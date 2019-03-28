@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.GMHennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewCharacterInfo;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.GMViewWarehouseWithdrawLis
 import com.l2jmobius.gameserver.network.serverpackets.GmViewQuestInfo;
 
 /**
- * This class ...
  * @version $Revision: 1.1.2.2.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestGMCommand implements IClientIncomingPacket
@@ -40,7 +39,7 @@ public final class RequestGMCommand implements IClientIncomingPacket
 	private int _command;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_targetName = packet.readS();
 		_command = packet.readD();
@@ -49,17 +48,17 @@ public final class RequestGMCommand implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		// prevent non gm or low level GMs from vieweing player stuff
-		if (!client.getActiveChar().isGM() || !client.getActiveChar().getAccessLevel().allowAltG())
+		if (!client.getPlayer().isGM() || !client.getPlayer().getAccessLevel().allowAltG())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = L2World.getInstance().getPlayer(_targetName);
+		final PlayerInstance player = World.getInstance().getPlayer(_targetName);
 		
-		final L2Clan clan = ClanTable.getInstance().getClanByName(_targetName);
+		final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
 		
 		// player name was incorrect?
 		if ((player == null) && ((clan == null) || (_command != 6)))

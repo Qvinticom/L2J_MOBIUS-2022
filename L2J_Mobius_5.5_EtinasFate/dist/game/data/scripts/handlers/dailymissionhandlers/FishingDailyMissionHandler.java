@@ -20,10 +20,10 @@ import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerFishing;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 
@@ -47,7 +47,7 @@ public class FishingDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(L2PcInstance player)
+	public boolean isAvailable(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
@@ -74,7 +74,7 @@ public class FishingDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private void onPlayerFishing(OnPlayerFishing event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if (event.getReason() == FishingEndReason.WIN)
 		{
 			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);

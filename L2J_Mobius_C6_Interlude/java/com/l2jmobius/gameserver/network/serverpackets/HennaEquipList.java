@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class HennaEquipList extends L2GameServerPacket
+public class HennaEquipList extends GameServerPacket
 {
-	private final L2PcInstance _player;
-	private final L2HennaInstance[] _hennaEquipList;
+	private final PlayerInstance _player;
+	private final HennaInstance[] _hennaEquipList;
 	
-	public HennaEquipList(L2PcInstance player, L2HennaInstance[] hennaEquipList)
+	public HennaEquipList(PlayerInstance player, HennaInstance[] hennaEquipList)
 	{
 		_player = player;
 		_hennaEquipList = hennaEquipList;
@@ -39,7 +39,7 @@ public class HennaEquipList extends L2GameServerPacket
 		// writeD(10); // total amount of symbol available which depends on difference classes
 		writeD(_hennaEquipList.length);
 		
-		for (L2HennaInstance element : _hennaEquipList)
+		for (HennaInstance element : _hennaEquipList)
 		{
 			/*
 			 * Player must have at least one dye in inventory to be able to see the henna that can be applied with it.

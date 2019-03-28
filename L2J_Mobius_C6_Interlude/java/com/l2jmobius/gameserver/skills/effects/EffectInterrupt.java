@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author KidZor
  */
 
-public class EffectInterrupt extends L2Effect
+public class EffectInterrupt extends Effect
 {
 	public EffectInterrupt(Env env, EffectTemplate template)
 	{
@@ -33,7 +33,7 @@ public class EffectInterrupt extends L2Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return L2Effect.EffectType.INTERRUPT;
+		return Effect.EffectType.INTERRUPT;
 	}
 	
 	@Override

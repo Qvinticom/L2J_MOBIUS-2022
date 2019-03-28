@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -41,9 +41,9 @@ public final class Resurrection extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.RESURRECTION;
+		return EffectType.RESURRECTION;
 	}
 	
 	@Override
@@ -55,20 +55,20 @@ public final class Resurrection extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		
-		if (activeChar.isPlayer())
+		if (creature.isPlayer())
 		{
 			if (target.getActingPlayer() != null)
 			{
-				target.getActingPlayer().reviveRequest(activeChar.getActingPlayer(), info.getSkill(), target.isPet(), _power);
+				target.getActingPlayer().reviveRequest(creature.getActingPlayer(), info.getSkill(), target.isPet(), _power);
 			}
 		}
 		else
 		{
 			DecayTaskManager.getInstance().cancel(target);
-			target.doRevive(Formulas.calculateSkillResurrectRestorePercent(_power, activeChar));
+			target.doRevive(Formulas.calculateSkillResurrectRestorePercent(_power, creature));
 		}
 	}
 }

@@ -16,22 +16,22 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: (ch) dc d: character object id c: 1 if won 0 if failed
  * @author -Wooden-
  */
-public class ExFishingEnd extends L2GameServerPacket
+public class ExFishingEnd extends GameServerPacket
 {
 	private final boolean _win;
-	L2Character _activeChar;
+	Creature _creature;
 	
-	public ExFishingEnd(boolean win, L2PcInstance character)
+	public ExFishingEnd(boolean win, PlayerInstance character)
 	{
 		_win = win;
-		_activeChar = character;
+		_creature = character;
 	}
 	
 	/*
@@ -43,7 +43,7 @@ public class ExFishingEnd extends L2GameServerPacket
 	{
 		writeC(0xfe);
 		writeH(0x14);
-		writeD(_activeChar.getObjectId());
+		writeD(_creature.getObjectId());
 		writeC(_win ? 1 : 0);
 	}
 }

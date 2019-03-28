@@ -17,18 +17,18 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 
-public final class EffectSignetAntiSummon extends L2Effect
+public final class EffectSignetAntiSummon extends Effect
 {
-	private L2EffectPointInstance _actor;
+	private EffectPointInstance _actor;
 	
 	public EffectSignetAntiSummon(Env env, EffectTemplate template)
 	{
@@ -44,7 +44,7 @@ public final class EffectSignetAntiSummon extends L2Effect
 	@Override
 	public void onStart()
 	{
-		_actor = (L2EffectPointInstance) getEffected();
+		_actor = (EffectPointInstance) getEffected();
 	}
 	
 	@Override
@@ -56,16 +56,16 @@ public final class EffectSignetAntiSummon extends L2Effect
 		}
 		final int mpConsume = getSkill().getMpConsume();
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
-			if (cha == null)
+			if (creature == null)
 			{
 				continue;
 			}
 			
-			if (cha instanceof L2Playable)
+			if (creature instanceof Playable)
 			{
-				final L2PcInstance owner = (L2PcInstance) cha;
+				final PlayerInstance owner = (PlayerInstance) creature;
 				if (owner.getPet() != null)
 				{
 					if (mpConsume > getEffector().getStatus().getCurrentMp())

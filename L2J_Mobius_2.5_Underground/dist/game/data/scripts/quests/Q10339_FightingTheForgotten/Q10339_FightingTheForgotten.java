@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -66,10 +66,10 @@ public final class Q10339_FightingTheForgotten extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -87,15 +87,15 @@ public final class Q10339_FightingTheForgotten extends Quest
 			}
 			case "32975-05.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "TELEPORT":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					player.teleToLocation(TELEPORT_LOC);
 				}
 				break;
@@ -106,12 +106,12 @@ public final class Q10339_FightingTheForgotten extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -125,14 +125,14 @@ public final class Q10339_FightingTheForgotten extends Quest
 			{
 				if (npc.getId() == THEODORE)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "32975-05.html";
 					}
 				}
 				else if (npc.getId() == HADEL)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -146,7 +146,7 @@ public final class Q10339_FightingTheForgotten extends Quest
 						}
 						case 3:
 						{
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							giveAdena(player, 528_210, true);
 							addExpAndSp(player, 238_423_500, 57_221);
 							htmltext = "33344-03.html";
@@ -167,35 +167,35 @@ public final class Q10339_FightingTheForgotten extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(2))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
 		{
-			final int monsterCount = st.getMemoState() + 1;
+			final int monsterCount = qs.getMemoState() + 1;
 			if (monsterCount >= 12)
 			{
-				st.setCond(3, true);
-				st.setMemoState(0);
+				qs.setCond(3, true);
+				qs.setMemoState(0);
 			}
 			else
 			{
-				st.setMemoState(monsterCount);
+				qs.setMemoState(monsterCount);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if (st != null)
+		final QuestState qs = getQuestState(player, false);
+		if(qs != null)
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATING_THE_ANCIENT_GHOSTS, st.getMemoState()));
+			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATING_THE_ANCIENT_GHOSTS, qs.getMemoState()));
 			return npcLogList;
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

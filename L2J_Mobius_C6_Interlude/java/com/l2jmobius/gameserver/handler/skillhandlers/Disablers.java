@@ -21,23 +21,23 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.ai.AttackableAI;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.L2AttackableAI;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Effect.EffectType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Effect.EffectType;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
@@ -73,7 +73,7 @@ public class Disablers implements ISkillHandler
 		SkillType.BETRAY
 	};
 	
-	protected static final Logger LOGGER = Logger.getLogger(L2Skill.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
 	private String[] _negateSkillTypes = null;
 	private String[] _negateEffectTypes = null;
 	private float _negatePower = 0.f;
@@ -84,23 +84,23 @@ public class Disablers implements ISkillHandler
 	 */
 	@SuppressWarnings("null")
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
 		final SkillType type = skill.getSkillType();
 		
-		final boolean bss = activeChar.checkBss();
-		final boolean sps = activeChar.checkSps();
-		final boolean ss = activeChar.checkSs();
+		final boolean bss = creature.checkBss();
+		final boolean sps = creature.checkSps();
+		final boolean ss = creature.checkSs();
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
 			// Get a target
-			if (!(target2 instanceof L2Character))
+			if (!(target2 instanceof Creature))
 			{
 				continue;
 			}
 			
-			L2Character target = (L2Character) target2;
+			Creature target = (Creature) target2;
 			
 			if ((target == null) || target.isDead())
 			{
@@ -111,23 +111,23 @@ public class Disablers implements ISkillHandler
 			{
 				case BETRAY:
 				{
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
 					else
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
 				case FAKE_DEATH:
 				{
 					// stun/fakedeath is not mdef dependant, it depends on lvl difference, target CON and power of stun
-					skill.getEffects(activeChar, target, ss, sps, bss);
+					skill.getEffects(creature, target, ss, sps, bss);
 					break;
 				}
 				case STUN:
@@ -135,31 +135,31 @@ public class Disablers implements ISkillHandler
 					// Calculate skill evasion
 					if (Formulas.calcPhysicalSkillEvasion(target, skill))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+						creature.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
 						break;
 					}
 					// Calculate vengeance
 					if (target.vengeanceSkill(skill))
 					{
-						target = activeChar;
+						target = creature;
 					}
 				}
 				case ROOT:
 				{
 					if (target.reflectSkill(skill))
 					{
-						target = activeChar;
+						target = creature;
 					}
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
@@ -168,18 +168,18 @@ public class Disablers implements ISkillHandler
 				{
 					if (target.reflectSkill(skill))
 					{
-						target = activeChar;
+						target = creature;
 					}
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
@@ -188,66 +188,66 @@ public class Disablers implements ISkillHandler
 				{
 					if (target.reflectSkill(skill))
 					{
-						target = activeChar;
+						target = creature;
 					}
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
 				case CONFUSE_MOB_ONLY:
 				{
 					// do nothing if not on mob
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						final L2Effect[] effects = target.getAllEffects();
-						for (L2Effect e : effects)
+						final Effect[] effects = target.getAllEffects();
+						for (Effect e : effects)
 						{
 							if (e.getSkill().getSkillType() == type)
 							{
 								e.exit(false);
 							}
 						}
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 				}
 				case AGGDAMAGE:
 				{
-					if (target instanceof L2Attackable)
+					if (target instanceof Attackable)
 					{
-						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
+						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, creature, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 					}
 					// TODO [Nemesiss] should this have 100% chance?
-					skill.getEffects(activeChar, target, ss, sps, bss);
+					skill.getEffects(creature, target, ss, sps, bss);
 					break;
 				}
 				case AGGREDUCE:
 				{
 					// these skills needs to be rechecked
-					if (target instanceof L2Attackable)
+					if (target instanceof Attackable)
 					{
-						skill.getEffects(activeChar, target, ss, sps, bss);
-						final double aggdiff = ((L2Attackable) target).getHating(activeChar) - target.calcStat(Stats.AGGRESSION, ((L2Attackable) target).getHating(activeChar), target, skill);
+						skill.getEffects(creature, target, ss, sps, bss);
+						final double aggdiff = ((Attackable) target).getHating(creature) - target.calcStat(Stats.AGGRESSION, ((Attackable) target).getHating(creature), target, skill);
 						if (skill.getPower() > 0)
 						{
-							((L2Attackable) target).reduceHate(null, (int) skill.getPower());
+							((Attackable) target).reduceHate(null, (int) skill.getPower());
 						}
 						else if (aggdiff > 0)
 						{
-							((L2Attackable) target).reduceHate(null, (int) aggdiff);
+							((Attackable) target).reduceHate(null, (int) aggdiff);
 						}
 					}
 					break;
@@ -257,71 +257,71 @@ public class Disablers implements ISkillHandler
 					// these skills needs to be rechecked
 					if (skill.getName().equals("Bluff"))
 					{
-						if (target instanceof L2Attackable)
+						if (target instanceof Attackable)
 						{
-							L2Attackable _target = (L2Attackable) target;
-							_target.stopHating(activeChar);
+							Attackable _target = (Attackable) target;
+							_target.stopHating(creature);
 							if (_target.getMostHated() == null)
 							{
-								((L2AttackableAI) _target.getAI()).setGlobalAggro(-25);
+								((AttackableAI) _target.getAI()).setGlobalAggro(-25);
 								_target.clearAggroList();
 								_target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 								_target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 								_target.setWalking();
 							}
 						}
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
-					else if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					else if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						if (target instanceof L2Attackable)
+						if (target instanceof Attackable)
 						{
-							L2Attackable targ = (L2Attackable) target;
-							targ.stopHating(activeChar);
+							Attackable targ = (Attackable) target;
+							targ.stopHating(creature);
 							if (targ.getMostHated() == null)
 							{
-								((L2AttackableAI) targ.getAI()).setGlobalAggro(-25);
+								((AttackableAI) targ.getAI()).setGlobalAggro(-25);
 								targ.clearAggroList();
 								targ.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 								targ.setWalking();
 							}
 						}
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
 				case AGGREMOVE:
 				{
 					// these skills needs to be rechecked
-					if ((target instanceof L2Attackable) && !target.isRaid())
+					if ((target instanceof Attackable) && !target.isRaid())
 					{
-						if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+						if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 						{
-							if (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_UNDEAD)
+							if (skill.getTargetType() == Skill.SkillTargetType.TARGET_UNDEAD)
 							{
 								if (target.isUndead())
 								{
-									((L2Attackable) target).reduceHate(null, ((L2Attackable) target).getHating(((L2Attackable) target).getMostHated()));
+									((Attackable) target).reduceHate(null, ((Attackable) target).getHating(((Attackable) target).getMostHated()));
 								}
 							}
 							else
 							{
-								((L2Attackable) target).reduceHate(null, ((L2Attackable) target).getHating(((L2Attackable) target).getMostHated()));
+								((Attackable) target).reduceHate(null, ((Attackable) target).getHating(((Attackable) target).getMostHated()));
 							}
 						}
-						else if (activeChar instanceof L2PcInstance)
+						else if (creature instanceof PlayerInstance)
 						{
 							SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(skill.getId());
-							activeChar.sendPacket(sm);
+							creature.sendPacket(sm);
 						}
 					}
 					break;
@@ -338,42 +338,42 @@ public class Disablers implements ISkillHandler
 				}
 				case ERASE:
 				{
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss)
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss)
 						// Doesn't affect siege golem, wild hog cannon and Pets
-						&& !(target instanceof L2SiegeSummonInstance) && !(target instanceof L2PetInstance))
+						&& !(target instanceof SiegeSummonInstance) && !(target instanceof PetInstance))
 					{
-						L2PcInstance summonOwner = null;
-						L2Summon summonPet = null;
-						summonOwner = ((L2Summon) target).getOwner();
+						PlayerInstance summonOwner = null;
+						Summon summonPet = null;
+						summonOwner = ((Summon) target).getOwner();
 						summonPet = summonOwner.getPet();
 						summonPet.unSummon(summonOwner);
 						SystemMessage sm = new SystemMessage(SystemMessageId.LETHAL_STRIKE);
 						summonOwner.sendPacket(sm);
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
 				case MAGE_BANE:
 				{
-					for (L2Object t : targets)
+					for (WorldObject t : targets)
 					{
-						L2Character target1 = (L2Character) t;
+						Creature target1 = (Creature) t;
 						if (target1.reflectSkill(skill))
 						{
-							target1 = activeChar;
+							target1 = creature;
 						}
-						if (!Formulas.getInstance().calcSkillSuccess(activeChar, target1, skill, ss, sps, bss))
+						if (!Formulas.getInstance().calcSkillSuccess(creature, target1, skill, ss, sps, bss))
 						{
 							continue;
 						}
-						final L2Effect[] effects = target1.getAllEffects();
-						for (L2Effect e : effects)
+						final Effect[] effects = target1.getAllEffects();
+						for (Effect e : effects)
 						{
 							if (e.getStackType().equals("mAtkSpeedUp") || e.getStackType().equals("mAtk") || (e.getSkill().getId() == 1059) || (e.getSkill().getId() == 1085) || (e.getSkill().getId() == 4356) || (e.getSkill().getId() == 4355))
 							{
@@ -385,19 +385,19 @@ public class Disablers implements ISkillHandler
 				}
 				case WARRIOR_BANE:
 				{
-					for (L2Object t : targets)
+					for (WorldObject t : targets)
 					{
-						L2Character target1 = (L2Character) t;
+						Creature target1 = (Creature) t;
 						if (target1.reflectSkill(skill))
 						{
-							target1 = activeChar;
+							target1 = creature;
 						}
-						if (!Formulas.getInstance().calcSkillSuccess(activeChar, target1, skill, ss, sps, bss))
+						if (!Formulas.getInstance().calcSkillSuccess(creature, target1, skill, ss, sps, bss))
 						{
 							continue;
 						}
-						final L2Effect[] effects = target1.getAllEffects();
-						for (L2Effect e : effects)
+						final Effect[] effects = target1.getAllEffects();
+						for (Effect e : effects)
 						{
 							if (e.getStackType().equals("SpeedUp") || e.getStackType().equals("pAtkSpeedUp") || (e.getSkill().getId() == 1204) || (e.getSkill().getId() == 1086) || (e.getSkill().getId() == 4342) || (e.getSkill().getId() == 4357))
 							{
@@ -411,30 +411,30 @@ public class Disablers implements ISkillHandler
 				{
 					if (target.reflectSkill(skill))
 					{
-						target = activeChar;
+						target = creature;
 					}
 					if (skill.getId() == 1056)
 					{
 						// If target isInvul (for example Celestial shield) CANCEL doesn't work
 						if (target.isInvul())
 						{
-							if (activeChar instanceof L2PcInstance)
+							if (creature instanceof PlayerInstance)
 							{
 								SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 								sm.addString(target.getName());
 								sm.addSkillName(skill.getDisplayId());
-								activeChar.sendPacket(sm);
+								creature.sendPacket(sm);
 							}
 							break;
 						}
 						if (target.isRaid())
 						{
-							if (activeChar instanceof L2PcInstance)
+							if (creature instanceof PlayerInstance)
 							{
 								SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 								sm.addString(target.getName());
 								sm.addSkillName(skill.getDisplayId());
-								activeChar.sendPacket(sm);
+								creature.sendPacket(sm);
 							}
 							break;
 						}
@@ -451,9 +451,9 @@ public class Disablers implements ISkillHandler
 						landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
 						if (Rnd.get(100) < landrate)
 						{
-							L2Effect[] effects = target.getAllEffects();
+							Effect[] effects = target.getAllEffects();
 							int maxfive = 5;
-							for (L2Effect e : effects)
+							for (Effect e : effects)
 							{
 								switch (e.getEffectType())
 								{
@@ -502,12 +502,12 @@ public class Disablers implements ISkillHandler
 								}
 							}
 						}
-						else if (activeChar instanceof L2PcInstance)
+						else if (creature instanceof PlayerInstance)
 						{
 							SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 							sm.addString(target.getName());
 							sm.addSkillName(skill.getDisplayId());
-							activeChar.sendPacket(sm);
+							creature.sendPacket(sm);
 						}
 						break;
 					}
@@ -516,13 +516,13 @@ public class Disablers implements ISkillHandler
 					landrate = (int) target.calcStat(Stats.CANCEL_VULN, landrate, target, null);
 					if (Rnd.get(100) < landrate)
 					{
-						final L2Effect[] effects = target.getAllEffects();
+						final Effect[] effects = target.getAllEffects();
 						int maxdisp = (int) skill.getNegatePower();
 						if (maxdisp == 0)
 						{
 							maxdisp = Config.BUFFS_MAX_AMOUNT + Config.DEBUFFS_MAX_AMOUNT + 6;
 						}
-						for (L2Effect e : effects)
+						for (Effect e : effects)
 						{
 							switch (e.getEffectType())
 							{
@@ -566,12 +566,12 @@ public class Disablers implements ISkillHandler
 							}
 						}
 					}
-					else if (activeChar instanceof L2PcInstance)
+					else if (creature instanceof PlayerInstance)
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					break;
 				}
@@ -665,13 +665,13 @@ public class Disablers implements ISkillHandler
 									LOGGER.warning("Couldn't find skill handler for HEAL.");
 									continue;
 								}
-								final L2Object tgts[] = new L2Object[]
+								final WorldObject tgts[] = new WorldObject[]
 								{
 									target
 								};
 								try
 								{
-									Healhandler.useSkill(activeChar, skill, tgts);
+									Healhandler.useSkill(creature, skill, tgts);
 								}
 								catch (IOException e)
 								{
@@ -730,37 +730,37 @@ public class Disablers implements ISkillHandler
 		{
 			if (bss)
 			{
-				activeChar.removeBss();
+				creature.removeBss();
 			}
 			else if (sps)
 			{
-				activeChar.removeSps();
+				creature.removeSps();
 			}
 		}
 		else
 		{
-			activeChar.removeSs();
+			creature.removeSs();
 		}
 		
 		// self Effect :]
-		L2Effect effect = activeChar.getFirstEffect(skill.getId());
+		Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			// Replace old effect with new one.
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(activeChar);
+		skill.getEffectsSelf(creature);
 	}
 	
-	private void negateEffect(L2Character target, SkillType type, double power)
+	private void negateEffect(Creature target, SkillType type, double power)
 	{
 		negateEffect(target, type, power, 0);
 	}
 	
-	private void negateEffect(L2Character target, SkillType type, double power, int skillId)
+	private void negateEffect(Creature target, SkillType type, double power, int skillId)
 	{
-		L2Effect[] effects = target.getAllEffects();
-		for (L2Effect e : effects)
+		Effect[] effects = target.getAllEffects();
+		for (Effect e : effects)
 		{
 			if (((e.getSkill() != null) && (e.getSkill().getId() == 4215)) || (e.getSkill().getId() == 4515))
 			{

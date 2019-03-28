@@ -17,13 +17,13 @@
 package instances.TalkingIslandPast;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -62,7 +62,7 @@ public final class TalkingIslandPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -80,12 +80,12 @@ public final class TalkingIslandPast extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		if ((qs != null) && qs.isCond(21) && (qs.isMemoState(2)))
 		{
-			final L2Npc knight = addSpawn(MYSTERIOUS_DARK_KNIGHT, TI_LOC_3, false, 0, false, instance.getId());
+			final Npc knight = addSpawn(MYSTERIOUS_DARK_KNIGHT, TI_LOC_3, false, 0, false, instance.getId());
 			knight.getAI().startFollow(player);
 			knight.setRunning();
 			showOnScreenMsg(player, NpcStringId.A_MYSTERIOUS_DARK_KNIGHT_IS_HERE, ExShowScreenMessage.TOP_CENTER, 5000);
@@ -95,39 +95,39 @@ public final class TalkingIslandPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.initSeenCreatures();
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onExitZone(L2Character character, L2ZoneType zone)
+	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		final Instance instance = character.getInstanceWorld();
-		if ((instance != null) && character.isPlayer())
+		final Instance instance = creature.getInstanceWorld();
+		if ((instance != null) && creature.isPlayer())
 		{
-			character.teleToLocation(TOWN_TELEPORT);
+			creature.teleToLocation(TOWN_TELEPORT);
 		}
-		return super.onExitZone(character, zone);
+		return super.onExitZone(creature, zone);
 	}
 	
 	private void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		
 		if (creature.isPlayer())
 		{
 			final Instance instance = creature.getInstanceWorld();
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 			
 			if ((instance != null) && (npc.getId() == INVISIBLE_TI_NPC) && (qs != null) && qs.isCond(21) && qs.isMemoState(1))
 			{
 				final Location loc = npc.isInsideRadius2D(TI_LOC_1, 1000) ? TI_LOC_1 : TI_LOC_2;
 				qs.setMemoState(2);
-				final L2Npc knight = addSpawn(MYSTERIOUS_DARK_KNIGHT, loc, false, 0, false, instance.getId());
+				final Npc knight = addSpawn(MYSTERIOUS_DARK_KNIGHT, loc, false, 0, false, instance.getId());
 				knight.getAI().startFollow(player);
 				knight.setRunning();
 				showOnScreenMsg(player, NpcStringId.A_MYSTERIOUS_DARK_KNIGHT_IS_HERE, ExShowScreenMessage.TOP_CENTER, 5000);

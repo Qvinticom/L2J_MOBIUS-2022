@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.model.multisell;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author DS
@@ -33,7 +33,7 @@ public class Ingredient
 	private final int _enchantmentLevel;
 	private boolean _isTaxIngredient;
 	private boolean _maintainIngredient;
-	private L2Item _template = null;
+	private Item _template = null;
 	private ItemInfo _itemInfo = null;
 	
 	public Ingredient(StatsSet set)
@@ -62,12 +62,12 @@ public class Ingredient
 		return new Ingredient(_itemId, _itemCount, _enchantmentLevel, _isTaxIngredient, _maintainIngredient);
 	}
 	
-	public final L2Item getTemplate()
+	public final Item getTemplate()
 	{
 		return _template;
 	}
 	
-	public final void setItemInfo(L2ItemInstance item)
+	public final void setItemInfo(ItemInstance item)
 	{
 		_itemInfo = new ItemInfo(item);
 	}
@@ -134,7 +134,7 @@ public class Ingredient
 	
 	public final boolean isArmorOrWeapon()
 	{
-		return _template == null ? false : (_template instanceof L2Armor) || (_template instanceof L2Weapon);
+		return _template == null ? false : (_template instanceof Armor) || (_template instanceof Weapon);
 	}
 	
 	public final int getWeight()

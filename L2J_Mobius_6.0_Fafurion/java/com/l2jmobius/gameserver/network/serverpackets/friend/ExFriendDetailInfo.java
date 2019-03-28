@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets.friend;
 import java.util.Calendar;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -30,15 +30,15 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExFriendDetailInfo implements IClientOutgoingPacket
 {
 	private final int _objectId;
-	private final L2PcInstance _friend;
+	private final PlayerInstance _friend;
 	private final String _name;
 	private final int _lastAccess;
 	
-	public ExFriendDetailInfo(L2PcInstance player, String name)
+	public ExFriendDetailInfo(PlayerInstance player, String name)
 	{
 		_objectId = player.getObjectId();
 		_name = name;
-		_friend = L2World.getInstance().getPlayer(_name);
+		_friend = World.getInstance().getPlayer(_name);
 		_lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
 	}
 	

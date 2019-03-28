@@ -23,12 +23,12 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -46,14 +46,14 @@ public class SiegeFlag implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
@@ -81,7 +81,7 @@ public class SiegeFlag implements ISkillHandler
 		try
 		{
 			// Spawn a new flag
-			L2SiegeFlagInstance flag = new L2SiegeFlagInstance(player, IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
+			SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
 			
 			if (skill.is_advancedFlag())
 			{
@@ -118,14 +118,14 @@ public class SiegeFlag implements ISkillHandler
 	/**
 	 * Return true if character clan place a flag<BR>
 	 * <BR>
-	 * @param activeChar The L2Character of the character placing the flag
+	 * @param creature The Creature of the creature placing the flag
 	 * @param isCheckOnly if false, it will send a notification to the player telling him why it failed
 	 * @return
 	 */
-	public static boolean checkIfOkToPlaceFlag(L2Character activeChar, boolean isCheckOnly)
+	public static boolean checkIfOkToPlaceFlag(Creature creature, boolean isCheckOnly)
 	{
-		final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-		final Fort fort = FortManager.getInstance().getFort(activeChar);
+		final Castle castle = CastleManager.getInstance().getCastle(creature);
+		final Fort fort = FortManager.getInstance().getFort(creature);
 		if ((castle == null) && (fort == null))
 		{
 			return false;
@@ -133,20 +133,20 @@ public class SiegeFlag implements ISkillHandler
 		
 		if (castle != null)
 		{
-			return checkIfOkToPlaceFlag(activeChar, castle, isCheckOnly);
+			return checkIfOkToPlaceFlag(creature, castle, isCheckOnly);
 		}
-		return checkIfOkToPlaceFlag(activeChar, fort, isCheckOnly);
+		return checkIfOkToPlaceFlag(creature, fort, isCheckOnly);
 	}
 	
-	public static boolean checkIfOkToPlaceFlag(L2Character activeChar, Castle castle, boolean isCheckOnly)
+	public static boolean checkIfOkToPlaceFlag(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -184,15 +184,15 @@ public class SiegeFlag implements ISkillHandler
 		return false;
 	}
 	
-	public static boolean checkIfOkToPlaceFlag(L2Character activeChar, Fort fort, boolean isCheckOnly)
+	public static boolean checkIfOkToPlaceFlag(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{

@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -78,9 +78,9 @@ public class AutoAnnouncementHandler
 	}
 	
 	/**
-	 * @param activeChar
+	 * @param player
 	 */
-	public void listAutoAnnouncements(L2PcInstance activeChar)
+	public void listAutoAnnouncements(PlayerInstance player)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
@@ -114,7 +114,7 @@ public class AutoAnnouncementHandler
 		replyMSG.append("</body></html>");
 		
 		adminReply.setHtml(replyMSG.toString());
-		activeChar.sendPacket(adminReply);
+		player.sendPacket(adminReply);
 	}
 	
 	/**

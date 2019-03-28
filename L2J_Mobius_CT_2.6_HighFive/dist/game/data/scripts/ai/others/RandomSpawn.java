@@ -21,7 +21,7 @@ import java.util.Map;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -83,7 +83,7 @@ public final class RandomSpawn extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		final Location[] spawnlist = SPAWN_POINTS.get(npc.getId());
 		final Location loc = spawnlist[getRandom(spawnlist.length)];
@@ -97,10 +97,10 @@ public final class RandomSpawn extends AbstractNpcAI
 	
 	private static class Teleport implements Runnable
 	{
-		private final L2Npc _npc;
+		private final Npc _npc;
 		private final Location _loc;
 		
-		public Teleport(L2Npc npc, Location loc)
+		public Teleport(Npc npc, Location loc)
 		{
 			_npc = npc;
 			_loc = loc;

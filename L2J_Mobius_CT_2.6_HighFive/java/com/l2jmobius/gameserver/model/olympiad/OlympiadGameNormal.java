@@ -26,13 +26,13 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchResult;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
@@ -69,19 +69,19 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		}
 		
 		int playerOneObjectId = 0;
-		L2PcInstance playerOne = null;
-		L2PcInstance playerTwo = null;
+		PlayerInstance playerOne = null;
+		PlayerInstance playerTwo = null;
 		
 		while (list.size() > 1)
 		{
 			playerOneObjectId = list.remove(Rnd.get(list.size()));
-			playerOne = L2World.getInstance().getPlayer(playerOneObjectId);
+			playerOne = World.getInstance().getPlayer(playerOneObjectId);
 			if ((playerOne == null) || !playerOne.isOnline())
 			{
 				continue;
 			}
 			
-			playerTwo = L2World.getInstance().getPlayer(list.remove(Rnd.get(list.size())));
+			playerTwo = World.getInstance().getPlayer(list.remove(Rnd.get(list.size())));
 			if ((playerTwo == null) || !playerTwo.isOnline())
 			{
 				list.add(playerOneObjectId);
@@ -104,14 +104,14 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void sendOlympiadInfo(L2Character player)
+	public final void sendOlympiadInfo(Creature creature)
 	{
-		player.sendPacket(new ExOlympiadUserInfo(_playerOne));
-		player.sendPacket(new ExOlympiadUserInfo(_playerTwo));
+		creature.sendPacket(new ExOlympiadUserInfo(_playerOne));
+		creature.sendPacket(new ExOlympiadUserInfo(_playerTwo));
 	}
 	
 	@Override
-	public final void broadcastOlympiadInfo(L2OlympiadStadiumZone stadium)
+	public final void broadcastOlympiadInfo(OlympiadStadiumZone stadium)
 	{
 		stadium.broadcastPacket(new ExOlympiadUserInfo(_playerOne));
 		stadium.broadcastPacket(new ExOlympiadUserInfo(_playerTwo));
@@ -232,7 +232,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void handleDisconnect(L2PcInstance player)
+	protected final void handleDisconnect(PlayerInstance player)
 	{
 		if (player.getObjectId() == _playerOne.getObjectId())
 		{
@@ -303,7 +303,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected void validateWinner(L2OlympiadStadiumZone stadium)
+	protected void validateWinner(OlympiadStadiumZone stadium)
 	{
 		if (_aborted)
 		{
@@ -648,7 +648,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void addDamage(L2PcInstance player, int damage)
+	protected final void addDamage(PlayerInstance player, int damage)
 	{
 		if ((_playerOne.getPlayer() == null) || (_playerTwo.getPlayer() == null))
 		{

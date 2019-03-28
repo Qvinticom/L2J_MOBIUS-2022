@@ -20,8 +20,8 @@ import java.util.OptionalInt;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListApplied;
 
 /**
@@ -30,24 +30,24 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPledgeWaitingListApplied
 public class RequestPledgeWaitingApplied implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (activeChar.getClan() != null))
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || (player.getClan() != null))
 		{
 			return;
 		}
 		
-		final OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(activeChar.getObjectId());
+		final OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(player.getObjectId());
 		if (clanId.isPresent())
 		{
-			activeChar.sendPacket(new ExPledgeWaitingListApplied(clanId.getAsInt(), activeChar.getObjectId()));
+			player.sendPacket(new ExPledgeWaitingListApplied(clanId.getAsInt(), player.getObjectId()));
 		}
 	}
 }

@@ -16,62 +16,62 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * sample 0000: 5a d8 a8 10 48 d8 a8 10 48 10 04 00 00 01 00 00 Z...H...H....... 0010: 00 f0 1a 00 00 68 28 00 00 .....h(.. format dddddd dddh (h)
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class MagicSkillUse extends L2GameServerPacket
+public class MagicSkillUse extends GameServerPacket
 {
 	private int _targetId;
 	private final int _skillId;
 	private final int _skillLevel;
 	private final int _hitTime;
 	private final int _reuseDelay;
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	
-	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(Creature creature, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		if (target != null)
 		{
 			_targetId = target.getObjectId();
 		}
 		else
 		{
-			_targetId = cha.getTargetId();
+			_targetId = creature.getTargetId();
 		}
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_hitTime = hitTime;
 		_reuseDelay = reuseDelay;
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
-	public MagicSkillUse(L2Character cha, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(Creature creature, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		_charObjId = cha.getObjectId();
-		_targetId = cha.getTargetId();
+		_objectId = creature.getObjectId();
+		_targetId = creature.getTargetId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_hitTime = hitTime;
 		_reuseDelay = reuseDelay;
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x48);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_targetId);
 		writeD(_skillId);
 		writeD(_skillLevel);

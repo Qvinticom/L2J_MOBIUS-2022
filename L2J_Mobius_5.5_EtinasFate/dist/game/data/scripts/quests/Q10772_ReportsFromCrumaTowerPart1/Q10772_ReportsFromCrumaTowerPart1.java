@@ -18,11 +18,11 @@ package quests.Q10772_ReportsFromCrumaTowerPart1;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -59,7 +59,7 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -85,7 +85,7 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			}
 			case "spawn_owl":
 			{
-				if (qs.isCond(1) && !L2World.getInstance().getVisibleObjectsInRange(player, L2Npc.class, 700).stream().anyMatch(n -> n.getId() == MAGIC_OWL))
+				if (qs.isCond(1) && !World.getInstance().getVisibleObjectsInRange(player, Npc.class, 700).stream().anyMatch(n -> n.getId() == MAGIC_OWL))
 				{
 					addSpawn(MAGIC_OWL, OWL_LOC, true, 20000);
 				}
@@ -123,7 +123,7 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -157,7 +157,7 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("DESPAWN_OWL") && (npc != null) && (npc.getId() == MAGIC_OWL))
 		{

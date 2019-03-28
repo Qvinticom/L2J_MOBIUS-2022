@@ -16,8 +16,8 @@
  */
 package quests.Q10318_DecayingDarkness;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -68,7 +68,7 @@ public final class Q10318_DecayingDarkness extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -108,7 +108,7 @@ public final class Q10318_DecayingDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -146,7 +146,7 @@ public final class Q10318_DecayingDarkness extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && qs.isCond(1))
@@ -157,42 +157,42 @@ public final class Q10318_DecayingDarkness extends Quest
 				{
 					case ORBIS_VICTIM:
 					{
-						final L2Npc mob = addSpawn(18978, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+						final Npc mob = addSpawn(18978, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
 						addAttackPlayerDesire(mob, attacker, 5);
 						npc.deleteMe();
 						break;
 					}
 					case ORBIS_CURATOR:
 					{
-						final L2Npc mob1 = addSpawn(18981, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+						final Npc mob1 = addSpawn(18981, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
 						addAttackPlayerDesire(mob1, attacker, 5);
 						npc.deleteMe();
 						break;
 					}
 					case ORBIS_THROWER:
 					{
-						final L2Npc mob2 = addSpawn(18980, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+						final Npc mob2 = addSpawn(18980, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
 						addAttackPlayerDesire(mob2, attacker, 5);
 						npc.deleteMe();
 						break;
 					}
 					case ORBIS_ANCIENT_HERO:
 					{
-						final L2Npc mob3 = addSpawn(18982, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+						final Npc mob3 = addSpawn(18982, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
 						addAttackPlayerDesire(mob3, attacker, 5);
 						npc.deleteMe();
 						break;
 					}
 					case ORBIS_GUARD:
 					{
-						final L2Npc mob4 = addSpawn(18979, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+						final Npc mob4 = addSpawn(18979, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
 						addAttackPlayerDesire(mob4, attacker, 5);
 						npc.deleteMe();
 						break;
 					}
 					case ORBIS_CHIEF:
 					{
-						final L2Npc mob5 = addSpawn(18983, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
+						final Npc mob5 = addSpawn(18983, npc.getX(), npc.getY(), npc.getZ(), 0, false, 60000);
 						addAttackPlayerDesire(mob5, attacker, 5);
 						npc.deleteMe();
 						break;
@@ -204,7 +204,7 @@ public final class Q10318_DecayingDarkness extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, CURSE_RESIDUE, 1, 8, 0.7, true))

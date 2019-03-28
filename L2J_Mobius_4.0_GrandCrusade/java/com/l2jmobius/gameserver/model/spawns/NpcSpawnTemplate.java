@@ -31,17 +31,17 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.ChanceLocation;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.IParameterized;
-import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 
 /**
  * @author UnAfraid
@@ -55,7 +55,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	private final Duration _respawnTime;
 	private final Duration _respawnTimeRandom;
 	private List<ChanceLocation> _locations;
-	private L2SpawnTerritory _zone;
+	private SpawnTerritory _zone;
 	private StatsSet _parameters;
 	private final boolean _spawnAnimation;
 	private final boolean _saveInDB;
@@ -63,7 +63,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	private List<MinionHolder> _minions;
 	private final SpawnTemplate _spawnTemplate;
 	private final SpawnGroup _group;
-	private final Set<L2Npc> _spawnedNpcs = ConcurrentHashMap.newKeySet();
+	private final Set<Npc> _spawnedNpcs = ConcurrentHashMap.newKeySet();
 	
 	private NpcSpawnTemplate(NpcSpawnTemplate template)
 	{
@@ -116,7 +116,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 			final String zoneName = set.getString("zone", null);
 			if (zoneName != null)
 			{
-				final L2SpawnTerritory zone = ZoneManager.getInstance().getSpawnTerritory(zoneName);
+				final SpawnTerritory zone = ZoneManager.getInstance().getSpawnTerritory(zoneName);
 				if (zone == null)
 				{
 					throw new NullPointerException("Spawn with non existing zone requested " + zoneName);
@@ -200,7 +200,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		return _locations;
 	}
 	
-	public L2SpawnTerritory getZone()
+	public SpawnTerritory getZone()
 	{
 		return _zone;
 	}
@@ -253,7 +253,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		_minions.add(minion);
 	}
 	
-	public Set<L2Npc> getSpawnedNpcs()
+	public Set<Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
 	}
@@ -282,7 +282,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		}
 		else if (!_group.getTerritories().isEmpty())
 		{
-			final L2SpawnTerritory territory = _group.getTerritories().get(Rnd.get(_group.getTerritories().size()));
+			final SpawnTerritory territory = _group.getTerritories().get(Rnd.get(_group.getTerritories().size()));
 			for (int i = 0; i < 100; i++)
 			{
 				final Location loc = territory.getRandomPoint();
@@ -294,7 +294,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		}
 		else if (!_spawnTemplate.getTerritories().isEmpty())
 		{
-			final L2SpawnTerritory territory = _spawnTemplate.getTerritories().get(Rnd.get(_spawnTemplate.getTerritories().size()));
+			final SpawnTerritory territory = _spawnTemplate.getTerritories().get(Rnd.get(_spawnTemplate.getTerritories().size()));
 			for (int i = 0; i < 100; i++)
 			{
 				final Location loc = territory.getRandomPoint();
@@ -316,14 +316,14 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	{
 		try
 		{
-			final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
+			final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
 			if (npcTemplate == null)
 			{
 				LOGGER.warning("Attempting to spawn unexisting npc id: " + _id + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
 				return;
 			}
 			
-			if (npcTemplate.isType("L2Defender"))
+			if (npcTemplate.isType("Defender"))
 			{
 				LOGGER.warning("Attempting to spawn npc id: " + _id + " type: " + npcTemplate.getType() + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
 				return;
@@ -348,9 +348,9 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	 * @throws ClassNotFoundException
 	 * @throws SecurityException
 	 */
-	private void spawnNpc(L2NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	private void spawnNpc(NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
-		final L2Spawn spawn = new L2Spawn(npcTemplate);
+		final Spawn spawn = new Spawn(npcTemplate);
 		final Location loc = getSpawnLocation();
 		if (loc == null)
 		{
@@ -390,10 +390,10 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		{
 			if (!DBSpawnManager.getInstance().isDefined(_id))
 			{
-				final L2Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
+				final Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
 				if ((spawnedNpc != null) && spawnedNpc.isMonster() && (_minions != null))
 				{
-					((L2MonsterInstance) spawnedNpc).getMinionList().spawnMinions(_minions);
+					((MonsterInstance) spawnedNpc).getMinionList().spawnMinions(_minions);
 				}
 				
 				_spawnedNpcs.add(spawnedNpc);
@@ -401,10 +401,10 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		}
 		else
 		{
-			final L2Npc npc = spawn.doSpawn(_spawnAnimation);
+			final Npc npc = spawn.doSpawn(_spawnAnimation);
 			if (npc.isMonster() && (_minions != null))
 			{
-				((L2MonsterInstance) npc).getMinionList().spawnMinions(_minions);
+				((MonsterInstance) npc).getMinionList().spawnMinions(_minions);
 			}
 			_spawnedNpcs.add(npc);
 			
@@ -423,17 +423,17 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		_spawnedNpcs.clear();
 	}
 	
-	public void notifySpawnNpc(L2Npc npc)
+	public void notifySpawnNpc(Npc npc)
 	{
 		_spawnTemplate.notifyEvent(event -> event.onSpawnNpc(_spawnTemplate, _group, npc));
 	}
 	
-	public void notifyDespawnNpc(L2Npc npc)
+	public void notifyDespawnNpc(Npc npc)
 	{
 		_spawnTemplate.notifyEvent(event -> event.onSpawnDespawnNpc(_spawnTemplate, _group, npc));
 	}
 	
-	public void notifyNpcDeath(L2Npc npc, L2Character killer)
+	public void notifyNpcDeath(Npc npc, Creature killer)
 	{
 		_spawnTemplate.notifyEvent(event -> event.onSpawnNpcDeath(_spawnTemplate, _group, npc, killer));
 	}

@@ -18,8 +18,8 @@ package quests.Q00251_NoSecrets;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -61,26 +61,26 @@ public class Q00251_NoSecrets extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equals("30201-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		return event;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			final int npcId = npc.getId();
 			
@@ -89,7 +89,7 @@ public class Q00251_NoSecrets extends Quest
 				giveItems(player, DIARY, 1);
 				if ((getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -101,7 +101,7 @@ public class Q00251_NoSecrets extends Quest
 				giveItems(player, TABLE, 1);
 				if ((getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -113,12 +113,12 @@ public class Q00251_NoSecrets extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -127,16 +127,16 @@ public class Q00251_NoSecrets extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "30201-05.htm";
 				}
-				else if ((st.isCond(2)) && (getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
+				else if ((qs.isCond(2)) && (getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
 				{
 					htmltext = "30201-04.htm";
 					giveAdena(player, 313355, true);
 					addExpAndSp(player, 56787, 160578);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,7 +27,7 @@ public class ExPledgeCount implements IClientOutgoingPacket
 {
 	private final int _count;
 	
-	public ExPledgeCount(L2Clan clan)
+	public ExPledgeCount(Clan clan)
 	{
 		_count = clan.getOnlineMembersCount();
 	}

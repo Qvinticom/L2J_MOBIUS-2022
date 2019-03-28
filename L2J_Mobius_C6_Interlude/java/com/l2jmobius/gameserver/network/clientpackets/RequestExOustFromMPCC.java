@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author -Wooden- D0 0F 00 5A 00 77 00 65 00 72 00 67 00 00 00
  */
-public final class RequestExOustFromMPCC extends L2GameClientPacket
+public final class RequestExOustFromMPCC extends GameClientPacket
 {
 	private String _name;
 	
@@ -36,10 +36,10 @@ public final class RequestExOustFromMPCC extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if ((target != null) && target.isInParty() && activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getChannelLeader().equals(activeChar))
+		if ((target != null) && target.isInParty() && player.isInParty() && player.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getChannelLeader().equals(player))
 		{
 			target.getParty().getCommandChannel().removeParty(target.getParty());
 			
@@ -50,7 +50,7 @@ public final class RequestExOustFromMPCC extends L2GameClientPacket
 		}
 		else
 		{
-			activeChar.sendMessage("Incorrect Target");
+			player.sendMessage("Incorrect Target");
 		}
 	}
 }

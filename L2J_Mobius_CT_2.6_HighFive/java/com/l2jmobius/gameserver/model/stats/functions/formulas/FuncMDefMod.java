@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.stats.functions.formulas;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
@@ -42,12 +42,12 @@ public class FuncMDefMod extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		double value = initVal;
 		if (effector.isPlayer())
 		{
-			final L2PcInstance p = effector.getActingPlayer();
+			final PlayerInstance p = effector.getActingPlayer();
 			if (!p.getInventory().isPaperdollSlotEmpty(Inventory.PAPERDOLL_LFINGER))
 			{
 				value -= p.getTemplate().getBaseDefBySlot(p.isTransformed() ? p.getTransformation().getBaseDefBySlot(p, Inventory.PAPERDOLL_LFINGER) : Inventory.PAPERDOLL_LFINGER);

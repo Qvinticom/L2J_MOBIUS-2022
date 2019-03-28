@@ -25,9 +25,9 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -59,7 +59,7 @@ public final class Hardin extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = getHtmlMessage(player);
 		if (htmltext != null)
@@ -151,7 +151,7 @@ public final class Hardin extends AbstractNpcAI
 			}
 			// Adjustments
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-			for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+			for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
 			{
 				player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 			}
@@ -173,13 +173,13 @@ public final class Hardin extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final String htmltext = getHtmlMessage(player);
 		return htmltext == null ? "33870-01.html" : htmltext;
 	}
 	
-	private String getHtmlMessage(L2PcInstance player)
+	private String getHtmlMessage(PlayerInstance player)
 	{
 		if (player.getRace() == Race.ERTHEIA)
 		{

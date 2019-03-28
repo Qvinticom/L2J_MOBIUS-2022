@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="15200" level="101" type="L2EffectPoint" name="Death Gate">
+	<npc id="15200" level="101" type="EffectPoint" name="Death Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -32,7 +32,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="15201" level="103" type="L2EffectPoint" name="Death Gate">
+	<npc id="15201" level="103" type="EffectPoint" name="Death Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -64,7 +64,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="15202" level="105" type="L2EffectPoint" name="Death Gate">
+	<npc id="15202" level="105" type="EffectPoint" name="Death Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -96,7 +96,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="15203" level="99" type="L2Servitor" name="Burning Mechanic Golem">
+	<npc id="15203" level="99" type="Servitor" name="Burning Mechanic Golem">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -122,7 +122,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="15204" level="101" type="L2Servitor" name="Burning Mechanic Golem">
+	<npc id="15204" level="101" type="Servitor" name="Burning Mechanic Golem">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -148,7 +148,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="15205" level="103" type="L2Servitor" name="Burning Mechanic Golem">
+	<npc id="15205" level="103" type="Servitor" name="Burning Mechanic Golem">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -174,7 +174,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="15206" level="105" type="L2Servitor" name="Burning Mechanic Golem">
+	<npc id="15206" level="105" type="Servitor" name="Burning Mechanic Golem">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -200,7 +200,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="15207" level="99" type="L2Pet" name="Discarded Wizard's Soul">
+	<npc id="15207" level="99" type="Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="1" /> <!-- Curse from Deadland -->
@@ -234,7 +234,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15208" level="101" type="L2Pet" name="Discarded Wizard's Soul">
+	<npc id="15208" level="101" type="Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="2" /> <!-- Curse from Deadland -->
@@ -268,7 +268,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15209" level="103" type="L2Pet" name="Discarded Wizard's Soul">
+	<npc id="15209" level="103" type="Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="3" /> <!-- Curse from Deadland -->
@@ -302,7 +302,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15210" level="105" type="L2Pet" name="Discarded Wizard's Soul">
+	<npc id="15210" level="105" type="Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="4" /> <!-- Curse from Deadland -->
@@ -336,7 +336,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15211" level="85" type="L2Npc" name="Dominant Flag">
+	<npc id="15211" level="85" type="Npc" name="Dominant Flag">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -355,7 +355,7 @@
 			<height normal="88.8" />
 		</collision>
 	</npc>
-	<npc id="15212" level="85" type="L2Npc" name="Cursed Man">
+	<npc id="15212" level="85" type="Npc" name="Cursed Man">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -374,7 +374,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15213" level="85" type="L2Npc" name="Cursed Man">
+	<npc id="15213" level="85" type="Npc" name="Cursed Man">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -393,7 +393,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="15214" level="85" type="L2Npc" name="Reanimated Man">
+	<npc id="15214" level="85" type="Npc" name="Reanimated Man">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -412,7 +412,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="15215" level="85" type="L2Npc" name="Reanimated Man">
+	<npc id="15215" level="85" type="Npc" name="Reanimated Man">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -431,7 +431,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="15216" level="85" type="L2Npc" name="Discarded Wizard's Soul">
+	<npc id="15216" level="85" type="Npc" name="Discarded Wizard's Soul">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -450,7 +450,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15217" level="85" type="L2Npc" name="Discarded Wizard's Soul">
+	<npc id="15217" level="85" type="Npc" name="Discarded Wizard's Soul">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -469,7 +469,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15218" level="85" type="L2Npc" name="Death Gate">
+	<npc id="15218" level="85" type="Npc" name="Death Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -488,7 +488,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="15219" level="85" type="L2Npc" name="Death Gate">
+	<npc id="15219" level="85" type="Npc" name="Death Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -507,7 +507,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="15220" level="85" type="L2Npc" name="Commando Cat">
+	<npc id="15220" level="85" type="Npc" name="Commando Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -526,7 +526,7 @@
 			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15221" level="85" type="L2Npc" name="Commando Cat">
+	<npc id="15221" level="85" type="Npc" name="Commando Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -545,7 +545,7 @@
 			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15222" level="85" type="L2Npc" name="Commando Cat">
+	<npc id="15222" level="85" type="Npc" name="Commando Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -564,7 +564,7 @@
 			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15223" level="85" type="L2Npc" name="Commando Cat">
+	<npc id="15223" level="85" type="Npc" name="Commando Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -583,7 +583,7 @@
 			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15224" level="85" type="L2Npc" name="Commando Cat">
+	<npc id="15224" level="85" type="Npc" name="Commando Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -602,7 +602,7 @@
 			<height normal="16.75" />
 		</collision>
 	</npc>
-	<npc id="15225" level="85" type="L2Npc" name="Witch Cat">
+	<npc id="15225" level="85" type="Npc" name="Witch Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -622,7 +622,7 @@
 			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="15226" level="85" type="L2Npc" name="Witch Cat">
+	<npc id="15226" level="85" type="Npc" name="Witch Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -642,7 +642,7 @@
 			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="15227" level="85" type="L2Npc" name="Witch Cat">
+	<npc id="15227" level="85" type="Npc" name="Witch Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -662,7 +662,7 @@
 			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="15228" level="85" type="L2Npc" name="Witch Cat">
+	<npc id="15228" level="85" type="Npc" name="Witch Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -682,7 +682,7 @@
 			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="15229" level="85" type="L2Npc" name="Witch Cat">
+	<npc id="15229" level="85" type="Npc" name="Witch Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -702,7 +702,7 @@
 			<height normal="15.9" />
 		</collision>
 	</npc>
-	<npc id="15230" level="85" type="L2Npc" name="Unicorn Lancer">
+	<npc id="15230" level="85" type="Npc" name="Unicorn Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -721,7 +721,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15231" level="85" type="L2Npc" name="Unicorn Lancer">
+	<npc id="15231" level="85" type="Npc" name="Unicorn Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -740,7 +740,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15232" level="85" type="L2Npc" name="Unicorn Lancer">
+	<npc id="15232" level="85" type="Npc" name="Unicorn Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -759,7 +759,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15233" level="85" type="L2Npc" name="Unicorn Lancer">
+	<npc id="15233" level="85" type="Npc" name="Unicorn Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -778,7 +778,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15234" level="85" type="L2Npc" name="Unicorn Lancer">
+	<npc id="15234" level="85" type="Npc" name="Unicorn Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -797,7 +797,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15235" level="85" type="L2Npc" name="Unicorn Cherub">
+	<npc id="15235" level="85" type="Npc" name="Unicorn Cherub">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -817,7 +817,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15236" level="85" type="L2Npc" name="Unicorn Cherub">
+	<npc id="15236" level="85" type="Npc" name="Unicorn Cherub">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -837,7 +837,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15237" level="85" type="L2Npc" name="Unicorn Cherub">
+	<npc id="15237" level="85" type="Npc" name="Unicorn Cherub">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -857,7 +857,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15238" level="85" type="L2Npc" name="Unicorn Cherub">
+	<npc id="15238" level="85" type="Npc" name="Unicorn Cherub">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -877,7 +877,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15239" level="85" type="L2Npc" name="Unicorn Cherub">
+	<npc id="15239" level="85" type="Npc" name="Unicorn Cherub">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -897,7 +897,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="15240" level="85" type="L2Npc" name="Soul Specter">
+	<npc id="15240" level="85" type="Npc" name="Soul Specter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -916,7 +916,7 @@
 			<height normal="28.6" />
 		</collision>
 	</npc>
-	<npc id="15241" level="85" type="L2Npc" name="Soul Specter">
+	<npc id="15241" level="85" type="Npc" name="Soul Specter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -935,7 +935,7 @@
 			<height normal="28.6" />
 		</collision>
 	</npc>
-	<npc id="15242" level="85" type="L2Npc" name="Soul Specter">
+	<npc id="15242" level="85" type="Npc" name="Soul Specter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -954,7 +954,7 @@
 			<height normal="28.6" />
 		</collision>
 	</npc>
-	<npc id="15243" level="85" type="L2Npc" name="Soul Specter">
+	<npc id="15243" level="85" type="Npc" name="Soul Specter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -973,7 +973,7 @@
 			<height normal="28.6" />
 		</collision>
 	</npc>
-	<npc id="15244" level="85" type="L2Npc" name="Soul Specter">
+	<npc id="15244" level="85" type="Npc" name="Soul Specter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -992,7 +992,7 @@
 			<height normal="28.6" />
 		</collision>
 	</npc>
-	<npc id="15245" level="85" type="L2Npc" name="Banshee Queen">
+	<npc id="15245" level="85" type="Npc" name="Banshee Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1012,7 +1012,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15246" level="85" type="L2Npc" name="Banshee Queen">
+	<npc id="15246" level="85" type="Npc" name="Banshee Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1032,7 +1032,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15247" level="85" type="L2Npc" name="Banshee Queen">
+	<npc id="15247" level="85" type="Npc" name="Banshee Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1052,7 +1052,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15248" level="85" type="L2Npc" name="Banshee Queen">
+	<npc id="15248" level="85" type="Npc" name="Banshee Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1072,7 +1072,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15249" level="85" type="L2Npc" name="Banshee Queen">
+	<npc id="15249" level="85" type="Npc" name="Banshee Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

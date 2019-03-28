@@ -18,10 +18,10 @@ package ai.areas.TalkingIsland;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -44,16 +44,16 @@ public final class YeSagiraGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc != null) && !npc.isDead())
 		{
 			if (!npc.isInCombat())
 			{
-				final List<L2MonsterInstance> nearbyMonsters = L2World.getInstance().getVisibleObjectsInRange(npc, L2MonsterInstance.class, 1000);
+				final List<MonsterInstance> nearbyMonsters = World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 1000);
 				if (!nearbyMonsters.isEmpty())
 				{
-					final L2MonsterInstance monster = nearbyMonsters.get(getRandom(nearbyMonsters.size()));
+					final MonsterInstance monster = nearbyMonsters.get(getRandom(nearbyMonsters.size()));
 					if ((monster != null) && !monster.isDead() && !monster.isInCombat())
 					{
 						npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
@@ -66,7 +66,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsInvul(true);
 		startQuestTimer("GUARD_AGGRO", 5000, npc, null);

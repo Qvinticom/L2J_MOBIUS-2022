@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * sample 5F 01 00 00 00 format cdd
  */
-public final class RequestAnswerJoinAlly extends L2GameClientPacket
+public final class RequestAnswerJoinAlly extends GameClientPacket
 {
 	private int _response;
 	
@@ -36,14 +36,14 @@ public final class RequestAnswerJoinAlly extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance requestor = activeChar.getRequest().getPartner();
+		final PlayerInstance requestor = player.getRequest().getPartner();
 		
 		if (requestor == null)
 		{
@@ -52,7 +52,7 @@ public final class RequestAnswerJoinAlly extends L2GameClientPacket
 		
 		if (_response == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DID_NOT_RESPOND_TO_ALLY_INVITATION);
+			player.sendPacket(SystemMessageId.YOU_DID_NOT_RESPOND_TO_ALLY_INVITATION);
 			requestor.sendPacket(SystemMessageId.NO_RESPONSE_TO_ALLY_INVITATION);
 		}
 		else
@@ -62,21 +62,21 @@ public final class RequestAnswerJoinAlly extends L2GameClientPacket
 				return; // hax
 			}
 			
-			final L2Clan clan = requestor.getClan();
+			final Clan clan = requestor.getClan();
 			// we must double check this cause of hack
-			if (clan.checkAllyJoinCondition(requestor, activeChar))
+			if (clan.checkAllyJoinCondition(requestor, player))
 			{
 				// TODO: Need correct message id
 				requestor.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_INVITING_FRIEND);
-				activeChar.sendPacket(SystemMessageId.YOU_ACCEPTED_ALLIANCE);
-				activeChar.getClan().setAllyId(clan.getAllyId());
-				activeChar.getClan().setAllyName(clan.getAllyName());
-				activeChar.getClan().setAllyPenaltyExpiryTime(0, 0);
-				activeChar.getClan().setAllyCrest(clan.getAllyCrestId());
-				activeChar.getClan().updateClanInDB();
+				player.sendPacket(SystemMessageId.YOU_ACCEPTED_ALLIANCE);
+				player.getClan().setAllyId(clan.getAllyId());
+				player.getClan().setAllyName(clan.getAllyName());
+				player.getClan().setAllyPenaltyExpiryTime(0, 0);
+				player.getClan().setAllyCrest(clan.getAllyCrestId());
+				player.getClan().updateClanInDB();
 			}
 		}
 		
-		activeChar.getRequest().onRequestResponse();
+		player.getRequest().onRequestResponse();
 	}
 }

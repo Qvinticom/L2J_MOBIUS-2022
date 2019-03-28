@@ -20,8 +20,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -52,9 +52,9 @@ public class PcPoint implements Runnable
 	public void run()
 	{
 		int score = 0;
-		for (L2PcInstance activeChar : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
-			if ((activeChar.isOnline() == 1) && (activeChar.getLevel() > Config.PCB_MIN_LEVEL) && !activeChar.isInOfflineMode())
+			if ((player.isOnline() == 1) && (player.getLevel() > Config.PCB_MIN_LEVEL) && !player.isInOfflineMode())
 			{
 				score = Rnd.get(Config.PCB_POINT_MIN, Config.PCB_POINT_MAX);
 				
@@ -62,23 +62,23 @@ public class PcPoint implements Runnable
 				{
 					score *= 2;
 					
-					activeChar.addPcBangScore(score);
+					player.addPcBangScore(score);
 					
 					SystemMessage sm = new SystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_GOT_$51_GLASSES_PC);
 					sm.addNumber(score);
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 					
-					activeChar.updatePcBangWnd(score, true, true);
+					player.updatePcBangWnd(score, true, true);
 				}
 				else
 				{
-					activeChar.addPcBangScore(score);
+					player.addPcBangScore(score);
 					
 					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_RECEVIED_$51_GLASSES_PC);
 					sm.addNumber(score);
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 					
-					activeChar.updatePcBangWnd(score, true, false);
+					player.updatePcBangWnd(score, true, false);
 				}
 			}
 		}

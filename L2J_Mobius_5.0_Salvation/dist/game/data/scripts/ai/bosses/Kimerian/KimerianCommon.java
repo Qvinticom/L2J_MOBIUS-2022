@@ -20,12 +20,12 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -83,7 +83,7 @@ public final class KimerianCommon extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -92,7 +92,7 @@ public final class KimerianCommon extends AbstractInstance
 			{
 				case "HELPER_TIME_ACTION":
 				{
-					player = npc.getVariables().getObject("PC_INSTANCE", L2PcInstance.class);
+					player = npc.getVariables().getObject("PC_INSTANCE", PlayerInstance.class);
 					if (player != null)
 					{
 						final double distance = npc.calculateDistance2D(player);
@@ -107,7 +107,7 @@ public final class KimerianCommon extends AbstractInstance
 						}
 						else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
 						{
-							final L2Character monster = (L2Character) player.getTarget();
+							final Creature monster = (Creature) player.getTarget();
 							if ((monster != null) && monster.isMonster() && player.isInCombat())
 							{
 								addAttackDesire(npc, monster);
@@ -137,7 +137,7 @@ public final class KimerianCommon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final Instance instance = npc.getInstanceWorld();
@@ -203,7 +203,7 @@ public final class KimerianCommon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -219,14 +219,14 @@ public final class KimerianCommon extends AbstractInstance
 					
 					for (int i = 0; i < 5; i++)
 					{
-						final L2Npc ghost = addSpawn(KIMERIAN_GHOST, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
+						final Npc ghost = addSpawn(KIMERIAN_GHOST, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
 						addAttackPlayerDesire(ghost, player, 23);
 					}
 					
 					npc.disableCoreAI(true);
 					npc.breakAttack();
 					npc.breakCast();
-					((L2Attackable) npc).clearAggroList();
+					((Attackable) npc).clearAggroList();
 					
 					getTimers().addTimer("KIMERIAN_INVUL_START", 6000, n ->
 					{
@@ -240,7 +240,7 @@ public final class KimerianCommon extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -261,7 +261,7 @@ public final class KimerianCommon extends AbstractInstance
 				case KIMERIAN:
 				{
 					instance.finishInstance(5);
-					final L2Npc kimerian = addSpawn(KIMERIAN_DEAD, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+					final Npc kimerian = addSpawn(KIMERIAN_DEAD, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 					final Location loc = Util.getRandomPosition(kimerian, 500, 500);
 					kimerian.setInvisible(true);
 					playSound(killer, "RM01_S");
@@ -276,7 +276,7 @@ public final class KimerianCommon extends AbstractInstance
 					getTimers().addTimer("KIMERIAN_SPAWN_DEFKA", 7000, t ->
 					{
 						kimerian.deleteMe();
-						final L2Npc noeti = addSpawn(NOETI_KASHERON_LEAVE, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+						final Npc noeti = addSpawn(NOETI_KASHERON_LEAVE, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 						getTimers().addTimer("NOETI_SAY2", 3000, n -> noeti.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.UNFORTUNATELY_THEY_RAN_AWAY));
 					});
 					break;
@@ -288,7 +288,7 @@ public final class KimerianCommon extends AbstractInstance
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
@@ -297,7 +297,7 @@ public final class KimerianCommon extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -323,7 +323,7 @@ public final class KimerianCommon extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (npc.getId())
@@ -349,8 +349,8 @@ public final class KimerianCommon extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final StatsSet npcParams = npc.getParameters();
 		final StatsSet npcVars = npc.getVariables();
 		final Instance instance = npc.getInstanceWorld();
@@ -362,7 +362,7 @@ public final class KimerianCommon extends AbstractInstance
 				case FAIRY_REBEL:
 				case NEOMI_KASHERON:
 				{
-					if (creature.isPlayer() && (npcVars.getObject("PC_INSTANCE", L2PcInstance.class) == null))
+					if (creature.isPlayer() && (npcVars.getObject("PC_INSTANCE", PlayerInstance.class) == null))
 					{
 						npcVars.set("PC_INSTANCE", creature.getActingPlayer());
 						getTimers().addRepeatingTimer("HELPER_TIME_ACTION", 2000, npc, null);
@@ -427,7 +427,7 @@ public final class KimerianCommon extends AbstractInstance
 		}
 	}
 	
-	private void spawnHollow(L2Npc npc, L2PcInstance player, boolean isHollow)
+	private void spawnHollow(Npc npc, PlayerInstance player, boolean isHollow)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		
@@ -435,7 +435,7 @@ public final class KimerianCommon extends AbstractInstance
 		{
 			if (isHollow)
 			{
-				final L2Npc kimerian = addSpawn(KIMERIAN_HOLLOW, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
+				final Npc kimerian = addSpawn(KIMERIAN_HOLLOW, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
 				kimerian.setTargetable(false);
 				kimerian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_RIDICULOUS_YOU_THINK_YOU_CAN_FIND_ME);
 				getTimers().addTimer("KIMERIAN_HOLLOW_SAY_2", 3000, n -> kimerian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THEN_TRY_HA_HA_HA));
@@ -444,7 +444,7 @@ public final class KimerianCommon extends AbstractInstance
 			}
 			else
 			{
-				final L2Npc kimerian = addSpawn(KIMERIAN_HOLLOW_2, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
+				final Npc kimerian = addSpawn(KIMERIAN_HOLLOW_2, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, player), false, 0, false, instance.getId());
 				kimerian.setTargetable(false);
 				kimerian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_RE_STILL_TRYING);
 				getTimers().addTimer("KIMERIAN_HOLLOW_SAY_2", 3000, n -> kimerian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_HA_HA_HA));

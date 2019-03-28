@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -33,7 +33,7 @@ public class ExShuttleGetOff implements IClientOutgoingPacket
 	private final int _y;
 	private final int _z;
 	
-	public ExShuttleGetOff(L2PcInstance player, L2ShuttleInstance shuttle, int x, int y, int z)
+	public ExShuttleGetOff(PlayerInstance player, ShuttleInstance shuttle, int x, int y, int z)
 	{
 		_playerObjectId = player.getObjectId();
 		_shuttleObjectId = shuttle.getObjectId();

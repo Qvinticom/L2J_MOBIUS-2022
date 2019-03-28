@@ -16,26 +16,26 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Duel;
 
-public class NpcStatus extends CharStatus
+public class NpcStatus extends CreatureStatus
 {
-	public NpcStatus(L2Npc activeChar)
+	public NpcStatus(Npc activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public void reduceHp(double value, L2Character attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true, false, false);
 	}
 	
 	@Override
-	public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
 	{
 		if (getActiveChar().isDead())
 		{
@@ -44,7 +44,7 @@ public class NpcStatus extends CharStatus
 		
 		if (attacker != null)
 		{
-			final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
 			if ((attackerPlayer != null) && attackerPlayer.isInDuel())
 			{
 				attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
@@ -58,8 +58,8 @@ public class NpcStatus extends CharStatus
 	}
 	
 	@Override
-	public L2Npc getActiveChar()
+	public Npc getActiveChar()
 	{
-		return (L2Npc) super.getActiveChar();
+		return (Npc) super.getActiveChar();
 	}
 }

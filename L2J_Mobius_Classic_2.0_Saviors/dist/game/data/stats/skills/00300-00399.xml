@@ -2564,7 +2564,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -2577,7 +2577,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
 				<minDamage>1</minDamage>

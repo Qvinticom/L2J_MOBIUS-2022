@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -36,13 +36,13 @@ public class Harvester implements IItemHandler
 	{
 		5125
 	};
-	L2PcInstance _activeChar;
-	L2MonsterInstance _target;
+	PlayerInstance _player;
+	MonsterInstance _target;
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance _item)
+	public void useItem(Playable playable, ItemInstance _item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -52,23 +52,23 @@ public class Harvester implements IItemHandler
 			return;
 		}
 		
-		_activeChar = (L2PcInstance) playable;
-		if ((_activeChar.getTarget() == null) || !(_activeChar.getTarget() instanceof L2MonsterInstance))
+		_player = (PlayerInstance) playable;
+		if ((_player.getTarget() == null) || !(_player.getTarget() instanceof MonsterInstance))
 		{
-			_activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		_target = (L2MonsterInstance) _activeChar.getTarget();
+		_target = (MonsterInstance) _player.getTarget();
 		if ((_target == null) || !_target.isDead())
 		{
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(2098, 1); // harvesting skill
-		_activeChar.useMagic(skill, false, false);
+		final Skill skill = SkillTable.getInstance().getInfo(2098, 1); // harvesting skill
+		_player.useMagic(skill, false, false);
 	}
 	
 	@Override

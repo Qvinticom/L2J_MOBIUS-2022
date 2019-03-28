@@ -16,8 +16,8 @@
  */
 package quests.Q10464_BePreparedForAnything;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -51,10 +51,10 @@ public final class Q10464_BePreparedForAnything extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -70,14 +70,14 @@ public final class Q10464_BePreparedForAnything extends Quest
 			}
 			case "33864-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, MAGIC_PIN, 1);
 				htmltext = event;
 				break;
 			}
 			case "32610-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					if (!hasQuestItems(player, LEATHER_BELT))
 					{
@@ -89,16 +89,16 @@ public final class Q10464_BePreparedForAnything extends Quest
 			}
 			case "32610-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32610-04.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_024_belt_01.htm", TutorialShowHtml.LARGE_WINDOW));
 					htmltext = event;
@@ -107,18 +107,18 @@ public final class Q10464_BePreparedForAnything extends Quest
 			}
 			case "32610-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33864-07.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 781_410, 187);
@@ -133,12 +133,12 @@ public final class Q10464_BePreparedForAnything extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -150,15 +150,15 @@ public final class Q10464_BePreparedForAnything extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = npc.getId() == PATERSON ? "33864-05.html" : "32610-01.html";
 				}
-				else if (st.isCond(2) && (npc.getId() == OLF_KANORE))
+				else if (qs.isCond(2) && (npc.getId() == OLF_KANORE))
 				{
 					htmltext = hasQuestItems(player, LEATHER_BELT_FINISHED) ? "32610-06.html" : "32610-05.html";
 				}
-				else if (st.isCond(3))
+				else if (qs.isCond(3))
 				{
 					htmltext = npc.getId() == PATERSON ? "33864-06.html" : "32610-08.html";
 				}

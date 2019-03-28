@@ -22,10 +22,10 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExMPCCPartymasterList;
 
 /**
@@ -34,25 +34,25 @@ import com.l2jmobius.gameserver.network.serverpackets.ExMPCCPartymasterList;
 public class RequestExMpccPartymasterList implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final MatchingRoom room = activeChar.getMatchingRoom();
+		final MatchingRoom room = player.getMatchingRoom();
 		if ((room != null) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
 		{
-			final Set<String> leadersName = room.getMembers().stream().map(L2PcInstance::getParty).filter(Objects::nonNull).map(L2Party::getLeader).map(L2PcInstance::getName).collect(Collectors.toSet());
-			activeChar.sendPacket(new ExMPCCPartymasterList(leadersName));
+			final Set<String> leadersName = room.getMembers().stream().map(PlayerInstance::getParty).filter(Objects::nonNull).map(Party::getLeader).map(PlayerInstance::getName).collect(Collectors.toSet());
+			player.sendPacket(new ExMPCCPartymasterList(leadersName));
 		}
 	}
 }

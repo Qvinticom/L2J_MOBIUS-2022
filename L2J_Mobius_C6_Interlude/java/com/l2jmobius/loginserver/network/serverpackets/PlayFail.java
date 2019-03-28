@@ -17,10 +17,9 @@
 package com.l2jmobius.loginserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
-public final class PlayFail extends L2LoginServerPacket
+public final class PlayFail extends LoginServerPacket
 {
 	public enum PlayFailReason
 	{

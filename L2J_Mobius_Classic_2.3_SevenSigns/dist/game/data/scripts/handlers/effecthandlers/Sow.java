@@ -19,14 +19,14 @@ package handlers.effecthandlers;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -48,15 +48,15 @@ public final class Sow extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effector.isPlayer() || !effected.isMonster())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
-		final L2MonsterInstance target = (L2MonsterInstance) effected;
+		final PlayerInstance player = effector.getActingPlayer();
+		final MonsterInstance target = (MonsterInstance) effected;
 		
 		if (target.isDead() || (!target.getTemplate().canBeSown()) || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
 		{
@@ -64,7 +64,7 @@ public final class Sow extends AbstractEffect
 		}
 		
 		// Consuming used seed
-		final L2Seed seed = target.getSeed();
+		final Seed seed = target.getSeed();
 		if (!player.destroyItemByItemId("Consume", seed.getSeedId(), 1, target, false))
 		{
 			return;
@@ -82,7 +82,7 @@ public final class Sow extends AbstractEffect
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party != null)
 		{
 			party.broadcastPacket(sm);
@@ -96,12 +96,12 @@ public final class Sow extends AbstractEffect
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
-	private static boolean calcSuccess(L2Character activeChar, L2Character target, L2Seed seed)
+	private static boolean calcSuccess(Creature creature, Creature target, Seed seed)
 	{
 		// TODO: check all the chances
 		final int minlevelSeed = seed.getLevel() - 5;
 		final int maxlevelSeed = seed.getLevel() + 5;
-		final int levelPlayer = activeChar.getLevel(); // Attacker Level
+		final int levelPlayer = creature.getLevel(); // Attacker Level
 		final int levelTarget = target.getLevel(); // target Level
 		int basicSuccess = seed.isAlternative() ? 20 : 90;
 		

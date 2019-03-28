@@ -18,9 +18,9 @@ package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 public class SupportMagic implements IBypassHandler
@@ -76,25 +76,25 @@ public class SupportMagic implements IBypassHandler
 	private static final int HASTE_LEVEL_2 = 40;
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!target.isNpc() || activeChar.isCursedWeaponEquipped())
+		if (!target.isNpc() || player.isCursedWeaponEquipped())
 		{
 			return false;
 		}
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			makeSupportMagic(activeChar, (L2Npc) target, true);
+			makeSupportMagic(player, (Npc) target, true);
 		}
 		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			makeSupportMagic(activeChar, (L2Npc) target, false);
+			makeSupportMagic(player, (Npc) target, false);
 		}
 		return true;
 	}
 	
-	private static void makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
+	private static void makeSupportMagic(PlayerInstance player, Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
 		if (isSummon && !player.hasServitor())

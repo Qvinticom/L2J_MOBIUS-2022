@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22300" level="82" type="L2Monster" name="Dolph's Minion">
+	<npc id="22300" level="82" type="Monster" name="Dolph's Minion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -49,7 +49,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22301" level="82" type="L2Monster" name="Terod">
+	<npc id="22301" level="82" type="Monster" name="Terod">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -104,7 +104,7 @@
 			<height normal="50.4" />
 		</collision>
 	</npc>
-	<npc id="22302" level="82" type="L2Monster" name="Darnels's Guardian">
+	<npc id="22302" level="82" type="Monster" name="Darnels's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -169,7 +169,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="22303" level="82" type="L2Monster" name="Guardian of the Square">
+	<npc id="22303" level="82" type="Monster" name="Guardian of the Square">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -225,7 +225,7 @@
 			<height normal="35.6" />
 		</collision>
 	</npc>
-	<npc id="22304" level="82" type="L2Monster" name="Guardian of the Emerald">
+	<npc id="22304" level="82" type="Monster" name="Guardian of the Emerald">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -281,7 +281,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="22305" level="82" type="L2Monster" name="Kechi's Captain">
+	<npc id="22305" level="82" type="Monster" name="Kechi's Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -341,7 +341,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="22306" level="82" type="L2Monster" name="Kechi's Captain">
+	<npc id="22306" level="82" type="Monster" name="Kechi's Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
@@ -413,7 +413,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="22307" level="82" type="L2Monster" name="Kechi's Captain">
+	<npc id="22307" level="82" type="Monster" name="Kechi's Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -480,7 +480,7 @@
 			<height normal="46.3765" />
 		</collision>
 	</npc>
-	<npc id="22308" level="82" type="L2Monster" name="Kechi's Guard">
+	<npc id="22308" level="82" type="Monster" name="Kechi's Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -540,7 +540,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="22309" level="82" type="L2Monster" name="Kechi's Guard">
+	<npc id="22309" level="82" type="Monster" name="Kechi's Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -600,7 +600,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="22310" level="82" type="L2Monster" name="Kechi's Guard">
+	<npc id="22310" level="82" type="Monster" name="Kechi's Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -667,7 +667,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="22311" level="83" type="L2Monster" name="Parme's Guardian">
+	<npc id="22311" level="83" type="Monster" name="Parme's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -733,7 +733,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="22312" level="83" type="L2Monster" name="Fafurion's Henchman">
+	<npc id="22312" level="83" type="Monster" name="Fafurion's Henchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -791,7 +791,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="22313" level="83" type="L2Monster" name="Garden Stakato">
+	<npc id="22313" level="83" type="Monster" name="Garden Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
@@ -855,7 +855,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22314" level="83" type="L2Monster" name="Garden Poison Moth">
+	<npc id="22314" level="83" type="Monster" name="Garden Poison Moth">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -914,7 +914,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22315" level="83" type="L2Monster" name="Garden Guard">
+	<npc id="22315" level="83" type="Monster" name="Garden Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -971,7 +971,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="22316" level="83" type="L2Monster" name="Garden Guardian Tree">
+	<npc id="22316" level="83" type="Monster" name="Garden Guardian Tree">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1027,7 +1027,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="22317" level="83" type="L2Monster" name="Garden Castalia">
+	<npc id="22317" level="83" type="Monster" name="Garden Castalia">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />

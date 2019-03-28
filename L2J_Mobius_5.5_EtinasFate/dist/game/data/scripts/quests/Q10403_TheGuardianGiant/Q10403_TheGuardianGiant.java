@@ -18,8 +18,8 @@ package quests.Q10403_TheGuardianGiant;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -63,10 +63,10 @@ public final class Q10403_TheGuardianGiant extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -82,15 +82,15 @@ public final class Q10403_TheGuardianGiant extends Quest
 			}
 			case "33866-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33866-07.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -105,12 +105,12 @@ public final class Q10403_TheGuardianGiant extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -119,7 +119,7 @@ public final class Q10403_TheGuardianGiant extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					case 2:
@@ -145,24 +145,24 @@ public final class Q10403_TheGuardianGiant extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted())
+		if ((qs != null) && qs.isStarted())
 		{
-			if (st.isCond(2) && (npc.getId() == AKUM))
+			if (qs.isCond(2) && (npc.getId() == AKUM))
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 				takeItems(killer, FRAGMENT, -1);
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WITH_THE_POWER_OF_THE_GODS_CEASE_YOUR_MASQUERADING_AS_OUR_MASTERS_OR_ELSE);
 			}
-			else if (st.isCond(1))
+			else if (qs.isCond(1))
 			{
 				if (giveItemRandomly(killer, FRAGMENT, 1, 90, 1, true))
 				{
-					st.setCond(2, true);
-					final L2Npc akum = addSpawn(AKUM, npc);
+					qs.setCond(2, true);
+					final Npc akum = addSpawn(AKUM, npc);
 					akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHO_IS_IT_THAT_THREATENS_US_YOU_WITH_THE_POWER_OF_THE_GODS_WHY_DO_YOU_COVET_OUR_POWERS);
 					addAttackPlayerDesire(akum, killer);
 				}

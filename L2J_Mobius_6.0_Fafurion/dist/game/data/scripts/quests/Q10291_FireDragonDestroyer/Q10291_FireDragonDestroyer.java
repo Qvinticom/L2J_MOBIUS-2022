@@ -18,8 +18,8 @@ package quests.Q10291_FireDragonDestroyer;
 
 import java.util.function.Function;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -52,17 +52,17 @@ public class Q10291_FireDragonDestroyer extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equals("31540-05.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, POOR_NECKLACE, 1);
 		}
 		
@@ -70,24 +70,24 @@ public class Q10291_FireDragonDestroyer extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		if (!player.isInParty())
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final Function<L2PcInstance, Boolean> rewardCheck = p ->
+		final Function<PlayerInstance, Boolean> rewardCheck = p ->
 		{
 			if (Util.checkIfInRange(8000, npc, p, false))
 			{
-				final QuestState st = getQuestState(p, false);
+				final QuestState qs = getQuestState(p, false);
 				
-				if ((st != null) && st.isCond(1) && hasQuestItems(p, POOR_NECKLACE))
+				if ((qs != null) && qs.isCond(1) && hasQuestItems(p, POOR_NECKLACE))
 				{
 					takeItems(p, POOR_NECKLACE, -1);
 					giveItems(p, VALOR_NECKLACE, 1);
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 			return true;
@@ -106,12 +106,12 @@ public class Q10291_FireDragonDestroyer extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -127,7 +127,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					if (hasQuestItems(player, POOR_NECKLACE))
 					{
@@ -139,13 +139,13 @@ public class Q10291_FireDragonDestroyer extends Quest
 						htmltext = "31540-07.html";
 					}
 				}
-				else if (st.isCond(2) && hasQuestItems(player, VALOR_NECKLACE))
+				else if (qs.isCond(2) && hasQuestItems(player, VALOR_NECKLACE))
 				{
 					htmltext = "31540-08.html";
 					giveAdena(player, 126549, true);
 					addExpAndSp(player, 717291, 172);
 					giveItems(player, VALAKAS_SLAYER_CIRCLET, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}

@@ -17,8 +17,8 @@
 package quests.Q00175_TheWayOfTheWarrior;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -82,7 +82,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -147,7 +147,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		if (npc.getId() == MOUNTAIN_WEREWOLF)
 		{
@@ -169,7 +169,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -294,7 +294,7 @@ public final class Q00175_TheWayOfTheWarrior extends Quest
 		return htmltext;
 	}
 	
-	public static void giveNewbieReward(L2PcInstance player)
+	public static void giveNewbieReward(PlayerInstance player)
 	{
 		final PlayerVariables vars = player.getVariables();
 		if ((player.getLevel() < 25) && !vars.getBoolean("NEWBIE_SHOTS", false))

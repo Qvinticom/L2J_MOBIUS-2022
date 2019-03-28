@@ -22,11 +22,11 @@ import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
@@ -48,7 +48,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		// 30%
 	};
 	
-	private L2Spawn _nurka;
+	private Spawn _nurka;
 	private final Map<Integer, Long> _damageToNurka = new HashMap<>();
 	private NpcHtmlMessage _messengerMsg;
 	
@@ -62,7 +62,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		
 		try
 		{
-			_nurka = new L2Spawn(BLOODY_LORD_NURKA);
+			_nurka = new Spawn(BLOODY_LORD_NURKA);
 			_nurka.setAmount(1);
 			_nurka.setRespawnDelay(10800);
 //			@formatter:off
@@ -102,14 +102,14 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		player.sendPacket(_messengerMsg);
 		return null;
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{
@@ -127,7 +127,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{
@@ -147,7 +147,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public L2Clan getWinner()
+	public Clan getWinner()
 	{
 		int winnerId = 0;
 		long counter = 0;

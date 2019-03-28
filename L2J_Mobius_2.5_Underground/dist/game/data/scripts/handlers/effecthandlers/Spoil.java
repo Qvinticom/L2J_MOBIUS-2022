@@ -20,10 +20,10 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -38,7 +38,7 @@ public final class Spoil extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
 		final double lvlModifier = Math.pow(1.3, lvlDifference);
@@ -65,7 +65,7 @@ public final class Spoil extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effected.isMonster() || effected.isDead())
 		{
@@ -73,7 +73,7 @@ public final class Spoil extends AbstractEffect
 			return;
 		}
 		
-		final L2MonsterInstance target = (L2MonsterInstance) effected;
+		final MonsterInstance target = (MonsterInstance) effected;
 		if (target.isSpoiled())
 		{
 			effector.sendPacket(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED);

@@ -16,12 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2ManufactureList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ManufactureList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 
-public final class RequestRecipeShopManageList extends L2GameClientPacket
+public final class RequestRecipeShopManageList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -32,7 +32,7 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -47,7 +47,7 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket
 		
 		if (player.getPrivateStoreType() != 0)
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
 			if (player.isSitting())
 			{
@@ -57,7 +57,7 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket
 		
 		if (player.getCreateList() == null)
 		{
-			player.setCreateList(new L2ManufactureList());
+			player.setCreateList(new ManufactureList());
 		}
 		
 		player.sendPacket(new RecipeShopManageList(player, true));

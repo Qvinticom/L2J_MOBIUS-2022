@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ClanMasteryData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ClanMasteryHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExPledgeMasteryInfo extends AbstractItemPacket
 {
-	final L2PcInstance _player;
+	final PlayerInstance _player;
 	
-	public ExPledgeMasteryInfo(L2PcInstance player)
+	public ExPledgeMasteryInfo(PlayerInstance player)
 	{
 		_player = player;
 	}

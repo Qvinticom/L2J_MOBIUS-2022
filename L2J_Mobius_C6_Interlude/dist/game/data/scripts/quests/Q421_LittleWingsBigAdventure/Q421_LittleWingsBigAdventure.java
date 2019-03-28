@@ -19,14 +19,14 @@ package quests.Q421_LittleWingsBigAdventure;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -65,7 +65,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -81,7 +81,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 				// Find the level of the flute.
 				for (int i = 3500; i < 3503; i++)
 				{
-					final L2ItemInstance item = player.getInventory().getItemByItemId(i);
+					final ItemInstance item = player.getInventory().getItemByItemId(i);
 					if ((item != null) && (item.getEnchantLevel() >= 55))
 					{
 						st.setState(State.STARTED);
@@ -99,7 +99,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		}
 		else if (event.equals("30747-02.htm"))
 		{
-			final L2Summon summon = player.getPet();
+			final Summon summon = player.getPet();
 			if (summon != null)
 			{
 				htmltext = (summon.getControlItemId() == st.getInt("summonOid")) ? "30747-04.htm" : "30747-03.htm";
@@ -107,7 +107,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		}
 		else if (event.equals("30747-05.htm"))
 		{
-			final L2Summon summon = player.getPet();
+			final Summon summon = player.getPet();
 			if ((summon == null) || (summon.getControlItemId() != st.getInt("summonOid")))
 			{
 				htmltext = "30747-06.htm";
@@ -125,7 +125,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -151,7 +151,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 					// Find the level of the hatchling.
 					for (int i = 3500; i < 3503; i++)
 					{
-						final L2ItemInstance item = player.getInventory().getItemByItemId(i);
+						final ItemInstance item = player.getInventory().getItemByItemId(i);
 						if ((item != null) && (item.getEnchantLevel() >= 55))
 						{
 							return "30610-04.htm";
@@ -179,7 +179,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 						}
 						else if (id == 2)
 						{
-							final L2Summon summon = player.getPet();
+							final Summon summon = player.getPet();
 							htmltext = (summon != null) ? ((summon.getControlItemId() == st.getInt("summonOid")) ? "30747-04.htm" : "30747-03.htm") : "30747-02.htm";
 						}
 						else if (id == 3)
@@ -192,7 +192,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 						}
 						else if (id == 63) // Did all trees, no more leaves.
 						{
-							final L2Summon summon = player.getPet();
+							final Summon summon = player.getPet();
 							if (summon == null)
 							{
 								return "30747-12.htm";
@@ -208,7 +208,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 						}
 						else if (id == 100) // Spoke with the Fairy.
 						{
-							final L2Summon summon = player.getPet();
+							final Summon summon = player.getPet();
 							if ((summon != null) && (summon.getControlItemId() == st.getInt("summonOid")))
 							{
 								return "30747-15.htm";
@@ -221,7 +221,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 							
 							for (int i = 3500; i < 3503; i++)
 							{
-								final L2ItemInstance item = player.getInventory().getItemByItemId(i);
+								final ItemInstance item = player.getInventory().getItemByItemId(i);
 								if ((item != null) && (item.getObjectId() == st.getInt("summonOid")))
 								{
 									st.takeItems(i, 1);
@@ -235,7 +235,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 							// Curse if the registered objectId is the wrong one (switch flutes).
 							htmltext = "30747-18.htm";
 							
-							final L2Skill skill = SkillTable.getInstance().getInfo(4167, 1);
+							final Skill skill = SkillTable.getInstance().getInfo(4167, 1);
 							if ((skill != null) && (player.getFirstEffect(skill) == null))
 							{
 								skill.getEffects(npc, player);
@@ -250,12 +250,12 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		// Minions scream no matter current quest state.
-		if (((L2MonsterInstance) npc).hasMinions())
+		if (((MonsterInstance) npc).hasMinions())
 		{
-			for (L2MonsterInstance ghost : ((L2MonsterInstance) npc).getSpawnedMinions())
+			for (MonsterInstance ghost : ((MonsterInstance) npc).getSpawnedMinions())
 			{
 				if (!ghost.isDead() && (Rnd.get(100) < 1))
 				{
@@ -306,16 +306,16 @@ public class Q421_LittleWingsBigAdventure extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
-		final L2Character originalKiller = isPet ? killer.getPet() : killer;
+		final Creature originalKiller = isPet ? killer.getPet() : killer;
 		
 		// Tree curses the killer.
 		if (Rnd.get(100) < 30)
 		{
 			if (originalKiller != null)
 			{
-				final L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
+				final Skill skill = SkillTable.getInstance().getInfo(4243, 1);
 				if ((skill != null) && (originalKiller.getFirstEffect(skill) == null))
 				{
 					skill.getEffects(npc, originalKiller);
@@ -326,7 +326,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		// Spawn 20 ghosts, attacking the killer.
 		for (int i = 0; i < 20; i++)
 		{
-			final L2Attackable newNpc = (L2Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), Rnd.get(65536), true, 300000);
+			final Attackable newNpc = (Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), Rnd.get(65536), true, 300000);
 			
 			newNpc.setRunning();
 			newNpc.addDamageHate(originalKiller, 0, 999);

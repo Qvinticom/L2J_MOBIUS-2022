@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class TutorialEnableClientEvent extends L2GameServerPacket
+public class TutorialEnableClientEvent extends GameServerPacket
 {
 	private int _eventId = 0;
 	

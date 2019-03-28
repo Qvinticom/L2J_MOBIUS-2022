@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
 import com.l2jmobius.gameserver.util.Util;
@@ -37,7 +37,7 @@ public final class RequestDeleteSentPost implements IClientIncomingPacket
 	int[] _msgIds = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int count = packet.readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
@@ -54,15 +54,15 @@ public final class RequestDeleteSentPost implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (_msgIds == null) || !Config.ALLOW_MAIL)
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || (_msgIds == null) || !Config.ALLOW_MAIL)
 		{
 			return;
 		}
 		
-		if (!activeChar.isInsideZone(ZoneId.PEACE))
+		if (!player.isInsideZone(ZoneId.PEACE))
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
@@ -75,9 +75,9 @@ public final class RequestDeleteSentPost implements IClientIncomingPacket
 			{
 				continue;
 			}
-			if (msg.getSenderId() != activeChar.getObjectId())
+			if (msg.getSenderId() != player.getObjectId())
 			{
-				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to delete not own post!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to delete not own post!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			

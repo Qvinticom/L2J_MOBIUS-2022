@@ -22,9 +22,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance.PunishLevel;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance.PunishLevel;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Flood protector implementation.
@@ -39,7 +39,7 @@ public final class FloodProtectorAction
 	/**
 	 * Client for this instance of flood protector.
 	 */
-	private final L2GameClient client;
+	private final GameClient client;
 	/**
 	 * Configuration of this instance of flood protector.
 	 */
@@ -70,7 +70,7 @@ public final class FloodProtectorAction
 	 * @param client for which flood protection is being created
 	 * @param config flood protector configuration
 	 */
-	public FloodProtectorAction(L2GameClient client, FloodProtectorConfig config)
+	public FloodProtectorAction(GameClient client, FloodProtectorConfig config)
 	{
 		super();
 		this.client = client;
@@ -87,7 +87,7 @@ public final class FloodProtectorAction
 	public boolean tryPerformAction(String command)
 	{
 		// Ignore flood protector for GM char
-		if ((client != null) && (client.getActiveChar() != null) && client.getActiveChar().isGM())
+		if ((client != null) && (client.getPlayer() != null) && client.getPlayer().isGM())
 		{
 			return true;
 		}
@@ -230,9 +230,9 @@ public final class FloodProtectorAction
 	 */
 	private void kickPlayer()
 	{
-		if (client.getActiveChar() != null)
+		if (client.getPlayer() != null)
 		{
-			client.getActiveChar().logout();
+			client.getPlayer().logout();
 		}
 		else
 		{
@@ -247,24 +247,24 @@ public final class FloodProtectorAction
 	 */
 	private void banChat()
 	{
-		if (client.getActiveChar() != null)
+		if (client.getPlayer() != null)
 		{
-			final L2PcInstance activeChar = client.getActiveChar();
+			final PlayerInstance player = client.getPlayer();
 			
 			long newChatBanTime = 60000; // 1 minute
-			if (activeChar.getPunishLevel() == PunishLevel.CHAT)
+			if (player.getPunishLevel() == PunishLevel.CHAT)
 			{
-				if (activeChar.getPunishTimer() <= (60000 * 3)) // if less then 3 minutes (MAX CHAT BAN TIME), add 1 minute
+				if (player.getPunishTimer() <= (60000 * 3)) // if less then 3 minutes (MAX CHAT BAN TIME), add 1 minute
 				{
-					newChatBanTime += activeChar.getPunishTimer();
+					newChatBanTime += player.getPunishTimer();
 				}
 				else
 				{
-					newChatBanTime = activeChar.getPunishTimer();
+					newChatBanTime = player.getPunishTimer();
 				}
 			}
 			
-			activeChar.setPunishLevel(PunishLevel.CHAT, newChatBanTime);
+			player.setPunishLevel(PunishLevel.CHAT, newChatBanTime);
 		}
 	}
 	
@@ -273,13 +273,13 @@ public final class FloodProtectorAction
 	 */
 	private void banAccount()
 	{
-		if (client.getActiveChar() != null)
+		if (client.getPlayer() != null)
 		{
-			client.getActiveChar().setPunishLevel(PunishLevel.ACC, config.PUNISHMENT_TIME);
+			client.getPlayer().setPunishLevel(PunishLevel.ACC, config.PUNISHMENT_TIME);
 			
-			LOGGER(client.getActiveChar().getName() + " banned for flooding");
+			LOGGER(client.getPlayer().getName() + " banned for flooding");
 			
-			client.getActiveChar().logout();
+			client.getPlayer().logout();
 		}
 		else
 		{
@@ -292,11 +292,11 @@ public final class FloodProtectorAction
 	 */
 	private void jailChar()
 	{
-		if (client.getActiveChar() != null)
+		if (client.getPlayer() != null)
 		{
-			client.getActiveChar().setPunishLevel(PunishLevel.JAIL, config.PUNISHMENT_TIME);
+			client.getPlayer().setPunishLevel(PunishLevel.JAIL, config.PUNISHMENT_TIME);
 			
-			LOGGER.warning(client.getActiveChar().getName() + " jailed for flooding");
+			LOGGER.warning(client.getPlayer().getName() + " jailed for flooding");
 		}
 		else
 		{
@@ -323,10 +323,10 @@ public final class FloodProtectorAction
 		{
 			case IN_GAME:
 			{
-				if (client.getActiveChar() != null)
+				if (client.getPlayer() != null)
 				{
-					StringUtil.append(output, client.getActiveChar().getName());
-					StringUtil.append(output, "(", String.valueOf(client.getActiveChar().getObjectId()), ") ");
+					StringUtil.append(output, client.getPlayer().getName());
+					StringUtil.append(output, "(", String.valueOf(client.getPlayer().getObjectId()), ") ");
 				}
 			}
 			case AUTHED:

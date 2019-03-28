@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -34,11 +34,11 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 	private final int _currentTemplateId;
 	private final Map<Integer, Long> _instanceTimes;
 	
-	public ExInzoneWaiting(L2PcInstance activeChar)
+	public ExInzoneWaiting(PlayerInstance player)
 	{
-		final Instance instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
+		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 		_currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
-		_instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);
+		_instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
 	}
 	
 	@Override

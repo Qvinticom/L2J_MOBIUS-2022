@@ -9,10 +9,10 @@ UPDATE `clanhall` SET `location` = 'BeastFarm' WHERE `id` = '63';
 
 -- Insert new NPCs
 INSERT IGNORE INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`hpreg`,`mpreg`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`armor`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`,`absorb_type`) VALUES
-	(75003,31366,'Cole',1,'Beast Manager',1,'NPC.a_traderD_Mhuman',8.00,25.30,70,'male','L2ClanHallManager',40,3862,3059,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
-	(75004,31537,'Tom',1,'Beast Keeper',1,'NPC.a_common_peopleC_Mhuman',10.00,24.00,70,'male','L2Doormen',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
-	(75005,31537,'Richard',1,'Beast Keeper',1,'NPC.a_common_peopleC_Mhuman',10.00,24.00,70,'male','L2Doormen',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
-	(75006,31537,'Harry',1,'Beast Keeper',1,'NPC.a_common_peopleC_Mhuman',10.00,24.00,70,'male','L2Doormen',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT');
+	(75003,31366,'Cole',1,'Beast Manager',1,'NPC.a_traderD_Mhuman',8.00,25.30,70,'male','ClanHallManager',40,3862,3059,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
+	(75004,31537,'Tom',1,'Beast Keeper',1,'NPC.a_common_peopleC_Mhuman',10.00,24.00,70,'male','Doorman',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
+	(75005,31537,'Richard',1,'Beast Keeper',1,'NPC.a_common_peopleC_Mhuman',10.00,24.00,70,'male','Doorman',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT'),
+	(75006,31537,'Harry',1,'Beast Keeper',1,'NPC.a_common_peopleC_Mhuman',10.00,24.00,70,'male','Doorman',40,3862,1493,11.85,2.78,40,43,30,21,20,10,0,0,1314,470,780,382,278,0,333,0,0,0,55,132,NULL,0,1,0,'LAST_HIT');
 
 -- Spawns
 INSERT IGNORE INTO `spawnlist` VALUES 
@@ -98,13 +98,13 @@ INSERT IGNORE INTO teleport VALUES
 
 -- Insert new NPCs
 INSERT IGNORE INTO `npc` (`id`,`idTemplate`,`name`,`serverSideName`,`title`,`serverSideTitle`,`class`,`collision_radius`,`collision_height`,`level`,`sex`,`type`,`attackrange`,`hp`,`mp`,`hpreg`,`mpreg`,`str`,`con`,`dex`,`int`,`wit`,`men`,`exp`,`sp`,`patk`,`pdef`,`matk`,`mdef`,`atkspd`,`aggro`,`matkspd`,`rhand`,`lhand`,`armor`,`walkspd`,`runspd`,`faction_id`,`faction_range`,`isUndead`,`absorb_level`,`absorb_type`) VALUES
-	(75007,21591,'Carrie',1,'Undead Matron',1,'Monster2.vampire_wizard',5.50,28.00,73,'female','L2ClanHallManager',40,4086,3059,13.43,3.09,40,43,30,21,20,10,0,0,1770,415,885,407,278,0,333,99,0,0,50,198,NULL,300,0,0,'LAST_HIT'),
-	(75008,21587,'Freddy',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','L2Doormen',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
-	(75009,21587,'Hannibal',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','L2Doormen',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
-	(75010,21587,'Jason',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','L2Doormen',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
-	(75011,21587,'Michael',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','L2Doormen',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
-	(75012,21587,'Matt',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','L2Doormen',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
-	(75013,21587,'Charles',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','L2Doormen',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT');
+	(75007,21591,'Carrie',1,'Undead Matron',1,'Monster2.vampire_wizard',5.50,28.00,73,'female','ClanHallManager',40,4086,3059,13.43,3.09,40,43,30,21,20,10,0,0,1770,415,885,407,278,0,333,99,0,0,50,198,NULL,300,0,0,'LAST_HIT'),
+	(75008,21587,'Freddy',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','Doorman',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
+	(75009,21587,'Hannibal',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','Doorman',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
+	(75010,21587,'Jason',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','Doorman',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
+	(75011,21587,'Michael',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','Doorman',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
+	(75012,21587,'Matt',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','Doorman',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT'),
+	(75013,21587,'Charles',1,'Undead Butler',1,'Monster2.vampire_soldier_20_bi',10.00,29.00,72,'male','Doorman',40,4013,1565,13.43,3.09,40,43,30,21,20,10,0,0,1710,406,849,399,278,0,333,234,0,0,66,209,NULL,300,0,0,'LAST_HIT');
 
 -- Spawns
 INSERT IGNORE INTO `spawnlist` VALUES 

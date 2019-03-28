@@ -17,9 +17,9 @@
 package quests.Q10404_KekropusLetterAHiddenMeaning;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -59,10 +59,10 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -77,9 +77,9 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 			}
 			case "33864-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					giveItems(player, SOE_FIELDS_OF_MASSACRE, 1);
 					htmltext = event;
 				}
@@ -87,9 +87,9 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 			}
 			case "33867-02.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -105,23 +105,23 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isStarted())
+		if (qs.isStarted())
 		{
-			if ((npc.getId() == PATERSON) && st.isCond(1))
+			if ((npc.getId() == PATERSON) && qs.isCond(1))
 			{
 				htmltext = "33864-01.html";
 			}
-			else if (st.isCond(2))
+			else if (qs.isCond(2))
 			{
 				htmltext = npc.getId() == PATERSON ? "33864-04.html" : "33867-01.html";
 			}
@@ -130,14 +130,14 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
-			final QuestState st = getQuestState(player, false);
+			final PlayerInstance player = creature.getActingPlayer();
+			final QuestState qs = getQuestState(player, false);
 			
-			if ((st != null) && st.isCond(2))
+			if ((qs != null) && qs.isCond(2))
 			{
 				showOnScreenMsg(player, NpcStringId.FIELDS_OF_MASSACRE_IS_A_GOOD_HUNTING_ZONE_FOR_LV_61_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}

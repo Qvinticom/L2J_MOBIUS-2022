@@ -23,7 +23,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -104,7 +104,7 @@ public class BoatGludinRune implements Runnable
 		new VehiclePathPoint(-95686, 150514, -3610, 150, 800)
 	};
 	
-	private final L2BoatInstance _boat;
+	private final BoatInstance _boat;
 	private int _cycle = 0;
 	private int _shoutCount = 0;
 	
@@ -135,7 +135,7 @@ public class BoatGludinRune implements Runnable
 	private final PlaySound GLUDIN_SOUND;
 	private final PlaySound RUNE_SOUND;
 	
-	public BoatGludinRune(L2BoatInstance boat)
+	public BoatGludinRune(BoatInstance boat)
 	{
 		_boat = boat;
 		
@@ -346,7 +346,7 @@ public class BoatGludinRune implements Runnable
 	
 	public static void main(String[] args)
 	{
-		final L2BoatInstance boat = BoatManager.getInstance().getNewBoat(3, -95686, 150514, -3610, 16723);
+		final BoatInstance boat = BoatManager.getInstance().getNewBoat(3, -95686, 150514, -3610, 16723);
 		if (boat != null)
 		{
 			boat.registerEngine(new BoatGludinRune(boat));

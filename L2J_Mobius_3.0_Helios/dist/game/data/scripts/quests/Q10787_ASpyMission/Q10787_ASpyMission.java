@@ -17,10 +17,10 @@
 package quests.Q10787_ASpyMission;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -59,7 +59,7 @@ public final class Q10787_ASpyMission extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -91,7 +91,7 @@ public final class Q10787_ASpyMission extends Quest
 						htmltext = "33994-03.html";
 					}
 					// @formatter:off
-					L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 150).stream()
+					World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 150).stream()
 					.filter(n -> (n.getId() == EMBRYO_PURIFIER))
 					.forEach(mob -> addAttackPlayerDesire(mob, player));
 					// @formatter:on
@@ -122,7 +122,7 @@ public final class Q10787_ASpyMission extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -156,7 +156,7 @@ public final class Q10787_ASpyMission extends Quest
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		if ((npc != null) && (npc.getId() == SUSPICIOUS_BOX) && event.equals("DESPAWN"))
 		{

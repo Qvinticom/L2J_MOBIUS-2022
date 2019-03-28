@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 public final class RequestReplySurrenderPledgeWar implements IClientIncomingPacket
 {
@@ -27,7 +27,7 @@ public final class RequestReplySurrenderPledgeWar implements IClientIncomingPack
 	private int _answer;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_reqName = packet.readS();
 		_answer = packet.readD();
@@ -35,14 +35,14 @@ public final class RequestReplySurrenderPledgeWar implements IClientIncomingPack
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		final L2PcInstance requestor = activeChar.getActiveRequester();
+		final PlayerInstance requestor = player.getActiveRequester();
 		if (requestor == null)
 		{
 			return;
@@ -50,12 +50,12 @@ public final class RequestReplySurrenderPledgeWar implements IClientIncomingPack
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), player.getClanId());
 		}
 		else
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
 		}
-		activeChar.onTransactionRequest(requestor);
+		player.onTransactionRequest(requestor);
 	}
 }

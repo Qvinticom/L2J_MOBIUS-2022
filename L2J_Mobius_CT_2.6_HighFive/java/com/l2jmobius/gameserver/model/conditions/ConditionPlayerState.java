@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.PlayerState;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -43,10 +43,10 @@ public class ConditionPlayerState extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final L2Character character = effector;
-		final L2PcInstance player = effector.getActingPlayer();
+		final Creature creature = effector;
+		final PlayerInstance player = effector.getActingPlayer();
 		switch (_check)
 		{
 			case RESTING:
@@ -59,11 +59,11 @@ public class ConditionPlayerState extends Condition
 			}
 			case MOVING:
 			{
-				return character.isMoving() == _required;
+				return creature.isMoving() == _required;
 			}
 			case RUNNING:
 			{
-				return character.isRunning() == _required;
+				return creature.isRunning() == _required;
 			}
 			case STANDING:
 			{
@@ -71,19 +71,19 @@ public class ConditionPlayerState extends Condition
 				{
 					return (_required != (player.isSitting() || player.isMoving()));
 				}
-				return (_required != character.isMoving());
+				return (_required != creature.isMoving());
 			}
 			case FLYING:
 			{
-				return (character.isFlying() == _required);
+				return (creature.isFlying() == _required);
 			}
 			case BEHIND:
 			{
-				return (character.isBehind(effected) == _required);
+				return (creature.isBehind(effected) == _required);
 			}
 			case FRONT:
 			{
-				return (character.isInFrontOf(effected) == _required);
+				return (creature.isInFrontOf(effected) == _required);
 			}
 			case CHAOTIC:
 			{

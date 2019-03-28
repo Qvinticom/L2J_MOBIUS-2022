@@ -18,21 +18,21 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.xml.AugmentationData;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Format:(ch) dddd
  * @author -Wooden-
  */
-public final class RequestRefine extends L2GameClientPacket
+public final class RequestRefine extends GameClientPacket
 {
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
@@ -51,47 +51,47 @@ public final class RequestRefine extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance targetItem = (L2ItemInstance) L2World.getInstance().findObject(_targetItemObjId);
-		final L2ItemInstance refinerItem = (L2ItemInstance) L2World.getInstance().findObject(_refinerItemObjId);
-		final L2ItemInstance gemstoneItem = (L2ItemInstance) L2World.getInstance().findObject(_gemstoneItemObjId);
+		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
+		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
+		final ItemInstance gemstoneItem = (ItemInstance) World.getInstance().findObject(_gemstoneItemObjId);
 		
-		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null) || (targetItem.getOwnerId() != activeChar.getObjectId()) || (refinerItem.getOwnerId() != activeChar.getObjectId()) || (gemstoneItem.getOwnerId() != activeChar.getObjectId()) || (activeChar.getLevel() < 46)) // must
-																																																																									// be
-																																																																									// lvl
-																																																																									// 46
+		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null) || (targetItem.getOwnerId() != player.getObjectId()) || (refinerItem.getOwnerId() != player.getObjectId()) || (gemstoneItem.getOwnerId() != player.getObjectId()) || (player.getLevel() < 46)) // must
+																																																																					// be
+																																																																					// lvl
+																																																																					// 46
 		{
-			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
-			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
+			player.sendPacket(new ExVariationResult(0, 0, 0));
+			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
 		
 		// unequip item
 		if (targetItem.isEquipped())
 		{
-			activeChar.disarmWeapons();
+			player.disarmWeapons();
 		}
 		
-		if (TryAugmentItem(activeChar, targetItem, refinerItem, gemstoneItem))
+		if (TryAugmentItem(player, targetItem, refinerItem, gemstoneItem))
 		{
 			final int stat12 = 0x0000FFFF & targetItem.getAugmentation().getAugmentationId();
 			final int stat34 = targetItem.getAugmentation().getAugmentationId() >> 16;
-			activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1));
-			activeChar.sendPacket(SystemMessageId.THE_ITEM_WAS_SUCCESSFULLY_AUGMENTED);
+			player.sendPacket(new ExVariationResult(stat12, stat34, 1));
+			player.sendPacket(SystemMessageId.THE_ITEM_WAS_SUCCESSFULLY_AUGMENTED);
 		}
 		else
 		{
-			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
-			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
+			player.sendPacket(new ExVariationResult(0, 0, 0));
+			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 		}
 	}
 	
-	boolean TryAugmentItem(L2PcInstance player, L2ItemInstance targetItem, L2ItemInstance refinerItem, L2ItemInstance gemstoneItem)
+	boolean TryAugmentItem(PlayerInstance player, ItemInstance targetItem, ItemInstance refinerItem, ItemInstance gemstoneItem)
 	{
 		if (targetItem.isAugmented() || targetItem.isWear())
 		{
@@ -129,7 +129,7 @@ public final class RequestRefine extends L2GameClientPacket
 			return false;
 		}
 		
-		if (player.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
 			return false;
@@ -167,13 +167,13 @@ public final class RequestRefine extends L2GameClientPacket
 		
 		// must be a weapon, must be > d grade
 		// TODO: can do better? : currently: using isdestroyable() as a check for hero / cursed weapons
-		if ((itemGrade < L2Item.CRYSTAL_C) || (itemType != L2Item.TYPE2_WEAPON) || !targetItem.isDestroyable())
+		if ((itemGrade < Item.CRYSTAL_C) || (itemType != Item.TYPE2_WEAPON) || !targetItem.isDestroyable())
 		{
 			return false;
 		}
 		
 		// player must be able to use augmentation
-		if ((player.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE) || player.isDead() || player.isParalyzed() || player.isFishing() || player.isSitting())
+		if ((player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE) || player.isDead() || player.isParalyzed() || player.isFishing() || player.isSitting())
 		{
 			return false;
 		}
@@ -183,7 +183,7 @@ public final class RequestRefine extends L2GameClientPacket
 		final int lifeStoneGrade = getLifeStoneGrade(lifeStoneId);
 		switch (itemGrade)
 		{
-			case L2Item.CRYSTAL_C:
+			case Item.CRYSTAL_C:
 			{
 				if ((player.getLevel() < 46) || (gemstoneItemId != 2130))
 				{
@@ -192,7 +192,7 @@ public final class RequestRefine extends L2GameClientPacket
 				modifyGemstoneCount = 20;
 				break;
 			}
-			case L2Item.CRYSTAL_B:
+			case Item.CRYSTAL_B:
 			{
 				if ((player.getLevel() < 52) || (gemstoneItemId != 2130))
 				{
@@ -201,7 +201,7 @@ public final class RequestRefine extends L2GameClientPacket
 				modifyGemstoneCount = 30;
 				break;
 			}
-			case L2Item.CRYSTAL_A:
+			case Item.CRYSTAL_A:
 			{
 				if ((player.getLevel() < 61) || (gemstoneItemId != 2131))
 				{
@@ -210,7 +210,7 @@ public final class RequestRefine extends L2GameClientPacket
 				modifyGemstoneCount = 20;
 				break;
 			}
-			case L2Item.CRYSTAL_S:
+			case Item.CRYSTAL_S:
 			{
 				if ((player.getLevel() < 76) || (gemstoneItemId != 2131))
 				{

@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariationCancel;
 import com.l2jmobius.gameserver.util.Util;
@@ -34,41 +34,41 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			return;
 		}
 		
-		if (item.getOwnerId() != activeChar.getObjectId())
+		if (item.getOwnerId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to destroy augment on item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
 		if (!item.isAugmented())
 		{
-			activeChar.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
+			player.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
 			return;
 		}
 		
 		if (item.isPvp() && !Config.ALT_ALLOW_AUGMENT_PVP_ITEMS)
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
@@ -138,6 +138,6 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 			}
 		}
 		
-		activeChar.sendPacket(new ExPutItemResultForVariationCancel(item, price));
+		player.sendPacket(new ExPutItemResultForVariationCancel(item, price));
 	}
 }

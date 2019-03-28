@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.MatchingRoomType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author jeremy
@@ -31,31 +31,30 @@ public class RequestExOustFromMpccRoom implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final MatchingRoom room = activeChar.getMatchingRoom();
+		final MatchingRoom room = player.getMatchingRoom();
 		
-		if ((room != null) && (room.getLeader() == activeChar) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
+		if ((room != null) && (room.getLeader() == player) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(_objectId);
+			final PlayerInstance target = World.getInstance().getPlayer(_objectId);
 			
-			if (player != null)
+			if (target != null)
 			{
-				room.deleteMember(player, true);
+				room.deleteMember(target, true);
 			}
 		}
 	}

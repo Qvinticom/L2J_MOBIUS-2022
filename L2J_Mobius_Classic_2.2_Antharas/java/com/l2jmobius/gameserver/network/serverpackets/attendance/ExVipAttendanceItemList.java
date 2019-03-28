@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.attendance;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -32,7 +32,7 @@ public class ExVipAttendanceItemList implements IClientOutgoingPacket
 	boolean _available;
 	int _index;
 	
-	public ExVipAttendanceItemList(L2PcInstance player)
+	public ExVipAttendanceItemList(PlayerInstance player)
 	{
 		final AttendanceInfoHolder attendanceInfo = player.getAttendanceInfo();
 		_available = attendanceInfo.isRewardAvailable();

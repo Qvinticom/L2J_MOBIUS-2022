@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
@@ -33,10 +33,10 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 public class AreaSummon implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		target = activeChar.getSummon();
+		final List<Creature> targetList = new ArrayList<>();
+		target = creature.getSummon();
 		if ((target == null) || !target.isServitor() || target.isDead())
 		{
 			return EMPTY_TARGET_LIST;
@@ -44,18 +44,18 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		if (onlyFirst)
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
 				target
 			};
 		}
 		
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
 		final int maxTargets = skill.getAffectLimit();
 		
-		L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, skill.getAffectRange(), obj ->
+		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, skill.getAffectRange(), obj ->
 		{
-			if (obj == activeChar)
+			if (obj == creature)
 			{
 				return;
 			}
@@ -65,7 +65,7 @@ public class AreaSummon implements ITargetTypeHandler
 				return;
 			}
 			
-			if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+			if (!Skill.checkForAreaOffensiveSkills(creature, obj, skill, srcInArena))
 			{
 				return;
 			}
@@ -83,12 +83,12 @@ public class AreaSummon implements ITargetTypeHandler
 			return EMPTY_TARGET_LIST;
 		}
 		
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.AREA_SUMMON;
+		return TargetType.AREA_SUMMON;
 	}
 }

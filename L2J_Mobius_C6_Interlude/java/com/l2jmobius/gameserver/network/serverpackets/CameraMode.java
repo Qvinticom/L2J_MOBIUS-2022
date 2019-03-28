@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class CameraMode extends L2GameServerPacket
+public class CameraMode extends GameServerPacket
 {
 	private final int _mode;
 	

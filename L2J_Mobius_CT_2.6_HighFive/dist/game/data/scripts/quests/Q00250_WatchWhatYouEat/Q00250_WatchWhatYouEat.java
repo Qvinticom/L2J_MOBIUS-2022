@@ -17,8 +17,8 @@
 package quests.Q00250_WatchWhatYouEat;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -63,12 +63,12 @@ public class Q00250_WatchWhatYouEat extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -77,15 +77,15 @@ public class Q00250_WatchWhatYouEat extends Quest
 		{
 			if (event.equalsIgnoreCase("32743-03.htm"))
 			{
-				st.startQuest();
+				qs.startQuest();
 			}
 			else if (event.equalsIgnoreCase("32743-end.htm"))
 			{
 				giveAdena(player, 135661, true);
 				addExpAndSp(player, 698334, 76369);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 			}
-			else if (event.equalsIgnoreCase("32743-22.html") && st.isCompleted())
+			else if (event.equalsIgnoreCase("32743-22.html") && qs.isCompleted())
 			{
 				htmltext = "32743-23.html";
 			}
@@ -94,7 +94,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == SALLY)
 		{
@@ -105,14 +105,14 @@ public class Q00250_WatchWhatYouEat extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
-		if (st.isStarted() && st.isCond(1))
+		if (qs.isStarted() && qs.isCond(1))
 		{
 			for (int[] mob : MOBS)
 			{
@@ -127,21 +127,21 @@ public class Q00250_WatchWhatYouEat extends Quest
 			}
 			if (hasQuestItems(player, MOBS[0][1]) && hasQuestItems(player, MOBS[1][1]) && hasQuestItems(player, MOBS[2][1]))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return null;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (npc.getId() == SALLY)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -150,11 +150,11 @@ public class Q00250_WatchWhatYouEat extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "32743-04.htm";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						if (hasQuestItems(player, MOBS[0][1]) && hasQuestItems(player, MOBS[1][1]) && hasQuestItems(player, MOBS[2][1]))
 						{

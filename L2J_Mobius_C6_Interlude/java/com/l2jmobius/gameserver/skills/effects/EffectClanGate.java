@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.skills.Env;
 /**
  * @author ZaKaX (Ghost @ L2D)
  */
-public class EffectClanGate extends L2Effect
+public class EffectClanGate extends Effect
 {
 	public EffectClanGate(Env env, EffectTemplate template)
 	{
@@ -37,14 +37,14 @@ public class EffectClanGate extends L2Effect
 	@Override
 	public void onStart()
 	{
-		getEffected().startAbnormalEffect(L2Character.ABNORMAL_EFFECT_MAGIC_CIRCLE);
-		if (getEffected() instanceof L2PcInstance)
+		getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_MAGIC_CIRCLE);
+		if (getEffected() instanceof PlayerInstance)
 		{
-			final L2Clan clan = ((L2PcInstance) getEffected()).getClan();
+			final Clan clan = ((PlayerInstance) getEffected()).getClan();
 			if (clan != null)
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
-				clan.broadcastToOtherOnlineMembers(msg, ((L2PcInstance) getEffected()));
+				clan.broadcastToOtherOnlineMembers(msg, ((PlayerInstance) getEffected()));
 			}
 		}
 	}
@@ -58,7 +58,7 @@ public class EffectClanGate extends L2Effect
 	@Override
 	public void onExit()
 	{
-		getEffected().stopAbnormalEffect(L2Character.ABNORMAL_EFFECT_MAGIC_CIRCLE);
+		getEffected().stopAbnormalEffect(Creature.ABNORMAL_EFFECT_MAGIC_CIRCLE);
 	}
 	
 	@Override

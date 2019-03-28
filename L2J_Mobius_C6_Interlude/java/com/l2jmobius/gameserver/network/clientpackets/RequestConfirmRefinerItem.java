@@ -16,19 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExConfirmVariationRefiner;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * Fromat(ch) dd
  * @author -Wooden-
  */
-public class RequestConfirmRefinerItem extends L2GameClientPacket
+public class RequestConfirmRefinerItem extends GameClientPacket
 {
 	private static final int GEMSTONE_D = 2130;
 	private static final int GEMSTONE_C = 2131;
@@ -46,9 +46,9 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		final L2ItemInstance targetItem = (L2ItemInstance) L2World.getInstance().findObject(_targetItemObjId);
-		final L2ItemInstance refinerItem = (L2ItemInstance) L2World.getInstance().findObject(_refinerItemObjId);
+		final PlayerInstance player = getClient().getPlayer();
+		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
+		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
 		
 		if ((targetItem == null) || (refinerItem == null))
 		{
@@ -61,7 +61,7 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 		// is the item a life stone?
 		if ((refinerItemId < 8723) || (refinerItemId > 8762))
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
@@ -73,7 +73,7 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 		
 		switch (itemGrade)
 		{
-			case L2Item.CRYSTAL_C:
+			case Item.CRYSTAL_C:
 			{
 				gemstoneCount = 20;
 				gemstoneItemId = GEMSTONE_D;
@@ -81,7 +81,7 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 				sm.addString("Gemstone D");
 				break;
 			}
-			case L2Item.CRYSTAL_B:
+			case Item.CRYSTAL_B:
 			{
 				gemstoneCount = 30;
 				gemstoneItemId = GEMSTONE_D;
@@ -89,7 +89,7 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 				sm.addString("Gemstone D");
 				break;
 			}
-			case L2Item.CRYSTAL_A:
+			case Item.CRYSTAL_A:
 			{
 				gemstoneCount = 20;
 				gemstoneItemId = GEMSTONE_C;
@@ -97,7 +97,7 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 				sm.addString("Gemstone C");
 				break;
 			}
-			case L2Item.CRYSTAL_S:
+			case Item.CRYSTAL_S:
 			{
 				gemstoneCount = 25;
 				gemstoneItemId = GEMSTONE_C;
@@ -107,8 +107,8 @@ public class RequestConfirmRefinerItem extends L2GameClientPacket
 			}
 		}
 		
-		activeChar.sendPacket(new ExConfirmVariationRefiner(_refinerItemObjId, refinerItemId, gemstoneItemId, gemstoneCount));
-		activeChar.sendPacket(sm);
+		player.sendPacket(new ExConfirmVariationRefiner(_refinerItemObjId, refinerItemId, gemstoneItemId, gemstoneCount));
+		player.sendPacket(sm);
 	}
 	
 	private int getLifeStoneGrade(int itemId)

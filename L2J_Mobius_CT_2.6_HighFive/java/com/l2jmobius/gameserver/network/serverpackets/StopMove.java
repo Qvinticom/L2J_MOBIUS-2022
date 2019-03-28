@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class StopMove implements IClientOutgoingPacket
@@ -28,9 +28,9 @@ public final class StopMove implements IClientOutgoingPacket
 	private final int _z;
 	private final int _heading;
 	
-	public StopMove(L2Character cha)
+	public StopMove(Creature creature)
 	{
-		this(cha.getObjectId(), cha.getX(), cha.getY(), cha.getZ(), cha.getHeading());
+		this(creature.getObjectId(), creature.getX(), creature.getY(), creature.getZ(), creature.getHeading());
 	}
 	
 	/**

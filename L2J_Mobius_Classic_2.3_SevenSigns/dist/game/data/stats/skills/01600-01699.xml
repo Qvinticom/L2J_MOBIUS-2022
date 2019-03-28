@@ -798,7 +798,7 @@
 				</weaponType>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>10</chance>
@@ -864,7 +864,7 @@
 				</SHOCK>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>10</chance>

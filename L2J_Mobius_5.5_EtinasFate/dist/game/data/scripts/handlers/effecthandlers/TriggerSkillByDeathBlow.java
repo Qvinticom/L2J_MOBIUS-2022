@@ -21,15 +21,15 @@ import java.util.logging.Level;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageReceived;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -54,7 +54,7 @@ public final class TriggerSkillByDeathBlow extends AbstractEffect
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
-		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 	}
 	
 	private void onDamageReceivedEvent(OnCreatureDamageReceived event)
@@ -85,7 +85,7 @@ public final class TriggerSkillByDeathBlow extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		L2Object target = null;
+		WorldObject target = null;
 		try
 		{
 			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getTarget(), event.getAttacker(), triggerSkill, false, false, false);
@@ -95,20 +95,20 @@ public final class TriggerSkillByDeathBlow extends AbstractEffect
 			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
-		if ((target != null) && target.isCharacter())
+		if ((target != null) && target.isCreature())
 		{
-			SkillCaster.triggerCast(event.getTarget(), (L2Character) target, triggerSkill);
+			SkillCaster.triggerCast(event.getTarget(), (Creature) target, triggerSkill);
 		}
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> onDamageReceivedEvent(event), this));
 	}

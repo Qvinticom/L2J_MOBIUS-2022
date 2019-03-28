@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.model.quest;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class QuestTimer
 {
@@ -51,12 +51,12 @@ public class QuestTimer
 	boolean _isActive = true;
 	final String _name;
 	final Quest _quest;
-	final L2NpcInstance _npc;
-	final L2PcInstance _player;
+	final NpcInstance _npc;
+	final PlayerInstance _player;
 	final boolean _isRepeating;
 	private ScheduledFuture<?> _schedular;
 	
-	public QuestTimer(Quest quest, String name, long time, L2NpcInstance npc, L2PcInstance player, boolean repeating)
+	public QuestTimer(Quest quest, String name, long time, NpcInstance npc, PlayerInstance player, boolean repeating)
 	{
 		_name = name;
 		_quest = quest;
@@ -73,7 +73,7 @@ public class QuestTimer
 		}
 	}
 	
-	public QuestTimer(Quest quest, String name, long time, L2NpcInstance npc, L2PcInstance player)
+	public QuestTimer(Quest quest, String name, long time, NpcInstance npc, PlayerInstance player)
 	{
 		this(quest, name, time, npc, player, false);
 	}
@@ -106,7 +106,7 @@ public class QuestTimer
 	// public method to compare if this timer matches with the key attributes passed.
 	// a quest and a name are required.
 	// null npc or player act as wildcards for the match
-	public boolean isMatch(Quest quest, String name, L2NpcInstance npc, L2PcInstance player)
+	public boolean isMatch(Quest quest, String name, NpcInstance npc, PlayerInstance player)
 	{
 		if ((quest == null) || (name == null))
 		{
@@ -141,12 +141,12 @@ public class QuestTimer
 		return _name;
 	}
 	
-	public final L2NpcInstance getNpc()
+	public final NpcInstance getNpc()
 	{
 		return _npc;
 	}
 	
-	public final L2PcInstance getPlayer()
+	public final PlayerInstance getPlayer()
 	{
 		return _player;
 	}

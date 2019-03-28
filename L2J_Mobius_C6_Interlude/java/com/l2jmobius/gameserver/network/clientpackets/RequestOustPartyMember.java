@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestOustPartyMember extends L2GameClientPacket
+public final class RequestOustPartyMember extends GameClientPacket
 {
 	private String _name;
 	
@@ -31,21 +31,21 @@ public final class RequestOustPartyMember extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isInParty() && activeChar.getParty().isLeader(activeChar))
+		if (player.isInParty() && player.getParty().isLeader(player))
 		{
-			if (activeChar.getParty().isInDimensionalRift() && !activeChar.getParty().getDimensionalRift().getRevivedAtWaitingRoom().contains(activeChar))
+			if (player.getParty().isInDimensionalRift() && !player.getParty().getDimensionalRift().getRevivedAtWaitingRoom().contains(player))
 			{
-				activeChar.sendMessage("You can't dismiss party member when you are in Dimensional Rift.");
+				player.sendMessage("You can't dismiss party member when you are in Dimensional Rift.");
 			}
 			else
 			{
-				activeChar.getParty().removePartyMember(_name);
+				player.getParty().removePartyMember(_name);
 			}
 		}
 	}

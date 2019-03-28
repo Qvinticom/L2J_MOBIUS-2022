@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.communitybbs.CommunityBoard;
  * Format SSSSSS
  * @author -Wooden-
  */
-public class RequestBBSwrite extends L2GameClientPacket
+public class RequestBBSwrite extends GameClientPacket
 {
 	private String _url;
 	private String _arg1;

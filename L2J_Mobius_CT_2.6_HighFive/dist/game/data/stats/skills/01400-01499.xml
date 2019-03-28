@@ -2849,7 +2849,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5448" skillLevel="1" /> <!-- Oblivion -->
@@ -2897,7 +2897,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5449" skillLevel="1" /> <!-- Weak Constitution -->
@@ -2945,7 +2945,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5450" skillLevel="1" /> <!-- Thin Skin -->
@@ -2993,7 +2993,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5451" skillLevel="1" /> <!-- Enervation -->
@@ -3041,7 +3041,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5452" skillLevel="1" /> <!-- Spite -->
@@ -3089,7 +3089,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5453" skillLevel="1" /> <!-- Mental Impoverish -->
@@ -3132,7 +3132,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<cond msgId="113" addName="1">
 			<not>
-				<target npcType="L2Attackable" />
+				<target npcType="Attackable" />
 			</not>
 		</cond>
 		<for>
@@ -3213,7 +3213,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5577" skillLevel="1" /> <!-- Healer Ability - Heal -->
@@ -3230,7 +3230,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5578" skillLevel="1" /> <!-- Summoner Ability - Spirit -->
@@ -3255,7 +3255,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="10" />
 				<param skillId="5567" skillLevel="1" /> <!-- Flame Armor -->
@@ -3281,7 +3281,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="10" />
 				<param skillId="5568" skillLevel="1" /> <!-- Frost Armor -->
@@ -3307,7 +3307,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="10" />
 				<param skillId="5569" skillLevel="1" /> <!-- Hurricane Armor -->
@@ -3384,7 +3384,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5570" skillLevel="1" /> <!-- Excessive Royalty -->
@@ -3399,7 +3399,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="5" />
 				<param skillId="5571" skillLevel="1" /> <!-- Mutual Response -->

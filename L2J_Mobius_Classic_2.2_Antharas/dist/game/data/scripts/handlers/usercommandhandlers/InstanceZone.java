@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExInzoneWaiting;
 
 /**
@@ -38,13 +38,13 @@ public class InstanceZone implements IUserCommandHandler
 	}
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
-		activeChar.sendPacket(new ExInzoneWaiting(activeChar, false));
+		player.sendPacket(new ExInzoneWaiting(player, false));
 		return true;
 	}
 }

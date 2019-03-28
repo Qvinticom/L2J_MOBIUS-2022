@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 0000: 76 7a 07 80 49 ea 01 00 00 c1 37 fe uz..Ic'.J.....7.
@@ -28,18 +28,18 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  * <p>
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class MoveOnVehicle extends L2GameServerPacket
+public class MoveOnVehicle extends GameServerPacket
 {
 	private final int _id;
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public MoveOnVehicle(int vehicleID, L2PcInstance player, int x, int y, int z)
+	public MoveOnVehicle(int vehicleID, PlayerInstance player, int x, int y, int z)
 	{
 		_id = vehicleID;
-		_activeChar = player;
+		_player = player;
 		_x = x;
 		_y = y;
 		_z = z;
@@ -50,13 +50,13 @@ public class MoveOnVehicle extends L2GameServerPacket
 	{
 		writeC(0x71);
 		
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeD(_id);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		writeD(_activeChar.getX());
-		writeD(_activeChar.getY());
-		writeD(_activeChar.getZ());
+		writeD(_player.getX());
+		writeD(_player.getY());
+		writeD(_player.getZ());
 	}
 }

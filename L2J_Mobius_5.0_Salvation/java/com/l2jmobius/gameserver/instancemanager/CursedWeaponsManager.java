@@ -37,15 +37,15 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.CursedWeapon;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FeedableBeastInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FortCommanderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FeedableBeastInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GuardInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -146,7 +146,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT itemId, charId, playerReputation, playerPkKills, nbKills, endTime FROM cursed_weapons"))
 		{
-			// Retrieve the L2PcInstance from the characters table of the database
+			// Retrieve the PlayerInstance from the characters table of the database
 			CursedWeapon cw;
 			while (rs.next())
 			{
@@ -228,9 +228,9 @@ public final class CursedWeaponsManager implements IGameXmlReader
 		}
 	}
 	
-	public synchronized void checkDrop(L2Attackable attackable, L2PcInstance player)
+	public synchronized void checkDrop(Attackable attackable, PlayerInstance player)
 	{
-		if ((attackable instanceof L2DefenderInstance) || (attackable instanceof L2GuardInstance) || (attackable instanceof L2GrandBossInstance) || (attackable instanceof L2FeedableBeastInstance) || (attackable instanceof L2FortCommanderInstance))
+		if ((attackable instanceof DefenderInstance) || (attackable instanceof GuardInstance) || (attackable instanceof GrandBossInstance) || (attackable instanceof FeedableBeastInstance) || (attackable instanceof FortCommanderInstance))
 		{
 			return;
 		}
@@ -249,7 +249,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 		}
 	}
 	
-	public void activate(L2PcInstance player, L2ItemInstance item)
+	public void activate(PlayerInstance player, ItemInstance item)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(item.getId());
 		if (player.isCursedWeaponEquipped()) // cannot own 2 cursed swords
@@ -273,7 +273,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 		}
 	}
 	
-	public void drop(int itemId, L2Character killer)
+	public void drop(int itemId, Creature killer)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
 		
@@ -299,7 +299,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 		Broadcast.toAllOnlinePlayers(sm);
 	}
 	
-	public void checkPlayer(L2PcInstance player)
+	public void checkPlayer(PlayerInstance player)
 	{
 		if (player == null)
 		{

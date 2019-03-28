@@ -22,15 +22,15 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -63,7 +63,7 @@ public abstract class LetterQuest extends Quest
 	 * @param player player trying start quest
 	 * @return {@code true} when additional conditions are met, otherwise {@code false}
 	 */
-	public boolean canShowTutorialMark(L2PcInstance player)
+	public boolean canShowTutorialMark(PlayerInstance player)
 	{
 		return true;
 	}
@@ -134,7 +134,7 @@ public abstract class LetterQuest extends Quest
 	}
 	
 	@Override
-	public boolean canStartQuest(L2PcInstance player)
+	public boolean canStartQuest(PlayerInstance player)
 	{
 		return canShowTutorialMark(player) && super.canStartQuest(player);
 	}
@@ -143,12 +143,12 @@ public abstract class LetterQuest extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if ((event.getMarkId() == getId()) && canStartQuest(player))
 		{
 			final String html = getHtm(player, "popup.html").replace("%teleport%", getTeleportCommand());
-			final QuestState st = getQuestState(player, true);
-			st.startQuest();
+			final QuestState qs = getQuestState(player, true);
+			qs.startQuest();
 			
 			player.sendPacket(new PlaySound(3, _startQuestSound, 0, 0, 0, 0, 0));
 			player.sendPacket(new TutorialShowHtml(html));
@@ -160,12 +160,12 @@ public abstract class LetterQuest extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final L2PcInstance player = event.getActiveChar();
-		final QuestState st = getQuestState(player, false);
+		final PlayerInstance player = event.getPlayer();
+		final QuestState qs = getQuestState(player, false);
 		
 		if (event.getCommand().equals(getTeleportCommand()))
 		{
-			if ((st != null) && st.isCond(1) && hasQuestItems(player, _startSOE))
+			if ((qs != null) && qs.isCond(1) && hasQuestItems(player, _startSOE))
 			{
 				if (CastleManager.getInstance().getCastles().stream().anyMatch(c -> c.getSiege().isInProgress()))
 				{
@@ -211,10 +211,10 @@ public abstract class LetterQuest extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
-		final QuestState st = getQuestState(player, false);
+		final PlayerInstance player = event.getPlayer();
+		final QuestState qs = getQuestState(player, false);
 		
-		if ((st == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
+		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
@@ -231,10 +231,10 @@ public abstract class LetterQuest extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
-		final QuestState st = getQuestState(player, false);
+		final PlayerInstance player = event.getPlayer();
+		final QuestState qs = getQuestState(player, false);
 		
-		if ((st == null) && canStartQuest(player))
+		if ((qs == null) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
@@ -243,11 +243,11 @@ public abstract class LetterQuest extends Quest
 	}
 	
 	@Override
-	public void onQuestAborted(L2PcInstance player)
+	public void onQuestAborted(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		st.startQuest();
+		qs.startQuest();
 		player.sendPacket(SystemMessageId.THIS_QUEST_CANNOT_BE_DELETED);
 	}
 }

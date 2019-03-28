@@ -19,18 +19,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PartySpelled extends L2GameServerPacket
+public class PartySpelled extends GameServerPacket
 {
 	private final List<Effect> _effects;
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	
 	private class Effect
 	{
@@ -46,22 +45,22 @@ public class PartySpelled extends L2GameServerPacket
 		}
 	}
 	
-	public PartySpelled(L2Character cha)
+	public PartySpelled(Creature creature)
 	{
 		_effects = new ArrayList<>();
-		_activeChar = cha;
+		_creature = creature;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		if (_activeChar == null)
+		if (_creature == null)
 		{
 			return;
 		}
 		writeC(0xee);
-		writeD(_activeChar instanceof L2SummonInstance ? 2 : _activeChar instanceof L2PetInstance ? 1 : 0);
-		writeD(_activeChar.getObjectId());
+		writeD(_creature instanceof SummonInstance ? 2 : _creature instanceof PetInstance ? 1 : 0);
+		writeD(_creature.getObjectId());
 		writeD(_effects.size());
 		for (Effect temp : _effects)
 		{

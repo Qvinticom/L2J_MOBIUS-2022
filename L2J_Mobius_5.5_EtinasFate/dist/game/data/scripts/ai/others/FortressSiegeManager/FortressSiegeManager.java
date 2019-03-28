@@ -17,10 +17,10 @@
 package ai.others.FortressSiegeManager;
 
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -69,7 +69,7 @@ public final class FortressSiegeManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -90,7 +90,7 @@ public final class FortressSiegeManager extends AbstractNpcAI
 				}
 				else
 				{
-					final L2Clan clan = player.getClan();
+					final Clan clan = player.getClan();
 					final Fort fortress = npc.getFort();
 					final Castle castle = npc.getCastle();
 					
@@ -161,7 +161,7 @@ public final class FortressSiegeManager extends AbstractNpcAI
 				}
 				else
 				{
-					final L2Clan clan = player.getClan();
+					final Clan clan = player.getClan();
 					final Fort fortress = npc.getFort();
 					
 					if (clan.getFortId() == fortress.getResidenceId())
@@ -196,7 +196,7 @@ public final class FortressSiegeManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Fort fortress = npc.getFort();
 		final int fortOwner = fortress.getOwnerClan() == null ? 0 : fortress.getOwnerClan().getId();

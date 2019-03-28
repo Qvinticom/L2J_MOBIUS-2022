@@ -19,8 +19,8 @@ package quests.Q00616_MagicalPowerOfFirePart2;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -66,14 +66,14 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			if (npc.getId() == NASTRON)
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1: // take the item and give the heart
 					{
@@ -85,7 +85,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 						{
 							giveItems(player, NASTRON_HEART, 1);
 						}
-						st.setCond(3, true);
+						qs.setCond(3, true);
 						break;
 					}
 				}
@@ -94,13 +94,13 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (player != null)
 		{
-			final QuestState st = getQuestState(player, false);
-			if (st == null)
+			final QuestState qs = getQuestState(player, false);
+			if (qs == null)
 			{
 				return null;
 			}
@@ -109,7 +109,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 			{
 				case "31379-02.html":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
@@ -118,7 +118,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 					if (hasQuestItems(player, NASTRON_HEART))
 					{
 						addExpAndSp(player, 10000, 0);
-						st.exitQuest(true, true);
+						qs.exitQuest(true, true);
 						htmltext = "31379-06.html";
 					}
 					else
@@ -129,7 +129,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 				}
 				case "spawn_totem":
 				{
-					htmltext = (hasQuestItems(player, RED_TOTEM)) ? spawnNastron(npc, st) : "31558-04.html";
+					htmltext = (hasQuestItems(player, RED_TOTEM)) ? spawnNastron(npc, qs) : "31558-04.html";
 					break;
 				}
 			}
@@ -151,7 +151,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final int respawnMinDelay = (int) (43200000 * Config.RAID_MIN_RESPAWN_MULTIPLIER);
 		final int respawnMaxDelay = (int) (129600000 * Config.RAID_MAX_RESPAWN_MULTIPLIER);
@@ -164,16 +164,16 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case UDAN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -182,7 +182,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 					}
 					case State.STARTED:
 					{
-						htmltext = (st.isCond(1)) ? "31379-03.html" : (hasQuestItems(player, NASTRON_HEART)) ? "31379-04.html" : "31379-05.html";
+						htmltext = (qs.isCond(1)) ? "31379-03.html" : (hasQuestItems(player, NASTRON_HEART)) ? "31379-04.html" : "31379-05.html";
 						break;
 					}
 				}
@@ -190,9 +190,9 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 			}
 			case KETRA_TOTEM:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -201,7 +201,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 						}
 						case 2:
 						{
-							htmltext = spawnNastron(npc, st);
+							htmltext = spawnNastron(npc, qs);
 							break;
 						}
 						case 3:
@@ -217,19 +217,19 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		return htmltext;
 	}
 	
-	private String spawnNastron(L2Npc npc, QuestState st)
+	private String spawnNastron(Npc npc, QuestState qs)
 	{
 		if (getQuestTimer("spawn_npc", null, null) != null)
 		{
 			return "31558-03.html";
 		}
-		if (st.isCond(1))
+		if (qs.isCond(1))
 		{
-			takeItems(st.getPlayer(), RED_TOTEM, 1);
-			st.setCond(2, true);
+			takeItems(qs.getPlayer(), RED_TOTEM, 1);
+			qs.setCond(2, true);
 		}
 		npc.deleteMe();
-		final L2Npc nastron = addSpawn(NASTRON, 142528, -82528, -6496, 0, false, 0);
+		final Npc nastron = addSpawn(NASTRON, 142528, -82528, -6496, 0, false, 0);
 		nastron.broadcastPacket(new NpcSay(nastron, ChatType.NPC_GENERAL, NpcStringId.THE_MAGICAL_POWER_OF_FIRE_IS_ALSO_THE_POWER_OF_FLAMES_AND_LAVA_IF_YOU_DARE_TO_CONFRONT_IT_ONLY_DEATH_WILL_AWAIT_YOU));
 		startQuestTimer("despawn_nastron", 1200000, nastron, null);
 		return "31558-02.html";

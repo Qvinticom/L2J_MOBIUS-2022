@@ -18,8 +18,8 @@ package ai.areas.Gracia.AI.NPC.Nemo;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -48,7 +48,7 @@ public final class Nemo extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -79,7 +79,7 @@ public final class Nemo extends AbstractNpcAI
 			{
 				if ((player.getVariables().getInt("TEST_MAGUEN", 0) == 0) && (npc.getScriptValue() < MAXIMUM_MAGUEN))
 				{
-					final L2Npc maguen = addSpawn(MAGUEN, npc.getLocation(), true, 60000, true);
+					final Npc maguen = addSpawn(MAGUEN, npc.getLocation(), true, 60000, true);
 					maguen.getVariables().set("SUMMON_PLAYER", player);
 					maguen.getVariables().set("SPAWNED_NPC", npc);
 					maguen.getVariables().set("TEST_MAGUEN", 1);
@@ -101,7 +101,7 @@ public final class Nemo extends AbstractNpcAI
 			}
 			case "DECREASE_COUNT":
 			{
-				final L2Npc spawnedNpc = npc.getVariables().getObject("SPAWNED_NPC", L2Npc.class);
+				final Npc spawnedNpc = npc.getVariables().getObject("SPAWNED_NPC", Npc.class);
 				if ((spawnedNpc != null) && (spawnedNpc.getScriptValue() > 0))
 				{
 					player.getVariables().remove("TEST_MAGUEN");

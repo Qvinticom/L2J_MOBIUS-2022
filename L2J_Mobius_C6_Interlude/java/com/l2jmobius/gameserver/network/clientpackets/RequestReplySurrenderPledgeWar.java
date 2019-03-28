@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
+public final class RequestReplySurrenderPledgeWar extends GameClientPacket
 {
 	private int _answer;
 	
@@ -34,13 +34,13 @@ public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance requestor = activeChar.getActiveRequester();
+		final PlayerInstance requestor = player.getActiveRequester();
 		if (requestor == null)
 		{
 			return;
@@ -49,12 +49,12 @@ public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
 		if (_answer == 1)
 		{
 			requestor.deathPenalty(false);
-			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), player.getClanId());
 		}
 		else
 		{
 		}
 		
-		activeChar.onTransactionRequest(null);
+		player.onTransactionRequest(null);
 	}
 }

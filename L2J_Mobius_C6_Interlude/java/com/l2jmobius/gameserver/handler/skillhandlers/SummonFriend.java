@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -41,16 +41,16 @@ public class SummonFriend implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activePlayer = (L2PcInstance) activeChar;
+		PlayerInstance activePlayer = (PlayerInstance) creature;
 		
-		if (!L2PcInstance.checkSummonerStatus(activePlayer))
+		if (!PlayerInstance.checkSummonerStatus(activePlayer))
 		{
 			return;
 		}
@@ -88,9 +88,9 @@ public class SummonFriend implements ISkillHandler
 		}
 		
 		// Checks summoner not in siege zone
-		if (activeChar.isInsideZone(ZoneId.SIEGE))
+		if (creature.isInsideZone(ZoneId.SIEGE))
 		{
-			((L2PcInstance) activeChar).sendMessage("You cannot summon in siege zone.");
+			((PlayerInstance) creature).sendMessage("You cannot summon in siege zone.");
 			return;
 		}
 		
@@ -109,24 +109,24 @@ public class SummonFriend implements ISkillHandler
 		
 		try
 		{
-			for (L2Object target1 : targets)
+			for (WorldObject target1 : targets)
 			{
-				if (!(target1 instanceof L2Character))
+				if (!(target1 instanceof Creature))
 				{
 					continue;
 				}
 				
-				L2Character target = (L2Character) target1;
-				if (activeChar == target)
+				Creature target = (Creature) target1;
+				if (creature == target)
 				{
 					continue;
 				}
 				
-				if (target instanceof L2PcInstance)
+				if (target instanceof PlayerInstance)
 				{
-					L2PcInstance targetChar = (L2PcInstance) target;
+					PlayerInstance targetChar = (PlayerInstance) target;
 					
-					if (!L2PcInstance.checkSummonTargetStatus(targetChar, activePlayer))
+					if (!PlayerInstance.checkSummonTargetStatus(targetChar, activePlayer))
 					{
 						continue;
 					}
@@ -135,7 +135,7 @@ public class SummonFriend implements ISkillHandler
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 						continue;
 					}
 					
@@ -169,7 +169,7 @@ public class SummonFriend implements ISkillHandler
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 						continue;
 					}
 					
@@ -178,33 +178,33 @@ public class SummonFriend implements ISkillHandler
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 						continue;
 					}
 					
 					if ((GrandBossManager.getInstance().getZone(targetChar) != null) && !targetChar.isGM())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					// Check for the the target's festival status
 					if (targetChar.isInOlympiadMode())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_IN_OLYMPIAD));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_IN_OLYMPIAD));
 						continue;
 					}
 					
 					// Check for the the target's festival status
 					if (targetChar.isFestivalParticipant())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
 					// Check for the target's jail status, arenas and siege zones
 					if (targetChar.isInsideZone(ZoneId.PVP))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
@@ -212,19 +212,19 @@ public class SummonFriend implements ISkillHandler
 					/* if (targetChar.getInventory().getItemByItemId(8615) == null) */
 					if ((targetChar.getInventory().getItemByItemId(8615) == null) && (skill.getId() != 1429)) // KidZor
 					{
-						((L2PcInstance) activeChar).sendMessage("Your target cannot be summoned while he hasn't got a Summoning Crystal");
+						((PlayerInstance) creature).sendMessage("Your target cannot be summoned while he hasn't got a Summoning Crystal");
 						targetChar.sendMessage("You cannot be summoned while you haven't got a Summoning Crystal");
 						continue;
 					}
 					
-					if (!Util.checkIfInRange(0, activeChar, target, false))
+					if (!Util.checkIfInRange(0, creature, target, false))
 					{
 						// Check already summon
-						if (!targetChar.teleportRequest((L2PcInstance) activeChar, skill))
+						if (!targetChar.teleportRequest((PlayerInstance) creature, skill))
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_SUMMONED);
 							sm.addString(target.getName());
-							activeChar.sendPacket(sm);
+							creature.sendPacket(sm);
 							continue;
 						}
 						
@@ -233,15 +233,15 @@ public class SummonFriend implements ISkillHandler
 						{
 							// Send message
 							final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.S1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-							confirm.addString(activeChar.getName());
-							confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+							confirm.addString(creature.getName());
+							confirm.addZoneName(creature.getX(), creature.getY(), creature.getZ());
 							confirm.addTime(30000);
-							confirm.addRequesterId(activeChar.getObjectId());
+							confirm.addRequesterId(creature.getObjectId());
 							targetChar.sendPacket(confirm);
 						}
 						else
 						{
-							L2PcInstance.teleToTarget(targetChar, (L2PcInstance) activeChar, skill);
+							PlayerInstance.teleToTarget(targetChar, (PlayerInstance) creature, skill);
 							targetChar.teleportRequest(null, null);
 						}
 					}

@@ -25,12 +25,12 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.TradeController;
-import com.l2jmobius.gameserver.model.L2Territory;
+import com.l2jmobius.gameserver.model.Territory;
 
 public class TerritoryTable
 {
 	private static final Logger LOGGER = Logger.getLogger(TradeController.class.getName());
-	private static Map<Integer, L2Territory> _territory = new HashMap<>();
+	private static Map<Integer, Territory> _territory = new HashMap<>();
 	
 	public static TerritoryTable getInstance()
 	{
@@ -67,7 +67,7 @@ public class TerritoryTable
 				
 				if (_territory.get(terr) == null)
 				{
-					final L2Territory t = new L2Territory();
+					final Territory t = new Territory();
 					_territory.put(terr, t);
 				}
 				_territory.get(terr).add(rset.getInt("loc_x"), rset.getInt("loc_y"), rset.getInt("loc_zmin"), rset.getInt("loc_zmax"), rset.getInt("proc"));

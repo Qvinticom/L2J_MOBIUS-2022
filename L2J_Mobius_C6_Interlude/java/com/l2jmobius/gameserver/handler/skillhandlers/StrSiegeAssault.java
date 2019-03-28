@@ -19,19 +19,19 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 
 /**
  * @author _tomciaaa_
@@ -44,21 +44,21 @@ public class StrSiegeAssault implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
-		if (!activeChar.isRiding())
+		if (!creature.isRiding())
 		{
 			return;
 		}
 		
-		if (!(player.getTarget() instanceof L2DoorInstance))
+		if (!(player.getTarget() instanceof DoorInstance))
 		{
 			return;
 		}
@@ -84,7 +84,7 @@ public class StrSiegeAssault implements ISkillHandler
 		
 		try
 		{
-			L2ItemInstance itemToTake = player.getInventory().getItemByItemId(skill.getItemConsumeId());
+			ItemInstance itemToTake = player.getInventory().getItemByItemId(skill.getItemConsumeId());
 			
 			if (!player.destroyItem("Consume", itemToTake.getObjectId(), skill.getItemConsume(), null, true))
 			{
@@ -94,16 +94,16 @@ public class StrSiegeAssault implements ISkillHandler
 			// damage calculation
 			int damage = 0;
 			
-			for (L2Object target2 : targets)
+			for (WorldObject target2 : targets)
 			{
 				if (target2 == null)
 				{
 					continue;
 				}
 				
-				L2Character target = (L2Character) target2;
-				L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
-				if ((activeChar instanceof L2PcInstance) && (target instanceof L2PcInstance) && target.isAlikeDead() && target.isFakeDeath())
+				Creature target = (Creature) target2;
+				ItemInstance weapon = creature.getActiveWeaponInstance();
+				if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 				{
 					target.stopFakeDeath(null);
 				}
@@ -112,33 +112,33 @@ public class StrSiegeAssault implements ISkillHandler
 					continue;
 				}
 				
-				final boolean dual = activeChar.isUsingDualWeapon();
-				final boolean shld = Formulas.calcShldUse(activeChar, target);
-				final boolean crit = Formulas.calcCrit(activeChar.getCriticalHit(target, skill));
-				final boolean soul = ((weapon != null) && (weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT) && (weapon.getItemType() != L2WeaponType.DAGGER));
+				final boolean dual = creature.isUsingDualWeapon();
+				final boolean shld = Formulas.calcShldUse(creature, target);
+				final boolean crit = Formulas.calcCrit(creature.getCriticalHit(target, skill));
+				final boolean soul = ((weapon != null) && (weapon.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT) && (weapon.getItemType() != WeaponType.DAGGER));
 				
-				if (!crit && ((skill.getCondition() & L2Skill.COND_CRIT) != 0))
+				if (!crit && ((skill.getCondition() & Skill.COND_CRIT) != 0))
 				{
 					damage = 0;
 				}
 				else
 				{
-					damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, crit, dual, soul);
+					damage = (int) Formulas.calcPhysDam(creature, target, skill, shld, crit, dual, soul);
 				}
 				
 				if (damage > 0)
 				{
-					target.reduceCurrentHp(damage, activeChar);
+					target.reduceCurrentHp(damage, creature);
 					if (soul && (weapon != null))
 					{
-						weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
+						weapon.setChargedSoulshot(ItemInstance.CHARGED_NONE);
 					}
 					
-					activeChar.sendDamageMessage(target, damage, false, false, false);
+					creature.sendDamageMessage(target, damage, false, false, false);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessage.sendString(skill.getName() + " failed."));
+					creature.sendPacket(SystemMessage.sendString(skill.getName() + " failed."));
 				}
 			}
 		}
@@ -157,14 +157,14 @@ public class StrSiegeAssault implements ISkillHandler
 	/**
 	 * Return true if character clan place a flag<BR>
 	 * <BR>
-	 * @param activeChar The L2Character of the character placing the flag
+	 * @param creature The Creature of the creature placing the flag
 	 * @param isCheckOnly if false, it will send a notification to the player telling him why it failed
 	 * @return
 	 */
-	public static boolean checkIfOkToUseStriderSiegeAssault(L2Character activeChar, boolean isCheckOnly)
+	public static boolean checkIfOkToUseStriderSiegeAssault(Creature creature, boolean isCheckOnly)
 	{
-		final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-		final Fort fort = FortManager.getInstance().getFort(activeChar);
+		final Castle castle = CastleManager.getInstance().getCastle(creature);
+		final Fort fort = FortManager.getInstance().getFort(creature);
 		
 		if ((castle == null) && (fort == null))
 		{
@@ -173,20 +173,20 @@ public class StrSiegeAssault implements ISkillHandler
 		
 		if (castle != null)
 		{
-			return checkIfOkToUseStriderSiegeAssault(activeChar, castle, isCheckOnly);
+			return checkIfOkToUseStriderSiegeAssault(creature, castle, isCheckOnly);
 		}
-		return checkIfOkToUseStriderSiegeAssault(activeChar, fort, isCheckOnly);
+		return checkIfOkToUseStriderSiegeAssault(creature, fort, isCheckOnly);
 	}
 	
-	public static boolean checkIfOkToUseStriderSiegeAssault(L2Character activeChar, Castle castle, boolean isCheckOnly)
+	public static boolean checkIfOkToUseStriderSiegeAssault(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
@@ -196,11 +196,11 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			sm.addString("You can only use strider siege assault during a siege.");
 		}
-		else if (!(player.getTarget() instanceof L2DoorInstance))
+		else if (!(player.getTarget() instanceof DoorInstance))
 		{
 			sm.addString("You can only use strider siege assault on doors and walls.");
 		}
-		else if (!activeChar.isRiding())
+		else if (!creature.isRiding())
 		{
 			sm.addString("You can only use strider siege assault when on strider.");
 		}
@@ -217,15 +217,15 @@ public class StrSiegeAssault implements ISkillHandler
 		return false;
 	}
 	
-	public static boolean checkIfOkToUseStriderSiegeAssault(L2Character activeChar, Fort fort, boolean isCheckOnly)
+	public static boolean checkIfOkToUseStriderSiegeAssault(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
@@ -235,11 +235,11 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			sm.addString("You can only use strider siege assault during a siege.");
 		}
-		else if (!(player.getTarget() instanceof L2DoorInstance))
+		else if (!(player.getTarget() instanceof DoorInstance))
 		{
 			sm.addString("You can only use strider siege assault on doors and walls.");
 		}
-		else if (!activeChar.isRiding())
+		else if (!creature.isRiding())
 		{
 			sm.addString("You can only use strider siege assault when on strider.");
 		}

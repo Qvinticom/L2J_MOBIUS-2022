@@ -32,9 +32,9 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.base.Race;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.Stats;
@@ -72,10 +72,10 @@ import com.l2jmobius.gameserver.skills.funcs.LambdaCalc;
 import com.l2jmobius.gameserver.skills.funcs.LambdaConst;
 import com.l2jmobius.gameserver.skills.funcs.LambdaStats;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.item.L2ArmorType;
-import com.l2jmobius.gameserver.templates.item.L2Item;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.ArmorType;
+import com.l2jmobius.gameserver.templates.item.Item;
+import com.l2jmobius.gameserver.templates.item.Weapon;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 
 /**
  * @author mkizub
@@ -213,13 +213,13 @@ public abstract class DocumentBase
 		final int ord = Integer.decode(getValue(order, template));
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, name, stat, ord, lambda);
-		if (template instanceof L2Item)
+		if (template instanceof Item)
 		{
-			((L2Item) template).attach(ft);
+			((Item) template).attach(ft);
 		}
-		else if (template instanceof L2Skill)
+		else if (template instanceof Skill)
 		{
-			((L2Skill) template).attach(ft);
+			((Skill) template).attach(ft);
 		}
 		else if (template instanceof EffectTemplate)
 		{
@@ -260,26 +260,26 @@ public abstract class DocumentBase
 			
 			if (Config.ENABLE_MODIFY_SKILL_DURATION)
 			{
-				if (Config.SKILL_DURATION_LIST.containsKey(((L2Skill) template).getId()))
+				if (Config.SKILL_DURATION_LIST.containsKey(((Skill) template).getId()))
 				{
-					if (((L2Skill) template).getLevel() < 100)
+					if (((Skill) template).getLevel() < 100)
 					{
-						time = Config.SKILL_DURATION_LIST.get(((L2Skill) template).getId());
+						time = Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
 					}
-					else if ((((L2Skill) template).getLevel() >= 100) && (((L2Skill) template).getLevel() < 140))
+					else if ((((Skill) template).getLevel() >= 100) && (((Skill) template).getLevel() < 140))
 					{
-						time += Config.SKILL_DURATION_LIST.get(((L2Skill) template).getId());
+						time += Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
 					}
-					else if (((L2Skill) template).getLevel() > 140)
+					else if (((Skill) template).getLevel() > 140)
 					{
-						time = Config.SKILL_DURATION_LIST.get(((L2Skill) template).getId());
+						time = Config.SKILL_DURATION_LIST.get(((Skill) template).getId());
 					}
 				}
 			}
 		}
 		else
 		{
-			time = ((L2Skill) template).getBuffDuration() / 1000 / count;
+			time = ((Skill) template).getBuffDuration() / 1000 / count;
 		}
 		
 		boolean self = false;
@@ -303,27 +303,27 @@ public abstract class DocumentBase
 			
 			if (abn.equals("poison"))
 			{
-				abnormal = L2Character.ABNORMAL_EFFECT_POISON;
+				abnormal = Creature.ABNORMAL_EFFECT_POISON;
 			}
 			else if (abn.equals("bleeding"))
 			{
-				abnormal = L2Character.ABNORMAL_EFFECT_BLEEDING;
+				abnormal = Creature.ABNORMAL_EFFECT_BLEEDING;
 			}
 			else if (abn.equals("flame"))
 			{
-				abnormal = L2Character.ABNORMAL_EFFECT_FLAME;
+				abnormal = Creature.ABNORMAL_EFFECT_FLAME;
 			}
 			else if (abn.equals("bighead"))
 			{
-				abnormal = L2Character.ABNORMAL_EFFECT_BIG_HEAD;
+				abnormal = Creature.ABNORMAL_EFFECT_BIG_HEAD;
 			}
 			else if (abn.equals("stealth"))
 			{
-				abnormal = L2Character.ABNORMAL_EFFECT_STEALTH;
+				abnormal = Creature.ABNORMAL_EFFECT_STEALTH;
 			}
 			else if (abn.equals("float"))
 			{
-				abnormal = L2Character.ABNORMAL_EFFECT_FLOATING_ROOT;
+				abnormal = Creature.ABNORMAL_EFFECT_FLOATING_ROOT;
 			}
 		}
 		
@@ -364,17 +364,17 @@ public abstract class DocumentBase
 		final EffectTemplate lt = new EffectTemplate(attachCond, applayCond, name, lambda, count, time, abnormal, stackType, stackOrder, showIcon, type, effectPower);
 		parseTemplate(n, lt);
 		
-		if (template instanceof L2Item)
+		if (template instanceof Item)
 		{
-			((L2Item) template).attach(lt);
+			((Item) template).attach(lt);
 		}
-		else if ((template instanceof L2Skill) && !self)
+		else if ((template instanceof Skill) && !self)
 		{
-			((L2Skill) template).attach(lt);
+			((Skill) template).attach(lt);
 		}
-		else if ((template instanceof L2Skill) && self)
+		else if ((template instanceof Skill) && self)
 		{
-			((L2Skill) template).attachSelf(lt);
+			((Skill) template).attachSelf(lt);
 		}
 	}
 	
@@ -395,11 +395,11 @@ public abstract class DocumentBase
 			lvl = Integer.decode(getValue(attrs.getNamedItem("lvl").getNodeValue(), template));
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(id, lvl);
+		final Skill skill = SkillTable.getInstance().getInfo(id, lvl);
 		
 		if (attrs.getNamedItem("chance") != null)
 		{
-			if ((template instanceof L2Weapon) || (template instanceof L2Item))
+			if ((template instanceof Weapon) || (template instanceof Item))
 			{
 				skill.attach(new ConditionGameChance(Integer.decode(getValue(attrs.getNamedItem("chance").getNodeValue(), template))), true);
 			}
@@ -409,26 +409,26 @@ public abstract class DocumentBase
 			}
 		}
 		
-		if (template instanceof L2Weapon)
+		if (template instanceof Weapon)
 		{
 			if ((attrs.getNamedItem("onUse") != null) || ((attrs.getNamedItem("onCrit") == null) && (attrs.getNamedItem("onCast") == null)))
 			{
-				((L2Weapon) template).attach(skill); // Attach as skill triggered on use
+				((Weapon) template).attach(skill); // Attach as skill triggered on use
 			}
 			
 			if (attrs.getNamedItem("onCrit") != null)
 			{
-				((L2Weapon) template).attachOnCrit(skill); // Attach as skill triggered on critical hit
+				((Weapon) template).attachOnCrit(skill); // Attach as skill triggered on critical hit
 			}
 			
 			if (attrs.getNamedItem("onCast") != null)
 			{
-				((L2Weapon) template).attachOnCast(skill); // Attach as skill triggered on cast
+				((Weapon) template).attachOnCast(skill); // Attach as skill triggered on cast
 			}
 		}
-		else if (template instanceof L2Item)
+		else if (template instanceof Item)
 		{
-			((L2Item) template).attach(skill); // Attach as skill triggered on use
+			((Item) template).attach(skill); // Attach as skill triggered on use
 		}
 	}
 	
@@ -727,7 +727,7 @@ public abstract class DocumentBase
 				while (st.hasMoreTokens())
 				{
 					final String item = st.nextToken().trim();
-					for (L2WeaponType wt : L2WeaponType.values())
+					for (WeaponType wt : WeaponType.values())
 					{
 						if (wt.toString().equals(item))
 						{
@@ -736,7 +736,7 @@ public abstract class DocumentBase
 						}
 					}
 					
-					for (L2ArmorType at : L2ArmorType.values())
+					for (ArmorType at : ArmorType.values())
 					{
 						if (at.toString().equals(item))
 						{
@@ -776,7 +776,7 @@ public abstract class DocumentBase
 				while (st.hasMoreTokens())
 				{
 					final String item = st.nextToken().trim();
-					for (L2WeaponType wt : L2WeaponType.values())
+					for (WeaponType wt : WeaponType.values())
 					{
 						if (wt.toString().equals(item))
 						{
@@ -785,7 +785,7 @@ public abstract class DocumentBase
 						}
 					}
 					
-					for (L2ArmorType at : L2ArmorType.values())
+					for (ArmorType at : ArmorType.values())
 					{
 						if (at.toString().equals(item))
 						{
@@ -969,7 +969,7 @@ public abstract class DocumentBase
 		// is it a table?
 		if (value.charAt(0) == '#')
 		{
-			if (template instanceof L2Skill)
+			if (template instanceof Skill)
 			{
 				return getTableValue(value);
 			}

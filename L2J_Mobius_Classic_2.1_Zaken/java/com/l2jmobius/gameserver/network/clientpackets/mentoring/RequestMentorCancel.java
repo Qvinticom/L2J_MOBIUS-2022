@@ -20,12 +20,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
-import com.l2jmobius.gameserver.model.L2Mentee;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Mentee;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMenteeLeft;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMenteeRemove;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeLeft;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeRemove;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,7 +39,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 	private String _name;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_confirmed = packet.readD();
 		_name = packet.readS();
@@ -47,20 +47,20 @@ public class RequestMentorCancel implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_confirmed != 1)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		final int objectId = CharNameTable.getInstance().getIdByName(_name);
 		if (player != null)
 		{
 			if (player.isMentor())
 			{
-				final L2Mentee mentee = MentorManager.getInstance().getMentee(player.getObjectId(), objectId);
+				final Mentee mentee = MentorManager.getInstance().getMentee(player.getObjectId(), objectId);
 				if (mentee != null)
 				{
 					MentorManager.getInstance().cancelAllMentoringBuffs(mentee.getPlayerInstance());
@@ -81,7 +81,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 			}
 			else if (player.isMentee())
 			{
-				final L2Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
+				final Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
 				if ((mentor != null) && (mentor.getObjectId() == objectId))
 				{
 					MentorManager.getInstance().cancelAllMentoringBuffs(player);

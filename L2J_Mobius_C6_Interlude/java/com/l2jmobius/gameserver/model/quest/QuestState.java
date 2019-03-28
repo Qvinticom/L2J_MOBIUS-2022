@@ -26,13 +26,13 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2DropData;
-import com.l2jmobius.gameserver.model.PcInventory;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.DropData;
+import com.l2jmobius.gameserver.model.PlayerInventory;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -72,7 +72,7 @@ public final class QuestState
 	private final String _questName;
 	
 	/** Player who engaged the quest */
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
 	/** State of the quest */
 	private byte _state;
@@ -91,10 +91,10 @@ public final class QuestState
 	 * <LI>Add the QuestState in the player's list of quests by using setQuestState()</LI>
 	 * <LI>Add drops gotten by the quest</LI> <BR/>
 	 * @param quest : quest associated with the QuestState
-	 * @param player : L2PcInstance pointing out the player
+	 * @param player : PlayerInstance pointing out the player
 	 * @param state : state of the quest
 	 */
-	QuestState(Quest quest, L2PcInstance player, byte state)
+	QuestState(Quest quest, PlayerInstance player, byte state)
 	{
 		_questName = quest.getName();
 		_player = player;
@@ -121,10 +121,10 @@ public final class QuestState
 	}
 	
 	/**
-	 * Return the L2PcInstance
-	 * @return L2PcInstance
+	 * Return the PlayerInstance
+	 * @return PlayerInstance
 	 */
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
@@ -438,16 +438,16 @@ public final class QuestState
 	
 	/**
 	 * Add player to get notification of characters death
-	 * @param character : L2Character of the character to get notification of death
+	 * @param creature : Creature of the creature to get notification of death
 	 */
-	public void addNotifyOfDeath(L2Character character)
+	public void addNotifyOfDeath(Creature creature)
 	{
-		if (character == null)
+		if (creature == null)
 		{
 			return;
 		}
 		
-		character.addNotifyQuestOfDeath(this);
+		creature.addNotifyQuestOfDeath(this);
 	}
 	
 	/**
@@ -461,7 +461,7 @@ public final class QuestState
 		
 		if ((_player != null) && (_player.getInventory() != null) && (_player.getInventory().getItems() != null))
 		{
-			for (L2ItemInstance item : _player.getInventory().getItems())
+			for (ItemInstance item : _player.getInventory().getItems())
 			{
 				if ((item != null) && (item.getItemId() == itemId))
 				{
@@ -490,7 +490,7 @@ public final class QuestState
 	 */
 	public boolean hasAtLeastOneQuestItem(int... itemIds)
 	{
-		final PcInventory inv = _player.getInventory();
+		final PlayerInventory inv = _player.getInventory();
 		for (int itemId : itemIds)
 		{
 			if (inv.getItemByItemId(itemId) != null)
@@ -508,7 +508,7 @@ public final class QuestState
 	 */
 	public boolean hasQuestItems(int... itemIds)
 	{
-		final PcInventory inv = _player.getInventory();
+		final PlayerInventory inv = _player.getInventory();
 		for (int itemId : itemIds)
 		{
 			if (inv.getItemByItemId(itemId) == null)
@@ -526,7 +526,7 @@ public final class QuestState
 	 */
 	public int getEnchantLevel(int itemId)
 	{
-		final L2ItemInstance enchanteditem = _player.getInventory().getItemByItemId(itemId);
+		final ItemInstance enchanteditem = _player.getInventory().getItemByItemId(itemId);
 		
 		if (enchanteditem == null)
 		{
@@ -563,7 +563,7 @@ public final class QuestState
 		
 		// Set quantity of item
 		// Add items to player's inventory
-		final L2ItemInstance item = _player.getInventory().addItem("Quest", itemId, count, _player, _player.getTarget());
+		final ItemInstance item = _player.getInventory().addItem("Quest", itemId, count, _player, _player.getTarget());
 		
 		if (item == null)
 		{
@@ -651,7 +651,7 @@ public final class QuestState
 		}
 		
 		int itemCount = 0;
-		final int random = Rnd.get(L2DropData.MAX_CHANCE);
+		final int random = Rnd.get(DropData.MAX_CHANCE);
 		
 		while (random < dropChance)
 		{
@@ -669,8 +669,8 @@ public final class QuestState
 				itemCount++;
 			}
 			
-			// Prepare for next iteration if dropChance > L2DropData.MAX_CHANCE
-			dropChance -= L2DropData.MAX_CHANCE;
+			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
+			dropChance -= DropData.MAX_CHANCE;
 		}
 		
 		if (itemCount > 0)
@@ -718,7 +718,7 @@ public final class QuestState
 	 */
 	public boolean dropItemsAlways(int itemId, int count, int neededCount)
 	{
-		return dropItems(itemId, count, neededCount, L2DropData.MAX_CHANCE, DROP_FIXED_RATE);
+		return dropItems(itemId, count, neededCount, DropData.MAX_CHANCE, DROP_FIXED_RATE);
 	}
 	
 	/**
@@ -726,7 +726,7 @@ public final class QuestState
 	 * @param itemId : Identifier of the item to be dropped.
 	 * @param count : Quantity of items to be dropped.
 	 * @param neededCount : Quantity of items needed to complete the task. If set to 0, unlimited amount is collected.
-	 * @param dropChance : Item drop rate (100% chance is defined by the L2DropData.MAX_CHANCE = 1.000.000).
+	 * @param dropChance : Item drop rate (100% chance is defined by the DropData.MAX_CHANCE = 1.000.000).
 	 * @return boolean : Indicating whether item quantity has been reached.
 	 */
 	public boolean dropItems(int itemId, int count, int neededCount, int dropChance)
@@ -739,7 +739,7 @@ public final class QuestState
 	 * @param itemId : Identifier of the item to be dropped.
 	 * @param count : Quantity of items to be dropped.
 	 * @param neededCount : Quantity of items needed to complete the task. If set to 0, unlimited amount is collected.
-	 * @param dropChance : Item drop rate (100% chance is defined by the L2DropData.MAX_CHANCE = 1.000.000).
+	 * @param dropChance : Item drop rate (100% chance is defined by the DropData.MAX_CHANCE = 1.000.000).
 	 * @param type : Item drop behavior: DROP_DIVMOD (rate and), DROP_FIXED_RATE, DROP_FIXED_COUNT or DROP_FIXED_BOTH
 	 * @return boolean : Indicating whether item quantity has been reached.
 	 */
@@ -759,29 +759,29 @@ public final class QuestState
 		{
 			case DROP_DIVMOD:
 				dropChance *= Config.RATE_DROP_QUEST;
-				amount = count * (dropChance / L2DropData.MAX_CHANCE);
-				if (Rnd.get(L2DropData.MAX_CHANCE) < (dropChance % L2DropData.MAX_CHANCE))
+				amount = count * (dropChance / DropData.MAX_CHANCE);
+				if (Rnd.get(DropData.MAX_CHANCE) < (dropChance % DropData.MAX_CHANCE))
 				{
 					amount += count;
 				}
 				break;
 			
 			case DROP_FIXED_RATE:
-				if (Rnd.get(L2DropData.MAX_CHANCE) < dropChance)
+				if (Rnd.get(DropData.MAX_CHANCE) < dropChance)
 				{
 					amount = (int) (count * Config.RATE_DROP_QUEST);
 				}
 				break;
 			
 			case DROP_FIXED_COUNT:
-				if (Rnd.get(L2DropData.MAX_CHANCE) < (dropChance * Config.RATE_DROP_QUEST))
+				if (Rnd.get(DropData.MAX_CHANCE) < (dropChance * Config.RATE_DROP_QUEST))
 				{
 					amount = count;
 				}
 				break;
 			
 			case DROP_FIXED_BOTH:
-				if (Rnd.get(L2DropData.MAX_CHANCE) < dropChance)
+				if (Rnd.get(DropData.MAX_CHANCE) < dropChance)
 				{
 					amount = count;
 				}
@@ -860,29 +860,29 @@ public final class QuestState
 			{
 				case DROP_DIVMOD:
 					dropChance *= Config.RATE_DROP_QUEST;
-					amount = count * (dropChance / L2DropData.MAX_CHANCE);
-					if (Rnd.get(L2DropData.MAX_CHANCE) < (dropChance % L2DropData.MAX_CHANCE))
+					amount = count * (dropChance / DropData.MAX_CHANCE);
+					if (Rnd.get(DropData.MAX_CHANCE) < (dropChance % DropData.MAX_CHANCE))
 					{
 						amount += count;
 					}
 					break;
 				
 				case DROP_FIXED_RATE:
-					if (Rnd.get(L2DropData.MAX_CHANCE) < dropChance)
+					if (Rnd.get(DropData.MAX_CHANCE) < dropChance)
 					{
 						amount = (int) (count * Config.RATE_DROP_QUEST);
 					}
 					break;
 				
 				case DROP_FIXED_COUNT:
-					if (Rnd.get(L2DropData.MAX_CHANCE) < (dropChance * Config.RATE_DROP_QUEST))
+					if (Rnd.get(DropData.MAX_CHANCE) < (dropChance * Config.RATE_DROP_QUEST))
 					{
 						amount = count;
 					}
 					break;
 				
 				case DROP_FIXED_BOTH:
-					if (Rnd.get(L2DropData.MAX_CHANCE) < dropChance)
+					if (Rnd.get(DropData.MAX_CHANCE) < dropChance)
 					{
 						amount = count;
 					}
@@ -957,7 +957,7 @@ public final class QuestState
 	public void takeItems(int itemId, int count)
 	{
 		// Get object item from player's inventory list
-		L2ItemInstance item = _player.getInventory().getItemByItemId(itemId);
+		ItemInstance item = _player.getInventory().getItemByItemId(itemId);
 		
 		if (item == null)
 		{
@@ -1072,7 +1072,7 @@ public final class QuestState
 		getQuest().startQuestTimer(name, time, null, getPlayer(), false);
 	}
 	
-	public void startQuestTimer(String name, long time, L2NpcInstance npc)
+	public void startQuestTimer(String name, long time, NpcInstance npc)
 	{
 		getQuest().startQuestTimer(name, time, npc, getPlayer(), false);
 	}
@@ -1082,7 +1082,7 @@ public final class QuestState
 		getQuest().startQuestTimer(name, time, null, getPlayer(), true);
 	}
 	
-	public void startRepeatingQuestTimer(String name, long time, L2NpcInstance npc)
+	public void startRepeatingQuestTimer(String name, long time, NpcInstance npc)
 	{
 		getQuest().startQuestTimer(name, time, npc, getPlayer(), true);
 	}
@@ -1103,17 +1103,17 @@ public final class QuestState
 	 * @param npcId
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId)
+	public NpcInstance addSpawn(int npcId)
 	{
 		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, 0);
 	}
 	
-	public L2NpcInstance addSpawn(int npcId, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int despawnDelay)
 	{
 		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, despawnDelay);
 	}
 	
-	public L2NpcInstance addSpawn(int npcId, int x, int y, int z)
+	public NpcInstance addSpawn(int npcId, int x, int y, int z)
 	{
 		return addSpawn(npcId, x, y, z, 0, false, 0);
 	}
@@ -1121,17 +1121,17 @@ public final class QuestState
 	/**
 	 * Add spawn for player instance Will despawn after the spawn length expires Uses player's coords and heading. Adds a little randomization in the x y coords Return object id of newly spawned npc
 	 * @param npcId
-	 * @param cha
+	 * @param creature
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId, L2Character cha)
+	public NpcInstance addSpawn(int npcId, Creature creature)
 	{
-		return addSpawn(npcId, cha, true, 0);
+		return addSpawn(npcId, creature, true, 0);
 	}
 	
-	public L2NpcInstance addSpawn(int npcId, L2Character cha, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, Creature creature, int despawnDelay)
 	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, despawnDelay);
+		return addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), true, despawnDelay);
 	}
 	
 	/**
@@ -1143,22 +1143,22 @@ public final class QuestState
 	 * @param despawnDelay
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId, int x, int y, int z, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int x, int y, int z, int despawnDelay)
 	{
 		return addSpawn(npcId, x, y, z, 0, false, despawnDelay);
 	}
 	
 	/**
-	 * Add spawn for player instance Inherits coords and heading from specified L2Character instance. It could be either the player, or any killed/attacked mob Return object id of newly spawned npc
+	 * Add spawn for player instance Inherits coords and heading from specified Creature instance. It could be either the player, or any killed/attacked mob Return object id of newly spawned npc
 	 * @param npcId
-	 * @param cha
+	 * @param creature
 	 * @param randomOffset
 	 * @param despawnDelay
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId, L2Character cha, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, Creature creature, boolean randomOffset, int despawnDelay)
 	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), randomOffset, despawnDelay);
+		return addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), randomOffset, despawnDelay);
 	}
 	
 	/**
@@ -1172,7 +1172,7 @@ public final class QuestState
 	 * @param despawnDelay
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
 		return getQuest().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
 	}
@@ -1265,16 +1265,16 @@ public final class QuestState
 		_player.sendPacket(new TutorialEnableClientEvent(number));
 	}
 	
-	public void dropItem(L2MonsterInstance npc, L2PcInstance player, int itemId, int count)
+	public void dropItem(MonsterInstance npc, PlayerInstance player, int itemId, int count)
 	{
 		npc.DropItem(player, itemId, count);
 	}
 	
-	public L2NpcInstance getNpc()
+	public NpcInstance getNpc()
 	{
-		if (_player.getTarget() instanceof L2NpcInstance)
+		if (_player.getTarget() instanceof NpcInstance)
 		{
-			return (L2NpcInstance) _player.getTarget();
+			return (NpcInstance) _player.getTarget();
 		}
 		return null;
 	}

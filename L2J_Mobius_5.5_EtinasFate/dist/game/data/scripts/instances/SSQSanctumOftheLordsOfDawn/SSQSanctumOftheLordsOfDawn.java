@@ -21,8 +21,8 @@ import java.util.List;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -75,13 +75,13 @@ public final class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		// Spawn guards and set save points
 		for (int i = 1; i <= 4; i++)
 		{
-			final List<L2Npc> npcs = instance.spawnGroup("save_point" + i);
-			for (L2Npc npc : npcs)
+			final List<Npc> npcs = instance.spawnGroup("save_point" + i);
+			for (Npc npc : npcs)
 			{
 				npc.setScriptValue(i - 1);
 			}
@@ -89,7 +89,7 @@ public final class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -130,7 +130,7 @@ public final class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		switch (npc.getId())
 		{
@@ -199,7 +199,7 @@ public final class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));
 		startQuestTimer("teleportPlayer", 2000, npc, player);

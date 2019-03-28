@@ -34,12 +34,12 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -91,7 +91,7 @@ public final class CharEffectList
 	/** If {@code true} only party icons need to be updated. */
 	private boolean _partyOnly = false;
 	/** The owner of this effect list. */
-	private final L2Character _owner;
+	private final Creature _owner;
 	/** Hidden buffs count, prevents iterations. */
 	private final AtomicInteger _hiddenBuffs = new AtomicInteger();
 	
@@ -101,7 +101,7 @@ public final class CharEffectList
 	 * Constructor for effect list.
 	 * @param owner the creature that owns this effect list
 	 */
-	public CharEffectList(L2Character owner)
+	public CharEffectList(Creature owner)
 	{
 		_owner = owner;
 	}
@@ -246,7 +246,7 @@ public final class CharEffectList
 	 * @param type the effect type
 	 * @return the first effect matching the given effect type
 	 */
-	public BuffInfo getFirstEffect(L2EffectType type)
+	public BuffInfo getFirstEffect(EffectType type)
 	{
 		if (hasBuffs())
 		{
@@ -778,7 +778,7 @@ public final class CharEffectList
 	 * TODO: Remove after all effect types are replaced by abnormal skill types.
 	 * @param type the type of the effect to stop
 	 */
-	public void stopEffects(L2EffectType type)
+	public void stopEffects(EffectType type)
 	{
 		boolean update = false;
 		final Consumer<BuffInfo> action = info ->
@@ -1405,7 +1405,7 @@ public final class CharEffectList
 			{
 				if (_owner.isSummon())
 				{
-					final L2PcInstance summonOwner = ((L2Summon) _owner).getOwner();
+					final PlayerInstance summonOwner = ((Summon) _owner).getOwner();
 					if (summonOwner != null)
 					{
 						if (summonOwner.isInParty())

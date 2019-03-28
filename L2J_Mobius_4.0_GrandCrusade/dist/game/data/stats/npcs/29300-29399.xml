@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29300" level="97" type="L2RaidBoss" name="Varkaron" title="Dimensional Invader">
+	<npc id="29300" level="97" type="RaidBoss" name="Varkaron" title="Dimensional Invader">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -112,7 +112,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29301" level="99" type="L2Monster" name="Minion Monisac">
+	<npc id="29301" level="99" type="Monster" name="Minion Monisac">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -136,7 +136,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="29302" level="99" type="L2Monster" name="Minion Monishe">
+	<npc id="29302" level="99" type="Monster" name="Minion Monishe">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" />
@@ -161,7 +161,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="29303" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29303" level="105" type="Monster" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -188,7 +188,7 @@
 			<height normal="124" />
 		</collision>
 	</npc>
-	<npc id="29304" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29304" level="105" type="Monster" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -215,7 +215,7 @@
 			<height normal="152" />
 		</collision>
 	</npc>
-	<npc id="29305" level="105" type="L2GrandBoss" name="Helios" title="Emperor of the Beginning">
+	<npc id="29305" level="105" type="GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="6127016742000" sp="14704840180" />
@@ -331,7 +331,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29306" level="99" type="L2Monster" name="Leopold" title="Superion Siege Cannon">
+	<npc id="29306" level="99" type="Monster" name="Leopold" title="Superion Siege Cannon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Leopold - Title: Superion Siege Cannon ?? -->
 		<race>ETC</race>
@@ -347,7 +347,7 @@
 			<height normal="249" />
 		</collision>
 	</npc>
-	<npc id="29307" level="99" type="L2Monster" name="Helios' Red Lightning" title="Enuma Elish">
+	<npc id="29307" level="99" type="Monster" name="Helios' Red Lightning" title="Enuma Elish">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Helios Red Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
@@ -364,7 +364,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="29308" level="99" type="L2Monster" name="Helios' Blue Lightning" title="Enuma Elish">
+	<npc id="29308" level="99" type="Monster" name="Helios' Blue Lightning" title="Enuma Elish">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Helios Blue Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
@@ -381,7 +381,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="29309" level="105" type="L2Monster" name="Leopold Origin" title="Ultimate Kamael">
+	<npc id="29309" level="105" type="Monster" name="Leopold Origin" title="Ultimate Kamael">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -411,7 +411,7 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="29310" level="105" type="L2Monster" name="Enuma Elish Origin" title="Ultimate Kamael">
+	<npc id="29310" level="105" type="Monster" name="Enuma Elish Origin" title="Ultimate Kamael">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -441,7 +441,7 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="29311" level="105" type="L2Monster" name="Royal Templar Colonel" title="Emperor's Escort">
+	<npc id="29311" level="105" type="Monster" name="Royal Templar Colonel" title="Emperor's Escort">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -474,7 +474,7 @@
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="29312" level="105" type="L2Monster" name="Royal Sharpshooter" title="Emperor's Escort">
+	<npc id="29312" level="105" type="Monster" name="Royal Sharpshooter" title="Emperor's Escort">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="47163" />
@@ -507,7 +507,7 @@
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="29313" level="105" type="L2Monster" name="Royal Archmage" title="Emperor's Escort">
+	<npc id="29313" level="105" type="Monster" name="Royal Archmage" title="Emperor's Escort">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -540,7 +540,7 @@
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="29314" level="105" type="L2Monster" name="Royal Gatekeeper" title="Emperor's Escort">
+	<npc id="29314" level="105" type="Monster" name="Royal Gatekeeper" title="Emperor's Escort">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -572,7 +572,7 @@
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="29315" level="105" type="L2Monster" name="Mimillion" title="Red Lightning Watchman">
+	<npc id="29315" level="105" type="Monster" name="Mimillion" title="Red Lightning Watchman">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -598,7 +598,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="29316" level="105" type="L2Monster" name="Mimillus" title="Blue Lightning Watchman">
+	<npc id="29316" level="105" type="Monster" name="Mimillus" title="Blue Lightning Watchman">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -624,7 +624,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="29317" level="85" type="L2Npc" name="Lindvior" title="Wind Dragon">
+	<npc id="29317" level="85" type="Npc" name="Lindvior" title="Wind Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

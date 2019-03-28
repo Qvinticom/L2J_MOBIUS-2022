@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
@@ -37,17 +37,17 @@ public final class RequestHennaEquip implements IClientIncomingPacket
 	private int _symbolId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_symbolId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -57,43 +57,43 @@ public final class RequestHennaEquip implements IClientIncomingPacket
 			return;
 		}
 		
-		int totalHennaSlots = activeChar.getHennaEmptySlots();
-		if ((Config.PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL || activeChar.hasPremiumStatus()) && Config.PREMIUM_HENNA_SLOT_ENABLED && (activeChar.getClassId().level() > 1) && (activeChar.getHenna(4) == null))
+		int totalHennaSlots = player.getHennaEmptySlots();
+		if ((Config.PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL || player.hasPremiumStatus()) && Config.PREMIUM_HENNA_SLOT_ENABLED && (player.getClassId().level() > 1) && (player.getHenna(4) == null))
 		{
 			totalHennaSlots++;
 		}
 		if (totalHennaSlots == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
+			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2Henna henna = HennaData.getInstance().getHenna(_symbolId);
+		final Henna henna = HennaData.getInstance().getHenna(_symbolId);
 		if (henna == null)
 		{
-			LOGGER.warning("Invalid Henna Id: " + _symbolId + " from player " + activeChar);
+			LOGGER.warning("Invalid Henna Id: " + _symbolId + " from player " + player);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final long _count = activeChar.getInventory().getInventoryItemCount(henna.getDyeItemId(), -1);
-		if (henna.isAllowedClass(activeChar.getClassId()) && (_count >= henna.getWearCount()) && (activeChar.getAdena() >= henna.getWearFee()) && activeChar.addHenna(henna))
+		final long _count = player.getInventory().getInventoryItemCount(henna.getDyeItemId(), -1);
+		if (henna.isAllowedClass(player.getClassId()) && (_count >= henna.getWearCount()) && (player.getAdena() >= henna.getWearFee()) && player.addHenna(henna))
 		{
-			activeChar.destroyItemByItemId("Henna", henna.getDyeItemId(), henna.getWearCount(), activeChar, true);
-			activeChar.getInventory().reduceAdena("Henna", henna.getWearFee(), activeChar, activeChar.getLastFolkNPC());
+			player.destroyItemByItemId("Henna", henna.getDyeItemId(), henna.getWearCount(), player, true);
+			player.getInventory().reduceAdena("Henna", henna.getWearFee(), player, player.getLastFolkNPC());
 			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addModifiedItem(activeChar.getInventory().getAdenaInstance());
-			activeChar.sendInventoryUpdate(iu);
-			activeChar.sendPacket(new HennaEquipList(activeChar));
-			activeChar.sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED);
+			iu.addModifiedItem(player.getInventory().getAdenaInstance());
+			player.sendInventoryUpdate(iu);
+			player.sendPacket(new HennaEquipList(player));
+			player.sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED);
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);
-			if (!activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !henna.isAllowedClass(activeChar.getClassId()))
+			player.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);
+			if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !henna.isAllowedClass(player.getClassId()))
 			{
-				Util.handleIllegalPlayerAction(activeChar, "Exploit attempt: Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);
 			}
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 		}

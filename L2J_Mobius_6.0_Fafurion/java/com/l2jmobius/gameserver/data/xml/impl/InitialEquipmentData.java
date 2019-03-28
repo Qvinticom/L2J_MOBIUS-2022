@@ -31,7 +31,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.items.PcItemTemplate;
+import com.l2jmobius.gameserver.model.items.PlayerItemTemplate;
 
 /**
  * This class holds the Initial Equipment information.<br>
@@ -42,7 +42,7 @@ public final class InitialEquipmentData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(InitialEquipmentData.class.getName());
 	
-	private final Map<ClassId, List<PcItemTemplate>> _initialEquipmentList = new HashMap<>();
+	private final Map<ClassId, List<PlayerItemTemplate>> _initialEquipmentList = new HashMap<>();
 	private static final String NORMAL = "data/stats/initialEquipment.xml";
 	private static final String EVENT = "data/stats/initialEquipmentEvent.xml";
 	
@@ -88,7 +88,7 @@ public final class InitialEquipmentData implements IGameXmlReader
 	{
 		NamedNodeMap attrs = d.getAttributes();
 		final ClassId classId = ClassId.getClassId(Integer.parseInt(attrs.getNamedItem("classId").getNodeValue()));
-		final List<PcItemTemplate> equipList = new ArrayList<>();
+		final List<PlayerItemTemplate> equipList = new ArrayList<>();
 		for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 		{
 			if ("item".equalsIgnoreCase(c.getNodeName()))
@@ -100,7 +100,7 @@ public final class InitialEquipmentData implements IGameXmlReader
 					final Node attr = attrs.item(i);
 					set.set(attr.getNodeName(), attr.getNodeValue());
 				}
-				equipList.add(new PcItemTemplate(set));
+				equipList.add(new PlayerItemTemplate(set));
 			}
 		}
 		_initialEquipmentList.put(classId, equipList);
@@ -111,7 +111,7 @@ public final class InitialEquipmentData implements IGameXmlReader
 	 * @param cId the class Id for the required initial equipment.
 	 * @return the initial equipment for the given class Id.
 	 */
-	public List<PcItemTemplate> getEquipmentList(ClassId cId)
+	public List<PlayerItemTemplate> getEquipmentList(ClassId cId)
 	{
 		return _initialEquipmentList.get(cId);
 	}
@@ -121,7 +121,7 @@ public final class InitialEquipmentData implements IGameXmlReader
 	 * @param cId the class Id for the required initial equipment.
 	 * @return the initial equipment for the given class Id.
 	 */
-	public List<PcItemTemplate> getEquipmentList(int cId)
+	public List<PlayerItemTemplate> getEquipmentList(int cId)
 	{
 		return _initialEquipmentList.get(ClassId.getClassId(cId));
 	}

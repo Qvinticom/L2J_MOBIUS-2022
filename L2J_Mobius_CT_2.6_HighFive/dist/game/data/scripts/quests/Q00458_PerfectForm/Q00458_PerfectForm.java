@@ -18,9 +18,9 @@ package quests.Q00458_PerfectForm;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -83,7 +83,7 @@ public class Q00458_PerfectForm extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String noQuest = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
@@ -221,7 +221,7 @@ public class Q00458_PerfectForm extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1))
@@ -238,12 +238,12 @@ public class Q00458_PerfectForm extends Quest
 			{
 				qs.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
 				
-				final L2Attackable mob = (L2Attackable) npc;
+				final Attackable mob = (Attackable) npc;
 				if (mob.isOverhit())
 				{
 					qs.set("overhitsTotal", String.valueOf(qs.getInt("overhitsTotal") + 1)); // memoStateEx 1
 					final int maxHp = mob.getMaxHp();
-					// L2Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
+					// Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
 					final double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
 					if (overhitPercentage >= 1.2)
 					{
@@ -284,7 +284,7 @@ public class Q00458_PerfectForm extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

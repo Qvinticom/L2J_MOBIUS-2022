@@ -19,8 +19,8 @@ package ai.others.Selina;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -62,7 +62,7 @@ public final class Selina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final BuffHolder buff = BUFFS.get(event);
 		if (buff != null)
@@ -81,7 +81,7 @@ public final class Selina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final String htmltext;
 		if (hasQuestItems(player, GOLDEN_RAM_BADGE_SOLDIER))
@@ -100,7 +100,7 @@ public final class Selina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final BuffHolder buff = BUFFS.get(Integer.toString(skill.getId()));
 		if (buff != null)

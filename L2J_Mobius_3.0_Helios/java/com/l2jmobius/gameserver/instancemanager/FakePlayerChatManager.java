@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.FakePlayerChatHolder;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -78,17 +78,17 @@ public final class FakePlayerChatManager implements IGameXmlReader
 		}));
 	}
 	
-	public void manageChat(L2PcInstance player, String fpcName, String message)
+	public void manageChat(PlayerInstance player, String fpcName, String message)
 	{
 		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
 	}
 	
-	public void manageChat(L2PcInstance player, String fpcName, String message, int minDelay, int maxDelay)
+	public void manageChat(PlayerInstance player, String fpcName, String message, int minDelay, int maxDelay)
 	{
 		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
 	}
 	
-	private void manageResponce(L2PcInstance player, String fpcName, String message)
+	private void manageResponce(PlayerInstance player, String fpcName, String message)
 	{
 		if (player == null)
 		{
@@ -100,10 +100,10 @@ public final class FakePlayerChatManager implements IGameXmlReader
 		// tricky question
 		if (text.contains("can you see me"))
 		{
-			final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(FakePlayerData.getInstance().getNpcIdByName(fpcName));
+			final Spawn spawn = SpawnTable.getInstance().getAnySpawn(FakePlayerData.getInstance().getNpcIdByName(fpcName));
 			if (spawn != null)
 			{
-				final L2Npc npc = spawn.getLastSpawn();
+				final Npc npc = spawn.getLastSpawn();
 				if (npc != null)
 				{
 					if (npc.calculateDistance2D(player) < 3000)
@@ -171,12 +171,12 @@ public final class FakePlayerChatManager implements IGameXmlReader
 		}
 	}
 	
-	public void sendChat(L2PcInstance player, String fpcName, String message)
+	public void sendChat(PlayerInstance player, String fpcName, String message)
 	{
-		final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(FakePlayerData.getInstance().getNpcIdByName(fpcName));
+		final Spawn spawn = SpawnTable.getInstance().getAnySpawn(FakePlayerData.getInstance().getNpcIdByName(fpcName));
 		if (spawn != null)
 		{
-			final L2Npc npc = spawn.getLastSpawn();
+			final Npc npc = spawn.getLastSpawn();
 			if (npc != null)
 			{
 				player.sendPacket(new CreatureSay(npc, player, fpcName, ChatType.WHISPER, message));

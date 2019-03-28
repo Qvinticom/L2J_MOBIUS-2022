@@ -23,11 +23,11 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchResult;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
@@ -103,9 +103,9 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		
 		List<Integer> teamOne = null;
 		List<Integer> teamTwo = null;
-		L2PcInstance player;
-		final List<L2PcInstance> teamOnePlayers = new ArrayList<>(MAX_TEAM_SIZE);
-		final List<L2PcInstance> teamTwoPlayers = new ArrayList<>(MAX_TEAM_SIZE);
+		PlayerInstance player;
+		final List<PlayerInstance> teamOnePlayers = new ArrayList<>(MAX_TEAM_SIZE);
+		final List<PlayerInstance> teamTwoPlayers = new ArrayList<>(MAX_TEAM_SIZE);
 		
 		while (list.size() > 1)
 		{
@@ -118,7 +118,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			
 			for (int objectId : teamOne)
 			{
-				player = L2World.getInstance().getPlayer(objectId);
+				player = World.getInstance().getPlayer(objectId);
 				if ((player == null) || !player.isOnline())
 				{
 					teamOnePlayers.clear();
@@ -141,7 +141,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			
 			for (int objectId : teamTwo)
 			{
-				player = L2World.getInstance().getPlayer(objectId);
+				player = World.getInstance().getPlayer(objectId);
 				if ((player == null) || !player.isOnline())
 				{
 					teamTwoPlayers.clear();
@@ -230,21 +230,21 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void sendOlympiadInfo(L2Character player)
+	public final void sendOlympiadInfo(Creature creature)
 	{
 		for (int i = 0; i < MAX_TEAM_SIZE; i++)
 		{
-			player.sendPacket(new ExOlympiadUserInfo(_teamOne[i]));
+			creature.sendPacket(new ExOlympiadUserInfo(_teamOne[i]));
 		}
 		
 		for (int i = 0; i < MAX_TEAM_SIZE; i++)
 		{
-			player.sendPacket(new ExOlympiadUserInfo(_teamTwo[i]));
+			creature.sendPacket(new ExOlympiadUserInfo(_teamTwo[i]));
 		}
 	}
 	
 	@Override
-	public final void broadcastOlympiadInfo(L2OlympiadStadiumZone stadium)
+	public final void broadcastOlympiadInfo(OlympiadStadiumZone stadium)
 	{
 		for (int i = 0; i < MAX_TEAM_SIZE; i++)
 		{
@@ -462,7 +462,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void handleDisconnect(L2PcInstance player)
+	protected final void handleDisconnect(PlayerInstance player)
 	{
 		Participant par;
 		for (int i = _teamOneSize; --i >= 0;)
@@ -525,7 +525,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected void validateWinner(L2OlympiadStadiumZone stadium)
+	protected void validateWinner(OlympiadStadiumZone stadium)
 	{
 		if (_aborted)
 		{
@@ -962,7 +962,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 	 * UnAfraid: TODO: We should calculate the damage in array separately for each player so we can display it on ExOlympiadMatchResult correctly.
 	 */
 	@Override
-	protected final void addDamage(L2PcInstance player, int damage)
+	protected final void addDamage(PlayerInstance player, int damage)
 	{
 		Participant par;
 		for (int i = _teamOneSize; --i >= 0;)

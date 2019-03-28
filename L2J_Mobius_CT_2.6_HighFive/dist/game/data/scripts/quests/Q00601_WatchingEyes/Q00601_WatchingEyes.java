@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -80,11 +80,11 @@ public class Q00601_WatchingEyes extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -94,7 +94,7 @@ public class Q00601_WatchingEyes extends Quest
 		{
 			case "31683-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "31683-05.html":
@@ -110,7 +110,7 @@ public class Q00601_WatchingEyes extends Quest
 					addExpAndSp(player, 120000, 10000);
 				}
 				giveAdena(player, REWARD[i][1], true);
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				break;
 			}
 			default:
@@ -123,16 +123,16 @@ public class Q00601_WatchingEyes extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
+		if ((qs != null) && qs.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			giveItems(player, PROOF_OF_AVENGER, 1);
 			if (getQuestItemsCount(player, PROOF_OF_AVENGER) == 100)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
@@ -143,12 +143,12 @@ public class Q00601_WatchingEyes extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -157,7 +157,7 @@ public class Q00601_WatchingEyes extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (st.isCond(1)) ? "31683-03.html" : "31683-04.html";
+				htmltext = (qs.isCond(1)) ? "31683-03.html" : "31683-04.html";
 				break;
 			}
 		}

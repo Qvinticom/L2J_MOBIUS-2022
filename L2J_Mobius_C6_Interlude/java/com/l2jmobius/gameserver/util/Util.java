@@ -25,10 +25,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * General Utility functions related to game server.
@@ -54,7 +54,7 @@ public final class Util
 		':'
 	};
 	
-	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, int punishment)
+	public static void handleIllegalPlayerAction(PlayerInstance actor, String message, int punishment)
 	{
 		ThreadPool.schedule(new IllegalPlayerAction(actor, message, punishment), 5000);
 	}
@@ -69,7 +69,7 @@ public final class Util
 	 * @param obj2
 	 * @return degree value of object 2 to the horizontal line with object 1 being the origin
 	 */
-	public static double calculateAngleFrom(L2Object obj1, L2Object obj2)
+	public static double calculateAngleFrom(WorldObject obj1, WorldObject obj2)
 	{
 		return calculateAngleFrom(obj1.getX(), obj1.getY(), obj2.getX(), obj2.getY());
 	}
@@ -109,7 +109,7 @@ public final class Util
 		return Math.sqrt((dx * dx) + (dy * dy));
 	}
 	
-	public static double calculateDistance(L2Object obj1, L2Object obj2, boolean includeZAxis)
+	public static double calculateDistance(WorldObject obj1, WorldObject obj2, boolean includeZAxis)
 	{
 		if ((obj1 == null) || (obj2 == null))
 		{
@@ -166,10 +166,10 @@ public final class Util
 	// Micht: Removed this because UNUSED
 	/*
 	 * public static boolean checkIfInRange(int range, int x1, int y1, int x2, int y2) { return checkIfInRange(range, x1, y1, 0, x2, y2, 0, false); } public static boolean checkIfInRange(int range, int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis) { if (includeZAxis) { return
-	 * ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2) + (z1 - z2)*(z1 - z2)) <= range * range; } else { return ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2)) <= range * range; } } public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis) { if (obj1 == null || obj2
+	 * ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2) + (z1 - z2)*(z1 - z2)) <= range * range; } else { return ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2)) <= range * range; } } public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis) { if (obj1 == null || obj2
 	 * == null) return false; return checkIfInRange(range, obj1.getPosition().getX(), obj1.getPosition().getY(), obj1.getPosition().getZ(), obj2.getPosition().getX(), obj2.getPosition().getY(), obj2.getPosition().getZ(), includeZAxis); }
 	 */
-	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
+	public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis)
 	{
 		if ((obj1 == null) || (obj2 == null))
 		{
@@ -181,13 +181,13 @@ public final class Util
 		}
 		
 		int rad = 0;
-		if (obj1 instanceof L2Character)
+		if (obj1 instanceof Creature)
 		{
-			rad += ((L2Character) obj1).getTemplate().collisionRadius;
+			rad += ((Creature) obj1).getTemplate().collisionRadius;
 		}
-		if (obj2 instanceof L2Character)
+		if (obj2 instanceof Creature)
 		{
-			rad += ((L2Character) obj2).getTemplate().collisionRadius;
+			rad += ((Creature) obj2).getTemplate().collisionRadius;
 		}
 		
 		final double dx = obj1.getX() - obj2.getX();
@@ -340,7 +340,7 @@ public final class Util
 		return minutesToConvert * 60000;
 	}
 	
-	public static int calculateHeadingFrom(L2Object obj1, L2Object obj2)
+	public static int calculateHeadingFrom(WorldObject obj1, WorldObject obj2)
 	{
 		return calculateHeadingFrom(obj1.getX(), obj1.getY(), obj2.getX(), obj2.getY());
 	}
@@ -391,7 +391,7 @@ public final class Util
 		return angle;
 	}
 	
-	public static int calcCameraAngle(L2NpcInstance target)
+	public static int calcCameraAngle(NpcInstance target)
 	{
 		return calcCameraAngle(target.getHeading());
 	}

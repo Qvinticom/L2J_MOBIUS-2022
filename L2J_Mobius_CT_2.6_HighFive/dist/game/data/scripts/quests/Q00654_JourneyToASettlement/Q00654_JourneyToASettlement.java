@@ -19,8 +19,8 @@ package quests.Q00654_JourneyToASettlement;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -57,10 +57,10 @@ public final class Q00654_JourneyToASettlement extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -70,26 +70,26 @@ public final class Q00654_JourneyToASettlement extends Quest
 		{
 			case "31453-02.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "31453-03.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
-					st.setMemoState(2);
-					st.setCond(2, true);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 			}
 			case "31453-07.html":
 			{
-				if (st.isMemoState(2) && hasQuestItems(player, ANTELOPE_SKIN))
+				if (qs.isMemoState(2) && hasQuestItems(player, ANTELOPE_SKIN))
 				{
 					giveItems(player, FRINTEZZAS_SCROLL, 1);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 			}
@@ -98,35 +98,35 @@ public final class Q00654_JourneyToASettlement extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, 2, 3, npc);
-		if ((st != null) && giveItemRandomly(st.getPlayer(), npc, ANTELOPE_SKIN, 1, 1, MOBS_SKIN.get(npc.getId()), true))
+		final QuestState qs = getRandomPartyMemberState(player, 2, 3, npc);
+		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, ANTELOPE_SKIN, 1, 1, MOBS_SKIN.get(npc.getId()), true))
 		{
-			st.setCond(3);
+			qs.setCond(3);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
-			st = player.getQuestState(Q00119_LastImperialPrince.class.getSimpleName());
-			htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "31453-01.htm" : "31453-04.htm";
+			qs = player.getQuestState(Q00119_LastImperialPrince.class.getSimpleName());
+			htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "31453-01.htm" : "31453-04.htm";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			if (st.isMemoState(1))
+			if (qs.isMemoState(1))
 			{
-				st.setMemoState(2);
-				st.setCond(2, true);
+				qs.setMemoState(2);
+				qs.setCond(2, true);
 				htmltext = "31453-03.html";
 			}
-			else if (st.isMemoState(2))
+			else if (qs.isMemoState(2))
 			{
 				htmltext = (hasQuestItems(player, ANTELOPE_SKIN) ? "31453-06.html" : "31453-05.html");
 			}

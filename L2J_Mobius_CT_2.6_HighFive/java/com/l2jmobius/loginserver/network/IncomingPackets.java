@@ -32,7 +32,7 @@ import com.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
 /**
  * @author Mobius
  */
-public enum IncomingPackets implements IIncomingPackets<L2LoginClient>
+public enum IncomingPackets implements IIncomingPackets<LoginClient>
 {
 	AUTH_GAME_GUARD(0x07, AuthGameGuard::new, ConnectionState.CONNECTED),
 	REQUEST_AUTH_LOGIN(0x00, RequestAuthLogin::new, ConnectionState.AUTHED_GG),
@@ -54,10 +54,10 @@ public enum IncomingPackets implements IIncomingPackets<L2LoginClient>
 	}
 	
 	private short _packetId;
-	private Supplier<IIncomingPacket<L2LoginClient>> _incomingPacketFactory;
+	private Supplier<IIncomingPacket<LoginClient>> _incomingPacketFactory;
 	private Set<IConnectionState> _connectionStates;
 	
-	IncomingPackets(int packetId, Supplier<IIncomingPacket<L2LoginClient>> incomingPacketFactory, IConnectionState... connectionStates)
+	IncomingPackets(int packetId, Supplier<IIncomingPacket<LoginClient>> incomingPacketFactory, IConnectionState... connectionStates)
 	{
 		// packetId is an unsigned byte
 		if (packetId > 0xFF)
@@ -77,7 +77,7 @@ public enum IncomingPackets implements IIncomingPackets<L2LoginClient>
 	}
 	
 	@Override
-	public IIncomingPacket<L2LoginClient> newIncomingPacket()
+	public IIncomingPacket<LoginClient> newIncomingPacket()
 	{
 		return _incomingPacketFactory.get();
 	}

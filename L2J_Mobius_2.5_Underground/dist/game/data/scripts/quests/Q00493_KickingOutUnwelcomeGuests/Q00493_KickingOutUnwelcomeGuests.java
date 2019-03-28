@@ -20,8 +20,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -53,10 +53,10 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -73,16 +73,16 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 			}
 			case "33515-05.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33515-08.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					addExpAndSp(player, 560_000_000, 134_400);
-					st.exitQuest(QuestType.DAILY, true);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 				}
 				break;
@@ -92,14 +92,14 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (npc.getId() == GEORGIO)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -108,11 +108,11 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "33515-06.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "33515-07.html";
 					}
@@ -120,9 +120,9 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 				}
 				case State.COMPLETED:
 				{
-					if (st.isNowAvailable())
+					if (qs.isNowAvailable())
 					{
-						st.setState(State.CREATED);
+						qs.setState(State.CREATED);
 						htmltext = "33515-01.htm";
 					}
 					else
@@ -137,49 +137,49 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
-			final int killedCount = st.getInt(Integer.toString(npc.getId()));
+			final int killedCount = qs.getInt(Integer.toString(npc.getId()));
 			if (killedCount < 20)
 			{
-				st.set(Integer.toString(npc.getId()), killedCount + 1);
+				qs.set(Integer.toString(npc.getId()), killedCount + 1);
 			}
 			
-			final int killedLunatic = st.getInt(Integer.toString(LUNATIC_CREATURE));
-			final int killedRessurected = st.getInt(Integer.toString(RESURRECTED_CREATION));
-			final int killedUndead = st.getInt(Integer.toString(UNDEAD_CREATURE));
-			final int killedMessenger = st.getInt(Integer.toString(SHILEN_MESSENGER));
-			final int killedHellish = st.getInt(Integer.toString(HELLISH_CREATURE));
+			final int killedLunatic = qs.getInt(Integer.toString(LUNATIC_CREATURE));
+			final int killedRessurected = qs.getInt(Integer.toString(RESURRECTED_CREATION));
+			final int killedUndead = qs.getInt(Integer.toString(UNDEAD_CREATURE));
+			final int killedMessenger = qs.getInt(Integer.toString(SHILEN_MESSENGER));
+			final int killedHellish = qs.getInt(Integer.toString(HELLISH_CREATURE));
 			
 			if ((killedLunatic == 20) && (killedRessurected == 20) && (killedUndead == 20) && (killedMessenger == 20) && (killedHellish == 20))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		executeForEachPlayer(player, npc, isSummon, true, false);
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(5);
-			npcLogList.add(new NpcLogListHolder(LUNATIC_CREATURE, false, st.getInt(Integer.toString(LUNATIC_CREATURE))));
-			npcLogList.add(new NpcLogListHolder(RESURRECTED_CREATION, false, st.getInt(Integer.toString(RESURRECTED_CREATION))));
-			npcLogList.add(new NpcLogListHolder(UNDEAD_CREATURE, false, st.getInt(Integer.toString(UNDEAD_CREATURE))));
-			npcLogList.add(new NpcLogListHolder(SHILEN_MESSENGER, false, st.getInt(Integer.toString(SHILEN_MESSENGER))));
-			npcLogList.add(new NpcLogListHolder(HELLISH_CREATURE, false, st.getInt(Integer.toString(HELLISH_CREATURE))));
+			npcLogList.add(new NpcLogListHolder(LUNATIC_CREATURE, false, qs.getInt(Integer.toString(LUNATIC_CREATURE))));
+			npcLogList.add(new NpcLogListHolder(RESURRECTED_CREATION, false, qs.getInt(Integer.toString(RESURRECTED_CREATION))));
+			npcLogList.add(new NpcLogListHolder(UNDEAD_CREATURE, false, qs.getInt(Integer.toString(UNDEAD_CREATURE))));
+			npcLogList.add(new NpcLogListHolder(SHILEN_MESSENGER, false, qs.getInt(Integer.toString(SHILEN_MESSENGER))));
+			npcLogList.add(new NpcLogListHolder(HELLISH_CREATURE, false, qs.getInt(Integer.toString(HELLISH_CREATURE))));
 			return npcLogList;
 		}
 		return super.getNpcLogList(player);

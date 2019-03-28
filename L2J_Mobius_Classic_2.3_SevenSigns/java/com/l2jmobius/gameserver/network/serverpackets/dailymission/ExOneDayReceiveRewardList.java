@@ -24,7 +24,7 @@ import java.util.function.Function;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.util.cron4j.Predictor;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.util.cron4j.Predictor;
  */
 public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
-	final L2PcInstance _player;
+	final PlayerInstance _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
 	private static final Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000;
 	
@@ -42,7 +42,7 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 	private final long _weekRemainTime;
 	private final long _monthRemainTime;
 	
-	public ExOneDayReceiveRewardList(L2PcInstance player, boolean sendRewards)
+	public ExOneDayReceiveRewardList(PlayerInstance player, boolean sendRewards)
 	{
 		_player = player;
 		_rewards = sendRewards ? DailyMissionData.getInstance().getDailyMissionData(player) : Collections.emptyList();

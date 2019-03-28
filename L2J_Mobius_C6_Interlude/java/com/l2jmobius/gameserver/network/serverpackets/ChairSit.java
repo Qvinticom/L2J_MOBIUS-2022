@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * sample format d
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ChairSit extends L2GameServerPacket
+public class ChairSit extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _staticObjectId;
 	
 	/**
 	 * @param player
 	 * @param staticObjectId
 	 */
-	public ChairSit(L2PcInstance player, int staticObjectId)
+	public ChairSit(PlayerInstance player, int staticObjectId)
 	{
-		_activeChar = player;
+		_player = player;
 		_staticObjectId = staticObjectId;
 	}
 	
@@ -41,7 +41,7 @@ public class ChairSit extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xe1);
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeD(_staticObjectId);
 	}
 }

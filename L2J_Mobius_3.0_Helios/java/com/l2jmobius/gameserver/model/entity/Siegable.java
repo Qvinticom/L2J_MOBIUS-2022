@@ -21,10 +21,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * @author JIV
@@ -35,25 +35,25 @@ public interface Siegable
 	
 	void endSiege();
 	
-	L2SiegeClan getAttackerClan(int clanId);
+	SiegeClan getAttackerClan(int clanId);
 	
-	L2SiegeClan getAttackerClan(L2Clan clan);
+	SiegeClan getAttackerClan(Clan clan);
 	
-	Collection<L2SiegeClan> getAttackerClans();
+	Collection<SiegeClan> getAttackerClans();
 	
-	List<L2PcInstance> getAttackersInZone();
+	List<PlayerInstance> getAttackersInZone();
 	
-	boolean checkIsAttacker(L2Clan clan);
+	boolean checkIsAttacker(Clan clan);
 	
-	L2SiegeClan getDefenderClan(int clanId);
+	SiegeClan getDefenderClan(int clanId);
 	
-	L2SiegeClan getDefenderClan(L2Clan clan);
+	SiegeClan getDefenderClan(Clan clan);
 	
-	List<L2SiegeClan> getDefenderClans();
+	List<SiegeClan> getDefenderClans();
 	
-	boolean checkIsDefender(L2Clan clan);
+	boolean checkIsDefender(Clan clan);
 	
-	Set<L2Npc> getFlag(L2Clan clan);
+	Set<Npc> getFlag(Clan clan);
 	
 	Calendar getSiegeDate();
 	

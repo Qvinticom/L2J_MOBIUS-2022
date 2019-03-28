@@ -17,11 +17,10 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: $ $Date: $
  * @author Luca Baldi
  */
-public class ExQuestInfo extends L2GameServerPacket
+public class ExQuestInfo extends GameServerPacket
 {
 	/*
 	 * (non-Javadoc)

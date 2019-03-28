@@ -63,18 +63,18 @@ public enum CtrlEvent
 	 * attempt to cancel a cast/bow attack and so on.
 	 */
 	EVT_CANCEL,
-	/** The character is dead */
+	/** The creature is dead */
 	EVT_DEAD,
-	/** The character looks like dead */
+	/** The creature looks like dead */
 	EVT_FAKE_DEATH,
-	/** The character attack anyone randomly **/
+	/** The creature attack anyone randomly **/
 	EVT_CONFUSED,
-	/** The character cannot cast spells anymore **/
+	/** The creature cannot cast spells anymore **/
 	EVT_MUTED,
-	/** The character flee in random directions **/
+	/** The creature flee in random directions **/
 	EVT_AFRAID,
-	/** The character finish casting **/
+	/** The creature finish casting **/
 	EVT_FINISH_CASTING,
-	/** The character betrayed its master */
+	/** The creature betrayed its master */
 	EVT_BETRAYED
 }

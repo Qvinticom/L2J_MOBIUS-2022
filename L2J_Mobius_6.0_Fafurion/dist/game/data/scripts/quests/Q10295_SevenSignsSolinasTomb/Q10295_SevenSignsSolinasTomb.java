@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -105,7 +105,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -139,7 +139,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			case "intro_movie":
 			{
 				player.teleToLocation(START_LOC);
-				final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+				final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 				elcadia.teleToLocation(player, true);
 				if (qs.isCond(1))
 				{
@@ -195,7 +195,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			case "teleport_back":
 			{
 				player.teleToLocation(BACK_LOC);
-				final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+				final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 				elcadia.teleToLocation(player, true);
 				break;
 			}
@@ -204,7 +204,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				if (hasQuestItems(player, STAFF_RELIC))
 				{
 					takeItems(player, STAFF_RELIC, -1);
-					final L2Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
+					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
 					guardian.setIsInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
@@ -215,7 +215,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				if (hasQuestItems(player, SWORD_RELIC))
 				{
 					takeItems(player, SWORD_RELIC, -1);
-					final L2Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
+					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
 					guardian.setIsInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
@@ -226,7 +226,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				if (hasQuestItems(player, SHIELD_RELIC))
 				{
 					takeItems(player, SHIELD_RELIC, -1);
-					final L2Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
+					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
 					guardian.setIsInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
@@ -237,7 +237,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				if (hasQuestItems(player, SCROLL_RELIC))
 				{
 					takeItems(player, SCROLL_RELIC, -1);
-					final L2Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
+					final Npc guardian = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
 					guardian.setIsInvul(false);
 					guardian.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 				}
@@ -254,14 +254,14 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 						closeDoor(door, player.getInstanceId());
 					}
 					player.teleToLocation(ROOM_LOC);
-					final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+					final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 					elcadia.teleToLocation(player, true);
 				}
 				return null;
 			}
 			case "activate_trap":
 			{
-				final List<L2Npc> monsters = player.getInstanceWorld().spawnGroup("solina_trap");
+				final List<Npc> monsters = player.getInstanceWorld().spawnGroup("solina_trap");
 				player.getInstanceWorld().setParameter("monstersCount", monsters.size());
 				for (int door : TRAP_DOORS)
 				{
@@ -275,7 +275,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				if (qs.getInt("progress") == 3)
 				{
 					player.teleToLocation(ROOM_2_LOC);
-					final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+					final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 					elcadia.teleToLocation(player, true);
 				}
 				return null;
@@ -302,7 +302,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 		return htmltext;
 	}
 	
-	private void tryToOpenDoors(L2PcInstance player)
+	private void tryToOpenDoors(PlayerInstance player)
 	{
 		if (hasQuestItems(player, STAFF_RELIC, SWORD_RELIC, SCROLL_RELIC, SHIELD_RELIC))
 		{
@@ -314,7 +314,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
@@ -463,7 +463,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -535,7 +535,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		switch (npc.getId())

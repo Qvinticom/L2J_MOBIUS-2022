@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -37,16 +37,16 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 	private final int _inventoryExtraSlots;
 	private final int _inventoryQuestItems;
 	
-	public ExStorageMaxCount(L2PcInstance activeChar)
+	public ExStorageMaxCount(PlayerInstance player)
 	{
-		_inventory = activeChar.getInventoryLimit();
-		_warehouse = activeChar.getWareHouseLimit();
-		_privateSell = activeChar.getPrivateSellStoreLimit();
-		_privateBuy = activeChar.getPrivateBuyStoreLimit();
+		_inventory = player.getInventoryLimit();
+		_warehouse = player.getWareHouseLimit();
+		_privateSell = player.getPrivateSellStoreLimit();
+		_privateBuy = player.getPrivateBuyStoreLimit();
 		_clan = Config.WAREHOUSE_SLOTS_CLAN;
-		_receipeD = activeChar.getDwarfRecipeLimit();
-		_recipe = activeChar.getCommonRecipeLimit();
-		_inventoryExtraSlots = (int) activeChar.getStat().calcStat(Stats.INV_LIM, 0, null, null);
+		_receipeD = player.getDwarfRecipeLimit();
+		_recipe = player.getCommonRecipeLimit();
+		_inventoryExtraSlots = (int) player.getStat().calcStat(Stats.INV_LIM, 0, null, null);
 		_inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
 	}
 	

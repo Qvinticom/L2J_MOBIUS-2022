@@ -24,11 +24,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public final class ItemsAutoDestroy
 {
-	private final List<L2ItemInstance> _items = new LinkedList<>();
+	private final List<ItemInstance> _items = new LinkedList<>();
 	
 	protected ItemsAutoDestroy()
 	{
@@ -40,7 +40,7 @@ public final class ItemsAutoDestroy
 		return SingletonHolder._instance;
 	}
 	
-	public synchronized void addItem(L2ItemInstance item)
+	public synchronized void addItem(ItemInstance item)
 	{
 		item.setDropTime(System.currentTimeMillis());
 		_items.add(item);
@@ -54,10 +54,10 @@ public final class ItemsAutoDestroy
 		}
 		
 		final long curtime = System.currentTimeMillis();
-		final Iterator<L2ItemInstance> itemIterator = _items.iterator();
+		final Iterator<ItemInstance> itemIterator = _items.iterator();
 		while (itemIterator.hasNext())
 		{
-			final L2ItemInstance item = itemIterator.next();
+			final ItemInstance item = itemIterator.next();
 			if ((item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
 			{
 				itemIterator.remove();

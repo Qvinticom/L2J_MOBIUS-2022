@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -52,7 +52,7 @@ public final class NpcSay implements IClientOutgoingPacket
 		_text = text;
 	}
 	
-	public NpcSay(L2Npc npc, ChatType messageType, String text)
+	public NpcSay(Npc npc, ChatType messageType, String text)
 	{
 		_objectId = npc.getObjectId();
 		_textType = messageType;
@@ -69,7 +69,7 @@ public final class NpcSay implements IClientOutgoingPacket
 		_npcString = npcString.getId();
 	}
 	
-	public NpcSay(L2Npc npc, ChatType messageType, NpcStringId npcString)
+	public NpcSay(Npc npc, ChatType messageType, NpcStringId npcString)
 	{
 		_objectId = npc.getObjectId();
 		_textType = messageType;

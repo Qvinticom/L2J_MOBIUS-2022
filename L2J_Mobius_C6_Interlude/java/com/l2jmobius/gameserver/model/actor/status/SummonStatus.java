@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Summon;
 
 public class SummonStatus extends PlayableStatus
 {
-	public SummonStatus(L2Summon activeChar)
+	public SummonStatus(Summon activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public L2Summon getActiveChar()
+	public Summon getActiveChar()
 	{
-		return (L2Summon) super.getActiveChar();
+		return (Summon) super.getActiveChar();
 	}
 }

@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -222,10 +222,10 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -235,7 +235,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 		{
 			case "31538-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -256,7 +256,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 			}
 			case "31538-08.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -265,10 +265,10 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if(qs != null)
 		{
 			final int npcId = npc.getId();
 			if (CommonUtil.contains(ARCHON_OF_HALISHA, npcId))
@@ -302,16 +302,16 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "31538-01.htm" : "31538-03.html");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			htmltext = ((getQuestItemsCount(player, BROKEN_RELIC_PART) >= REQUIRED_RELIC_COUNT) ? "31538-04.html" : "31538-07.html");
 		}

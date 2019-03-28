@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * This class handles following admin commands: - delete = deletes target
@@ -41,7 +41,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		handleRepair(command);
 		return true;
@@ -87,13 +87,13 @@ public class AdminRepairChar implements IAdminCommandHandler
 				return;
 			}
 			
-			// connection = L2DatabaseFactory.getConnection();
+			// connection = DatabaseFactory.getConnection();
 			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?");
 			statement.setInt(1, objId);
 			statement.execute();
 			statement.close();
 			
-			// connection = L2DatabaseFactory.getConnection();
+			// connection = DatabaseFactory.getConnection();
 			statement = con.prepareStatement("UPDATE items SET loc=\"INVENTORY\" WHERE owner_id=?");
 			statement.setInt(1, objId);
 			statement.execute();

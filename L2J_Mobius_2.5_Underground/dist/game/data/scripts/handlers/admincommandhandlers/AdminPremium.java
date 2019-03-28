@@ -23,7 +23,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -43,7 +43,7 @@ public class AdminPremium implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_premium_menu"))
 		{
@@ -111,7 +111,7 @@ public class AdminPremium implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void addPremiumStatus(L2PcInstance admin, int months, String accountName)
+	private void addPremiumStatus(PlayerInstance admin, int months, String accountName)
 	{
 		if (!Config.PREMIUM_SYSTEM_ENABLED)
 		{
@@ -124,7 +124,7 @@ public class AdminPremium implements IAdminCommandHandler
 		admin.sendMessage("Account " + accountName + " will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(accountName)) + ".");
 	}
 	
-	private void viewPremiumInfo(L2PcInstance admin, String accountName)
+	private void viewPremiumInfo(PlayerInstance admin, String accountName)
 	{
 		if (!Config.PREMIUM_SYSTEM_ENABLED)
 		{
@@ -142,7 +142,7 @@ public class AdminPremium implements IAdminCommandHandler
 		}
 	}
 	
-	private void removePremium(L2PcInstance admin, String accountName)
+	private void removePremium(PlayerInstance admin, String accountName)
 	{
 		if (!Config.PREMIUM_SYSTEM_ENABLED)
 		{

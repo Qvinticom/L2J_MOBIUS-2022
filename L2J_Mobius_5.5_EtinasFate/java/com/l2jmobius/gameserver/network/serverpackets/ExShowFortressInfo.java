@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -45,7 +45,7 @@ public class ExShowFortressInfo implements IClientOutgoingPacket
 		packet.writeD(forts.size());
 		for (Fort fort : forts)
 		{
-			final L2Clan clan = fort.getOwnerClan();
+			final Clan clan = fort.getOwnerClan();
 			packet.writeD(fort.getResidenceId());
 			packet.writeS(clan != null ? clan.getName() : "");
 			packet.writeD(fort.getSiege().isInProgress() ? 0x01 : 0x00);

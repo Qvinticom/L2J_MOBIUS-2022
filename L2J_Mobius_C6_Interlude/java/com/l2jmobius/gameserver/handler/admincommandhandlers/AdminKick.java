@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -33,7 +33,7 @@ public class AdminKick implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_kick"))
 		{
@@ -49,7 +49,7 @@ public class AdminKick implements IAdminCommandHandler
 				st.nextToken();
 				
 				final String player = st.nextToken();
-				final L2PcInstance plyr = L2World.getInstance().getPlayer(player);
+				final PlayerInstance plyr = World.getInstance().getPlayer(player);
 				
 				if (plyr != null)
 				{
@@ -69,7 +69,7 @@ public class AdminKick implements IAdminCommandHandler
 		{
 			int counter = 0;
 			
-			for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				if (!player.isGM())
 				{

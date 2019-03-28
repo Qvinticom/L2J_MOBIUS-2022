@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
-public class ValidateLocation extends L2GameServerPacket
+public class ValidateLocation extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	private final int _heading;
 	
-	public ValidateLocation(L2Character cha)
+	public ValidateLocation(Creature creature)
 	{
-		_charObjId = cha.getObjectId();
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
-		_heading = cha.getHeading();
+		_objectId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
+		_heading = creature.getHeading();
 	}
 	
 	@Override
@@ -40,7 +40,7 @@ public class ValidateLocation extends L2GameServerPacket
 	{
 		writeC(0x61);
 		
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);

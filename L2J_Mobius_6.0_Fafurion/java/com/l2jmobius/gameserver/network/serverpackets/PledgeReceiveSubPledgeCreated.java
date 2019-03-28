@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,9 +27,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 {
 	private final SubPledge _subPledge;
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
-	public PledgeReceiveSubPledgeCreated(SubPledge subPledge, L2Clan clan)
+	public PledgeReceiveSubPledgeCreated(SubPledge subPledge, Clan clan)
 	{
 		_subPledge = subPledge;
 		_clan = clan;

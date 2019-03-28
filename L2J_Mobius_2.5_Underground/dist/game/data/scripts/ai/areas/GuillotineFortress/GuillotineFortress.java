@@ -16,8 +16,8 @@
  */
 package ai.areas.GuillotineFortress;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -61,7 +61,7 @@ public class GuillotineFortress extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isPet, Skill skill)
 	{
 		if ((npc.getCurrentHpPercent() <= 85) && npc.isScriptValue(1))
 		{
@@ -72,7 +72,7 @@ public class GuillotineFortress extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance mem : player.getParty().getMembers())
+				for (PlayerInstance mem : player.getParty().getMembers())
 				{
 					mem.broadcastPacket(new ExShowScreenMessage(NpcStringId.CHAOS_SHIELD_BREAKTHROUGH, ExShowScreenMessage.BOTTOM_CENTER, 10000, false));
 				}
@@ -93,7 +93,7 @@ public class GuillotineFortress extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if ((killer != null) && killer.isPlayer() && (getRandom(100) < 5))
 		{

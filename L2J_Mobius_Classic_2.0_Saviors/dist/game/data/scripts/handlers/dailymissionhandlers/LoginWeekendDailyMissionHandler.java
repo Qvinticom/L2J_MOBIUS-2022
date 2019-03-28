@@ -22,10 +22,10 @@ import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 /**
@@ -39,7 +39,7 @@ public class LoginWeekendDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(L2PcInstance player)
+	public boolean isAvailable(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if ((entry != null) && (entry.getStatus() == DailyMissionStatus.AVAILABLE))
@@ -63,7 +63,7 @@ public class LoginWeekendDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private void onPlayerLogin(OnPlayerLogin event)
 	{
-		final DailyMissionPlayerEntry entry = getPlayerEntry(event.getActiveChar().getObjectId(), true);
+		final DailyMissionPlayerEntry entry = getPlayerEntry(event.getPlayer().getObjectId(), true);
 		final int currentDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 		final long lastCompleted = entry.getLastCompleted();
 		if (((currentDay == Calendar.SATURDAY) || (currentDay == Calendar.SUNDAY)) // Reward only on weekend.

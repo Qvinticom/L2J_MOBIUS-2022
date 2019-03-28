@@ -19,16 +19,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  * @author godson
  */
-public class ExOlympiadSpelledInfo extends L2GameServerPacket
+public class ExOlympiadSpelledInfo extends GameServerPacket
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private final List<Effect> _effects;
 	
 	private class Effect
@@ -45,7 +44,7 @@ public class ExOlympiadSpelledInfo extends L2GameServerPacket
 		}
 	}
 	
-	public ExOlympiadSpelledInfo(L2PcInstance player)
+	public ExOlympiadSpelledInfo(PlayerInstance player)
 	{
 		_effects = new ArrayList<>();
 		_player = player;

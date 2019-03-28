@@ -20,9 +20,9 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,64 +35,64 @@ import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillLi
 public class RequestChangeAbilityPoint implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isSubClassActive() && !activeChar.isDualClassActive())
+		if (player.isSubClassActive() && !player.isDualClassActive())
 		{
 			return;
 		}
 		
-		if ((activeChar.getLevel() < 99) || (activeChar.getNobleLevel() == 0))
+		if ((player.getLevel() < 99) || (player.getNobleLevel() == 0))
 		{
-			activeChar.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
+			player.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;
 		}
 		
-		if (activeChar.getAbilityPoints() >= Config.ABILITY_MAX_POINTS)
+		if (player.getAbilityPoints() >= Config.ABILITY_MAX_POINTS)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ACQUIRE_ANY_MORE_ABILITY_POINTS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ACQUIRE_ANY_MORE_ABILITY_POINTS);
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode() || activeChar.isOnEvent(CeremonyOfChaosEvent.class))
+		if (player.isInOlympiadMode() || player.isOnEvent(CeremonyOfChaosEvent.class))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
-		else if (activeChar.isOnEvent()) // custom event message
+		else if (player.isOnEvent()) // custom event message
 		{
-			activeChar.sendMessage("You cannot use or reset Ability Points while participating in an event.");
+			player.sendMessage("You cannot use or reset Ability Points while participating in an event.");
 			return;
 		}
 		
-		final long spRequired = AbilityPointsData.getInstance().getPrice(activeChar.getAbilityPoints());
-		if (spRequired > activeChar.getSp())
+		final long spRequired = AbilityPointsData.getInstance().getPrice(player.getAbilityPoints());
+		if (spRequired > player.getSp())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S1_SP_TO_CONVERT_TO1_ABILITY_POINT);
 			sm.addLong(spRequired);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
-		if (activeChar.getStat().removeSp(spRequired))
+		if (player.getStat().removeSp(spRequired))
 		{
-			activeChar.setAbilityPoints(activeChar.getAbilityPoints() + 1);
-			final UserInfo info = new UserInfo(activeChar, false);
+			player.setAbilityPoints(player.getAbilityPoints() + 1);
+			final UserInfo info = new UserInfo(player, false);
 			info.addComponentType(UserInfoType.SLOTS, UserInfoType.CURRENT_HPMPCP_EXP_SP);
-			activeChar.sendPacket(info);
-			activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+			player.sendPacket(info);
+			player.sendPacket(new ExAcquireAPSkillList(player));
 		}
 	}
 }

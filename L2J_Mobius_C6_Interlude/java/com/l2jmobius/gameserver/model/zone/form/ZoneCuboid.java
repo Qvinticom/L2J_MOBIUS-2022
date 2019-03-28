@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.model.zone.form;
 
-import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
+import com.l2jmobius.gameserver.model.zone.ZoneForm;
 
 /**
  * A primitive rectangular zone
  * @author durgus
  */
-public class ZoneCuboid extends L2ZoneForm
+public class ZoneCuboid extends ZoneForm
 {
 	private int _x1;
 	private int _x2;

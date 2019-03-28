@@ -21,9 +21,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * @author UnAfraid
@@ -33,11 +33,11 @@ public class MpRewardTask
 	private final AtomicInteger _count;
 	private final double _value;
 	private final ScheduledFuture<?> _task;
-	private final L2Character _creature;
+	private final Creature _creature;
 	
-	public MpRewardTask(L2Character creature, L2Npc npc)
+	public MpRewardTask(Creature creature, Npc npc)
 	{
-		final L2NpcTemplate template = npc.getTemplate();
+		final NpcTemplate template = npc.getTemplate();
 		_creature = creature;
 		_count = new AtomicInteger(template.getMpRewardTicks());
 		_value = calculateBaseValue(npc, creature);
@@ -49,9 +49,9 @@ public class MpRewardTask
 	 * @param creature
 	 * @return
 	 */
-	private double calculateBaseValue(L2Npc npc, L2Character creature)
+	private double calculateBaseValue(Npc npc, Creature creature)
 	{
-		final L2NpcTemplate template = npc.getTemplate();
+		final NpcTemplate template = npc.getTemplate();
 		switch (template.getMpRewardType())
 		{
 			case PER:

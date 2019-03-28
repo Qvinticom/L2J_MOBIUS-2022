@@ -22,12 +22,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -43,7 +43,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 	private long _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_count = packet.readQ();
@@ -51,33 +51,33 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || activeChar.isInCrystallize())
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || player.isInCrystallize())
 		{
 			return;
 		}
 		
 		// if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
 		// {
-		// activeChar.sendMessage("You are crystallizing too fast.");
+		// player.sendMessage("You are crystallizing too fast.");
 		// return;
 		// }
 		
 		if (_count <= 0)
 		{
-			Util.handleIllegalPlayerAction(activeChar, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + activeChar.getName(), Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + player.getName(), Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() != PrivateStoreType.NONE) || activeChar.isInCrystallize())
+		if ((player.getPrivateStoreType() != PrivateStoreType.NONE) || player.isInCrystallize())
 		{
 			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
-		final int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
+		final int skillLevel = player.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
 		if (skillLevel <= 0)
 		{
 			client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
@@ -85,7 +85,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem() || (!Config.ALT_ALLOW_AUGMENT_DESTROY && item.isAugmented()))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -95,18 +95,18 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
-			LOGGER.warning(activeChar + ": tried to crystallize " + item.getItem());
+			LOGGER.warning(player + ": tried to crystallize " + item.getItem());
 			return;
 		}
 		
 		if (_count > item.getCount())
 		{
-			_count = activeChar.getInventory().getItemByObjectId(_objectId).getCount();
+			_count = player.getInventory().getItemByObjectId(_objectId).getCount();
 		}
 		
-		if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
+		if (!player.getInventory().canManipulateWithItemId(item.getId()))
 		{
-			activeChar.sendMessage("You cannot use this item.");
+			player.sendMessage("You cannot use this item.");
 			return;
 		}
 		
@@ -176,7 +176,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(item);
 		if ((crystallizationRewards != null) && !crystallizationRewards.isEmpty())
 		{
-			activeChar.setInCrystallize(true);
+			player.setInCrystallize(true);
 			client.sendPacket(new ExGetCrystalizingEstimation(crystallizationRewards));
 		}
 		else

@@ -16,28 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2ShortCut;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ShortCut;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * ShortCutInit format d *(1dddd)/(2ddddd)/(3dddd)
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class ShortCutInit extends L2GameServerPacket
+public class ShortCutInit extends GameServerPacket
 {
-	private L2ShortCut[] _shortCuts;
-	private L2PcInstance _activeChar;
+	private ShortCut[] _shortCuts;
+	private PlayerInstance _player;
 	
-	public ShortCutInit(L2PcInstance activeChar)
+	public ShortCutInit(PlayerInstance player)
 	{
-		_activeChar = activeChar;
+		_player = player;
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
 		
-		_shortCuts = _activeChar.getAllShortCuts();
+		_shortCuts = _player.getAllShortCuts();
 	}
 	
 	@Override
@@ -46,14 +46,14 @@ public class ShortCutInit extends L2GameServerPacket
 		writeC(0x45);
 		writeD(_shortCuts.length);
 		
-		for (L2ShortCut sc : _shortCuts)
+		for (ShortCut sc : _shortCuts)
 		{
 			writeD(sc.getType());
 			writeD(sc.getSlot() + (sc.getPage() * 12));
 			
 			switch (sc.getType())
 			{
-				case L2ShortCut.TYPE_ITEM: // 1
+				case ShortCut.TYPE_ITEM: // 1
 				{
 					writeD(sc.getId());
 					writeD(0x01);
@@ -64,7 +64,7 @@ public class ShortCutInit extends L2GameServerPacket
 					writeH(0x00);
 					break;
 				}
-				case L2ShortCut.TYPE_SKILL: // 2
+				case ShortCut.TYPE_SKILL: // 2
 				{
 					writeD(sc.getId());
 					writeD(sc.getLevel());
@@ -72,19 +72,19 @@ public class ShortCutInit extends L2GameServerPacket
 					writeD(0x01); // C6
 					break;
 				}
-				case L2ShortCut.TYPE_ACTION: // 3
+				case ShortCut.TYPE_ACTION: // 3
 				{
 					writeD(sc.getId());
 					writeD(0x01); // C6
 					break;
 				}
-				case L2ShortCut.TYPE_MACRO: // 4
+				case ShortCut.TYPE_MACRO: // 4
 				{
 					writeD(sc.getId());
 					writeD(0x01); // C6
 					break;
 				}
-				case L2ShortCut.TYPE_RECIPE: // 5
+				case ShortCut.TYPE_RECIPE: // 5
 				{
 					writeD(sc.getId());
 					writeD(0x01); // C6

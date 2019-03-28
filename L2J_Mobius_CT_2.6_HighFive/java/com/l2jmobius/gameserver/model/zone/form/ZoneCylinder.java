@@ -20,13 +20,13 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
+import com.l2jmobius.gameserver.model.zone.ZoneForm;
 
 /**
  * A primitive circular zone
  * @author durgus
  */
-public class ZoneCylinder extends L2ZoneForm
+public class ZoneCylinder extends ZoneForm
 {
 	private final int _x;
 	private final int _y;

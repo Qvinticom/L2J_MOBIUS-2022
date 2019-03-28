@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class MoveToLocationAirShip implements IClientIncomingPacket
@@ -38,7 +38,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 	private int _param2 = 0;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_command = packet.readD();
 		_param1 = packet.readD();
@@ -50,21 +50,21 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.isInAirShip())
+		if (!player.isInAirShip())
 		{
 			return;
 		}
 		
-		final L2AirShipInstance ship = activeChar.getAirShip();
-		if (!ship.isCaptain(activeChar))
+		final AirShipInstance ship = player.getAirShip();
+		if (!ship.isCaptain(player))
 		{
 			return;
 		}
@@ -79,7 +79,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 				{
 					return;
 				}
-				if (_param1 < L2World.GRACIA_MAX_X)
+				if (_param1 < World.GRACIA_MAX_X)
 				{
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_param1, _param2, z));
 				}
@@ -100,9 +100,9 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 				{
 					return;
 				}
-				if (z < L2World.GRACIA_MAX_Z)
+				if (z < World.GRACIA_MAX_Z)
 				{
-					z = Math.min(z + STEP, L2World.GRACIA_MAX_Z);
+					z = Math.min(z + STEP, World.GRACIA_MAX_Z);
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(ship.getX(), ship.getY(), z));
 				}
 				break;
@@ -113,9 +113,9 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 				{
 					return;
 				}
-				if (z > L2World.GRACIA_MIN_Z)
+				if (z > World.GRACIA_MIN_Z)
 				{
-					z = Math.max(z - STEP, L2World.GRACIA_MIN_Z);
+					z = Math.max(z - STEP, World.GRACIA_MIN_Z);
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(ship.getX(), ship.getY(), z));
 				}
 				break;
@@ -139,7 +139,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 				{
 					if (fuelConsumption > ship.getFuel())
 					{
-						activeChar.sendPacket(SystemMessageId.YOUR_AIRSHIP_CANNOT_TELEPORT_BECAUSE_DUE_TO_LOW_FUEL);
+						player.sendPacket(SystemMessageId.YOUR_AIRSHIP_CANNOT_TELEPORT_BECAUSE_DUE_TO_LOW_FUEL);
 						return;
 					}
 					ship.setFuel(ship.getFuel() - fuelConsumption);

@@ -23,15 +23,15 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.templates.item.L2EtcItemType;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.templates.item.EtcItemType;
 
 public class ItemsAutoDestroy
 {
 	protected static final Logger LOGGER = Logger.getLogger(ItemsAutoDestroy.class.getName());
 	private static ItemsAutoDestroy _instance;
-	protected List<L2ItemInstance> _items = null;
+	protected List<ItemInstance> _items = null;
 	protected static long _sleep;
 	
 	private ItemsAutoDestroy()
@@ -55,7 +55,7 @@ public class ItemsAutoDestroy
 		return _instance;
 	}
 	
-	public synchronized void addItem(L2ItemInstance item)
+	public synchronized void addItem(ItemInstance item)
 	{
 		item.setDropTime(System.currentTimeMillis());
 		_items.add(item);
@@ -70,18 +70,18 @@ public class ItemsAutoDestroy
 		
 		final long curtime = System.currentTimeMillis();
 		
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
-			if ((item == null) || (item.getDropTime() == 0) || (item.getLocation() != L2ItemInstance.ItemLocation.VOID))
+			if ((item == null) || (item.getDropTime() == 0) || (item.getLocation() != ItemInstance.ItemLocation.VOID))
 			{
 				_items.remove(item);
 			}
-			else if (item.getItemType() == L2EtcItemType.HERB)
+			else if (item.getItemType() == EtcItemType.HERB)
 			{
 				if ((curtime - item.getDropTime()) > Config.HERB_AUTO_DESTROY_TIME)
 				{
-					L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-					L2World.getInstance().removeObject(item);
+					World.getInstance().removeVisibleObject(item, item.getWorldRegion());
+					World.getInstance().removeObject(item);
 					_items.remove(item);
 					
 					if (Config.SAVE_DROPPED_ITEM)
@@ -92,8 +92,8 @@ public class ItemsAutoDestroy
 			}
 			else if ((curtime - item.getDropTime()) > _sleep)
 			{
-				L2World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-				L2World.getInstance().removeObject(item);
+				World.getInstance().removeVisibleObject(item, item.getWorldRegion());
+				World.getInstance().removeObject(item);
 				_items.remove(item);
 				
 				if (Config.SAVE_DROPPED_ITEM)

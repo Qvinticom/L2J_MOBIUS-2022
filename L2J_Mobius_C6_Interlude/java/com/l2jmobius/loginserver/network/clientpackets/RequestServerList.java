@@ -22,7 +22,7 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
 /**
  * Format: ddc d: fist part of session id d: second part of session id c: ?
  */
-public class RequestServerList extends L2LoginClientPacket
+public class RequestServerList extends LoginClientPacket
 {
 	private int _skey1;
 	private int _skey2;

@@ -21,10 +21,10 @@ import java.util.ArrayList;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -137,7 +137,7 @@ public class Transform extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		for (Transformer monster : _mobs)
 		{
@@ -150,8 +150,8 @@ public class Transform extends Quest
 						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), Message[Rnd.get(monster.getMessage())]));
 					}
 					npc.onDecay();
-					final L2Attackable newNpc = (L2Attackable) addSpawn(monster.getIdPoly(), npc);
-					final L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+					final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
+					final Creature originalAttacker = isPet ? attacker.getPet() : attacker;
 					newNpc.setRunning();
 					newNpc.addDamageHate(originalAttacker, 0, 999);
 					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
@@ -170,7 +170,7 @@ public class Transform extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		for (Transformer monster : _mobs)
 		{
@@ -180,8 +180,8 @@ public class Transform extends Quest
 				{
 					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), Message[Rnd.get(monster.getMessage())]));
 				}
-				final L2Attackable newNpc = (L2Attackable) addSpawn(monster.getIdPoly(), npc);
-				final L2Character originalAttacker = isPet ? killer.getPet() : killer;
+				final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
+				final Creature originalAttacker = isPet ? killer.getPet() : killer;
 				newNpc.setRunning();
 				newNpc.addDamageHate(originalAttacker, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
@@ -192,7 +192,7 @@ public class Transform extends Quest
 	
 	private class NPCSpawnTask implements Runnable
 	{
-		private final L2NpcInstance spawn;
+		private final NpcInstance spawn;
 		private final long spawnEffectTime;
 		private final int spawnAbnormalEffect;
 		
@@ -201,7 +201,7 @@ public class Transform extends Quest
 		 * @param spawnEffectTime
 		 * @param spawnAbnormalEffect
 		 */
-		public NPCSpawnTask(L2NpcInstance spawn, long spawnEffectTime, int spawnAbnormalEffect)
+		public NPCSpawnTask(NpcInstance spawn, long spawnEffectTime, int spawnAbnormalEffect)
 		{
 			super();
 			this.spawn = spawn;

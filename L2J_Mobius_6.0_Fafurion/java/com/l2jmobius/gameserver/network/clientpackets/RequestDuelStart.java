@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelAskStart;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,14 +39,14 @@ public final class RequestDuelStart implements IClientIncomingPacket
 	private int _partyDuel;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_player = packet.readS();
 		_partyDuel = packet.readD();
 		return true;
 	}
 	
-	private void scheduleDeny(L2PcInstance player, String name)
+	private void scheduleDeny(PlayerInstance player, String name)
 	{
 		if (player != null)
 		{
@@ -58,10 +58,10 @@ public final class RequestDuelStart implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -69,15 +69,15 @@ public final class RequestDuelStart implements IClientIncomingPacket
 		if (FakePlayerData.getInstance().isTalkable(_player))
 		{
 			final String name = FakePlayerData.getInstance().getProperName(_player);
-			if (activeChar.isInsideZone(ZoneId.PVP) || activeChar.isInsideZone(ZoneId.PEACE) || activeChar.isInsideZone(ZoneId.SIEGE))
+			if (player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.SIEGE))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL);
 				sm.addString(name);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 				return;
 			}
 			boolean npcInRange = false;
-			for (L2Npc npc : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, 250))
+			for (Npc npc : World.getInstance().getVisibleObjectsInRange(player, Npc.class, 250))
 			{
 				if (npc.getName().equals(name))
 				{
@@ -88,53 +88,53 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
 				sm.addString(name);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 				return;
 			}
-			if (activeChar.isProcessingRequest())
+			if (player.isProcessingRequest())
 			{
 				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 				msg.addString(name);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 				return;
 			}
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 			sm.addString(name);
-			activeChar.sendPacket(sm);
-			ThreadPool.schedule(() -> scheduleDeny(activeChar, name), 10000);
-			activeChar.blockRequest();
+			player.sendPacket(sm);
+			ThreadPool.schedule(() -> scheduleDeny(player, name), 10000);
+			player.blockRequest();
 			return;
 		}
 		
-		final L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
+		final PlayerInstance targetChar = World.getInstance().getPlayer(_player);
 		if (targetChar == null)
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
+			player.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
 			return;
 		}
-		if (activeChar == targetChar)
+		if (player == targetChar)
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
+			player.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
 			return;
 		}
 		
 		// Check if duel is possible
-		if (!activeChar.canDuel())
+		if (!player.canDuel())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
+			player.sendPacket(SystemMessageId.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
 			return;
 		}
 		else if (!targetChar.canDuel())
 		{
-			activeChar.sendPacket(targetChar.getNoDuelReason());
+			player.sendPacket(targetChar.getNoDuelReason());
 			return;
 		}
 		// Players may not be too far apart
-		else if (!activeChar.isInsideRadius2D(targetChar, 250))
+		else if (!player.isInsideRadius2D(targetChar, 250))
 		{
 			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
 			msg.addString(targetChar.getName());
-			activeChar.sendPacket(msg);
+			player.sendPacket(msg);
 			return;
 		}
 		
@@ -142,36 +142,36 @@ public final class RequestDuelStart implements IClientIncomingPacket
 		if (_partyDuel == 1)
 		{
 			// Player must be in a party & the party leader
-			final L2Party party = activeChar.getParty();
-			if ((party == null) || !party.isLeader(activeChar))
+			final Party party = player.getParty();
+			if ((party == null) || !party.isLeader(player))
 			{
-				activeChar.sendMessage("You have to be the leader of a party in order to request a party duel.");
+				player.sendMessage("You have to be the leader of a party in order to request a party duel.");
 				return;
 			}
 			// Target must be in a party
 			else if (!targetChar.isInParty())
 			{
-				activeChar.sendPacket(SystemMessageId.SINCE_THE_PERSON_YOU_CHALLENGED_IS_NOT_CURRENTLY_IN_A_PARTY_THEY_CANNOT_DUEL_AGAINST_YOUR_PARTY);
+				player.sendPacket(SystemMessageId.SINCE_THE_PERSON_YOU_CHALLENGED_IS_NOT_CURRENTLY_IN_A_PARTY_THEY_CANNOT_DUEL_AGAINST_YOUR_PARTY);
 				return;
 			}
 			// Target may not be of the same party
-			else if (activeChar.getParty().containsPlayer(targetChar))
+			else if (player.getParty().containsPlayer(targetChar))
 			{
-				activeChar.sendMessage("This player is a member of your own party.");
+				player.sendMessage("This player is a member of your own party.");
 				return;
 			}
 			
 			// Check if every player is ready for a duel
-			for (L2PcInstance temp : activeChar.getParty().getMembers())
+			for (PlayerInstance temp : player.getParty().getMembers())
 			{
 				if (!temp.canDuel())
 				{
-					activeChar.sendMessage("Not all the members of your party are ready for a duel.");
+					player.sendMessage("Not all the members of your party are ready for a duel.");
 					return;
 				}
 			}
-			L2PcInstance partyLeader = null; // snatch party leader of targetChar's party
-			for (L2PcInstance temp : targetChar.getParty().getMembers())
+			PlayerInstance partyLeader = null; // snatch party leader of targetChar's party
+			for (PlayerInstance temp : targetChar.getParty().getMembers())
 			{
 				if (partyLeader == null)
 				{
@@ -179,7 +179,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 				}
 				if (!temp.canDuel())
 				{
-					activeChar.sendPacket(SystemMessageId.THE_OPPOSING_PARTY_IS_CURRENTLY_UNABLE_TO_ACCEPT_A_CHALLENGE_TO_A_DUEL);
+					player.sendPacket(SystemMessageId.THE_OPPOSING_PARTY_IS_CURRENTLY_UNABLE_TO_ACCEPT_A_CHALLENGE_TO_A_DUEL);
 					return;
 				}
 			}
@@ -189,22 +189,22 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			{
 				if (!partyLeader.isProcessingRequest())
 				{
-					activeChar.onTransactionRequest(partyLeader);
-					partyLeader.sendPacket(new ExDuelAskStart(activeChar.getName(), _partyDuel));
+					player.onTransactionRequest(partyLeader);
+					partyLeader.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
 					
 					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 					msg.addString(partyLeader.getName());
-					activeChar.sendPacket(msg);
+					player.sendPacket(msg);
 					
 					msg = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL);
-					msg.addString(activeChar.getName());
+					msg.addString(player.getName());
 					targetChar.sendPacket(msg);
 				}
 				else
 				{
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 					msg.addString(partyLeader.getName());
-					activeChar.sendPacket(msg);
+					player.sendPacket(msg);
 				}
 			}
 		}
@@ -213,22 +213,22 @@ public final class RequestDuelStart implements IClientIncomingPacket
 		{
 			if (!targetChar.isProcessingRequest())
 			{
-				activeChar.onTransactionRequest(targetChar);
-				targetChar.sendPacket(new ExDuelAskStart(activeChar.getName(), _partyDuel));
+				player.onTransactionRequest(targetChar);
+				targetChar.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
 				
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 				msg.addString(targetChar.getName());
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 				
 				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CHALLENGED_YOU_TO_A_DUEL);
-				msg.addString(activeChar.getName());
+				msg.addString(player.getName());
 				targetChar.sendPacket(msg);
 			}
 			else
 			{
 				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 				msg.addString(targetChar.getName());
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 			}
 		}
 	}

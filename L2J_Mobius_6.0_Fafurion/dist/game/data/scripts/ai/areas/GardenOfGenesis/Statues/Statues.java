@@ -17,8 +17,8 @@
 package ai.areas.GardenOfGenesis.Statues;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -53,7 +53,7 @@ public final class Statues extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (event.equals("fight"))
@@ -88,7 +88,7 @@ public final class Statues extends AbstractNpcAI
 				{
 					npc.setScriptValue(1);
 					startQuestTimer("FUNCTION_REUSE", 900000, npc, null);
-					final L2Npc keeper = addSpawn(npcId, loc, false, 900000);
+					final Npc keeper = addSpawn(npcId, loc, false, 900000);
 					addAttackPlayerDesire(keeper, player);
 				}
 			}
@@ -105,15 +105,15 @@ public final class Statues extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".html";
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2Npc buffNpc = addSpawn(BUFF_NPC, npc, false, 5000);
+		final Npc buffNpc = addSpawn(BUFF_NPC, npc, false, 5000);
 		buffNpc.setIsInvul(true);
 		addSkillCastDesire(buffNpc, buffNpc, REWARD_BUFF, 23);
 		return super.onKill(npc, killer, isSummon);

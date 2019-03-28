@@ -19,10 +19,10 @@ package handlers.admincommandhandlers;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -37,7 +37,7 @@ public class AdminDelete implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_delete"))
 		{
@@ -52,16 +52,16 @@ public class AdminDelete implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	// TODO: add possibility to delete any L2Object (except L2PcInstance)
-	private void handleDelete(L2PcInstance activeChar)
+	// TODO: add possibility to delete any WorldObject (except PlayerInstance)
+	private void handleDelete(PlayerInstance activeChar)
 	{
-		final L2Object obj = activeChar.getTarget();
-		if (obj instanceof L2Npc)
+		final WorldObject obj = activeChar.getTarget();
+		if (obj instanceof Npc)
 		{
-			final L2Npc target = (L2Npc) obj;
+			final Npc target = (Npc) obj;
 			target.deleteMe();
 			
-			final L2Spawn spawn = target.getSpawn();
+			final Spawn spawn = target.getSpawn();
 			if (spawn != null)
 			{
 				spawn.stopRespawn();

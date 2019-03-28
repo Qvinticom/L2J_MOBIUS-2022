@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2RecipeList;
+import com.l2jmobius.gameserver.model.RecipeList;
 
 /**
  * format d d(dd)
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class RecipeBookItemList extends L2GameServerPacket
+public class RecipeBookItemList extends GameServerPacket
 {
-	private L2RecipeList[] _recipes;
+	private RecipeList[] _recipes;
 	private final boolean _isDwarvenCraft;
 	private final int _maxMp;
 	
@@ -34,7 +34,7 @@ public class RecipeBookItemList extends L2GameServerPacket
 		_maxMp = maxMp;
 	}
 	
-	public void addRecipes(L2RecipeList[] recipeBook)
+	public void addRecipes(RecipeList[] recipeBook)
 	{
 		_recipes = recipeBook;
 	}
@@ -57,7 +57,7 @@ public class RecipeBookItemList extends L2GameServerPacket
 			
 			for (int i = 0; i < _recipes.length; i++)
 			{
-				final L2RecipeList temp = _recipes[i];
+				final RecipeList temp = _recipes[i];
 				writeD(temp.getId());
 				writeD(i + 1);
 			}

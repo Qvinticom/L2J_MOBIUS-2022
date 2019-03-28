@@ -27,7 +27,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -461,7 +461,7 @@ public class Lottery
 		return res;
 	}
 	
-	public int[] checkTicket(L2ItemInstance item)
+	public int[] checkTicket(ItemInstance item)
 	{
 		return checkTicket(item.getCustomType1(), item.getEnchantLevel(), item.getCustomType2());
 	}

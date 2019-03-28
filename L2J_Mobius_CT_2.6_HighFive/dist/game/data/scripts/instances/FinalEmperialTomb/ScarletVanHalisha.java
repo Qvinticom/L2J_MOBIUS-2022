@@ -25,12 +25,12 @@ import java.util.ArrayList;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -41,7 +41,7 @@ import ai.AbstractNpcAI;
  */
 public final class ScarletVanHalisha extends AbstractNpcAI
 {
-	private L2Character _target;
+	private Creature _target;
 	private Skill _skill;
 	private long _lastRangedSkillTime;
 	private final int _rangedSkillMinCoolTime = 60000; // 1 minute
@@ -59,7 +59,7 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -81,14 +81,14 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		getSkillAI(npc);
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		startQuestTimer("random_Target", 5000, npc, null, true);
 		startQuestTimer("attack", 500, npc, null, true);
@@ -96,14 +96,14 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		cancelQuestTimers("attack");
 		cancelQuestTimers("random_Target");
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private Skill getRndSkills(L2Npc npc)
+	private Skill getRndSkills(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -162,7 +162,7 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 		return SkillData.getInstance().getSkill(5014, 1);
 	}
 	
-	private synchronized void getSkillAI(L2Npc npc)
+	private synchronized void getSkillAI(Npc npc)
 	{
 		if (npc.isInvul() || npc.isCastingNow())
 		{
@@ -173,7 +173,7 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);
 		}
-		final L2Character target = _target;
+		final Creature target = _target;
 		Skill skill = _skill;
 		if (skill == null)
 		{
@@ -207,24 +207,24 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 		}
 	}
 	
-	private L2Character getRandomTarget(L2Npc npc, Skill skill)
+	private Creature getRandomTarget(Npc npc, Skill skill)
 	{
-		final ArrayList<L2Character> result = new ArrayList<>();
-		for (L2Object obj : L2World.getInstance().getVisibleObjects(npc, L2Object.class))
+		final ArrayList<Creature> result = new ArrayList<>();
+		for (WorldObject obj : World.getInstance().getVisibleObjects(npc, WorldObject.class))
 		{
-			if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
+			if (obj.isPlayable() || (obj instanceof DecoyInstance))
 			{
 				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 				{
 					continue;
 				}
 				
-				if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+				if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 				{
 					continue;
 				}
 			}
-			if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
+			if (obj.isPlayable() || (obj instanceof DecoyInstance))
 			{
 				int skillRange = 150;
 				if (skill != null)
@@ -255,16 +255,16 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 						}
 					}
 				}
-				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((L2Character) obj).isDead())
+				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
 				{
-					result.add((L2Character) obj);
+					result.add((Creature) obj);
 				}
 			}
 		}
 		if (!result.isEmpty() && (result.size() != 0))
 		{
 			final Object[] characters = result.toArray();
-			return (L2Character) characters[Rnd.get(characters.length)];
+			return (Creature) characters[Rnd.get(characters.length)];
 		}
 		return null;
 	}

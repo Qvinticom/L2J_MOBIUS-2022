@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**
@@ -31,9 +31,9 @@ public class TrapTask implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(TrapTask.class.getName());
 	private static final int TICK = 1000; // 1s
-	private final L2TrapInstance _trap;
+	private final TrapInstance _trap;
 	
-	public TrapTask(L2TrapInstance trap)
+	public TrapTask(TrapInstance trap)
 	{
 		_trap = trap;
 	}
@@ -72,7 +72,7 @@ public class TrapTask implements Runnable
 					}
 				}
 				
-				for (L2Character target : L2World.getInstance().getVisibleObjects(_trap, L2Character.class))
+				for (Creature target : World.getInstance().getVisibleObjects(_trap, Creature.class))
 				{
 					if (_trap.checkTarget(target))
 					{

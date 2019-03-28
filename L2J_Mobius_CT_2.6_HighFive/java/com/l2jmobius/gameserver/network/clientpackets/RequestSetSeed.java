@@ -22,11 +22,11 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.model.SeedProduction;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author l3x
@@ -39,7 +39,7 @@ public class RequestSetSeed implements IClientIncomingPacket
 	private List<SeedProduction> _items;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_manorId = packet.readD();
 		final int count = packet.readD();
@@ -69,7 +69,7 @@ public class RequestSetSeed implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_items.isEmpty())
 		{
@@ -84,7 +84,7 @@ public class RequestSetSeed implements IClientIncomingPacket
 		}
 		
 		// Check player privileges
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player))
 		{
 			client.sendActionFailed();
@@ -95,7 +95,7 @@ public class RequestSetSeed implements IClientIncomingPacket
 		final List<SeedProduction> list = new ArrayList<>(_items.size());
 		for (SeedProduction sp : _items)
 		{
-			final L2Seed s = manor.getSeed(sp.getId());
+			final Seed s = manor.getSeed(sp.getId());
 			if ((s != null) && (sp.getStartAmount() <= s.getSeedLimit()) && (sp.getPrice() >= s.getSeedMinPrice()) && (sp.getPrice() <= s.getSeedMaxPrice()))
 			{
 				list.add(sp);

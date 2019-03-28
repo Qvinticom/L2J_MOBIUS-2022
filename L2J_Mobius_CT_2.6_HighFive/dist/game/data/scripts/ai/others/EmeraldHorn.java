@@ -16,10 +16,10 @@
  */
 package ai.others;
 
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
@@ -55,7 +55,7 @@ public class EmeraldHorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (Util.calculateDistance(npc, npc.getSpawn(), false, false) > MAX_CHASE_DIST)
 		{
@@ -89,7 +89,7 @@ public class EmeraldHorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if (getRandom(5) < 1)
 		{
@@ -102,18 +102,18 @@ public class EmeraldHorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (DAMAGE_TIMER_15S.equals(event))
 		{
 			if (!npc.getVariables().getBoolean(HIGH_DAMAGE_FLAG, false))
 			{
-				final L2Character mostHated = ((L2Attackable) npc).getMostHated();
+				final Creature mostHated = ((Attackable) npc).getMostHated();
 				if (mostHated != null)
 				{
 					if (mostHated.isDead())
 					{
-						((L2Attackable) npc).stopHating(mostHated);
+						((Attackable) npc).stopHating(mostHated);
 					}
 					else
 					{

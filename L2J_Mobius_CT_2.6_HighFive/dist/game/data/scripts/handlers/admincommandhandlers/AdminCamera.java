@@ -17,8 +17,8 @@
 package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -37,15 +37,15 @@ public class AdminCamera implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCreature())
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 			return false;
 		}
 		
-		final L2Character target = (L2Character) activeChar.getTarget();
+		final Creature target = (Creature) activeChar.getTarget();
 		final String[] com = command.split(" ");
 		switch (com[0])
 		{

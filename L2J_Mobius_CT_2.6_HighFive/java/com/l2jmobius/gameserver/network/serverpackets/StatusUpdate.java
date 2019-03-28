@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class StatusUpdate implements IClientOutgoingPacket
@@ -76,7 +76,7 @@ public final class StatusUpdate implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * If you have access to object itself use {@link StatusUpdate#StatusUpdate(L2Object)}.
+	 * If you have access to object itself use {@link StatusUpdate#StatusUpdate(WorldObject)}.
 	 * @param objectId
 	 */
 	public StatusUpdate(int objectId)
@@ -85,10 +85,10 @@ public final class StatusUpdate implements IClientOutgoingPacket
 	}
 	
 	/**
-	 * Create {@link StatusUpdate} packet for given {@link L2Object}.
+	 * Create {@link StatusUpdate} packet for given {@link WorldObject}.
 	 * @param object
 	 */
-	public StatusUpdate(L2Object object)
+	public StatusUpdate(WorldObject object)
 	{
 		_objectId = object.getObjectId();
 	}

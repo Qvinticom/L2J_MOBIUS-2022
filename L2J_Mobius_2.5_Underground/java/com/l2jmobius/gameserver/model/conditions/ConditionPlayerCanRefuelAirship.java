@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -36,11 +36,11 @@ public class ConditionPlayerCanRefuelAirship extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		boolean canRefuelAirship = true;
-		final L2PcInstance player = effector.getActingPlayer();
-		if ((player == null) || (player.getAirShip() == null) || !(player.getAirShip() instanceof L2ControllableAirShipInstance) || ((player.getAirShip().getFuel() + _val) > player.getAirShip().getMaxFuel()))
+		final PlayerInstance player = effector.getActingPlayer();
+		if ((player == null) || (player.getAirShip() == null) || !(player.getAirShip() instanceof ControllableAirShipInstance) || ((player.getAirShip().getFuel() + _val) > player.getAirShip().getMaxFuel()))
 		{
 			canRefuelAirship = false;
 		}

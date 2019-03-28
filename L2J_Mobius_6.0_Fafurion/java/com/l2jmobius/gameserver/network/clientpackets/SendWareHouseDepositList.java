@@ -23,13 +23,13 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jmobius.gameserver.model.itemcontainer.PcWarehouse;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.util.Util;
@@ -44,7 +44,7 @@ public final class SendWareHouseDepositList implements IClientIncomingPacket
 	private List<ItemHolder> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int size = packet.readD();
 		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.getReadableBytes()))
@@ -68,14 +68,14 @@ public final class SendWareHouseDepositList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_items == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -92,9 +92,9 @@ public final class SendWareHouseDepositList implements IClientIncomingPacket
 		{
 			return;
 		}
-		final boolean isPrivate = warehouse instanceof PcWarehouse;
+		final boolean isPrivate = warehouse instanceof PlayerWarehouse;
 		
-		final L2Npc manager = player.getLastFolkNPC();
+		final Npc manager = player.getLastFolkNPC();
 		if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
 		{
 			return;
@@ -125,7 +125,7 @@ public final class SendWareHouseDepositList implements IClientIncomingPacket
 		
 		for (ItemHolder i : _items)
 		{
-			final L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (item == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -172,7 +172,7 @@ public final class SendWareHouseDepositList implements IClientIncomingPacket
 		for (ItemHolder i : _items)
 		{
 			// Check validity of requested item
-			final L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -184,7 +184,7 @@ public final class SendWareHouseDepositList implements IClientIncomingPacket
 				continue;
 			}
 			
-			final L2ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), i.getId(), i.getCount(), warehouse, player, manager);
+			final ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), i.getId(), i.getCount(), warehouse, player, manager);
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

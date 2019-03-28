@@ -18,14 +18,14 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 0x42 WarehouseWithdrawalList dh (h dddhh dhhh d)
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/29 23:15:10 $
  */
-public class WareHouseWithdrawalList extends L2GameServerPacket
+public class WareHouseWithdrawalList extends GameServerPacket
 {
 	private static Logger LOGGER = Logger.getLogger(WareHouseWithdrawalList.class.getName());
 	
@@ -34,24 +34,24 @@ public class WareHouseWithdrawalList extends L2GameServerPacket
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 4; // not sure
 	
-	private L2PcInstance _activeChar;
+	private PlayerInstance _player;
 	private int _playerAdena;
-	private L2ItemInstance[] _items;
+	private ItemInstance[] _items;
 	private int _whType;
 	
-	public WareHouseWithdrawalList(L2PcInstance player, int type)
+	public WareHouseWithdrawalList(PlayerInstance player, int type)
 	{
-		_activeChar = player;
+		_player = player;
 		_whType = type;
 		
-		_playerAdena = _activeChar.getAdena();
-		if (_activeChar.getActiveWarehouse() == null)
+		_playerAdena = _player.getAdena();
+		if (_player.getActiveWarehouse() == null)
 		{
 			// Something went wrong!
-			LOGGER.warning("error while sending withdraw request to: " + _activeChar.getName());
+			LOGGER.warning("error while sending withdraw request to: " + _player.getName());
 			return;
 		}
-		_items = _activeChar.getActiveWarehouse().getItems();
+		_items = _player.getActiveWarehouse().getItems();
 	}
 	
 	@Override
@@ -65,7 +65,7 @@ public class WareHouseWithdrawalList extends L2GameServerPacket
 		writeD(_playerAdena);
 		writeH(_items.length);
 		
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
 			writeD(0x00); // unconfirmed, works

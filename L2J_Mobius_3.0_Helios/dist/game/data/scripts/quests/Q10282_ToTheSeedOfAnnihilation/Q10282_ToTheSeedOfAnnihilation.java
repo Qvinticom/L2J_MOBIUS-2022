@@ -17,8 +17,8 @@
 package quests.Q10282_ToTheSeedOfAnnihilation;
 
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -48,11 +48,11 @@ public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -61,7 +61,7 @@ public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 		{
 			case "32733-07.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, SOA_ORDERS, 1);
 				break;
 			}
@@ -70,7 +70,7 @@ public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 				giveAdena(player, 212182, true);
 				giveItems(player, EAR, 5);
 				addExpAndSp(player, 1148480, 275);
-				st.exitQuest(QuestType.ONE_TIME);
+				qs.exitQuest(QuestType.ONE_TIME);
 				break;
 			}
 		}
@@ -78,13 +78,13 @@ public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -108,7 +108,7 @@ public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					if (npcId == KBALDIR)
 					{

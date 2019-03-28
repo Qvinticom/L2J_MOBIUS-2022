@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class NormalCamera extends L2GameServerPacket
+public class NormalCamera extends GameServerPacket
 {
 	public NormalCamera()
 	{

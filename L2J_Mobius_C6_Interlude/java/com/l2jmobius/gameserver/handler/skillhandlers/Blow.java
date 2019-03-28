@@ -19,15 +19,15 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.BaseStats;
 import com.l2jmobius.gameserver.skills.Formulas;
 import com.l2jmobius.gameserver.skills.Stats;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -49,20 +49,20 @@ public class Blow implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean bss = activeChar.checkBss();
-		final boolean sps = activeChar.checkSps();
-		final boolean ss = activeChar.checkSs();
+		final boolean bss = creature.checkBss();
+		final boolean sps = creature.checkSps();
+		final boolean ss = creature.checkSs();
 		
 		Formulas.getInstance();
 		
-		for (L2Character target : (L2Character[]) targets)
+		for (Creature target : (Creature[]) targets)
 		{
 			if (target.isAlikeDead())
 			{
@@ -76,11 +76,11 @@ public class Blow implements ISkillHandler
 			
 			if (skill.getName().equals("Backstab"))
 			{
-				if (activeChar.isBehindTarget())
+				if (creature.isBehindTarget())
 				{
 					_successChance = (byte) Config.BACKSTAB_ATTACK_BEHIND;
 				}
-				else if (activeChar.isFrontTarget())
+				else if (creature.isFrontTarget())
 				{
 					_successChance = (byte) Config.BACKSTAB_ATTACK_FRONT;
 				}
@@ -89,11 +89,11 @@ public class Blow implements ISkillHandler
 					_successChance = (byte) Config.BACKSTAB_ATTACK_SIDE;
 				}
 			}
-			else if (activeChar.isBehindTarget())
+			else if (creature.isBehindTarget())
 			{
 				_successChance = (byte) Config.BLOW_ATTACK_BEHIND;
 			}
-			else if (activeChar.isFrontTarget())
+			else if (creature.isFrontTarget())
 			{
 				_successChance = (byte) Config.BLOW_ATTACK_FRONT;
 			}
@@ -104,9 +104,9 @@ public class Blow implements ISkillHandler
 			
 			boolean success = true;
 			
-			if ((skill.getCondition() & L2Skill.COND_CRIT) != 0)
+			if ((skill.getCondition() & Skill.COND_CRIT) != 0)
 			{
-				success = (success && Formulas.getInstance().calcBlow(activeChar, target, _successChance));
+				success = (success && Formulas.getInstance().calcBlow(creature, target, _successChance));
 			}
 			
 			if (!skillIsEvaded && success)
@@ -114,9 +114,9 @@ public class Blow implements ISkillHandler
 				if (skill.hasEffects())
 				{
 					target.stopSkillEffects(skill.getId());
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(activeChar, target, ss, sps, bss);
+						skill.getEffects(creature, target, ss, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 						sm.addSkillName(skill);
 						target.sendPacket(sm);
@@ -125,52 +125,52 @@ public class Blow implements ISkillHandler
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.ATTACK_FAILED);
 						sm.addSkillName(skill);
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 						return;
 					}
 				}
 				
-				final L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
+				final ItemInstance weapon = creature.getActiveWeaponInstance();
 				boolean soul = false;
 				if (weapon != null)
 				{
-					soul = (ss && (weapon.getItemType() == L2WeaponType.DAGGER));
+					soul = (ss && (weapon.getItemType() == WeaponType.DAGGER));
 				}
 				
-				final boolean shld = Formulas.calcShldUse(activeChar, target);
+				final boolean shld = Formulas.calcShldUse(creature, target);
 				
 				// Critical hit
 				boolean crit = false;
 				
 				// Critical damage condition is applied for sure if there is skill critical condition
-				if ((skill.getCondition() & L2Skill.COND_CRIT) != 0)
+				if ((skill.getCondition() & Skill.COND_CRIT) != 0)
 				{
 					crit = true; // if there is not critical condition, calculate critical chance
 				}
-				else if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(activeChar)))
+				else if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(creature)))
 				{
 					crit = true;
 				}
 				
-				double damage = Formulas.calcBlowDamage(activeChar, target, skill, shld, crit, soul);
+				double damage = Formulas.calcBlowDamage(creature, target, skill, shld, crit, soul);
 				
-				if (skill.getDmgDirectlyToHP() && (target instanceof L2PcInstance))
+				if (skill.getDmgDirectlyToHP() && (target instanceof PlayerInstance))
 				{
 					// no vegeange implementation
-					final L2Character[] ts =
+					final Creature[] ts =
 					{
 						target,
-						activeChar
+						creature
 					};
 					
-					for (L2Character targ : ts)
+					for (Creature targ : ts)
 					{
-						final L2PcInstance player = (L2PcInstance) targ;
+						final PlayerInstance player = (PlayerInstance) targ;
 						if (!player.isInvul())
 						{
 							// Check and calculate transfered damage
-							final L2Summon summon = player.getPet();
-							if ((summon instanceof L2SummonInstance) && Util.checkIfInRange(900, player, summon, true))
+							final Summon summon = player.getPet();
+							if ((summon instanceof SummonInstance) && Util.checkIfInRange(900, player, summon, true))
 							{
 								int tDmg = ((int) damage * (int) player.getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 								
@@ -181,7 +181,7 @@ public class Blow implements ISkillHandler
 								}
 								if (tDmg > 0)
 								{
-									summon.reduceCurrentHp(tDmg, activeChar);
+									summon.reduceCurrentHp(tDmg, creature);
 									damage -= tDmg;
 								}
 							}
@@ -208,7 +208,7 @@ public class Blow implements ISkillHandler
 									}
 									else
 									{
-										player.doDie(activeChar);
+										player.doDie(creature);
 									}
 								}
 							}
@@ -218,7 +218,7 @@ public class Blow implements ISkillHandler
 							}
 						}
 						final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
-						smsg.addString(activeChar.getName());
+						smsg.addString(creature.getName());
 						smsg.addNumber((int) damage);
 						player.sendPacket(smsg);
 						
@@ -231,12 +231,12 @@ public class Blow implements ISkillHandler
 				}
 				else
 				{
-					target.reduceCurrentHp(damage, activeChar);
+					target.reduceCurrentHp(damage, creature);
 					
 					// vengeance reflected damage
 					if (target.vengeanceSkill(skill))
 					{
-						activeChar.reduceCurrentHp(damage, target);
+						creature.reduceCurrentHp(damage, target);
 					}
 				}
 				
@@ -246,49 +246,49 @@ public class Blow implements ISkillHandler
 					target.breakAttack();
 					target.breakCast();
 				}
-				if (activeChar instanceof L2PcInstance)
+				if (creature instanceof PlayerInstance)
 				{
-					final L2PcInstance activePlayer = (L2PcInstance) activeChar;
+					final PlayerInstance activePlayer = (PlayerInstance) creature;
 					
 					activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
-					if (activePlayer.isInOlympiadMode() && (target instanceof L2PcInstance) && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == activePlayer.getOlympiadGameId()))
+					if (activePlayer.isInOlympiadMode() && (target instanceof PlayerInstance) && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == activePlayer.getOlympiadGameId()))
 					{
 						Olympiad.getInstance().notifyCompetitorDamage(activePlayer, (int) damage, activePlayer.getOlympiadGameId());
 					}
 				}
 				
 				// Possibility of a lethal strike
-				Formulas.calcLethalHit(activeChar, target, skill);
+				Formulas.calcLethalHit(creature, target, skill);
 				final PlaySound PlaySound = new PlaySound("skillsound.critical_hit_02");
-				activeChar.sendPacket(PlaySound);
+				creature.sendPacket(PlaySound);
 			}
 			else
 			{
 				if (skillIsEvaded)
 				{
-					if (target instanceof L2PcInstance)
+					if (target instanceof PlayerInstance)
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1S_ATTACK);
-						sm.addString(activeChar.getName());
-						((L2PcInstance) target).sendPacket(sm);
+						sm.addString(creature.getName());
+						((PlayerInstance) target).sendPacket(sm);
 					}
 				}
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.ATTACK_FAILED);
 				sm.addSkillName(skill);
-				activeChar.sendPacket(sm);
+				creature.sendPacket(sm);
 				return;
 			}
 			
 			// Self Effect
 			if (skill.hasSelfEffects())
 			{
-				final L2Effect effect = activeChar.getFirstEffect(skill.getId());
+				final Effect effect = creature.getFirstEffect(skill.getId());
 				if ((effect != null) && effect.isSelfEffect())
 				{
 					effect.exit(false);
 				}
-				skill.getEffectsSelf(activeChar);
+				skill.getEffectsSelf(creature);
 			}
 		}
 		
@@ -296,16 +296,16 @@ public class Blow implements ISkillHandler
 		{
 			if (bss)
 			{
-				activeChar.removeBss();
+				creature.removeBss();
 			}
 			else if (sps)
 			{
-				activeChar.removeSps();
+				creature.removeSps();
 			}
 		}
 		else
 		{
-			activeChar.removeSs();
+			creature.removeSs();
 		}
 	}
 	

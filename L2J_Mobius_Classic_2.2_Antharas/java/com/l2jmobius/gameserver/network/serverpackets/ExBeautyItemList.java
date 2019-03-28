@@ -23,7 +23,7 @@ import java.util.Map;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -40,9 +40,9 @@ public class ExBeautyItemList implements IClientOutgoingPacket
 	private static final int FACE_TYPE = 1;
 	private static final int COLOR_TYPE = 2;
 	
-	public ExBeautyItemList(L2PcInstance activeChar)
+	public ExBeautyItemList(PlayerInstance player)
 	{
-		_beautyData = BeautyShopData.getInstance().getBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType());
+		_beautyData = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType());
 		
 		for (BeautyItem hair : _beautyData.getHairList().values())
 		{

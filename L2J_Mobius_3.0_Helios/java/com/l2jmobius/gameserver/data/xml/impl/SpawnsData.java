@@ -35,7 +35,7 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ChanceLocation;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.interfaces.IParameterized;
 import com.l2jmobius.gameserver.model.interfaces.ITerritorized;
@@ -43,8 +43,8 @@ import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
-import com.l2jmobius.gameserver.model.zone.type.L2BannedSpawnTerritory;
-import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.BannedSpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 
 /**
  * @author UnAfraid
@@ -195,12 +195,12 @@ public class SpawnsData implements IGameXmlReader
 			{
 				case "territory":
 				{
-					spawnTemplate.addTerritory(new L2SpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
+					spawnTemplate.addTerritory(new SpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
 					break;
 				}
 				case "banned_territory":
 				{
-					spawnTemplate.addBannedTerritory(new L2BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
+					spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
 					break;
 				}
 			}
@@ -237,14 +237,14 @@ public class SpawnsData implements IGameXmlReader
 	private void parseNpc(Node n, SpawnTemplate spawnTemplate, SpawnGroup group)
 	{
 		final NpcSpawnTemplate npcTemplate = new NpcSpawnTemplate(spawnTemplate, group, new StatsSet(parseAttributes(n)));
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
+		final NpcTemplate template = NpcData.getInstance().getTemplate(npcTemplate.getId());
 		if (template == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Requested spawn for non existing npc: " + npcTemplate.getId() + " in file: " + spawnTemplate.getFile().getName());
 			return;
 		}
 		
-		if (template.isType("L2Servitor") || template.isType("L2Pet"))
+		if (template.isType("Servitor") || template.isType("Pet"))
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Requested spawn for " + template.getType() + " " + template.getName() + "(" + template.getId() + ") file: " + spawnTemplate.getFile().getName());
 			return;

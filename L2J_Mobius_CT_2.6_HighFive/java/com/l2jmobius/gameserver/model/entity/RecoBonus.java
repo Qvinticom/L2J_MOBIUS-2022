@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.entity;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik
@@ -135,22 +135,22 @@ public final class RecoBonus
 		}
 	};
 	
-	public static int getRecoBonus(L2PcInstance activeChar)
+	public static int getRecoBonus(PlayerInstance player)
 	{
-		if ((activeChar != null) && activeChar.isOnline() && (activeChar.getRecomHave() != 0) && (activeChar.getNevitHourglassTime() > 0))
+		if ((player != null) && player.isOnline() && (player.getRecomHave() != 0) && (player.getNevitHourglassTime() > 0))
 		{
-			final int lvl = activeChar.getLevel() / 10;
-			final int exp = (Math.min(100, activeChar.getRecomHave()) - 1) / 10;
+			final int lvl = player.getLevel() / 10;
+			final int exp = (Math.min(100, player.getRecomHave()) - 1) / 10;
 			
 			return _recoBonus[lvl][exp];
 		}
 		return 0;
 	}
 	
-	public static double getRecoMultiplier(L2PcInstance activeChar)
+	public static double getRecoMultiplier(PlayerInstance player)
 	{
 		double multiplier = 1.0;
-		final double bonus = getRecoBonus(activeChar);
+		final double bonus = getRecoBonus(player);
 		if (bonus > 0)
 		{
 			multiplier += (bonus / 100);

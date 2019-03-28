@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -43,14 +43,14 @@ public final class ConditionPlayerHasCastle extends Condition
 	 * @return true, if successful
 	 */
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effector.getActingPlayer() == null)
 		{
 			return false;
 		}
 		
-		final L2Clan clan = effector.getActingPlayer().getClan();
+		final Clan clan = effector.getActingPlayer().getClan();
 		if (clan == null)
 		{
 			return _castle == 0;

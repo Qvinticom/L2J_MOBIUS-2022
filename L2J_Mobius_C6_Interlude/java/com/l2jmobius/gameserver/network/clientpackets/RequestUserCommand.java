@@ -20,11 +20,11 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.handler.UserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestUserCommand extends L2GameClientPacket
+public class RequestUserCommand extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestUserCommand.class.getName());
 	
@@ -39,7 +39,7 @@ public class RequestUserCommand extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -55,7 +55,7 @@ public class RequestUserCommand extends L2GameClientPacket
 		}
 		else
 		{
-			handler.useUserCommand(_command, getClient().getActiveChar());
+			handler.useUserCommand(_command, getClient().getPlayer());
 		}
 	}
 }

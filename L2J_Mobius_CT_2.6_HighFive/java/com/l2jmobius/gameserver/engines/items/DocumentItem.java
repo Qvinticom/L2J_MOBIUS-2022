@@ -29,15 +29,15 @@ import org.w3c.dom.Node;
 import com.l2jmobius.gameserver.engines.DocumentBase;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author mkizub, JIV
  */
 public final class DocumentItem extends DocumentBase
 {
-	private Item _currentItem = null;
-	private final List<L2Item> _itemsInFile = new ArrayList<>();
+	private ItemDataHolder _currentItem = null;
+	private final List<Item> _itemsInFile = new ArrayList<>();
 	
 	/**
 	 * @param file
@@ -78,7 +78,7 @@ public final class DocumentItem extends DocumentBase
 					{
 						try
 						{
-							_currentItem = new Item();
+							_currentItem = new ItemDataHolder();
 							parseItem(d);
 							_itemsInFile.add(_currentItem.item);
 							resetTable();
@@ -167,8 +167,8 @@ public final class DocumentItem extends DocumentBase
 		
 		try
 		{
-			final Constructor<?> itemClass = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
-			_currentItem.item = (L2Item) itemClass.newInstance(_currentItem.set);
+			final Constructor<?> itemClass = Class.forName("com.l2jmobius.gameserver.model.items." + _currentItem.type).getConstructor(StatsSet.class);
+			_currentItem.item = (Item) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{
@@ -176,7 +176,7 @@ public final class DocumentItem extends DocumentBase
 		}
 	}
 	
-	public List<L2Item> getItemList()
+	public List<Item> getItemList()
 	{
 		return _itemsInFile;
 	}

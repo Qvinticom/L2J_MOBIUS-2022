@@ -16,8 +16,8 @@
  */
 package custom.ShadowWeapons;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -50,7 +50,7 @@ public final class ShadowWeapons extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext;
 		final boolean has_d = hasQuestItems(player, 8869); // Shadow Item Exchange Coupon (D-Grade)

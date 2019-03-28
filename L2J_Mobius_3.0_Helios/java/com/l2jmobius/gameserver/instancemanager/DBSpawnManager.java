@@ -35,10 +35,10 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -50,8 +50,8 @@ public class DBSpawnManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DBSpawnManager.class.getName());
 	
-	protected final Map<Integer, L2Npc> _npcs = new ConcurrentHashMap<>();
-	protected final Map<Integer, L2Spawn> _spawns = new ConcurrentHashMap<>();
+	protected final Map<Integer, Npc> _npcs = new ConcurrentHashMap<>();
+	protected final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
 	protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
 	protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 	
@@ -91,10 +91,10 @@ public class DBSpawnManager
 		{
 			while (rset.next())
 			{
-				final L2NpcTemplate template = getValidTemplate(rset.getInt("id"));
+				final NpcTemplate template = getValidTemplate(rset.getInt("id"));
 				if (template != null)
 				{
-					final L2Spawn spawn = new L2Spawn(template);
+					final Spawn spawn = new Spawn(template);
 					spawn.setXYZ(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
 					spawn.setAmount(1);
 					spawn.setHeading(rset.getInt("heading"));
@@ -161,7 +161,7 @@ public class DBSpawnManager
 	
 	private void scheduleSpawn(int npcId)
 	{
-		final L2Npc npc = _spawns.get(npcId).doSpawn();
+		final Npc npc = _spawns.get(npcId).doSpawn();
 		if (npc != null)
 		{
 			npc.setDBStatus(DBStatusType.ALIVE);
@@ -184,7 +184,7 @@ public class DBSpawnManager
 	 * @param npc the npc
 	 * @param isNpcDead the is npc dead
 	 */
-	public void updateStatus(L2Npc npc, boolean isNpcDead)
+	public void updateStatus(Npc npc, boolean isNpcDead)
 	{
 		final StatsSet info = _storedInfo.get(npc.getId());
 		if (info == null)
@@ -232,7 +232,7 @@ public class DBSpawnManager
 	 * @param currentMP the current mp
 	 * @param storeInDb the store in db
 	 */
-	public void addNewSpawn(L2Spawn spawn, long respawnTime, double currentHP, double currentMP, boolean storeInDb)
+	public void addNewSpawn(Spawn spawn, long respawnTime, double currentHP, double currentMP, boolean storeInDb)
 	{
 		if (spawn == null)
 		{
@@ -250,7 +250,7 @@ public class DBSpawnManager
 		
 		if ((respawnTime == 0) || (time > respawnTime))
 		{
-			final L2Npc npc = spawn.doSpawn();
+			final Npc npc = spawn.doSpawn();
 			if (npc != null)
 			{
 				npc.setCurrentHp(currentHP);
@@ -298,7 +298,7 @@ public class DBSpawnManager
 		}
 	}
 	
-	public L2Npc addNewSpawn(L2Spawn spawn, boolean storeInDb)
+	public Npc addNewSpawn(Spawn spawn, boolean storeInDb)
 	{
 		if (spawn == null)
 		{
@@ -306,7 +306,7 @@ public class DBSpawnManager
 		}
 		
 		final int npcId = spawn.getId();
-		final L2Spawn existingSpawn = _spawns.get(npcId);
+		final Spawn existingSpawn = _spawns.get(npcId);
 		if (existingSpawn != null)
 		{
 			return existingSpawn.getLastSpawn();
@@ -314,7 +314,7 @@ public class DBSpawnManager
 		
 		SpawnTable.getInstance().addNewSpawn(spawn, false);
 		
-		final L2Npc npc = spawn.doSpawn();
+		final Npc npc = spawn.doSpawn();
 		if (npc == null)
 		{
 			throw new NullPointerException();
@@ -361,7 +361,7 @@ public class DBSpawnManager
 	 * @param spawn the spawn dat
 	 * @param updateDb the update db
 	 */
-	public void deleteSpawn(L2Spawn spawn, boolean updateDb)
+	public void deleteSpawn(Spawn spawn, boolean updateDb)
 	{
 		if (spawn == null)
 		{
@@ -413,7 +413,7 @@ public class DBSpawnManager
 					continue;
 				}
 				
-				final L2Npc npc = _npcs.get(npcId);
+				final Npc npc = _npcs.get(npcId);
 				if (npc == null)
 				{
 					continue;
@@ -469,7 +469,7 @@ public class DBSpawnManager
 		
 		for (int i : _npcs.keySet())
 		{
-			final L2Npc npc = _npcs.get(i);
+			final Npc npc = _npcs.get(i);
 			msg[index++] = npc.getName() + ": " + npc.getDBStatus().name();
 		}
 		
@@ -493,7 +493,7 @@ public class DBSpawnManager
 		
 		if (_npcs.containsKey(npcId))
 		{
-			final L2Npc npc = _npcs.get(npcId);
+			final Npc npc = _npcs.get(npcId);
 			
 			msg += npc.getName() + ": " + npc.getDBStatus().name();
 		}
@@ -527,7 +527,7 @@ public class DBSpawnManager
 	 * @param npcId the npc id
 	 * @return the valid template
 	 */
-	public L2NpcTemplate getValidTemplate(int npcId)
+	public NpcTemplate getValidTemplate(int npcId)
 	{
 		return NpcData.getInstance().getTemplate(npcId);
 	}
@@ -536,7 +536,7 @@ public class DBSpawnManager
 	 * Notify spawn night npc.
 	 * @param npc the npc
 	 */
-	public void notifySpawnNightNpc(L2Npc npc)
+	public void notifySpawnNightNpc(Npc npc)
 	{
 		final StatsSet info = new StatsSet();
 		info.set("currentHP", npc.getCurrentHp());
@@ -563,7 +563,7 @@ public class DBSpawnManager
 	 * Gets the npcs.
 	 * @return the npcs
 	 */
-	public Map<Integer, L2Npc> getNpcs()
+	public Map<Integer, Npc> getNpcs()
 	{
 		return _npcs;
 	}
@@ -572,7 +572,7 @@ public class DBSpawnManager
 	 * Gets the spawns.
 	 * @return the spawns
 	 */
-	public Map<Integer, L2Spawn> getSpawns()
+	public Map<Integer, Spawn> getSpawns()
 	{
 		return _spawns;
 	}

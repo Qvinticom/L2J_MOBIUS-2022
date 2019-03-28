@@ -25,8 +25,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 
 public final class SiegeGuardManager
@@ -34,7 +34,7 @@ public final class SiegeGuardManager
 	private static Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
 	
 	private final Castle _castle;
-	private final List<L2Spawn> _siegeGuardSpawn = new ArrayList<>();
+	private final List<Spawn> _siegeGuardSpawn = new ArrayList<>();
 	
 	public SiegeGuardManager(Castle castle)
 	{
@@ -43,16 +43,16 @@ public final class SiegeGuardManager
 	
 	/**
 	 * Add guard.
-	 * @param activeChar
+	 * @param player
 	 * @param npcId
 	 */
-	public void addSiegeGuard(L2PcInstance activeChar, int npcId)
+	public void addSiegeGuard(PlayerInstance player, int npcId)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
-		addSiegeGuard(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getHeading(), npcId);
+		addSiegeGuard(player.getX(), player.getY(), player.getZ(), player.getHeading(), npcId);
 	}
 	
 	/**
@@ -70,16 +70,16 @@ public final class SiegeGuardManager
 	
 	/**
 	 * Hire merc.
-	 * @param activeChar
+	 * @param player
 	 * @param npcId
 	 */
-	public void hireMerc(L2PcInstance activeChar, int npcId)
+	public void hireMerc(PlayerInstance player, int npcId)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
-		hireMerc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getHeading(), npcId);
+		hireMerc(player.getX(), player.getY(), player.getZ(), player.getHeading(), npcId);
 	}
 	
 	/**
@@ -147,7 +147,7 @@ public final class SiegeGuardManager
 			final int hiredMax = MercTicketManager.getInstance().getMaxAllowedMerc(_castle.getResidenceId());
 			final boolean isHired = _castle.getOwnerId() > 0;
 			loadSiegeGuard();
-			for (L2Spawn spawn : _siegeGuardSpawn)
+			for (Spawn spawn : _siegeGuardSpawn)
 			{
 				if (spawn != null)
 				{
@@ -178,7 +178,7 @@ public final class SiegeGuardManager
 	 */
 	public void unspawnSiegeGuard()
 	{
-		for (L2Spawn spawn : _siegeGuardSpawn)
+		for (Spawn spawn : _siegeGuardSpawn)
 		{
 			if ((spawn != null) && (spawn.getLastSpawn() != null))
 			{
@@ -204,7 +204,7 @@ public final class SiegeGuardManager
 			{
 				while (rs.next())
 				{
-					final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
+					final Spawn spawn = new Spawn(rs.getInt("npcId"));
 					spawn.setAmount(1);
 					spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawn.setHeading(rs.getInt("heading"));
@@ -256,7 +256,7 @@ public final class SiegeGuardManager
 		return _castle;
 	}
 	
-	public final List<L2Spawn> getSiegeGuardSpawn()
+	public final List<Spawn> getSiegeGuardSpawn()
 	{
 		return _siegeGuardSpawn;
 	}

@@ -17,8 +17,8 @@
 package village_master.ElfHumanWizardChange2;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 
 import ai.AbstractNpcAI;
@@ -64,7 +64,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -103,7 +103,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String ClassChangeRequested(L2PcInstance player, int classId)
+	private String ClassChangeRequested(PlayerInstance player, int classId)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
@@ -254,7 +254,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.WIZARD_GROUP) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.isInCategory(CategoryType.HUMAN_MALL_CLASS) || player.isInCategory(CategoryType.ELF_MALL_CLASS)))

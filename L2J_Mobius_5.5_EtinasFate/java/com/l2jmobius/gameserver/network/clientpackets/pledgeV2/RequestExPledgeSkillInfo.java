@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeSkillInfo;
 
@@ -32,7 +32,7 @@ public class RequestExPledgeSkillInfo implements IClientIncomingPacket
 	private int _skillLevel;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
 		_skillLevel = packet.readD();
@@ -40,14 +40,14 @@ public class RequestExPledgeSkillInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;

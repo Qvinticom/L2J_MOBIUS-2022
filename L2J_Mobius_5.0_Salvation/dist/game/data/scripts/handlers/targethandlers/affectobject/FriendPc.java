@@ -17,10 +17,10 @@
 package handlers.targethandlers.affectobject;
 
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
@@ -30,15 +30,15 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 public class FriendPc implements IAffectObjectHandler
 {
 	@Override
-	public boolean checkAffectedObject(L2Character activeChar, L2Character target)
+	public boolean checkAffectedObject(Creature creature, Creature target)
 	{
 		if (!target.isPlayer())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
-		final L2PcInstance targetPlayer = target.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
+		final PlayerInstance targetPlayer = target.getActingPlayer();
 		
 		if (player != null)
 		{
@@ -49,15 +49,15 @@ public class FriendPc implements IAffectObjectHandler
 			}
 			
 			// Party (command channel doesn't make you friends).
-			final L2Party party = player.getParty();
-			final L2Party targetParty = targetPlayer.getParty();
+			final Party party = player.getParty();
+			final Party targetParty = targetPlayer.getParty();
 			if ((party != null) && (targetParty != null) && (party.getLeaderObjectId() == targetParty.getLeaderObjectId()))
 			{
 				return true;
 			}
 			
 			// Arena.
-			if (activeChar.isInsideZone(ZoneId.PVP) && target.isInsideZone(ZoneId.PVP))
+			if (creature.isInsideZone(ZoneId.PVP) && target.isInsideZone(ZoneId.PVP))
 			{
 				return false;
 			}
@@ -75,8 +75,8 @@ public class FriendPc implements IAffectObjectHandler
 			}
 			
 			// Clan.
-			final L2Clan clan = player.getClan();
-			final L2Clan targetClan = targetPlayer.getClan();
+			final Clan clan = player.getClan();
+			final Clan targetClan = targetPlayer.getClan();
 			if (clan != null)
 			{
 				if (clan == targetClan)
@@ -113,7 +113,7 @@ public class FriendPc implements IAffectObjectHandler
 			return (target.getActingPlayer().getPvpFlag() == 0) && (target.getActingPlayer().getReputation() >= 0);
 		}
 		
-		return target.isAutoAttackable(activeChar);
+		return target.isAutoAttackable(creature);
 	}
 	
 	@Override

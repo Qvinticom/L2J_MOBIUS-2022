@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -39,27 +39,27 @@ public class Unlock implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		L2Object[] targetList = skill.getTargetList(activeChar);
+		WorldObject[] targetList = skill.getTargetList(creature);
 		
 		if (targetList == null)
 		{
 			return;
 		}
 		
-		for (L2Object element : targetList)
+		for (WorldObject element : targetList)
 		{
-			L2Object target = element;
+			WorldObject target = element;
 			
 			final boolean success = Formulas.getInstance().calculateUnlockChance(skill);
-			if (target instanceof L2DoorInstance)
+			if (target instanceof DoorInstance)
 			{
-				L2DoorInstance door = (L2DoorInstance) target;
+				DoorInstance door = (DoorInstance) target;
 				if (!door.isUnlockable())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					creature.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
+					creature.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
@@ -69,20 +69,20 @@ public class Unlock implements ISkillHandler
 					door.onOpen();
 					SystemMessage msg = new SystemMessage(SystemMessageId.S1_S2);
 					msg.addString("Unlock the door!");
-					activeChar.sendPacket(msg);
+					creature.sendPacket(msg);
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
+					creature.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
 				}
 			}
-			else if (target instanceof L2ChestInstance)
+			else if (target instanceof ChestInstance)
 			{
-				L2ChestInstance chest = (L2ChestInstance) element;
+				ChestInstance chest = (ChestInstance) element;
 				
 				if ((chest.getCurrentHp() <= 0) || chest.isInteracted())
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					creature.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
@@ -225,22 +225,22 @@ public class Unlock implements ISkillHandler
 				
 				if (Rnd.get(100) <= chestChance)
 				{
-					activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
+					creature.broadcastPacket(new SocialAction(creature.getObjectId(), 3));
 					chest.setSpecialDrop();
 					chest.setMustRewardExpSp(false);
 					chest.setInteracted();
-					chest.reduceCurrentHp(99999999, activeChar);
+					chest.reduceCurrentHp(99999999, creature);
 				}
 				else
 				{
-					activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
+					creature.broadcastPacket(new SocialAction(creature.getObjectId(), 13));
 					if (Rnd.get(100) < chestTrapLimit)
 					{
-						chest.chestTrap(activeChar);
+						chest.chestTrap(creature);
 					}
 					chest.setInteracted();
-					chest.addDamageHate(activeChar, 0, 1);
-					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
+					chest.addDamageHate(creature, 0, 1);
+					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);
 				}
 			}
 		}

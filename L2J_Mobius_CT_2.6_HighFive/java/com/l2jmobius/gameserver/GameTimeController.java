@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * Game Time controller class.
@@ -43,7 +43,7 @@ public final class GameTimeController extends Thread
 	
 	private static GameTimeController _instance;
 	
-	private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();
+	private final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
 	private GameTimeController()
@@ -97,36 +97,36 @@ public final class GameTimeController extends Thread
 	}
 	
 	/**
-	 * Add a L2Character to movingObjects of GameTimeController.
-	 * @param cha The L2Character to add to movingObjects of GameTimeController
+	 * Add a Creature to movingObjects of GameTimeController.
+	 * @param creature The Creature to add to movingObjects of GameTimeController
 	 */
-	public final void registerMovingObject(L2Character cha)
+	public final void registerMovingObject(Creature creature)
 	{
-		if (cha == null)
+		if (creature == null)
 		{
 			return;
 		}
 		
-		if (!_movingObjects.contains(cha))
+		if (!_movingObjects.contains(creature))
 		{
-			_movingObjects.add(cha);
+			_movingObjects.add(creature);
 		}
 	}
 	
 	/**
-	 * Move all L2Characters contained in movingObjects of GameTimeController.<BR>
+	 * Move all Creatures contained in movingObjects of GameTimeController.<BR>
 	 * <B><U> Concept</U> :</B><BR>
-	 * All L2Character in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
+	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
 	 * <B><U> Actions</U> :</B><BR>
 	 * <ul>
-	 * <li>Update the position of each L2Character</li>
-	 * <li>If movement is finished, the L2Character is removed from movingObjects</li>
-	 * <li>Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
+	 * <li>Update the position of each Creature</li>
+	 * <li>If movement is finished, the Creature is removed from movingObjects</li>
+	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li>
 	 * </ul>
 	 */
 	private void moveObjects()
 	{
-		_movingObjects.removeIf(L2Character::updatePosition);
+		_movingObjects.removeIf(Creature::updatePosition);
 	}
 	
 	public final void stopTimer()

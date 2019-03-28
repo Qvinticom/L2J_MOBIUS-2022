@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
-public class EffectBlockBuff extends L2Effect
+public class EffectBlockBuff extends Effect
 {
 	public EffectBlockBuff(Env env, EffectTemplate template)
 	{
@@ -29,7 +29,7 @@ public class EffectBlockBuff extends L2Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return L2Effect.EffectType.BLOCK_BUFF;
+		return Effect.EffectType.BLOCK_BUFF;
 	}
 	
 	@Override

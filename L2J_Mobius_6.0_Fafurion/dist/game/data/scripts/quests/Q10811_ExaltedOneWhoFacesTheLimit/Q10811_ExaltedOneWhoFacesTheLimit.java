@@ -17,13 +17,13 @@
 package quests.Q10811_ExaltedOneWhoFacesTheLimit;
 
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerAbilityPointsChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAbilityPointsChanged;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -55,7 +55,7 @@ public final class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		
@@ -109,7 +109,7 @@ public final class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -150,6 +150,6 @@ public final class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	private void OnPlayerAbilityPointsChanged(OnPlayerAbilityPointsChanged event)
 	{
-		notifyEvent("SUBQUEST_FINISHED_NOTIFY", null, event.getActiveChar());
+		notifyEvent("SUBQUEST_FINISHED_NOTIFY", null, event.getPlayer());
 	}
 }

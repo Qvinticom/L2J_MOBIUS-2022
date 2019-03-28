@@ -31,9 +31,9 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
+import com.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
 
 /**
  * @author UnAfraid

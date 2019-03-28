@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25001" level="23" type="L2RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
+	<npc id="25001" level="23" type="RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -66,7 +66,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="25002" level="22" type="L2Monster" name="Guard of Kutus" title="Raid Fighter">
+	<npc id="25002" level="22" type="Monster" name="Guard of Kutus" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="2" /> <!-- BOSS Windstrike -->
@@ -110,7 +110,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25003" level="22" type="L2Monster" name="Pawn of Kutus" title="Raid Fighter">
+	<npc id="25003" level="22" type="Monster" name="Pawn of Kutus" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="2" /> <!-- Stun -->
@@ -152,7 +152,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25004" level="30" type="L2RaidBoss" name="Turek Mercenary Captain" title="Raid Boss">
+	<npc id="25004" level="30" type="RaidBoss" name="Turek Mercenary Captain" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -217,7 +217,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25005" level="29" type="L2Monster" name="Turek Mercenary Archer" title="Raid Fighter">
+	<npc id="25005" level="29" type="Monster" name="Turek Mercenary Archer" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4754" level="2" /> <!-- BOSS Power Shot -->
@@ -259,7 +259,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25006" level="29" type="L2Monster" name="Turek Mercenary Warrior" title="Raid Fighter">
+	<npc id="25006" level="29" type="Monster" name="Turek Mercenary Warrior" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -297,7 +297,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="25007" level="42" type="L2RaidBoss" name="Retreat Spider Cletu" title="Raid Boss">
+	<npc id="25007" level="42" type="RaidBoss" name="Retreat Spider Cletu" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -365,7 +365,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25008" level="41" type="L2Monster" name="Cletu's Retainer" title="Raid Fighter">
+	<npc id="25008" level="41" type="Monster" name="Cletu's Retainer" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="3" /> <!-- BOSS Heal -->
@@ -408,7 +408,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25009" level="41" type="L2Monster" name="Cletu's Pawn" title="Raid Fighter">
+	<npc id="25009" level="41" type="Monster" name="Cletu's Pawn" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -445,7 +445,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25010" level="55" type="L2RaidBoss" name="Furious Thieles" title="Raid Boss">
+	<npc id="25010" level="55" type="RaidBoss" name="Furious Thieles" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -512,7 +512,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="25011" level="54" type="L2Monster" name="Guard of Thieles" title="Raid Fighter">
+	<npc id="25011" level="54" type="Monster" name="Guard of Thieles" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4760" level="5" /> <!-- Stun -->
@@ -554,7 +554,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25012" level="54" type="L2Monster" name="Follower of Thieles" title="Raid Fighter">
+	<npc id="25012" level="54" type="Monster" name="Follower of Thieles" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
@@ -591,7 +591,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25013" level="50" type="L2RaidBoss" name="Ghost of Peasant Leader" title="Raid Boss">
+	<npc id="25013" level="50" type="RaidBoss" name="Ghost of Peasant Leader" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -664,7 +664,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25014" level="49" type="L2Monster" name="Ghost of Peasant" title="Raid Fighter">
+	<npc id="25014" level="49" type="Monster" name="Ghost of Peasant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4720" level="4" /> <!-- BOSS Strike -->
@@ -707,7 +707,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25015" level="49" type="L2Monster" name="Ghost of Peasant" title="Raid Fighter">
+	<npc id="25015" level="49" type="Monster" name="Ghost of Peasant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -746,7 +746,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25016" level="60" type="L2RaidBoss" name="The 3rd Underwater Guardian" title="Raid Boss">
+	<npc id="25016" level="60" type="RaidBoss" name="The 3rd Underwater Guardian" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -815,7 +815,7 @@
 			<height normal="73" />
 		</collision>
 	</npc>
-	<npc id="25017" level="59" type="L2Monster" name="Escort of the 3rd Guardian" title="Raid Fighter">
+	<npc id="25017" level="59" type="Monster" name="Escort of the 3rd Guardian" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4784" level="5" /> <!-- BOSS Chant of Life -->
@@ -858,7 +858,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25018" level="59" type="L2Monster" name="Support of the 3rd Guardian" title="Raid Fighter">
+	<npc id="25018" level="59" type="Monster" name="Support of the 3rd Guardian" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -895,7 +895,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25019" level="25" type="L2RaidBoss" name="Pan Dryad" title="Raid Boss">
+	<npc id="25019" level="25" type="RaidBoss" name="Pan Dryad" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -961,7 +961,7 @@
 			<height normal="73" />
 		</collision>
 	</npc>
-	<npc id="25020" level="34" type="L2RaidBoss" name="Breka Warlock Pastu" title="Raid Boss">
+	<npc id="25020" level="34" type="RaidBoss" name="Breka Warlock Pastu" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1028,7 +1028,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25021" level="33" type="L2Monster" name="Pastu's Silhouette" title="Raid Fighter">
+	<npc id="25021" level="33" type="Monster" name="Pastu's Silhouette" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4786" level="3" /> <!-- BOSS Chant of Life -->
@@ -1072,7 +1072,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25022" level="33" type="L2Monster" name="Pastu's Shadow" title="Raid Fighter">
+	<npc id="25022" level="33" type="Monster" name="Pastu's Shadow" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1110,7 +1110,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25023" level="34" type="L2RaidBoss" name="Stakato Queen Zyrnna" title="Raid Boss">
+	<npc id="25023" level="34" type="RaidBoss" name="Stakato Queen Zyrnna" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1175,7 +1175,7 @@
 			<height normal="76" />
 		</collision>
 	</npc>
-	<npc id="25024" level="33" type="L2Monster" name="Jeruna's Guard Captain" title="Raid Fighter">
+	<npc id="25024" level="33" type="Monster" name="Jeruna's Guard Captain" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4730" level="3" /> <!-- BOSS Mortal Blow -->
@@ -1217,7 +1217,7 @@
 			<height normal="24" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="25025" level="33" type="L2Monster" name="Jeruna's Guard" title="Raid Fighter">
+	<npc id="25025" level="33" type="Monster" name="Jeruna's Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1255,7 +1255,7 @@
 			<height normal="25" grown="30.8" />
 		</collision>
 	</npc>
-	<npc id="25026" level="49" type="L2RaidBoss" name="Ketra Commander Atis" title="Raid Boss">
+	<npc id="25026" level="49" type="RaidBoss" name="Ketra Commander Atis" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1323,7 +1323,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25027" level="48" type="L2Monster" name="Ketra Marksman" title="Raid Fighter">
+	<npc id="25027" level="48" type="Monster" name="Ketra Marksman" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4761" level="4" /> <!-- Stun -->
@@ -1365,7 +1365,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25028" level="48" type="L2Monster" name="Ketra Raider" title="Raid Fighter">
+	<npc id="25028" level="48" type="Monster" name="Ketra Raider" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1403,7 +1403,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="25029" level="53" type="L2RaidBoss" name="Atraiban" title="Raid Boss">
+	<npc id="25029" level="53" type="RaidBoss" name="Atraiban" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1472,7 +1472,7 @@
 			<height normal="96" />
 		</collision>
 	</npc>
-	<npc id="25030" level="52" type="L2Monster" name="Atraiban's Top Disciple" title="Raid Fighter">
+	<npc id="25030" level="52" type="Monster" name="Atraiban's Top Disciple" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4784" level="5" /> <!-- BOSS Chant of Life -->
@@ -1515,7 +1515,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25031" level="52" type="L2Monster" name="Atraiban's Disciple" title="Raid Fighter">
+	<npc id="25031" level="52" type="Monster" name="Atraiban's Disciple" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1552,7 +1552,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25032" level="58" type="L2RaidBoss" name="Eva's Guardian Millenu" title="Raid Boss">
+	<npc id="25032" level="58" type="RaidBoss" name="Eva's Guardian Millenu" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1619,7 +1619,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25033" level="57" type="L2Monster" name="Millenu Guard Shaman" title="Raid Fighter">
+	<npc id="25033" level="57" type="Monster" name="Millenu Guard Shaman" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="5" /> <!-- BOSS Life Drain -->
@@ -1663,7 +1663,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25034" level="57" type="L2Monster" name="Mellenu Guard Warrior" title="Raid Fighter">
+	<npc id="25034" level="57" type="Monster" name="Mellenu Guard Warrior" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4170" level="5" /> <!-- BOSS Mortal Blow -->
@@ -1706,7 +1706,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25035" level="70" type="L2RaidBoss" name="Shilen's Messenger Cabrio" title="Raid Boss">
+	<npc id="25035" level="70" type="RaidBoss" name="Shilen's Messenger Cabrio" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1777,7 +1777,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="25036" level="69" type="L2Monster" name="Cabrio Captor" title="Raid Fighter">
+	<npc id="25036" level="69" type="Monster" name="Cabrio Captor" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4208" level="6" /> <!-- Stun -->
@@ -1820,7 +1820,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25037" level="69" type="L2Monster" name="Cabrio Blader" title="Raid Fighter">
+	<npc id="25037" level="69" type="Monster" name="Cabrio Blader" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1859,7 +1859,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25038" level="28" type="L2RaidBoss" name="Tirak" title="Raid Boss">
+	<npc id="25038" level="28" type="RaidBoss" name="Tirak" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1928,7 +1928,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="25039" level="27" type="L2Monster" name="Tirak's Guard" title="Raid Fighter">
+	<npc id="25039" level="27" type="Monster" name="Tirak's Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4732" level="2" /> <!-- BOSS Mortal Blow -->
@@ -1971,7 +1971,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="25040" level="27" type="L2Monster" name="Tirak's Knight" title="Raid Fighter">
+	<npc id="25040" level="27" type="Monster" name="Tirak's Knight" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2010,7 +2010,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25041" level="35" type="L2RaidBoss" name="Remmel" title="Raid Boss">
+	<npc id="25041" level="35" type="RaidBoss" name="Remmel" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2079,7 +2079,7 @@
 			<height normal="76" />
 		</collision>
 	</npc>
-	<npc id="25042" level="34" type="L2Monster" name="Remmel's Archer" title="Raid Fighter">
+	<npc id="25042" level="34" type="Monster" name="Remmel's Archer" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4757" level="3" /> <!-- BOSS Power Shot -->
@@ -2121,7 +2121,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25043" level="34" type="L2Monster" name="Remmel's Guard" title="Raid Fighter">
+	<npc id="25043" level="34" type="Monster" name="Remmel's Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2159,7 +2159,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25044" level="47" type="L2RaidBoss" name="Barion" title="Raid Boss">
+	<npc id="25044" level="47" type="RaidBoss" name="Barion" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2236,7 +2236,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25045" level="46" type="L2Monster" name="Barion's Dark Mage" title="Raid Fighter">
+	<npc id="25045" level="46" type="Monster" name="Barion's Dark Mage" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
@@ -2280,7 +2280,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="25046" level="46" type="L2Monster" name="Barion's Grunt" title="Raid Fighter">
+	<npc id="25046" level="46" type="Monster" name="Barion's Grunt" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2319,7 +2319,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="25047" level="49" type="L2RaidBoss" name="Karte" title="Raid Boss">
+	<npc id="25047" level="49" type="RaidBoss" name="Karte" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2400,7 +2400,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="25048" level="48" type="L2Monster" name="Karte's Chief Knight" title="Raid Fighter">
+	<npc id="25048" level="48" type="Monster" name="Karte's Chief Knight" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4722" level="4" /> <!-- BOSS Strike -->
@@ -2443,7 +2443,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25049" level="48" type="L2Monster" name="Karte's Royal Guard" title="Raid Fighter">
+	<npc id="25049" level="48" type="Monster" name="Karte's Royal Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2482,7 +2482,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="25050" level="51" type="L2RaidBoss" name="Verfa" title="Raid Boss">
+	<npc id="25050" level="51" type="RaidBoss" name="Verfa" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -2553,7 +2553,7 @@
 			<height normal="141" />
 		</collision>
 	</npc>
-	<npc id="25051" level="65" type="L2RaidBoss" name="Rahha" title="Raid Boss">
+	<npc id="25051" level="65" type="RaidBoss" name="Rahha" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2619,7 +2619,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25052" level="64" type="L2Monster" name="Priestess of Rahha" title="Raid Fighter">
+	<npc id="25052" level="64" type="Monster" name="Priestess of Rahha" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="6" /> <!-- BOSS Chant of Life -->
@@ -2662,7 +2662,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25053" level="64" type="L2Monster" name="Fanatics of Rahha" title="Raid Fighter">
+	<npc id="25053" level="64" type="Monster" name="Fanatics of Rahha" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -2699,7 +2699,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="25054" level="75" type="L2RaidBoss" name="Kernon" title="Raid Boss">
+	<npc id="25054" level="75" type="RaidBoss" name="Kernon" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2774,7 +2774,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25055" level="74" type="L2Monster" name="Taliadon" title="Raid Fighter">
+	<npc id="25055" level="74" type="Monster" name="Taliadon" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4168" level="7" /> <!-- BOSS Strike -->
@@ -2817,7 +2817,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="25056" level="74" type="L2Monster" name="Vemsk" title="Raid Fighter">
+	<npc id="25056" level="74" type="Monster" name="Vemsk" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2856,7 +2856,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25057" level="45" type="L2RaidBoss" name="Beacon of Blue Sky" title="Raid Boss">
+	<npc id="25057" level="45" type="RaidBoss" name="Beacon of Blue Sky" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2923,7 +2923,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25058" level="44" type="L2Monster" name="Beacon's Shooter" title="Raid Fighter">
+	<npc id="25058" level="44" type="Monster" name="Beacon's Shooter" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4757" level="5" /> <!-- BOSS Power Shot -->
@@ -2966,7 +2966,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25059" level="44" type="L2Monster" name="Beacon's Warrior" title="Raid Fighter">
+	<npc id="25059" level="44" type="Monster" name="Beacon's Warrior" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3005,7 +3005,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25060" level="24" type="L2RaidBoss" name="Unrequited Kael" title="Raid Boss">
+	<npc id="25060" level="24" type="RaidBoss" name="Unrequited Kael" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3067,7 +3067,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="25061" level="23" type="L2Monster" name="Kael's Bead" title="Raid Fighter">
+	<npc id="25061" level="23" type="Monster" name="Kael's Bead" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="2" /> <!-- BOSS Aura Burn -->
@@ -3110,7 +3110,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25062" level="23" type="L2Monster" name="Kael's Escort" title="Raid Fighter">
+	<npc id="25062" level="23" type="Monster" name="Kael's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="2" /> <!-- Stun -->
@@ -3151,7 +3151,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="25063" level="35" type="L2RaidBoss" name="Chertuba of Great Soul" title="Raid Boss">
+	<npc id="25063" level="35" type="RaidBoss" name="Chertuba of Great Soul" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
@@ -3216,7 +3216,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25064" level="40" type="L2RaidBoss" name="Wizard of Storm Teruk" title="Raid Boss">
+	<npc id="25064" level="40" type="RaidBoss" name="Wizard of Storm Teruk" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3302,7 +3302,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25065" level="39" type="L2Monster" name="Teruk's Escort" title="Raid Fighter">
+	<npc id="25065" level="39" type="Monster" name="Teruk's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4722" level="3" /> <!-- BOSS Strike -->
@@ -3344,7 +3344,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25066" level="39" type="L2Monster" name="Teruk's Knight" title="Raid Fighter">
+	<npc id="25066" level="39" type="Monster" name="Teruk's Knight" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3382,7 +3382,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25067" level="52" type="L2RaidBoss" name="Captain of Red Flag Shaka" title="Raid Boss">
+	<npc id="25067" level="52" type="RaidBoss" name="Captain of Red Flag Shaka" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3454,7 +3454,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25068" level="51" type="L2Monster" name="Shaka's Shooter" title="Raid Fighter">
+	<npc id="25068" level="51" type="Monster" name="Shaka's Shooter" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4755" level="4" /> <!-- BOSS Power Shot -->
@@ -3496,7 +3496,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25069" level="51" type="L2Monster" name="Shaka's Follower" title="Raid Fighter">
+	<npc id="25069" level="51" type="Monster" name="Shaka's Follower" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3534,7 +3534,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="25070" level="55" type="L2RaidBoss" name="Enchanted Forest Watcher Ruell" title="Raid Boss">
+	<npc id="25070" level="55" type="RaidBoss" name="Enchanted Forest Watcher Ruell" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3604,7 +3604,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="25071" level="54" type="L2Monster" name="Ruell's Wind" title="Raid Fighter">
+	<npc id="25071" level="54" type="Monster" name="Ruell's Wind" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="5" /> <!-- BOSS Windstrike -->
@@ -3647,7 +3647,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25072" level="54" type="L2Monster" name="Ruell's Unicorn" title="Raid Fighter">
+	<npc id="25072" level="54" type="Monster" name="Ruell's Unicorn" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="5" /> <!-- Stun -->
@@ -3688,7 +3688,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25073" level="69" type="L2RaidBoss" name="Bloody Priest Rudelto" title="Raid Boss">
+	<npc id="25073" level="69" type="RaidBoss" name="Bloody Priest Rudelto" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3754,7 +3754,7 @@
 			<height normal="180" />
 		</collision>
 	</npc>
-	<npc id="25074" level="68" type="L2Monster" name="Rudelto's Banshee" title="Raid Fighter">
+	<npc id="25074" level="68" type="Monster" name="Rudelto's Banshee" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="6" /> <!-- BOSS Heal -->
@@ -3798,7 +3798,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25075" level="68" type="L2Monster" name="Rudelto's Dre Vanul" title="Raid Fighter">
+	<npc id="25075" level="68" type="Monster" name="Rudelto's Dre Vanul" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3836,7 +3836,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25076" level="25" type="L2RaidBoss" name="Princess Molrang" title="Raid Boss">
+	<npc id="25076" level="25" type="RaidBoss" name="Princess Molrang" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3903,7 +3903,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25077" level="24" type="L2Monster" name="Captain Dogun" title="Raid Fighter">
+	<npc id="25077" level="24" type="Monster" name="Captain Dogun" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4732" level="2" /> <!-- BOSS Mortal Blow -->
@@ -3944,7 +3944,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25078" level="24" type="L2Monster" name="Princess' Guard" title="Raid Fighter">
+	<npc id="25078" level="24" type="Monster" name="Princess' Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3981,7 +3981,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25079" level="30" type="L2RaidBoss" name="Cat's Eye Bandit" title="Raid Boss">
+	<npc id="25079" level="30" type="RaidBoss" name="Cat's Eye Bandit" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4040,7 +4040,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25080" level="29" type="L2Monster" name="Mercenary" title="Raid Fighter">
+	<npc id="25080" level="29" type="Monster" name="Mercenary" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="2" /> <!-- BOSS Chant of Life -->
@@ -4084,7 +4084,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25081" level="29" type="L2Monster" name="Cat's Eye Bandit" title="Raid Fighter">
+	<npc id="25081" level="29" type="Monster" name="Cat's Eye Bandit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4122,7 +4122,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25082" level="39" type="L2RaidBoss" name="Leader of Cat Gang" title="Raid Boss">
+	<npc id="25082" level="39" type="RaidBoss" name="Leader of Cat Gang" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4186,7 +4186,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25083" level="38" type="L2Monster" name="Cat Gang" title="Raid Fighter">
+	<npc id="25083" level="38" type="Monster" name="Cat Gang" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
@@ -4229,7 +4229,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="25084" level="38" type="L2Monster" name="Cat Gang" title="Raid Fighter">
+	<npc id="25084" level="38" type="Monster" name="Cat Gang" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="3" /> <!-- Stun -->
@@ -4270,7 +4270,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="25085" level="44" type="L2RaidBoss" name="Timak Orc Chief Ranger" title="Raid Boss">
+	<npc id="25085" level="44" type="RaidBoss" name="Timak Orc Chief Ranger" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4336,7 +4336,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25086" level="43" type="L2Monster" name="Timak Orc Ranger" title="Raid Fighter">
+	<npc id="25086" level="43" type="Monster" name="Timak Orc Ranger" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4760" level="4" /> <!-- Stun -->
@@ -4378,7 +4378,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25087" level="43" type="L2Monster" name="Timak Orc Ranger" title="Raid Fighter">
+	<npc id="25087" level="43" type="Monster" name="Timak Orc Ranger" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4416,7 +4416,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25088" level="43" type="L2RaidBoss" name="Crazy Mechanic Golem" title="Raid Boss">
+	<npc id="25088" level="43" type="RaidBoss" name="Crazy Mechanic Golem" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -4482,7 +4482,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="25089" level="59" type="L2RaidBoss" name="Soulless Wild Boar" title="Raid Boss">
+	<npc id="25089" level="59" type="RaidBoss" name="Soulless Wild Boar" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4553,7 +4553,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25090" level="58" type="L2Monster" name="Soulless Wolf" title="Raid Fighter">
+	<npc id="25090" level="58" type="Monster" name="Soulless Wolf" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="5" /> <!-- BOSS Life Drain -->
@@ -4596,7 +4596,7 @@
 			<height normal="11" />
 		</collision>
 	</npc>
-	<npc id="25091" level="58" type="L2Monster" name="Soulless Bear" title="Raid Fighter">
+	<npc id="25091" level="58" type="Monster" name="Soulless Bear" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="5" /> <!-- Stun -->
@@ -4637,7 +4637,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25092" level="70" type="L2RaidBoss" name="Korim" title="Raid Boss">
+	<npc id="25092" level="70" type="RaidBoss" name="Korim" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4708,7 +4708,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25093" level="69" type="L2Monster" name="Korim Chief Guard Kaywon" title="Raid Fighter">
+	<npc id="25093" level="69" type="Monster" name="Korim Chief Guard Kaywon" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4720" level="6" /> <!-- BOSS Strike -->
@@ -4750,7 +4750,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25094" level="69" type="L2Monster" name="Korim Guards" title="Raid Fighter">
+	<npc id="25094" level="69" type="Monster" name="Korim Guards" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4788,7 +4788,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25095" level="29" type="L2RaidBoss" name="Elf Renoa" title="Raid Boss">
+	<npc id="25095" level="29" type="RaidBoss" name="Elf Renoa" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4849,7 +4849,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25096" level="28" type="L2Monster" name="Renoa's Elpy" title="Raid Fighter">
+	<npc id="25096" level="28" type="Monster" name="Renoa's Elpy" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="2" /> <!-- BOSS Life Drain -->
@@ -4891,7 +4891,7 @@
 			<height normal="4.5" />
 		</collision>
 	</npc>
-	<npc id="25097" level="28" type="L2Monster" name="Renoa's Hog" title="Raid Fighter">
+	<npc id="25097" level="28" type="Monster" name="Renoa's Hog" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4727" level="2" /> <!-- Stun -->
@@ -4932,7 +4932,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25098" level="35" type="L2RaidBoss" name="Sejarr's Servitor" title="Raid Boss">
+	<npc id="25098" level="35" type="RaidBoss" name="Sejarr's Servitor" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
@@ -4996,7 +4996,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="25099" level="44" type="L2RaidBoss" name="Rotting Tree Repiro" title="Raid Boss">
+	<npc id="25099" level="44" type="RaidBoss" name="Rotting Tree Repiro" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">

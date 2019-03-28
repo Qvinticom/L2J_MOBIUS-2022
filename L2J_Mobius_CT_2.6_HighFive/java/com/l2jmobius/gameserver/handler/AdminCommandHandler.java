@@ -24,8 +24,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jmobius.gameserver.util.GMAudit;
@@ -64,7 +64,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 	}
 	
 	/**
-	 * WARNING: Please use {@link #useAdminCommand(L2PcInstance, String, boolean)} instead.
+	 * WARNING: Please use {@link #useAdminCommand(PlayerInstance, String, boolean)} instead.
 	 */
 	@Override
 	public IAdminCommandHandler getHandler(String adminCommand)
@@ -77,7 +77,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		return _datatable.get(command);
 	}
 	
-	public void useAdminCommand(L2PcInstance player, String fullCommand, boolean useConfirm)
+	public void useAdminCommand(PlayerInstance player, String fullCommand, boolean useConfirm)
 	{
 		final String command = fullCommand.split(" ")[0];
 		final String commandNoPrefix = command.substring(6);
@@ -118,7 +118,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 				{
 					if (Config.GMAUDIT)
 					{
-						final L2Object target = player.getTarget();
+						final WorldObject target = player.getTarget();
 						GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", fullCommand, (target != null ? target.getName() : "no-target"));
 					}
 					

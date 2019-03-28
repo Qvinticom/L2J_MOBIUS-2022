@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.communitybbs.CommunityBoard;
 
-public final class RequestShowBoard extends L2GameClientPacket
+public final class RequestShowBoard extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unknown;

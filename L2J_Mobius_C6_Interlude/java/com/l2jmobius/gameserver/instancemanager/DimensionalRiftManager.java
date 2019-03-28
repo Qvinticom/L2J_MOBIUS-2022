@@ -40,17 +40,17 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.DimensionalRift;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * Thanks to L2Fortress and balancer.ru - kombat
+ * Thanks to Fortress and balancer.ru - kombat
  */
 public class DimensionalRiftManager
 {
@@ -187,8 +187,8 @@ public class DimensionalRiftManager
 			int z;
 			int delay;
 			int count;
-			L2Spawn spawnDat;
-			L2NpcTemplate template;
+			Spawn spawnDat;
+			NpcTemplate template;
 			
 			for (Node rift = doc.getFirstChild(); rift != null; rift = rift.getNextSibling())
 			{
@@ -240,7 +240,7 @@ public class DimensionalRiftManager
 												
 												if ((template != null) && _rooms.containsKey(type) && _rooms.get(type).containsKey(roomId))
 												{
-													spawnDat = new L2Spawn(template);
+													spawnDat = new Spawn(template);
 													spawnDat.setAmount(1);
 													spawnDat.setX(x);
 													spawnDat.setY(y);
@@ -302,13 +302,13 @@ public class DimensionalRiftManager
 		return _rooms.get((byte) 0).get((byte) 0).checkIfInZone(x, y, z);
 	}
 	
-	public void teleportToWaitingRoom(L2PcInstance player)
+	public void teleportToWaitingRoom(PlayerInstance player)
 	{
 		final int[] coords = getRoom((byte) 0, (byte) 0).getTeleportCoords();
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	public void start(L2PcInstance player, byte type, L2NpcInstance npc)
+	public void start(PlayerInstance player, byte type, NpcInstance npc)
 	{
 		boolean canPass = true;
 		if (!player.isInParty())
@@ -345,7 +345,7 @@ public class DimensionalRiftManager
 			return;
 		}
 		
-		for (L2PcInstance p : player.getParty().getPartyMembers())
+		for (PlayerInstance p : player.getParty().getPartyMembers())
 		{
 			if (!checkIfInPeaceZone(p.getX(), p.getY(), p.getZ()))
 			{
@@ -359,8 +359,8 @@ public class DimensionalRiftManager
 			return;
 		}
 		
-		L2ItemInstance i;
-		for (L2PcInstance p : player.getParty().getPartyMembers())
+		ItemInstance i;
+		for (PlayerInstance p : player.getParty().getPartyMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 			
@@ -389,7 +389,7 @@ public class DimensionalRiftManager
 			return;
 		}
 		
-		for (L2PcInstance p : player.getParty().getPartyMembers())
+		for (PlayerInstance p : player.getParty().getPartyMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 			p.destroyItem("RiftEntrance", i.getObjectId(), getNeededItems(type), null, false);
@@ -445,8 +445,8 @@ public class DimensionalRiftManager
 		private final int[] _teleportCoords;
 		private final Shape _s;
 		private final boolean _isBossRoom;
-		private final List<L2Spawn> _roomSpawns;
-		protected final List<L2NpcInstance> _roomMobs;
+		private final List<Spawn> _roomSpawns;
+		protected final List<NpcInstance> _roomMobs;
 		private boolean _isUsed = false;
 		
 		public DimensionalRiftRoom(byte type, byte room, int xMin, int xMax, int yMin, int yMax, int zMin, int zMax, int xT, int yT, int zT, boolean isBossRoom)
@@ -508,14 +508,14 @@ public class DimensionalRiftManager
 			return _isBossRoom;
 		}
 		
-		public List<L2Spawn> getSpawns()
+		public List<Spawn> getSpawns()
 		{
 			return _roomSpawns;
 		}
 		
 		public void spawn()
 		{
-			for (L2Spawn spawn : _roomSpawns)
+			for (Spawn spawn : _roomSpawns)
 			{
 				spawn.doSpawn();
 				if ((spawn.getNpcId() < 25333) && (spawn.getNpcId() > 25338))
@@ -527,7 +527,7 @@ public class DimensionalRiftManager
 		
 		public void unspawn()
 		{
-			for (L2Spawn spawn : _roomSpawns)
+			for (Spawn spawn : _roomSpawns)
 			{
 				spawn.stopRespawn();
 				if (spawn.getLastSpawn() != null)
@@ -584,7 +584,7 @@ public class DimensionalRiftManager
 		}
 	}
 	
-	public void showHtmlFile(L2PcInstance player, String file, L2NpcInstance npc)
+	public void showHtmlFile(PlayerInstance player, String file, NpcInstance npc)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(file);
@@ -592,7 +592,7 @@ public class DimensionalRiftManager
 		player.sendPacket(html);
 	}
 	
-	public void handleCheat(L2PcInstance player, L2NpcInstance npc)
+	public void handleCheat(PlayerInstance player, NpcInstance npc)
 	{
 		showHtmlFile(player, "data/html/seven_signs/rift/Cheater.htm", npc);
 		if (!player.isGM())

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,7 +32,7 @@ public class VehicleStarted implements IClientOutgoingPacket
 	 * @param boat
 	 * @param state
 	 */
-	public VehicleStarted(L2Character boat, int state)
+	public VehicleStarted(Creature boat, int state)
 	{
 		_objectId = boat.getObjectId();
 		_state = state;

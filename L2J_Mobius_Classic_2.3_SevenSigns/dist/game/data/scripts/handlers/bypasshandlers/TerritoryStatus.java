@@ -19,10 +19,10 @@ package handlers.bypasshandlers;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class TerritoryStatus implements IBypassHandler
@@ -33,26 +33,26 @@ public class TerritoryStatus implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
 			return false;
 		}
 		
-		final L2Npc npc = (L2Npc) target;
+		final Npc npc = (Npc) target;
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		{
 			if (npc.getCastle().getOwnerId() > 0)
 			{
-				html.setFile(activeChar, "data/html/territorystatus.htm");
-				final L2Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
+				html.setFile(player, "data/html/territorystatus.htm");
+				final Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
 				html.replace("%clanname%", clan.getName());
 				html.replace("%clanleadername%", clan.getLeaderName());
 			}
 			else
 			{
-				html.setFile(activeChar, "data/html/territorynoclan.htm");
+				html.setFile(player, "data/html/territorynoclan.htm");
 			}
 		}
 		html.replace("%castlename%", npc.getCastle().getName());
@@ -68,7 +68,7 @@ public class TerritoryStatus implements IBypassHandler
 				html.replace("%territory%", "The Kingdom of Aden");
 			}
 		}
-		activeChar.sendPacket(html);
+		player.sendPacket(html);
 		return true;
 	}
 	

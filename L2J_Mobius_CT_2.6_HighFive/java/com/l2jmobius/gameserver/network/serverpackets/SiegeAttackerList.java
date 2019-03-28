@@ -20,8 +20,8 @@ import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -77,11 +77,11 @@ public final class SiegeAttackerList implements IClientOutgoingPacket
 			final int size = _castle.getSiege().getAttackerClans().size();
 			if (size > 0)
 			{
-				L2Clan clan;
+				Clan clan;
 				
 				packet.writeD(size);
 				packet.writeD(size);
-				for (L2SiegeClan siegeclan : _castle.getSiege().getAttackerClans())
+				for (SiegeClan siegeclan : _castle.getSiege().getAttackerClans())
 				{
 					clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 					if (clan == null)
@@ -112,15 +112,15 @@ public final class SiegeAttackerList implements IClientOutgoingPacket
 			packet.writeD(0x00); // 0
 			packet.writeD(0x01); // 1
 			packet.writeD(0x00); // 0
-			final Collection<L2SiegeClan> attackers = _hall.getSiege().getAttackerClans();
+			final Collection<SiegeClan> attackers = _hall.getSiege().getAttackerClans();
 			final int size = attackers.size();
 			if (size > 0)
 			{
 				packet.writeD(size);
 				packet.writeD(size);
-				for (L2SiegeClan sClan : attackers)
+				for (SiegeClan sClan : attackers)
 				{
-					final L2Clan clan = ClanTable.getInstance().getClan(sClan.getClanId());
+					final Clan clan = ClanTable.getInstance().getClan(sClan.getClanId());
 					if (clan == null)
 					{
 						continue;

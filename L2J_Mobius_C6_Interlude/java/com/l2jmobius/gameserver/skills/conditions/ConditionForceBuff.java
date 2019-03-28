@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.skills.conditions;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.effects.EffectBattleForce;
 import com.l2jmobius.gameserver.skills.effects.EffectSpellForce;
@@ -50,7 +50,7 @@ public class ConditionForceBuff extends Condition
 		final int neededBattle = _battleForces;
 		if (neededBattle > 0)
 		{
-			final L2Effect battleForce = env.player.getFirstEffect(BATTLE_FORCE);
+			final Effect battleForce = env.player.getFirstEffect(BATTLE_FORCE);
 			if (!(battleForce instanceof EffectBattleForce) || (((EffectBattleForce) battleForce).forces < neededBattle))
 			{
 				return false;
@@ -59,7 +59,7 @@ public class ConditionForceBuff extends Condition
 		final int neededSpell = _spellForces;
 		if (neededSpell > 0)
 		{
-			final L2Effect spellForce = env.player.getFirstEffect(SPELL_FORCE);
+			final Effect spellForce = env.player.getFirstEffect(SPELL_FORCE);
 			if (!(spellForce instanceof EffectSpellForce) || (((EffectSpellForce) spellForce).forces < neededSpell))
 			{
 				return false;

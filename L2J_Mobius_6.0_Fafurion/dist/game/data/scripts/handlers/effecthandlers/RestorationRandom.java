@@ -24,14 +24,14 @@ import java.util.Map.Entry;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
+import com.l2jmobius.gameserver.model.ExtractableProductItem;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.holders.RestorationItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -45,7 +45,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RestorationRandom extends AbstractEffect
 {
-	private final List<L2ExtractableProductItem> _products = new ArrayList<>();
+	private final List<ExtractableProductItem> _products = new ArrayList<>();
 	
 	public RestorationRandom(StatsSet params)
 	{
@@ -56,7 +56,7 @@ public final class RestorationRandom extends AbstractEffect
 			{
 				items.add(new RestorationItemHolder(item.getInt(".id"), item.getInt(".count"), item.getInt(".minEnchant", 0), item.getInt(".maxEnchant", 0)));
 			}
-			_products.add(new L2ExtractableProductItem(items, group.getFloat(".chance")));
+			_products.add(new ExtractableProductItem(items, group.getFloat(".chance")));
 		}
 	}
 	
@@ -67,7 +67,7 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;
@@ -83,7 +83,7 @@ public final class RestorationRandom extends AbstractEffect
 		// If you get chance equal 45% you fall into the second zone 30-80.
 		// Meaning you get the second production list.
 		// Calculate extraction
-		for (L2ExtractableProductItem expi : _products)
+		for (ExtractableProductItem expi : _products)
 		{
 			chance = expi.getChance();
 			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
@@ -94,14 +94,14 @@ public final class RestorationRandom extends AbstractEffect
 			chanceFrom += chance;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
+		final PlayerInstance player = effected.getActingPlayer();
 		if (creationList.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			return;
 		}
 		
-		final Map<L2ItemInstance, Long> extractedItems = new HashMap<>();
+		final Map<ItemInstance, Long> extractedItems = new HashMap<>();
 		for (RestorationItemHolder createdItem : creationList)
 		{
 			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
@@ -110,7 +110,7 @@ public final class RestorationRandom extends AbstractEffect
 			}
 			
 			long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
-			final L2ItemInstance newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
+			final ItemInstance newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
 			
 			if (createdItem.getMaxEnchant() > 0)
 			{
@@ -130,7 +130,7 @@ public final class RestorationRandom extends AbstractEffect
 		if (!extractedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (Entry<L2ItemInstance, Long> entry : extractedItems.entrySet())
+			for (Entry<ItemInstance, Long> entry : extractedItems.entrySet())
 			{
 				playerIU.addModifiedItem(entry.getKey());
 				sendMessage(player, entry.getKey(), entry.getValue());
@@ -140,12 +140,12 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.EXTRACT_ITEM;
+		return EffectType.EXTRACT_ITEM;
 	}
 	
-	private void sendMessage(L2PcInstance player, L2ItemInstance item, Long count)
+	private void sendMessage(PlayerInstance player, ItemInstance item, Long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

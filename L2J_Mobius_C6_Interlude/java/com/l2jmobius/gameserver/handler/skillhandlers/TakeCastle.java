@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ArtefactInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,14 +42,14 @@ public class TakeCastle implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
@@ -81,7 +81,7 @@ public class TakeCastle implements ISkillHandler
 		
 		try
 		{
-			if ((castle != null) && (targets[0] instanceof L2ArtefactInstance))
+			if ((castle != null) && (targets[0] instanceof ArtefactInstance))
 			{
 				castle.Engrave(player.getClan(), targets[0].getObjectId());
 			}
@@ -104,37 +104,37 @@ public class TakeCastle implements ISkillHandler
 	/**
 	 * Return true if character clan place a flag<BR>
 	 * <BR>
-	 * @param activeChar The L2Character of the character placing the flag
+	 * @param creature The Creature of the creature placing the flag
 	 * @param isCheckOnly
 	 * @return
 	 */
-	public static boolean checkIfOkToCastSealOfRule(L2Character activeChar, boolean isCheckOnly)
+	public static boolean checkIfOkToCastSealOfRule(Creature creature, boolean isCheckOnly)
 	{
-		final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-		final Fort fort = FortManager.getInstance().getFort(activeChar);
+		final Castle castle = CastleManager.getInstance().getCastle(creature);
+		final Fort fort = FortManager.getInstance().getFort(creature);
 		
 		if ((fort != null) && (castle == null))
 		{
-			return checkIfOkToCastFlagDisplay(activeChar, fort, isCheckOnly);
+			return checkIfOkToCastFlagDisplay(creature, fort, isCheckOnly);
 		}
-		return checkIfOkToCastSealOfRule(activeChar, castle, isCheckOnly);
+		return checkIfOkToCastSealOfRule(creature, castle, isCheckOnly);
 	}
 	
-	public static boolean checkIfOkToCastSealOfRule(L2Character activeChar, Castle castle, boolean isCheckOnly)
+	public static boolean checkIfOkToCastSealOfRule(Creature creature, Castle castle, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
 		{
 			sm.addString("You must be on castle ground to use this skill");
 		}
-		else if ((player.getTarget() == null) || !(player.getTarget() instanceof L2ArtefactInstance))
+		else if ((player.getTarget() == null) || !(player.getTarget() instanceof ArtefactInstance))
 		{
 			sm.addString("You can only use this skill on an artifact");
 		}
@@ -167,26 +167,26 @@ public class TakeCastle implements ISkillHandler
 		return false;
 	}
 	
-	public static boolean checkIfOkToCastFlagDisplay(L2Character activeChar, boolean isCheckOnly)
+	public static boolean checkIfOkToCastFlagDisplay(Creature creature, boolean isCheckOnly)
 	{
-		return checkIfOkToCastFlagDisplay(activeChar, FortManager.getInstance().getFort(activeChar), isCheckOnly);
+		return checkIfOkToCastFlagDisplay(creature, FortManager.getInstance().getFort(creature), isCheckOnly);
 	}
 	
-	public static boolean checkIfOkToCastFlagDisplay(L2Character activeChar, Fort fort, boolean isCheckOnly)
+	public static boolean checkIfOkToCastFlagDisplay(Creature creature, Fort fort, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
 		{
 			sm.addString("You must be on fort ground to use this skill");
 		}
-		else if ((player.getTarget() == null) && !(player.getTarget() instanceof L2ArtefactInstance))
+		else if ((player.getTarget() == null) && !(player.getTarget() instanceof ArtefactInstance))
 		{
 			sm.addString("You can only use this skill on an flagpole");
 		}

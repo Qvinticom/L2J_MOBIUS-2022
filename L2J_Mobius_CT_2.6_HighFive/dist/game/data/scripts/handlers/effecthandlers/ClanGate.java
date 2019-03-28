@@ -16,8 +16,8 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -40,7 +40,7 @@ public final class ClanGate extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			final L2Clan clan = info.getEffected().getActingPlayer().getClan();
+			final Clan clan = info.getEffected().getActingPlayer().getClan();
 			if (clan != null)
 			{
 				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_THE_PORTAL_HAS_BEEN_CREATED);

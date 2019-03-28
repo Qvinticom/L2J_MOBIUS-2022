@@ -151,7 +151,7 @@ public final class ItemAuctionManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
+			LOGGER.log(Level.SEVERE, "ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
 		}
 	}
 	

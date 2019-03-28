@@ -19,8 +19,8 @@ package quests.Q00354_ConquestOfAlligatorIsland;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -59,10 +59,10 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -79,7 +79,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "30895-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -100,7 +100,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "30895-10.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -109,36 +109,36 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if(qs != null)
 		{
 			int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))
 			{
-				giveItemRandomly(st.getPlayer(), npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
+				giveItemRandomly(qs.getPlayer(), npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
 			}
 			else
 			{
 				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
-				giveItemRandomly(st.getPlayer(), npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
+				giveItemRandomly(qs.getPlayer(), npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30895-01.htm" : "30895-03.html");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			htmltext = "30895-04.html";
 		}

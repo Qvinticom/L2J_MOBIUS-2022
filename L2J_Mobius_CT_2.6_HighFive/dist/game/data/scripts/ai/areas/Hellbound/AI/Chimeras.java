@@ -18,10 +18,10 @@ package ai.areas.Hellbound.AI;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 import ai.AbstractNpcAI;
@@ -67,7 +67,7 @@ public final class Chimeras extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		if (HellboundEngine.getInstance().getLevel() == 7) // Have random spawn points only in 7 lvl
 		{
@@ -82,7 +82,7 @@ public final class Chimeras extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public final String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if ((skill.getId() == BOTTLE) && !npc.isDead())
 		{
@@ -120,10 +120,10 @@ public final class Chimeras extends AbstractNpcAI
 	
 	private static class Teleport implements Runnable
 	{
-		private final L2Npc _npc;
+		private final Npc _npc;
 		private final Location _loc;
 		
-		public Teleport(L2Npc npc, Location loc)
+		public Teleport(Npc npc, Location loc)
 		{
 			_npc = npc;
 			_loc = loc;

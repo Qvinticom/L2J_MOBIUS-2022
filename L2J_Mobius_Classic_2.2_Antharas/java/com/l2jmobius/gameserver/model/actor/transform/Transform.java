@@ -24,11 +24,11 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.InventoryBlockType;
 import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerTransform;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTransform;
 import com.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import com.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -120,7 +120,7 @@ public final class Transform implements IIdentifiable
 		return _title;
 	}
 	
-	private TransformTemplate getTemplate(L2Character creature)
+	private TransformTemplate getTemplate(Creature creature)
 	{
 		if (creature.isPlayer())
 		{
@@ -128,7 +128,7 @@ public final class Transform implements IIdentifiable
 		}
 		else if (creature.isNpc())
 		{
-			return ((L2Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
+			return ((Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
 		}
 		
 		return null;
@@ -202,7 +202,7 @@ public final class Transform implements IIdentifiable
 		return _type == TransformType.PURE_STAT;
 	}
 	
-	public double getCollisionHeight(L2Character creature, double defaultCollisionHeight)
+	public double getCollisionHeight(Creature creature, double defaultCollisionHeight)
 	{
 		final TransformTemplate template = getTemplate(creature);
 		if ((template != null) && (template.getCollisionHeight() != null))
@@ -213,7 +213,7 @@ public final class Transform implements IIdentifiable
 		return defaultCollisionHeight;
 	}
 	
-	public double getCollisionRadius(L2Character creature, double defaultCollisionRadius)
+	public double getCollisionRadius(Creature creature, double defaultCollisionRadius)
 	{
 		final TransformTemplate template = getTemplate(creature);
 		if ((template != null) && (template.getCollisionRadius() != null))
@@ -224,13 +224,13 @@ public final class Transform implements IIdentifiable
 		return defaultCollisionRadius;
 	}
 	
-	public void onTransform(L2Character creature, boolean addSkills)
+	public void onTransform(Creature creature, boolean addSkills)
 	{
 		// Abort attacking and casting.
 		creature.abortAttack();
 		creature.abortCast();
 		
-		final L2PcInstance player = creature.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		
 		// Get off the strider or something else if character is mounted
 		if (creature.isPlayer() && player.isMounted())
@@ -344,7 +344,7 @@ public final class Transform implements IIdentifiable
 		}
 	}
 	
-	public void onUntransform(L2Character creature)
+	public void onUntransform(Creature creature)
 	{
 		// Abort attacking and casting.
 		creature.abortAttack();
@@ -361,7 +361,7 @@ public final class Transform implements IIdentifiable
 			
 			if (creature.isPlayer())
 			{
-				final L2PcInstance player = creature.getActingPlayer();
+				final PlayerInstance player = creature.getActingPlayer();
 				final boolean hasTransformSkills = player.hasTransformSkills();
 				
 				if (_name != null)
@@ -405,7 +405,7 @@ public final class Transform implements IIdentifiable
 		}
 	}
 	
-	public void onLevelUp(L2PcInstance player)
+	public void onLevelUp(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		if (template != null)
@@ -427,7 +427,7 @@ public final class Transform implements IIdentifiable
 		}
 	}
 	
-	public WeaponType getBaseAttackType(L2Character creature, WeaponType defaultAttackType)
+	public WeaponType getBaseAttackType(Creature creature, WeaponType defaultAttackType)
 	{
 		final TransformTemplate template = getTemplate(creature);
 		if (template != null)
@@ -441,7 +441,7 @@ public final class Transform implements IIdentifiable
 		return defaultAttackType;
 	}
 	
-	public double getStats(L2Character creature, Stats stats, double defaultValue)
+	public double getStats(Creature creature, Stats stats, double defaultValue)
 	{
 		double val = defaultValue;
 		final TransformTemplate template = getTemplate(creature);
@@ -457,7 +457,7 @@ public final class Transform implements IIdentifiable
 		return val;
 	}
 	
-	public int getBaseDefBySlot(L2PcInstance player, int slot)
+	public int getBaseDefBySlot(PlayerInstance player, int slot)
 	{
 		final int defaultValue = player.getTemplate().getBaseDefBySlot(slot);
 		final TransformTemplate template = getTemplate(player);
@@ -469,7 +469,7 @@ public final class Transform implements IIdentifiable
 	 * @param creature
 	 * @return {@code -1} if this transformation doesn't alter levelmod, otherwise a new levelmod will be returned.
 	 */
-	public double getLevelMod(L2Character creature)
+	public double getLevelMod(Creature creature)
 	{
 		double val = 1;
 		final TransformTemplate template = getTemplate(creature);

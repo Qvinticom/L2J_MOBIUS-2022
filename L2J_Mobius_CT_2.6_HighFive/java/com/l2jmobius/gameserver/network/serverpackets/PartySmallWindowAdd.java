@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class PartySmallWindowAdd implements IClientOutgoingPacket
 {
-	private final L2PcInstance _member;
-	private final L2Party _party;
+	private final PlayerInstance _member;
+	private final Party _party;
 	
-	public PartySmallWindowAdd(L2PcInstance member, L2Party party)
+	public PartySmallWindowAdd(PlayerInstance member, Party party)
 	{
 		_member = member;
 		_party = party;

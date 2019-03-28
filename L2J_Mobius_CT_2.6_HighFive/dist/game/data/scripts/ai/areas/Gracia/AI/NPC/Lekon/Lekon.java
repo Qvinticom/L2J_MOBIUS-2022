@@ -17,9 +17,9 @@
 package ai.areas.Gracia.AI.NPC.Lekon;
 
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 import ai.AbstractNpcAI;
@@ -47,7 +47,7 @@ public final class Lekon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -59,7 +59,7 @@ public final class Lekon extends AbstractNpcAI
 			}
 			case "licence":
 			{
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if ((clan == null) || !player.isClanLeader() || (clan.getLevel() < MIN_CLAN_LV))
 				{
 					htmltext = "32557-02.html";

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.request;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaCancel;
 
 /**
@@ -26,26 +26,26 @@ import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivide
  */
 public class AdenaDistributionRequest extends AbstractRequest
 {
-	private final L2PcInstance _distributor;
-	private final List<L2PcInstance> _players;
+	private final PlayerInstance _distributor;
+	private final List<PlayerInstance> _players;
 	private final int _adenaObjectId;
 	private final long _adenaCount;
 	
-	public AdenaDistributionRequest(L2PcInstance activeChar, L2PcInstance distributor, List<L2PcInstance> players, int adenaObjectId, long adenaCount)
+	public AdenaDistributionRequest(PlayerInstance player, PlayerInstance distributor, List<PlayerInstance> players, int adenaObjectId, long adenaCount)
 	{
-		super(activeChar);
+		super(player);
 		_distributor = distributor;
 		_adenaObjectId = adenaObjectId;
 		_players = players;
 		_adenaCount = adenaCount;
 	}
 	
-	public L2PcInstance getDistributor()
+	public PlayerInstance getDistributor()
 	{
 		return _distributor;
 	}
 	
-	public List<L2PcInstance> getPlayers()
+	public List<PlayerInstance> getPlayers()
 	{
 		return _players;
 	}

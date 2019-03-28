@@ -21,20 +21,20 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 {
-	private final L2Character _character;
+	private final Creature _creature;
 	private final List<BuffInfo> _effects;
 	
-	public ExAbnormalStatusUpdateFromTarget(L2Character character)
+	public ExAbnormalStatusUpdateFromTarget(Creature creature)
 	{
 		//@formatter:off
-		_character = character;
-		_effects = character.getEffectList().getEffects()
+		_creature = creature;
+		_effects = creature.getEffectList().getEffects()
 					.stream()
 					.filter(Objects::nonNull)
 					.filter(BuffInfo::isInUse)
@@ -48,7 +48,7 @@ public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ABNORMAL_STATUS_UPDATE_FROM_TARGET.writeId(packet);
 		
-		packet.writeD(_character.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeH(_effects.size());
 		
 		for (BuffInfo info : _effects)

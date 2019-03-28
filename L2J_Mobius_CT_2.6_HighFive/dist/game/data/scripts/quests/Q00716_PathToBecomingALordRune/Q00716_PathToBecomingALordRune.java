@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -73,7 +73,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
@@ -85,7 +85,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 		{
 			return "Castle has no lord";
 		}
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		if (event.equals("frederick_q716_03.htm"))
 		{
 			qs.startQuest();
@@ -115,7 +115,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -124,7 +124,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 		{
 			return "Castle has no lord";
 		}
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		
 		switch (npc.getId())
 		{
@@ -273,7 +273,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		final QuestState qs = killer.getQuestState(getName());
 		if (qs == null)
@@ -285,7 +285,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 			return null;
 		}
 		final Castle castle = CastleManager.getInstance().getCastleById(RuneCastle);
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		if ((qs.getState() == State.STARTED) && qs.isCond(0))
 		{
 			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (castleOwner.getQuestState(Q00716_PathToBecomingALordRune.class.getSimpleName()) != null) && (castleOwner.getQuestState(Q00716_PathToBecomingALordRune.class.getSimpleName()).isCond(7)))

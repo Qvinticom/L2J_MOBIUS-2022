@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * Format: (ch)ddddd
  */
-public class ExConfirmVariationRefiner extends L2GameServerPacket
+public class ExConfirmVariationRefiner extends GameServerPacket
 {
 	private final int _refinerItemObjId;
 	private final int _lifestoneItemId;

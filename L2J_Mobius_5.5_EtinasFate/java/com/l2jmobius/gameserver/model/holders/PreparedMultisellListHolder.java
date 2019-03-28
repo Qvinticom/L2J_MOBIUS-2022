@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 
@@ -36,7 +36,7 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 	private double _taxRate;
 	private List<ItemInfo> _itemInfos;
 	
-	public PreparedMultisellListHolder(MultisellListHolder list, boolean inventoryOnly, ItemContainer inventory, L2Npc npc, double ingredientMultiplier, double productMultiplier)
+	public PreparedMultisellListHolder(MultisellListHolder list, boolean inventoryOnly, ItemContainer inventory, Npc npc, double ingredientMultiplier, double productMultiplier)
 	{
 		super(list.getId(), list.isChanceMultisell(), list.isApplyTaxes(), list.isMaintainEnchantment(), list.getIngredientMultiplier(), list.getProductMultiplier(), list._entries, list._npcsAllowed);
 		

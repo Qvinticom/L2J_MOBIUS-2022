@@ -20,10 +20,10 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,13 +34,13 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 	private String _name;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
 		return true;
 	}
 	
-	private void scheduleDeny(L2PcInstance player)
+	private void scheduleDeny(PlayerInstance player)
 	{
 		if (player != null)
 		{
@@ -50,83 +50,83 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (FakePlayerData.getInstance().isTalkable(_name))
 		{
-			if (!activeChar.isProcessingRequest())
+			if (!player.isProcessingRequest())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 				sm.addString(_name);
-				activeChar.sendPacket(sm);
-				ThreadPool.schedule(() -> scheduleDeny(activeChar), 10000);
-				activeChar.blockRequest();
+				player.sendPacket(sm);
+				ThreadPool.schedule(() -> scheduleDeny(player), 10000);
+				player.blockRequest();
 			}
 			else
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 				sm.addString(_name);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 			return;
 		}
 		
-		final L2PcInstance friend = L2World.getInstance().getPlayer(_name);
+		final PlayerInstance friend = World.getInstance().getPlayer(_name);
 		
 		// Target is not found in the game.
 		if ((friend == null) || !friend.isOnline() || friend.isInvisible())
 		{
-			activeChar.sendPacket(SystemMessageId.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME);
 			return;
 		}
 		// You cannot add yourself to your own friend list.
-		if (friend == activeChar)
+		if (friend == player)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOURSELF_TO_YOUR_OWN_FRIEND_LIST);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_YOURSELF_TO_YOUR_OWN_FRIEND_LIST);
 			return;
 		}
 		// Target is in olympiad.
-		if (activeChar.isInOlympiadMode() || friend.isInOlympiadMode())
+		if (player.isInOlympiadMode() || friend.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
+			player.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
 			return;
 		}
 		
 		// Cannot request friendship in Ceremony of Chaos event.
-		if (activeChar.isOnEvent(CeremonyOfChaosEvent.class))
+		if (player.isOnEvent(CeremonyOfChaosEvent.class))
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
 			return;
 		}
 		
 		// Target blocked active player.
-		if (BlockList.isBlocked(friend, activeChar))
+		if (BlockList.isBlocked(friend, player))
 		{
-			activeChar.sendMessage("You are in target's block list.");
+			player.sendMessage("You are in target's block list.");
 			return;
 		}
 		SystemMessage sm;
 		// Target is blocked.
-		if (BlockList.isBlocked(activeChar, friend))
+		if (BlockList.isBlocked(player, friend))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BLOCKED_C1);
 			sm.addString(friend.getName());
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
 		// Target already in friend list.
-		if (activeChar.getFriendList().contains(friend.getObjectId()))
+		if (player.getFriendList().contains(friend.getObjectId()))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(_name);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		// Target is busy.
@@ -134,14 +134,14 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(_name);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		// Friend request sent.
-		activeChar.onTransactionRequest(friend);
-		friend.sendPacket(new FriendAddRequest(activeChar.getName()));
+		player.onTransactionRequest(friend);
+		friend.sendPacket(new FriendAddRequest(player.getName()));
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 		sm.addString(_name);
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 	}
 }

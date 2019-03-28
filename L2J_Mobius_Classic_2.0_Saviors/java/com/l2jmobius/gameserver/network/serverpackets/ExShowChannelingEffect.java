@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,11 +25,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExShowChannelingEffect extends AbstractItemPacket
 {
-	private final L2Character _caster;
-	private final L2Character _target;
+	private final Creature _caster;
+	private final Creature _target;
 	private final int _state;
 	
-	public ExShowChannelingEffect(L2Character caster, L2Character target, int state)
+	public ExShowChannelingEffect(Creature caster, Creature target, int state)
 	{
 		_caster = caster;
 		_target = target;

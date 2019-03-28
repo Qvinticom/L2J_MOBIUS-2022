@@ -26,8 +26,8 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -95,7 +95,7 @@ public final class AuctionableHall extends ClanHall
 	}
 	
 	@Override
-	public final void setOwner(L2Clan clan)
+	public final void setOwner(Clan clan)
 	{
 		super.setOwner(clan);
 		_paidUntil = System.currentTimeMillis();
@@ -153,7 +153,7 @@ public final class AuctionableHall extends ClanHall
 					return;
 				}
 				
-				final L2Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
+				final Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
 				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease())
 				{
 					if (_paidUntil != 0)
@@ -226,7 +226,7 @@ public final class AuctionableHall extends ClanHall
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: updateOwnerInDB(Pledge clan): " + e.getMessage(), e);
 		}
 	}
 }

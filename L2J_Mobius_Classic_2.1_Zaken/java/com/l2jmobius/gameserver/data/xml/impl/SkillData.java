@@ -115,7 +115,7 @@ public class SkillData implements IGameXmlReader
 	
 	/**
 	 * Provides the skill hash
-	 * @param skill The L2Skill to be hashed
+	 * @param skill The Skill to be hashed
 	 * @return getSkillHashCode(skill.getId(), skill.getLevel())
 	 */
 	public static long getSkillHashCode(Skill skill)

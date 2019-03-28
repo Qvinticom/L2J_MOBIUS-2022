@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author devScarlet & mrTJO
  */
-public class ServerClose extends L2GameServerPacket
+public class ServerClose extends GameServerPacket
 {
 	public static final ServerClose STATIC_PACKET = new ServerClose();
 	
 	/**
-	 * @see com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 * @see com.l2jmobius.gameserver.network.serverpackets.GameServerPacket#writeImpl()
 	 */
 	@Override
 	protected void writeImpl()

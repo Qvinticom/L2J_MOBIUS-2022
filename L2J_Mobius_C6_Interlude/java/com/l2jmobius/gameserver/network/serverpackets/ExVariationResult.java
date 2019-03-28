@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * Format: (ch)ddd.
  */
-public class ExVariationResult extends L2GameServerPacket
+public class ExVariationResult extends GameServerPacket
 {
 	/** The _stat12. */
 	private final int _stat12;

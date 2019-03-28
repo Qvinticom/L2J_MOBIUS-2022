@@ -27,11 +27,11 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -51,11 +51,11 @@ public class HallOfErosionAttack extends AbstractNpcAI
 {
 	protected class HEAWorld extends InstanceWorld
 	{
-		public List<L2Npc> npcList = new ArrayList<>();
-		public List<L2Npc> deadTumors = new ArrayList<>();
+		public List<Npc> npcList = new ArrayList<>();
+		public List<Npc> deadTumors = new ArrayList<>();
 		public int tumorCount = 0;
-		public L2Npc cohemenes = null;
-		protected L2Npc deadTumor;
+		public Npc cohemenes = null;
+		protected Npc deadTumor;
 		public boolean isBossAttacked = false;
 		public long startTime = 0;
 		
@@ -225,20 +225,20 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		tumorRespawnTime = 180 * 1000;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	private boolean checkConditions(PlayerInstance player)
 	{
 		if (player.isGM())
 		{
 			return true;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -251,7 +251,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			return false;
 		}
 		
-		final L2CommandChannel channel = party.getCommandChannel();
+		final CommandChannel channel = party.getCommandChannel();
 		if (channel == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL);
@@ -271,7 +271,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			return false;
 		}
 		
-		for (L2PcInstance partyMember : party.getCommandChannel().getMembers())
+		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
@@ -310,7 +310,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(L2PcInstance player, int[] coords)
+	protected void enterInstance(PlayerInstance player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		
@@ -335,7 +335,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			
 			if (player.isInParty())
 			{
-				for (L2PcInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -356,7 +356,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		{
 			for (int i = 0; i < spawn[6]; i++)
 			{
-				final L2Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+				final Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 				npc.getSpawn().setRespawnDelay(spawn[5]);
 				npc.getSpawn().setAmount(1);
 				if (spawn[5] > 0)
@@ -374,7 +374,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		{
 			for (int i = 0; i < spawn[6]; i++)
 			{
-				final L2Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+				final Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 				npc.getSpawn().setRespawnDelay(spawn[5]);
 				npc.getSpawn().setAmount(1);
 				if (spawn[5] > 0)
@@ -395,7 +395,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	{
 		if (!world.npcList.isEmpty())
 		{
-			for (L2Npc npc : world.npcList)
+			for (Npc npc : world.npcList)
 			{
 				if (npc != null)
 				{
@@ -407,7 +407,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HEAWorld)
@@ -416,7 +416,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			
 			if (event.startsWith("warp"))
 			{
-				L2Npc victim = null;
+				Npc victim = null;
 				victim = world.deadTumor;
 				if (victim != null)
 				{
@@ -428,7 +428,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-					for (L2PcInstance partyMember : player.getParty().getMembers())
+					for (PlayerInstance partyMember : player.getParty().getMembers())
 					{
 						if (partyMember.isInsideRadius3D(player, 500))
 						{
@@ -442,7 +442,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{
@@ -453,7 +453,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
@@ -473,7 +473,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
@@ -488,7 +488,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(INSTANCEID);
 				
-				for (L2PcInstance player : tmpworld.getAllowed())
+				for (PlayerInstance player : tmpworld.getAllowed())
 				{
 					if ((player != null) && player.isOnline())
 					{
@@ -502,7 +502,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
@@ -537,7 +537,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
@@ -562,7 +562,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.ALL_THE_TUMORS_INSIDE_S1_HAVE_BEEN_DESTROYED_DRIVEN_INTO_A_CORNER_COHEMENES_APPEARS_CLOSE_BY, 2, 8000));
 					final int[] spawn = COHEMENES_SPAWN[Rnd.get(0, COHEMENES_SPAWN.length - 1)];
-					final L2Npc n = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+					final Npc n = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 					n.broadcastPacket(new NpcSay(n.getObjectId(), ChatType.SHOUT, n.getId(), NpcStringId.C_MON_C_MON_SHOW_YOUR_FACE_YOU_LITTLE_RATS_LET_ME_SEE_WHAT_THE_DOOMED_WEAKLINGS_ARE_SCHEMING));
 					world.cohemenes = n;
 				}
@@ -570,14 +570,14 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			if (npc.getId() == COHEMENES)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.SHOUT, npc.getId(), NpcStringId.KEU_I_WILL_LEAVE_FOR_NOW_BUT_DON_T_THINK_THIS_IS_OVER_THE_SEED_OF_INFINITY_CAN_NEVER_DIE));
-				for (L2PcInstance plr : world.getAllowed())
+				for (PlayerInstance plr : world.getAllowed())
 				{
 					if (plr != null)
 					{
-						final QuestState st = plr.getQuestState(Q00696_ConquerTheHallOfErosion.class.getSimpleName());
-						if ((st != null) && (st.getInt("cond") == 1))
+						final QuestState qs = plr.getQuestState(Q00696_ConquerTheHallOfErosion.class.getSimpleName());
+						if ((qs != null) && (qs.getInt("cond") == 1))
 						{
-							st.set("cohemenes", "1");
+							qs.set("cohemenes", "1");
 						}
 					}
 				}
@@ -613,7 +613,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addInstanceName(INSTANCEID);
 			
-			for (L2PcInstance plr : world.getAllowed())
+			for (PlayerInstance plr : world.getAllowed())
 			{
 				if (plr != null)
 				{
@@ -632,10 +632,10 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	
 	private class TumorRevival implements Runnable
 	{
-		private final L2Npc _deadTumor;
+		private final Npc _deadTumor;
 		private final HEAWorld _world;
 		
-		public TumorRevival(L2Npc deadTumor, HEAWorld world)
+		public TumorRevival(Npc deadTumor, HEAWorld world)
 		{
 			_deadTumor = world.deadTumor;
 			_world = world;
@@ -649,7 +649,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				return;
 			}
 			
-			final L2Npc tumor = addSpawn(TUMOR_ALIVE, _deadTumor.getLocation(), _world.getInstanceId());
+			final Npc tumor = addSpawn(TUMOR_ALIVE, _deadTumor.getLocation(), _world.getInstanceId());
 			_world.npcList.add(tumor);
 			_deadTumor.deleteMe();
 			final int tag = _world.getParameters().getInt("tag", -1);
@@ -659,10 +659,10 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	
 	private class RegenerationCoffinSpawn implements Runnable
 	{
-		private final L2Npc _deadTumor;
+		private final Npc _deadTumor;
 		private final HEAWorld _world;
 		
-		public RegenerationCoffinSpawn(L2Npc deadTumor, HEAWorld world)
+		public RegenerationCoffinSpawn(Npc deadTumor, HEAWorld world)
 		{
 			_deadTumor = world.deadTumor;
 			_world = world;
@@ -677,7 +677,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			}
 			for (int i = 0; i < 4; i++)
 			{
-				final L2Npc worm = addSpawn(18710, _deadTumor.getLocation(), _world.getInstanceId());
+				final Npc worm = addSpawn(18710, _deadTumor.getLocation(), _world.getInstanceId());
 				_world.npcList.add(worm);
 			}
 		}
@@ -685,7 +685,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	
 	protected void broadCastPacket(HEAWorld world, IClientOutgoingPacket packet)
 	{
-		for (L2PcInstance player : world.getAllowed())
+		for (PlayerInstance player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

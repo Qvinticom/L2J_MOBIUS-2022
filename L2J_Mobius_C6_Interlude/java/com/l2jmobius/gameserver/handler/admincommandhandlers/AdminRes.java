@@ -17,17 +17,17 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * This class handles following admin commands: - res = resurrects target L2Character
+ * This class handles following admin commands: - res = resurrects target Creature
  * @version $Revision: 1.2.4.5 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminRes implements IAdminCommandHandler
@@ -39,7 +39,7 @@ public class AdminRes implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_res "))
 		{
@@ -67,19 +67,19 @@ public class AdminRes implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleRes(L2PcInstance activeChar)
+	private void handleRes(PlayerInstance activeChar)
 	{
 		handleRes(activeChar, null);
 	}
 	
-	private void handleRes(L2PcInstance activeChar, String resParam)
+	private void handleRes(PlayerInstance activeChar, String resParam)
 	{
-		L2Object obj = activeChar.getTarget();
+		WorldObject obj = activeChar.getTarget();
 		
 		if (resParam != null)
 		{
 			// Check if a player name was specified as a param.
-			L2PcInstance plyr = L2World.getInstance().getPlayer(resParam);
+			PlayerInstance plyr = World.getInstance().getPlayer(resParam);
 			
 			if (plyr != null)
 			{
@@ -92,7 +92,7 @@ public class AdminRes implements IAdminCommandHandler
 				{
 					final int radius = Integer.parseInt(resParam);
 					
-					for (L2PcInstance knownPlayer : activeChar.getKnownList().getKnownPlayersInRadius(radius))
+					for (PlayerInstance knownPlayer : activeChar.getKnownList().getKnownPlayersInRadius(radius))
 					{
 						doResurrect(knownPlayer);
 					}
@@ -113,23 +113,23 @@ public class AdminRes implements IAdminCommandHandler
 			obj = activeChar;
 		}
 		
-		if (obj instanceof L2ControllableMobInstance)
+		if (obj instanceof ControllableMobInstance)
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		
-		doResurrect((L2Character) obj);
+		doResurrect((Creature) obj);
 	}
 	
-	private void handleNonPlayerRes(L2PcInstance activeChar)
+	private void handleNonPlayerRes(PlayerInstance activeChar)
 	{
 		handleNonPlayerRes(activeChar, "");
 	}
 	
-	private void handleNonPlayerRes(L2PcInstance activeChar, String radiusStr)
+	private void handleNonPlayerRes(PlayerInstance activeChar, String radiusStr)
 	{
-		L2Object obj = activeChar.getTarget();
+		WorldObject obj = activeChar.getTarget();
 		
 		try
 		{
@@ -139,9 +139,9 @@ public class AdminRes implements IAdminCommandHandler
 			{
 				radius = Integer.parseInt(radiusStr);
 				
-				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
+				for (Creature knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 				{
-					if (!(knownChar instanceof L2PcInstance) && !(knownChar instanceof L2ControllableMobInstance))
+					if (!(knownChar instanceof PlayerInstance) && !(knownChar instanceof ControllableMobInstance))
 					{
 						doResurrect(knownChar);
 					}
@@ -156,16 +156,16 @@ public class AdminRes implements IAdminCommandHandler
 			return;
 		}
 		
-		if ((obj == null) || (obj instanceof L2PcInstance) || (obj instanceof L2ControllableMobInstance))
+		if ((obj == null) || (obj instanceof PlayerInstance) || (obj instanceof ControllableMobInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		
-		doResurrect((L2Character) obj);
+		doResurrect((Creature) obj);
 	}
 	
-	private void doResurrect(L2Character targetChar)
+	private void doResurrect(Creature targetChar)
 	{
 		if (!targetChar.isDead())
 		{
@@ -173,9 +173,9 @@ public class AdminRes implements IAdminCommandHandler
 		}
 		
 		// If the target is a player, then restore the XP lost on death.
-		if (targetChar instanceof L2PcInstance)
+		if (targetChar instanceof PlayerInstance)
 		{
-			((L2PcInstance) targetChar).restoreExp(100.0);
+			((PlayerInstance) targetChar).restoreExp(100.0);
 		}
 		else
 		{

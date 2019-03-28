@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.enums.StatModifierType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerIsInCombat;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
@@ -109,7 +109,7 @@ public abstract class AbstractStatEffect extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		if (_conditions.isEmpty() || _conditions.stream().allMatch(cond -> cond.test(effected, effected, skill)))
 		{

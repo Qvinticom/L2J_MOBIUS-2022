@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
 
 /**
  * @author l2jserver
@@ -72,7 +72,7 @@ public class SkillSpellbookTable
 	
 	public int getBookForSkill(int skillId, int level)
 	{
-		if ((skillId == L2Skill.SKILL_DIVINE_INSPIRATION) && (level != -1))
+		if ((skillId == Skill.SKILL_DIVINE_INSPIRATION) && (level != -1))
 		{
 			switch (level)
 			{
@@ -107,12 +107,12 @@ public class SkillSpellbookTable
 		return skillSpellbooks.get(skillId);
 	}
 	
-	public int getBookForSkill(L2Skill skill)
+	public int getBookForSkill(Skill skill)
 	{
 		return getBookForSkill(skill.getId(), -1);
 	}
 	
-	public int getBookForSkill(L2Skill skill, int level)
+	public int getBookForSkill(Skill skill, int level)
 	{
 		return getBookForSkill(skill.getId(), level);
 	}

@@ -19,7 +19,7 @@ package com.l2jmobius.loginserver.network.serverpackets;
 /**
  * @author KenM
  */
-public final class AccountKicked extends L2LoginServerPacket
+public final class AccountKicked extends LoginServerPacket
 {
 	public enum AccountKickedReason
 	{

@@ -23,16 +23,16 @@ import java.util.List;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.util.Util;
@@ -68,7 +68,7 @@ public class Monastery extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		if (Util.contains(mobs1, npc.getNpcId()) && !npc.isInCombat() && (npc.getTarget() == null))
 		{
@@ -82,20 +82,20 @@ public class Monastery extends Quest
 					case 22124:
 					case 22126:
 					{
-						final L2Skill skill = SkillTable.getInstance().getInfo(4589, 8);
+						final Skill skill = SkillTable.getInstance().getInfo(4589, 8);
 						npc.doCast(skill);
 						break;
 					}
 					default:
 					{
 						npc.setIsRunning(true);
-						((L2Attackable) npc).addDamageHate(player, 0, 999);
+						((Attackable) npc).addDamageHate(player, 0, 999);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 						break;
 					}
 				}
 			}
-			else if (((L2Attackable) npc).getMostHated() == null)
+			else if (((Attackable) npc).getMostHated() == null)
 			{
 				return null;
 			}
@@ -104,19 +104,19 @@ public class Monastery extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2NpcInstance npc)
+	public String onSpawn(NpcInstance npc)
 	{
 		if (Util.contains(mobs1, npc.getNpcId()))
 		{
-			final List<L2Playable> result = new ArrayList<>();
-			final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-			for (L2Object obj : objs)
+			final List<Playable> result = new ArrayList<>();
+			final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
+			for (WorldObject obj : objs)
 			{
-				if ((obj instanceof L2PcInstance) || (obj instanceof L2PetInstance))
+				if ((obj instanceof PlayerInstance) || (obj instanceof PetInstance))
 				{
-					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((L2Character) obj).isDead())
+					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
 					{
-						result.add((L2Playable) obj);
+						result.add((Playable) obj);
 					}
 				}
 			}
@@ -125,9 +125,9 @@ public class Monastery extends Quest
 				final Object[] characters = result.toArray();
 				for (Object obj : characters)
 				{
-					final L2Playable target = (L2Playable) (obj instanceof L2PcInstance ? obj : ((L2Summon) obj).getOwner());
+					final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
 					
-					if ((target.getActiveWeaponInstance() == null) || ((target instanceof L2PcInstance) && ((L2PcInstance) target).isSilentMoving()) || ((target instanceof L2Summon) && ((L2Summon) target).getOwner().isSilentMoving()))
+					if ((target.getActiveWeaponInstance() == null) || ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving()) || ((target instanceof Summon) && ((Summon) target).getOwner().isSilentMoving()))
 					{
 						continue;
 					}
@@ -142,14 +142,14 @@ public class Monastery extends Quest
 							case 22126:
 							case 22127:
 							{
-								final L2Skill skill = SkillTable.getInstance().getInfo(4589, 8);
+								final Skill skill = SkillTable.getInstance().getInfo(4589, 8);
 								npc.doCast(skill);
 								break;
 							}
 							default:
 							{
 								npc.setIsRunning(true);
-								((L2Attackable) npc).addDamageHate(target, 0, 999);
+								((Attackable) npc).addDamageHate(target, 0, 999);
 								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 								break;
 							}
@@ -163,12 +163,12 @@ public class Monastery extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		if (Util.contains(mobs1, npc.getNpcId()) && (skill.getId() == 4589))
 		{
 			npc.setIsRunning(true);
-			((L2Attackable) npc).addDamageHate(player, 0, 999);
+			((Attackable) npc).addDamageHate(player, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
 		
@@ -177,7 +177,7 @@ public class Monastery extends Quest
 			if (skill.getSkillType() == SkillType.AGGDAMAGE)
 			{
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), text[Rnd.get(2) + 1].replace("name", player.getName())));
-				((L2Attackable) npc).addDamageHate(player, 0, 999);
+				((Attackable) npc).addDamageHate(player, 0, 999);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			}
 		}

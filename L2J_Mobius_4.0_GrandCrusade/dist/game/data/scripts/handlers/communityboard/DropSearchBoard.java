@@ -34,11 +34,11 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -66,7 +66,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		final boolean isSpoil;
 		final boolean isRaid;
 		
-		public CBDropHolder(L2NpcTemplate npcTemplate, DropHolder dropHolder)
+		public CBDropHolder(NpcTemplate npcTemplate, DropHolder dropHolder)
 		{
 			isSpoil = dropHolder.getDropType() == DropType.SPOIL;
 			itemId = dropHolder.getItemId();
@@ -75,7 +75,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			min = dropHolder.getMin();
 			max = dropHolder.getMax();
 			chance = dropHolder.getChance();
-			isRaid = npcTemplate.getType().equals("L2RaidBoss") || npcTemplate.getType().equals("L2GrandBoss");
+			isRaid = npcTemplate.getType().equals("RaidBoss") || npcTemplate.getType().equals("GrandBoss");
 		}
 		
 		/**
@@ -121,7 +121,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		DROP_INDEX_CACHE.values().stream().forEach(l -> l.sort((d1, d2) -> Byte.valueOf(d1.npcLevel).compareTo(Byte.valueOf(d2.npcLevel))));
 	}
 	
-	private void addToDropList(L2NpcTemplate npcTemplate, DropHolder dropHolder)
+	private void addToDropList(NpcTemplate npcTemplate, DropHolder dropHolder)
 	{
 		if (BLOCK_ID.contains(dropHolder.getItemId()))
 		{
@@ -139,7 +139,7 @@ public class DropSearchBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance player)
+	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
 	{
 		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
 		String[] params = command.split(" ");
@@ -195,7 +195,7 @@ public class DropSearchBoard implements IParseBoardHandler
 					}
 					else
 					{
-						final L2Item item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
+						final Item item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
 						
 						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
 						{
@@ -330,8 +330,8 @@ public class DropSearchBoard implements IParseBoardHandler
 	{
 		int limit = 0;
 		Set<Integer> existInDropData = DROP_INDEX_CACHE.keySet();
-		List<L2Item> items = new ArrayList<>();
-		for (L2Item item : ItemTable.getInstance().getAllItems())
+		List<Item> items = new ArrayList<>();
+		for (Item item : ItemTable.getInstance().getAllItems())
 		{
 			if (item == null)
 			{
@@ -364,7 +364,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		
 		StringBuilder builder = new StringBuilder(items.size() * 28);
 		int i = 0;
-		for (L2Item item : items)
+		for (Item item : items)
 		{
 			i++;
 			if (i == 1)

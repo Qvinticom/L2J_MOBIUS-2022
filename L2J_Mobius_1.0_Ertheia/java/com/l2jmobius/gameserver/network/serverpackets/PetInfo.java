@@ -19,16 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class PetInfo implements IClientOutgoingPacket
 {
-	private final L2Summon _summon;
+	private final Summon _summon;
 	private final int _val;
 	private final int _runSpd;
 	private final int _walkSpd;
@@ -43,7 +43,7 @@ public class PetInfo implements IClientOutgoingPacket
 	private int _curFed;
 	private int _statusMask = 0;
 	
-	public PetInfo(L2Summon summon, int val)
+	public PetInfo(Summon summon, int val)
 	{
 		_summon = summon;
 		_moveMultiplier = summon.getMovementSpeedMultiplier();
@@ -56,13 +56,13 @@ public class PetInfo implements IClientOutgoingPacket
 		_val = val;
 		if (summon.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) _summon;
+			final PetInstance pet = (PetInstance) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
 		else if (summon.isServitor())
 		{
-			final L2ServitorInstance sum = (L2ServitorInstance) _summon;
+			final ServitorInstance sum = (ServitorInstance) _summon;
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
 		}

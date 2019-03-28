@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -98,7 +98,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
 	 * @param command the command
 	 * @param player the player
 	 */
-	public void handleParseCommand(String command, L2PcInstance player)
+	public void handleParseCommand(String command, PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -131,7 +131,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
 	 * @param arg4 the fourth argument
 	 * @param arg5 the fifth argument
 	 */
-	public void handleWriteCommand(L2PcInstance player, String url, String arg1, String arg2, String arg3, String arg4, String arg5)
+	public void handleWriteCommand(PlayerInstance player, String url, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		if (player == null)
 		{
@@ -195,7 +195,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
 	 * @param title the title
 	 * @param bypass the bypass
 	 */
-	public void addBypass(L2PcInstance player, String title, String bypass)
+	public void addBypass(PlayerInstance player, String title, String bypass)
 	{
 		_bypasses.put(player.getObjectId(), title + "&" + bypass);
 	}
@@ -205,7 +205,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
 	 * @param player the player
 	 * @return the last bypass used
 	 */
-	public String removeBypass(L2PcInstance player)
+	public String removeBypass(PlayerInstance player)
 	{
 		return _bypasses.remove(player.getObjectId());
 	}
@@ -216,7 +216,7 @@ public final class CommunityBoardHandler implements IHandler<IParseBoardHandler,
 	 * @param html the HTML to send
 	 * @param player the player
 	 */
-	public static void separateAndSend(String html, L2PcInstance player)
+	public static void separateAndSend(String html, PlayerInstance player)
 	{
 		Util.sendCBHtml(player, html);
 	}

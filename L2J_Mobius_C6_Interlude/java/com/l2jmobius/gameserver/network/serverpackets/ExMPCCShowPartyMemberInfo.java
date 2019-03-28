@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: ch d[Sdd]
  * @author KenM
  */
-public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
+public class ExMPCCShowPartyMemberInfo extends GameServerPacket
 {
-	private final L2Party _party;
+	private final Party _party;
 	
-	public ExMPCCShowPartyMemberInfo(L2Party party)
+	public ExMPCCShowPartyMemberInfo(Party party)
 	{
 		_party = party;
 	}
@@ -39,7 +39,7 @@ public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 		writeH(0x4a);
 		
 		writeD(_party.getMemberCount());
-		for (L2PcInstance pc : _party.getPartyMembers())
+		for (PlayerInstance pc : _party.getPartyMembers())
 		{
 			writeS(pc.getName());
 			writeD(pc.getObjectId());

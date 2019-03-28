@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
@@ -68,14 +68,14 @@ public class Book implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
 		String filename = "data/html/help/" + itemId + ".htm";
@@ -84,24 +84,24 @@ public class Book implements IItemHandler
 		// Quest item: Lidia's diary
 		if (itemId == 7064)
 		{
-			activeChar.sendPacket(new ShowMiniMap(1665));
-			activeChar.sendPacket(new RadarControl(0, 1, 51995, -51265, -3104));
+			player.sendPacket(new ShowMiniMap(1665));
+			player.sendPacket(new RadarControl(0, 1, 51995, -51265, -3104));
 		}
 		
 		if (content == null)
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(1);
 			html.setHtml("<html><body>My Text is missing:<br>" + filename + "</body></html>");
-			activeChar.sendPacket(html);
+			player.sendPacket(html);
 		}
 		else
 		{
 			NpcHtmlMessage itemReply = new NpcHtmlMessage(5);
 			itemReply.setHtml(content);
-			activeChar.sendPacket(itemReply);
+			player.sendPacket(itemReply);
 		}
 		
-		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	@Override

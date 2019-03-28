@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.SiegeClanType;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -72,7 +72,7 @@ public final class SiegeDefenderList implements IClientOutgoingPacket
 		packet.writeD(size);
 		
 		// Add owners
-		final L2Clan ownerClan = _castle.getOwner();
+		final Clan ownerClan = _castle.getOwner();
 		if (ownerClan != null)
 		{
 			packet.writeD(ownerClan.getId());
@@ -88,9 +88,9 @@ public final class SiegeDefenderList implements IClientOutgoingPacket
 		}
 		
 		// List of confirmed defenders
-		for (L2SiegeClan siegeClan : _castle.getSiege().getDefenderClans())
+		for (SiegeClan siegeClan : _castle.getSiege().getDefenderClans())
 		{
-			final L2Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+			final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
 			if ((defendingClan == null) || (defendingClan == _castle.getOwner()))
 			{
 				continue;
@@ -109,9 +109,9 @@ public final class SiegeDefenderList implements IClientOutgoingPacket
 		}
 		
 		// List of not confirmed defenders
-		for (L2SiegeClan siegeClan : _castle.getSiege().getDefenderWaitingClans())
+		for (SiegeClan siegeClan : _castle.getSiege().getDefenderWaitingClans())
 		{
-			final L2Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+			final Clan defendingClan = ClanTable.getInstance().getClan(siegeClan.getClanId());
 			if (defendingClan == null)
 			{
 				continue;

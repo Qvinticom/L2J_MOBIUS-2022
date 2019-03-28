@@ -22,15 +22,15 @@ import java.util.Calendar;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.L2SiegeClan.SiegeClanType;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.zone.type.L2SiegableHallZone;
-import com.l2jmobius.gameserver.model.zone.type.L2SiegeZone;
+import com.l2jmobius.gameserver.model.zone.type.SiegableHallZone;
+import com.l2jmobius.gameserver.model.zone.type.SiegeZone;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 
 /**
@@ -52,7 +52,7 @@ public final class SiegableHall extends ClanHall
 	};
 	
 	private SiegeStatus _status = SiegeStatus.REGISTERING;
-	private L2SiegeZone _siegeZone;
+	private SiegeZone _siegeZone;
 	
 	private ClanHallSiegeEngine _siege;
 	
@@ -105,7 +105,7 @@ public final class SiegableHall extends ClanHall
 	
 	public void spawnDoor(boolean isDoorWeak)
 	{
-		for (L2DoorInstance door : getDoors())
+		for (DoorInstance door : getDoors())
 		{
 			if (door.isDead())
 			{
@@ -193,15 +193,15 @@ public final class SiegableHall extends ClanHall
 		updateDb();
 	}
 	
-	public final void addAttacker(L2Clan clan)
+	public final void addAttacker(Clan clan)
 	{
 		if (_siege != null)
 		{
-			_siege.getAttackers().put(clan.getId(), new L2SiegeClan(clan.getId(), SiegeClanType.ATTACKER));
+			_siege.getAttackers().put(clan.getId(), new SiegeClan(clan.getId(), SiegeClanType.ATTACKER));
 		}
 	}
 	
-	public final void removeAttacker(L2Clan clan)
+	public final void removeAttacker(Clan clan)
 	{
 		if (_siege != null)
 		{
@@ -209,7 +209,7 @@ public final class SiegableHall extends ClanHall
 		}
 	}
 	
-	public final boolean isRegistered(L2Clan clan)
+	public final boolean isRegistered(Clan clan)
 	{
 		return (_siege != null) && _siege.checkIsAttacker(clan);
 	}
@@ -239,12 +239,12 @@ public final class SiegableHall extends ClanHall
 		_status = status;
 	}
 	
-	public final L2SiegeZone getSiegeZone()
+	public final SiegeZone getSiegeZone()
 	{
 		return _siegeZone;
 	}
 	
-	public final void setSiegeZone(L2SiegeZone zone)
+	public final void setSiegeZone(SiegeZone zone)
 	{
 		_siegeZone = zone;
 	}
@@ -254,7 +254,7 @@ public final class SiegableHall extends ClanHall
 		_siegeZone.setIsActive(active);
 	}
 	
-	public final void showSiegeInfo(L2PcInstance player)
+	public final void showSiegeInfo(PlayerInstance player)
 	{
 		player.sendPacket(new SiegeInfo(this, player));
 	}
@@ -266,8 +266,8 @@ public final class SiegableHall extends ClanHall
 	}
 	
 	@Override
-	public L2SiegableHallZone getZone()
+	public SiegableHallZone getZone()
 	{
-		return (L2SiegableHallZone) super.getZone();
+		return (SiegableHallZone) super.getZone();
 	}
 }

@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -110,7 +110,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		
@@ -661,7 +661,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public void showEditPage(L2PcInstance activeChar)
+	public void showEditPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
@@ -701,7 +701,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	public void showControlPage(L2PcInstance activeChar)
+	public void showControlPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
@@ -730,7 +730,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	public void showMainPage(L2PcInstance activeChar)
+	public void showMainPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");

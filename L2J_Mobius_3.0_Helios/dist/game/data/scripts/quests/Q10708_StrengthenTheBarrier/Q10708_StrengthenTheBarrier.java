@@ -16,8 +16,8 @@
  */
 package quests.Q10708_StrengthenTheBarrier;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -53,13 +53,13 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
 		if (event.equals("activateKey"))
 		{
-			if ((st != null) && st.isCond(1))
+			if ((qs != null) && qs.isCond(1))
 			{
 				addAttackPlayerDesire(addSpawn(LAIKEL, npc, true, 120000), player);
 				addAttackPlayerDesire(addSpawn(LAIKEL, npc, true, 120000), player);
@@ -67,7 +67,7 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 				addAttackPlayerDesire(addSpawn(SEALBREAKER, npc, true, 120000), player);
 				addAttackPlayerDesire(addSpawn(SEALBREAKER, npc, true, 120000), player);
 				takeItems(player, KEY, -1);
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
@@ -75,7 +75,7 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 			}
 		}
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -90,16 +90,16 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 			}
 			case "33846-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, KEY, 1);
 				htmltext = event;
 				break;
 			}
 			case "33846-06.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EWB, 1);
 					giveStoryQuestReward(player, 17);
 					if (player.getLevel() >= MIN_LEVEL)
@@ -115,12 +115,12 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -134,11 +134,11 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 			{
 				if (npc.getId() == BACON)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "33846-04.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "33846-05.html";
 					}

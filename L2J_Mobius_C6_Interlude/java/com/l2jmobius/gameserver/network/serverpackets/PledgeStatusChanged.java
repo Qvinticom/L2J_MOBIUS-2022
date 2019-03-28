@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * sample 0000: cd b0 98 a0 48 1e 01 00 00 00 00 00 00 00 00 00 ....H........... 0010: 00 00 00 00 00 ..... format ddddd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeStatusChanged extends L2GameServerPacket
+public class PledgeStatusChanged extends GameServerPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
-	public PledgeStatusChanged(L2Clan clan)
+	public PledgeStatusChanged(Clan clan)
 	{
 		_clan = clan;
 	}

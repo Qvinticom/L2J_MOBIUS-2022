@@ -17,8 +17,8 @@
 package quests.Q00008_AnAdventureBegins;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -49,10 +49,10 @@ public class Q00008_AnAdventureBegins extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -62,19 +62,19 @@ public class Q00008_AnAdventureBegins extends Quest
 		{
 			case "30134-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "30134-06.html":
 			{
 				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
 				giveItems(player, MARK_OF_TRAVELER, 1);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
 			}
 			case "30355-02.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				giveItems(player, ROSELYNS_NOTE, 1);
 				break;
 			}
@@ -85,7 +85,7 @@ public class Q00008_AnAdventureBegins extends Quest
 					return "30144-03.html";
 				}
 				takeItems(player, ROSELYNS_NOTE, -1);
-				st.setCond(3, true);
+				qs.setCond(3, true);
 				break;
 			}
 			default:
@@ -98,16 +98,16 @@ public class Q00008_AnAdventureBegins extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case JASMINE:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -116,11 +116,11 @@ public class Q00008_AnAdventureBegins extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30134-04.html";
 						}
-						else if (st.isCond(3))
+						else if (qs.isCond(3))
 						{
 							htmltext = "30134-05.html";
 						}
@@ -136,13 +136,13 @@ public class Q00008_AnAdventureBegins extends Quest
 			}
 			case ROSELYN:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "30355-01.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "30355-03.html";
 					}
@@ -151,13 +151,13 @@ public class Q00008_AnAdventureBegins extends Quest
 			}
 			case HARNE:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(2))
+					if (qs.isCond(2))
 					{
 						htmltext = "30144-01.html";
 					}
-					else if (st.isCond(3))
+					else if (qs.isCond(3))
 					{
 						htmltext = "30144-04.html";
 					}

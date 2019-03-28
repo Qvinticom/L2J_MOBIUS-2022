@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch Sd.
  * @author KenM
  */
-public class ExDuelAskStart extends L2GameServerPacket
+public class ExDuelAskStart extends GameServerPacket
 {
 	/** The _requestor name. */
 	private final String _requestorName;

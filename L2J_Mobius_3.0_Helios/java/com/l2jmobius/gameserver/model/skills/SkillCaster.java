@@ -39,27 +39,27 @@ import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillUse;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillSee;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import com.l2jmobius.gameserver.model.options.OptionsSkillType;
@@ -87,19 +87,19 @@ public class SkillCaster implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillCaster.class.getName());
 	
-	private final WeakReference<L2Character> _caster;
-	private final WeakReference<L2Object> _target;
+	private final WeakReference<Creature> _caster;
+	private final WeakReference<WorldObject> _target;
 	private final Skill _skill;
-	private final L2ItemInstance _item;
+	private final ItemInstance _item;
 	private final SkillCastingType _castingType;
 	private int _hitTime;
 	private int _cancelTime;
 	private int _coolTime;
-	private Collection<L2Object> _targets;
+	private Collection<WorldObject> _targets;
 	private ScheduledFuture<?> _task;
 	private int _phase;
 	
-	private SkillCaster(L2Character caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
+	private SkillCaster(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
 	{
 		Objects.requireNonNull(caster);
 		Objects.requireNonNull(skill);
@@ -125,7 +125,7 @@ public class SkillCaster implements Runnable
 	 * @param shiftPressed dont move while casting
 	 * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
 	 */
-	public static SkillCaster castSkill(L2Character caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
+	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
 	{
 		return castSkill(caster, target, skill, item, castingType, ctrlPressed, shiftPressed, -1);
 	}
@@ -142,7 +142,7 @@ public class SkillCaster implements Runnable
 	 * @param castTime custom cast time in milliseconds or -1 for default.
 	 * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
 	 */
-	public static SkillCaster castSkill(L2Character caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
+	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
 	{
 		if ((caster == null) || (skill == null) || (castingType == null))
 		{
@@ -229,8 +229,8 @@ public class SkillCaster implements Runnable
 	
 	public boolean startCasting()
 	{
-		final L2Character caster = _caster.get();
-		final L2Object target = _target.get();
+		final Creature caster = _caster.get();
+		final WorldObject target = _target.get();
 		
 		if ((caster == null) || (target == null))
 		{
@@ -274,9 +274,9 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Reduce talisman mana on skill use
-		if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == L2Item.SLOT_DECO))
+		if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == Item.SLOT_DECO))
 		{
-			final L2ItemInstance talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), L2ItemInstance::isEquipped).stream().findAny().orElse(null);
+			final ItemInstance talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), ItemInstance::isEquipped).stream().findAny().orElse(null);
 			if (talisman != null)
 			{
 				talisman.decreaseMana(false, talisman.useSkillDisTime());
@@ -290,7 +290,7 @@ public class SkillCaster implements Runnable
 			caster.broadcastPacket(new ExRotation(caster.getObjectId(), caster.getHeading())); // TODO: Not sent in retail. Probably moveToPawn is enough
 			
 			// Send MoveToPawn packet to trigger Blue Bubbles on target become Red, but don't do it while (double) casting, because that will screw up animation... some fucked up stuff, right?
-			if (caster.isPlayer() && !caster.isCastingNow() && target.isCharacter())
+			if (caster.isPlayer() && !caster.isCastingNow() && target.isCreature())
 			{
 				caster.sendPacket(new MoveToPawn(caster, target, (int) caster.calculateDistance2D(target)));
 				caster.sendPacket(ActionFailed.STATIC_PACKET);
@@ -338,8 +338,8 @@ public class SkillCaster implements Runnable
 		// Consume reagent item.
 		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
 		{
-			// Get the L2ItemInstance consumed by the spell.
-			final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
+			// Get the ItemInstance consumed by the spell.
+			final ItemInstance requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
 			if (_skill.isBad() || (requiredItem.getItem().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
 			{
 				caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
@@ -348,7 +348,7 @@ public class SkillCaster implements Runnable
 		
 		if (caster.isPlayer())
 		{
-			final L2PcInstance player = caster.getActingPlayer();
+			final PlayerInstance player = caster.getActingPlayer();
 			
 			// Consume fame points.
 			if (_skill.getFamePointConsume() > 0)
@@ -368,7 +368,7 @@ public class SkillCaster implements Runnable
 			// Consume clan reputation points.
 			if (_skill.getClanRepConsume() > 0)
 			{
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if ((clan == null) || (clan.getReputationScore() < _skill.getClanRepConsume()))
 				{
 					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
@@ -383,9 +383,9 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Trigger any skill cast start effects.
-		if (target.isCharacter())
+		if (target.isCreature())
 		{
-			_skill.applyEffectScope(EffectScope.START, new BuffInfo(caster, (L2Character) target, _skill, false, _item, null), true, false);
+			_skill.applyEffectScope(EffectScope.START, new BuffInfo(caster, (Creature) target, _skill, false, _item, null), true, false);
 		}
 		
 		// Start channeling if skill is channeling.
@@ -399,8 +399,8 @@ public class SkillCaster implements Runnable
 	
 	public boolean launchSkill()
 	{
-		final L2Character caster = _caster.get();
-		final L2Object target = _target.get();
+		final Creature caster = _caster.get();
+		final WorldObject target = _target.get();
 		
 		if ((caster == null) || (target == null))
 		{
@@ -435,8 +435,8 @@ public class SkillCaster implements Runnable
 	
 	public boolean finishSkill()
 	{
-		final L2Character caster = _caster.get();
-		final L2Object target = _target.get();
+		final Creature caster = _caster.get();
+		final WorldObject target = _target.get();
 		
 		if ((caster == null) || (target == null))
 		{
@@ -532,7 +532,7 @@ public class SkillCaster implements Runnable
 		return true;
 	}
 	
-	public static void callSkill(L2Character caster, L2Object target, Collection<L2Object> targets, Skill skill, L2ItemInstance item)
+	public static void callSkill(Creature caster, WorldObject target, Collection<WorldObject> targets, Skill skill, ItemInstance item)
 	{
 		// Launch the magic skill in order to calculate its effects
 		try
@@ -543,26 +543,26 @@ public class SkillCaster implements Runnable
 				return;
 			}
 			
-			// Check if the toggle skill effects are already in progress on the L2Character
+			// Check if the toggle skill effects are already in progress on the Creature
 			if (skill.isToggle() && caster.isAffectedBySkill(skill.getId()))
 			{
 				return;
 			}
 			
 			// Initial checks
-			for (L2Object obj : targets)
+			for (WorldObject obj : targets)
 			{
-				if ((obj == null) || !obj.isCharacter())
+				if ((obj == null) || !obj.isCreature())
 				{
 					continue;
 				}
 				
-				final L2Character creature = (L2Character) obj;
+				final Creature creature = (Creature) obj;
 				
 				// Check raid monster/minion attack and check buffing characters who attack raid monsters. Raid is still affected by skills.
 				if (!Config.RAID_DISABLE_CURSE && creature.isRaid() && creature.giveRaidCurse() && (caster.getLevel() >= (creature.getLevel() + 9)))
 				{
-					if (skill.isBad() || ((creature.getTarget() == caster) && ((L2Attackable) creature).getAggroList().containsKey(caster)))
+					if (skill.isBad() || ((creature.getTarget() == caster) && ((Attackable) creature).getAggroList().containsKey(caster)))
 					{
 						// Skills such as Summon Battle Scar too can trigger magic silence.
 						final CommonSkill curse = skill.isBad() ? CommonSkill.RAID_CURSE2 : CommonSkill.RAID_CURSE;
@@ -577,7 +577,7 @@ public class SkillCaster implements Runnable
 				// Static skills not trigger any chance skills
 				if (!skill.isStatic())
 				{
-					final L2Weapon activeWeapon = caster.getActiveWeaponItem();
+					final Weapon activeWeapon = caster.getActiveWeaponItem();
 					// Launch weapon Special ability skill effect if available
 					if ((activeWeapon != null) && !creature.isDead())
 					{
@@ -601,14 +601,14 @@ public class SkillCaster implements Runnable
 			}
 			
 			// Launch the magic skill and calculate its effects
-			skill.activateSkill(caster, item, targets.toArray(new L2Object[0]));
+			skill.activateSkill(caster, item, targets.toArray(new WorldObject[0]));
 			
-			final L2PcInstance player = caster.getActingPlayer();
+			final PlayerInstance player = caster.getActingPlayer();
 			if (player != null)
 			{
-				for (L2Object obj : targets)
+				for (WorldObject obj : targets)
 				{
-					if (!obj.isCharacter())
+					if (!obj.isCreature())
 					{
 						continue;
 					}
@@ -618,18 +618,18 @@ public class SkillCaster implements Runnable
 						if (obj.isPlayable())
 						{
 							// Update pvpflag.
-							player.updatePvPStatus((L2Character) obj);
+							player.updatePvPStatus((Creature) obj);
 							
 							if (obj.isSummon())
 							{
-								((L2Summon) obj).updateAndBroadcastStatus(1);
+								((Summon) obj).updateAndBroadcastStatus(1);
 							}
 						}
 						else if (obj.isAttackable())
 						{
 							// Add hate to the attackable, and put it in the attack list.
-							((L2Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
-							((L2Character) obj).addAttackerToAttackByList(caster);
+							((Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
+							((Creature) obj).addAttackerToAttackByList(caster);
 							if (obj.isFakePlayer())
 							{
 								player.updatePvPStatus();
@@ -637,9 +637,9 @@ public class SkillCaster implements Runnable
 						}
 						
 						// notify target AI about the attack
-						if (((L2Character) obj).hasAI() && !skill.hasEffectType(L2EffectType.HATE))
+						if (((Creature) obj).hasAI() && !skill.hasEffectType(EffectType.HATE))
 						{
-							((L2Character) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
+							((Creature) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
 						}
 					}
 					// Self casting should not increase PvP time.
@@ -648,12 +648,12 @@ public class SkillCaster implements Runnable
 						// Supporting monsters or players results in pvpflag.
 						if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
 							|| (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
-								|| (((L2Character) obj).getReputation() < 0) //
+								|| (((Creature) obj).getReputation() < 0) //
 							)))
 						{
 							// Consider fake player PvP status.
 							if (!obj.isFakePlayer() //
-								|| (obj.isFakePlayer() && (!((L2Npc) obj).isScriptValue(0) || (((L2Npc) obj).getReputation() < 0))))
+								|| (obj.isFakePlayer() && (!((Npc) obj).isScriptValue(0) || (((Npc) obj).getReputation() < 0))))
 							{
 								player.updatePvPStatus();
 							}
@@ -662,25 +662,25 @@ public class SkillCaster implements Runnable
 				}
 				
 				// Mobs in range 1000 see spell
-				L2World.getInstance().forEachVisibleObjectInRange(player, L2Npc.class, 1000, npcMob ->
+				World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
 				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new L2Object[0])), npcMob);
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
 					
 					// On Skill See logic
 					if (npcMob.isAttackable() && !npcMob.isFakePlayer())
 					{
-						final L2Attackable attackable = (L2Attackable) npcMob;
+						final Attackable attackable = (Attackable) npcMob;
 						
 						if (skill.getEffectPoint() > 0)
 						{
 							if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
 							{
-								final L2Object npcTarget = attackable.getTarget();
-								for (L2Object skillTarget : targets)
+								final WorldObject npcTarget = attackable.getTarget();
+								for (WorldObject skillTarget : targets)
 								{
 									if ((npcTarget == skillTarget) || (npcMob == skillTarget))
 									{
-										final L2Character originalCaster = caster.isSummon() ? caster : player;
+										final Creature originalCaster = caster.isSummon() ? caster : player;
 										attackable.addDamageHate(originalCaster, 0, (skill.getEffectPoint() * 150) / (attackable.getLevel() + 7));
 									}
 								}
@@ -693,7 +693,7 @@ public class SkillCaster implements Runnable
 			{
 				if (target.isPlayable() || target.isFakePlayer())
 				{
-					final L2Npc npc = ((L2Npc) caster);
+					final Npc npc = ((Npc) caster);
 					if (!npc.isScriptValue(1))
 					{
 						npc.setScriptValue(1); // in combat
@@ -722,8 +722,8 @@ public class SkillCaster implements Runnable
 			_task = null;
 		}
 		
-		final L2Character caster = _caster.get();
-		final L2Object target = _target.get();
+		final Creature caster = _caster.get();
+		final WorldObject target = _target.get();
 		if (caster == null)
 		{
 			return;
@@ -746,7 +746,7 @@ public class SkillCaster implements Runnable
 		// If there is a queued skill, launch it and wipe the queue.
 		if (caster.isPlayer())
 		{
-			final L2PcInstance currPlayer = caster.getActingPlayer();
+			final PlayerInstance currPlayer = caster.getActingPlayer();
 			final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 			if (queuedSkill != null)
 			{
@@ -781,7 +781,7 @@ public class SkillCaster implements Runnable
 		}
 	}
 	
-	private void calcSkillTiming(L2Character creature, Skill skill)
+	private void calcSkillTiming(Creature creature, Skill skill)
 	{
 		final double timeFactor = Formulas.calcSkillTimeFactor(creature, skill);
 		final double cancelTime = Formulas.calcSkillCancelTime(creature, skill);
@@ -798,50 +798,50 @@ public class SkillCaster implements Runnable
 		_coolTime = (int) (skill.getCoolTime() / timeFactor); // cooltimeMillis / timeFactor
 	}
 	
-	public static void triggerCast(L2Character activeChar, L2Character target, Skill skill)
+	public static void triggerCast(Creature creature, Creature target, Skill skill)
 	{
-		triggerCast(activeChar, target, skill, null, true);
+		triggerCast(creature, target, skill, null, true);
 	}
 	
-	public static void triggerCast(L2Character activeChar, L2Object target, Skill skill, L2ItemInstance item, boolean ignoreTargetType)
+	public static void triggerCast(Creature creature, WorldObject target, Skill skill, ItemInstance item, boolean ignoreTargetType)
 	{
 		try
 		{
-			if ((activeChar == null) || (skill == null))
+			if ((creature == null) || (skill == null))
 			{
 				return;
 			}
 			
-			if (skill.checkCondition(activeChar, target))
+			if (skill.checkCondition(creature, target))
 			{
-				if (activeChar.isSkillDisabled(skill))
+				if (creature.isSkillDisabled(skill))
 				{
 					return;
 				}
 				
 				if (skill.getReuseDelay() > 0)
 				{
-					activeChar.disableSkill(skill, skill.getReuseDelay());
+					creature.disableSkill(skill, skill.getReuseDelay());
 				}
 				
 				if (!ignoreTargetType)
 				{
-					final L2Object objTarget = skill.getTarget(activeChar, false, false, false);
-					if ((objTarget != null) && objTarget.isCharacter())
+					final WorldObject objTarget = skill.getTarget(creature, false, false, false);
+					if ((objTarget != null) && objTarget.isCreature())
 					{
 						target = objTarget;
 					}
 				}
 				
-				final L2Object[] targets = skill.getTargetsAffected(activeChar, target).toArray(new L2Object[0]);
+				final WorldObject[] targets = skill.getTargetsAffected(creature, target).toArray(new WorldObject[0]);
 				
 				if (!skill.isNotBroadcastable())
 				{
-					activeChar.broadcastPacket(new MagicSkillUse(activeChar, target, skill.getDisplayId(), skill.getLevel(), 0, 0));
+					creature.broadcastPacket(new MagicSkillUse(creature, target, skill.getDisplayId(), skill.getLevel(), 0, 0));
 				}
 				
 				// Launch the magic skill and calculate its effects
-				skill.activateSkill(activeChar, item, targets);
+				skill.activateSkill(creature, item, targets);
 			}
 		}
 		catch (Exception e)
@@ -861,7 +861,7 @@ public class SkillCaster implements Runnable
 	/**
 	 * @return the creature casting the skill.
 	 */
-	public L2Character getCaster()
+	public Creature getCaster()
 	{
 		return _caster.get();
 	}
@@ -869,7 +869,7 @@ public class SkillCaster implements Runnable
 	/**
 	 * @return the target this skill is being cast on.
 	 */
-	public L2Object getTarget()
+	public WorldObject getTarget()
 	{
 		return _target.get();
 	}
@@ -877,7 +877,7 @@ public class SkillCaster implements Runnable
 	/**
 	 * @return the item that has been used in this casting.
 	 */
-	public L2ItemInstance getItem()
+	public ItemInstance getItem()
 	{
 		return _item;
 	}
@@ -925,7 +925,7 @@ public class SkillCaster implements Runnable
 	 * @param skill the skill to be check if it can be casted by the given caster or not.
 	 * @return {@code true} if the caster can proceed with casting the given skill, {@code false} otherwise.
 	 */
-	public static boolean checkUseConditions(L2Character caster, Skill skill)
+	public static boolean checkUseConditions(Creature caster, Skill skill)
 	{
 		return checkUseConditions(caster, skill, SkillCastingType.NORMAL);
 	}
@@ -937,7 +937,7 @@ public class SkillCaster implements Runnable
 	 * @param castingType used to check if caster is currently casting this type of cast.
 	 * @return {@code true} if the caster can proceed with casting the given skill, {@code false} otherwise.
 	 */
-	public static boolean checkUseConditions(L2Character caster, Skill skill, SkillCastingType castingType)
+	public static boolean checkUseConditions(Creature caster, Skill skill, SkillCastingType castingType)
 	{
 		if (caster == null)
 		{
@@ -983,7 +983,7 @@ public class SkillCaster implements Runnable
 		// Skill mute checks.
 		if (!skill.isStatic())
 		{
-			// Check if the skill is a magic spell and if the L2Character is not muted
+			// Check if the skill is a magic spell and if the Creature is not muted
 			if (skill.isMagic())
 			{
 				if (caster.isMuted())
@@ -992,7 +992,7 @@ public class SkillCaster implements Runnable
 					return false;
 				}
 			}
-			else if (caster.isPhysicalMuted()) // Check if the skill is physical and if the L2Character is not physical_muted
+			else if (caster.isPhysicalMuted()) // Check if the skill is physical and if the Creature is not physical_muted
 			{
 				caster.sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
@@ -1000,8 +1000,8 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Check if the caster's weapon is limited to use only its own skills
-		final L2Weapon weapon = caster.getActiveWeaponItem();
-		if ((weapon != null) && weapon.useWeaponSkillsOnly() && !caster.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		final Weapon weapon = caster.getActiveWeaponItem();
+		if ((weapon != null) && weapon.useWeaponSkillsOnly() && !caster.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS))
 		{
 			final List<ItemSkillHolder> weaponSkills = weapon.getSkills(ItemSkillType.NORMAL);
 			if ((weaponSkills != null) && !weaponSkills.stream().anyMatch(sh -> sh.getSkillId() == skill.getId()))
@@ -1014,11 +1014,11 @@ public class SkillCaster implements Runnable
 		// Check if a spell consumes an item.
 		if ((skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
 		{
-			// Get the L2ItemInstance consumed by the spell
-			final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
+			// Get the ItemInstance consumed by the spell
+			final ItemInstance requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
 			if ((requiredItem == null) || (requiredItem.getCount() < skill.getItemConsumeCount()))
 			{
-				if (skill.hasEffectType(L2EffectType.SUMMON))
+				if (skill.hasEffectType(EffectType.SUMMON))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
 					sm.addItemName(skill.getItemConsumeId());
@@ -1035,7 +1035,7 @@ public class SkillCaster implements Runnable
 		
 		if (caster.isPlayer())
 		{
-			final L2PcInstance player = caster.getActingPlayer();
+			final PlayerInstance player = caster.getActingPlayer();
 			if (player.inObserverMode())
 			{
 				return false;
@@ -1054,7 +1054,7 @@ public class SkillCaster implements Runnable
 			}
 			
 			// Check if not in AirShip
-			if (player.isInAirShip() && !skill.hasEffectType(L2EffectType.REFUEL_AIRSHIP))
+			if (player.isInAirShip() && !skill.hasEffectType(EffectType.REFUEL_AIRSHIP))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill);
@@ -1071,7 +1071,7 @@ public class SkillCaster implements Runnable
 			// Consume clan reputation points
 			if (skill.getClanRepConsume() > 0)
 			{
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if ((clan == null) || (clan.getReputationScore() < skill.getClanRepConsume()))
 				{
 					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
@@ -1091,7 +1091,7 @@ public class SkillCaster implements Runnable
 		return true;
 	}
 	
-	private void handleSkillFly(L2Character creature, L2Object target)
+	private void handleSkillFly(Creature creature, WorldObject target)
 	{
 		int x = 0;
 		int y = 0;
@@ -1105,9 +1105,9 @@ public class SkillCaster implements Runnable
 				final double course = _skill.getOperateType() == SkillOperateType.DA4 ? Math.toRadians(270) : Math.toRadians(90);
 				final double radian = Math.toRadians(Util.convertHeadingToDegree(target.getHeading()));
 				double nRadius = creature.getCollisionRadius();
-				if (target.isCharacter())
+				if (target.isCreature())
 				{
-					nRadius += ((L2Character) target).getCollisionRadius();
+					nRadius += ((Creature) target).getCollisionRadius();
 				}
 				x = target.getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
 				y = target.getY() + (int) (Math.sin(Math.PI + radian + course) * nRadius);
@@ -1140,9 +1140,9 @@ public class SkillCaster implements Runnable
 					final int dy = target.getY() - creature.getY();
 					final double distance = Math.sqrt((dx * dx) + (dy * dy));
 					double nRadius = creature.getCollisionRadius();
-					if (target.isCharacter())
+					if (target.isCreature())
 					{
-						nRadius += ((L2Character) target).getCollisionRadius();
+						nRadius += ((Creature) target).getCollisionRadius();
 					}
 					x = (int) (target.getX() - (nRadius * (dx / distance)));
 					y = (int) (target.getY() - (nRadius * (dy / distance)));

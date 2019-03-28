@@ -16,30 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ObservationReturn extends L2GameServerPacket
+public class ObservationReturn extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
 	/**
 	 * @param observer
 	 */
-	public ObservationReturn(L2PcInstance observer)
+	public ObservationReturn(PlayerInstance observer)
 	{
-		_activeChar = observer;
+		_player = observer;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xe0);
-		writeD(_activeChar.getObsX());
-		writeD(_activeChar.getObsY());
-		writeD(_activeChar.getObsZ());
+		writeD(_player.getObsX());
+		writeD(_player.getObsY());
+		writeD(_player.getObsZ());
 	}
 }

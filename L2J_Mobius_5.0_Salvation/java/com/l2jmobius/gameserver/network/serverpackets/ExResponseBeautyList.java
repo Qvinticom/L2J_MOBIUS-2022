@@ -20,7 +20,7 @@ import java.util.Map;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,24 +29,24 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExResponseBeautyList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _type;
 	private final Map<Integer, BeautyItem> _beautyItem;
 	
 	public static final int SHOW_FACESHAPE = 1;
 	public static final int SHOW_HAIRSTYLE = 0;
 	
-	public ExResponseBeautyList(L2PcInstance activeChar, int type)
+	public ExResponseBeautyList(PlayerInstance player, int type)
 	{
-		_activeChar = activeChar;
+		_player = player;
 		_type = type;
 		if (type == SHOW_HAIRSTYLE)
 		{
-			_beautyItem = BeautyShopData.getInstance().getBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType()).getHairList();
+			_beautyItem = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType()).getHairList();
 		}
 		else
 		{
-			_beautyItem = BeautyShopData.getInstance().getBeautyData(activeChar.getRace(), activeChar.getAppearance().getSexType()).getFaceList();
+			_beautyItem = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType()).getFaceList();
 		}
 	}
 	
@@ -55,8 +55,8 @@ public class ExResponseBeautyList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_RESPONSE_BEAUTY_LIST.writeId(packet);
 		
-		packet.writeQ(_activeChar.getAdena());
-		packet.writeQ(_activeChar.getBeautyTickets());
+		packet.writeQ(_player.getAdena());
+		packet.writeQ(_player.getBeautyTickets());
 		packet.writeD(_type);
 		packet.writeD(_beautyItem.size());
 		for (BeautyItem item : _beautyItem.values())

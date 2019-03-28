@@ -31,12 +31,12 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Announcements;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class FortressOfResistance
 {
@@ -67,7 +67,7 @@ public class FortressOfResistance
 	
 	protected class DamageInfo
 	{
-		public L2Clan _clan;
+		public Clan _clan;
 		public long _damage;
 	}
 	
@@ -198,12 +198,12 @@ public class FortressOfResistance
 		Announce("Capture registration of Partisan Hideout has begun!");
 		Announce("Now its open for 1 hours!");
 		
-		L2NpcInstance result = null;
+		NpcInstance result = null;
 		try
 		{
-			L2NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
+			NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
 			
-			final L2Spawn spawn = new L2Spawn(template);
+			final Spawn spawn = new Spawn(template);
 			spawn.setX(50335);
 			spawn.setY(111275);
 			spawn.setZ(-1970);
@@ -236,12 +236,12 @@ public class FortressOfResistance
 			_clansDamageInfo.clear();
 		}
 		
-		L2NpcInstance result = null;
+		NpcInstance result = null;
 		try
 		{
-			L2NpcTemplate template = NpcTable.getInstance().getTemplate(BOSS_ID);
+			NpcTemplate template = NpcTable.getInstance().getTemplate(BOSS_ID);
 			
-			final L2Spawn spawn = new L2Spawn(template);
+			final Spawn spawn = new Spawn(template);
 			spawn.setX(44525);
 			spawn.setY(108867);
 			spawn.setZ(-2020);
@@ -263,9 +263,9 @@ public class FortressOfResistance
 	
 	protected class DeSpawnTimer implements Runnable
 	{
-		L2NpcInstance _npc = null;
+		NpcInstance _npc = null;
 		
-		public DeSpawnTimer(L2NpcInstance npc)
+		public DeSpawnTimer(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -277,7 +277,7 @@ public class FortressOfResistance
 		}
 	}
 	
-	public final boolean Conditions(L2PcInstance player)
+	public final boolean Conditions(PlayerInstance player)
 	{
 		if ((player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 2))
 		{
@@ -309,7 +309,7 @@ public class FortressOfResistance
 	
 	public void CaptureFinish()
 	{
-		L2Clan clanIdMaxDamage = null;
+		Clan clanIdMaxDamage = null;
 		long tempMaxDamage = 0;
 		for (DamageInfo damageInfo : _clansDamageInfo.values())
 		{
@@ -341,7 +341,7 @@ public class FortressOfResistance
 		_announce.cancel(true);
 	}
 	
-	public void addSiegeDamage(L2Clan clan, long damage)
+	public void addSiegeDamage(Clan clan, long damage)
 	{
 		DamageInfo clanDamage = _clansDamageInfo.get(clan.getClanId());
 		if (clanDamage != null)

@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -69,7 +69,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -102,7 +102,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 					npc.setTitle(player.getName());
 					npc.broadcastInfo();
 					
-					final L2Npc narsides = addSpawn(NARSIDES, NARSIDES_LOC);
+					final Npc narsides = addSpawn(NARSIDES, NARSIDES_LOC);
 					narsides.setSummoner(npc);
 					narsides.setScriptValue(player.getObjectId());
 					getTimers().addTimer("DESPAWN_NARSIDES", 62000, narsides, null);
@@ -152,7 +152,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -220,14 +220,14 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(3))
 		{
 			qs.setCond(4, true);
 			
-			final L2Npc device = (L2Npc) npc.getSummoner();
+			final Npc device = (Npc) npc.getSummoner();
 			device.setTitle("");
 			device.setScriptValue(0);
 			device.broadcastInfo();
@@ -236,7 +236,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -244,7 +244,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 			{
 				if ((npc != null) && (npc.getId() == NARSIDES))
 				{
-					final L2Npc summoner = (L2Npc) npc.getSummoner();
+					final Npc summoner = (Npc) npc.getSummoner();
 					summoner.setTitle("");
 					summoner.setScriptValue(0);
 					summoner.broadcastInfo();
@@ -258,7 +258,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 				{
 					for (Location loc : MINIONS_LOC)
 					{
-						final L2Npc mob = addSpawn(GIANT_MINION, loc, false, 120000);
+						final Npc mob = addSpawn(GIANT_MINION, loc, false, 120000);
 						addAttackPlayerDesire(mob, player);
 					}
 					getTimers().addTimer("SPAWN_MASTER", 2000, npc, player);
@@ -269,7 +269,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 			{
 				if (npc != null)
 				{
-					final L2Npc master = addSpawn(ENRAGED_GIANT_NARSIDES, ENRAGED_NARSIDES_LOC);
+					final Npc master = addSpawn(ENRAGED_GIANT_NARSIDES, ENRAGED_NARSIDES_LOC);
 					master.setSummoner(npc.getSummoner());
 					addAttackPlayerDesire(master, player);
 					npc.deleteMe();
@@ -281,7 +281,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 			{
 				if (npc != null)
 				{
-					final L2Npc device = (L2Npc) npc.getSummoner();
+					final Npc device = (Npc) npc.getSummoner();
 					device.setTitle("");
 					device.setScriptValue(0);
 					device.broadcastInfo();

@@ -42,7 +42,7 @@ public class Location implements IPositionable
 		this(x, y, z, heading, 0);
 	}
 	
-	public Location(L2Object obj)
+	public Location(WorldObject obj)
 	{
 		this(obj.getX(), obj.getY(), obj.getZ(), obj.getHeading(), obj.getInstanceId());
 	}

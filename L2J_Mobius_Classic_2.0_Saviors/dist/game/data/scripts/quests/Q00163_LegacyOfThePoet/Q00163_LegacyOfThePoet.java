@@ -18,8 +18,8 @@ package quests.Q00163_LegacyOfThePoet;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -58,11 +58,11 @@ public class Q00163_LegacyOfThePoet extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if(qs != null)
 		{
 			switch (event)
 			{
@@ -74,7 +74,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 				}
 				case "30220-05.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
@@ -84,17 +84,17 @@ public class Q00163_LegacyOfThePoet extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			if ((getRandom(10) == 0) && !hasQuestItems(killer, RUMIELS_1ST_POEM))
 			{
 				giveItems(killer, RUMIELS_1ST_POEM, 1);
 				if (hasQuestItems(killer, RUMIELS_2ND_POEM, RUMIELS_3RD_POEM, RUMIELS_4TH_POEM))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -106,7 +106,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 				giveItems(killer, RUMIELS_2ND_POEM, 1);
 				if (hasQuestItems(killer, RUMIELS_1ST_POEM, RUMIELS_3RD_POEM, RUMIELS_4TH_POEM))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -118,7 +118,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 				giveItems(killer, RUMIELS_3RD_POEM, 1);
 				if (hasQuestItems(killer, RUMIELS_1ST_POEM, RUMIELS_2ND_POEM, RUMIELS_4TH_POEM))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -130,7 +130,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 				giveItems(killer, RUMIELS_4TH_POEM, 1);
 				if (hasQuestItems(killer, RUMIELS_1ST_POEM, RUMIELS_2ND_POEM, RUMIELS_3RD_POEM))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -142,12 +142,12 @@ public class Q00163_LegacyOfThePoet extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -159,7 +159,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 				if (hasQuestItems(player, RUMIELS_1ST_POEM, RUMIELS_2ND_POEM, RUMIELS_3RD_POEM, RUMIELS_4TH_POEM))
 				{
 					giveItems(player, LEATHER_SHIRT, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30220-07.html";
 				}
 				else

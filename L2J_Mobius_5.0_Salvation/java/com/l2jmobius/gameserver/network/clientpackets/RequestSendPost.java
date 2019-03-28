@@ -26,14 +26,14 @@ import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
+import com.l2jmobius.gameserver.model.AccessLevel;
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2AccessLevel;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostSent;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -68,7 +68,7 @@ public final class RequestSendPost implements IClientIncomingPacket
 	}
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_receiver = packet.readS();
 		_isCod = packet.readD() != 0;
@@ -102,15 +102,15 @@ public final class RequestSendPost implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (!Config.ALLOW_MAIL)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -122,58 +122,58 @@ public final class RequestSendPost implements IClientIncomingPacket
 			_reqAdena = 0;
 		}
 		
-		if (!activeChar.getAccessLevel().allowTransaction())
+		if (!player.getAccessLevel().allowTransaction())
 		{
-			activeChar.sendMessage("Transactions are disabled for your Access Level.");
+			player.sendMessage("Transactions are disabled for your Access Level.");
 			return;
 		}
 		
-		if (!activeChar.isInsideZone(ZoneId.PEACE) && (_items != null))
+		if (!player.isInsideZone(ZoneId.PEACE) && (_items != null))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
 			return;
 		}
 		
-		if (activeChar.getActiveTradeList() != null)
+		if (player.getActiveTradeList() != null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_DURING_AN_EXCHANGE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_DURING_AN_EXCHANGE);
 			return;
 		}
 		
-		if (activeChar.hasItemRequest())
+		if (player.hasItemRequest())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SEND_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SEND_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS);
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
+		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS);
 			return;
 		}
 		
 		if (_receiver.length() > MAX_RECV_LENGTH)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_RECIPIENT_EXCEEDED);
+			player.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_RECIPIENT_EXCEEDED);
 			return;
 		}
 		
 		if (_subject.length() > MAX_SUBJ_LENGTH)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED);
+			player.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED);
 			return;
 		}
 		
 		if (_text.length() > MAX_TEXT_LENGTH)
 		{
 			// not found message for this
-			activeChar.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED);
+			player.sendPacket(SystemMessageId.THE_ALLOWED_LENGTH_FOR_A_TITLE_EXCEEDED);
 			return;
 		}
 		
 		if ((_items != null) && (_items.length > MAX_ATTACHMENTS))
 		{
-			activeChar.sendPacket(SystemMessageId.ITEM_SELECTION_IS_POSSIBLE_UP_TO_8);
+			player.sendPacket(SystemMessageId.ITEM_SELECTION_IS_POSSIBLE_UP_TO_8);
 			return;
 		}
 		
@@ -186,12 +186,12 @@ public final class RequestSendPost implements IClientIncomingPacket
 		{
 			if (_reqAdena == 0)
 			{
-				activeChar.sendPacket(SystemMessageId.WHEN_NOT_ENTERING_THE_AMOUNT_FOR_THE_PAYMENT_REQUEST_YOU_CANNOT_SEND_ANY_MAIL);
+				player.sendPacket(SystemMessageId.WHEN_NOT_ENTERING_THE_AMOUNT_FOR_THE_PAYMENT_REQUEST_YOU_CANNOT_SEND_ANY_MAIL);
 				return;
 			}
 			if ((_items == null) || (_items.length == 0))
 			{
-				activeChar.sendPacket(SystemMessageId.IT_S_A_PAYMENT_REQUEST_TRANSACTION_PLEASE_ATTACH_THE_ITEM);
+				player.sendPacket(SystemMessageId.IT_S_A_PAYMENT_REQUEST_TRANSACTION_PLEASE_ATTACH_THE_ITEM);
 				return;
 			}
 		}
@@ -200,76 +200,76 @@ public final class RequestSendPost implements IClientIncomingPacket
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
 			sm.addString(FakePlayerData.getInstance().getProperName(_receiver));
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
 		final int receiverId = CharNameTable.getInstance().getIdByName(_receiver);
 		if (receiverId <= 0)
 		{
-			activeChar.sendPacket(SystemMessageId.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE);
+			player.sendPacket(SystemMessageId.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE);
 			return;
 		}
 		
-		if (receiverId == activeChar.getObjectId())
+		if (receiverId == player.getObjectId())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF);
 			return;
 		}
 		
 		final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
-		final L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
+		final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 		
-		if ((accessLevel != null) && accessLevel.isGm() && !activeChar.getAccessLevel().isGm())
+		if ((accessLevel != null) && accessLevel.isGm() && !player.getAccessLevel().isGm())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
 			sm.addString(_receiver);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
-		if (activeChar.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && (_items != null)) || Config.JAIL_DISABLE_CHAT))
+		if (player.isJailed() && ((Config.JAIL_DISABLE_TRANSACTION && (_items != null)) || Config.JAIL_DISABLE_CHAT))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
 			return;
 		}
 		
-		if (BlockList.isInBlockList(receiverId, activeChar.getObjectId()))
+		if (BlockList.isInBlockList(receiverId, player.getObjectId()))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
 			sm.addString(_receiver);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
-		if (MailManager.getInstance().getOutboxSize(activeChar.getObjectId()) >= OUTBOX_SIZE)
+		if (MailManager.getInstance().getOutboxSize(player.getObjectId()) >= OUTBOX_SIZE)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
+			player.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
 			return;
 		}
 		
 		if (MailManager.getInstance().getInboxSize(receiverId) >= INBOX_SIZE)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
+			player.sendPacket(SystemMessageId.THE_MAIL_LIMIT_240_HAS_BEEN_EXCEEDED_AND_THIS_CANNOT_BE_FORWARDED);
 			return;
 		}
 		
 		if (!client.getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
 		{
-			activeChar.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MIN_AGO_AND_THIS_CANNOT_BE_FORWARDED);
+			player.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MIN_AGO_AND_THIS_CANNOT_BE_FORWARDED);
 			return;
 		}
 		
-		final Message msg = new Message(activeChar.getObjectId(), receiverId, _isCod, _subject, _text, _reqAdena);
-		if (removeItems(activeChar, msg))
+		final Message msg = new Message(player.getObjectId(), receiverId, _isCod, _subject, _text, _reqAdena);
+		if (removeItems(player, msg))
 		{
 			MailManager.getInstance().sendMessage(msg);
-			activeChar.sendPacket(ExNoticePostSent.valueOf(true));
-			activeChar.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_SENT);
+			player.sendPacket(ExNoticePostSent.valueOf(true));
+			player.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_SENT);
 		}
 	}
 	
-	private boolean removeItems(L2PcInstance player, Message msg)
+	private boolean removeItems(PlayerInstance player, Message msg)
 	{
 		long currentAdena = player.getAdena();
 		long fee = MESSAGE_FEE;
@@ -279,7 +279,7 @@ public final class RequestSendPost implements IClientIncomingPacket
 			for (AttachmentItem i : _items)
 			{
 				// Check validity of requested item
-				final L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+				final ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 				if ((item == null) || !item.isTradeable() || item.isEquipped())
 				{
 					player.sendPacket(SystemMessageId.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER);
@@ -320,14 +320,14 @@ public final class RequestSendPost implements IClientIncomingPacket
 		for (AttachmentItem i : _items)
 		{
 			// Check validity of requested item
-			final L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+			final ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 			if ((oldItem == null) || !oldItem.isTradeable() || oldItem.isEquipped())
 			{
 				LOGGER.warning("Error adding attachment for char " + player.getName() + " (olditem == null)");
 				return false;
 			}
 			
-			final L2ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
+			final ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, msg.getReceiverName() + "[" + msg.getReceiverId() + "]");
 			if (newItem == null)
 			{
 				LOGGER.warning("Error adding attachment for char " + player.getName() + " (newitem == null)");

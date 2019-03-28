@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -71,10 +71,10 @@ public class Q00290_ThreatRemoval extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -84,13 +84,13 @@ public class Q00290_ThreatRemoval extends Quest
 		{
 			case "30201-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30201-06.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					takeItems(player, SEL_MAHUM_ID_TAG, 400);
 					switch (getRandom(10))
@@ -137,7 +137,7 @@ public class Q00290_ThreatRemoval extends Quest
 			}
 			case "30201-07.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -145,7 +145,7 @@ public class Q00290_ThreatRemoval extends Quest
 			}
 			case "exit":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					if (hasQuestItems(player, SEL_MAHUM_ID_TAG))
 					{
@@ -153,7 +153,7 @@ public class Q00290_ThreatRemoval extends Quest
 					}
 					else
 					{
-						st.exitQuest(true, true);
+						qs.exitQuest(true, true);
 						htmltext = "30201-09.html";
 					}
 				}
@@ -161,9 +161,9 @@ public class Q00290_ThreatRemoval extends Quest
 			}
 			case "30201-10.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -173,9 +173,9 @@ public class Q00290_ThreatRemoval extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		final PlayerInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return super.onKill(npc, player, isSummon);
@@ -192,22 +192,22 @@ public class Q00290_ThreatRemoval extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				st = player.getQuestState(Q00251_NoSecrets.class.getSimpleName());
-				htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30201-01.htm" : "30201-03.html";
+				qs = player.getQuestState(Q00251_NoSecrets.class.getSimpleName());
+				htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "30201-01.htm" : "30201-03.html";
 				break;
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = (getQuestItemsCount(player, SEL_MAHUM_ID_TAG) < 400) ? "30201-04.html" : "30201-05.html";
 				}

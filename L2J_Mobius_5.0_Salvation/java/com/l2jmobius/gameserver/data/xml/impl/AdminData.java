@@ -30,10 +30,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.L2AccessLevel;
-import com.l2jmobius.gameserver.model.L2AdminCommandAccessRight;
+import com.l2jmobius.gameserver.model.AccessLevel;
+import com.l2jmobius.gameserver.model.AdminCommandAccessRight;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -46,9 +46,9 @@ public final class AdminData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AdminData.class.getName());
 	
-	private final Map<Integer, L2AccessLevel> _accessLevels = new HashMap<>();
-	private final Map<String, L2AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
-	private final Map<L2PcInstance, Boolean> _gmList = new ConcurrentHashMap<>();
+	private final Map<Integer, AccessLevel> _accessLevels = new HashMap<>();
+	private final Map<String, AdminCommandAccessRight> _adminCommandAccessRights = new HashMap<>();
+	private final Map<PlayerInstance, Boolean> _gmList = new ConcurrentHashMap<>();
 	private int _highestLevel = 0;
 	
 	protected AdminData()
@@ -73,8 +73,8 @@ public final class AdminData implements IGameXmlReader
 		NamedNodeMap attrs;
 		Node attr;
 		StatsSet set;
-		L2AccessLevel level;
-		L2AdminCommandAccessRight command;
+		AccessLevel level;
+		AdminCommandAccessRight command;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -90,7 +90,7 @@ public final class AdminData implements IGameXmlReader
 							attr = attrs.item(i);
 							set.set(attr.getNodeName(), attr.getNodeValue());
 						}
-						level = new L2AccessLevel(set);
+						level = new AccessLevel(set);
 						if (level.getLevel() > _highestLevel)
 						{
 							_highestLevel = level.getLevel();
@@ -106,7 +106,7 @@ public final class AdminData implements IGameXmlReader
 							attr = attrs.item(i);
 							set.set(attr.getNodeName(), attr.getNodeValue());
 						}
-						command = new L2AdminCommandAccessRight(set);
+						command = new AdminCommandAccessRight(set);
 						_adminCommandAccessRights.put(command.getAdminCommand(), command);
 					}
 				}
@@ -119,7 +119,7 @@ public final class AdminData implements IGameXmlReader
 	 * @param accessLevelNum as int
 	 * @return the access level instance by char access level
 	 */
-	public L2AccessLevel getAccessLevel(int accessLevelNum)
+	public AccessLevel getAccessLevel(int accessLevelNum)
 	{
 		if (accessLevelNum < 0)
 		{
@@ -132,7 +132,7 @@ public final class AdminData implements IGameXmlReader
 	 * Gets the master access level.
 	 * @return the master access level
 	 */
-	public L2AccessLevel getMasterAccessLevel()
+	public AccessLevel getMasterAccessLevel()
 	{
 		return _accessLevels.get(_highestLevel);
 	}
@@ -153,15 +153,15 @@ public final class AdminData implements IGameXmlReader
 	 * @param accessLevel the access level
 	 * @return {@code true}, if successful, {@code false} otherwise
 	 */
-	public boolean hasAccess(String adminCommand, L2AccessLevel accessLevel)
+	public boolean hasAccess(String adminCommand, AccessLevel accessLevel)
 	{
-		L2AdminCommandAccessRight acar = _adminCommandAccessRights.get(adminCommand);
+		AdminCommandAccessRight acar = _adminCommandAccessRights.get(adminCommand);
 		if (acar == null)
 		{
 			// Trying to avoid the spam for next time when the gm would try to use the same command
 			if ((accessLevel.getLevel() > 0) && (accessLevel.getLevel() == _highestLevel))
 			{
-				acar = new L2AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
+				acar = new AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
 				_adminCommandAccessRights.put(adminCommand, acar);
 				LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + adminCommand + " auto setting accesslevel: " + accessLevel.getLevel() + " !");
 			}
@@ -181,7 +181,7 @@ public final class AdminData implements IGameXmlReader
 	 */
 	public boolean requireConfirm(String command)
 	{
-		final L2AdminCommandAccessRight acar = _adminCommandAccessRights.get(command);
+		final AdminCommandAccessRight acar = _adminCommandAccessRights.get(command);
 		if (acar == null)
 		{
 			LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + command + ".");
@@ -195,10 +195,10 @@ public final class AdminData implements IGameXmlReader
 	 * @param includeHidden the include hidden
 	 * @return the all GMs
 	 */
-	public List<L2PcInstance> getAllGms(boolean includeHidden)
+	public List<PlayerInstance> getAllGms(boolean includeHidden)
 	{
-		final List<L2PcInstance> tmpGmList = new ArrayList<>();
-		for (Entry<L2PcInstance, Boolean> entry : _gmList.entrySet())
+		final List<PlayerInstance> tmpGmList = new ArrayList<>();
+		for (Entry<PlayerInstance, Boolean> entry : _gmList.entrySet())
 		{
 			if (includeHidden || !entry.getValue())
 			{
@@ -216,7 +216,7 @@ public final class AdminData implements IGameXmlReader
 	public List<String> getAllGmNames(boolean includeHidden)
 	{
 		final List<String> tmpGmList = new ArrayList<>();
-		for (Entry<L2PcInstance, Boolean> entry : _gmList.entrySet())
+		for (Entry<PlayerInstance, Boolean> entry : _gmList.entrySet())
 		{
 			if (!entry.getValue())
 			{
@@ -231,11 +231,11 @@ public final class AdminData implements IGameXmlReader
 	}
 	
 	/**
-	 * Add a L2PcInstance player to the Set _gmList.
+	 * Add a PlayerInstance player to the Set _gmList.
 	 * @param player the player
 	 * @param hidden the hidden
 	 */
-	public void addGm(L2PcInstance player, boolean hidden)
+	public void addGm(PlayerInstance player, boolean hidden)
 	{
 		_gmList.put(player, hidden);
 	}
@@ -244,7 +244,7 @@ public final class AdminData implements IGameXmlReader
 	 * Delete a GM.
 	 * @param player the player
 	 */
-	public void deleteGm(L2PcInstance player)
+	public void deleteGm(PlayerInstance player)
 	{
 		_gmList.remove(player);
 	}
@@ -253,7 +253,7 @@ public final class AdminData implements IGameXmlReader
 	 * GM will be displayed on clients GM list.
 	 * @param player the player
 	 */
-	public void showGm(L2PcInstance player)
+	public void showGm(PlayerInstance player)
 	{
 		if (_gmList.containsKey(player))
 		{
@@ -265,7 +265,7 @@ public final class AdminData implements IGameXmlReader
 	 * GM will no longer be displayed on clients GM list.
 	 * @param player the player
 	 */
-	public void hideGm(L2PcInstance player)
+	public void hideGm(PlayerInstance player)
 	{
 		if (_gmList.containsKey(player))
 		{
@@ -280,7 +280,7 @@ public final class AdminData implements IGameXmlReader
 	 */
 	public boolean isGmOnline(boolean includeHidden)
 	{
-		for (Entry<L2PcInstance, Boolean> entry : _gmList.entrySet())
+		for (Entry<PlayerInstance, Boolean> entry : _gmList.entrySet())
 		{
 			if (includeHidden || !entry.getValue())
 			{
@@ -294,7 +294,7 @@ public final class AdminData implements IGameXmlReader
 	 * Send list to player.
 	 * @param player the player
 	 */
-	public void sendListToPlayer(L2PcInstance player)
+	public void sendListToPlayer(PlayerInstance player)
 	{
 		if (isGmOnline(player.isGM()))
 		{
@@ -319,7 +319,7 @@ public final class AdminData implements IGameXmlReader
 	 */
 	public void broadcastToGMs(IClientOutgoingPacket packet)
 	{
-		for (L2PcInstance gm : getAllGms(true))
+		for (PlayerInstance gm : getAllGms(true))
 		{
 			gm.sendPacket(packet);
 		}
@@ -332,7 +332,7 @@ public final class AdminData implements IGameXmlReader
 	 */
 	public String broadcastMessageToGMs(String message)
 	{
-		for (L2PcInstance gm : getAllGms(true))
+		for (PlayerInstance gm : getAllGms(true))
 		{
 			gm.sendMessage(message);
 		}

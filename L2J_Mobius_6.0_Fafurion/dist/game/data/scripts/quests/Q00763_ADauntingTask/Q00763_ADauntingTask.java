@@ -19,8 +19,8 @@ package quests.Q00763_ADauntingTask;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -93,10 +93,10 @@ public final class Q00763_ADauntingTask extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -114,14 +114,14 @@ public final class Q00763_ADauntingTask extends Quest
 			}
 			case "33851-04.htm":
 			{
-				st.startQuest();
-				st.setCond(2, true);
+				qs.startQuest();
+				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "33851-09.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					final long itemCount = getQuestItemsCount(player, MALICE);
 					
@@ -134,7 +134,7 @@ public final class Q00763_ADauntingTask extends Quest
 								addExpAndSp(player, data[1], data[2]);
 							}
 							giveItems(player, STEEL_DOOR_BOX, data[3]);
-							st.exitQuest(QuestType.DAILY, true);
+							qs.exitQuest(QuestType.DAILY, true);
 							htmltext = event;
 							break;
 						}
@@ -147,12 +147,12 @@ public final class Q00763_ADauntingTask extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -161,18 +161,18 @@ public final class Q00763_ADauntingTask extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.isCond(2) ? "33851-05.html" : "33851-06.html";
+				htmltext = qs.isCond(2) ? "33851-05.html" : "33851-06.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = "33851-01.htm";
 				}
 				break;
@@ -182,11 +182,11 @@ public final class Q00763_ADauntingTask extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(2) && (getRandom(100) < 25))
+		if ((qs != null) && qs.isCond(2) && (getRandom(100) < 25))
 		{
 			if (getQuestItemsCount(killer, EYE) < 50)
 			{
@@ -195,7 +195,7 @@ public final class Q00763_ADauntingTask extends Quest
 				
 				if (getQuestItemsCount(killer, EYE) >= 50)
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					showOnScreenMsg(killer, NpcStringId.YOU_CAN_GATHER_MORE_POWERFUL_DARK_MALICE, ExShowScreenMessage.TOP_CENTER, 6000);
 				}
 			}

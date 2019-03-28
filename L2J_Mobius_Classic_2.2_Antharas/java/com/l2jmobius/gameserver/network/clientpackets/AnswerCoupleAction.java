@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -31,29 +31,29 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class AnswerCoupleAction implements IClientIncomingPacket
 {
-	private int _charObjId;
+	private int _objectId;
 	private int _actionId;
 	private int _answer;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_actionId = packet.readD();
 		_answer = packet.readD();
-		_charObjId = packet.readD();
+		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		final L2PcInstance target = L2World.getInstance().getPlayer(_charObjId);
-		if ((activeChar == null) || (target == null))
+		final PlayerInstance player = client.getPlayer();
+		final PlayerInstance target = World.getInstance().getPlayer(_objectId);
+		if ((player == null) || (target == null))
 		{
 			return;
 		}
-		if ((target.getMultiSocialTarget() != activeChar.getObjectId()) || (target.getMultiSociaAction() != _actionId))
+		if ((target.getMultiSocialTarget() != player.getObjectId()) || (target.getMultiSociaAction() != _actionId))
 		{
 			return;
 		}
@@ -63,26 +63,26 @@ public class AnswerCoupleAction implements IClientIncomingPacket
 		}
 		else if (_answer == 1) // approve
 		{
-			final int distance = (int) activeChar.calculateDistance2D(target);
-			if ((distance > 125) || (distance < 15) || (activeChar.getObjectId() == target.getObjectId()))
+			final int distance = (int) player.calculateDistance2D(target);
+			if ((distance > 125) || (distance < 15) || (player.getObjectId() == target.getObjectId()))
 			{
 				client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 				target.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 				return;
 			}
-			int heading = Util.calculateHeadingFrom(activeChar, target);
-			activeChar.broadcastPacket(new ExRotation(activeChar.getObjectId(), heading));
-			activeChar.setHeading(heading);
-			heading = Util.calculateHeadingFrom(target, activeChar);
+			int heading = Util.calculateHeadingFrom(player, target);
+			player.broadcastPacket(new ExRotation(player.getObjectId(), heading));
+			player.setHeading(heading);
+			heading = Util.calculateHeadingFrom(target, player);
 			target.setHeading(heading);
 			target.broadcastPacket(new ExRotation(target.getObjectId(), heading));
-			activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), _actionId));
-			target.broadcastPacket(new SocialAction(_charObjId, _actionId));
+			player.broadcastPacket(new SocialAction(player.getObjectId(), _actionId));
+			target.broadcastPacket(new SocialAction(_objectId, _actionId));
 		}
 		else if (_answer == -1) // refused
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
-			sm.addPcName(activeChar);
+			sm.addPcName(player);
 			target.sendPacket(sm);
 		}
 		target.setMultiSocialAction(0, 0);

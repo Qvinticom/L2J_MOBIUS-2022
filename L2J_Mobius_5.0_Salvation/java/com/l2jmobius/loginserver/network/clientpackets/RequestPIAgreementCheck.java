@@ -19,18 +19,18 @@ package com.l2jmobius.loginserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.IIncomingPacket;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.PIAgreementCheck;
 
 /**
  * @author UnAfraid
  */
-public class RequestPIAgreementCheck implements IIncomingPacket<L2LoginClient>
+public class RequestPIAgreementCheck implements IIncomingPacket<LoginClient>
 {
 	private int _accountId;
 	
 	@Override
-	public boolean read(L2LoginClient client, PacketReader packet)
+	public boolean read(LoginClient client, PacketReader packet)
 	{
 		_accountId = packet.readD();
 		byte[] padding0 = new byte[3];
@@ -43,7 +43,7 @@ public class RequestPIAgreementCheck implements IIncomingPacket<L2LoginClient>
 	}
 	
 	@Override
-	public void run(L2LoginClient client)
+	public void run(LoginClient client)
 	{
 		client.sendPacket(new PIAgreementCheck(_accountId, Config.SHOW_PI_AGREEMENT ? 0x01 : 0x00));
 	}

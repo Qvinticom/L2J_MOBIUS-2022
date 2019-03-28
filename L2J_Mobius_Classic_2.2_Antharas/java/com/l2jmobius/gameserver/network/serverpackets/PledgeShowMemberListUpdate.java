@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -37,12 +37,12 @@ public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 	private final int _race;
 	private final int _sex;
 	
-	public PledgeShowMemberListUpdate(L2PcInstance player)
+	public PledgeShowMemberListUpdate(PlayerInstance player)
 	{
 		this(player.getClan().getClanMember(player.getObjectId()));
 	}
 	
-	public PledgeShowMemberListUpdate(L2ClanMember member)
+	public PledgeShowMemberListUpdate(ClanMember member)
 	{
 		_name = member.getName();
 		_level = member.getLevel();
@@ -52,7 +52,7 @@ public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 		_race = member.getRaceOrdinal();
 		_sex = member.getSex() ? 1 : 0;
 		_onlineStatus = member.getOnlineStatus();
-		if (_pledgeType == L2Clan.SUBUNIT_ACADEMY)
+		if (_pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
 			_hasSponsor = member.getSponsor() != 0 ? 1 : 0;
 		}

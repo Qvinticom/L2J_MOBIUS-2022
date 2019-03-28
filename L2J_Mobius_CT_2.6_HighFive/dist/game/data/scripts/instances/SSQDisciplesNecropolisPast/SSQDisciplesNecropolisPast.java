@@ -25,8 +25,8 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -126,13 +126,13 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	
 	protected void spawnNPC(InstanceWorld world)
 	{
-		final List<L2Npc> lilithGroup = new ArrayList<>();
+		final List<Npc> lilithGroup = new ArrayList<>();
 		for (Map.Entry<Integer, Location> entry : LILITH_SPAWN.entrySet())
 		{
 			lilithGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
 		}
 		world.setParameter("lilithGroup", lilithGroup);
-		final List<L2Npc> anakimGroup = new ArrayList<>();
+		final List<Npc> anakimGroup = new ArrayList<>();
 		for (Map.Entry<Integer, Location> entry : ANAKIM_SPAWN.entrySet())
 		{
 			anakimGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
@@ -140,7 +140,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		world.getParameters().set("anakimGroup", anakimGroup);
 	}
 	
-	private synchronized void checkDoors(L2Npc npc, InstanceWorld world)
+	private synchronized void checkDoors(Npc npc, InstanceWorld world)
 	{
 		final int countKill = world.getParameters().getInt("countKill", 0) + 1;
 		world.setParameter("countKill", countKill);
@@ -175,7 +175,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -185,7 +185,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		teleportPlayer(player, ENTER, world.getInstanceId());
 	}
 	
-	private void makeCast(L2Npc npc, List<L2Npc> targets)
+	private void makeCast(Npc npc, List<Npc> targets)
 	{
 		npc.setTarget(targets.get(getRandom(targets.size())));
 		if (SKILLS.containsKey(npc.getId()))
@@ -195,7 +195,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -218,9 +218,9 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 				}
 				case "FIGHT":
 				{
-					final List<L2Npc> anakimGroup = world.getParameters().getList("anakimGroup", L2Npc.class, new ArrayList<>());
-					final List<L2Npc> lilithGroup = world.getParameters().getList("lilithGroup", L2Npc.class, new ArrayList<>());
-					for (L2Npc caster : anakimGroup)
+					final List<Npc> anakimGroup = world.getParameters().getList("anakimGroup", Npc.class, new ArrayList<>());
+					final List<Npc> lilithGroup = world.getParameters().getList("lilithGroup", Npc.class, new ArrayList<>());
+					for (Npc caster : anakimGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow())
 						{
@@ -239,7 +239,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 							}
 						}
 					}
-					for (L2Npc caster : lilithGroup)
+					for (Npc caster : lilithGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow())
 						{
@@ -300,7 +300,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -348,7 +348,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -373,13 +373,13 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -412,14 +412,14 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		npc.setIsMortal(false);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		final QuestState qs = talker.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName());
 		String htmltext = getNoQuestMsg(talker);

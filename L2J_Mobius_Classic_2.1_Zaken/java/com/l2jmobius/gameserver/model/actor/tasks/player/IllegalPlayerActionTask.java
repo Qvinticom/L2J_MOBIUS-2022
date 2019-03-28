@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -36,9 +36,9 @@ public final class IllegalPlayerActionTask implements Runnable
 	
 	private final String _message;
 	private final IllegalActionPunishmentType _punishment;
-	private final L2PcInstance _actor;
+	private final PlayerInstance _actor;
 	
-	public IllegalPlayerActionTask(L2PcInstance actor, String message, IllegalActionPunishmentType punishment)
+	public IllegalPlayerActionTask(PlayerInstance actor, String message, IllegalActionPunishmentType punishment)
 	{
 		_message = message;
 		_punishment = punishment;

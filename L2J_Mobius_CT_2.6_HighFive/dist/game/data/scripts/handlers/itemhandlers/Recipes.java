@@ -18,10 +18,10 @@ package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class Recipes implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -39,22 +39,22 @@ public class Recipes implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (activeChar.isCrafting())
+		final PlayerInstance player = playable.getActingPlayer();
+		if (player.isCrafting())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return false;
 		}
 		
-		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
+		final RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
 		if (rp == null)
 		{
 			return false;
 		}
 		
-		if (activeChar.hasRecipeList(rp.getId()))
+		if (player.hasRecipeList(rp.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
+			player.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
 			return false;
 		}
 		
@@ -63,50 +63,50 @@ public class Recipes implements IItemHandler
 		boolean recipeLimit = false;
 		if (rp.isDwarvenRecipe())
 		{
-			canCraft = activeChar.hasDwarvenCraft();
-			recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft());
-			recipeLimit = (activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit());
+			canCraft = player.hasDwarvenCraft();
+			recipeLevel = (rp.getLevel() > player.getDwarvenCraft());
+			recipeLimit = (player.getDwarvenRecipeBook().length >= player.getDwarfRecipeLimit());
 		}
 		else
 		{
-			canCraft = activeChar.hasCommonCraft();
-			recipeLevel = (rp.getLevel() > activeChar.getCommonCraft());
-			recipeLimit = (activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit());
+			canCraft = player.hasCommonCraft();
+			recipeLevel = (rp.getLevel() > player.getCommonCraft());
+			recipeLimit = (player.getCommonRecipeBook().length >= player.getCommonRecipeLimit());
 		}
 		
 		if (!canCraft)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS);
+			player.sendPacket(SystemMessageId.THE_RECIPE_CANNOT_BE_REGISTERED_YOU_DO_NOT_HAVE_THE_ABILITY_TO_CREATE_ITEMS);
 			return false;
 		}
 		
 		if (recipeLevel)
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
+			player.sendPacket(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
 			return false;
 		}
 		
 		if (recipeLimit)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_BE_REGISTERED);
-			sm.addInt(rp.isDwarvenRecipe() ? activeChar.getDwarfRecipeLimit() : activeChar.getCommonRecipeLimit());
-			activeChar.sendPacket(sm);
+			sm.addInt(rp.isDwarvenRecipe() ? player.getDwarfRecipeLimit() : player.getCommonRecipeLimit());
+			player.sendPacket(sm);
 			return false;
 		}
 		
 		if (rp.isDwarvenRecipe())
 		{
-			activeChar.registerDwarvenRecipeList(rp, true);
+			player.registerDwarvenRecipeList(rp, true);
 		}
 		else
 		{
-			activeChar.registerCommonRecipeList(rp, true);
+			player.registerCommonRecipeList(rp, true);
 		}
 		
-		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
+		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED);
 		sm.addItemName(item);
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		return true;
 	}
 }

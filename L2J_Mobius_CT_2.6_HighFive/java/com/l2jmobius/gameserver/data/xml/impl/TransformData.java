@@ -27,7 +27,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
 import com.l2jmobius.gameserver.model.actor.transform.TransformLevelData;
 import com.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
@@ -222,7 +222,7 @@ public final class TransformData implements IGameXmlReader
 		return _transformData.get(id);
 	}
 	
-	public boolean transformPlayer(int id, L2PcInstance player)
+	public boolean transformPlayer(int id, PlayerInstance player)
 	{
 		final Transform transform = getTransform(id);
 		if (transform != null)

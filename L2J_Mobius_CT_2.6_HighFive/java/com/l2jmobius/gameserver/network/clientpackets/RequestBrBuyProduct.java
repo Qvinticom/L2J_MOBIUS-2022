@@ -25,10 +25,10 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrBuyProduct;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrGamePoint;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -42,7 +42,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 	private int _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_productId = packet.readD();
 		_count = packet.readD();
@@ -50,9 +50,9 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -84,7 +84,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Item item = ItemTable.getInstance().getTemplate(product.getItemId());
+		final Item item = ItemTable.getInstance().getTemplate(product.getItemId());
 		if (item == null)
 		{
 			player.sendPacket(new ExBrBuyProduct(ExBrBuyProduct.RESULT_WRONG_PRODUCT));

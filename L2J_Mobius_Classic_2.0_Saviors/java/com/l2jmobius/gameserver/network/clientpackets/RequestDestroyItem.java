@@ -26,20 +26,19 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class ...
  * @version $Revision: 1.7.2.4.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestDestroyItem implements IClientIncomingPacket
@@ -48,7 +47,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 	private long _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_count = packet.readQ();
@@ -56,10 +55,10 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -68,47 +67,47 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		{
 			if (_count < 0)
 			{
-				Util.handleIllegalPlayerAction(activeChar, "[RequestDestroyItem] Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to destroy item with oid " + _objectId + " but has count < 0!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "[RequestDestroyItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to destroy item with oid " + _objectId + " but has count < 0!", Config.DEFAULT_PUNISH);
 			}
 			return;
 		}
 		
 		if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy"))
 		{
-			activeChar.sendMessage("You are destroying items too fast.");
+			player.sendMessage("You are destroying items too fast.");
 			return;
 		}
 		
 		long count = _count;
 		
-		if (activeChar.isProcessingTransaction() || (activeChar.getPrivateStoreType() != PrivateStoreType.NONE))
+		if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
 			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
-		if (activeChar.hasItemRequest())
+		if (player.hasItemRequest())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DESTROY_OR_CRYSTALLIZE_ITEMS_WHILE_ENCHANTING_ATTRIBUTES);
 			return;
 		}
 		
-		final L2ItemInstance itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		
 		// if we can't find the requested item, its actually a cheat
 		if (itemToRemove == null)
 		{
 			// gm can destroy other player items
-			if (activeChar.isGM())
+			if (player.isGM())
 			{
-				final L2Object obj = L2World.getInstance().findObject(_objectId);
+				final WorldObject obj = World.getInstance().findObject(_objectId);
 				if (obj.isItem())
 				{
-					if (_count > ((L2ItemInstance) obj).getCount())
+					if (_count > ((ItemInstance) obj).getCount())
 					{
-						count = ((L2ItemInstance) obj).getCount();
+						count = ((ItemInstance) obj).getCount();
 					}
-					AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_delete_item " + _objectId + " " + count, true);
+					AdminCommandHandler.getInstance().useAdminCommand(player, "admin_delete_item " + _objectId + " " + count, true);
 				}
 				return;
 			}
@@ -118,7 +117,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId()))
+		if (player.isCastingNow(s -> s.getSkill().getItemConsumeId() == itemToRemove.getId()))
 		{
 			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;
@@ -126,7 +125,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		
 		final int itemId = itemToRemove.getId();
 		
-		if (!Config.DESTROY_ALL_ITEMS && ((!activeChar.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId)))
+		if (!Config.DESTROY_ALL_ITEMS && ((!player.canOverrideCond(PlayerCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId)))
 		{
 			if (itemToRemove.isHeroItem())
 			{
@@ -141,13 +140,13 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		
 		if (!itemToRemove.isStackable() && (count > 1))
 		{
-			Util.handleIllegalPlayerAction(activeChar, "[RequestDestroyItem] Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to destroy a non-stackable item with oid " + _objectId + " but has count > 1!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "[RequestDestroyItem] Character " + player.getName() + " of account " + player.getAccountName() + " tried to destroy a non-stackable item with oid " + _objectId + " but has count > 1!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if (!activeChar.getInventory().canManipulateWithItemId(itemToRemove.getId()))
+		if (!player.getInventory().canManipulateWithItemId(itemToRemove.getId()))
 		{
-			activeChar.sendMessage("You cannot use this item.");
+			player.sendMessage("You cannot use this item.");
 			return;
 		}
 		
@@ -158,10 +157,10 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		
 		if (itemToRemove.getItem().isPetItem())
 		{
-			final L2Summon pet = activeChar.getPet();
+			final Summon pet = player.getPet();
 			if ((pet != null) && (pet.getControlObjectId() == _objectId))
 			{
-				pet.unSummon(activeChar);
+				pet.unSummon(player);
 			}
 			
 			try (Connection con = DatabaseFactory.getConnection();
@@ -196,17 +195,17 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 				client.sendPacket(sm);
 			}
 			
-			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance itm : unequiped)
+			for (ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
 			}
-			activeChar.sendInventoryUpdate(iu);
+			player.sendInventoryUpdate(iu);
 		}
 		
-		final L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Destroy", itemToRemove, count, activeChar, null);
+		final ItemInstance removedItem = player.getInventory().destroyItem("Destroy", itemToRemove, count, player, null);
 		
 		if (removedItem == null)
 		{
@@ -224,11 +223,11 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 			{
 				iu.addModifiedItem(removedItem);
 			}
-			activeChar.sendInventoryUpdate(iu);
+			player.sendInventoryUpdate(iu);
 		}
 		else
 		{
-			activeChar.sendItemList(true);
+			player.sendItemList(true);
 		}
 	}
 }

@@ -40,7 +40,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.util.Broadcast;
 
@@ -445,7 +445,7 @@ public class AutoSpawnHandler
 				final int z = locationList[locationIndex].getZ();
 				final int heading = locationList[locationIndex].getHeading();
 				
-				final L2Spawn newSpawn = new L2Spawn(spawnInst.getId());
+				final Spawn newSpawn = new Spawn(spawnInst.getId());
 				newSpawn.setXYZ(x, y, z);
 				if (heading != -1)
 				{
@@ -459,7 +459,7 @@ public class AutoSpawnHandler
 				
 				// Add the new spawn information to the spawn table, but do not store it.
 				SpawnTable.getInstance().addNewSpawn(newSpawn, false);
-				L2Npc npcInst = null;
+				Npc npcInst = null;
 				
 				if (spawnInst._spawnCount == 1)
 				{
@@ -486,7 +486,7 @@ public class AutoSpawnHandler
 				{
 					if (spawnInst.isRandomSpawn())
 					{
-						while (!L2World.getInstance().getVisibleObjectsInRange(npcInst, L2Npc.class, 5).isEmpty())
+						while (!World.getInstance().getVisibleObjectsInRange(npcInst, Npc.class, 5).isEmpty())
 						{
 							// LOGGER.log(Level.INFO, "AutoSpawnHandler: Random spawn location " + npcInst.getLocation() + " for " + npcInst + " is occupied. Teleporting...");
 							npcInst.teleToLocation(locationList[Rnd.get(locationList.length)]);
@@ -539,7 +539,7 @@ public class AutoSpawnHandler
 					return;
 				}
 				
-				for (L2Npc npcInst : spawnInst.getNPCInstanceList())
+				for (Npc npcInst : spawnInst.getNPCInstanceList())
 				{
 					if (npcInst == null)
 					{
@@ -581,7 +581,7 @@ public class AutoSpawnHandler
 		
 		protected int _lastLocIndex = -1;
 		
-		private final Queue<L2Npc> _npcList = new ConcurrentLinkedQueue<>();
+		private final Queue<Npc> _npcList = new ConcurrentLinkedQueue<>();
 		
 		private final List<Location> _locList = new CopyOnWriteArrayList<>();
 		
@@ -604,12 +604,12 @@ public class AutoSpawnHandler
 			_spawnActive = activeValue;
 		}
 		
-		protected boolean addNpcInstance(L2Npc npcInst)
+		protected boolean addNpcInstance(Npc npcInst)
 		{
 			return _npcList.add(npcInst);
 		}
 		
-		protected boolean removeNpcInstance(L2Npc npcInst)
+		protected boolean removeNpcInstance(Npc npcInst)
 		{
 			return _npcList.remove(npcInst);
 		}
@@ -654,14 +654,14 @@ public class AutoSpawnHandler
 			return _locList.toArray(new Location[_locList.size()]);
 		}
 		
-		public Queue<L2Npc> getNPCInstanceList()
+		public Queue<Npc> getNPCInstanceList()
 		{
 			return _npcList;
 		}
 		
-		public Collection<L2Spawn> getSpawns()
+		public Collection<Spawn> getSpawns()
 		{
-			return _npcList.stream().map(L2Npc::getSpawn).collect(Collectors.toList());
+			return _npcList.stream().map(Npc::getSpawn).collect(Collectors.toList());
 		}
 		
 		public void setSpawnCount(int spawnCount)

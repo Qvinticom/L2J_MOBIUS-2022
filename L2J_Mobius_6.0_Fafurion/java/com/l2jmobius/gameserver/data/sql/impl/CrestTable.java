@@ -30,9 +30,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.model.L2Crest.CrestType;
+import com.l2jmobius.gameserver.model.Crest;
+import com.l2jmobius.gameserver.model.Crest.CrestType;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * Loads and saves crests from database.
@@ -42,7 +42,7 @@ public final class CrestTable
 {
 	private static final Logger LOGGER = Logger.getLogger(CrestTable.class.getName());
 	
-	private final Map<Integer, L2Crest> _crests = new ConcurrentHashMap<>();
+	private final Map<Integer, Crest> _crests = new ConcurrentHashMap<>();
 	private final AtomicInteger _nextId = new AtomicInteger(1);
 	
 	protected CrestTable()
@@ -54,7 +54,7 @@ public final class CrestTable
 	{
 		_crests.clear();
 		final Set<Integer> crestsInUse = new HashSet<>();
-		for (L2Clan clan : ClanTable.getInstance().getClans())
+		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if (clan.getCrestId() != 0)
 			{
@@ -97,7 +97,7 @@ public final class CrestTable
 				final CrestType crestType = CrestType.getById(rs.getInt("type"));
 				if (crestType != null)
 				{
-					_crests.put(id, new L2Crest(id, data, crestType));
+					_crests.put(id, new Crest(id, data, crestType));
 				}
 				else
 				{
@@ -112,7 +112,7 @@ public final class CrestTable
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _crests.size() + " Crests.");
 		
-		for (L2Clan clan : ClanTable.getInstance().getClans())
+		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if ((clan.getCrestId() != 0) && (getCrest(clan.getCrestId()) == null))
 			{
@@ -139,25 +139,25 @@ public final class CrestTable
 	
 	/**
 	 * @param crestId The crest id
-	 * @return {@code L2Crest} if crest is found, {@code null} if crest was not found.
+	 * @return {@code Crest} if crest is found, {@code null} if crest was not found.
 	 */
-	public L2Crest getCrest(int crestId)
+	public Crest getCrest(int crestId)
 	{
 		return _crests.get(crestId);
 	}
 	
 	/**
-	 * Creates a {@code L2Crest} object and inserts it in database and cache.
+	 * Creates a {@code Crest} object and inserts it in database and cache.
 	 * @param data
 	 * @param crestType
-	 * @return {@code L2Crest} on success, {@code null} on failure.
+	 * @return {@code Crest} on success, {@code null} on failure.
 	 */
-	public L2Crest createCrest(byte[] data, CrestType crestType)
+	public Crest createCrest(byte[] data, CrestType crestType)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `crests`(`crest_id`, `data`, `type`) VALUES(?, ?, ?)"))
 		{
-			final L2Crest crest = new L2Crest(_nextId.getAndIncrement(), data, crestType);
+			final Crest crest = new Crest(_nextId.getAndIncrement(), data, crestType);
 			statement.setInt(1, crest.getId());
 			statement.setBytes(2, crest.getData());
 			statement.setInt(3, crest.getType().getId());

@@ -1715,7 +1715,7 @@
 				<type>STUN</type>
 				<level>1</level>
 				<hasAbnormal>true</hasAbnormal>
-				<L2Character>caster</L2Character>
+				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
 		<effects>
@@ -2552,7 +2552,7 @@
 		</conditions>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>

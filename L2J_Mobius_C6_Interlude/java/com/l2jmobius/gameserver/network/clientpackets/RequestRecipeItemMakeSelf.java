@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.RecipeController;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
+public final class RequestRecipeItemMakeSelf extends GameClientPacket
 {
 	private int _id;
 	
@@ -32,8 +32,8 @@ public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -43,18 +43,18 @@ public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() != 0)
+		if (player.getPrivateStoreType() != 0)
 		{
-			activeChar.sendMessage("Cannot make items while trading");
+			player.sendMessage("Cannot make items while trading");
 			return;
 		}
 		
-		if (activeChar.isCrafting())
+		if (player.isCrafting())
 		{
-			activeChar.sendMessage("Currently in Craft Mode");
+			player.sendMessage("Currently in Craft Mode");
 			return;
 		}
 		
-		RecipeController.getInstance().requestMakeItem(activeChar, _id);
+		RecipeController.getInstance().requestMakeItem(player, _id);
 	}
 }

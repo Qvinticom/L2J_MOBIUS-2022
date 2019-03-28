@@ -35,9 +35,9 @@ import com.l2jmobius.gameserver.enums.AuctionItemType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -146,7 +146,7 @@ public class Auction
 		startAutoTask();
 	}
 	
-	public Auction(int itemId, L2Clan Clan, long delay, long bid, String name)
+	public Auction(int itemId, Clan Clan, long delay, long bid, String name)
 	{
 		_id = itemId;
 		_endDate = System.currentTimeMillis() + delay;
@@ -264,7 +264,7 @@ public class Auction
 	 * @param bidder
 	 * @param bid
 	 */
-	public synchronized void setBid(L2PcInstance bidder, long bid)
+	public synchronized void setBid(PlayerInstance bidder, long bid)
 	{
 		final long requiredAdena = _highestBidderName.equals(bidder.getClan().getLeaderName()) ? bid - _highestBidderMaxBid : bid;
 		if ((((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid))) && takeItem(bidder, requiredAdena))
@@ -292,7 +292,7 @@ public class Auction
 			quantity *= 0.9; // take 10% tax fee if needed
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClanByName(clanName);
+		final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 		if (clan == null)
 		{
 			LOGGER.warning("Clan " + clanName + " doesn't exist!");
@@ -319,7 +319,7 @@ public class Auction
 	 * @param quantity
 	 * @return
 	 */
-	private boolean takeItem(L2PcInstance bidder, long quantity)
+	private boolean takeItem(PlayerInstance bidder, long quantity)
 	{
 		if ((bidder.getClan() != null) && (bidder.getClan().getWarehouse().getAdena() >= quantity))
 		{
@@ -335,7 +335,7 @@ public class Auction
 	 * @param bidder
 	 * @param bid
 	 */
-	private void updateInDB(L2PcInstance bidder, long bid)
+	private void updateInDB(PlayerInstance bidder, long bid)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -365,9 +365,9 @@ public class Auction
 					ps.setLong(7, System.currentTimeMillis());
 					ps.execute();
 				}
-				if (L2World.getInstance().getPlayer(_highestBidderName) != null)
+				if (World.getInstance().getPlayer(_highestBidderName) != null)
 				{
-					L2World.getInstance().getPlayer(_highestBidderName).sendMessage("You have been out bidded");
+					World.getInstance().getPlayer(_highestBidderName).sendMessage("You have been out bidded");
 				}
 			}
 			
@@ -387,7 +387,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Exception: Auction.updateInDB(L2PcInstance bidder, int bid): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.updateInDB(PlayerInstance bidder, int bid): " + e.getMessage(), e);
 		}
 	}
 	
@@ -411,9 +411,9 @@ public class Auction
 			{
 				returnItem(b.getClanName(), b.getBid(), true); // 10 % tax
 			}
-			else if (L2World.getInstance().getPlayer(b.getName()) != null)
+			else if (World.getInstance().getPlayer(b.getName()) != null)
 			{
-				L2World.getInstance().getPlayer(b.getName()).sendMessage("Congratulation you have won ClanHall!");
+				World.getInstance().getPlayer(b.getName()).sendMessage("Congratulation you have won ClanHall!");
 			}
 			ClanTable.getInstance().getClanByName(b.getClanName()).setAuctionBiddedAt(0, true);
 		}
@@ -461,7 +461,7 @@ public class Auction
 				returnItem(_sellerClanName, ClanHallManager.getInstance().getAuctionableHallById(_itemId).getLease(), false);
 			}
 			deleteAuctionFromDB();
-			final L2Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
+			final Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
 			Clan.setAuctionBiddedAt(0, true);
 			removeBids();

@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author -Wooden-
  */
-public final class SnoopQuit extends L2GameClientPacket
+public final class SnoopQuit extends GameClientPacket
 {
 	private int _snoopID;
 	
@@ -35,19 +35,19 @@ public final class SnoopQuit extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = (L2PcInstance) L2World.getInstance().findObject(_snoopID);
+		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_snoopID);
+		if (target == null)
+		{
+			return;
+		}
+		
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		player.removeSnooper(activeChar);
-		activeChar.removeSnooped(player);
+		target.removeSnooper(player);
+		player.removeSnooped(target);
 	}
 }

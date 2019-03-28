@@ -20,13 +20,13 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2ClanHallManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2WarehouseInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.ClanHallManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.WarehouseInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -45,27 +45,27 @@ public class ClanWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!(target instanceof L2WarehouseInstance) && !(target instanceof L2ClanHallManagerInstance))
+		if (!(target instanceof WarehouseInstance) && !(target instanceof ClanHallManagerInstance))
 		{
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (player.isEnchanting())
 		{
 			return false;
 		}
 		
-		if (activeChar.getClan() == null)
+		if (player.getClan() == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 			return false;
 		}
 		
-		if (activeChar.getClan().getLevel() == 0)
+		if (player.getClan().getLevel() == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
 			return false;
 		}
 		
@@ -75,14 +75,14 @@ public class ClanWarehouse implements IBypassHandler
 			{
 				if (Config.ENABLE_WAREHOUSESORTING_CLAN)
 				{
-					final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-					msg.setFile(activeChar, "data/html/mods/WhSortedC.htm");
-					msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
-					activeChar.sendPacket(msg);
+					final NpcHtmlMessage msg = new NpcHtmlMessage(((Npc) target).getObjectId());
+					msg.setFile(player, "data/html/mods/WhSortedC.htm");
+					msg.replace("%objectId%", String.valueOf(((Npc) target).getObjectId()));
+					player.sendPacket(msg);
 				}
 				else
 				{
-					showWithdrawWindow(activeChar, null, (byte) 0);
+					showWithdrawWindow(player, null, (byte) 0);
 				}
 				return true;
 			}
@@ -92,24 +92,24 @@ public class ClanWarehouse implements IBypassHandler
 				
 				if (param.length > 2)
 				{
-					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
+					showWithdrawWindow(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
 				}
 				else if (param.length > 1)
 				{
-					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.A2Z);
+					showWithdrawWindow(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.A2Z);
 				}
 				else
 				{
-					showWithdrawWindow(activeChar, WarehouseListType.ALL, SortedWareHouseWithdrawalList.A2Z);
+					showWithdrawWindow(player, WarehouseListType.ALL, SortedWareHouseWithdrawalList.A2Z);
 				}
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[2])) // DepositC
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
-				activeChar.setInventoryBlockingStatus(true);
-				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				player.setActiveWarehouse(player.getClan().getWarehouse());
+				player.setInventoryBlockingStatus(true);
+				player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.CLAN));
 				return true;
 			}
 			
@@ -122,7 +122,7 @@ public class ClanWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWithdrawWindow(L2PcInstance player, WarehouseListType itemtype, byte sortorder)
+	private static void showWithdrawWindow(PlayerInstance player, WarehouseListType itemtype, byte sortorder)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
@@ -140,11 +140,11 @@ public class ClanWarehouse implements IBypassHandler
 			return;
 		}
 		
-		for (L2ItemInstance i : player.getActiveWarehouse().getItems())
+		for (ItemInstance i : player.getActiveWarehouse().getItems())
 		{
 			if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 			{
-				player.getActiveWarehouse().destroyItem("L2ItemInstance", i, player, null);
+				player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
 			}
 		}
 		if (itemtype != null)

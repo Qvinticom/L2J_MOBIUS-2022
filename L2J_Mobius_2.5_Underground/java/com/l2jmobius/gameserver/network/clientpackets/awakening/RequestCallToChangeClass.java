@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets.awakening;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCallToChangeClass;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCallToChangeClass;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
@@ -30,16 +30,16 @@ import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 public class RequestCallToChangeClass implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		// Nothing to read
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

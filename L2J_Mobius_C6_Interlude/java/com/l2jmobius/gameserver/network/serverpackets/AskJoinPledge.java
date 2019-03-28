@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class AskJoinPledge extends L2GameServerPacket
+public class AskJoinPledge extends GameServerPacket
 {
 	private final int _requestorObjId;
 	private final String _pledgeName;

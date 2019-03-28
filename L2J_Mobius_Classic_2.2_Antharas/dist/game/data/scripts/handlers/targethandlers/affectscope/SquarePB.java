@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import com.l2jmobius.gameserver.util.Util;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.util.Util;
 public class SquarePB implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int squareStartAngle = skill.getFanRange()[1];
@@ -47,15 +47,15 @@ public class SquarePB implements IAffectScopeHandler
 		final int radius = (int) Math.sqrt((squareLength * squareLength) + (squareWidth * squareWidth));
 		final int affectLimit = skill.getAffectLimit();
 		
-		final int rectX = activeChar.getX();
-		final int rectY = activeChar.getY() - (squareWidth / 2);
-		final double heading = Math.toRadians(squareStartAngle + Util.convertHeadingToDegree(activeChar.getHeading()));
+		final int rectX = creature.getX();
+		final int rectY = creature.getY() - (squareWidth / 2);
+		final double heading = Math.toRadians(squareStartAngle + Util.convertHeadingToDegree(creature.getHeading()));
 		final double cos = Math.cos(-heading);
 		final double sin = Math.sin(-heading);
 		
 		// Target checks.
 		final AtomicInteger affected = new AtomicInteger(0);
-		final Predicate<L2Character> filter = c ->
+		final Predicate<Creature> filter = c ->
 		{
 			if ((affectLimit > 0) && (affected.get() >= affectLimit))
 			{
@@ -67,17 +67,17 @@ public class SquarePB implements IAffectScopeHandler
 			}
 			
 			// Check if inside square.
-			final int xp = c.getX() - activeChar.getX();
-			final int yp = c.getY() - activeChar.getY();
-			final int xr = (int) ((activeChar.getX() + (xp * cos)) - (yp * sin));
-			final int yr = (int) (activeChar.getY() + (xp * sin) + (yp * cos));
+			final int xp = c.getX() - creature.getX();
+			final int yp = c.getY() - creature.getY();
+			final int xr = (int) ((creature.getX() + (xp * cos)) - (yp * sin));
+			final int yr = (int) (creature.getY() + (xp * sin) + (yp * cos));
 			if ((xr > rectX) && (xr < (rectX + squareLength)) && (yr > rectY) && (yr < (rectY + squareWidth)))
 			{
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, c))
 				{
 					return false;
 				}
-				if (!GeoEngine.getInstance().canSeeTarget(activeChar, c))
+				if (!GeoEngine.getInstance().canSeeTarget(creature, c))
 				{
 					return false;
 				}
@@ -90,7 +90,7 @@ public class SquarePB implements IAffectScopeHandler
 		};
 		
 		// Check and add targets.
-		L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, c ->
+		World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, radius, c ->
 		{
 			if (filter.test(c))
 			{

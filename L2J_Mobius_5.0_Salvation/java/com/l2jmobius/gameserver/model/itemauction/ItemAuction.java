@@ -29,9 +29,9 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -84,9 +84,9 @@ public final class ItemAuction
 		_scheduledAuctionEndingExtendState = ItemAuctionExtendState.INITIAL;
 		_auctionEndingExtendState = ItemAuctionExtendState.INITIAL;
 		
-		final L2ItemInstance item = _auctionItem.createNewItemInstance();
+		final ItemInstance item = _auctionItem.createNewItemInstance();
 		_itemInfo = new ItemInfo(item);
-		L2World.getInstance().removeObject(item);
+		World.getInstance().removeObject(item);
 		
 		for (ItemAuctionBid bid : _auctionBids)
 		{
@@ -139,7 +139,7 @@ public final class ItemAuction
 		return _itemInfo;
 	}
 	
-	public final L2ItemInstance createNewItemInstance()
+	public final ItemInstance createNewItemInstance()
 	{
 		return _auctionItem.createNewItemInstance();
 	}
@@ -243,7 +243,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final void registerBid(L2PcInstance player, long newBid)
+	public final void registerBid(PlayerInstance player, long newBid)
 	{
 		if (player == null)
 		{
@@ -323,7 +323,7 @@ public final class ItemAuction
 		}
 	}
 	
-	private void onPlayerBid(L2PcInstance player, ItemAuctionBid bid)
+	private void onPlayerBid(PlayerInstance player, ItemAuctionBid bid)
 	{
 		if (_highestBid == null)
 		{
@@ -331,7 +331,7 @@ public final class ItemAuction
 		}
 		else if (_highestBid.getLastBid() < bid.getLastBid())
 		{
-			final L2PcInstance old = _highestBid.getPlayer();
+			final PlayerInstance old = _highestBid.getPlayer();
 			if (old != null)
 			{
 				old.sendPacket(SystemMessageId.YOU_WERE_OUTBID_THE_NEW_HIGHEST_BID_IS_S1_ADENA);
@@ -412,7 +412,7 @@ public final class ItemAuction
 			final ItemAuctionBid bid = _auctionBids.get(i);
 			if (bid != null)
 			{
-				final L2PcInstance player = bid.getPlayer();
+				final PlayerInstance player = bid.getPlayer();
 				if (player != null)
 				{
 					player.sendPacket(packet);
@@ -421,7 +421,7 @@ public final class ItemAuction
 		}
 	}
 	
-	public final boolean cancelBid(L2PcInstance player)
+	public final boolean cancelBid(PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -508,7 +508,7 @@ public final class ItemAuction
 		}
 	}
 	
-	private boolean reduceItemCount(L2PcInstance player, long count)
+	private boolean reduceItemCount(PlayerInstance player, long count)
 	{
 		if (!player.reduceAdena("ItemAuction", count, player, true))
 		{
@@ -518,7 +518,7 @@ public final class ItemAuction
 		return true;
 	}
 	
-	private void increaseItemCount(L2PcInstance player, long count)
+	private void increaseItemCount(PlayerInstance player, long count)
 	{
 		player.addAdena("ItemAuction", count, player, true);
 	}
@@ -528,7 +528,7 @@ public final class ItemAuction
 	 * @param player The player that made the bid
 	 * @return The last bid the player made or -1
 	 */
-	public final long getLastBid(L2PcInstance player)
+	public final long getLastBid(PlayerInstance player)
 	{
 		final ItemAuctionBid bid = getBidFor(player.getObjectId());
 		return bid != null ? bid.getLastBid() : -1L;

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2ClanMember;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,12 +25,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 {
-	private final L2ClanMember _member;
+	private final ClanMember _member;
 	
 	/**
 	 * @param member
 	 */
-	public PledgeReceiveMemberInfo(L2ClanMember member)
+	public PledgeReceiveMemberInfo(ClanMember member)
 	{
 		_member = member;
 	}

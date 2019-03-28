@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * 37 // Packet Identifier <BR>
@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
  * <BR>
  * @version $Revision: 1.3.2.2.2.4 $ $Date: 2005/03/27 15:29:39 $ Rebuild 23.2.2006 by Advi
  */
-public class InventoryUpdate extends L2GameServerPacket
+public class InventoryUpdate extends GameServerPacket
 {
 	private final List<ItemInfo> _items;
 	
@@ -61,7 +61,7 @@ public class InventoryUpdate extends L2GameServerPacket
 		_items = items;
 	}
 	
-	public void addItem(L2ItemInstance item)
+	public void addItem(ItemInstance item)
 	{
 		if (item != null)
 		{
@@ -69,7 +69,7 @@ public class InventoryUpdate extends L2GameServerPacket
 		}
 	}
 	
-	public void addNewItem(L2ItemInstance item)
+	public void addNewItem(ItemInstance item)
 	{
 		if (item != null)
 		{
@@ -77,7 +77,7 @@ public class InventoryUpdate extends L2GameServerPacket
 		}
 	}
 	
-	public void addModifiedItem(L2ItemInstance item)
+	public void addModifiedItem(ItemInstance item)
 	{
 		if (item != null)
 		{
@@ -85,7 +85,7 @@ public class InventoryUpdate extends L2GameServerPacket
 		}
 	}
 	
-	public void addRemovedItem(L2ItemInstance item)
+	public void addRemovedItem(ItemInstance item)
 	{
 		if (item != null)
 		{
@@ -93,11 +93,11 @@ public class InventoryUpdate extends L2GameServerPacket
 		}
 	}
 	
-	public void addItems(List<L2ItemInstance> items)
+	public void addItems(List<ItemInstance> items)
 	{
 		if (items != null)
 		{
-			for (L2ItemInstance item : items)
+			for (ItemInstance item : items)
 			{
 				if (item != null)
 				{

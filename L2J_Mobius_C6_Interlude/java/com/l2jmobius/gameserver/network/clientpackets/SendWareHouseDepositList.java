@@ -22,19 +22,19 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.ClanWarehouse;
 import com.l2jmobius.gameserver.model.ItemContainer;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jmobius.gameserver.templates.item.L2EtcItemType;
+import com.l2jmobius.gameserver.templates.item.EtcItemType;
 
-public final class SendWareHouseDepositList extends L2GameClientPacket
+public final class SendWareHouseDepositList extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(SendWareHouseDepositList.class.getName());
 	
@@ -77,7 +77,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -89,9 +89,9 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 			return;
 		}
 		
-		final L2FolkInstance manager = player.getLastFolkNPC();
+		final FolkInstance manager = player.getLastFolkNPC();
 		
-		if ((manager == null) || !player.isInsideRadius(manager, L2NpcInstance.INTERACTION_DISTANCE, false, false))
+		if ((manager == null) || !player.isInsideRadius(manager, NpcInstance.INTERACTION_DISTANCE, false, false))
 		{
 			return;
 		}
@@ -161,7 +161,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 			final int count = _items[(i * 2) + 1];
 			
 			// Check validity of requested item
-			final L2ItemInstance item = player.checkItemManipulation(objectId, count, "deposit");
+			final ItemInstance item = player.checkItemManipulation(objectId, count, "deposit");
 			if (item == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -170,7 +170,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 				continue;
 			}
 			
-			if (((warehouse instanceof ClanWarehouse) && !item.isTradeable()) || (item.getItemType() == L2EtcItemType.QUEST))
+			if (((warehouse instanceof ClanWarehouse) && !item.isTradeable()) || (item.getItemType() == EtcItemType.QUEST))
 			{
 				return;
 			}
@@ -218,7 +218,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 				continue;
 			}
 			
-			final L2ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
+			final ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -238,7 +238,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 				continue;
 			}
 			
-			final L2ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
+			final ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

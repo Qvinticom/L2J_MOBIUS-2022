@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2ArtefactInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControlTowerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import com.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.skills.Env;
 /**
  * @author programmos, sword developers Implementation of the Bluff Effect
  */
-public class EffectBluff extends L2Effect
+public class EffectBluff extends Effect
 {
 	
 	public EffectBluff(Env env, EffectTemplate template)
@@ -59,7 +59,7 @@ public class EffectBluff extends L2Effect
 			return;
 		}
 		
-		if ((getEffected() instanceof L2FolkInstance) || (getEffected() instanceof L2ControlTowerInstance) || (getEffected() instanceof L2ArtefactInstance) || (getEffected() instanceof L2EffectPointInstance) || (getEffected() instanceof L2SiegeFlagInstance) || (getEffected() instanceof L2SiegeSummonInstance))
+		if ((getEffected() instanceof FolkInstance) || (getEffected() instanceof ControlTowerInstance) || (getEffected() instanceof ArtefactInstance) || (getEffected() instanceof EffectPointInstance) || (getEffected() instanceof SiegeFlagInstance) || (getEffected() instanceof SiegeSummonInstance))
 		{
 			return;
 		}

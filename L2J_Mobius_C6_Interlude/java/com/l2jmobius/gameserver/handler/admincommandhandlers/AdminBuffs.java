@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -49,7 +49,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command, " ");
 		
@@ -66,9 +66,9 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				if (st.hasMoreTokens())
 				{
-					L2PcInstance player = null;
+					PlayerInstance player = null;
 					String playername = st.nextToken();
-					player = L2World.getInstance().getPlayer(playername);
+					player = World.getInstance().getPlayer(playername);
 					if (player != null)
 					{
 						showBuffs(player, activeChar);
@@ -77,9 +77,9 @@ public class AdminBuffs implements IAdminCommandHandler
 					BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online");
 					return false;
 				}
-				else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
+				else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof PlayerInstance))
 				{
-					showBuffs((L2PcInstance) activeChar.getTarget(), activeChar);
+					showBuffs((PlayerInstance) activeChar.getTarget(), activeChar);
 					return true;
 				}
 				else
@@ -154,9 +154,9 @@ public class AdminBuffs implements IAdminCommandHandler
 					}
 					if (radius > 0)
 					{
-						for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
+						for (Creature knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 						{
-							if ((knownChar instanceof L2PcInstance) && !knownChar.equals(activeChar))
+							if ((knownChar instanceof PlayerInstance) && !knownChar.equals(activeChar))
 							{
 								knownChar.stopAllEffects();
 							}
@@ -181,7 +181,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public void showBuffs(L2PcInstance player, L2PcInstance activeChar)
+	public void showBuffs(PlayerInstance player, PlayerInstance activeChar)
 	{
 		StringBuilder html = new StringBuilder();
 		
@@ -189,9 +189,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("<table>");
 		html.append("<tr><td width=200>Skill</td><td width=70>Action</td></tr>");
 		
-		L2Effect[] effects = player.getAllEffects();
+		Effect[] effects = player.getAllEffects();
 		
-		for (L2Effect e : effects)
+		for (Effect e : effects)
 		{
 			if (e != null)
 			{
@@ -209,15 +209,15 @@ public class AdminBuffs implements IAdminCommandHandler
 		activeChar.sendPacket(ms);
 	}
 	
-	private void removeBuff(L2PcInstance remover, String playername, int SkillId)
+	private void removeBuff(PlayerInstance remover, String playername, int SkillId)
 	{
-		L2PcInstance player = L2World.getInstance().getPlayer(playername);
+		PlayerInstance player = World.getInstance().getPlayer(playername);
 		
 		if ((player != null) && (SkillId > 0))
 		{
-			L2Effect[] effects = player.getAllEffects();
+			Effect[] effects = player.getAllEffects();
 			
-			for (L2Effect e : effects)
+			for (Effect e : effects)
 			{
 				if ((e != null) && (e.getSkill().getId() == SkillId))
 				{
@@ -229,9 +229,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void removeAllBuffs(L2PcInstance remover, String playername)
+	private void removeAllBuffs(PlayerInstance remover, String playername)
 	{
-		final L2PcInstance player = L2World.getInstance().getPlayer(playername);
+		final PlayerInstance player = World.getInstance().getPlayer(playername);
 		
 		if (player != null)
 		{

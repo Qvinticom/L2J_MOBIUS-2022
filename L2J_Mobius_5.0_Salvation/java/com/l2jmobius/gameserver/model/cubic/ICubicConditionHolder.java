@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.cubic;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.cubic.conditions.ICubicCondition;
 
 /**
@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.cubic.conditions.ICubicCondition;
  */
 public interface ICubicConditionHolder
 {
-	boolean validateConditions(CubicInstance cubic, L2Character owner, L2Object target);
+	boolean validateConditions(CubicInstance cubic, Creature owner, WorldObject target);
 	
 	void addCondition(ICubicCondition condition);
 }

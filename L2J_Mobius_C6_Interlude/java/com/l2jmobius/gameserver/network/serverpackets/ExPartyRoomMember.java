@@ -18,17 +18,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.instancemanager.TownManager;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik
  */
-public class ExPartyRoomMember extends L2GameServerPacket
+public class ExPartyRoomMember extends GameServerPacket
 {
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExPartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode)
+	public ExPartyRoomMember(PlayerInstance player, PartyMatchRoom room, int mode)
 	{
 		_room = room;
 		_mode = mode;
@@ -41,7 +41,7 @@ public class ExPartyRoomMember extends L2GameServerPacket
 		writeH(0x0e);
 		writeD(_mode);
 		writeD(_room.getMembers());
-		for (L2PcInstance _member : _room.getPartyMembers())
+		for (PlayerInstance _member : _room.getPartyMembers())
 		{
 			writeD(_member.getObjectId());
 			writeS(_member.getName());

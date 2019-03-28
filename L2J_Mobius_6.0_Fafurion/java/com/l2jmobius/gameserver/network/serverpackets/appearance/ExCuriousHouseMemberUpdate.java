@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets.appearance;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -36,7 +36,7 @@ public class ExCuriousHouseMemberUpdate implements IClientOutgoingPacket
 	public ExCuriousHouseMemberUpdate(CeremonyOfChaosMember member)
 	{
 		_objId = member.getObjectId();
-		final L2PcInstance player = member.getPlayer();
+		final PlayerInstance player = member.getPlayer();
 		if (player != null)
 		{
 			_maxHp = player.getMaxHp();

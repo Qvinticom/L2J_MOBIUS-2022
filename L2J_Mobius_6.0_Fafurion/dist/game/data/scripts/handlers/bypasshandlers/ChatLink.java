@@ -17,12 +17,12 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcFirstTalk;
 
 public class ChatLink implements IBypassHandler
 {
@@ -32,7 +32,7 @@ public class ChatLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -49,14 +49,14 @@ public class ChatLink implements IBypassHandler
 			
 		}
 		
-		final L2Npc npc = (L2Npc) target;
+		final Npc npc = (Npc) target;
 		if ((val == 0) && npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);
+			EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
 		}
 		else
 		{
-			npc.showChatWindow(activeChar, val);
+			npc.showChatWindow(player, val);
 		}
 		return false;
 	}

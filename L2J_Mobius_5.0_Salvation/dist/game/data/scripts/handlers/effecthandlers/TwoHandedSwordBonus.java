@@ -18,12 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.StatModifierType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class TwoHandedSwordBonus extends AbstractEffect
 {
 	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
-	private static final Condition _slotCondition = new ConditionUsingSlotType(L2Item.SLOT_LR_HAND);
+	private static final Condition _slotCondition = new ConditionUsingSlotType(Item.SLOT_LR_HAND);
 	
 	private final double _pAtkAmount;
 	private final StatModifierType _pAtkmode;
@@ -52,7 +52,7 @@ public class TwoHandedSwordBonus extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		if (((_weaponTypeCondition == null) || _weaponTypeCondition.test(effected, effected, skill)) && ((_slotCondition == null) || _slotCondition.test(effected, effected, skill)))
 		{

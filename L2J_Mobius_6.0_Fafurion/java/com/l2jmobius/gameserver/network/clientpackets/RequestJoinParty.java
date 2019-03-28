@@ -22,12 +22,12 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.PartyRequest;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
@@ -43,14 +43,14 @@ public final class RequestJoinParty implements IClientIncomingPacket
 	private int _partyDistributionTypeId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
 		_partyDistributionTypeId = packet.readD();
 		return true;
 	}
 	
-	private void scheduleDeny(L2PcInstance player)
+	private void scheduleDeny(PlayerInstance player)
 	{
 		if (player != null)
 		{
@@ -67,9 +67,9 @@ public final class RequestJoinParty implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance requestor = client.getActiveChar();
+		final PlayerInstance requestor = client.getPlayer();
 		if (requestor == null)
 		{
 			return;
@@ -92,7 +92,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
+		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
@@ -194,9 +194,9 @@ public final class RequestJoinParty implements IClientIncomingPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void addTargetToParty(L2PcInstance target, L2PcInstance requestor)
+	private void addTargetToParty(PlayerInstance target, PlayerInstance requestor)
 	{
-		final L2Party party = requestor.getParty();
+		final Party party = requestor.getParty();
 		
 		// summary of ppl already in party and ppl that get invitation
 		if (!party.isLeader(requestor))
@@ -232,7 +232,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void createNewParty(L2PcInstance target, L2PcInstance requestor)
+	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
 	{
 		final PartyDistributionType partyDistributionType = PartyDistributionType.findById(_partyDistributionTypeId);
 		if (partyDistributionType == null)
@@ -242,7 +242,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		
 		if (!target.hasRequest(PartyRequest.class))
 		{
-			final L2Party party = new L2Party(requestor, partyDistributionType);
+			final Party party = new Party(requestor, partyDistributionType);
 			party.setPendingInvitation(true);
 			final PartyRequest request = new PartyRequest(requestor, target, party);
 			request.scheduleTimeout(30 * 1000);

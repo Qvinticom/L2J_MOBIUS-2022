@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 /**
  * @author programmos
  */
-public final class RequestSiegeDefenderList extends L2GameClientPacket
+public final class RequestSiegeDefenderList extends GameClientPacket
 {
 	private int _castleId;
 	

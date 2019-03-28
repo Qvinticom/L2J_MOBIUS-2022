@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -39,7 +39,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_unblockip "))
 		{
@@ -66,7 +66,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private boolean unblockIp(String ipAddress, L2PcInstance activeChar)
+	private boolean unblockIp(String ipAddress, PlayerInstance activeChar)
 	{
 		// LoginServerThread.getInstance().unBlockip(ipAddress);
 		LOGGER.warning("IP removed by GM " + activeChar.getName());

@@ -20,8 +20,8 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
@@ -36,7 +36,7 @@ public class PrivateWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!Config.ALLOW_WAREHOUSE)
 		{
@@ -48,7 +48,7 @@ public class PrivateWarehouse implements IBypassHandler
 			return false;
 		}
 		
-		if (activeChar.hasItemRequest())
+		if (player.hasItemRequest())
 		{
 			return false;
 		}
@@ -57,15 +57,15 @@ public class PrivateWarehouse implements IBypassHandler
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawP
 			{
-				showWithdrawWindow(activeChar);
+				showWithdrawWindow(player);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // DepositP
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.setActiveWarehouse(activeChar.getWarehouse());
-				activeChar.setInventoryBlockingStatus(true);
-				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.PRIVATE));
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				player.setActiveWarehouse(player.getWarehouse());
+				player.setInventoryBlockingStatus(true);
+				player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.PRIVATE));
 				return true;
 			}
 			
@@ -78,7 +78,7 @@ public class PrivateWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWithdrawWindow(L2PcInstance player)
+	private static void showWithdrawWindow(PlayerInstance player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());

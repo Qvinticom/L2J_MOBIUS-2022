@@ -25,8 +25,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * <b>AutoSave</b> only
@@ -84,9 +84,9 @@ public class AutoSaveManager
 		{
 			int playerscount = 0;
 			
-			final Collection<L2PcInstance> players = L2World.getInstance().getAllPlayers();
+			final Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
 			
-			for (L2PcInstance player : players)
+			for (PlayerInstance player : players)
 			{
 				if (player != null)
 				{
@@ -110,9 +110,9 @@ public class AutoSaveManager
 		@Override
 		public void run()
 		{
-			final Collection<L2PcInstance> players = L2World.getInstance().getAllPlayers();
+			final Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
 			
-			for (L2PcInstance player : players)
+			for (PlayerInstance player : players)
 			{
 				if ((player != null) && !player.isInOfflineMode())
 				{

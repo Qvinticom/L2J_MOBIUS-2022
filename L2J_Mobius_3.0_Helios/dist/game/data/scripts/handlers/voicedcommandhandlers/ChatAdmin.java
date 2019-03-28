@@ -22,8 +22,8 @@ import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -42,7 +42,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
 	{
 		if (!AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 		{
@@ -76,7 +76,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					final int objId = CharNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{
-						final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+						final PlayerInstance player = World.getInstance().getPlayer(objId);
 						if ((player == null) || !player.isOnline())
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Player not online!");
@@ -139,7 +139,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					final int objId = CharNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{
-						final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+						final PlayerInstance player = World.getInstance().getPlayer(objId);
 						if ((player == null) || !player.isOnline())
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Player not online!");

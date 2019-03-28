@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -37,9 +37,9 @@ public class ManaHeal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature actChar, Skill skill, WorldObject[] targets)
 	{
-		for (L2Character target : (L2Character[]) targets)
+		for (Creature target : (Creature[]) targets)
 		{
 			if ((target == null) || target.isDead() || target.isInvul())
 			{
@@ -62,7 +62,7 @@ public class ManaHeal implements ISkillHandler
 			sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 			target.sendPacket(sump);
 			
-			if ((actChar instanceof L2PcInstance) && (actChar != target))
+			if ((actChar instanceof PlayerInstance) && (actChar != target))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_RESTORED_BY_S1);
 				sm.addString(actChar.getName());

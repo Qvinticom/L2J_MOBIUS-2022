@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.handler.custom;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.L2Rebirth;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.entity.Rebirth;
 
 /**
  * This will simply manage any custom 'Enter World callers' needed.<br>
@@ -51,12 +51,12 @@ public class CustomWorldHandler
 	 * Requests entry into the world - manages appropriately.
 	 * @param player
 	 */
-	public void enterWorld(L2PcInstance player)
+	public void enterWorld(PlayerInstance player)
 	{
-		// L2Rebirth's skills must be actived only on main class
+		// Rebirth's skills must be actived only on main class
 		if (!player.isSubClassActive())
 		{
-			L2Rebirth.getInstance().grantRebirthSkills(player);// Rebirth Caller - if player has any skills, they will be granted them.
+			Rebirth.getInstance().grantRebirthSkills(player);// Rebirth Caller - if player has any skills, they will be granted them.
 		}
 	}
 	
@@ -64,7 +64,7 @@ public class CustomWorldHandler
 	 * Requests removal from the world - manages appropriately.
 	 * @param player
 	 */
-	public void exitWorld(L2PcInstance player)
+	public void exitWorld(PlayerInstance player)
 	{
 		// TODO: Remove the rebirth engine's bonus skills from player?
 	}

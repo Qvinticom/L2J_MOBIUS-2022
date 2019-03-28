@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class ChooseInventoryItem extends L2GameServerPacket
+public class ChooseInventoryItem extends GameServerPacket
 {
 	private final int _itemId;
 	

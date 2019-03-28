@@ -22,8 +22,8 @@ import com.l2jmobius.gameserver.handler.ICustomByPassHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.handler.itemhandlers.ExtractableItems;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Nick
@@ -44,12 +44,12 @@ public class ExtractableByPassHandler implements ICustomByPassHandler
 	}
 	
 	@Override
-	public void handleCommand(String command, L2PcInstance player, String parameters)
+	public void handleCommand(String command, PlayerInstance player, String parameters)
 	{
 		try
 		{
 			final int objId = Integer.parseInt(parameters);
-			final L2ItemInstance item = player.getInventory().getItemByObjectId(objId);
+			final ItemInstance item = player.getInventory().getItemByObjectId(objId);
 			if (item == null)
 			{
 				return;

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,11 +25,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExAdenaInvenCount implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public ExAdenaInvenCount(L2PcInstance cha)
+	public ExAdenaInvenCount(PlayerInstance player)
 	{
-		_activeChar = cha;
+		_player = player;
 	}
 	
 	@Override
@@ -37,8 +37,8 @@ public class ExAdenaInvenCount implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ADENA_INVEN_COUNT.writeId(packet);
 		
-		packet.writeQ(_activeChar.getAdena());
-		packet.writeH(_activeChar.getInventory().getSize());
+		packet.writeQ(_player.getAdena());
+		packet.writeH(_player.getInventory().getSize());
 		return true;
 	}
 }

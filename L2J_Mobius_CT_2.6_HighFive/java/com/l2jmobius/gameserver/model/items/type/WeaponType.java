@@ -46,7 +46,7 @@ public enum WeaponType implements ItemType
 	private final TraitType _traitType;
 	
 	/**
-	 * Constructor of the L2WeaponType.
+	 * Constructor of the WeaponType.
 	 * @param traitType
 	 */
 	WeaponType(TraitType traitType)
@@ -65,7 +65,7 @@ public enum WeaponType implements ItemType
 	}
 	
 	/**
-	 * @return L2TraitType the type of the WeaponType
+	 * @return TraitType the type of the WeaponType
 	 */
 	public TraitType getTraitType()
 	{

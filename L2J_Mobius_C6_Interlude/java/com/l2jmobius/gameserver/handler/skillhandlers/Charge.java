@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class Charge implements ISkillHandler
 {
@@ -36,26 +36,26 @@ public class Charge implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		for (L2Object target1 : targets)
+		for (WorldObject target1 : targets)
 		{
-			if (!(target1 instanceof L2PcInstance))
+			if (!(target1 instanceof PlayerInstance))
 			{
 				continue;
 			}
-			L2PcInstance target = (L2PcInstance) target1;
-			skill.getEffects(activeChar, target, false, false, false);
+			PlayerInstance target = (PlayerInstance) target1;
+			skill.getEffects(creature, target, false, false, false);
 		}
 		// self Effect :]
 		
-		L2Effect effect = activeChar.getFirstEffect(skill.getId());
+		Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			// Replace old effect with new one.
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(activeChar);
+		skill.getEffectsSelf(creature);
 	}
 	
 	@Override

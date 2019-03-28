@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -31,27 +31,27 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public final class ServitorSkillUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		final L2Summon summon = activeChar.getAnyServitor();
+		final Summon summon = player.getAnyServitor();
 		if ((summon == null) || !summon.isServitor())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
 			return;
 		}
 		
-		activeChar.getServitors().values().forEach(servitor ->
+		player.getServitors().values().forEach(servitor ->
 		{
 			if (summon.isBetrayed())
 			{
-				activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+				player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 				return;
 			}
 			
 			final int skillLevel = PetSkillData.getInstance().getAvailableLevel(servitor, data.getOptionId());
 			if (skillLevel > 0)
 			{
-				servitor.setTarget(activeChar.getTarget());
+				servitor.setTarget(player.getTarget());
 				servitor.useMagic(SkillData.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 		});

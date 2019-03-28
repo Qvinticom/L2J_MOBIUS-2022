@@ -25,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.timers.IEventTimerCancel;
 import com.l2jmobius.gameserver.model.events.timers.IEventTimerEvent;
 import com.l2jmobius.gameserver.model.events.timers.TimerHolder;
@@ -69,7 +69,7 @@ public final class TimerExecutor<T>
 	 * @param eventTimer
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, IEventTimerEvent<T> eventTimer)
+	public boolean addTimer(T event, StatsSet params, long time, Npc npc, PlayerInstance player, IEventTimerEvent<T> eventTimer)
 	{
 		return addTimer(new TimerHolder<>(event, params, time, npc, player, false, eventTimer, _cancelListener, this));
 	}
@@ -95,7 +95,7 @@ public final class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player)
+	public boolean addTimer(T event, StatsSet params, long time, Npc npc, PlayerInstance player)
 	{
 		return addTimer(event, params, time, npc, player, _eventListener);
 	}
@@ -108,7 +108,7 @@ public final class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(T event, long time, L2Npc npc, L2PcInstance player)
+	public boolean addTimer(T event, long time, Npc npc, PlayerInstance player)
 	{
 		return addTimer(event, null, time, npc, player, _eventListener);
 	}
@@ -123,7 +123,7 @@ public final class TimerExecutor<T>
 	 * @param eventTimer
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	private boolean addRepeatingTimer(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, IEventTimerEvent<T> eventTimer)
+	private boolean addRepeatingTimer(T event, StatsSet params, long time, Npc npc, PlayerInstance player, IEventTimerEvent<T> eventTimer)
 	{
 		return addTimer(new TimerHolder<>(event, params, time, npc, player, true, eventTimer, _cancelListener, this));
 	}
@@ -136,7 +136,7 @@ public final class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addRepeatingTimer(T event, long time, L2Npc npc, L2PcInstance player)
+	public boolean addRepeatingTimer(T event, long time, Npc npc, PlayerInstance player)
 	{
 		return addRepeatingTimer(event, null, time, npc, player, _eventListener);
 	}
@@ -182,7 +182,7 @@ public final class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if there is a timer with the given event npc and player parameters, {@code false} otherwise
 	 */
-	public boolean hasTimer(T event, L2Npc npc, L2PcInstance player)
+	public boolean hasTimer(T event, Npc npc, PlayerInstance player)
 	{
 		final Set<TimerHolder<T>> timers = _timers.get(event);
 		if ((timers == null) || timers.isEmpty())
@@ -215,7 +215,7 @@ public final class TimerExecutor<T>
 	 * @param player
 	 * @return {@code true} if timer for the given event, npc, player were stopped, {@code false} otheriwse
 	 */
-	public boolean cancelTimer(T event, L2Npc npc, L2PcInstance player)
+	public boolean cancelTimer(T event, Npc npc, PlayerInstance player)
 	{
 		final Set<TimerHolder<T>> timers = _timers.get(event);
 		if ((timers == null) || timers.isEmpty())
@@ -231,7 +231,7 @@ public final class TimerExecutor<T>
 	 * Cancel all timers of specified npc
 	 * @param npc
 	 */
-	public void cancelTimersOf(L2Npc npc)
+	public void cancelTimersOf(Npc npc)
 	{
 		removeAndCancelTimers(timer -> timer.getNpc() == npc);
 	}

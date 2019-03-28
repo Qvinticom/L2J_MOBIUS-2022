@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,7 +29,7 @@ public class ExUISetting implements IClientOutgoingPacket
 	public static final String SPLIT_VAR = "	";
 	private final byte[] _uiKeyMapping;
 	
-	public ExUISetting(L2PcInstance player)
+	public ExUISetting(PlayerInstance player)
 	{
 		if (player.getVariables().hasVariable(UI_KEY_MAPPING_VAR))
 		{

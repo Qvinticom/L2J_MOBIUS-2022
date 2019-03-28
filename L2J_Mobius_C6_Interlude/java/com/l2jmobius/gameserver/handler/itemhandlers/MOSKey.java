@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -40,44 +40,44 @@ public class MOSKey implements IItemHandler
 	public static long LAST_OPEN = 0;
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		final int itemId = item.getItemId();
 		
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2Object target = activeChar.getTarget();
+		PlayerInstance player = (PlayerInstance) playable;
+		WorldObject target = player.getTarget();
 		
-		if (!(target instanceof L2DoorInstance))
+		if (!(target instanceof DoorInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		final L2DoorInstance door = (L2DoorInstance) target;
+		final DoorInstance door = (DoorInstance) target;
 		
-		if (!activeChar.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
+		if (!player.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
 		{
-			activeChar.sendMessage("Door is to far.");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("Door is to far.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((activeChar.getAbnormalEffect() > 0) || activeChar.isInCombat())
+		if ((player.getAbnormalEffect() > 0) || player.isInCombat())
 		{
-			activeChar.sendMessage("You can`t use the key right now.");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You can`t use the key right now.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((LAST_OPEN + 1800000) > System.currentTimeMillis()) // 30 * 60 * 1000 = 1800000
 		{
-			activeChar.sendMessage("You can`t use the key right now.");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You can`t use the key right now.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -94,7 +94,7 @@ public class MOSKey implements IItemHandler
 				DoorTable.getInstance().getDoor(23150004).openMe();
 				DoorTable.getInstance().getDoor(23150003).onOpen();
 				DoorTable.getInstance().getDoor(23150004).onOpen();
-				activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
 				LAST_OPEN = System.currentTimeMillis();
 			}
 		}

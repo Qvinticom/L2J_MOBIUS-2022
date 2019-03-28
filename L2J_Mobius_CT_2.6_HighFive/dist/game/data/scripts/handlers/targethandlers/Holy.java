@@ -17,11 +17,11 @@
 package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ArtefactInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
@@ -29,22 +29,22 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 public class Holy implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		if (!(target instanceof L2ArtefactInstance))
+		if (!(target instanceof ArtefactInstance))
 		{
 			return EMPTY_TARGET_LIST;
 		}
 		
-		return new L2Object[]
+		return new WorldObject[]
 		{
 			target
 		};
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.HOLY;
+		return TargetType.HOLY;
 	}
 }

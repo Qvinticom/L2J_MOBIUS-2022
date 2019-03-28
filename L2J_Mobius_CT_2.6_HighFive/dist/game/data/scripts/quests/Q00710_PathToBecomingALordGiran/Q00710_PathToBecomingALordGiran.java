@@ -19,8 +19,8 @@ package quests.Q00710_PathToBecomingALordGiran;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -72,7 +72,7 @@ public class Q00710_PathToBecomingALordGiran extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		final Castle castle = CastleManager.getInstance().getCastleById(GiranCastle);
@@ -111,7 +111,7 @@ public class Q00710_PathToBecomingALordGiran extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -120,7 +120,7 @@ public class Q00710_PathToBecomingALordGiran extends Quest
 		{
 			return "Castle has no lord";
 		}
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		switch (npc.getId())
 		{
 			case Saul:
@@ -224,7 +224,7 @@ public class Q00710_PathToBecomingALordGiran extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public final String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		final QuestState qs = killer.getQuestState(getName());
 		

@@ -25,23 +25,22 @@ import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSelect;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSelect;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelected;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
 
 /**
- * This class ...
  * @version $Revision: 1.5.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
 public class CharacterSelect implements IClientIncomingPacket
@@ -61,7 +60,7 @@ public class CharacterSelect implements IClientIncomingPacket
 	private int _unk4; // new in C4
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_charSlot = packet.readD();
 		_unk1 = packet.readH();
@@ -72,7 +71,7 @@ public class CharacterSelect implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
 		{
@@ -87,13 +86,13 @@ public class CharacterSelect implements IClientIncomingPacket
 		
 		// We should always be able to acquire the lock
 		// But if we can't lock then nothing should be done (i.e. repeated packet)
-		if (client.getActiveCharLock().tryLock())
+		if (client.getPlayerLock().tryLock())
 		{
 			try
 			{
 				// should always be null
 				// but if not then this is repeated packet and nothing should be done here
-				if (client.getActiveChar() == null)
+				if (client.getPlayer() == null)
 				{
 					final CharSelectInfoPackage info = client.getCharSelection(_charSlot);
 					if (info == null)
@@ -126,7 +125,7 @@ public class CharacterSelect implements IClientIncomingPacket
 					
 					if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
 					{
-						if (info.isGood() && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+						if (info.isGood() && (World.getInstance().getAllGoodPlayers().size() >= (World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 						{
 							final NpcHtmlMessage msg = new NpcHtmlMessage();
 							msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
@@ -135,7 +134,7 @@ public class CharacterSelect implements IClientIncomingPacket
 							client.sendPacket(msg);
 							return;
 						}
-						if (info.isEvil() && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+						if (info.isEvil() && (World.getInstance().getAllEvilPlayers().size() >= (World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 						{
 							final NpcHtmlMessage msg = new NpcHtmlMessage();
 							msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
@@ -147,16 +146,16 @@ public class CharacterSelect implements IClientIncomingPacket
 					}
 					
 					// load up character from disk
-					final L2PcInstance cha = client.load(_charSlot);
+					final PlayerInstance cha = client.load(_charSlot);
 					if (cha == null)
 					{
-						return; // handled in L2GameClient
+						return; // handled in GameClient
 					}
 					
 					CharNameTable.getInstance().addName(cha);
 					
 					cha.setClient(client);
-					client.setActiveChar(cha);
+					client.setPlayer(cha);
 					cha.setOnlineStatus(true, true);
 					
 					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
@@ -172,7 +171,7 @@ public class CharacterSelect implements IClientIncomingPacket
 			}
 			finally
 			{
-				client.getActiveCharLock().unlock();
+				client.getPlayerLock().unlock();
 			}
 			
 			LOGGER_ACCOUNTING.info("Logged in, " + client);

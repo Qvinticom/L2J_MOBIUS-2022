@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -48,7 +48,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		trackAeoreLimit(effector, effected, skill, LIMIT_OF_AEORE); // Tracking Aeore Limit Debuff
 		trackSigelLimit(effector, effected, skill, LIMIT_OF_SIGEL); // Tracking Sigel Limit Debuff
@@ -56,7 +56,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if ((skill.getId() == BATTLE_RAPSODY) || (skill.getId() == OVERLORDS_DIGNITY))
 		{
@@ -72,7 +72,7 @@ public class TrackLimitedSkill extends AbstractEffect
 		}
 	}
 	
-	private void trackAeoreLimit(L2Character effector, L2Character effected, Skill skill, int limitSkillId)
+	private void trackAeoreLimit(Creature effector, Creature effected, Skill skill, int limitSkillId)
 	{
 		limitAeoreLevel = 0;
 		CharEffectList effectList = effected.getEffectList();
@@ -95,7 +95,7 @@ public class TrackLimitedSkill extends AbstractEffect
 		}
 	}
 	
-	private void trackSigelLimit(L2Character effector, L2Character effected, Skill skill, int limitSkillId)
+	private void trackSigelLimit(Creature effector, Creature effected, Skill skill, int limitSkillId)
 	{
 		limitSigelLevel = 0;
 		CharEffectList effectList = effected.getEffectList();
@@ -118,7 +118,7 @@ public class TrackLimitedSkill extends AbstractEffect
 		}
 	}
 	
-	private void trackIssLimit(L2Character effector, L2Character effected, Skill skill, int limitSkillId)
+	private void trackIssLimit(Creature effector, Creature effected, Skill skill, int limitSkillId)
 	{
 		limitIssLevel = 0;
 		CharEffectList effectList = effected.getEffectList();
@@ -140,7 +140,7 @@ public class TrackLimitedSkill extends AbstractEffect
 		}
 	}
 	
-	private void increaseLimit(L2Character effector, L2Character effected, Skill skill, int limitLevel)
+	private void increaseLimit(Creature effector, Creature effected, Skill skill, int limitLevel)
 	{
 		if (limitLevel < 3)
 		{

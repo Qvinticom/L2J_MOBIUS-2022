@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.position;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 public class Location
 {
@@ -41,14 +41,14 @@ public class Location
 		_heading = heading;
 	}
 	
-	public Location(L2Object obj)
+	public Location(WorldObject obj)
 	{
 		_x = obj.getX();
 		_y = obj.getY();
 		_z = obj.getZ();
 	}
 	
-	public Location(L2Character obj)
+	public Location(Creature obj)
 	{
 		_x = obj.getX();
 		_y = obj.getY();

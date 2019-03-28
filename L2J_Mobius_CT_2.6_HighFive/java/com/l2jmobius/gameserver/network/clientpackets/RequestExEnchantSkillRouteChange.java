@@ -24,13 +24,13 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
-import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import com.l2jmobius.gameserver.model.EnchantSkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
@@ -51,7 +51,7 @@ public final class RequestExEnchantSkillRouteChange implements IClientIncomingPa
 	private int _skillLvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
 		_skillLvl = packet.readD();
@@ -59,14 +59,14 @@ public final class RequestExEnchantSkillRouteChange implements IClientIncomingPa
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -98,7 +98,7 @@ public final class RequestExEnchantSkillRouteChange implements IClientIncomingPa
 		
 		final int reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
 		
-		final L2EnchantSkillLearn s = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
+		final EnchantSkillLearn s = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 		if (s == null)
 		{
 			return;
@@ -125,7 +125,7 @@ public final class RequestExEnchantSkillRouteChange implements IClientIncomingPa
 		if (player.getSp() >= requiredSp)
 		{
 			// only first lvl requires book
-			final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+			final ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 			if (Config.ES_SP_BOOK_NEEDED)
 			{
 				if (spb == null)// Haven't spellbook

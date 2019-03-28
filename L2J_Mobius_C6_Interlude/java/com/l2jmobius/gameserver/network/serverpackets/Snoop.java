@@ -16,20 +16,20 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * CDSDDSS -> (0xd5)(objId)(name)(0x00)(type)(speaker)(name)
  */
 
-public class Snoop extends L2GameServerPacket
+public class Snoop extends GameServerPacket
 {
-	private final L2PcInstance _snooped;
+	private final PlayerInstance _snooped;
 	private final int _type;
 	private final String _speaker;
 	private final String _msg;
 	
-	public Snoop(L2PcInstance snooped, int type, String speaker, String msg)
+	public Snoop(PlayerInstance snooped, int type, String speaker, String msg)
 	{
 		_snooped = snooped;
 		_type = type;

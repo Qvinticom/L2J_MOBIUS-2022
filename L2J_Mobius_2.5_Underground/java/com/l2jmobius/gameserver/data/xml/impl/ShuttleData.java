@@ -31,11 +31,11 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleData;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleEngine;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleStop;
+import com.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import com.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
+import com.l2jmobius.gameserver.model.shuttle.ShuttleDataHolder;
+import com.l2jmobius.gameserver.model.shuttle.ShuttleEngine;
+import com.l2jmobius.gameserver.model.shuttle.ShuttleStop;
 
 /**
  * @author UnAfraid
@@ -44,8 +44,8 @@ public final class ShuttleData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ShuttleData.class.getName());
 	
-	private final Map<Integer, L2ShuttleData> _shuttles = new HashMap<>();
-	private final Map<Integer, L2ShuttleInstance> _shuttleInstances = new HashMap<>();
+	private final Map<Integer, ShuttleDataHolder> _shuttles = new HashMap<>();
+	private final Map<Integer, ShuttleInstance> _shuttleInstances = new HashMap<>();
 	
 	protected ShuttleData()
 	{
@@ -57,7 +57,7 @@ public final class ShuttleData implements IGameXmlReader
 	{
 		if (!_shuttleInstances.isEmpty())
 		{
-			for (L2ShuttleInstance shuttle : _shuttleInstances.values())
+			for (ShuttleInstance shuttle : _shuttleInstances.values())
 			{
 				shuttle.deleteMe();
 			}
@@ -74,7 +74,7 @@ public final class ShuttleData implements IGameXmlReader
 		NamedNodeMap attrs;
 		StatsSet set;
 		Node att;
-		L2ShuttleData data;
+		ShuttleDataHolder data;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -90,7 +90,7 @@ public final class ShuttleData implements IGameXmlReader
 							att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
-						data = new L2ShuttleData(set);
+						data = new ShuttleDataHolder(set);
 						for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 						{
 							if ("doors".equalsIgnoreCase(b.getNodeName()))
@@ -111,7 +111,7 @@ public final class ShuttleData implements IGameXmlReader
 									if ("stop".equalsIgnoreCase(a.getNodeName()))
 									{
 										attrs = a.getAttributes();
-										final L2ShuttleStop stop = new L2ShuttleStop(parseInteger(attrs, "id"));
+										final ShuttleStop stop = new ShuttleStop(parseInteger(attrs, "id"));
 										
 										for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling())
 										{
@@ -162,24 +162,24 @@ public final class ShuttleData implements IGameXmlReader
 	
 	private void init()
 	{
-		for (L2ShuttleData data : _shuttles.values())
+		for (ShuttleDataHolder data : _shuttles.values())
 		{
-			final L2ShuttleInstance shuttle = new L2ShuttleInstance(new L2CharTemplate(new StatsSet()));
+			final ShuttleInstance shuttle = new ShuttleInstance(new CreatureTemplate(new StatsSet()));
 			shuttle.setData(data);
 			shuttle.setHeading(data.getLocation().getHeading());
 			shuttle.setLocationInvisible(data.getLocation());
 			shuttle.spawnMe();
 			shuttle.getStat().setMoveSpeed(300);
 			shuttle.getStat().setRotationSpeed(0);
-			shuttle.registerEngine(new L2ShuttleEngine(data, shuttle));
+			shuttle.registerEngine(new ShuttleEngine(data, shuttle));
 			shuttle.runEngine(1000);
 			_shuttleInstances.put(shuttle.getObjectId(), shuttle);
 		}
 	}
 	
-	public L2ShuttleInstance getShuttle(int id)
+	public ShuttleInstance getShuttle(int id)
 	{
-		for (L2ShuttleInstance shuttle : _shuttleInstances.values())
+		for (ShuttleInstance shuttle : _shuttleInstances.values())
 		{
 			if ((shuttle.getObjectId() == id) || (shuttle.getId() == id))
 			{

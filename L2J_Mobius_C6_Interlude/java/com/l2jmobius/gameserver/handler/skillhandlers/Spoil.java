@@ -18,12 +18,12 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
@@ -39,9 +39,9 @@ public class Spoil implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -51,40 +51,40 @@ public class Spoil implements ISkillHandler
 			return;
 		}
 		
-		for (L2Object target1 : targets)
+		for (WorldObject target1 : targets)
 		{
-			if (!(target1 instanceof L2MonsterInstance))
+			if (!(target1 instanceof MonsterInstance))
 			{
 				continue;
 			}
 			
-			L2MonsterInstance target = (L2MonsterInstance) target1;
+			MonsterInstance target = (MonsterInstance) target1;
 			
 			if (target.isSpoil())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.ALREDAY_SPOILED));
+				creature.sendPacket(new SystemMessage(SystemMessageId.ALREDAY_SPOILED));
 				continue;
 			}
 			
 			boolean spoil = false;
 			if (!target.isDead())
 			{
-				spoil = Formulas.calcMagicSuccess(activeChar, (L2Character) target1, skill);
+				spoil = Formulas.calcMagicSuccess(creature, (Creature) target1, skill);
 				
 				if (spoil)
 				{
 					target.setSpoil(true);
-					target.setIsSpoiledBy(activeChar.getObjectId());
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.SPOIL_SUCCESS));
+					target.setIsSpoiledBy(creature.getObjectId());
+					creature.sendPacket(new SystemMessage(SystemMessageId.SPOIL_SUCCESS));
 				}
 				else
 				{
 					SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 					sm.addString(target.getName());
 					sm.addSkillName(skill.getDisplayId());
-					activeChar.sendPacket(sm);
+					creature.sendPacket(sm);
 				}
-				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
+				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, creature);
 			}
 		}
 	}

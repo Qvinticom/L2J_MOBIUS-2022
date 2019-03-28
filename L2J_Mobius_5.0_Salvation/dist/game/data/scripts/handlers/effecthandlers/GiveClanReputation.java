@@ -16,11 +16,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -45,7 +45,7 @@ public final class GiveClanReputation extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead() || (effector.getActingPlayer().getClan() == null))
 		{
@@ -54,7 +54,7 @@ public final class GiveClanReputation extends AbstractEffect
 		
 		effector.getActingPlayer().getClan().addReputationScore(_reputation, true);
 		
-		for (L2ClanMember member : effector.getActingPlayer().getClan().getMembers())
+		for (ClanMember member : effector.getActingPlayer().getClan().getMembers())
 		{
 			if (member.isOnline())
 			{

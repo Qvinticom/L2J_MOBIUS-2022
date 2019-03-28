@@ -22,11 +22,11 @@ import java.util.function.Predicate;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.html.PageBuilder;
 import com.l2jmobius.gameserver.model.html.PageResult;
 import com.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
@@ -53,7 +53,7 @@ public class AdminScan implements IAdminCommandHandler
 	private static final int DEFAULT_RADIUS = 1000;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -81,8 +81,8 @@ public class AdminScan implements IAdminCommandHandler
 						BuilderUtil.sendSysMessage(activeChar, "objectId is not set!");
 					}
 					
-					final L2Object target = L2World.getInstance().findObject(objectId);
-					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+					final WorldObject target = World.getInstance().findObject(objectId);
+					final Npc npc = target instanceof Npc ? (Npc) target : null;
 					if (npc == null)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "NPC does not exist or object_id does not belong to an NPC");
@@ -91,7 +91,7 @@ public class AdminScan implements IAdminCommandHandler
 					
 					npc.deleteMe();
 					
-					final L2Spawn spawn = npc.getSpawn();
+					final Spawn spawn = npc.getSpawn();
 					if (spawn != null)
 					{
 						spawn.stopRespawn();
@@ -121,14 +121,14 @@ public class AdminScan implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void processBypass(L2PcInstance activeChar, BypassParser parser)
+	private void processBypass(PlayerInstance activeChar, BypassParser parser)
 	{
 		final int id = parser.getInt("id", 0);
 		final String name = parser.getString("name", null);
 		final int radius = parser.getInt("radius", parser.getInt("range", DEFAULT_RADIUS));
 		final int page = parser.getInt("page", 0);
 		
-		final Predicate<L2Npc> condition;
+		final Predicate<Npc> condition;
 		if (id > 0)
 		{
 			condition = npc -> npc.getId() == id;
@@ -168,14 +168,14 @@ public class AdminScan implements IAdminCommandHandler
 		return builder;
 	}
 	
-	private void sendNpcList(L2PcInstance activeChar, int radius, int page, Predicate<L2Npc> condition, BypassParser parser)
+	private void sendNpcList(PlayerInstance activeChar, int radius, int page, Predicate<Npc> condition, BypassParser parser)
 	{
 		final BypassBuilder bypassParser = createBypassBuilder(parser, "bypass -h admin_scan");
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/scan.htm");
 		
 		//@formatter:off
-		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, radius, condition), 15, bypassParser.toString())
+		final PageResult result = PageBuilder.newBuilder(World.getInstance().getVisibleObjectsInRange(activeChar, Npc.class, radius, condition), 15, bypassParser.toString())
 			.currentPage(page)
 			.pageHandler(NextPrevPageHandler.INSTANCE)
 			.formatter(BypassParserFormatter.INSTANCE)

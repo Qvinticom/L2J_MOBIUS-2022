@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.EnchantSkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
 
 /**
@@ -34,7 +34,7 @@ public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPac
 	private int _skillLvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_type = packet.readD();
 		_skillId = packet.readD();
@@ -43,16 +43,16 @@ public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPac
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -72,7 +72,7 @@ public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPac
 			reqSkillLvl = _skillLvl; // change route
 		}
 		
-		final int playerSkillLvl = activeChar.getSkillLevel(_skillId);
+		final int playerSkillLvl = player.getSkillLevel(_skillId);
 		
 		// dont have such skill
 		if (playerSkillLvl == 0)
@@ -83,7 +83,7 @@ public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPac
 		// if reqlvl is 100,200,.. check base skill lvl enchant
 		if ((reqSkillLvl % 100) == 0)
 		{
-			final L2EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
+			final EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 			if (esl != null)
 			{
 				// if player dont have min level to enchant
@@ -108,7 +108,7 @@ public final class RequestExEnchantSkillInfoDetail implements IClientIncomingPac
 		}
 		
 		// send skill enchantment detail
-		final ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, activeChar);
-		activeChar.sendPacket(esd);
+		final ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, player);
+		player.sendPacket(esd);
 	}
 }

@@ -25,7 +25,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
+import com.l2jmobius.gameserver.model.ArmorSet;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
  */
 public final class ArmorSetsData implements IGameXmlReader
 {
-	private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
+	private final Map<Integer, ArmorSet> _armorSets = new HashMap<>();
 	
 	/**
 	 * Instantiates a new armor sets data.
@@ -63,7 +63,7 @@ public final class ArmorSetsData implements IGameXmlReader
 				{
 					if ("set".equalsIgnoreCase(d.getNodeName()))
 					{
-						final L2ArmorSet set = new L2ArmorSet();
+						final ArmorSet set = new ArmorSet();
 						for (Node a = d.getFirstChild(); a != null; a = a.getNextSibling())
 						{
 							final NamedNodeMap attrs = a.getAttributes();
@@ -174,7 +174,7 @@ public final class ArmorSetsData implements IGameXmlReader
 	 * @param chestId the chest Id identifying the armor set.
 	 * @return the armor set associated to the give chest Id.
 	 */
-	public L2ArmorSet getSet(int chestId)
+	public ArmorSet getSet(int chestId)
 	{
 		return _armorSets.get(chestId);
 	}

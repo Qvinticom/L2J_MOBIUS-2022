@@ -17,17 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeShowInfoUpdate extends L2GameServerPacket
+public class PledgeShowInfoUpdate extends GameServerPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
-	public PledgeShowInfoUpdate(L2Clan clan)
+	public PledgeShowInfoUpdate(Clan clan)
 	{
 		_clan = clan;
 	}

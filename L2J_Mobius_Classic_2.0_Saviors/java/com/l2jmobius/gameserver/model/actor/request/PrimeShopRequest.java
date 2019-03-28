@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.model.actor.request;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author UnAfraid
  */
 public class PrimeShopRequest extends AbstractRequest
 {
-	public PrimeShopRequest(L2PcInstance activeChar)
+	public PrimeShopRequest(PlayerInstance player)
 	{
-		super(activeChar);
+		super(player);
 	}
 	
 	@Override

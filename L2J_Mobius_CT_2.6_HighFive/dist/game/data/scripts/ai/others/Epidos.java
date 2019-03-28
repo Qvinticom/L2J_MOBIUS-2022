@@ -21,9 +21,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.MinionList;
 
 import ai.AbstractNpcAI;
@@ -66,7 +66,7 @@ public final class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("check_minions"))
 		{
@@ -74,7 +74,7 @@ public final class Epidos extends AbstractNpcAI
 			{
 				final int hpDecreasePercent = (int) (((_lastHp.get(npc.getObjectId()) - npc.getCurrentHp()) * 100) / npc.getMaxHp());
 				int minionsCount = 0;
-				final int spawnedMinions = ((L2MonsterInstance) npc).getMinionList().countSpawnedMinions();
+				final int spawnedMinions = ((MonsterInstance) npc).getMinionList().countSpawnedMinions();
 				
 				if ((hpDecreasePercent > 5) && (hpDecreasePercent <= 15) && (spawnedMinions <= 9))
 				{
@@ -91,7 +91,7 @@ public final class Epidos extends AbstractNpcAI
 				
 				for (int i = 0; i < minionsCount; i++)
 				{
-					MinionList.spawnMinion((L2MonsterInstance) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getId())]);
+					MinionList.spawnMinion((MonsterInstance) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getId())]);
 				}
 				
 				_lastHp.put(npc.getObjectId(), npc.getCurrentHp());
@@ -114,7 +114,7 @@ public final class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.isInsideRadius3D(-45474, 247450, -13994, 2000))
 		{
@@ -126,7 +126,7 @@ public final class Epidos extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		startQuestTimer("check_minions", 10000, npc, null);
 		startQuestTimer("check_idle", 600000, npc, null);

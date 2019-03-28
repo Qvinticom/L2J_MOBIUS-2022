@@ -21,13 +21,13 @@ import java.util.TreeMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
  * @author dishkols
  * @param <T>
  */
-public class WorldObjectTree<T extends L2Object>extends L2ObjectMap<T>
+public class WorldObjectTree<T extends WorldObject>extends L2ObjectMap<T>
 {
 	private final TreeMap<Integer, T> _objectMap = new TreeMap<>();
 	private final ReentrantReadWriteLock _rwl = new ReentrantReadWriteLock();

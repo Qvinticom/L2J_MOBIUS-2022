@@ -18,9 +18,9 @@ package ai.areas.Rune.AltarOfSacrifice;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -37,9 +37,9 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	private static final int JENNAS_GUARD = 33887;
 	private static final int GIGGLE = 33812;
 	
-	private static L2Npc _immerial;
-	private static L2Npc _jenas_guard;
-	private static L2Npc _giggle;
+	private static Npc _immerial;
+	private static Npc _jenas_guard;
+	private static Npc _giggle;
 	
 	private AltarOfSacrifice()
 	{
@@ -48,7 +48,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("msg_text"))
 		{
@@ -73,7 +73,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if ((creature != null) && creature.isPlayer() && _jenas_guard.isScriptValue(0))
 		{
@@ -84,7 +84,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -107,7 +107,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	private void sendMessage(L2Npc npc, NpcStringId npcString, int delay)
+	private void sendMessage(Npc npc, NpcStringId npcString, int delay)
 	{
 		ThreadPool.schedule(() ->
 		{

@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: ch Sddddddddd.
  * @author KenM
  */
-public class ExDuelUpdateUserInfo extends L2GameServerPacket
+public class ExDuelUpdateUserInfo extends GameServerPacket
 {
 	/** The _active char. */
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
 	/**
 	 * Instantiates a new ex duel update user info.
-	 * @param cha the cha
+	 * @param player the cha
 	 */
-	public ExDuelUpdateUserInfo(L2PcInstance cha)
+	public ExDuelUpdateUserInfo(PlayerInstance player)
 	{
-		_activeChar = cha;
+		_player = player;
 	}
 	
 	@Override
@@ -41,15 +41,15 @@ public class ExDuelUpdateUserInfo extends L2GameServerPacket
 	{
 		writeC(0xfe);
 		writeH(0x4f);
-		writeS(_activeChar.getName());
-		writeD(_activeChar.getObjectId());
-		writeD(_activeChar.getClassId().getId());
-		writeD(_activeChar.getLevel());
-		writeD((int) _activeChar.getCurrentHp());
-		writeD(_activeChar.getMaxHp());
-		writeD((int) _activeChar.getCurrentMp());
-		writeD(_activeChar.getMaxMp());
-		writeD((int) _activeChar.getCurrentCp());
-		writeD(_activeChar.getMaxCp());
+		writeS(_player.getName());
+		writeD(_player.getObjectId());
+		writeD(_player.getClassId().getId());
+		writeD(_player.getLevel());
+		writeD((int) _player.getCurrentHp());
+		writeD(_player.getMaxHp());
+		writeD((int) _player.getCurrentMp());
+		writeD(_player.getMaxMp());
+		writeD((int) _player.getCurrentCp());
+		writeD(_player.getMaxCp());
 	}
 }

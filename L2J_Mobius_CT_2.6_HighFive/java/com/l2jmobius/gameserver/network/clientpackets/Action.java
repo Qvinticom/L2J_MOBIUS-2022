@@ -18,14 +18,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -41,7 +41,7 @@ public final class Action implements IClientIncomingPacket
 	private int _actionId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD(); // Target object Identifier
 		_originX = packet.readD();
@@ -52,48 +52,48 @@ public final class Action implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		// Get the current PlayerInstance of the player
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			activeChar.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+			player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final BuffInfo info = activeChar.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+		final BuffInfo info = player.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
 		if (info != null)
 		{
 			for (AbstractEffect effect : info.getEffects())
 			{
 				if (!effect.checkCondition(-4))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 		}
 		
-		final L2Object obj;
-		if (activeChar.getTargetId() == _objectId)
+		final WorldObject obj;
+		if (player.getTargetId() == _objectId)
 		{
-			obj = activeChar.getTarget();
+			obj = player.getTarget();
 		}
-		else if (activeChar.isInAirShip() && (activeChar.getAirShip().getHelmObjectId() == _objectId))
+		else if (player.isInAirShip() && (player.getAirShip().getHelmObjectId() == _objectId))
 		{
-			obj = activeChar.getAirShip();
+			obj = player.getAirShip();
 		}
 		else
 		{
-			obj = L2World.getInstance().findObject(_objectId);
+			obj = World.getInstance().findObject(_objectId);
 		}
 		
 		// If object requested does not exist, add warn msg into logs
@@ -104,28 +104,28 @@ public final class Action implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!obj.isTargetable() && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL))
+		if (!obj.isTargetable() && !player.canOverrideCond(PlayerCondOverride.TARGET_ALL))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't interact with objects in the other instances, except from multiverse
-		if ((obj.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		if ((obj.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly interact with invisible characters
-		if (!obj.isVisibleFor(activeChar))
+		if (!obj.isVisibleFor(player))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Check if the target is valid, if the player haven't a shop or isn't the requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...)
-		if (activeChar.getActiveRequester() != null)
+		if (player.getActiveRequester() != null)
 		{
 			// Actions prohibited when in trade
 			client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -136,25 +136,25 @@ public final class Action implements IClientIncomingPacket
 		{
 			case 0:
 			{
-				obj.onAction(activeChar);
+				obj.onAction(player);
 				break;
 			}
 			case 1:
 			{
-				if (!activeChar.isGM() && (!(obj.isNpc() && Config.ALT_GAME_VIEWNPC) || obj.isFakePlayer()))
+				if (!player.isGM() && (!(obj.isNpc() && Config.ALT_GAME_VIEWNPC) || obj.isFakePlayer()))
 				{
-					obj.onAction(activeChar, false);
+					obj.onAction(player, false);
 				}
 				else
 				{
-					obj.onActionShift(activeChar);
+					obj.onActionShift(player);
 				}
 				break;
 			}
 			default:
 			{
 				// Invalid action detected (probably client cheating), log this
-				LOGGER.warning("[C] Action: Character: " + activeChar.getName() + " requested invalid action: " + _actionId);
+				LOGGER.warning("[C] Action: Character: " + player.getName() + " requested invalid action: " + _actionId);
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}

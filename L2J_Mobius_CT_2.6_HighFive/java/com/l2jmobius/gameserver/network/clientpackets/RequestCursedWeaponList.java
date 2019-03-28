@@ -21,8 +21,8 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponList;
 
 /**
@@ -32,16 +32,16 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponList;
 public class RequestCursedWeaponList implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2Character activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -53,6 +53,6 @@ public class RequestCursedWeaponList implements IClientIncomingPacket
 			list.add(id);
 		}
 		
-		activeChar.sendPacket(new ExCursedWeaponList(list));
+		player.sendPacket(new ExCursedWeaponList(list));
 	}
 }

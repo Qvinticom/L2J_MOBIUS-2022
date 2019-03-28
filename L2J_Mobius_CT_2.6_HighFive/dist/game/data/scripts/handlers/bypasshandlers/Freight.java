@@ -17,10 +17,10 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcFreight;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import com.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
@@ -37,7 +37,7 @@ public class Freight implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -46,36 +46,36 @@ public class Freight implements IBypassHandler
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			final PcFreight freight = activeChar.getFreight();
+			final PlayerFreight freight = player.getFreight();
 			if (freight != null)
 			{
 				if (freight.getSize() > 0)
 				{
-					activeChar.setActiveWarehouse(freight);
-					for (L2ItemInstance i : activeChar.getActiveWarehouse().getItems())
+					player.setActiveWarehouse(freight);
+					for (ItemInstance i : player.getActiveWarehouse().getItems())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{
-							activeChar.getActiveWarehouse().destroyItem("L2ItemInstance", i, activeChar, null);
+							player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
 						}
 					}
-					activeChar.sendPacket(new WareHouseWithdrawalList(activeChar, WareHouseWithdrawalList.FREIGHT));
+					player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.FREIGHT));
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
+					player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 				}
 			}
 		}
 		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			if (activeChar.getAccountChars().size() < 1)
+			if (player.getAccountChars().size() < 1)
 			{
-				activeChar.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
+				player.sendPacket(SystemMessageId.THAT_CHARACTER_DOES_NOT_EXIST);
 			}
 			else
 			{
-				activeChar.sendPacket(new PackageToList(activeChar.getAccountChars()));
+				player.sendPacket(new PackageToList(player.getAccountChars()));
 			}
 		}
 		return false;

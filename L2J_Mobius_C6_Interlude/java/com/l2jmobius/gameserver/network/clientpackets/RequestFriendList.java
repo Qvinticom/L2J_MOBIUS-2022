@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.CharNameTable;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestFriendList extends L2GameClientPacket
+public final class RequestFriendList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -33,17 +33,17 @@ public final class RequestFriendList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
 		// ======<Friend List>======
-		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_HEAD);
+		player.sendPacket(SystemMessageId.FRIEND_LIST_HEAD);
 		
-		for (int id : activeChar.getFriendList())
+		for (int id : player.getFriendList())
 		{
 			final String friendName = CharNameTable.getInstance().getPlayerName(id);
 			if (friendName == null)
@@ -51,12 +51,12 @@ public final class RequestFriendList extends L2GameClientPacket
 				continue;
 			}
 			
-			final L2PcInstance friend = L2World.getInstance().getPlayer(id);
+			final PlayerInstance friend = World.getInstance().getPlayer(id);
 			
-			activeChar.sendPacket(SystemMessage.getSystemMessage(((friend == null) || (friend.isOnline() == 0)) ? SystemMessageId.S1_OFFLINE : SystemMessageId.S1_ONLINE).addString(friendName));
+			player.sendPacket(SystemMessage.getSystemMessage(((friend == null) || (friend.isOnline() == 0)) ? SystemMessageId.S1_OFFLINE : SystemMessageId.S1_ONLINE).addString(friendName));
 		}
 		
 		// =========================
-		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
+		player.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
 	}
 }

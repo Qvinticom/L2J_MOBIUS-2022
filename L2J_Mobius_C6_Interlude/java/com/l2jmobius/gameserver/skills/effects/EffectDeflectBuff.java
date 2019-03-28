@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.skills.Env;
 /**
  * @author Java
  */
-public final class EffectDeflectBuff extends L2Effect
+public final class EffectDeflectBuff extends Effect
 {
 	public EffectDeflectBuff(Env env, EffectTemplate template)
 	{

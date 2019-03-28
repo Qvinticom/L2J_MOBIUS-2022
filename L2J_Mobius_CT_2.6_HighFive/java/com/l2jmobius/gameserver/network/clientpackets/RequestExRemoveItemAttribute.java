@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Elementals;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -39,7 +39,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	}
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_element = (byte) packet.readD();
@@ -47,15 +47,15 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_objectId);
 		
 		if (targetItem == null)
 		{
@@ -67,18 +67,18 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.reduceAdena("RemoveElement", getPrice(targetItem), activeChar, true))
+		if (player.reduceAdena("RemoveElement", getPrice(targetItem), player, true))
 		{
 			if (targetItem.isEquipped())
 			{
-				targetItem.getElemental(_element).removeBonus(activeChar);
+				targetItem.getElemental(_element).removeBonus(player);
 			}
 			targetItem.clearElementAttr(_element);
-			activeChar.sendPacket(new UserInfo(activeChar));
+			player.sendPacket(new UserInfo(player));
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
-			activeChar.sendPacket(iu);
+			player.sendPacket(iu);
 			SystemMessage sm;
 			final byte realElement = targetItem.isArmor() ? Elementals.getOppositeElement(_element) : _element;
 			if (targetItem.getEnchantLevel() > 0)
@@ -116,22 +116,22 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 					sm.addElemental(Elementals.getOppositeElement(realElement));
 				}
 			}
-			activeChar.sendPacket(sm);
-			activeChar.sendPacket(new ExBaseAttributeCancelResult(targetItem.getObjectId(), _element));
+			player.sendPacket(sm);
+			player.sendPacket(new ExBaseAttributeCancelResult(targetItem.getObjectId(), _element));
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_TO_CANCEL_THIS_ATTRIBUTE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_TO_CANCEL_THIS_ATTRIBUTE);
 		}
 	}
 	
-	private long getPrice(L2ItemInstance item)
+	private long getPrice(ItemInstance item)
 	{
 		switch (item.getItem().getCrystalType())
 		{
 			case S:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 50000;
 				}
@@ -143,7 +143,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case S80:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 100000;
 				}
@@ -155,7 +155,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case S84:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 200000;
 				}

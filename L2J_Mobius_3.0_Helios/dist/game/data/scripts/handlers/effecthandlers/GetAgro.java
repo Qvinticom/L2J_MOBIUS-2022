@@ -19,14 +19,14 @@ package handlers.effecthandlers;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -40,9 +40,9 @@ public final class GetAgro extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.AGGRESSION;
+		return EffectType.AGGRESSION;
 	}
 	
 	@Override
@@ -52,18 +52,18 @@ public final class GetAgro extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if ((effected != null) && effected.isAttackable())
 		{
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 			
 			// Monsters from the same clan should assist.
-			final L2NpcTemplate template = ((L2Attackable) effected).getTemplate();
+			final NpcTemplate template = ((Attackable) effected).getTemplate();
 			final Set<Integer> clans = template.getClans();
 			if (clans != null)
 			{
-				for (L2Attackable nearby : L2World.getInstance().getVisibleObjectsInRange(effected, L2Attackable.class, template.getClanHelpRange()))
+				for (Attackable nearby : World.getInstance().getVisibleObjectsInRange(effected, Attackable.class, template.getClanHelpRange()))
 				{
 					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
 					{

@@ -19,8 +19,8 @@ package quests.Q00023_LidiasHeart;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -64,11 +64,11 @@ public final class Q00023_LidiasHeart extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ("DESPAWN".equals(event))
 		{
-			final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
+			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			if (npc0 != null)
 			{
 				npc0.getVariables().set("SPAWNED", false);
@@ -180,7 +180,7 @@ public final class Q00023_LidiasHeart extends Quest
 					if (!npc.getVariables().getBoolean("SPAWNED", false))
 					{
 						npc.getVariables().set("SPAWNED", true);
-						final L2Npc ghost = addSpawn(npc, GHOST_OF_VON_HELLMANN, GHOST_SPAWN, false, 0);
+						final Npc ghost = addSpawn(npc, GHOST_OF_VON_HELLMANN, GHOST_SPAWN, false, 0);
 						ghost.getVariables().set("npc0", npc);
 						htmltext = event;
 					}
@@ -283,7 +283,7 @@ public final class Q00023_LidiasHeart extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -499,7 +499,7 @@ public final class Q00023_LidiasHeart extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("DESPAWN", 300000, npc, null);
 		npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHO_AWOKE_ME));

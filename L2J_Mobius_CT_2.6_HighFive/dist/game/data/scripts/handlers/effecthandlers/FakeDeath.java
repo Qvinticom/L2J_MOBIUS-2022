@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
@@ -41,9 +41,9 @@ public final class FakeDeath extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.FAKE_DEATH;
+		return EffectType.FAKE_DEATH;
 	}
 	
 	@Override

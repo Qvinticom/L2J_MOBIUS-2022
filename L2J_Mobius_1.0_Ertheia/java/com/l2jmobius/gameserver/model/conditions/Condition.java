@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -104,17 +104,17 @@ public abstract class Condition implements ConditionListener
 		return _listener;
 	}
 	
-	public final boolean test(L2Character caster, L2Character target, Skill skill)
+	public final boolean test(Creature caster, Creature target, Skill skill)
 	{
 		return test(caster, target, skill, null);
 	}
 	
-	public final boolean test(L2Character caster, L2Character target, L2Item item)
+	public final boolean test(Creature caster, Creature target, Item item)
 	{
 		return test(caster, target, null, null);
 	}
 	
-	public final boolean test(L2Character caster, L2Character target, Skill skill, L2Item item)
+	public final boolean test(Creature caster, Creature target, Skill skill, Item item)
 	{
 		final boolean res = testImpl(caster, target, skill, item);
 		if ((_listener != null) && (res != _result))
@@ -133,7 +133,7 @@ public abstract class Condition implements ConditionListener
 	 * @param item the item
 	 * @return {@code true} if successful, {@code false} otherwise
 	 */
-	public abstract boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item);
+	public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, Item item);
 	
 	@Override
 	public void notifyChanged()

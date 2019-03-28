@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestReplyStartPledgeWar extends L2GameClientPacket
+public final class RequestReplyStartPledgeWar extends GameClientPacket
 {
 	private int _answer;
 	
@@ -35,13 +35,13 @@ public final class RequestReplyStartPledgeWar extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance requestor = activeChar.getActiveRequester();
+		final PlayerInstance requestor = player.getActiveRequester();
 		if (requestor == null)
 		{
 			return;
@@ -49,14 +49,14 @@ public final class RequestReplyStartPledgeWar extends L2GameClientPacket
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().storeClanWars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().storeClanWars(requestor.getClanId(), player.getClanId());
 		}
 		else
 		{
 			requestor.sendPacket(SystemMessageId.WAR_PROCLAMATION_HAS_BEEN_REFUSED);
 		}
 		
-		activeChar.setActiveRequester(null);
+		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
 	}
 }

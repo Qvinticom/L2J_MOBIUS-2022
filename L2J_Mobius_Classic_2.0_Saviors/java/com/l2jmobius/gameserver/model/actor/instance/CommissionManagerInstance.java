@@ -17,24 +17,24 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExShowCommission;
 
 /**
  * @author NosBit
  */
-public class CommissionManagerInstance extends L2Npc
+public class CommissionManagerInstance extends Npc
 {
-	public CommissionManagerInstance(L2NpcTemplate template)
+	public CommissionManagerInstance(NpcTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.CommissionManagerInstance);
 	}
 	
 	@Override
-	public boolean isAutoAttackable(L2Character attacker)
+	public boolean isAutoAttackable(Creature attacker)
 	{
 		if (attacker.isMonster())
 		{
@@ -45,7 +45,7 @@ public class CommissionManagerInstance extends L2Npc
 	}
 	
 	@Override
-	public void onBypassFeedback(L2PcInstance player, String command)
+	public void onBypassFeedback(PlayerInstance player, String command)
 	{
 		if (command.equalsIgnoreCase("show_commission"))
 		{

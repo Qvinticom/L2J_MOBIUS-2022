@@ -16,8 +16,8 @@
  */
 package ai.areas.OrbisTemple;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -51,7 +51,7 @@ public final class OrbisTempleStatues extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		switch (npc.getId())
 		{
@@ -86,7 +86,7 @@ public final class OrbisTempleStatues extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		if (npc.getId() < ANCIENT_HERO)

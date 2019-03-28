@@ -19,33 +19,33 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 import java.util.Iterator;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class SkillCoolTime extends L2GameServerPacket
+public class SkillCoolTime extends GameServerPacket
 {
 	@SuppressWarnings("rawtypes")
 	public Collection _reuseTimeStamps;
 	
-	public SkillCoolTime(L2PcInstance cha)
+	public SkillCoolTime(PlayerInstance player)
 	{
-		_reuseTimeStamps = cha.getReuseTimeStamps();
+		_reuseTimeStamps = player.getReuseTimeStamps();
 	}
 	
 	@SuppressWarnings("rawtypes")
 	@Override
 	protected final void writeImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		writeC(193);
 		writeD(_reuseTimeStamps.size());
-		L2PcInstance.TimeStamp ts;
+		PlayerInstance.TimeStamp ts;
 		for (Iterator i$ = _reuseTimeStamps.iterator(); i$.hasNext(); writeD((int) ts.getRemaining() / 1000))
 		{
-			ts = (L2PcInstance.TimeStamp) i$.next();
+			ts = (PlayerInstance.TimeStamp) i$.next();
 			writeD(ts.getSkill().getId());
 			writeD(0);
 			writeD((int) ts.getReuse() / 1000);

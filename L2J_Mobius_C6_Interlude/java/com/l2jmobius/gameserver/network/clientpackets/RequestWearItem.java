@@ -24,21 +24,21 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MercManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.StoreTradeList;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MercManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class RequestWearItem extends L2GameClientPacket
+public final class RequestWearItem extends GameClientPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(RequestWearItem.class.getName());
 	
@@ -57,7 +57,7 @@ public final class RequestWearItem extends L2GameClientPacket
 	private int[] _items;
 	
 	/** Player that request a Try on */
-	protected L2PcInstance _activeChar;
+	protected PlayerInstance _player;
 	
 	class RemoveWearItemsTask implements Runnable
 	{
@@ -66,7 +66,7 @@ public final class RequestWearItem extends L2GameClientPacket
 		{
 			try
 			{
-				_activeChar.destroyWearedItems("Wear", null, true);
+				_player.destroyWearedItems("Wear", null, true);
 			}
 			catch (Throwable e)
 			{
@@ -83,7 +83,7 @@ public final class RequestWearItem extends L2GameClientPacket
 	protected void readImpl()
 	{
 		// Read and Decrypt the RequestWearItem Client->Server Packet
-		_activeChar = getClient().getActiveChar();
+		_player = getClient().getPlayer();
 		_unknow = readD();
 		_listId = readD(); // List of ItemID to Wear
 		_count = readD(); // Number of Item to Wear
@@ -117,7 +117,7 @@ public final class RequestWearItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		// Get the current player and return if null
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -136,32 +136,32 @@ public final class RequestWearItem extends L2GameClientPacket
 		}
 		
 		// Check current target of the player and the INTERACTION_DISTANCE
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null // No target (ie GM Shop)
-		) || (!(target instanceof L2MerchantInstance) && !(target instanceof L2MercManagerInstance)) // Target not a merchant and not mercmanager
-			|| !player.isInsideRadius(target, L2NpcInstance.INTERACTION_DISTANCE, false, false)))
+		) || (!(target instanceof MerchantInstance) && !(target instanceof MercManagerInstance)) // Target not a merchant and not mercmanager
+			|| !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false)))
 		{
 			return; // Distance is too far
 		}
 		
-		L2TradeList list = null;
+		StoreTradeList list = null;
 		
 		// Get the current merchant targeted by the player
-		final L2MerchantInstance merchant = (target != null) && (target instanceof L2MerchantInstance) ? (L2MerchantInstance) target : null;
+		final MerchantInstance merchant = (target != null) && (target instanceof MerchantInstance) ? (MerchantInstance) target : null;
 		if (merchant == null)
 		{
 			LOGGER.warning("Null merchant!");
 			return;
 		}
 		
-		final List<L2TradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
+		final List<StoreTradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
 		if (lists == null)
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		for (L2TradeList tradeList : lists)
+		for (StoreTradeList tradeList : lists)
 		{
 			if (tradeList.getListId() == _listId)
 			{
@@ -201,7 +201,7 @@ public final class RequestWearItem extends L2GameClientPacket
 				return;
 			}
 			
-			final L2Item template = ItemTable.getInstance().getTemplate(itemId);
+			final Item template = ItemTable.getInstance().getTemplate(itemId);
 			weight += template.getWeight();
 			slots++;
 			
@@ -246,9 +246,9 @@ public final class RequestWearItem extends L2GameClientPacket
 				return;
 			}
 			
-			// If player doesn't own this item : Add this L2ItemInstance to Inventory and set properties lastchanged to ADDED and _wear to True
-			// If player already own this item : Return its L2ItemInstance (will not be destroy because property _wear set to False)
-			final L2ItemInstance item = player.getInventory().addWearItem("Wear", itemId, player, merchant);
+			// If player doesn't own this item : Add this ItemInstance to Inventory and set properties lastchanged to ADDED and _wear to True
+			// If player already own this item : Return its ItemInstance (will not be destroy because property _wear set to False)
+			final ItemInstance item = player.getInventory().addWearItem("Wear", itemId, player, merchant);
 			
 			// Equip player with this item (set its location)
 			player.getInventory().equipItemAndRecord(item);
@@ -266,7 +266,7 @@ public final class RequestWearItem extends L2GameClientPacket
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
 		
-		// Send a Server->Client packet UserInfo to this L2PcInstance and CharInfo to all L2PcInstance in its _KnownPlayers
+		// Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers
 		player.broadcastUserInfo();
 		
 		// All weared items should be removed in ALLOW_WEAR_DELAY sec.

@@ -20,21 +20,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class ItemList extends AbstractItemPacket
 {
 	private final int _sendType;
-	private final L2PcInstance _activeChar;
-	private final List<L2ItemInstance> _items;
+	private final PlayerInstance _player;
+	private final List<ItemInstance> _items;
 	
-	public ItemList(int sendType, L2PcInstance activeChar)
+	public ItemList(int sendType, PlayerInstance player)
 	{
 		_sendType = sendType;
-		_activeChar = activeChar;
-		_items = activeChar.getInventory().getItems(item -> !item.isQuestItem()).stream().collect(Collectors.toList());
+		_player = player;
+		_items = player.getInventory().getItems(item -> !item.isQuestItem()).stream().collect(Collectors.toList());
 	}
 	
 	@Override
@@ -46,7 +46,7 @@ public final class ItemList extends AbstractItemPacket
 			packet.writeC(_sendType);
 			packet.writeD(_items.size());
 			packet.writeD(_items.size());
-			for (L2ItemInstance item : _items)
+			for (ItemInstance item : _items)
 			{
 				writeItem(packet, item);
 			}
@@ -57,7 +57,7 @@ public final class ItemList extends AbstractItemPacket
 			packet.writeD(0x00);
 			packet.writeD(_items.size());
 		}
-		writeInventoryBlock(packet, _activeChar.getInventory());
+		writeInventoryBlock(packet, _player.getInventory());
 		return true;
 	}
 }

@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.3.3 $ $Date: 2009/05/12 19:06:39 $
  */
-public class LeaveWorld extends L2GameServerPacket
+public class LeaveWorld extends GameServerPacket
 {
 	public static final LeaveWorld STATIC_PACKET = new LeaveWorld();
 	

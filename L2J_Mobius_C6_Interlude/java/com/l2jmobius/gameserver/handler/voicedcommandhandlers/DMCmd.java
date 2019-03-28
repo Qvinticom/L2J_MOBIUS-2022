@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 
 public class DMCmd implements IVoicedCommandHandler
@@ -31,7 +31,7 @@ public class DMCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		if (command.startsWith("dmjoin"))
 		{
@@ -56,7 +56,7 @@ public class DMCmd implements IVoicedCommandHandler
 		return VOICED_COMMANDS;
 	}
 	
-	public boolean JoinDM(L2PcInstance activeChar)
+	public boolean JoinDM(PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -111,7 +111,7 @@ public class DMCmd implements IVoicedCommandHandler
 		}
 	}
 	
-	public boolean LeaveDM(L2PcInstance activeChar)
+	public boolean LeaveDM(PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -140,7 +140,7 @@ public class DMCmd implements IVoicedCommandHandler
 		}
 	}
 	
-	public boolean DMinfo(L2PcInstance activeChar)
+	public boolean DMinfo(PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{

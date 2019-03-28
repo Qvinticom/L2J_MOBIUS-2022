@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author JIV
@@ -30,21 +30,21 @@ public final class EndScenePlayer implements IClientIncomingPacket
 	private int _movieId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_movieId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (_movieId == 0))
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || (_movieId == 0))
 		{
 			return;
 		}
-		final MovieHolder movieHolder = activeChar.getMovieHolder();
+		final MovieHolder movieHolder = player.getMovieHolder();
 		if (movieHolder == null)
 		{
 			return;
@@ -54,10 +54,10 @@ public final class EndScenePlayer implements IClientIncomingPacket
 		{
 			return;
 		}
-		activeChar.stopMovie();
-		activeChar.setIsTeleporting(true, false); // avoid to get player removed from L2World
-		activeChar.decayMe();
-		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-		activeChar.setIsTeleporting(false, false);
+		player.stopMovie();
+		player.setIsTeleporting(true, false); // avoid to get player removed from World
+		player.decayMe();
+		player.spawnMe(player.getX(), player.getY(), player.getZ());
+		player.setIsTeleporting(false, false);
 	}
 }

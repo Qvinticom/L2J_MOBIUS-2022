@@ -19,15 +19,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Map.Entry;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopSellList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _buyer;
-	private final L2PcInstance _manufacturer;
+	private final PlayerInstance _buyer;
+	private final PlayerInstance _manufacturer;
 	
-	public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer)
+	public RecipeShopSellList(PlayerInstance buyer, PlayerInstance manufacturer)
 	{
 		_buyer = buyer;
 		_manufacturer = manufacturer;

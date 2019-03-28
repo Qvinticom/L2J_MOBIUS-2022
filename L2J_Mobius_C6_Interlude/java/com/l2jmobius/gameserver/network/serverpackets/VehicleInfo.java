@@ -16,19 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 
 /**
  * @author Maktakien
  */
-public class VehicleInfo extends L2GameServerPacket
+public class VehicleInfo extends GameServerPacket
 {
-	private final L2BoatInstance _boat;
+	private final BoatInstance _boat;
 	
 	/**
 	 * @param boat
 	 */
-	public VehicleInfo(L2BoatInstance boat)
+	public VehicleInfo(BoatInstance boat)
 	{
 		_boat = boat;
 	}

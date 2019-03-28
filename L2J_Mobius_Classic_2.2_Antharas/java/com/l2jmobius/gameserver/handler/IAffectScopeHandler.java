@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.handler;
 
 import java.util.function.Consumer;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
  */
 public interface IAffectScopeHandler
 {
-	void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action);
+	void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action);
 	
 	Enum<AffectScope> getAffectScopeType();
 }

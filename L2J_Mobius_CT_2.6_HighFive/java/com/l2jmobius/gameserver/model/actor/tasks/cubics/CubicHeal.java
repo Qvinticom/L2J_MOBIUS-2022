@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.model.actor.tasks.cubics;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -31,9 +31,9 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 public class CubicHeal implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicHeal.class.getName());
-	private final L2CubicInstance _cubic;
+	private final CubicInstance _cubic;
 	
-	public CubicHeal(L2CubicInstance cubic)
+	public CubicHeal(CubicInstance cubic)
 	{
 		_cubic = cubic;
 	}
@@ -57,14 +57,14 @@ public class CubicHeal implements Runnable
 		
 		try
 		{
-			final Skill skill = _cubic.getSkills().stream().filter(s -> s.getId() == L2CubicInstance.SKILL_CUBIC_HEAL).findFirst().orElse(null);
+			final Skill skill = _cubic.getSkills().stream().filter(s -> s.getId() == CubicInstance.SKILL_CUBIC_HEAL).findFirst().orElse(null);
 			if (skill == null)
 			{
 				return;
 			}
 			
 			_cubic.cubicTargetForHeal();
-			final L2Character target = _cubic.getTarget();
+			final Creature target = _cubic.getTarget();
 			if ((target != null) && !target.isDead())
 			{
 				if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())

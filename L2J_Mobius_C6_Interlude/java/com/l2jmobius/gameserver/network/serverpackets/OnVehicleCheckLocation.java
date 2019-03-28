@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 
 /**
  * @author Maktakien
  */
-public class OnVehicleCheckLocation extends L2GameServerPacket
+public class OnVehicleCheckLocation extends GameServerPacket
 {
-	private final L2BoatInstance _boat;
+	private final BoatInstance _boat;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -34,7 +34,7 @@ public class OnVehicleCheckLocation extends L2GameServerPacket
 	 * @param y
 	 * @param z
 	 */
-	public OnVehicleCheckLocation(L2BoatInstance instance, int x, int y, int z)
+	public OnVehicleCheckLocation(BoatInstance instance, int x, int y, int z)
 	{
 		_boat = instance;
 		_x = x;

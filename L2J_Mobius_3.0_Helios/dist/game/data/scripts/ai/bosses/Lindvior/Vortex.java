@@ -20,11 +20,11 @@ import java.util.Collection;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
@@ -48,13 +48,13 @@ public class Vortex extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
 			case "rnd_small":
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 250, attackers ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 250, attackers ->
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
@@ -76,7 +76,7 @@ public class Vortex extends AbstractNpcAI
 			}
 			case "rnd_big":
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 500, attackers ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 500, attackers ->
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
@@ -113,7 +113,7 @@ public class Vortex extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character player, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -128,11 +128,11 @@ public class Vortex extends AbstractNpcAI
 				break;
 			}
 		}
-		return super.onSeeCreature(npc, player, isSummon);
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -154,9 +154,9 @@ public class Vortex extends AbstractNpcAI
 		return super.onSpawn(npc);
 	}
 	
-	private void attackRandomTarget(L2Npc npc)
+	private void attackRandomTarget(Npc npc)
 	{
-		final Collection<L2PcInstance> players = L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class);
+		final Collection<PlayerInstance> players = World.getInstance().getVisibleObjects(npc, PlayerInstance.class);
 		{
 			if ((players == null) || players.isEmpty())
 			{

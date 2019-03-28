@@ -18,35 +18,34 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.3.2.6 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PrivateStoreListSell extends L2GameServerPacket
+public class PrivateStoreListSell extends GameServerPacket
 {
-	private final L2PcInstance _storePlayer;
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _storePlayer;
+	private final PlayerInstance _player;
 	private int _playerAdena;
 	private final boolean _packageSale;
 	private final TradeList.TradeItem[] _items;
 	
 	// player's private shop
-	public PrivateStoreListSell(L2PcInstance player, L2PcInstance storePlayer)
+	public PrivateStoreListSell(PlayerInstance player, PlayerInstance storePlayer)
 	{
-		_activeChar = player;
+		_player = player;
 		_storePlayer = storePlayer;
 		
 		if (Config.SELL_BY_ITEM)
 		{
 			final CreatureSay cs11 = new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"); // 8D
-			_activeChar.sendPacket(cs11);
-			_playerAdena = _activeChar.getItemCount(Config.SELL_ITEM, -1);
+			_player.sendPacket(cs11);
+			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);
 		}
 		else
 		{
-			_playerAdena = _activeChar.getAdena();
+			_playerAdena = _player.getAdena();
 		}
 		
 		_storePlayer.getSellList().updateItems();

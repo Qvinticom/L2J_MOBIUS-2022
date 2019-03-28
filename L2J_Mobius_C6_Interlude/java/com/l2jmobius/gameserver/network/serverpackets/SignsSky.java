@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
  * Changes the sky color depending on the outcome of the Seven Signs competition. packet type id 0xf8 format: c h
  * @author Tempy
  */
-public class SignsSky extends L2GameServerPacket
+public class SignsSky extends GameServerPacket
 {
 	private int _state = 0;
 	

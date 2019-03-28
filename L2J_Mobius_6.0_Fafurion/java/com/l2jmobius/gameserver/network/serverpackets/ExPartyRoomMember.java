@@ -24,7 +24,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.MatchingMemberType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.matching.PartyMatchingRoom;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -36,7 +36,7 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 	private final PartyMatchingRoom _room;
 	private final MatchingMemberType _type;
 	
-	public ExPartyRoomMember(L2PcInstance player, PartyMatchingRoom room)
+	public ExPartyRoomMember(PlayerInstance player, PartyMatchingRoom room)
 	{
 		_room = room;
 		_type = room.getMemberType(player);
@@ -49,7 +49,7 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_room.getMembersCount());
-		for (L2PcInstance member : _room.getMembers())
+		for (PlayerInstance member : _room.getMembers())
 		{
 			packet.writeD(member.getObjectId());
 			packet.writeS(member.getName());

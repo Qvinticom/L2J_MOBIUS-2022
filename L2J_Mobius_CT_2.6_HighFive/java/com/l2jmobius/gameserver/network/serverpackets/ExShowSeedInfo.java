@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.model.SeedProduction;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -61,7 +61,7 @@ public class ExShowSeedInfo implements IClientOutgoingPacket
 			packet.writeQ(seed.getAmount()); // Left to buy
 			packet.writeQ(seed.getStartAmount()); // Started amount
 			packet.writeQ(seed.getPrice()); // Sell Price
-			final L2Seed s = CastleManorManager.getInstance().getSeed(seed.getId());
+			final Seed s = CastleManorManager.getInstance().getSeed(seed.getId());
 			if (s == null)
 			{
 				packet.writeD(0); // Seed level

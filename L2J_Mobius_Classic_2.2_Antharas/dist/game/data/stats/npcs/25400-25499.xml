@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25400" level="34" type="L2Monster" name="Watchman's Servant" title="Raid Fighter">
+	<npc id="25400" level="34" type="Monster" name="Watchman's Servant" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" />
 			<skill name="SelfRangeBuff_a" id="4213" level="3" />
@@ -40,7 +40,7 @@
 			<height normal="20" grown="24" />
 		</collision>
 	</npc>
-	<npc id="25401" level="32" type="L2RaidBoss" name="Skyla" title="Raid Boss">
+	<npc id="25401" level="32" type="RaidBoss" name="Skyla" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25402" count="1" respawnTime="360" weightPoint="1" />
@@ -102,7 +102,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25402" level="31" type="L2Monster" name="Skyla's Confidant" title="Raid Fighter">
+	<npc id="25402" level="31" type="Monster" name="Skyla's Confidant" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" />
 		</parameters>
@@ -141,7 +141,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25403" level="31" type="L2Monster" name="Skyla's Follower" title="Raid Fighter">
+	<npc id="25403" level="31" type="Monster" name="Skyla's Follower" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" />
 			<skill name="Debuff_a" id="4204" level="3" />
@@ -182,7 +182,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25404" level="33" type="L2RaidBoss" name="Corsair Captain Kylon" title="Raid Boss">
+	<npc id="25404" level="33" type="RaidBoss" name="Corsair Captain Kylon" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25405" count="2" respawnTime="360" weightPoint="1" />
@@ -233,7 +233,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25405" level="32" type="L2Monster" name="Kylon's Pirate" title="Raid Fighter">
+	<npc id="25405" level="32" type="Monster" name="Kylon's Pirate" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" />
 		</parameters>
@@ -276,7 +276,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25406" level="32" type="L2Monster" name="Kylon's Mate" title="Raid Fighter">
+	<npc id="25406" level="32" type="Monster" name="Kylon's Mate" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="3" />
 		</parameters>
@@ -319,7 +319,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25407" level="60" type="L2RaidBoss" name="Lord Ishka" title="Raid Boss">
+	<npc id="25407" level="60" type="RaidBoss" name="Lord Ishka" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25408" count="1" respawnTime="360" weightPoint="1" />
@@ -410,7 +410,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25408" level="59" type="L2Monster" name="Ishka's Elite Officer" title="Raid Fighter">
+	<npc id="25408" level="59" type="Monster" name="Ishka's Elite Officer" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" />
 		</parameters>
@@ -453,7 +453,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25409" level="59" type="L2Monster" name="Ishka's Elite Soldier" title="Raid Fighter">
+	<npc id="25409" level="59" type="Monster" name="Ishka's Elite Soldier" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" />
 		</parameters>
@@ -496,7 +496,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="25410" level="40" type="L2RaidBoss" name="Road Scavenger Leader" title="Raid Boss">
+	<npc id="25410" level="40" type="RaidBoss" name="Road Scavenger Leader" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25411" count="3" respawnTime="360" weightPoint="1" />
@@ -557,7 +557,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25411" level="39" type="L2Monster" name="Road Scavenger Henchman" title="Raid Fighter">
+	<npc id="25411" level="39" type="Monster" name="Road Scavenger Henchman" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="3" />
 		</parameters>
@@ -595,7 +595,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25412" level="47" type="L2RaidBoss" name="Necrosentinel Royal Guard" title="Raid Boss">
+	<npc id="25412" level="47" type="RaidBoss" name="Necrosentinel Royal Guard" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25413" count="3" respawnTime="360" weightPoint="1" />
@@ -660,7 +660,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25413" level="46" type="L2Monster" name="Necrosentinel Archer" title="Raid Fighter">
+	<npc id="25413" level="46" type="Monster" name="Necrosentinel Archer" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
@@ -699,7 +699,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25414" level="46" type="L2Monster" name="Necrosentinel Soldier" title="Raid Fighter">
+	<npc id="25414" level="46" type="Monster" name="Necrosentinel Soldier" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
@@ -738,7 +738,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25415" level="40" type="L2RaidBoss" name="Nakondas" title="Raid Boss">
+	<npc id="25415" level="40" type="RaidBoss" name="Nakondas" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25416" count="3" respawnTime="360" weightPoint="1" />
@@ -802,7 +802,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25416" level="39" type="L2Monster" name="Nakondas' Slave" title="Raid Fighter">
+	<npc id="25416" level="39" type="Monster" name="Nakondas' Slave" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" />
 			<skill name="Debuff_a" id="4200" level="3" />
@@ -842,7 +842,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25417" level="39" type="L2Monster" name="Nakondas' Chain" title="Raid Fighter">
+	<npc id="25417" level="39" type="Monster" name="Nakondas' Chain" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" />
 			<skill name="SelfRangeBuff_a" id="4213" level="3" />
@@ -884,7 +884,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25418" level="57" type="L2RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
+	<npc id="25418" level="57" type="RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25419" count="3" respawnTime="360" weightPoint="1" />
@@ -953,7 +953,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25419" level="56" type="L2Monster" name="Dread Panther" title="Raid Fighter">
+	<npc id="25419" level="56" type="Monster" name="Dread Panther" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" />
 		</parameters>
@@ -991,7 +991,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="25420" level="58" type="L2RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
+	<npc id="25420" level="58" type="RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25421" count="3" respawnTime="360" weightPoint="1" />
@@ -1060,7 +1060,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25421" level="57" type="L2Monster" name="Trisalim's Escort" title="Raid Fighter">
+	<npc id="25421" level="57" type="Monster" name="Trisalim's Escort" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="4" />
 			<skill name="Debuff_a" id="4204" level="4" />
@@ -1100,7 +1100,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25422" level="57" type="L2Monster" name="Rotting Tree's Servant" title="Raid Fighter">
+	<npc id="25422" level="57" type="Monster" name="Rotting Tree's Servant" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" />
 			<skill name="SelfRangeBuff_a" id="4212" level="4" />
@@ -1140,7 +1140,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 	</npc>
-	<npc id="25423" level="61" type="L2RaidBoss" name="Fairy Queen Timiniel" title="Raid Boss">
+	<npc id="25423" level="61" type="RaidBoss" name="Fairy Queen Timiniel" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25424" count="4" respawnTime="360" weightPoint="1" /> <!-- Timiniel's Royal Guards -->
@@ -1242,7 +1242,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25424" level="60" type="L2Monster" name="Timiniel's Escort" title="Raid Fighter">
+	<npc id="25424" level="60" type="Monster" name="Timiniel's Escort" title="Raid Fighter">
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1281,7 +1281,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25425" level="60" type="L2Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
+	<npc id="25425" level="60" type="Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4742" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1324,7 +1324,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25426" level="25" type="L2RaidBoss" name="Betrayer of Urutu Freki" title="Raid Boss">
+	<npc id="25426" level="25" type="RaidBoss" name="Betrayer of Urutu Freki" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25427" count="2" respawnTime="360" weightPoint="1" />
@@ -1370,7 +1370,7 @@
 			<height normal="29.7" />
 		</collision>
 	</npc>
-	<npc id="25427" level="24" type="L2Monster" name="Freki's Vampire Bat" title="Raid Fighter">
+	<npc id="25427" level="24" type="Monster" name="Freki's Vampire Bat" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" />
 		</parameters>
@@ -1408,7 +1408,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="25428" level="24" type="L2Monster" name="Freki's Wild Bear" title="Raid Fighter">
+	<npc id="25428" level="24" type="Monster" name="Freki's Wild Bear" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="2" />
 		</parameters>
@@ -1446,7 +1446,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25429" level="25" type="L2RaidBoss" name="Mammon Collector Talos" title="Raid Boss">
+	<npc id="25429" level="25" type="RaidBoss" name="Mammon Collector Talos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25430" count="3" respawnTime="360" weightPoint="1" />
@@ -1494,7 +1494,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="25430" level="22" type="L2Monster" name="Talos' Pawn" title="Raid Fighter">
+	<npc id="25430" level="22" type="Monster" name="Talos' Pawn" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" />
 		</parameters>
@@ -1535,7 +1535,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25431" level="44" type="L2RaidBoss" name="Flamestone Golem" title="Raid Boss">
+	<npc id="25431" level="44" type="RaidBoss" name="Flamestone Golem" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25433" count="2" respawnTime="360" weightPoint="1" />
@@ -1603,7 +1603,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25432" level="43" type="L2Monster" name="Elemental of Flame" title="Raid Fighter">
+	<npc id="25432" level="43" type="Monster" name="Elemental of Flame" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="4" />
 			<skill name="SelfRangeBuff_a" id="4211" level="4" />
@@ -1646,7 +1646,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25433" level="43" type="L2Monster" name="Elemental of Spark" title="Raid Fighter">
+	<npc id="25433" level="43" type="Monster" name="Elemental of Spark" title="Raid Fighter">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -1683,7 +1683,7 @@
 			<height normal="20" grown="24" />
 		</collision>
 	</npc>
-	<npc id="25434" level="55" type="L2RaidBoss" name="Bandit Leader Barda" title="Raid Boss">
+	<npc id="25434" level="55" type="RaidBoss" name="Bandit Leader Barda" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25435" count="1" respawnTime="360" weightPoint="1" />
@@ -1749,7 +1749,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25435" level="54" type="L2Monster" name="Barda's Pawn" title="Raid Fighter">
+	<npc id="25435" level="54" type="Monster" name="Barda's Pawn" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" />
 		</parameters>
@@ -1788,7 +1788,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="25436" level="54" type="L2Monster" name="Barda's Shaman" title="Raid Fighter">
+	<npc id="25436" level="54" type="Monster" name="Barda's Shaman" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="5" />
 			<skill name="Debuff_a" id="4199" level="5" />
@@ -1829,7 +1829,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25437" level="45" type="L2RaidBoss" name="Timak Orc Gosmos" title="Raid Boss">
+	<npc id="25437" level="45" type="RaidBoss" name="Timak Orc Gosmos" title="Raid Boss">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="4" />
@@ -1885,7 +1885,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25438" level="44" type="L2RaidBoss" name="Thief Kelbar" title="Raid Boss">
+	<npc id="25438" level="44" type="RaidBoss" name="Thief Kelbar" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25439" count="1" respawnTime="360" weightPoint="1" />
@@ -1948,7 +1948,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25439" level="43" type="L2Monster" name="Kelbar's Subordinate" title="Raid Fighter">
+	<npc id="25439" level="43" type="Monster" name="Kelbar's Subordinate" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" />
 		</parameters>
@@ -1987,7 +1987,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25440" level="43" type="L2Monster" name="Kelbar's Wizard" title="Raid Fighter">
+	<npc id="25440" level="43" type="Monster" name="Kelbar's Wizard" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="4" />
 			<skill name="Debuff_a" id="4200" level="4" />
@@ -2028,7 +2028,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25441" level="45" type="L2RaidBoss" name="Evil Spirit Cyrion" title="Raid Boss">
+	<npc id="25441" level="45" type="RaidBoss" name="Evil Spirit Cyrion" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25442" count="4" respawnTime="360" weightPoint="1" />
@@ -2094,7 +2094,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25442" level="44" type="L2Monster" name="Evil Creature of Forest" title="Raid Fighter">
+	<npc id="25442" level="44" type="Monster" name="Evil Creature of Forest" title="Raid Fighter">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2128,7 +2128,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25443" level="44" type="L2Monster" name="Anger of Forest" title="Raid Fighter">
+	<npc id="25443" level="44" type="Monster" name="Anger of Forest" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" />
 		</parameters>
@@ -2166,7 +2166,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25444" level="80" type="L2RaidBoss" name="Enmity Ghost Ramdal" title="Raid Boss">
+	<npc id="25444" level="80" type="RaidBoss" name="Enmity Ghost Ramdal" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25445" count="3" respawnTime="360" weightPoint="1" />
@@ -2216,7 +2216,7 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="25445" level="64" type="L2Monster" name="Enmity Ghost" title="Raid Fighter">
+	<npc id="25445" level="64" type="Monster" name="Enmity Ghost" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2254,7 +2254,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25446" level="64" type="L2Monster" name="Begrudged Shooter" title="Raid Fighter">
+	<npc id="25446" level="64" type="Monster" name="Begrudged Shooter" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
@@ -2293,7 +2293,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25447" level="80" type="L2RaidBoss" name="Immortal Savior Mardil" title="Raid Boss">
+	<npc id="25447" level="80" type="RaidBoss" name="Immortal Savior Mardil" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25448" count="2" respawnTime="360" weightPoint="1" />
@@ -2342,7 +2342,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25448" level="70" type="L2Monster" name="Immortal Savior" title="Raid Fighter">
+	<npc id="25448" level="70" type="Monster" name="Immortal Savior" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2380,7 +2380,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25449" level="70" type="L2Monster" name="Immortal Guide" title="Raid Fighter">
+	<npc id="25449" level="70" type="Monster" name="Immortal Guide" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="7" />
 			<skill name="SelfRangeBuff_a" id="4213" level="7" />
@@ -2420,7 +2420,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25450" level="80" type="L2RaidBoss" name="Cherub Galaxia" title="Raid Boss">
+	<npc id="25450" level="80" type="RaidBoss" name="Cherub Galaxia" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25451" count="3" respawnTime="360" weightPoint="1" />
@@ -2472,7 +2472,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25451" level="78" type="L2Monster" name="Galaxia's Escorts" title="Raid Fighter">
+	<npc id="25451" level="78" type="Monster" name="Galaxia's Escorts" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" />
 			<skill name="Debuff_a" id="4202" level="8" />
@@ -2513,7 +2513,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="25452" level="79" type="L2Monster" name="Messenger of Angel" title="Raid Fighter">
+	<npc id="25452" level="79" type="Monster" name="Messenger of Angel" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="8" />
 			<skill name="SelfRangeBuff_a" id="4212" level="8" />
@@ -2554,7 +2554,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="25453" level="70" type="L2RaidBoss" name="Meanas Anor" title="Raid Boss">
+	<npc id="25453" level="70" type="RaidBoss" name="Meanas Anor" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25454" count="3" respawnTime="360" weightPoint="1" /> <!-- Wyvern of Marsh -->
@@ -2653,7 +2653,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25454" level="69" type="L2Monster" name="Swamp Wyvern" title="Raid Fighter">
+	<npc id="25454" level="69" type="Monster" name="Swamp Wyvern" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="6" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -2692,7 +2692,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25455" level="69" type="L2Monster" name="Swamp Succubus" title="Raid Fighter">
+	<npc id="25455" level="69" type="Monster" name="Swamp Succubus" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="6" /> <!-- BOSS Might -->
@@ -2731,7 +2731,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25456" level="49" type="L2RaidBoss" name="Mirror of Oblivion" title="Raid Boss">
+	<npc id="25456" level="49" type="RaidBoss" name="Mirror of Oblivion" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25457" count="1" respawnTime="360" weightPoint="1" />
@@ -2804,7 +2804,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25457" level="48" type="L2Monster" name="Shards of Oblivion" title="Raid Fighter">
+	<npc id="25457" level="48" type="Monster" name="Shards of Oblivion" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2842,7 +2842,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25458" level="48" type="L2Monster" name="Shadow of Oblivion" title="Raid Fighter">
+	<npc id="25458" level="48" type="Monster" name="Shadow of Oblivion" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="4" />
 			<skill name="SelfRangeBuff_a" id="4213" level="4" />
@@ -2886,7 +2886,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25459" level="48" type="L2Monster" name="Shards of Oblivion" title="Raid Fighter">
+	<npc id="25459" level="48" type="Monster" name="Shards of Oblivion" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2924,7 +2924,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="25460" level="51" type="L2RaidBoss" name="Deadman Ereve" title="Raid Boss">
+	<npc id="25460" level="51" type="RaidBoss" name="Deadman Ereve" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25461" count="2" respawnTime="360" weightPoint="1" />
@@ -3000,7 +3000,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25461" level="50" type="L2Monster" name="Ereve's Knight" title="Raid Fighter">
+	<npc id="25461" level="50" type="Monster" name="Ereve's Knight" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" />
 		</parameters>
@@ -3043,7 +3043,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25462" level="50" type="L2Monster" name="Ereve's Squire" title="Raid Fighter">
+	<npc id="25462" level="50" type="Monster" name="Ereve's Squire" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" />
 		</parameters>
@@ -3086,7 +3086,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="25463" level="56" type="L2RaidBoss" name="Harit Guardian Garangky" title="Raid Boss">
+	<npc id="25463" level="56" type="RaidBoss" name="Harit Guardian Garangky" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25464" count="1" respawnTime="360" weightPoint="1" />
@@ -3152,7 +3152,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25464" level="55" type="L2Monster" name="Garangky Escort Captain" title="Raid Fighter">
+	<npc id="25464" level="55" type="Monster" name="Garangky Escort Captain" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" />
 		</parameters>
@@ -3191,7 +3191,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="25465" level="55" type="L2Monster" name="Garangky Escort Wizard" title="Raid Fighter">
+	<npc id="25465" level="55" type="Monster" name="Garangky Escort Wizard" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="5" />
 			<skill name="SelfRangeBuff_a" id="4212" level="5" />
@@ -3232,7 +3232,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25466" level="55" type="L2Monster" name="Garangky Escort" title="Raid Fighter">
+	<npc id="25466" level="55" type="Monster" name="Garangky Escort" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" />
 		</parameters>
@@ -3271,7 +3271,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25467" level="80" type="L2RaidBoss" name="Gorgolos" title="Raid Boss">
+	<npc id="25467" level="80" type="RaidBoss" name="Gorgolos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25468" count="4" respawnTime="360" weightPoint="1" />
@@ -3323,7 +3323,7 @@
 			<height normal="96" />
 		</collision>
 	</npc>
-	<npc id="25468" level="63" type="L2Monster" name="Cursed Life" title="Raid Fighter">
+	<npc id="25468" level="63" type="Monster" name="Cursed Life" title="Raid Fighter">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3359,7 +3359,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25469" level="63" type="L2Monster" name="Cursed Soul" title="Raid Fighter">
+	<npc id="25469" level="63" type="Monster" name="Cursed Soul" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" />
 		</parameters>
@@ -3399,7 +3399,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25470" level="80" type="L2RaidBoss" name="Last Titan Utenus" title="Raid Boss">
+	<npc id="25470" level="80" type="RaidBoss" name="Last Titan Utenus" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25471" count="3" respawnTime="360" weightPoint="1" />
@@ -3449,7 +3449,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25471" level="65" type="L2Monster" name="Utenus' Wizard" title="Raid Fighter">
+	<npc id="25471" level="65" type="Monster" name="Utenus' Wizard" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="6" />
 			<skill name="Debuff_a" id="4205" level="6" />
@@ -3492,7 +3492,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25472" level="65" type="L2Monster" name="Utenus' Escort" title="Raid Fighter">
+	<npc id="25472" level="65" type="Monster" name="Utenus' Escort" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" />
 		</parameters>
@@ -3533,7 +3533,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25473" level="52" type="L2RaidBoss" name="Grave Robber Kim" title="Raid Boss">
+	<npc id="25473" level="52" type="RaidBoss" name="Grave Robber Kim" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25474" count="3" respawnTime="360" weightPoint="1" />
@@ -3625,7 +3625,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25474" level="51" type="L2Monster" name="Kim's Gang" title="Raid Fighter">
+	<npc id="25474" level="51" type="Monster" name="Kim's Gang" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" />
 		</parameters>
@@ -3664,7 +3664,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25475" level="55" type="L2RaidBoss" name="Ghost Knight Kabed" title="Raid Boss">
+	<npc id="25475" level="55" type="RaidBoss" name="Ghost Knight Kabed" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25476" count="3" respawnTime="360" weightPoint="1" />
@@ -3734,7 +3734,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25476" level="54" type="L2Monster" name="Kabed's Soldier" title="Raid Fighter">
+	<npc id="25476" level="54" type="Monster" name="Kabed's Soldier" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="125" /> <!-- Spinebone Sword -->
@@ -3773,7 +3773,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25477" level="54" type="L2Monster" name="Kabed's Archer" title="Raid Fighter">
+	<npc id="25477" level="54" type="Monster" name="Kabed's Archer" title="Raid Fighter">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
@@ -3812,7 +3812,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25478" level="65" type="L2RaidBoss" name="Shilen's Priest Hisilrome" title="Raid Boss">
+	<npc id="25478" level="65" type="RaidBoss" name="Shilen's Priest Hisilrome" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25479" count="3" respawnTime="360" weightPoint="1" />
@@ -3881,7 +3881,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25479" level="64" type="L2Monster" name="Hisilrome's Servitor" title="Raid Fighter">
+	<npc id="25479" level="64" type="Monster" name="Hisilrome's Servitor" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="6" />
 			<skill name="Debuff_a" id="4204" level="6" />
@@ -3922,7 +3922,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25480" level="64" type="L2Monster" name="Hisilrome's Servant" title="Raid Fighter">
+	<npc id="25480" level="64" type="Monster" name="Hisilrome's Servant" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="6" />
 			<skill name="SelfRangeBuff_a" id="4211" level="6" />
@@ -3962,7 +3962,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25481" level="53" type="L2RaidBoss" name="Magus Kenishee" title="Raid Boss">
+	<npc id="25481" level="53" type="RaidBoss" name="Magus Kenishee" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25482" count="2" respawnTime="360" weightPoint="1" />
@@ -4011,7 +4011,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25482" level="52" type="L2Monster" name="Shadow of Kenishee" title="Raid Fighter">
+	<npc id="25482" level="52" type="Monster" name="Shadow of Kenishee" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" />
 		</parameters>
@@ -4051,7 +4051,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25483" level="52" type="L2Monster" name="Phantom of Kenishee" title="Raid Fighter">
+	<npc id="25483" level="52" type="Monster" name="Phantom of Kenishee" title="Raid Fighter">
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="6" />
 			<skill name="SelfRangeBuff_a" id="4212" level="6" />
@@ -4093,7 +4093,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25484" level="50" type="L2RaidBoss" name="Zaken's Chief Mate Tillion" title="Raid Boss">
+	<npc id="25484" level="50" type="RaidBoss" name="Zaken's Chief Mate Tillion" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25485" count="1" respawnTime="360" weightPoint="1" />
@@ -4144,7 +4144,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25485" level="49" type="L2Monster" name="Tillion's Subordinate" title="Raid Fighter">
+	<npc id="25485" level="49" type="Monster" name="Tillion's Subordinate" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" />
 		</parameters>
@@ -4187,7 +4187,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25486" level="49" type="L2Monster" name="Tillion's Bat" title="Raid Fighter">
+	<npc id="25486" level="49" type="Monster" name="Tillion's Bat" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" />
 		</parameters>
@@ -4225,7 +4225,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="25487" level="40" type="L2RaidBoss" name="Water Spirit Lian" title="Raid Boss">
+	<npc id="25487" level="40" type="RaidBoss" name="Water Spirit Lian" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25488" count="3" respawnTime="360" weightPoint="1" />
@@ -4273,7 +4273,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25488" level="39" type="L2Monster" name="Gildor's Spirit" title="Raid Fighter">
+	<npc id="25488" level="39" type="Monster" name="Gildor's Spirit" title="Raid Fighter">
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" />
 			<skill name="Debuff_a" id="4200" level="3" />
@@ -4315,7 +4315,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25489" level="39" type="L2Monster" name="Gildor's Guardian" title="Raid Fighter">
+	<npc id="25489" level="39" type="Monster" name="Gildor's Guardian" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="3" />
 		</parameters>
@@ -4355,7 +4355,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25490" level="40" type="L2RaidBoss" name="Gwindorr" title="Raid Boss">
+	<npc id="25490" level="40" type="RaidBoss" name="Gwindorr" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25491" count="3" respawnTime="360" weightPoint="1" />
@@ -4402,7 +4402,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25491" level="39" type="L2Monster" name="Gwindorr's Escort" title="Raid Fighter">
+	<npc id="25491" level="39" type="Monster" name="Gwindorr's Escort" title="Raid Fighter">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- Lizardspear -->
@@ -4437,7 +4437,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25492" level="39" type="L2Monster" name="Gwindorr's Follower" title="Raid Fighter">
+	<npc id="25492" level="39" type="Monster" name="Gwindorr's Follower" title="Raid Fighter">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
@@ -4472,7 +4472,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25493" level="55" type="L2RaidBoss" name="Eva's Spirit Niniel" title="Raid Boss">
+	<npc id="25493" level="55" type="RaidBoss" name="Eva's Spirit Niniel" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25494" count="1" respawnTime="360" weightPoint="1" />
@@ -4522,7 +4522,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="25494" level="54" type="L2Monster" name="Niniel's Spirit" title="Raid Fighter">
+	<npc id="25494" level="54" type="Monster" name="Niniel's Spirit" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" />
 		</parameters>
@@ -4560,7 +4560,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25495" level="54" type="L2Monster" name="Niniel's Spirit" title="Raid Fighter">
+	<npc id="25495" level="54" type="Monster" name="Niniel's Spirit" title="Raid Fighter">
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -4594,7 +4594,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25496" level="52" type="L2RaidBoss" name="Fafurion's Envoy Pingolpin" title="Raid Boss">
+	<npc id="25496" level="52" type="RaidBoss" name="Fafurion's Envoy Pingolpin" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25497" count="3" respawnTime="360" weightPoint="1" />
@@ -4642,7 +4642,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25497" level="51" type="L2Monster" name="Fafurion's Envoy" title="Raid Fighter">
+	<npc id="25497" level="51" type="Monster" name="Fafurion's Envoy" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" />
 		</parameters>
@@ -4681,7 +4681,7 @@
 			<height normal="25" grown="30.8" />
 		</collision>
 	</npc>
-	<npc id="25498" level="45" type="L2RaidBoss" name="Fafurion's Henchman Istary" title="Raid Boss">
+	<npc id="25498" level="45" type="RaidBoss" name="Fafurion's Henchman Istary" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25499" count="1" respawnTime="360" weightPoint="1" />
@@ -4747,7 +4747,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25499" level="44" type="L2Monster" name="Alligator of Istary" title="Raid Fighter">
+	<npc id="25499" level="44" type="Monster" name="Alligator of Istary" title="Raid Fighter">
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="4" />
 		</parameters>

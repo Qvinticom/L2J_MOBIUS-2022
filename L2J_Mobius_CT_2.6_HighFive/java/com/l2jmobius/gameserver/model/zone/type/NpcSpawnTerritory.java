@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 import java.util.List;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
+import com.l2jmobius.gameserver.model.zone.ZoneForm;
 
 /**
  * Just dummy zone, needs only for geometry calculations
@@ -28,11 +28,11 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 public class NpcSpawnTerritory
 {
 	private final String _name;
-	private final L2ZoneForm _territory;
+	private final ZoneForm _territory;
 	@SuppressWarnings("unused")
-	private List<L2ZoneForm> _bannedTerritories; // TODO: Implement it
+	private List<ZoneForm> _bannedTerritories; // TODO: Implement it
 	
-	public NpcSpawnTerritory(String name, L2ZoneForm territory)
+	public NpcSpawnTerritory(String name, ZoneForm territory)
 	{
 		_name = name;
 		_territory = territory;

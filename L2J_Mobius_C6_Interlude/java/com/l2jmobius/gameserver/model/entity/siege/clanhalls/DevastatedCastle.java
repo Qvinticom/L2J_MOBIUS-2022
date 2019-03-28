@@ -32,13 +32,13 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class DevastatedCastle
 {
@@ -60,11 +60,11 @@ public class DevastatedCastle
 	private ScheduledFuture<?> _mikhail;
 	private ScheduledFuture<?> _monsterdespawn;
 	
-	private L2NpcInstance _minion1 = null;
-	private L2NpcInstance _minion2 = null;
+	private NpcInstance _minion1 = null;
+	private NpcInstance _minion2 = null;
 	
 	private final ArrayList<MonsterLocation> _monsters = new ArrayList<>();
-	private ArrayList<L2Spawn> _spawns = new ArrayList<>();
+	private ArrayList<Spawn> _spawns = new ArrayList<>();
 	
 	private final Calendar _siegetime = Calendar.getInstance();
 	
@@ -81,7 +81,7 @@ public class DevastatedCastle
 	
 	protected class DamageInfo
 	{
-		public L2Clan _clan;
+		public Clan _clan;
 		public long _damage;
 	}
 	
@@ -212,12 +212,12 @@ public class DevastatedCastle
 		Announce("Siege registration of Devastated castle has begun!");
 		Announce("Now its open for 2 hours!");
 		
-		L2NpcInstance result = null;
+		NpcInstance result = null;
 		try
 		{
-			L2NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
+			NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
 			
-			final L2Spawn spawn = new L2Spawn(template);
+			final Spawn spawn = new Spawn(template);
 			spawn.setX(179040);
 			spawn.setY(-13717);
 			spawn.setZ(-2263);
@@ -269,9 +269,9 @@ public class DevastatedCastle
 	
 	public void Siege()
 	{
-		L2NpcInstance result = null;
-		L2NpcTemplate template = null;
-		L2Spawn spawn = null;
+		NpcInstance result = null;
+		NpcTemplate template = null;
+		Spawn spawn = null;
 		
 		final ClanHall CH = ClanHallManager.getInstance().getClanHallById(34);
 		CH.banishForeigners();
@@ -284,7 +284,7 @@ public class DevastatedCastle
 			fillMonsters();
 			
 			template = NpcTable.getInstance().getTemplate(BOSS_ID);
-			spawn = new L2Spawn(template);
+			spawn = new Spawn(template);
 			spawn.setX(178298);
 			spawn.setY(-17624);
 			spawn.setZ(-2194);
@@ -293,7 +293,7 @@ public class DevastatedCastle
 			_gustav = ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
 			
 			template = NpcTable.getInstance().getTemplate(BOSS1_ID);
-			spawn = new L2Spawn(template);
+			spawn = new Spawn(template);
 			spawn.setX(178306);
 			spawn.setY(-17535);
 			spawn.setZ(-2195);
@@ -302,7 +302,7 @@ public class DevastatedCastle
 			_dietrich = ThreadPool.schedule(new DeSpawnTimer(_minion1), 3600000); // 60 * 60 * 1000
 			
 			template = NpcTable.getInstance().getTemplate(BOSS2_ID);
-			spawn = new L2Spawn(template);
+			spawn = new Spawn(template);
 			spawn.setX(178304);
 			spawn.setY(-17712);
 			spawn.setZ(-2194);
@@ -720,8 +720,8 @@ public class DevastatedCastle
 		{
 			try
 			{
-				final L2NpcTemplate template = NpcTable.getInstance().getTemplate(ml.getId());
-				final L2Spawn sp = new L2Spawn(template);
+				final NpcTemplate template = NpcTable.getInstance().getTemplate(ml.getId());
+				final Spawn sp = new Spawn(template);
 				sp.setAmount(1);
 				sp.setX(ml.getX());
 				sp.setY(ml.getY());
@@ -751,7 +751,7 @@ public class DevastatedCastle
 	
 	public void DeSpawn()
 	{
-		for (L2Spawn sp : _spawns)
+		for (Spawn sp : _spawns)
 		{
 			sp.stopRespawn();
 			sp.getLastSpawn().doDie(sp.getLastSpawn());
@@ -763,9 +763,9 @@ public class DevastatedCastle
 	
 	protected class DeSpawnTimer implements Runnable
 	{
-		L2NpcInstance _npc = null;
+		NpcInstance _npc = null;
 		
-		public DeSpawnTimer(L2NpcInstance npc)
+		public DeSpawnTimer(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -786,7 +786,7 @@ public class DevastatedCastle
 		}
 	}
 	
-	public final boolean Conditions(L2PcInstance player)
+	public final boolean Conditions(PlayerInstance player)
 	{
 		if ((player != null) && (player.getClan() != null) && player.isClanLeader() && (player.getClan().getAuctionBiddedAt() <= 0) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) == null) && (player.getClan().getLevel() > 3))
 		{
@@ -807,7 +807,7 @@ public class DevastatedCastle
 	
 	public void SiegeFinish()
 	{
-		L2Clan clanIdMaxDamage = null;
+		Clan clanIdMaxDamage = null;
 		long tempMaxDamage = 0;
 		for (DamageInfo damageInfo : _clansDamageInfo.values())
 		{
@@ -848,7 +848,7 @@ public class DevastatedCastle
 		CH.spawnDoor();
 	}
 	
-	public void addSiegeDamage(L2Clan clan, long damage)
+	public void addSiegeDamage(Clan clan, long damage)
 	{
 		DamageInfo clanDamage = _clansDamageInfo.get(clan.getClanId());
 		if (clanDamage != null)
@@ -879,7 +879,7 @@ public class DevastatedCastle
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage());
+			LOGGER.info("Exception: updateOwnerInDB(Pledge clan): " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

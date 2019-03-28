@@ -19,7 +19,7 @@ package handlers.usercommandhandlers;
 import java.text.SimpleDateFormat;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -34,7 +34,7 @@ public class ClanPenalty implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
@@ -46,26 +46,26 @@ public class ClanPenalty implements IUserCommandHandler
 		final StringBuilder htmlContent = new StringBuilder(500);
 		htmlContent.append("<html><body><center><table width=270 border=0 bgcolor=111111><tr><td width=170>Penalty</td><td width=100 align=center>Expiration Date</td></tr></table><table width=270 border=0><tr>");
 		
-		if (activeChar.getClanJoinExpiryTime() > System.currentTimeMillis())
+		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
 			htmlContent.append("<td width=170>Unable to join a clan.</td><td width=100 align=center>");
-			htmlContent.append(format.format(activeChar.getClanJoinExpiryTime()));
+			htmlContent.append(format.format(player.getClanJoinExpiryTime()));
 			htmlContent.append("</td>");
 			penalty = true;
 		}
 		
-		if (activeChar.getClanCreateExpiryTime() > System.currentTimeMillis())
+		if (player.getClanCreateExpiryTime() > System.currentTimeMillis())
 		{
 			htmlContent.append("<td width=170>Unable to create a clan.</td><td width=100 align=center>");
-			htmlContent.append(format.format(activeChar.getClanCreateExpiryTime()));
+			htmlContent.append(format.format(player.getClanCreateExpiryTime()));
 			htmlContent.append("</td>");
 			penalty = true;
 		}
 		
-		if ((activeChar.getClan() != null) && (activeChar.getClan().getCharPenaltyExpiryTime() > System.currentTimeMillis()))
+		if ((player.getClan() != null) && (player.getClan().getCharPenaltyExpiryTime() > System.currentTimeMillis()))
 		{
 			htmlContent.append("<td width=170>Unable to invite a clan member.</td><td width=100 align=center>");
-			htmlContent.append(format.format(activeChar.getClan().getCharPenaltyExpiryTime()));
+			htmlContent.append(format.format(player.getClan().getCharPenaltyExpiryTime()));
 			htmlContent.append("</td>");
 			penalty = true;
 		}
@@ -79,7 +79,7 @@ public class ClanPenalty implements IUserCommandHandler
 		
 		final NpcHtmlMessage penaltyHtml = new NpcHtmlMessage();
 		penaltyHtml.setHtml(htmlContent.toString());
-		activeChar.sendPacket(penaltyHtml);
+		player.sendPacket(penaltyHtml);
 		
 		return true;
 	}

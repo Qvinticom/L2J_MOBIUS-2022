@@ -22,7 +22,7 @@ import java.util.List;
  * Format: (ch) d[d]
  * @author -Wooden-
  */
-public class ExCursedWeaponList extends L2GameServerPacket
+public class ExCursedWeaponList extends GameServerPacket
 {
 	private final List<Integer> _cursedWeaponIds;
 	

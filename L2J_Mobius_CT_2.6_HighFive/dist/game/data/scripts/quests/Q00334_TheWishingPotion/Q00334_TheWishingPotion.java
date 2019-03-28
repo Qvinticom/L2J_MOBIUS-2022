@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -119,7 +119,7 @@ public final class Q00334_TheWishingPotion extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
@@ -321,7 +321,7 @@ public final class Q00334_TheWishingPotion extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -378,7 +378,7 @@ public final class Q00334_TheWishingPotion extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (npc.getId())
 		{
@@ -708,7 +708,7 @@ public final class Q00334_TheWishingPotion extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPlayerFromParty(killer, npc);
 		if (qs != null)
@@ -1058,7 +1058,7 @@ public final class Q00334_TheWishingPotion extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private QuestState getRandomPlayerFromParty(L2PcInstance player, L2Npc npc)
+	private QuestState getRandomPlayerFromParty(PlayerInstance player, Npc npc)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		final List<QuestState> candidates = new ArrayList<>();

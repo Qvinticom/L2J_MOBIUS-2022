@@ -17,8 +17,8 @@
 package quests.Q10292_SevenSignsGirlOfDoubt;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -69,10 +69,10 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -90,21 +90,21 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32593-03.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "32597-03.html":
 			{
-				st.setMemoState(2);
-				st.setCond(2, true);
+				qs.setMemoState(2);
+				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "32784-02.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					htmltext = event;
 				}
@@ -112,17 +112,17 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32784-03.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
-					st.setMemoState(3);
-					st.setCond(3, true);
+					qs.setMemoState(3);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32784-05.html":
 			{
-				if (st.isMemoState(4))
+				if (qs.isMemoState(4))
 				{
 					htmltext = event;
 				}
@@ -130,10 +130,10 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32784-06.html":
 			{
-				if (st.isMemoState(4))
+				if (qs.isMemoState(4))
 				{
-					st.setMemoState(5);
-					st.setCond(5, true);
+					qs.setMemoState(5);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
@@ -155,7 +155,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			case "32784-11.html":
 			case "32784-12.html":
 			{
-				if (st.isMemoState(6))
+				if (qs.isMemoState(6))
 				{
 					htmltext = event;
 				}
@@ -163,27 +163,27 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 			}
 			case "32784-13.html":
 			{
-				if (st.isMemoState(6))
+				if (qs.isMemoState(6))
 				{
-					st.setMemoState(7);
-					st.setCond(7, true);
+					qs.setMemoState(7);
+					qs.setCond(7, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30832-02.html":
 			{
-				if (st.isMemoState(7))
+				if (qs.isMemoState(7))
 				{
-					st.setMemoState(8);
-					st.setCond(8, true);
+					qs.setMemoState(8);
+					qs.setCond(8, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30832-03.html":
 			{
-				if (st.isMemoState(8))
+				if (qs.isMemoState(8))
 				{
 					htmltext = event;
 				}
@@ -194,16 +194,16 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if(qs != null)
 		{
 			if (CommonUtil.contains(MOBS, npc.getId()))
 			{
-				if (giveItemRandomly(st.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 0.7, true) && st.isMemoState(3))
+				if (giveItemRandomly(qs.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 0.7, true) && qs.isMemoState(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 				}
 			}
 			else
@@ -211,8 +211,8 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 				killCount++;
 				if (killCount == 2)
 				{
-					st.setMemoState(6);
-					st.setCond(6);
+					qs.setMemoState(6);
+					qs.setCond(6);
 				}
 			}
 		}
@@ -220,36 +220,36 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.getVariables().set(I_QUEST1, false);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCompleted())
+		if (qs.isCompleted())
 		{
 			if (npc.getId() == WOOD)
 			{
 				htmltext = "32593-05.html";
 			}
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			final QuestState st1 = player.getQuestState(Q00198_SevenSignsEmbryo.class.getSimpleName());
 			htmltext = ((player.getLevel() >= MIN_LEVEL) && (st1 != null) && (st1.isCompleted())) ? "32593-01.htm" : "32593-06.htm";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case WOOD:
 				{
-					if ((st.getMemoState() > 0) && (st.getMemoState() < 9))
+					if ((qs.getMemoState() > 0) && (qs.getMemoState() < 9))
 					{
 						htmltext = "32593-07.html";
 					}
@@ -257,7 +257,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 				}
 				case FRANZ:
 				{
-					final int memoState = st.getMemoState();
+					final int memoState = qs.getMemoState();
 					if (memoState == 1)
 					{
 						htmltext = "32597-01.html";
@@ -274,7 +274,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 				}
 				case ELCADIA:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 2:
 						{
@@ -290,8 +290,8 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 							else
 							{
 								takeItem(player, ELCADIAS_MARK);
-								st.setMemoState(4);
-								st.setCond(4, true);
+								qs.setMemoState(4);
+								qs.setCond(4, true);
 								htmltext = "32784-04.html";
 							}
 							break;
@@ -325,7 +325,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 							else
 							{
 								addExpAndSp(player, 10000000, 1000000);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								htmltext = "32784-16.html";
 							}
 							break;
@@ -335,11 +335,11 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 				}
 				case HARDIN:
 				{
-					if (st.isMemoState(7))
+					if (qs.isMemoState(7))
 					{
 						htmltext = "30832-01.html";
 					}
-					else if (st.isMemoState(8))
+					else if (qs.isMemoState(8))
 					{
 						htmltext = "30832-03.html";
 					}

@@ -1540,7 +1540,7 @@
 		<!-- TODO: Remove this condition when proper target type is done -->
 		<cond msgId="113" addName="1">
 			<not>
-				<target npcType="L2Attackable" />
+				<target npcType="Attackable" />
 			</not>
 		</cond>
 		<for>
@@ -1575,7 +1575,7 @@
 		<!-- TODO: Remove this condition when proper target type is done -->
 		<cond>
 			<not>
-				<target npcType="L2Attackable" />
+				<target npcType="Attackable" />
 			</not>
 		</cond>
 		<for>

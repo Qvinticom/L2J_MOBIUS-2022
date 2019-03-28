@@ -16,9 +16,9 @@
  */
 package ai.areas.CrumaTower;
 
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -44,7 +44,7 @@ public final class SummonPc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final int chance = getRandom(100);
 		final boolean attacked = npc.getVariables().getBoolean("attacked", false);
@@ -68,7 +68,7 @@ public final class SummonPc extends AbstractNpcAI
 		}
 		else if ((npc.calculateDistance3D(attacker) > 100) && !attacked)
 		{
-			final L2Attackable monster = (L2Attackable) npc;
+			final Attackable monster = (Attackable) npc;
 			if (monster.getMostHated() != null)
 			{
 				if (((monster.getMostHated() == attacker) && (chance < 50)) || (chance < 10))
@@ -86,7 +86,7 @@ public final class SummonPc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if ((skill.getId() == SUMMON_PC.getSkillId()) && !npc.isDead() && npc.getVariables().getBoolean("attacked", false))
 		{

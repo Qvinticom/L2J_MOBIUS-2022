@@ -24,21 +24,21 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPickup;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -137,7 +137,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -209,7 +209,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
@@ -303,14 +303,14 @@ public class Q00255_Tutorial extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isMemoState(2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30))
 		{
 			// check for too many gems on ground
 			int counter = 0;
-			for (L2ItemInstance item : L2World.getInstance().getVisibleObjectsInRange(killer, L2ItemInstance.class, 1500))
+			for (ItemInstance item : World.getInstance().getVisibleObjectsInRange(killer, ItemInstance.class, 1500))
 			{
 				if (item.getId() == BLUE_GEM)
 				{
@@ -330,7 +330,7 @@ public class Q00255_Tutorial extends Quest
 	@Id(BLUE_GEM)
 	public void OnPlayerItemPickup(OnPlayerItemPickup event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.getMemoState() < 3))
 		{
@@ -345,7 +345,7 @@ public class Q00255_Tutorial extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final QuestState qs = getQuestState(event.getActiveChar(), false);
+		final QuestState qs = getQuestState(event.getPlayer(), false);
 		if (qs != null)
 		{
 			switch (event.getMarkId())
@@ -354,10 +354,10 @@ public class Q00255_Tutorial extends Quest
 				{
 					if (qs.isMemoState(1))
 					{
-						showOnScreenMsg(event.getActiveChar(), NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
-						final int classId = event.getActiveChar().getClassId().getId();
-						addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
-						showTutorialHtml(event.getActiveChar(), "tutorial_04.html");
+						showOnScreenMsg(event.getPlayer(), NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
+						final int classId = event.getPlayer().getClassId().getId();
+						addRadar(event.getPlayer(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
+						showTutorialHtml(event.getPlayer(), "tutorial_04.html");
 					}
 					break;
 				}
@@ -365,9 +365,9 @@ public class Q00255_Tutorial extends Quest
 				{
 					if (qs.isMemoState(3))
 					{
-						final int classId = event.getActiveChar().getClassId().getId();
-						addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
-						showTutorialHtml(event.getActiveChar(), "tutorial_06.html");
+						final int classId = event.getPlayer().getClassId().getId();
+						addRadar(event.getPlayer(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
+						showTutorialHtml(event.getPlayer(), "tutorial_06.html");
 					}
 					break;
 				}
@@ -375,9 +375,9 @@ public class Q00255_Tutorial extends Quest
 				{
 					if (qs.isMemoState(5))
 					{
-						final int classId = event.getActiveChar().getClassId().getId();
-						addRadar(event.getActiveChar(), COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
-						playSound(event.getActiveChar(), "ItemSound.quest_tutorial");
+						final int classId = event.getPlayer().getClassId().getId();
+						addRadar(event.getPlayer(), COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
+						playSound(event.getPlayer(), "ItemSound.quest_tutorial");
 					}
 					break;
 				}
@@ -389,7 +389,7 @@ public class Q00255_Tutorial extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if (event.getCommand().startsWith(TUTORIAL_BUYPASS))
 		{
 			notifyEvent(event.getCommand().replace(TUTORIAL_BUYPASS, ""), null, player);
@@ -405,7 +405,7 @@ public class Q00255_Tutorial extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if (player.getLevel() > 6)
 		{
 			return;
@@ -418,12 +418,12 @@ public class Q00255_Tutorial extends Quest
 		}
 	}
 	
-	private void showTutorialHtml(L2PcInstance player, String html)
+	private void showTutorialHtml(PlayerInstance player, String html)
 	{
 		player.sendPacket(new TutorialShowHtml(getHtm(player, html)));
 	}
 	
-	public void playTutorialVoice(L2PcInstance player, String voice)
+	public void playTutorialVoice(PlayerInstance player, String voice)
 	{
 		player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
 	}

@@ -19,7 +19,7 @@ package com.l2jmobius.loginserver.network.serverpackets;
 /**
  * Fromat: d d: response
  */
-public final class GGAuth extends L2LoginServerPacket
+public final class GGAuth extends LoginServerPacket
 {
 	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
 	

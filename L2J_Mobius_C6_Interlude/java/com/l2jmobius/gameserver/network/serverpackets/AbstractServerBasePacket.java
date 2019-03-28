@@ -21,7 +21,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * @version $Revision: $ $Date: $
  * @author galun
  */
-public abstract class AbstractServerBasePacket extends L2GameServerPacket
+public abstract class AbstractServerBasePacket extends GameServerPacket
 {
 	@Override
 	public abstract void runImpl();

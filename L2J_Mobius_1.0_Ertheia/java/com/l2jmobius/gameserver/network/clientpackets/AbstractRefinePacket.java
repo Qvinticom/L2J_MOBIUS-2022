@@ -21,12 +21,12 @@ import java.util.Arrays;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.VariationFee;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param fee
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem, L2ItemInstance feeItem, VariationFee fee)
+	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance mineralItem, ItemInstance feeItem, VariationFee fee)
 	{
 		if (fee == null)
 		{
@@ -86,7 +86,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param mineralItem
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance mineralItem)
+	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance mineralItem)
 	{
 		if (!isValid(player, item))
 		{
@@ -113,7 +113,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param item
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player, L2ItemInstance item)
+	protected static boolean isValid(PlayerInstance player, ItemInstance item)
 	{
 		if (!isValid(player))
 		{
@@ -168,7 +168,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			}
 		}
 		
-		if (!(item.getItem() instanceof L2Weapon) && !(item.getItem() instanceof L2Armor))
+		if (!(item.getItem() instanceof Weapon) && !(item.getItem() instanceof Armor))
 		{
 			return false; // neither weapon nor armor ?
 		}
@@ -187,7 +187,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param player
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player)
+	protected static boolean isValid(PlayerInstance player)
 	{
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{

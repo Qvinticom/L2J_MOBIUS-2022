@@ -50,7 +50,7 @@ public final class EnemyCharge extends AbstractEffect
 			return;
 		}
 		
-		// Get current position of the L2Character
+		// Get current position of the Creature
 		final int curX = info.getEffector().getX();
 		final int curY = info.getEffector().getY();
 		final int curZ = info.getEffector().getZ();

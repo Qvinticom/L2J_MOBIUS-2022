@@ -17,8 +17,8 @@
 package ai.areas.GardenOfSpirits;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 
 import ai.AbstractNpcAI;
 
@@ -53,55 +53,55 @@ public final class GardenOfSpirits extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
 			switch (zone.getId())
 			{
 				case ZONE_ID_1:
 				{
-					character.teleToLocation(TELEPORT_LOC_1);
+					creature.teleToLocation(TELEPORT_LOC_1);
 					break;
 				}
 				case ZONE_ID_2:
 				{
-					character.teleToLocation(TELEPORT_LOC_2);
+					creature.teleToLocation(TELEPORT_LOC_2);
 					break;
 				}
 				case ZONE_ID_3:
 				{
-					character.teleToLocation(TELEPORT_LOC_3);
+					creature.teleToLocation(TELEPORT_LOC_3);
 					break;
 				}
 				case ZONE_ID_4:
 				{
-					character.teleToLocation(TELEPORT_LOC_4);
+					creature.teleToLocation(TELEPORT_LOC_4);
 					break;
 				}
 				case ZONE_ID_5:
 				{
-					character.teleToLocation(TELEPORT_LOC_5);
+					creature.teleToLocation(TELEPORT_LOC_5);
 					break;
 				}
 				case ZONE_ID_6:
 				{
-					character.teleToLocation(TELEPORT_LOC_6);
+					creature.teleToLocation(TELEPORT_LOC_6);
 					break;
 				}
 				case ZONE_ID_7:
 				{
-					character.teleToLocation(TELEPORT_LOC_7);
+					creature.teleToLocation(TELEPORT_LOC_7);
 					break;
 				}
 				case ZONE_ID_8:
 				{
-					character.teleToLocation(TELEPORT_LOC_8);
+					creature.teleToLocation(TELEPORT_LOC_8);
 					break;
 				}
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	public static void main(String[] args)

@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
  * format dddd sample 0000: 3a 69 08 10 48 02 c1 00 00 f7 56 00 00 89 ea ff :i..H.....V..... 0010: ff 0c b2 d8 61 ....a
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class TeleportToLocation extends L2GameServerPacket
+public class TeleportToLocation extends GameServerPacket
 {
 	private final int _targetObjId;
 	private final int _x;
@@ -36,7 +36,7 @@ public class TeleportToLocation extends L2GameServerPacket
 	 * @param y
 	 * @param z
 	 */
-	public TeleportToLocation(L2Object obj, int x, int y, int z)
+	public TeleportToLocation(WorldObject obj, int x, int y, int z)
 	{
 		_targetObjId = obj.getObjectId();
 		_x = x;
@@ -45,7 +45,7 @@ public class TeleportToLocation extends L2GameServerPacket
 		_heading = obj.getPosition().getHeading();
 	}
 	
-	public TeleportToLocation(L2Object obj, int x, int y, int z, int heading)
+	public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading)
 	{
 		_targetObjId = obj.getObjectId();
 		_x = x;

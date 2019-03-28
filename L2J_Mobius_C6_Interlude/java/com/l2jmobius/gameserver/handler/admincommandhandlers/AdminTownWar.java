@@ -21,12 +21,12 @@ import java.util.Collection;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
 
 public class AdminTownWar implements IAdminCommandHandler
 {
@@ -35,15 +35,15 @@ public class AdminTownWar implements IAdminCommandHandler
 		"admin_townwar_start",
 		"admin_townwar_end"
 	};
-	private L2Object _activeObject;
+	private WorldObject _activeObject;
 	
-	public final L2Object getActiveObject()
+	public final WorldObject getActiveObject()
 	{
 		return _activeObject;
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_townwar_start")) // townwar_start
 		{
@@ -57,7 +57,7 @@ public class AdminTownWar implements IAdminCommandHandler
 	}
 	
 	@SuppressWarnings("deprecation")
-	private void startTW(L2PcInstance activeChar)
+	private void startTW(PlayerInstance activeChar)
 	{
 		// All Towns will become War Zones
 		if (Config.TW_ALL_TOWNS)
@@ -88,14 +88,14 @@ public class AdminTownWar implements IAdminCommandHandler
 			TownManager.getInstance().getTown(Config.TW_TOWN_ID).setParameter("noPeace", "true");
 		}
 		
-		final Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers();
+		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
 		{
 			int x;
 			int y;
 			int z;
-			L2TownZone Town;
+			TownZone Town;
 			
-			for (L2PcInstance onlinePlayer : pls)
+			for (PlayerInstance onlinePlayer : pls)
 			{
 				if (onlinePlayer.isOnline() == 1)
 				{
@@ -138,7 +138,7 @@ public class AdminTownWar implements IAdminCommandHandler
 	}
 	
 	@SuppressWarnings("deprecation")
-	private void endTW(L2PcInstance activeChar)
+	private void endTW(PlayerInstance activeChar)
 	{
 		// All Towns will become Peace Zones
 		if (Config.TW_ALL_TOWNS)
@@ -169,14 +169,14 @@ public class AdminTownWar implements IAdminCommandHandler
 			TownManager.getInstance().getTown(Config.TW_TOWN_ID).setParameter("noPeace", "false");
 		}
 		
-		final Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers();
+		final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
 		{
 			int xx;
 			int yy;
 			int zz;
-			L2TownZone Town;
+			TownZone Town;
 			
-			for (L2PcInstance onlinePlayer : pls)
+			for (PlayerInstance onlinePlayer : pls)
 			{
 				if (onlinePlayer.isOnline() == 1)
 				{

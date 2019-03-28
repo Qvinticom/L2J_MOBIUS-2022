@@ -16,19 +16,19 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
-import com.l2jmobius.loginserver.L2LoginClient;
+import com.l2jmobius.loginserver.LoginClient;
 
 /**
  * Format: dd b dddd s d: session id d: protocol revision b: 0x90 bytes : 0x80 bytes for the scrambled RSA public key 0x10 bytes at 0x00 d: unknow d: unknow d: unknow d: unknow s: blowfish key
  */
-public final class Init extends L2LoginServerPacket
+public final class Init extends LoginServerPacket
 {
 	private final int _sessionId;
 	
 	private final byte[] _publicKey;
 	private final byte[] _blowfishKey;
 	
-	public Init(L2LoginClient client)
+	public Init(LoginClient client)
 	{
 		this(client.getScrambledModulus(), client.getBlowfishKey(), client.getSessionId());
 	}

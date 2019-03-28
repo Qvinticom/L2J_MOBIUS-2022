@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -38,10 +38,10 @@ public class ConditionPlayerCanEscape extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		boolean canTeleport = true;
-		final L2PcInstance player = effector.getActingPlayer();
+		final PlayerInstance player = effector.getActingPlayer();
 		if (player == null)
 		{
 			canTeleport = false;
@@ -70,7 +70,7 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
-		else if ((GrandBossManager.getInstance().getZone(player) != null) && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		else if ((GrandBossManager.getInstance().getZone(player) != null) && !player.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS))
 		{
 			canTeleport = false;
 		}

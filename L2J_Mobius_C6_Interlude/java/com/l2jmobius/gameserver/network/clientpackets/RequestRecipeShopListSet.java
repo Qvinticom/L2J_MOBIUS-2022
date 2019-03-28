@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2ManufactureList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.ManufactureList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 
-public final class RequestRecipeShopListSet extends L2GameClientPacket
+public final class RequestRecipeShopListSet extends GameClientPacket
 {
 	private int _count;
 	private int[] _items; // count*2
@@ -54,7 +54,7 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -84,24 +84,24 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		
 		if (_count == 0)
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
 			player.standUp();
 		}
 		else
 		{
-			final L2ManufactureList createList = new L2ManufactureList();
+			final ManufactureList createList = new ManufactureList();
 			
 			for (int x = 0; x < _count; x++)
 			{
 				final int recipeID = _items[(x * 2) + 0];
 				final int cost = _items[(x * 2) + 1];
-				createList.add(new L2ManufactureItem(recipeID, cost));
+				createList.add(new ManufactureItem(recipeID, cost));
 			}
 			createList.setStoreName(player.getCreateList() != null ? player.getCreateList().getStoreName() : "");
 			player.setCreateList(createList);
 			
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_MANUFACTURE);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_MANUFACTURE);
 			player.sitDown();
 			player.broadcastUserInfo();
 			player.sendPacket(new RecipeShopMsg(player));

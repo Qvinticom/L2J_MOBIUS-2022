@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.skills.effects.EffectCharge;
 
@@ -26,19 +26,19 @@ import com.l2jmobius.gameserver.skills.effects.EffectCharge;
 /**
  * @author Luca Baldi
  */
-public class EtcStatusUpdate extends L2GameServerPacket
+public class EtcStatusUpdate extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final EffectCharge _effect;
 	
-	public EtcStatusUpdate(L2PcInstance activeChar)
+	public EtcStatusUpdate(PlayerInstance player)
 	{
-		_activeChar = activeChar;
-		_effect = (EffectCharge) _activeChar.getFirstEffect(L2Effect.EffectType.CHARGE);
+		_player = player;
+		_effect = (EffectCharge) _player.getFirstEffect(Effect.EffectType.CHARGE);
 	}
 	
 	/**
-	 * @see com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 * @see com.l2jmobius.gameserver.network.serverpackets.GameServerPacket#writeImpl()
 	 */
 	@Override
 	protected void writeImpl()
@@ -52,12 +52,12 @@ public class EtcStatusUpdate extends L2GameServerPacket
 		{
 			writeD(0x00); // 1-7 increase force, lvl
 		}
-		writeD(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
-		writeD(_activeChar.isInRefusalMode() || _activeChar.isChatBanned() ? 1 : 0); // 1 = block all chat
+		writeD(_player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+		writeD(_player.isInRefusalMode() || _player.isChatBanned() ? 1 : 0); // 1 = block all chat
 		// writeD(0x00); // 1 = danger area
-		writeD(_activeChar.isInsideZone(ZoneId.DANGERAREA)/* || _activeChar.isInDangerArea() */ ? 1 : 0); // 1 = danger area
-		writeD(Math.min(_activeChar.getExpertisePenalty() + _activeChar.getMasteryPenalty() + _activeChar.getMasteryWeapPenalty(), 1)); // 1 = grade penalty
-		writeD(_activeChar.getCharmOfCourage() ? 1 : 0); // 1 = charm of courage (no xp loss in siege..)
-		writeD(_activeChar.getDeathPenaltyBuffLevel()); // 1-15 death penalty, lvl (combat ability decreased due to death)
+		writeD(_player.isInsideZone(ZoneId.DANGERAREA)/* || _player.isInDangerArea() */ ? 1 : 0); // 1 = danger area
+		writeD(Math.min(_player.getExpertisePenalty() + _player.getMasteryPenalty() + _player.getMasteryWeapPenalty(), 1)); // 1 = grade penalty
+		writeD(_player.getCharmOfCourage() ? 1 : 0); // 1 = charm of courage (no xp loss in siege..)
+		writeD(_player.getDeathPenaltyBuffLevel()); // 1-15 death penalty, lvl (combat ability decreased due to death)
 	}
 }

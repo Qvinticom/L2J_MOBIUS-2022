@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
-public class EffectInvincible extends L2Effect
+public class EffectInvincible extends Effect
 {
 	public EffectInvincible(Env env, EffectTemplate template)
 	{
@@ -29,7 +29,7 @@ public class EffectInvincible extends L2Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return L2Effect.EffectType.INVINCIBLE;
+		return Effect.EffectType.INVINCIBLE;
 	}
 	
 	@Override

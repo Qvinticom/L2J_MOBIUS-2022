@@ -28,9 +28,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2CharTemplate;
+import com.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
 
 public class BoatManager
 {
@@ -41,7 +41,7 @@ public class BoatManager
 		return SingletonHolder._instance;
 	}
 	
-	private Map<Integer, L2BoatInstance> _staticItems = new HashMap<>();
+	private Map<Integer, BoatInstance> _staticItems = new HashMap<>();
 	
 	public BoatManager()
 	{
@@ -76,7 +76,7 @@ public class BoatManager
 					continue;
 				}
 				
-				L2BoatInstance boat = parseLine(line);
+				BoatInstance boat = parseLine(line);
 				boat.spawn();
 				_staticItems.put(boat.getObjectId(), boat);
 			}
@@ -130,9 +130,9 @@ public class BoatManager
 		}
 	}
 	
-	private L2BoatInstance parseLine(String line)
+	private BoatInstance parseLine(String line)
 	{
-		L2BoatInstance boat;
+		BoatInstance boat;
 		StringTokenizer st = new StringTokenizer(line, ";");
 		
 		String name = st.nextToken();
@@ -185,8 +185,8 @@ public class BoatManager
 		npcDat.set("baseMpReg", 3.e-3f);
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
-		L2CharTemplate template = new L2CharTemplate(npcDat);
-		boat = new L2BoatInstance(IdFactory.getInstance().getNextId(), template, name);
+		CreatureTemplate template = new CreatureTemplate(npcDat);
+		boat = new BoatInstance(IdFactory.getInstance().getNextId(), template, name);
 		boat.getPosition().setHeading(heading);
 		boat.setXYZ(xspawn, yspawn, zspawn);
 		
@@ -218,7 +218,7 @@ public class BoatManager
 		return boat;
 	}
 	
-	public L2BoatInstance GetBoat(int boatId)
+	public BoatInstance GetBoat(int boatId)
 	{
 		if (_staticItems == null)
 		{

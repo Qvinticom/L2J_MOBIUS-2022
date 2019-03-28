@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Loads name and access level for all players.
@@ -50,7 +50,7 @@ public class CharNameTable
 		}
 	}
 	
-	public final void addName(L2PcInstance player)
+	public final void addName(PlayerInstance player)
 	{
 		if (player != null)
 		{

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.ensoul;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExEnsoulResult implements IClientOutgoingPacket
 {
 	private final int _success;
-	private final L2ItemInstance _item;
+	private final ItemInstance _item;
 	
-	public ExEnsoulResult(int success, L2ItemInstance item)
+	public ExEnsoulResult(int success, ItemInstance item)
 	{
 		_success = success;
 		_item = item;

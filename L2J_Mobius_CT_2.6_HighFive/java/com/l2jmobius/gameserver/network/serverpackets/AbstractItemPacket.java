@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author UnAfraid
@@ -32,7 +32,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(PacketWriter packet, L2ItemInstance item)
+	protected void writeItem(PacketWriter packet, ItemInstance item)
 	{
 		writeItem(packet, new ItemInfo(item));
 	}
@@ -70,7 +70,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		}
 	}
 	
-	protected void writeInventoryBlock(PacketWriter packet, PcInventory inventory)
+	protected void writeInventoryBlock(PacketWriter packet, PlayerInventory inventory)
 	{
 		if (inventory.hasInventoryBlock())
 		{

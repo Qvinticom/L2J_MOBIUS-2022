@@ -19,8 +19,8 @@ package quests.Q00048_ToTheImmortalPlateau;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -70,11 +70,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -82,9 +82,9 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 		{
 			case "30097-04.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, GALLADUCCIS_ORDER_1, 1);
 					htmltext = event;
 				}
@@ -92,11 +92,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 			case "30094-02.html":
 			{
-				if (st.isCond(1) && hasQuestItems(player, GALLADUCCIS_ORDER_1))
+				if (qs.isCond(1) && hasQuestItems(player, GALLADUCCIS_ORDER_1))
 				{
 					takeItems(player, GALLADUCCIS_ORDER_1, 1);
 					giveItems(player, MAGIC_SWORD_HILT, 1);
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				else
@@ -107,11 +107,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 			case "30097-07.html":
 			{
-				if (st.isCond(2) && hasQuestItems(player, MAGIC_SWORD_HILT))
+				if (qs.isCond(2) && hasQuestItems(player, MAGIC_SWORD_HILT))
 				{
 					takeItems(player, MAGIC_SWORD_HILT, 1);
 					giveItems(player, GALLADUCCIS_ORDER_2, 1);
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				else
@@ -122,11 +122,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 			case "30090-02.html":
 			{
-				if (st.isCond(3) && hasQuestItems(player, GALLADUCCIS_ORDER_2))
+				if (qs.isCond(3) && hasQuestItems(player, GALLADUCCIS_ORDER_2))
 				{
 					takeItems(player, GALLADUCCIS_ORDER_2, 1);
 					giveItems(player, GEMSTONE_POWDER, 1);
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				else
@@ -137,11 +137,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 			case "30097-11.html":
 			{
-				if (st.isCond(4) && hasQuestItems(player, GEMSTONE_POWDER))
+				if (qs.isCond(4) && hasQuestItems(player, GEMSTONE_POWDER))
 				{
 					takeItems(player, GEMSTONE_POWDER, 1);
 					giveItems(player, GALLADUCCIS_ORDER_3, 1);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				else
@@ -152,11 +152,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 			case "30116-02.html":
 			{
-				if (st.isCond(5) && hasQuestItems(player, GALLADUCCIS_ORDER_3))
+				if (qs.isCond(5) && hasQuestItems(player, GALLADUCCIS_ORDER_3))
 				{
 					takeItems(player, GALLADUCCIS_ORDER_3, 1);
 					giveItems(player, PURIFIED_MAGIC_NECKLACE, 1);
-					st.setCond(6, true);
+					qs.setCond(6, true);
 					htmltext = event;
 				}
 				else
@@ -167,10 +167,10 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			}
 			case "30097-15.html":
 			{
-				if (st.isCond(6) && hasQuestItems(player, PURIFIED_MAGIC_NECKLACE))
+				if (qs.isCond(6) && hasQuestItems(player, PURIFIED_MAGIC_NECKLACE))
 				{
 					giveItems(player, SCROLL_OF_ESCAPE_ORC_VILLAGE, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				else
@@ -184,16 +184,16 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		QuestState st = getQuestState(talker, true);
+		QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
 		switch (npc.getId())
 		{
 			case GALLADUCCI:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -203,8 +203,8 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 						}
 						else
 						{
-							st = talker.getQuestState(Q00009_IntoTheCityOfHumans.class.getSimpleName());
-							if ((st != null) && st.isCompleted() && hasQuestItems(talker, MARK_OF_TRAVELER))
+							qs = talker.getQuestState(Q00009_IntoTheCityOfHumans.class.getSimpleName());
+							if ((qs != null) && qs.isCompleted() && hasQuestItems(talker, MARK_OF_TRAVELER))
 							{
 								htmltext = "30097-01.htm";
 							}
@@ -217,7 +217,7 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -273,11 +273,11 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 			case SANDRA:
 			case DUSTIN:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					final ItemHolder i = NPC_ITEMS.get(npc.getId());
 					final int cond = i.getId();
-					if (st.isCond(cond))
+					if (qs.isCond(cond))
 					{
 						final int itemId = (int) i.getCount();
 						if (hasQuestItems(talker, itemId))
@@ -285,7 +285,7 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 							htmltext = npc.getId() + "-01.html";
 						}
 					}
-					else if (st.isCond(cond + 1))
+					else if (qs.isCond(cond + 1))
 					{
 						htmltext = npc.getId() + "-04.html";
 					}

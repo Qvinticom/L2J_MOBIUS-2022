@@ -20,7 +20,7 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -87,7 +87,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		_html = html;
 	}
 	
-	public final boolean setFile(L2PcInstance player, String path)
+	public final boolean setFile(PlayerInstance player, String path)
 	{
 		final String content = HtmCache.getInstance().getHtm(player, path);
 		if (content == null)
@@ -132,7 +132,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 	}
 	
 	@Override
-	public final void runImpl(L2PcInstance player)
+	public final void runImpl(PlayerInstance player)
 	{
 		if (player != null)
 		{

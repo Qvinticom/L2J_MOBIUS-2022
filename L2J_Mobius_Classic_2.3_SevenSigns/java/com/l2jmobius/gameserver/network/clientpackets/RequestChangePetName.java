@@ -18,13 +18,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.PetNameTable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/04/06 16:13:48 $
  */
 public final class RequestChangePetName implements IClientIncomingPacket
@@ -32,22 +31,22 @@ public final class RequestChangePetName implements IClientIncomingPacket
 	private String _name;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Summon pet = activeChar.getPet();
+		final Summon pet = player.getPet();
 		if (pet == null)
 		{
 			return;
@@ -55,32 +54,32 @@ public final class RequestChangePetName implements IClientIncomingPacket
 		
 		if (!pet.isPet())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 			return;
 		}
 		
 		if (pet.getName() != null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SET_THE_NAME_OF_THE_PET);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SET_THE_NAME_OF_THE_PET);
 			return;
 		}
 		
 		if (PetNameTable.getInstance().doesPetNameExist(_name, pet.getTemplate().getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_IS_ALREADY_IN_USE_BY_ANOTHER_PET);
+			player.sendPacket(SystemMessageId.THIS_IS_ALREADY_IN_USE_BY_ANOTHER_PET);
 			return;
 		}
 		
 		if ((_name.length() < 3) || (_name.length() > 16))
 		{
-			// activeChar.sendPacket(SystemMessageId.YOUR_PET_S_NAME_CAN_BE_UP_TO_8_CHARACTERS_IN_LENGTH);
-			activeChar.sendMessage("Your pet's name can be up to 16 characters in length.");
+			// player.sendPacket(SystemMessageId.YOUR_PET_S_NAME_CAN_BE_UP_TO_8_CHARACTERS_IN_LENGTH);
+			player.sendMessage("Your pet's name can be up to 16 characters in length.");
 			return;
 		}
 		
 		if (!PetNameTable.getInstance().isValidPetName(_name))
 		{
-			activeChar.sendPacket(SystemMessageId.AN_INVALID_CHARACTER_IS_INCLUDED_IN_THE_PET_S_NAME);
+			player.sendPacket(SystemMessageId.AN_INVALID_CHARACTER_IS_INCLUDED_IN_THE_PET_S_NAME);
 			return;
 		}
 		

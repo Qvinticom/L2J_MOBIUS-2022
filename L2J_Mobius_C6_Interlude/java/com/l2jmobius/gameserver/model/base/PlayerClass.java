@@ -33,7 +33,7 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public enum PlayerClass
 {
@@ -218,7 +218,7 @@ public enum PlayerClass
 		_type = pType;
 	}
 	
-	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
+	public final Set<PlayerClass> getAvailableSubclasses(PlayerInstance player)
 	{
 		Set<PlayerClass> subclasses = null;
 		

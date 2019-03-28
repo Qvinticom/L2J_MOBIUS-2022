@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -65,10 +65,10 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -84,47 +84,47 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 			}
 			case "32245-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "take_reward":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					final int gemsCount = st.getInt("submitted_gems");
+					final int gemsCount = qs.getInt("submitted_gems");
 					if (gemsCount >= 744)
 					{
-						st.set("submitted_gems", Integer.toString(gemsCount - 744));
+						qs.set("submitted_gems", Integer.toString(gemsCount - 744));
 						giveItems(player, DYNASTY_SOUL_II, 1);
 						htmltext = "32245-09.html";
 					}
 					else
 					{
-						htmltext = getHtm(player, "32245-10.html").replace("%itemcount%", st.get("submitted_gems"));
+						htmltext = getHtm(player, "32245-10.html").replace("%itemcount%", qs.get("submitted_gems"));
 					}
 				}
 				break;
 			}
 			case "32245-08.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					final int submittedCount = st.getInt("submitted_gems");
+					final int submittedCount = qs.getInt("submitted_gems");
 					final int broughtCount = (int) getQuestItemsCount(player, RED_GEM);
 					final int finalCount = submittedCount + broughtCount;
 					takeItems(player, RED_GEM, broughtCount);
-					st.set("submitted_gems", Integer.toString(finalCount));
+					qs.set("submitted_gems", Integer.toString(finalCount));
 					htmltext = getHtm(player, "32245-08.html").replace("%itemcount%", Integer.toString(finalCount));
 				}
 				break;
 			}
 			case "32245-12.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					giveAdena(player, (st.getInt("submitted_gems") * 10000), true);
-					st.exitQuest(true, true);
+					giveAdena(player, (qs.getInt("submitted_gems") * 10000), true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -134,9 +134,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance pl = getRandomPartyMember(player, 1);
+		final PlayerInstance pl = getRandomPartyMember(player, 1);
 		if (pl == null)
 		{
 			return super.onKill(npc, player, isSummon);
@@ -154,12 +154,12 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -172,9 +172,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 				{
 					htmltext = "32245-05.html";
 				}
-				else if (st.getInt("submitted_gems") > 0)
+				else if (qs.getInt("submitted_gems") > 0)
 				{
-					htmltext = getHtm(player, "32245-07.html").replace("%itemcount%", st.get("submitted_gems"));
+					htmltext = getHtm(player, "32245-07.html").replace("%itemcount%", qs.get("submitted_gems"));
 				}
 				else
 				{

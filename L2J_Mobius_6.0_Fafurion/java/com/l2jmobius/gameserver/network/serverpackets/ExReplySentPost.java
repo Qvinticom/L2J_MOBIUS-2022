@@ -21,7 +21,7 @@ import java.util.Collection;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExReplySentPost extends AbstractItemPacket
 {
 	private final Message _msg;
-	private Collection<L2ItemInstance> _items = null;
+	private Collection<ItemInstance> _items = null;
 	
 	public ExReplySentPost(Message msg)
 	{
@@ -64,7 +64,7 @@ public class ExReplySentPost extends AbstractItemPacket
 		if ((_items != null) && !_items.isEmpty())
 		{
 			packet.writeD(_items.size());
-			for (L2ItemInstance item : _items)
+			for (ItemInstance item : _items)
 			{
 				writeItem(packet, item);
 				packet.writeD(item.getObjectId());

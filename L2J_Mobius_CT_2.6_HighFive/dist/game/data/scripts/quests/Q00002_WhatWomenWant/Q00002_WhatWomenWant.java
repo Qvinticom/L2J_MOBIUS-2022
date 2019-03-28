@@ -17,8 +17,8 @@
 package quests.Q00002_WhatWomenWant;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,10 +54,10 @@ public class Q00002_WhatWomenWant extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -67,7 +67,7 @@ public class Q00002_WhatWomenWant extends Quest
 		{
 			case "30223-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, ARUJIENS_LETTER1, 1);
 				break;
 			}
@@ -75,13 +75,13 @@ public class Q00002_WhatWomenWant extends Quest
 			{
 				takeItems(player, ARUJIENS_LETTER3, -1);
 				giveItems(player, POETRY_BOOK, 1);
-				st.setCond(4, true);
+				qs.setCond(4, true);
 				break;
 			}
 			case "30223-09.html":
 			{
 				giveAdena(player, 450, true);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				// Newbie Guide
 				showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 				addExpAndSp(player, 4254, 335);
@@ -102,15 +102,15 @@ public class Q00002_WhatWomenWant extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case ARUJIEN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -119,7 +119,7 @@ public class Q00002_WhatWomenWant extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -144,7 +144,7 @@ public class Q00002_WhatWomenWant extends Quest
 							case 5:
 							{
 								giveItems(player, EARRING, 1);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								htmltext = "30223-11.html";
 								// Newbie Guide
 								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
@@ -165,11 +165,11 @@ public class Q00002_WhatWomenWant extends Quest
 			}
 			case MIRABEL:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
-						st.setCond(2, true);
+						qs.setCond(2, true);
 						takeItems(player, ARUJIENS_LETTER1, -1);
 						giveItems(player, ARUJIENS_LETTER2, 1);
 						htmltext = "30146-01.html";
@@ -183,11 +183,11 @@ public class Q00002_WhatWomenWant extends Quest
 			}
 			case HERBIEL:
 			{
-				if (st.isStarted() && (st.getCond() > 1))
+				if (qs.isStarted() && (qs.getCond() > 1))
 				{
-					if (st.isCond(2))
+					if (qs.isCond(2))
 					{
-						st.setCond(3, true);
+						qs.setCond(3, true);
 						takeItems(player, ARUJIENS_LETTER2, -1);
 						giveItems(player, ARUJIENS_LETTER3, 1);
 						htmltext = "30150-01.html";
@@ -201,16 +201,16 @@ public class Q00002_WhatWomenWant extends Quest
 			}
 			case GREENIS:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(4))
+					if (qs.isCond(4))
 					{
-						st.setCond(5, true);
+						qs.setCond(5, true);
 						takeItems(player, POETRY_BOOK, -1);
 						giveItems(player, GREENIS_LETTER, 1);
 						htmltext = "30157-02.html";
 					}
-					else if (st.isCond(5))
+					else if (qs.isCond(5))
 					{
 						htmltext = "30157-03.html";
 					}

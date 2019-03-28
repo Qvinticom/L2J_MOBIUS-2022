@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ShowXMasSeal;
 
@@ -34,27 +34,27 @@ public class SpecialXMas implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
-		if (activeChar.isParalyzed())
+		if (player.isParalyzed())
 		{
-			activeChar.sendMessage("You Cannot Use This While You Are Paralyzed");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You Cannot Use This While You Are Paralyzed");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (itemId == 5555) // Token of Love
 		{
 			ShowXMasSeal SXS = new ShowXMasSeal(5555);
-			activeChar.sendPacket(SXS);
+			player.sendPacket(SXS);
 		}
 	}
 	

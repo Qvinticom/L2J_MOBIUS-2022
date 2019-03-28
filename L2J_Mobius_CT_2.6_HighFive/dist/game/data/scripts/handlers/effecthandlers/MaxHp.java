@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.EffectCalculationType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.stat.CharStat;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -66,8 +66,8 @@ public final class MaxHp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected();
-		final CharStat charStat = effected.getStat();
+		final Creature effected = info.getEffected();
+		final CreatureStat charStat = effected.getStat();
 		final double currentHp = effected.getCurrentHp();
 		double amount = _power;
 		
@@ -100,7 +100,7 @@ public final class MaxHp extends AbstractEffect
 		}
 		if (_heal)
 		{
-			final L2Character caster = info.getEffector();
+			final Creature caster = info.getEffector();
 			if ((caster != null) && (caster != effected))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
@@ -120,7 +120,7 @@ public final class MaxHp extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final CreatureStat charStat = info.getEffected().getStat();
 		synchronized (charStat)
 		{
 			charStat.getActiveChar().removeStatsOwner(this);

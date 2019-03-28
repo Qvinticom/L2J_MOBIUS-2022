@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -38,98 +38,98 @@ public class Remedy implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		L2PcInstance activeChar;
+		PlayerInstance player;
 		
-		if (playable instanceof L2PcInstance)
+		if (playable instanceof PlayerInstance)
 		{
-			activeChar = (L2PcInstance) playable;
+			player = (PlayerInstance) playable;
 		}
-		else if (playable instanceof L2PetInstance)
+		else if (playable instanceof PetInstance)
 		{
-			activeChar = ((L2PetInstance) playable).getOwner();
+			player = ((PetInstance) playable).getOwner();
 		}
 		else
 		{
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		
 		final int itemId = item.getItemId();
 		if (itemId == 1831) // antidote
 		{
-			L2Effect[] effects = activeChar.getAllEffects();
-			for (L2Effect e : effects)
+			Effect[] effects = player.getAllEffects();
+			for (Effect e : effects)
 			{
-				if ((e.getSkill().getSkillType() == L2Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 3))
+				if ((e.getSkill().getSkillType() == Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 3))
 				{
 					e.exit(true);
 					break;
 				}
 			}
 			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1832) // advanced antidote
 		{
-			L2Effect[] effects = activeChar.getAllEffects();
-			for (L2Effect e : effects)
+			Effect[] effects = player.getAllEffects();
+			for (Effect e : effects)
 			{
-				if ((e.getSkill().getSkillType() == L2Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 7))
+				if ((e.getSkill().getSkillType() == Skill.SkillType.POISON) && (e.getSkill().getLevel() <= 7))
 				{
 					e.exit(true);
 					break;
 				}
 			}
 			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2043, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1833) // bandage
 		{
-			L2Effect[] effects = activeChar.getAllEffects();
-			for (L2Effect e : effects)
+			Effect[] effects = player.getAllEffects();
+			for (Effect e : effects)
 			{
-				if ((e.getSkill().getSkillType() == L2Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 3))
+				if ((e.getSkill().getSkillType() == Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 3))
 				{
 					e.exit(true);
 					break;
 				}
 			}
 			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 34, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 1834) // emergency dressing
 		{
-			L2Effect[] effects = activeChar.getAllEffects();
-			for (L2Effect e : effects)
+			Effect[] effects = player.getAllEffects();
+			for (Effect e : effects)
 			{
-				if ((e.getSkill().getSkillType() == L2Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 7))
+				if ((e.getSkill().getSkillType() == Skill.SkillType.BLEED) && (e.getSkill().getLevel() <= 7))
 				{
 					e.exit(true);
 					break;
 				}
 			}
 			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2045, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 3889) // potion of recovery
 		{
-			L2Effect[] effects = activeChar.getAllEffects();
-			for (L2Effect e : effects)
+			Effect[] effects = player.getAllEffects();
+			for (Effect e : effects)
 			{
 				if (e.getSkill().getId() == 4082)
 				{
@@ -137,16 +137,16 @@ public class Remedy implements IItemHandler
 				}
 			}
 			
-			activeChar.setIsImobilised(false);
+			player.setIsImobilised(false);
 			
-			if (activeChar.getFirstEffect(L2Effect.EffectType.ROOT) == null)
+			if (player.getFirstEffect(Effect.EffectType.ROOT) == null)
 			{
-				activeChar.stopRooting(null);
+				player.stopRooting(null);
 			}
 			
 			MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 	}

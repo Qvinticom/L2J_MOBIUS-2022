@@ -20,8 +20,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -111,13 +111,13 @@ public final class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		
 		if ("DESPAWN".equals(event))
 		{
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_HAVE_GOOD_LUCK_I_SHALL_RETURN));
-			final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
+			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			if (npc0 != null)
 			{
 				npc0.getVariables().set("SPAWNED", false);
@@ -1117,7 +1117,7 @@ public final class Q00060_GoodWorksReward extends Quest
 					{
 						npc.getVariables().set("SPAWNED", true);
 						npc.getVariables().set("PLAYER_ID", player.getObjectId());
-						final L2Npc pursuer = addSpawn(PURSUER, player.getX() + 50, player.getY() + 50, player.getZ(), 0, false, 0);
+						final Npc pursuer = addSpawn(PURSUER, player.getX() + 50, player.getY() + 50, player.getZ(), 0, false, 0);
 						pursuer.getVariables().set("PLAYER_ID", player.getObjectId());
 						pursuer.getVariables().set("npc0", npc);
 						pursuer.getVariables().set("player0", player);
@@ -1151,7 +1151,7 @@ public final class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -1172,7 +1172,7 @@ public final class Q00060_GoodWorksReward extends Quest
 					}
 				}
 			}
-			final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
+			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			if (npc0 != null)
 			{
 				npc0.getVariables().set("SPAWNED", false);
@@ -1182,7 +1182,7 @@ public final class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int memoState = qs.getMemoState();
@@ -1350,10 +1350,10 @@ public final class Q00060_GoodWorksReward extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("DESPAWN", 60000, npc, null);
-		final L2PcInstance player = npc.getVariables().getObject("player0", L2PcInstance.class);
+		final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);
 		if (player != null)
 		{
 			if (player.isPlayer())

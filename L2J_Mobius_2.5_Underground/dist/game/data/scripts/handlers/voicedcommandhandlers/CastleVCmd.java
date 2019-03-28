@@ -18,8 +18,8 @@ package handlers.voicedcommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -36,7 +36,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
 	{
 		switch (command)
 		{
@@ -54,7 +54,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 					return false;
 				}
 				
-				final L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
+				final DoorInstance door = (DoorInstance) activeChar.getTarget();
 				if (door == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -93,7 +93,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 					activeChar.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS);
 					return false;
 				}
-				final L2DoorInstance door2 = (L2DoorInstance) activeChar.getTarget();
+				final DoorInstance door2 = (DoorInstance) activeChar.getTarget();
 				if (door2 == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

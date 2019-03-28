@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.clanhallauction.ClanHallAuction;
 import com.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
@@ -70,7 +70,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 		return AUCTIONS.get(clanHallId);
 	}
 	
-	public ClanHallAuction getClanHallAuctionByClan(L2Clan clan)
+	public ClanHallAuction getClanHallAuctionByClan(Clan clan)
 	{
 		//@formatter:off
 		return AUCTIONS.values().stream()
@@ -80,7 +80,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 		//@formatter:on
 	}
 	
-	public boolean checkForClanBid(int clanHallId, L2Clan clan)
+	public boolean checkForClanBid(int clanHallId, Clan clan)
 	{
 		//@formatter:off
 		return AUCTIONS.entrySet().stream()

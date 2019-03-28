@@ -21,8 +21,8 @@ import java.util.Collection;
 import java.util.Collections;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.SkillCastingType;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -32,35 +32,35 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class MagicSkillLaunched implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _skillId;
 	private final int _skillLevel;
 	private final SkillCastingType _castingType;
-	private final Collection<L2Object> _targets;
+	private final Collection<WorldObject> _targets;
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, SkillCastingType castingType, Collection<L2Object> targets)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel, SkillCastingType castingType, Collection<WorldObject> targets)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_castingType = castingType;
 		
 		if (targets == null)
 		{
-			targets = Collections.singletonList(cha);
+			targets = Collections.singletonList(creature);
 		}
 		
 		_targets = targets;
 	}
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, SkillCastingType castingType, L2Object... targets)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel, SkillCastingType castingType, WorldObject... targets)
 	{
-		this(cha, skillId, skillLevel, castingType, (targets == null ? Collections.singletonList(cha) : Arrays.asList(targets)));
+		this(creature, skillId, skillLevel, castingType, (targets == null ? Collections.singletonList(creature) : Arrays.asList(targets)));
 	}
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel)
 	{
-		this(cha, skillId, skillId, SkillCastingType.NORMAL, Collections.singletonList(cha));
+		this(creature, skillId, skillId, SkillCastingType.NORMAL, Collections.singletonList(creature));
 	}
 	
 	@Override
@@ -69,11 +69,11 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 		OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
 		
 		packet.writeD(_castingType.getClientBarId()); // MagicSkillUse castingType
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);
 		packet.writeD(_targets.size());
-		for (L2Object target : _targets)
+		for (WorldObject target : _targets)
 		{
 			packet.writeD(target.getObjectId());
 		}

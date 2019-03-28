@@ -23,18 +23,18 @@ import java.util.Map.Entry;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopManageList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _seller;
+	private final PlayerInstance _seller;
 	private final boolean _isDwarven;
 	private final Collection<RecipeHolder> _recipes;
 	private List<Entry<Integer, Long>> _manufacture;
 	
-	public RecipeShopManageList(L2PcInstance seller, boolean isDwarven)
+	public RecipeShopManageList(PlayerInstance seller, boolean isDwarven)
 	{
 		_seller = seller;
 		_isDwarven = isDwarven;

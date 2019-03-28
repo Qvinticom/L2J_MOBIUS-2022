@@ -20,11 +20,10 @@ import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * This class ...
  * @version $Revision: 1.7.2.2.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
 public class PrivateStoreListBuy extends AbstractItemPacket
@@ -33,7 +32,7 @@ public class PrivateStoreListBuy extends AbstractItemPacket
 	private final long _playerAdena;
 	private final Collection<TradeItem> _items;
 	
-	public PrivateStoreListBuy(L2PcInstance player, L2PcInstance storePlayer)
+	public PrivateStoreListBuy(PlayerInstance player, PlayerInstance storePlayer)
 	{
 		_objId = storePlayer.getObjectId();
 		_playerAdena = player.getAdena();

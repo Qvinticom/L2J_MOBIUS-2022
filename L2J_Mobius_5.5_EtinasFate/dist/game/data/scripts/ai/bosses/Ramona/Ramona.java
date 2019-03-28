@@ -23,17 +23,17 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestTimer;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.type.L2NoSummonFriendZone;
+import com.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
 
 import ai.AbstractNpcAI;
 
@@ -92,17 +92,17 @@ public class Ramona extends AbstractNpcAI
 	private static final Location RAMONA_SPAWN_LOC_2 = new Location(86327, 169759, -10465, 16383);
 	// Other
 	private static final int ROOM_CONTROL_DOOR = 22230711;
-	private static final L2NoSummonFriendZone ZONE = ZoneManager.getInstance().getZoneById(210108, L2NoSummonFriendZone.class);
+	private static final NoSummonFriendZone ZONE = ZoneManager.getInstance().getZoneById(210108, NoSummonFriendZone.class);
 	private static final int MIN_PLAYER_COUNT = 14;
 	// Vars
-	private static L2DoorInstance _door;
-	private static ArrayList<L2Npc> _minions = new ArrayList<>();
+	private static DoorInstance _door;
+	private static ArrayList<Npc> _minions = new ArrayList<>();
 	private static int _bossStage;
 	private static long _lastAction;
-	private static L2Npc _invisible;
-	private static L2Npc _ramona1;
-	private static L2Npc _ramona2;
-	private static L2Npc _ramona3;
+	private static Npc _invisible;
+	private static Npc _ramona1;
+	private static Npc _ramona2;
+	private static Npc _ramona3;
 	
 	private Ramona()
 	{
@@ -113,7 +113,7 @@ public class Ramona extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -127,7 +127,7 @@ public class Ramona extends AbstractNpcAI
 			case "SPAWN_RAMONA_1":
 			{
 				_bossStage = 1;
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 3000, ramona ->
+				World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 3000, ramona ->
 				{
 					if (ramona.getId() == RAMONA)
 					{
@@ -156,9 +156,9 @@ public class Ramona extends AbstractNpcAI
 				_bossStage = 2;
 				for (int i = 0; i < 7; i++)
 				{
-					final L2Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
+					final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
 					minion.setRunning();
-					((L2Attackable) minion).setIsRaidMinion(true);
+					((Attackable) minion).setIsRaidMinion(true);
 					addAttackPlayerDesire(minion, player);
 					_minions.add(minion);
 				}
@@ -182,9 +182,9 @@ public class Ramona extends AbstractNpcAI
 				_bossStage = 3;
 				for (int i = 0; i < 7; i++)
 				{
-					final L2Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
+					final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
 					minion.setRunning();
-					((L2Attackable) minion).setIsRaidMinion(true);
+					((Attackable) minion).setIsRaidMinion(true);
 					addAttackPlayerDesire(minion, player);
 					_minions.add(minion);
 				}
@@ -208,17 +208,17 @@ public class Ramona extends AbstractNpcAI
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
 					// GrandBossManager.getInstance().setBossStatus(RAMONA, ALIVE);
-					for (L2Character charInside : ZONE.getCharactersInside())
+					for (Creature creature : ZONE.getCharactersInside())
 					{
-						if (charInside != null)
+						if (creature != null)
 						{
-							if (charInside.isNpc())
+							if (creature.isNpc())
 							{
-								charInside.deleteMe();
+								creature.deleteMe();
 							}
-							else if (charInside.isPlayer())
+							else if (creature.isPlayer())
 							{
-								charInside.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(charInside, TeleportWhereType.TOWN));
+								creature.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(creature, TeleportWhereType.TOWN));
 							}
 						}
 					}
@@ -257,7 +257,7 @@ public class Ramona extends AbstractNpcAI
 				}
 				if (!_minions.isEmpty())
 				{
-					for (L2Npc minion : _minions)
+					for (Npc minion : _minions)
 					{
 						if (minion == null)
 						{
@@ -276,7 +276,7 @@ public class Ramona extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		double currentHp = (npc.getCurrentHp() / npc.getMaxHp()) * 100;
 		switch (npc.getId())
@@ -317,13 +317,13 @@ public class Ramona extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
 			case ROOM_CONTROL:
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2DoorInstance.class, 8000, Door ->
+				World.getInstance().forEachVisibleObjectInRange(npc, DoorInstance.class, 8000, Door ->
 				{
 					if (Door.getId() == ROOM_CONTROL_DOOR)
 					{
@@ -346,7 +346,7 @@ public class Ramona extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer() && npc.isScriptValue(0) && (ZONE.getCharactersInside().size() >= MIN_PLAYER_COUNT))
 		{

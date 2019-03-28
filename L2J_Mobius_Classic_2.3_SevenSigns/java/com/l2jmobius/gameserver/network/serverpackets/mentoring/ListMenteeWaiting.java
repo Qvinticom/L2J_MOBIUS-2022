@@ -21,8 +21,8 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -32,13 +32,13 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ListMenteeWaiting implements IClientOutgoingPacket
 {
 	private final int PLAYERS_PER_PAGE = 64;
-	private final List<L2PcInstance> _possibleCandiates = new ArrayList<>();
+	private final List<PlayerInstance> _possibleCandiates = new ArrayList<>();
 	private final int _page;
 	
 	public ListMenteeWaiting(int page, int minLevel, int maxLevel)
 	{
 		_page = page;
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && !player.isMentee() && !player.isMentor() && !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
@@ -63,7 +63,7 @@ public class ListMenteeWaiting implements IClientOutgoingPacket
 		packet.writeD(_possibleCandiates.size());
 		packet.writeD(_possibleCandiates.size() % PLAYERS_PER_PAGE);
 		
-		for (L2PcInstance player : _possibleCandiates)
+		for (PlayerInstance player : _possibleCandiates)
 		{
 			if ((1 <= (PLAYERS_PER_PAGE * _page)) && (1 > (PLAYERS_PER_PAGE * (_page - 1))))
 			{

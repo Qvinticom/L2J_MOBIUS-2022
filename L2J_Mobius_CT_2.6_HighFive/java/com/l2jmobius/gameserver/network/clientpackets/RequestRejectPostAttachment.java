@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -37,22 +37,22 @@ public final class RequestRejectPostAttachment implements IClientIncomingPacket
 	private int _msgId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_msgId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -62,9 +62,9 @@ public final class RequestRejectPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!activeChar.isInsideZone(ZoneId.PEACE))
+		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
 		}
 		
@@ -74,9 +74,9 @@ public final class RequestRejectPostAttachment implements IClientIncomingPacket
 			return;
 		}
 		
-		if (msg.getReceiverId() != activeChar.getObjectId())
+		if (msg.getReceiverId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to reject not own attachment!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to reject not own attachment!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -87,14 +87,14 @@ public final class RequestRejectPostAttachment implements IClientIncomingPacket
 		
 		MailManager.getInstance().sendMessage(new Message(msg));
 		
-		activeChar.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
-		activeChar.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
+		player.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
+		player.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
 		
-		final L2PcInstance sender = L2World.getInstance().getPlayer(msg.getSenderId());
+		final PlayerInstance sender = World.getInstance().getPlayer(msg.getSenderId());
 		if (sender != null)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
-			sm.addString(activeChar.getName());
+			sm.addString(player.getName());
 			sender.sendPacket(sm);
 		}
 	}

@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -66,10 +66,10 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -78,9 +78,9 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 		{
 			case "30126-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -103,7 +103,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 					{
 						giveItems(player, REWARD_ANIMAL_BONE);
 					}
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				else
@@ -117,18 +117,18 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		final PlayerInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
-			if (st.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
+			final QuestState qs = getQuestState(partyMember, false);
+			if (qs.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
 			{
 				giveItems(player, BRACELET_OF_LIZARDMAN, 1);
 				if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) == REQUIRED_BRACELET_COUNT)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -140,12 +140,12 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -154,7 +154,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{

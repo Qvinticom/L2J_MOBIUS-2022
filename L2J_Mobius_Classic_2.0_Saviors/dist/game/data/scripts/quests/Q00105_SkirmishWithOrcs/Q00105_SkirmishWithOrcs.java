@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -89,11 +89,11 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -101,9 +101,9 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 		{
 			case "30218-04.html":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, KENDNELLS_ORDERS[getRandom(0, 3)], 1);
 					htmltext = event;
 				}
@@ -119,10 +119,10 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			switch (npc.getId())
 			{
@@ -131,10 +131,10 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				case 27061:
 				case 27062:
 				{
-					if (st.isCond(1) && hasQuestItems(killer, MONSTER_DROP.get(npc.getId())))
+					if (qs.isCond(1) && hasQuestItems(killer, MONSTER_DROP.get(npc.getId())))
 					{
 						giveItems(killer, KABOO_CHIEFS_1ST_TORQUE, 1);
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					break;
 				}
@@ -143,10 +143,10 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				case 27067:
 				case 27068:
 				{
-					if (st.isCond(3) && hasQuestItems(killer, MONSTER_DROP.get(npc.getId())))
+					if (qs.isCond(3) && hasQuestItems(killer, MONSTER_DROP.get(npc.getId())))
 					{
 						giveItems(killer, KABOO_CHIEFS_2ST_TORQUE, 1);
-						st.setCond(4, true);
+						qs.setCond(4, true);
 					}
 					break;
 				}
@@ -156,12 +156,12 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -181,7 +181,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				{
 					htmltext = "30218-06.html";
 				}
-				if (st.isCond(2) && hasQuestItems(talker, KABOO_CHIEFS_1ST_TORQUE))
+				if (qs.isCond(2) && hasQuestItems(talker, KABOO_CHIEFS_1ST_TORQUE))
 				{
 					for (int i = 0; i < 4; i++)
 					{
@@ -189,14 +189,14 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 					}
 					takeItems(talker, KABOO_CHIEFS_1ST_TORQUE, 1);
 					giveItems(talker, KENDNELLS_ORDERS[getRandom(4, 7)], 1);
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = "30218-07.html";
 				}
 				if (hasAtLeastOneQuestItem(talker, KENDELLS_5TH_ORDER, KENDELLS_6TH_ORDER, KENDELLS_7TH_ORDER, KENDELLS_8TH_ORDER))
 				{
 					htmltext = "30218-08.html";
 				}
-				if (st.isCond(4) && hasQuestItems(talker, KABOO_CHIEFS_2ST_TORQUE))
+				if (qs.isCond(4) && hasQuestItems(talker, KABOO_CHIEFS_2ST_TORQUE))
 				{
 					// Q00281_HeadForTheHills.giveNewbieReward(talker);
 					if (talker.isMageClass())
@@ -208,7 +208,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 						giveItems(talker, SWORD_OF_SUNSET, 1);
 					}
 					talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30218-09.html";
 				}
 				break;

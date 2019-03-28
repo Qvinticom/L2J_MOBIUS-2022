@@ -19,15 +19,15 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -43,16 +43,16 @@ public class Heal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
+		PlayerInstance player = null;
+		if (creature instanceof PlayerInstance)
 		{
-			player = (L2PcInstance) activeChar;
+			player = (PlayerInstance) creature;
 		}
 		
-		final boolean bss = activeChar.checkBss();
-		final boolean sps = activeChar.checkSps();
+		final boolean bss = creature.checkBss();
+		final boolean sps = creature.checkSps();
 		
 		// check for other effects
 		try
@@ -61,18 +61,18 @@ public class Heal implements ISkillHandler
 			
 			if (handler != null)
 			{
-				handler.useSkill(activeChar, skill, targets);
+				handler.useSkill(creature, skill, targets);
 			}
 		}
 		catch (Exception e)
 		{
 		}
 		
-		L2Character target = null;
+		Creature target = null;
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
-			target = (L2Character) target2;
+			target = (Creature) target2;
 			
 			if ((target == null) || target.isDead() || target.isInvul())
 			{
@@ -80,28 +80,28 @@ public class Heal implements ISkillHandler
 			}
 			
 			// Avoid players heal inside Baium lair from outside
-			if (((GrandBossManager.getInstance().getZone(player) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(activeChar) != null)))
+			if (((GrandBossManager.getInstance().getZone(player) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(creature) != null)))
 			{
 				continue;
 			}
 			
 			// We should not heal walls and door
-			if (target instanceof L2DoorInstance)
+			if (target instanceof DoorInstance)
 			{
 				continue;
 			}
 			
 			// We should not heal siege flags
-			if ((target instanceof L2NpcInstance) && (((L2NpcInstance) target).getNpcId() == 35062))
+			if ((target instanceof NpcInstance) && (((NpcInstance) target).getNpcId() == 35062))
 			{
-				activeChar.getActingPlayer().sendMessage("You cannot heal siege flags!");
+				creature.getActingPlayer().sendMessage("You cannot heal siege flags!");
 				continue;
 			}
 			
 			// Player holding a cursed weapon can't be healed and can't heal
-			if (target != activeChar)
+			if (target != creature)
 			{
-				if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isCursedWeaponEquiped())
+				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
 				{
 					continue;
 				}
@@ -112,7 +112,7 @@ public class Heal implements ISkillHandler
 			}
 			
 			// Fixed about Infinity Rod skill on Raid Boss and BigBoss
-			if ((skill.getId() == 3598) && ((target instanceof L2RaidBossInstance) || (target instanceof L2GrandBossInstance)))
+			if ((skill.getId() == 3598) && ((target instanceof RaidBossInstance) || (target instanceof GrandBossInstance)))
 			{
 				continue;
 			}
@@ -147,17 +147,17 @@ public class Heal implements ISkillHandler
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 			
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
 				if (skill.getId() == 4051)
 				{
 					SystemMessage sm = new SystemMessage(SystemMessageId.REJUVENATING_HP);
 					target.sendPacket(sm);
 				}
-				else if ((activeChar instanceof L2PcInstance) && (activeChar != target))
+				else if ((creature instanceof PlayerInstance) && (creature != target))
 				{
 					SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_S1);
-					sm.addString(activeChar.getName());
+					sm.addString(creature.getName());
 					sm.addNumber((int) hp);
 					target.sendPacket(sm);
 				}

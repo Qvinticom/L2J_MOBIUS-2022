@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 
 /**
  * Used to Store data sent to Client for Character.<br>
@@ -68,7 +68,7 @@ public class CharSelectInfoPackage
 	{
 		setObjectId(objectId);
 		_name = name;
-		_paperdoll = PcInventory.restoreVisibleInventory(objectId);
+		_paperdoll = PlayerInventory.restoreVisibleInventory(objectId);
 	}
 	
 	/**

@@ -30,12 +30,12 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.SocialClass;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.zone.type.L2ResidenceZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceZone;
 
 /**
  * @author xban1x
@@ -46,9 +46,9 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	private final int _residenceId;
 	private String _name;
 	
-	private L2ResidenceZone _zone = null;
+	private ResidenceZone _zone = null;
 	private final Map<Integer, ResidenceFunction> _functions = new ConcurrentHashMap<>();
-	private List<L2SkillLearn> _residentialSkills = new ArrayList<>();
+	private List<SkillLearn> _residentialSkills = new ArrayList<>();
 	
 	public AbstractResidence(int residenceId)
 	{
@@ -84,22 +84,22 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		_name = name;
 	}
 	
-	public L2ResidenceZone getResidenceZone()
+	public ResidenceZone getResidenceZone()
 	{
 		return _zone;
 	}
 	
-	protected void setResidenceZone(L2ResidenceZone zone)
+	protected void setResidenceZone(ResidenceZone zone)
 	{
 		_zone = zone;
 	}
 	
-	public void giveResidentialSkills(L2PcInstance player)
+	public void giveResidentialSkills(PlayerInstance player)
 	{
 		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
 		{
 			final int playerSocialClass = player.getPledgeClass() + 1;
-			for (L2SkillLearn skill : _residentialSkills)
+			for (SkillLearn skill : _residentialSkills)
 			{
 				final SocialClass skillSocialClass = skill.getSocialClass();
 				if ((skillSocialClass == null) || (playerSocialClass >= skillSocialClass.ordinal()))
@@ -110,11 +110,11 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		}
 	}
 	
-	public void removeResidentialSkills(L2PcInstance player)
+	public void removeResidentialSkills(PlayerInstance player)
 	{
 		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
 		{
-			for (L2SkillLearn skill : _residentialSkills)
+			for (SkillLearn skill : _residentialSkills)
 			{
 				player.removeSkill(skill.getSkillId(), false);
 			}

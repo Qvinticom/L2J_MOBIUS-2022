@@ -18,8 +18,8 @@ package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -29,14 +29,14 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public final class TacticalSignUse implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if ((!activeChar.isInParty() || (activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter()))
+		if ((!player.isInParty() || (player.getTarget() == null) || !player.getTarget().isCreature()))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.getParty().addTacticalSign(activeChar, data.getOptionId(), (L2Character) activeChar.getTarget());
+		player.getParty().addTacticalSign(player, data.getOptionId(), (Creature) player.getTarget());
 	}
 }

@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.templates.StatsSet;
  * Format: (ch) d [SdSdSdd] d: size [ S: hero name d: hero class ID S: hero clan name d: hero clan crest id S: hero ally name d: hero Ally id d: count ]
  * @author -Wooden- Format from KenM Re-written by godson
  */
-public class ExHeroList extends L2GameServerPacket
+public class ExHeroList extends GameServerPacket
 {
 	private final Map<Integer, StatsSet> _heroList;
 	

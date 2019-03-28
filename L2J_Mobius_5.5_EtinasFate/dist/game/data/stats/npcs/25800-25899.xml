@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25800" level="99" type="L2RaidBoss" name="Michaela" title="Grand Judge">
+	<npc id="25800" level="99" type="RaidBoss" name="Michaela" title="Grand Judge">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="Attack_BoostValue" value="151" />
@@ -158,7 +158,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25801" level="88" type="L2RaidBoss" name="Teredor">
+	<npc id="25801" level="88" type="RaidBoss" name="Teredor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="Attack_BoostValue" value="131" />
@@ -242,7 +242,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25802" level="89" type="L2Monster" name="Pan Direm" title="Faithful Servant">
+	<npc id="25802" level="89" type="Monster" name="Pan Direm" title="Faithful Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -301,7 +301,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25803" level="87" type="L2Monster" name="Escort Captain" title="Successor Subordinate">
+	<npc id="25803" level="87" type="Monster" name="Escort Captain" title="Successor Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="3" />
@@ -341,7 +341,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25804" level="87" type="L2Monster" name="Escort Captain" title="Successor Subordinate">
+	<npc id="25804" level="87" type="Monster" name="Escort Captain" title="Successor Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -383,7 +383,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25805" level="98" type="L2Monster" name="Escort" title="Queen's Subordinate">
+	<npc id="25805" level="98" type="Monster" name="Escort" title="Queen's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="4" />
@@ -450,7 +450,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25806" level="98" type="L2Monster" name="Escort" title="Queen's Subordinate">
+	<npc id="25806" level="98" type="Monster" name="Escort" title="Queen's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -518,7 +518,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25807" level="89" type="L2Monster" name="Escort Captain" title="Queen's Subordinate">
+	<npc id="25807" level="89" type="Monster" name="Escort Captain" title="Queen's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -559,7 +559,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25808" level="89" type="L2Monster" name="Escort Captain" title="Queen's Subordinate">
+	<npc id="25808" level="89" type="Monster" name="Escort Captain" title="Queen's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -600,7 +600,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25809" level="59" type="L2Monster" name="Vladimir" title="Executioner">
+	<npc id="25809" level="59" type="Monster" name="Vladimir" title="Executioner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -647,7 +647,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="25810" level="58" type="L2Monster" name="Vladimir's Follower">
+	<npc id="25810" level="58" type="Monster" name="Vladimir's Follower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -678,7 +678,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25811" level="62" type="L2Monster" name="Lazearth" title="Destroyer">
+	<npc id="25811" level="62" type="Monster" name="Lazearth" title="Destroyer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -750,7 +750,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="25812" level="62" type="L2Monster" name="Lazearth" title="Destroyer">
+	<npc id="25812" level="62" type="Monster" name="Lazearth" title="Destroyer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -820,7 +820,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25813" level="66" type="L2Monster" name="Byron" title="Queen of Blood">
+	<npc id="25813" level="66" type="Monster" name="Byron" title="Queen of Blood">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -893,7 +893,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25814" level="65" type="L2Monster" name="Byron's Maid">
+	<npc id="25814" level="65" type="Monster" name="Byron's Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -924,7 +924,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25815" level="70" type="L2Monster" name="Ken" title="Savage">
+	<npc id="25815" level="70" type="Monster" name="Ken" title="Savage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -996,7 +996,7 @@
 			<height normal="48" />
 		</collision>
 	</npc>
-	<npc id="25816" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
+	<npc id="25816" level="72" type="Monster" name="Heaven's Palace Sniper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1068,7 +1068,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="25817" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
+	<npc id="25817" level="72" type="Monster" name="Heaven's Palace Sniper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1138,7 +1138,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25818" level="75" type="L2Monster" name="Emperor of Heaven's Palace">
+	<npc id="25818" level="75" type="Monster" name="Emperor of Heaven's Palace">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1212,7 +1212,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25819" level="75" type="L2Monster" name="Heaven's Palace Healer">
+	<npc id="25819" level="75" type="Monster" name="Heaven's Palace Healer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1243,7 +1243,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="25820" level="75" type="L2Monster" name="Heaven's Palace Goddess">
+	<npc id="25820" level="75" type="Monster" name="Heaven's Palace Goddess">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -1316,7 +1316,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="25821" level="75" type="L2Monster" name="Heaven's Palace Goddess Warrior">
+	<npc id="25821" level="75" type="Monster" name="Heaven's Palace Goddess Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1347,7 +1347,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="25822" level="95" type="L2Monster" name="Lakielo" title="Cursed Hero">
+	<npc id="25822" level="95" type="Monster" name="Lakielo" title="Cursed Hero">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14267" level="1" />
@@ -1386,7 +1386,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25823" level="95" type="L2Monster" name="Brakiera" title="Cursed Hero">
+	<npc id="25823" level="95" type="Monster" name="Brakiera" title="Cursed Hero">
 		<parameters>
 			<skill name="Skill01_ID" id="14267" level="2" />
 			<skill name="summonSkill" id="14265" level="1" />
@@ -1424,7 +1424,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25824" level="97" type="L2RaidBoss" name="Ron" title="Raid Boss">
+	<npc id="25824" level="97" type="RaidBoss" name="Ron" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1556,7 +1556,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25825" level="97" type="L2RaidBoss" name="Ron" title="Raid Boss">
+	<npc id="25825" level="97" type="RaidBoss" name="Ron" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14271" level="1" />
@@ -1678,7 +1678,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25826" level="95" type="L2Monster" name="Nameless Subject" title="Raid Fighter">
+	<npc id="25826" level="95" type="Monster" name="Nameless Subject" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1722,7 +1722,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="25827" level="45" type="L2Monster" name="Accencio" title="Event Monster">
+	<npc id="25827" level="45" type="Monster" name="Accencio" title="Event Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14274" level="1" />
@@ -1768,7 +1768,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25828" level="45" type="L2Monster" name="Malicio" title="Event Monster">
+	<npc id="25828" level="45" type="Monster" name="Malicio" title="Event Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SpecialSkill01_ID" id="14286" level="1" />
@@ -1814,7 +1814,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="25829" level="45" type="L2Monster" name="Mertes">
+	<npc id="25829" level="45" type="Monster" name="Mertes">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01" id="14274" level="1" />
@@ -1846,7 +1846,7 @@
 			<height normal="133.5" />
 		</collision>
 	</npc>
-	<npc id="25830" level="93" type="L2Monster" name="Golem of Repairs">
+	<npc id="25830" level="93" type="Monster" name="Golem of Repairs">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="heal" id="14276" level="1" />
@@ -1900,7 +1900,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25831" level="20" type="L2Monster" name="Eyesaroch" title="Husk">
+	<npc id="25831" level="20" type="Monster" name="Eyesaroch" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14159" level="1" />
@@ -1932,7 +1932,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25832" level="20" type="L2Monster" name="Overseer" title="Embryo">
+	<npc id="25832" level="20" type="Monster" name="Overseer" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14172" level="1" />
@@ -1965,7 +1965,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25833" level="95" type="L2Monster" name="Orbis' Victim">
+	<npc id="25833" level="95" type="Monster" name="Orbis' Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2027,7 +2027,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25834" level="95" type="L2Monster" name="Orbis' Guard">
+	<npc id="25834" level="95" type="Monster" name="Orbis' Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2087,7 +2087,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25835" level="95" type="L2Monster" name="Orbis' Thrower">
+	<npc id="25835" level="95" type="Monster" name="Orbis' Thrower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2149,7 +2149,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25836" level="96" type="L2Monster" name="Orbis' Curator">
+	<npc id="25836" level="96" type="Monster" name="Orbis' Curator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2210,7 +2210,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="25837" level="92" type="L2RaidBoss" name="Weeping Yui" title="Raid Boss">
+	<npc id="25837" level="92" type="RaidBoss" name="Weeping Yui" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_ID" value="s_npc_monster_fortuna_bleed_drain_magic1" />
@@ -2304,7 +2304,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25838" level="93" type="L2RaidBoss" name="Mukshu the Coward" title="Raid Boss">
+	<npc id="25838" level="93" type="RaidBoss" name="Mukshu the Coward" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Fast_Skill" id="14538" level="1" />
@@ -2386,7 +2386,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25839" level="96" type="L2RaidBoss" name="Blind Hornafi" title="Raid Boss">
+	<npc id="25839" level="96" type="RaidBoss" name="Blind Hornafi" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Stun_Skill" id="14539" level="1" />
@@ -2471,7 +2471,7 @@
 			<height normal="77" />
 		</collision>
 	</npc>
-	<npc id="25840" level="94" type="L2RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
+	<npc id="25840" level="94" type="RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14363" level="1" />
@@ -2562,7 +2562,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25841" level="95" type="L2RaidBoss" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
+	<npc id="25841" level="95" type="RaidBoss" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14357" level="1" />
@@ -2656,7 +2656,7 @@
 			<height normal="62" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25842" level="95" type="L2Monster" name="Black Beast" title="Raid Fighter">
+	<npc id="25842" level="95" type="Monster" name="Black Beast" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2696,7 +2696,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25843" level="96" type="L2RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
+	<npc id="25843" level="96" type="RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2799,7 +2799,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25844" level="96" type="L2RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
+	<npc id="25844" level="96" type="RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2904,7 +2904,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25845" level="96" type="L2RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
+	<npc id="25845" level="96" type="RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14360" level="1" />
@@ -2998,7 +2998,7 @@
 			<height normal="93" />
 		</collision>
 	</npc>
-	<npc id="25846" level="96" type="L2RaidBoss" name="Yoentumak the Waiter" title="Raid Boss">
+	<npc id="25846" level="96" type="RaidBoss" name="Yoentumak the Waiter" title="Raid Boss">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Debuff_Skill" id="14364" level="1" />
@@ -3084,7 +3084,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="25855" level="104" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
+	<npc id="25855" level="104" type="RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3241,7 +3241,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25856" level="104" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
+	<npc id="25856" level="104" type="RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3399,7 +3399,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25857" level="104" type="L2Monster" name="Corrupted Captain" title="Guardian of the Altar">
+	<npc id="25857" level="104" type="Monster" name="Corrupted Captain" title="Guardian of the Altar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16982" level="1" /> <!-- Devil Horns of Shield -->
@@ -3437,7 +3437,7 @@
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
-	<npc id="25858" level="104" type="L2Monster" name="Corrupted High Priest" title="Guardian of the Altar">
+	<npc id="25858" level="104" type="Monster" name="Corrupted High Priest" title="Guardian of the Altar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16983" level="1" /> <!-- Embryo's Blessing -->
@@ -3475,7 +3475,7 @@
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
-	<npc id="25865" level="93" type="L2Monster" name="Apherus Subordinate">
+	<npc id="25865" level="93" type="Monster" name="Apherus Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3514,7 +3514,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="25866" level="94" type="L2RaidBoss" name="Apherus">
+	<npc id="25866" level="94" type="RaidBoss" name="Apherus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />
@@ -3598,7 +3598,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25867" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
+	<npc id="25867" level="98" type="RaidBoss" name="Spezion" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3652,7 +3652,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="25868" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
+	<npc id="25868" level="98" type="RaidBoss" name="Spezion" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="300" />
@@ -3708,7 +3708,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="25869" level="98" type="L2RaidBoss" name="Berserk Spezion" title="Raid Boss">
+	<npc id="25869" level="98" type="RaidBoss" name="Berserk Spezion" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14149" level="1" />
@@ -3763,7 +3763,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="25870" level="43" type="L2RaidBoss" name="Rose" title="Raid Boss">
+	<npc id="25870" level="43" type="RaidBoss" name="Rose" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -3828,7 +3828,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25871" level="43" type="L2RaidBoss" name="Thorn" title="Raid Boss">
+	<npc id="25871" level="43" type="RaidBoss" name="Thorn" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -3893,7 +3893,7 @@
 			<height normal="39" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25872" level="97" type="L2Monster" name="Spezion's Subordinate">
+	<npc id="25872" level="97" type="Monster" name="Spezion's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3930,7 +3930,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25873" level="97" type="L2Monster" name="Spezion's Subordinate">
+	<npc id="25873" level="97" type="Monster" name="Spezion's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3966,7 +3966,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25874" level="97" type="L2Monster" name="Spezion's Subordinate">
+	<npc id="25874" level="97" type="Monster" name="Spezion's Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4002,7 +4002,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25875" level="88" type="L2RaidBoss" name="Queen of Darkness" title="Raid Boss">
+	<npc id="25875" level="88" type="RaidBoss" name="Queen of Darkness" title="Raid Boss">
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<skill name="Skill01_ID" id="14701" level="1" />
@@ -4079,7 +4079,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25876" level="105" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
+	<npc id="25876" level="105" type="RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14515" level="1" />
@@ -4215,7 +4215,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25877" level="104" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
+	<npc id="25877" level="104" type="RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill02_ID" id="14519" level="1" />
@@ -4351,7 +4351,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25878" level="85" type="L2Monster" name="Arbitor of Darkness" title="Raid Fighter">
+	<npc id="25878" level="85" type="Monster" name="Arbitor of Darkness" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4417,7 +4417,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25879" level="88" type="L2RaidBoss" name="Queen of Darkness" title="Raid Boss">
+	<npc id="25879" level="88" type="RaidBoss" name="Queen of Darkness" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
@@ -4507,7 +4507,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25880" level="97" type="L2RaidBoss" name="Georgios" title="Raid Boss">
+	<npc id="25880" level="97" type="RaidBoss" name="Georgios" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14012" level="2" />
@@ -4561,7 +4561,7 @@
 			<height normal="91" />
 		</collision>
 	</npc>
-	<npc id="25881" level="98" type="L2Monster" name="Veridan" title="Hell's Warden">
+	<npc id="25881" level="98" type="Monster" name="Veridan" title="Hell's Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -4608,7 +4608,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25882" level="88" type="L2RaidBoss" name="Zellaka" title="Lord of Kartia">
+	<npc id="25882" level="88" type="RaidBoss" name="Zellaka" title="Lord of Kartia">
 		<parameters>
 			<param name="MoveAroundSocial" value="134" />
 			<param name="MoveAroundSocial1" value="134" />
@@ -4740,7 +4740,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25883" level="93" type="L2RaidBoss" name="Pelline" title="Lord of Kartia">
+	<npc id="25883" level="93" type="RaidBoss" name="Pelline" title="Lord of Kartia">
 		<parameters>
 			<param name="MoveAroundSocial" value="119" />
 			<param name="MoveAroundSocial1" value="119" />
@@ -4872,7 +4872,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25884" level="98" type="L2RaidBoss" name="Kalios" title="Lord of Kartia">
+	<npc id="25884" level="98" type="RaidBoss" name="Kalios" title="Lord of Kartia">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -5010,7 +5010,7 @@
 			<height normal="65.5" />
 		</collision>
 	</npc>
-	<npc id="25885" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
+	<npc id="25885" level="97" type="RaidBoss" name="Guillotine of Death" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
@@ -5144,7 +5144,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25886" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
+	<npc id="25886" level="97" type="RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -5298,7 +5298,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25887" level="97" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
+	<npc id="25887" level="97" type="RaidBoss" name="Crook the Mad" title="Raid Boss">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -5451,7 +5451,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25888" level="97" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
+	<npc id="25888" level="97" type="RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -5498,7 +5498,7 @@
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
-	<npc id="25889" level="97" type="L2Monster" name="Revenant of Sir Calibus" title="Raid Fighter">
+	<npc id="25889" level="97" type="Monster" name="Revenant of Sir Calibus" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5551,7 +5551,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25890" level="97" type="L2Monster" name="Soul Collector Acheron" title="Raid Fighter">
+	<npc id="25890" level="97" type="Monster" name="Soul Collector Acheron" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5603,7 +5603,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="25891" level="97" type="L2Monster" name="Evil Spirit Tempest" title="Raid Fighter">
+	<npc id="25891" level="97" type="Monster" name="Evil Spirit Tempest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5655,7 +5655,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25892" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
+	<npc id="25892" level="97" type="RaidBoss" name="Guillotine of Death" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -5787,7 +5787,7 @@
 			<height normal="82" />
 		</collision>
 	</npc>
-	<npc id="25893" level="97" type="L2Monster" name="Strain">
+	<npc id="25893" level="97" type="Monster" name="Strain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_DecayRatio" value="50" />
@@ -5825,7 +5825,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="25894" level="94" type="L2RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
+	<npc id="25894" level="94" type="RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5915,7 +5915,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25895" level="104" type="L2Monster" name="Lyn Draco">
+	<npc id="25895" level="104" type="Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -5946,7 +5946,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25896" level="104" type="L2Monster" name="Lyn Draco">
+	<npc id="25896" level="104" type="Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -5977,7 +5977,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="25897" level="104" type="L2Monster" name="Lyn Draco">
+	<npc id="25897" level="104" type="Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -6014,7 +6014,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25898" level="99" type="L2Monster" name="Cyclone">
+	<npc id="25898" level="99" type="Monster" name="Cyclone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
@@ -6050,7 +6050,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25899" level="104" type="L2GrandBoss" name="Lindvior" title="Wind Dragon">
+	<npc id="25899" level="104" type="GrandBoss" name="Lindvior" title="Wind Dragon">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->

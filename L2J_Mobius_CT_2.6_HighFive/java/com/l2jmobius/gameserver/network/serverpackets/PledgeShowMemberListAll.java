@@ -17,23 +17,23 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.Clan.SubPledge;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
-	private final L2PcInstance _activeChar;
-	private final L2ClanMember[] _members;
+	private final Clan _clan;
+	private final PlayerInstance _player;
+	private final ClanMember[] _members;
 	private int _pledgeType;
 	
-	public PledgeShowMemberListAll(L2Clan clan, L2PcInstance activeChar)
+	public PledgeShowMemberListAll(Clan clan, PlayerInstance player)
 	{
 		_clan = clan;
-		_activeChar = activeChar;
+		_player = player;
 		_members = _clan.getMembers();
 	}
 	
@@ -46,21 +46,21 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		
 		for (SubPledge subPledge : _clan.getAllSubPledges())
 		{
-			_activeChar.sendPacket(new PledgeReceiveSubPledgeCreated(subPledge, _clan));
+			_player.sendPacket(new PledgeReceiveSubPledgeCreated(subPledge, _clan));
 		}
 		
-		for (L2ClanMember m : _members)
+		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() == 0)
 			{
 				continue;
 			}
-			_activeChar.sendPacket(new PledgeShowMemberListAdd(m));
+			_player.sendPacket(new PledgeShowMemberListAdd(m));
 		}
 		
 		// unless this is sent sometimes, the client doesn't recognise the player as the leader
-		_activeChar.sendPacket(new UserInfo(_activeChar));
-		_activeChar.sendPacket(new ExBrExtraUserInfo(_activeChar));
+		_player.sendPacket(new UserInfo(_player));
+		_player.sendPacket(new ExBrExtraUserInfo(_player));
 		return true;
 	}
 	
@@ -90,7 +90,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(0x00); // Territory castle ID
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
-		for (L2ClanMember m : _members)
+		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() != _pledgeType)
 			{
@@ -99,7 +99,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());
 			packet.writeD(m.getClassId());
-			final L2PcInstance player = m.getPlayerInstance();
+			final PlayerInstance player = m.getPlayerInstance();
 			if (player != null)
 			{
 				packet.writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect

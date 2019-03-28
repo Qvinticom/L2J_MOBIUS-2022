@@ -16,8 +16,8 @@
  */
 package ai.others;
 
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -44,11 +44,11 @@ public class SeeThroughSilentMove extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.isAttackable())
 		{
-			((L2Attackable) npc).setSeeThroughSilentMove(true);
+			((Attackable) npc).setSeeThroughSilentMove(true);
 		}
 		return super.onSpawn(npc);
 	}

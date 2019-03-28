@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -38,7 +38,7 @@ public class StaticObject implements IClientOutgoingPacket
 	private final boolean _showHp;
 	private final int _damageGrade;
 	
-	public StaticObject(L2StaticObjectInstance staticObject)
+	public StaticObject(StaticObjectInstance staticObject)
 	{
 		_staticObjectId = staticObject.getId();
 		_objectId = staticObject.getObjectId();
@@ -53,7 +53,7 @@ public class StaticObject implements IClientOutgoingPacket
 		_damageGrade = 0;
 	}
 	
-	public StaticObject(L2DoorInstance door, boolean targetable)
+	public StaticObject(DoorInstance door, boolean targetable)
 	{
 		_staticObjectId = door.getId();
 		_objectId = door.getObjectId();

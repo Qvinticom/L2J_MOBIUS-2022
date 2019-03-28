@@ -82,7 +82,7 @@ public final class SkillData
 	
 	/**
 	 * Provides the skill hash
-	 * @param skill The L2Skill to be hashed
+	 * @param skill The Skill to be hashed
 	 * @return getSkillHashCode(skill.getId(), skill.getLevel())
 	 */
 	public static int getSkillHashCode(Skill skill)

@@ -21,10 +21,10 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -57,7 +57,7 @@ public final class Kekropus extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -93,9 +93,9 @@ public final class Kekropus extends AbstractNpcAI
 						player.sendPacket(packet);
 						return null;
 					}
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
@@ -110,7 +110,7 @@ public final class Kekropus extends AbstractNpcAI
 						player.sendPacket(packet);
 						return null;
 					}
-					for (L2PcInstance member : members)
+					for (PlayerInstance member : members)
 					{
 						if (member.getLevel() < Config.HELIOS_MIN_PLAYER_LVL)
 						{
@@ -122,7 +122,7 @@ public final class Kekropus extends AbstractNpcAI
 							return null;
 						}
 					}
-					for (L2PcInstance member : members)
+					for (PlayerInstance member : members)
 					{
 						if ((member.calculateDistance2D(npc) < 1000) && (npc.getId() == KEKROPUS))
 						{
@@ -142,7 +142,7 @@ public final class Kekropus extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final int i = getRandom(0, 12);
 		if ((i > 0) && (i <= 3))

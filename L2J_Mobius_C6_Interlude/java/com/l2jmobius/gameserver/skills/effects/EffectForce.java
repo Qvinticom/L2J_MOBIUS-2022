@@ -19,15 +19,15 @@ package com.l2jmobius.gameserver.skills.effects;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author kombat
  */
-public class EffectForce extends L2Effect
+public class EffectForce extends Effect
 {
 	protected static final Logger LOGGER = Logger.getLogger(EffectForce.class.getName());
 	
@@ -75,7 +75,7 @@ public class EffectForce extends L2Effect
 	public void updateBuff()
 	{
 		exit(false);
-		final L2Skill newSkill = SkillTable.getInstance().getInfo(getSkill().getId(), forces);
+		final Skill newSkill = SkillTable.getInstance().getInfo(getSkill().getId(), forces);
 		if (newSkill != null)
 		{
 			newSkill.getEffects(getEffector(), getEffected(), false, false, false);

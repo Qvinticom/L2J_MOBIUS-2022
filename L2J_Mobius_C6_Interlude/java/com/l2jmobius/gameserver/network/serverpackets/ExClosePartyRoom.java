@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author Gnacik
  */
-public class ExClosePartyRoom extends L2GameServerPacket
+public class ExClosePartyRoom extends GameServerPacket
 {
 	public ExClosePartyRoom()
 	{

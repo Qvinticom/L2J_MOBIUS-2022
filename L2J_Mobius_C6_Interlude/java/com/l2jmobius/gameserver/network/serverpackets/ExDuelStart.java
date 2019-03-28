@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch d.
  * @author KenM
  */
-public class ExDuelStart extends L2GameServerPacket
+public class ExDuelStart extends GameServerPacket
 {
 	/** The _unk1. */
 	private final int _unk1;

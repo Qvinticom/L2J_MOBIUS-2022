@@ -18,12 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
@@ -44,19 +44,19 @@ public final class Stun extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.STUN;
+		return EffectType.STUN;
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected();
+		final Creature effected = info.getEffected();
 		effected.stopStunning(false);
 		if (effected.isSummon())
 		{
-			final L2Character effector = info.getEffector();
+			final Creature effector = info.getEffector();
 			if ((effector != null) && !effector.isDead())
 			{
 				if (effector.isPlayable() && (effected.getActingPlayer().getPvpFlag() == 0))
@@ -65,7 +65,7 @@ public final class Stun extends AbstractEffect
 				}
 				else
 				{
-					((L2Summon) effected).doSummonAttack(effector);
+					((Summon) effected).doSummonAttack(effector);
 				}
 			}
 			else

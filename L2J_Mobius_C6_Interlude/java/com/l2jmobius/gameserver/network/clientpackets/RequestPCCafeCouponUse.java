@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  * Format: (ch) S
  * @author -Wooden-
  */
-public final class RequestPCCafeCouponUse extends L2GameClientPacket
+public final class RequestPCCafeCouponUse extends GameClientPacket
 {
 	private final Logger LOGGER = Logger.getLogger(RequestPCCafeCouponUse.class.getName());
 	private String _str;

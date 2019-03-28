@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.actor.stat;
 
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStat extends SummonStat
 {
-	public PetStat(L2PetInstance activeChar)
+	public PetStat(PetInstance activeChar)
 	{
 		super(activeChar);
 	}
@@ -85,7 +85,7 @@ public class PetStat extends SummonStat
 		{
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
 		}
-		// Send a Server->Client packet PetInfo to the L2PcInstance
+		// Send a Server->Client packet PetInfo to the PlayerInstance
 		getActiveChar().updateAndBroadcastStatus(1);
 		
 		if (getActiveChar().getControlItem() != null)
@@ -114,9 +114,9 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public L2PetInstance getActiveChar()
+	public PetInstance getActiveChar()
 	{
-		return (L2PetInstance) super.getActiveChar();
+		return (PetInstance) super.getActiveChar();
 	}
 	
 	public final int getFeedBattle()
@@ -166,25 +166,25 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public double getMAtk(L2Character target, Skill skill)
+	public double getMAtk(Creature target, Skill skill)
 	{
 		return calcStat(Stats.MAGIC_ATTACK, getActiveChar().getPetLevelData().getPetMAtk(), target, skill);
 	}
 	
 	@Override
-	public double getMDef(L2Character target, Skill skill)
+	public double getMDef(Creature target, Skill skill)
 	{
 		return calcStat(Stats.MAGIC_DEFENCE, getActiveChar().getPetLevelData().getPetMDef(), target, skill);
 	}
 	
 	@Override
-	public double getPAtk(L2Character target)
+	public double getPAtk(Creature target)
 	{
 		return calcStat(Stats.POWER_ATTACK, getActiveChar().getPetLevelData().getPetPAtk(), target, null);
 	}
 	
 	@Override
-	public double getPDef(L2Character target)
+	public double getPDef(Creature target)
 	{
 		return calcStat(Stats.POWER_DEFENCE, getActiveChar().getPetLevelData().getPetPDef(), target, null);
 	}

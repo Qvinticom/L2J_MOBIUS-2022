@@ -24,14 +24,14 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
+import com.l2jmobius.gameserver.model.ArmorSet;
 
 public class ArmorSetsTable
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetsTable.class.getName());
 	private static ArmorSetsTable _instance;
 	
-	public Map<Integer, L2ArmorSet> armorSets;
+	public Map<Integer, ArmorSet> armorSets;
 	private final Map<Integer, ArmorDummy> cusArmorSets;
 	
 	public static ArmorSetsTable getInstance()
@@ -71,7 +71,7 @@ public class ArmorSetsTable
 				final int shield_skill_id = rset.getInt("shield_skill_id");
 				final int enchant6skill = rset.getInt("enchant6skill");
 				
-				armorSets.put(chest, new L2ArmorSet(chest, legs, head, gloves, feet, skill_id, shield, shield_skill_id, enchant6skill));
+				armorSets.put(chest, new ArmorSet(chest, legs, head, gloves, feet, skill_id, shield, shield_skill_id, enchant6skill));
 				cusArmorSets.put(id, new ArmorDummy(chest, legs, head, gloves, feet, skill_id, shield));
 			}
 			
@@ -91,12 +91,12 @@ public class ArmorSetsTable
 		return armorSets.containsKey(chestId);
 	}
 	
-	public L2ArmorSet getSet(int chestId)
+	public ArmorSet getSet(int chestId)
 	{
 		return armorSets.get(chestId);
 	}
 	
-	public void addObj(int v, L2ArmorSet s)
+	public void addObj(int v, ArmorSet s)
 	{
 		armorSets.put(v, s);
 	}

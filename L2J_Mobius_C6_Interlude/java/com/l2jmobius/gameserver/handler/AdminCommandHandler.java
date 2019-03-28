@@ -91,7 +91,6 @@ import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminWho;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminZone;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.5 $ $Date: 2005/03/27 15:30:09 $
  */
 public class AdminCommandHandler

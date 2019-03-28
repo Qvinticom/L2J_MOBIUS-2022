@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
+import com.l2jmobius.gameserver.model.SkillLearn;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -69,7 +69,7 @@ public class AcquireSkillInfo implements IClientOutgoingPacket
 	 * @param skillType the skill learning type.
 	 * @param skillLearn the skill learn.
 	 */
-	public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn)
+	public AcquireSkillInfo(AcquireSkillType skillType, SkillLearn skillLearn)
 	{
 		_id = skillLearn.getSkillId();
 		_level = skillLearn.getSkillLevel();
@@ -96,7 +96,7 @@ public class AcquireSkillInfo implements IClientOutgoingPacket
 	 * @param skillLearn the skill learn.
 	 * @param sp the custom SP amount.
 	 */
-	public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn, int sp)
+	public AcquireSkillInfo(AcquireSkillType skillType, SkillLearn skillLearn, int sp)
 	{
 		_id = skillLearn.getSkillId();
 		_level = skillLearn.getSkillLevel();

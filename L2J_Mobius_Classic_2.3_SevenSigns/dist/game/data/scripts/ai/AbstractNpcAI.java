@@ -18,9 +18,9 @@ package ai;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 
@@ -41,7 +41,7 @@ public abstract class AbstractNpcAI extends Quest
 	 * Simple on first talk event handler.
 	 */
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".html";
 	}
@@ -70,11 +70,11 @@ public abstract class AbstractNpcAI extends Quest
 		addFactionCallId(mobs);
 	}
 	
-	public void spawnMinions(L2Npc npc, String spawnName)
+	public void spawnMinions(Npc npc, String spawnName)
 	{
 		for (MinionHolder is : npc.getParameters().getMinionList(spawnName))
 		{
-			addMinion((L2MonsterInstance) npc, is.getId());
+			addMinion((MonsterInstance) npc, is.getId());
 		}
 	}
 }

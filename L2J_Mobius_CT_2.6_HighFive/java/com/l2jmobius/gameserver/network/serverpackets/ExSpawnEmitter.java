@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -35,7 +35,7 @@ public class ExSpawnEmitter implements IClientOutgoingPacket
 		_npcObjectId = npcObjectId;
 	}
 	
-	public ExSpawnEmitter(L2PcInstance player, L2Npc npc)
+	public ExSpawnEmitter(PlayerInstance player, Npc npc)
 	{
 		this(player.getObjectId(), npc.getObjectId());
 	}

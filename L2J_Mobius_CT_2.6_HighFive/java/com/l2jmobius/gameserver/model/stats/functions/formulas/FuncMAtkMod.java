@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.stats.functions.formulas;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -40,7 +40,7 @@ public class FuncMAtkMod extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		// Level Modifier^2 * INT Modifier^2
 		final double lvlMod = effector.isPlayer() ? BaseStats.INT.calcBonus(effector.getActingPlayer()) : BaseStats.INT.calcBonus(effector);

@@ -21,7 +21,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Speed Down -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
@@ -72,7 +72,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Speed Down -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
@@ -139,7 +139,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Mirage -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
@@ -187,7 +187,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Mirage -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
@@ -244,7 +244,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Critical Down -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
@@ -299,7 +299,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Critical Down -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
@@ -360,7 +360,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Effect of Doubt -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>

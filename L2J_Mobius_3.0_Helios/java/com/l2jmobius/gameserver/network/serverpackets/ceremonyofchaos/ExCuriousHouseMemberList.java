@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets.ceremonyofchaos;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -50,7 +50,7 @@ public class ExCuriousHouseMemberList implements IClientOutgoingPacket
 		packet.writeD(_players.size());
 		for (CeremonyOfChaosMember cocPlayer : _players)
 		{
-			final L2PcInstance player = cocPlayer.getPlayer();
+			final PlayerInstance player = cocPlayer.getPlayer();
 			packet.writeD(cocPlayer.getObjectId());
 			packet.writeD(cocPlayer.getPosition());
 			if (player != null)

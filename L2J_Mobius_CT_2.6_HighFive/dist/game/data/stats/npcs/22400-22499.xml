@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22400" level="83" type="L2Monster" name="Parme's Healer">
+	<npc id="22400" level="83" type="Monster" name="Parme's Healer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
@@ -67,7 +67,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22401" level="83" type="L2Monster" name="Parme's Healer">
+	<npc id="22401" level="83" type="Monster" name="Parme's Healer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
@@ -142,7 +142,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22402" level="83" type="L2Monster" name="Shadow Column">
+	<npc id="22402" level="83" type="Monster" name="Shadow Column">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDmagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
@@ -207,7 +207,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="22403" level="83" type="L2Monster" name="Foundry Foreman">
+	<npc id="22403" level="83" type="Monster" name="Foundry Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -302,7 +302,7 @@
 			<height normal="40.5985" />
 		</collision>
 	</npc>
-	<npc id="22404" level="83" type="L2Monster" name="Arcane Captain">
+	<npc id="22404" level="83" type="Monster" name="Arcane Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -392,7 +392,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="22405" level="83" type="L2Monster" name="Darion's Faithful Servant">
+	<npc id="22405" level="83" type="Monster" name="Darion's Faithful Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -485,7 +485,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="22406" level="83" type="L2Monster" name="Darion's Faithful Servant">
+	<npc id="22406" level="83" type="Monster" name="Darion's Faithful Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -577,7 +577,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22407" level="83" type="L2Monster" name="Darion's Faithful Servant">
+	<npc id="22407" level="83" type="Monster" name="Darion's Faithful Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -671,7 +671,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22408" level="83" type="L2Monster" name="Darion's Faithful Servant">
+	<npc id="22408" level="83" type="Monster" name="Darion's Faithful Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -778,7 +778,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22409" level="83" type="L2Monster" name="Darion's Faithful Servant">
+	<npc id="22409" level="83" type="Monster" name="Darion's Faithful Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -885,7 +885,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22410" level="83" type="L2Monster" name="Darion's Faithful Servant">
+	<npc id="22410" level="83" type="Monster" name="Darion's Faithful Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -979,7 +979,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22411" level="83" type="L2Monster" name="Beleth's Retainer">
+	<npc id="22411" level="83" type="Monster" name="Beleth's Retainer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1071,7 +1071,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22412" level="83" type="L2Monster" name="Beleth's Fighter">
+	<npc id="22412" level="83" type="Monster" name="Beleth's Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1172,7 +1172,7 @@
 			<height normal="46.8" grown="55" />
 		</collision>
 	</npc>
-	<npc id="22413" level="83" type="L2Monster" name="Beleth's Low Servant">
+	<npc id="22413" level="83" type="Monster" name="Beleth's Low Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1259,7 +1259,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="22414" level="83" type="L2Monster" name="Beleth's Follower">
+	<npc id="22414" level="83" type="Monster" name="Beleth's Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1333,7 +1333,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="22415" level="83" type="L2Monster" name="Beleth's Devotee">
+	<npc id="22415" level="83" type="Monster" name="Beleth's Devotee">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1423,7 +1423,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22416" level="82" type="L2Monster" name="Kechi's Captain">
+	<npc id="22416" level="82" type="Monster" name="Kechi's Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -1509,7 +1509,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="22417" level="82" type="L2Monster" name="Kechi's Guard">
+	<npc id="22417" level="82" type="Monster" name="Kechi's Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1606,7 +1606,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="22418" level="82" type="L2Monster" name="Burning Iris">
+	<npc id="22418" level="82" type="Monster" name="Burning Iris">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1686,7 +1686,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22419" level="82" type="L2Monster" name="Flame Iris">
+	<npc id="22419" level="82" type="Monster" name="Flame Iris">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1775,7 +1775,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22420" level="82" type="L2Monster" name="Brimstone Iris">
+	<npc id="22420" level="82" type="Monster" name="Brimstone Iris">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1863,7 +1863,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22422" level="83" type="L2Monster" name="Failan's Guard">
+	<npc id="22422" level="83" type="Monster" name="Failan's Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1941,7 +1941,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="22423" level="83" type="L2Monster" name="Original Sin Warden">
+	<npc id="22423" level="83" type="Monster" name="Original Sin Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2035,7 +2035,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="22424" level="83" type="L2Monster" name="Slave of Greed">
+	<npc id="22424" level="83" type="Monster" name="Slave of Greed">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2116,7 +2116,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="22425" level="83" type="L2Monster" name="Slave of Lust">
+	<npc id="22425" level="83" type="Monster" name="Slave of Lust">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2194,7 +2194,7 @@
 			<height normal="30.7" />
 		</collision>
 	</npc>
-	<npc id="22426" level="83" type="L2Monster" name="Slave of Wrath">
+	<npc id="22426" level="83" type="Monster" name="Slave of Wrath">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
@@ -2275,7 +2275,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="22427" level="83" type="L2Monster" name="Slave of Sloth">
+	<npc id="22427" level="83" type="Monster" name="Slave of Sloth">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2355,7 +2355,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22428" level="83" type="L2Monster" name="Slave of Envy">
+	<npc id="22428" level="83" type="Monster" name="Slave of Envy">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2438,7 +2438,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="22429" level="83" type="L2Monster" name="Slave of Pride">
+	<npc id="22429" level="83" type="Monster" name="Slave of Pride">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2529,7 +2529,7 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="22430" level="83" type="L2Monster" name="Slave of Gluttony">
+	<npc id="22430" level="83" type="Monster" name="Slave of Gluttony">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2612,7 +2612,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="22431" level="83" type="L2Monster" name="Original Sin Warden">
+	<npc id="22431" level="83" type="Monster" name="Original Sin Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2707,7 +2707,7 @@
 			<height normal="37.5" grown="46.8" />
 		</collision>
 	</npc>
-	<npc id="22432" level="83" type="L2Monster" name="Slave of Greed">
+	<npc id="22432" level="83" type="Monster" name="Slave of Greed">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2787,7 +2787,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="22433" level="83" type="L2Monster" name="Slave of Lust">
+	<npc id="22433" level="83" type="Monster" name="Slave of Lust">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2868,7 +2868,7 @@
 			<height normal="30.7" />
 		</collision>
 	</npc>
-	<npc id="22434" level="83" type="L2Monster" name="Slave of Wrath">
+	<npc id="22434" level="83" type="Monster" name="Slave of Wrath">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
@@ -2958,7 +2958,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="22435" level="83" type="L2Monster" name="Slave of Sloth">
+	<npc id="22435" level="83" type="Monster" name="Slave of Sloth">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3034,7 +3034,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22436" level="83" type="L2Monster" name="Slave of Envy">
+	<npc id="22436" level="83" type="Monster" name="Slave of Envy">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3109,7 +3109,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="22437" level="83" type="L2Monster" name="Slave of Pride">
+	<npc id="22437" level="83" type="Monster" name="Slave of Pride">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3186,7 +3186,7 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="22438" level="83" type="L2Monster" name="Slave of Gluttony">
+	<npc id="22438" level="83" type="Monster" name="Slave of Gluttony">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3260,7 +3260,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="22439" level="83" type="L2Monster" name="Beleth's Assassin">
+	<npc id="22439" level="83" type="Monster" name="Beleth's Assassin">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3346,7 +3346,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="22440" level="83" type="L2Monster" name="Beleth's Assassin">
+	<npc id="22440" level="83" type="Monster" name="Beleth's Assassin">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3433,7 +3433,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="22441" level="83" type="L2Monster" name="Beleth's Minion">
+	<npc id="22441" level="83" type="Monster" name="Beleth's Minion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3516,7 +3516,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="22442" level="83" type="L2Monster" name="Beleth's Minion">
+	<npc id="22442" level="83" type="Monster" name="Beleth's Minion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3595,7 +3595,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="22443" level="45" type="L2Monster" name="Kertang's Messenger">
+	<npc id="22443" level="45" type="Monster" name="Kertang's Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3667,7 +3667,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="22444" level="55" type="L2Monster" name="Kertang's Messenger">
+	<npc id="22444" level="55" type="Monster" name="Kertang's Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3737,7 +3737,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="22445" level="65" type="L2Monster" name="Kertang's Messenger">
+	<npc id="22445" level="65" type="Monster" name="Kertang's Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3807,7 +3807,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="22446" level="75" type="L2Monster" name="Kertang's Messenger">
+	<npc id="22446" level="75" type="Monster" name="Kertang's Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3878,7 +3878,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="22447" level="80" type="L2Monster" name="Kertang's Messenger">
+	<npc id="22447" level="80" type="Monster" name="Kertang's Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3953,7 +3953,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="22448" level="86" type="L2Monster" name="Leodas" title="Resistance Commander">
+	<npc id="22448" level="86" type="Monster" name="Leodas" title="Resistance Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4051,7 +4051,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="22449" level="86" type="L2Monster" name="Amaskari" title="Torture Expert">
+	<npc id="22449" level="86" type="Monster" name="Amaskari" title="Torture Expert">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -4149,7 +4149,7 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="22450" level="86" type="L2Monster" name="Tortured Native">
+	<npc id="22450" level="86" type="Monster" name="Tortured Native">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4216,7 +4216,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22451" level="86" type="L2Monster" name="Native Elite Soldier">
+	<npc id="22451" level="86" type="Monster" name="Native Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4292,7 +4292,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22452" level="25" type="L2Monster" name="White Skull Kanabion">
+	<npc id="22452" level="25" type="Monster" name="White Skull Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4378,7 +4378,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="22453" level="25" type="L2Monster" name="White Skull Kanabion" title="Doppler">
+	<npc id="22453" level="25" type="Monster" name="White Skull Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -4469,7 +4469,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="22454" level="27" type="L2Monster" name="White Skull Kanabion" title="Void">
+	<npc id="22454" level="27" type="Monster" name="White Skull Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4562,7 +4562,7 @@
 			<height normal="37.5" grown="45" />
 		</collision>
 	</npc>
-	<npc id="22455" level="30" type="L2Monster" name="Begrudged Kanabion">
+	<npc id="22455" level="30" type="Monster" name="Begrudged Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -4648,7 +4648,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="22456" level="30" type="L2Monster" name="Begrudged Kanabion" title="Doppler">
+	<npc id="22456" level="30" type="Monster" name="Begrudged Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -4737,7 +4737,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="22457" level="32" type="L2Monster" name="Begrudged Kanabion" title="Void">
+	<npc id="22457" level="32" type="Monster" name="Begrudged Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -4828,7 +4828,7 @@
 			<height normal="23" grown="27.6" />
 		</collision>
 	</npc>
-	<npc id="22458" level="35" type="L2Monster" name="Rotten Kanabion">
+	<npc id="22458" level="35" type="Monster" name="Rotten Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4913,7 +4913,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="22459" level="35" type="L2Monster" name="Rotten Kanabion" title="Doppler">
+	<npc id="22459" level="35" type="Monster" name="Rotten Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
@@ -5001,7 +5001,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="22460" level="37" type="L2Monster" name="Rotten Kanabion" title="Void">
+	<npc id="22460" level="37" type="Monster" name="Rotten Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5090,7 +5090,7 @@
 			<height normal="21.25" />
 		</collision>
 	</npc>
-	<npc id="22461" level="40" type="L2Monster" name="Gluttonous Kanabion">
+	<npc id="22461" level="40" type="Monster" name="Gluttonous Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -5176,7 +5176,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="22462" level="40" type="L2Monster" name="Gluttonous Kanabion" title="Doppler">
+	<npc id="22462" level="40" type="Monster" name="Gluttonous Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5263,7 +5263,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="22463" level="42" type="L2Monster" name="Gluttonous Kanabion" title="Void">
+	<npc id="22463" level="42" type="Monster" name="Gluttonous Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -5354,7 +5354,7 @@
 			<height normal="42" grown="50.8" />
 		</collision>
 	</npc>
-	<npc id="22464" level="45" type="L2Monster" name="Callous Kanabion">
+	<npc id="22464" level="45" type="Monster" name="Callous Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -5440,7 +5440,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="22465" level="45" type="L2Monster" name="Callous Kanabion" title="Doppler">
+	<npc id="22465" level="45" type="Monster" name="Callous Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -5529,7 +5529,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="22466" level="47" type="L2Monster" name="Callous Kanabion" title="Void">
+	<npc id="22466" level="47" type="Monster" name="Callous Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -5620,7 +5620,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="22467" level="50" type="L2Monster" name="Savage Kanabion">
+	<npc id="22467" level="50" type="Monster" name="Savage Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -5706,7 +5706,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="22468" level="50" type="L2Monster" name="Savage Kanabion" title="Doppler">
+	<npc id="22468" level="50" type="Monster" name="Savage Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -5795,7 +5795,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22469" level="52" type="L2Monster" name="Savage Kanabion" title="Void">
+	<npc id="22469" level="52" type="Monster" name="Savage Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5886,7 +5886,7 @@
 			<height normal="31.5" grown="38.1" />
 		</collision>
 	</npc>
-	<npc id="22470" level="55" type="L2Monster" name="Peerless Kanabion">
+	<npc id="22470" level="55" type="Monster" name="Peerless Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
@@ -5972,7 +5972,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="22471" level="55" type="L2Monster" name="Peerless Kanabion" title="Doppler">
+	<npc id="22471" level="55" type="Monster" name="Peerless Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -6061,7 +6061,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22472" level="57" type="L2Monster" name="Peerless Kanabion" title="Void">
+	<npc id="22472" level="57" type="Monster" name="Peerless Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -6152,7 +6152,7 @@
 			<height normal="28.8" grown="34.9" />
 		</collision>
 	</npc>
-	<npc id="22473" level="60" type="L2Monster" name="Massive Kanabion">
+	<npc id="22473" level="60" type="Monster" name="Massive Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -6238,7 +6238,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="22474" level="60" type="L2Monster" name="Massive Kanabion" title="Doppler">
+	<npc id="22474" level="60" type="Monster" name="Massive Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -6327,7 +6327,7 @@
 			<height normal="28" grown="34" />
 		</collision>
 	</npc>
-	<npc id="22475" level="62" type="L2Monster" name="Massive Kanabion" title="Void">
+	<npc id="22475" level="62" type="Monster" name="Massive Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -6418,7 +6418,7 @@
 			<height normal="32" grown="39" />
 		</collision>
 	</npc>
-	<npc id="22476" level="65" type="L2Monster" name="Fervent Kanabion">
+	<npc id="22476" level="65" type="Monster" name="Fervent Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6504,7 +6504,7 @@
 			<height normal="23.5" grown="29" />
 		</collision>
 	</npc>
-	<npc id="22477" level="65" type="L2Monster" name="Fervent Kanabion" title="Doppler">
+	<npc id="22477" level="65" type="Monster" name="Fervent Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -6592,7 +6592,7 @@
 			<height normal="31.5" grown="38" />
 		</collision>
 	</npc>
-	<npc id="22478" level="67" type="L2Monster" name="Fervent Kanabion" title="Void">
+	<npc id="22478" level="67" type="Monster" name="Fervent Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -6682,7 +6682,7 @@
 			<height normal="35" grown="42.9" />
 		</collision>
 	</npc>
-	<npc id="22479" level="70" type="L2Monster" name="Ruptured Kanabion">
+	<npc id="22479" level="70" type="Monster" name="Ruptured Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -6767,7 +6767,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22480" level="70" type="L2Monster" name="Ruptured Kanabion" title="Doppler">
+	<npc id="22480" level="70" type="Monster" name="Ruptured Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -6855,7 +6855,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="22481" level="72" type="L2Monster" name="Ruptured Kanabion" title="Void">
+	<npc id="22481" level="72" type="Monster" name="Ruptured Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -6945,7 +6945,7 @@
 			<height normal="54" grown="65.5" />
 		</collision>
 	</npc>
-	<npc id="22482" level="75" type="L2Monster" name="Sword Kanabion">
+	<npc id="22482" level="75" type="Monster" name="Sword Kanabion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -7030,7 +7030,7 @@
 			<height normal="40.5985" />
 		</collision>
 	</npc>
-	<npc id="22483" level="75" type="L2Monster" name="Sword Kanabion" title="Doppler">
+	<npc id="22483" level="75" type="Monster" name="Sword Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
@@ -7118,7 +7118,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="22484" level="77" type="L2Monster" name="Sword Kanabion" title="Void">
+	<npc id="22484" level="77" type="Monster" name="Sword Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
@@ -7210,7 +7210,7 @@
 			<height normal="49" grown="60.5" />
 		</collision>
 	</npc>
-	<npc id="22485" level="29" type="L2Monster" name="Lost Watcher">
+	<npc id="22485" level="29" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -7272,7 +7272,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="22486" level="29" type="L2Monster" name="Lost Watcher">
+	<npc id="22486" level="29" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -7331,7 +7331,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="22487" level="29" type="L2Monster" name="Lost Beholder">
+	<npc id="22487" level="29" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -7394,7 +7394,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="22488" level="39" type="L2Monster" name="Lost Watcher">
+	<npc id="22488" level="39" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -7456,7 +7456,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="22489" level="39" type="L2Monster" name="Lost Watcher">
+	<npc id="22489" level="39" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -7515,7 +7515,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="22490" level="39" type="L2Monster" name="Lost Beholder">
+	<npc id="22490" level="39" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -7578,7 +7578,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="22491" level="49" type="L2Monster" name="Lost Watcher">
+	<npc id="22491" level="49" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -7639,7 +7639,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22492" level="49" type="L2Monster" name="Lost Watcher">
+	<npc id="22492" level="49" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -7697,7 +7697,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22493" level="49" type="L2Monster" name="Lost Beholder">
+	<npc id="22493" level="49" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7759,7 +7759,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="22494" level="59" type="L2Monster" name="Lost Watcher">
+	<npc id="22494" level="59" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -7821,7 +7821,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="22495" level="59" type="L2Monster" name="Lost Watcher">
+	<npc id="22495" level="59" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -7880,7 +7880,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="22496" level="59" type="L2Monster" name="Lost Beholder">
+	<npc id="22496" level="59" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7942,7 +7942,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22497" level="69" type="L2Monster" name="Lost Watcher">
+	<npc id="22497" level="69" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -8003,7 +8003,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22498" level="69" type="L2Monster" name="Lost Watcher">
+	<npc id="22498" level="69" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -8061,7 +8061,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22499" level="69" type="L2Monster" name="Lost Beholder">
+	<npc id="22499" level="69" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />

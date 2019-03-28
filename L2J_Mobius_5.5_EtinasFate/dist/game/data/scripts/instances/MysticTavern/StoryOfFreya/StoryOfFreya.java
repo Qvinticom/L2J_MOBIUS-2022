@@ -22,16 +22,16 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
@@ -62,12 +62,12 @@ public class StoryOfFreya extends AbstractInstance
 	private static final int ICE_CRYSTAL_SHARD = 46594;
 	private static final Location CASTLE_TELEPORT = new Location(212410, -46728, -11225);
 	private static final Location LABIRYNTH_TELEPORT = new Location(213145, -43145, -872);
-	private static final L2ScriptZone FIRST_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80013, L2ScriptZone.class);
-	private static final L2ScriptZone SECOND_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80014, L2ScriptZone.class);
-	private static final L2ScriptZone THRID_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80015, L2ScriptZone.class);
-	private static final L2ScriptZone FOURTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80016, L2ScriptZone.class);
-	private static final L2ScriptZone FIFTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80017, L2ScriptZone.class);
-	private static final L2ScriptZone SIXTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80018, L2ScriptZone.class);
+	private static final ScriptZone FIRST_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80013, ScriptZone.class);
+	private static final ScriptZone SECOND_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80014, ScriptZone.class);
+	private static final ScriptZone THRID_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80015, ScriptZone.class);
+	private static final ScriptZone FOURTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80016, ScriptZone.class);
+	private static final ScriptZone FIFTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80017, ScriptZone.class);
+	private static final ScriptZone SIXTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80018, ScriptZone.class);
 	private static final int FREYA_SNOW = 26160228;
 	
 	public StoryOfFreya()
@@ -81,7 +81,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final Instance world = npc.getInstanceWorld();
@@ -110,9 +110,9 @@ public class StoryOfFreya extends AbstractInstance
 					htmltext = "34172-04.html";
 					break;
 				}
-				final L2Party party = player.getParty();
-				final List<L2PcInstance> members = party.getMembers();
-				for (L2PcInstance member : members)
+				final Party party = player.getParty();
+				final List<PlayerInstance> members = party.getMembers();
+				for (PlayerInstance member : members)
 				{
 					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
@@ -128,7 +128,7 @@ public class StoryOfFreya extends AbstractInstance
 				enterInstance(player, null, TEMPLATE_ID);
 				if (player.getParty() != null)
 				{
-					for (L2PcInstance member : player.getParty().getMembers())
+					for (PlayerInstance member : player.getParty().getMembers())
 					{
 						if (member != player)
 						{
@@ -143,9 +143,9 @@ public class StoryOfFreya extends AbstractInstance
 			{
 				if (player.isInParty())
 				{
-					final L2Party party = player.getParty();
-					final List<L2PcInstance> members = party.getMembers();
-					for (L2PcInstance member : members)
+					final Party party = player.getParty();
+					final List<PlayerInstance> members = party.getMembers();
+					for (PlayerInstance member : members)
 					{
 						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
@@ -177,9 +177,9 @@ public class StoryOfFreya extends AbstractInstance
 					}
 					if (player.isInParty())
 					{
-						final L2Party party = player.getParty();
-						final List<L2PcInstance> members = party.getMembers();
-						for (L2PcInstance member : members)
+						final Party party = player.getParty();
+						final List<PlayerInstance> members = party.getMembers();
+						for (PlayerInstance member : members)
 						{
 							if ((member == null) || (member.calculateDistance3D(npc) > 300))
 							{
@@ -224,9 +224,9 @@ public class StoryOfFreya extends AbstractInstance
 				}
 				if (player.isInParty())
 				{
-					final L2Party party = player.getParty();
-					final List<L2PcInstance> members = party.getMembers();
-					for (L2PcInstance member : members)
+					final Party party = player.getParty();
+					final List<PlayerInstance> members = party.getMembers();
+					for (PlayerInstance member : members)
 					{
 						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
@@ -251,7 +251,7 @@ public class StoryOfFreya extends AbstractInstance
 			}
 			case "startAttack":
 			{
-				for (final L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
+				for (final Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
 				{
 					if (nearby.getId() == KNIGHT)
 					{
@@ -273,7 +273,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -287,7 +287,7 @@ public class StoryOfFreya extends AbstractInstance
 						npc.setScriptValue(1);
 						for (int i = 0; i < 6; i++)
 						{
-							final L2Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							final Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
 							addAttackPlayerDesire(knight, attacker);
 						}
 					}
@@ -296,7 +296,7 @@ public class StoryOfFreya extends AbstractInstance
 						npc.setScriptValue(1);
 						for (int a = 0; a < 8; a++)
 						{
-							final L2Npc golem = addSpawn(GLACIER_GOLEM, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							final Npc golem = addSpawn(GLACIER_GOLEM, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
 							addAttackPlayerDesire(golem, attacker);
 						}
 					}
@@ -309,7 +309,7 @@ public class StoryOfFreya extends AbstractInstance
 						npc.setScriptValue(1);
 						for (int b = 0; b < 4; b++)
 						{
-							final L2Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							final Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
 							addAttackPlayerDesire(knight, attacker);
 						}
 					}
@@ -322,7 +322,7 @@ public class StoryOfFreya extends AbstractInstance
 						npc.setScriptValue(1);
 						for (int c = 0; c < 6; c++)
 						{
-							final L2Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							final Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
 							addAttackPlayerDesire(knight, attacker);
 						}
 					}
@@ -334,7 +334,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -369,9 +369,9 @@ public class StoryOfFreya extends AbstractInstance
 					startQuestTimer("finishInstance", 5000, npc, null);
 					if (player.isInParty())
 					{
-						final L2Party party = player.getParty();
-						final List<L2PcInstance> members = party.getMembers();
-						for (L2PcInstance member : members)
+						final Party party = player.getParty();
+						final List<PlayerInstance> members = party.getMembers();
+						for (PlayerInstance member : members)
 						{
 							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 							{
@@ -388,7 +388,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -411,7 +411,7 @@ public class StoryOfFreya extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		String htmltext = null;
@@ -449,7 +449,7 @@ public class StoryOfFreya extends AbstractInstance
 		return htmltext;
 	}
 	
-	protected void QuestProgress(L2Npc npc, L2PcInstance player)
+	protected void QuestProgress(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q00835_PitiableMelisa.class.getSimpleName());
 		if ((qs != null) && qs.isStarted())

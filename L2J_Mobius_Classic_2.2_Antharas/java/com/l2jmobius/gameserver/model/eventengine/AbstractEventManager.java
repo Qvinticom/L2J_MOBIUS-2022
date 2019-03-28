@@ -26,14 +26,14 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.atomic.AtomicReference;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.eventengine.drop.IEventDrop;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 
 /**
  * @author UnAfraid
@@ -48,7 +48,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	private volatile Map<String, IEventDrop> _rewards = Collections.emptyMap();
 	
 	private final Set<T> _events = ConcurrentHashMap.newKeySet();
-	private final Queue<L2PcInstance> _registeredPlayers = new ConcurrentLinkedDeque<>();
+	private final Queue<PlayerInstance> _registeredPlayers = new ConcurrentLinkedDeque<>();
 	private final AtomicReference<IEventState> _state = new AtomicReference<>();
 	
 	public abstract void onInitialized();
@@ -167,27 +167,27 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	
 	/* ********************** */
 	
-	public final boolean registerPlayer(L2PcInstance player)
+	public final boolean registerPlayer(PlayerInstance player)
 	{
 		return canRegister(player, true) && _registeredPlayers.offer(player);
 	}
 	
-	public final boolean unregisterPlayer(L2PcInstance player)
+	public final boolean unregisterPlayer(PlayerInstance player)
 	{
 		return _registeredPlayers.remove(player);
 	}
 	
-	public final boolean isRegistered(L2PcInstance player)
+	public final boolean isRegistered(PlayerInstance player)
 	{
 		return _registeredPlayers.contains(player);
 	}
 	
-	public boolean canRegister(L2PcInstance player, boolean sendMessage)
+	public boolean canRegister(PlayerInstance player, boolean sendMessage)
 	{
 		return !_registeredPlayers.contains(player);
 	}
 	
-	public final Queue<L2PcInstance> getRegisteredPlayers()
+	public final Queue<PlayerInstance> getRegisteredPlayers()
 	{
 		return _registeredPlayers;
 	}
@@ -198,7 +198,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLogout(OnPlayerLogout event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if (_registeredPlayers.remove(player))
 		{
 			onUnregisteredPlayer(player);
@@ -211,7 +211,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	 * Triggered when a player is automatically removed from the event manager because he disconnected
 	 * @param player
 	 */
-	protected void onUnregisteredPlayer(L2PcInstance player)
+	protected void onUnregisteredPlayer(PlayerInstance player)
 	{
 		
 	}

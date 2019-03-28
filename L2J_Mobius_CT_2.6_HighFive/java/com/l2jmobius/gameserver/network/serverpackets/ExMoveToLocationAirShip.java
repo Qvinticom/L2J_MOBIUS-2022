@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExMoveToLocationAirShip implements IClientOutgoingPacket
@@ -30,15 +30,15 @@ public class ExMoveToLocationAirShip implements IClientOutgoingPacket
 	private final int _y;
 	private final int _z;
 	
-	public ExMoveToLocationAirShip(L2Character cha)
+	public ExMoveToLocationAirShip(Creature creature)
 	{
-		_objId = cha.getObjectId();
-		_tx = cha.getXdestination();
-		_ty = cha.getYdestination();
-		_tz = cha.getZdestination();
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
+		_objId = creature.getObjectId();
+		_tx = creature.getXdestination();
+		_ty = creature.getYdestination();
+		_tz = creature.getZdestination();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override

@@ -22,15 +22,14 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Seed;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -40,7 +39,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public class Seed implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!Config.ALLOW_MANOR)
 		{
@@ -52,19 +51,19 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final L2Object tgt = playable.getTarget();
+		final WorldObject tgt = playable.getTarget();
 		if (!tgt.isNpc())
 		{
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		else if (!tgt.isMonster() || ((L2MonsterInstance) tgt).isRaid() || (tgt instanceof L2ChestInstance))
+		else if (!tgt.isMonster() || ((MonsterInstance) tgt).isRaid() || (tgt instanceof ChestInstance))
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			return false;
 		}
 		
-		final L2MonsterInstance target = (L2MonsterInstance) tgt;
+		final MonsterInstance target = (MonsterInstance) tgt;
 		if (target.isDead())
 		{
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -76,7 +75,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final L2Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
+		final com.l2jmobius.gameserver.model.Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
 		if (seed == null)
 		{
 			return false;
@@ -89,13 +88,13 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		target.setSeeded(seed, activeChar);
+		final PlayerInstance player = playable.getActingPlayer();
+		target.setSeeded(seed, player);
 		
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills != null)
 		{
-			skills.forEach(holder -> activeChar.useMagic(holder.getSkill(), item, false, false));
+			skills.forEach(holder -> player.useMagic(holder.getSkill(), item, false, false));
 		}
 		return true;
 	}

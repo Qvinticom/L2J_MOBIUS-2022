@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,7 +35,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_character_disconnect"))
 		{
@@ -50,14 +50,14 @@ public class AdminDisconnect implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void disconnectCharacter(L2PcInstance activeChar)
+	private void disconnectCharacter(PlayerInstance activeChar)
 	{
-		L2Object target = activeChar.getTarget();
-		L2PcInstance player = null;
+		WorldObject target = activeChar.getTarget();
+		PlayerInstance player = null;
 		
-		if (target instanceof L2PcInstance)
+		if (target instanceof PlayerInstance)
 		{
-			player = (L2PcInstance) target;
+			player = (PlayerInstance) target;
 		}
 		else
 		{

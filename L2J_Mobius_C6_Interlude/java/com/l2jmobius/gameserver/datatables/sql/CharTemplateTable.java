@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2PcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
 
 /**
  * @version $Revision: 1.6.2.1.2.10 $ $Date: 2005/03/29 14:00:54 $
@@ -161,7 +161,7 @@ public class CharTemplateTable
 		"Maestro"
 	};
 	
-	private final Map<Integer, L2PcTemplate> _templates;
+	private final Map<Integer, PlayerTemplate> _templates;
 	
 	public static CharTemplateTable getInstance()
 	{
@@ -222,11 +222,11 @@ public class CharTemplateTable
 				set.set("spawnY", rset.getInt("y"));
 				set.set("spawnZ", rset.getInt("z"));
 				
-				L2PcTemplate ct;
+				PlayerTemplate ct;
 				
 				set.set("collision_radius", rset.getDouble("m_col_r"));
 				set.set("collision_height", rset.getDouble("m_col_h"));
-				ct = new L2PcTemplate(set);
+				ct = new PlayerTemplate(set);
 				// 5 items must go here
 				for (int x = 1; x < 6; x++)
 				{
@@ -249,12 +249,12 @@ public class CharTemplateTable
 		LOGGER.info("CharTemplateTable: Loaded " + _templates.size() + " Character Templates.");
 	}
 	
-	public L2PcTemplate getTemplate(ClassId classId)
+	public PlayerTemplate getTemplate(ClassId classId)
 	{
 		return getTemplate(classId.getId());
 	}
 	
-	public L2PcTemplate getTemplate(int classId)
+	public PlayerTemplate getTemplate(int classId)
 	{
 		final int key = classId;
 		

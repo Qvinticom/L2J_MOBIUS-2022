@@ -19,14 +19,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
-public final class RequestPartyMatchConfig extends L2GameClientPacket
+public final class RequestPartyMatchConfig extends GameClientPacket
 {
 	private int _auto;
 	private int _loc;
@@ -43,20 +43,20 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		if (_activeChar == null)
+		final PlayerInstance _player = getClient().getPlayer();
+		if (_player == null)
 		{
 			return;
 		}
 		
-		if (!_activeChar.isInPartyMatchRoom() && (_activeChar.getParty() != null) && (_activeChar.getParty().getLeader() != _activeChar))
+		if (!_player.isInPartyMatchRoom() && (_player.getParty() != null) && (_player.getParty().getLeader() != _player))
 		{
-			_activeChar.sendPacket(SystemMessageId.CANT_VIEW_PARTY_ROOMS);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(SystemMessageId.CANT_VIEW_PARTY_ROOMS);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (_activeChar.isInPartyMatchRoom())
+		if (_player.isInPartyMatchRoom())
 		{
 			// If Player is in Room show him room, not list
 			final PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
@@ -65,25 +65,25 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 				return;
 			}
 			
-			final PartyMatchRoom _room = _list.getPlayerRoom(_activeChar);
+			final PartyMatchRoom _room = _list.getPlayerRoom(_player);
 			if (_room == null)
 			{
 				return;
 			}
 			
-			_activeChar.sendPacket(new PartyMatchDetail(_activeChar, _room));
-			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 2));
+			_player.sendPacket(new PartyMatchDetail(_player, _room));
+			_player.sendPacket(new ExPartyRoomMember(_player, _room, 2));
 			
-			_activeChar.setPartyRoom(_room.getId());
-			_activeChar.broadcastUserInfo();
+			_player.setPartyRoom(_room.getId());
+			_player.broadcastUserInfo();
 		}
 		else
 		{
 			// Add to waiting list
-			PartyMatchWaitingList.getInstance().addPlayer(_activeChar);
+			PartyMatchWaitingList.getInstance().addPlayer(_player);
 			
 			// Send Room list
-			_activeChar.sendPacket(new PartyMatchList(_activeChar, _auto, _loc, _lvl));
+			_player.sendPacket(new PartyMatchList(_player, _auto, _loc, _lvl));
 		}
 	}
 }

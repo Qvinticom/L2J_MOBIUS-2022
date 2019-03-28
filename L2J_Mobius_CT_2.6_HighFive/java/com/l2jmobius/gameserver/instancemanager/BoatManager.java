@@ -20,17 +20,17 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class BoatManager
 {
-	private final Map<Integer, L2BoatInstance> _boats = new ConcurrentHashMap<>();
+	private final Map<Integer, BoatInstance> _boats = new ConcurrentHashMap<>();
 	private final boolean[] _docksBusy = new boolean[3];
 	
 	public static final int TALKING_ISLAND = 1;
@@ -50,7 +50,7 @@ public class BoatManager
 		}
 	}
 	
-	public L2BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading)
+	public BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading)
 	{
 		if (!Config.ALLOW_BOAT)
 		{
@@ -94,7 +94,7 @@ public class BoatManager
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
 		
-		final L2BoatInstance boat = new L2BoatInstance(new L2CharTemplate(npcDat));
+		final BoatInstance boat = new BoatInstance(new CreatureTemplate(npcDat));
 		boat.setHeading(heading);
 		boat.setXYZInvisible(x, y, z);
 		boat.spawnMe();
@@ -107,7 +107,7 @@ public class BoatManager
 	 * @param boatId
 	 * @return
 	 */
-	public L2BoatInstance getBoat(int boatId)
+	public BoatInstance getBoat(int boatId)
 	{
 		return _boats.get(boatId);
 	}
@@ -169,7 +169,7 @@ public class BoatManager
 	
 	private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets)
 	{
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			if (Math.hypot(player.getX() - point1.getX(), player.getY() - point1.getY()) < Config.BOAT_BROADCAST_RADIUS)
 			{

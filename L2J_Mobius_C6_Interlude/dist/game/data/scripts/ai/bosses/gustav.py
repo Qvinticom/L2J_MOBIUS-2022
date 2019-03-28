@@ -6,8 +6,8 @@ from com.l2jmobius.gameserver.model.quest import QuestState
 from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jmobius.gameserver.instancemanager import ClanHallManager
 from com.l2jmobius.commons.util import Rnd
-from com.l2jmobius.gameserver.model import L2Clan
-from com.l2jmobius.gameserver.model import L2ClanMember
+from com.l2jmobius.gameserver.model.clan import Clan
+from com.l2jmobius.gameserver.model.clan import ClanMember
 from java.lang import System
 
 GUSTAV = 35410

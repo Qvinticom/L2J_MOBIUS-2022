@@ -33,9 +33,9 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Augmentation;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.Augmentation;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import com.l2jmobius.gameserver.skills.Stats;
 
 /**
@@ -125,7 +125,7 @@ public class AugmentationData
 			_augmentationSkillId = augmentationSkillId;
 		}
 		
-		public L2Skill getSkill(int level)
+		public Skill getSkill(int level)
 		{
 			if (level > _maxSkillLevel)
 			{
@@ -382,9 +382,9 @@ public class AugmentationData
 	 * @param item
 	 * @param lifeStoneLevel
 	 * @param lifeStoneGrade
-	 * @return L2Augmentation
+	 * @return Augmentation
 	 */
-	public L2Augmentation generateRandomAugmentation(L2ItemInstance item, int lifeStoneLevel, int lifeStoneGrade)
+	public Augmentation generateRandomAugmentation(ItemInstance item, int lifeStoneLevel, int lifeStoneGrade)
 	{
 		// Note: stat12 stands for stat 1 AND 2 (same for stat34 ;p ) this is because a value can contain up to 2 stat modifications (there are two short values packed in one integer value, meaning 4 stat modifications at max) for more info take a look at getAugStatsById(...)
 		// Note: lifeStoneGrade: (0 means low grade, 3 top grade)
@@ -517,7 +517,7 @@ public class AugmentationData
 		}
 		
 		// generate a skill if neccessary
-		L2Skill skill = null;
+		Skill skill = null;
 		if (generateSkill)
 		{
 			augmentationSkill temp = null;
@@ -547,7 +547,7 @@ public class AugmentationData
 			}
 		}
 		
-		return new L2Augmentation(item, ((stat34 << 16) + stat12), skill, true);
+		return new Augmentation(item, ((stat34 << 16) + stat12), skill, true);
 	}
 	
 	public class AugStat

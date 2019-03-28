@@ -19,15 +19,15 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.util.IllegalPlayerAction;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class RequestGetItemFromPet extends L2GameClientPacket
+public final class RequestGetItemFromPet extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestGetItemFromPet.class.getName());
 	
@@ -47,9 +47,9 @@ public final class RequestGetItemFromPet extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if ((player == null) || (player.getPet() == null) || !(player.getPet() instanceof L2PetInstance))
+		if ((player == null) || (player.getPet() == null) || !(player.getPet() instanceof PetInstance))
 		{
 			return;
 		}
@@ -60,7 +60,7 @@ public final class RequestGetItemFromPet extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) player.getPet();
+		final PetInstance pet = (PetInstance) player.getPet();
 		
 		if (player.getActiveEnchantItem() != null)
 		{

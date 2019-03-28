@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 public class ZakenSelf implements ISkillHandler
 {
@@ -31,17 +31,17 @@ public class ZakenSelf implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
 		try
 		{
-			for (L2Object target1 : targets)
+			for (WorldObject target1 : targets)
 			{
-				if (!(target1 instanceof L2Character))
+				if (!(target1 instanceof Creature))
 				{
 					continue;
 				}
-				final L2Character target = (L2Character) target1;
+				final Creature target = (Creature) target1;
 				final int ch = (Rnd.get(14) + 1);
 				if (ch == 1)
 				{

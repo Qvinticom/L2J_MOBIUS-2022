@@ -22,7 +22,7 @@ import java.util.Collection;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
-	final L2PcInstance _player;
+	final PlayerInstance _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
 	
-	public ExOneDayReceiveRewardList(L2PcInstance player)
+	public ExOneDayReceiveRewardList(PlayerInstance player)
 	{
 		_player = player;
 		_rewards = DailyMissionData.getInstance().getDailyMissionData(player);

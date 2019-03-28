@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class TutorialCloseHtml extends L2GameServerPacket
+public class TutorialCloseHtml extends GameServerPacket
 {
 	@Override
 	protected void writeImpl()

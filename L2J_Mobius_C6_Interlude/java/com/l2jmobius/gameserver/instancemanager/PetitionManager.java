@@ -27,11 +27,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.Say2;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -95,10 +95,10 @@ public final class PetitionManager
 		
 		private final List<CreatureSay> _messageLogger = new ArrayList<>();
 		
-		private final L2PcInstance _petitioner;
-		private L2PcInstance _responder;
+		private final PlayerInstance _petitioner;
+		private PlayerInstance _responder;
 		
-		public Petition(L2PcInstance petitioner, String petitionText, int petitionType)
+		public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
 		{
 			petitionType--;
 			_id = IdFactory.getInstance().getNextId();
@@ -168,12 +168,12 @@ public final class PetitionManager
 			return _id;
 		}
 		
-		public L2PcInstance getPetitioner()
+		public PlayerInstance getPetitioner()
 		{
 			return _petitioner;
 		}
 		
-		public L2PcInstance getResponder()
+		public PlayerInstance getResponder()
 		{
 			return _responder;
 		}
@@ -193,7 +193,7 @@ public final class PetitionManager
 			return _type.toString().replace("_", " ");
 		}
 		
-		public void sendPetitionerPacket(L2GameServerPacket responsePacket)
+		public void sendPetitionerPacket(GameServerPacket responsePacket)
 		{
 			if ((_petitioner == null) || (_petitioner.isOnline() == 0))
 			{
@@ -203,7 +203,7 @@ public final class PetitionManager
 			_petitioner.sendPacket(responsePacket);
 		}
 		
-		public void sendResponderPacket(L2GameServerPacket responsePacket)
+		public void sendResponderPacket(GameServerPacket responsePacket)
 		{
 			if ((_responder == null) || (_responder.isOnline() == 0))
 			{
@@ -219,7 +219,7 @@ public final class PetitionManager
 			_state = state;
 		}
 		
-		public void setResponder(L2PcInstance respondingAdmin)
+		public void setResponder(PlayerInstance respondingAdmin)
 		{
 			if (_responder != null)
 			{
@@ -252,7 +252,7 @@ public final class PetitionManager
 		LOGGER.info("PetitionManager: Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
 	}
 	
-	public boolean acceptPetition(L2PcInstance respondingAdmin, int petitionId)
+	public boolean acceptPetition(PlayerInstance respondingAdmin, int petitionId)
 	{
 		if (!isValidPetition(petitionId))
 		{
@@ -284,7 +284,7 @@ public final class PetitionManager
 		return true;
 	}
 	
-	public boolean cancelActivePetition(L2PcInstance player)
+	public boolean cancelActivePetition(PlayerInstance player)
 	{
 		for (Petition currPetition : _pendingPetitions.values())
 		{
@@ -302,7 +302,7 @@ public final class PetitionManager
 		return false;
 	}
 	
-	public void checkPetitionMessages(L2PcInstance petitioner)
+	public void checkPetitionMessages(PlayerInstance petitioner)
 	{
 		if (petitioner != null)
 		{
@@ -326,7 +326,7 @@ public final class PetitionManager
 		}
 	}
 	
-	public boolean endActivePetition(L2PcInstance player)
+	public boolean endActivePetition(PlayerInstance player)
 	{
 		if (!player.isGM())
 		{
@@ -364,7 +364,7 @@ public final class PetitionManager
 		return _pendingPetitions.size();
 	}
 	
-	public int getPlayerTotalPetitionCount(L2PcInstance player)
+	public int getPlayerTotalPetitionCount(PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -431,7 +431,7 @@ public final class PetitionManager
 		return currPetition.getState() == PetitionState.In_Process;
 	}
 	
-	public boolean isPlayerInConsultation(L2PcInstance player)
+	public boolean isPlayerInConsultation(PlayerInstance player)
 	{
 		if (player != null)
 		{
@@ -462,7 +462,7 @@ public final class PetitionManager
 		return Config.PETITIONING_ALLOWED;
 	}
 	
-	public boolean isPlayerPetitionPending(L2PcInstance petitioner)
+	public boolean isPlayerPetitionPending(PlayerInstance petitioner)
 	{
 		if (petitioner != null)
 		{
@@ -488,7 +488,7 @@ public final class PetitionManager
 		return _pendingPetitions.containsKey(petitionId);
 	}
 	
-	public boolean rejectPetition(L2PcInstance respondingAdmin, int petitionId)
+	public boolean rejectPetition(PlayerInstance respondingAdmin, int petitionId)
 	{
 		if (!isValidPetition(petitionId))
 		{
@@ -506,7 +506,7 @@ public final class PetitionManager
 		return currPetition.endPetitionConsultation(PetitionState.Responder_Reject);
 	}
 	
-	public boolean sendActivePetitionMessage(L2PcInstance player, String messageText)
+	public boolean sendActivePetitionMessage(PlayerInstance player, String messageText)
 	{
 		CreatureSay cs;
 		
@@ -541,7 +541,7 @@ public final class PetitionManager
 		return false;
 	}
 	
-	public void sendPendingPetitionList(L2PcInstance activeChar)
+	public void sendPendingPetitionList(PlayerInstance player)
 	{
 		final StringBuilder htmlContent = new StringBuilder("<html><body><center><font color=\"LEVEL\">Current Petitions</font><br><table width=\"300\">");
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM HH:mm z");
@@ -580,10 +580,10 @@ public final class PetitionManager
 		
 		NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
 		htmlMsg.setHtml(htmlContent.toString());
-		activeChar.sendPacket(htmlMsg);
+		player.sendPacket(htmlMsg);
 	}
 	
-	public int submitPetition(L2PcInstance petitioner, String petitionText, int petitionType)
+	public int submitPetition(PlayerInstance petitioner, String petitionText, int petitionType)
 	{
 		// Create a new petition instance and add it to the list of pending petitions.
 		Petition newPetition = new Petition(petitioner, petitionText, petitionType);
@@ -597,9 +597,9 @@ public final class PetitionManager
 		return newPetitionId;
 	}
 	
-	public void viewPetition(L2PcInstance activeChar, int petitionId)
+	public void viewPetition(PlayerInstance player, int petitionId)
 	{
-		if (!activeChar.isGM())
+		if (!player.isGM())
 		{
 			return;
 		}
@@ -625,6 +625,6 @@ public final class PetitionManager
 		
 		NpcHtmlMessage htmlMsg = new NpcHtmlMessage(0);
 		htmlMsg.setHtml(htmlContent.toString());
-		activeChar.sendPacket(htmlMsg);
+		player.sendPacket(htmlMsg);
 	}
 }

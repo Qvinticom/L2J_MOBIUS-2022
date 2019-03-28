@@ -18,62 +18,62 @@ package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardNoHTMLInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.ai.CreatureAI;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.GuardNoHTMLInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class GuardNoHTMLKnownList extends AttackableKnownList
 {
-	public GuardNoHTMLKnownList(L2GuardNoHTMLInstance activeChar)
+	public GuardNoHTMLKnownList(GuardNoHTMLInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object)
+	public boolean addKnownObject(WorldObject object)
 	{
 		return addKnownObject(object, null);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object, L2Character dropper)
+	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
 		if (!super.addKnownObject(object, dropper))
 		{
 			return false;
 		}
 		
-		// Set home location of the L2GuardInstance (if not already done)
+		// Set home location of the GuardInstance (if not already done)
 		if (getActiveChar().getHomeX() == 0)
 		{
 			getActiveChar().getHomeLocation();
 		}
 		
-		if (object instanceof L2PcInstance)
+		if (object instanceof PlayerInstance)
 		{
-			// Check if the object added is a L2PcInstance that owns Karma
-			L2PcInstance player = (L2PcInstance) object;
+			// Check if the object added is a PlayerInstance that owns Karma
+			PlayerInstance player = (PlayerInstance) object;
 			
 			if (player.getKarma() > 0)
 			{
-				// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
+				// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
 				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{
 					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 				}
 			}
 		}
-		else if (Config.ALLOW_GUARDS && (object instanceof L2MonsterInstance))
+		else if (Config.ALLOW_GUARDS && (object instanceof MonsterInstance))
 		{
-			// Check if the object added is an aggressive L2MonsterInstance
-			L2MonsterInstance mob = (L2MonsterInstance) object;
+			// Check if the object added is an aggressive MonsterInstance
+			MonsterInstance mob = (MonsterInstance) object;
 			
 			if (mob.isAggressive())
 			{
-				// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
+				// Set the GuardInstance Intention to AI_INTENTION_ACTIVE
 				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{
 					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
@@ -85,18 +85,18 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public boolean removeKnownObject(L2Object object)
+	public boolean removeKnownObject(WorldObject object)
 	{
 		if (!super.removeKnownObject(object))
 		{
 			return false;
 		}
 		
-		// Check if the _aggroList of the L2GuardInstance is Empty
+		// Check if the _aggroList of the GuardInstance is Empty
 		if (getActiveChar().noTarget())
 		{
-			// Set the L2GuardInstance to AI_INTENTION_IDLE
-			final L2CharacterAI ai = getActiveChar().getAI();
+			// Set the GuardInstance to AI_INTENTION_IDLE
+			final CreatureAI ai = getActiveChar().getAI();
 			if (ai != null)
 			{
 				ai.setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
@@ -107,8 +107,8 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final L2GuardNoHTMLInstance getActiveChar()
+	public final GuardNoHTMLInstance getActiveChar()
 	{
-		return (L2GuardNoHTMLInstance) super.getActiveChar();
+		return (GuardNoHTMLInstance) super.getActiveChar();
 	}
 }

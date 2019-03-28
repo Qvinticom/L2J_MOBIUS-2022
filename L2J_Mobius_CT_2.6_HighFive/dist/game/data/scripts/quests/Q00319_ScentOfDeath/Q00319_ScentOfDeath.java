@@ -18,8 +18,8 @@ package quests.Q00319_ScentOfDeath;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -55,10 +55,10 @@ public class Q00319_ScentOfDeath extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -70,7 +70,7 @@ public class Q00319_ScentOfDeath extends Quest
 			{
 				case "30138-04.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
@@ -80,10 +80,10 @@ public class Q00319_ScentOfDeath extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false) && (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false) && (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT))
 		{
 			if (getRandom(10) > MIN_CHANCE)
 			{
@@ -94,7 +94,7 @@ public class Q00319_ScentOfDeath extends Quest
 				}
 				else
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -102,12 +102,12 @@ public class Q00319_ScentOfDeath extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -116,7 +116,7 @@ public class Q00319_ScentOfDeath extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -128,7 +128,7 @@ public class Q00319_ScentOfDeath extends Quest
 						giveAdena(player, 3350, false);
 						giveItems(player, LESSER_HEALING_POTION);
 						takeItems(player, ZOMBIES_SKIN, -1);
-						st.exitQuest(true, true);
+						qs.exitQuest(true, true);
 						htmltext = "30138-06.html";
 						break;
 					}

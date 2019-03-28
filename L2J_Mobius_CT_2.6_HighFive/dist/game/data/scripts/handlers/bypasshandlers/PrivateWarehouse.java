@@ -20,9 +20,9 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -41,14 +41,14 @@ public class PrivateWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (player.isEnchanting())
 		{
 			return false;
 		}
@@ -59,14 +59,14 @@ public class PrivateWarehouse implements IBypassHandler
 			{
 				if (Config.ENABLE_WAREHOUSESORTING_PRIVATE)
 				{
-					final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-					msg.setFile(activeChar, "data/html/mods/WhSortedP.htm");
-					msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
-					activeChar.sendPacket(msg);
+					final NpcHtmlMessage msg = new NpcHtmlMessage(((Npc) target).getObjectId());
+					msg.setFile(player, "data/html/mods/WhSortedP.htm");
+					msg.replace("%objectId%", String.valueOf(((Npc) target).getObjectId()));
+					player.sendPacket(msg);
 				}
 				else
 				{
-					showWithdrawWindow(activeChar, null, (byte) 0);
+					showWithdrawWindow(player, null, (byte) 0);
 				}
 				return true;
 			}
@@ -76,24 +76,24 @@ public class PrivateWarehouse implements IBypassHandler
 				
 				if (param.length > 2)
 				{
-					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
+					showWithdrawWindow(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
 				}
 				else if (param.length > 1)
 				{
-					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.A2Z);
+					showWithdrawWindow(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.A2Z);
 				}
 				else
 				{
-					showWithdrawWindow(activeChar, WarehouseListType.ALL, SortedWareHouseWithdrawalList.A2Z);
+					showWithdrawWindow(player, WarehouseListType.ALL, SortedWareHouseWithdrawalList.A2Z);
 				}
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[2])) // DepositP
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.setActiveWarehouse(activeChar.getWarehouse());
-				activeChar.setInventoryBlockingStatus(true);
-				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.PRIVATE));
+				player.sendPacket(ActionFailed.STATIC_PACKET);
+				player.setActiveWarehouse(player.getWarehouse());
+				player.setInventoryBlockingStatus(true);
+				player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.PRIVATE));
 				return true;
 			}
 			
@@ -106,7 +106,7 @@ public class PrivateWarehouse implements IBypassHandler
 		return false;
 	}
 	
-	private static void showWithdrawWindow(L2PcInstance player, WarehouseListType itemtype, byte sortorder)
+	private static void showWithdrawWindow(PlayerInstance player, WarehouseListType itemtype, byte sortorder)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());

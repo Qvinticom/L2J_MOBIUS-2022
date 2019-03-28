@@ -25,15 +25,15 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.MessageType;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Party.MessageType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
@@ -108,7 +108,7 @@ public abstract class AbstractOlympiadGame
 	 * @param player
 	 * @return
 	 */
-	protected static SystemMessage checkDefaulted(L2PcInstance player)
+	protected static SystemMessage checkDefaulted(PlayerInstance player)
 	{
 		if ((player == null) || !player.isOnline())
 		{
@@ -162,7 +162,7 @@ public abstract class AbstractOlympiadGame
 	
 	protected static boolean portPlayerToArena(Participant par, Location loc, int id, Instance instance)
 	{
-		final L2PcInstance player = par.getPlayer();
+		final PlayerInstance player = par.getPlayer();
 		if ((player == null) || !player.isOnline())
 		{
 			return false;
@@ -192,7 +192,7 @@ public abstract class AbstractOlympiadGame
 		return true;
 	}
 	
-	protected static void removals(L2PcInstance player, boolean removeParty)
+	protected static void removals(PlayerInstance player, boolean removeParty)
 	{
 		try
 		{
@@ -232,7 +232,7 @@ public abstract class AbstractOlympiadGame
 			// Remove Summon's Buffs
 			if (player.hasSummon())
 			{
-				final L2Summon pet = player.getPet();
+				final Summon pet = player.getPet();
 				if (pet != null)
 				{
 					pet.unSummon(player);
@@ -252,7 +252,7 @@ public abstract class AbstractOlympiadGame
 			// Remove player from his party
 			if (removeParty)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				if (party != null)
 				{
 					party.removePartyMember(player, MessageType.EXPELLED);
@@ -291,7 +291,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static void cleanEffects(L2PcInstance player)
+	protected static void cleanEffects(PlayerInstance player)
 	{
 		try
 		{
@@ -314,7 +314,7 @@ public abstract class AbstractOlympiadGame
 			{
 				player.setAgathionId(0);
 			}
-			final L2Summon pet = player.getPet();
+			final Summon pet = player.getPet();
 			if ((pet != null) && !pet.isDead())
 			{
 				pet.setTarget(null);
@@ -344,7 +344,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static void playerStatusBack(L2PcInstance player)
+	protected static void playerStatusBack(PlayerInstance player)
 	{
 		try
 		{
@@ -391,7 +391,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	protected static void portPlayerBack(L2PcInstance player)
+	protected static void portPlayerBack(PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -406,7 +406,7 @@ public abstract class AbstractOlympiadGame
 		}
 	}
 	
-	public static void rewardParticipant(L2PcInstance player, List<ItemHolder> list)
+	public static void rewardParticipant(PlayerInstance player, List<ItemHolder> list)
 	{
 		if ((player == null) || !player.isOnline() || (list == null))
 		{
@@ -418,7 +418,7 @@ public abstract class AbstractOlympiadGame
 			final InventoryUpdate iu = new InventoryUpdate();
 			list.forEach(holder ->
 			{
-				final L2ItemInstance item = player.getInventory().addItem("Olympiad", holder.getId(), holder.getCount(), player, null);
+				final ItemInstance item = player.getInventory().addItem("Olympiad", holder.getId(), holder.getCount(), player, null);
 				if (item == null)
 				{
 					return;
@@ -444,7 +444,7 @@ public abstract class AbstractOlympiadGame
 	
 	public abstract boolean containsParticipant(int playerId);
 	
-	public abstract void sendOlympiadInfo(L2Character player);
+	public abstract void sendOlympiadInfo(Creature creature);
 	
 	public abstract void broadcastOlympiadInfo(OlympiadStadium _stadium);
 	
@@ -466,11 +466,11 @@ public abstract class AbstractOlympiadGame
 	
 	protected abstract void clearPlayers();
 	
-	protected abstract void handleDisconnect(L2PcInstance player);
+	protected abstract void handleDisconnect(PlayerInstance player);
 	
 	protected abstract void resetDamage();
 	
-	protected abstract void addDamage(L2PcInstance player, int damage);
+	protected abstract void addDamage(PlayerInstance player, int damage);
 	
 	protected abstract boolean checkBattleStatus();
 	

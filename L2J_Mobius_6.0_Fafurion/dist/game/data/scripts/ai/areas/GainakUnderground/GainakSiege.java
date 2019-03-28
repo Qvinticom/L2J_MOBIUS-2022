@@ -20,17 +20,17 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2PeaceZone;
-import com.l2jmobius.gameserver.model.zone.type.L2SiegeZone;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.PeaceZone;
+import com.l2jmobius.gameserver.model.zone.type.SiegeZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -49,8 +49,8 @@ public final class GainakSiege extends AbstractNpcAI
 {
 	private static final int SIEGE_EFFECT = 20140700;
 	private static final int SIEGE_DURATION = 30;
-	private static final L2SiegeZone GAINAK_SIEGE_ZONE = ZoneManager.getInstance().getZoneById(60019, L2SiegeZone.class);
-	private static final L2PeaceZone GAINAK_TOWN_ZONE = ZoneManager.getInstance().getZoneById(60020, L2PeaceZone.class);
+	private static final SiegeZone GAINAK_SIEGE_ZONE = ZoneManager.getInstance().getZoneById(60019, SiegeZone.class);
+	private static final PeaceZone GAINAK_TOWN_ZONE = ZoneManager.getInstance().getZoneById(60020, PeaceZone.class);
 	protected static final int[] ASSASSIN_IDS =
 	{
 		19471,
@@ -79,17 +79,17 @@ public final class GainakSiege extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onEnterZone(L2Character character, L2ZoneType zone)
+	public final String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (_isInSiege && character.isPlayer())
+		if (_isInSiege && creature.isPlayer())
 		{
-			character.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, true));
+			creature.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, true));
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("GAINAK_WAR"))
 		{
@@ -128,16 +128,16 @@ public final class GainakSiege extends AbstractNpcAI
 					s.addString("Gainak is now under siege.");
 					Broadcast.toAllOnlinePlayers(s);
 				}
-				ZoneManager.getInstance().getZoneById(GAINAK_TOWN_ZONE.getId(), L2PeaceZone.class).setEnabled(false);
+				ZoneManager.getInstance().getZoneById(GAINAK_TOWN_ZONE.getId(), PeaceZone.class).setEnabled(false);
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2SiegeZone zone = ZoneManager.getInstance().getZone(npc, L2SiegeZone.class);
+		final SiegeZone zone = ZoneManager.getInstance().getZone(npc, SiegeZone.class);
 		if ((zone != null) && (zone.getId() == 60019) && zone.isActive())
 		{
 			ThreadPool.schedule(new RespawnNewAssassin(npc.getLocation()), 60000);
@@ -169,7 +169,7 @@ public final class GainakSiege extends AbstractNpcAI
 		{
 			if (event.getAttacker().isPlayer() && event.getTarget().isPlayer())
 			{
-				final L2PcInstance attackerPlayer = event.getAttacker().getActingPlayer();
+				final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
 				attackerPlayer.setPvpKills(attackerPlayer.getPvpKills() + 1);
 				attackerPlayer.sendPacket(new UserInfo(attackerPlayer));
 			}

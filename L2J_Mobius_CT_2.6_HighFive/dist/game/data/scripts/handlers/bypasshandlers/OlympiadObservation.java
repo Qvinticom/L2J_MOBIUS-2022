@@ -19,10 +19,10 @@ package handlers.bypasshandlers;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2OlympiadManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.OlympiadManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
@@ -42,49 +42,49 @@ public class OlympiadObservation implements IBypassHandler
 	};
 	
 	@Override
-	public final boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public final boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		try
 		{
-			final L2Npc olymanager = activeChar.getLastFolkNPC();
+			final Npc olymanager = player.getLastFolkNPC();
 			
 			if (command.startsWith(COMMANDS[0])) // list
 			{
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					activeChar.sendPacket(SystemMessageId.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
 				}
 				
-				activeChar.sendPacket(new ExOlympiadMatchList());
+				player.sendPacket(new ExOlympiadMatchList());
 			}
 			else
 			{
-				if ((olymanager == null) || !(olymanager instanceof L2OlympiadManagerInstance))
+				if ((olymanager == null) || !(olymanager instanceof OlympiadManagerInstance))
 				{
 					return false;
 				}
 				
-				if (!activeChar.inObserverMode() && !activeChar.isInsideRadius2D(olymanager, 300))
+				if (!player.inObserverMode() && !player.isInsideRadius2D(olymanager, 300))
 				{
 					return false;
 				}
 				
-				if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
+				if (OlympiadManager.getInstance().isRegisteredInComp(player))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
+					player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 					return false;
 				}
 				
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					activeChar.sendPacket(SystemMessageId.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 					return false;
 				}
 				
-				if (activeChar.isOnEvent())
+				if (player.isOnEvent())
 				{
-					activeChar.sendMessage("You can not observe games while registered on an event");
+					player.sendMessage("You can not observe games while registered on an event");
 					return false;
 				}
 				
@@ -92,8 +92,8 @@ public class OlympiadObservation implements IBypassHandler
 				final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(arenaId);
 				if (nextArena != null)
 				{
-					activeChar.enterOlympiadObserverMode(nextArena.getZone().getSpectatorSpawns().get(0), arenaId);
-					activeChar.setInstanceId(OlympiadGameManager.getInstance().getOlympiadTask(arenaId).getZone().getInstanceId());
+					player.enterOlympiadObserverMode(nextArena.getZone().getSpectatorSpawns().get(0), arenaId);
+					player.setInstanceId(OlympiadGameManager.getInstance().getOlympiadTask(arenaId).getZone().getInstanceId());
 				}
 			}
 			return true;

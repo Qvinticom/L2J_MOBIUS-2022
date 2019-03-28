@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -38,7 +38,7 @@ public class AdminGmChat implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_gmchat"))
 		{
@@ -61,12 +61,12 @@ public class AdminGmChat implements IAdminCommandHandler
 	 * @param command
 	 * @param activeChar
 	 */
-	private void snoop(String command, L2PcInstance activeChar)
+	private void snoop(String command, PlayerInstance activeChar)
 	{
-		L2Object target = null;
+		WorldObject target = null;
 		if (command.length() > 12)
 		{
-			target = L2World.getInstance().getPlayer(command.substring(12));
+			target = World.getInstance().getPlayer(command.substring(12));
 		}
 		if (target == null)
 		{
@@ -78,12 +78,12 @@ public class AdminGmChat implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.YOU_MUST_SELECT_A_TARGET);
 			return;
 		}
-		if (!(target instanceof L2PcInstance))
+		if (!(target instanceof PlayerInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		L2PcInstance player = (L2PcInstance) target;
+		PlayerInstance player = (PlayerInstance) target;
 		player.addSnooper(activeChar);
 		activeChar.addSnooped(player);
 	}
@@ -98,7 +98,7 @@ public class AdminGmChat implements IAdminCommandHandler
 	 * @param command
 	 * @param activeChar
 	 */
-	private void handleGmChat(String command, L2PcInstance activeChar)
+	private void handleGmChat(String command, PlayerInstance activeChar)
 	{
 		try
 		{

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.skills.holders;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
 
 /**
  * @author BiggBoss Simple class for storing skill id/level
@@ -33,7 +33,7 @@ public final class SkillHolder
 		_skillLvl = skillLvl;
 	}
 	
-	public SkillHolder(L2Skill skill)
+	public SkillHolder(Skill skill)
 	{
 		_skillId = skill.getId();
 		_skillLvl = skill.getLevel();
@@ -49,7 +49,7 @@ public final class SkillHolder
 		return _skillLvl;
 	}
 	
-	public final L2Skill getSkill()
+	public final Skill getSkill()
 	{
 		return SkillTable.getInstance().getInfo(_skillId, _skillLvl);
 	}

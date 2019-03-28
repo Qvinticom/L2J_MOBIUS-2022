@@ -474,7 +474,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Guess: Same as clan hall one -->
 				<!-- Critical Damage Increase -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>300</minDamage>

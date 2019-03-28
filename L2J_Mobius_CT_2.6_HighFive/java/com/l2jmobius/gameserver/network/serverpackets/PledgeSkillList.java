@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -46,7 +46,7 @@ public class PledgeSkillList implements IClientOutgoingPacket
 		}
 	}
 	
-	public PledgeSkillList(L2Clan clan)
+	public PledgeSkillList(Clan clan)
 	{
 		_skills = clan.getAllSkills();
 		_subSkills = clan.getAllSubSkills();

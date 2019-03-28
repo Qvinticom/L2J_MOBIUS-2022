@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -36,7 +36,7 @@ public final class RequestPledgeReorganizeMember implements IClientIncomingPacke
 	private int _newPledgeType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		packet.readD(); // _isMemberSelected
 		_memberName = packet.readS();
@@ -46,26 +46,26 @@ public final class RequestPledgeReorganizeMember implements IClientIncomingPacke
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_MANAGE_RANKS))
+		if (!player.hasClanPrivilege(ClanPrivilege.CL_MANAGE_RANKS))
 		{
 			return;
 		}
 		
-		final L2ClanMember member1 = clan.getClanMember(_memberName);
+		final ClanMember member1 = clan.getClanMember(_memberName);
 		if ((member1 == null) || (member1.getObjectId() == clan.getLeaderId()))
 		{
 			return;
@@ -81,7 +81,7 @@ public final class RequestPledgeReorganizeMember implements IClientIncomingPacke
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME);
 			sm.addString(_newPledgeType == 0 ? "Common Members" : "Elite Members");
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		

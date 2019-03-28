@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -44,12 +44,12 @@ public class ConditionPlayerRangeFromSummonedNpc extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		boolean existNpc = false;
 		if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0))
 		{
-			for (L2Npc target : L2World.getInstance().getVisibleObjectsInRange(effector, L2Npc.class, _radius))
+			for (Npc target : World.getInstance().getVisibleObjectsInRange(effector, Npc.class, _radius))
 			{
 				if (CommonUtil.contains(_npcIds, target.getId()) && (effector == target.getSummoner()))
 				{

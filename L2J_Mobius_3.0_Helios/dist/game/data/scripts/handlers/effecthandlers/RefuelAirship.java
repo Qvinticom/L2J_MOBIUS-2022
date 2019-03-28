@@ -17,11 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -38,9 +38,9 @@ public final class RefuelAirship extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.REFUEL_AIRSHIP;
+		return EffectType.REFUEL_AIRSHIP;
 	}
 	
 	@Override
@@ -50,9 +50,9 @@ public final class RefuelAirship extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		final L2AirShipInstance ship = effector.getActingPlayer().getAirShip();
+		final AirShipInstance ship = effector.getActingPlayer().getAirShip();
 		ship.setFuel(ship.getFuel() + _value);
 		ship.updateAbnormalVisualEffects();
 	}

@@ -21,11 +21,11 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -34,27 +34,27 @@ import com.l2jmobius.gameserver.util.Util;
 public class PartyNotMe implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		if (activeChar.getParty() != null)
+		final List<Creature> targetList = new ArrayList<>();
+		if (creature.getParty() != null)
 		{
-			final List<L2PcInstance> partyList = activeChar.getParty().getMembers();
-			for (L2PcInstance partyMember : partyList)
+			final List<PlayerInstance> partyList = creature.getParty().getMembers();
+			for (PlayerInstance partyMember : partyList)
 			{
 				if ((partyMember == null) || partyMember.isDead())
 				{
 					continue;
 				}
-				else if (partyMember == activeChar)
+				else if (partyMember == creature)
 				{
 					continue;
 				}
-				else if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, activeChar, partyMember, true))
+				else if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, creature, partyMember, true))
 				{
 					continue;
 				}
-				else if ((skill.getAffectRange() > 0) && !Util.checkIfInRange(skill.getAffectRange(), activeChar, partyMember, true))
+				else if ((skill.getAffectRange() > 0) && !Util.checkIfInRange(skill.getAffectRange(), creature, partyMember, true))
 				{
 					continue;
 				}
@@ -69,12 +69,12 @@ public class PartyNotMe implements ITargetTypeHandler
 				}
 			}
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.PARTY_NOTME;
+		return TargetType.PARTY_NOTME;
 	}
 }

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Community Board interface.
@@ -34,5 +34,5 @@ public interface IWriteBoardHandler extends IParseBoardHandler
 	 * @param arg5 the fifth argument
 	 * @return
 	 */
-	boolean writeCommunityBoardCommand(L2PcInstance player, String arg1, String arg2, String arg3, String arg4, String arg5);
+	boolean writeCommunityBoardCommand(PlayerInstance player, String arg1, String arg2, String arg3, String arg4, String arg5);
 }

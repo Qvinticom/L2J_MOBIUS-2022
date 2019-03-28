@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22001" level="25" type="L2Monster" name="Grim Wolf">
+	<npc id="22001" level="25" type="Monster" name="Grim Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -64,7 +64,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22002" level="26" type="L2Monster" name="Grim Bear">
+	<npc id="22002" level="26" type="Monster" name="Grim Bear">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -127,7 +127,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22003" level="27" type="L2Monster" name="Grave Robber Scout">
+	<npc id="22003" level="27" type="Monster" name="Grave Robber Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -192,7 +192,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22004" level="27" type="L2Monster" name="Grave Robber Lookout">
+	<npc id="22004" level="27" type="Monster" name="Grave Robber Lookout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -258,7 +258,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22005" level="28" type="L2Monster" name="Grave Robber Ranger">
+	<npc id="22005" level="28" type="Monster" name="Grave Robber Ranger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -325,7 +325,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22006" level="29" type="L2Monster" name="Grave Robber Guard">
+	<npc id="22006" level="29" type="Monster" name="Grave Robber Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -394,7 +394,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22079" level="53" type="L2Monster" name="Lost Bandersnatch">
+	<npc id="22079" level="53" type="Monster" name="Lost Bandersnatch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -448,7 +448,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22080" level="54" type="L2Monster" name="Massive Lost Bandersnatch">
+	<npc id="22080" level="54" type="Monster" name="Massive Lost Bandersnatch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -493,7 +493,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22081" level="53" type="L2Monster" name="Lost Watchman">
+	<npc id="22081" level="53" type="Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -561,7 +561,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22082" level="54" type="L2Monster" name="Lost Elder Watchman">
+	<npc id="22082" level="54" type="Monster" name="Lost Elder Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -629,7 +629,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22083" level="55" type="L2Monster" name="Baby Panthera">
+	<npc id="22083" level="55" type="Monster" name="Baby Panthera">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -685,7 +685,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22084" level="56" type="L2Monster" name="Panthera">
+	<npc id="22084" level="56" type="Monster" name="Panthera">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -730,7 +730,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="22085" level="55" type="L2Monster" name="Lost Gargoyle">
+	<npc id="22085" level="55" type="Monster" name="Lost Gargoyle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -796,7 +796,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22086" level="56" type="L2Monster" name="Lost Gargoyle Youngling">
+	<npc id="22086" level="56" type="Monster" name="Lost Gargoyle Youngling">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -867,7 +867,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22087" level="56" type="L2Monster" name="Pronghorn Spirit">
+	<npc id="22087" level="56" type="Monster" name="Pronghorn Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -924,7 +924,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22088" level="57" type="L2Monster" name="Pronghorn">
+	<npc id="22088" level="57" type="Monster" name="Pronghorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -988,7 +988,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22089" level="57" type="L2Monster" name="Ice Tarantula">
+	<npc id="22089" level="57" type="Monster" name="Ice Tarantula">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1051,7 +1051,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22090" level="58" type="L2Monster" name="Frost Tarantula">
+	<npc id="22090" level="58" type="Monster" name="Frost Tarantula">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1114,7 +1114,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22091" level="58" type="L2Monster" name="Lost Steel Golem">
+	<npc id="22091" level="58" type="Monster" name="Lost Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1175,7 +1175,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22092" level="59" type="L2Monster" name="Frost Steel Golem">
+	<npc id="22092" level="59" type="Monster" name="Frost Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1220,7 +1220,7 @@
 			<height normal="46.4" />
 		</collision>
 	</npc>
-	<npc id="22093" level="60" type="L2Monster" name="Lost Buffalo">
+	<npc id="22093" level="60" type="Monster" name="Lost Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1277,7 +1277,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22094" level="61" type="L2Monster" name="Frost Buffalo">
+	<npc id="22094" level="61" type="Monster" name="Frost Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1343,7 +1343,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22095" level="61" type="L2Monster" name="Ursus Cub">
+	<npc id="22095" level="61" type="Monster" name="Ursus Cub">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1399,7 +1399,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22096" level="62" type="L2Monster" name="Ursus">
+	<npc id="22096" level="62" type="Monster" name="Ursus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1444,7 +1444,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22097" level="62" type="L2Monster" name="Lost Yeti">
+	<npc id="22097" level="62" type="Monster" name="Lost Yeti">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1507,7 +1507,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22098" level="63" type="L2Monster" name="Frost Yeti">
+	<npc id="22098" level="63" type="Monster" name="Frost Yeti">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1570,7 +1570,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22099" level="57" type="L2Monster" name="Freya's Buffalo">
+	<npc id="22099" level="57" type="Monster" name="Freya's Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />

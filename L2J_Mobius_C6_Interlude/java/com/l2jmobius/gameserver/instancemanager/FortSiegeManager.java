@@ -34,11 +34,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -73,7 +73,7 @@ public class FortSiegeManager
 	private int _siegeLength = 120; // Time in minute. Changeable in siege.config
 	private List<FortSiege> _sieges;
 	
-	public final void addSiegeSkills(L2PcInstance character)
+	public final void addSiegeSkills(PlayerInstance character)
 	{
 		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
 		character.addSkill(SkillTable.getInstance().getInfo(247, 1), false);
@@ -82,19 +82,19 @@ public class FortSiegeManager
 	/**
 	 * Return true if character summon<BR>
 	 * <BR>
-	 * @param activeChar The L2Character of the character can summon
+	 * @param creature The Creature of the creature can summon
 	 * @param isCheckOnly
 	 * @return
 	 */
-	public final boolean checkIfOkToSummon(L2Character activeChar, boolean isCheckOnly)
+	public final boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		Fort fort = FortManager.getInstance().getFort(player);
 		
 		if ((fort == null) || (fort.getFortId() <= 0))
@@ -125,11 +125,11 @@ public class FortSiegeManager
 	/**
 	 * Return true if the clan is registered or owner of a fort<BR>
 	 * <BR>
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @param fortid
 	 * @return
 	 */
-	public final boolean checkIsRegistered(L2Clan clan, int fortid)
+	public final boolean checkIsRegistered(Clan clan, int fortid)
 	{
 		if (clan == null)
 		{
@@ -165,7 +165,7 @@ public class FortSiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(L2PcInstance character)
+	public final void removeSiegeSkills(PlayerInstance character)
 	{
 		character.removeSkill(SkillTable.getInstance().getInfo(246, 1));
 		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
@@ -326,7 +326,7 @@ public class FortSiegeManager
 		return _flagMaxCount;
 	}
 	
-	public final FortSiege getSiege(L2Object activeObject)
+	public final FortSiege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
@@ -436,7 +436,7 @@ public class FortSiegeManager
 		}
 	}
 	
-	public final boolean checkIsRegisteredInSiege(L2Clan clan)
+	public final boolean checkIsRegisteredInSiege(Clan clan)
 	{
 		for (Fort fort : FortManager.getInstance().getForts())
 		{

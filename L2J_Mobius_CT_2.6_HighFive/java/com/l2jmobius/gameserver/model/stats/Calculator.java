@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.stats;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 
@@ -203,7 +203,7 @@ public final class Calculator
 	 * @param initVal the initial value
 	 * @return the calculated value
 	 */
-	public double calc(L2Character caster, L2Character target, Skill skill, double initVal)
+	public double calc(Creature caster, Creature target, Skill skill, double initVal)
 	{
 		double value = initVal;
 		for (AbstractFunction func : _functions)

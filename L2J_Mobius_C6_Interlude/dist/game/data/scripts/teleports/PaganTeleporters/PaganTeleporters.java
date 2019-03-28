@@ -17,8 +17,8 @@
 package teleports.PaganTeleporters;
 
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -37,7 +37,7 @@ public class PaganTeleporters extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("Close_Door1"))
 		{
@@ -52,7 +52,7 @@ public class PaganTeleporters extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());

@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.stat.PcStat;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.ExVitalityPointInfo;
 
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.network.serverpackets.ExVitalityPointInfo;
  */
 public class VitalityTask implements Runnable
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public VitalityTask(L2PcInstance player)
+	public VitalityTask(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -43,7 +43,7 @@ public class VitalityTask implements Runnable
 			return;
 		}
 		
-		if (_player.getVitalityPoints() >= PcStat.MAX_VITALITY_POINTS)
+		if (_player.getVitalityPoints() >= PlayerStat.MAX_VITALITY_POINTS)
 		{
 			return;
 		}

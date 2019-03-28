@@ -18,8 +18,8 @@ package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -29,23 +29,23 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public final class UnsummonServitor implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		boolean canUnsummon = true;
 		
-		if (activeChar.hasServitors())
+		if (player.hasServitors())
 		{
-			for (L2Summon s : activeChar.getServitors().values())
+			for (Summon s : player.getServitors().values())
 			{
 				if (s.isBetrayed())
 				{
-					activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+					player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 					canUnsummon = false;
 					break;
 				}
 				else if (s.isAttackingNow() || s.isInCombat() || s.isMovementDisabled())
 				{
-					activeChar.sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
+					player.sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
 					canUnsummon = false;
 					break;
 				}
@@ -53,12 +53,12 @@ public final class UnsummonServitor implements IPlayerActionHandler
 			
 			if (canUnsummon)
 			{
-				activeChar.getServitors().values().forEach(s -> s.unSummon(activeChar));
+				player.getServitors().values().forEach(s -> s.unSummon(player));
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
 		}
 	}
 }

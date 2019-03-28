@@ -29,13 +29,13 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.LuckyGameItemType;
 import com.l2jmobius.gameserver.enums.LuckyGameResultType;
 import com.l2jmobius.gameserver.enums.LuckyGameType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -53,7 +53,7 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 	private int _reading;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int type = CommonUtil.constrain(packet.readD(), 0, LuckyGameType.values().length);
 		_type = LuckyGameType.values()[type];
@@ -62,9 +62,9 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -158,7 +158,7 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 		{
 			for (ItemHolder r : reward.getValue())
 			{
-				final L2ItemInstance item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
+				final ItemInstance item = player.addItem("LuckyGame", r.getId(), r.getCount(), player, true);
 				iu.addItem(item);
 				if (reward.getKey() == LuckyGameItemType.UNIQUE)
 				{

@@ -22,11 +22,11 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public class SoulShots implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -43,9 +43,9 @@ public class SoulShots implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final PlayerInstance player = playable.getActingPlayer();
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
@@ -58,9 +58,9 @@ public class SoulShots implements IItemHandler
 		// Check if Soul shot can be used
 		if ((weaponInst == null) || (weaponItem.getSoulShotCount() == 0))
 		{
-			if (!activeChar.getAutoSoulShot().contains(itemId))
+			if (!player.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
+				player.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
 			}
 			return false;
 		}
@@ -69,18 +69,18 @@ public class SoulShots implements IItemHandler
 		
 		if (!gradeCheck)
 		{
-			if (!activeChar.getAutoSoulShot().contains(itemId))
+			if (!player.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
+				player.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
 			}
 			return false;
 		}
 		
-		activeChar.soulShotLock.lock();
+		player.soulShotLock.lock();
 		try
 		{
 			// Check if Soul shot is already active
-			if (activeChar.isChargedShot(ShotType.SOULSHOTS))
+			if (player.isChargedShot(ShotType.SOULSHOTS))
 			{
 				return false;
 			}
@@ -92,36 +92,36 @@ public class SoulShots implements IItemHandler
 				SSCount = weaponItem.getReducedSoulShot();
 			}
 			
-			if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
+			if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 			{
-				if (!activeChar.disableAutoShot(itemId))
+				if (!player.disableAutoShot(itemId))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
 				}
 				return false;
 			}
 			// Charge soul shot
-			activeChar.chargeShot(ShotType.SOULSHOTS);
+			player.chargeShot(ShotType.SOULSHOTS);
 		}
 		finally
 		{
-			activeChar.soulShotLock.unlock();
+			player.soulShotLock.unlock();
 		}
 		
 		// Send message to client
-		if (!activeChar.getAutoSoulShot().contains(item.getId()))
+		if (!player.getAutoSoulShot().contains(item.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED);
+			player.sendPacket(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED);
 		}
 		
 		// Visual effect change if player has equipped Ruby lvl 3 or higher
-		if (activeChar.getActiveRubyJewel() != null)
+		if (player.getActiveRubyJewel() != null)
 		{
-			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, activeChar.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
+			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, player.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
 		}
 		else
 		{
-			skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+			skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
 		}
 		return true;
 	}

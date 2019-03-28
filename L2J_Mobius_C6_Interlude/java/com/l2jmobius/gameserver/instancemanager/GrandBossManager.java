@@ -28,12 +28,12 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * This class handles all Grand Bosses:
@@ -64,13 +64,13 @@ public class GrandBossManager
 	
 	private static GrandBossManager _instance;
 	
-	protected static Map<Integer, L2GrandBossInstance> _bosses;
+	protected static Map<Integer, GrandBossInstance> _bosses;
 	
 	protected static Map<Integer, StatsSet> _storedInfo;
 	
 	private Map<Integer, Integer> _bossStatus;
 	
-	private List<L2BossZone> _zones;
+	private List<BossZone> _zones;
 	
 	public static GrandBossManager getInstance()
 	{
@@ -142,7 +142,7 @@ public class GrandBossManager
 		}
 		
 		final Map<Integer, List<Integer>> zones = new ConcurrentHashMap<>();
-		for (L2BossZone zone : _zones)
+		for (BossZone zone : _zones)
 		{
 			if (zone == null)
 			{
@@ -172,7 +172,7 @@ public class GrandBossManager
 			e.printStackTrace();
 		}
 		
-		for (L2BossZone zone : _zones)
+		for (BossZone zone : _zones)
 		{
 			if (zone == null)
 			{
@@ -183,7 +183,7 @@ public class GrandBossManager
 		zones.clear();
 	}
 	
-	public void addZone(L2BossZone zone)
+	public void addZone(BossZone zone)
 	{
 		if (_zones != null)
 		{
@@ -191,13 +191,13 @@ public class GrandBossManager
 		}
 	}
 	
-	public final L2BossZone getZone(L2Character character)
+	public final BossZone getZone(Creature creature)
 	{
 		if (_zones != null)
 		{
-			for (L2BossZone temp : _zones)
+			for (BossZone temp : _zones)
 			{
-				if (temp.isCharacterInZone(character))
+				if (temp.isCharacterInZone(creature))
 				{
 					return temp;
 				}
@@ -206,11 +206,11 @@ public class GrandBossManager
 		return null;
 	}
 	
-	public final L2BossZone getZone(int x, int y, int z)
+	public final BossZone getZone(int x, int y, int z)
 	{
 		if (_zones != null)
 		{
-			for (L2BossZone temp : _zones)
+			for (BossZone temp : _zones)
 			{
 				if (temp.isInsideZone(x, y, z))
 				{
@@ -221,9 +221,9 @@ public class GrandBossManager
 		return null;
 	}
 	
-	public boolean checkIfInZone(String zoneType, L2Object obj)
+	public boolean checkIfInZone(String zoneType, WorldObject obj)
 	{
-		final L2BossZone temp = getZone(obj.getX(), obj.getY(), obj.getZ());
+		final BossZone temp = getZone(obj.getX(), obj.getY(), obj.getZ());
 		if (temp == null)
 		{
 			return false;
@@ -243,7 +243,7 @@ public class GrandBossManager
 		updateDb(bossId, true);
 	}
 	
-	public void addBoss(L2GrandBossInstance boss)
+	public void addBoss(GrandBossInstance boss)
 	{
 		if (boss != null)
 		{
@@ -251,12 +251,12 @@ public class GrandBossManager
 		}
 	}
 	
-	public L2GrandBossInstance getBoss(int bossId)
+	public GrandBossInstance getBoss(int bossId)
 	{
 		return _bosses.get(bossId);
 	}
 	
-	public L2GrandBossInstance deleteBoss(int bossId)
+	public GrandBossInstance deleteBoss(int bossId)
 	{
 		return _bosses.remove(bossId);
 	}
@@ -283,7 +283,7 @@ public class GrandBossManager
 		{
 			for (Integer bossId : _storedInfo.keySet())
 			{
-				final L2GrandBossInstance boss = _bosses.get(bossId);
+				final GrandBossInstance boss = _bosses.get(bossId);
 				final StatsSet info = _storedInfo.get(bossId);
 				if ((boss == null) || (info == null))
 				{
@@ -331,7 +331,7 @@ public class GrandBossManager
 			delete.executeUpdate();
 			delete.close();
 			
-			for (L2BossZone zone : _zones)
+			for (BossZone zone : _zones)
 			{
 				if (zone == null)
 				{
@@ -355,7 +355,7 @@ public class GrandBossManager
 			
 			for (Integer bossId : _storedInfo.keySet())
 			{
-				final L2GrandBossInstance boss = _bosses.get(bossId);
+				final GrandBossInstance boss = _bosses.get(bossId);
 				final StatsSet info = _storedInfo.get(bossId);
 				if ((boss == null) || (info == null))
 				{
@@ -400,7 +400,7 @@ public class GrandBossManager
 		PreparedStatement statement = null;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final L2GrandBossInstance boss = _bosses.get(bossId);
+			final GrandBossInstance boss = _bosses.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))
@@ -451,15 +451,15 @@ public class GrandBossManager
 		_zones.clear();
 	}
 	
-	public L2NpcTemplate getValidTemplate(int bossId)
+	public NpcTemplate getValidTemplate(int bossId)
 	{
-		final L2NpcTemplate template = NpcTable.getInstance().getTemplate(bossId);
+		final NpcTemplate template = NpcTable.getInstance().getTemplate(bossId);
 		if (template == null)
 		{
 			return null;
 		}
 		
-		if (!template.type.equalsIgnoreCase("L2GrandBoss"))
+		if (!template.type.equalsIgnoreCase("GrandBoss"))
 		{
 			return null;
 		}

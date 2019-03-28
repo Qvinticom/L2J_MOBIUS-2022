@@ -24,11 +24,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.CrestCache;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestSetPledgeCrest extends L2GameClientPacket
+public final class RequestSetPledgeCrest extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestSetPledgeCrest.class.getName());
 	
@@ -51,14 +51,14 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;
@@ -66,19 +66,19 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 		
 		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
 		{
-			activeChar.sendPacket(SystemMessageId.CANNOT_SET_CREST_WHILE_DISSOLUTION_IN_PROGRESS);
+			player.sendPacket(SystemMessageId.CANNOT_SET_CREST_WHILE_DISSOLUTION_IN_PROGRESS);
 			return;
 		}
 		
 		if (_length < 0)
 		{
-			activeChar.sendMessage("File transfer error.");
+			player.sendMessage("File transfer error.");
 			return;
 		}
 		
 		if (_length > 256)
 		{
-			activeChar.sendMessage("The clan crest file size was too big (max 256 bytes).");
+			player.sendMessage("The clan crest file size was too big (max 256 bytes).");
 			return;
 		}
 		
@@ -87,9 +87,9 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 			CrestCache.getInstance().removePledgeCrest(clan.getCrestId());
 			
 			clan.setHasCrest(false);
-			activeChar.sendPacket(SystemMessageId.CLAN_CREST_HAS_BEEN_DELETED);
+			player.sendPacket(SystemMessageId.CLAN_CREST_HAS_BEEN_DELETED);
 			
-			for (L2PcInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers(""))
 			{
 				member.broadcastUserInfo();
 			}
@@ -97,11 +97,11 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 			return;
 		}
 		
-		if ((activeChar.getClanPrivileges() & L2Clan.CP_CL_REGISTER_CREST) == L2Clan.CP_CL_REGISTER_CREST)
+		if ((player.getClanPrivileges() & Clan.CP_CL_REGISTER_CREST) == Clan.CP_CL_REGISTER_CREST)
 		{
 			if (clan.getLevel() < 3)
 			{
-				activeChar.sendPacket(SystemMessageId.CLAN_LVL_3_NEEDED_TO_SET_CREST);
+				player.sendPacket(SystemMessageId.CLAN_LVL_3_NEEDED_TO_SET_CREST);
 				return;
 			}
 			
@@ -136,7 +136,7 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 			clan.setCrestId(newId);
 			clan.setHasCrest(true);
 			
-			for (L2PcInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers(""))
 			{
 				member.broadcastUserInfo();
 			}

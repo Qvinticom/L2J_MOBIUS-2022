@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeDraftListSearch;
 
 /**
@@ -36,7 +36,7 @@ public class RequestPledgeDraftListSearch implements IClientIncomingPacket
 	private boolean _descending;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_levelMin = CommonUtil.constrain(packet.readD(), 0, 107);
 		_levelMax = CommonUtil.constrain(packet.readD(), 0, 107);
@@ -48,11 +48,11 @@ public class RequestPledgeDraftListSearch implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}

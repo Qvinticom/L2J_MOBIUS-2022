@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2NoSummonFriendZone;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -49,14 +49,14 @@ public class Helios extends AbstractNpcAI
 	private static final int DEAD = 3;
 	// Misc
 	private static final int HELIOS_RAID_DURATION = 5; // hours
-	private static L2Npc bossInstance;
-	private final L2NoSummonFriendZone bossZone;
+	private static Npc bossInstance;
+	private final NoSummonFriendZone bossZone;
 	
 	private Helios()
 	{
 		addKillId(HELIOS1, HELIOS2, HELIOS3);
 		// Zone
-		bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, L2NoSummonFriendZone.class);
+		bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS3);
 		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
@@ -79,7 +79,7 @@ public class Helios extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -114,7 +114,7 @@ public class Helios extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{

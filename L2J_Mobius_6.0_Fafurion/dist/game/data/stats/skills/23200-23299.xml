@@ -1568,7 +1568,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Critical -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
@@ -3207,7 +3207,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Critical -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>

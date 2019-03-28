@@ -19,8 +19,8 @@ package ai.others.OracleTeleport;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -152,37 +152,37 @@ public final class OracleTeleport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
-			if (CommonUtil.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
+			if (CommonUtil.contains(TEMPLE_PRIEST, npcId) && (qs.getState() == State.STARTED))
 			{
-				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
+				player.teleToLocation(RETURN_LOCS[qs.getInt("id")]);
 				player.setIsIn7sDungeon(false);
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
-			else if (CommonUtil.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
+			else if (CommonUtil.contains(RIFT_POSTERS, npcId) && (qs.getState() == State.STARTED))
 			{
-				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
+				player.teleToLocation(RETURN_LOCS[qs.getInt("id")]);
 				htmltext = "rift_back.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else
 			{
 				player.teleToLocation(RETURN_LOCS[getRandom(RETURN_LOCS.length - 1)]);
 				htmltext = "rift_back_unknown.htm";
 				player.setIsIn7sDungeon(false);
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 		}
 		else if (event.equalsIgnoreCase("Festival"))
 		{
-			final int id = st.getInt("id");
+			final int id = qs.getInt("id");
 			if (CommonUtil.contains(TOWN_DAWN, id))
 			{
 				player.teleToLocation(new Location(-80157, 111344, -4901));
@@ -205,7 +205,7 @@ public final class OracleTeleport extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("5.htm"))
 		{
-			final int id = st.getInt("id");
+			final int id = qs.getInt("id");
 			if (id > -1)
 			{
 				htmltext = "5a.htm";
@@ -219,14 +219,14 @@ public final class OracleTeleport extends AbstractNpcAI
 				}
 				i++;
 			}
-			st.set("id", Integer.toString(i));
-			st.setState(State.STARTED);
+			qs.set("id", Integer.toString(i));
+			qs.setState(State.STARTED);
 			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		else if (event.equalsIgnoreCase("6.htm"))
 		{
 			htmltext = "6.htm";
-			st.exitQuest(true);
+			qs.exitQuest(true);
 		}
 		else if (event.equalsIgnoreCase("zigurratDimensional"))
 		{
@@ -264,8 +264,8 @@ public final class OracleTeleport extends AbstractNpcAI
 				}
 				i++;
 			}
-			st.set("id", Integer.toString(i));
-			st.setState(State.STARTED);
+			qs.set("id", Integer.toString(i));
+			qs.setState(State.STARTED);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			htmltext = "ziggurat_rift.htm";
 			player.teleToLocation(new Location(-114755, -179466, -6752));
@@ -274,15 +274,15 @@ public final class OracleTeleport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
 		if (CommonUtil.contains(TOWN_DAWN, npcId))
 		{
-			st.setState(State.STARTED);
+			qs.setState(State.STARTED);
 			int i = 0;
 			for (int dawn : TELEPORTERS)
 			{
@@ -292,14 +292,14 @@ public final class OracleTeleport extends AbstractNpcAI
 				}
 				i++;
 			}
-			st.set("id", Integer.toString(i));
+			qs.set("id", Integer.toString(i));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			player.teleToLocation(new Location(-80157, 111344, -4901));
 			player.setIsIn7sDungeon(true);
 		}
 		if (CommonUtil.contains(TOWN_DUSK, npcId))
 		{
-			st.setState(State.STARTED);
+			qs.setState(State.STARTED);
 			int i = 0;
 			for (int dusk : TELEPORTERS)
 			{
@@ -309,7 +309,7 @@ public final class OracleTeleport extends AbstractNpcAI
 				}
 				i++;
 			}
-			st.set("id", Integer.toString(i));
+			qs.set("id", Integer.toString(i));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			player.teleToLocation(new Location(-81261, 86531, -5157));
 			player.setIsIn7sDungeon(true);
@@ -319,12 +319,12 @@ public final class OracleTeleport extends AbstractNpcAI
 			if (player.getLevel() < 20)
 			{
 				htmltext = "1.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if (player.getAllActiveQuests().size() > 23)
 			{
 				htmltext = "1a.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if (!hasQuestItems(player, DIMENSIONAL_FRAGMENT))
 			{
@@ -332,7 +332,7 @@ public final class OracleTeleport extends AbstractNpcAI
 			}
 			else
 			{
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 				htmltext = "4.htm";
 			}
 		}
@@ -342,47 +342,47 @@ public final class OracleTeleport extends AbstractNpcAI
 			if (playerLevel < 20)
 			{
 				htmltext = "ziggurat_lowlevel.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if (player.getAllActiveQuests().size() > 40)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_TOO_MANY_ONGOING_QUESTS);
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if (!hasQuestItems(player, DIMENSIONAL_FRAGMENT))
 			{
 				htmltext = "ziggurat_nofrag.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if ((playerLevel >= 20) && (playerLevel < 30) && (player.getAdena() < 2000))
 			{
 				htmltext = "ziggurat_noadena.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if ((playerLevel >= 30) && (playerLevel < 40) && (player.getAdena() < 4500))
 			{
 				htmltext = "ziggurat_noadena.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if ((playerLevel >= 40) && (playerLevel < 50) && (player.getAdena() < 8000))
 			{
 				htmltext = "ziggurat_noadena.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if ((playerLevel >= 50) && (playerLevel < 60) && (player.getAdena() < 12500))
 			{
 				htmltext = "ziggurat_noadena.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if ((playerLevel >= 60) && (playerLevel < 70) && (player.getAdena() < 18000))
 			{
 				htmltext = "ziggurat_noadena.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else if ((playerLevel >= 70) && (player.getAdena() < 24500))
 			{
 				htmltext = "ziggurat_noadena.htm";
-				st.exitQuest(true);
+				qs.exitQuest(true);
 			}
 			else
 			{

@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.model.actor.stat;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.Playable;
 
-public class PlayableStat extends CharStat
+public class PlayableStat extends CreatureStat
 {
 	private final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
 	
-	public PlayableStat(L2Playable activeChar)
+	public PlayableStat(Playable activeChar)
 	{
 		super(activeChar);
 	}
@@ -210,8 +210,8 @@ public class PlayableStat extends CharStat
 	}
 	
 	@Override
-	public L2Playable getActiveChar()
+	public Playable getActiveChar()
 	{
-		return (L2Playable) super.getActiveChar();
+		return (Playable) super.getActiveChar();
 	}
 }

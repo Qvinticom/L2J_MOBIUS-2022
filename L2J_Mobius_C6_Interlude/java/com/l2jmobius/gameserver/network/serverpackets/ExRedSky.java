@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch d.
  * @author KenM
  */
-public class ExRedSky extends L2GameServerPacket
+public class ExRedSky extends GameServerPacket
 {
 	/** The _duration. */
 	private final int _duration;

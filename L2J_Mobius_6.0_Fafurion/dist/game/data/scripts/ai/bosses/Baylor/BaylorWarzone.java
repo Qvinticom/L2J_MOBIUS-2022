@@ -16,16 +16,16 @@
  */
 package ai.bosses.Baylor;
 
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -67,7 +67,7 @@ public final class BaylorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -77,7 +77,7 @@ public final class BaylorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -159,13 +159,13 @@ public final class BaylorWarzone extends AbstractInstance
 				case "START_SCENE_12":
 				{
 					int count = 0;
-					for (L2Npc baylor : world.spawnGroup("BAYLOR"))
+					for (Npc baylor : world.spawnGroup("BAYLOR"))
 					{
 						baylor.getVariables().set("is_after_you", count);
 						baylor.disableCoreAI(true);
 						baylor.setRandomAnimation(false);
 						baylor.setRandomWalking(false);
-						((L2Attackable) baylor).setCanReturnToSpawnPoint(false);
+						((Attackable) baylor).setCanReturnToSpawnPoint(false);
 						count++;
 					}
 					getTimers().addTimer("START_SCENE_13", 300, npc, null);
@@ -265,12 +265,12 @@ public final class BaylorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			world.getAliveNpcs(INVISIBLE_NPC_1, INVISIBLE_NPC_2, INVISIBLE_NPC_3).forEach(L2Npc::deleteMe);
+			world.getAliveNpcs(INVISIBLE_NPC_1, INVISIBLE_NPC_2, INVISIBLE_NPC_3).forEach(Npc::deleteMe);
 			world.getAliveNpcs(PRISON_GUARD).forEach(guard -> guard.doDie(null));
 			npc.deleteMe();
 		}
@@ -278,18 +278,18 @@ public final class BaylorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		getTimers().addTimer("BATTLE_PORT", 3000, e ->
 		{
 			instance.getPlayers().forEach(p -> p.teleToLocation(BATTLE_PORT));
-			instance.getDoors().forEach(L2DoorInstance::closeMe);
+			instance.getDoors().forEach(DoorInstance::closeMe);
 		});
 	}
 	
 	public void onBossKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		
 		if (isInInstance(world))
@@ -307,8 +307,8 @@ public final class BaylorWarzone extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
@@ -319,7 +319,7 @@ public final class BaylorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == INVISIBLE_NPC_1)
 		{
@@ -330,13 +330,13 @@ public final class BaylorWarzone extends AbstractInstance
 	
 	/**
 	 * Broadcasts SocialAction packet to self and known players.
-	 * @param character
+	 * @param creature
 	 * @param actionId
 	 */
-	private void broadcastSocialAction(L2Character character, int actionId)
+	private void broadcastSocialAction(Creature creature, int actionId)
 	{
-		final SocialAction action = new SocialAction(character.getObjectId(), actionId);
-		L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
+		final SocialAction action = new SocialAction(creature.getObjectId(), actionId);
+		World.getInstance().forEachVisibleObject(creature, PlayerInstance.class, player ->
 		{
 			player.sendPacket(action);
 		});

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,10 +28,10 @@ public class NicknameChanged implements IClientOutgoingPacket
 	private final String _title;
 	private final int _objectId;
 	
-	public NicknameChanged(L2Character cha)
+	public NicknameChanged(Creature creature)
 	{
-		_objectId = cha.getObjectId();
-		_title = cha.getTitle();
+		_objectId = creature.getObjectId();
+		_title = creature.getTitle();
 	}
 	
 	@Override

@@ -22,8 +22,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.VariationInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private int _objId;
 	private int _x;
 	private int _y;
@@ -71,40 +71,40 @@ public class CharInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_HAIR2
 	};
 	
-	public CharInfo(L2PcInstance cha, boolean gmSeeInvis)
+	public CharInfo(PlayerInstance player, boolean gmSeeInvis)
 	{
-		_activeChar = cha;
-		_objId = cha.getObjectId();
-		if ((_activeChar.getVehicle() != null) && (_activeChar.getInVehiclePosition() != null))
+		_player = player;
+		_objId = player.getObjectId();
+		if ((_player.getVehicle() != null) && (_player.getInVehiclePosition() != null))
 		{
-			_x = _activeChar.getInVehiclePosition().getX();
-			_y = _activeChar.getInVehiclePosition().getY();
-			_z = _activeChar.getInVehiclePosition().getZ();
-			_vehicleId = _activeChar.getVehicle().getObjectId();
+			_x = _player.getInVehiclePosition().getX();
+			_y = _player.getInVehiclePosition().getY();
+			_z = _player.getInVehiclePosition().getZ();
+			_vehicleId = _player.getVehicle().getObjectId();
 		}
 		else
 		{
-			_x = _activeChar.getX();
-			_y = _activeChar.getY();
-			_z = _activeChar.getZ();
+			_x = _player.getX();
+			_y = _player.getY();
+			_z = _player.getZ();
 		}
-		_heading = _activeChar.getHeading();
-		_mAtkSpd = _activeChar.getMAtkSpd();
-		_pAtkSpd = _activeChar.getPAtkSpd();
-		_attackSpeedMultiplier = (float) _activeChar.getAttackSpeedMultiplier();
-		_moveMultiplier = cha.getMovementSpeedMultiplier();
-		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
-		_walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);
-		_swimRunSpd = (int) Math.round(cha.getSwimRunSpeed() / _moveMultiplier);
-		_swimWalkSpd = (int) Math.round(cha.getSwimWalkSpeed() / _moveMultiplier);
-		_flyRunSpd = cha.isFlying() ? _runSpd : 0;
-		_flyWalkSpd = cha.isFlying() ? _walkSpd : 0;
-		_enchantLevel = cha.getInventory().getWeaponEnchant();
-		_armorEnchant = cha.getInventory().getArmorMinEnchant();
+		_heading = _player.getHeading();
+		_mAtkSpd = _player.getMAtkSpd();
+		_pAtkSpd = _player.getPAtkSpd();
+		_attackSpeedMultiplier = (float) _player.getAttackSpeedMultiplier();
+		_moveMultiplier = player.getMovementSpeedMultiplier();
+		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
+		_walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);
+		_swimRunSpd = (int) Math.round(player.getSwimRunSpeed() / _moveMultiplier);
+		_swimWalkSpd = (int) Math.round(player.getSwimWalkSpeed() / _moveMultiplier);
+		_flyRunSpd = player.isFlying() ? _runSpd : 0;
+		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
+		_enchantLevel = player.getInventory().getWeaponEnchant();
+		_armorEnchant = player.getInventory().getArmorMinEnchant();
 		_gmSeeInvis = gmSeeInvis;
 	}
 	
-	public CharInfo(L2DecoyInstance decoy, boolean gmSeeInvis)
+	public CharInfo(DecoyInstance decoy, boolean gmSeeInvis)
 	{
 		this(decoy.getActingPlayer(), gmSeeInvis); // init
 		_objId = decoy.getObjectId();
@@ -118,27 +118,27 @@ public class CharInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHAR_INFO.writeId(packet);
-		final CeremonyOfChaosEvent event = _activeChar.getEvent(CeremonyOfChaosEvent.class);
-		final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_activeChar.getObjectId()) : null;
+		final CeremonyOfChaosEvent event = _player.getEvent(CeremonyOfChaosEvent.class);
+		final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_player.getObjectId()) : null;
 		packet.writeD(_x); // Confirmed
 		packet.writeD(_y); // Confirmed
 		packet.writeD(_z); // Confirmed
 		packet.writeD(_vehicleId); // Confirmed
 		packet.writeD(_objId); // Confirmed
-		packet.writeS(_activeChar.getAppearance().getVisibleName()); // Confirmed
+		packet.writeS(_player.getAppearance().getVisibleName()); // Confirmed
 		
-		packet.writeH(_activeChar.getRace().ordinal()); // Confirmed
-		packet.writeC(_activeChar.getAppearance().getSex() ? 0x01 : 0x00); // Confirmed
-		packet.writeD(_activeChar.getBaseClass()); // Confirmed
+		packet.writeH(_player.getRace().ordinal()); // Confirmed
+		packet.writeC(_player.getAppearance().getSex() ? 0x01 : 0x00); // Confirmed
+		packet.writeD(_player.getBaseClass()); // Confirmed
 		
 		for (int slot : getPaperdollOrder())
 		{
-			packet.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
+			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
 		}
 		
 		for (int slot : getPaperdollOrderAugument())
 		{
-			final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
+			final VariationInstance augment = _player.getInventory().getPaperdollAugmentation(slot);
 			packet.writeD(augment != null ? augment.getOption1Id() : 0); // Confirmed
 			// Mobius: Maybe use 2x writeH ?
 			// packet.writeD(augment != null ? augment.getOption2Id() : 0); // Confirmed
@@ -148,11 +148,11 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		for (int slot : getPaperdollOrderVisualId())
 		{
-			packet.writeD(_activeChar.getInventory().getPaperdollItemVisualId(slot));
+			packet.writeD(_player.getInventory().getPaperdollItemVisualId(slot));
 		}
 		
-		packet.writeC(_activeChar.getPvpFlag());
-		packet.writeD(_activeChar.getReputation());
+		packet.writeC(_player.getPvpFlag());
+		packet.writeD(_player.getReputation());
 		
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
@@ -168,82 +168,82 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeF(_moveMultiplier);
 		packet.writeF(_attackSpeedMultiplier);
 		
-		packet.writeF(_activeChar.getCollisionRadius());
-		packet.writeF(_activeChar.getCollisionHeight());
+		packet.writeF(_player.getCollisionRadius());
+		packet.writeF(_player.getCollisionHeight());
 		
-		packet.writeD(_activeChar.getVisualHair());
-		packet.writeD(_activeChar.getVisualHairColor());
-		packet.writeD(_activeChar.getVisualFace());
+		packet.writeD(_player.getVisualHair());
+		packet.writeD(_player.getVisualHairColor());
+		packet.writeD(_player.getVisualFace());
 		
-		packet.writeS(_gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
+		packet.writeS(_gmSeeInvis ? "Invisible" : _player.getAppearance().getVisibleTitle());
 		
-		packet.writeD(_activeChar.getAppearance().getVisibleClanId());
-		packet.writeD(_activeChar.getAppearance().getVisibleClanCrestId());
-		packet.writeD(_activeChar.getAppearance().getVisibleAllyId());
-		packet.writeD(_activeChar.getAppearance().getVisibleAllyCrestId());
+		packet.writeD(_player.getAppearance().getVisibleClanId());
+		packet.writeD(_player.getAppearance().getVisibleClanCrestId());
+		packet.writeD(_player.getAppearance().getVisibleAllyId());
+		packet.writeD(_player.getAppearance().getVisibleAllyCrestId());
 		
-		packet.writeC(_activeChar.isSitting() ? 0x00 : 0x01); // Confirmed
-		packet.writeC(_activeChar.isRunning() ? 0x01 : 0x00); // Confirmed
-		packet.writeC(_activeChar.isInCombat() ? 0x01 : 0x00); // Confirmed
+		packet.writeC(_player.isSitting() ? 0x00 : 0x01); // Confirmed
+		packet.writeC(_player.isRunning() ? 0x01 : 0x00); // Confirmed
+		packet.writeC(_player.isInCombat() ? 0x01 : 0x00); // Confirmed
 		
-		packet.writeC(!_activeChar.isInOlympiadMode() && _activeChar.isAlikeDead() ? 0x01 : 0x00); // Confirmed
+		packet.writeC(!_player.isInOlympiadMode() && _player.isAlikeDead() ? 0x01 : 0x00); // Confirmed
 		
-		packet.writeC(_activeChar.isInvisible() ? 0x01 : 0x00);
+		packet.writeC(_player.isInvisible() ? 0x01 : 0x00);
 		
-		packet.writeC(_activeChar.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-		packet.writeC(_activeChar.getPrivateStoreType().getId()); // Confirmed
+		packet.writeC(_player.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+		packet.writeC(_player.getPrivateStoreType().getId()); // Confirmed
 		
-		packet.writeH(_activeChar.getCubics().size()); // Confirmed
-		_activeChar.getCubics().keySet().forEach(packet::writeH);
+		packet.writeH(_player.getCubics().size()); // Confirmed
+		_player.getCubics().keySet().forEach(packet::writeH);
 		
-		packet.writeC(_activeChar.isInMatchingRoom() ? 0x01 : 0x00); // Confirmed
+		packet.writeC(_player.isInMatchingRoom() ? 0x01 : 0x00); // Confirmed
 		
-		packet.writeC(_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0);
-		packet.writeH(_activeChar.getRecomHave()); // Confirmed
-		packet.writeD(_activeChar.getMountNpcId() == 0 ? 0 : _activeChar.getMountNpcId() + 1000000);
+		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
+		packet.writeH(_player.getRecomHave()); // Confirmed
+		packet.writeD(_player.getMountNpcId() == 0 ? 0 : _player.getMountNpcId() + 1000000);
 		
-		packet.writeD(_activeChar.getClassId().getId()); // Confirmed
+		packet.writeD(_player.getClassId().getId()); // Confirmed
 		packet.writeD(0x00); // TODO: Find me!
-		packet.writeC(_activeChar.isMounted() ? 0 : _enchantLevel); // Confirmed
+		packet.writeC(_player.isMounted() ? 0 : _enchantLevel); // Confirmed
 		
-		packet.writeC(_activeChar.getTeam().getId()); // Confirmed
+		packet.writeC(_player.getTeam().getId()); // Confirmed
 		
-		packet.writeD(_activeChar.getClanCrestLargeId());
-		packet.writeC(_activeChar.isNoble() ? 1 : 0); // Confirmed
-		packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Confirmed
+		packet.writeD(_player.getClanCrestLargeId());
+		packet.writeC(_player.isNoble() ? 1 : 0); // Confirmed
+		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Confirmed
 		
-		packet.writeC(_activeChar.isFishing() ? 1 : 0); // Confirmed
+		packet.writeC(_player.isFishing() ? 1 : 0); // Confirmed
 		
-		final ILocational baitLocation = _activeChar.getFishing().getBaitLocation();
+		final ILocational baitLocation = _player.getFishing().getBaitLocation();
 		packet.writeD(baitLocation.getX()); // Confirmed
 		packet.writeD(baitLocation.getY()); // Confirmed
 		packet.writeD(baitLocation.getZ()); // Confirmed
 		
-		packet.writeD(_activeChar.getAppearance().getNameColor()); // Confirmed
+		packet.writeD(_player.getAppearance().getNameColor()); // Confirmed
 		
 		packet.writeD(_heading); // Confirmed
 		
-		packet.writeC(_activeChar.getPledgeClass());
-		packet.writeH(_activeChar.getPledgeType());
+		packet.writeC(_player.getPledgeClass());
+		packet.writeH(_player.getPledgeType());
 		
-		packet.writeD(_activeChar.getAppearance().getTitleColor()); // Confirmed
+		packet.writeD(_player.getAppearance().getTitleColor()); // Confirmed
 		
-		packet.writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+		packet.writeC(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
 		
-		packet.writeD(_activeChar.getAppearance().getVisibleClanId() > 0 ? _activeChar.getClan().getReputationScore() : 0);
-		packet.writeD(_activeChar.getTransformationDisplayId()); // Confirmed
-		packet.writeD(_activeChar.getAgathionId()); // Confirmed
-		
-		packet.writeC(0x00); // TODO: Find me!
-		
-		packet.writeD((int) Math.round(_activeChar.getCurrentCp())); // Confirmed
-		packet.writeD(_activeChar.getMaxHp()); // Confirmed
-		packet.writeD((int) Math.round(_activeChar.getCurrentHp())); // Confirmed
-		packet.writeD(_activeChar.getMaxMp()); // Confirmed
-		packet.writeD((int) Math.round(_activeChar.getCurrentMp())); // Confirmed
+		packet.writeD(_player.getAppearance().getVisibleClanId() > 0 ? _player.getClan().getReputationScore() : 0);
+		packet.writeD(_player.getTransformationDisplayId()); // Confirmed
+		packet.writeD(_player.getAgathionId()); // Confirmed
 		
 		packet.writeC(0x00); // TODO: Find me!
-		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
+		
+		packet.writeD((int) Math.round(_player.getCurrentCp())); // Confirmed
+		packet.writeD(_player.getMaxHp()); // Confirmed
+		packet.writeD((int) Math.round(_player.getCurrentHp())); // Confirmed
+		packet.writeD(_player.getMaxMp()); // Confirmed
+		packet.writeD((int) Math.round(_player.getCurrentMp())); // Confirmed
+		
+		packet.writeC(0x00); // TODO: Find me!
+		final Set<AbnormalVisualEffect> abnormalVisualEffects = _player.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeD(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
 		{
@@ -253,9 +253,9 @@ public class CharInfo implements IClientOutgoingPacket
 		{
 			packet.writeH(AbnormalVisualEffect.STEALTH.getClientId());
 		}
-		packet.writeC(cocPlayer != null ? cocPlayer.getPosition() : _activeChar.isTrueHero() ? 100 : 0);
-		packet.writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
-		packet.writeC(_activeChar.getAbilityPointsUsed()); // Used Ability Points
+		packet.writeC(cocPlayer != null ? cocPlayer.getPosition() : _player.isTrueHero() ? 100 : 0);
+		packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
+		packet.writeC(_player.getAbilityPointsUsed()); // Used Ability Points
 		return true;
 	}
 	

@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -32,21 +32,21 @@ public final class RequestExOustFromMPCC implements IClientIncomingPacket
 	private String _name;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance target = World.getInstance().getPlayer(_name);
+		final PlayerInstance player = client.getPlayer();
 		
-		if ((target != null) && target.isInParty() && activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar) && activeChar.getParty().getCommandChannel().equals(target.getParty().getCommandChannel()))
+		if ((target != null) && target.isInParty() && player.isInParty() && player.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getLeader().equals(player) && player.getParty().getCommandChannel().equals(target.getParty().getCommandChannel()))
 		{
-			if (activeChar.equals(target))
+			if (player.equals(target))
 			{
 				return;
 			}
@@ -57,16 +57,16 @@ public final class RequestExOustFromMPCC implements IClientIncomingPacket
 			target.getParty().broadcastPacket(sm);
 			
 			// check if CC has not been canceled
-			if (activeChar.getParty().isInCommandChannel())
+			if (player.getParty().isInCommandChannel())
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL);
 				sm.addString(target.getParty().getLeader().getName());
-				activeChar.getParty().getCommandChannel().broadcastPacket(sm);
+				player.getParty().getCommandChannel().broadcastPacket(sm);
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+			player.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 		}
 	}
 }

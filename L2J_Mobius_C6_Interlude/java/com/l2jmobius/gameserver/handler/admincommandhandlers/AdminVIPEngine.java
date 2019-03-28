@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.VIP;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -45,7 +45,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_vip"))
 		{
@@ -355,7 +355,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 		return _adminCommands;
 	}
 	
-	public void showMainPage(L2PcInstance activeChar)
+	public void showMainPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");

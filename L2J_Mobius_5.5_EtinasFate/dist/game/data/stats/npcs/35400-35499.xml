@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35400" level="70" type="L2Merchant" name="Horner" title="Clan Hall Manager">
+	<npc id="35400" level="70" type="Merchant" name="Horner" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -50,7 +50,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35401" level="70" type="L2Npc" name="Amiel" title="Clan Hall Gatekeeper">
+	<npc id="35401" level="70" type="Npc" name="Amiel" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -91,7 +91,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35402" level="70" type="L2Npc" name="Borna" title="Clan Hall Gatekeeper">
+	<npc id="35402" level="70" type="Npc" name="Borna" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -141,7 +141,7 @@
 			<height normal="22.25" />
 		</collision>
 	</npc>
-	<npc id="35403" level="70" type="L2Merchant" name="Ron" title="Clan Hall Manager">
+	<npc id="35403" level="70" type="Merchant" name="Ron" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -191,7 +191,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35404" level="70" type="L2Npc" name="Jamal" title="Clan Hall Gatekeeper">
+	<npc id="35404" level="70" type="Npc" name="Jamal" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -241,7 +241,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35405" level="70" type="L2Merchant" name="Flynn" title="Clan Hall Manager">
+	<npc id="35405" level="70" type="Merchant" name="Flynn" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -291,7 +291,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35406" level="70" type="L2Npc" name="Jabilo" title="Clan Hall Gatekeeper">
+	<npc id="35406" level="70" type="Npc" name="Jabilo" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -341,7 +341,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35407" level="70" type="L2Merchant" name="Seth" title="Clan Hall Manager">
+	<npc id="35407" level="70" type="Merchant" name="Seth" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -391,7 +391,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35408" level="76" type="L2Monster" name="Dietrich">
+	<npc id="35408" level="76" type="Monster" name="Dietrich">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -439,7 +439,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="35409" level="76" type="L2Monster" name="Mikhail">
+	<npc id="35409" level="76" type="Monster" name="Mikhail">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -487,7 +487,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="35410" level="78" type="L2Monster" name="Gustav">
+	<npc id="35410" level="78" type="Monster" name="Gustav">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -537,7 +537,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="35411" level="73" type="L2Defender" name="Doom Servant">
+	<npc id="35411" level="73" type="Defender" name="Doom Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -592,7 +592,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="35412" level="74" type="L2Defender" name="Doom Guard">
+	<npc id="35412" level="74" type="Defender" name="Doom Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -645,7 +645,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="35413" level="75" type="L2Defender" name="Doom Archer">
+	<npc id="35413" level="75" type="Defender" name="Doom Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -702,7 +702,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35414" level="76" type="L2Defender" name="Doom Trooper">
+	<npc id="35414" level="76" type="Defender" name="Doom Trooper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -755,7 +755,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="35415" level="77" type="L2Defender" name="Doom Warrior">
+	<npc id="35415" level="77" type="Defender" name="Doom Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -812,7 +812,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35416" level="78" type="L2Defender" name="Doom Knight">
+	<npc id="35416" level="78" type="Defender" name="Doom Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -867,7 +867,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="35417" level="75" type="L2Npc" name="Gatekeeper of Hell">
+	<npc id="35417" level="75" type="Npc" name="Gatekeeper of Hell">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -911,7 +911,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35418" level="75" type="L2Npc" name="Gatekeeper of Hell">
+	<npc id="35418" level="75" type="Npc" name="Gatekeeper of Hell">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -955,7 +955,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35419" level="75" type="L2Npc" name="Hephaeston" title="Wyvern Manager">
+	<npc id="35419" level="75" type="Npc" name="Hephaeston" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -997,7 +997,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35420" level="75" type="L2Npc" name="Loken" title="Herald">
+	<npc id="35420" level="75" type="Npc" name="Loken" title="Herald">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1040,7 +1040,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35421" level="75" type="L2Npc" name="Biggerstaff" title="Steward">
+	<npc id="35421" level="75" type="Npc" name="Biggerstaff" title="Steward">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1082,7 +1082,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="35422" level="75" type="L2Npc" name="Victor's Flag">
+	<npc id="35422" level="75" type="Npc" name="Victor's Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1125,7 +1125,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="35423" level="75" type="L2Npc" name="Red Flag">
+	<npc id="35423" level="75" type="Npc" name="Red Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1169,7 +1169,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="35424" level="75" type="L2Npc" name="Yellow Flag">
+	<npc id="35424" level="75" type="Npc" name="Yellow Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1213,7 +1213,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="35425" level="75" type="L2Npc" name="Green Flag">
+	<npc id="35425" level="75" type="Npc" name="Green Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1257,7 +1257,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="35426" level="75" type="L2Npc" name="Blue Flag">
+	<npc id="35426" level="75" type="Npc" name="Blue Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1301,7 +1301,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="35427" level="75" type="L2Npc" name="Purple Flag">
+	<npc id="35427" level="75" type="Npc" name="Purple Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1345,7 +1345,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="35428" level="73" type="L2Defender" name="Oel Mahum Berserker">
+	<npc id="35428" level="73" type="Defender" name="Oel Mahum Berserker">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1385,7 +1385,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="35429" level="73" type="L2Defender" name="Oel Mahum Scout">
+	<npc id="35429" level="73" type="Defender" name="Oel Mahum Scout">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1425,7 +1425,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="35430" level="73" type="L2Defender" name="Oel Mahum Prefect">
+	<npc id="35430" level="73" type="Defender" name="Oel Mahum Prefect">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1464,7 +1464,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="35431" level="73" type="L2Defender" name="Oel Mahum Cleric">
+	<npc id="35431" level="73" type="Defender" name="Oel Mahum Cleric">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1503,7 +1503,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="35432" level="73" type="L2Defender" name="Oel Mahum Thief">
+	<npc id="35432" level="73" type="Defender" name="Oel Mahum Thief">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1544,7 +1544,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35433" level="75" type="L2Npc" name="Inner Castle Gatekeeper">
+	<npc id="35433" level="75" type="Npc" name="Inner Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1589,7 +1589,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35434" level="75" type="L2Npc" name="Inner Castle Gatekeeper">
+	<npc id="35434" level="75" type="Npc" name="Inner Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1634,7 +1634,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35435" level="75" type="L2Npc" name="Outer Castle Gatekeeper">
+	<npc id="35435" level="75" type="Npc" name="Outer Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1679,7 +1679,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35436" level="75" type="L2Npc" name="Outer Castle Gatekeeper">
+	<npc id="35436" level="75" type="Npc" name="Outer Castle Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1724,7 +1724,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35437" level="75" type="L2Npc" name="Herald">
+	<npc id="35437" level="75" type="Npc" name="Herald">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1771,7 +1771,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35438" level="75" type="L2Npc" name="Chamberlain">
+	<npc id="35438" level="75" type="Npc" name="Chamberlain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1819,7 +1819,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35439" level="70" type="L2Merchant" name="Carey" title="Clan Hall Manager">
+	<npc id="35439" level="70" type="Merchant" name="Carey" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1860,7 +1860,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35440" level="70" type="L2Npc" name="Daniel" title="Clan Hall Gatekeeper">
+	<npc id="35440" level="70" type="Npc" name="Daniel" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1932,7 +1932,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35441" level="70" type="L2Merchant" name="Dianne" title="Clan Hall Manager">
+	<npc id="35441" level="70" type="Merchant" name="Dianne" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1973,7 +1973,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35442" level="70" type="L2Npc" name="Jacques" title="Clan Hall Gatekeeper">
+	<npc id="35442" level="70" type="Npc" name="Jacques" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2045,7 +2045,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35443" level="70" type="L2Merchant" name="Crissy" title="Clan Hall Manager">
+	<npc id="35443" level="70" type="Merchant" name="Crissy" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2086,7 +2086,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35444" level="70" type="L2Npc" name="Joff" title="Clan Hall Gatekeeper">
+	<npc id="35444" level="70" type="Npc" name="Joff" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2158,7 +2158,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35445" level="70" type="L2Merchant" name="Albert" title="Clan Hall Manager">
+	<npc id="35445" level="70" type="Merchant" name="Albert" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2199,7 +2199,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35446" level="70" type="L2Npc" name="Niels" title="Clan Hall Gatekeeper">
+	<npc id="35446" level="70" type="Npc" name="Niels" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2271,7 +2271,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35447" level="70" type="L2Merchant" name="Korgen" title="Clan Hall Manager">
+	<npc id="35447" level="70" type="Merchant" name="Korgen" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2312,7 +2312,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35448" level="70" type="L2Npc" name="Rudy" title="Clan Hall Gatekeeper">
+	<npc id="35448" level="70" type="Npc" name="Rudy" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2384,7 +2384,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35449" level="70" type="L2Merchant" name="DiMaggio" title="Clan Hall Manager">
+	<npc id="35449" level="70" type="Merchant" name="DiMaggio" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2425,7 +2425,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35450" level="70" type="L2Npc" name="Gellar" title="Clan Hall Gatekeeper">
+	<npc id="35450" level="70" type="Npc" name="Gellar" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2497,7 +2497,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35451" level="70" type="L2Merchant" name="Emma" title="Clan Hall Manager">
+	<npc id="35451" level="70" type="Merchant" name="Emma" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2538,7 +2538,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35452" level="70" type="L2Npc" name="Theobolt" title="Clan Hall Gatekeeper">
+	<npc id="35452" level="70" type="Npc" name="Theobolt" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2579,7 +2579,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35453" level="70" type="L2Merchant" name="Adrienne" title="Clan Hall Manager">
+	<npc id="35453" level="70" type="Merchant" name="Adrienne" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2620,7 +2620,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35454" level="70" type="L2Npc" name="Rosconne" title="Clan Hall Gatekeeper">
+	<npc id="35454" level="70" type="Npc" name="Rosconne" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2661,7 +2661,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35455" level="70" type="L2Merchant" name="Bianca" title="Clan Hall Manager">
+	<npc id="35455" level="70" type="Merchant" name="Bianca" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2702,7 +2702,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35456" level="70" type="L2Npc" name="Stewart" title="Clan Hall Gatekeeper">
+	<npc id="35456" level="70" type="Npc" name="Stewart" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2743,7 +2743,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35457" level="70" type="L2Merchant" name="Gladys" title="Clan Hall Manager">
+	<npc id="35457" level="70" type="Merchant" name="Gladys" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2784,7 +2784,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35458" level="70" type="L2Npc" name="Theron" title="Clan Hall Gatekeeper">
+	<npc id="35458" level="70" type="Npc" name="Theron" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2825,7 +2825,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35459" level="70" type="L2Merchant" name="Regina" title="Clan Hall Manager">
+	<npc id="35459" level="70" type="Merchant" name="Regina" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2866,7 +2866,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35460" level="70" type="L2Npc" name="Trey" title="Clan Hall Gatekeeper">
+	<npc id="35460" level="70" type="Npc" name="Trey" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2907,7 +2907,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35461" level="70" type="L2Merchant" name="Aida" title="Clan Hall Manager">
+	<npc id="35461" level="70" type="Merchant" name="Aida" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2948,7 +2948,7 @@
 			<height normal="17.7" />
 		</collision>
 	</npc>
-	<npc id="35462" level="70" type="L2Npc" name="Kalmer" title="Clan Hall Gatekeeper">
+	<npc id="35462" level="70" type="Npc" name="Kalmer" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2989,7 +2989,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35463" level="70" type="L2Merchant" name="Helga" title="Clan Hall Manager">
+	<npc id="35463" level="70" type="Merchant" name="Helga" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3030,7 +3030,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35464" level="70" type="L2Npc" name="Volfrem" title="Clan Hall Gatekeeper">
+	<npc id="35464" level="70" type="Npc" name="Volfrem" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3071,7 +3071,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35465" level="70" type="L2Merchant" name="Millicent" title="Clan Hall Manager">
+	<npc id="35465" level="70" type="Merchant" name="Millicent" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3112,7 +3112,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="35466" level="70" type="L2Npc" name="Gerard" title="Clan Hall Gatekeeper">
+	<npc id="35466" level="70" type="Npc" name="Gerard" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3153,7 +3153,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35467" level="70" type="L2Merchant" name="Branhillde" title="Clan Hall Manager">
+	<npc id="35467" level="70" type="Merchant" name="Branhillde" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3194,7 +3194,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35468" level="70" type="L2Npc" name="Lambert" title="Clan Hall Gatekeeper">
+	<npc id="35468" level="70" type="Npc" name="Lambert" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3235,7 +3235,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="35469" level="20" type="L2Artefact" name="Divine Altar">
+	<npc id="35469" level="20" type="Artefact" name="Divine Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3273,7 +3273,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="35470" level="99" type="L2Defender" name="Astair van Halter" title="King">
+	<npc id="35470" level="99" type="Defender" name="Astair van Halter" title="King">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
@@ -3321,7 +3321,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35471" level="95" type="L2Defender" name="Royal Knight" title="Rune">
+	<npc id="35471" level="95" type="Defender" name="Royal Knight" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -3369,7 +3369,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35472" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35472" level="93" type="Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" />
@@ -3418,7 +3418,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35473" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35473" level="93" type="Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" />
@@ -3467,7 +3467,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35474" level="93" type="L2Defender" name="Royal Guard" title="Rune">
+	<npc id="35474" level="93" type="Defender" name="Royal Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -3514,7 +3514,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35475" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35475" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3561,7 +3561,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35476" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35476" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3608,7 +3608,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35477" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35477" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3655,7 +3655,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35478" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35478" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3702,7 +3702,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35479" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35479" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3749,7 +3749,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35480" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35480" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3796,7 +3796,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35481" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35481" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3843,7 +3843,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35482" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35482" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3890,7 +3890,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35483" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35483" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -3937,7 +3937,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35484" level="95" type="L2Defender" name="Royal Knight" title="Rune">
+	<npc id="35484" level="95" type="Defender" name="Royal Knight" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -3985,7 +3985,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35485" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35485" level="93" type="Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" />
@@ -4034,7 +4034,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35486" level="93" type="L2Defender" name="Royal Wizard" title="Rune">
+	<npc id="35486" level="93" type="Defender" name="Royal Wizard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" />
@@ -4083,7 +4083,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35487" level="93" type="L2Defender" name="Royal Guard" title="Rune">
+	<npc id="35487" level="93" type="Defender" name="Royal Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -4130,7 +4130,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35488" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35488" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4177,7 +4177,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35489" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35489" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4224,7 +4224,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35490" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35490" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4271,7 +4271,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35491" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35491" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4318,7 +4318,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35492" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35492" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4365,7 +4365,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35493" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35493" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4412,7 +4412,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35494" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35494" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4459,7 +4459,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35495" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35495" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4506,7 +4506,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35496" level="92" type="L2Defender" name="Escort" title="Rune">
+	<npc id="35496" level="92" type="Defender" name="Escort" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="139" />
@@ -4553,7 +4553,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35497" level="75" type="L2Monster" name="Gatekeeper" title="Rune">
+	<npc id="35497" level="75" type="Monster" name="Gatekeeper" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4635,7 +4635,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35498" level="75" type="L2Monster" name="Gatekeeper" title="Rune">
+	<npc id="35498" level="75" type="Monster" name="Gatekeeper" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4717,7 +4717,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35499" level="75" type="L2Monster" name="Gatekeeper" title="Rune">
+	<npc id="35499" level="75" type="Monster" name="Gatekeeper" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

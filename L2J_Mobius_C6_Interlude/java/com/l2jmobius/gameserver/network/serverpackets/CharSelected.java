@@ -17,24 +17,23 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.5.2.6 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharSelected extends L2GameServerPacket
+public class CharSelected extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _sessionId;
 	
 	/**
-	 * @param cha
+	 * @param player
 	 * @param sessionId
 	 */
-	public CharSelected(L2PcInstance cha, int sessionId)
+	public CharSelected(PlayerInstance player, int sessionId)
 	{
-		_activeChar = cha;
+		_player = player;
 		_sessionId = sessionId;
 	}
 	
@@ -43,33 +42,33 @@ public class CharSelected extends L2GameServerPacket
 	{
 		writeC(0x15);
 		
-		writeS(_activeChar.getName());
-		writeD(_activeChar.getCharId()); // ??
-		writeS(_activeChar.getTitle());
+		writeS(_player.getName());
+		writeD(_player.getCharId()); // ??
+		writeS(_player.getTitle());
 		writeD(_sessionId);
-		writeD(_activeChar.getClanId());
+		writeD(_player.getClanId());
 		writeD(0x00); // ??
-		writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
-		writeD(_activeChar.getRace().ordinal());
-		writeD(_activeChar.getClassId().getId());
+		writeD(_player.getAppearance().getSex() ? 1 : 0);
+		writeD(_player.getRace().ordinal());
+		writeD(_player.getClassId().getId());
 		writeD(0x01); // active ??
-		writeD(_activeChar.getX());
-		writeD(_activeChar.getY());
-		writeD(_activeChar.getZ());
+		writeD(_player.getX());
+		writeD(_player.getY());
+		writeD(_player.getZ());
 		
-		writeF(_activeChar.getCurrentHp());
-		writeF(_activeChar.getCurrentMp());
-		writeD(_activeChar.getSp());
-		writeQ(_activeChar.getExp());
-		writeD(_activeChar.getLevel());
-		writeD(_activeChar.getKarma()); // thx evill33t
+		writeF(_player.getCurrentHp());
+		writeF(_player.getCurrentMp());
+		writeD(_player.getSp());
+		writeQ(_player.getExp());
+		writeD(_player.getLevel());
+		writeD(_player.getKarma()); // thx evill33t
 		writeD(0x0); // ?
-		writeD(_activeChar.getINT());
-		writeD(_activeChar.getSTR());
-		writeD(_activeChar.getCON());
-		writeD(_activeChar.getMEN());
-		writeD(_activeChar.getDEX());
-		writeD(_activeChar.getWIT());
+		writeD(_player.getINT());
+		writeD(_player.getSTR());
+		writeD(_player.getCON());
+		writeD(_player.getMEN());
+		writeD(_player.getDEX());
+		writeD(_player.getWIT());
 		for (int i = 0; i < 30; i++)
 		{
 			writeD(0x00);

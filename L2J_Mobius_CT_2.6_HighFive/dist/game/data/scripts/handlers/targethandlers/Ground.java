@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
@@ -35,18 +35,18 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 public class Ground implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final List<Creature> targetList = new ArrayList<>();
+		final PlayerInstance player = (PlayerInstance) creature;
 		final int maxTargets = skill.getAffectLimit();
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
 		
-		L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
+		World.getInstance().forEachVisibleObject(creature, Creature.class, character ->
 		{
 			if ((character != null) && character.isInsideRadius2D(player.getCurrentSkillWorldPosition(), skill.getAffectRange()))
 			{
-				if (!Skill.checkForAreaOffensiveSkills(activeChar, character, skill, srcInArena))
+				if (!Skill.checkForAreaOffensiveSkills(creature, character, skill, srcInArena))
 				{
 					return;
 				}
@@ -66,17 +66,17 @@ public class Ground implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			if (skill.hasEffectType(L2EffectType.SUMMON_NPC))
+			if (skill.hasEffectType(EffectType.SUMMON_NPC))
 			{
-				targetList.add(activeChar);
+				targetList.add(creature);
 			}
 		}
-		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.isEmpty() ? EMPTY_TARGET_LIST : targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.GROUND;
+		return TargetType.GROUND;
 	}
 }

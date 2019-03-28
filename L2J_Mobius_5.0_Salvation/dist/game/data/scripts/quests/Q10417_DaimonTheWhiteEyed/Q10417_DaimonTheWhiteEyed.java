@@ -17,8 +17,8 @@
 package quests.Q10417_DaimonTheWhiteEyed;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -51,10 +51,10 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -70,24 +70,24 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 			}
 			case "31683-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31683-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31683-03.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() > MIN_LEVEL)
 					{
@@ -102,21 +102,21 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.getState() == State.CREATED)
+		if (qs.getState() == State.CREATED)
 		{
 			if (npc.getId() == EYE_OF_ARGOS)
 			{
 				htmltext = "31683-01.htm";
 			}
 		}
-		else if (st.getState() == State.STARTED)
+		else if (qs.getState() == State.STARTED)
 		{
-			switch (st.getCond())
+			switch (qs.getCond())
 			{
 				case 1:
 				{
@@ -139,13 +139,13 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(1))
+		if ((qs != null) && qs.isCond(1))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

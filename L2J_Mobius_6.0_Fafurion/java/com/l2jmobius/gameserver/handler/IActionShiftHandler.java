@@ -19,14 +19,14 @@ package com.l2jmobius.gameserver.handler;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public interface IActionShiftHandler
 {
 	Logger LOGGER = Logger.getLogger(IActionShiftHandler.class.getName());
 	
-	boolean action(L2PcInstance activeChar, L2Object target, boolean interact);
+	boolean action(PlayerInstance player, WorldObject target, boolean interact);
 	
 	InstanceType getInstanceType();
 }

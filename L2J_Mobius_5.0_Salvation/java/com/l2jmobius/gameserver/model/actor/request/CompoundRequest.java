@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.request;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author UnAfraid
@@ -27,12 +27,12 @@ public class CompoundRequest extends AbstractRequest
 	private int _itemOne;
 	private int _itemTwo;
 	
-	public CompoundRequest(L2PcInstance activeChar)
+	public CompoundRequest(PlayerInstance player)
 	{
-		super(activeChar);
+		super(player);
 	}
 	
-	public L2ItemInstance getItemOne()
+	public ItemInstance getItemOne()
 	{
 		return getActiveChar().getInventory().getItemByObjectId(_itemOne);
 	}
@@ -42,7 +42,7 @@ public class CompoundRequest extends AbstractRequest
 		_itemOne = itemOne;
 	}
 	
-	public L2ItemInstance getItemTwo()
+	public ItemInstance getItemTwo()
 	{
 		return getActiveChar().getInventory().getItemByObjectId(_itemTwo);
 	}

@@ -18,35 +18,34 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:40 $
  */
-public class PrivateStoreManageListBuy extends L2GameServerPacket
+public class PrivateStoreManageListBuy extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private int _playerAdena;
-	private final L2ItemInstance[] _itemList;
+	private final ItemInstance[] _itemList;
 	private final TradeList.TradeItem[] _buyList;
 	
-	public PrivateStoreManageListBuy(L2PcInstance player)
+	public PrivateStoreManageListBuy(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		
 		if (Config.SELL_BY_ITEM)
 		{
-			_playerAdena = _activeChar.getItemCount(Config.SELL_ITEM, -1);
+			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);
 		}
 		else
 		{
-			_playerAdena = _activeChar.getAdena();
+			_playerAdena = _player.getAdena();
 		}
 		
-		_itemList = _activeChar.getInventory().getUniqueItems(false, true, true);
-		_buyList = _activeChar.getBuyList().getItems();
+		_itemList = _player.getInventory().getUniqueItems(false, true, true);
+		_buyList = _player.getBuyList().getItems();
 	}
 	
 	@Override
@@ -54,12 +53,12 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 	{
 		writeC(0xb7);
 		// section 1
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeD(_playerAdena);
 		
 		// section2
 		writeD(_itemList.length); // inventory items for potential buy
-		for (L2ItemInstance item : _itemList)
+		for (ItemInstance item : _itemList)
 		{
 			writeD(item.getItemId());
 			writeH(item.getEnchantLevel()); // show enchant lvl, but you can't buy enchanted weapons because of L2 Interlude Client bug

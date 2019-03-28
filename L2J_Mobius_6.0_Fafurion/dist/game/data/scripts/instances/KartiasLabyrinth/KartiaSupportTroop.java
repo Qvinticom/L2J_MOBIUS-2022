@@ -20,11 +20,11 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -49,7 +49,7 @@ public final class KartiaSupportTroop extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("NPC_SAY") && !npc.isDead())
 		{
@@ -60,10 +60,10 @@ public final class KartiaSupportTroop extends AbstractNpcAI
 		{
 			if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
 			{
-				final List<L2MonsterInstance> monsterList = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class);
+				final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjects(npc, MonsterInstance.class);
 				if (!monsterList.isEmpty())
 				{
-					final L2MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
+					final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
 					
 					if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster))
 					{
@@ -75,7 +75,7 @@ public final class KartiaSupportTroop extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getInstanceWorld() != null)
 		{

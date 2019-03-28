@@ -19,8 +19,8 @@ package ai.areas.FantasyIsle;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangeTimeToStart;
 import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameRequestReady;
@@ -47,7 +47,7 @@ public class HandysBlockCheckerEvent extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if ((npc == null) || (player == null))
 		{

@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -62,15 +62,15 @@ public final class RandomizeHate extends AbstractEffect
 			return;
 		}
 		
-		final L2Attackable effectedMob = (L2Attackable) info.getEffected();
-		final List<L2Character> aggroList = effectedMob.getAggroList().keySet().stream().filter(c -> c != info.getEffector()).collect(Collectors.toList());
+		final Attackable effectedMob = (Attackable) info.getEffected();
+		final List<Creature> aggroList = effectedMob.getAggroList().keySet().stream().filter(c -> c != info.getEffector()).collect(Collectors.toList());
 		if (aggroList.isEmpty())
 		{
 			return;
 		}
 		
 		// Choosing randomly a new target
-		final L2Character target = aggroList.get(Rnd.get(aggroList.size()));
+		final Creature target = aggroList.get(Rnd.get(aggroList.size()));
 		final int hate = effectedMob.getHating(info.getEffector());
 		effectedMob.stopHating(info.getEffector());
 		effectedMob.addDamageHate(target, 0, hate);

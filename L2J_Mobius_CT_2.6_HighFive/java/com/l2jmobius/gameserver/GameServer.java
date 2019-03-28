@@ -133,7 +133,7 @@ import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.instancemanager.games.Lottery;
 import com.l2jmobius.gameserver.model.AutoSpawnHandler;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.entity.Hero;
@@ -218,7 +218,7 @@ public class GameServer
 		// start game time control early
 		GameTimeController.init();
 		InstanceManager.getInstance();
-		L2World.getInstance();
+		World.getInstance();
 		MapRegionManager.getInstance();
 		AnnouncementsTable.getInstance();
 		GlobalVariablesManager.getInstance();

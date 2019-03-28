@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.FenceState;
-import com.l2jmobius.gameserver.model.actor.instance.L2FenceInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FenceInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -34,7 +34,7 @@ public class ExColosseumFenceInfo implements IClientOutgoingPacket
 	private final int _length;
 	private final int _clientState;
 	
-	public ExColosseumFenceInfo(L2FenceInstance fence)
+	public ExColosseumFenceInfo(FenceInstance fence)
 	{
 		this(fence.getObjectId(), fence.getX(), fence.getY(), fence.getZ(), fence.getWidth(), fence.getLength(), fence.getState());
 	}

@@ -26,12 +26,12 @@ import java.util.Map;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -46,7 +46,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 	private final Map<Integer, SkillHolder> _skills = new LinkedHashMap<>();
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		packet.readD(); // Total size
 		for (int i = 0; i < TREE_SIZE; i++)
@@ -71,48 +71,48 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isSubClassActive() && !activeChar.isDualClassActive())
+		if (player.isSubClassActive() && !player.isDualClassActive())
 		{
 			return;
 		}
 		
-		if ((activeChar.getAbilityPoints() == 0) || (activeChar.getAbilityPoints() == activeChar.getAbilityPointsUsed()))
+		if ((player.getAbilityPoints() == 0) || (player.getAbilityPoints() == player.getAbilityPointsUsed()))
 		{
-			LOGGER.warning("Player " + activeChar + " is trying to learn ability without ability points!");
+			LOGGER.warning("Player " + player + " is trying to learn ability without ability points!");
 			return;
 		}
 		
-		if ((activeChar.getLevel() < 99) || !activeChar.isNoble())
+		if ((player.getLevel() < 99) || !player.isNoble())
 		{
-			activeChar.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
+			player.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;
 		}
-		else if (activeChar.isInOlympiadMode() || activeChar.isOnEvent(CeremonyOfChaosEvent.class))
+		else if (player.isInOlympiadMode() || player.isOnEvent(CeremonyOfChaosEvent.class))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
-		else if (activeChar.isOnEvent()) // custom event message
+		else if (player.isOnEvent()) // custom event message
 		{
-			activeChar.sendMessage("You cannot use or reset Ability Points while participating in an event.");
+			player.sendMessage("You cannot use or reset Ability Points while participating in an event.");
 			return;
 		}
 		
 		final int[] pointsSpent = new int[TREE_SIZE];
 		Arrays.fill(pointsSpent, 0);
 		
-		final List<L2SkillLearn> skillsToLearn = new ArrayList<>(_skills.size());
+		final List<SkillLearn> skillsToLearn = new ArrayList<>(_skills.size());
 		for (SkillHolder holder : _skills.values())
 		{
-			final L2SkillLearn learn = SkillTreesData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLevel());
+			final SkillLearn learn = SkillTreesData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLevel());
 			if (learn == null)
 			{
 				LOGGER.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
@@ -128,7 +128,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 				break;
 			}
 			
-			if (activeChar.getSkillLevel(skill.getId()) > 0)
+			if (player.getSkillLevel(skill.getId()) > 0)
 			{
 				pointsSpent[learn.getTreeId() - 1] += skill.getLevel();
 			}
@@ -137,13 +137,13 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 		}
 		
 		// Sort the skills by their tree id -> row -> column
-		skillsToLearn.sort(Comparator.comparingInt(L2SkillLearn::getTreeId).thenComparing(L2SkillLearn::getRow).thenComparing(L2SkillLearn::getColumn));
+		skillsToLearn.sort(Comparator.comparingInt(SkillLearn::getTreeId).thenComparing(SkillLearn::getRow).thenComparing(SkillLearn::getColumn));
 		
-		for (L2SkillLearn learn : skillsToLearn)
+		for (SkillLearn learn : skillsToLearn)
 		{
 			final Skill skill = SkillData.getInstance().getSkill(learn.getSkillId(), learn.getSkillLevel());
 			final int points;
-			final int knownLevel = activeChar.getSkillLevel(skill.getId());
+			final int knownLevel = player.getSkillLevel(skill.getId());
 			if (knownLevel == 0) // player didn't knew it at all!
 			{
 				points = learn.getSkillLevel();
@@ -156,7 +156,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			// Case 1: Learning skill without having X points spent on the specific tree
 			if (learn.getPointsRequired() > pointsSpent[learn.getTreeId() - 1])
 			{
-				LOGGER.warning("Player " + activeChar + " is trying to learn " + skill + " without enough ability points spent!");
+				LOGGER.warning("Player " + player + " is trying to learn " + skill + " without enough ability points spent!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -164,27 +164,27 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			// Case 2: Learning skill without having its parent
 			for (SkillHolder required : learn.getPreReqSkills())
 			{
-				if (activeChar.getSkillLevel(required.getSkillId()) < required.getSkillLevel())
+				if (player.getSkillLevel(required.getSkillId()) < required.getSkillLevel())
 				{
-					LOGGER.warning("Player " + activeChar + " is trying to learn " + skill + " without having prerequsite skill: " + required.getSkill() + "!");
+					LOGGER.warning("Player " + player + " is trying to learn " + skill + " without having prerequsite skill: " + required.getSkill() + "!");
 					client.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 			
 			// Case 3 Learning a skill without having enough points
-			if ((activeChar.getAbilityPoints() - activeChar.getAbilityPointsUsed()) < points)
+			if ((player.getAbilityPoints() - player.getAbilityPointsUsed()) < points)
 			{
-				LOGGER.warning("Player " + activeChar + " is trying to learn ability without ability points!");
+				LOGGER.warning("Player " + player + " is trying to learn ability without ability points!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
 			pointsSpent[learn.getTreeId() - 1] += points;
 			
-			activeChar.addSkill(skill, true);
-			activeChar.setAbilityPointsUsed(activeChar.getAbilityPointsUsed() + points);
+			player.addSkill(skill, true);
+			player.setAbilityPointsUsed(player.getAbilityPointsUsed() + points);
 		}
-		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+		player.sendPacket(new ExAcquireAPSkillList(player));
 	}
 }

@@ -18,13 +18,13 @@ package quests.Q10332_ToughRoad;
 
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -57,11 +57,11 @@ public final class Q10332_ToughRoad extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			if (event.equals("SCREEN_MSG"))
 			{
@@ -80,16 +80,16 @@ public final class Q10332_ToughRoad extends Quest
 			}
 			case "30565-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30332-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					addExpAndSp(player, 42250, 20);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					player.getVariables().remove(MOVIE_VAR);
 					break;
 				}
@@ -99,14 +99,14 @@ public final class Q10332_ToughRoad extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (npc.getId() == KAKAI)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -127,11 +127,11 @@ public final class Q10332_ToughRoad extends Quest
 		}
 		else if (npc.getId() == BATHIS)
 		{
-			if (st.getState() == State.STARTED)
+			if (qs.getState() == State.STARTED)
 			{
 				htmltext = "30332-01.html";
 			}
-			else if (st.getState() == State.COMPLETED)
+			else if (qs.getState() == State.COMPLETED)
 			{
 				htmltext = "30332-04.html";
 			}
@@ -140,21 +140,21 @@ public final class Q10332_ToughRoad extends Quest
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			final QuestState st = getQuestState(player, false);
+			final PlayerInstance player = creature.getActingPlayer();
+			final QuestState qs = getQuestState(player, false);
 			final QuestState st10331 = player.getQuestState(Q10331_StartOfFate.class.getSimpleName());
 			
-			if (((st == null) || st.isCreated()) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (st10331 != null) && st10331.isCompleted() && !player.getVariables().getBoolean(MOVIE_VAR, false))
+			if (((qs == null) || qs.isCreated()) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (st10331 != null) && st10331.isCompleted() && !player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				player.getVariables().set(MOVIE_VAR, true);
 				playMovie(player, Movie.SI_ILLUSION_04_QUE);
 				startQuestTimer("SCREEN_MSG", 11000, null, player);
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 }

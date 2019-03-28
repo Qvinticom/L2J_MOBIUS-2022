@@ -16,21 +16,21 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * sample 63 01 00 00 00 count c1 b2 e0 4a object id 54 00 75 00 65 00 73 00 64 00 61 00 79 00 00 00 name 5a 01 00 00 hp 5a 01 00 00 hp max 89 00 00 00 mp 89 00 00 00 mp max 0e 00 00 00 level 12 00 00 00 class 00 00 00 00 01 00 00 00 format d (dSdddddddd)
  * @version $Revision: 1.6.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class PartySmallWindowAll extends L2GameServerPacket
+public final class PartySmallWindowAll extends GameServerPacket
 {
-	private final L2Party _party;
-	private final L2PcInstance _exclude;
+	private final Party _party;
+	private final PlayerInstance _exclude;
 	private final int _dist;
 	private final int _LeaderOID;
 	
-	public PartySmallWindowAll(L2PcInstance exclude, L2Party party)
+	public PartySmallWindowAll(PlayerInstance exclude, Party party)
 	{
 		_exclude = exclude;
 		_party = party;
@@ -46,7 +46,7 @@ public final class PartySmallWindowAll extends L2GameServerPacket
 		writeD(_dist);
 		writeD(_party.getMemberCount() - 1);
 		
-		for (L2PcInstance member : _party.getPartyMembers())
+		for (PlayerInstance member : _party.getPartyMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{

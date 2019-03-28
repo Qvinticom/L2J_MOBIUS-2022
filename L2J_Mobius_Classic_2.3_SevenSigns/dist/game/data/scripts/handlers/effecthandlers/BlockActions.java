@@ -23,12 +23,12 @@ import java.util.stream.Collectors;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -52,13 +52,13 @@ public final class BlockActions extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.BLOCK_ACTIONS;
+		return EffectType.BLOCK_ACTIONS;
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if ((effected == null) || effected.isRaid())
 		{
@@ -72,7 +72,7 @@ public final class BlockActions extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		_allowedSkills.stream().forEach(effected::removeBlockActionsAllowedSkill);
 		if (effected.isPlayable())
@@ -87,7 +87,7 @@ public final class BlockActions extends AbstractEffect
 					}
 					else
 					{
-						((L2Summon) effected).doAutoAttack(effector);
+						((Summon) effected).doAutoAttack(effector);
 					}
 				}
 				else

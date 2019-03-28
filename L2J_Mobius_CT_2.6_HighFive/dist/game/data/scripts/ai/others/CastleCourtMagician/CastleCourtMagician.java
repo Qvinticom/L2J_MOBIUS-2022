@@ -16,9 +16,9 @@
  */
 package ai.others.CastleCourtMagician;
 
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
@@ -122,7 +122,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((player.getClan() == null) && (player.getClanId() != npc.getCastle().getOwnerId()))
 		{
@@ -261,7 +261,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 			{
 				if (player.getClanId() == npc.getCastle().getOwnerId())
 				{
-					final L2PcInstance clanLeader = player.getClan().getLeader().getPlayerInstance();
+					final PlayerInstance clanLeader = player.getClan().getLeader().getPlayerInstance();
 					
 					if ((clanLeader != null) && clanLeader.isAffectedBySkill(CLAN_GATE))
 					{
@@ -284,7 +284,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId())) ? "courtmagician.html" : "courtmagician-01.html";
 	}

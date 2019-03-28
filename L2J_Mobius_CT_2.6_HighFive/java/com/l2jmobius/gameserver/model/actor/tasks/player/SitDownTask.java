@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Task dedicated to put player to sit down.
@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class SitDownTask implements Runnable
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public SitDownTask(L2PcInstance player)
+	public SitDownTask(PlayerInstance player)
 	{
 		_player = player;
 	}

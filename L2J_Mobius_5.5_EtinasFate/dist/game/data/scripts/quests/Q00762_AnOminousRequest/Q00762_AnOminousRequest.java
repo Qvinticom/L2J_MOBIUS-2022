@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -116,10 +116,10 @@ public final class Q00762_AnOminousRequest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -137,13 +137,13 @@ public final class Q00762_AnOminousRequest extends Quest
 			}
 			case "31522-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31522-09.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					final long itemCount = getQuestItemsCount(player, BLOOD);
 					
@@ -156,7 +156,7 @@ public final class Q00762_AnOminousRequest extends Quest
 								addExpAndSp(player, data[1], data[2]);
 							}
 							giveItems(player, STEEL_DOOR_BOX, data[3]);
-							st.exitQuest(QuestType.DAILY, true);
+							qs.exitQuest(QuestType.DAILY, true);
 							htmltext = event;
 							break;
 						}
@@ -169,12 +169,12 @@ public final class Q00762_AnOminousRequest extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -183,18 +183,18 @@ public final class Q00762_AnOminousRequest extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.isCond(1) ? "31522-05.html" : "31522-06.html";
+				htmltext = qs.isCond(1) ? "31522-05.html" : "31522-06.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = "31522-01.htm";
 				}
 				break;
@@ -204,11 +204,11 @@ public final class Q00762_AnOminousRequest extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (getRandom(100) < 15))
+		if ((qs != null) && (qs.isCond(1) || qs.isCond(2)) && (getRandom(100) < 15))
 		{
 			if (getQuestItemsCount(killer, BONE) < 50)
 			{
@@ -217,7 +217,7 @@ public final class Q00762_AnOminousRequest extends Quest
 				
 				if (getQuestItemsCount(killer, BONE) >= 50)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					showOnScreenMsg(killer, NpcStringId.YOU_CAN_GATHER_MORE_MONSTER_BLOOD, ExShowScreenMessage.TOP_CENTER, 6000);
 				}
 			}

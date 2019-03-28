@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: (ch).
  * @author -Wooden-
  */
-public class ExOrcMove extends L2GameServerPacket
+public class ExOrcMove extends GameServerPacket
 {
 	@Override
 	protected void writeImpl()

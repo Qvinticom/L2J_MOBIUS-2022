@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.network.serverpackets.CharTemplates;
-import com.l2jmobius.gameserver.templates.chars.L2PcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
 
-public final class NewCharacter extends L2GameClientPacket
+public final class NewCharacter extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -33,7 +33,7 @@ public final class NewCharacter extends L2GameClientPacket
 	{
 		final CharTemplates ct = new CharTemplates();
 		
-		L2PcTemplate template = CharTemplateTable.getInstance().getTemplate(0);
+		PlayerTemplate template = CharTemplateTable.getInstance().getTemplate(0);
 		ct.addChar(template);
 		
 		template = CharTemplateTable.getInstance().getTemplate(ClassId.fighter); // Human Fighter

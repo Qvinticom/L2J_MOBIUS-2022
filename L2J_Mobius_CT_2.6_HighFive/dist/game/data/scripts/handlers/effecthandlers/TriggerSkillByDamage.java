@@ -20,18 +20,18 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageReceived;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger Skill By Damage effect implementation.
@@ -44,7 +44,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 	private final int _minDamage;
 	private final int _chance;
 	private final SkillHolder _skill;
-	private final L2TargetType _targetType;
+	private final TargetType _targetType;
 	private final InstanceType _attackerType;
 	
 	public TriggerSkillByDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
@@ -56,8 +56,8 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		_minDamage = params.getInt("minDamage", 1);
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
-		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
-		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 	}
 	
 	private void onDamageReceivedEvent(OnCreatureDamageReceived event)
@@ -67,7 +67,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 			return;
 		}
 		
-		if ((_targetType == L2TargetType.ONE) && (event.getAttacker().getTarget() != event.getTarget()))
+		if ((_targetType == TargetType.ONE) && (event.getAttacker().getTarget() != event.getTarget()))
 		{
 			return;
 		}
@@ -95,15 +95,15 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker());
-		for (L2Object triggerTarget : targets)
+		final WorldObject[] targets = targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker());
+		for (WorldObject triggerTarget : targets)
 		{
-			if ((triggerTarget == null) || !triggerTarget.isCharacter())
+			if ((triggerTarget == null) || !triggerTarget.isCreature())
 			{
 				continue;
 			}
 			
-			final L2Character targetChar = (L2Character) triggerTarget;
+			final Creature targetChar = (Creature) triggerTarget;
 			if (!targetChar.isInvul())
 			{
 				event.getTarget().makeTriggerCast(triggerSkill, targetChar);

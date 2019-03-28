@@ -20,12 +20,12 @@ import java.util.function.Predicate;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CommissionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.commission.CommissionItemType;
 import com.l2jmobius.gameserver.model.commission.CommissionTreeType;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 
@@ -41,7 +41,7 @@ public class RequestCommissionList implements IClientIncomingPacket
 	private String _query;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_treeViewDepth = packet.readD();
 		_itemType = packet.readD();
@@ -52,9 +52,9 @@ public class RequestCommissionList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -66,7 +66,7 @@ public class RequestCommissionList implements IClientIncomingPacket
 			return;
 		}
 		
-		Predicate<L2Item> filter = i -> true;
+		Predicate<Item> filter = i -> true;
 		switch (_treeViewDepth)
 		{
 			case 1:

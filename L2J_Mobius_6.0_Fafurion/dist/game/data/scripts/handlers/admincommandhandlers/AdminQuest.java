@@ -28,8 +28,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
@@ -64,7 +64,7 @@ public class AdminQuest implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_quest_reload"))
 		{
@@ -157,18 +157,18 @@ public class AdminQuest implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Get a target first.");
 			}
-			else if (!activeChar.getTarget().isCharacter())
+			else if (!activeChar.getTarget().isCreature())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Invalid Target.");
 			}
 			else
 			{
-				final L2Character character = (L2Character) activeChar.getTarget();
+				final Creature creature = (Creature) activeChar.getTarget();
 				final StringBuilder sb = new StringBuilder();
 				final Set<String> questNames = new TreeSet<>();
 				for (EventType type : EventType.values())
 				{
-					for (AbstractEventListener listener : character.getListeners(type))
+					for (AbstractEventListener listener : creature.getListeners(type))
 					{
 						if (listener.getOwner() instanceof Quest)
 						{
@@ -185,7 +185,7 @@ public class AdminQuest implements IAdminCommandHandler
 				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 				msg.setFile(activeChar, "data/html/admin/npc-quests.htm");
 				msg.replace("%quests%", sb.toString());
-				msg.replace("%objid%", character.getObjectId());
+				msg.replace("%objid%", creature.getObjectId());
 				msg.replace("%questName%", "");
 				activeChar.sendPacket(msg);
 			}
@@ -298,7 +298,7 @@ public class AdminQuest implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showDir(String dir, L2PcInstance activeChar)
+	private void showDir(String dir, PlayerInstance activeChar)
 	{
 		String replace = null;
 		File path;

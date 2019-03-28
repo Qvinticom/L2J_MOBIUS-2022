@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author Nik
@@ -42,7 +42,7 @@ public class hitConditionBonus
 	private static int lowBonus = 0;
 	private static int darkBonus = 0;
 	
-	protected static double getConditionBonus(L2Character attacker, L2Character target)
+	protected static double getConditionBonus(Creature attacker, Creature target)
 	{
 		double mod = 100;
 		// Get high or low bonus

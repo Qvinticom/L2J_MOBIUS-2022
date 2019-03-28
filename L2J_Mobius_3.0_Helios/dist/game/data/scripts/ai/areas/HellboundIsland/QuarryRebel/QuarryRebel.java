@@ -18,9 +18,9 @@ package ai.areas.HellboundIsland.QuarryRebel;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 import ai.AbstractNpcAI;
@@ -59,7 +59,7 @@ public class QuarryRebel extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("SPAWN"))
 		{
@@ -123,7 +123,7 @@ public class QuarryRebel extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((skill != null) && skill.isBad())
 		{
@@ -133,15 +133,15 @@ public class QuarryRebel extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		startQuestTimer("SPAWN", 500, npc, killer);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private static void spawnNextMob(int npcId, L2Character killer, Location loc)
+	private static void spawnNextMob(int npcId, Creature killer, Location loc)
 	{
-		final L2Npc npc = addSpawn(npcId, loc.getX(), loc.getY(), loc.getZ(), killer.getHeading() + 32500, false, 300000);
+		final Npc npc = addSpawn(npcId, loc.getX(), loc.getY(), loc.getZ(), killer.getHeading() + 32500, false, 300000);
 		npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 1000);
 	}
 	

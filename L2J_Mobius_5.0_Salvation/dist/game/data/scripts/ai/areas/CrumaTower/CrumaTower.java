@@ -17,14 +17,14 @@
 package ai.areas.CrumaTower;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageReceived;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -46,7 +46,7 @@ public final class CrumaTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("MESSAGE") && (npc != null))
 		{
@@ -57,7 +57,7 @@ public final class CrumaTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("MESSAGE", 15000, npc, null);
 		return super.onSpawn(npc);
@@ -70,7 +70,7 @@ public final class CrumaTower extends AbstractNpcAI
 	{
 		try
 		{
-			final L2Npc npc = (L2Npc) event.getTarget();
+			final Npc npc = (Npc) event.getTarget();
 			final int[] location = npc.getParameters().getIntArray("teleport", ";");
 			event.getAttacker().teleToLocation(location[0], location[1], location[2]);
 		}

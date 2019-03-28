@@ -1631,7 +1631,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="50" />
 				<param skillId="5022" skillLevel="#triggeredLevel" /> <!-- Decrease Speed -->

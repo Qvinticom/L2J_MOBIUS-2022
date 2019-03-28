@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author St3eT
@@ -28,10 +28,10 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public final class MovieHolder
 {
 	private final Movie _movie;
-	private final List<L2PcInstance> _players;
-	private final List<L2PcInstance> _votedPlayers = new CopyOnWriteArrayList<>();
+	private final List<PlayerInstance> _players;
+	private final List<PlayerInstance> _votedPlayers = new CopyOnWriteArrayList<>();
 	
-	public MovieHolder(List<L2PcInstance> players, Movie movie)
+	public MovieHolder(List<PlayerInstance> players, Movie movie)
 	{
 		_players = players;
 		_movie = movie;
@@ -44,7 +44,7 @@ public final class MovieHolder
 		return _movie;
 	}
 	
-	public void playerEscapeVote(L2PcInstance player)
+	public void playerEscapeVote(PlayerInstance player)
 	{
 		if (_votedPlayers.contains(player) || !_players.contains(player) || !_movie.isEscapable())
 		{
@@ -55,16 +55,16 @@ public final class MovieHolder
 		
 		if (((_votedPlayers.size() * 100) / _players.size()) >= 50)
 		{
-			_players.forEach(L2PcInstance::stopMovie);
+			_players.forEach(PlayerInstance::stopMovie);
 		}
 	}
 	
-	public List<L2PcInstance> getPlayers()
+	public List<PlayerInstance> getPlayers()
 	{
 		return _players;
 	}
 	
-	public List<L2PcInstance> getVotedPlayers()
+	public List<PlayerInstance> getVotedPlayers()
 	{
 		return _votedPlayers;
 	}

@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -81,78 +81,78 @@ public class SoulCrystals implements IItemHandler
 	
 	// Our main method, where everything goes on
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2Object target = activeChar.getTarget();
-		if (!(target instanceof L2MonsterInstance))
+		PlayerInstance player = (PlayerInstance) playable;
+		WorldObject target = player.getTarget();
+		if (!(target instanceof MonsterInstance))
 		{
 			// Send a System Message to the caster
 			SystemMessage sm = new SystemMessage(SystemMessageId.INCORRECT_TARGET);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			
-			// Send a Server->Client packet ActionFailed to the L2PcInstance
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			// Send a Server->Client packet ActionFailed to the PlayerInstance
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			
 			return;
 		}
 		
-		if (activeChar.isParalyzed())
+		if (player.isParalyzed())
 		{
-			activeChar.sendMessage("You Cannot Use This While You Are Paralyzed");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You Cannot Use This While You Are Paralyzed");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// u can use soul crystal only when target hp goes below 50%
-		if (((L2MonsterInstance) target).getCurrentHp() > (((L2MonsterInstance) target).getMaxHp() / 2.0))
+		if (((MonsterInstance) target).getCurrentHp() > (((MonsterInstance) target).getMaxHp() / 2.0))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final int crystalId = item.getItemId();
 		
 		// Soul Crystal Casting section
-		final L2Skill skill = SkillTable.getInstance().getInfo(2096, 1);
-		activeChar.useMagic(skill, false, true);
+		final Skill skill = SkillTable.getInstance().getInfo(2096, 1);
+		player.useMagic(skill, false, true);
 		// End Soul Crystal Casting section
 		
 		// Continue execution later
-		CrystalFinalizer cf = new CrystalFinalizer(activeChar, target, crystalId);
+		CrystalFinalizer cf = new CrystalFinalizer(player, target, crystalId);
 		ThreadPool.schedule(cf, skill.getHitTime());
 	}
 	
 	static class CrystalFinalizer implements Runnable
 	{
-		private final L2PcInstance _activeChar;
-		private final L2Attackable _target;
+		private final PlayerInstance _player;
+		private final Attackable _target;
 		private final int _crystalId;
 		
-		CrystalFinalizer(L2PcInstance activeChar, L2Object target, int crystalId)
+		CrystalFinalizer(PlayerInstance player, WorldObject target, int crystalId)
 		{
-			_activeChar = activeChar;
-			_target = (L2Attackable) target;
+			_player = player;
+			_target = (Attackable) target;
 			_crystalId = crystalId;
 		}
 		
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead() || _target.isDead())
+			if (_player.isDead() || _target.isDead())
 			{
 				return;
 			}
-			_activeChar.enableAllSkills();
+			_player.enableAllSkills();
 			try
 			{
-				_target.addAbsorber(_activeChar, _crystalId);
-				_activeChar.setTarget(_target);
+				_target.addAbsorber(_player, _crystalId);
+				_player.setTarget(_target);
 			}
 			catch (Throwable e)
 			{

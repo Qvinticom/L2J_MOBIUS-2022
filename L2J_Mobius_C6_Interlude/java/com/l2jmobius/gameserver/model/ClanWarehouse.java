@@ -17,14 +17,15 @@
 package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance.ItemLocation;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public final class ClanWarehouse extends Warehouse
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
-	public ClanWarehouse(L2Clan clan)
+	public ClanWarehouse(Clan clan)
 	{
 		_clan = clan;
 	}
@@ -36,7 +37,7 @@ public final class ClanWarehouse extends Warehouse
 	}
 	
 	@Override
-	public L2PcInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _clan.getLeader().getPlayerInstance();
 	}
@@ -57,7 +58,7 @@ public final class ClanWarehouse extends Warehouse
 		return 0;
 	}
 	
-	public void setLocationId(L2PcInstance dummy)
+	public void setLocationId(PlayerInstance dummy)
 	{
 	}
 	

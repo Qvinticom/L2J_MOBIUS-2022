@@ -20,11 +20,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -122,7 +122,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -153,7 +153,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 				}
 				case "START_BOSS":
 				{
-					final L2Attackable spezion = (L2Attackable) addSpawn(SPEZION, SPEZION_LOC, true, 0, false, instance.getId());
+					final Attackable spezion = (Attackable) addSpawn(SPEZION, SPEZION_LOC, true, 0, false, instance.getId());
 					spezion.setCanReturnToSpawnPoint(false);
 					showOnScreenMsg(instance, NpcStringId.SPEZION_S_STATUS_WILL_ONLY_CHANGE_WHEN_EXPOSED_TO_LIGHT, ExShowScreenMessage.TOP_CENTER, 4000);
 					break;
@@ -163,7 +163,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		
@@ -175,7 +175,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -215,7 +215,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 					{
 						if (player.isInParty())
 						{
-							for (L2PcInstance member : player.getParty().getMembers())
+							for (PlayerInstance member : player.getParty().getMembers())
 							{
 								if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 								{
@@ -224,7 +224,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 							}
 							showOnScreenMsg(instance, NpcStringId.WHEN_THE_TIME_BOMB_IS_ACTIVATED_A_DOOR_OPENS_SOMEWHERE, ExShowScreenMessage.TOP_CENTER, 4000);
 							addSpawn(TIME_BOMB_1, TIME_BOMB_1_LOC, false, 0, false, instance.getId());
-							final L2Npc portal = instance.getAliveNpcs(EXIT_PORTAL).stream().findAny().orElse(null);
+							final Npc portal = instance.getAliveNpcs(EXIT_PORTAL).stream().findAny().orElse(null);
 							if (portal != null)
 							{
 								portal.getVariables().set("PORTAL_STATE", 1);
@@ -235,7 +235,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 							player.teleToLocation(ORBIS_LOCATION);
 							showOnScreenMsg(instance, NpcStringId.WHEN_THE_TIME_BOMB_IS_ACTIVATED_A_DOOR_OPENS_SOMEWHERE, ExShowScreenMessage.TOP_CENTER, 4000);
 							addSpawn(TIME_BOMB_1, TIME_BOMB_1_LOC, false, 0, false, instance.getId());
-							final L2Npc portal = instance.getAliveNpcs(EXIT_PORTAL).stream().findAny().orElse(null);
+							final Npc portal = instance.getAliveNpcs(EXIT_PORTAL).stream().findAny().orElse(null);
 							if (portal != null)
 							{
 								portal.getVariables().set("PORTAL_STATE", 1);
@@ -280,7 +280,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 					{
 						if (player.isInParty())
 						{
-							for (L2PcInstance member : player.getParty().getMembers())
+							for (PlayerInstance member : player.getParty().getMembers())
 							{
 								if (member.getInstanceWorld() == instance)
 								{
@@ -293,7 +293,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 							player.teleToLocation(SPEZION_LAIR);
 						}
 						
-						final L2Npc portal = instance.getAliveNpcs(EXIT_PORTAL).stream().findAny().orElse(null);
+						final Npc portal = instance.getAliveNpcs(EXIT_PORTAL).stream().findAny().orElse(null);
 						if (portal != null)
 						{
 							portal.getVariables().set("PORTAL_STATE", 2);
@@ -322,7 +322,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -354,8 +354,8 @@ public final class PrisonOfDarkness extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
 		
 		if (isInInstance(instance) && (npc.getId() == EXIT_PORTAL))
@@ -381,7 +381,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance) && (npc.getId() == SPEZIONS_PAWN))
@@ -394,7 +394,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))

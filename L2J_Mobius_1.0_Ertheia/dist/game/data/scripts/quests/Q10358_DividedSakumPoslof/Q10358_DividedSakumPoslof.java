@@ -20,8 +20,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -59,10 +59,10 @@ public final class Q10358_DividedSakumPoslof extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -78,17 +78,17 @@ public final class Q10358_DividedSakumPoslof extends Quest
 			}
 			case "33510-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31795-05.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
 					giveAdena(player, 1050, true);
 					addExpAndSp(player, 750000, 180);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -98,12 +98,12 @@ public final class Q10358_DividedSakumPoslof extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -112,7 +112,7 @@ public final class Q10358_DividedSakumPoslof extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -123,7 +123,7 @@ public final class Q10358_DividedSakumPoslof extends Quest
 					{
 						if (npc.getId() == LEF)
 						{
-							st.setCond(3);
+							qs.setCond(3);
 							giveItems(player, SAKUM_SKETCH, 1);
 							htmltext = "33510-05.html";
 						}
@@ -156,67 +156,67 @@ public final class Q10358_DividedSakumPoslof extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted())
+		if ((qs != null) && qs.isStarted())
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
-				int killedZombies = st.getInt("killed_" + ZOMBIE_WARRIOR);
-				int killedVeelans = st.getInt("killed_" + VEELEAN);
+				int killedZombies = qs.getInt("killed_" + ZOMBIE_WARRIOR);
+				int killedVeelans = qs.getInt("killed_" + VEELEAN);
 				
 				if (npc.getId() == ZOMBIE_WARRIOR)
 				{
 					if (killedZombies < 20)
 					{
 						killedZombies++;
-						st.set("killed_" + ZOMBIE_WARRIOR, killedZombies);
+						qs.set("killed_" + ZOMBIE_WARRIOR, killedZombies);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				else if (killedVeelans < 23)
 				{
 					killedVeelans++;
-					st.set("killed_" + VEELEAN, killedVeelans);
+					qs.set("killed_" + VEELEAN, killedVeelans);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				if ((killedZombies == 20) && (killedVeelans == 23))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
-			else if (st.isCond(3))
+			else if (qs.isCond(3))
 			{
-				st.set("killed_" + POSLOF, 1);
-				st.setCond(4);
+				qs.set("killed_" + POSLOF, 1);
+				qs.setCond(4);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted())
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted())
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
 				final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
-				npcLogList.add(new NpcLogListHolder(ZOMBIE_WARRIOR, false, st.getInt("killed_" + ZOMBIE_WARRIOR)));
-				npcLogList.add(new NpcLogListHolder(VEELEAN, false, st.getInt("killed_" + VEELEAN)));
+				npcLogList.add(new NpcLogListHolder(ZOMBIE_WARRIOR, false, qs.getInt("killed_" + ZOMBIE_WARRIOR)));
+				npcLogList.add(new NpcLogListHolder(VEELEAN, false, qs.getInt("killed_" + VEELEAN)));
 				return npcLogList;
 			}
-			else if (st.isCond(3))
+			else if (qs.isCond(3))
 			{
 				final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-				npcLogList.add(new NpcLogListHolder(POSLOF, false, st.getInt("killed_" + POSLOF)));
+				npcLogList.add(new NpcLogListHolder(POSLOF, false, qs.getInt("killed_" + POSLOF)));
 				return npcLogList;
 			}
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

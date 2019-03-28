@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -42,38 +42,38 @@ public class PaganKeys implements IItemHandler
 	public static final int INTERACTION_DISTANCE = 100;
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		
 		final int itemId = item.getItemId();
 		
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2Object target = activeChar.getTarget();
+		PlayerInstance player = (PlayerInstance) playable;
+		WorldObject target = player.getTarget();
 		
-		if (!(target instanceof L2DoorInstance))
+		if (!(target instanceof DoorInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		final L2DoorInstance door = (L2DoorInstance) target;
+		final DoorInstance door = (DoorInstance) target;
 		
-		if (!activeChar.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
+		if (!player.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
 		{
-			activeChar.sendMessage("Too far.");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("Too far.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((activeChar.getAbnormalEffect() > 0) || activeChar.isInCombat())
+		if ((player.getAbnormalEffect() > 0) || player.isInCombat())
 		{
-			activeChar.sendMessage("You cannot use the key now.");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You cannot use the key now.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -92,22 +92,22 @@ public class PaganKeys implements IItemHandler
 				{
 					if ((openChance > 0) && (Rnd.get(100) < openChance))
 					{
-						activeChar.sendMessage("You opened Anterooms Door.");
+						player.sendMessage("You opened Anterooms Door.");
 						door.openMe();
 						door.onOpen(); // Closes the door after 60sec
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
 					}
 					else
 					{
-						activeChar.sendMessage("You failed to open Anterooms Door.");
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
+						player.sendMessage("You failed to open Anterooms Door.");
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 13));
 						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						activeChar.sendPacket(playSound);
+						player.sendPacket(playSound);
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Incorrect Door.");
+					player.sendMessage("Incorrect Door.");
 				}
 				break;
 			}
@@ -117,22 +117,22 @@ public class PaganKeys implements IItemHandler
 				{
 					if ((openChance > 0) && (Rnd.get(100) < openChance))
 					{
-						activeChar.sendMessage("You opened Altar Entrance.");
+						player.sendMessage("You opened Altar Entrance.");
 						door.openMe();
 						door.onOpen();
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
 					}
 					else
 					{
-						activeChar.sendMessage("You failed to open Altar Entrance.");
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
+						player.sendMessage("You failed to open Altar Entrance.");
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 13));
 						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						activeChar.sendPacket(playSound);
+						player.sendPacket(playSound);
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Incorrect Door.");
+					player.sendMessage("Incorrect Door.");
 				}
 				break;
 			}
@@ -142,22 +142,22 @@ public class PaganKeys implements IItemHandler
 				{
 					if ((openChance > 0) && (Rnd.get(100) < openChance))
 					{
-						activeChar.sendMessage("You opened Door of Darkness.");
+						player.sendMessage("You opened Door of Darkness.");
 						door.openMe();
 						door.onOpen();
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
 					}
 					else
 					{
-						activeChar.sendMessage("You failed to open Door of Darkness.");
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
+						player.sendMessage("You failed to open Door of Darkness.");
+						player.broadcastPacket(new SocialAction(player.getObjectId(), 13));
 						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						activeChar.sendPacket(playSound);
+						player.sendPacket(playSound);
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Incorrect Door.");
+					player.sendMessage("Incorrect Door.");
 				}
 				break;
 			}

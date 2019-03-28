@@ -18,10 +18,10 @@ package instances.KartiasLabyrinth;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -63,14 +63,14 @@ public final class KartiaBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		getTimers().addRepeatingTimer("NPC_SAY", 20000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("NPC_SAY") && npc.isTargetable())
 		{
@@ -80,14 +80,14 @@ public final class KartiaBoss extends AbstractNpcAI
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.NO_HOW_COULD_THIS_BE_I_CAN_T_GO_BACK_TO_NIHIL_LIKE_THIS);
 		getTimers().cancelTimersOf(npc);
 	}
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		if ((npc.getCurrentHpPercent() <= 75) && npc.isScriptValue(0))
 		{
 			spawnMinions(npc);
@@ -105,7 +105,7 @@ public final class KartiaBoss extends AbstractNpcAI
 		}
 	}
 	
-	public void spawnMinions(L2Npc npc)
+	public void spawnMinions(Npc npc)
 	{
 		final StatsSet param = npc.getParameters();
 		final int kartiaLevel = param.getInt("cartia_level", 0);

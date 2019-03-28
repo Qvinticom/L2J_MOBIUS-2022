@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,16 +25,16 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExFishingStart implements IClientOutgoingPacket
 {
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	private final int _fishType;
 	private final boolean _isNightLure;
 	
-	public ExFishingStart(L2Character character, int fishType, int x, int y, int z, boolean isNightLure)
+	public ExFishingStart(Creature creature, int fishType, int x, int y, int z, boolean isNightLure)
 	{
-		_activeChar = character;
+		_creature = creature;
 		_fishType = fishType;
 		_x = x;
 		_y = y;
@@ -46,7 +46,7 @@ public class ExFishingStart implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FISHING_START.writeId(packet);
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeD(_fishType); // fish type
 		packet.writeD(_x); // x position
 		packet.writeD(_y); // y position

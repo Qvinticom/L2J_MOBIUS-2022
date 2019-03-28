@@ -22,13 +22,13 @@ import java.util.concurrent.Future;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.AutoPotionTask;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 
 /**
  * @author Gigi, Mobius
@@ -45,7 +45,7 @@ public class AutoPotion implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		if (!Config.AUTO_POTIONS_ENABLED || (activeChar == null))
 		{
@@ -85,7 +85,7 @@ public class AutoPotion implements IVoicedCommandHandler
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLogout(OnPlayerLogout event)
 	{
-		final int playerOID = event.getActiveChar().getObjectId();
+		final int playerOID = event.getPlayer().getObjectId();
 		if (AUTO_POTION_TASKS.containsKey(playerOID))
 		{
 			AUTO_POTION_TASKS.get(playerOID).cancel(true);

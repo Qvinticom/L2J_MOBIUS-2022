@@ -24,12 +24,12 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.enums.ClanHallGrade;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunction;
@@ -104,7 +104,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -256,7 +256,7 @@ public final class ClanHallManager extends AbstractNpcAI
 										case 2:
 										case 3:
 										{
-											((L2MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
+											((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
 											break;
 										}
 										default:
@@ -430,7 +430,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final ClanHall clanHall = npc.getClanHall();
@@ -455,7 +455,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
@@ -468,9 +468,9 @@ public final class ClanHallManager extends AbstractNpcAI
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
-	private void updateVisualEffects(ClanHall clanHall, L2Npc npc)
+	private void updateVisualEffects(ClanHall clanHall, Npc npc)
 	{
-		L2World.getInstance().forEachVisibleObject(npc, L2PcInstance.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
+		World.getInstance().forEachVisibleObject(npc, PlayerInstance.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
 	private String getFunctionInfo(ResidenceFunction func, String htmltext, String name)
@@ -492,7 +492,7 @@ public final class ClanHallManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean isOwningClan(L2PcInstance player, L2Npc npc)
+	private boolean isOwningClan(PlayerInstance player, Npc npc)
 	{
 		return ((npc.getClanHall().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}

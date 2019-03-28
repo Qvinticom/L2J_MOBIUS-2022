@@ -18,9 +18,9 @@ package ai.areas.SeedOfAnnihilation;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -80,7 +80,7 @@ public final class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc == null) || (player == null))
 		{
@@ -91,7 +91,7 @@ public final class Maguen extends AbstractNpcAI
 		{
 			case "SPAWN_MAGUEN":
 			{
-				final L2Npc maguen = addSpawn(MAGUEN, npc.getLocation(), true, 60000, true);
+				final Npc maguen = addSpawn(MAGUEN, npc.getLocation(), true, 60000, true);
 				maguen.getVariables().set("SUMMON_PLAYER", player);
 				maguen.setTitle(player.getName());
 				maguen.setRunning();
@@ -167,7 +167,7 @@ public final class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final BuffInfo b_info = player.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
 		final BuffInfo c_info = player.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
@@ -257,9 +257,9 @@ public final class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if ((skill == MACHINE.getSkill()) && (caster == npc.getVariables().getObject("SUMMON_PLAYER", L2PcInstance.class)))
+		if ((skill == MACHINE.getSkill()) && (caster == npc.getVariables().getObject("SUMMON_PLAYER", PlayerInstance.class)))
 		{
 			if ((npc.getVariables().getInt("NPC_EFFECT") != 0) && (npc.getVariables().getInt("BLOCKED_SKILLSEE") == 0))
 			{
@@ -362,11 +362,11 @@ public final class Maguen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (killer.isInParty())
 		{
-			final L2PcInstance partyMember = getRandomPartyMember(killer);
+			final PlayerInstance partyMember = getRandomPartyMember(killer);
 			final int i0 = 10 + (10 * killer.getParty().getMemberCount());
 			
 			if ((getRandom(1000) < i0) && (npc.calculateDistance3D(killer) < 2000) && (npc.calculateDistance3D(partyMember) < 2000))
@@ -377,7 +377,7 @@ public final class Maguen extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void maguenPetChance(L2PcInstance player)
+	private void maguenPetChance(PlayerInstance player)
 	{
 		final int chance1 = getRandom(10000);
 		final int chance2 = getRandom(20);

@@ -17,8 +17,8 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 
@@ -30,20 +30,20 @@ public class ReceivePremium implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
 			return false;
 		}
 		
-		if (activeChar.getPremiumItemList().isEmpty())
+		if (player.getPremiumItemList().isEmpty())
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
+			player.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
 			return false;
 		}
 		
-		activeChar.sendPacket(new ExGetPremiumItemList(activeChar));
+		player.sendPacket(new ExGetPremiumItemList(player));
 		
 		return true;
 	}

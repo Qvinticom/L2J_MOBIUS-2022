@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author Luca Baldi
  */
-public class ExShowQuestMark extends L2GameServerPacket
+public class ExShowQuestMark extends GameServerPacket
 {
 	private final int _questId;
 	
@@ -29,7 +29,7 @@ public class ExShowQuestMark extends L2GameServerPacket
 	}
 	
 	/**
-	 * @see com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 * @see com.l2jmobius.gameserver.network.serverpackets.GameServerPacket#writeImpl()
 	 */
 	@Override
 	protected void writeImpl()

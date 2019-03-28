@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -109,20 +109,20 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		if (event.equalsIgnoreCase("32549-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.equalsIgnoreCase("32550-04.htm"))
 		{
-			st.setCond(3);
+			qs.setCond(3);
 		}
 		else if (event.equalsIgnoreCase("32550-07.htm"))
 		{
@@ -170,16 +170,16 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 3);
+		final PlayerInstance partyMember = getRandomPartyMember(player, 3);
 		if (partyMember == null)
 		{
 			return null;
 		}
-		final QuestState st = getQuestState(partyMember, false);
+		final QuestState qs = getQuestState(partyMember, false);
 		final int npcId = npc.getId();
-		if ((st != null) && QUEST_MOBS.containsKey(npcId))
+		if ((qs != null) && QUEST_MOBS.containsKey(npcId))
 		{
 			int chance = (int) (QUEST_MOBS.get(npcId).getCount() * Config.RATE_QUEST_DROP);
 			int numItems = chance / 1000;
@@ -198,12 +198,12 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= 75) ? "32549-01.htm" : "32549-00.htm";
 		}
@@ -211,24 +211,24 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		{
 			if (npc.getId() == DILIOS)
 			{
-				if (st.isCond(1) && hasQuestItems(player, LEKONS_CERTIFICATE))
+				if (qs.isCond(1) && hasQuestItems(player, LEKONS_CERTIFICATE))
 				{
 					htmltext = "32549-04.htm";
 					takeItems(player, LEKONS_CERTIFICATE, -1);
-					st.setCond(2);
+					qs.setCond(2);
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
 					htmltext = "32549-05.htm";
 				}
 			}
 			else
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					htmltext = "32550-01.htm";
 				}
-				else if (st.isCond(3))
+				else if (qs.isCond(3))
 				{
 					for (int i : QUEST_ITEMS)
 					{
@@ -244,7 +244,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		return htmltext;
 	}
 	
-	private static boolean giveReward(L2PcInstance player, int itemId, int minCount, int rewardItemId, long rewardCount)
+	private static boolean giveReward(PlayerInstance player, int itemId, int minCount, int rewardItemId, long rewardCount)
 	{
 		long count = getQuestItemsCount(player, itemId);
 		if (count < minCount)

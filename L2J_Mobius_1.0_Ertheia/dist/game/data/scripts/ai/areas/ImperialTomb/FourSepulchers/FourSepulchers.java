@@ -36,14 +36,14 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2EffectZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.EffectZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -125,7 +125,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	}
 	// Spawns
 	private static List<int[]> ROOM_SPAWN_DATA = new ArrayList<>();
-	private static final Map<Integer, List<L2Npc>> STORED_MONSTER_SPAWNS = new HashMap<>();
+	private static final Map<Integer, List<Npc>> STORED_MONSTER_SPAWNS = new HashMap<>();
 	static
 	{
 		STORED_MONSTER_SPAWNS.put(1, new CopyOnWriteArrayList<>());
@@ -218,7 +218,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		
@@ -319,7 +319,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 				final int sepulcherId = getSepulcherId(player);
 				final int currentWave = STORED_PROGRESS.get(sepulcherId);
 				Location lastLocation = null;
-				for (L2Npc spawn : STORED_MONSTER_SPAWNS.get(sepulcherId))
+				for (Npc spawn : STORED_MONSTER_SPAWNS.get(sepulcherId))
 				{
 					lastLocation = spawn.getLocation();
 					if (spawn.isDead())
@@ -357,7 +357,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc == null)
 		{
@@ -387,7 +387,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		if (npc.getId() == ROOM_3_VICTIM)
@@ -400,7 +400,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		{
 			npc.setTarget(npc);
 			npc.doCast(PETRIFY.getSkill());
-			((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+			((Attackable) npc).setCanReturnToSpawnPoint(false);
 			npc.setTargetable(false);
 			npc.setIsInvul(true);
 			startQuestTimer("REMOVE_PETRIFY", 5 * 60 * 1000, npc, null, false); // 5 minutes
@@ -409,7 +409,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -423,9 +423,9 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 			case ROOM_4_CHARM_3:
 			case ROOM_4_CHARM_4:
 			{
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(killer))
+				for (ZoneType zone : ZoneManager.getInstance().getZones(killer))
 				{
-					if ((zone instanceof L2EffectZone) && (((L2EffectZone) zone).getSkillLevel(CHARM_SKILLS.get(npc.getId())) > 0))
+					if ((zone instanceof EffectZone) && (((EffectZone) zone).getSkillLevel(CHARM_SKILLS.get(npc.getId())) > 0))
 					{
 						zone.setEnabled(false);
 						break;
@@ -445,7 +445,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 				
 				if ((killer.getParty() != null) && (sepulcherId > 0))
 				{
-					for (L2PcInstance mem : killer.getParty().getMembers())
+					for (PlayerInstance mem : killer.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(1500, killer, mem, true))
 						{
@@ -477,7 +477,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void tryEnter(L2Npc npc, L2PcInstance player)
+	private void tryEnter(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		
@@ -497,7 +497,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 			return;
 		}
 		
-		for (L2PcInstance mem : player.getParty().getMembers())
+		for (PlayerInstance mem : player.getParty().getMembers())
 		{
 			final QuestState qs = mem.getQuestState(Q00620_FourGoblets.class.getSimpleName());
 			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
@@ -528,11 +528,11 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		final int sepulcherId = getSepulcherId(player);
 		
 		// Delete any existing spawns
-		for (L2Character cha : ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getCharactersInside())
+		for (Creature creature : ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getCharactersInside())
 		{
-			if (cha.isMonster() || cha.isRaid() || (cha.isNpc() && ((((L2Npc) cha).getId() == MYSTERIOUS_CHEST) || (((L2Npc) cha).getId() == KEY_CHEST) || (((L2Npc) cha).getId() == TELEPORTER))))
+			if (creature.isMonster() || creature.isRaid() || (creature.isNpc() && ((((Npc) creature).getId() == MYSTERIOUS_CHEST) || (((Npc) creature).getId() == KEY_CHEST) || (((Npc) creature).getId() == TELEPORTER))))
 			{
-				cha.deleteMe();
+				creature.deleteMe();
 			}
 		}
 		// Disable EffectZones
@@ -540,9 +540,9 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		{
 			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4))
 			{
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(spawnInfo[2], spawnInfo[3], spawnInfo[4]))
+				for (ZoneType zone : ZoneManager.getInstance().getZones(spawnInfo[2], spawnInfo[3], spawnInfo[4]))
 				{
-					if (zone instanceof L2EffectZone)
+					if (zone instanceof EffectZone)
 					{
 						zone.setEnabled(false);
 					}
@@ -560,15 +560,15 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		}
 		
 		// Teleport players inside
-		final List<L2PcInstance> members = new ArrayList<>();
-		for (L2PcInstance mem : player.getParty().getMembers())
+		final List<PlayerInstance> members = new ArrayList<>();
+		for (PlayerInstance mem : player.getParty().getMembers())
 		{
 			if (Util.checkIfInRange(700, player, mem, true))
 			{
 				members.add(mem);
 			}
 		}
-		for (L2PcInstance mem : members)
+		for (PlayerInstance mem : members)
 		{
 			mem.teleToLocation(START_HALL_SPAWNS.get(npcId), 80);
 			takeItems(mem, ENTRANCE_PASS, 1);
@@ -594,7 +594,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		startQuestTimer("SPAWN_MYSTERIOUS_CHEST", ENTRY_DELAY * 60 * 1000, npc, player, false);
 	}
 	
-	private void spawnNextWave(L2PcInstance player)
+	private void spawnNextWave(PlayerInstance player)
 	{
 		final int sepulcherId = getSepulcherId(player);
 		final int currentWave = STORED_PROGRESS.get(sepulcherId);
@@ -607,9 +607,9 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		}
 		if (currentWave == 4)
 		{
-			for (L2ZoneType zone : ZoneManager.getInstance().getZones(player))
+			for (ZoneType zone : ZoneManager.getInstance().getZones(player))
 			{
-				if (zone instanceof L2EffectZone)
+				if (zone instanceof EffectZone)
 				{
 					zone.setEnabled(true);
 				}
@@ -625,7 +625,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		}
 	}
 	
-	private void spawnMysteriousChest(L2PcInstance player)
+	private void spawnMysteriousChest(PlayerInstance player)
 	{
 		final int sepulcherId = getSepulcherId(player);
 		final int currentWave = STORED_PROGRESS.get(sepulcherId);
@@ -639,12 +639,12 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		}
 	}
 	
-	private void spawnKeyChest(L2PcInstance player, Location loc)
+	private void spawnKeyChest(PlayerInstance player, Location loc)
 	{
 		addSpawn(KEY_CHEST, loc != null ? loc : player);
 	}
 	
-	private int getSepulcherId(L2PcInstance player)
+	private int getSepulcherId(PlayerInstance player)
 	{
 		if (ZoneManager.getInstance().getZoneById(CONQUEROR_ZONE).getPlayersInside().contains(player))
 		{
@@ -665,7 +665,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		return 0;
 	}
 	
-	private void showHtmlFile(L2PcInstance player, String file, L2Npc npc, L2PcInstance member)
+	private void showHtmlFile(PlayerInstance player, String file, Npc npc, PlayerInstance member)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(player, "data/scripts/ai/areas/ImperialTomb/FourSepulchers/" + file);

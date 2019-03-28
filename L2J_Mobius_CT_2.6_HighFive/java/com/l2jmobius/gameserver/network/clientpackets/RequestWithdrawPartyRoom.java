@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 
@@ -34,7 +34,7 @@ public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
 	private int _unk1;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_roomid = packet.readD();
 		_unk1 = packet.readD();
@@ -42,11 +42,11 @@ public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance _activeChar = client.getActiveChar();
+		final PlayerInstance _player = client.getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
@@ -57,23 +57,23 @@ public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_activeChar.isInParty() && _room.getOwner().isInParty()) && (_activeChar.getParty().getLeaderObjectId() == _room.getOwner().getParty().getLeaderObjectId()))
+		if ((_player.isInParty() && _room.getOwner().isInParty()) && (_player.getParty().getLeaderObjectId() == _room.getOwner().getParty().getLeaderObjectId()))
 		{
 			// If user is in party with Room Owner
 			// is not removed from Room
 			
 			// _activeChar.setPartyMatching(0);
-			_activeChar.broadcastUserInfo();
+			_player.broadcastUserInfo();
 		}
 		else
 		{
-			_room.deleteMember(_activeChar);
+			_room.deleteMember(_player);
 			
-			_activeChar.setPartyRoom(0);
+			_player.setPartyRoom(0);
 			// _activeChar.setPartyMatching(0);
 			
-			_activeChar.sendPacket(new ExClosePartyRoom());
-			_activeChar.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
+			_player.sendPacket(new ExClosePartyRoom());
+			_player.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
 		}
 	}
 }

@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.skills.funcs;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.Stats;
-import com.l2jmobius.gameserver.templates.item.L2Item;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.Item;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 
 public class FuncEnchant extends Func
 {
@@ -38,11 +38,11 @@ public class FuncEnchant extends Func
 		{
 			return;
 		}
-		final L2ItemInstance item = (L2ItemInstance) funcOwner;
+		final ItemInstance item = (ItemInstance) funcOwner;
 		final int cristall = item.getItem().getCrystalType();
 		final Enum<?> itemType = item.getItemType();
 		
-		if (cristall == L2Item.CRYSTAL_NONE)
+		if (cristall == Item.CRYSTAL_NONE)
 		{
 			return;
 		}
@@ -55,9 +55,9 @@ public class FuncEnchant extends Func
 			enchant = 3;
 		}
 		
-		if ((env.player != null) && (env.player instanceof L2PcInstance))
+		if ((env.player != null) && (env.player instanceof PlayerInstance))
 		{
-			final L2PcInstance player = (L2PcInstance) env.player;
+			final PlayerInstance player = (PlayerInstance) env.player;
 			if (player.isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && ((enchant + overenchant) > Config.ALT_OLY_ENCHANT_LIMIT))
 			{
 				if (Config.ALT_OLY_ENCHANT_LIMIT > 3)
@@ -82,27 +82,27 @@ public class FuncEnchant extends Func
 		{
 			switch (item.getItem().getCrystalType())
 			{
-				case L2Item.CRYSTAL_S:
+				case Item.CRYSTAL_S:
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 					break;
 				}
-				case L2Item.CRYSTAL_A:
+				case Item.CRYSTAL_A:
 				{
 					env.value += (3 * enchant) + (6 * overenchant);
 					break;
 				}
-				case L2Item.CRYSTAL_B:
+				case Item.CRYSTAL_B:
 				{
 					env.value += (3 * enchant) + (6 * overenchant);
 					break;
 				}
-				case L2Item.CRYSTAL_C:
+				case Item.CRYSTAL_C:
 				{
 					env.value += (3 * enchant) + (6 * overenchant);
 					break;
 				}
-				case L2Item.CRYSTAL_D:
+				case Item.CRYSTAL_D:
 				{
 					env.value += (2 * enchant) + (4 * overenchant);
 					break;
@@ -113,13 +113,13 @@ public class FuncEnchant extends Func
 		
 		switch (item.getItem().getCrystalType())
 		{
-			case L2Item.CRYSTAL_A:
+			case Item.CRYSTAL_A:
 			{
-				if (itemType == L2WeaponType.BOW)
+				if (itemType == WeaponType.BOW)
 				{
 					env.value += (8 * enchant) + (16 * overenchant);
 				}
-				else if ((itemType == L2WeaponType.DUALFIST) || (itemType == L2WeaponType.DUAL) || ((itemType == L2WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
 				{
 					env.value += (5 * enchant) + (10 * overenchant);
 				}
@@ -129,13 +129,13 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_B:
+			case Item.CRYSTAL_B:
 			{
-				if (itemType == L2WeaponType.BOW)
+				if (itemType == WeaponType.BOW)
 				{
 					env.value += (6 * enchant) + (12 * overenchant);
 				}
-				else if ((itemType == L2WeaponType.DUALFIST) || (itemType == L2WeaponType.DUAL) || ((itemType == L2WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 				}
@@ -145,13 +145,13 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_C:
+			case Item.CRYSTAL_C:
 			{
-				if (itemType == L2WeaponType.BOW)
+				if (itemType == WeaponType.BOW)
 				{
 					env.value += (6 * enchant) + (12 * overenchant);
 				}
-				else if ((itemType == L2WeaponType.DUALFIST) || (itemType == L2WeaponType.DUAL) || ((itemType == L2WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 				}
@@ -161,9 +161,9 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_D:
+			case Item.CRYSTAL_D:
 			{
-				if (itemType == L2WeaponType.BOW)
+				if (itemType == WeaponType.BOW)
 				{
 					env.value += (4 * enchant) + (8 * overenchant);
 				}
@@ -173,13 +173,13 @@ public class FuncEnchant extends Func
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_S:
+			case Item.CRYSTAL_S:
 			{
-				if (itemType == L2WeaponType.BOW)
+				if (itemType == WeaponType.BOW)
 				{
 					env.value += (10 * enchant) + (20 * overenchant);
 				}
-				else if ((itemType == L2WeaponType.DUALFIST) || (itemType == L2WeaponType.DUAL) || ((itemType == L2WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
+				else if ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || ((itemType == WeaponType.SWORD) && (item.getItem().getBodyPart() == 16384)))
 				{
 					env.value += (4 * enchant) + (12 * overenchant);
 				}

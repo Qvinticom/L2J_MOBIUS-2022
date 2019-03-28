@@ -26,17 +26,17 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2ManufactureList;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.ManufactureList;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestActionUse extends L2GameClientPacket
+public final class RequestActionUse extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestActionUse.class.getName());
 	
@@ -79,22 +79,22 @@ public final class RequestActionUse extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
 		// dont do anything if player is dead
-		if ((_actionId != 0) && activeChar.isAlikeDead())
+		if ((_actionId != 0) && player.isAlikeDead())
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// don't do anything if player is confused
-		if (activeChar.isOutOfControl())
+		if (player.isOutOfControl())
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -105,57 +105,57 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			// LOGGER.info(activeChar.getName() + " request Pet Action use: id " + _actionId + " ctrl:" + _ctrlPressed + " shift:" + _shiftPressed);
 		}
-		else if (activeChar.isCastingNow())
+		else if (player.isCastingNow())
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2Summon pet = activeChar.getPet();
-		final L2Object target = activeChar.getTarget();
+		final Summon pet = player.getPet();
+		final WorldObject target = player.getTarget();
 		
 		switch (_actionId)
 		{
 			case 0:
 			{
-				if (activeChar.getMountType() != 0)
+				if (player.getMountType() != 0)
 				{
 					break;
 				}
-				if ((target != null) && !activeChar.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && activeChar.isInsideRadius(target, L2StaticObjectInstance.INTERACTION_DISTANCE, false, false))
+				if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius(target, StaticObjectInstance.INTERACTION_DISTANCE, false, false))
 				{
-					final ChairSit cs = new ChairSit(activeChar, ((L2StaticObjectInstance) target).getStaticObjectId());
-					activeChar.sendPacket(cs);
-					activeChar.sitDown();
-					activeChar.broadcastPacket(cs);
+					final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
+					player.sendPacket(cs);
+					player.sitDown();
+					player.broadcastPacket(cs);
 					break;
 				}
-				if (activeChar.isSitting() || activeChar.isFakeDeath())
+				if (player.isSitting() || player.isFakeDeath())
 				{
-					activeChar.standUp();
+					player.standUp();
 				}
 				else
 				{
-					activeChar.sitDown();
+					player.sitDown();
 				}
 				break;
 			}
 			case 1:
 			{
-				if (activeChar.isRunning())
+				if (player.isRunning())
 				{
-					activeChar.setWalking();
+					player.setWalking();
 				}
 				else
 				{
-					activeChar.setRunning();
+					player.setRunning();
 				}
 				break;
 			}
 			case 15:
 			case 21: // pet follow/stop
 			{
-				if ((pet != null) && !pet.isMovementDisabled() && !activeChar.isBetrayed())
+				if ((pet != null) && !pet.isMovementDisabled() && !player.isBetrayed())
 				{
 					pet.setFollowStatus(!pet.getFollowStatus());
 				}
@@ -164,7 +164,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			case 16:
 			case 22: // pet attack
 			{
-				if ((target != null) && (pet != null) && (pet != target) && !activeChar.isBetrayed())
+				if ((target != null) && (pet != null) && (pet != target) && !player.isBetrayed())
 				{
 					if (pet.isAttackingDisabled())
 					{
@@ -177,31 +177,31 @@ public final class RequestActionUse extends L2GameClientPacket
 							return;
 						}
 					}
-					if (activeChar.isInOlympiadMode() && !activeChar.isOlympiadStart())
+					if (player.isInOlympiadMode() && !player.isOlympiadStart())
 					{
-						// if L2PcInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
-						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+						// if PlayerInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
+						player.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					if ((target instanceof L2PcInstance) && !activeChar.getAccessLevel().allowPeaceAttack() && L2Character.isInsidePeaceZone(pet, target))
+					if ((target instanceof PlayerInstance) && !player.getAccessLevel().allowPeaceAttack() && Creature.isInsidePeaceZone(pet, target))
 					{
-						if (!activeChar.isInFunEvent() || !((L2PcInstance) target).isInFunEvent())
+						if (!player.isInFunEvent() || !((PlayerInstance) target).isInFunEvent())
 						{
-							activeChar.sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
+							player.sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
 							return;
 						}
 					}
-					if (target.isAutoAttackable(activeChar) || _ctrlPressed)
+					if (target.isAutoAttackable(player) || _ctrlPressed)
 					{
-						if (target instanceof L2DoorInstance)
+						if (target instanceof DoorInstance)
 						{
-							if (((L2DoorInstance) target).isAttackable(activeChar) && (pet.getNpcId() != L2SiegeSummonInstance.SWOOP_CANNON_ID))
+							if (((DoorInstance) target).isAttackable(player) && (pet.getNpcId() != SiegeSummonInstance.SWOOP_CANNON_ID))
 							{
 								pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 							}
 						}
 						// siege golem AI doesn't support attacking other than doors at the moment
-						else if (pet.getNpcId() != L2SiegeSummonInstance.SIEGE_GOLEM_ID)
+						else if (pet.getNpcId() != SiegeSummonInstance.SIEGE_GOLEM_ID)
 						{
 							pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 						}
@@ -212,7 +212,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			case 17:
 			case 23: // pet - cancel action
 			{
-				if ((pet != null) && !pet.isMovementDisabled() && !activeChar.isBetrayed())
+				if ((pet != null) && !pet.isMovementDisabled() && !player.isBetrayed())
 				{
 					pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
 				}
@@ -220,33 +220,33 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 19: // pet unsummon
 			{
-				if ((pet != null) && !activeChar.isBetrayed())
+				if ((pet != null) && !player.isBetrayed())
 				{
 					// returns pet to control item
 					if (pet.isDead())
 					{
-						activeChar.sendPacket(SystemMessageId.DEAD_PET_CANNOT_BE_RETURNED);
+						player.sendPacket(SystemMessageId.DEAD_PET_CANNOT_BE_RETURNED);
 					}
 					else if (pet.isAttackingNow() || pet.isRooted())
 					{
-						activeChar.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
+						player.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
 					}
-					else if (pet.isInCombat() || activeChar.isInCombat())
+					else if (pet.isInCombat() || player.isInCombat())
 					{
-						activeChar.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
+						player.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
 					}
 					else // if it is a pet and not a summon
-					if (pet instanceof L2PetInstance)
+					if (pet instanceof PetInstance)
 					{
-						final L2PetInstance petInst = (L2PetInstance) pet;
+						final PetInstance petInst = (PetInstance) pet;
 						// if the pet is more than 40% fed
 						if (petInst.getCurrentFed() > (petInst.getMaxFed() * 0.40))
 						{
-							pet.unSummon(activeChar);
+							pet.unSummon(player);
 						}
 						else
 						{
-							activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RESTORE_HUNGRY_PETS);
+							player.sendPacket(SystemMessageId.YOU_CANNOT_RESTORE_HUNGRY_PETS);
 						}
 					}
 				}
@@ -255,95 +255,95 @@ public final class RequestActionUse extends L2GameClientPacket
 			case 38: // pet mount
 			{
 				// mount
-				if ((pet != null) && pet.isMountable() && !activeChar.isMounted() && !activeChar.isBetrayed())
+				if ((pet != null) && pet.isMountable() && !player.isMounted() && !player.isBetrayed())
 				{
-					if (activeChar.isDead())
+					if (player.isDead())
 					{
 						// A strider cannot be ridden when dead
 						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
 					else if (pet.isDead())
 					{
 						// A dead strider cannot be ridden.
 						final SystemMessage msg = new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
 					else if (pet.isInCombat() || pet.isRooted())
 					{
 						// A strider in battle cannot be ridden
 						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
-					else if (activeChar.isInCombat())
+					else if (player.isInCombat())
 					{
 						// A strider cannot be ridden while in battle
 						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
-					else if (activeChar.isInFunEvent())
+					else if (player.isInFunEvent())
 					{
 						// A strider cannot be ridden while in event
 						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
-					else if (activeChar.isSitting()) // Like L2OFF you can mount also during movement
+					else if (player.isSitting()) // Like L2OFF you can mount also during movement
 					{
 						// A strider can be ridden only when standing
 						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
-					else if (activeChar.isFishing())
+					else if (player.isFishing())
 					{
 						// You can't mount, dismount, break and drop items while fishing
 						final SystemMessage msg = new SystemMessage(SystemMessageId.CANNOT_DO_WHILE_FISHING_2);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
-					else if (activeChar.isCursedWeaponEquiped())
+					else if (player.isCursedWeaponEquiped())
 					{
 						// You can't mount, dismount, break and drop items while weilding a cursed weapon
 						final SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-						activeChar.sendPacket(msg);
+						player.sendPacket(msg);
 					}
-					else if (!pet.isDead() && !activeChar.isMounted())
+					else if (!pet.isDead() && !player.isMounted())
 					{
-						if (!activeChar.disarmWeapons())
+						if (!player.disarmWeapons())
 						{
 							return;
 						}
-						if (!activeChar.getFloodProtectors().getItemPetSummon().tryPerformAction("mount"))
+						if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("mount"))
 						{
 							return;
 						}
-						final Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
-						activeChar.broadcastPacket(mount);
-						activeChar.setMountType(mount.getMountType());
-						activeChar.setMountObjectID(pet.getControlItemId());
-						pet.unSummon(activeChar);
-						if ((activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) || (activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND) != null))
+						final Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
+						player.broadcastPacket(mount);
+						player.setMountType(mount.getMountType());
+						player.setMountObjectID(pet.getControlItemId());
+						pet.unSummon(player);
+						if ((player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) || (player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND) != null))
 						{
-							if (activeChar.isFlying())
+							if (player.isFlying())
 							{
 								// Remove skill Wyvern Breath
-								activeChar.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-								activeChar.sendSkillList();
+								player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+								player.sendSkillList();
 							}
-							if (activeChar.setMountType(0))
+							if (player.setMountType(0))
 							{
-								final Ride dismount = new Ride(activeChar.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-								activeChar.broadcastPacket(dismount);
-								activeChar.setMountObjectID(0);
+								final Ride dismount = new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0);
+								player.broadcastPacket(dismount);
+								player.setMountObjectID(0);
 							}
 						}
 					}
 				}
-				else if (activeChar.isRentedPet())
+				else if (player.isRentedPet())
 				{
-					activeChar.stopRentPet();
+					player.stopRentPet();
 				}
-				else if (activeChar.isMounted())
+				else if (player.isMounted())
 				{
-					activeChar.dismount();
+					player.dismount();
 				}
 				break;
 			}
@@ -359,42 +359,42 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 37:
 			{
-				if (activeChar.isAlikeDead())
+				if (player.isAlikeDead())
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are in private store
-				if ((activeChar.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_BUY) || (activeChar.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_SELL))
+				if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL))
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are sitting
-				if (activeChar.isSitting() && (activeChar.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_MANUFACTURE))
+				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// You can't open Manufacture when the task is launched
-				if (activeChar.isSittingTaskLaunched())
+				if (player.isSittingTaskLaunched())
 				{
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				if (activeChar.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_MANUFACTURE)
+				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
 				{
-					activeChar.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
-					if (activeChar.isSitting())
+					player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+					if (player.isSitting())
 					{
-						activeChar.standUp();
+						player.standUp();
 					}
 				}
-				if (activeChar.getCreateList() == null)
+				if (player.getCreateList() == null)
 				{
-					activeChar.setCreateList(new L2ManufactureList());
+					player.setCreateList(new ManufactureList());
 				}
-				activeChar.sendPacket(new RecipeShopManageList(activeChar, true));
+				player.sendPacket(new RecipeShopManageList(player, true));
 				break;
 			}
 			case 39: // Soulless - Parasite Burst
@@ -409,7 +409,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 42: // Kai the Cat - Self Damage Shield
 			{
-				useSkill(4378, activeChar);
+				useSkill(4378, player);
 				break;
 			}
 			case 43: // Unicorn Merrow - Hydro Screw
@@ -424,7 +424,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 45: // Unicorn Boxer - Master Recharge
 			{
-				useSkill(4025, activeChar);
+				useSkill(4025, player);
 				break;
 			}
 			case 46: // Mew the Cat - Mega Storm Strike
@@ -445,59 +445,59 @@ public final class RequestActionUse extends L2GameClientPacket
 			case 51:
 			{
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
-				if (activeChar.isAlikeDead())
+				if (player.isAlikeDead())
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are in private store
-				if ((activeChar.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_BUY) || (activeChar.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_SELL))
+				if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_BUY) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL))
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// Like L2OFF - You can't open Manufacture when you are sitting
-				if (activeChar.isSitting() && (activeChar.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_MANUFACTURE))
+				if (player.isSitting() && (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_MANUFACTURE))
 				{
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				// You can't open Manufacture when the task is launched
-				if (activeChar.isSittingTaskLaunched())
+				if (player.isSittingTaskLaunched())
 				{
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				if (activeChar.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_MANUFACTURE)
+				if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_MANUFACTURE)
 				{
-					activeChar.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
-					if (activeChar.isSitting())
+					player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
+					if (player.isSitting())
 					{
-						activeChar.standUp();
+						player.standUp();
 					}
 				}
-				if (activeChar.getCreateList() == null)
+				if (player.getCreateList() == null)
 				{
-					activeChar.setCreateList(new L2ManufactureList());
+					player.setCreateList(new ManufactureList());
 				}
-				activeChar.sendPacket(new RecipeShopManageList(activeChar, false));
+				player.sendPacket(new RecipeShopManageList(player, false));
 				break;
 			}
 			case 52: // unsummon
 			{
-				if ((pet != null) && (pet instanceof L2SummonInstance))
+				if ((pet != null) && (pet instanceof SummonInstance))
 				{
-					if (pet.isInCombat() || activeChar.isInCombat())
+					if (pet.isInCombat() || player.isInCombat())
 					{
-						activeChar.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
+						player.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
 					}
 					else if (pet.isAttackingNow() || pet.isRooted())
 					{
-						activeChar.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
+						player.sendMessage("You cannot despawn a summon during combat."); // Message like L2OFF
 					}
 					else
 					{
-						pet.unSummon(activeChar);
+						pet.unSummon(player);
 					}
 				}
 				break;
@@ -533,7 +533,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1000: // Siege Golem - Siege Hammer
 			{
-				if (target instanceof L2DoorInstance)
+				if (target instanceof DoorInstance)
 				{
 					useSkill(4079);
 				}
@@ -550,7 +550,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1004: // Wind Hatchling/Strider - Wild Defense
 			{
-				useSkill(4711, activeChar); // TODO use correct skill lvl based on pet lvl
+				useSkill(4711, player); // TODO use correct skill lvl based on pet lvl
 				break;
 			}
 			case 1005: // Star Hatchling/Strider - Bright Burst
@@ -560,17 +560,17 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1006: // Star Hatchling/Strider - Bright Heal
 			{
-				useSkill(4713, activeChar); // TODO use correct skill lvl based on pet lvl
+				useSkill(4713, player); // TODO use correct skill lvl based on pet lvl
 				break;
 			}
 			case 1007: // Cat Queen - Blessing of Queen
 			{
-				useSkill(4699, activeChar);
+				useSkill(4699, player);
 				break;
 			}
 			case 1008: // Cat Queen - Gift of Queen
 			{
-				useSkill(4700, activeChar);
+				useSkill(4700, player);
 				break;
 			}
 			case 1009: // Cat Queen - Cure of Queen
@@ -580,12 +580,12 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1010: // Unicorn Seraphim - Blessing of Seraphim
 			{
-				useSkill(4702, activeChar);
+				useSkill(4702, player);
 				break;
 			}
 			case 1011: // Unicorn Seraphim - Gift of Seraphim
 			{
-				useSkill(4703, activeChar);
+				useSkill(4703, player);
 				break;
 			}
 			case 1012: // Unicorn Seraphim - Cure of Seraphim
@@ -600,7 +600,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1014: // Nightshade - Mass Curse of Shade
 			{
-				useSkill(4706, activeChar);
+				useSkill(4706, player);
 				break;
 			}
 			case 1015: // Nightshade - Shade Sacrifice
@@ -660,7 +660,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1039: // Swoop Cannon - Cannon Fodder
 			{
-				if (!(target instanceof L2DoorInstance))
+				if (!(target instanceof DoorInstance))
 				{
 					useSkill(5110);
 				}
@@ -668,7 +668,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			case 1040: // Swoop Cannon - Big Bang
 			{
-				if (!(target instanceof L2DoorInstance))
+				if (!(target instanceof DoorInstance))
 				{
 					useSkill(5111);
 				}
@@ -676,7 +676,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			}
 			default:
 			{
-				LOGGER.warning(activeChar.getName() + ": unhandled action type " + _actionId);
+				LOGGER.warning(player.getName() + ": unhandled action type " + _actionId);
 			}
 		}
 	}
@@ -684,33 +684,33 @@ public final class RequestActionUse extends L2GameClientPacket
 	/*
 	 * Cast a skill for active pet/servitor. Target is specified as a parameter but can be overwrited or ignored depending on skill type.
 	 */
-	private void useSkill(int skillId, L2Object target)
+	private void useSkill(int skillId, WorldObject target)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Summon activeSummon = activeChar.getPet();
+		final Summon activeSummon = player.getPet();
 		
-		if (activeChar.getPrivateStoreType() != 0)
+		if (player.getPrivateStoreType() != 0)
 		{
-			activeChar.sendMessage("Cannot use skills while trading");
+			player.sendMessage("Cannot use skills while trading");
 			return;
 		}
 		
-		if ((activeSummon != null) && !activeChar.isBetrayed())
+		if ((activeSummon != null) && !player.isBetrayed())
 		{
-			final Map<Integer, L2Skill> _skills = activeSummon.getTemplate().getSkills();
+			final Map<Integer, Skill> _skills = activeSummon.getTemplate().getSkills();
 			
 			if (_skills.size() == 0)
 			{
-				// activeChar.sendPacket(SystemMessageId.SKILL_NOT_AVAILABLE);
+				// player.sendPacket(SystemMessageId.SKILL_NOT_AVAILABLE);
 				return;
 			}
 			
-			final L2Skill skill = _skills.get(skillId);
+			final Skill skill = _skills.get(skillId);
 			
 			if (skill == null)
 			{
@@ -721,9 +721,9 @@ public final class RequestActionUse extends L2GameClientPacket
 			
 			boolean force = _ctrlPressed;
 			
-			if (target instanceof L2Character)
+			if (target instanceof Creature)
 			{
-				if (activeSummon.isInsideZone(ZoneId.PVP) && ((L2Character) target).isInsideZone(ZoneId.PVP))
+				if (activeSummon.isInsideZone(ZoneId.PVP) && ((Creature) target).isInsideZone(ZoneId.PVP))
 				{
 					force = true;
 				}
@@ -734,16 +734,16 @@ public final class RequestActionUse extends L2GameClientPacket
 	}
 	
 	/*
-	 * Cast a skill for active pet/servitor. Target is retrieved from owner' target, then validated by overloaded method useSkill(int, L2Character).
+	 * Cast a skill for active pet/servitor. Target is retrieved from owner' target, then validated by overloaded method useSkill(int, Creature).
 	 */
 	private void useSkill(int skillId)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		useSkill(skillId, activeChar.getTarget());
+		useSkill(skillId, player.getTarget());
 	}
 }

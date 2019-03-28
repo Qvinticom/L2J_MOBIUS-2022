@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
 
 /**
  * Format: (ch) dd
  * @author -Wooden-
  */
-public final class RequestPledgeWarList extends L2GameClientPacket
+public final class RequestPledgeWarList extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;
@@ -41,18 +41,18 @@ public final class RequestPledgeWarList extends L2GameClientPacket
 	{
 		// LOGGER.info("C5: RequestPledgeWarList d:"+_unk1);
 		// LOGGER.info("C5: RequestPledgeWarList d:"+_tab);
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getClan() == null)
+		if (player.getClan() == null)
 		{
 			return;
 		}
 		
 		// do we need powers to do that??
-		activeChar.sendPacket(new PledgeReceiveWarList(activeChar.getClan(), _tab));
+		player.sendPacket(new PledgeReceiveWarList(player.getClan(), _tab));
 	}
 }

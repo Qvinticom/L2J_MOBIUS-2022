@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.instancemanager;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.CrownTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
@@ -47,14 +47,14 @@ public class CrownManager
 		LOGGER.info("CrownManager: initialized");
 	}
 	
-	public void checkCrowns(L2Clan clan)
+	public void checkCrowns(Clan clan)
 	{
 		if (clan == null)
 		{
 			return;
 		}
 		
-		for (L2ClanMember member : clan.getMembers())
+		for (ClanMember member : clan.getMembers())
 		{
 			if ((member != null) && member.isOnline() && (member.getPlayerInstance() != null))
 			{
@@ -63,9 +63,9 @@ public class CrownManager
 		}
 	}
 	
-	public void checkCrowns(L2PcInstance activeChar)
+	public void checkCrowns(PlayerInstance player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -73,28 +73,28 @@ public class CrownManager
 		boolean isLeader = false;
 		int crownId = -1;
 		
-		L2Clan activeCharClan = activeChar.getClan();
-		L2ClanMember activeCharClanLeader;
+		Clan playerClan = player.getClan();
+		ClanMember playerClanLeader;
 		
-		if (activeCharClan != null)
+		if (playerClan != null)
 		{
-			activeCharClanLeader = activeChar.getClan().getLeader();
+			playerClanLeader = player.getClan().getLeader();
 		}
 		else
 		{
-			activeCharClanLeader = null;
+			playerClanLeader = null;
 		}
 		
-		if (activeCharClan != null)
+		if (playerClan != null)
 		{
-			Castle activeCharCastle = CastleManager.getInstance().getCastleByOwner(activeCharClan);
+			Castle playerCastle = CastleManager.getInstance().getCastleByOwner(playerClan);
 			
-			if (activeCharCastle != null)
+			if (playerCastle != null)
 			{
-				crownId = CrownTable.getCrownId(activeCharCastle.getCastleId());
+				crownId = CrownTable.getCrownId(playerCastle.getCastleId());
 			}
 			
-			if ((activeCharClanLeader != null) && (activeCharClanLeader.getObjectId() == activeChar.getObjectId()))
+			if ((playerClanLeader != null) && (playerClanLeader.getObjectId() == player.getObjectId()))
 			{
 				isLeader = true;
 			}
@@ -102,23 +102,23 @@ public class CrownManager
 		
 		if (crownId > 0)
 		{
-			if (isLeader && (activeChar.getInventory().getItemByItemId(6841) == null))
+			if (isLeader && (player.getInventory().getItemByItemId(6841) == null))
 			{
-				activeChar.addItem("Crown", 6841, 1, activeChar, true);
-				activeChar.getInventory().updateDatabase();
+				player.addItem("Crown", 6841, 1, player, true);
+				player.getInventory().updateDatabase();
 			}
 			
-			if (activeChar.getInventory().getItemByItemId(crownId) == null)
+			if (player.getInventory().getItemByItemId(crownId) == null)
 			{
-				activeChar.addItem("Crown", crownId, 1, activeChar, true);
-				activeChar.getInventory().updateDatabase();
+				player.addItem("Crown", crownId, 1, player, true);
+				player.getInventory().updateDatabase();
 			}
 		}
 		
 		boolean alreadyFoundCirclet = false;
 		boolean alreadyFoundCrown = false;
 		
-		for (L2ItemInstance item : activeChar.getInventory().getItems())
+		for (ItemInstance item : player.getInventory().getItems())
 		{
 			if (CrownTable.getCrownList().contains(item.getItemId()))
 			{
@@ -142,8 +142,8 @@ public class CrownManager
 					}
 				}
 				
-				activeChar.destroyItem("Removing Crown", item, activeChar, true);
-				activeChar.getInventory().updateDatabase();
+				player.destroyItem("Removing Crown", item, player, true);
+				player.getInventory().updateDatabase();
 			}
 		}
 	}

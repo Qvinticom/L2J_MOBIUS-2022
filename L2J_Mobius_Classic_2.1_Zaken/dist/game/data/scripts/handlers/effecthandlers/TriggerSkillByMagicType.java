@@ -22,15 +22,15 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -63,7 +63,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 	
 	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
 	{
-		if (!event.getTarget().isCharacter())
+		if (!event.getTarget().isCreature())
 		{
 			return;
 		}
@@ -85,7 +85,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 		}
 		else
 		{
-			final BuffInfo buffInfo = ((L2Character) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
+			final BuffInfo buffInfo = ((Creature) event.getTarget()).getEffectList().getBuffInfoBySkillId(_skill.getSkillId());
 			if (buffInfo != null)
 			{
 				triggerSkill = SkillData.getInstance().getSkill(_skill.getSkillId(), Math.min(_skillLevelScaleTo, buffInfo.getSkill().getLevel() + 1));
@@ -96,7 +96,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 			}
 		}
 		
-		L2Object target = null;
+		WorldObject target = null;
 		try
 		{
 			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getCaster(), event.getTarget(), triggerSkill, false, false, false);
@@ -106,14 +106,14 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
-		if ((target != null) && target.isCharacter())
+		if ((target != null) && target.isCreature())
 		{
-			SkillCaster.triggerCast(event.getCaster(), (L2Character) target, triggerSkill);
+			SkillCaster.triggerCast(event.getCaster(), (Creature) target, triggerSkill);
 		}
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_magicTypes.length == 0))
 		{
@@ -124,7 +124,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_SKILL_FINISH_CAST, listener -> listener.getOwner() == this);
 	}

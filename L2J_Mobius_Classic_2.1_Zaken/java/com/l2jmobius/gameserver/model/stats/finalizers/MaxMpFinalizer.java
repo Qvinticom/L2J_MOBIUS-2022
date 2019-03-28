@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.Optional;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -31,19 +31,19 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class MaxMpFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
 		double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
 		if (creature.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) creature;
+			final PetInstance pet = (PetInstance) creature;
 			baseValue += pet.getPetLevelData().getPetMaxMP();
 		}
 		else if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			if (player != null)
 			{
 				baseValue += player.getTemplate().getBaseMpMax(player.getLevel());

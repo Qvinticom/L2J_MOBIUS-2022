@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -33,7 +33,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_help"))
 		{
@@ -57,9 +57,9 @@ public class AdminHelpPage implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	// FIXME: implement method to send html to player in L2PcInstance directly
+	// FIXME: implement method to send html to player in PlayerInstance directly
 	// PUBLIC & STATIC so other classes from package can include it directly
-	public static void showHelpPage(L2PcInstance targetChar, String filename)
+	public static void showHelpPage(PlayerInstance targetChar, String filename)
 	{
 		String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -67,7 +67,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 		targetChar.sendPacket(adminReply);
 	}
 	
-	public static void showSubMenuPage(L2PcInstance targetChar, String filename)
+	public static void showSubMenuPage(PlayerInstance targetChar, String filename)
 	{
 		String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

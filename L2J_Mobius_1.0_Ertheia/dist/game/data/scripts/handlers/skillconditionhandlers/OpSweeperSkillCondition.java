@@ -19,11 +19,11 @@ package handlers.skillconditionhandlers;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,19 +39,19 @@ public class OpSweeperSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final AtomicBoolean canSweep = new AtomicBoolean(false);
 		if (caster.getActingPlayer() != null)
 		{
-			final L2PcInstance sweeper = caster.getActingPlayer();
+			final PlayerInstance sweeper = caster.getActingPlayer();
 			if (skill != null)
 			{
 				skill.forEachTargetAffected(sweeper, target, o ->
 				{
 					if (o.isAttackable())
 					{
-						final L2Attackable a = (L2Attackable) o;
+						final Attackable a = (Attackable) o;
 						if (a.isDead())
 						{
 							if (a.isSpoiled())

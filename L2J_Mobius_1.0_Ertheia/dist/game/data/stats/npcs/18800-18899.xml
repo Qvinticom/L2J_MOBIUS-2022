@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18800" level="77" type="L2Monster" name="Fledgling Lavasaurus">
+	<npc id="18800" level="77" type="Monster" name="Fledgling Lavasaurus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -56,7 +56,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18801" level="77" type="L2Monster" name="Adult Lavasaurus">
+	<npc id="18801" level="77" type="Monster" name="Adult Lavasaurus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -113,7 +113,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18802" level="78" type="L2Monster" name="Elderly Lavasaurus">
+	<npc id="18802" level="78" type="Monster" name="Elderly Lavasaurus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -171,7 +171,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18803" level="78" type="L2Monster" name="Ancient Lavasaurus">
+	<npc id="18803" level="78" type="Monster" name="Ancient Lavasaurus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -229,7 +229,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18804" level="78" type="L2Monster" name="Tar Beetle">
+	<npc id="18804" level="78" type="Monster" name="Tar Beetle">
 		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -265,7 +265,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="18805" level="83" type="L2Monster" name="Waste Landfill Machine">
+	<npc id="18805" level="83" type="Monster" name="Waste Landfill Machine">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -298,7 +298,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="18806" level="83" type="L2Monster" name="Purifying Magic Circle">
+	<npc id="18806" level="83" type="Monster" name="Purifying Magic Circle">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -320,7 +320,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18807" level="81" type="L2Monster" name="Frightened Ragna Orc">
+	<npc id="18807" level="81" type="Monster" name="Frightened Ragna Orc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -367,7 +367,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="18808" level="82" type="L2Monster" name="Dark Shaman Varangka">
+	<npc id="18808" level="82" type="Monster" name="Dark Shaman Varangka">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -415,7 +415,7 @@
 			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="18809" level="82" type="L2Monster" name="Varangka's Confidant">
+	<npc id="18809" level="82" type="Monster" name="Varangka's Confidant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
@@ -464,7 +464,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="18810" level="82" type="L2Monster" name="Varangka's Servant">
+	<npc id="18810" level="82" type="Monster" name="Varangka's Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
@@ -519,7 +519,7 @@
 			<height normal="20.8" />
 		</collision>
 	</npc>
-	<npc id="18811" level="82" type="L2Monster" name="Guardian of the Altar">
+	<npc id="18811" level="82" type="Monster" name="Guardian of the Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -553,7 +553,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18812" level="81" type="L2Monster" name="Kasha's Eye" title="Atk. Spd. Boost">
+	<npc id="18812" level="81" type="Monster" name="Kasha's Eye" title="Atk. Spd. Boost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="1" />
@@ -591,7 +591,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18813" level="81" type="L2Monster" name="Kasha's Eye" title="P. Atk. Boost">
+	<npc id="18813" level="81" type="Monster" name="Kasha's Eye" title="P. Atk. Boost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="2" />
@@ -629,7 +629,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18814" level="81" type="L2Monster" name="Kasha's Eye" title="Critical Rate Boost">
+	<npc id="18814" level="81" type="Monster" name="Kasha's Eye" title="Critical Rate Boost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="3" />
@@ -667,7 +667,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18815" level="83" type="L2Monster" name="Graveyard Guard" title="Death-calling">
+	<npc id="18815" level="83" type="Monster" name="Graveyard Guard" title="Death-calling">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -714,7 +714,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18816" level="81" type="L2Monster" name="Chieftain's Treasure Chest">
+	<npc id="18816" level="81" type="Monster" name="Chieftain's Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -749,7 +749,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18817" level="81" type="L2Monster" name="Invader Martyr of Nightmare">
+	<npc id="18817" level="81" type="Monster" name="Invader Martyr of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5376" level="4" />
@@ -791,7 +791,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18818" level="81" type="L2Monster" name="Nihil Invader Martyr">
+	<npc id="18818" level="81" type="Monster" name="Nihil Invader Martyr">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5376" level="4" />
@@ -832,7 +832,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="18819" level="82" type="L2Monster" name="Nihil Invader Treasure Chest">
+	<npc id="18819" level="82" type="Monster" name="Nihil Invader Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -864,7 +864,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18820" level="82" type="L2Monster" name="Nihil Invader Treasure Chest">
+	<npc id="18820" level="82" type="Monster" name="Nihil Invader Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -896,7 +896,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18821" level="84" type="L2Monster" name="Mutant Martyr">
+	<npc id="18821" level="84" type="Monster" name="Mutant Martyr">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5376" level="5" />
@@ -937,7 +937,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18822" level="84" type="L2Monster" name="Mutant Treasure Chest">
+	<npc id="18822" level="84" type="Monster" name="Mutant Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -969,7 +969,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18823" level="84" type="L2Monster" name="Mutant Treasure Chest">
+	<npc id="18823" level="84" type="Monster" name="Mutant Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1002,7 +1002,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18824" level="1" type="L2Npc" name="Merchant of Mammon A">
+	<npc id="18824" level="1" type="Npc" name="Merchant of Mammon A">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -1035,7 +1035,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="18825" level="1" type="L2Npc" name="Merchant of Mammon B">
+	<npc id="18825" level="1" type="Npc" name="Merchant of Mammon B">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -1068,7 +1068,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="18826" level="80" type="L2Npc" name="Shilen's Evil Thoughts (Presentation)">
+	<npc id="18826" level="80" type="Npc" name="Shilen's Evil Thoughts (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1101,7 +1101,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18827" level="80" type="L2Npc" name="Priest Cain (Presentation)">
+	<npc id="18827" level="80" type="Npc" name="Priest Cain (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
@@ -1134,7 +1134,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18828" level="80" type="L2Npc" name="High Priest of Dawn">
+	<npc id="18828" level="80" type="Npc" name="High Priest of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1167,7 +1167,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18829" level="80" type="L2Npc" name="Shilen's Evil Thoughts Captain (Presentation)">
+	<npc id="18829" level="80" type="Npc" name="Shilen's Evil Thoughts Captain (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1201,7 +1201,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18830" level="1" type="L2Npc" name="Boz' Energy">
+	<npc id="18830" level="1" type="Npc" name="Boz' Energy">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1235,7 +1235,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18831" level="1" type="L2Npc" name="Camera Dummy 2 (ssq Presentation)">
+	<npc id="18831" level="1" type="Npc" name="Camera Dummy 2 (ssq Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1268,7 +1268,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18832" level="1" type="L2Npc" name="Camera Dummy 3 (ssq Presentation)">
+	<npc id="18832" level="1" type="Npc" name="Camera Dummy 3 (ssq Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1301,7 +1301,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18833" level="1" type="L2Npc" name="Emperor's Seal Device">
+	<npc id="18833" level="1" type="Npc" name="Emperor's Seal Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1334,7 +1334,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18834" level="85" type="L2Monster" name="Guard of the Dawn">
+	<npc id="18834" level="85" type="Monster" name="Guard of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Fstring_Num" value="19514" />
@@ -1377,7 +1377,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18835" level="85" type="L2Monster" name="Guard of the Dawn">
+	<npc id="18835" level="85" type="Monster" name="Guard of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Fstring_Num" value="19506" />
@@ -1420,7 +1420,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18836" level="82" type="L2Monster" name="Varangka's Guardian">
+	<npc id="18836" level="82" type="Monster" name="Varangka's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
@@ -1470,7 +1470,7 @@
 			<height normal="39.5" grown="69" />
 		</collision>
 	</npc>
-	<npc id="18837" level="1" type="L2Npc">
+	<npc id="18837" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1508,7 +1508,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18838" level="84" type="L2Monster" name="Treasure Chest of Invader Soldier of Nightmare">
+	<npc id="18838" level="84" type="Monster" name="Treasure Chest of Invader Soldier of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1530,7 +1530,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18839" level="85" type="L2Monster" name="Wild Maguen">
+	<npc id="18839" level="85" type="Monster" name="Wild Maguen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="B_PLASMA1" id="6367" level="1" />
@@ -1587,7 +1587,7 @@
 			<height normal="13.25" />
 		</collision>
 	</npc>
-	<npc id="18840" level="85" type="L2Npc">
+	<npc id="18840" level="85" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaceCycleID" value="4" />
@@ -1623,7 +1623,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18841" level="85" type="L2Npc">
+	<npc id="18841" level="85" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaceCycleID" value="5" />
@@ -1659,7 +1659,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18842" level="85" type="L2Npc">
+	<npc id="18842" level="85" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaceCycleID" value="6" />
@@ -1695,7 +1695,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18843" level="85" type="L2Npc" name="Kokracon's Ward">
+	<npc id="18843" level="85" type="Npc" name="Kokracon's Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1728,7 +1728,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18844" level="85" type="L2Npc" name="Reptilikon's Ward">
+	<npc id="18844" level="85" type="Npc" name="Reptilikon's Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1761,7 +1761,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18845" level="85" type="L2Npc" name="Torumba's Telegraph">
+	<npc id="18845" level="85" type="Npc" name="Torumba's Telegraph">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1833,7 +1833,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18847" level="85" type="L2Monster" name="Freya" title="Ice Queen">
+	<npc id="18847" level="85" type="Monster" name="Freya" title="Ice Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6278" level="1" />
@@ -2033,7 +2033,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18852" level="85" type="L2Monster" name="Sirra">
+	<npc id="18852" level="85" type="Monster" name="Sirra">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2068,7 +2068,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18853" level="85" type="L2Monster" name="Glacier">
+	<npc id="18853" level="85" type="Monster" name="Glacier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff" id="6301" level="1" />
@@ -2108,7 +2108,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18854" level="85" type="L2Monster" name="Icy Breath">
+	<npc id="18854" level="85" type="Monster" name="Icy Breath">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_Blizzard" id="6299" level="1" />
@@ -2149,7 +2149,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18855" level="85" type="L2Monster" name="Ice Knight">
+	<npc id="18855" level="85" type="Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2204,7 +2204,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18856" level="85" type="L2Monster" name="Ice Knight">
+	<npc id="18856" level="85" type="Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2263,7 +2263,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18857" level="1" type="L2Npc">
+	<npc id="18857" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2297,7 +2297,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18858" level="1" type="L2Npc">
+	<npc id="18858" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2331,7 +2331,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18859" level="1" type="L2Npc">
+	<npc id="18859" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2365,7 +2365,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18860" level="1" type="L2Npc">
+	<npc id="18860" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2399,7 +2399,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18861" level="1" type="L2Npc">
+	<npc id="18861" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2433,7 +2433,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18862" level="82" type="L2Monster" name="Tanta Lizardman Guard" title="Ugoros' Escort">
+	<npc id="18862" level="82" type="Monster" name="Tanta Lizardman Guard" title="Ugoros' Escort">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2476,7 +2476,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="18863" level="84" type="L2Monster" name="Priest Ugoros" title="Tanta Lizardmen">
+	<npc id="18863" level="84" type="Monster" name="Priest Ugoros" title="Tanta Lizardmen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6426" level="1" />
@@ -2537,7 +2537,7 @@
 			<height normal="53.5" />
 		</collision>
 	</npc>
-	<npc id="18864" level="85" type="L2Monster" name="Fantasy Mushroom">
+	<npc id="18864" level="85" type="Monster" name="Fantasy Mushroom">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6427" level="1" />
@@ -2583,7 +2583,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18865" level="85" type="L2Monster" name="Sticky Mushroom">
+	<npc id="18865" level="85" type="Monster" name="Sticky Mushroom">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6428" level="1" />
@@ -2627,7 +2627,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18866" level="85" type="L2Monster" name="Rainbow Frog">
+	<npc id="18866" level="85" type="Monster" name="Rainbow Frog">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6429" level="1" />
@@ -2669,7 +2669,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="18867" level="85" type="L2Monster" name="Abyss Weed">
+	<npc id="18867" level="85" type="Monster" name="Abyss Weed">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6648" level="1" />
@@ -2717,7 +2717,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18868" level="85" type="L2Monster" name="Vitality Plant">
+	<npc id="18868" level="85" type="Monster" name="Vitality Plant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6430" level="1" />
@@ -2761,7 +2761,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="18869" level="83" type="L2TamedBeast" name="Kookaburra" title="Tame">
+	<npc id="18869" level="83" type="TamedBeast" name="Kookaburra" title="Tame">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -2829,7 +2829,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18870" level="83" type="L2TamedBeast" name="Cougar" title="Tame">
+	<npc id="18870" level="83" type="TamedBeast" name="Cougar" title="Tame">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -2897,7 +2897,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="18871" level="84" type="L2TamedBeast" name="Buffalo" title="Tame">
+	<npc id="18871" level="84" type="TamedBeast" name="Buffalo" title="Tame">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -2965,7 +2965,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18872" level="84" type="L2TamedBeast" name="Grendel" title="Tame">
+	<npc id="18872" level="84" type="TamedBeast" name="Grendel" title="Tame">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -3032,7 +3032,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="18873" level="83" type="L2FeedableBeast" name="Baby Alpine Kookaburra">
+	<npc id="18873" level="83" type="FeedableBeast" name="Baby Alpine Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3095,7 +3095,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18874" level="83" type="L2FeedableBeast" name="Young Kookaburra">
+	<npc id="18874" level="83" type="FeedableBeast" name="Young Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3171,7 +3171,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18875" level="83" type="L2FeedableBeast" name="Young Kookaburra">
+	<npc id="18875" level="83" type="FeedableBeast" name="Young Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3238,7 +3238,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18876" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
+	<npc id="18876" level="83" type="FeedableBeast" name="Adult Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3310,7 +3310,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="18877" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
+	<npc id="18877" level="83" type="FeedableBeast" name="Adult Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3377,7 +3377,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="18878" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
+	<npc id="18878" level="83" type="FeedableBeast" name="Full Grown Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3457,7 +3457,7 @@
 			<height normal="33" grown="40" />
 		</collision>
 	</npc>
-	<npc id="18879" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
+	<npc id="18879" level="83" type="FeedableBeast" name="Full Grown Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
@@ -3526,7 +3526,7 @@
 			<height normal="33" grown="40" />
 		</collision>
 	</npc>
-	<npc id="18880" level="83" type="L2FeedableBeast" name="Baby Alpine Cougar">
+	<npc id="18880" level="83" type="FeedableBeast" name="Baby Alpine Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -3589,7 +3589,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="18881" level="83" type="L2FeedableBeast" name="Young Cougar">
+	<npc id="18881" level="83" type="FeedableBeast" name="Young Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -3665,7 +3665,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18882" level="83" type="L2FeedableBeast" name="Young Cougar">
+	<npc id="18882" level="83" type="FeedableBeast" name="Young Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -3732,7 +3732,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18883" level="83" type="L2FeedableBeast" name="Adult Cougar">
+	<npc id="18883" level="83" type="FeedableBeast" name="Adult Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -3804,7 +3804,7 @@
 			<height normal="17.2" />
 		</collision>
 	</npc>
-	<npc id="18884" level="83" type="L2FeedableBeast" name="Adult Cougar">
+	<npc id="18884" level="83" type="FeedableBeast" name="Adult Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -3871,7 +3871,7 @@
 			<height normal="17.2" />
 		</collision>
 	</npc>
-	<npc id="18885" level="83" type="L2FeedableBeast" name="Full Grown Cougar">
+	<npc id="18885" level="83" type="FeedableBeast" name="Full Grown Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -3950,7 +3950,7 @@
 			<height normal="28" grown="34" />
 		</collision>
 	</npc>
-	<npc id="18886" level="83" type="L2FeedableBeast" name="Full Grown Cougar">
+	<npc id="18886" level="83" type="FeedableBeast" name="Full Grown Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
@@ -4019,7 +4019,7 @@
 			<height normal="28" grown="34" />
 		</collision>
 	</npc>
-	<npc id="18887" level="84" type="L2FeedableBeast" name="Baby Alpine Buffalo">
+	<npc id="18887" level="84" type="FeedableBeast" name="Baby Alpine Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4082,7 +4082,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18888" level="84" type="L2FeedableBeast" name="Young Buffalo">
+	<npc id="18888" level="84" type="FeedableBeast" name="Young Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4158,7 +4158,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18889" level="84" type="L2FeedableBeast" name="Young Buffalo">
+	<npc id="18889" level="84" type="FeedableBeast" name="Young Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4225,7 +4225,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18890" level="84" type="L2FeedableBeast" name="Adult Buffalo">
+	<npc id="18890" level="84" type="FeedableBeast" name="Adult Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4297,7 +4297,7 @@
 			<height normal="25.2" />
 		</collision>
 	</npc>
-	<npc id="18891" level="84" type="L2FeedableBeast" name="Adult Buffalo">
+	<npc id="18891" level="84" type="FeedableBeast" name="Adult Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4364,7 +4364,7 @@
 			<height normal="25.2" />
 		</collision>
 	</npc>
-	<npc id="18892" level="84" type="L2FeedableBeast" name="Full Grown Buffalo">
+	<npc id="18892" level="84" type="FeedableBeast" name="Full Grown Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4440,7 +4440,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="18893" level="84" type="L2FeedableBeast" name="Full Grown Buffalo">
+	<npc id="18893" level="84" type="FeedableBeast" name="Full Grown Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
@@ -4509,7 +4509,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="18894" level="84" type="L2FeedableBeast" name="Baby Alpine Grendel">
+	<npc id="18894" level="84" type="FeedableBeast" name="Baby Alpine Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -4571,7 +4571,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="18895" level="84" type="L2FeedableBeast" name="Young Grendel">
+	<npc id="18895" level="84" type="FeedableBeast" name="Young Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -4646,7 +4646,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="18896" level="84" type="L2FeedableBeast" name="Young Grendel">
+	<npc id="18896" level="84" type="FeedableBeast" name="Young Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -4712,7 +4712,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="18897" level="84" type="L2FeedableBeast" name="Adult Grendel">
+	<npc id="18897" level="84" type="FeedableBeast" name="Adult Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -4783,7 +4783,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="18898" level="84" type="L2FeedableBeast" name="Adult Grendel">
+	<npc id="18898" level="84" type="FeedableBeast" name="Adult Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -4850,7 +4850,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="18899" level="84" type="L2FeedableBeast" name="Full Grown Grendel">
+	<npc id="18899" level="84" type="FeedableBeast" name="Full Grown Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />

@@ -20,7 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 public class FortUpdater implements Runnable
 {
 	private static Logger LOGGER = Logger.getLogger(FortUpdater.class.getName());
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final Fort _fort;
 	private int _runCount;
 	private final UpdaterType _updaterType;
@@ -42,7 +42,7 @@ public class FortUpdater implements Runnable
 		PERIODIC_UPDATE // raise blood oath/supply level
 	}
 	
-	public FortUpdater(Fort fort, L2Clan clan, int runCount, UpdaterType ut)
+	public FortUpdater(Fort fort, Clan clan, int runCount, UpdaterType ut)
 	{
 		_fort = fort;
 		_clan = clan;

@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.entity.ClanHall.ClanHallFunction;
 /**
  * @author Steuf
  */
-public class ClanHallDecoration extends L2GameServerPacket
+public class ClanHallDecoration extends GameServerPacket
 {
 	private final ClanHall _clanHall;
 	private ClanHallFunction _function;

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="12774" level="1" type="L2Npc" name="Young Squash">
+	<npc id="12774" level="1" type="Npc" name="Young Squash">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -36,7 +36,7 @@
 			<height normal="10.5" />
 		</collision>
 	</npc>
-	<npc id="12775" level="1" type="L2Npc" name="High Quality Squash">
+	<npc id="12775" level="1" type="Npc" name="High Quality Squash">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -73,7 +73,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="12776" level="1" type="L2Npc" name="Low Quality Squash">
+	<npc id="12776" level="1" type="Npc" name="Low Quality Squash">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -110,7 +110,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="12777" level="1" type="L2Npc" name="Large Young Squash">
+	<npc id="12777" level="1" type="Npc" name="Large Young Squash">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -146,7 +146,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="12778" level="1" type="L2Npc" name="High Quality Large Squash">
+	<npc id="12778" level="1" type="Npc" name="High Quality Large Squash">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -183,7 +183,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="12779" level="1" type="L2Npc" name="Low Quality Large Squash">
+	<npc id="12779" level="1" type="Npc" name="Low Quality Large Squash">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -220,7 +220,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="12780" level="25" type="L2BabyPet" name="Baby Buffalo">
+	<npc id="12780" level="25" type="BabyPet" name="Baby Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Heal1" id="4717" level="1" /> <!-- Heal Trick -->
@@ -262,7 +262,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="12781" level="25" type="L2BabyPet" name="Baby Kookaburra">
+	<npc id="12781" level="25" type="BabyPet" name="Baby Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Heal1" id="4717" level="1" /> <!-- Heal Trick -->
@@ -304,7 +304,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="12782" level="25" type="L2BabyPet" name="Baby Cougar">
+	<npc id="12782" level="25" type="BabyPet" name="Baby Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Heal1" id="4717" level="1" /> <!-- Heal Trick -->

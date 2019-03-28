@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SendTradeRequest;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class TradeRequest extends L2GameClientPacket
+public final class TradeRequest extends GameClientPacket
 {
 	private int _objectId;
 	
@@ -39,7 +39,7 @@ public final class TradeRequest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -52,15 +52,15 @@ public final class TradeRequest extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Object target = L2World.getInstance().findObject(_objectId);
-		if ((target == null) || !player.getKnownList().knowsObject(target) || !(target instanceof L2PcInstance) || (target.getObjectId() == player.getObjectId()))
+		final WorldObject target = World.getInstance().findObject(_objectId);
+		if ((target == null) || !player.getKnownList().knowsObject(target) || !(target instanceof PlayerInstance) || (target.getObjectId() == player.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2PcInstance partner = (L2PcInstance) target;
+		final PlayerInstance partner = (PlayerInstance) target;
 		
 		if (partner.isInOlympiadMode() || player.isInOlympiadMode())
 		{

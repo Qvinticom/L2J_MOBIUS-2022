@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.type.RespawnZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -36,17 +36,17 @@ public class Loc implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		int region;
-		final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
+		final RespawnZone zone = ZoneManager.getInstance().getZone(player, RespawnZone.class);
 		if (zone != null)
 		{
-			region = MapRegionManager.getInstance().getRestartRegion(activeChar, zone.getAllRespawnPoints().get(Race.HUMAN)).getLocId();
+			region = MapRegionManager.getInstance().getRestartRegion(player, zone.getAllRespawnPoints().get(Race.HUMAN)).getLocId();
 		}
 		else
 		{
-			region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
+			region = MapRegionManager.getInstance().getMapRegionLocId(player);
 		}
 		
 		SystemMessage sm;
@@ -55,17 +55,17 @@ public class Loc implements IUserCommandHandler
 			sm = SystemMessage.getSystemMessage(region);
 			if (sm.getSystemMessageId().getParamCount() == 3)
 			{
-				sm.addInt(activeChar.getX());
-				sm.addInt(activeChar.getY());
-				sm.addInt(activeChar.getZ());
+				sm.addInt(player.getX());
+				sm.addInt(player.getY());
+				sm.addInt(player.getZ());
 			}
 		}
 		else
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.CURRENT_LOCATION_S1);
-			sm.addString(activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ());
+			sm.addString(player.getX() + ", " + player.getY() + ", " + player.getZ());
 		}
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		return true;
 	}
 	

@@ -16,8 +16,8 @@
  */
 package quests.Q00013_ParcelDelivery;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -46,11 +46,11 @@ public class Q00013_ParcelDelivery extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -59,17 +59,17 @@ public class Q00013_ParcelDelivery extends Quest
 		{
 			case "31274-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, PACKAGE, 1);
 				break;
 			}
 			case "31539-01.html":
 			{
-				if (st.isCond(1) && hasQuestItems(player, PACKAGE))
+				if (qs.isCond(1) && hasQuestItems(player, PACKAGE))
 				{
 					giveAdena(player, 271980, true);
 					addExpAndSp(player, 1_279_632, 307);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
@@ -82,13 +82,13 @@ public class Q00013_ParcelDelivery extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -100,7 +100,7 @@ public class Q00013_ParcelDelivery extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					switch (npcId)
 					{

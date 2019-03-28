@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 
 /**
@@ -34,7 +34,7 @@ public final class RequestPledgeMemberInfo implements IClientIncomingPacket
 	private String _player;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_unk1 = packet.readD();
 		_player = packet.readS();
@@ -42,24 +42,24 @@ public final class RequestPledgeMemberInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		// LOGGER.info("C5: RequestPledgeMemberInfo d:"+_unk1);
 		// LOGGER.info("C5: RequestPledgeMemberInfo S:"+_player);
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// do we need powers to do that??
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;
 		}
 		
-		final L2ClanMember member = clan.getClanMember(_player);
+		final ClanMember member = clan.getClanMember(_player);
 		if (member == null)
 		{
 			return;

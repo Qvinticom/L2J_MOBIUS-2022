@@ -19,33 +19,33 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @version $Revision: 1.4.2.3.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SellList extends L2GameServerPacket
+public class SellList extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
-	private final L2MerchantInstance _lease;
+	private final PlayerInstance _player;
+	private final MerchantInstance _lease;
 	private final int _money;
-	private final List<L2ItemInstance> _selllist = new ArrayList<>();
+	private final List<ItemInstance> _selllist = new ArrayList<>();
 	
-	public SellList(L2PcInstance player)
+	public SellList(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		_lease = null;
-		_money = _activeChar.getAdena();
+		_money = _player.getAdena();
 		doLease();
 	}
 	
-	public SellList(L2PcInstance player, L2MerchantInstance lease)
+	public SellList(PlayerInstance player, MerchantInstance lease)
 	{
-		_activeChar = player;
+		_player = player;
 		_lease = lease;
-		_money = _activeChar.getAdena();
+		_money = _player.getAdena();
 		doLease();
 	}
 	
@@ -53,13 +53,13 @@ public class SellList extends L2GameServerPacket
 	{
 		if (_lease == null)
 		{
-			for (L2ItemInstance item : _activeChar.getInventory().getItems())
+			for (ItemInstance item : _player.getInventory().getItems())
 			{
 				if ((item != null) && !item.isEquipped() && // Not equipped
 					item.getItem().isSellable() && // Item is sellable
 					(item.getItem().getItemId() != 57) && // Adena is not sellable
-					((_activeChar.getPet() == null) || // Pet not summoned or
-						(item.getObjectId() != _activeChar.getPet().getControlItemId()))) // Pet is summoned and not the item that summoned the pet
+					((_player.getPet() == null) || // Pet not summoned or
+						(item.getObjectId() != _player.getPet().getControlItemId()))) // Pet is summoned and not the item that summoned the pet
 				{
 					_selllist.add(item);
 				}
@@ -76,7 +76,7 @@ public class SellList extends L2GameServerPacket
 		
 		writeH(_selllist.size());
 		
-		for (L2ItemInstance item : _selllist)
+		for (ItemInstance item : _selllist)
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());

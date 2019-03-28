@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="19300" level="95" type="L2Monster" name="Spicula Elite Lieutenant">
+	<npc id="19300" level="95" type="Monster" name="Spicula Elite Lieutenant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -45,7 +45,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="19301" level="93" type="L2Monster" name="Elite Soldier Clone 1">
+	<npc id="19301" level="93" type="Monster" name="Elite Soldier Clone 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -87,7 +87,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="19302" level="93" type="L2Monster" name="Spicula Elite Guard 1">
+	<npc id="19302" level="93" type="Monster" name="Spicula Elite Guard 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -131,7 +131,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="19303" level="94" type="L2Monster" name="Elite Soldier Clone 2">
+	<npc id="19303" level="94" type="Monster" name="Elite Soldier Clone 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -174,7 +174,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19304" level="94" type="L2Monster" name="Spicula Elite Guard 2">
+	<npc id="19304" level="94" type="Monster" name="Spicula Elite Guard 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -219,7 +219,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19305" level="94" type="L2Monster" name="Boz" title="Spicula Clone Generator">
+	<npc id="19305" level="94" type="Monster" name="Boz" title="Spicula Clone Generator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -260,7 +260,7 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="19306" level="95" type="L2Monster" name="Yin Spicula Lieutenant">
+	<npc id="19306" level="95" type="Monster" name="Yin Spicula Lieutenant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -313,7 +313,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="19307" level="96" type="L2Monster" name="Yin Spicula Captain">
+	<npc id="19307" level="96" type="Monster" name="Yin Spicula Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -366,7 +366,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="19308" level="94" type="L2Npc" name="Yin Fragment" title="Spicula Clone Generator">
+	<npc id="19308" level="94" type="Npc" name="Yin Fragment" title="Spicula Clone Generator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -406,7 +406,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19309" level="93" type="L2Monster" name="Golem of Repairs" title="Black Anvil Guild">
+	<npc id="19309" level="93" type="Monster" name="Golem of Repairs" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -470,7 +470,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19310" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
+	<npc id="19310" level="94" type="Monster" name="Drill Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -533,7 +533,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19311" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
+	<npc id="19311" level="94" type="Monster" name="Drill Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -597,7 +597,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19312" level="94" type="L2Monster" name="Excavator Golem" title="Black Anvil Guild">
+	<npc id="19312" level="94" type="Monster" name="Excavator Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -636,7 +636,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19313" level="94" type="L2Npc" name="Excavator Golem" title="Black Anvil Guild">
+	<npc id="19313" level="94" type="Npc" name="Excavator Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -676,7 +676,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19314" level="95" type="L2Monster" name="Pincer Golem" title="Black Anvil Guild">
+	<npc id="19314" level="95" type="Monster" name="Pincer Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -739,7 +739,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19315" level="95" type="L2Monster" name="Pincer Golem" title="Black Anvil Guild">
+	<npc id="19315" level="95" type="Monster" name="Pincer Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -803,7 +803,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19316" level="94" type="L2Monster" name="Screw Golem" title="Black Anvil Guild">
+	<npc id="19316" level="94" type="Monster" name="Screw Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -867,7 +867,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19317" level="94" type="L2Monster" name="Screw Golem" title="Black Anvil Guild">
+	<npc id="19317" level="94" type="Monster" name="Screw Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -932,7 +932,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19318" level="94" type="L2Monster" name="Cannon Golem" title="Black Anvil Guild">
+	<npc id="19318" level="94" type="Monster" name="Cannon Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -974,7 +974,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="19319" level="94" type="L2Monster" name="Cannon Golem" title="Black Anvil Guild">
+	<npc id="19319" level="94" type="Monster" name="Cannon Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -1015,7 +1015,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19320" level="94" type="L2Npc" name="Yin" title="Spicula Clone Generator">
+	<npc id="19320" level="94" type="Npc" name="Yin" title="Spicula Clone Generator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
@@ -1051,7 +1051,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="19321" level="94" type="L2Monster" name="For Raid Presentation Purposes">
+	<npc id="19321" level="94" type="Monster" name="For Raid Presentation Purposes">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1081,7 +1081,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19322" level="94" type="L2Npc" name="Yuti" title="Captain">
+	<npc id="19322" level="94" type="Npc" name="Yuti" title="Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FRIEND</race>
 		<sex>MALE</sex>
@@ -1111,7 +1111,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19323" level="94" type="L2Npc" name="Raider's Crossroads D?cor">
+	<npc id="19323" level="94" type="Npc" name="Raider's Crossroads D?cor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FRIEND</race>
 		<sex>MALE</sex>
@@ -1141,7 +1141,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19324" level="94" type="L2Monster" name="For Raid Presentation Purposes">
+	<npc id="19324" level="94" type="Monster" name="For Raid Presentation Purposes">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1171,7 +1171,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19325" level="85" type="L2Npc" name="Sticky Mushroom">
+	<npc id="19325" level="85" type="Npc" name="Sticky Mushroom">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -1201,7 +1201,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19326" level="94" type="L2Monster" name="For Raid Presentation Purposes">
+	<npc id="19326" level="94" type="Monster" name="For Raid Presentation Purposes">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -1231,7 +1231,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="19327" level="95" type="L2Monster" name="Gustav">
+	<npc id="19327" level="95" type="Monster" name="Gustav">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1269,7 +1269,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19328" level="95" type="L2Monster" name="Gustav" title="Resurrected">
+	<npc id="19328" level="95" type="Monster" name="Gustav" title="Resurrected">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1304,7 +1304,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19329" level="95" type="L2Monster" name="Mikhail">
+	<npc id="19329" level="95" type="Monster" name="Mikhail">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1342,7 +1342,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19330" level="95" type="L2Monster" name="Mikhail" title="Resurrected">
+	<npc id="19330" level="95" type="Monster" name="Mikhail" title="Resurrected">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1379,7 +1379,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19331" level="95" type="L2Monster" name="Dietrich">
+	<npc id="19331" level="95" type="Monster" name="Dietrich">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1417,7 +1417,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19332" level="95" type="L2Monster" name="Dietrich" title="Resurrected">
+	<npc id="19332" level="95" type="Monster" name="Dietrich" title="Resurrected">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1454,7 +1454,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19333" level="95" type="L2Npc" name="Demolished Throne Stronghold">
+	<npc id="19333" level="95" type="Npc" name="Demolished Throne Stronghold">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1489,7 +1489,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19334" level="95" type="L2Npc" name="Transportation Stronghold">
+	<npc id="19334" level="95" type="Npc" name="Transportation Stronghold">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1523,7 +1523,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="19335" level="95" type="L2Monster" name="Attack Stronghold">
+	<npc id="19335" level="95" type="Monster" name="Attack Stronghold">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>ETC</sex>
@@ -1558,7 +1558,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="19336" level="94" type="L2Monster" name="Doom Servant">
+	<npc id="19336" level="94" type="Monster" name="Doom Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1593,7 +1593,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="19337" level="94" type="L2Monster" name="Doom Guard">
+	<npc id="19337" level="94" type="Monster" name="Doom Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1628,7 +1628,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="19338" level="94" type="L2Monster" name="Doom Archer">
+	<npc id="19338" level="94" type="Monster" name="Doom Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1664,7 +1664,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="19339" level="95" type="L2Monster" name="Doom Trooper">
+	<npc id="19339" level="95" type="Monster" name="Doom Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1700,7 +1700,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="19340" level="95" type="L2Monster" name="Doom Warrior">
+	<npc id="19340" level="95" type="Monster" name="Doom Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1736,7 +1736,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19341" level="95" type="L2Monster" name="Doom Knight">
+	<npc id="19341" level="95" type="Monster" name="Doom Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1772,7 +1772,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="19342" level="95" type="L2Monster" name="Lidia von Hellmann" title="Lady of the Fortress of the Dead">
+	<npc id="19342" level="95" type="Monster" name="Lidia von Hellmann" title="Lady of the Fortress of the Dead">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1810,7 +1810,7 @@
 			<height normal="25.4" />
 		</collision>
 	</npc>
-	<npc id="19343" level="95" type="L2Monster" name="Giselle von Hellmann" title="Vengeful Ghost of the von Hellmann House">
+	<npc id="19343" level="95" type="Monster" name="Giselle von Hellmann" title="Vengeful Ghost of the von Hellmann House">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1847,7 +1847,7 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="19344" level="95" type="L2Monster" name="Giselle von Hellmann" title="Resurrected">
+	<npc id="19344" level="95" type="Monster" name="Giselle von Hellmann" title="Resurrected">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1884,7 +1884,7 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="19345" level="95" type="L2Monster" name="Alfred von Hellmann" title="Master of the von Hellmann House">
+	<npc id="19345" level="95" type="Monster" name="Alfred von Hellmann" title="Master of the von Hellmann House">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1921,7 +1921,7 @@
 			<height normal="35" grown="42.9" />
 		</collision>
 	</npc>
-	<npc id="19346" level="94" type="L2Monster" name="Vampire Adept">
+	<npc id="19346" level="94" type="Monster" name="Vampire Adept">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -1957,7 +1957,7 @@
 			<height normal="21.5" grown="25.8" />
 		</collision>
 	</npc>
-	<npc id="19347" level="94" type="L2Monster" name="Vampire Soldier">
+	<npc id="19347" level="94" type="Monster" name="Vampire Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1993,7 +1993,7 @@
 			<height normal="23.5" grown="29" />
 		</collision>
 	</npc>
-	<npc id="19348" level="94" type="L2Monster" name="Vampire Caster">
+	<npc id="19348" level="94" type="Monster" name="Vampire Caster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2029,7 +2029,7 @@
 			<height normal="21.5" grown="25.8" />
 		</collision>
 	</npc>
-	<npc id="19349" level="94" type="L2Monster" name="Vampire Magister">
+	<npc id="19349" level="94" type="Monster" name="Vampire Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2065,7 +2065,7 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="19350" level="95" type="L2Monster" name="Vampire Warlord">
+	<npc id="19350" level="95" type="Monster" name="Vampire Warlord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2101,7 +2101,7 @@
 			<height normal="31.5" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19351" level="95" type="L2Monster" name="Vampire Leader">
+	<npc id="19351" level="95" type="Monster" name="Vampire Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2136,7 +2136,7 @@
 			<height normal="25.8" />
 		</collision>
 	</npc>
-	<npc id="19352" level="90" type="L2Monster" name="Sophie von Hellmann's Soul" title="Maligned">
+	<npc id="19352" level="90" type="Monster" name="Sophie von Hellmann's Soul" title="Maligned">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2170,7 +2170,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="19353" level="95" type="L2Monster" name="Logan" title="Near-death">
+	<npc id="19353" level="95" type="Monster" name="Logan" title="Near-death">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2204,7 +2204,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19354" level="95" type="L2Monster" name="Von Hellmann House's Maligned Spirit">
+	<npc id="19354" level="95" type="Monster" name="Von Hellmann House's Maligned Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2238,7 +2238,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19355" level="95" type="L2Monster" name="">
+	<npc id="19355" level="95" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2272,7 +2272,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19356" level="95" type="L2Monster" name="">
+	<npc id="19356" level="95" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2306,7 +2306,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19357" level="95" type="L2Monster" name="Bloody Lord Nurka">
+	<npc id="19357" level="95" type="Monster" name="Bloody Lord Nurka">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2348,7 +2348,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="19358" level="95" type="L2Monster" name="Nurka's Royal Guard">
+	<npc id="19358" level="95" type="Monster" name="Nurka's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2388,7 +2388,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="19359" level="95" type="L2Monster" name="Nurka's Royal Guard">
+	<npc id="19359" level="95" type="Monster" name="Nurka's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2428,7 +2428,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19360" level="94" type="L2Monster" name="Soldier of Resistance">
+	<npc id="19360" level="94" type="Monster" name="Soldier of Resistance">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2468,7 +2468,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19361" level="94" type="L2Monster" name="Archer of Resistance">
+	<npc id="19361" level="94" type="Monster" name="Archer of Resistance">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2508,7 +2508,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19362" level="95" type="L2Monster" name="Wizard of Resistance">
+	<npc id="19362" level="95" type="Monster" name="Wizard of Resistance">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2548,7 +2548,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19363" level="95" type="L2Monster" name="Healer of Resistance">
+	<npc id="19363" level="95" type="Monster" name="Healer of Resistance">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2588,7 +2588,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19364" level="99" type="L2Npc" name="">
+	<npc id="19364" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2618,7 +2618,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19365" level="1" type="L2Monster" name="Cute Buffalo">
+	<npc id="19365" level="1" type="Monster" name="Cute Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2647,7 +2647,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19366" level="1" type="L2Monster" name="Cute Spotted Buffalo">
+	<npc id="19366" level="1" type="Monster" name="Cute Spotted Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2676,7 +2676,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="19367" level="1" type="L2Npc" name="Silvermane White Tiger" title="Cow Thief">
+	<npc id="19367" level="1" type="Npc" name="Silvermane White Tiger" title="Cow Thief">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -2705,7 +2705,7 @@
 			<height normal="28" grown="34" />
 		</collision>
 	</npc>
-	<npc id="19368" level="1" type="L2Npc" name="Greedy Mahum Chef">
+	<npc id="19368" level="1" type="Npc" name="Greedy Mahum Chef">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2734,7 +2734,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="19369" level="99" type="L2Npc" name="Campfire">
+	<npc id="19369" level="99" type="Npc" name="Campfire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2764,7 +2764,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="19370" level="99" type="L2Monster" name="Mysterious Fruit Tree">
+	<npc id="19370" level="99" type="Monster" name="Mysterious Fruit Tree">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>MALE</sex>
@@ -2794,7 +2794,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="19371" level="99" type="L2Monster" name="Greedy Pixie">
+	<npc id="19371" level="99" type="Monster" name="Greedy Pixie">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
@@ -2824,7 +2824,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19372" level="99" type="L2Npc" name="Dimensional Rift">
+	<npc id="19372" level="99" type="Npc" name="Dimensional Rift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -2854,7 +2854,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19373" level="1" type="L2Monster" name="Broken Toad Cannon">
+	<npc id="19373" level="1" type="Monster" name="Broken Toad Cannon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
@@ -2883,7 +2883,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19374" level="1" type="L2Monster" name="Broken Gathering Robot">
+	<npc id="19374" level="1" type="Monster" name="Broken Gathering Robot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2912,7 +2912,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19375" level="99" type="L2Monster" name="Repair Robot">
+	<npc id="19375" level="99" type="Monster" name="Repair Robot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2942,7 +2942,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19376" level="99" type="L2Monster" name="Repair Robot">
+	<npc id="19376" level="99" type="Monster" name="Repair Robot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2972,7 +2972,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19377" level="99" type="L2Npc" name="Teleport Source" title="Teleport">
+	<npc id="19377" level="99" type="Npc" name="Teleport Source" title="Teleport">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3002,7 +3002,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="19378" level="99" type="L2Npc" name="Star Stone" title="Gatherable">
+	<npc id="19378" level="99" type="Npc" name="Star Stone" title="Gatherable">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3032,7 +3032,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="19379" level="99" type="L2Npc" name="Sandblast">
+	<npc id="19379" level="99" type="Npc" name="Sandblast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3062,7 +3062,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="19380" level="99" type="L2Monster" name="Stone Gathering Robot">
+	<npc id="19380" level="99" type="Monster" name="Stone Gathering Robot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3092,7 +3092,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="19381" level="1" type="L2Monster" name="Destroyer Robot">
+	<npc id="19381" level="1" type="Monster" name="Destroyer Robot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3121,7 +3121,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="19382" level="1" type="L2Npc" name="Clan Request Assistant">
+	<npc id="19382" level="1" type="Npc" name="Clan Request Assistant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3150,7 +3150,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19383" level="99" type="L2Npc" name="Blue Stone" title="Gatherable">
+	<npc id="19383" level="99" type="Npc" name="Blue Stone" title="Gatherable">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3180,7 +3180,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="19384" level="99" type="L2Npc" name="Dark Summon Circle">
+	<npc id="19384" level="99" type="Npc" name="Dark Summon Circle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>ETC</sex>
@@ -3210,7 +3210,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19385" level="99" type="L2Monster" name="Crystal Raider">
+	<npc id="19385" level="99" type="Monster" name="Crystal Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3240,7 +3240,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="19386" level="1" type="L2Monster" name="Broken Guardian Robot">
+	<npc id="19386" level="1" type="Monster" name="Broken Guardian Robot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3269,7 +3269,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="19387" level="1" type="L2Npc" name="Cute Milk Cow">
+	<npc id="19387" level="1" type="Npc" name="Cute Milk Cow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3298,7 +3298,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="19388" level="99" type="L2Npc" name="Summon Device">
+	<npc id="19388" level="99" type="Npc" name="Summon Device">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3328,7 +3328,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19389" level="1" type="L2Npc" name="">
+	<npc id="19389" level="1" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3357,7 +3357,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19390" level="99" type="L2Npc" name="">
+	<npc id="19390" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3386,7 +3386,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19391" level="99" type="L2Npc" name="">
+	<npc id="19391" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3415,7 +3415,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="19392" level="99" type="L2Npc" name="">
+	<npc id="19392" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3444,7 +3444,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="19393" level="85" type="L2Monster" name="Contaminated Cocoon">
+	<npc id="19393" level="85" type="Monster" name="Contaminated Cocoon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3473,7 +3473,7 @@
 			<height normal="130" />
 		</collision>
 	</npc>
-	<npc id="19394" level="85" type="L2Monster" name="Large Contaminated Cocoon">
+	<npc id="19394" level="85" type="Monster" name="Large Contaminated Cocoon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3502,7 +3502,7 @@
 			<height normal="191" />
 		</collision>
 	</npc>
-	<npc id="19395" level="99" type="L2Monster" name="">
+	<npc id="19395" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3531,7 +3531,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19396" level="99" type="L2Monster" name="Mother Nornil">
+	<npc id="19396" level="99" type="Monster" name="Mother Nornil">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3560,7 +3560,7 @@
 			<height normal="253" />
 		</collision>
 	</npc>
-	<npc id="19397" level="99" type="L2Npc" name="">
+	<npc id="19397" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3595,7 +3595,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="19398" level="99" type="L2Npc" name="">
+	<npc id="19398" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3630,7 +3630,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="19399" level="99" type="L2Npc" name="">
+	<npc id="19399" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>

@@ -22,7 +22,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.enums.SubclassType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.SubClass;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -36,7 +36,7 @@ public class ExSubjobInfo implements IClientOutgoingPacket
 	private final int _type;
 	private final List<SubInfo> _subs;
 	
-	public ExSubjobInfo(L2PcInstance player, SubclassInfoType type)
+	public ExSubjobInfo(PlayerInstance player, SubclassInfoType type)
 	{
 		_currClassId = player.getClassId().getId();
 		_currRace = player.getRace().ordinal();
@@ -66,7 +66,7 @@ public class ExSubjobInfo implements IClientOutgoingPacket
 			_type = sub.isDualClass() ? SubclassType.DUALCLASS.ordinal() : SubclassType.SUBCLASS.ordinal();
 		}
 		
-		public SubInfo(L2PcInstance player)
+		public SubInfo(PlayerInstance player)
 		{
 			_index = 0;
 			_classId = player.getBaseClass();

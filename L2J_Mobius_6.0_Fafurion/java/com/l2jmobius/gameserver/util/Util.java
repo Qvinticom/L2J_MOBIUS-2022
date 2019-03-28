@@ -42,11 +42,11 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractHtmlPacket;
@@ -60,7 +60,7 @@ public final class Util
 	private static final Logger LOGGER = Logger.getLogger(Util.class.getName());
 	private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 	
-	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment)
+	public static void handleIllegalPlayerAction(PlayerInstance actor, String message, IllegalActionPunishmentType punishment)
 	{
 		ThreadPool.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
 	}
@@ -180,7 +180,7 @@ public final class Util
 	 * @param includeZAxis
 	 * @return {@code true} if the two objects are within specified range between each other, {@code false} otherwise
 	 */
-	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
+	public static boolean checkIfInRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis)
 	{
 		if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceWorld() != obj2.getInstanceWorld()))
 		{
@@ -192,13 +192,13 @@ public final class Util
 		}
 		
 		int radius = 0;
-		if (obj1.isCharacter())
+		if (obj1.isCreature())
 		{
-			radius += ((L2Character) obj1).getTemplate().getCollisionRadius();
+			radius += ((Creature) obj1).getTemplate().getCollisionRadius();
 		}
-		if (obj2.isCharacter())
+		if (obj2.isCreature())
 		{
-			radius += ((L2Character) obj2).getTemplate().getCollisionRadius();
+			radius += ((Creature) obj2).getTemplate().getCollisionRadius();
 		}
 		
 		return calculateDistance(obj1, obj2, includeZAxis, false) <= (range + radius);
@@ -212,7 +212,7 @@ public final class Util
 	 * @param includeZAxis if true, check also Z axis (3-dimensional check), otherwise only 2D
 	 * @return {@code true} if objects are within specified range between each other, {@code false} otherwise
 	 */
-	public static boolean checkIfInShortRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
+	public static boolean checkIfInShortRange(int range, WorldObject obj1, WorldObject obj2, boolean includeZAxis)
 	{
 		if ((obj1 == null) || (obj2 == null))
 		{
@@ -398,7 +398,7 @@ public final class Util
 		return dateFormat.format(date.getTime());
 	}
 	
-	private static void buildHtmlBypassCache(L2PcInstance player, HtmlActionScope scope, String html)
+	private static void buildHtmlBypassCache(PlayerInstance player, HtmlActionScope scope, String html)
 	{
 		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int bypassEnd = 0;
@@ -439,7 +439,7 @@ public final class Util
 		}
 	}
 	
-	private static void buildHtmlLinkCache(L2PcInstance player, HtmlActionScope scope, String html)
+	private static void buildHtmlLinkCache(PlayerInstance player, HtmlActionScope scope, String html)
 	{
 		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int linkEnd = 0;
@@ -486,7 +486,7 @@ public final class Util
 	 * @param npcObjId the npc object id the html actions are cached for
 	 * @param html the html code to parse
 	 */
-	public static void buildHtmlActionCache(L2PcInstance player, HtmlActionScope scope, int npcObjId, String html)
+	public static void buildHtmlActionCache(PlayerInstance player, HtmlActionScope scope, int npcObjId, String html)
 	{
 		if ((player == null) || (scope == null) || (npcObjId < 0) || (html == null))
 		{
@@ -506,12 +506,12 @@ public final class Util
 	 * Helper method to send a community board html to the specified player.<br>
 	 * HtmlActionCache will be build with npc origin 0 which means the<br>
 	 * links on the html are not bound to a specific npc.
-	 * @param activeChar the player
+	 * @param player the player
 	 * @param html the html content
 	 */
-	public static void sendCBHtml(L2PcInstance activeChar, String html)
+	public static void sendCBHtml(PlayerInstance player, String html)
 	{
-		sendCBHtml(activeChar, html, 0);
+		sendCBHtml(player, html, 0);
 	}
 	
 	/**
@@ -519,13 +519,13 @@ public final class Util
 	 * When {@code npcObjId} is greater -1 the HtmlActionCache will be build<br>
 	 * with the npcObjId as origin. An origin of 0 means the cached bypasses<br>
 	 * are not bound to a specific npc.
-	 * @param activeChar the player to send the html content to
+	 * @param player the player to send the html content to
 	 * @param html the html content
 	 * @param npcObjId bypass origin to use
 	 */
-	public static void sendCBHtml(L2PcInstance activeChar, String html, int npcObjId)
+	public static void sendCBHtml(PlayerInstance player, String html, int npcObjId)
 	{
-		sendCBHtml(activeChar, html, null, npcObjId);
+		sendCBHtml(player, html, null, npcObjId);
 	}
 	
 	/**
@@ -533,13 +533,13 @@ public final class Util
 	 * HtmlActionCache will be build with npc origin 0 which means the<br>
 	 * links on the html are not bound to a specific npc. It also fills a<br>
 	 * multiedit field in the send html if fillMultiEdit is not null.
-	 * @param activeChar the player
+	 * @param player the player
 	 * @param html the html content
 	 * @param fillMultiEdit text to fill the multiedit field with(may be null)
 	 */
-	public static void sendCBHtml(L2PcInstance activeChar, String html, String fillMultiEdit)
+	public static void sendCBHtml(PlayerInstance player, String html, String fillMultiEdit)
 	{
-		sendCBHtml(activeChar, html, fillMultiEdit, 0);
+		sendCBHtml(player, html, fillMultiEdit, 0);
 	}
 	
 	/**
@@ -548,69 +548,69 @@ public final class Util
 	 * is not null. When {@code npcObjId} is greater -1 the HtmlActionCache will be build<br>
 	 * with the npcObjId as origin. An origin of 0 means the cached bypasses<br>
 	 * are not bound to a specific npc.
-	 * @param activeChar the player
+	 * @param player the player
 	 * @param html the html content
 	 * @param fillMultiEdit text to fill the multiedit field with(may be null)
 	 * @param npcObjId bypass origin to use
 	 */
-	public static void sendCBHtml(L2PcInstance activeChar, String html, String fillMultiEdit, int npcObjId)
+	public static void sendCBHtml(PlayerInstance player, String html, String fillMultiEdit, int npcObjId)
 	{
-		if ((activeChar == null) || (html == null))
+		if ((player == null) || (html == null))
 		{
 			return;
 		}
 		
-		activeChar.clearHtmlActions(HtmlActionScope.COMM_BOARD_HTML);
+		player.clearHtmlActions(HtmlActionScope.COMM_BOARD_HTML);
 		
 		if (npcObjId > -1)
 		{
-			buildHtmlActionCache(activeChar, HtmlActionScope.COMM_BOARD_HTML, npcObjId, html);
+			buildHtmlActionCache(player, HtmlActionScope.COMM_BOARD_HTML, npcObjId, html);
 		}
 		
 		if (fillMultiEdit != null)
 		{
-			activeChar.sendPacket(new ShowBoard(html, "1001"));
-			fillMultiEditContent(activeChar, fillMultiEdit);
+			player.sendPacket(new ShowBoard(html, "1001"));
+			fillMultiEditContent(player, fillMultiEdit);
 		}
 		else if (html.length() < 16250)
 		{
-			activeChar.sendPacket(new ShowBoard(html, "101"));
-			activeChar.sendPacket(new ShowBoard(null, "102"));
-			activeChar.sendPacket(new ShowBoard(null, "103"));
+			player.sendPacket(new ShowBoard(html, "101"));
+			player.sendPacket(new ShowBoard(null, "102"));
+			player.sendPacket(new ShowBoard(null, "103"));
 		}
 		else if (html.length() < (16250 * 2))
 		{
-			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-			activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
-			activeChar.sendPacket(new ShowBoard(null, "103"));
+			player.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+			player.sendPacket(new ShowBoard(html.substring(16250), "102"));
+			player.sendPacket(new ShowBoard(null, "103"));
 		}
 		else if (html.length() < (16250 * 3))
 		{
-			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-			activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
-			activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
+			player.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+			player.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
+			player.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
 		}
 		else
 		{
-			activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
-			activeChar.sendPacket(new ShowBoard(null, "102"));
-			activeChar.sendPacket(new ShowBoard(null, "103"));
+			player.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
+			player.sendPacket(new ShowBoard(null, "102"));
+			player.sendPacket(new ShowBoard(null, "103"));
 		}
 	}
 	
 	/**
 	 * Fills the community board's multiedit window with text. Must send after sendCBHtml
-	 * @param activeChar
+	 * @param player
 	 * @param text
 	 */
-	public static void fillMultiEditContent(L2PcInstance activeChar, String text)
+	public static void fillMultiEditContent(PlayerInstance player, String text)
 	{
-		activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
+		player.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", player.getName(), Integer.toString(player.getObjectId()), player.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
 	}
 	
-	public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius)
+	public static boolean isInsideRangeOfObjectId(WorldObject obj, int targetObjId, int radius)
 	{
-		final L2Object target = L2World.getInstance().findObject(targetObjId);
+		final WorldObject target = World.getInstance().findObject(targetObjId);
 		return (target != null) && (obj.calculateDistance3D(target) <= radius);
 	}
 	

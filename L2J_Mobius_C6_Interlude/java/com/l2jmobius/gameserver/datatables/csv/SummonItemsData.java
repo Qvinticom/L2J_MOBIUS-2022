@@ -23,13 +23,13 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2SummonItem;
+import com.l2jmobius.gameserver.model.SummonItem;
 
 public class SummonItemsData
 {
 	private static Logger LOGGER = Logger.getLogger(SummonItemsData.class.getName());
 	
-	private final Map<Integer, L2SummonItem> _summonitems;
+	private final Map<Integer, SummonItem> _summonitems;
 	
 	private static SummonItemsData _instance;
 	
@@ -95,7 +95,7 @@ public class SummonItemsData
 					continue;
 				}
 				
-				L2SummonItem summonitem = new L2SummonItem(itemID, npcID, summonType);
+				SummonItem summonitem = new SummonItem(itemID, npcID, summonType);
 				_summonitems.put(itemID, summonitem);
 			}
 		}
@@ -114,7 +114,7 @@ public class SummonItemsData
 		LOGGER.info("Summon items data: Loaded " + _summonitems.size() + " summon items.");
 	}
 	
-	public L2SummonItem getSummonItem(int itemId)
+	public SummonItem getSummonItem(int itemId)
 	{
 		return _summonitems.get(itemId);
 	}
@@ -125,7 +125,7 @@ public class SummonItemsData
 		final int[] result = new int[size];
 		int i = 0;
 		
-		for (L2SummonItem si : _summonitems.values())
+		for (SummonItem si : _summonitems.values())
 		{
 			result[i] = si.getItemId();
 			i++;

@@ -21,10 +21,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 public final class AntiFeedManager
 {
@@ -55,7 +55,7 @@ public final class AntiFeedManager
 	 * @param target Target character
 	 * @return True if kill is non-feeded.
 	 */
-	public boolean check(L2Character attacker, L2Character target)
+	public boolean check(Creature attacker, Creature target)
 	{
 		if (!Config.ANTIFEED_ENABLE)
 		{
@@ -67,7 +67,7 @@ public final class AntiFeedManager
 			return false;
 		}
 		
-		final L2PcInstance targetPlayer = target.getActingPlayer();
+		final PlayerInstance targetPlayer = target.getActingPlayer();
 		if (targetPlayer == null)
 		{
 			return false;
@@ -89,14 +89,14 @@ public final class AntiFeedManager
 		
 		if (Config.ANTIFEED_DUALBOX && (attacker != null))
 		{
-			final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
 			if (attackerPlayer == null)
 			{
 				return false;
 			}
 			
-			final L2GameClient targetClient = targetPlayer.getClient();
-			final L2GameClient attackerClient = attackerPlayer.getClient();
+			final GameClient targetClient = targetPlayer.getClient();
+			final GameClient attackerClient = attackerPlayer.getClient();
 			if ((targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached())
 			{
 				// unable to check ip address
@@ -133,7 +133,7 @@ public final class AntiFeedManager
 	 * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
 	 *         False if number of all simultaneous connections from player's IP address higher than max.
 	 */
-	public boolean tryAddPlayer(int eventId, L2PcInstance player, int max)
+	public boolean tryAddPlayer(int eventId, PlayerInstance player, int max)
 	{
 		return tryAddClient(eventId, player.getClient(), max);
 	}
@@ -145,7 +145,7 @@ public final class AntiFeedManager
 	 * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
 	 *         False if number of all simultaneous connections from player's IP address higher than max.
 	 */
-	public boolean tryAddClient(int eventId, L2GameClient client, int max)
+	public boolean tryAddClient(int eventId, GameClient client, int max)
 	{
 		if (client == null)
 		{
@@ -164,7 +164,7 @@ public final class AntiFeedManager
 		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
 		{
 			final String address = client.getConnectionAddress().getHostAddress();
-			for (L2PcInstance player : L2World.getInstance().getPlayers())
+			for (PlayerInstance player : World.getInstance().getPlayers())
 			{
 				if (((player.getClient() == null) || player.getClient().isDetached()) && player.getIPAddress().equals(address))
 				{
@@ -187,7 +187,7 @@ public final class AntiFeedManager
 	 * @param player
 	 * @return true if success and false if any problem detected.
 	 */
-	public boolean removePlayer(int eventId, L2PcInstance player)
+	public boolean removePlayer(int eventId, PlayerInstance player)
 	{
 		return removeClient(eventId, player.getClient());
 	}
@@ -198,7 +198,7 @@ public final class AntiFeedManager
 	 * @param client
 	 * @return true if success and false if any problem detected.
 	 */
-	public boolean removeClient(int eventId, L2GameClient client)
+	public boolean removeClient(int eventId, GameClient client)
 	{
 		if (client == null)
 		{
@@ -227,9 +227,9 @@ public final class AntiFeedManager
 	 * Remove player connection IP address from all registered events lists.
 	 * @param client
 	 */
-	public void onDisconnect(L2GameClient client)
+	public void onDisconnect(GameClient client)
 	{
-		if ((client == null) || (client.getConnectionAddress() == null) || (client.getActiveChar() == null))
+		if ((client == null) || (client.getConnectionAddress() == null) || (client.getPlayer() == null))
 		{
 			return;
 		}
@@ -258,7 +258,7 @@ public final class AntiFeedManager
 	 * @param max
 	 * @return maximum number of allowed connections (whitelist + max)
 	 */
-	public int getLimit(L2PcInstance player, int max)
+	public int getLimit(PlayerInstance player, int max)
 	{
 		return getLimit(player.getClient(), max);
 	}
@@ -268,7 +268,7 @@ public final class AntiFeedManager
 	 * @param max
 	 * @return maximum number of allowed connections (whitelist + max)
 	 */
-	public int getLimit(L2GameClient client, int max)
+	public int getLimit(GameClient client, int max)
 	{
 		if (client == null)
 		{

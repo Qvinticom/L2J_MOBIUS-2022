@@ -17,8 +17,8 @@
 package quests.Q00176_StepsForHonor;
 
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,24 +44,24 @@ public class Q00176_StepsForHonor extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equalsIgnoreCase("36479-04.html"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equalsIgnoreCase("36479-04.html"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -74,7 +74,7 @@ public class Q00176_StepsForHonor extends Quest
 				{
 					return "36479-05.html";
 				}
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -83,7 +83,7 @@ public class Q00176_StepsForHonor extends Quest
 					}
 					case 2:
 					{
-						st.setCond(3, true);
+						qs.setCond(3, true);
 						htmltext = "36479-07.html";
 						break;
 					}
@@ -94,7 +94,7 @@ public class Q00176_StepsForHonor extends Quest
 					}
 					case 4:
 					{
-						st.setCond(5, true);
+						qs.setCond(5, true);
 						htmltext = "36479-09.html";
 						break;
 					}
@@ -105,7 +105,7 @@ public class Q00176_StepsForHonor extends Quest
 					}
 					case 6:
 					{
-						st.setCond(7, true);
+						qs.setCond(7, true);
 						htmltext = "36479-11.html";
 						break;
 					}
@@ -117,7 +117,7 @@ public class Q00176_StepsForHonor extends Quest
 					case 8:
 					{
 						giveItems(player, CLOAK, 1);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = "36479-13.html";
 						break;
 					}

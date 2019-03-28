@@ -33,13 +33,13 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.MinionList;
@@ -145,8 +145,8 @@ public final class TowerOfNaia extends AbstractNpcAI
 	private static Map<Integer, Integer> ZONES = new HashMap<>();
 	private static Map<Integer, int[][]> SPAWNS = new HashMap<>();
 	
-	private L2MonsterInstance _lock;
-	private final L2Npc _controller;
+	private MonsterInstance _lock;
+	private final Npc _controller;
 	private int _counter;
 	private final AtomicInteger _despawnedSporesCount = new AtomicInteger();
 	private final int[] _indexCount =
@@ -158,8 +158,8 @@ public final class TowerOfNaia extends AbstractNpcAI
 	private int _winIndex;
 	
 	private final Map<Integer, Boolean> _activeRooms = new HashMap<>();
-	private final Map<Integer, List<L2Npc>> _spawns = new ConcurrentHashMap<>();
-	private final Set<L2Npc> _sporeSpawn = ConcurrentHashMap.newKeySet();
+	private final Map<Integer, List<Npc>> _spawns = new ConcurrentHashMap<>();
+	private final Set<Npc> _sporeSpawn = ConcurrentHashMap.newKeySet();
 	static
 	{
 		// Format: entrance_door, exit_door
@@ -372,7 +372,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			addKillId(npcId);
 		}
 		
-		_lock = (L2MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
+		_lock = (MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
 		_controller = addSpawn(CONTROLLER, 16608, 244420, 11620, 31264, false, 0, false);
 		_counter = 90;
 		initSporeChallenge();
@@ -380,7 +380,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		
@@ -409,7 +409,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		
@@ -417,7 +417,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (event.equalsIgnoreCase("spawn_lock"))
 		{
 			htmltext = null;
-			_lock = (L2MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
+			_lock = (MonsterInstance) addSpawn(LOCK, 16409, 244438, 11620, -1048, false, 0, false);
 			_counter = 90;
 		}
 		
@@ -445,10 +445,10 @@ public final class TowerOfNaia extends AbstractNpcAI
 				// Requirements aren't met, despawn reached spores
 				else
 				{
-					final Iterator<L2Npc> it = _sporeSpawn.iterator();
+					final Iterator<Npc> it = _sporeSpawn.iterator();
 					while (it.hasNext())
 					{
-						final L2Npc spore = it.next();
+						final Npc spore = it.next();
 						if ((spore != null) && !spore.isDead() && (spore.getX() == spore.getSpawn().getX()) && (spore.getY() == spore.getSpawn().getY()))
 						{
 							spore.deleteMe();
@@ -515,12 +515,12 @@ public final class TowerOfNaia extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("teleport") && (_lock != null))
 		{
 			htmltext = null;
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			if (party != null)
 			{
 				if (Util.checkIfInRange(3000, party.getLeader(), npc, true))
 				{
-					for (L2PcInstance partyMember : party.getMembers())
+					for (PlayerInstance partyMember : party.getMembers())
 					{
 						if (Util.checkIfInRange(2000, partyMember, npc, true))
 						{
@@ -550,7 +550,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("go") && _activeRooms.containsKey(npcId) && !_activeRooms.get(npcId))
 		{
 			htmltext = null;
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			
 			if (party != null)
 			{
@@ -567,7 +567,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((_lock != null) && (npc.getObjectId() == _lock.getObjectId()))
 		{
@@ -593,7 +593,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		
@@ -608,7 +608,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		{
 			int managerId = 0;
 			
-			for (L2ZoneType zone : ZoneManager.getInstance().getZones(npc.getX(), npc.getY(), npc.getZ()))
+			for (ZoneType zone : ZoneManager.getInstance().getZones(npc.getX(), npc.getY(), npc.getZ()))
 			{
 				if (ZONES.containsValue(zone.getId()))
 				{
@@ -625,7 +625,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			
 			if ((managerId > 0) && _spawns.containsKey(managerId))
 			{
-				final List<L2Npc> spawned = _spawns.get(managerId);
+				final List<Npc> spawned = _spawns.get(managerId);
 				spawned.remove(npc);
 				if (spawned.isEmpty() && DOORS.containsKey(managerId))
 				{
@@ -685,7 +685,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 					if ((Math.abs(_indexCount[sporeGroup]) < ELEMENT_INDEX_LIMIT) && (Math.abs(_indexCount[sporeGroup]) > 0) && ((_indexCount[sporeGroup] % 20) == 0) && (getRandom(100) < 50))
 					{
 						final String el = ELEMENTS_NAME[Arrays.binarySearch(ELEMENTS, npcId)];
-						for (L2Npc spore : _sporeSpawn)
+						for (Npc spore : _sporeSpawn)
 						{
 							if ((spore != null) && !spore.isDead() && (spore.getId() == npcId))
 							{
@@ -712,7 +712,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 						_winIndex = Arrays.binarySearch(ELEMENTS, npcId);
 						final int[] coord = SPORES_MERGE_POSITION[_winIndex];
 						
-						for (L2Npc spore : _sporeSpawn)
+						for (Npc spore : _sporeSpawn)
 						{
 							if ((spore != null) && !spore.isDead())
 							{
@@ -729,7 +729,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		final int npcId = npc.getId();
 		
@@ -791,7 +791,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		
 		if (_spawns.containsKey(managerId) && (_spawns.get(managerId) != null))
 		{
-			for (L2Npc npc : _spawns.get(managerId))
+			for (Npc npc : _spawns.get(managerId))
 			{
 				if ((npc != null) && !npc.isDead())
 				{
@@ -822,7 +822,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		GlobalVariablesManager.getInstance().set("elpy_respawn_time", respawnTime);
 	}
 	
-	private int moveTo(L2Npc npc, int[] coords)
+	private int moveTo(Npc npc, int[] coords)
 	{
 		int time = 0;
 		if (npc != null)
@@ -852,12 +852,12 @@ public final class TowerOfNaia extends AbstractNpcAI
 		}
 	}
 	
-	private L2Npc spawnRandomSpore()
+	private Npc spawnRandomSpore()
 	{
 		return addSpawn(getRandom(SPORE_FIRE, SPORE_EARTH), -45474, 247450, -13994, 49152, false, 0, false);
 	}
 	
-	private L2Npc spawnOppositeSpore(int srcSporeId)
+	private Npc spawnOppositeSpore(int srcSporeId)
 	{
 		final int idx = Arrays.binarySearch(ELEMENTS, srcSporeId);
 		return idx >= 0 ? addSpawn(OPPOSITE_ELEMENTS[idx], -45474, 247450, -13994, 49152, false, 0, false) : null;
@@ -876,10 +876,10 @@ public final class TowerOfNaia extends AbstractNpcAI
 		if (SPAWNS.containsKey(managerId))
 		{
 			final int[][] spawnList = SPAWNS.get(managerId);
-			final List<L2Npc> spawned = new CopyOnWriteArrayList<>();
+			final List<Npc> spawned = new CopyOnWriteArrayList<>();
 			for (int[] spawn : spawnList)
 			{
-				final L2Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);
+				final Npc spawnedNpc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false);
 				spawned.add(spawnedNpc);
 			}
 			if (!spawned.isEmpty())
@@ -889,16 +889,16 @@ public final class TowerOfNaia extends AbstractNpcAI
 		}
 	}
 	
-	private void removeForeigners(int managerId, L2Party party)
+	private void removeForeigners(int managerId, Party party)
 	{
 		if ((party != null) && ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
-			final L2ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (L2PcInstance player : zone.getPlayersInside())
+			final ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
+			for (PlayerInstance player : zone.getPlayersInside())
 			{
 				if (player != null)
 				{
-					final L2Party charParty = player.getParty();
+					final Party charParty = player.getParty();
 					if ((charParty == null) || (charParty.getLeaderObjectId() != party.getLeaderObjectId()))
 					{
 						player.teleToLocation(16110, 243841, 11616);
@@ -912,8 +912,8 @@ public final class TowerOfNaia extends AbstractNpcAI
 	{
 		if (ZONES.containsKey(managerId) && (ZoneManager.getInstance().getZoneById(ZONES.get(managerId)) != null))
 		{
-			final L2ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
-			for (L2PcInstance player : zone.getPlayersInside())
+			final ZoneType zone = ZoneManager.getInstance().getZoneById(ZONES.get(managerId));
+			for (PlayerInstance player : zone.getPlayersInside())
 			{
 				if (player != null)
 				{
@@ -925,7 +925,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 	
 	private void removeSpores()
 	{
-		for (L2Npc spore : _sporeSpawn)
+		for (Npc spore : _sporeSpawn)
 		{
 			if ((spore != null) && !spore.isDead())
 			{

@@ -16,39 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Maktakien
  */
-public class GetOffVehicle extends L2GameServerPacket
+public class GetOffVehicle extends GameServerPacket
 {
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	private final L2PcInstance _activeChar;
-	private final L2BoatInstance _boat;
+	private final PlayerInstance _player;
+	private final BoatInstance _boat;
 	
 	/**
-	 * @param activeChar
+	 * @param player
 	 * @param boat
 	 * @param x
 	 * @param y
 	 * @param z
 	 */
-	public GetOffVehicle(L2PcInstance activeChar, L2BoatInstance boat, int x, int y, int z)
+	public GetOffVehicle(PlayerInstance player, BoatInstance boat, int x, int y, int z)
 	{
-		_activeChar = activeChar;
+		_player = player;
 		_boat = boat;
 		_x = x;
 		_y = y;
 		_z = z;
 		
-		if (_activeChar != null)
+		if (_player != null)
 		{
-			_activeChar.setInBoat(false);
-			_activeChar.setBoat(null);
+			_player.setInBoat(false);
+			_player.setBoat(null);
 		}
 	}
 	
@@ -59,13 +59,13 @@ public class GetOffVehicle extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		if ((_boat == null) || (_activeChar == null))
+		if ((_boat == null) || (_player == null))
 		{
 			return;
 		}
 		
 		writeC(0x5d);
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeD(_boat.getObjectId());
 		writeD(_x);
 		writeD(_y);

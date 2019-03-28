@@ -18,9 +18,9 @@ package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class Disguise implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -37,29 +37,29 @@ public class Disguise implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final PlayerInstance player = playable.getActingPlayer();
 		
-		final int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(activeChar);
+		final int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
 		if ((regId > 0) && (regId == (item.getId() - 13596)))
 		{
-			if ((activeChar.getClan() != null) && (activeChar.getClan().getCastleId() > 0))
+			if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
 			{
-				activeChar.sendPacket(SystemMessageId.A_TERRITORY_OWNING_CLAN_MEMBER_CANNOT_USE_A_DISGUISE_SCROLL);
+				player.sendPacket(SystemMessageId.A_TERRITORY_OWNING_CLAN_MEMBER_CANNOT_USE_A_DISGUISE_SCROLL);
 				return false;
 			}
-			TerritoryWarManager.getInstance().addDisguisedPlayer(activeChar.getObjectId());
-			activeChar.broadcastUserInfo();
+			TerritoryWarManager.getInstance().addDisguisedPlayer(player.getObjectId());
+			player.broadcastUserInfo();
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			return true;
 		}
 		else if (regId > 0)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_DISGUISE_SCROLL_CANNOT_BE_USED_BECAUSE_IT_IS_MEANT_FOR_USE_IN_A_DIFFERENT_TERRITORY);
+			player.sendPacket(SystemMessageId.THE_DISGUISE_SCROLL_CANNOT_BE_USED_BECAUSE_IT_IS_MEANT_FOR_USE_IN_A_DIFFERENT_TERRITORY);
 			return false;
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.THE_TERRITORY_WAR_EXCLUSIVE_DISGUISE_AND_TRANSFORMATION_CAN_BE_USED_20_MINUTES_BEFORE_THE_START_OF_THE_TERRITORY_WAR_TO_10_MINUTES_AFTER_ITS_END);
+			player.sendPacket(SystemMessageId.THE_TERRITORY_WAR_EXCLUSIVE_DISGUISE_AND_TRANSFORMATION_CAN_BE_USED_20_MINUTES_BEFORE_THE_START_OF_THE_TERRITORY_WAR_TO_10_MINUTES_AFTER_ITS_END);
 			return false;
 		}
 	}

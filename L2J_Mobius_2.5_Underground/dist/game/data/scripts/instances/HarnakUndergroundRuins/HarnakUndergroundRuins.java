@@ -27,14 +27,14 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -105,7 +105,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		if (firstEnter)
@@ -119,7 +119,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -225,8 +225,8 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				if (world != null)
 				{
 					world.incStatus();
-					final List<L2Npc> npcs = world.spawnGroup("third_room");
-					final L2Npc powerSource = npcs.stream().filter(n -> n.getId() == POWER_SOURCE).findFirst().orElse(null);
+					final List<Npc> npcs = world.spawnGroup("third_room");
+					final Npc powerSource = npcs.stream().filter(n -> n.getId() == POWER_SOURCE).findFirst().orElse(null);
 					if (powerSource != null)
 					{
 						powerSource.setTarget(player);
@@ -247,8 +247,8 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 							world.setStatus(2);
 							world.setParameter("wave", 1);
 							world.setParameter("waveNpcId", entry.getValue());
-							final List<L2Npc> npcs = world.spawnGroup("second_room_wave_1_" + entry.getValue());
-							for (L2Npc n : npcs)
+							final List<Npc> npcs = world.spawnGroup("second_room_wave_1_" + entry.getValue());
+							for (Npc n : npcs)
 							{
 								addAttackPlayerDesire(n, player);
 							}
@@ -264,8 +264,8 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				if (world != null)
 				{
 					final int waveNpcId = world.getParameters().getInt("waveNpcId");
-					final List<L2Npc> npcs = world.spawnGroup("second_room_wave_2_" + waveNpcId);
-					for (L2Npc n : npcs)
+					final List<Npc> npcs = world.spawnGroup("second_room_wave_2_" + waveNpcId);
+					for (Npc n : npcs)
 					{
 						addAttackPlayerDesire(n, player);
 					}
@@ -281,14 +281,14 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				if (world != null)
 				{
 					final int waveNpcId = world.getParameters().getInt("waveNpcId");
-					List<L2Npc> npcs = world.spawnGroup("second_room_wave_3_" + waveNpcId);
-					for (L2Npc n : npcs)
+					List<Npc> npcs = world.spawnGroup("second_room_wave_3_" + waveNpcId);
+					for (Npc n : npcs)
 					{
 						addAttackPlayerDesire(n, player);
 					}
 					
 					npcs = world.spawnGroup("power_source");
-					for (L2Npc n : npcs)
+					for (Npc n : npcs)
 					{
 						n.setTarget(player);
 						startQuestTimer("cast_defense_maximum", 1, n, player);
@@ -362,14 +362,14 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				if (world != null)
 				{
 					final int waveNpcId = world.getParameters().getInt("waveNpcId");
-					List<L2Npc> npcs = world.spawnGroup("third_room_" + waveNpcId);
-					for (L2Npc n : npcs)
+					List<Npc> npcs = world.spawnGroup("third_room_" + waveNpcId);
+					for (Npc n : npcs)
 					{
 						addAttackPlayerDesire(n, player);
 					}
 					
 					npcs = world.spawnGroup("seal");
-					for (L2Npc n : npcs)
+					for (Npc n : npcs)
 					{
 						n.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);
 						startQuestTimer("seal_say", 10000, n, player);
@@ -501,7 +501,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = killer.getInstanceWorld();
 		if (world != null)
@@ -608,7 +608,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	
 	private void moveNpcRoom1(int npcId, NpcStringId message, String timer, Instance world)
 	{
-		final L2Npc npc = world.getNpc(npcId);
+		final Npc npc = world.getNpc(npcId);
 		if (npc != null)
 		{
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NPC_ROOM1_LOC);
@@ -619,7 +619,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -630,7 +630,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				if (npc.getId() != currentNpc)
 				{
 					world.setStatus(0);
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						addAttackPlayerDesire(n, player);
 					}
@@ -676,7 +676,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
@@ -690,14 +690,14 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (!character.isPlayer())
+		if (!creature.isPlayer())
 		{
 			return null;
 		}
 		
-		final L2PcInstance player = character.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
 		{
@@ -728,7 +728,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				}
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	public static void main(String[] args)

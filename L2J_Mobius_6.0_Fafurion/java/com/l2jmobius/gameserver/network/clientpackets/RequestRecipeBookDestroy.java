@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.RecipeHolder;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
@@ -30,17 +30,17 @@ public final class RequestRecipeBookDestroy implements IClientIncomingPacket
 	private int _recipeID;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_recipeID = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -50,9 +50,9 @@ public final class RequestRecipeBookDestroy implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() == PrivateStoreType.MANUFACTURE) || activeChar.isCrafting())
+		if ((player.getPrivateStoreType() == PrivateStoreType.MANUFACTURE) || player.isCrafting())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return;
 		}
 		
@@ -64,10 +64,10 @@ public final class RequestRecipeBookDestroy implements IClientIncomingPacket
 		}
 		
 		// Remove the recipe from the list.
-		activeChar.unregisterRecipeList(_recipeID);
+		player.unregisterRecipeList(_recipeID);
 		
 		// Send the new recipe book.
-		final RecipeBookItemList response = new RecipeBookItemList(activeChar, rp.isDwarvenRecipe());
-		activeChar.sendPacket(response);
+		final RecipeBookItemList response = new RecipeBookItemList(player, rp.isDwarvenRecipe());
+		player.sendPacket(response);
 	}
 }

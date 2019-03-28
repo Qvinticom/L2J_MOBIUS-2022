@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ChangeMoveType implements IClientOutgoingPacket
@@ -25,13 +25,13 @@ public class ChangeMoveType implements IClientOutgoingPacket
 	public static final int WALK = 0;
 	public static final int RUN = 1;
 	
-	private final int _charObjId;
+	private final int _objectId;
 	private final boolean _running;
 	
-	public ChangeMoveType(L2Character character)
+	public ChangeMoveType(Creature creature)
 	{
-		_charObjId = character.getObjectId();
-		_running = character.isRunning();
+		_objectId = creature.getObjectId();
+		_running = creature.isRunning();
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class ChangeMoveType implements IClientOutgoingPacket
 	{
 		OutgoingPackets.CHANGE_MOVE_TYPE.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_running ? RUN : WALK);
 		packet.writeD(0); // c2
 		return true;

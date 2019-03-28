@@ -21,8 +21,8 @@ import java.util.List;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -122,7 +122,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -136,7 +136,7 @@ public final class DarkCloudMansion extends AbstractInstance
 				}
 				case "DELETE":
 				{
-					world.getNpcs(BELETH_SAMPLE).stream().filter(n -> n != npc).forEach(L2Npc::deleteMe);
+					world.getNpcs(BELETH_SAMPLE).stream().filter(n -> n != npc).forEach(Npc::deleteMe);
 					world.setParameter("blocked", false);
 					spawnRoomE(world);
 					break;
@@ -152,7 +152,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == YIYEN)
 		{
@@ -170,7 +170,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -199,7 +199,7 @@ public final class DarkCloudMansion extends AbstractInstance
 								world.setStatus(5);
 								world.spawnGroup("roomBClear");
 								world.spawnGroup("hall");
-								world.getNpcs(MONOLITH).forEach(L2Npc::deleteMe);
+								world.getNpcs(MONOLITH).forEach(Npc::deleteMe);
 							}
 						}
 						else
@@ -242,7 +242,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -282,7 +282,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -327,10 +327,10 @@ public final class DarkCloudMansion extends AbstractInstance
 						world.openCloseDoor(ROOM_B_DOOR, true);
 						
 						int current = 0;
-						final List<L2Npc> desks = world.spawnGroup("roomB");
+						final List<Npc> desks = world.spawnGroup("roomB");
 						while (!desks.isEmpty())
 						{
-							final L2Npc desk = desks.remove(getRandom(desks.size()));
+							final Npc desk = desks.remove(getRandom(desks.size()));
 							desk.setScriptValue(current++);
 						}
 					}
@@ -355,10 +355,10 @@ public final class DarkCloudMansion extends AbstractInstance
 						world.openCloseDoor(ROOM_D_DOOR, true);
 						for (int i = 1; i <= 7; i++)
 						{
-							final List<L2Npc> row = world.spawnGroup("roomD" + i);
+							final List<Npc> row = world.spawnGroup("roomD" + i);
 							for (int x = 0; x < 2; x++)
 							{
-								final L2Npc col = row.remove(getRandom(row.size()));
+								final Npc col = row.remove(getRandom(row.size()));
 								col.setIsInvul(true);
 							}
 						}
@@ -388,19 +388,19 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	private void spawnRoomE(Instance world)
 	{
-		final List<L2Npc> npcs = world.spawnGroup("roomE");
-		for (L2Npc n : npcs)
+		final List<Npc> npcs = world.spawnGroup("roomE");
+		for (Npc n : npcs)
 		{
 			n.broadcastSay(ChatType.NPC_GENERAL, SPAWN_CHAT[getRandom(SPAWN_CHAT.length)]);
 		}
 		for (int i = 0; i < 3; i++)
 		{
-			final L2Npc n = npcs.remove(getRandom(npcs.size()));
+			final Npc n = npcs.remove(getRandom(npcs.size()));
 			n.setScriptValue(1);
 		}
 	}
 	
-	private void handleRoomE(Instance world, L2Npc npc)
+	private void handleRoomE(Instance world, Npc npc)
 	{
 		if (CommonUtil.contains(BELETH_SAMPLE, npc.getId()))
 		{
@@ -422,7 +422,7 @@ public final class DarkCloudMansion extends AbstractInstance
 					else
 					{
 						world.setStatus(10);
-						world.getNpcs().forEach(L2Npc::deleteMe);
+						world.getNpcs().forEach(Npc::deleteMe);
 						world.spawnGroup("roomEClear");
 					}
 				}

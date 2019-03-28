@@ -21,10 +21,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.stat.CharStat;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.TraitType;
 
@@ -62,15 +62,15 @@ public final class DefenceTrait extends AbstractEffect
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getKey());
+				LOGGER.warning(getClass().getSimpleName() + ": value of TraitType enum required but found: " + param.getKey());
 			}
 		}
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		final CharStat charStat = effected.getStat();
+		final CreatureStat charStat = effected.getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
@@ -99,9 +99,9 @@ public final class DefenceTrait extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		final CharStat charStat = effected.getStat();
+		final CreatureStat charStat = effected.getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())

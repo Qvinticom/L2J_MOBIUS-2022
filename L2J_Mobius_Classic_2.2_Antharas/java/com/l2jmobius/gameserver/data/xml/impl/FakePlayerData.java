@@ -29,7 +29,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.holders.FakePlayerHolder;
 
 /**
@@ -74,7 +74,7 @@ public class FakePlayerData implements IGameXmlReader
 		{
 			final StatsSet set = new StatsSet(parseAttributes(fakePlayerNode));
 			final int npcId = set.getInt("npcId");
-			final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
+			final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 			final String name = template.getName();
 			if (CharNameTable.getInstance().getIdByName(name) > 0)
 			{

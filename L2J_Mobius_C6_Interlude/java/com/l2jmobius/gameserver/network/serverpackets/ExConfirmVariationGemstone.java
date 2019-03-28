@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * Format: (ch)ddddd
  */
-public class ExConfirmVariationGemstone extends L2GameServerPacket
+public class ExConfirmVariationGemstone extends GameServerPacket
 {
 	private final int _gemstoneObjId;
 	private final int _unk1;

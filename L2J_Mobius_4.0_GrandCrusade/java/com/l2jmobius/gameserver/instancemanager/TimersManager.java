@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.timers.TimerHolder;
 
 /**
@@ -34,7 +34,7 @@ public class TimersManager
 	
 	public void registerTimer(TimerHolder<?> timer)
 	{
-		final L2Npc npc = timer.getNpc();
+		final Npc npc = timer.getNpc();
 		if (npc != null)
 		{
 			final List<TimerHolder<?>> npcTimers = _timers.computeIfAbsent(npc.getObjectId(), key -> new ArrayList<>());
@@ -44,7 +44,7 @@ public class TimersManager
 			}
 		}
 		
-		final L2PcInstance player = timer.getPlayer();
+		final PlayerInstance player = timer.getPlayer();
 		if (player != null)
 		{
 			final List<TimerHolder<?>> playerTimers = _timers.computeIfAbsent(player.getObjectId(), key -> new ArrayList<>());

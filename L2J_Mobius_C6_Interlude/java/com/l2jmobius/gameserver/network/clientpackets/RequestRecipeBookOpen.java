@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.RecipeController;
 
-public final class RequestRecipeBookOpen extends L2GameClientPacket
+public final class RequestRecipeBookOpen extends GameClientPacket
 {
 	private boolean _isDwarvenCraft;
 	
@@ -31,17 +31,17 @@ public final class RequestRecipeBookOpen extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (getClient().getActiveChar() == null)
+		if (getClient().getPlayer() == null)
 		{
 			return;
 		}
 		
-		if (getClient().getActiveChar().getPrivateStoreType() != 0)
+		if (getClient().getPlayer().getPrivateStoreType() != 0)
 		{
-			getClient().getActiveChar().sendMessage("Cannot use recipe book while trading");
+			getClient().getPlayer().sendMessage("Cannot use recipe book while trading");
 			return;
 		}
 		
-		RecipeController.getInstance().requestBookOpen(getClient().getActiveChar(), _isDwarvenCraft);
+		RecipeController.getInstance().requestBookOpen(getClient().getPlayer(), _isDwarvenCraft);
 	}
 }

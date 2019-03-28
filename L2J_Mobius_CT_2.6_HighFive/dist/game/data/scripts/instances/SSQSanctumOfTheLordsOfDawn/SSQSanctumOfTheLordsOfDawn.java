@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -75,7 +75,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -114,7 +114,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 				if (world != null)
 				{
 					boolean teleported = false;
-					for (L2Npc monster : world.getParameters().getList("save_point1", L2Npc.class))
+					for (Npc monster : world.getParameters().getList("save_point1", Npc.class))
 					{
 						if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 						{
@@ -125,7 +125,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 					}
 					if (!teleported)
 					{
-						for (L2Npc monster : world.getParameters().getList("save_point2", L2Npc.class))
+						for (Npc monster : world.getParameters().getList("save_point2", Npc.class))
 						{
 							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 							{
@@ -137,7 +137,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 					}
 					if (!teleported)
 					{
-						for (L2Npc monster : world.getParameters().getList("save_point3", L2Npc.class))
+						for (Npc monster : world.getParameters().getList("save_point3", Npc.class))
 						{
 							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 							{
@@ -149,7 +149,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 					}
 					if (!teleported)
 					{
-						for (L2Npc monster : world.getParameters().getList("save_point4", L2Npc.class))
+						for (Npc monster : world.getParameters().getList("save_point4", Npc.class))
 						{
 							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 							{
@@ -165,7 +165,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -179,7 +179,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		switch (npc.getId())
 		{
@@ -215,7 +215,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 							world.openDoor(DOOR_TWO);
 							world.setParameter("doorst", doorst + 1);
 							npc.decayMe();
-							for (L2PcInstance plr : world.getAllowed())
+							for (PlayerInstance plr : world.getAllowed())
 							{
 								if (plr != null)
 								{
@@ -259,7 +259,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		npc.disableCoreAI(true); // disable core AI
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));

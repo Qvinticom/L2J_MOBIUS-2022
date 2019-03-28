@@ -22,8 +22,8 @@ import java.util.Map;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -110,10 +110,10 @@ public class Q00463_IMustBeaGenius extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -123,26 +123,26 @@ public class Q00463_IMustBeaGenius extends Quest
 		{
 			case "32069-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				final int number = getRandom(51) + 550;
-				st.set("number", String.valueOf(number));
-				st.set("chance", String.valueOf(getRandom(4)));
+				qs.set("number", String.valueOf(number));
+				qs.set("chance", String.valueOf(getRandom(4)));
 				htmltext = getHtm(player, event).replace("%num%", String.valueOf(number));
 				break;
 			}
 			case "32069-05.htm":
 			{
-				htmltext = getHtm(player, event).replace("%num%", st.get("number"));
+				htmltext = getHtm(player, event).replace("%num%", qs.get("number"));
 				break;
 			}
 			case "reward":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					final int rnd = getRandom(REWARD.length);
 					final String str = (REWARD[rnd][2] < 10) ? "0" + REWARD[rnd][2] : String.valueOf(REWARD[rnd][2]);
 					addExpAndSp(player, REWARD[rnd][0], REWARD[rnd][1]);
-					st.exitQuest(QuestType.DAILY, true);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "32069-" + str + ".html";
 				}
 				break;
@@ -161,20 +161,20 @@ public class Q00463_IMustBeaGenius extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		if (st.isCond(1))
+		if (qs.isCond(1))
 		{
 			boolean msg = false;
 			int number = MOBS.get(npc.getId()).getCount();
 			
-			if (MOBS.get(npc.getId()).getSpecialChance() == st.getInt("chance"))
+			if (MOBS.get(npc.getId()).getSpecialChance() == qs.getInt("chance"))
 			{
 				number = getRandom(100) + 1;
 			}
@@ -194,11 +194,11 @@ public class Q00463_IMustBeaGenius extends Quest
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2, player.getName(), String.valueOf(number));
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (getQuestItemsCount(player, CORPSE_LOG) == st.getInt("number"))
+				if (getQuestItemsCount(player, CORPSE_LOG) == qs.getInt("number"))
 				{
 					takeItems(player, CORPSE_LOG, -1);
 					giveItems(player, COLLECTION, 1);
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -206,21 +206,21 @@ public class Q00463_IMustBeaGenius extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "32069-07.htm";
 					break;
 				}
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 			}
 			case State.CREATED:
 			{
@@ -229,18 +229,18 @@ public class Q00463_IMustBeaGenius extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "32069-04.html";
 				}
-				else if (st.getInt("var") == 1)
+				else if (qs.getInt("var") == 1)
 				{
 					htmltext = "32069-06a.html";
 				}
 				else
 				{
 					takeItems(player, COLLECTION, -1);
-					st.set("var", "1");
+					qs.set("var", "1");
 					htmltext = "32069-06.html";
 				}
 				break;

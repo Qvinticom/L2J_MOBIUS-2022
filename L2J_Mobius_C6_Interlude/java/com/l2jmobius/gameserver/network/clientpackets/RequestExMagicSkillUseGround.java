@@ -18,15 +18,15 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Fromat:(ch) dddddc
  */
-public final class RequestExMagicSkillUseGround extends L2GameClientPacket
+public final class RequestExMagicSkillUseGround extends GameClientPacket
 {
 	private int _x;
 	private int _y;
@@ -49,35 +49,35 @@ public final class RequestExMagicSkillUseGround extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Get the level of the used skill
-		final int level = activeChar.getSkillLevel(_skillId);
+		final int level = player.getSkillLevel(_skillId);
 		if (level <= 0)
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		// Get the L2Skill template corresponding to the skillID received from the client
-		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
+		// Get the Skill template corresponding to the skillID received from the client
+		final Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
 		
 		if (skill != null)
 		{
-			activeChar.setCurrentSkillWorldPosition(new Point3D(_x, _y, _z));
+			player.setCurrentSkillWorldPosition(new Point3D(_x, _y, _z));
 			
 			// normally magicskilluse packet turns char client side but for these skills, it doesn't (even with correct target)
-			activeChar.setHeading(Util.calculateHeadingFrom(activeChar.getX(), activeChar.getY(), _x, _y));
+			player.setHeading(Util.calculateHeadingFrom(player.getX(), player.getY(), _x, _y));
 			
 			// TODO: Send a valide position and broadcast the new heading.
 			// Putting a simple Validelocation chars can go up of wall spamming on position and clicking on a SIGNET
-			// activeChar.broadcastPacket(new ValidateLocation(activeChar));
+			// player.broadcastPacket(new ValidateLocation(activeChar));
 			
-			activeChar.useMagic(skill, _ctrlPressed, _shiftPressed);
+			player.useMagic(skill, _ctrlPressed, _shiftPressed);
 		}
 		else
 		{

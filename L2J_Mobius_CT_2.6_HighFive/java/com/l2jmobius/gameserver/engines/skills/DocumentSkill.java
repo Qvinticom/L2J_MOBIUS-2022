@@ -37,25 +37,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class DocumentSkill extends DocumentBase
 {
-	public static class SkillInfo
-	{
-		public int id;
-		public String name;
-		public StatsSet[] sets;
-		public StatsSet[] enchsets1;
-		public StatsSet[] enchsets2;
-		public StatsSet[] enchsets3;
-		public StatsSet[] enchsets4;
-		public StatsSet[] enchsets5;
-		public StatsSet[] enchsets6;
-		public StatsSet[] enchsets7;
-		public StatsSet[] enchsets8;
-		public int currentLevel;
-		public List<Skill> skills = new ArrayList<>();
-		public List<Skill> currentSkills = new ArrayList<>();
-	}
-	
-	private SkillInfo _currentSkill;
+	private SkillDataHolder _currentSkill;
 	private final List<Skill> _skillsInFile = new ArrayList<>();
 	
 	public DocumentSkill(File file)
@@ -63,7 +45,7 @@ public class DocumentSkill extends DocumentBase
 		super(file);
 	}
 	
-	private void setCurrentSkill(SkillInfo skill)
+	private void setCurrentSkill(SkillDataHolder skill)
 	{
 		_currentSkill = skill;
 	}
@@ -118,7 +100,7 @@ public class DocumentSkill extends DocumentBase
 				{
 					if ("skill".equalsIgnoreCase(d.getNodeName()))
 					{
-						setCurrentSkill(new SkillInfo());
+						setCurrentSkill(new SkillDataHolder());
 						parseSkill(d);
 						_skillsInFile.addAll(_currentSkill.skills);
 						resetTable();
@@ -127,7 +109,7 @@ public class DocumentSkill extends DocumentBase
 			}
 			else if ("skill".equalsIgnoreCase(n.getNodeName()))
 			{
-				setCurrentSkill(new SkillInfo());
+				setCurrentSkill(new SkillDataHolder());
 				parseSkill(n);
 				_skillsInFile.addAll(_currentSkill.skills);
 			}

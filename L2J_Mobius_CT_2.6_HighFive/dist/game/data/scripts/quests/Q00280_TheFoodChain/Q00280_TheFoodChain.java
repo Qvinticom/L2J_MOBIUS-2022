@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -80,11 +80,11 @@ public final class Q00280_TheFoodChain extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -93,7 +93,7 @@ public final class Q00280_TheFoodChain extends Quest
 		{
 			case "32175-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -119,7 +119,7 @@ public final class Q00280_TheFoodChain extends Quest
 			}
 			case "32175-09.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -152,10 +152,10 @@ public final class Q00280_TheFoodChain extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			final int chance = getRandom(1000);
 			for (ItemHolder dropChance : MONSTER_CHANCE.get(npc.getId()))
@@ -171,12 +171,12 @@ public final class Q00280_TheFoodChain extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{

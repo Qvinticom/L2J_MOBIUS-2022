@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -44,14 +44,14 @@ public final class ConditionSlotItemId extends ConditionInventory
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
 			return false;
 		}
 		
-		final L2ItemInstance itemSlot = effector.getInventory().getPaperdollItem(_slot);
+		final ItemInstance itemSlot = effector.getInventory().getPaperdollItem(_slot);
 		if (itemSlot != null)
 		{
 			return (itemSlot.getId() == _itemId) && (itemSlot.getEnchantLevel() >= _enchantLevel);

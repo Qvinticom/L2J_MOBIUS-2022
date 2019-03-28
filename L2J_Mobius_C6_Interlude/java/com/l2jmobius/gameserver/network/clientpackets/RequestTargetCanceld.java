@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestTargetCanceld extends L2GameClientPacket
+public final class RequestTargetCanceld extends GameClientPacket
 {
 	private int _unselect;
 	
@@ -31,23 +31,23 @@ public final class RequestTargetCanceld extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2Character activeChar = getClient().getActiveChar();
-		if (activeChar != null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player != null)
 		{
 			if (_unselect == 0)
 			{
-				if (activeChar.isCastingNow() && activeChar.canAbortCast())
+				if (player.isCastingNow() && player.canAbortCast())
 				{
-					activeChar.abortCast();
+					player.abortCast();
 				}
-				else if (activeChar.getTarget() != null)
+				else if (player.getTarget() != null)
 				{
-					activeChar.setTarget(null);
+					player.setTarget(null);
 				}
 			}
-			else if (activeChar.getTarget() != null)
+			else if (player.getTarget() != null)
 			{
-				activeChar.setTarget(null);
+				player.setTarget(null);
 			}
 		}
 	}

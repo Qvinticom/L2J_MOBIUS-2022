@@ -31,11 +31,11 @@ import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -54,12 +54,12 @@ public class HeartInfinityAttack extends AbstractNpcAI
 {
 	private class HIAWorld extends InstanceWorld
 	{
-		public List<L2Npc> npcList = new ArrayList<>();
-		public List<L2Npc> startroom = new ArrayList<>();
-		public List<L2Npc> deadTumors = new ArrayList<>();
-		protected L2Npc ekimus;
-		protected L2Npc deadTumor;
-		protected List<L2Npc> hounds = new ArrayList<>(2);
+		public List<Npc> npcList = new ArrayList<>();
+		public List<Npc> startroom = new ArrayList<>();
+		public List<Npc> deadTumors = new ArrayList<>();
+		protected Npc ekimus;
+		protected Npc deadTumor;
+		protected List<Npc> hounds = new ArrayList<>(2);
 		public int tumorCount = 0;
 		public boolean isBossAttacked = false;
 		public long startTime = 0;
@@ -237,15 +237,15 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		tumorRespawnTime = 180 * 1000;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	private boolean checkConditions(PlayerInstance player)
 	{
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -267,7 +267,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			party.getCommandChannel().broadcastPacket(sm);
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getCommandChannel().getMembers())
+		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
@@ -297,7 +297,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(L2PcInstance player, int[] coords)
+	protected void enterInstance(PlayerInstance player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		
@@ -326,7 +326,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance partyMember : player.getParty().getCommandChannel().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getCommandChannel().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -337,7 +337,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				}
 			}
 			broadCastPacket(((HIAWorld) world), new ExShowScreenMessage(NpcStringId.YOU_WILL_PARTICIPATE_IN_S1_S2_SHORTLY_BE_PREPARED_FOR_ANYTHING, 2, 8000));
-			final L2Npc npc = addSpawn(32536, -179376, 206111, -15538, 16384, false, 0, false, ((HIAWorld) world).getInstanceId());
+			final Npc npc = addSpawn(32536, -179376, 206111, -15538, 16384, false, 0, false, ((HIAWorld) world).getInstanceId());
 			((HIAWorld) world).startroom.add(npc);
 		}
 	}
@@ -361,7 +361,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	{
 		if (!world.startroom.isEmpty())
 		{
-			for (L2Npc npc : world.startroom)
+			for (Npc npc : world.startroom)
 			{
 				if (npc != null)
 				{
@@ -375,7 +375,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		{
 			for (int i = 0; i < spawn[6]; i++)
 			{
-				final L2Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+				final Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 				npc.setCurrentHp(npc.getMaxHp() * .5);
 				world.npcList.add(npc);
 			}
@@ -385,7 +385,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		{
 			for (int i = 0; i < spawn[6]; i++)
 			{
-				final L2Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+				final Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 				npc.getSpawn().setRespawnDelay(spawn[5]);
 				npc.getSpawn().setAmount(1);
 				if (spawn[5] > 0)
@@ -411,7 +411,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HIAWorld)
@@ -421,7 +421,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			if (event.startsWith("warpechmus"))
 			{
 				broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 800))
 					{
@@ -434,7 +434,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			{
 				player.destroyItemByItemId("SOI", 13797, 3, player, true);
 				notifyEkimusRoomEntrance(world);
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 400))
 					{
@@ -444,7 +444,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			}
 			else if (event.startsWith("warp"))
 			{
-				L2Npc victim = null;
+				Npc victim = null;
 				victim = world.deadTumor;
 				if (victim != null)
 				{
@@ -456,7 +456,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-					for (L2PcInstance partyMember : player.getParty().getMembers())
+					for (PlayerInstance partyMember : player.getParty().getMembers())
 					{
 						if (partyMember.isInsideRadius3D(player, 500))
 						{
@@ -470,13 +470,13 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
-		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		QuestState qs = player.getQuestState(qn);
+		if (qs == null)
 		{
-			st = newQuestState(player);
+			qs = newQuestState(player);
 		}
 		
 		if (npcId == ABYSSGAZE)
@@ -487,7 +487,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
@@ -507,7 +507,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
@@ -522,7 +522,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(INSTANCEID);
 				
-				for (L2PcInstance player : tmpworld.getAllowed())
+				for (PlayerInstance player : tmpworld.getAllowed())
 				{
 					if (player != null)
 					{
@@ -537,9 +537,9 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			
 			if (npc.getId() == EKIMUS)
 			{
-				for (L2Npc mob : world.hounds)
+				for (Npc mob : world.hounds)
 				{
-					((L2MonsterInstance) mob).addDamageHate(attacker, 0, 500);
+					((MonsterInstance) mob).addDamageHate(attacker, 0, 500);
 					mob.setRunning();
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 				}
@@ -549,7 +549,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
@@ -583,7 +583,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
@@ -602,7 +602,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				if (world.tumorCount < 1)
 				{
 					houndBlocked = true;
-					for (L2Npc hound : world.hounds)
+					for (Npc hound : world.hounds)
 					{
 						hound.setIsInvul(true);
 					}
@@ -631,10 +631,10 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	
 	private class TumorRevival implements Runnable
 	{
-		private final L2Npc _deadTumor;
+		private final Npc _deadTumor;
 		private final HIAWorld _world;
 		
-		public TumorRevival(L2Npc deadTumor, HIAWorld world)
+		public TumorRevival(Npc deadTumor, HIAWorld world)
 		{
 			_deadTumor = world.deadTumor;
 			_world = world;
@@ -647,7 +647,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			{
 				return;
 			}
-			final L2Npc alivetumor = addSpawn(ALIVETUMOR, _deadTumor.getLocation(), _world.getInstanceId());
+			final Npc alivetumor = addSpawn(ALIVETUMOR, _deadTumor.getLocation(), _world.getInstanceId());
 			alivetumor.setCurrentHp(alivetumor.getMaxHp() * .25);
 			notifyTumorRevival(_world);
 			_world.npcList.add(alivetumor);
@@ -710,7 +710,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		if ((world.tumorCount == 1) && houndBlocked)
 		{
 			houndBlocked = false;
-			for (L2Npc hound : world.hounds)
+			for (Npc hound : world.hounds)
 			{
 				hound.setIsInvul(false);
 			}
@@ -725,10 +725,10 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	
 	private class RegenerationCoffinSpawn implements Runnable
 	{
-		private final L2Npc _deadTumor;
+		private final Npc _deadTumor;
 		private final HIAWorld _world;
 		
-		public RegenerationCoffinSpawn(L2Npc deadTumor, HIAWorld world)
+		public RegenerationCoffinSpawn(Npc deadTumor, HIAWorld world)
 		{
 			_deadTumor = world.deadTumor;
 			_world = world;
@@ -743,7 +743,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			}
 			for (int i = 0; i < 4; i++)
 			{
-				final L2Npc worm = addSpawn(COFFIN, _deadTumor.getLocation(), _world.getInstanceId());
+				final Npc worm = addSpawn(COFFIN, _deadTumor.getLocation(), _world.getInstanceId());
 				_world.npcList.add(worm);
 			}
 		}
@@ -822,7 +822,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	
 	public void notifyEkimusRoomEntrance(HIAWorld world)
 	{
-		for (L2PcInstance ch : ZoneManager.getInstance().getZoneById(200032).getPlayersInside())
+		for (PlayerInstance ch : ZoneManager.getInstance().getZoneById(200032).getPlayersInside())
 		{
 			if (ch != null)
 			{
@@ -860,7 +860,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	
 	protected void broadCastPacket(HIAWorld world, IClientOutgoingPacket packet)
 	{
-		for (L2PcInstance player : world.getAllowed())
+		for (PlayerInstance player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

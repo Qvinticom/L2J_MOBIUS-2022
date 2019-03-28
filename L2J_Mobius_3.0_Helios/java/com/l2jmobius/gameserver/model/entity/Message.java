@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author Migi, DS
@@ -175,7 +175,7 @@ public class Message
 		_attachments.setNewMessageId(_messageId);
 	}
 	
-	public Message(int receiverId, L2ItemInstance item, MailType mailType)
+	public Message(int receiverId, ItemInstance item, MailType mailType)
 	{
 		_messageId = IdFactory.getInstance().getNextId();
 		_senderId = -1;

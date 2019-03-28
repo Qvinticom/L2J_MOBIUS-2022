@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author kombat
  */
-final class EffectBestowSkill extends L2Effect
+final class EffectBestowSkill extends Effect
 {
 	public EffectBestowSkill(Env env, EffectTemplate template)
 	{
@@ -40,7 +40,7 @@ final class EffectBestowSkill extends L2Effect
 	@Override
 	public void onStart()
 	{
-		final L2Skill tempSkill = SkillTable.getInstance().getInfo(getSkill().getTriggeredId(), getSkill().getTriggeredLevel());
+		final Skill tempSkill = SkillTable.getInstance().getInfo(getSkill().getTriggeredId(), getSkill().getTriggeredLevel());
 		if (tempSkill != null)
 		{
 			getEffected().addSkill(tempSkill);

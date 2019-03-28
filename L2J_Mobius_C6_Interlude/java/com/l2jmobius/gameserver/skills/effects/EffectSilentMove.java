@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 
-final class EffectSilentMove extends L2Effect
+final class EffectSilentMove extends Effect
 {
 	public EffectSilentMove(Env env, EffectTemplate template)
 	{
@@ -36,10 +36,10 @@ final class EffectSilentMove extends L2Effect
 	{
 		super.onStart();
 		
-		final L2Character effected = getEffected();
-		if (effected instanceof L2PcInstance)
+		final Creature effected = getEffected();
+		if (effected instanceof PlayerInstance)
 		{
-			((L2PcInstance) effected).setSilentMoving(true);
+			((PlayerInstance) effected).setSilentMoving(true);
 		}
 	}
 	
@@ -48,10 +48,10 @@ final class EffectSilentMove extends L2Effect
 	{
 		super.onExit();
 		
-		final L2Character effected = getEffected();
-		if (effected instanceof L2PcInstance)
+		final Creature effected = getEffected();
+		if (effected instanceof PlayerInstance)
 		{
-			((L2PcInstance) effected).setSilentMoving(false);
+			((PlayerInstance) effected).setSilentMoving(false);
 		}
 	}
 	

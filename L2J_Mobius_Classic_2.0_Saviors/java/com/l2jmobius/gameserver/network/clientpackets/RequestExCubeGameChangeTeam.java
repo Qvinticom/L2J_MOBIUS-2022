@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format: chdd d: Arena d: Team
@@ -31,7 +31,7 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 	private int _team;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		// client sends -1,0,1,2 for arena parameter
 		_arena = packet.readD() + 1;
@@ -40,14 +40,14 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		// do not remove players after start
 		if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(_arena))
 		{
 			return;
 		}
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
 		switch (_team)
 		{

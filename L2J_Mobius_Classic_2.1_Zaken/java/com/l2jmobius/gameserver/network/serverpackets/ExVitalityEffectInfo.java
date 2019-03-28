@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,11 +30,11 @@ public class ExVitalityEffectInfo implements IClientOutgoingPacket
 	private final int _vitalityItemsRemaining;
 	private final int _points;
 	
-	public ExVitalityEffectInfo(L2PcInstance cha)
+	public ExVitalityEffectInfo(PlayerInstance player)
 	{
-		_points = cha.getVitalityPoints();
-		_vitalityBonus = (int) cha.getStat().getVitalityExpBonus() * 100;
-		_vitalityItemsRemaining = Config.VITALITY_MAX_ITEMS_ALLOWED - cha.getVitalityItemsUsed();
+		_points = player.getVitalityPoints();
+		_vitalityBonus = (int) player.getStat().getVitalityExpBonus() * 100;
+		_vitalityItemsRemaining = Config.VITALITY_MAX_ITEMS_ALLOWED - player.getVitalityItemsUsed();
 	}
 	
 	@Override

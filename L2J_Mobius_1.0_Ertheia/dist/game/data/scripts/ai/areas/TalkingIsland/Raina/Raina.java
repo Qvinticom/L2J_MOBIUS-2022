@@ -34,8 +34,8 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.ClassLevel;
 import com.l2jmobius.gameserver.model.base.PlayerClass;
@@ -45,7 +45,7 @@ import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMenuSelect;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
@@ -148,7 +148,7 @@ public final class Raina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -469,8 +469,8 @@ public final class Raina extends AbstractNpcAI
 	@Id(RAINA)
 	public final void OnNpcMenuSelect(OnNpcMenuSelect event)
 	{
-		final L2PcInstance player = event.getTalker();
-		final L2Npc npc = event.getNpc();
+		final PlayerInstance player = event.getTalker();
+		final Npc npc = event.getNpc();
 		final int ask = event.getAsk();
 		
 		switch (ask)
@@ -656,7 +656,7 @@ public final class Raina extends AbstractNpcAI
 		}
 	}
 	
-	private void addPowerItem(L2PcInstance player)
+	private void addPowerItem(PlayerInstance player)
 	{
 		int itemId = ABELIUS_POWER; // Sigel
 		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
@@ -695,7 +695,7 @@ public final class Raina extends AbstractNpcAI
 	 * @param player
 	 * @return
 	 */
-	private Set<PlayerClass> getAvailableSubClasses(L2PcInstance player)
+	private Set<PlayerClass> getAvailableSubClasses(PlayerInstance player)
 	{
 		final int currentBaseId = player.getBaseClass();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
@@ -726,7 +726,7 @@ public final class Raina extends AbstractNpcAI
 		return availSubs;
 	}
 	
-	private boolean haveDoneQuest(L2PcInstance player, boolean isErtheia)
+	private boolean haveDoneQuest(PlayerInstance player, boolean isErtheia)
 	{
 		final QuestState qs = isErtheia ? player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName()) : player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
 		return (((qs != null) && qs.isCompleted()) || Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS);
@@ -738,7 +738,7 @@ public final class Raina extends AbstractNpcAI
 	 * @param classId
 	 * @return
 	 */
-	private boolean isValidNewSubClass(L2PcInstance player, int classId)
+	private boolean isValidNewSubClass(PlayerInstance player, int classId)
 	{
 		final ClassId cid = ClassId.values()[classId];
 		ClassId subClassId;
@@ -777,7 +777,7 @@ public final class Raina extends AbstractNpcAI
 		return found;
 	}
 	
-	private boolean hasAllSubclassLeveled(L2PcInstance player)
+	private boolean hasAllSubclassLeveled(PlayerInstance player)
 	{
 		boolean leveled = true;
 		
@@ -791,7 +791,7 @@ public final class Raina extends AbstractNpcAI
 		return leveled;
 	}
 	
-	public final List<PlayerClass> getAvailableDualclasses(L2PcInstance player)
+	public final List<PlayerClass> getAvailableDualclasses(PlayerInstance player)
 	{
 		final List<PlayerClass> dualClasses = new ArrayList<>();
 		
@@ -805,7 +805,7 @@ public final class Raina extends AbstractNpcAI
 		return dualClasses;
 	}
 	
-	private List<PlayerClass> getDualClasses(L2PcInstance player, CategoryType cType)
+	private List<PlayerClass> getDualClasses(PlayerInstance player, CategoryType cType)
 	{
 		final List<PlayerClass> tempList = new ArrayList<>();
 		final int baseClassId = player.getBaseClass();
@@ -821,7 +821,7 @@ public final class Raina extends AbstractNpcAI
 		return tempList;
 	}
 	
-	public final Set<PlayerClass> getSubclasses(L2PcInstance player, int classId)
+	public final Set<PlayerClass> getSubclasses(PlayerInstance player, int classId)
 	{
 		Set<PlayerClass> subclasses = null;
 		final PlayerClass pClass = PlayerClass.values()[classId];
@@ -879,7 +879,7 @@ public final class Raina extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (Config.ALT_GAME_DUALCLASS_WITHOUT_QUEST)
 		{
@@ -888,7 +888,7 @@ public final class Raina extends AbstractNpcAI
 		return "33491.html";
 	}
 	
-	private NpcHtmlMessage getNpcHtmlMessage(L2PcInstance player, L2Npc npc, String fileName)
+	private NpcHtmlMessage getNpcHtmlMessage(PlayerInstance player, Npc npc, String fileName)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
@@ -901,7 +901,7 @@ public final class Raina extends AbstractNpcAI
 		return html;
 	}
 	
-	private int getCloakId(L2PcInstance player)
+	private int getCloakId(PlayerInstance player)
 	{
 		CategoryType catType = null;
 		

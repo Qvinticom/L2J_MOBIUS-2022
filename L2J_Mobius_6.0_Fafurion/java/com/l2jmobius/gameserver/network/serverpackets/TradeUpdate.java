@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -31,7 +31,7 @@ public class TradeUpdate extends AbstractItemPacket
 	private final long _newCount;
 	private final long _count;
 	
-	public TradeUpdate(int sendType, L2PcInstance player, TradeItem item, long count)
+	public TradeUpdate(int sendType, PlayerInstance player, TradeItem item, long count)
 	{
 		_sendType = sendType;
 		_count = count;

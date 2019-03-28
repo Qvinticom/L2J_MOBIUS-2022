@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExConfirmCancelItem;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * Format(ch) d
  * @author -Wooden-
  */
-public final class RequestConfirmCancelItem extends L2GameClientPacket
+public final class RequestConfirmCancelItem extends GameClientPacket
 {
 	private int _itemId;
 	
@@ -40,24 +40,24 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(_itemId);
+		final PlayerInstance player = getClient().getPlayer();
+		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemId);
 		
-		if ((activeChar == null) || (item == null))
+		if ((player == null) || (item == null))
 		{
 			return;
 		}
 		
 		if (!item.isAugmented())
 		{
-			activeChar.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
+			player.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
 			return;
 		}
 		
 		int price = 0;
 		switch (item.getItem().getItemGrade())
 		{
-			case L2Item.CRYSTAL_C:
+			case Item.CRYSTAL_C:
 			{
 				if (item.getCrystalCount() < 1720)
 				{
@@ -73,7 +73,7 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_B:
+			case Item.CRYSTAL_B:
 			{
 				if (item.getCrystalCount() < 1746)
 				{
@@ -85,7 +85,7 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_A:
+			case Item.CRYSTAL_A:
 			{
 				if (item.getCrystalCount() < 2160)
 				{
@@ -101,7 +101,7 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 				}
 				break;
 			}
-			case L2Item.CRYSTAL_S:
+			case Item.CRYSTAL_S:
 			{
 				price = 480000;
 				break;
@@ -113,6 +113,6 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 			}
 		}
 		
-		activeChar.sendPacket(new ExConfirmCancelItem(_itemId, price));
+		player.sendPacket(new ExConfirmCancelItem(_itemId, price));
 	}
 }

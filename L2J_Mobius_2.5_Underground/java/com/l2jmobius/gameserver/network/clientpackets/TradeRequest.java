@@ -23,14 +23,14 @@ import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SendTradeRequest;
@@ -44,13 +44,13 @@ public final class TradeRequest implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
-	private void scheduleDeny(L2PcInstance player, String name)
+	private void scheduleDeny(PlayerInstance player, String name)
 	{
 		if (player != null)
 		{
@@ -62,9 +62,9 @@ public final class TradeRequest implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -91,7 +91,7 @@ public final class TradeRequest implements IClientIncomingPacket
 			}
 		}
 		
-		final L2Object target = L2World.getInstance().findObject(_objectId);
+		final WorldObject target = World.getInstance().findObject(_objectId);
 		// If there is no target, target is far away or
 		// they are in different instances
 		// trade request is ignored and there is no system message.
@@ -112,7 +112,7 @@ public final class TradeRequest implements IClientIncomingPacket
 		{
 			final String name = FakePlayerData.getInstance().getProperName(target.getName());
 			boolean npcInRange = false;
-			for (L2Npc npc : L2World.getInstance().getVisibleObjectsInRange(player, L2Npc.class, 150))
+			for (Npc npc : World.getInstance().getVisibleObjectsInRange(player, Npc.class, 150))
 			{
 				if (npc.getName().equals(name))
 				{
@@ -145,7 +145,7 @@ public final class TradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance partner = target.getActingPlayer();
+		final PlayerInstance partner = target.getActingPlayer();
 		if (partner.isInOlympiadMode() || player.isInOlympiadMode())
 		{
 			player.sendMessage("A user currently participating in the Olympiad cannot accept or request a trade.");

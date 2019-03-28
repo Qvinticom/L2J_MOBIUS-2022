@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -34,7 +34,7 @@ public class ExOlympiadSpelledInfo implements IClientOutgoingPacket
 	private final List<BuffInfo> _effects = new ArrayList<>();
 	private final List<Skill> _effects2 = new ArrayList<>();
 	
-	public ExOlympiadSpelledInfo(L2PcInstance player)
+	public ExOlympiadSpelledInfo(PlayerInstance player)
 	{
 		_playerId = player.getObjectId();
 	}

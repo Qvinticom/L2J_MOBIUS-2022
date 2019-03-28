@@ -25,11 +25,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
@@ -44,10 +44,10 @@ public final class RequestRecipeShopListSet implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12;
 	
-	private L2ManufactureItem[] _items = null;
+	private ManufactureItem[] _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int count = packet.readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
@@ -55,7 +55,7 @@ public final class RequestRecipeShopListSet implements IClientIncomingPacket
 			return false;
 		}
 		
-		_items = new L2ManufactureItem[count];
+		_items = new ManufactureItem[count];
 		for (int i = 0; i < count; i++)
 		{
 			final int id = packet.readD();
@@ -65,15 +65,15 @@ public final class RequestRecipeShopListSet implements IClientIncomingPacket
 				_items = null;
 				return false;
 			}
-			_items[i] = new L2ManufactureItem(id, cost);
+			_items[i] = new ManufactureItem(id, cost);
 		}
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -106,14 +106,14 @@ public final class RequestRecipeShopListSet implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		
 		player.getManufactureItems().clear();
 		
-		for (L2ManufactureItem i : _items)
+		for (ManufactureItem i : _items)
 		{
-			final L2RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
+			final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
 			if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);

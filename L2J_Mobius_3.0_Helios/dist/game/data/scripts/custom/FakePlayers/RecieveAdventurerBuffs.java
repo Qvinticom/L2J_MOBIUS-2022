@@ -19,9 +19,9 @@ package custom.FakePlayers;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -70,13 +70,13 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.startsWith("AUTOBUFF") && (npc != null) && !npc.isDead())
 		{
 			if (!npc.isMoving())
 			{
-				for (L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 100))
+				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 100))
 				{
 					if (CommonUtil.contains(ADVENTURERS_GUIDE, nearby.getId()))
 					{
@@ -102,7 +102,7 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("AUTOBUFF" + npc.getObjectId(), 1000, npc, null);
 		return super.onSpawn(npc);

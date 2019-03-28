@@ -16,8 +16,8 @@
  */
 package quests.Q00249_PoisonedPlainsOfTheLizardmen;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -41,11 +41,11 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -54,27 +54,27 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
 			{
-				st.startQuest();
+				qs.startQuest();
 			}
 		}
 		else if ((npc.getId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
 		{
 			giveAdena(player, 83056, true);
 			addExpAndSp(player, 477496, 58743);
-			st.exitQuest(false, true);
+			qs.exitQuest(false, true);
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (npc.getId() == MOUEN)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -83,7 +83,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "30196-04.htm";
 					}
@@ -98,11 +98,11 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 		}
 		else if (npc.getId() == JOHNNY)
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
 				htmltext = "32744-01.htm";
 			}
-			else if (st.isCompleted())
+			else if (qs.isCompleted())
 			{
 				htmltext = "32744-04.htm";
 			}

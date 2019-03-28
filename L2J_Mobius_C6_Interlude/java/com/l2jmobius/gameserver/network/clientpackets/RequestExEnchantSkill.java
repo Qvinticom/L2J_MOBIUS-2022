@@ -21,13 +21,13 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
-import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
-import com.l2jmobius.gameserver.model.L2ShortCut;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.EnchantSkillLearn;
+import com.l2jmobius.gameserver.model.ShortCut;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkill extends L2GameClientPacket
+public final class RequestExEnchantSkill extends GameClientPacket
 {
 	private int _skillId;
 	private int _skillLvl;
@@ -55,13 +55,13 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2FolkInstance trainer = player.getLastFolkNPC();
+		final FolkInstance trainer = player.getLastFolkNPC();
 		if (trainer == null)
 		{
 			return;
@@ -69,7 +69,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		
 		final int npcid = trainer.getNpcId();
 		
-		if (!player.isInsideRadius(trainer, L2NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
+		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
 		{
 			return;
 		}
@@ -89,7 +89,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		final Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
 		
 		int counts = 0;
 		int _requiredSp = 10000000;
@@ -97,11 +97,11 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		byte _rate = 0;
 		int _baseLvl = 1;
 		
-		final L2EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
+		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		
-		for (L2EnchantSkillLearn s : skills)
+		for (EnchantSkillLearn s : skills)
 		{
-			final L2Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
 			
 			if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcid))
 			{
@@ -132,7 +132,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					final int spbId = 6622;
 					
-					final L2ItemInstance spb = player.getInventory().getItemByItemId(spbId);
+					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
 					
 					if (spb == null)// Haven't spellbook
 					{
@@ -195,13 +195,13 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		player.sendSkillList();
 		
 		// update all the shortcuts to this skill
-		final L2ShortCut[] allShortCuts = player.getAllShortCuts();
+		final ShortCut[] allShortCuts = player.getAllShortCuts();
 		
-		for (L2ShortCut sc : allShortCuts)
+		for (ShortCut sc : allShortCuts)
 		{
-			if ((sc.getId() == _skillId) && (sc.getType() == L2ShortCut.TYPE_SKILL))
+			if ((sc.getId() == _skillId) && (sc.getType() == ShortCut.TYPE_SKILL))
 			{
-				final L2ShortCut newsc = new L2ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _skillLvl, 1);
+				final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _skillLvl, 1);
 				player.sendPacket(new ShortCutRegister(newsc));
 				player.registerShortCut(newsc);
 			}

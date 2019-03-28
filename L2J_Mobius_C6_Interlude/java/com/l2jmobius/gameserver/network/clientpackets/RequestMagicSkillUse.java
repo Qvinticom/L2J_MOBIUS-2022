@@ -20,16 +20,15 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * This class ...
  * @version $Revision: 1.7.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestMagicSkillUse extends L2GameClientPacket
+public final class RequestMagicSkillUse extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestMagicSkillUse.class.getName());
 	
@@ -48,30 +47,30 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		// Get the current PlayerInstance of the player
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Get the level of the used skill
-		final int level = activeChar.getSkillLevel(_magicId);
+		final int level = player.getSkillLevel(_magicId);
 		if (level <= 0)
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isOutOfControl())
+		if (player.isOutOfControl())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		// Get the L2Skill template corresponding to the skillID received from the client
-		final L2Skill skill = SkillTable.getInstance().getInfo(_magicId, level);
+		// Get the Skill template corresponding to the skillID received from the client
+		final Skill skill = SkillTable.getInstance().getInfo(_magicId, level);
 		
 		// Check the validity of the skill
 		if (skill != null)
@@ -82,24 +81,24 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 			// LOGGER.fine(" [FINE] currentState:"+activeChar.getCurrentState()); //for debug
 			
 			// If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
-			if ((skill.getSkillType() == SkillType.RECALL) && !Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getKarma() > 0))
+			if ((skill.getSkillType() == SkillType.RECALL) && !Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getKarma() > 0))
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
 			// players mounted on pets cannot use any toggle skills
-			if (skill.isToggle() && activeChar.isMounted())
+			if (skill.isToggle() && player.isMounted())
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			activeChar.useMagic(skill, _ctrlPressed, _shiftPressed);
+			player.useMagic(skill, _ctrlPressed, _shiftPressed);
 		}
 		else
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			LOGGER.warning("No skill found with id " + _magicId + " and level " + level + " !!");
 		}
 	}

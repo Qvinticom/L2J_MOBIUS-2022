@@ -23,13 +23,13 @@ import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 /**
@@ -52,7 +52,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(L2PcInstance player)
+	public boolean isAvailable(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
@@ -79,15 +79,15 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 	
 	private void onAttackableKill(OnAttackableKill event)
 	{
-		final L2Attackable monster = event.getTarget();
-		final L2PcInstance player = event.getAttacker();
+		final Attackable monster = event.getTarget();
+		final PlayerInstance player = event.getAttacker();
 		if (monster.isRaid() && (monster.getInstanceId() > 0) && (player != null))
 		{
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			if (party != null)
 			{
-				final L2CommandChannel channel = party.getCommandChannel();
-				final List<L2PcInstance> members = channel != null ? channel.getMembers() : party.getMembers();
+				final CommandChannel channel = party.getCommandChannel();
+				final List<PlayerInstance> members = channel != null ? channel.getMembers() : party.getMembers();
 				members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::processPlayerProgress);
 			}
 			else
@@ -97,7 +97,7 @@ public class BossDailyMissionHandler extends AbstractDailyMissionHandler
 		}
 	}
 	
-	private void processPlayerProgress(L2PcInstance player)
+	private void processPlayerProgress(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
 		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)

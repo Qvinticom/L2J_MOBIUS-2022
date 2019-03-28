@@ -23,8 +23,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -97,7 +97,7 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -556,7 +556,7 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -651,15 +651,15 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
+		final List<PlayerInstance> players = new ArrayList<>();
 		players.add(killer);
 		players.add(killer);
 		
 		if (killer.isInParty())
 		{
-			for (L2PcInstance member : killer.getParty().getMembers())
+			for (PlayerInstance member : killer.getParty().getMembers())
 			{
 				if (getQuestState(member, false) != null)
 				{
@@ -668,7 +668,7 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 		}
 		
-		final L2PcInstance player = players.get(Rnd.get(players.size()));
+		final PlayerInstance player = players.get(Rnd.get(players.size()));
 		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (MONSTERS.get(npc.getId()) < getRandom(1000)))
 		{
 			final QuestState qs = getQuestState(player, false);

@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 
-public final class RequestPledgeInfo extends L2GameClientPacket
+public final class RequestPledgeInfo extends GameClientPacket
 {
 	private int clanId;
 	
@@ -34,10 +34,10 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		final L2Clan clan = ClanTable.getInstance().getClan(clanId);
+		final PlayerInstance player = getClient().getPlayer();
+		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -46,6 +46,6 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 		{
 			return; // we have no clan data ?!? should not happen
 		}
-		activeChar.sendPacket(new PledgeInfo(clan));
+		player.sendPacket(new PledgeInfo(clan));
 	}
 }

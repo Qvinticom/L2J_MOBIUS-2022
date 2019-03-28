@@ -23,10 +23,10 @@ import com.l2jmobius.gameserver.ai.NextAction;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSocialAction;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAskCoupleAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 public final class SocialAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		switch (data.getOptionId())
 		{
@@ -60,14 +60,14 @@ public final class SocialAction implements IPlayerActionHandler
 			case 28: // Propose
 			case 29: // Provoke
 			{
-				useSocial(activeChar, data.getOptionId());
+				useSocial(player, data.getOptionId());
 				break;
 			}
 			case 30: // Beauty Shop
 			{
-				if (useSocial(activeChar, data.getOptionId()))
+				if (useSocial(player, data.getOptionId()))
 				{
-					activeChar.broadcastInfo();
+					player.broadcastInfo();
 				}
 				break;
 			}
@@ -75,31 +75,31 @@ public final class SocialAction implements IPlayerActionHandler
 			case 17: // High Five
 			case 18: // Couple Dance
 			{
-				useCoupleSocial(activeChar, data.getOptionId());
+				useCoupleSocial(player, data.getOptionId());
 			}
 		}
 	}
 	
-	private boolean useSocial(L2PcInstance activeChar, int id)
+	private boolean useSocial(PlayerInstance player, int id)
 	{
-		if (activeChar.isFishing())
+		if (player.isFishing())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return false;
 		}
 		
-		if (activeChar.canMakeSocialAction())
+		if (player.canMakeSocialAction())
 		{
-			activeChar.broadcastPacket(new com.l2jmobius.gameserver.network.serverpackets.SocialAction(activeChar.getObjectId(), id));
+			player.broadcastPacket(new com.l2jmobius.gameserver.network.serverpackets.SocialAction(player.getObjectId(), id));
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSocialAction(activeChar, id), activeChar);
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSocialAction(player, id), player);
 		}
 		
 		return true;
 	}
 	
-	private void scheduleDeny(L2PcInstance player)
+	private void scheduleDeny(PlayerInstance player)
 	{
 		if (player != null)
 		{
@@ -108,14 +108,14 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 	}
 	
-	private void useCoupleSocial(L2PcInstance player, int id)
+	private void useCoupleSocial(PlayerInstance player, int id)
 	{
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		if ((target == null))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -227,7 +227,7 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 		
 		// Checks for partner.
-		final L2PcInstance partner = target.getActingPlayer();
+		final PlayerInstance partner = target.getActingPlayer();
 		if (partner.isInStoreMode() || partner.isCrafting())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);

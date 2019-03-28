@@ -16,8 +16,8 @@
  */
 package quests.Q00122_OminousNews;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -43,10 +43,10 @@ public final class Q00122_OminousNews extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -55,14 +55,14 @@ public final class Q00122_OminousNews extends Quest
 		{
 			case "31979-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "32017-02.html":
 			{
 				giveAdena(player, 8923, true);
 				addExpAndSp(player, 45151, 10);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
 			}
 		}
@@ -70,16 +70,16 @@ public final class Q00122_OminousNews extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
 			case MOIRA:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -101,7 +101,7 @@ public final class Q00122_OminousNews extends Quest
 			}
 			case KARUDA:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = "32017-01.html";
 				}

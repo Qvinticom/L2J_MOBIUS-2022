@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public final class RequestPledgePower extends L2GameClientPacket
+public final class RequestPledgePower extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(ManagePledgePower.class.getName());
 	private int _rank;
@@ -47,7 +47,7 @@ public final class RequestPledgePower extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -66,14 +66,14 @@ public final class RequestPledgePower extends L2GameClientPacket
 					// Clan war, right to dismiss, set functions
 					// Auction, manage taxes, attack/defend registration, mercenary management
 					// => Leaves only CP_CL_VIEW_WAREHOUSE, CP_CH_OPEN_DOOR, CP_CS_OPEN_DOOR?
-					_privs = (_privs & L2Clan.CP_CL_VIEW_WAREHOUSE) + (_privs & L2Clan.CP_CH_OPEN_DOOR) + (_privs & L2Clan.CP_CS_OPEN_DOOR);
+					_privs = (_privs & Clan.CP_CL_VIEW_WAREHOUSE) + (_privs & Clan.CP_CH_OPEN_DOOR) + (_privs & Clan.CP_CS_OPEN_DOOR);
 				}
 				player.getClan().setRankPrivs(_rank, _privs);
 			}
 		}
 		else
 		{
-			final ManagePledgePower mpp = new ManagePledgePower(getClient().getActiveChar().getClan(), _action, _rank);
+			final ManagePledgePower mpp = new ManagePledgePower(getClient().getPlayer().getClan(), _action, _rank);
 			player.sendPacket(mpp);
 		}
 	}

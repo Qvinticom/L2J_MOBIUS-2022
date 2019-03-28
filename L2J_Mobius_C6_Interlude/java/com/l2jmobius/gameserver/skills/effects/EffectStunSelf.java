@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
-public class EffectStunSelf extends L2Effect
+public class EffectStunSelf extends Effect
 {
 	public EffectStunSelf(Env env, EffectTemplate template)
 	{

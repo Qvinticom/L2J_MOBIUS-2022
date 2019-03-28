@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeShowMemberListDelete extends L2GameServerPacket
+public class PledgeShowMemberListDelete extends GameServerPacket
 {
 	private final String _player;
 	

@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -66,12 +66,12 @@ public final class SiegeDefenderList implements IClientOutgoingPacket
 		final int size = _castle.getSiege().getDefenderClans().size() + _castle.getSiege().getDefenderWaitingClans().size();
 		if (size > 0)
 		{
-			L2Clan clan;
+			Clan clan;
 			
 			packet.writeD(size);
 			packet.writeD(size);
 			// Listing the Lord and the approved clans
-			for (L2SiegeClan siegeclan : _castle.getSiege().getDefenderClans())
+			for (SiegeClan siegeclan : _castle.getSiege().getDefenderClans())
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 				if (clan == null)
@@ -112,7 +112,7 @@ public final class SiegeDefenderList implements IClientOutgoingPacket
 				packet.writeS(""); // AllyLeaderName
 				packet.writeD(clan.getAllyCrestId());
 			}
-			for (L2SiegeClan siegeclan : _castle.getSiege().getDefenderWaitingClans())
+			for (SiegeClan siegeclan : _castle.getSiege().getDefenderWaitingClans())
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 				packet.writeD(clan.getId());

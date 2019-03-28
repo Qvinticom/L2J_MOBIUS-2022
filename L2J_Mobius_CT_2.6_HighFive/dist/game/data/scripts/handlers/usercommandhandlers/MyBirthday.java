@@ -19,7 +19,7 @@ package handlers.usercommandhandlers;
 import java.util.Calendar;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -35,22 +35,22 @@ public class MyBirthday implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		final Calendar date = activeChar.getCreateDate();
+		final Calendar date = player.getCreateDate();
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_BIRTHDAY_IS_S3_S4_S2);
-		sm.addPcName(activeChar);
+		sm.addPcName(player);
 		sm.addString(Integer.toString(date.get(Calendar.YEAR)));
 		sm.addString(Integer.toString(date.get(Calendar.MONTH) + 1));
 		sm.addString(Integer.toString(date.get(Calendar.DATE)));
 		
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		return true;
 	}
 	

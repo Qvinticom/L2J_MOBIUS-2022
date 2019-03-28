@@ -18,8 +18,8 @@ package quests.Q10422_AssassinationOfTheVarkaSilenosChief;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -55,10 +55,10 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -74,7 +74,7 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 			}
 			case "33853-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -85,10 +85,10 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 			case "reward_9550":
 			case "reward_9551":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, stoneId, 15);
 					giveStoryQuestReward(npc, player);
 					if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL))
@@ -104,7 +104,7 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -131,7 +131,7 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		

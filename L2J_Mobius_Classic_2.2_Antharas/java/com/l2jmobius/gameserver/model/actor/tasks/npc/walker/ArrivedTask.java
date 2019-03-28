@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.tasks.npc.walker;
 
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.WalkInfo;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 /**
  * Walker arrive task.
@@ -27,9 +27,9 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 public class ArrivedTask implements Runnable
 {
 	private final WalkInfo _walk;
-	private final L2Npc _npc;
+	private final Npc _npc;
 	
-	public ArrivedTask(L2Npc npc, WalkInfo walk)
+	public ArrivedTask(Npc npc, WalkInfo walk)
 	{
 		_npc = npc;
 		_walk = walk;

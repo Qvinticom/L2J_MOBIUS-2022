@@ -22,8 +22,8 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
@@ -99,7 +99,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		addKillId(MUCROKIAN.keySet());
 	}
 	
-	private boolean canGiveItem(L2PcInstance player, int quanty)
+	private boolean canGiveItem(PlayerInstance player, int quanty)
 	{
 		final long mucrokian = getQuestItemsCount(player, MUCROKIAN_HIDE);
 		final long awakened = getQuestItemsCount(player, AWAKENED_MUCROKIAN_HIDE);
@@ -126,10 +126,10 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -149,7 +149,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 			}
 			case "32646-04.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				player.sendPacket(new RadarControl(0, 2, 77325, 205773, -3432));
 				htmltext = event;
 				break;
@@ -198,7 +198,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 			}
 			case "32646-11.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -206,7 +206,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		return htmltext;
 	}
 	
-	private String onItemExchangeRequest(L2PcInstance player, int item, int quanty)
+	private String onItemExchangeRequest(PlayerInstance player, int item, int quanty)
 	{
 		String htmltext;
 		if (canGiveItem(player, quanty))
@@ -230,9 +230,9 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
+		final PlayerInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
 			final float chance = (MUCROKIAN.get(npc.getId()) * Config.RATE_QUEST_DROP);
@@ -253,9 +253,9 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
 		final QuestState q309 = talker.getQuestState(Q00309_ForAGoodCause.class.getSimpleName());
@@ -263,7 +263,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		{
 			htmltext = "32646-15.html";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			htmltext = (hasQuestItems(talker, MUCROKIAN_HIDE) || hasQuestItems(talker, AWAKENED_MUCROKIAN_HIDE)) ? "32646-06.html" : "32646-05.html";
 		}

@@ -23,9 +23,9 @@ import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.StringUtil;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 public class DamageFormatter extends Formatter
@@ -47,19 +47,19 @@ public class DamageFormatter extends Formatter
 					continue;
 				}
 				
-				if (p instanceof L2Character)
+				if (p instanceof Creature)
 				{
-					if (((L2Character) p).isRaid())
+					if (((Creature) p).isRaid())
 					{
 						StringUtil.append(output, "RaidBoss ");
 					}
 					
-					StringUtil.append(output, ((L2Character) p).getName(), "(", String.valueOf(((L2Character) p).getObjectId()), ") ");
-					StringUtil.append(output, String.valueOf(((L2Character) p).getLevel()), " lvl");
+					StringUtil.append(output, ((Creature) p).getName(), "(", String.valueOf(((Creature) p).getObjectId()), ") ");
+					StringUtil.append(output, String.valueOf(((Creature) p).getLevel()), " lvl");
 					
-					if (p instanceof L2Summon)
+					if (p instanceof Summon)
 					{
-						final L2PcInstance owner = ((L2Summon) p).getOwner();
+						final PlayerInstance owner = ((Summon) p).getOwner();
 						if (owner != null)
 						{
 							StringUtil.append(output, " Owner:", owner.getName(), "(", String.valueOf(owner.getObjectId()), ")");

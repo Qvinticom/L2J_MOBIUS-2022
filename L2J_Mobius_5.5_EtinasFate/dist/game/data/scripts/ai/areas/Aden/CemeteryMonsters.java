@@ -17,8 +17,8 @@
 package ai.areas.Aden;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -97,7 +97,7 @@ public class CemeteryMonsters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (getRandom(25) < 5)
 		{
@@ -107,7 +107,7 @@ public class CemeteryMonsters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (getRandom(100) < 5)
 		{
@@ -124,7 +124,7 @@ public class CemeteryMonsters extends AbstractNpcAI
 				{
 					for (int i = 0; i < 6; i++)
 					{
-						L2Npc raider = addSpawn(ADEN_RAIDER, killer, true, 180000, false);
+						Npc raider = addSpawn(ADEN_RAIDER, killer, true, 180000, false);
 						addAttackPlayerDesire(raider, killer);
 					}
 					break;

@@ -18,17 +18,17 @@ package quests.Q00500_BrothersBoundInChains;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonAgathion;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerUnsummonAgathion;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonAgathion;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerUnsummonAgathion;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -67,7 +67,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -138,7 +138,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
@@ -187,7 +187,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		{
 			return;
 		}
-		final L2PcInstance player = event.getPlayer();
+		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -207,7 +207,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		{
 			return;
 		}
-		final L2PcInstance player = event.getPlayer();
+		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -226,7 +226,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
 	public void onAttackableKill(OnAttackableKill event)
 	{
-		final L2PcInstance player = event.getAttacker();
+		final PlayerInstance player = event.getAttacker();
 		if ((player == null) || (player.getAgathionId() != SIN_EATER) || !player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
 		{
 			return;
@@ -236,7 +236,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 		{
 			return;
 		}
-		final L2Attackable target = event.getTarget();
+		final Attackable target = event.getTarget();
 		if (target == null)
 		{
 			return;

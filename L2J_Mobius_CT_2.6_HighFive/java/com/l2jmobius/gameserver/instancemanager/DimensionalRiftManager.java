@@ -38,11 +38,11 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.DimensionalRiftRoom;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.DimensionalRift;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -193,7 +193,7 @@ public final class DimensionalRiftManager
 												
 												if (_rooms.containsKey(type) && _rooms.get(type).containsKey(roomId))
 												{
-													final L2Spawn spawnDat = new L2Spawn(mobId);
+													final Spawn spawnDat = new Spawn(mobId);
 													spawnDat.setAmount(1);
 													spawnDat.setXYZ(x, y, z);
 													spawnDat.setHeading(-1);
@@ -253,12 +253,12 @@ public final class DimensionalRiftManager
 		return _rooms.get((byte) 0).get((byte) 0).checkIfInZone(x, y, z);
 	}
 	
-	public void teleportToWaitingRoom(L2PcInstance player)
+	public void teleportToWaitingRoom(PlayerInstance player)
 	{
 		player.teleToLocation(getRoom((byte) 0, (byte) 0).getTeleportCoorinates());
 	}
 	
-	public synchronized void start(L2PcInstance player, byte type, L2Npc npc)
+	public synchronized void start(PlayerInstance player, byte type, Npc npc)
 	{
 		boolean canPass = true;
 		if (!player.isInParty())
@@ -296,7 +296,7 @@ public final class DimensionalRiftManager
 			return;
 		}
 		
-		for (L2PcInstance p : player.getParty().getMembers())
+		for (PlayerInstance p : player.getParty().getMembers())
 		{
 			if (!checkIfInPeaceZone(p.getX(), p.getY(), p.getZ()))
 			{
@@ -311,9 +311,9 @@ public final class DimensionalRiftManager
 			return;
 		}
 		
-		L2ItemInstance i;
+		ItemInstance i;
 		final int count = getNeededItems(type);
-		for (L2PcInstance p : player.getParty().getMembers())
+		for (PlayerInstance p : player.getParty().getMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 			
@@ -348,7 +348,7 @@ public final class DimensionalRiftManager
 			return;
 		}
 		
-		for (L2PcInstance p : player.getParty().getMembers())
+		for (PlayerInstance p : player.getParty().getMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
 			if (!p.destroyItem("RiftEntrance", i, count, null, false))
@@ -436,7 +436,7 @@ public final class DimensionalRiftManager
 		}
 	}
 	
-	public void showHtmlFile(L2PcInstance player, String file, L2Npc npc)
+	public void showHtmlFile(PlayerInstance player, String file, Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(player, file);
@@ -444,7 +444,7 @@ public final class DimensionalRiftManager
 		player.sendPacket(html);
 	}
 	
-	public void handleCheat(L2PcInstance player, L2Npc npc)
+	public void handleCheat(PlayerInstance player, Npc npc)
 	{
 		showHtmlFile(player, "data/html/seven_signs/rift/Cheater.htm", npc);
 		if (!player.isGM())

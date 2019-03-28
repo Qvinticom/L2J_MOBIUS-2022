@@ -27,9 +27,9 @@ import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.CoupleManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -54,7 +54,7 @@ public class Wedding implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		
 		if (activeChar.isInFunEvent() || activeChar.isInOlympiadMode())
@@ -78,7 +78,7 @@ public class Wedding implements IVoicedCommandHandler
 		return false;
 	}
 	
-	public boolean Divorce(L2PcInstance activeChar)
+	public boolean Divorce(PlayerInstance activeChar)
 	{
 		
 		if (activeChar.getPartnerId() == 0)
@@ -101,8 +101,8 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You have broken up as a couple.");
 		}
 		
-		L2PcInstance partner;
-		partner = (L2PcInstance) L2World.getInstance().findObject(_partnerId);
+		PlayerInstance partner;
+		partner = (PlayerInstance) World.getInstance().findObject(_partnerId);
 		
 		if (partner != null)
 		{
@@ -127,7 +127,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean Engage(L2PcInstance activeChar)
+	public boolean Engage(PlayerInstance activeChar)
 	{
 		// check target
 		if (activeChar.getTarget() == null)
@@ -137,13 +137,13 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		// check if target is a l2pcinstance
-		if (!(activeChar.getTarget() instanceof L2PcInstance))
+		if (!(activeChar.getTarget() instanceof PlayerInstance))
 		{
 			activeChar.sendMessage("You can only ask another player to engage you.");
 			return false;
 		}
 		
-		L2PcInstance ptarget = (L2PcInstance) activeChar.getTarget();
+		PlayerInstance ptarget = (PlayerInstance) activeChar.getTarget();
 		
 		// check if player is already engaged
 		if (activeChar.getPartnerId() != 0)
@@ -171,7 +171,7 @@ public class Wedding implements IVoicedCommandHandler
 					skillId = 4362;
 				}
 				
-				L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+				Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 				if (activeChar.getFirstEffect(skill) == null)
 				{
 					skill.getEffects(activeChar, activeChar, false, false, false);
@@ -228,7 +228,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean GoToLove(L2PcInstance activeChar)
+	public boolean GoToLove(PlayerInstance activeChar)
 	{
 		if (!activeChar.isMarried())
 		{
@@ -256,8 +256,8 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		L2PcInstance partner;
-		partner = (L2PcInstance) L2World.getInstance().findObject(activeChar.getPartnerId());
+		PlayerInstance partner;
+		partner = (PlayerInstance) World.getInstance().findObject(activeChar.getPartnerId());
 		if (partner == null)
 		{
 			activeChar.sendMessage("Your partner is not online.");
@@ -405,15 +405,15 @@ public class Wedding implements IVoicedCommandHandler
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		private final int _partnerx;
 		private final int _partnery;
 		private final int _partnerz;
 		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(L2PcInstance activeChar, int x, int y, int z, boolean to7sDungeon)
+		EscapeFinalizer(PlayerInstance activeChar, int x, int y, int z, boolean to7sDungeon)
 		{
-			_activeChar = activeChar;
+			_player = activeChar;
 			_partnerx = x;
 			_partnery = y;
 			_partnerz = z;
@@ -423,17 +423,17 @@ public class Wedding implements IVoicedCommandHandler
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead())
+			if (_player.isDead())
 			{
 				return;
 			}
 			
-			_activeChar.setIsIn7sDungeon(_to7sDungeon);
-			_activeChar.enableAllSkills();
+			_player.setIsIn7sDungeon(_to7sDungeon);
+			_player.enableAllSkills();
 			
 			try
 			{
-				_activeChar.teleToLocation(_partnerx, _partnery, _partnerz);
+				_player.teleToLocation(_partnerx, _partnery, _partnerz);
 			}
 			catch (Throwable e)
 			{

@@ -31,12 +31,12 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.L2PetData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.PetData;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 
@@ -103,9 +103,9 @@ public class CharSummonTable
 		}
 	}
 	
-	public void removeServitor(L2PcInstance activeChar, int summonObjectId)
+	public void removeServitor(PlayerInstance player, int summonObjectId)
 	{
-		_servitors.computeIfPresent(activeChar.getObjectId(), (k, v) ->
+		_servitors.computeIfPresent(player.getObjectId(), (k, v) ->
 		{
 			v.remove(summonObjectId);
 			return !v.isEmpty() ? v : null;
@@ -114,7 +114,7 @@ public class CharSummonTable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(REMOVE_SUMMON))
 		{
-			ps.setInt(1, activeChar.getObjectId());
+			ps.setInt(1, player.getObjectId());
 			ps.setInt(2, summonObjectId);
 			ps.execute();
 		}
@@ -124,36 +124,36 @@ public class CharSummonTable
 		}
 	}
 	
-	public void restorePet(L2PcInstance activeChar)
+	public void restorePet(PlayerInstance player)
 	{
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_pets.get(activeChar.getObjectId()));
+		final ItemInstance item = player.getInventory().getItemByObjectId(_pets.get(player.getObjectId()));
 		if (item == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Null pet summoning item for: " + activeChar);
+			LOGGER.warning(getClass().getSimpleName() + ": Null pet summoning item for: " + player);
 			return;
 		}
-		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
 		if (petData == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Null pet data for: " + activeChar + " and summoning item: " + item);
+			LOGGER.warning(getClass().getSimpleName() + ": Null pet data for: " + player + " and summoning item: " + item);
 			return;
 		}
-		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
 		if (npcTemplate == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Null pet NPC template for: " + activeChar + " and pet Id:" + petData.getNpcId());
+			LOGGER.warning(getClass().getSimpleName() + ": Null pet NPC template for: " + player + " and pet Id:" + petData.getNpcId());
 			return;
 		}
 		
-		final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, activeChar, item);
+		final PetInstance pet = PetInstance.spawnPet(npcTemplate, player, item);
 		if (pet == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Null pet instance for: " + activeChar + " and pet NPC template:" + npcTemplate);
+			LOGGER.warning(getClass().getSimpleName() + ": Null pet instance for: " + player + " and pet NPC template:" + npcTemplate);
 			return;
 		}
 		
 		pet.setShowSummonAnimation(true);
-		pet.setTitle(activeChar.getName());
+		pet.setTitle(player.getName());
 		
 		if (!pet.isRespawned())
 		{
@@ -171,20 +171,20 @@ public class CharSummonTable
 		}
 		
 		item.setEnchantLevel(pet.getLevel());
-		activeChar.setPet(pet);
-		pet.spawnMe(activeChar.getX() + 50, activeChar.getY() + 100, activeChar.getZ());
+		player.setPet(pet);
+		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
 		pet.startFeed();
 		pet.setFollowStatus(true);
 		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
 		pet.broadcastStatusUpdate();
 	}
 	
-	public void restoreServitor(L2PcInstance activeChar)
+	public void restoreServitor(PlayerInstance player)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(LOAD_SUMMON))
 		{
-			ps.setInt(1, activeChar.getObjectId());
+			ps.setInt(1, player.getObjectId());
 			try (ResultSet rs = ps.executeQuery())
 			{
 				Skill skill;
@@ -196,18 +196,18 @@ public class CharSummonTable
 					final int curMp = rs.getInt("curMp");
 					final int time = rs.getInt("time");
 					
-					skill = SkillData.getInstance().getSkill(skillId, activeChar.getSkillLevel(skillId));
+					skill = SkillData.getInstance().getSkill(skillId, player.getSkillLevel(skillId));
 					if (skill == null)
 					{
-						removeServitor(activeChar, summonObjId);
+						removeServitor(player, summonObjId);
 						return;
 					}
 					
-					skill.applyEffects(activeChar, activeChar);
+					skill.applyEffects(player, player);
 					
-					if (activeChar.hasServitors())
+					if (player.hasServitors())
 					{
-						final L2ServitorInstance summon = activeChar.getServitors().values().stream().map(s -> ((L2ServitorInstance) s)).filter(s -> s.getReferenceSkill() == skillId).findAny().orElse(null);
+						final ServitorInstance summon = player.getServitors().values().stream().map(s -> ((ServitorInstance) s)).filter(s -> s.getReferenceSkill() == skillId).findAny().orElse(null);
 						summon.setCurrentHp(curHp);
 						summon.setCurrentMp(curMp);
 						summon.setLifeTimeRemaining(time);
@@ -221,7 +221,7 @@ public class CharSummonTable
 		}
 	}
 	
-	public void saveSummon(L2ServitorInstance summon)
+	public void saveSummon(ServitorInstance summon)
 	{
 		if ((summon == null) || (summon.getLifeTimeRemaining() <= 0))
 		{

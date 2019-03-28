@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.crypt.nProtect;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelected;
 
 @SuppressWarnings("unused")
-public class CharacterSelected extends L2GameClientPacket
+public class CharacterSelected extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(CharacterSelected.class.getName());
 	private int _charSlot;
@@ -58,15 +58,15 @@ public class CharacterSelected extends L2GameClientPacket
 		}
 		
 		// we should always be abble to acquire the lock but if we cant lock then nothing should be done (ie repeated packet)
-		if (getClient().getActiveCharLock().tryLock())
+		if (getClient().getPlayerLock().tryLock())
 		{
 			try
 			{
 				// should always be null but if not then this is repeated packet and nothing should be done here
-				if (getClient().getActiveChar() == null)
+				if (getClient().getPlayer() == null)
 				{
 					// Load up character from disk
-					final L2PcInstance cha = getClient().loadCharFromDisk(_charSlot);
+					final PlayerInstance cha = getClient().loadCharFromDisk(_charSlot);
 					
 					if (cha == null)
 					{
@@ -82,7 +82,7 @@ public class CharacterSelected extends L2GameClientPacket
 					}
 					
 					cha.setClient(getClient());
-					getClient().setActiveChar(cha);
+					getClient().setPlayer(cha);
 					nProtect.getInstance().sendRequest(getClient());
 					getClient().setState(GameClientState.ENTERING);
 					sendPacket(new CharSelected(cha, getClient().getSessionId().playOkID1));
@@ -94,7 +94,7 @@ public class CharacterSelected extends L2GameClientPacket
 			}
 			finally
 			{
-				getClient().getActiveCharLock().unlock();
+				getClient().getPlayerLock().unlock();
 			}
 		}
 	}

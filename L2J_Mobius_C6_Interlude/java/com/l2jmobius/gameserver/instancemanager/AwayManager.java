@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
@@ -35,7 +35,7 @@ public final class AwayManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(AwayManager.class.getName());
 	private static AwayManager _instance;
-	protected Map<L2PcInstance, RestoreData> _awayPlayers;
+	protected Map<PlayerInstance, RestoreData> _awayPlayers;
 	
 	public static final AwayManager getInstance()
 	{
@@ -53,11 +53,11 @@ public final class AwayManager
 		private final int _originalTitleColor;
 		private final boolean _sitForced;
 		
-		public RestoreData(L2PcInstance activeChar)
+		public RestoreData(PlayerInstance player)
 		{
-			_originalTitle = activeChar.getTitle();
-			_originalTitleColor = activeChar.getAppearance().getTitleColor();
-			_sitForced = !activeChar.isSitting();
+			_originalTitle = player.getTitle();
+			_originalTitleColor = player.getAppearance().getTitleColor();
+			_sitForced = !player.isSitting();
 		}
 		
 		public boolean isSitForced()
@@ -65,151 +65,151 @@ public final class AwayManager
 			return _sitForced;
 		}
 		
-		public void restore(L2PcInstance activeChar)
+		public void restore(PlayerInstance player)
 		{
-			activeChar.getAppearance().setTitleColor(_originalTitleColor);
-			activeChar.setTitle(_originalTitle);
+			player.getAppearance().setTitleColor(_originalTitleColor);
+			player.setTitle(_originalTitle);
 		}
 	}
 	
 	private AwayManager()
 	{
-		_awayPlayers = Collections.synchronizedMap(new WeakHashMap<L2PcInstance, RestoreData>());
+		_awayPlayers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RestoreData>());
 	}
 	
-	public void setAway(L2PcInstance activeChar, String text)
+	public void setAway(PlayerInstance player, String text)
 	{
-		activeChar.set_awaying(true);
-		activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 9));
-		activeChar.sendMessage("Your status is Away in " + Config.AWAY_TIMER + " Sec.");
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		player.set_awaying(true);
+		player.broadcastPacket(new SocialAction(player.getObjectId(), 9));
+		player.sendMessage("Your status is Away in " + Config.AWAY_TIMER + " Sec.");
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.AWAY_TIMER * 1000);
-		activeChar.sendPacket(sg);
-		activeChar.setIsImobilised(true);
-		ThreadPool.schedule(new setPlayerAwayTask(activeChar, text), Config.AWAY_TIMER * 1000);
+		player.sendPacket(sg);
+		player.setIsImobilised(true);
+		ThreadPool.schedule(new setPlayerAwayTask(player, text), Config.AWAY_TIMER * 1000);
 	}
 	
-	public void setBack(L2PcInstance activeChar)
+	public void setBack(PlayerInstance player)
 	{
-		activeChar.sendMessage("You are back from Away Status in " + Config.BACK_TIMER + " Sec.");
+		player.sendMessage("You are back from Away Status in " + Config.BACK_TIMER + " Sec.");
 		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.BACK_TIMER * 1000);
-		activeChar.sendPacket(sg);
-		ThreadPool.schedule(new setPlayerBackTask(activeChar), Config.BACK_TIMER * 1000);
+		player.sendPacket(sg);
+		ThreadPool.schedule(new setPlayerBackTask(player), Config.BACK_TIMER * 1000);
 	}
 	
-	public void extraBack(L2PcInstance activeChar)
+	public void extraBack(PlayerInstance player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
-		RestoreData rd = _awayPlayers.get(activeChar);
+		RestoreData rd = _awayPlayers.get(player);
 		if (rd == null)
 		{
 			return;
 		}
 		
-		rd.restore(activeChar);
-		_awayPlayers.remove(activeChar);
+		rd.restore(player);
+		_awayPlayers.remove(player);
 	}
 	
 	class setPlayerAwayTask implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		private final String _awayText;
 		
-		setPlayerAwayTask(L2PcInstance activeChar, String awayText)
+		setPlayerAwayTask(PlayerInstance player, String awayText)
 		{
-			_activeChar = activeChar;
+			_player = player;
 			_awayText = awayText;
 		}
 		
 		@Override
 		public void run()
 		{
-			if (_activeChar == null)
+			if (_player == null)
 			{
 				return;
 			}
-			if (_activeChar.isAttackingNow() || _activeChar.isCastingNow())
+			if (_player.isAttackingNow() || _player.isCastingNow())
 			{
 				return;
 			}
 			
-			_awayPlayers.put(_activeChar, new RestoreData(_activeChar));
+			_awayPlayers.put(_player, new RestoreData(_player));
 			
-			_activeChar.disableAllSkills();
-			_activeChar.abortAttack();
-			_activeChar.abortCast();
-			_activeChar.setTarget(null);
-			_activeChar.setIsImobilised(false);
-			if (!_activeChar.isSitting())
+			_player.disableAllSkills();
+			_player.abortAttack();
+			_player.abortCast();
+			_player.setTarget(null);
+			_player.setIsImobilised(false);
+			if (!_player.isSitting())
 			{
-				_activeChar.sitDown();
+				_player.sitDown();
 			}
 			if (_awayText.length() <= 1)
 			{
-				_activeChar.sendMessage("You are now *Away*");
+				_player.sendMessage("You are now *Away*");
 			}
 			else
 			{
-				_activeChar.sendMessage("You are now Away *" + _awayText + "*");
+				_player.sendMessage("You are now Away *" + _awayText + "*");
 			}
 			
-			_activeChar.getAppearance().setTitleColor(Config.AWAY_TITLE_COLOR);
+			_player.getAppearance().setTitleColor(Config.AWAY_TITLE_COLOR);
 			
 			if (_awayText.length() <= 1)
 			{
-				_activeChar.setTitle("*Away*");
+				_player.setTitle("*Away*");
 			}
 			else
 			{
-				_activeChar.setTitle("Away*" + _awayText + "*");
+				_player.setTitle("Away*" + _awayText + "*");
 			}
 			
-			_activeChar.broadcastUserInfo();
-			_activeChar.setIsParalyzed(true);
-			_activeChar.setIsAway(true);
-			_activeChar.set_awaying(false);
+			_player.broadcastUserInfo();
+			_player.setIsParalyzed(true);
+			_player.setIsAway(true);
+			_player.set_awaying(false);
 		}
 	}
 	
 	class setPlayerBackTask implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		
-		setPlayerBackTask(L2PcInstance activeChar)
+		setPlayerBackTask(PlayerInstance player)
 		{
-			_activeChar = activeChar;
+			_player = player;
 		}
 		
 		@Override
 		public void run()
 		{
-			if (_activeChar == null)
+			if (_player == null)
 			{
 				return;
 			}
-			RestoreData rd = _awayPlayers.get(_activeChar);
+			RestoreData rd = _awayPlayers.get(_player);
 			
 			if (rd == null)
 			{
 				return;
 			}
 			
-			_activeChar.setIsParalyzed(false);
-			_activeChar.enableAllSkills();
-			_activeChar.setIsAway(false);
+			_player.setIsParalyzed(false);
+			_player.enableAllSkills();
+			_player.setIsAway(false);
 			
 			if (rd.isSitForced())
 			{
-				_activeChar.standUp();
+				_player.standUp();
 			}
 			
-			rd.restore(_activeChar);
-			_awayPlayers.remove(_activeChar);
-			_activeChar.broadcastUserInfo();
-			_activeChar.sendMessage("You are Back now!");
+			rd.restore(_player);
+			_awayPlayers.remove(_player);
+			_player.broadcastUserInfo();
+			_player.sendMessage("You are Back now!");
 		}
 	}
 }

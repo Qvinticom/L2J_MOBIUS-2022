@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class ChangeMoveType2 extends L2GameClientPacket
+public final class ChangeMoveType2 extends GameClientPacket
 {
 	private boolean _typeRun;
 	
@@ -31,7 +31,7 @@ public final class ChangeMoveType2 extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;

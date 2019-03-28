@@ -29,12 +29,12 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RecipeInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -53,14 +53,14 @@ public class RecipeController
 	protected static final Logger LOGGER = Logger.getLogger(RecipeController.class.getName());
 	
 	private static RecipeController _instance;
-	protected static final Map<L2PcInstance, RecipeItemMaker> _activeMakers = Collections.synchronizedMap(new WeakHashMap<L2PcInstance, RecipeItemMaker>());
+	protected static final Map<PlayerInstance, RecipeItemMaker> _activeMakers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RecipeItemMaker>());
 	
 	public static RecipeController getInstance()
 	{
 		return _instance == null ? _instance = new RecipeController() : _instance;
 	}
 	
-	public synchronized void requestBookOpen(L2PcInstance player, boolean isDwarvenCraft)
+	public synchronized void requestBookOpen(PlayerInstance player, boolean isDwarvenCraft)
 	{
 		RecipeItemMaker maker = null;
 		if (Config.ALT_GAME_CREATION)
@@ -81,22 +81,22 @@ public class RecipeController
 		return;
 	}
 	
-	public synchronized void requestMakeItemAbort(L2PcInstance player)
+	public synchronized void requestMakeItemAbort(PlayerInstance player)
 	{
 		_activeMakers.remove(player); // TODO: anything else here?
 	}
 	
-	public synchronized void requestManufactureItem(L2PcInstance manufacturer, int recipeListId, L2PcInstance player)
+	public synchronized void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
 	{
-		L2RecipeList recipeList = getValidRecipeList(player, recipeListId);
+		RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		
 		if (recipeList == null)
 		{
 			return;
 		}
 		
-		List<L2RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
-		List<L2RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
+		List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
+		List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -127,7 +127,7 @@ public class RecipeController
 		}
 	}
 	
-	public synchronized void requestMakeItem(L2PcInstance player, int recipeListId)
+	public synchronized void requestMakeItem(PlayerInstance player, int recipeListId)
 	{
 		if (player.isInDuel())
 		{
@@ -135,15 +135,15 @@ public class RecipeController
 			return;
 		}
 		
-		L2RecipeList recipeList = getValidRecipeList(player, recipeListId);
+		RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		
 		if (recipeList == null)
 		{
 			return;
 		}
 		
-		List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+		List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+		List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -182,10 +182,10 @@ public class RecipeController
 	{
 		protected boolean _isValid;
 		protected List<TempItem> _items = null;
-		protected final L2RecipeList _recipeList;
-		protected final L2PcInstance _player; // "crafter"
-		protected final L2PcInstance _target; // "customer"
-		protected final L2Skill _skill;
+		protected final RecipeList _recipeList;
+		protected final PlayerInstance _player; // "crafter"
+		protected final PlayerInstance _target; // "customer"
+		protected final Skill _skill;
 		protected final int _skillId;
 		protected final int _skillLevel;
 		protected double _creationPasses;
@@ -194,14 +194,14 @@ public class RecipeController
 		protected int _totalItems;
 		protected int _delay;
 		
-		public RecipeItemMaker(L2PcInstance pPlayer, L2RecipeList pRecipeList, L2PcInstance pTarget)
+		public RecipeItemMaker(PlayerInstance pPlayer, RecipeList pRecipeList, PlayerInstance pTarget)
 		{
 			_player = pPlayer;
 			_target = pTarget;
 			_recipeList = pRecipeList;
 			
 			_isValid = false;
-			_skillId = _recipeList.isDwarvenRecipe() ? L2Skill.SKILL_CREATE_DWARVEN : L2Skill.SKILL_CREATE_COMMON;
+			_skillId = _recipeList.isDwarvenRecipe() ? Skill.SKILL_CREATE_DWARVEN : Skill.SKILL_CREATE_COMMON;
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
 			
@@ -265,7 +265,7 @@ public class RecipeController
 			// check that customer can afford to pay for creation services
 			if (_player != _target)
 			{
-				for (L2ManufactureItem temp : _player.getCreateList().getList())
+				for (ManufactureItem temp : _player.getCreateList().getList())
 				{
 					if (temp.getRecipeId() == _recipeList.getId()) // find recipe for item we want manufactured
 					{
@@ -423,7 +423,7 @@ public class RecipeController
 			if ((_target != _player) && (_price > 0)) // customer must pay for services
 			{
 				// attempt to pay for item
-				L2ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				
 				if (adenatransfer == null)
 				{
@@ -554,17 +554,17 @@ public class RecipeController
 		
 		private List<TempItem> listItems(boolean remove)
 		{
-			L2RecipeInstance[] recipes = _recipeList.getRecipes();
+			RecipeInstance[] recipes = _recipeList.getRecipes();
 			Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
 			
-			for (L2RecipeInstance recipe : recipes)
+			for (RecipeInstance recipe : recipes)
 			{
 				final int quantity = _recipeList.isConsumable() ? (int) (recipe.getQuantity() * Config.RATE_CONSUMABLE_COST) : recipe.getQuantity();
 				
 				if (quantity > 0)
 				{
-					final L2ItemInstance item = inv.getItemByItemId(recipe.getItemId());
+					final ItemInstance item = inv.getItemByItemId(recipe.getItemId());
 					
 					// check materials
 					if ((item == null) || (item.getCount() < quantity))
@@ -612,7 +612,7 @@ public class RecipeController
 			 * @param item
 			 * @param quantity of that item
 			 */
-			public TempItem(L2ItemInstance item, int quantity)
+			public TempItem(ItemInstance item, int quantity)
 			{
 				super();
 				_itemId = item.getItemId();
@@ -658,7 +658,7 @@ public class RecipeController
 			final int itemId = _recipeList.getItemId();
 			final int itemCount = _recipeList.getCount();
 			
-			final L2ItemInstance createdItem = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
+			final ItemInstance createdItem = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
 			
 			// inform customer of earned item
 			SystemMessage sm = null;
@@ -718,9 +718,9 @@ public class RecipeController
 		}
 	}
 	
-	private L2RecipeList getValidRecipeList(L2PcInstance player, int id)
+	private RecipeList getValidRecipeList(PlayerInstance player, int id)
 	{
-		final L2RecipeList recipeList = RecipeTable.getInstance().getRecipeList(id - 1);
+		final RecipeList recipeList = RecipeTable.getInstance().getRecipeList(id - 1);
 		
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{

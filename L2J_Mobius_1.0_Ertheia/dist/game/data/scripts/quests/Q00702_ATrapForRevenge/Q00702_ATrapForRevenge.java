@@ -17,8 +17,8 @@
 package quests.Q00702_ATrapForRevenge;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -62,18 +62,18 @@ public class Q00702_ATrapForRevenge extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("32563-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.equalsIgnoreCase("32563-07.html"))
 		{
@@ -99,7 +99,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-14.html"))
 		{
-			st.exitQuest(true, true);
+			qs.exitQuest(true, true);
 		}
 		else if (event.equalsIgnoreCase("32557-03.html"))
 		{
@@ -125,11 +125,11 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-03.html"))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		else if (event.equalsIgnoreCase("32555-05.html"))
 		{
-			st.exitQuest(true, true);
+			qs.exitQuest(true, true);
 		}
 		else if (event.equalsIgnoreCase("32555-06.html"))
 		{
@@ -263,9 +263,9 @@ public class Q00702_ATrapForRevenge extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 2);
+		final PlayerInstance partyMember = getRandomPartyMember(player, 2);
 		if (partyMember == null)
 		{
 			return null;
@@ -373,14 +373,14 @@ public class Q00702_ATrapForRevenge extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (npc.getId() == PLENOS)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -390,16 +390,16 @@ public class Q00702_ATrapForRevenge extends Quest
 				}
 				case State.STARTED:
 				{
-					htmltext = (st.isCond(1)) ? "32563-05.html" : "32563-06.html";
+					htmltext = (qs.isCond(1)) ? "32563-05.html" : "32563-06.html";
 					break;
 				}
 			}
 		}
-		if (st.getState() == State.STARTED)
+		if (qs.getState() == State.STARTED)
 		{
 			if (npc.getId() == LEKON)
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -415,7 +415,7 @@ public class Q00702_ATrapForRevenge extends Quest
 			}
 			else if (npc.getId() == TENIUS)
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{

@@ -23,7 +23,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 public class SoIManager
@@ -129,7 +129,7 @@ public class SoIManager
 		GlobalVariablesManager.getInstance().remove("SoI_opened");
 		// EnergySeeds.SoiSeedStop();
 		DoorData.getInstance().getDoor(14240102).closeMe();
-		for (L2PcInstance ch : ZoneManager.getInstance().getZoneById(60010).getPlayersInside())
+		for (PlayerInstance ch : ZoneManager.getInstance().getZoneById(60010).getPlayersInside())
 		{
 			if (ch != null)
 			{
@@ -248,7 +248,7 @@ public class SoIManager
 		// EnergySeeds.SoiSeedSpawn();
 	}
 	
-	public static void teleportInSeed(L2PcInstance player)
+	public static void teleportInSeed(PlayerInstance player)
 	{
 		player.teleToLocation(openSeedTeleportLocs[Rnd.get(openSeedTeleportLocs.length)], false);
 	}

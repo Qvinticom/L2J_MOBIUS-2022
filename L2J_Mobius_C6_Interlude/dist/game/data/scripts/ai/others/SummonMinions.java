@@ -26,9 +26,9 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -36,7 +36,7 @@ public class SummonMinions extends Quest
 {
 	private static int HasSpawned;
 	private static Set<Integer> myTrackingSet = new CopyOnWriteArraySet<>(); // Used to track instances of npcs
-	private final Map<Integer, List<L2PcInstance>> _attackersList = new ConcurrentHashMap<>();
+	private final Map<Integer, List<PlayerInstance>> _attackersList = new ConcurrentHashMap<>();
 	private static final Map<Integer, Integer[]> MINIONS = new HashMap<>();
 	static
 	{
@@ -142,7 +142,7 @@ public class SummonMinions extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final int npcObjId = npc.getObjectId();
@@ -165,7 +165,7 @@ public class SummonMinions extends Quest
 							Integer[] minions = MINIONS.get(npcId);
 							for (Integer minion : minions)
 							{
-								final L2Attackable newNpc = (L2Attackable) addSpawn(minion, (npc.getX() + Rnd.get(-150, 150)), (npc.getY() + Rnd.get(-150, 150)), npc.getZ(), 0, false, 0);
+								final Attackable newNpc = (Attackable) addSpawn(minion, (npc.getX() + Rnd.get(-150, 150)), (npc.getY() + Rnd.get(-150, 150)), npc.getZ(), 0, false, 0);
 								newNpc.setRunning();
 								newNpc.addDamageHate(attacker, 0, 999);
 								newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -181,11 +181,11 @@ public class SummonMinions extends Quest
 					}
 					if (attacker.getParty() != null)
 					{
-						for (L2PcInstance member : attacker.getParty().getPartyMembers())
+						for (PlayerInstance member : attacker.getParty().getPartyMembers())
 						{
 							if (_attackersList.get(npcObjId) == null)
 							{
-								final List<L2PcInstance> player = new ArrayList<>();
+								final List<PlayerInstance> player = new ArrayList<>();
 								player.add(member);
 								_attackersList.put(npcObjId, player);
 							}
@@ -197,7 +197,7 @@ public class SummonMinions extends Quest
 					}
 					else if (_attackersList.get(npcObjId) == null)
 					{
-						final List<L2PcInstance> player = new ArrayList<>();
+						final List<PlayerInstance> player = new ArrayList<>();
 						player.add(attacker);
 						_attackersList.put(npcObjId, player);
 					}
@@ -211,7 +211,7 @@ public class SummonMinions extends Quest
 						Integer[] minions = MINIONS.get(npcId);
 						for (Integer minion : minions)
 						{
-							final L2Attackable newNpc = (L2Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
+							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -227,7 +227,7 @@ public class SummonMinions extends Quest
 					{
 						for (Integer minion : minions)
 						{
-							final L2Attackable newNpc = (L2Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
+							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -256,7 +256,7 @@ public class SummonMinions extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final int npcObjId = npc.getObjectId();

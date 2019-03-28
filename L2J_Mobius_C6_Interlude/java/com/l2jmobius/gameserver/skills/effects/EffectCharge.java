@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 
-public class EffectCharge extends L2Effect
+public class EffectCharge extends Effect
 {
 	public int numCharges;
 	
@@ -31,9 +31,9 @@ public class EffectCharge extends L2Effect
 	{
 		super(env, template);
 		numCharges = 1;
-		if (env.target instanceof L2PcInstance)
+		if (env.target instanceof PlayerInstance)
 		{
-			env.target.sendPacket(new EtcStatusUpdate((L2PcInstance) env.target));
+			env.target.sendPacket(new EtcStatusUpdate((PlayerInstance) env.target));
 			final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
 			sm.addNumber(numCharges);
 			getEffected().sendPacket(sm);

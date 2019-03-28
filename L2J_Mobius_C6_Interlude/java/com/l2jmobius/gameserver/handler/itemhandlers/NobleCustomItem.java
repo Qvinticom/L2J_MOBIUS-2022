@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class NobleCustomItem implements IItemHandler
@@ -35,34 +35,34 @@ public class NobleCustomItem implements IItemHandler
 	}
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		if (Config.NOBLE_CUSTOM_ITEMS)
 		{
-			if (!(playable instanceof L2PcInstance))
+			if (!(playable instanceof PlayerInstance))
 			{
 				return;
 			}
 			
-			L2PcInstance activeChar = (L2PcInstance) playable;
+			PlayerInstance player = (PlayerInstance) playable;
 			
-			if (activeChar.isInOlympiadMode())
+			if (player.isInOlympiadMode())
 			{
-				activeChar.sendMessage("This Item Cannot Be Used On Olympiad Games.");
+				player.sendMessage("This Item Cannot Be Used On Olympiad Games.");
 			}
 			
-			if (activeChar.isNoble())
+			if (player.isNoble())
 			{
-				activeChar.sendMessage("You Are Already A Noblesse!.");
+				player.sendMessage("You Are Already A Noblesse!.");
 			}
 			else
 			{
-				activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 16));
-				activeChar.setNoble(true);
-				activeChar.sendMessage("You Are Now a Noble,You Are Granted With Noblesse Status , And Noblesse Skills.");
-				activeChar.broadcastUserInfo();
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 16));
+				player.setNoble(true);
+				player.sendMessage("You Are Now a Noble,You Are Granted With Noblesse Status , And Noblesse Skills.");
+				player.broadcastUserInfo();
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-				activeChar.getInventory().addItem("Tiara", 7694, 1, activeChar, null);
+				player.getInventory().addItem("Tiara", 7694, 1, player, null);
 			}
 		}
 	}

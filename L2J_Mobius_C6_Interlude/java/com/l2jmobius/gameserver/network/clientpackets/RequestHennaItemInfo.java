@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.csv.HennaTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.HennaItemInfo;
-import com.l2jmobius.gameserver.templates.item.L2Henna;
+import com.l2jmobius.gameserver.templates.item.Henna;
 
-public final class RequestHennaItemInfo extends L2GameClientPacket
+public final class RequestHennaItemInfo extends GameClientPacket
 {
 	private int _symbolId;
 	
@@ -35,23 +35,23 @@ public final class RequestHennaItemInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Henna template = HennaTable.getInstance().getTemplate(_symbolId);
+		final Henna template = HennaTable.getInstance().getTemplate(_symbolId);
 		
 		if (template == null)
 		{
 			return;
 		}
 		
-		final L2HennaInstance temp = new L2HennaInstance(template);
+		final HennaInstance temp = new HennaInstance(template);
 		
-		final HennaItemInfo hii = new HennaItemInfo(temp, activeChar);
-		activeChar.sendPacket(hii);
+		final HennaItemInfo hii = new HennaItemInfo(temp, player);
+		player.sendPacket(hii);
 	}
 }

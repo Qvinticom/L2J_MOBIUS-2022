@@ -29,15 +29,15 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.CastleData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * Siege Guard Manager.
@@ -46,8 +46,8 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 public final class SiegeGuardManager
 {
 	private static final Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
-	private static final Set<L2ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
-	private static final Map<Integer, Set<L2Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
+	private static final Set<ItemInstance> _droppedTickets = ConcurrentHashMap.newKeySet();
+	private static final Map<Integer, Set<Spawn>> _siegeGuardSpawn = new ConcurrentHashMap<>();
 	
 	protected SiegeGuardManager()
 	{
@@ -77,10 +77,10 @@ public final class SiegeGuardManager
 				final SiegeGuardHolder holder = getSiegeGuardByNpc(castle.getResidenceId(), npcId);
 				if ((holder != null) && !castle.getSiege().isInProgress())
 				{
-					final L2ItemInstance dropticket = new L2ItemInstance(holder.getItemId());
+					final ItemInstance dropticket = new ItemInstance(holder.getItemId());
 					dropticket.setItemLocation(ItemLocation.VOID);
 					dropticket.dropMe(null, x, y, z);
-					L2World.getInstance().addObject(dropticket);
+					World.getInstance().addObject(dropticket);
 					_droppedTickets.add(dropticket);
 				}
 			}
@@ -119,7 +119,7 @@ public final class SiegeGuardManager
 	 * @param player the PlayerInstance
 	 * @return {@code true} if {@code PlayerInstance} is too much close to another ticket, {@code false} otherwise
 	 */
-	public boolean isTooCloseToAnotherTicket(L2PcInstance player)
+	public boolean isTooCloseToAnotherTicket(PlayerInstance player)
 	{
 		return _droppedTickets.stream().filter(g -> g.calculateDistance3D(player) < 25).findFirst().orElse(null) != null;
 	}
@@ -142,7 +142,7 @@ public final class SiegeGuardManager
 	 * @param itemId the ID of the item
 	 * @param player the PlayerInstance
 	 */
-	public void addTicket(int itemId, L2PcInstance player)
+	public void addTicket(int itemId, PlayerInstance player)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if (castle == null)
@@ -177,10 +177,10 @@ public final class SiegeGuardManager
 			}
 			
 			spawnMercenary(player, holder);
-			final L2ItemInstance dropticket = new L2ItemInstance(itemId);
+			final ItemInstance dropticket = new ItemInstance(itemId);
 			dropticket.setItemLocation(ItemLocation.VOID);
 			dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
-			L2World.getInstance().addObject(dropticket);
+			World.getInstance().addObject(dropticket);
 			_droppedTickets.add(dropticket);
 		}
 	}
@@ -192,10 +192,10 @@ public final class SiegeGuardManager
 	 */
 	private void spawnMercenary(IPositionable pos, SiegeGuardHolder holder)
 	{
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
+		final NpcTemplate template = NpcData.getInstance().getTemplate(holder.getNpcId());
 		if (template != null)
 		{
-			final L2DefenderInstance npc = new L2DefenderInstance(template);
+			final DefenderInstance npc = new DefenderInstance(template);
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			npc.setDecayed(false);
 			npc.setHeading(pos.getHeading());
@@ -211,7 +211,7 @@ public final class SiegeGuardManager
 	 */
 	public void deleteTickets(int castleId)
 	{
-		for (L2ItemInstance ticket : _droppedTickets)
+		for (ItemInstance ticket : _droppedTickets)
 		{
 			if ((ticket != null) && (getSiegeGuardByItem(castleId, ticket.getId()) != null))
 			{
@@ -225,7 +225,7 @@ public final class SiegeGuardManager
 	 * remove a single ticket and its associated spawn from the world (used when the castle lord picks up a ticket, for example).
 	 * @param item the item ID
 	 */
-	public void removeTicket(L2ItemInstance item)
+	public void removeTicket(ItemInstance item)
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(item);
 		if (castle == null)
@@ -259,7 +259,7 @@ public final class SiegeGuardManager
 			{
 				while (rs.next())
 				{
-					final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
+					final Spawn spawn = new Spawn(rs.getInt("npcId"));
 					spawn.setAmount(1);
 					spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawn.setHeading(rs.getInt("heading"));
@@ -327,7 +327,7 @@ public final class SiegeGuardManager
 			final boolean isHired = (castle.getOwnerId() > 0);
 			loadSiegeGuard(castle);
 			
-			for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId()))
+			for (Spawn spawn : getSpawnedGuards(castle.getResidenceId()))
 			{
 				if (spawn != null)
 				{
@@ -359,7 +359,7 @@ public final class SiegeGuardManager
 	 */
 	public void unspawnSiegeGuard(Castle castle)
 	{
-		for (L2Spawn spawn : getSpawnedGuards(castle.getResidenceId()))
+		for (Spawn spawn : getSpawnedGuards(castle.getResidenceId()))
 		{
 			if ((spawn != null) && (spawn.getLastSpawn() != null))
 			{
@@ -370,7 +370,7 @@ public final class SiegeGuardManager
 		getSpawnedGuards(castle.getResidenceId()).clear();
 	}
 	
-	public Set<L2Spawn> getSpawnedGuards(int castleId)
+	public Set<Spawn> getSpawnedGuards(int castleId)
 	{
 		return _siegeGuardSpawn.computeIfAbsent(castleId, key -> ConcurrentHashMap.newKeySet());
 	}

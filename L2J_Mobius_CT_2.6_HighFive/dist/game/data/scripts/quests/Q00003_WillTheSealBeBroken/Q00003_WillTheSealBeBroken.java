@@ -18,8 +18,8 @@ package quests.Q00003_WillTheSealBeBroken;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -57,10 +57,10 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -70,7 +70,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		{
 			case "30141-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "30141-05.html":
@@ -87,32 +87,32 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance member = getRandomPartyMember(player, 1);
+		final PlayerInstance member = getRandomPartyMember(player, 1);
 		if (member == null)
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = getQuestState(member, false);
+		final QuestState qs = getQuestState(member, false);
 		switch (npc.getId())
 		{
 			case OMEN_BEAST:
 			{
-				giveItem(member, st, OMEN_BEAST_EYE, getRegisteredItemIds());
+				giveItem(member, qs, OMEN_BEAST_EYE, getRegisteredItemIds());
 				break;
 			}
 			case STINK_ZOMBIE:
 			case TAINTED_ZOMBIE:
 			{
-				giveItem(member, st, TAINT_STONE, getRegisteredItemIds());
+				giveItem(member, qs, TAINT_STONE, getRegisteredItemIds());
 				break;
 			}
 			case LESSER_SUCCUBUS:
 			case LESSER_SUCCUBUS_TILFO:
 			case LESSER_SUCCUBUS_TUREN:
 			{
-				giveItem(member, st, SUCCUBUS_BLOOD, getRegisteredItemIds());
+				giveItem(member, qs, SUCCUBUS_BLOOD, getRegisteredItemIds());
 				break;
 			}
 		}
@@ -120,11 +120,11 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -133,14 +133,14 @@ public class Q00003_WillTheSealBeBroken extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "30141-04.html";
 				}
 				else
 				{
 					giveItems(player, ENCHANT, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30141-06.html";
 				}
 				break;
@@ -154,7 +154,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		return htmltext;
 	}
 	
-	private static void giveItem(L2PcInstance player, QuestState st, int item, int... items)
+	private static void giveItem(PlayerInstance player, QuestState qs, int item, int... items)
 	{
 		if (!hasQuestItems(player, item))
 		{
@@ -162,7 +162,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			if (hasQuestItems(player, items))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 	}

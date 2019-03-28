@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.ICondition;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -44,7 +44,7 @@ public class ExtendDropDataHolder
 		_systemMessages = set.getMap("systemMessages", Long.class, SystemMessageId.class);
 	}
 	
-	public void reward(L2PcInstance player, L2Npc npc)
+	public void reward(PlayerInstance player, Npc npc)
 	{
 		if (_conditions.isEmpty() || _conditions.stream().allMatch(cond -> cond.test(player, npc)))
 		{

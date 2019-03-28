@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="26200" level="102" type="L2RaidBoss" name="Hanson" title="Guard Captain">
+	<npc id="26200" level="102" type="RaidBoss" name="Hanson" title="Guard Captain">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -63,7 +63,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26201" level="102" type="L2RaidBoss" name="Grom" title="Destroyer">
+	<npc id="26201" level="102" type="RaidBoss" name="Grom" title="Destroyer">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -125,7 +125,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26202" level="102" type="L2RaidBoss" name="Medvez" title="Executor">
+	<npc id="26202" level="102" type="RaidBoss" name="Medvez" title="Executor">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -187,7 +187,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26203" level="102" type="L2RaidBoss" name="Zigatan" title="Dark Knight">
+	<npc id="26203" level="102" type="RaidBoss" name="Zigatan" title="Dark Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -249,7 +249,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26204" level="102" type="L2RaidBoss" name="Hunchback Kwai" title="Berserker">
+	<npc id="26204" level="102" type="RaidBoss" name="Hunchback Kwai" title="Berserker">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -311,7 +311,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26205" level="102" type="L2RaidBoss" name="Cornix" title="Soul Reaper">
+	<npc id="26205" level="102" type="RaidBoss" name="Cornix" title="Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -373,7 +373,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26206" level="102" type="L2RaidBoss" name="Caranix" title="Soul Reaper">
+	<npc id="26206" level="102" type="RaidBoss" name="Caranix" title="Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -435,7 +435,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26207" level="102" type="L2RaidBoss" name="Jonadan" title="Creed Guardian">
+	<npc id="26207" level="102" type="RaidBoss" name="Jonadan" title="Creed Guardian">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -497,7 +497,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26208" level="102" type="L2RaidBoss" name="Demien" title="Creed Guardian">
+	<npc id="26208" level="102" type="RaidBoss" name="Demien" title="Creed Guardian">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -559,7 +559,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26209" level="102" type="L2RaidBoss" name="Berk" title="High Executor">
+	<npc id="26209" level="102" type="RaidBoss" name="Berk" title="High Executor">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -621,7 +621,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26210" level="102" type="L2RaidBoss" name="Tarku" title="Orc Mercenary">
+	<npc id="26210" level="102" type="RaidBoss" name="Tarku" title="Orc Mercenary">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -683,7 +683,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26211" level="102" type="L2RaidBoss" name="Tarpin" title="Orc Mercenary">
+	<npc id="26211" level="102" type="RaidBoss" name="Tarpin" title="Orc Mercenary">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -745,7 +745,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26212" level="102" type="L2Monster" name="Embryo Safe Vault" title="Handle with Care">
+	<npc id="26212" level="102" type="Monster" name="Embryo Safe Vault" title="Handle with Care">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" />
@@ -812,7 +812,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26213" level="102" type="L2Monster" name="Embryo Secret Vault" title="Handle with Care">
+	<npc id="26213" level="102" type="Monster" name="Embryo Secret Vault" title="Handle with Care">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" />
@@ -879,7 +879,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26214" level="102" type="L2RaidBoss" name="Sakum" title="Final Evolution Form">
+	<npc id="26214" level="102" type="RaidBoss" name="Sakum" title="Final Evolution Form">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -941,7 +941,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26215" level="102" type="L2RaidBoss" name="Crazy Typhoon" title="Kelbim's Old Underling">
+	<npc id="26215" level="102" type="RaidBoss" name="Crazy Typhoon" title="Kelbim's Old Underling">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1003,7 +1003,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26216" level="102" type="L2RaidBoss" name="Cursed Haren" title="Kelbim's Old Underling">
+	<npc id="26216" level="102" type="RaidBoss" name="Cursed Haren" title="Kelbim's Old Underling">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1065,7 +1065,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26217" level="102" type="L2RaidBoss" name="Flynt" title="Evil Destructor">
+	<npc id="26217" level="102" type="RaidBoss" name="Flynt" title="Evil Destructor">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1127,7 +1127,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26218" level="102" type="L2RaidBoss" name="Harp" title="Complete Being">
+	<npc id="26218" level="102" type="RaidBoss" name="Harp" title="Complete Being">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1165,7 +1165,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26219" level="102" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
+	<npc id="26219" level="102" type="RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="7" />
@@ -1202,7 +1202,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26220" level="102" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
+	<npc id="26220" level="102" type="RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="7" />
@@ -1264,7 +1264,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26221" level="102" type="L2RaidBoss" name="Whitra" title="Guardian">
+	<npc id="26221" level="102" type="RaidBoss" name="Whitra" title="Guardian">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1326,7 +1326,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26222" level="102" type="L2RaidBoss" name="Bletra" title="Guardian">
+	<npc id="26222" level="102" type="RaidBoss" name="Bletra" title="Guardian">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1388,7 +1388,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26223" level="102" type="L2RaidBoss" name="Upgraded Siege Tank" title="Test Run">
+	<npc id="26223" level="102" type="RaidBoss" name="Upgraded Siege Tank" title="Test Run">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1450,7 +1450,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26224" level="102" type="L2RaidBoss" name="Vegima" title="Dark Shaman">
+	<npc id="26224" level="102" type="RaidBoss" name="Vegima" title="Dark Shaman">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1512,7 +1512,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26225" level="102" type="L2RaidBoss" name="Varonia" title="Soul Reaper">
+	<npc id="26225" level="102" type="RaidBoss" name="Varonia" title="Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1574,7 +1574,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26226" level="102" type="L2RaidBoss" name="Aronia" title="Soul Reaper">
+	<npc id="26226" level="102" type="RaidBoss" name="Aronia" title="Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1636,7 +1636,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26227" level="102" type="L2RaidBoss" name="Odd" title="Inquisitor">
+	<npc id="26227" level="102" type="RaidBoss" name="Odd" title="Inquisitor">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1698,7 +1698,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26228" level="102" type="L2RaidBoss" name="Even" title="Judge">
+	<npc id="26228" level="102" type="RaidBoss" name="Even" title="Judge">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1760,7 +1760,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26229" level="102" type="L2RaidBoss" name="Nemertess" title="Incarnation of Revenge">
+	<npc id="26229" level="102" type="RaidBoss" name="Nemertess" title="Incarnation of Revenge">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="31685534106" sp="63371076" raidPoints="21" />
@@ -1798,7 +1798,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26230" level="85" type="L2Npc" name="Castle Raider">
+	<npc id="26230" level="85" type="Npc" name="Castle Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1818,7 +1818,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="26231" level="34" type="L2Npc" name="Poslof">
+	<npc id="26231" level="34" type="Npc" name="Poslof">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -1844,7 +1844,7 @@
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 		</skillList>
 	</npc>
-	<npc id="26232" level="85" type="L2Npc" name="Resurrected Castle Archer">
+	<npc id="26232" level="85" type="Npc" name="Resurrected Castle Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1864,7 +1864,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="26233" level="85" type="L2Npc" name="Orc Mercenary">
+	<npc id="26233" level="85" type="Npc" name="Orc Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1884,7 +1884,7 @@
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="26234" level="85" type="L2Npc" name="Castle Wizard">
+	<npc id="26234" level="85" type="Npc" name="Castle Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1904,7 +1904,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="26235" level="104" type="L2Npc" name="Kain van Halter" title="Embryo Commander-in-chief">
+	<npc id="26235" level="104" type="Npc" name="Kain van Halter" title="Embryo Commander-in-chief">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1923,7 +1923,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="26236" level="104" type="L2RaidBoss" name="Camille" title="Final Disciple">
+	<npc id="26236" level="104" type="RaidBoss" name="Camille" title="Final Disciple">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="304278653952" sp="608557372" raidPoints="21" />
@@ -2065,7 +2065,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26237" level="85" type="L2Npc" name="Creed Guardian" title="Camille's Immediate">
+	<npc id="26237" level="85" type="Npc" name="Creed Guardian" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2084,7 +2084,7 @@
 			<height normal="39.6" />
 		</collision>
 	</npc>
-	<npc id="26238" level="85" type="L2Npc" name="Soul Reaper" title="Camille's Immediate">
+	<npc id="26238" level="85" type="Npc" name="Soul Reaper" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2103,7 +2103,7 @@
 			<height normal="49.8" />
 		</collision>
 	</npc>
-	<npc id="26239" level="85" type="L2Npc" name="Soul Reaper" title="Camille's Immediate">
+	<npc id="26239" level="85" type="Npc" name="Soul Reaper" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2122,7 +2122,7 @@
 			<height normal="40.8" />
 		</collision>
 	</npc>
-	<npc id="26240" level="85" type="L2Npc" name="Judge" title="Camille's Immediate">
+	<npc id="26240" level="85" type="Npc" name="Judge" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2141,7 +2141,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="26241" level="85" type="L2Npc" name="Choir" title="Camille's Immediate">
+	<npc id="26241" level="85" type="Npc" name="Choir" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2160,7 +2160,7 @@
 			<height normal="32.4" />
 		</collision>
 	</npc>
-	<npc id="26242" level="85" type="L2Npc" name="Berserker" title="Camille's Immediate">
+	<npc id="26242" level="85" type="Npc" name="Berserker" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2179,7 +2179,7 @@
 			<height normal="34.2" />
 		</collision>
 	</npc>
-	<npc id="26243" level="103" type="L2Monster" name="Mamut" title="Chief Gatekeeper">
+	<npc id="26243" level="103" type="Monster" name="Mamut" title="Chief Gatekeeper">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="26114827957" sp="52229698" />
@@ -2203,7 +2203,7 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26244" level="103" type="L2Monster" name="Isburg" title="Guardian Captain">
+	<npc id="26244" level="103" type="Monster" name="Isburg" title="Guardian Captain">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="48498979846" sp="96997980" />
@@ -2227,7 +2227,7 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="26245" level="85" type="L2Npc" name="Judge" title="Guardian Captain's Immediate">
+	<npc id="26245" level="85" type="Npc" name="Judge" title="Guardian Captain's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2246,7 +2246,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="26246" level="85" type="L2Npc" name="Berserker" title="Guardian Captain's Immediate">
+	<npc id="26246" level="85" type="Npc" name="Berserker" title="Guardian Captain's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2265,7 +2265,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="26247" level="85" type="L2Npc" name="Roa" title="Camille's Special Subordinate">
+	<npc id="26247" level="85" type="Npc" name="Roa" title="Camille's Special Subordinate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2284,7 +2284,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="26248" level="85" type="L2RaidBoss" name="Frederick the Destroyer">
+	<npc id="26248" level="85" type="RaidBoss" name="Frederick the Destroyer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2304,7 +2304,7 @@
 			<height normal="94" />
 		</collision>
 	</npc>
-	<npc id="26249" level="85" type="L2Npc" name="Darion">
+	<npc id="26249" level="85" type="Npc" name="Darion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2323,7 +2323,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26250" level="85" type="L2Npc" name="Goldberg">
+	<npc id="26250" level="85" type="Npc" name="Goldberg">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2342,7 +2342,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26251" level="85" type="L2Npc" name="Handy Cannon Gunner">
+	<npc id="26251" level="85" type="Npc" name="Handy Cannon Gunner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2361,7 +2361,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26252" level="85" type="L2Npc" name="Anchor Warrior">
+	<npc id="26252" level="85" type="Npc" name="Anchor Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2380,7 +2380,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26253" level="85" type="L2Npc" name="Operator">
+	<npc id="26253" level="85" type="Npc" name="Operator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2399,7 +2399,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26254" level="85" type="L2Npc" name="Axe Warrior">
+	<npc id="26254" level="85" type="Npc" name="Axe Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2418,7 +2418,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26255" level="85" type="L2Npc" name="Zaken">
+	<npc id="26255" level="85" type="Npc" name="Zaken">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2437,7 +2437,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26256" level="85" type="L2Npc" name="Devil Guardian">
+	<npc id="26256" level="85" type="Npc" name="Devil Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2456,7 +2456,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26257" level="85" type="L2Npc" name="Devil Spearshooter">
+	<npc id="26257" level="85" type="Npc" name="Devil Spearshooter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2475,7 +2475,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26258" level="85" type="L2Npc" name="Devil Warrior">
+	<npc id="26258" level="85" type="Npc" name="Devil Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2494,7 +2494,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26259" level="85" type="L2Npc" name="Devil Dolores">
+	<npc id="26259" level="85" type="Npc" name="Devil Dolores">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2513,7 +2513,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26260" level="85" type="L2Npc" name="Blader">
+	<npc id="26260" level="85" type="Npc" name="Blader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2532,7 +2532,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26261" level="85" type="L2Npc" name="Tiat">
+	<npc id="26261" level="85" type="Npc" name="Tiat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2551,7 +2551,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26262" level="85" type="L2Npc" name="Dragontroop Spellshifter">
+	<npc id="26262" level="85" type="Npc" name="Dragontroop Spellshifter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2570,7 +2570,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26263" level="85" type="L2Npc" name="Dragontroop Royal Guard Captain">
+	<npc id="26263" level="85" type="Npc" name="Dragontroop Royal Guard Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2589,7 +2589,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26264" level="85" type="L2Npc" name="Dragontroop Lancer">
+	<npc id="26264" level="85" type="Npc" name="Dragontroop Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2608,7 +2608,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26265" level="85" type="L2Npc" name="Dragontroop Berserker">
+	<npc id="26265" level="85" type="Npc" name="Dragontroop Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2627,7 +2627,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26266" level="85" type="L2Npc" name="Tauti">
+	<npc id="26266" level="85" type="Npc" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2646,7 +2646,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26267" level="85" type="L2Npc" name="Mary Reed">
+	<npc id="26267" level="85" type="Npc" name="Mary Reed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2665,7 +2665,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26268" level="85" type="L2Npc" name="Shield Master">
+	<npc id="26268" level="85" type="Npc" name="Shield Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2684,7 +2684,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26269" level="85" type="L2Npc" name="Spear Master">
+	<npc id="26269" level="85" type="Npc" name="Spear Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2703,7 +2703,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26270" level="85" type="L2Npc" name="Bow Master">
+	<npc id="26270" level="85" type="Npc" name="Bow Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2722,7 +2722,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26271" level="85" type="L2Npc" name="Magic Master">
+	<npc id="26271" level="85" type="Npc" name="Magic Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2741,7 +2741,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26272" level="85" type="L2Npc" name="Dancing Bard" title="GM's Guardian">
+	<npc id="26272" level="85" type="Npc" name="Dancing Bard" title="GM's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2760,7 +2760,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26273" level="85" type="L2Npc" name="Golden Bat Dandy" title="GM's Guardian">
+	<npc id="26273" level="85" type="Npc" name="Golden Bat Dandy" title="GM's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2779,7 +2779,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26274" level="85" type="L2Npc" name="Snow Man" title="GM's Guardian">
+	<npc id="26274" level="85" type="Npc" name="Snow Man" title="GM's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2798,7 +2798,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26275" level="85" type="L2Npc" name="Super Kat the Cat" title="GM's Guardian">
+	<npc id="26275" level="85" type="Npc" name="Super Kat the Cat" title="GM's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2817,7 +2817,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26276" level="85" type="L2Npc" name="Spicula Zero" title="Raid Boss">
+	<npc id="26276" level="85" type="Npc" name="Spicula Zero" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2836,7 +2836,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26277" level="101" type="L2RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Kantu" title="Raid Boss">
+	<npc id="26277" level="101" type="RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Kantu" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46329" />
@@ -2931,7 +2931,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26278" level="101" type="L2RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Kai" title="Raid Boss">
+	<npc id="26278" level="101" type="RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Kai" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46331" />
@@ -3026,7 +3026,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26279" level="101" type="L2RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Heine" title="Raid Boss">
+	<npc id="26279" level="101" type="RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Heine" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46334" />
@@ -3121,7 +3121,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26280" level="101" type="L2RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Xenon" title="Raid Boss">
+	<npc id="26280" level="101" type="RaidBoss" name="Ashen Shadow Expeditionary Force Leaders Xenon" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46335" />
@@ -3220,7 +3220,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26281" level="85" type="L2Npc" name="Ashen Shadow Expeditionary Force Soldier Recruit" title="Raid Fighter">
+	<npc id="26281" level="85" type="Npc" name="Ashen Shadow Expeditionary Force Soldier Recruit" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3239,7 +3239,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26282" level="85" type="L2Npc" name="Ashen Shadow Expeditionary Force Scout" title="Raid Fighter">
+	<npc id="26282" level="85" type="Npc" name="Ashen Shadow Expeditionary Force Scout" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3258,7 +3258,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26283" level="85" type="L2Npc" name="Ashen Shadow Expeditionary Force Wizard" title="Raid Fighter">
+	<npc id="26283" level="85" type="Npc" name="Ashen Shadow Expeditionary Force Wizard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3277,7 +3277,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26284" level="85" type="L2Npc" name="Ashen Shadow Expeditionary Force Healer" title="Raid Fighter">
+	<npc id="26284" level="85" type="Npc" name="Ashen Shadow Expeditionary Force Healer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3296,7 +3296,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26285" level="101" type="L2RaidBoss" name="Blood Devil Brutal" title="Raid Boss">
+	<npc id="26285" level="101" type="RaidBoss" name="Blood Devil Brutal" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3390,7 +3390,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26286" level="101" type="L2RaidBoss" name="Blood Devil Akun" title="Raid Boss">
+	<npc id="26286" level="101" type="RaidBoss" name="Blood Devil Akun" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3484,7 +3484,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26287" level="101" type="L2RaidBoss" name="Blood Devil Epica" title="Raid Boss">
+	<npc id="26287" level="101" type="RaidBoss" name="Blood Devil Epica" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3578,7 +3578,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26288" level="101" type="L2RaidBoss" name="Blood Queen Julia" title="Raid Boss">
+	<npc id="26288" level="101" type="RaidBoss" name="Blood Queen Julia" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3676,7 +3676,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26289" level="85" type="L2Npc" name="Blood Devil Knight" title="Raid Fighter">
+	<npc id="26289" level="85" type="Npc" name="Blood Devil Knight" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3695,7 +3695,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26290" level="85" type="L2Npc" name="Blood Devil Shooter" title="Raid Fighter">
+	<npc id="26290" level="85" type="Npc" name="Blood Devil Shooter" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3714,7 +3714,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26291" level="85" type="L2Npc" name="Blood Devil Sorceress" title="Raid Fighter">
+	<npc id="26291" level="85" type="Npc" name="Blood Devil Sorceress" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3733,7 +3733,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26292" level="85" type="L2Npc" name="Blood Devil Shaman" title="Raid Fighter">
+	<npc id="26292" level="85" type="Npc" name="Blood Devil Shaman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3752,7 +3752,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26293" level="105" type="L2RaidBoss" name="Valiant Edgar" title="Raid Boss">
+	<npc id="26293" level="105" type="RaidBoss" name="Valiant Edgar" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -3846,7 +3846,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26294" level="105" type="L2RaidBoss" name="Vicious Blood" title="Raid Boss">
+	<npc id="26294" level="105" type="RaidBoss" name="Vicious Blood" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -3940,7 +3940,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26295" level="105" type="L2RaidBoss" name="Coquette Morrigan" title="Raid Boss">
+	<npc id="26295" level="105" type="RaidBoss" name="Coquette Morrigan" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4034,7 +4034,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26296" level="105" type="L2RaidBoss" name="Cunning Croby" title="Raid Boss">
+	<npc id="26296" level="105" type="RaidBoss" name="Cunning Croby" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4132,7 +4132,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26297" level="85" type="L2Npc" name="Vampire Berserker" title="Raid Fighter">
+	<npc id="26297" level="85" type="Npc" name="Vampire Berserker" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4151,7 +4151,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26298" level="85" type="L2Npc" name="Vampire Shooter" title="Raid Fighter">
+	<npc id="26298" level="85" type="Npc" name="Vampire Shooter" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4170,7 +4170,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="26299" level="85" type="L2Npc" name="Vampire Wizard" title="Raid Fighter">
+	<npc id="26299" level="85" type="Npc" name="Vampire Wizard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

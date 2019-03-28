@@ -18,12 +18,12 @@ package handlers.skillconditionhandlers;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -48,7 +48,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		if ((caster == null) || !caster.isPlayer())
 		{
@@ -58,7 +58,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		final Inventory inv = caster.getInventory();
 		
 		// Get the itemMask of the weared chest (if exists)
-		final L2ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		if (chest == null)
 		{
 			return false;
@@ -75,12 +75,12 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		final long chestBodyPart = chest.getItem().getBodyPart();
 		// return True if chest armor is a Full Armor
-		if (chestBodyPart == L2Item.SLOT_FULL_ARMOR)
+		if (chestBodyPart == Item.SLOT_FULL_ARMOR)
 		{
 			return true;
 		}
 		// check legs armor
-		final L2ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+		final ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		if (legs == null)
 		{
 			return false;

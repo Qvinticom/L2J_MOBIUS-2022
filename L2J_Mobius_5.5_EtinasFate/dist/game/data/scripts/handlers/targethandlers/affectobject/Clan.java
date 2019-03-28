@@ -17,10 +17,9 @@
 package handlers.targethandlers.affectobject;
 
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 
 /**
@@ -29,25 +28,25 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 public class Clan implements IAffectObjectHandler
 {
 	@Override
-	public boolean checkAffectedObject(L2Character activeChar, L2Character target)
+	public boolean checkAffectedObject(Creature creature, Creature target)
 	{
-		if (activeChar == target)
+		if (creature == target)
 		{
 			return true;
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		if (player != null)
 		{
-			final L2Clan clan = player.getClan();
+			final com.l2jmobius.gameserver.model.clan.Clan clan = player.getClan();
 			if (clan != null)
 			{
 				return clan == target.getClan();
 			}
 		}
-		else if (activeChar.isNpc() && target.isNpc())
+		else if (creature.isNpc() && target.isNpc())
 		{
-			return ((L2Npc) activeChar).isInMyClan(((L2Npc) target));
+			return ((Npc) creature).isInMyClan(((Npc) target));
 		}
 		
 		return false;

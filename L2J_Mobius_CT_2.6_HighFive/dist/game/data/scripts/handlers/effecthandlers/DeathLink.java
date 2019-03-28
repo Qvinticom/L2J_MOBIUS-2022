@@ -19,10 +19,10 @@ package handlers.effecthandlers;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -39,9 +39,9 @@ public final class DeathLink extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.DEATH_LINK;
+		return EffectType.DEATH_LINK;
 	}
 	
 	@Override
@@ -53,25 +53,25 @@ public final class DeathLink extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean sps = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
 		{
 			target.stopFakeDeath(true);
 		}
 		
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		final int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
+		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
+		final int damage = (int) Formulas.calcMagicDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		if (damage > 0)
 		{
@@ -85,20 +85,20 @@ public final class DeathLink extends AbstractEffect
 			// Shield Deflect Magic: Reflect all damage on caster.
 			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
 			{
-				activeChar.reduceCurrentHp(damage, target, info.getSkill());
-				activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);
+				creature.reduceCurrentHp(damage, target, info.getSkill());
+				creature.notifyDamageReceived(damage, target, info.getSkill(), mcrit, false);
 			}
 			else
 			{
-				target.reduceCurrentHp(damage, activeChar, info.getSkill());
-				target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
-				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
+				target.reduceCurrentHp(damage, creature, info.getSkill());
+				target.notifyDamageReceived(damage, creature, info.getSkill(), mcrit, false);
+				creature.sendDamageMessage(target, damage, mcrit, false, false);
 			}
 		}
 		
 		if (info.getSkill().isSuicideAttack())
 		{
-			activeChar.doDie(activeChar);
+			creature.doDie(creature);
 		}
 	}
 }

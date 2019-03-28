@@ -27,7 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.entity.Fort;
 
 public final class FortSiegeGuardManager
@@ -35,7 +35,7 @@ public final class FortSiegeGuardManager
 	private static final Logger LOGGER = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
 	private final Fort _fort;
-	private final Map<Integer, List<L2Spawn>> _siegeGuards = new HashMap<>();
+	private final Map<Integer, List<Spawn>> _siegeGuards = new HashMap<>();
 	
 	public FortSiegeGuardManager(Fort fort)
 	{
@@ -49,10 +49,10 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final List<L2Spawn> monsterList = _siegeGuards.get(_fort.getResidenceId());
+			final List<Spawn> monsterList = _siegeGuards.get(_fort.getResidenceId());
 			if (monsterList != null)
 			{
-				for (L2Spawn spawnDat : monsterList)
+				for (Spawn spawnDat : monsterList)
 				{
 					spawnDat.doSpawn();
 					if (spawnDat.getRespawnDelay() == 0)
@@ -79,10 +79,10 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final List<L2Spawn> monsterList = _siegeGuards.get(_fort.getResidenceId());
+			final List<Spawn> monsterList = _siegeGuards.get(_fort.getResidenceId());
 			if (monsterList != null)
 			{
-				for (L2Spawn spawnDat : monsterList)
+				for (Spawn spawnDat : monsterList)
 				{
 					spawnDat.stopRespawn();
 					if (spawnDat.getLastSpawn() != null)
@@ -111,10 +111,10 @@ public final class FortSiegeGuardManager
 			ps.setInt(1, fortId);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				final List<L2Spawn> siegeGuardSpawns = new ArrayList<>();
+				final List<Spawn> siegeGuardSpawns = new ArrayList<>();
 				while (rs.next())
 				{
-					final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
+					final Spawn spawn = new Spawn(rs.getInt("npcId"));
 					spawn.setAmount(1);
 					spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawn.setHeading(rs.getInt("heading"));
@@ -137,7 +137,7 @@ public final class FortSiegeGuardManager
 		return _fort;
 	}
 	
-	public final Map<Integer, List<L2Spawn>> getSiegeGuardSpawn()
+	public final Map<Integer, List<Spawn>> getSiegeGuardSpawn()
 	{
 		return _siegeGuards;
 	}

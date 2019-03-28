@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.network.serverpackets.SSQStatus;
 
@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SSQStatus;
  * Seven Signs Record Update Request packet type id 0xc7 format: cc
  * @author Tempy
  */
-public final class RequestSSQStatus extends L2GameClientPacket
+public final class RequestSSQStatus extends GameClientPacket
 {
 	private int _page;
 	
@@ -37,8 +37,8 @@ public final class RequestSSQStatus extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -48,7 +48,7 @@ public final class RequestSSQStatus extends L2GameClientPacket
 			return;
 		}
 		
-		final SSQStatus ssqs = new SSQStatus(activeChar, _page);
-		activeChar.sendPacket(ssqs);
+		final SSQStatus ssqs = new SSQStatus(player, _page);
+		player.sendPacket(ssqs);
 	}
 }

@@ -19,9 +19,9 @@ package handlers.bypasshandlers;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.entity.GameEvent;
 
 public class EventEngine implements IBypassHandler
 {
@@ -32,7 +32,7 @@ public class EventEngine implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -43,12 +43,12 @@ public class EventEngine implements IBypassHandler
 		{
 			if (command.equalsIgnoreCase("event_participate"))
 			{
-				L2Event.registerPlayer(activeChar);
+				GameEvent.registerPlayer(player);
 				return true;
 			}
 			else if (command.equalsIgnoreCase("event_unregister"))
 			{
-				L2Event.removeAndResetPlayer(activeChar);
+				GameEvent.removeAndResetPlayer(player);
 				return true;
 			}
 		}

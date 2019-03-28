@@ -144,7 +144,7 @@ import com.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -223,7 +223,7 @@ public class GameServer
 		printSection("World");
 		// start game time control early
 		GameTimeController.init();
-		L2World.getInstance();
+		World.getInstance();
 		MapRegionManager.getInstance();
 		ZoneManager.getInstance();
 		DoorData.getInstance();

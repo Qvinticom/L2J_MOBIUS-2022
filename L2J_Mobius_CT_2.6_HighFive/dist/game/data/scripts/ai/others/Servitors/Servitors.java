@@ -22,15 +22,15 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureKill;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureKill;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -108,13 +108,13 @@ public final class Servitors extends AbstractNpcAI
 		if (event.getAttacker().isNpc() && event.getTarget().isServitor() //
 			&& Util.checkIfInRange(1500, event.getAttacker(), event.getTarget(), true))
 		{
-			final L2ServitorInstance target = (L2ServitorInstance) event.getTarget();
-			final L2PcInstance master = target.getOwner();
+			final ServitorInstance target = (ServitorInstance) event.getTarget();
+			final PlayerInstance master = target.getOwner();
 			final QuestState qs = master.getQuestState(Q00230_TestOfTheSummoner.class.getSimpleName());
 			
 			if ((qs != null) && hasQuestItems(master, CRYSTAL_OF_INPROGRESS_3RD))
 			{
-				final L2Npc killer = (L2Npc) event.getAttacker();
+				final Npc killer = (Npc) event.getAttacker();
 				final List<Integer> items = MONSTERS.get(killer.getId());
 				giveItems(master, items.get(2), 1); // Crystal of Defeat
 				playSound(master, QuestSound.ITEMSOUND_QUEST_ITEMGET);

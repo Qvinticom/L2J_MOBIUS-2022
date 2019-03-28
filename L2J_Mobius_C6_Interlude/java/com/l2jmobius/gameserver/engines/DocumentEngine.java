@@ -24,8 +24,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * @author mkizub
@@ -74,7 +74,7 @@ public class DocumentEngine
 		}
 	}
 	
-	public List<L2Skill> loadSkills(File file)
+	public List<Skill> loadSkills(File file)
 	{
 		if (file == null)
 		{
@@ -86,17 +86,17 @@ public class DocumentEngine
 		return doc.getSkills();
 	}
 	
-	public void loadAllSkills(Map<Integer, L2Skill> allSkills)
+	public void loadAllSkills(Map<Integer, Skill> allSkills)
 	{
 		int count = 0;
 		for (File file : _skillFiles)
 		{
-			final List<L2Skill> s = loadSkills(file);
+			final List<Skill> s = loadSkills(file);
 			if (s == null)
 			{
 				continue;
 			}
-			for (L2Skill skill : s)
+			for (Skill skill : s)
 			{
 				allSkills.put(SkillTable.getSkillHashCode(skill), skill);
 				count++;
@@ -107,11 +107,11 @@ public class DocumentEngine
 	
 	/**
 	 * Return created items
-	 * @return List of {@link L2Item}
+	 * @return List of {@link Item}
 	 */
-	public List<L2Item> loadItems()
+	public List<Item> loadItems()
 	{
-		List<L2Item> list = new ArrayList<>();
+		List<Item> list = new ArrayList<>();
 		for (File f : _itemFiles)
 		{
 			DocumentItem document = new DocumentItem(f);

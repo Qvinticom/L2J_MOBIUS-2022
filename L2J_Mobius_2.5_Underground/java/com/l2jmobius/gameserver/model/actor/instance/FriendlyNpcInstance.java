@@ -18,27 +18,27 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.FriendlyNpcAI;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
+import com.l2jmobius.gameserver.ai.CreatureAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcFirstTalk;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @author GKR, Sdw
  */
-public class FriendlyNpcInstance extends L2Attackable
+public class FriendlyNpcInstance extends Attackable
 {
 	private boolean _isAutoAttackable = true;
 	
-	public FriendlyNpcInstance(L2NpcTemplate template)
+	public FriendlyNpcInstance(NpcTemplate template)
 	{
 		super(template);
 		setInstanceType(InstanceType.FriendlyNpcInstance);
@@ -51,7 +51,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	}
 	
 	@Override
-	public boolean isAutoAttackable(L2Character attacker)
+	public boolean isAutoAttackable(Creature attacker)
 	{
 		return _isAutoAttackable && !attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance);
 	}
@@ -63,7 +63,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	}
 	
 	@Override
-	public void addDamage(L2Character attacker, int damage, Skill skill)
+	public void addDamage(Creature attacker, int damage, Skill skill)
 	{
 		if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance))
 		{
@@ -77,7 +77,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	}
 	
 	@Override
-	public void addDamageHate(L2Character attacker, int damage, int aggro)
+	public void addDamageHate(Creature attacker, int damage, int aggro)
 	{
 		if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance))
 		{
@@ -86,9 +86,9 @@ public class FriendlyNpcInstance extends L2Attackable
 	}
 	
 	@Override
-	public boolean doDie(L2Character killer)
+	public boolean doDie(Creature killer)
 	{
-		// Kill the L2NpcInstance (the corpse disappeared after 7 seconds)
+		// Kill the NpcInstance (the corpse disappeared after 7 seconds)
 		if (!super.doDie(killer))
 		{
 			return false;
@@ -103,32 +103,32 @@ public class FriendlyNpcInstance extends L2Attackable
 	}
 	
 	@Override
-	public void onAction(L2PcInstance player, boolean interact)
+	public void onAction(PlayerInstance player, boolean interact)
 	{
 		if (!canTarget(player))
 		{
 			return;
 		}
 		
-		// Check if the L2PcInstance already target the L2GuardInstance
+		// Check if the PlayerInstance already target the GuardInstance
 		if (getObjectId() != player.getTargetId())
 		{
-			// Set the target of the L2PcInstance player
+			// Set the target of the PlayerInstance player
 			player.setTarget(this);
 		}
 		else if (interact)
 		{
-			// Calculate the distance between the L2PcInstance and the L2NpcInstance
+			// Calculate the distance between the PlayerInstance and the NpcInstance
 			if (!canInteract(player))
 			{
-				// Set the L2PcInstance Intention to AI_INTENTION_INTERACT
+				// Set the PlayerInstance Intention to AI_INTENTION_INTERACT
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
 			}
 			else
 			{
 				player.setLastFolkNPC(this);
 				
-				// Open a chat window on client with the text of the L2GuardInstance
+				// Open a chat window on client with the text of the GuardInstance
 				if (hasListener(EventType.ON_NPC_QUEST_START))
 				{
 					player.setLastQuestNpcObject(getObjectId());
@@ -144,7 +144,7 @@ public class FriendlyNpcInstance extends L2Attackable
 				}
 			}
 		}
-		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
@@ -164,7 +164,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	}
 	
 	@Override
-	protected L2CharacterAI initAI()
+	protected CreatureAI initAI()
 	{
 		return new FriendlyNpcAI(this);
 	}

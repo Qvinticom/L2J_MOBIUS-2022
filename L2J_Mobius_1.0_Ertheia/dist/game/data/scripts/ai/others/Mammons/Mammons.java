@@ -24,8 +24,8 @@ import java.util.Objects;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.util.Broadcast;
 
@@ -71,7 +71,7 @@ public final class Mammons extends AbstractNpcAI
 		NpcStringId.I_VE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP,
 	};
 	private static final int TELEPORT_DELAY = 3600000; // 60min
-	private static final List<L2Npc> _mammons = new ArrayList<>();
+	private static final List<Npc> _mammons = new ArrayList<>();
 	
 	private Mammons()
 	{
@@ -84,7 +84,7 @@ public final class Mammons extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -106,13 +106,13 @@ public final class Mammons extends AbstractNpcAI
 			{
 				if (!_mammons.isEmpty())
 				{
-					_mammons.stream().filter(Objects::nonNull).forEach(L2Npc::deleteMe);
+					_mammons.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
 					_mammons.clear();
 				}
 				final int town = getRandom(3);
-				final L2Npc blacksmith = addSpawn(MAMMONS[0], BLACKSMITH_LOC[town]);
-				final L2Npc merchant = addSpawn(MAMMONS[1], MERCHANT_LOC[town]);
-				final L2Npc priest = addSpawn(MAMMONS[2], PRIEST_LOC[town]);
+				final Npc blacksmith = addSpawn(MAMMONS[0], BLACKSMITH_LOC[town]);
+				final Npc merchant = addSpawn(MAMMONS[1], MERCHANT_LOC[town]);
+				final Npc priest = addSpawn(MAMMONS[2], PRIEST_LOC[town]);
 				_mammons.addAll(Arrays.asList(blacksmith, merchant, priest));
 				
 				if (blacksmith != null)

@@ -19,25 +19,25 @@ package instances.PailakaInjuredDragon;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableFactionCall;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableFactionCall;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2TeleportZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.TeleportZone;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 
 import instances.AbstractInstance;
@@ -140,7 +140,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState qs = player.getQuestState(Q00144_PailakaInjuredDragon.class.getSimpleName());
@@ -172,7 +172,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -201,7 +201,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 				}
 				case "LOOK_NEIGHBOR":
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, HEAL.getSkill().getCastRange(), npcs ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, HEAL.getSkill().getCastRange(), npcs ->
 					{
 						if ((npcs.getCurrentHpPercent() < 70) && (getRandom(100) < 10))
 						{
@@ -215,7 +215,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 				{
 					if (world.getNpcsOfGroup(npc.getParameters().getString("control_maker"), n -> !n.isDead()).isEmpty())
 					{
-						final L2ZoneType zone = ZoneManager.getInstance().getZoneByName(npc.getParameters().getString("AreaName"), L2TeleportZone.class);
+						final ZoneType zone = ZoneManager.getInstance().getZoneByName(npc.getParameters().getString("AreaName"), TeleportZone.class);
 						if (zone != null)
 						{
 							zone.setEnabled(false, world.getId());
@@ -350,7 +350,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 				}
 				case "DISPLAY_SKILL":
 				{
-					final L2Npc target = world.getNpc(DRAGON_TARGET);
+					final Npc target = world.getNpc(DRAGON_TARGET);
 					if (target != null)
 					{
 						addSkillCastDesire(npc, target, RISE_OF_LATANA, 5000);
@@ -360,7 +360,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 				}
 				case "LATANA_CAST":
 				{
-					final L2Npc target = world.getNpc(DRAGON_TARGET);
+					final Npc target = world.getNpc(DRAGON_TARGET);
 					if (target != null)
 					{
 						addSkillCastDesire(npc, target, STUN, 5000);
@@ -427,7 +427,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -447,8 +447,8 @@ public final class PailakaInjuredDragon extends AbstractInstance
 				}
 				case LATANA_SKILL_USE:
 				{
-					final L2Npc latana = world.getNpc(LATANA);
-					final L2PcInstance player = world.getFirstPlayer();
+					final Npc latana = world.getNpc(LATANA);
+					final PlayerInstance player = world.getFirstPlayer();
 					if ((latana != null) && (player != null) && (latana.calculateDistance2D(player) <= 900))
 					{
 						addSkillCastDesire(npc, player, STUN, 500000);
@@ -478,8 +478,8 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	
 	private void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
@@ -515,7 +515,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -593,8 +593,8 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	// @formatter:on
 	public void onAttackableFactionCall(OnAttackableFactionCall event)
 	{
-		final L2Npc npc = event.getNpc();
-		final L2PcInstance attacker = event.getAttacker();
+		final Npc npc = event.getNpc();
+		final PlayerInstance attacker = event.getAttacker();
 		if (npc.calculateDistance2D(attacker) < 40)
 		{
 			addAttackPlayerDesire(npc, attacker, 1000);
@@ -610,7 +610,7 @@ public final class PailakaInjuredDragon extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))

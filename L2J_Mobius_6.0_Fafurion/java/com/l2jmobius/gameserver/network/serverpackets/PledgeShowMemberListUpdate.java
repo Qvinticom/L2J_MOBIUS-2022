@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,12 +33,12 @@ public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 	private final int _objectId;
 	private final int _onlineStatus;
 	
-	public PledgeShowMemberListUpdate(L2PcInstance player)
+	public PledgeShowMemberListUpdate(PlayerInstance player)
 	{
 		this(player.getClan().getClanMember(player.getObjectId()));
 	}
 	
-	public PledgeShowMemberListUpdate(L2ClanMember member)
+	public PledgeShowMemberListUpdate(ClanMember member)
 	{
 		_name = member.getName();
 		_level = member.getLevel();

@@ -21,9 +21,9 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -51,7 +51,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
@@ -72,11 +72,11 @@ public class AdminFortSiege implements IAdminCommandHandler
 		}
 		else
 		{
-			final L2Object target = activeChar.getTarget();
-			L2PcInstance player = null;
+			final WorldObject target = activeChar.getTarget();
+			PlayerInstance player = null;
 			if ((target != null) && target.isPlayer())
 			{
-				player = (L2PcInstance) target;
+				player = (PlayerInstance) target;
 			}
 			
 			if (command.equalsIgnoreCase("admin_add_fortattacker"))
@@ -124,7 +124,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_removefort"))
 			{
-				final L2Clan clan = fort.getOwnerClan();
+				final Clan clan = fort.getOwnerClan();
 				if (clan != null)
 				{
 					fort.removeOwner(true);
@@ -148,7 +148,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showFortSelectPage(L2PcInstance activeChar)
+	private void showFortSelectPage(PlayerInstance activeChar)
 	{
 		int i = 0;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
@@ -176,7 +176,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showFortSiegePage(L2PcInstance activeChar, Fort fort)
+	private void showFortSiegePage(PlayerInstance activeChar, Fort fort)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar, "data/html/admin/fort.htm");

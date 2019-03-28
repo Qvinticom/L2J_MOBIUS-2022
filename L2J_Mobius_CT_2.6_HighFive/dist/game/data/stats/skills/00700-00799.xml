@@ -1422,7 +1422,7 @@
 				<mul stat="mDef" val="1.15" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="300" />
 				<param chance="20" />
 				<param skillId="5556" skillLevel="1" /> <!-- Protection Power -->
@@ -1444,7 +1444,7 @@
 				<add stat="earthRes" val="20" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="20" />
 				<param skillId="5556" skillLevel="1" /> <!-- Protection Power -->
@@ -1464,7 +1464,7 @@
 				<add stat="darkRes" val="20" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="20" />
 				<param skillId="5556" skillLevel="1" /> <!-- Protection Power -->
@@ -1487,7 +1487,7 @@
 				</mul>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="3" />
 				<param skillId="5559" skillLevel="1" /> <!-- Physical Pose -->
@@ -1511,7 +1511,7 @@
 				</add>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="3" />
 				<param skillId="5559" skillLevel="1" /> <!-- Physical Pose -->
@@ -1557,7 +1557,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="8" />
 				<param skillId="5561" skillLevel="1" /> <!-- Seed of Revenge -->
@@ -1729,7 +1729,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="5" />
 				<param skillId="5565" skillLevel="1" /> <!-- Expose Weak Point -->
@@ -2164,7 +2164,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="20" />
 				<param skillId="5562" skillLevel="1" /> <!-- Spirit of Phoenix -->
@@ -2226,7 +2226,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="20" />
 				<param skillId="5563" skillLevel="1" /> <!-- Eva's Will -->
@@ -2287,7 +2287,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="20" />
 				<param skillId="5564" skillLevel="1" /> <!-- Pain of Shillien -->
@@ -2416,7 +2416,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="10" />
 				<param skillId="5600" skillLevel="1" /> <!-- Betrayal Mark -->

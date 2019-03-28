@@ -17,8 +17,8 @@
 package ai.areas.ForestOfTheDead;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -34,14 +34,14 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 {
 	private static final int EILHALDER_VON_HELLMANN = 25328;
 	private static final Location SPAWN_LOCATION = new Location(59090, -42188, -3003);
-	private static L2Npc npcInstance;
+	private static Npc npcInstance;
 	
 	private EilhalderVonHellmann()
 	{
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc != null)
 		{

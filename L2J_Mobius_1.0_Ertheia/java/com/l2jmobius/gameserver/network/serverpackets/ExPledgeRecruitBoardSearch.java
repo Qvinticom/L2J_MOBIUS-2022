@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -63,7 +63,7 @@ public class ExPledgeRecruitBoardSearch implements IClientOutgoingPacket
 		}
 		for (int i = _startIndex; i < _endIndex; i++)
 		{
-			final L2Clan clan = _clanList.get(i).getClan();
+			final Clan clan = _clanList.get(i).getClan();
 			packet.writeD(clan.getCrestId());
 			packet.writeD(clan.getAllyCrestId());
 			packet.writeS(clan.getName());

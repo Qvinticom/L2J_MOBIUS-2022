@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
@@ -95,10 +95,10 @@ public class Q00512_BladeUnderFoot extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			int playerCount = player.getParty().getMemberCount();
 			int itemCount = RAID_BOSSES.get(npc.getId()).getSecondChance();
@@ -114,10 +114,10 @@ public class Q00512_BladeUnderFoot extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -131,7 +131,7 @@ public class Q00512_BladeUnderFoot extends Quest
 				{
 					if ((npc.isMyLord(player) || ((npc.getCastle().getResidenceId() == player.getClan().getCastleId()) && (player.getClan().getCastleId() > 0))))
 					{
-						st.startQuest();
+						qs.startQuest();
 						htmltext = event;
 					}
 					else
@@ -152,7 +152,7 @@ public class Q00512_BladeUnderFoot extends Quest
 			}
 			case "36403-11.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -161,10 +161,10 @@ public class Q00512_BladeUnderFoot extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st != null)
+		final QuestState qs = getQuestState(player, false);
+		if(qs != null)
 		{
 			if (player.getParty() != null)
 			{
@@ -180,11 +180,11 @@ public class Q00512_BladeUnderFoot extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			if (player.getLevel() >= MIN_LEVEL)
 			{
@@ -195,7 +195,7 @@ public class Q00512_BladeUnderFoot extends Quest
 				htmltext = "36403-08.htm";
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			if (hasQuestItems(player, FRAGMENT_OF_THE_DUNGEON_LEADER_MARK))
 			{

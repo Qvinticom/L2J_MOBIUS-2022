@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets.friend;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -34,15 +34,15 @@ public class FriendAddRequestResult implements IClientOutgoingPacket
 	private final int _charLevel;
 	private final int _charClassId;
 	
-	public FriendAddRequestResult(L2PcInstance activeChar, int result)
+	public FriendAddRequestResult(PlayerInstance player, int result)
 	{
 		_result = result;
-		_charId = activeChar.getObjectId();
-		_charName = activeChar.getName();
-		_isOnline = activeChar.isOnlineInt();
-		_charObjectId = activeChar.getObjectId();
-		_charLevel = activeChar.getLevel();
-		_charClassId = activeChar.getActiveClass();
+		_charId = player.getObjectId();
+		_charName = player.getName();
+		_isOnline = player.isOnlineInt();
+		_charObjectId = player.getObjectId();
+		_charLevel = player.getLevel();
+		_charClassId = player.getActiveClass();
 	}
 	
 	@Override

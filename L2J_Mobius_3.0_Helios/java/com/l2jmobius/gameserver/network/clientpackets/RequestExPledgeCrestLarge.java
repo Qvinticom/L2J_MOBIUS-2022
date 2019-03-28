@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.Crest;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 
 /**
@@ -31,7 +31,7 @@ public final class RequestExPledgeCrestLarge implements IClientIncomingPacket
 	private int _clanId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_crestId = packet.readD();
 		_clanId = packet.readD();
@@ -39,9 +39,9 @@ public final class RequestExPledgeCrestLarge implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2Crest crest = CrestTable.getInstance().getCrest(_crestId);
+		final Crest crest = CrestTable.getInstance().getCrest(_crestId);
 		final byte[] data = crest != null ? crest.getData() : null;
 		if (data != null)
 		{

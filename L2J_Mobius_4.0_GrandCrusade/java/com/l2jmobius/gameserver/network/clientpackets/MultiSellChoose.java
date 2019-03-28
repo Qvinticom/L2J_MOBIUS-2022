@@ -31,19 +31,19 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.SpecialItemType;
 import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -73,7 +73,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	private EnsoulOption[] _soulCrystalSpecialOptions;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_listId = packet.readD();
 		_entryId = packet.readD();
@@ -105,9 +105,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -132,7 +132,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Npc npc = player.getLastFolkNPC();
+		final Npc npc = player.getLastFolkNPC();
 		if (!list.isNpcAllowed(-1) && !isAllowedToUse(player, npc, list))
 		{
 			if (player.isGM())
@@ -196,8 +196,8 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Clan clan = player.getClan();
-		final PcInventory inventory = player.getInventory();
+		final Clan clan = player.getClan();
+		final PlayerInventory inventory = player.getInventory();
 		
 		try
 		{
@@ -217,7 +217,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					continue;
 				}
 				
-				final L2Item template = ItemTable.getInstance().getTemplate(product.getId());
+				final Item template = ItemTable.getInstance().getTemplate(product.getId());
 				if (template == null)
 				{
 					player.setMultiSell(null);
@@ -279,7 +279,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					continue;
 				}
 				int found = 0;
-				for (L2ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
+				for (ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
 				{
 					if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel())
 					{
@@ -370,7 +370,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else if (ingredient.getEnchantmentLevel() > 0)
 				{
 					// Take the enchanted item.
-					final L2ItemInstance destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
+					final ItemInstance destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
 					if (destroyedItem != null)
 					{
 						itemEnchantmentProcessed = true;
@@ -387,7 +387,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else if (!itemEnchantmentProcessed && (itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId()))
 				{
 					// Take the enchanted item.
-					final L2ItemInstance destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
+					final ItemInstance destroyedItem = inventory.destroyItem("Multisell", itemEnchantment.getObjectId(), totalCount, player, npc);
 					if (destroyedItem != null)
 					{
 						itemEnchantmentProcessed = true;
@@ -404,7 +404,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else
 				{
 					// Take a regular item.
-					final L2ItemInstance destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.getId(), totalCount, player, npc);
+					final ItemInstance destroyedItem = inventory.destroyItemByItemId("Multisell", ingredient.getId(), totalCount, player, npc);
 					if (destroyedItem != null)
 					{
 						iu.addItem(destroyedItem);
@@ -468,7 +468,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else
 				{
 					// Give item.
-					final L2ItemInstance addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
+					final ItemInstance addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
 					
 					// Check if the newly given item should be enchanted.
 					if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getItem().getClass().equals(itemEnchantment.getItem().getClass()))
@@ -594,7 +594,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	 * @param totalCount
 	 * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
 	 */
-	private boolean checkIngredients(L2PcInstance player, PreparedMultisellListHolder list, PcInventory inventory, L2Clan clan, int ingredientId, long totalCount)
+	private boolean checkIngredients(PlayerInstance player, PreparedMultisellListHolder list, PlayerInventory inventory, Clan clan, int ingredientId, long totalCount)
 	{
 		final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
 		if (specialItem != null)
@@ -674,7 +674,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	 * @param list
 	 * @return {@code true} if player can buy stuff from the multisell, {@code false} otherwise.
 	 */
-	private boolean isAllowedToUse(L2PcInstance player, L2Npc npc, PreparedMultisellListHolder list)
+	private boolean isAllowedToUse(PlayerInstance player, Npc npc, PreparedMultisellListHolder list)
 	{
 		if (npc != null)
 		{
@@ -682,7 +682,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			{
 				return false;
 			}
-			else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, L2Npc.INTERACTION_DISTANCE)))
+			else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE)))
 			{
 				return false;
 			}

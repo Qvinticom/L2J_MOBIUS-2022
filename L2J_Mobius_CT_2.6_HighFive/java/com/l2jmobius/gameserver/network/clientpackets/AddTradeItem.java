@@ -17,17 +17,16 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
 
 /**
- * This class ...
  * @version $Revision: 1.5.2.2.2.5 $ $Date: 2005/03/27 15:29:29 $
  */
 public final class AddTradeItem implements IClientIncomingPacket
@@ -37,7 +36,7 @@ public final class AddTradeItem implements IClientIncomingPacket
 	private long _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_tradeId = packet.readD();
 		_objectId = packet.readD();
@@ -46,9 +45,9 @@ public final class AddTradeItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -61,8 +60,8 @@ public final class AddTradeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance partner = trade.getPartner();
-		if ((partner == null) || (L2World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null))
+		final PlayerInstance partner = trade.getPartner();
+		if ((partner == null) || (World.getInstance().getPlayer(partner.getObjectId()) == null) || (partner.getActiveTradeList() == null))
 		{
 			// Trade partner not found, cancel trade
 			if (partner != null)

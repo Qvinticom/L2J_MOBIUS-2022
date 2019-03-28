@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
@@ -46,9 +46,9 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.PHYSICAL_ATTACK_HP_LINK;
+		return EffectType.PHYSICAL_ATTACK_HP_LINK;
 	}
 	
 	@Override
@@ -60,47 +60,47 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		final Skill skill = info.getSkill();
 		
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		if (activeChar.isMovementDisabled())
+		if (creature.isMovementDisabled())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);
-			activeChar.sendPacket(sm);
+			creature.sendPacket(sm);
 			return;
 		}
 		
-		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
+		final byte shld = Formulas.calcShldUse(creature, target, skill);
 		// Physical damage critical rate is only affected by STR.
 		boolean crit = false;
 		if (skill.getBaseCritRate() > 0)
 		{
-			crit = Formulas.calcCrit(activeChar, target, skill);
+			crit = Formulas.calcCrit(creature, target, skill);
 		}
 		
 		int damage = 0;
-		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
+		final boolean ss = skill.isPhysical() && creature.isChargedShot(ShotType.SOULSHOTS);
+		damage = (int) Formulas.calcPhysDam(creature, target, skill, shld, false, ss);
 		
 		if (damage > 0)
 		{
-			activeChar.sendDamageMessage(target, damage, false, crit, false);
-			target.reduceCurrentHp(damage, activeChar, skill);
-			target.notifyDamageReceived(damage, activeChar, skill, crit, false);
+			creature.sendDamageMessage(target, damage, false, crit, false);
+			target.reduceCurrentHp(damage, creature, skill);
+			target.notifyDamageReceived(damage, creature, skill, crit, false);
 			
 			// Check if damage should be reflected.
-			Formulas.calcDamageReflected(activeChar, target, skill, crit);
+			Formulas.calcDamageReflected(creature, target, skill, crit);
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
+			creature.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 		}
 	}
 }

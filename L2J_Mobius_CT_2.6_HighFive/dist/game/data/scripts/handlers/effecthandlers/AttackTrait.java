@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.stat.CharStat;
+import com.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -54,7 +54,7 @@ public final class AttackTrait extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final CreatureStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getAttackTraits())
 		{
 			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
@@ -73,7 +73,7 @@ public final class AttackTrait extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final CreatureStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getAttackTraits())
 		{
 			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())

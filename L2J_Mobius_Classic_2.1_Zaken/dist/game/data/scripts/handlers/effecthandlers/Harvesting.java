@@ -17,14 +17,14 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -46,15 +46,15 @@ public final class Harvesting extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effector.isPlayer() || !effected.isMonster() || !effected.isDead())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
-		final L2MonsterInstance monster = (L2MonsterInstance) effected;
+		final PlayerInstance player = effector.getActingPlayer();
+		final MonsterInstance monster = (MonsterInstance) effected;
 		if (player.getObjectId() != monster.getSeederId())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
@@ -85,7 +85,7 @@ public final class Harvesting extends AbstractEffect
 					player.sendPacket(sm);
 					
 					// Send msg to party
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					if (party != null)
 					{
 						if (item.getCount() == 1)
@@ -116,9 +116,9 @@ public final class Harvesting extends AbstractEffect
 		}
 	}
 	
-	private static boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
+	private static boolean calcSuccess(PlayerInstance player, MonsterInstance target)
 	{
-		final int levelPlayer = activeChar.getLevel();
+		final int levelPlayer = player.getLevel();
 		final int levelTarget = target.getLevel();
 		
 		int diff = (levelPlayer - levelTarget);

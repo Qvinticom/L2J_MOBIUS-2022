@@ -23,11 +23,11 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -207,7 +207,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param gemStones
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance refinerItem, L2ItemInstance gemStones)
+	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance refinerItem, ItemInstance gemStones)
 	{
 		if (!isValid(player, item, refinerItem))
 		{
@@ -249,7 +249,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param refinerItem
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player, L2ItemInstance item, L2ItemInstance refinerItem)
+	protected static boolean isValid(PlayerInstance player, ItemInstance item, ItemInstance refinerItem)
 	{
 		if (!isValid(player, item))
 		{
@@ -273,12 +273,12 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			return false;
 		}
 		// weapons can't be augmented with accessory ls
-		if ((item.getItem() instanceof L2Weapon) && (ls.getGrade() == GRADE_ACC))
+		if ((item.getItem() instanceof Weapon) && (ls.getGrade() == GRADE_ACC))
 		{
 			return false;
 		}
 		// and accessory can't be augmented with weapon ls
-		if ((item.getItem() instanceof L2Armor) && (ls.getGrade() != GRADE_ACC))
+		if ((item.getItem() instanceof Armor) && (ls.getGrade() != GRADE_ACC))
 		{
 			return false;
 		}
@@ -297,7 +297,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param item
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player, L2ItemInstance item)
+	protected static boolean isValid(PlayerInstance player, ItemInstance item)
 	{
 		if (!isValid(player))
 		{
@@ -356,9 +356,9 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			}
 		}
 		
-		if (item.getItem() instanceof L2Weapon)
+		if (item.getItem() instanceof Weapon)
 		{
-			switch (((L2Weapon) item.getItem()).getItemType())
+			switch (((Weapon) item.getItem()).getItemType())
 			{
 				case NONE:
 				case FISHINGROD:
@@ -371,14 +371,14 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 				}
 			}
 		}
-		else if (item.getItem() instanceof L2Armor)
+		else if (item.getItem() instanceof Armor)
 		{
 			// only accessories can be augmented
 			switch (item.getItem().getBodyPart())
 			{
-				case L2Item.SLOT_LR_FINGER:
-				case L2Item.SLOT_LR_EAR:
-				case L2Item.SLOT_NECK:
+				case Item.SLOT_LR_FINGER:
+				case Item.SLOT_LR_EAR:
+				case Item.SLOT_NECK:
 				{
 					break;
 				}
@@ -407,7 +407,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	 * @param player
 	 * @return
 	 */
-	protected static boolean isValid(L2PcInstance player)
+	protected static boolean isValid(PlayerInstance player)
 	{
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{

@@ -23,10 +23,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -41,7 +41,7 @@ public class SummonEffectsTable
 	// ---> key: servitorSkillId, value: Effects list
 	private final Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> _servitorEffects = new HashMap<>();
 	
-	private Map<Integer, List<SummonEffect>> getServitorEffects(L2PcInstance owner)
+	private Map<Integer, List<SummonEffect>> getServitorEffects(PlayerInstance owner)
 	{
 		final Map<Integer, Map<Integer, List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
 		if (servitorMap == null)
@@ -51,12 +51,12 @@ public class SummonEffectsTable
 		return servitorMap.get(owner.getClassIndex());
 	}
 	
-	private List<SummonEffect> getServitorEffects(L2PcInstance owner, int referenceSkill)
+	private List<SummonEffect> getServitorEffects(PlayerInstance owner, int referenceSkill)
 	{
 		return containsOwner(owner) ? getServitorEffects(owner).get(referenceSkill) : null;
 	}
 	
-	private boolean containsOwner(L2PcInstance owner)
+	private boolean containsOwner(PlayerInstance owner)
 	{
 		return _servitorEffects.getOrDefault(owner.getObjectId(), Collections.emptyMap()).containsKey(owner.getClassIndex());
 	}
@@ -76,7 +76,7 @@ public class SummonEffectsTable
 		}
 	}
 	
-	private void applyEffects(L2Summon summon, List<SummonEffect> summonEffects)
+	private void applyEffects(Summon summon, List<SummonEffect> summonEffects)
 	{
 		if (summonEffects == null)
 		{
@@ -91,12 +91,12 @@ public class SummonEffectsTable
 		}
 	}
 	
-	public boolean containsSkill(L2PcInstance owner, int referenceSkill)
+	public boolean containsSkill(PlayerInstance owner, int referenceSkill)
 	{
 		return containsOwner(owner) && getServitorEffects(owner).containsKey(referenceSkill);
 	}
 	
-	public void clearServitorEffects(L2PcInstance owner, int referenceSkill)
+	public void clearServitorEffects(PlayerInstance owner, int referenceSkill)
 	{
 		if (containsOwner(owner))
 		{
@@ -105,7 +105,7 @@ public class SummonEffectsTable
 		}
 	}
 	
-	public void addServitorEffect(L2PcInstance owner, int referenceSkill, Skill skill, int effectCurTime)
+	public void addServitorEffect(PlayerInstance owner, int referenceSkill, Skill skill, int effectCurTime)
 	{
 		_servitorEffects.putIfAbsent(owner.getObjectId(), new HashMap<>());
 		_servitorEffects.get(owner.getObjectId()).putIfAbsent(owner.getClassIndex(), new HashMap<>());
@@ -113,12 +113,12 @@ public class SummonEffectsTable
 		getServitorEffects(owner).get(referenceSkill).add(new SummonEffect(skill, effectCurTime));
 	}
 	
-	public void removeServitorEffects(L2PcInstance owner, int referenceSkill, int skillId)
+	public void removeServitorEffects(PlayerInstance owner, int referenceSkill, int skillId)
 	{
 		removeEffects(getServitorEffects(owner, referenceSkill), skillId);
 	}
 	
-	public void applyServitorEffects(L2ServitorInstance l2ServitorInstance, L2PcInstance owner, int referenceSkill)
+	public void applyServitorEffects(ServitorInstance l2ServitorInstance, PlayerInstance owner, int referenceSkill)
 	{
 		applyEffects(l2ServitorInstance, getServitorEffects(owner, referenceSkill));
 	}
@@ -136,7 +136,7 @@ public class SummonEffectsTable
 		return _petEffects.containsKey(controlObjectId);
 	}
 	
-	public void applyPetEffects(L2PetInstance l2PetInstance, int controlObjectId)
+	public void applyPetEffects(PetInstance l2PetInstance, int controlObjectId)
 	{
 		applyEffects(l2PetInstance, _petEffects.get(controlObjectId));
 	}

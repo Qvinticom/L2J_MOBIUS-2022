@@ -45,7 +45,7 @@ public class LoginServer
 	public static final int PROTOCOL_REV = 0x0102;
 	private static LoginServer INSTANCE;
 	private GameServerListener _gameServerListener;
-	private SelectorThread<L2LoginClient> _selectorThread;
+	private SelectorThread<LoginClient> _selectorThread;
 	private Status _statusServer;
 	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
 	
@@ -148,7 +148,7 @@ public class LoginServer
 		sc.setSleepTime(NetcoreConfig.getInstance().MMO_SELECTOR_SLEEP_TIME);
 		sc.setHelperBufferCount(NetcoreConfig.getInstance().MMO_HELPER_BUFFER_COUNT);
 		
-		final L2LoginPacketHandler lph = new L2LoginPacketHandler();
+		final LoginPacketHandler lph = new LoginPacketHandler();
 		final SelectorHelper sh = new SelectorHelper();
 		try
 		{

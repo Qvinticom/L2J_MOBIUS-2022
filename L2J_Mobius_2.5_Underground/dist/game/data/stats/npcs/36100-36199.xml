@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="36100" level="90" type="L2Defender" name="Wizard" title="Support Unit">
+	<npc id="36100" level="90" type="Defender" name="Wizard" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -67,7 +67,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36101" level="90" type="L2Defender" name="Healer" title="Support Unit">
+	<npc id="36101" level="90" type="Defender" name="Healer" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -132,7 +132,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36102" level="92" type="L2FortCommander" name="Archer Captain" title="Archer">
+	<npc id="36102" level="92" type="FortCommander" name="Archer Captain" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -197,7 +197,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36103" level="90" type="L2Defender" name="Archer" title="Archer">
+	<npc id="36103" level="90" type="Defender" name="Archer" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -257,7 +257,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36104" level="92" type="L2FortCommander" name="General" title="Officer's Barracks">
+	<npc id="36104" level="92" type="FortCommander" name="General" title="Officer's Barracks">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -322,7 +322,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36105" level="92" type="L2Defender" name="Minister" title="Officer's Barracks">
+	<npc id="36105" level="92" type="Defender" name="Minister" title="Officer's Barracks">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -385,7 +385,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36106" level="80" type="L2Monster" name="Ballista" title="Cloud Mountain Fortress">
+	<npc id="36106" level="80" type="Monster" name="Ballista" title="Cloud Mountain Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="FameValue" value="30" />
@@ -430,7 +430,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36107" level="80" type="L2Monster" name="Mercenary Captain">
+	<npc id="36107" level="80" type="Monster" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -519,7 +519,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36108" level="75" type="L2Monster" name="Mercenary Private">
+	<npc id="36108" level="75" type="Monster" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -569,7 +569,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36109" level="20" type="L2Npc" name="Flagpole">
+	<npc id="36109" level="20" type="Npc" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -606,7 +606,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36110" level="75" type="L2FortManager" name="Foreman" title="Tanor Fortress">
+	<npc id="36110" level="75" type="FortManager" name="Foreman" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
@@ -653,7 +653,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36111" level="75" type="L2Npc" name="Suspicious Merchant" title="Tanor Fortress">
+	<npc id="36111" level="75" type="Npc" name="Suspicious Merchant" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -700,7 +700,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36112" level="75" type="L2Npc" name="Guard Captain" title="Tanor Fortress">
+	<npc id="36112" level="75" type="Npc" name="Guard Captain" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -749,7 +749,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36113" level="75" type="L2Npc" name="Archer Captain" title="Tanor Fortress">
+	<npc id="36113" level="75" type="Npc" name="Archer Captain" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -790,7 +790,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36114" level="75" type="L2Npc" name="Support Unit Captain" title="Tanor Fortress">
+	<npc id="36114" level="75" type="Npc" name="Support Unit Captain" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -831,7 +831,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36115" level="75" type="L2Npc" name="Engineering Manager" title="Tanor Fortress">
+	<npc id="36115" level="75" type="Npc" name="Engineering Manager" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -872,7 +872,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36116" level="75" type="L2FortLogistics" name="Logistics Officer" title="Tanor Fortress">
+	<npc id="36116" level="75" type="FortLogistics" name="Logistics Officer" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -933,7 +933,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="36117" level="95" type="L2Npc" name="Supply Box">
+	<npc id="36117" level="95" type="Npc" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -971,7 +971,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36118" level="75" type="L2Npc" name="Detention Camp Warden" title="Tanor Fortress">
+	<npc id="36118" level="75" type="Npc" name="Detention Camp Warden" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1019,7 +1019,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36119" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36119" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1064,7 +1064,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36120" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36120" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1109,7 +1109,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36121" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36121" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1157,7 +1157,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36122" level="94" type="L2Defender" name="Rebel Commander" title="Tanor Fortress">
+	<npc id="36122" level="94" type="Defender" name="Rebel Commander" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1222,7 +1222,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36123" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Tanor Fortress">
+	<npc id="36123" level="90" type="Defender" name="Rebel Elite Soldier" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1282,7 +1282,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36124" level="89" type="L2Defender" name="Rebel Private" title="Tanor Fortress">
+	<npc id="36124" level="89" type="Defender" name="Rebel Private" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1337,7 +1337,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36125" level="86" type="L2Defender" name="Royal Guard" title="Tanor Fortress">
+	<npc id="36125" level="86" type="Defender" name="Royal Guard" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1395,7 +1395,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36126" level="86" type="L2Defender" name="Escort" title="Tanor Fortress">
+	<npc id="36126" level="86" type="Defender" name="Escort" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1453,7 +1453,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36127" level="75" type="L2Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36127" level="75" type="Npc" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1495,7 +1495,7 @@
 			<height normal="59.5" />
 		</collision>
 	</npc>
-	<npc id="36128" level="90" type="L2Defender" name="Dwarven Gunnery Sergeant">
+	<npc id="36128" level="90" type="Defender" name="Dwarven Gunnery Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
@@ -1555,7 +1555,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36129" level="92" type="L2FortCommander" name="Guard Captain" title="Guard">
+	<npc id="36129" level="92" type="FortCommander" name="Guard Captain" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1630,7 +1630,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36130" level="90" type="L2Defender" name="Guard" title="Guard">
+	<npc id="36130" level="90" type="Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1691,7 +1691,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36131" level="90" type="L2Defender" name="Guard" title="Guard">
+	<npc id="36131" level="90" type="Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1750,7 +1750,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36132" level="92" type="L2FortCommander" name="Support Unit Captain" title="Support Unit">
+	<npc id="36132" level="92" type="FortCommander" name="Support Unit Captain" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1825,7 +1825,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36133" level="90" type="L2Defender" name="Wizard" title="Support Unit">
+	<npc id="36133" level="90" type="Defender" name="Wizard" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1892,7 +1892,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36134" level="90" type="L2Defender" name="Healer" title="Support Unit">
+	<npc id="36134" level="90" type="Defender" name="Healer" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1957,7 +1957,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36135" level="92" type="L2FortCommander" name="Archer Captain" title="Archer">
+	<npc id="36135" level="92" type="FortCommander" name="Archer Captain" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2022,7 +2022,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36136" level="90" type="L2Defender" name="Archer" title="Archer">
+	<npc id="36136" level="90" type="Defender" name="Archer" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2082,7 +2082,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36137" level="80" type="L2Monster" name="Ballista" title="Tanor Fortress">
+	<npc id="36137" level="80" type="Monster" name="Ballista" title="Tanor Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="FameValue" value="30" />
@@ -2127,7 +2127,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36138" level="80" type="L2Monster" name="Mercenary Captain">
+	<npc id="36138" level="80" type="Monster" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2216,7 +2216,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36139" level="75" type="L2Monster" name="Mercenary Private">
+	<npc id="36139" level="75" type="Monster" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2266,7 +2266,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36140" level="20" type="L2Npc" name="Flagpole">
+	<npc id="36140" level="20" type="Npc" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2303,7 +2303,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36141" level="75" type="L2FortManager" name="Foreman" title="Dragonspine Fortress">
+	<npc id="36141" level="75" type="FortManager" name="Foreman" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
@@ -2350,7 +2350,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36142" level="75" type="L2Npc" name="Suspicious Merchant" title="Dragonspine Fortress">
+	<npc id="36142" level="75" type="Npc" name="Suspicious Merchant" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2397,7 +2397,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36143" level="75" type="L2Npc" name="Guard Captain" title="Dragonspine Fortress">
+	<npc id="36143" level="75" type="Npc" name="Guard Captain" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2446,7 +2446,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36144" level="75" type="L2Npc" name="Archer Captain" title="Dragonspine Fortress">
+	<npc id="36144" level="75" type="Npc" name="Archer Captain" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2487,7 +2487,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36145" level="75" type="L2Npc" name="Support Unit Captain" title="Dragonspine Fortress">
+	<npc id="36145" level="75" type="Npc" name="Support Unit Captain" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2528,7 +2528,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36146" level="75" type="L2Npc" name="Engineering Manager" title="Dragonspine Fortress">
+	<npc id="36146" level="75" type="Npc" name="Engineering Manager" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2569,7 +2569,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36147" level="75" type="L2FortLogistics" name="Logistics Officer" title="Dragonspine Fortress">
+	<npc id="36147" level="75" type="FortLogistics" name="Logistics Officer" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2630,7 +2630,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="36148" level="95" type="L2Npc" name="Supply Box">
+	<npc id="36148" level="95" type="Npc" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2668,7 +2668,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36149" level="75" type="L2Npc" name="Detention Camp Warden" title="Dragonspine Fortress">
+	<npc id="36149" level="75" type="Npc" name="Detention Camp Warden" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2716,7 +2716,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36150" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36150" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2761,7 +2761,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36151" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36151" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2806,7 +2806,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36152" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36152" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2854,7 +2854,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36153" level="94" type="L2Defender" name="Rebel Commander" title="Dragonspine Fortress">
+	<npc id="36153" level="94" type="Defender" name="Rebel Commander" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2919,7 +2919,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36154" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Dragonspine Fortress">
+	<npc id="36154" level="90" type="Defender" name="Rebel Elite Soldier" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2979,7 +2979,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36155" level="89" type="L2Defender" name="Rebel Private" title="Dragonspine Fortress">
+	<npc id="36155" level="89" type="Defender" name="Rebel Private" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3034,7 +3034,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36156" level="86" type="L2Defender" name="Royal Guard" title="Dragonspine Fortress">
+	<npc id="36156" level="86" type="Defender" name="Royal Guard" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3092,7 +3092,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36157" level="86" type="L2Defender" name="Escort" title="Dragonspine Fortress">
+	<npc id="36157" level="86" type="Defender" name="Escort" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3150,7 +3150,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36158" level="75" type="L2Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36158" level="75" type="Npc" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3192,7 +3192,7 @@
 			<height normal="59.5" />
 		</collision>
 	</npc>
-	<npc id="36159" level="90" type="L2Defender" name="Dwarven Gunnery Sergeant">
+	<npc id="36159" level="90" type="Defender" name="Dwarven Gunnery Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
@@ -3252,7 +3252,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36160" level="92" type="L2FortCommander" name="Guard Captain" title="Guard">
+	<npc id="36160" level="92" type="FortCommander" name="Guard Captain" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3327,7 +3327,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36161" level="90" type="L2Defender" name="Guard" title="Guard">
+	<npc id="36161" level="90" type="Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3388,7 +3388,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36162" level="90" type="L2Defender" name="Guard" title="Guard">
+	<npc id="36162" level="90" type="Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3447,7 +3447,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36163" level="92" type="L2FortCommander" name="Support Unit Captain" title="Support Unit">
+	<npc id="36163" level="92" type="FortCommander" name="Support Unit Captain" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3522,7 +3522,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36164" level="90" type="L2Defender" name="Wizard" title="Support Unit">
+	<npc id="36164" level="90" type="Defender" name="Wizard" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3589,7 +3589,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36165" level="90" type="L2Defender" name="Healer" title="Support Unit">
+	<npc id="36165" level="90" type="Defender" name="Healer" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3654,7 +3654,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="36166" level="92" type="L2FortCommander" name="Archer Captain" title="Archer">
+	<npc id="36166" level="92" type="FortCommander" name="Archer Captain" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3719,7 +3719,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36167" level="90" type="L2Defender" name="Archer" title="Archer">
+	<npc id="36167" level="90" type="Defender" name="Archer" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3779,7 +3779,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36168" level="80" type="L2Monster" name="Ballista" title="Dragonspine Fortress">
+	<npc id="36168" level="80" type="Monster" name="Ballista" title="Dragonspine Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="FameValue" value="30" />
@@ -3824,7 +3824,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="36169" level="80" type="L2Monster" name="Mercenary Captain">
+	<npc id="36169" level="80" type="Monster" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3913,7 +3913,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="36170" level="75" type="L2Monster" name="Mercenary Private">
+	<npc id="36170" level="75" type="Monster" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3963,7 +3963,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36171" level="20" type="L2Npc" name="Flagpole">
+	<npc id="36171" level="20" type="Npc" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -4000,7 +4000,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36172" level="75" type="L2FortManager" name="Foreman" title="Antharas' Fortress">
+	<npc id="36172" level="75" type="FortManager" name="Foreman" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
@@ -4047,7 +4047,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36173" level="75" type="L2Npc" name="Suspicious Merchant" title="Antharas' Fortress">
+	<npc id="36173" level="75" type="Npc" name="Suspicious Merchant" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4094,7 +4094,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36174" level="75" type="L2Npc" name="Guard Captain" title="Antharas' Fortress">
+	<npc id="36174" level="75" type="Npc" name="Guard Captain" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4143,7 +4143,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36175" level="75" type="L2Npc" name="Archer Captain" title="Antharas' Fortress">
+	<npc id="36175" level="75" type="Npc" name="Archer Captain" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4184,7 +4184,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36176" level="75" type="L2Npc" name="General" title="Antharas' Fortress">
+	<npc id="36176" level="75" type="Npc" name="General" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4226,7 +4226,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36177" level="75" type="L2Npc" name="Support Unit Captain" title="Antharas' Fortress">
+	<npc id="36177" level="75" type="Npc" name="Support Unit Captain" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4267,7 +4267,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36178" level="75" type="L2Npc" name="Engineering Manager" title="Antharas' Fortress">
+	<npc id="36178" level="75" type="Npc" name="Engineering Manager" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4308,7 +4308,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36179" level="75" type="L2FortLogistics" name="Logistics Officer" title="Antharas' Fortress">
+	<npc id="36179" level="75" type="FortLogistics" name="Logistics Officer" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4369,7 +4369,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="36180" level="95" type="L2Npc" name="Supply Box">
+	<npc id="36180" level="95" type="Npc" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4407,7 +4407,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36181" level="75" type="L2Npc" name="Detention Camp Warden" title="Antharas' Fortress">
+	<npc id="36181" level="75" type="Npc" name="Detention Camp Warden" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4455,7 +4455,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36182" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36182" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4500,7 +4500,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36183" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36183" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4545,7 +4545,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36184" level="75" type="L2FortDoormen" name="Doorman">
+	<npc id="36184" level="75" type="FortDoorman" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4593,7 +4593,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36185" level="94" type="L2Defender" name="Rebel Commander" title="Antharas' Fortress">
+	<npc id="36185" level="94" type="Defender" name="Rebel Commander" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4658,7 +4658,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36186" level="90" type="L2Defender" name="Rebel Elite Soldier" title="Antharas' Fortress">
+	<npc id="36186" level="90" type="Defender" name="Rebel Elite Soldier" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4718,7 +4718,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36187" level="89" type="L2Defender" name="Rebel Private" title="Antharas' Fortress">
+	<npc id="36187" level="89" type="Defender" name="Rebel Private" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4773,7 +4773,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36188" level="86" type="L2Defender" name="Royal Guard" title="Antharas' Fortress">
+	<npc id="36188" level="86" type="Defender" name="Royal Guard" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4831,7 +4831,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36189" level="86" type="L2Defender" name="Escort" title="Antharas' Fortress">
+	<npc id="36189" level="86" type="Defender" name="Escort" title="Antharas' Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4889,7 +4889,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36190" level="75" type="L2Npc" name="Main Machine" title="Control Room">
+	<npc id="36190" level="75" type="Npc" name="Main Machine" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -4940,7 +4940,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="36191" level="75" type="L2Npc" name="Backup Power Unit" title="Control Room">
+	<npc id="36191" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="broadcast_range" value="2000" />
@@ -4986,7 +4986,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="36192" level="75" type="L2Npc" name="Control Unit" title="Control Room">
+	<npc id="36192" level="75" type="Npc" name="Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
@@ -5036,7 +5036,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="36193" level="75" type="L2Npc" name="Power Control Unit" title="Control Room">
+	<npc id="36193" level="75" type="Npc" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -5078,7 +5078,7 @@
 			<height normal="59.5" />
 		</collision>
 	</npc>
-	<npc id="36194" level="90" type="L2Defender" name="Dwarven Gunnery Sergeant">
+	<npc id="36194" level="90" type="Defender" name="Dwarven Gunnery Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
@@ -5138,7 +5138,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="36195" level="88" type="L2Defender" name="Scout Golem" title="Control Room">
+	<npc id="36195" level="88" type="Defender" name="Scout Golem" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="30" />
@@ -5193,7 +5193,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36196" level="92" type="L2FortCommander" name="Guard Captain" title="Guard">
+	<npc id="36196" level="92" type="FortCommander" name="Guard Captain" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5268,7 +5268,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36197" level="90" type="L2Defender" name="Guard" title="Guard">
+	<npc id="36197" level="90" type="Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5329,7 +5329,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36198" level="90" type="L2Defender" name="Guard" title="Guard">
+	<npc id="36198" level="90" type="Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5388,7 +5388,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36199" level="92" type="L2FortCommander" name="Support Unit Captain" title="Support Unit">
+	<npc id="36199" level="92" type="FortCommander" name="Support Unit Captain" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

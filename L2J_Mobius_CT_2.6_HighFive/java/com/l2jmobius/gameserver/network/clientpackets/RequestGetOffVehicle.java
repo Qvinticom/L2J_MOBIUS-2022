@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.GetOffVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
@@ -35,7 +35,7 @@ public final class RequestGetOffVehicle implements IClientIncomingPacket
 	private int _z;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_boatId = packet.readD();
 		_x = packet.readD();
@@ -45,26 +45,26 @@ public final class RequestGetOffVehicle implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		if (!activeChar.isInBoat() || (activeChar.getBoat().getObjectId() != _boatId) || activeChar.getBoat().isMoving() || !activeChar.isInsideRadius3D(_x, _y, _z, 1000))
+		if (!player.isInBoat() || (player.getBoat().getObjectId() != _boatId) || player.getBoat().isMoving() || !player.isInsideRadius3D(_x, _y, _z, 1000))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.broadcastPacket(new StopMoveInVehicle(activeChar, _boatId));
-		activeChar.setVehicle(null);
-		activeChar.setInVehiclePosition(null);
+		player.broadcastPacket(new StopMoveInVehicle(player, _boatId));
+		player.setVehicle(null);
+		player.setInVehiclePosition(null);
 		client.sendPacket(ActionFailed.STATIC_PACKET);
-		activeChar.broadcastPacket(new GetOffVehicle(activeChar.getObjectId(), _boatId, _x, _y, _z));
-		activeChar.setXYZ(_x, _y, _z);
-		activeChar.setInsideZone(ZoneId.PEACE, false);
-		activeChar.revalidateZone(true);
+		player.broadcastPacket(new GetOffVehicle(player.getObjectId(), _boatId, _x, _y, _z));
+		player.setXYZ(_x, _y, _z);
+		player.setInsideZone(ZoneId.PEACE, false);
+		player.revalidateZone(true);
 	}
 }

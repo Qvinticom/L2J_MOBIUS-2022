@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -35,9 +35,9 @@ public class MyTargetSelected implements IClientOutgoingPacket
 	 * @param player
 	 * @param target
 	 */
-	public MyTargetSelected(L2PcInstance player, L2Character target)
+	public MyTargetSelected(PlayerInstance player, Creature target)
 	{
-		_objectId = (target instanceof L2ControllableAirShipInstance) ? ((L2ControllableAirShipInstance) target).getHelmObjectId() : target.getObjectId();
+		_objectId = (target instanceof ControllableAirShipInstance) ? ((ControllableAirShipInstance) target).getHelmObjectId() : target.getObjectId();
 		_color = target.isAutoAttackable(player) ? (player.getLevel() - target.getLevel()) : 0;
 	}
 	

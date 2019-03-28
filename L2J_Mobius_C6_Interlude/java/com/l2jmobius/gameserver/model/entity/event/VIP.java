@@ -29,18 +29,18 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.PcInventory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerInventory;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.Race;
 import com.l2jmobius.gameserver.model.entity.Announcements;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 public class VIP
 {
@@ -72,12 +72,12 @@ public class VIP
 	public static boolean _joining = false;
 	public static boolean _inProgress = true;
 	public static boolean _sitForced = false;
-	public static L2Spawn _endSpawn;
-	public static L2Spawn _joinSpawn;
-	public static Vector<L2PcInstance> _playersVIP = new Vector<>();
-	public static Vector<L2PcInstance> _playersNotVIP = new Vector<>();
+	public static Spawn _endSpawn;
+	public static Spawn _joinSpawn;
+	public static Vector<PlayerInstance> _playersVIP = new Vector<>();
+	public static Vector<PlayerInstance> _playersNotVIP = new Vector<>();
 	
-	public static void setTeam(String team, L2PcInstance activeChar)
+	public static void setTeam(String team, PlayerInstance player)
 	{
 		if (team.compareToIgnoreCase("Human") == 0)
 		{
@@ -106,13 +106,13 @@ public class VIP
 		}
 		else
 		{
-			activeChar.sendMessage("Invalid Team Name: //vip_setteam <human/elf/dark/orc/dwarf>");
+			player.sendMessage("Invalid Team Name: //vip_setteam <human/elf/dark/orc/dwarf>");
 			return;
 		}
 		setLoc();
 	}
 	
-	public static void setRandomTeam(L2PcInstance activeChar)
+	public static void setRandomTeam(PlayerInstance player)
 	{
 		final Random generator = new Random();
 		
@@ -203,57 +203,57 @@ public class VIP
 		}
 	}
 	
-	public static void endNPC(int npcId, L2PcInstance activeChar)
+	public static void endNPC(int npcId, PlayerInstance player)
 	{
 		if (_team == 0)
 		{
-			activeChar.sendMessage("Please select a team first");
+			player.sendMessage("Please select a team first");
 			return;
 		}
 		
-		final L2NpcTemplate npctmp = NpcTable.getInstance().getTemplate(npcId);
+		final NpcTemplate npctmp = NpcTable.getInstance().getTemplate(npcId);
 		_endNPC = npcId;
 		
 		try
 		{
-			_endSpawn = new L2Spawn(npctmp);
+			_endSpawn = new Spawn(npctmp);
 			_endSpawn.setX(_endX);
 			_endSpawn.setY(_endY);
 			_endSpawn.setZ(_endZ);
 			_endSpawn.setAmount(1);
-			_endSpawn.setHeading(activeChar.getHeading());
+			_endSpawn.setHeading(player.getHeading());
 			_endSpawn.setRespawnDelay(1);
 		}
 		catch (Exception e)
 		{
-			activeChar.sendMessage("VIP Engine[endNPC(" + activeChar.getName() + ")]: exception: " + e.getMessage());
+			player.sendMessage("VIP Engine[endNPC(" + player.getName() + ")]: exception: " + e.getMessage());
 		}
 	}
 	
-	public static void joinNPC(int npcId, L2PcInstance activeChar)
+	public static void joinNPC(int npcId, PlayerInstance player)
 	{
 		if (_joinX == 0)
 		{
-			activeChar.sendMessage("Please set a join x,y,z first");
+			player.sendMessage("Please set a join x,y,z first");
 			return;
 		}
 		
-		final L2NpcTemplate npctmp = NpcTable.getInstance().getTemplate(npcId);
+		final NpcTemplate npctmp = NpcTable.getInstance().getTemplate(npcId);
 		_joinNPC = npcId;
 		
 		try
 		{
-			_joinSpawn = new L2Spawn(npctmp);
+			_joinSpawn = new Spawn(npctmp);
 			_joinSpawn.setX(_joinX);
 			_joinSpawn.setY(_joinY);
 			_joinSpawn.setZ(_joinZ);
 			_joinSpawn.setAmount(1);
-			_joinSpawn.setHeading(activeChar.getHeading());
+			_joinSpawn.setHeading(player.getHeading());
 			_joinSpawn.setRespawnDelay(1);
 		}
 		catch (Exception e)
 		{
-			activeChar.sendMessage("VIP Engine[joinNPC(" + activeChar.getName() + ")]: exception: " + e.getMessage());
+			player.sendMessage("VIP Engine[joinNPC(" + player.getName() + ")]: exception: " + e.getMessage());
 		}
 	}
 	
@@ -299,24 +299,24 @@ public class VIP
 		}
 	}
 	
-	public static String getNPCName(int id, L2PcInstance activeChar)
+	public static String getNPCName(int id, PlayerInstance player)
 	{
 		if (id == 0)
 		{
 			return "";
 		}
 		
-		final L2NpcTemplate npctmp = NpcTable.getInstance().getTemplate(id);
+		final NpcTemplate npctmp = NpcTable.getInstance().getTemplate(id);
 		return npctmp.name;
 	}
 	
-	public static String getItemName(int id, L2PcInstance activeChar)
+	public static String getItemName(int id, PlayerInstance player)
 	{
 		if (id == 0)
 		{
 			return "";
 		}
-		final L2Item itemtmp = ItemTable.getInstance().getTemplate(id);
+		final Item itemtmp = ItemTable.getInstance().getTemplate(id);
 		return itemtmp.getName();
 	}
 	
@@ -327,23 +327,23 @@ public class VIP
 		_joinZ = Integer.valueOf(z);
 	}
 	
-	public static void startJoin(L2PcInstance activeChar)
+	public static void startJoin(PlayerInstance player)
 	{
 		if ((_time == 0) || (_team == 0) || (_endNPC == 0) || (_delay == 0))
 		{
-			activeChar.sendMessage("Cannot initiate join status of event, not all the values are filled in");
+			player.sendMessage("Cannot initiate join status of event, not all the values are filled in");
 			return;
 		}
 		
 		if (_joining)
 		{
-			activeChar.sendMessage("Players are already allowed to join the event");
+			player.sendMessage("Players are already allowed to join the event");
 			return;
 		}
 		
 		if (_started)
 		{
-			activeChar.sendMessage("Event already started. Please wait for it to finish or finish it manually");
+			player.sendMessage("Event already started. Please wait for it to finish or finish it manually");
 			return;
 		}
 		
@@ -432,7 +432,7 @@ public class VIP
 		}
 	}
 	
-	public static void showEndHTML(L2PcInstance eventPlayer, String objectId)
+	public static void showEndHTML(PlayerInstance eventPlayer, String objectId)
 	{
 		try
 		{
@@ -469,7 +469,7 @@ public class VIP
 		}
 	}
 	
-	public static void vipWin(L2PcInstance activeChar)
+	public static void vipWin(PlayerInstance player)
 	{
 		if (!_started)
 		{
@@ -486,11 +486,11 @@ public class VIP
 	
 	public static void rewardNotVIP()
 	{
-		for (L2PcInstance player : _playersNotVIP)
+		for (PlayerInstance player : _playersNotVIP)
 		{
 			if (player != null)
 			{
-				final PcInventory inv = player.getInventory();
+				final PlayerInventory inv = player.getInventory();
 				
 				if (ItemTable.getInstance().createDummyItem(_notVipReward).isStackable())
 				{
@@ -537,11 +537,11 @@ public class VIP
 	
 	public static void rewardVIP()
 	{
-		for (L2PcInstance player : _playersVIP)
+		for (PlayerInstance player : _playersVIP)
 		{
 			if ((player != null) && !player._isTheVIP)
 			{
-				final PcInventory inv = player.getInventory();
+				final PlayerInventory inv = player.getInventory();
 				
 				if (ItemTable.getInstance().createDummyItem(_vipReward).isStackable())
 				{
@@ -585,7 +585,7 @@ public class VIP
 			}
 			else if ((player != null) && player._isTheVIP)
 			{
-				final PcInventory inv = player.getInventory();
+				final PlayerInventory inv = player.getInventory();
 				
 				if (ItemTable.getInstance().createDummyItem(_theVipReward).isStackable())
 				{
@@ -636,7 +636,7 @@ public class VIP
 		
 		ThreadPool.schedule(() ->
 		{
-			for (L2PcInstance player1 : _playersVIP)
+			for (PlayerInstance player1 : _playersVIP)
 			{
 				if (player1 != null)
 				{
@@ -644,7 +644,7 @@ public class VIP
 				}
 			}
 			
-			for (L2PcInstance player2 : _playersNotVIP)
+			for (PlayerInstance player2 : _playersNotVIP)
 			{
 				if (player2 != null)
 				{
@@ -664,7 +664,7 @@ public class VIP
 		_inProgress = false;
 		_teamName = _joinArea = "";
 		
-		for (L2PcInstance player : _playersVIP)
+		for (PlayerInstance player : _playersVIP)
 		{
 			player.getAppearance().setNameColor(player._originalNameColourVIP);
 			player.setKarma(player._originalKarmaVIP);
@@ -675,7 +675,7 @@ public class VIP
 			player._isVIP = false;
 		}
 		
-		for (L2PcInstance player : _playersNotVIP)
+		for (PlayerInstance player : _playersNotVIP)
 		{
 			player.getAppearance().setNameColor(player._originalNameColourVIP);
 			player.setKarma(player._originalKarmaVIP);
@@ -701,7 +701,7 @@ public class VIP
 		
 		LOGGER.info("Random number chosen in VIP: " + random);
 		
-		final L2PcInstance VIP = _playersVIP.get(random);
+		final PlayerInstance VIP = _playersVIP.get(random);
 		VIP._isTheVIP = true;
 	}
 	
@@ -709,14 +709,14 @@ public class VIP
 	{
 		sit();
 		
-		for (L2PcInstance player : _playersVIP)
+		for (PlayerInstance player : _playersVIP)
 		{
 			if (player != null)
 			{
 				player.teleToLocation(_startX, _startY, _startZ);
 			}
 		}
-		for (L2PcInstance player : _playersNotVIP)
+		for (PlayerInstance player : _playersNotVIP)
 		{
 			if (player != null)
 			{
@@ -736,7 +736,7 @@ public class VIP
 			_sitForced = true;
 		}
 		
-		for (L2PcInstance player : _playersVIP)
+		for (PlayerInstance player : _playersVIP)
 		{
 			if (player != null)
 			{
@@ -758,7 +758,7 @@ public class VIP
 			}
 		}
 		
-		for (L2PcInstance player : _playersNotVIP)
+		for (PlayerInstance player : _playersNotVIP)
 		{
 			if (player != null)
 			{
@@ -783,7 +783,7 @@ public class VIP
 	
 	public static void setUserData()
 	{
-		for (L2PcInstance player : _playersVIP)
+		for (PlayerInstance player : _playersVIP)
 		{
 			if (player._isTheVIP)
 			{
@@ -797,7 +797,7 @@ public class VIP
 			player.setKarma(0);
 			player.broadcastUserInfo();
 		}
-		for (L2PcInstance player : _playersNotVIP)
+		for (PlayerInstance player : _playersNotVIP)
 		{
 			player.getAppearance().setNameColor(0, 255, 0);
 			player.setKarma(0);
@@ -805,7 +805,7 @@ public class VIP
 		}
 	}
 	
-	public static void showJoinHTML(L2PcInstance eventPlayer, String objectId)
+	public static void showJoinHTML(PlayerInstance eventPlayer, String objectId)
 	{
 		try
 		{
@@ -897,25 +897,25 @@ public class VIP
 		}
 	}
 	
-	public static void addPlayerVIP(L2PcInstance activeChar)
+	public static void addPlayerVIP(PlayerInstance player)
 	{
-		activeChar._isVIP = true;
-		_playersVIP.add(activeChar);
-		activeChar._originalNameColourVIP = activeChar.getAppearance().getNameColor();
-		activeChar._originalKarmaVIP = activeChar.getKarma();
-		activeChar._inEventVIP = true;
+		player._isVIP = true;
+		_playersVIP.add(player);
+		player._originalNameColourVIP = player.getAppearance().getNameColor();
+		player._originalKarmaVIP = player.getKarma();
+		player._inEventVIP = true;
 	}
 	
-	public static void addPlayerNotVIP(L2PcInstance activeChar)
+	public static void addPlayerNotVIP(PlayerInstance player)
 	{
-		activeChar._isNotVIP = true;
-		_playersNotVIP.add(activeChar);
-		activeChar._originalNameColourVIP = activeChar.getAppearance().getNameColor();
-		activeChar._originalKarmaVIP = activeChar.getKarma();
-		activeChar._inEventVIP = true;
+		player._isNotVIP = true;
+		_playersNotVIP.add(player);
+		player._originalNameColourVIP = player.getAppearance().getNameColor();
+		player._originalKarmaVIP = player.getKarma();
+		player._inEventVIP = true;
 	}
 	
-	public static void onDisconnect(L2PcInstance player)
+	public static void onDisconnect(PlayerInstance player)
 	{
 		
 		if (player._inEventTvT)

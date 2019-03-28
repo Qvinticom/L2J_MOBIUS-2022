@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18900" level="84" type="L2FeedableBeast" name="Full Grown Grendel">
+	<npc id="18900" level="84" type="FeedableBeast" name="Full Grown Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
@@ -77,7 +77,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="18901" level="83" type="L2Npc" name="Kookaburra" title="Golden">
+	<npc id="18901" level="83" type="Npc" name="Kookaburra" title="Golden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -124,7 +124,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18902" level="83" type="L2Npc" name="Cougar" title="Golden">
+	<npc id="18902" level="83" type="Npc" name="Cougar" title="Golden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -171,7 +171,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18903" level="84" type="L2Npc" name="Buffalo" title="Golden">
+	<npc id="18903" level="84" type="Npc" name="Buffalo" title="Golden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -218,7 +218,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18904" level="84" type="L2Npc" name="Grendel" title="Golden">
+	<npc id="18904" level="84" type="Npc" name="Grendel" title="Golden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -264,7 +264,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="18905" level="84" type="L2Npc" name="Farm Ravager" title="Crazed">
+	<npc id="18905" level="84" type="Npc" name="Farm Ravager" title="Crazed">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -307,7 +307,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18906" level="84" type="L2Monster" name="Farm Bandit">
+	<npc id="18906" level="84" type="Monster" name="Farm Bandit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -414,7 +414,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18907" level="84" type="L2Monster" name="Beast Devourer">
+	<npc id="18907" level="84" type="Monster" name="Beast Devourer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -516,7 +516,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18908" level="83" type="L2Monster" name="Sel Mahum Chef">
+	<npc id="18908" level="83" type="Monster" name="Sel Mahum Chef">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6330" level="1" /> <!-- Salmon Porridge Attack -->
@@ -573,7 +573,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="18909" level="83" type="L2Monster" name="Solina Knights">
+	<npc id="18909" level="83" type="Monster" name="Solina Knights">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6311" level="1" /> <!-- Solina Thrust -->
@@ -669,7 +669,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="18910" level="83" type="L2Monster" name="Solina Knight Captain">
+	<npc id="18910" level="83" type="Monster" name="Solina Knight Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6312" level="1" /> <!-- Launch Sacred Sword Energy -->
@@ -758,7 +758,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="18911" level="84" type="L2Monster" name="Abbey Treasure Chest">
+	<npc id="18911" level="84" type="Monster" name="Abbey Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -799,7 +799,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18912" level="1" type="L2Monster" name="Scarecrow">
+	<npc id="18912" level="1" type="Monster" name="Scarecrow">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -833,7 +833,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18913" level="1" type="L2Npc" name="Furnace">
+	<npc id="18913" level="1" type="Npc" name="Furnace">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -867,7 +867,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18914" level="1" type="L2Npc" name="Furnace">
+	<npc id="18914" level="1" type="Npc" name="Furnace">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -901,7 +901,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18915" level="1" type="L2Npc" name="Divine Furnace">
+	<npc id="18915" level="1" type="Npc" name="Divine Furnace">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -936,7 +936,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18916" level="1" type="L2Npc">
+	<npc id="18916" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -971,7 +971,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18917" level="72" type="L2Monster" name="Pavel Safety Device">
+	<npc id="18917" level="72" type="Monster" name="Pavel Safety Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Privates01_sil" value="22801" /> <!-- Cruel Pincer Golem -->
@@ -1044,7 +1044,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18918" level="85" type="L2Npc">
+	<npc id="18918" level="85" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1080,7 +1080,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18919" level="85" type="L2Npc">
+	<npc id="18919" level="85" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1116,7 +1116,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18920" level="84" type="L2Npc">
+	<npc id="18920" level="84" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1153,7 +1153,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18921" level="84" type="L2Npc" name="Square Base">
+	<npc id="18921" level="84" type="Npc" name="Square Base">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1190,7 +1190,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="18922" level="84" type="L2Npc" name="Door Golem" title="Final">
+	<npc id="18922" level="84" type="Npc" name="Door Golem" title="Final">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1228,7 +1228,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18923" level="84" type="L2Npc" name="Door Golem" title="Final">
+	<npc id="18923" level="84" type="Npc" name="Door Golem" title="Final">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1266,7 +1266,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18924" level="84" type="L2Npc" name="Door Golem">
+	<npc id="18924" level="84" type="Npc" name="Door Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1304,7 +1304,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18925" level="84" type="L2Npc" name="Trap">
+	<npc id="18925" level="84" type="Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>ETC</sex>
@@ -1341,7 +1341,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18926" level="85" type="L2QuestGuard" name="Mercenary Archer" title="Jinia Guild">
+	<npc id="18926" level="85" type="QuestGuard" name="Mercenary Archer" title="Jinia Guild">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
@@ -1381,7 +1381,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18927" level="84" type="L2Npc" name="Fire">
+	<npc id="18927" level="84" type="Npc" name="Fire">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6331" level="1" /> <!-- Camp Fire Tired -->
@@ -1420,7 +1420,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18928" level="85" type="L2TerrainObject" name="Annihilation Furnace">
+	<npc id="18928" level="85" type="TerrainObject" name="Annihilation Furnace">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1455,7 +1455,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="18929" level="84" type="L2Monster" name="Ward of the Grail">
+	<npc id="18929" level="84" type="Monster" name="Ward of the Grail">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" /> <!-- Martyr's Happiness -->
@@ -1498,7 +1498,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18930" level="1" type="L2Npc">
+	<npc id="18930" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1533,7 +1533,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18931" level="1" type="L2Npc">
+	<npc id="18931" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1568,7 +1568,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18932" level="1" type="L2Npc">
+	<npc id="18932" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1604,7 +1604,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18933" level="1" type="L2Npc" name="Fire Feed">
+	<npc id="18933" level="1" type="Npc" name="Fire Feed">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1639,7 +1639,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18934" level="84" type="L2Npc" name="Abbey Treasure Chest">
+	<npc id="18934" level="84" type="Npc" name="Abbey Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1679,7 +1679,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18935" level="85" type="L2Npc" name="Divine Sword Protection">
+	<npc id="18935" level="85" type="Npc" name="Divine Sword Protection">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1715,7 +1715,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18936" level="1" type="L2Npc">
+	<npc id="18936" level="1" type="Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1751,7 +1751,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18937" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18937" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1771,7 +1771,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18938" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18938" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1791,7 +1791,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18939" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18939" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1811,7 +1811,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18940" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18940" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1831,7 +1831,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18941" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18941" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1851,7 +1851,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18942" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18942" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1871,7 +1871,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18943" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18943" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1891,7 +1891,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18944" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18944" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1911,7 +1911,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18945" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18945" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1931,7 +1931,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18946" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18946" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1951,7 +1951,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18947" level="80" type="L2Npc" name="Target Dummy">
+	<npc id="18947" level="80" type="Npc" name="Target Dummy">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1971,7 +1971,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18948" level="80" type="L2Npc" name="Etis van Etina" title="Head of the Embryo">
+	<npc id="18948" level="80" type="Npc" name="Etis van Etina" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1991,7 +1991,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18949" level="80" type="L2Monster" name="Etis van Etina" title="Head of the Embryo">
+	<npc id="18949" level="80" type="Monster" name="Etis van Etina" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2021,7 +2021,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="18950" level="80" type="L2Monster" name="Etis van Etina's Phantom">
+	<npc id="18950" level="80" type="Monster" name="Etis van Etina's Phantom">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2046,7 +2046,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18951" level="80" type="L2Monster" name="Etis van Etina's Phantom">
+	<npc id="18951" level="80" type="Monster" name="Etis van Etina's Phantom">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2071,7 +2071,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18952" level="80" type="L2Monster" name="Solina's Guardian">
+	<npc id="18952" level="80" type="Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2102,7 +2102,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18953" level="80" type="L2Monster" name="Solina's Guardian">
+	<npc id="18953" level="80" type="Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2133,7 +2133,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18954" level="80" type="L2Monster" name="Solina's Guardian">
+	<npc id="18954" level="80" type="Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2164,7 +2164,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18955" level="80" type="L2Monster" name="Solina's Guardian">
+	<npc id="18955" level="80" type="Monster" name="Solina's Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2195,7 +2195,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18956" level="80" type="L2Monster" name="Guardian of the Tomb">
+	<npc id="18956" level="80" type="Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2225,7 +2225,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18957" level="80" type="L2Monster" name="Guardian of the Tomb">
+	<npc id="18957" level="80" type="Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2255,7 +2255,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18958" level="80" type="L2Monster" name="Guardian of the Tomb">
+	<npc id="18958" level="80" type="Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2285,7 +2285,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18959" level="80" type="L2Monster" name="Guardian of the Tomb">
+	<npc id="18959" level="80" type="Monster" name="Guardian of the Tomb">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2315,7 +2315,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18960" level="80" type="L2Npc" name="Drake Lord">
+	<npc id="18960" level="80" type="Npc" name="Drake Lord">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2335,7 +2335,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18961" level="80" type="L2Npc" name="Behemoth Leader">
+	<npc id="18961" level="80" type="Npc" name="Behemoth Leader">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2355,7 +2355,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18962" level="80" type="L2Npc" name="Dragon Beast">
+	<npc id="18962" level="80" type="Npc" name="Dragon Beast">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2375,7 +2375,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18963" level="80" type="L2Npc">
+	<npc id="18963" level="80" type="Npc">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2395,7 +2395,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18964" level="80" type="L2Npc" name="Antharas's Symbol">
+	<npc id="18964" level="80" type="Npc" name="Antharas's Symbol">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2423,7 +2423,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18965" level="80" type="L2Npc" name="Antharas's Symbol">
+	<npc id="18965" level="80" type="Npc" name="Antharas's Symbol">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2451,7 +2451,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18966" level="80" type="L2Npc" name="Antharas's Symbol">
+	<npc id="18966" level="80" type="Npc" name="Antharas's Symbol">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2478,7 +2478,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18967" level="80" type="L2Npc">
+	<npc id="18967" level="80" type="Npc">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2498,7 +2498,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18968" level="80" type="L2Npc">
+	<npc id="18968" level="80" type="Npc">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2518,7 +2518,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18969" level="80" type="L2Npc" name="Magma Drake Mother">
+	<npc id="18969" level="80" type="Npc" name="Magma Drake Mother">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2538,7 +2538,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18970" level="80" type="L2Npc" name="Magma Drake Hatchling">
+	<npc id="18970" level="80" type="Npc" name="Magma Drake Hatchling">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -2558,7 +2558,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18971" level="80" type="L2Npc" name="Gem Dragon Hatchling">
+	<npc id="18971" level="80" type="Npc" name="Gem Dragon Hatchling">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

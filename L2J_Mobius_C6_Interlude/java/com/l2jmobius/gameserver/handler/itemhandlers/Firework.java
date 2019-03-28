@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -37,110 +37,110 @@ public class Firework implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return; // prevent Class cast exception
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		
-		if (!activeChar.getFloodProtectors().getFirework().tryPerformAction("firework"))
+		if (!player.getFloodProtectors().getFirework().tryPerformAction("firework"))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addItemName(itemId);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
-		if (activeChar.isCastingNow())
+		if (player.isCastingNow())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isAway())
+		if (player.isAway())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isConfused())
+		if (player.isConfused())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isStunned())
+		if (player.isStunned())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isDead())
+		if (player.isDead())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isAlikeDead())
+		if (player.isAlikeDead())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (itemId == 6403) // elven_firecracker, xml: 2023
 		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2023, 1, 1, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			useFw(activeChar, 2023, 1);
+			MagicSkillUse MSU = new MagicSkillUse(playable, player, 2023, 1, 1, 0);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
+			useFw(player, 2023, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 6406) // firework, xml: 2024
 		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2024, 1, 1, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			useFw(activeChar, 2024, 1);
+			MagicSkillUse MSU = new MagicSkillUse(playable, player, 2024, 1, 1, 0);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
+			useFw(player, 2024, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 		else if (itemId == 6407) // large_firework, xml: 2025
 		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2025, 1, 1, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			useFw(activeChar, 2025, 1);
+			MagicSkillUse MSU = new MagicSkillUse(playable, player, 2025, 1, 1, 0);
+			player.sendPacket(MSU);
+			player.broadcastPacket(MSU);
+			useFw(player, 2025, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 	}
 	
-	public void useFw(L2PcInstance activeChar, int magicId, int level)
+	public void useFw(PlayerInstance player, int magicId, int level)
 	{
-		L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 		if (skill != null)
 		{
-			activeChar.useMagic(skill, false, false);
+			player.useMagic(skill, false, false);
 		}
 	}
 	

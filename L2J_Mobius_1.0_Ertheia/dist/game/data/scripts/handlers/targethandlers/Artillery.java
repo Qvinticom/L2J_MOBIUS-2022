@@ -17,9 +17,9 @@
 package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -37,13 +37,13 @@ public class Artillery implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		final L2Object target = activeChar.getTarget();
+		final WorldObject target = creature.getTarget();
 		if ((target != null) && target.isDoor())
 		{
-			final L2DoorInstance targetDoor = (L2DoorInstance) target;
-			if (!targetDoor.isDead() && targetDoor.isAutoAttackable(activeChar) && targetDoor.isEnemy())
+			final DoorInstance targetDoor = (DoorInstance) target;
+			if (!targetDoor.isDead() && targetDoor.isAutoAttackable(creature) && targetDoor.isEnemy())
 			{
 				return targetDoor;
 			}
@@ -51,7 +51,7 @@ public class Artillery implements ITargetTypeHandler
 		
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		}
 		
 		return null;

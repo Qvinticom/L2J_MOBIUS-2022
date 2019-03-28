@@ -2043,7 +2043,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<cond msgId="113" addName="1">
 			<not>
-				<target npcType="L2Attackable" />
+				<target npcType="Attackable" />
 			</not>
 		</cond>
 		<for>

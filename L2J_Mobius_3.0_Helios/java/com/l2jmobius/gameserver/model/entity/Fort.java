@@ -45,17 +45,17 @@ import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
-import com.l2jmobius.gameserver.model.zone.type.L2FortZone;
-import com.l2jmobius.gameserver.model.zone.type.L2SiegeZone;
+import com.l2jmobius.gameserver.model.zone.type.FortZone;
+import com.l2jmobius.gameserver.model.zone.type.SiegeZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
@@ -65,13 +65,13 @@ public final class Fort extends AbstractResidence
 {
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
 	
-	private final List<L2DoorInstance> _doors = new ArrayList<>();
-	private L2StaticObjectInstance _flagPole = null;
+	private final List<DoorInstance> _doors = new ArrayList<>();
+	private StaticObjectInstance _flagPole = null;
 	private volatile FortSiege _siege = null;
 	private Calendar _siegeDate;
 	private Calendar _lastOwnedTime;
-	private L2SiegeZone _zone;
-	L2Clan _fortOwner = null;
+	private SiegeZone _zone;
+	Clan _fortOwner = null;
 	private int _fortType = 0;
 	private int _state = 0;
 	private int _castleId = 0;
@@ -81,9 +81,9 @@ public final class Fort extends AbstractResidence
 	
 	// Spawn Data
 	private boolean _isSuspiciousMerchantSpawned = false;
-	private final Set<L2Spawn> _siegeNpcs = ConcurrentHashMap.newKeySet();
-	private final Set<L2Spawn> _npcCommanders = ConcurrentHashMap.newKeySet();
-	private final Set<L2Spawn> _specialEnvoys = ConcurrentHashMap.newKeySet();
+	private final Set<Spawn> _siegeNpcs = ConcurrentHashMap.newKeySet();
+	private final Set<Spawn> _npcCommanders = ConcurrentHashMap.newKeySet();
+	private final Set<Spawn> _specialEnvoys = ConcurrentHashMap.newKeySet();
 	
 	private final Map<Integer, Integer> _envoyCastles = new HashMap<>(2);
 	private final Set<Integer> _availableCastles = new HashSet<>(1);
@@ -266,7 +266,7 @@ public final class Fort extends AbstractResidence
 		return _function.get(type);
 	}
 	
-	public void endOfSiege(L2Clan clan)
+	public void endOfSiege(Clan clan)
 	{
 		ThreadPool.execute(new endFortressSiege(this, clan));
 	}
@@ -291,11 +291,11 @@ public final class Fort extends AbstractResidence
 		return getZone().isInsideZone(x, y, z);
 	}
 	
-	public L2SiegeZone getZone()
+	public SiegeZone getZone()
 	{
 		if (_zone == null)
 		{
-			for (L2SiegeZone zone : ZoneManager.getInstance().getAllZones(L2SiegeZone.class))
+			for (SiegeZone zone : ZoneManager.getInstance().getAllZones(SiegeZone.class))
 			{
 				if (zone.getSiegeObjectId() == getResidenceId())
 				{
@@ -308,9 +308,9 @@ public final class Fort extends AbstractResidence
 	}
 	
 	@Override
-	public L2FortZone getResidenceZone()
+	public FortZone getResidenceZone()
 	{
-		return (L2FortZone) super.getResidenceZone();
+		return (FortZone) super.getResidenceZone();
 	}
 	
 	/**
@@ -318,29 +318,29 @@ public final class Fort extends AbstractResidence
 	 * @param obj
 	 * @return
 	 */
-	public double getDistance(L2Object obj)
+	public double getDistance(WorldObject obj)
 	{
 		return getZone().getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(L2PcInstance activeChar, int doorId)
+	public void closeDoor(PlayerInstance player, int doorId)
 	{
-		openCloseDoor(activeChar, doorId, false);
+		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(L2PcInstance activeChar, int doorId)
+	public void openDoor(PlayerInstance player, int doorId)
 	{
-		openCloseDoor(activeChar, doorId, true);
+		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
+	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
 	{
-		if (activeChar.getClan() != _fortOwner)
+		if (player.getClan() != _fortOwner)
 		{
 			return;
 		}
 		
-		final L2DoorInstance door = getDoor(doorId);
+		final DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -366,7 +366,7 @@ public final class Fort extends AbstractResidence
 	 * @param updateClansReputation
 	 * @return
 	 */
-	public boolean setOwner(L2Clan clan, boolean updateClansReputation)
+	public boolean setOwner(Clan clan, boolean updateClansReputation)
 	{
 		if (clan == null)
 		{
@@ -378,14 +378,14 @@ public final class Fort extends AbstractResidence
 		sm.addCastleId(getResidenceId());
 		getSiege().announceToPlayer(sm);
 		
-		final L2Clan oldowner = _fortOwner;
+		final Clan oldowner = _fortOwner;
 		if ((oldowner != null) && (clan != oldowner))
 		{
 			// Remove points from old owner
 			updateClansReputation(oldowner, true);
 			try
 			{
-				final L2PcInstance oldleader = oldowner.getLeader().getPlayerInstance();
+				final PlayerInstance oldleader = oldowner.getLeader().getPlayerInstance();
 				if (oldleader != null)
 				{
 					if (oldleader.getMountType() == MountType.WYVERN)
@@ -432,7 +432,7 @@ public final class Fort extends AbstractResidence
 			getSiege().endSiege();
 		}
 		
-		for (L2PcInstance member : clan.getOnlineMembers(0))
+		for (PlayerInstance member : clan.getOnlineMembers(0))
 		{
 			giveResidentialSkills(member);
 			member.sendSkillList();
@@ -442,10 +442,10 @@ public final class Fort extends AbstractResidence
 	
 	public void removeOwner(boolean updateDB)
 	{
-		final L2Clan clan = _fortOwner;
+		final Clan clan = _fortOwner;
 		if (clan != null)
 		{
-			for (L2PcInstance member : clan.getOnlineMembers(0))
+			for (PlayerInstance member : clan.getOnlineMembers(0))
 			{
 				removeResidentialSkills(member);
 				member.sendSkillList();
@@ -506,7 +506,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public void setVisibleFlag(boolean val)
 	{
-		final L2StaticObjectInstance flagPole = _flagPole;
+		final StaticObjectInstance flagPole = _flagPole;
 		if (flagPole != null)
 		{
 			flagPole.setMeshIndex(val ? 1 : 0);
@@ -519,7 +519,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public void resetDoors()
 	{
-		for (L2DoorInstance door : _doors)
+		for (DoorInstance door : _doors)
 		{
 			if (door.isOpen())
 			{
@@ -540,7 +540,7 @@ public final class Fort extends AbstractResidence
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		final L2DoorInstance door = getDoor(doorId);
+		final DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			door.setCurrentHp(door.getMaxHp() + hp);
@@ -576,7 +576,7 @@ public final class Fort extends AbstractResidence
 			}
 			if (ownerId > 0)
 			{
-				final L2Clan clan = ClanTable.getInstance().getClan(ownerId); // Try to find clan instance
+				final Clan clan = ClanTable.getInstance().getClan(ownerId); // Try to find clan instance
 				clan.setFortId(getResidenceId());
 				setOwnerClan(clan);
 				final int runCount = getOwnedTime() / (Config.FS_UPDATE_FRQ * 60);
@@ -662,7 +662,7 @@ public final class Fort extends AbstractResidence
 		}
 	}
 	
-	public boolean updateFunctions(L2PcInstance player, int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(PlayerInstance player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
 		if (player == null)
 		{
@@ -702,7 +702,7 @@ public final class Fort extends AbstractResidence
 	// This method loads fort door data from database
 	private void loadDoor()
 	{
-		for (L2DoorInstance door : DoorData.getInstance().getDoors())
+		for (DoorInstance door : DoorData.getInstance().getDoors())
 		{
 			if ((door.getFort() != null) && (door.getFort().getResidenceId() == getResidenceId()))
 			{
@@ -713,7 +713,7 @@ public final class Fort extends AbstractResidence
 	
 	private void loadFlagPoles()
 	{
-		for (L2StaticObjectInstance obj : StaticObjectData.getInstance().getStaticObjects())
+		for (StaticObjectInstance obj : StaticObjectData.getInstance().getStaticObjects())
 		{
 			if ((obj.getType() == 3) && obj.getName().startsWith(getName()))
 			{
@@ -781,7 +781,7 @@ public final class Fort extends AbstractResidence
 	
 	private void updateOwnerInDB()
 	{
-		final L2Clan clan = _fortOwner;
+		final Clan clan = _fortOwner;
 		int clanId = 0;
 		if (clan != null)
 		{
@@ -811,7 +811,7 @@ public final class Fort extends AbstractResidence
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2);
 				sm.addString(clan.getName());
 				sm.addCastleId(getResidenceId());
-				L2World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));
+				World.getInstance().getPlayers().forEach(p -> p.sendPacket(sm));
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
 				if (_FortUpdater[0] != null)
@@ -844,36 +844,36 @@ public final class Fort extends AbstractResidence
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: updateOwnerInDB(Pledge clan): " + e.getMessage(), e);
 		}
 	}
 	
 	@Override
 	public final int getOwnerId()
 	{
-		final L2Clan clan = _fortOwner;
+		final Clan clan = _fortOwner;
 		return clan != null ? clan.getId() : -1;
 	}
 	
-	public final L2Clan getOwnerClan()
+	public final Clan getOwnerClan()
 	{
 		return _fortOwner;
 	}
 	
-	public final void setOwnerClan(L2Clan clan)
+	public final void setOwnerClan(Clan clan)
 	{
 		setVisibleFlag(clan != null);
 		_fortOwner = clan;
 	}
 	
-	public final L2DoorInstance getDoor(int doorId)
+	public final DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
 			return null;
 		}
 		
-		for (L2DoorInstance door : _doors)
+		for (DoorInstance door : _doors)
 		{
 			if (door.getId() == doorId)
 			{
@@ -883,12 +883,12 @@ public final class Fort extends AbstractResidence
 		return null;
 	}
 	
-	public final List<L2DoorInstance> getDoors()
+	public final List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
-	public final L2StaticObjectInstance getFlagPole()
+	public final StaticObjectInstance getFlagPole()
 	{
 		return _flagPole;
 	}
@@ -933,7 +933,7 @@ public final class Fort extends AbstractResidence
 		return _FortUpdater[0] == null ? 0 : _FortUpdater[0].getDelay(TimeUnit.SECONDS);
 	}
 	
-	public void updateClansReputation(L2Clan owner, boolean removePoints)
+	public void updateClansReputation(Clan owner, boolean removePoints)
 	{
 		if (owner != null)
 		{
@@ -951,9 +951,9 @@ public final class Fort extends AbstractResidence
 	private static class endFortressSiege implements Runnable
 	{
 		private final Fort _f;
-		private final L2Clan _clan;
+		private final Clan _clan;
 		
-		public endFortressSiege(Fort f, L2Clan clan)
+		public endFortressSiege(Fort f, Clan clan)
 		{
 			_f = f;
 			_clan = clan;
@@ -1079,7 +1079,7 @@ public final class Fort extends AbstractResidence
 		}
 		_isSuspiciousMerchantSpawned = true;
 		
-		for (L2Spawn spawnDat : _siegeNpcs)
+		for (Spawn spawnDat : _siegeNpcs)
 		{
 			spawnDat.doSpawn();
 			spawnDat.startRespawn();
@@ -1094,7 +1094,7 @@ public final class Fort extends AbstractResidence
 		}
 		_isSuspiciousMerchantSpawned = false;
 		
-		for (L2Spawn spawnDat : _siegeNpcs)
+		for (Spawn spawnDat : _siegeNpcs)
 		{
 			spawnDat.stopRespawn();
 			spawnDat.getLastSpawn().deleteMe();
@@ -1103,7 +1103,7 @@ public final class Fort extends AbstractResidence
 	
 	public void spawnNpcCommanders()
 	{
-		for (L2Spawn spawnDat : _npcCommanders)
+		for (Spawn spawnDat : _npcCommanders)
 		{
 			spawnDat.doSpawn();
 			spawnDat.startRespawn();
@@ -1112,7 +1112,7 @@ public final class Fort extends AbstractResidence
 	
 	public void despawnNpcCommanders()
 	{
-		for (L2Spawn spawnDat : _npcCommanders)
+		for (Spawn spawnDat : _npcCommanders)
 		{
 			spawnDat.stopRespawn();
 			spawnDat.getLastSpawn().deleteMe();
@@ -1121,7 +1121,7 @@ public final class Fort extends AbstractResidence
 	
 	public void spawnSpecialEnvoys()
 	{
-		for (L2Spawn spawnDat : _specialEnvoys)
+		for (Spawn spawnDat : _specialEnvoys)
 		{
 			spawnDat.doSpawn();
 			spawnDat.startRespawn();
@@ -1139,7 +1139,7 @@ public final class Fort extends AbstractResidence
 			{
 				while (rs.next())
 				{
-					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					final Spawn spawnDat = new Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
 					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
@@ -1168,7 +1168,7 @@ public final class Fort extends AbstractResidence
 			{
 				while (rs.next())
 				{
-					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					final Spawn spawnDat = new Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
 					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
@@ -1195,7 +1195,7 @@ public final class Fort extends AbstractResidence
 			{
 				while (rs.next())
 				{
-					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					final Spawn spawnDat = new Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
 					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
@@ -1227,7 +1227,7 @@ public final class Fort extends AbstractResidence
 				{
 					final int castleId = rs.getInt("castleId");
 					final int npcId = rs.getInt("npcId");
-					final L2Spawn spawnDat = new L2Spawn(npcId);
+					final Spawn spawnDat = new Spawn(npcId);
 					spawnDat.setAmount(1);
 					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
@@ -1248,7 +1248,7 @@ public final class Fort extends AbstractResidence
 	@Override
 	protected void initResidenceZone()
 	{
-		for (L2FortZone zone : ZoneManager.getInstance().getAllZones(L2FortZone.class))
+		for (FortZone zone : ZoneManager.getInstance().getAllZones(FortZone.class))
 		{
 			if (zone.getResidenceId() == getResidenceId())
 			{

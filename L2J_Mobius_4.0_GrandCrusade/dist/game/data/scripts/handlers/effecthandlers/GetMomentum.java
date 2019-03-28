@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -46,11 +46,11 @@ public class GetMomentum extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (effected.isPlayer())
 		{
-			final L2PcInstance player = effected.getActingPlayer();
+			final PlayerInstance player = effected.getActingPlayer();
 			final int maxCharge = (int) player.getStat().getValue(Stats.MAX_MOMENTUM, 0);
 			final int newCharge = Math.min(player.getCharges() + 1, maxCharge);
 			

@@ -21,11 +21,11 @@ import java.util.List;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -39,7 +39,7 @@ import ai.AbstractNpcAI;
 public final class NevitsHerald extends AbstractNpcAI
 {
 	private static final int NEVITS_HERALD = 4326;
-	private static final List<L2Npc> SPAWNS = new ArrayList<>();
+	private static final List<Npc> SPAWNS = new ArrayList<>();
 	private static final Location[] NEVITS_HERALD_LOC =
 	{
 		new Location(86971, -142772, -1336, 20480), // Town of Schuttgart
@@ -74,19 +74,19 @@ public final class NevitsHerald extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "4326.htm";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == NEVITS_HERALD)
 		{
 			if (event.equalsIgnoreCase("buff"))
 			{
-				if (player.getEffectList().getFirstEffect(L2EffectType.NEVITS_HOURGLASS) != null)
+				if (player.getEffectList().getFirstEffect(EffectType.NEVITS_HOURGLASS) != null)
 				{
 					return "4326-1.htm";
 				}
@@ -101,7 +101,7 @@ public final class NevitsHerald extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("despawn"))
 		{
-			for (L2Npc spawn : SPAWNS)
+			for (Npc spawn : SPAWNS)
 			{
 				cancelQuestTimer("text_spam", spawn, null);
 				spawn.deleteMe();
@@ -112,7 +112,7 @@ public final class NevitsHerald extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		ExShowScreenMessage message = null;
 		
@@ -125,7 +125,7 @@ public final class NevitsHerald extends AbstractNpcAI
 			message = new ExShowScreenMessage(NpcStringId.THE_EVIL_LAND_DRAGON_ANTHARAS_HAS_BEEN_DEFEATED, 2, 10000);
 		}
 		
-		for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
+		for (PlayerInstance onlinePlayer : World.getInstance().getPlayers())
 		{
 			if (onlinePlayer == null)
 			{
@@ -138,7 +138,7 @@ public final class NevitsHerald extends AbstractNpcAI
 		{
 			for (Location loc : NEVITS_HERALD_LOC)
 			{
-				L2Npc herald = addSpawn(NEVITS_HERALD, loc, false, 0);
+				Npc herald = addSpawn(NEVITS_HERALD, loc, false, 0);
 				startQuestTimer("text_spam", 3000, herald, null);
 				SPAWNS.add(herald);
 			}

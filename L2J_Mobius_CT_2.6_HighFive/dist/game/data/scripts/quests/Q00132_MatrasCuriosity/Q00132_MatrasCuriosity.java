@@ -17,8 +17,8 @@
 package quests.Q00132_MatrasCuriosity;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -52,30 +52,30 @@ public final class Q00132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !st.isCompleted())
+		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !qs.isCompleted())
 		{
-			if (st.isCreated())
+			if (qs.isCreated())
 			{
-				st.startQuest();
-				st.set("rewarded_prince", "1");
-				st.set("rewarded_ranku", "1");
+				qs.startQuest();
+				qs.set("rewarded_prince", "1");
+				qs.set("rewarded_ranku", "1");
 			}
 			else
 			{
 				htmltext = "32245-03a.htm";
 			}
 		}
-		else if (event.equalsIgnoreCase("32245-07.htm") && st.isCond(3) && !st.isCompleted())
+		else if (event.equalsIgnoreCase("32245-07.htm") && qs.isCond(3) && !qs.isCompleted())
 		{
 			giveAdena(player, 65884, true);
 			addExpAndSp(player, 50541, 5094);
@@ -85,15 +85,15 @@ public final class Q00132_MatrasCuriosity extends Quest
 			giveItems(player, WIND, 1);
 			giveItems(player, DARKNESS, 1);
 			giveItems(player, DIVINITY, 1);
-			st.exitQuest(false, true);
+			qs.exitQuest(false, true);
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		L2PcInstance pl = null;
+		PlayerInstance pl = null;
 		switch (npc.getId())
 		{
 			case DEMON_PRINCE:
@@ -101,12 +101,12 @@ public final class Q00132_MatrasCuriosity extends Quest
 				pl = getRandomPartyMember(player, "rewarded_prince", "1");
 				if (pl != null)
 				{
-					final QuestState st = getQuestState(pl, false);
+					final QuestState qs = getQuestState(pl, false);
 					giveItems(player, BLUEPRINT_PRINCE, 1);
-					st.set("rewarded_prince", "2");
+					qs.set("rewarded_prince", "2");
 					if (hasQuestItems(player, BLUEPRINT_RANKU))
 					{
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					else
 					{
@@ -120,12 +120,12 @@ public final class Q00132_MatrasCuriosity extends Quest
 				pl = getRandomPartyMember(player, "rewarded_ranku", "1");
 				if (pl != null)
 				{
-					final QuestState st = getQuestState(pl, false);
+					final QuestState qs = getQuestState(pl, false);
 					giveItems(player, BLUEPRINT_RANKU, 1);
-					st.set("rewarded_ranku", "2");
+					qs.set("rewarded_ranku", "2");
 					if (hasQuestItems(player, BLUEPRINT_PRINCE))
 					{
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					else
 					{
@@ -139,22 +139,22 @@ public final class Q00132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= 76) ? "32245-01.htm" : "32245-02.htm";
 		}
-		else if (st.isCompleted())
+		else if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			switch (st.getCond())
+			switch (qs.getCond())
 			{
 				case 1:
 				case 2:
@@ -163,7 +163,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 					{
 						takeItems(player, BLUEPRINT_RANKU, -1);
 						takeItems(player, BLUEPRINT_PRINCE, -1);
-						st.setCond(3, true);
+						qs.setCond(3, true);
 						htmltext = "32245-05.htm";
 					}
 					else

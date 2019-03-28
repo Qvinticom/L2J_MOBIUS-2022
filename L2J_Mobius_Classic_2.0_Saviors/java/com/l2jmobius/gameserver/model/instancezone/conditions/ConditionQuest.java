@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.instancezone.conditions;
 
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -39,7 +39,7 @@ public final class ConditionQuest extends Condition
 	}
 	
 	@Override
-	protected boolean test(L2PcInstance player, L2Npc npc)
+	protected boolean test(PlayerInstance player, Npc npc)
 	{
 		final int id = getParameters().getInt("id");
 		final Quest q = QuestManager.getInstance().getQuest(id);

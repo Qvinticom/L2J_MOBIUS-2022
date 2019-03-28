@@ -17,47 +17,47 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public class AllyInfo extends L2GameServerPacket
+public class AllyInfo extends GameServerPacket
 {
-	private final L2PcInstance _cha;
+	private final PlayerInstance _player;
 	
-	public AllyInfo(L2PcInstance cha)
+	public AllyInfo(PlayerInstance player)
 	{
-		_cha = cha;
+		_player = player;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getAllyId() == 0)
+		if (player.getAllyId() == 0)
 		{
-			_cha.sendPacket(SystemMessageId.NO_CURRENT_ALLIANCES);
+			_player.sendPacket(SystemMessageId.NO_CURRENT_ALLIANCES);
 			return;
 		}
 		
 		// ======<AllyInfo>======
 		SystemMessage sm = new SystemMessage(SystemMessageId.ALLIANCE_INFO_HEAD);
-		_cha.sendPacket(sm);
+		_player.sendPacket(sm);
 		// ======<Ally Name>======
 		sm = new SystemMessage(SystemMessageId.ALLIANCE_NAME_S1);
-		sm.addString(_cha.getClan().getAllyName());
-		_cha.sendPacket(sm);
+		sm.addString(_player.getClan().getAllyName());
+		_player.sendPacket(sm);
 		int online = 0;
 		int count = 0;
 		int clancount = 0;
-		for (L2Clan clan : ClanTable.getInstance().getClans())
+		for (Clan clan : ClanTable.getInstance().getClans())
 		{
-			if (clan.getAllyId() == _cha.getAllyId())
+			if (clan.getAllyId() == _player.getAllyId())
 			{
 				clancount++;
 				online += clan.getOnlineMembers("").length;
@@ -68,42 +68,42 @@ public class AllyInfo extends L2GameServerPacket
 		sm = new SystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2);
 		sm.addString("" + online);
 		sm.addString("" + count);
-		_cha.sendPacket(sm);
-		final L2Clan leaderclan = ClanTable.getInstance().getClan(_cha.getAllyId());
+		_player.sendPacket(sm);
+		final Clan leaderclan = ClanTable.getInstance().getClan(_player.getAllyId());
 		sm = new SystemMessage(SystemMessageId.ALLIANCE_LEADER_S2_OF_S1);
 		sm.addString(leaderclan.getName());
 		sm.addString(leaderclan.getLeaderName());
-		_cha.sendPacket(sm);
+		_player.sendPacket(sm);
 		// clan count
 		sm = new SystemMessage(SystemMessageId.ALLIANCE_CLAN_TOTAL_S1);
 		sm.addString("" + clancount);
-		_cha.sendPacket(sm);
+		_player.sendPacket(sm);
 		// clan information
 		sm = new SystemMessage(SystemMessageId.CLAN_INFO_HEAD);
-		_cha.sendPacket(sm);
-		for (L2Clan clan : ClanTable.getInstance().getClans())
+		_player.sendPacket(sm);
+		for (Clan clan : ClanTable.getInstance().getClans())
 		{
-			if (clan.getAllyId() == _cha.getAllyId())
+			if (clan.getAllyId() == _player.getAllyId())
 			{
 				// clan name
 				sm = new SystemMessage(SystemMessageId.CLAN_INFO_NAME);
 				sm.addString(clan.getName());
-				_cha.sendPacket(sm);
+				_player.sendPacket(sm);
 				// clan leader name
 				sm = new SystemMessage(SystemMessageId.CLAN_INFO_LEADER);
 				sm.addString(clan.getLeaderName());
-				_cha.sendPacket(sm);
+				_player.sendPacket(sm);
 				// clan level
 				sm = new SystemMessage(SystemMessageId.CLAN_INFO_LEVEL);
 				sm.addNumber(clan.getLevel());
-				_cha.sendPacket(sm);
+				_player.sendPacket(sm);
 				// ---------
 				sm = new SystemMessage(SystemMessageId.CLAN_INFO_SEPARATOR);
-				_cha.sendPacket(sm);
+				_player.sendPacket(sm);
 			}
 		}
 		// =========================
 		sm = new SystemMessage(SystemMessageId.CLAN_INFO_FOOT);
-		_cha.sendPacket(sm);
+		_player.sendPacket(sm);
 	}
 }

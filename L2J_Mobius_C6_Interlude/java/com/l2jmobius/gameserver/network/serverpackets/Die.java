@@ -20,10 +20,10 @@ import com.l2jmobius.gameserver.datatables.AccessLevel;
 import com.l2jmobius.gameserver.datatables.sql.AccessLevels;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -34,34 +34,34 @@ import com.l2jmobius.gameserver.model.entity.siege.Fort;
  * sample 0b 952a1048 objectId 00000000 00000000 00000000 00000000 00000000 00000000 format dddddd rev 377 format ddddddd rev 417
  * @version $Revision: 1.3.3 $ $Date: 2009/04/29 00:46:18 $
  */
-public class Die extends L2GameServerPacket
+public class Die extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final boolean _fake;
 	private boolean _sweepable;
 	private boolean _canTeleport;
 	private AccessLevel _access = AccessLevels.getInstance()._userAccessLevel;
-	private com.l2jmobius.gameserver.model.L2Clan _clan;
-	L2Character _activeChar;
+	private com.l2jmobius.gameserver.model.clan.Clan _clan;
+	Creature _creature;
 	
 	/**
-	 * @param cha
+	 * @param creature
 	 */
-	public Die(L2Character cha)
+	public Die(Creature creature)
 	{
-		_activeChar = cha;
-		if (cha instanceof L2PcInstance)
+		_creature = creature;
+		if (creature instanceof PlayerInstance)
 		{
-			final L2PcInstance player = (L2PcInstance) cha;
+			final PlayerInstance player = (PlayerInstance) creature;
 			_access = player.getAccessLevel();
 			_clan = player.getClan();
 			_canTeleport = ((!TvT.is_started() || !player._inEventTvT) && (!DM.is_started() || !player._inEventDM) && (!CTF.is_started() || !player._inEventCTF) && !player.isInFunEvent() && !player.isPendingRevive());
 		}
-		_charObjId = cha.getObjectId();
-		_fake = !cha.isDead();
-		if (cha instanceof L2Attackable)
+		_objectId = creature.getObjectId();
+		_fake = !creature.isDead();
+		if (creature instanceof Attackable)
 		{
-			_sweepable = ((L2Attackable) cha).isSweepActive();
+			_sweepable = ((Attackable) creature).isSweepActive();
 		}
 	}
 	
@@ -75,7 +75,7 @@ public class Die extends L2GameServerPacket
 		
 		writeC(0x06);
 		
-		writeD(_charObjId);
+		writeD(_objectId);
 		// NOTE:
 		// 6d 00 00 00 00 - to nearest village
 		// 6d 01 00 00 00 - to hide away
@@ -88,10 +88,10 @@ public class Die extends L2GameServerPacket
 		
 		if (_canTeleport && (_clan != null))
 		{
-			L2SiegeClan siegeClan = null;
+			SiegeClan siegeClan = null;
 			Boolean isInDefense = false;
-			final Castle castle = CastleManager.getInstance().getCastle(_activeChar);
-			final Fort fort = FortManager.getInstance().getFort(_activeChar);
+			final Castle castle = CastleManager.getInstance().getCastle(_creature);
+			final Fort fort = FortManager.getInstance().getFort(_creature);
 			
 			if ((castle != null) && castle.getSiege().getIsInProgress())
 			{

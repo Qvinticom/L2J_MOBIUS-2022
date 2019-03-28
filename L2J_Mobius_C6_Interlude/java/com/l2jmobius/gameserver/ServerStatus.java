@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Util;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Server status
@@ -51,7 +51,7 @@ public class ServerStatus
 			int ActivePlayers = 0;
 			int OfflinePlayers = 0;
 			
-			for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				if (player.isInOfflineMode())
 				{

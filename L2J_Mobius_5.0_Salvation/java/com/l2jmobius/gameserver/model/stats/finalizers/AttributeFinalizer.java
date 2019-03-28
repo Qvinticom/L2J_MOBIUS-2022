@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.Optional;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -41,7 +41,7 @@ public class AttributeFinalizer implements IStatsFunction
 	}
 	
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -50,7 +50,7 @@ public class AttributeFinalizer implements IStatsFunction
 		{
 			if (_isWeapon)
 			{
-				final L2ItemInstance weapon = creature.getActiveWeaponInstance();
+				final ItemInstance weapon = creature.getActiveWeaponInstance();
 				if (weapon != null)
 				{
 					final AttributeHolder weaponInstanceHolder = weapon.getAttribute(_type);
@@ -71,7 +71,7 @@ public class AttributeFinalizer implements IStatsFunction
 				final Inventory inventory = creature.getInventory();
 				if (inventory != null)
 				{
-					for (L2ItemInstance item : inventory.getPaperdollItems(L2ItemInstance::isArmor))
+					for (ItemInstance item : inventory.getPaperdollItems(ItemInstance::isArmor))
 					{
 						final AttributeHolder weaponInstanceHolder = item.getAttribute(_type);
 						if (weaponInstanceHolder != null)

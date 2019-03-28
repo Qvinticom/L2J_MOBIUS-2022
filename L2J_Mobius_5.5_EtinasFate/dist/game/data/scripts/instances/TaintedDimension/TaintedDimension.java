@@ -17,11 +17,11 @@
 package instances.TaintedDimension;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -97,7 +97,7 @@ public final class TaintedDimension extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -196,7 +196,7 @@ public final class TaintedDimension extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -206,7 +206,7 @@ public final class TaintedDimension extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -221,7 +221,7 @@ public final class TaintedDimension extends AbstractInstance
 						int actionId = 0;
 						for (Location loc : WARD_LOCATIONS)
 						{
-							final L2Npc ward = addSpawn(WARD, loc, false, 0, false, instance.getId());
+							final Npc ward = addSpawn(WARD, loc, false, 0, false, instance.getId());
 							ward.getVariables().set("ACTION_ID", actionId);
 							actionId++;
 						}
@@ -265,7 +265,7 @@ public final class TaintedDimension extends AbstractInstance
 	}
 	
 	@Override
-	public String onEventReceived(String event, L2Npc sender, L2Npc receiver, L2Object reference)
+	public String onEventReceived(String event, Npc sender, Npc receiver, WorldObject reference)
 	{
 		final Instance instance = receiver.getInstanceWorld();
 		if (isInInstance(instance))

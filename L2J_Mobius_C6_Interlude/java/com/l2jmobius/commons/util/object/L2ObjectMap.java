@@ -19,15 +19,14 @@ package com.l2jmobius.commons.util.object;
 import java.util.Iterator;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
- * This class ...
  * @author luisantonioa
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  * @param <T>
  */
-public abstract class L2ObjectMap<T extends L2Object> implements Iterable<T>
+public abstract class L2ObjectMap<T extends WorldObject> implements Iterable<T>
 {
 	public abstract int size();
 	
@@ -46,7 +45,7 @@ public abstract class L2ObjectMap<T extends L2Object> implements Iterable<T>
 	@Override
 	public abstract Iterator<T> iterator();
 	
-	public static L2ObjectMap<L2Object> createL2ObjectMap()
+	public static L2ObjectMap<WorldObject> createL2ObjectMap()
 	{
 		switch (Config.MAP_TYPE)
 		{

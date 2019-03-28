@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import com.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
@@ -34,23 +34,23 @@ public class Maps implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
 		if (itemId == 7063)
 		{
-			activeChar.sendPacket(new ShowMiniMap(1665));
-			activeChar.sendPacket(new RadarControl(0, 1, 51995, -51265, -3104));
+			player.sendPacket(new ShowMiniMap(1665));
+			player.sendPacket(new RadarControl(0, 1, 51995, -51265, -3104));
 		}
 		else
 		{
-			activeChar.sendPacket(new ShowMiniMap(itemId));
+			player.sendPacket(new ShowMiniMap(itemId));
 		}
 		
 		return;

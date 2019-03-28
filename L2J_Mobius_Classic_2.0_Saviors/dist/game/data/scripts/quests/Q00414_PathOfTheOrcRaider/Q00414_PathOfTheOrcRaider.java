@@ -21,9 +21,9 @@ package quests.Q00414_PathOfTheOrcRaider;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -67,7 +67,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -161,7 +161,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -180,7 +180,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 						else
 						{
 							takeItems(killer, GREEN_BLOOD, -1);
-							final L2Attackable monster = (L2Attackable) addSpawn(KURUKA_RATMAN_LEADER, npc, true, 0, true);
+							final Attackable monster = (Attackable) addSpawn(KURUKA_RATMAN_LEADER, npc, true, 0, true);
 							attackPlayer(monster, killer);
 						}
 					}
@@ -234,7 +234,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -316,7 +316,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 		return htmltext;
 	}
 	
-	private static void attackPlayer(L2Attackable npc, L2PcInstance player)
+	private static void attackPlayer(Attackable npc, PlayerInstance player)
 	{
 		if ((npc != null) && (player != null))
 		{

@@ -18,9 +18,9 @@ package quests.Q10430_KekropusLetterTrackingTheEvil;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -62,7 +62,7 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -110,7 +110,7 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
@@ -135,11 +135,11 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			
 			if ((qs != null) && qs.isCond(2))
@@ -151,7 +151,7 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	}
 	
 	@Override
-	public boolean canShowTutorialMark(L2PcInstance player)
+	public boolean canShowTutorialMark(PlayerInstance player)
 	{
 		return player.isInCategory(CategoryType.FIGHTER_GROUP);
 	}

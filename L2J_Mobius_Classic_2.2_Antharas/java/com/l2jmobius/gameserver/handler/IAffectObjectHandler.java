@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 
 /**
@@ -26,11 +26,11 @@ public interface IAffectObjectHandler
 {
 	/**
 	 * Checks if the rules for the given affect object type are accepted or not.
-	 * @param activeChar
+	 * @param creature
 	 * @param target
 	 * @return {@code true} if target should be accepted, {@code false} otherwise
 	 **/
-	boolean checkAffectedObject(L2Character activeChar, L2Character target);
+	boolean checkAffectedObject(Creature creature, Creature target);
 	
 	Enum<AffectObject> getAffectObjectType();
 }

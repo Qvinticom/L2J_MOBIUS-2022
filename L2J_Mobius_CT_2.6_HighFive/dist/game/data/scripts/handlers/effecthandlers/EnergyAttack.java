@@ -19,12 +19,12 @@ package handlers.effecthandlers;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.Weapon;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -59,9 +59,9 @@ public final class EnergyAttack extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.PHYSICAL_ATTACK;
+		return EffectType.PHYSICAL_ATTACK;
 	}
 	
 	@Override
@@ -73,13 +73,13 @@ public final class EnergyAttack extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2PcInstance attacker = info.getEffector().isPlayer() ? (L2PcInstance) info.getEffector() : null;
+		final PlayerInstance attacker = info.getEffector().isPlayer() ? (PlayerInstance) info.getEffector() : null;
 		if (attacker == null)
 		{
 			return;
 		}
 		
-		final L2Character target = info.getEffected();
+		final Creature target = info.getEffected();
 		final Skill skill = info.getSkill();
 		
 		double attack = attacker.getPAtk(target);
@@ -118,7 +118,7 @@ public final class EnergyAttack extends AbstractEffect
 			final double ssBoost = ss ? 2 : 1.0;
 			
 			double weaponTypeBoost;
-			final L2Weapon weapon = attacker.getActiveWeaponItem();
+			final Weapon weapon = attacker.getActiveWeaponItem();
 			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
 			{
 				weaponTypeBoost = 70;

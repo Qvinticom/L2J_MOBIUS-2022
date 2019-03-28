@@ -41,22 +41,22 @@ import com.l2jmobius.gameserver.handler.UserCommandHandler;
 import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
-import handlers.actionhandlers.L2ArtefactInstanceAction;
-import handlers.actionhandlers.L2DecoyAction;
-import handlers.actionhandlers.L2DoorInstanceAction;
-import handlers.actionhandlers.L2ItemInstanceAction;
-import handlers.actionhandlers.L2NpcAction;
-import handlers.actionhandlers.L2PcInstanceAction;
-import handlers.actionhandlers.L2PetInstanceAction;
-import handlers.actionhandlers.L2StaticObjectInstanceAction;
-import handlers.actionhandlers.L2SummonAction;
-import handlers.actionhandlers.L2TrapAction;
-import handlers.actionshifthandlers.L2DoorInstanceActionShift;
-import handlers.actionshifthandlers.L2ItemInstanceActionShift;
-import handlers.actionshifthandlers.L2NpcActionShift;
-import handlers.actionshifthandlers.L2PcInstanceActionShift;
-import handlers.actionshifthandlers.L2StaticObjectInstanceActionShift;
-import handlers.actionshifthandlers.L2SummonActionShift;
+import handlers.actionhandlers.ArtefactInstanceAction;
+import handlers.actionhandlers.DecoyAction;
+import handlers.actionhandlers.DoorInstanceAction;
+import handlers.actionhandlers.ItemInstanceAction;
+import handlers.actionhandlers.NpcAction;
+import handlers.actionhandlers.PlayerInstanceAction;
+import handlers.actionhandlers.PetInstanceAction;
+import handlers.actionhandlers.StaticObjectInstanceAction;
+import handlers.actionhandlers.SummonAction;
+import handlers.actionhandlers.TrapAction;
+import handlers.actionshifthandlers.DoorInstanceActionShift;
+import handlers.actionshifthandlers.ItemInstanceActionShift;
+import handlers.actionshifthandlers.NpcActionShift;
+import handlers.actionshifthandlers.PlayerInstanceActionShift;
+import handlers.actionshifthandlers.StaticObjectInstanceActionShift;
+import handlers.actionshifthandlers.SummonActionShift;
 import handlers.admincommandhandlers.AdminAdmin;
 import handlers.admincommandhandlers.AdminAnnouncements;
 import handlers.admincommandhandlers.AdminBBS;
@@ -370,25 +370,25 @@ public class MasterHandler
 	{
 		{
 			// Action Handlers
-			L2ArtefactInstanceAction.class,
-			L2DecoyAction.class,
-			L2DoorInstanceAction.class,
-			L2ItemInstanceAction.class,
-			L2NpcAction.class,
-			L2PcInstanceAction.class,
-			L2PetInstanceAction.class,
-			L2StaticObjectInstanceAction.class,
-			L2SummonAction.class,
-			L2TrapAction.class,
+			ArtefactInstanceAction.class,
+			DecoyAction.class,
+			DoorInstanceAction.class,
+			ItemInstanceAction.class,
+			NpcAction.class,
+			PlayerInstanceAction.class,
+			PetInstanceAction.class,
+			StaticObjectInstanceAction.class,
+			SummonAction.class,
+			TrapAction.class,
 		},
 		{
 			// Action Shift Handlers
-			L2DoorInstanceActionShift.class,
-			L2ItemInstanceActionShift.class,
-			L2NpcActionShift.class,
-			L2PcInstanceActionShift.class,
-			L2StaticObjectInstanceActionShift.class,
-			L2SummonActionShift.class,
+			DoorInstanceActionShift.class,
+			ItemInstanceActionShift.class,
+			NpcActionShift.class,
+			PlayerInstanceActionShift.class,
+			StaticObjectInstanceActionShift.class,
+			SummonActionShift.class,
 		},
 		{
 			// Admin Command Handlers

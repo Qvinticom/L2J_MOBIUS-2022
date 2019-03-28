@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -141,7 +141,7 @@ public class Q00999_T1Tutorial extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{
@@ -252,7 +252,7 @@ public class Q00999_T1Tutorial extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{
@@ -394,7 +394,7 @@ public class Q00999_T1Tutorial extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
@@ -419,7 +419,7 @@ public class Q00999_T1Tutorial extends Quest
 		
 		if ((Ex == 2) && !hasQuestItems(player, BLUE_GEM))
 		{
-			((L2MonsterInstance) npc).dropItem(player, BLUE_GEM, 1);
+			((MonsterInstance) npc).dropItem(player, BLUE_GEM, 1);
 			playSound(player, "ItemSound.quest_tutorial");
 		}
 		return null;

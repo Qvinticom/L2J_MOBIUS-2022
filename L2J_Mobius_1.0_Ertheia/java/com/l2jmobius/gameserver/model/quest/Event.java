@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.quest;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Abstract event class.
@@ -29,9 +29,9 @@ public abstract class Event extends Quest
 		super(-1);
 	}
 	
-	public abstract boolean eventStart(L2PcInstance eventMaker);
+	public abstract boolean eventStart(PlayerInstance eventMaker);
 	
 	public abstract boolean eventStop();
 	
-	public abstract boolean eventBypass(L2PcInstance activeChar, String bypass);
+	public abstract boolean eventBypass(PlayerInstance player, String bypass);
 }

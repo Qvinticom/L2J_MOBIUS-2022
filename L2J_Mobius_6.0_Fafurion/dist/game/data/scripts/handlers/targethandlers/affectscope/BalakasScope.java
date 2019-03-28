@@ -19,8 +19,8 @@ package handlers.targethandlers.affectscope;
 import java.util.function.Consumer;
 
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 public class BalakasScope implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		// TODO Unknown affect scope.
 	}

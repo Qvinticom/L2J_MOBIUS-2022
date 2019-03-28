@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExCubeGameRemovePlayer implements IClientOutgoingPacket
 {
-	L2PcInstance _player;
+	PlayerInstance _player;
 	boolean _isRedTeam;
 	
 	/**
@@ -33,7 +33,7 @@ public class ExCubeGameRemovePlayer implements IClientOutgoingPacket
 	 * @param player Player to Remove
 	 * @param isRedTeam Is Player from Red Team?
 	 */
-	public ExCubeGameRemovePlayer(L2PcInstance player, boolean isRedTeam)
+	public ExCubeGameRemovePlayer(PlayerInstance player, boolean isRedTeam)
 	{
 		_player = player;
 		_isRedTeam = isRedTeam;

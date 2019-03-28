@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.model.L2Crest;
+import com.l2jmobius.gameserver.model.Crest;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class PledgeCrest implements IClientOutgoingPacket
@@ -30,7 +30,7 @@ public final class PledgeCrest implements IClientOutgoingPacket
 	public PledgeCrest(int crestId)
 	{
 		_crestId = crestId;
-		final L2Crest crest = CrestTable.getInstance().getCrest(crestId);
+		final Crest crest = CrestTable.getInstance().getCrest(crestId);
 		_data = crest != null ? crest.getData() : null;
 	}
 	

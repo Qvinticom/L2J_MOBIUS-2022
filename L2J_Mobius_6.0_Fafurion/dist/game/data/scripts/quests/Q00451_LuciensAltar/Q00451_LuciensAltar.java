@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -61,11 +61,11 @@ public final class Q00451_LuciensAltar extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -77,7 +77,7 @@ public final class Q00451_LuciensAltar extends Quest
 		}
 		else if (event.equals("30537-05.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, REPLENISHED_BEAD, 5);
 			htmltext = event;
 		}
@@ -85,24 +85,24 @@ public final class Q00451_LuciensAltar extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
 		if (npcId == DAICHIR)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.COMPLETED:
 				{
-					if (!st.isNowAvailable())
+					if (!qs.isNowAvailable())
 					{
 						htmltext = "30537-03.html";
 						break;
 					}
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 				}
 				case State.CREATED:
 				{
@@ -111,9 +111,9 @@ public final class Q00451_LuciensAltar extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
-						if (st.isSet("32706") || st.isSet("32707") || st.isSet("32708") || st.isSet("32709") || st.isSet("32710"))
+						if (qs.isSet("32706") || qs.isSet("32707") || qs.isSet("32708") || qs.isSet("32709") || qs.isSet("32710"))
 						{
 							htmltext = "30537-10.html";
 						}
@@ -124,7 +124,7 @@ public final class Q00451_LuciensAltar extends Quest
 					}
 					else
 					{
-						st.exitQuest(QuestType.DAILY, true);
+						qs.exitQuest(QuestType.DAILY, true);
 						giveAdena(player, 742_800, true);
 						if (player.getLevel() >= MIN_LEVEL)
 						{
@@ -136,18 +136,18 @@ public final class Q00451_LuciensAltar extends Quest
 				}
 			}
 		}
-		else if (st.isCond(1) && hasQuestItems(player, REPLENISHED_BEAD))
+		else if (qs.isCond(1) && hasQuestItems(player, REPLENISHED_BEAD))
 		{
-			if (st.getInt(String.valueOf(npcId)) == 0)
+			if (qs.getInt(String.valueOf(npcId)) == 0)
 			{
-				st.set(String.valueOf(npcId), "1");
+				qs.set(String.valueOf(npcId), "1");
 				takeItems(player, REPLENISHED_BEAD, 1);
 				giveItems(player, DISCHARGED_BEAD, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				
 				if (getQuestItemsCount(player, DISCHARGED_BEAD) >= 5)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				htmltext = "recharge.html";
 			}
@@ -160,7 +160,7 @@ public final class Q00451_LuciensAltar extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs != null)

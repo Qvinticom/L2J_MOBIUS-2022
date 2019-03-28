@@ -25,7 +25,6 @@ import java.util.logging.LogRecord;
 import com.l2jmobius.Config;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.1 $ $Date: 2005/03/27 15:30:08 $
  */
 public class FileLogFormatter extends Formatter

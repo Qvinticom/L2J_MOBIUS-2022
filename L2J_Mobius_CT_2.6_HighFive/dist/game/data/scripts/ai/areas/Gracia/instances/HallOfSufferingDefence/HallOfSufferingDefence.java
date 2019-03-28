@@ -23,14 +23,14 @@ import java.util.Map;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -47,9 +47,9 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 {
 	private class HSDWorld extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList = new HashMap<>();
-		public L2Npc klodekus = null;
-		public L2Npc klanikus = null;
+		public Map<Npc, Boolean> npcList = new HashMap<>();
+		public Npc klodekus = null;
+		public Npc klanikus = null;
 		public boolean isBossesAttacked = false;
 		public long[] storeTime =
 		{
@@ -143,14 +143,14 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		addKillId(TUMOR_MOBIDS);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	private boolean checkConditions(PlayerInstance player)
 	{
 		if (debug || player.isGM())
 		{
 			return true;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -161,7 +161,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getMembers())
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 82))
 			{
@@ -200,13 +200,13 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	protected void enterInstance(L2PcInstance player, int[] coords)
+	protected void enterInstance(PlayerInstance player, int[] coords)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -238,7 +238,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -247,7 +247,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		}
 	}
 	
-	protected boolean checkKillProgress(L2Npc mob, HSDWorld world)
+	protected boolean checkKillProgress(Npc mob, HSDWorld world)
 	{
 		if (world.npcList.containsKey(mob))
 		{
@@ -295,10 +295,10 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	{
 		for (int[] mob : getRoomSpawns(world.getStatus()))
 		{
-			final L2Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], 0, false, 0, false, world.getInstanceId());
+			final Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], 0, false, 0, false, world.getInstanceId());
 			world.npcList.put(npc, false);
 		}
-		final L2Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.getStatus()][0], TUMOR_SPAWNS[world.getStatus()][1], TUMOR_SPAWNS[world.getStatus()][2], 0, false, 0, false, world.getInstanceId());
+		final Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.getStatus()][0], TUMOR_SPAWNS[world.getStatus()][1], TUMOR_SPAWNS[world.getStatus()][2], 0, false, 0, false, world.getInstanceId());
 		mob.disableCoreAI(true);
 		mob.setIsImmobilized(true);
 		mob.setCurrentHp(mob.getMaxHp() * 0.5);
@@ -315,7 +315,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		world.klodekus.setIsMortal(false);
 	}
 	
-	protected void bossSimpleDie(L2Npc boss)
+	protected void bossSimpleDie(Npc boss)
 	{
 		// killing is only possible one time
 		synchronized (this)
@@ -340,10 +340,10 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		
 		boss.stopAllEffectsExceptThoseThatLastThroughDeath();
 		
-		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
+		// Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
 		boss.broadcastStatusUpdate();
 		
-		// Notify L2Character AI
+		// Notify Creature AI
 		boss.getAI().notifyEvent(CtrlEvent.EVT_DEAD);
 		
 		// if (boss.getWorldRegion() != null)
@@ -353,22 +353,22 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if (skill.hasEffectType(L2EffectType.REBALANCE_HP, L2EffectType.HEAL))
+		if (skill.hasEffectType(EffectType.REBALANCE_HP, EffectType.HEAL))
 		{
 			int hate = 2 * skill.getEffectPoint();
 			if (hate < 2)
 			{
 				hate = 1000;
 			}
-			((L2Attackable) npc).addDamageHate(caster, 0, hate);
+			((Attackable) npc).addDamageHate(caster, 0, hate);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSDWorld)
@@ -381,12 +381,12 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 					world.isBossesAttacked = false;
 					return "";
 				}
-				L2Npc mob = addSpawn(TWIN_MOBIDS[getRandom(TWIN_MOBIDS.length)], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false, 0, false, npc.getInstanceId());
-				((L2Attackable) mob).addDamageHate(((L2Attackable) npc).getMostHated(), 0, 1);
+				Npc mob = addSpawn(TWIN_MOBIDS[getRandom(TWIN_MOBIDS.length)], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false, 0, false, npc.getInstanceId());
+				((Attackable) mob).addDamageHate(((Attackable) npc).getMostHated(), 0, 1);
 				if (getRandom(100) < 33)
 				{
 					mob = addSpawn(TWIN_MOBIDS[getRandom(TWIN_MOBIDS.length)], TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false, 0, false, npc.getInstanceId());
-					((L2Attackable) mob).addDamageHate(((L2Attackable) npc).getMostHated(), 0, 1);
+					((Attackable) mob).addDamageHate(((Attackable) npc).getMostHated(), 0, 1);
 				}
 				startQuestTimer("spawnBossGuards", BOSS_MINION_SPAWN_TIME, npc, null);
 			}
@@ -407,13 +407,13 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("ressurectTwin"))
 			{
 				final Skill skill = SkillData.getInstance().getSkill(5824, 1);
-				final L2Npc aliveTwin = (world.klanikus == npc ? world.klodekus : world.klanikus);
+				final Npc aliveTwin = (world.klanikus == npc ? world.klodekus : world.klanikus);
 				npc.doRevive();
 				npc.doCast(skill);
 				npc.setCurrentHp(aliveTwin.getCurrentHp());
 				
 				// get most hated of other boss
-				final L2Character hated = ((L2MonsterInstance) aliveTwin).getMostHated();
+				final Creature hated = ((MonsterInstance) aliveTwin).getMostHated();
 				if (hated != null)
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, hated, 1000);
@@ -431,7 +431,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSDWorld)
@@ -447,7 +447,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 				sm.addInstanceName(INSTANCEID);
 				
 				// set instance reenter time for all allowed players
-				for (L2PcInstance player : tmpworld.getAllowed())
+				for (PlayerInstance player : tmpworld.getAllowed())
 				{
 					if (player != null)
 					{
@@ -486,7 +486,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSDWorld)
@@ -568,7 +568,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 					cancelQuestTimers("isTwinSeparated");
 					addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false, 0, false, world.getInstanceId());
 					
-					for (L2PcInstance killer : world.getAllowed())
+					for (PlayerInstance killer : world.getAllowed())
 					{
 						if (killer != null)
 						{
@@ -586,7 +586,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{

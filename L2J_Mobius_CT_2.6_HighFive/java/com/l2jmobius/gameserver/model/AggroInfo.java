@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author xban1x
  */
 public final class AggroInfo
 {
-	private final L2Character _attacker;
+	private final Creature _attacker;
 	private int _hate = 0;
 	private int _damage = 0;
 	
-	public AggroInfo(L2Character pAttacker)
+	public AggroInfo(Creature pAttacker)
 	{
 		_attacker = pAttacker;
 	}
 	
-	public L2Character getAttacker()
+	public Creature getAttacker()
 	{
 		return _attacker;
 	}
@@ -42,7 +42,7 @@ public final class AggroInfo
 		return _hate;
 	}
 	
-	public int checkHate(L2Character owner)
+	public int checkHate(Creature owner)
 	{
 		if (_attacker.isAlikeDead() || !_attacker.isSpawned() || !owner.isInSurroundingRegion(_attacker))
 		{

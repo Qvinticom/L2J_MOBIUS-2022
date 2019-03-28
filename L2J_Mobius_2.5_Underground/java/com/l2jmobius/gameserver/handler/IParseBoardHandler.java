@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Community Board interface.
@@ -34,7 +34,7 @@ public interface IParseBoardHandler
 	 * @param player the player
 	 * @return
 	 */
-	boolean parseCommunityBoardCommand(String command, L2PcInstance player);
+	boolean parseCommunityBoardCommand(String command, PlayerInstance player);
 	
 	/**
 	 * Gets the community board commands.

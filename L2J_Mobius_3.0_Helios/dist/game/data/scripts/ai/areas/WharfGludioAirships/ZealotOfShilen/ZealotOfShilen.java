@@ -17,11 +17,11 @@
 package ai.areas.WharfGludioAirships.ZealotOfShilen;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -47,7 +47,7 @@ public final class ZealotOfShilen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc == null)
 		{
@@ -57,12 +57,12 @@ public final class ZealotOfShilen extends AbstractNpcAI
 		startQuestTimer("WATCHING", 10000, npc, null, true);
 		if (event.equalsIgnoreCase("WATCHING") && !npc.isAttackingNow())
 		{
-			L2World.getInstance().forEachVisibleObject(npc, L2MonsterInstance.class, character ->
+			World.getInstance().forEachVisibleObject(npc, MonsterInstance.class, character ->
 			{
 				if (!character.isDead() && !character.isDecayed())
 				{
 					npc.setRunning();
-					((L2Attackable) npc).addDamageHate(character, 0, 999);
+					((Attackable) npc).addDamageHate(character, 0, 999);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
 				}
 			});
@@ -71,13 +71,13 @@ public final class ZealotOfShilen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return (npc.isAttackingNow()) ? "32628-01.html" : npc.getId() + ".html";
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == ZEALOT)
 		{
@@ -86,7 +86,7 @@ public final class ZealotOfShilen extends AbstractNpcAI
 		else
 		{
 			npc.setIsInvul(true);
-			((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+			((Attackable) npc).setCanReturnToSpawnPoint(false);
 			startQuestTimer("WATCHING", 10000, npc, null, true);
 		}
 		return super.onSpawn(npc);

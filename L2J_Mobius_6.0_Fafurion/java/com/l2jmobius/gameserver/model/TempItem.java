@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * Class explanation:<br>
@@ -35,7 +35,7 @@ public final class TempItem
 	 * @param item
 	 * @param quantity of that item
 	 */
-	public TempItem(L2ItemInstance item, int quantity)
+	public TempItem(ItemInstance item, int quantity)
 	{
 		super();
 		_itemId = item.getId();

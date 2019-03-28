@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class AnswerJoinPartyRoom extends L2GameClientPacket
+public final class AnswerJoinPartyRoom extends GameClientPacket
 {
 	private int _answer; // 1 or 0
 	
@@ -40,13 +40,13 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance partner = player.getActiveRequester();
+		final PlayerInstance partner = player.getActiveRequester();
 		if (partner == null)
 		{
 			// Partner hasn't be found, cancel the invitation
@@ -54,7 +54,7 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 			player.setActiveRequester(null);
 			return;
 		}
-		else if (L2World.getInstance().getPlayer(partner.getObjectId()) == null)
+		else if (World.getInstance().getPlayer(partner.getObjectId()) == null)
 		{
 			// Partner hasn't be found, cancel the invitation
 			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
@@ -81,7 +81,7 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 				player.sendPacket(new PartyMatchDetail(player, _room));
 				player.sendPacket(new ExPartyRoomMember(player, _room, 0));
 				
-				for (L2PcInstance _member : _room.getPartyMembers())
+				for (PlayerInstance _member : _room.getPartyMembers())
 				{
 					if (_member == null)
 					{

@@ -17,12 +17,12 @@
 package ai.areas.PlainsOfLizardman;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -95,12 +95,12 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("fantasy_mushroom") && (npc != null) && (player != null))
 		{
 			npc.doCast(FANTASY_MUSHROOM_SKILL.getSkill());
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 200, monster ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 200, monster ->
 			{
 				npc.setTarget(monster);
 				npc.doCast(STUN_EFFECT.getSkill());
@@ -112,7 +112,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -148,7 +148,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 				{
 					npc.setScriptValue(1);
 					npc.setIsInvul(true);
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 1000, monster ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 1000, monster ->
 					{
 						if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))
 						{
@@ -165,7 +165,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		// Tanta Guard
 		if (getRandom(1000) == 0)
@@ -175,7 +175,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		
 		// Invisible buff npc
 		final int random = getRandom(100);
-		final L2Npc buffer = addSpawn(INVISIBLE_NPC, npc.getLocation(), false, 6000);
+		final Npc buffer = addSpawn(INVISIBLE_NPC, npc.getLocation(), false, 6000);
 		buffer.setTarget(killer);
 		
 		if (random <= 42)
@@ -217,7 +217,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private void castRandomBuff(L2Npc npc, int chance1, int chance2, SkillHolder... buffs)
+	private void castRandomBuff(Npc npc, int chance1, int chance2, SkillHolder... buffs)
 	{
 		final int rand = getRandom(100);
 		if (rand <= chance1)
@@ -235,7 +235,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	}
 	
 	@Override
-	protected void castSkill(L2Npc npc, L2Playable target, SkillHolder skill)
+	protected void castSkill(Npc npc, Playable target, SkillHolder skill)
 	{
 		npc.doDie(target);
 		super.castSkill(addSpawn(INVISIBLE_NPC, npc, false, 6000), target, skill);

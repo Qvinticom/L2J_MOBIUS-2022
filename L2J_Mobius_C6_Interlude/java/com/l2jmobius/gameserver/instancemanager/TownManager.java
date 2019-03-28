@@ -21,9 +21,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
 
 public class TownManager
 {
@@ -41,13 +41,13 @@ public class TownManager
 		return _instance;
 	}
 	
-	private List<L2TownZone> _towns;
+	private List<TownZone> _towns;
 	
 	public TownManager()
 	{
 	}
 	
-	public void addTown(L2TownZone arena)
+	public void addTown(TownZone arena)
 	{
 		if (_towns == null)
 		{
@@ -57,7 +57,7 @@ public class TownManager
 		_towns.add(arena);
 	}
 	
-	public final L2TownZone getClosestTown(L2Object activeObject)
+	public final TownZone getClosestTown(WorldObject activeObject)
 	{
 		switch (MapRegionTable.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
 		{
@@ -142,7 +142,7 @@ public class TownManager
 		return getTown(16); // Default to floran
 	}
 	
-	public static final int getClosestLocation(L2Object activeObject)
+	public static final int getClosestLocation(WorldObject activeObject)
 	{
 		switch (MapRegionTable.getInstance().getMapRegion(activeObject.getPosition().getX(), activeObject.getPosition().getY()))
 		{
@@ -293,9 +293,9 @@ public class TownManager
 		return false;
 	}
 	
-	public final L2TownZone getTown(int townId)
+	public final TownZone getTown(int townId)
 	{
-		for (L2TownZone temp : _towns)
+		for (TownZone temp : _towns)
 		{
 			if (temp.getTownId() == townId)
 			{
@@ -313,9 +313,9 @@ public class TownManager
 	 * @param z
 	 * @return
 	 */
-	public final L2TownZone getTown(int x, int y, int z)
+	public final TownZone getTown(int x, int y, int z)
 	{
-		for (L2TownZone temp : _towns)
+		for (TownZone temp : _towns)
 		{
 			if (temp.isInsideZone(x, y, z))
 			{

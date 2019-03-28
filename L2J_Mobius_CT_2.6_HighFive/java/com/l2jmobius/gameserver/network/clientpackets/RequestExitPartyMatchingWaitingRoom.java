@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author Gnacik
@@ -27,21 +27,21 @@ import com.l2jmobius.gameserver.network.L2GameClient;
 public final class RequestExitPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance _activeChar = client.getActiveChar();
+		final PlayerInstance _player = client.getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
 		
-		PartyMatchWaitingList.getInstance().removePlayer(_activeChar);
+		PartyMatchWaitingList.getInstance().removePlayer(_player);
 	}
 }

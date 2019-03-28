@@ -17,8 +17,8 @@
 package quests.Q10387_SoullessOne;
 
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,10 +54,10 @@ public final class Q10387_SoullessOne extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -76,15 +76,15 @@ public final class Q10387_SoullessOne extends Quest
 			}
 			case "33780-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33796-05.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					playMovie(player, Movie.SC_METUCELLAR_OPENING); // TODO: Need be created instance and run movie in instance
 					htmltext = event;
 				}
@@ -92,7 +92,7 @@ public final class Q10387_SoullessOne extends Quest
 			}
 			case "reward1":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveItems(player, COKES, 68);
 					giveItems(player, EAR, 5);
@@ -106,7 +106,7 @@ public final class Q10387_SoullessOne extends Quest
 			}
 			case "reward2":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveItems(player, EWR, 1);
 					giveItems(player, EAR, 6);
@@ -120,7 +120,7 @@ public final class Q10387_SoullessOne extends Quest
 			}
 			case "reward3":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveItems(player, POUCH, 1);
 					giveItems(player, EAR, 5);
@@ -137,12 +137,12 @@ public final class Q10387_SoullessOne extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -156,14 +156,14 @@ public final class Q10387_SoullessOne extends Quest
 			{
 				if (npc.getId() == HASED)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "33780-03.html";
 					}
 				}
 				else
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -194,19 +194,19 @@ public final class Q10387_SoullessOne extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(2))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
 		{
-			st.setCond(3, true);
+			qs.setCond(3, true);
 		}
 	}
 }

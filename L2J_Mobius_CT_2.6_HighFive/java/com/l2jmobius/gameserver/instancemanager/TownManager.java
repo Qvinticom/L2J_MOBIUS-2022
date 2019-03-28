@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.instancemanager;
 
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
 
 public final class TownManager
 {
@@ -89,9 +89,9 @@ public final class TownManager
 		return townHasCastleInSiege(MapRegionManager.getInstance().getMapRegionLocId(x, y));
 	}
 	
-	public static L2TownZone getTown(int townId)
+	public static TownZone getTown(int townId)
 	{
-		for (L2TownZone temp : ZoneManager.getInstance().getAllZones(L2TownZone.class))
+		for (TownZone temp : ZoneManager.getInstance().getAllZones(TownZone.class))
 		{
 			if (temp.getTownId() == townId)
 			{
@@ -108,13 +108,13 @@ public final class TownManager
 	 * @param z
 	 * @return
 	 */
-	public static L2TownZone getTown(int x, int y, int z)
+	public static TownZone getTown(int x, int y, int z)
 	{
-		for (L2ZoneType temp : ZoneManager.getInstance().getZones(x, y, z))
+		for (ZoneType temp : ZoneManager.getInstance().getZones(x, y, z))
 		{
-			if (temp instanceof L2TownZone)
+			if (temp instanceof TownZone)
 			{
-				return (L2TownZone) temp;
+				return (TownZone) temp;
 			}
 		}
 		return null;

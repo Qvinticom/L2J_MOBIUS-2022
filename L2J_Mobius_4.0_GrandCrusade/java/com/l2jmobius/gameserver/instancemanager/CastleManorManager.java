@@ -44,11 +44,11 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ManorMode;
 import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.model.SeedProduction;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.interfaces.IStorable;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
@@ -71,7 +71,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	// Temporary date
 	private Calendar _nextModeChange = null;
 	// Seeds holder
-	private static final Map<Integer, L2Seed> _seeds = new HashMap<>();
+	private static final Map<Integer, Seed> _seeds = new HashMap<>();
 	// Manor period settings
 	private final Map<Integer, List<CropProcure>> _procure = new HashMap<>();
 	private final Map<Integer, List<CropProcure>> _procureNext = new HashMap<>();
@@ -151,7 +151,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 									att = attrs.item(i);
 									set.set(att.getNodeName(), att.getNodeValue());
 								}
-								_seeds.put(set.getInt("seedId"), new L2Seed(set));
+								_seeds.put(set.getInt("seedId"), new Seed(set));
 							}
 						}
 					}
@@ -292,7 +292,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 				// Update manor period
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					final L2Clan owner = castle.getOwner();
+					final Clan owner = castle.getOwner();
 					if (owner == null)
 					{
 						continue;
@@ -365,10 +365,10 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 				// Notify clan leader about manor mode change
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					final L2Clan owner = castle.getOwner();
+					final Clan owner = castle.getOwner();
 					if (owner != null)
 					{
-						final L2ClanMember clanLeader = owner.getLeader();
+						final ClanMember clanLeader = owner.getLeader();
 						if ((clanLeader != null) && clanLeader.isOnline())
 						{
 							clanLeader.getPlayerInstance().sendPacket(SystemMessageId.THE_MANOR_INFORMATION_HAS_BEEN_UPDATED);
@@ -384,7 +384,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 				
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					final L2Clan owner = castle.getOwner();
+					final Clan owner = castle.getOwner();
 					if (owner == null)
 					{
 						continue;
@@ -408,7 +408,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 						_procureNext.get(castleId).clear();
 						
 						// Notify clan leader
-						final L2ClanMember clanLeader = owner.getLeader();
+						final ClanMember clanLeader = owner.getLeader();
 						if ((clanLeader != null) && clanLeader.isOnline())
 						{
 							clanLeader.getPlayerInstance().sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE);
@@ -586,7 +586,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		long total = 0;
 		for (SeedProduction seed : production)
 		{
-			final L2Seed s = getSeed(seed.getId());
+			final Seed s = getSeed(seed.getId());
 			total += (s == null) ? 1 : (s.getSeedReferencePrice() * seed.getStartAmount());
 		}
 		for (CropProcure crop : procure)
@@ -744,11 +744,11 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	// -------------------------------------------------------
 	// Seed methods
 	// -------------------------------------------------------
-	public final List<L2Seed> getCrops()
+	public final List<Seed> getCrops()
 	{
-		final List<L2Seed> seeds = new ArrayList<>();
+		final List<Seed> seeds = new ArrayList<>();
 		final List<Integer> cropIds = new ArrayList<>();
-		for (L2Seed seed : _seeds.values())
+		for (Seed seed : _seeds.values())
 		{
 			if (!cropIds.contains(seed.getCropId()))
 			{
@@ -760,7 +760,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		return seeds;
 	}
 	
-	public final Set<L2Seed> getSeedsForCastle(int castleId)
+	public final Set<Seed> getSeedsForCastle(int castleId)
 	{
 		return _seeds.values().stream().filter(s -> s.getCastleId() == castleId).collect(Collectors.toSet());
 	}
@@ -772,17 +772,17 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	public final Set<Integer> getCropIds()
 	{
-		return _seeds.values().stream().map(L2Seed::getCropId).collect(Collectors.toSet());
+		return _seeds.values().stream().map(Seed::getCropId).collect(Collectors.toSet());
 	}
 	
-	public final L2Seed getSeed(int seedId)
+	public final Seed getSeed(int seedId)
 	{
 		return _seeds.get(seedId);
 	}
 	
-	public final L2Seed getSeedByCrop(int cropId, int castleId)
+	public final Seed getSeedByCrop(int cropId, int castleId)
 	{
-		for (L2Seed s : getSeedsForCastle(castleId))
+		for (Seed s : getSeedsForCastle(castleId))
 		{
 			if (s.getCropId() == cropId)
 			{
@@ -792,9 +792,9 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		return null;
 	}
 	
-	public final L2Seed getSeedByCrop(int cropId)
+	public final Seed getSeedByCrop(int cropId)
 	{
-		for (L2Seed s : _seeds.values())
+		for (Seed s : _seeds.values())
 		{
 			if (s.getCropId() == cropId)
 			{

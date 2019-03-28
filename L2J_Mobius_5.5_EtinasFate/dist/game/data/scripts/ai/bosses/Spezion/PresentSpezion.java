@@ -16,7 +16,7 @@
  */
 package ai.bosses.Spezion;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -35,7 +35,7 @@ public final class PresentSpezion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setDisplayEffect(2);
 		return super.onSpawn(npc);

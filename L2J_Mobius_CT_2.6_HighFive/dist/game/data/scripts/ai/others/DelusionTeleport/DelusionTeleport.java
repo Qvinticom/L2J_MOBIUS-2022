@@ -21,9 +21,9 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.instancemanager.TownManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
 
 import ai.AbstractNpcAI;
 
@@ -73,11 +73,11 @@ public final class DelusionTeleport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == NPCS[0]) // Pathfinder Worker
 		{
-			final L2TownZone town = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ());
+			final TownZone town = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ());
 			final int townId = ((town == null) ? 0 : town.getTownId());
 			player.getVariables().set(DELUSION_RETURN, townId);
 			player.teleToLocation(HALL_LOCATIONS[getRandom(HALL_LOCATIONS.length)], false);

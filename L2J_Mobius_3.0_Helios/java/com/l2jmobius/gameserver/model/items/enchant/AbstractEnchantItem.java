@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
@@ -92,9 +92,9 @@ public abstract class AbstractEnchantItem
 	}
 	
 	/**
-	 * @return {@link L2Item} current item/scroll
+	 * @return {@link Item} current item/scroll
 	 */
-	public final L2Item getItem()
+	public final Item getItem()
 	{
 		return ItemTable.getInstance().getTemplate(_id);
 	}
@@ -125,7 +125,7 @@ public abstract class AbstractEnchantItem
 	 * @param supportItem
 	 * @return {@code true} if this support item can be used with the item to be enchanted, {@code false} otherwise
 	 */
-	public boolean isValid(L2ItemInstance itemToEnchant, EnchantSupportItem supportItem)
+	public boolean isValid(ItemInstance itemToEnchant, EnchantSupportItem supportItem)
 	{
 		if (itemToEnchant == null)
 		{
@@ -156,11 +156,11 @@ public abstract class AbstractEnchantItem
 	 */
 	private boolean isValidItemType(int type2)
 	{
-		if (type2 == L2Item.TYPE2_WEAPON)
+		if (type2 == Item.TYPE2_WEAPON)
 		{
 			return isWeapon();
 		}
-		else if ((type2 == L2Item.TYPE2_SHIELD_ARMOR) || (type2 == L2Item.TYPE2_ACCESSORY))
+		else if ((type2 == Item.TYPE2_SHIELD_ARMOR) || (type2 == Item.TYPE2_ACCESSORY))
 		{
 			return !isWeapon();
 		}

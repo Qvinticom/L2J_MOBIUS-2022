@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.clan.entry;
 
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * @author Sdw
@@ -28,7 +28,7 @@ public class PledgeRecruitInfo
 	private int _karma;
 	private String _information;
 	private String _detailedInformation;
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final int _applicationType;
 	private final int _recruitType;
 	
@@ -108,7 +108,7 @@ public class PledgeRecruitInfo
 		return _recruitType;
 	}
 	
-	public L2Clan getClan()
+	public Clan getClan()
 	{
 		return _clan;
 	}

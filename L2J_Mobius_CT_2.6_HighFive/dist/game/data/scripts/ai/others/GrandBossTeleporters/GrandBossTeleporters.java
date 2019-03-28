@@ -21,12 +21,12 @@ import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 
 import ai.AbstractNpcAI;
 import ai.bosses.Valakas.Valakas;
@@ -63,15 +63,15 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
 		if (hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			player.teleToLocation(ENTER_HALL_OF_FLAMES);
-			st.set("allowEnter", "1");
+			qs.set("allowEnter", "1");
 		}
 		else
 		{
@@ -81,10 +81,10 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
@@ -100,10 +100,10 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 						{
 							htmltext = "31385-03.htm";
 						}
-						else if (st.getInt("allowEnter") == 1)
+						else if (qs.getInt("allowEnter") == 1)
 						{
-							st.unset("allowEnter");
-							final L2BossZone zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
+							qs.unset("allowEnter");
+							final BossZone zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
 							
 							if (zone != null)
 							{
@@ -116,7 +116,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 							
 							if (status == 0)
 							{
-								final L2GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
+								final GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
 								valakasAI().startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME * 60000, valakas, null);
 								GrandBossManager.getInstance().setBossStatus(29028, 1);
 							}

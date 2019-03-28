@@ -3,7 +3,7 @@ from com.l2jmobius.gameserver.model.quest import State
 from com.l2jmobius.gameserver.model.quest import QuestState
 from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jmobius.gameserver.datatables import SkillTable
-from com.l2jmobius.gameserver.model import L2Effect
+from com.l2jmobius.gameserver.model import Effect
 from com.l2jmobius.commons.util import Rnd
 	
 qn = "8009_HotSpringsBuffs"

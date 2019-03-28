@@ -25,7 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.EnchantOptions;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -104,7 +104,7 @@ public class EnchantItemOptionsData implements IGameXmlReader
 	 * @param item
 	 * @return enchant effects information.
 	 */
-	public EnchantOptions getOptions(L2ItemInstance item)
+	public EnchantOptions getOptions(ItemInstance item)
 	{
 		return item != null ? getOptions(item.getId(), item.getEnchantLevel()) : null;
 	}

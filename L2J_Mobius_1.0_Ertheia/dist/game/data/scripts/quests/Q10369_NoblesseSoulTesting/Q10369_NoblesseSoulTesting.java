@@ -21,11 +21,11 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -121,7 +121,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -266,7 +266,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -439,9 +439,9 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(killer);
+		final PlayerInstance partyMember = getRandomPartyMember(killer);
 		final QuestState qs = getQuestState(partyMember, false);
 		
 		if (canProgress(partyMember) && (qs != null) && qs.isStarted() && (partyMember.calculateDistance2D(npc) <= Config.ALT_PARTY_RANGE))
@@ -501,11 +501,11 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			
 			if ((qs != null) && qs.isStarted())
@@ -531,13 +531,13 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
 			case INVISIBLE_NPC_NOBLE_2:
 			{
-				final L2Character summoner = npc.getSummoner();
+				final Creature summoner = npc.getSummoner();
 				if (summoner != null)
 				{
 					final QuestState qs = getQuestState(summoner.getActingPlayer(), false);
@@ -550,7 +550,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 			}
 			case LANYA:
 			{
-				final L2Character summoner = npc.getSummoner();
+				final Creature summoner = npc.getSummoner();
 				if (summoner != null)
 				{
 					final QuestState qs = getQuestState(summoner.getActingPlayer(), false);
@@ -575,7 +575,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (player != null)
 		{
@@ -648,7 +648,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		
@@ -659,7 +659,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 		return super.onFirstTalk(npc, player);
 	}
 	
-	private boolean canProgress(L2PcInstance player)
+	private boolean canProgress(PlayerInstance player)
 	{
 		return ((player.getLevel() > MIN_LEVEL) && player.isSubClassActive());
 	}

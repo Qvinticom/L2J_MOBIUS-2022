@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 
-public final class RequestItemList extends L2GameClientPacket
+public final class RequestItemList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -29,9 +29,9 @@ public final class RequestItemList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if ((getClient() != null) && (getClient().getActiveChar() != null) && !getClient().getActiveChar().isInvetoryDisabled())
+		if ((getClient() != null) && (getClient().getPlayer() != null) && !getClient().getPlayer().isInvetoryDisabled())
 		{
-			final ItemList il = new ItemList(getClient().getActiveChar(), true);
+			final ItemList il = new ItemList(getClient().getPlayer(), true);
 			sendPacket(il);
 		}
 	}

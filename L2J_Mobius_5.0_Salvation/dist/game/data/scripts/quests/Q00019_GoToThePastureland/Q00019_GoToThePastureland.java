@@ -16,8 +16,8 @@
  */
 package quests.Q00019_GoToThePastureland;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -47,19 +47,19 @@ public final class Q00019_GoToThePastureland extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("31302-02.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, VEAL, 1);
 		}
 		else if (event.equalsIgnoreCase("31537-02.htm"))
@@ -68,14 +68,14 @@ public final class Q00019_GoToThePastureland extends Quest
 			{
 				giveAdena(player, 50000, true);
 				addExpAndSp(player, 136766, 59); // TODO: Retail like SP value
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				htmltext = event;
 			}
 			else if (hasQuestItems(player, VEAL))
 			{
 				giveAdena(player, 299928, true);
 				addExpAndSp(player, 1_456_218, 349);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				htmltext = event;
 			}
 			else
@@ -87,14 +87,14 @@ public final class Q00019_GoToThePastureland extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (npc.getId() == VLADIMIR)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -113,7 +113,7 @@ public final class Q00019_GoToThePastureland extends Quest
 				}
 			}
 		}
-		else if ((npc.getId() == TUNATUN) && (st.isCond(1)))
+		else if ((npc.getId() == TUNATUN) && (qs.isCond(1)))
 		{
 			htmltext = "31537-01.html";
 		}

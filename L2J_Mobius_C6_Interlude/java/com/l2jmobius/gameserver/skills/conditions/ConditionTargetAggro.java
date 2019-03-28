@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.skills.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
@@ -36,14 +36,14 @@ public class ConditionTargetAggro extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		final L2Character target = env.target;
-		if (target instanceof L2MonsterInstance)
+		final Creature target = env.target;
+		if (target instanceof MonsterInstance)
 		{
-			return ((L2MonsterInstance) target).isAggressive() == _isAggro;
+			return ((MonsterInstance) target).isAggressive() == _isAggro;
 		}
-		if (target instanceof L2PcInstance)
+		if (target instanceof PlayerInstance)
 		{
-			return ((L2PcInstance) target).getKarma() > 0;
+			return ((PlayerInstance) target).getKarma() > 0;
 		}
 		return false;
 	}

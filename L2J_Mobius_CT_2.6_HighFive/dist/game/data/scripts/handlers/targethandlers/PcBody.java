@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -36,22 +36,22 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class PcBody implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		if ((target != null) && target.isDead())
 		{
-			final L2PcInstance player;
-			if (activeChar.isPlayer())
+			final PlayerInstance player;
+			if (creature.isPlayer())
 			{
-				player = activeChar.getActingPlayer();
+				player = creature.getActingPlayer();
 			}
 			else
 			{
 				player = null;
 			}
 			
-			final L2PcInstance targetPlayer;
+			final PlayerInstance targetPlayer;
 			if (target.isPlayer())
 			{
 				targetPlayer = target.getActingPlayer();
@@ -61,10 +61,10 @@ public class PcBody implements ITargetTypeHandler
 				targetPlayer = null;
 			}
 			
-			final L2PetInstance targetPet;
+			final PetInstance targetPet;
 			if (target.isPet())
 			{
-				targetPet = (L2PetInstance) target;
+				targetPet = (PetInstance) target;
 			}
 			else
 			{
@@ -75,7 +75,7 @@ public class PcBody implements ITargetTypeHandler
 			{
 				boolean condGood = true;
 				
-				if (skill.hasEffectType(L2EffectType.RESURRECTION))
+				if (skill.hasEffectType(EffectType.RESURRECTION))
 				{
 					if (targetPlayer != null)
 					{
@@ -83,13 +83,13 @@ public class PcBody implements ITargetTypeHandler
 						if (targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
 						{
 							condGood = false;
-							activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+							creature.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 						}
 						
 						if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
 						{
 							condGood = false;
-							activeChar.sendMessage("You may not resurrect participants in a festival.");
+							creature.sendMessage("You may not resurrect participants in a festival.");
 						}
 					}
 				}
@@ -99,22 +99,22 @@ public class PcBody implements ITargetTypeHandler
 					if (!onlyFirst)
 					{
 						targetList.add(target);
-						return targetList.toArray(new L2Object[targetList.size()]);
+						return targetList.toArray(new WorldObject[targetList.size()]);
 					}
-					return new L2Character[]
+					return new Creature[]
 					{
 						target
 					};
 				}
 			}
 		}
-		activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+		creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.PC_BODY;
+		return TargetType.PC_BODY;
 	}
 }

@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,9 +26,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExMPCCShowPartyMemberInfo implements IClientOutgoingPacket
 {
-	private final L2Party _party;
+	private final Party _party;
 	
-	public ExMPCCShowPartyMemberInfo(L2Party party)
+	public ExMPCCShowPartyMemberInfo(Party party)
 	{
 		_party = party;
 	}
@@ -39,7 +39,7 @@ public class ExMPCCShowPartyMemberInfo implements IClientOutgoingPacket
 		OutgoingPackets.EX_MPCCSHOW_PARTY_MEMBER_INFO.writeId(packet);
 		
 		packet.writeD(_party.getMemberCount());
-		for (L2PcInstance pc : _party.getMembers())
+		for (PlayerInstance pc : _party.getMembers())
 		{
 			packet.writeS(pc.getName());
 			packet.writeD(pc.getObjectId());

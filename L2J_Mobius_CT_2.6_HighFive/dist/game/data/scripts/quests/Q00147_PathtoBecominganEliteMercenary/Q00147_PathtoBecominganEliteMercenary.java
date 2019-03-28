@@ -16,8 +16,8 @@
  */
 package quests.Q00147_PathtoBecominganEliteMercenary;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,12 +54,12 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -74,18 +74,18 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 		}
 		else if (event.equalsIgnoreCase("elite-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -101,15 +101,15 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.getCond() < 4)
+				if (qs.getCond() < 4)
 				{
 					htmltext = "elite-05.htm";
 				}
-				else if (st.isCond(4))
+				else if (qs.isCond(4))
 				{
 					takeItems(player, ORDINARY_CERTIFICATE, -1);
 					giveItems(player, ELITE_CERTIFICATE, 1);
-					st.exitQuest(false);
+					qs.exitQuest(false);
 					htmltext = "elite-06.htm";
 				}
 				break;

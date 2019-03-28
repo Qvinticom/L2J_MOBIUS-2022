@@ -17,11 +17,11 @@
 package ai.others.NpcBuffers;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2TamedBeastInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.util.Util;
@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class NpcBufferAI implements Runnable
 {
-	private final L2Npc _npc;
+	private final Npc _npc;
 	private final NpcBufferSkillData _skillData;
 	
-	protected NpcBufferAI(L2Npc npc, NpcBufferSkillData skill)
+	protected NpcBufferAI(Npc npc, NpcBufferSkillData skill)
 	{
 		_npc = npc;
 		_skillData = skill;
@@ -54,7 +54,7 @@ public class NpcBufferAI implements Runnable
 		}
 		
 		final Skill skill = _skillData.getSkill();
-		final L2PcInstance player = _npc.getSummoner().getActingPlayer();
+		final PlayerInstance player = _npc.getSummoner().getActingPlayer();
 		
 		switch (_skillData.getAffectScope())
 		{
@@ -62,7 +62,7 @@ public class NpcBufferAI implements Runnable
 			{
 				if (player.isInParty())
 				{
-					for (L2PcInstance member : player.getParty().getMembers())
+					for (PlayerInstance member : player.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(skill.getAffectRange(), _npc, member, true) && !member.isDead())
 						{
@@ -81,7 +81,7 @@ public class NpcBufferAI implements Runnable
 			}
 			case RANGE:
 			{
-				for (L2Character target : L2World.getInstance().getVisibleObjectsInRange(_npc, L2Character.class, skill.getAffectRange()))
+				for (Creature target : World.getInstance().getVisibleObjectsInRange(_npc, Creature.class, skill.getAffectRange()))
 				{
 					switch (_skillData.getAffectObject())
 					{
@@ -120,11 +120,11 @@ public class NpcBufferAI implements Runnable
 	 * @param target the target
 	 * @return {@code true} if target can be affected by positive effect, {@code false} otherwise
 	 */
-	private boolean isFriendly(L2PcInstance player, L2Character target)
+	private boolean isFriendly(PlayerInstance player, Creature target)
 	{
 		if (target.isPlayable())
 		{
-			final L2PcInstance targetPlayer = target.getActingPlayer();
+			final PlayerInstance targetPlayer = target.getActingPlayer();
 			
 			if (player == targetPlayer)
 			{
@@ -165,16 +165,16 @@ public class NpcBufferAI implements Runnable
 	 * @param target the target
 	 * @return {@code true} if target can be affected by negative effect, {@code false} otherwise
 	 */
-	private boolean isEnemy(L2PcInstance player, L2Character target)
+	private boolean isEnemy(PlayerInstance player, Creature target)
 	{
 		if (isFriendly(player, target))
 		{
 			return false;
 		}
 		
-		if (target instanceof L2TamedBeastInstance)
+		if (target instanceof TamedBeastInstance)
 		{
-			return isEnemy(player, ((L2TamedBeastInstance) target).getOwner());
+			return isEnemy(player, ((TamedBeastInstance) target).getOwner());
 		}
 		
 		if (target.isMonster())
@@ -184,7 +184,7 @@ public class NpcBufferAI implements Runnable
 		
 		if (target.isPlayable())
 		{
-			final L2PcInstance targetPlayer = target.getActingPlayer();
+			final PlayerInstance targetPlayer = target.getActingPlayer();
 			
 			if (!isFriendly(player, targetPlayer))
 			{

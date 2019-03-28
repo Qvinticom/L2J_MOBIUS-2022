@@ -23,12 +23,12 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.ClanWarState;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.ClanWar;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.model.clan.ClanWar;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -38,22 +38,22 @@ public final class RequestStartPledgeWar implements IClientIncomingPacket
 	private String _pledgeName;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_pledgeName = packet.readS();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Clan clanDeclaringWar = player.getClan();
+		final Clan clanDeclaringWar = player.getClan();
 		if (clanDeclaringWar == null)
 		{
 			return;
@@ -78,7 +78,7 @@ public final class RequestStartPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Clan clanDeclaredWar = ClanTable.getInstance().getClanByName(_pledgeName);
+		final Clan clanDeclaredWar = ClanTable.getInstance().getClanByName(_pledgeName);
 		if (clanDeclaredWar == null)
 		{
 			client.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_CANNOT_BE_DECLARED_AGAINST_A_CLAN_THAT_DOES_NOT_EXIST));
@@ -133,8 +133,8 @@ public final class RequestStartPledgeWar implements IClientIncomingPacket
 		
 		ClanTable.getInstance().storeClanWars(newClanWar);
 		
-		clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(L2ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
+		clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
 		
-		clanDeclaredWar.getMembers().stream().filter(Objects::nonNull).filter(L2ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
+		clanDeclaredWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
 	}
 }

@@ -18,14 +18,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -46,7 +46,7 @@ public final class Attack implements IClientIncomingPacket
 	private int _attackId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_originX = packet.readD();
@@ -57,45 +57,45 @@ public final class Attack implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Avoid Attacks in Boat.
-		if (activeChar.isPlayable() && activeChar.isInBoat())
+		if (player.isPlayable() && player.isInBoat())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_ALLOWED_WHILE_RIDING_A_FERRY_OR_BOAT);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_ALLOWED_WHILE_RIDING_A_FERRY_OR_BOAT);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final BuffInfo info = activeChar.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+		final BuffInfo info = player.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
 		if (info != null)
 		{
 			for (AbstractEffect effect : info.getEffects())
 			{
 				if (!effect.checkCondition(-1))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 		}
 		
 		// avoid using expensive operations if not needed
-		final L2Object target;
-		if (activeChar.getTargetId() == _objectId)
+		final WorldObject target;
+		if (player.getTargetId() == _objectId)
 		{
-			target = activeChar.getTarget();
+			target = player.getTarget();
 		}
 		else
 		{
-			target = L2World.getInstance().findObject(_objectId);
+			target = World.getInstance().findObject(_objectId);
 		}
 		
 		if (target == null)
@@ -103,40 +103,40 @@ public final class Attack implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!target.isTargetable() && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL))
+		if (!target.isTargetable() && !player.canOverrideCond(PlayerCondOverride.TARGET_ALL))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't attack objects in the other instances
 		// except from multiverse
-		else if ((target.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		else if ((target.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly attack invisible characters
-		else if (!target.isVisibleFor(activeChar))
+		else if (!target.isVisibleFor(player))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.getTarget() != target)
+		if (player.getTarget() != target)
 		{
-			target.onAction(activeChar);
+			target.onAction(player);
 		}
 		else
 		{
-			if ((target.getObjectId() != activeChar.getObjectId()) && (activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null))
+			if ((target.getObjectId() != player.getObjectId()) && (player.getPrivateStoreType() == PrivateStoreType.NONE) && (player.getActiveRequester() == null))
 			{
-				target.onForcedAttack(activeChar);
+				target.onForcedAttack(player);
 			}
 			else
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 		}
 	}

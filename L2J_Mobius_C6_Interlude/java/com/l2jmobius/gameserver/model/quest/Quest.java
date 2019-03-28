@@ -38,22 +38,22 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.scripting.ManagedScript;
 import com.l2jmobius.gameserver.scripting.ScriptManager;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author Luis Arias
@@ -255,7 +255,7 @@ public class Quest extends ManagedScript
 	 * @param player
 	 * @return QuestState : QuestState created
 	 */
-	public QuestState newQuestState(L2PcInstance player)
+	public QuestState newQuestState(PlayerInstance player)
 	{
 		QuestState qs = new QuestState(this, player, _initialState);
 		createQuestInDb(qs);
@@ -302,7 +302,7 @@ public class Quest extends ManagedScript
 	 * @param player : The player instance to check.
 	 * @return true if the given player got an online clan member sponsor in a 1500 radius range.
 	 */
-	public static boolean getSponsor(L2PcInstance player)
+	public static boolean getSponsor(PlayerInstance player)
 	{
 		// Player hasn't a sponsor.
 		final int sponsorId = player.getSponsor();
@@ -312,18 +312,18 @@ public class Quest extends ManagedScript
 		}
 		
 		// Player hasn't a clan.
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return false;
 		}
 		
 		// Retrieve sponsor clan member object.
-		final L2ClanMember member = clan.getClanMember(sponsorId);
+		final ClanMember member = clan.getClanMember(sponsorId);
 		if ((member != null) && member.isOnline())
 		{
 			// The sponsor is online, retrieve player instance and check distance.
-			final L2PcInstance sponsor = member.getPlayerInstance();
+			final PlayerInstance sponsor = member.getPlayerInstance();
 			if ((sponsor != null) && player.isInsideRadius(sponsor, Config.ALT_PARTY_RANGE, true, false))
 			{
 				return true;
@@ -337,7 +337,7 @@ public class Quest extends ManagedScript
 	 * @param player : The player instance to check.
 	 * @return the apprentice of the given player. He must be online, and in a 1500 radius range.
 	 */
-	public static L2PcInstance getApprentice(L2PcInstance player)
+	public static PlayerInstance getApprentice(PlayerInstance player)
 	{
 		// Player hasn't an apprentice.
 		final int apprenticeId = player.getApprentice();
@@ -347,18 +347,18 @@ public class Quest extends ManagedScript
 		}
 		
 		// Player hasn't a clan.
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return null;
 		}
 		
 		// Retrieve apprentice clan member object.
-		final L2ClanMember member = clan.getClanMember(apprenticeId);
+		final ClanMember member = clan.getClanMember(apprenticeId);
 		if ((member != null) && member.isOnline())
 		{
 			// The apprentice is online, retrieve player instance and check distance.
-			final L2PcInstance academic = member.getPlayerInstance();
+			final PlayerInstance academic = member.getPlayerInstance();
 			if ((academic != null) && player.isInsideRadius(academic, Config.ALT_PARTY_RANGE, true, false))
 			{
 				return academic;
@@ -374,7 +374,7 @@ public class Quest extends ManagedScript
 	 * @param npc
 	 * @param player
 	 */
-	public void startQuestTimer(String name, long time, L2NpcInstance npc, L2PcInstance player)
+	public void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player)
 	{
 		startQuestTimer(name, time, npc, player, false);
 	}
@@ -387,7 +387,7 @@ public class Quest extends ManagedScript
 	 * @param player player associated with this timer (can be null)
 	 * @param repeating indicates if the timer is repeatable or one-time.
 	 */
-	public synchronized void startQuestTimer(String name, long time, L2NpcInstance npc, L2PcInstance player, boolean repeating)
+	public synchronized void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player, boolean repeating)
 	{
 		synchronized (_allEventTimers)
 		{
@@ -427,7 +427,7 @@ public class Quest extends ManagedScript
 		}
 	}
 	
-	public QuestTimer getQuestTimer(String name, L2NpcInstance npc, L2PcInstance player)
+	public QuestTimer getQuestTimer(String name, NpcInstance npc, PlayerInstance player)
 	{
 		if (name == null)
 		{
@@ -456,7 +456,7 @@ public class Quest extends ManagedScript
 		}
 	}
 	
-	public void cancelQuestTimer(String name, L2NpcInstance npc, L2PcInstance player)
+	public void cancelQuestTimer(String name, NpcInstance npc, PlayerInstance player)
 	{
 		if (name == null)
 		{
@@ -533,7 +533,7 @@ public class Quest extends ManagedScript
 	}
 	
 	// these are methods to call from java
-	public final boolean notifyAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public final boolean notifyAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		String res = null;
 		
@@ -549,7 +549,7 @@ public class Quest extends ManagedScript
 		return showResult(attacker, res);
 	}
 	
-	public final boolean notifyDeath(L2Character killer, L2Character victim, QuestState qs)
+	public final boolean notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
 		
@@ -565,7 +565,7 @@ public class Quest extends ManagedScript
 		return showResult(qs.getPlayer(), res);
 	}
 	
-	public final boolean notifyEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public final boolean notifyEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String res = null;
 		
@@ -581,7 +581,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public final boolean notifyKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public final boolean notifyKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		String res = null;
 		
@@ -597,7 +597,7 @@ public class Quest extends ManagedScript
 		return showResult(killer, res);
 	}
 	
-	public final boolean notifyTalk(L2NpcInstance npc, QuestState qs)
+	public final boolean notifyTalk(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
 		
@@ -616,7 +616,7 @@ public class Quest extends ManagedScript
 	}
 	
 	// override the default NPC dialogs when a quest defines this for the given NPC
-	public final boolean notifyFirstTalk(L2NpcInstance npc, L2PcInstance player)
+	public final boolean notifyFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String res = null;
 		
@@ -642,7 +642,7 @@ public class Quest extends ManagedScript
 		return true;
 	}
 	
-	public final boolean notifySkillUse(L2NpcInstance npc, L2PcInstance caster, L2Skill skill)
+	public final boolean notifySkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		String res = null;
 		
@@ -658,7 +658,7 @@ public class Quest extends ManagedScript
 		return showResult(caster, res);
 	}
 	
-	public final boolean notifySpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public final boolean notifySpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		String res = null;
 		try
@@ -672,7 +672,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public final boolean notifyFactionCall(L2NpcInstance npc, L2NpcInstance caller, L2PcInstance attacker, boolean isPet)
+	public final boolean notifyFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
 	{
 		String res = null;
 		try
@@ -686,7 +686,7 @@ public class Quest extends ManagedScript
 		return showResult(attacker, res);
 	}
 	
-	public final boolean notifyAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public final boolean notifyAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		String res = null;
 		
@@ -701,7 +701,7 @@ public class Quest extends ManagedScript
 		return showResult(player, res);
 	}
 	
-	public final boolean notifySpawn(L2NpcInstance npc)
+	public final boolean notifySpawn(NpcInstance npc)
 	{
 		String res = null;
 		
@@ -717,21 +717,21 @@ public class Quest extends ManagedScript
 	}
 	
 	// these are methods that java calls to invoke scripts
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onDeath(L2Character killer, L2Character victim, QuestState qs)
+	public String onDeath(Creature killer, Creature victim, QuestState qs)
 	{
-		if (killer instanceof L2NpcInstance)
+		if (killer instanceof NpcInstance)
 		{
-			return onAdvEvent("", (L2NpcInstance) killer, qs.getPlayer());
+			return onAdvEvent("", (NpcInstance) killer, qs.getPlayer());
 		}
 		return onAdvEvent("", null, qs.getPlayer());
 	}
 	
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -750,7 +750,7 @@ public class Quest extends ManagedScript
 		return null;
 	}
 	
-	public void sendDlgMessage(String text, L2PcInstance player)
+	public void sendDlgMessage(String text, PlayerInstance player)
 	{
 		player.dialog = this;
 		final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1.getId());
@@ -758,7 +758,7 @@ public class Quest extends ManagedScript
 		player.sendPacket(dlg);
 	}
 	
-	public void onDlgAnswer(L2PcInstance player)
+	public void onDlgAnswer(PlayerInstance player)
 	{
 	}
 	
@@ -767,42 +767,42 @@ public class Quest extends ManagedScript
 		return null;
 	}
 	
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onTalk(L2NpcInstance npc, L2PcInstance talker)
+	public String onTalk(NpcInstance npc, PlayerInstance talker)
 	{
 		return null;
 	}
 	
-	public String onFirstTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		return null;
 	}
 	
-	public String onSkillUse(L2NpcInstance npc, L2PcInstance caster, L2Skill skill)
+	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		return null;
 	}
 	
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		return null;
 	}
 	
-	public String onFactionCall(L2NpcInstance npc, L2NpcInstance caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		return null;
 	}
 	
-	public String onSpawn(L2NpcInstance npc)
+	public String onSpawn(NpcInstance npc)
 	{
 		return null;
 	}
@@ -813,7 +813,7 @@ public class Quest extends ManagedScript
 	 * @param t : Throwable
 	 * @return boolean
 	 */
-	public boolean showError(L2Character object, Throwable t)
+	public boolean showError(Creature object, Throwable t)
 	{
 		if (getScriptFile() != null)
 		{
@@ -825,9 +825,9 @@ public class Quest extends ManagedScript
 			return false;
 		}
 		
-		if (object instanceof L2PcInstance)
+		if (object instanceof PlayerInstance)
 		{
-			L2PcInstance player = (L2PcInstance) object;
+			PlayerInstance player = (PlayerInstance) object;
 			if (player.getAccessLevel().isGm())
 			{
 				final StringWriter sw = new StringWriter();
@@ -869,16 +869,16 @@ public class Quest extends ManagedScript
 	 * @param res : String pointing out the message to show at the player
 	 * @return boolean
 	 */
-	private boolean showResult(L2Character object, String res)
+	private boolean showResult(Creature object, String res)
 	{
 		if (res == null)
 		{
 			return true;
 		}
 		
-		if (object instanceof L2PcInstance)
+		if (object instanceof PlayerInstance)
 		{
-			L2PcInstance player = (L2PcInstance) object;
+			PlayerInstance player = (PlayerInstance) object;
 			
 			if (res.endsWith(".htm"))
 			{
@@ -905,9 +905,9 @@ public class Quest extends ManagedScript
 	/**
 	 * Add the quest to the NPC's startQuest
 	 * @param npcId
-	 * @return L2NpcTemplate : Start NPC
+	 * @return NpcTemplate : Start NPC
 	 */
-	public L2NpcTemplate addStartNpc(int npcId)
+	public NpcTemplate addStartNpc(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.QUEST_START);
 	}
@@ -923,9 +923,9 @@ public class Quest extends ManagedScript
 	/**
 	 * Add the quest to the NPC's first-talk (default action dialog)
 	 * @param npcId
-	 * @return L2NpcTemplate : Start NPC
+	 * @return NpcTemplate : Start NPC
 	 */
-	public L2NpcTemplate addFirstTalkId(int npcId)
+	public NpcTemplate addFirstTalkId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.NPC_FIRST_TALK);
 	}
@@ -944,7 +944,7 @@ public class Quest extends ManagedScript
 	 * @param attackId
 	 * @return int : attackId
 	 */
-	public L2NpcTemplate addAttackId(int attackId)
+	public NpcTemplate addAttackId(int attackId)
 	{
 		return addEventId(attackId, QuestEventType.ON_ATTACK);
 	}
@@ -963,7 +963,7 @@ public class Quest extends ManagedScript
 	 * @param killId
 	 * @return int : killId
 	 */
-	public L2NpcTemplate addKillId(int killId)
+	public NpcTemplate addKillId(int killId)
 	{
 		return addEventId(killId, QuestEventType.ON_KILL);
 	}
@@ -986,7 +986,7 @@ public class Quest extends ManagedScript
 	 * @param talkId : ID of the NPC
 	 * @return int : ID of the NPC
 	 */
-	public L2NpcTemplate addTalkId(int talkId)
+	public NpcTemplate addTalkId(int talkId)
 	{
 		return addEventId(talkId, QuestEventType.QUEST_TALK);
 	}
@@ -1003,7 +1003,7 @@ public class Quest extends ManagedScript
 		}
 	}
 	
-	public L2NpcTemplate addFactionCallId(int npcId)
+	public NpcTemplate addFactionCallId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.ON_FACTION_CALL);
 	}
@@ -1014,7 +1014,7 @@ public class Quest extends ManagedScript
 	 * @param npcId : ID of the NPC
 	 * @return int : ID of the NPC
 	 */
-	public L2NpcTemplate addSkillUseId(int npcId)
+	public NpcTemplate addSkillUseId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.ON_SKILL_USE);
 	}
@@ -1027,7 +1027,7 @@ public class Quest extends ManagedScript
 		}
 	}
 	
-	public L2NpcTemplate addSpellFinishedId(int npcId)
+	public NpcTemplate addSpellFinishedId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.ON_SPELL_FINISHED);
 	}
@@ -1038,7 +1038,7 @@ public class Quest extends ManagedScript
 	 * @param npcId ID of the NPC
 	 * @return int ID of the NPC
 	 */
-	public L2NpcTemplate addAggroRangeEnterId(int npcId)
+	public NpcTemplate addAggroRangeEnterId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.ON_AGGRO_RANGE_ENTER);
 	}
@@ -1051,7 +1051,7 @@ public class Quest extends ManagedScript
 		}
 	}
 	
-	public L2NpcTemplate addSpawnId(int npcId)
+	public NpcTemplate addSpawnId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.ON_SPAWN);
 	}
@@ -1085,13 +1085,13 @@ public class Quest extends ManagedScript
 	 * <BR>
 	 * @param npcId : id of the NPC to register
 	 * @param eventType : type of event being registered
-	 * @return L2NpcTemplate : Npc Template corresponding to the npcId, or null if the id is invalid
+	 * @return NpcTemplate : Npc Template corresponding to the npcId, or null if the id is invalid
 	 */
-	public L2NpcTemplate addEventId(int npcId, QuestEventType eventType)
+	public NpcTemplate addEventId(int npcId, QuestEventType eventType)
 	{
 		try
 		{
-			final L2NpcTemplate t = NpcTable.getInstance().getTemplate(npcId);
+			final NpcTemplate t = NpcTable.getInstance().getTemplate(npcId);
 			
 			if (t != null)
 			{
@@ -1108,13 +1108,13 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
-	 * Add quests to the L2PCInstance of the player.<BR>
+	 * Add quests to the NCInstance of the player.<BR>
 	 * <BR>
 	 * <U><I>Action : </U></I><BR>
-	 * Add state of quests, drops and variables for quests in the HashMap _quest of L2PcInstance
+	 * Add state of quests, drops and variables for quests in the HashMap _quest of PlayerInstance
 	 * @param player : Player who is entering the world
 	 */
-	public static final void playerEnter(L2PcInstance player)
+	public static final void playerEnter(PlayerInstance player)
 	{
 		if (Config.ALT_DEV_NO_QUESTS)
 		{
@@ -1445,12 +1445,12 @@ public class Quest extends ManagedScript
 	/**
 	 * Auxiliary function for party quests. Checks the player's condition. Player member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance condition is ignored.
 	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a L2Npc to compare distance
+	 * @param npc : the instance of a Npc to compare distance
 	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return QuestState : The QuestState of that player.
 	 */
-	public QuestState checkPlayerCondition(L2PcInstance player, L2NpcInstance npc, String var, String value)
+	public QuestState checkPlayerCondition(PlayerInstance player, NpcInstance npc, String var, String value)
 	{
 		// No valid player or npc instance is passed, there is nothing to check.
 		if ((player == null) || (npc == null))
@@ -1459,14 +1459,14 @@ public class Quest extends ManagedScript
 		}
 		
 		// Check player's quest conditions.
-		final QuestState st = player.getQuestState(_name);
-		if (st == null)
+		final QuestState qs = player.getQuestState(_name);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		// Condition exists? Condition has correct value?
-		if ((st.get(var) == null) || !value.equalsIgnoreCase(st.get(var).toString()))
+		if ((qs.get(var) == null) || !value.equalsIgnoreCase(qs.get(var).toString()))
 		{
 			return null;
 		}
@@ -1477,17 +1477,17 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		return st;
+		return qs;
 	}
 	
 	/**
 	 * Auxiliary function for party quests. Checks the player's condition. Player member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance condition is ignored.
 	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a L2Npc to compare distance
+	 * @param npc : the instance of a Npc to compare distance
 	 * @param state : the state in which the party member's QuestState must be in order to be considered.
 	 * @return QuestState : The QuestState of that player.
 	 */
-	public QuestState checkPlayerState(L2PcInstance player, L2NpcInstance npc, byte state)
+	public QuestState checkPlayerState(PlayerInstance player, NpcInstance npc, byte state)
 	{
 		// No valid player or npc instance is passed, there is nothing to check.
 		if ((player == null) || (npc == null))
@@ -1496,14 +1496,14 @@ public class Quest extends ManagedScript
 		}
 		
 		// Check player's quest conditions.
-		final QuestState st = player.getQuestState(_name);
-		if (st == null)
+		final QuestState qs = player.getQuestState(_name);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		// State correct?
-		if (st.getState() != state)
+		if (qs.getState() != state)
 		{
 			return null;
 		}
@@ -1514,12 +1514,12 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		return st;
+		return qs;
 	}
 	
-	// returns a random party member's L2PcInstance for the passed player's party
+	// returns a random party member's PlayerInstance for the passed player's party
 	// returns the passed player if he has no party.
-	public L2PcInstance getRandomPartyMember(L2PcInstance player)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player)
 	{
 		// NPE prevention. If the player is null, there is nothing to return
 		if (player == null)
@@ -1532,7 +1532,7 @@ public class Quest extends ManagedScript
 			return player;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		
 		return party.getPartyMembers().get(Rnd.get(party.getPartyMembers().size()));
 	}
@@ -1541,9 +1541,9 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player the instance of a player whose party is to be searched
 	 * @param value the value of the "cond" variable that must be matched
-	 * @return L2PcInstance: L2PcInstance for a random party member that matches the specified condition, or null if no match.
+	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match.
 	 */
-	public L2PcInstance getRandomPartyMember(L2PcInstance player, String value)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player, String value)
 	{
 		return getRandomPartyMember(player, "cond", value);
 	}
@@ -1551,20 +1551,20 @@ public class Quest extends ManagedScript
 	/**
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a L2Npc to compare distance
+	 * @param npc : the instance of a Npc to compare distance
 	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return List<Player> : List of party members that matches the specified condition, empty list if none matches. If the var is null, empty list is returned (i.e. no condition is applied). The party member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance
 	 *         condition is ignored.
 	 */
-	public List<L2PcInstance> getPartyMembers(L2PcInstance player, L2NpcInstance npc, String var, String value)
+	public List<PlayerInstance> getPartyMembers(PlayerInstance player, NpcInstance npc, String var, String value)
 	{
 		if (player == null)
 		{
 			return Collections.emptyList();
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			return (checkPlayerCondition(player, npc, var, value) != null) ? Arrays.asList(player) : Collections.emptyList();
@@ -1576,12 +1576,12 @@ public class Quest extends ManagedScript
 	/**
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a L2Npc to compare distance
+	 * @param npc : the instance of a Npc to compare distance
 	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @return Player : Player for a random party member that matches the specified condition, or null if no match. If the var is null, null is returned (i.e. no condition is applied). The party member must be within 1500 distance from the npc. If npc is null, distance condition is ignored.
 	 */
-	public L2PcInstance getRandomPartyMember(L2PcInstance player, L2NpcInstance npc, String var, String value)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player, NpcInstance npc, String var, String value)
 	{
 		// No valid player instance is passed, there is nothing to check.
 		if (player == null)
@@ -1590,7 +1590,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		final List<L2PcInstance> members = getPartyMembers(player, npc, var, value);
+		final List<PlayerInstance> members = getPartyMembers(player, npc, var, value);
 		if (members.isEmpty())
 		{
 			return player;
@@ -1601,11 +1601,11 @@ public class Quest extends ManagedScript
 	/**
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own.
 	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a L2Npc to compare distance
+	 * @param npc : the instance of a Npc to compare distance
 	 * @param value : the value of the "cond" variable that must be matched
 	 * @return Player : Player for a random party member that matches the specified condition, or null if no match.
 	 */
-	public L2PcInstance getRandomPartyMember(L2PcInstance player, L2NpcInstance npc, String value)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player, NpcInstance npc, String value)
 	{
 		return getRandomPartyMember(player, npc, "cond", value);
 	}
@@ -1615,10 +1615,10 @@ public class Quest extends ManagedScript
 	 * @param player the instance of a player whose party is to be searched
 	 * @param var a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value
-	 * @return L2PcInstance: L2PcInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
+	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
 	 *         player, or if no target exists, 1500 distance from the player itself.
 	 */
-	public L2PcInstance getRandomPartyMember(L2PcInstance player, String var, String value)
+	public PlayerInstance getRandomPartyMember(PlayerInstance player, String var, String value)
 	{
 		// if no valid player instance is passed, there is nothing to check...
 		if (player == null)
@@ -1634,7 +1634,7 @@ public class Quest extends ManagedScript
 		
 		// normal cases...if the player is not in a party, check the player's state
 		QuestState temp = null;
-		L2Party party = player.getParty();
+		Party party = player.getParty();
 		
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || (party.getPartyMembers().size() == 0))
@@ -1649,16 +1649,16 @@ public class Quest extends ManagedScript
 		}
 		
 		// if the player is in a party, gather a list of all matching party members (possibly including this player)
-		final List<L2PcInstance> candidates = new ArrayList<>();
+		final List<PlayerInstance> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
-		L2Object target = player.getTarget();
+		WorldObject target = player.getTarget();
 		if (target == null)
 		{
 			target = player;
 		}
 		
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
 			temp = partyMember.getQuestState(_name);
 			if ((temp != null) && (temp.get(var) != null) && ((String) temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
@@ -1680,18 +1680,18 @@ public class Quest extends ManagedScript
 	/**
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own.
 	 * @param player : the instance of a player whose party is to be searched
-	 * @param npc : the instance of a L2Npc to compare distance
+	 * @param npc : the instance of a Npc to compare distance
 	 * @param state : the state in which the party member's QuestState must be in order to be considered.
 	 * @return List<Player> : List of party members that matches the specified quest state, empty list if none matches. The party member must be within Config.PARTY_RANGE distance from the npc. If npc is null, distance condition is ignored.
 	 */
-	public List<L2PcInstance> getPartyMembersState(L2PcInstance player, L2NpcInstance npc, byte state)
+	public List<PlayerInstance> getPartyMembersState(PlayerInstance player, NpcInstance npc, byte state)
 	{
 		if (player == null)
 		{
 			return Collections.emptyList();
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			return (checkPlayerState(player, npc, state) != null) ? Arrays.asList(player) : Collections.emptyList();
@@ -1707,7 +1707,7 @@ public class Quest extends ManagedScript
 	 * @param state : the state in which the party member's QuestState must be in order to be considered.
 	 * @return Player: Player for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied).
 	 */
-	public L2PcInstance getRandomPartyMemberState(L2PcInstance player, L2NpcInstance npc, byte state)
+	public PlayerInstance getRandomPartyMemberState(PlayerInstance player, NpcInstance npc, byte state)
 	{
 		// No valid player instance is passed, there is nothing to check.
 		if (player == null)
@@ -1716,7 +1716,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		final List<L2PcInstance> members = getPartyMembersState(player, npc, state);
+		final List<PlayerInstance> members = getPartyMembersState(player, npc, state);
 		if (members.isEmpty())
 		{
 			return null;
@@ -1728,9 +1728,9 @@ public class Quest extends ManagedScript
 	 * Auxiliary function for party quests. Note: This function is only here because of how commonly it may be used by quest developers. For any variations on this function, the quest script can always handle things on its own
 	 * @param player the instance of a player whose party is to be searched
 	 * @param state the state in which the party member's queststate must be in order to be considered.
-	 * @return L2PcInstance: L2PcInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied).
+	 * @return PlayerInstance: PlayerInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied).
 	 */
-	public L2PcInstance getRandomPartyMemberState(L2PcInstance player, byte state)
+	public PlayerInstance getRandomPartyMemberState(PlayerInstance player, byte state)
 	{
 		// if no valid player instance is passed, there is nothing to check...
 		if (player == null)
@@ -1740,7 +1740,7 @@ public class Quest extends ManagedScript
 		
 		// normal cases...if the player is not in a partym check the player's state
 		QuestState temp = null;
-		L2Party party = player.getParty();
+		Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || (party.getPartyMembers().size() == 0))
 		{
@@ -1754,16 +1754,16 @@ public class Quest extends ManagedScript
 		}
 		
 		// if the player is in a party, gather a list of all matching party members (possibly including this player)
-		final List<L2PcInstance> candidates = new ArrayList<>();
+		final List<PlayerInstance> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
-		L2Object target = player.getTarget();
+		WorldObject target = player.getTarget();
 		if (target == null)
 		{
 			target = player;
 		}
 		
-		for (L2PcInstance partyMember : party.getPartyMembers())
+		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
 			temp = partyMember.getQuestState(_name);
 			
@@ -1789,7 +1789,7 @@ public class Quest extends ManagedScript
 	 * @param fileName
 	 * @return String : message sent to client
 	 */
-	public String showHtmlFile(L2PcInstance player, String fileName)
+	public String showHtmlFile(PlayerInstance player, String fileName)
 	{
 		final String questId = _name;
 		
@@ -1839,22 +1839,22 @@ public class Quest extends ManagedScript
 	// =========================================================
 	// QUEST SPAWNS
 	// =========================================================
-	public L2NpcInstance addSpawn(int npcId, L2Character cha)
+	public NpcInstance addSpawn(int npcId, Creature creature)
 	{
-		return QuestSpawn.getInstance().addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), false, 0);
+		return QuestSpawn.getInstance().addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), false, 0);
 	}
 	
-	public L2NpcInstance addSpawn(int npcId, Location loc, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, Location loc, boolean randomOffset, int despawnDelay)
 	{
 		return QuestSpawn.getInstance().addSpawn(npcId, loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), randomOffset, despawnDelay);
 	}
 	
-	public L2NpcInstance addSpawn(int npcId, L2Character cha, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, Creature creature, boolean randomOffset, int despawnDelay)
 	{
-		return QuestSpawn.getInstance().addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), randomOffset, despawnDelay);
+		return QuestSpawn.getInstance().addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), randomOffset, despawnDelay);
 	}
 	
-	public L2NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
 		return QuestSpawn.getInstance().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
 	}
@@ -1958,7 +1958,7 @@ public class Quest extends ManagedScript
 	 * @param isPet
 	 * @return
 	 */
-	public String onAggro(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		return null;
 	}

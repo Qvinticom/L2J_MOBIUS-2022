@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
@@ -28,40 +28,40 @@ public final class RequestRecipeBookOpen implements IClientIncomingPacket
 	private boolean _isDwarvenCraft;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_isDwarvenCraft = (packet.readD() == 0);
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isCastingNow())
+		if (player.isCastingNow())
 		{
 			client.sendPacket(SystemMessageId.YOUR_RECIPE_BOOK_MAY_NOT_BE_ACCESSED_WHILE_USING_A_SKILL);
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
+		if (player.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
 		{
 			client.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return;
 		}
 		
-		if (activeChar.isProcessingTransaction())
+		if (player.isProcessingTransaction())
 		{
 			client.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
 			return;
 		}
 		
-		final RecipeBookItemList response = new RecipeBookItemList(activeChar, _isDwarvenCraft);
-		activeChar.sendPacket(response);
+		final RecipeBookItemList response = new RecipeBookItemList(player, _isDwarvenCraft);
+		player.sendPacket(response);
 	}
 }

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author chris_00 opens the CommandChannel Information window
  */
-public class ExOpenMPCC extends L2GameServerPacket
+public class ExOpenMPCC extends GameServerPacket
 {
 	@Override
 	protected void writeImpl()

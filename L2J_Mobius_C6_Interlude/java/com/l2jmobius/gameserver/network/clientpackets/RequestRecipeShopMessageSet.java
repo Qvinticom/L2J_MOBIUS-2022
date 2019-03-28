@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class RequestRecipeShopMessageSet extends L2GameClientPacket
+public class RequestRecipeShopMessageSet extends GameClientPacket
 {
 	private String _name;
 	
@@ -31,14 +31,14 @@ public class RequestRecipeShopMessageSet extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
 		/*
-		 * if (player.getCreateList() == null) { player.setCreateList(new L2ManufactureList()); }
+		 * if (player.getCreateList() == null) { player.setCreateList(new ManufactureList()); }
 		 */
 		
 		if ((player.getCreateList() != null) && (_name.length() < 30))

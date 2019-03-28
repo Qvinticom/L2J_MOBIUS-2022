@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24300" level="85" type="L2Npc" name="Lurin">
+	<npc id="24300" level="85" type="Npc" name="Lurin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -19,7 +19,7 @@
 			<height normal="29.4" />
 		</collision>
 	</npc>
-	<npc id="24301" level="85" type="L2Npc" name="Lurin" title="Lord">
+	<npc id="24301" level="85" type="Npc" name="Lurin" title="Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -38,7 +38,7 @@
 			<height normal="29.4" />
 		</collision>
 	</npc>
-	<npc id="24302" level="85" type="L2Npc" name="Lurin" title="Lord">
+	<npc id="24302" level="85" type="Npc" name="Lurin" title="Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -57,7 +57,7 @@
 			<height normal="29.4" />
 		</collision>
 	</npc>
-	<npc id="24303" level="85" type="L2Npc" name="Lurin" title="Archlord">
+	<npc id="24303" level="85" type="Npc" name="Lurin" title="Archlord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -76,7 +76,7 @@
 			<height normal="29.4" />
 		</collision>
 	</npc>
-	<npc id="24304" level="108" type="L2Monster" name="Groz Kropiora">
+	<npc id="24304" level="108" type="Monster" name="Groz Kropiora">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="2941100928" sp="2636064" />
@@ -126,7 +126,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24305" level="109" type="L2Monster" name="Groz Krotania">
+	<npc id="24305" level="109" type="Monster" name="Groz Krotania">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="3307195160" sp="2970250" />
@@ -176,7 +176,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24306" level="109" type="L2Monster" name="Groz Krophy">
+	<npc id="24306" level="109" type="Monster" name="Groz Krophy">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="3307195160" sp="2970250" />
@@ -226,7 +226,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24307" level="110" type="L2Monster" name="Groz Krotany">
+	<npc id="24307" level="110" type="Monster" name="Groz Krotany">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="3680457000" sp="3303300" />
@@ -278,7 +278,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24308" level="110" type="L2Monster" name="Water Drake" title="Fafurion's Henchman">
+	<npc id="24308" level="110" type="Monster" name="Water Drake" title="Fafurion's Henchman">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="3680457000" sp="3303300" />
@@ -325,7 +325,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24309" level="107" type="L2Monster" name="Krophy">
+	<npc id="24309" level="107" type="Monster" name="Krophy">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="222117927" sp="199899" />
@@ -369,7 +369,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24310" level="107" type="L2Monster" name="Krotany">
+	<npc id="24310" level="107" type="Monster" name="Krotany">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="222117927" sp="199899" />
@@ -414,7 +414,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24311" level="106" type="L2Monster" name="Kropiora">
+	<npc id="24311" level="106" type="Monster" name="Kropiora">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="192829535" sp="173483" />
@@ -459,7 +459,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24312" level="106" type="L2Monster" name="Krotania">
+	<npc id="24312" level="106" type="Monster" name="Krotania">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="192829535" sp="173483" />
@@ -504,7 +504,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24313" level="109" type="L2Monster" name="Spiz Krophy">
+	<npc id="24313" level="109" type="Monster" name="Spiz Krophy">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="283699270" sp="255322" />
@@ -548,7 +548,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24314" level="109" type="L2Monster" name="Spiz Krotany">
+	<npc id="24314" level="109" type="Monster" name="Spiz Krotany">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="283699270" sp="255322" />
@@ -593,7 +593,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24315" level="108" type="L2Monster" name="Spiz Kropiora">
+	<npc id="24315" level="108" type="Monster" name="Spiz Kropiora">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="252403361" sp="227098" />
@@ -638,7 +638,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24316" level="108" type="L2Monster" name="Spiz Krotania">
+	<npc id="24316" level="108" type="Monster" name="Spiz Krotania">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="252403361" sp="227098" />
@@ -683,7 +683,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24317" level="115" type="L2Monster" name="Temple Guard Captain">
+	<npc id="24317" level="115" type="Monster" name="Temple Guard Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="7534890850" sp="54606960" />
@@ -728,7 +728,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24318" level="115" type="L2Monster" name="Temple Guard Captain">
+	<npc id="24318" level="115" type="Monster" name="Temple Guard Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="7534890850" sp="6771200" />
@@ -775,7 +775,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24319" level="113" type="L2Monster" name="Elite Guardian Warrior">
+	<npc id="24319" level="113" type="Monster" name="Elite Guardian Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="4294636077" sp="3856238" />
@@ -822,7 +822,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24320" level="113" type="L2Monster" name="Elite Guardian Archer">
+	<npc id="24320" level="113" type="Monster" name="Elite Guardian Archer">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" /> 
@@ -870,7 +870,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24321" level="112" type="L2Monster" name="Temple Patrol Guard">
+	<npc id="24321" level="112" type="Monster" name="Temple Patrol Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="2739597056" sp="2458624" />
@@ -915,7 +915,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24322" level="114" type="L2Monster" name="Temple Knight Recruit">
+	<npc id="24322" level="114" type="Monster" name="Temple Knight Recruit">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="3434335956" sp="3080052" />
@@ -960,7 +960,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24323" level="112" type="L2Monster" name="Temple Guard">
+	<npc id="24323" level="112" type="Monster" name="Temple Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="2739597056" sp="2458624" />
@@ -1006,7 +1006,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24324" level="114" type="L2Monster" name="Temple Guardian Warrior">
+	<npc id="24324" level="114" type="Monster" name="Temple Guardian Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="3434335956" sp="3080052" />
@@ -1052,7 +1052,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24325" level="112" type="L2Monster" name="Temple Wizard">
+	<npc id="24325" level="112" type="Monster" name="Temple Wizard">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2739597056" sp="2458624" />
@@ -1098,7 +1098,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24326" level="114" type="L2Monster" name="Temple Guardian Wizard">
+	<npc id="24326" level="114" type="Monster" name="Temple Guardian Wizard">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3434335956" sp="3080052" />
@@ -1144,7 +1144,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24327" level="112" type="L2Monster" name="Temple Priest">
+	<npc id="24327" level="112" type="Monster" name="Temple Priest">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2739597056" sp="2458624" />
@@ -1190,7 +1190,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24328" level="114" type="L2Monster" name="Temple Guardian Priest">
+	<npc id="24328" level="114" type="Monster" name="Temple Guardian Priest">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3434335956" sp="3080052" />
@@ -1236,7 +1236,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24329" level="111" type="L2Monster" name="Starving Water Dragon">
+	<npc id="24329" level="111" type="Monster" name="Starving Water Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="2446272945" sp="2193138" />

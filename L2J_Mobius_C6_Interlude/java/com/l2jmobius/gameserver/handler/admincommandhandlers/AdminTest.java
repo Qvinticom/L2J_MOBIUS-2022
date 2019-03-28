@@ -22,16 +22,15 @@ import java.util.StringTokenizer;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public class AdminTest implements IAdminCommandHandler
@@ -50,7 +49,7 @@ public class AdminTest implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_stats"))
 		{
@@ -61,7 +60,7 @@ public class AdminTest implements IAdminCommandHandler
 		}
 		if (command.equals("admin_mcrit"))
 		{
-			final L2Character target = (L2Character) activeChar.getTarget();
+			final Creature target = (Creature) activeChar.getTarget();
 			
 			BuilderUtil.sendSysMessage(activeChar, "Activechar Mcrit " + activeChar.getMCriticalHit(null, null));
 			BuilderUtil.sendSysMessage(activeChar, "Activechar baseMCritRate " + activeChar.getTemplate().baseMCritRate);
@@ -74,10 +73,10 @@ public class AdminTest implements IAdminCommandHandler
 		}
 		if (command.equals("admin_addbufftest"))
 		{
-			final L2Character target = (L2Character) activeChar.getTarget();
+			final Creature target = (Creature) activeChar.getTarget();
 			BuilderUtil.sendSysMessage(activeChar, "cast");
 			
-			final L2Skill skill = SkillTable.getInstance().getInfo(1085, 3);
+			final Skill skill = SkillTable.getInstance().getInfo(1085, 3);
 			
 			if (target != null)
 			{
@@ -177,21 +176,21 @@ public class AdminTest implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void adminTestSkill(L2PcInstance activeChar, int id)
+	private void adminTestSkill(PlayerInstance activeChar, int id)
 	{
-		L2Character player;
-		L2Object target = activeChar.getTarget();
+		Creature creature;
+		WorldObject target = activeChar.getTarget();
 		
-		if ((target == null) || !(target instanceof L2Character))
+		if ((target == null) || !(target instanceof Creature))
 		{
-			player = activeChar;
+			creature = activeChar;
 		}
 		else
 		{
-			player = (L2Character) target;
+			creature = (Creature) target;
 		}
 		
-		player.broadcastPacket(new MagicSkillUse(activeChar, player, id, 1, 1, 1));
+		creature.broadcastPacket(new MagicSkillUse(activeChar, creature, id, 1, 1, 1));
 		
 	}
 	

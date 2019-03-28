@@ -19,8 +19,8 @@ package quests.Q00370_AnElderSowsSeeds;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
@@ -63,17 +63,17 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
+	public boolean checkPartyMember(PlayerInstance member, Npc npc)
 	{
-		final QuestState st = getQuestState(member, false);
-		return ((st != null) && st.isStarted());
+		final QuestState qs = getQuestState(member, false);
+		return ((qs != null) && qs.isStarted());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -92,13 +92,13 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 			}
 			case "30612-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "REWARD":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					if (exchangeChapters(player, false))
 					{
@@ -113,10 +113,10 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 			}
 			case "30612-10.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					exchangeChapters(player, true);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -126,14 +126,14 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		if (MOBS1.containsKey(npcId))
 		{
 			if (getRandom(100) < MOBS1.get(npcId))
 			{
-				final L2PcInstance luckyPlayer = getRandomPartyMember(player, npc);
+				final PlayerInstance luckyPlayer = getRandomPartyMember(player, npc);
 				if (luckyPlayer != null)
 				{
 					giveItemRandomly(luckyPlayer, npc, SPELLBOOK_PAGE, 1, 0, 1.0, true);
@@ -142,32 +142,32 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 		}
 		else
 		{
-			final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-			if (st != null)
+			final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+			if(qs != null)
 			{
-				giveItemRandomly(st.getPlayer(), npc, SPELLBOOK_PAGE, 1, 0, MOBS2.get(npcId), true);
+				giveItemRandomly(qs.getPlayer(), npc, SPELLBOOK_PAGE, 1, 0, MOBS2.get(npcId), true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30612-01.htm" : "30612-05.html";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			htmltext = "30612-06.html";
 		}
 		return htmltext;
 	}
 	
-	private final boolean exchangeChapters(L2PcInstance player, boolean takeAllItems)
+	private final boolean exchangeChapters(PlayerInstance player, boolean takeAllItems)
 	{
 		final long waterChapters = getQuestItemsCount(player, CHAPTER_OF_WATER);
 		final long earthChapters = getQuestItemsCount(player, CHAPTER_OF_EARTH);

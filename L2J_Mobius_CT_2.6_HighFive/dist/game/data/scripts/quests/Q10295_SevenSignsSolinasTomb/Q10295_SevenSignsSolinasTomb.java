@@ -16,8 +16,8 @@
  */
 package quests.Q10295_SevenSignsSolinasTomb;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -67,10 +67,10 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -89,15 +89,15 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32792-03.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "32793-02.html":
 			case "32793-03.html":
 			{
-				if (st.isMemoState(3))
+				if (qs.isMemoState(3))
 				{
 					htmltext = event;
 				}
@@ -105,10 +105,10 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32793-04.html":
 			{
-				if (st.isMemoState(3))
+				if (qs.isMemoState(3))
 				{
-					st.setMemoState(4);
-					st.setCond(2, true);
+					qs.setMemoState(4);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
@@ -116,16 +116,16 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			case "32793-05.html":
 			case "32794-02.html":
 			{
-				if (st.isMemoState(4))
+				if (qs.isMemoState(4))
 				{
-					st.setMemoState(5);
+					qs.setMemoState(5);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32793-07.html":
 			{
-				if (st.isMemoState(5))
+				if (qs.isMemoState(5))
 				{
 					htmltext = event;
 				}
@@ -133,17 +133,17 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32793-08.html":
 			{
-				if (st.isMemoState(5))
+				if (qs.isMemoState(5))
 				{
-					st.setMemoState(6);
-					st.setCond(3, true);
+					qs.setMemoState(6);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32837-02.html":
 			{
-				if (st.getMemoState() > 1)
+				if (qs.getMemoState() > 1)
 				{
 					takeItems(player, -1, SCROLL_OF_ABSTINENCE, SHIELD_OF_SACRIFICE, SWORD_OF_HOLY_SPIRIT, STAFF_OF_BLESSING);
 					htmltext = event;
@@ -152,7 +152,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32838-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, SCROLL_OF_ABSTINENCE))
 					{
@@ -167,7 +167,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32839-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, SHIELD_OF_SACRIFICE))
 					{
@@ -182,7 +182,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32840-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, SWORD_OF_HOLY_SPIRIT))
 					{
@@ -197,7 +197,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32841-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, STAFF_OF_BLESSING))
 					{
@@ -212,7 +212,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32857-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, STAFF_OF_BLESSING))
 					{
@@ -228,7 +228,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32858-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, SWORD_OF_HOLY_SPIRIT))
 					{
@@ -244,7 +244,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32859-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, SCROLL_OF_ABSTINENCE))
 					{
@@ -260,7 +260,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			}
 			case "32860-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					if (hasQuestItems(player, SHIELD_OF_SACRIFICE))
 					{
@@ -279,18 +279,18 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCompleted())
+		if (qs.isCompleted())
 		{
 			if (npc.getId() == ERISS_EVIL_THOUGHTS)
 			{
 				htmltext = "32792-07.html";
 			}
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			final QuestState st1 = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
 			if ((player.getLevel() >= MIN_LEVEL) && (st1 != null) && (st1.isCompleted()))
@@ -298,13 +298,13 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				htmltext = "32792-01.htm";
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case ERISS_EVIL_THOUGHTS:
 				{
-					final int memoState = st.getMemoState();
+					final int memoState = qs.getMemoState();
 					if (memoState == 1)
 					{
 						htmltext = "32792-12.html";
@@ -326,7 +326,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 						else
 						{
 							addExpAndSp(player, 125000000, 12500000);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "32792-11.html";
 						}
 					}
@@ -334,7 +334,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case SOLINAS_EVIL_THOUGHTS:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 3:
 						{
@@ -361,11 +361,11 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case SOLINA:
 				{
-					if (st.isMemoState(4))
+					if (qs.isMemoState(4))
 					{
 						htmltext = "32794-01.html";
 					}
-					else if (st.isMemoState(5))
+					else if (qs.isMemoState(5))
 					{
 						htmltext = "32794-03.html";
 					}
@@ -373,11 +373,11 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ERIS:
 				{
-					if (st.isMemoState(4))
+					if (qs.isMemoState(4))
 					{
 						htmltext = "32795-01.html";
 					}
-					else if (st.isMemoState(5))
+					else if (qs.isMemoState(5))
 					{
 						htmltext = "32795-02.html";
 					}
@@ -385,11 +385,11 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ANAIS:
 				{
-					if (st.isMemoState(4))
+					if (qs.isMemoState(4))
 					{
 						htmltext = "32796-01.html";
 					}
-					else if (st.isMemoState(5))
+					else if (qs.isMemoState(5))
 					{
 						htmltext = "32796-02.html";
 					}
@@ -397,11 +397,11 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case JUDE_VAN_ETINA:
 				{
-					if (st.isMemoState(4))
+					if (qs.isMemoState(4))
 					{
 						htmltext = "32797-01.html";
 					}
-					else if (st.isMemoState(5))
+					else if (qs.isMemoState(5))
 					{
 						htmltext = "32797-02.html";
 					}
@@ -409,12 +409,12 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case TELEPORT_CONTROL_DEVICE_1:
 				{
-					if (st.getMemoState() > 1)
+					if (qs.getMemoState() > 1)
 					{
 						takeItems(player, -1, SCROLL_OF_ABSTINENCE, SHIELD_OF_SACRIFICE, SWORD_OF_HOLY_SPIRIT, STAFF_OF_BLESSING);
 						htmltext = "32837-01.html";
 					}
-					else if (st.isMemoState(1))
+					else if (qs.isMemoState(1))
 					{
 						htmltext = "32837-03.html";
 					}
@@ -422,7 +422,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case POWERFUL_DEVICE_1:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32838-01.html";
 					}
@@ -430,7 +430,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case POWERFUL_DEVICE_2:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32839-01.html";
 					}
@@ -438,7 +438,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case POWERFUL_DEVICE_3:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32840-01.html";
 					}
@@ -446,7 +446,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case POWERFUL_DEVICE_4:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32841-01.html";
 					}
@@ -454,7 +454,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case TELEPORT_CONTROL_DEVICE_2:
 				{
-					if (st.getMemoState() > 2)
+					if (qs.getMemoState() > 2)
 					{
 						htmltext = "32842-01.html";
 					}
@@ -462,11 +462,11 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case TOMB_OF_THE_SAINTESS:
 				{
-					if (st.isMemoState(2))
+					if (qs.isMemoState(2))
 					{
 						htmltext = "32843-01.html";
 					}
-					else if (st.getMemoState() > 2)
+					else if (qs.getMemoState() > 2)
 					{
 						htmltext = "32843-02.html";
 					}
@@ -474,7 +474,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case TELEPORT_CONTROL_DEVICE_3:
 				{
-					if (st.getMemoState() > 2)
+					if (qs.getMemoState() > 2)
 					{
 						htmltext = "32844-01.html";
 					}
@@ -482,7 +482,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ALTAR_OF_HALLOWS_1:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32857-01.html";
 					}
@@ -490,7 +490,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ALTAR_OF_HALLOWS_2:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32858-01.html";
 					}
@@ -498,7 +498,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ALTAR_OF_HALLOWS_3:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32859-01.html";
 					}
@@ -506,7 +506,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ALTAR_OF_HALLOWS_4:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32860-01.html";
 					}
@@ -514,7 +514,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 				}
 				case ELCADIA:
 				{
-					final int memoState = st.getMemoState();
+					final int memoState = qs.getMemoState();
 					if (memoState < 1)
 					{
 						htmltext = "32787-01.html";

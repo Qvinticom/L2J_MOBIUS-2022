@@ -29,18 +29,18 @@ import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.enums.DispelSlotType;
 import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -67,16 +67,16 @@ public final class Formulas
 	private static final byte MELEE_ATTACK_RANGE = 40;
 	
 	/**
-	 * Return the period between 2 regeneration task (3s for L2Character, 5 min for L2DoorInstance).
-	 * @param cha
+	 * Return the period between 2 regeneration task (3s for Creature, 5 min for DoorInstance).
+	 * @param creature
 	 * @return
 	 */
-	public static int getRegeneratePeriod(L2Character cha)
+	public static int getRegeneratePeriod(Creature creature)
 	{
-		return cha.isDoor() ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
+		return creature.isDoor() ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
 	}
 	
-	public static double calcBlowDamage(L2Character attacker, L2Character target, Skill skill, boolean backstab, double power, byte shld, boolean ss)
+	public static double calcBlowDamage(Creature attacker, Creature target, Skill skill, boolean backstab, double power, byte shld, boolean ss)
 	{
 		double defence = target.getPDef();
 		
@@ -128,7 +128,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double calcMagicDam(L2Character attacker, L2Character target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit)
+	public static double calcMagicDam(Creature attacker, Creature target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit)
 	{
 		// Bonus Spirit shot
 		final double shotsBonus = bss ? (4 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : sps ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1;
@@ -150,7 +150,7 @@ public final class Formulas
 			{
 				if (calcMagicSuccess(attacker, target, skill))
 				{
-					if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+					if (skill.hasEffectType(EffectType.HP_DRAIN))
 					{
 						attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_PERCENT_SUCCESSFUL);
 					}
@@ -172,7 +172,7 @@ public final class Formulas
 			
 			if (target.isPlayer())
 			{
-				final SystemMessage sm = (skill.hasEffectType(L2EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+				final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
 				sm.addString(attacker.getName());
 				target.sendPacket(sm);
 			}
@@ -184,7 +184,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double calcMagicDam(CubicInstance attacker, L2Character target, Skill skill, double power, boolean mcrit, byte shld)
+	public static double calcMagicDam(CubicInstance attacker, Creature target, Skill skill, double power, boolean mcrit, byte shld)
 	{
 		final double mAtk = attacker.getTemplate().getPower();
 		return calcMagicDam(attacker.getOwner(), target, skill, mAtk, power, shld, false, false, mcrit);
@@ -194,11 +194,11 @@ public final class Formulas
 	 * Returns true in case of critical hit
 	 * @param rate
 	 * @param skill
-	 * @param activeChar
+	 * @param creature
 	 * @param target
 	 * @return
 	 */
-	public static boolean calcCrit(double rate, L2Character activeChar, L2Character target, Skill skill)
+	public static boolean calcCrit(double rate, Creature creature, Creature target, Skill skill)
 	{
 		// Skill critical rate is calculated up to the first decimal, thats why multiply by 10 and compare to 1000.
 		if (skill != null)
@@ -206,16 +206,16 @@ public final class Formulas
 			// Magic Critical Rate
 			if (skill.isMagic())
 			{
-				rate = activeChar.getStat().getValue(Stats.MAGIC_CRITICAL_RATE);
+				rate = creature.getStat().getValue(Stats.MAGIC_CRITICAL_RATE);
 				if ((target == null) || !skill.isBad())
 				{
 					return Math.min(rate, 320) > Rnd.get(1000);
 				}
 				
 				double finalRate = target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
-				if ((activeChar.getLevel() >= 78) && (target.getLevel() >= 78))
+				if ((creature.getLevel() >= 78) && (target.getLevel() >= 78))
 				{
-					finalRate += Math.sqrt(activeChar.getLevel()) + ((activeChar.getLevel() - target.getLevel()) / 25);
+					finalRate += Math.sqrt(creature.getLevel()) + ((creature.getLevel() - target.getLevel()) / 25);
 					return Math.min(finalRate, 320) > Rnd.get(1000);
 				}
 				
@@ -226,19 +226,19 @@ public final class Formulas
 			final double statBonus;
 			
 			// There is a chance that activeChar has altered base stat for skill critical.
-			byte skillCritRateStat = (byte) activeChar.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
+			byte skillCritRateStat = (byte) creature.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
 			if ((skillCritRateStat >= 0) && (skillCritRateStat < BaseStats.values().length))
 			{
 				// Best tested
-				statBonus = BaseStats.values()[skillCritRateStat].calcBonus(activeChar);
+				statBonus = BaseStats.values()[skillCritRateStat].calcBonus(creature);
 			}
 			else
 			{
 				// Default base stat used for skill critical formula is STR.
-				statBonus = BaseStats.STR.calcBonus(activeChar);
+				statBonus = BaseStats.STR.calcBonus(creature);
 			}
 			
-			final double rateBonus = activeChar.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
+			final double rateBonus = creature.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
 			double finalRate = rate * statBonus * rateBonus * 10;
 			return finalRate > Rnd.get(1000);
 		}
@@ -247,14 +247,14 @@ public final class Formulas
 		// Even though, visible critical rate is capped to 500, you can reach higher than 50% chance with position and level modifiers.
 		// TODO: Find retail-like calculation for criticalRateMod.
 		final double criticalRateMod = (target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE_ADD, 0)) / 10;
-		final double criticalLocBonus = calcCriticalPositionBonus(activeChar, target);
-		final double criticalHeightBonus = calcCriticalHeightBonus(activeChar, target);
+		final double criticalLocBonus = calcCriticalPositionBonus(creature, target);
+		final double criticalHeightBonus = calcCriticalHeightBonus(creature, target);
 		rate = criticalLocBonus * criticalRateMod * criticalHeightBonus;
 		
 		// Autoattack critical depends on level difference at high levels as well.
-		if ((activeChar.getLevel() >= 78) || (target.getLevel() >= 78))
+		if ((creature.getLevel() >= 78) || (target.getLevel() >= 78))
 		{
-			rate += (Math.sqrt(activeChar.getLevel()) * (activeChar.getLevel() - target.getLevel()) * 0.125);
+			rate += (Math.sqrt(creature.getLevel()) * (creature.getLevel() - target.getLevel()) * 0.125);
 		}
 		
 		// Autoattack critical rate is limited between 3%-97%.
@@ -265,26 +265,26 @@ public final class Formulas
 	
 	/**
 	 * Gets the default (10% for side, 30% for back) positional critical rate bonus and multiplies it by any buffs that give positional critical rate bonus.
-	 * @param activeChar the attacker.
+	 * @param creature the attacker.
 	 * @param target the target.
 	 * @return a multiplier representing the positional critical rate bonus. Autoattacks for example get this bonus on top of the already capped critical rate of 500.
 	 */
-	public static double calcCriticalPositionBonus(L2Character activeChar, L2Character target)
+	public static double calcCriticalPositionBonus(Creature creature, Creature target)
 	{
 		// final Position position = activeChar.getStat().has(Stats.ATTACK_BEHIND) ? Position.BACK : Position.getPosition(activeChar, target);
-		switch (Position.getPosition(activeChar, target))
+		switch (Position.getPosition(creature, target))
 		{
 			case SIDE: // 10% Critical Chance bonus when attacking from side.
 			{
-				return 1.1 * activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.SIDE);
+				return 1.1 * creature.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.SIDE);
 			}
 			case BACK: // 30% Critical Chance bonus when attacking from back.
 			{
-				return 1.3 * activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.BACK);
+				return 1.3 * creature.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.BACK);
 			}
 			default: // No Critical Chance bonus when attacking from front.
 			{
-				return activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.FRONT);
+				return creature.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.FRONT);
 			}
 		}
 	}
@@ -300,7 +300,7 @@ public final class Formulas
 	 * @param skill {@code skill} to be used in the calculation, else calculation will result for autoattack.
 	 * @return regular critical damage bonus. Positional bonus is excluded!
 	 */
-	public static double calcCritDamage(L2Character attacker, L2Character target, Skill skill)
+	public static double calcCritDamage(Creature attacker, Creature target, Skill skill)
 	{
 		final double criticalDamage;
 		final double defenceCriticalDamage;
@@ -335,7 +335,7 @@ public final class Formulas
 	 * @param skill {@code skill} to be used in the calculation, else calculation will result for autoattack.
 	 * @return critical damage additional bonus, not multiplier!
 	 */
-	public static double calcCritDamageAdd(L2Character attacker, L2Character target, Skill skill)
+	public static double calcCritDamageAdd(Creature attacker, Creature target, Skill skill)
 	{
 		final double criticalDamageAdd;
 		final double defenceCriticalDamageAdd;
@@ -369,7 +369,7 @@ public final class Formulas
 	 * @param dmg
 	 * @return true in case when ATTACK is canceled due to hit
 	 */
-	public static boolean calcAtkBreak(L2Character target, double dmg)
+	public static boolean calcAtkBreak(Creature target, double dmg)
 	{
 		if (target.isChanneling())
 		{
@@ -384,7 +384,7 @@ public final class Formulas
 		}
 		if (Config.ALT_GAME_CANCEL_BOW && target.isAttackingNow())
 		{
-			final L2Weapon wpn = target.getActiveWeaponItem();
+			final Weapon wpn = target.getActiveWeaponItem();
 			if ((wpn != null) && (wpn.getItemType() == WeaponType.BOW))
 			{
 				init = 15;
@@ -418,7 +418,7 @@ public final class Formulas
 	 * @param skillTime
 	 * @return
 	 */
-	public static int calcAtkSpd(L2Character attacker, Skill skill, double skillTime)
+	public static int calcAtkSpd(Creature attacker, Skill skill, double skillTime)
 	{
 		if (skill.isMagic())
 		{
@@ -427,7 +427,7 @@ public final class Formulas
 		return (int) ((skillTime / attacker.getPAtkSpd()) * 300);
 	}
 	
-	public static double calcAtkSpdMultiplier(L2Character creature)
+	public static double calcAtkSpdMultiplier(Creature creature)
 	{
 		double armorBonus = 1; // EquipedArmorSpeedByCrystal TODO: Implement me!
 		double dexBonus = BaseStats.DEX.calcBonus(creature);
@@ -437,7 +437,7 @@ public final class Formulas
 		return (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
 	}
 	
-	public static double calcMAtkSpdMultiplier(L2Character creature)
+	public static double calcMAtkSpdMultiplier(Creature creature)
 	{
 		final double armorBonus = 1; // TODO: Implement me!
 		final double witBonus = BaseStats.WIT.calcBonus(creature);
@@ -451,7 +451,7 @@ public final class Formulas
 	 * @param skill
 	 * @return factor divisor for skill hit time and cancel time.
 	 */
-	public static double calcSkillTimeFactor(L2Character creature, Skill skill)
+	public static double calcSkillTimeFactor(Creature creature, Skill skill)
 	{
 		if (skill.getOperateType().isChanneling() || (skill.getMagicType() == 2) || (skill.getMagicType() == 4) || (skill.getMagicType() == 21))
 		{
@@ -471,7 +471,7 @@ public final class Formulas
 		
 		if (creature.isNpc())
 		{
-			double npcFactor = ((L2Npc) creature).getTemplate().getHitTimeFactorSkill();
+			double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
 			if (npcFactor > 0)
 			{
 				factor /= npcFactor;
@@ -480,7 +480,7 @@ public final class Formulas
 		return Math.max(0.01, factor);
 	}
 	
-	public static double calcSkillCancelTime(L2Character creature, Skill skill)
+	public static double calcSkillCancelTime(Creature creature, Skill skill)
 	{
 		return Math.max((skill.getHitCancelTime() * 1000) / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
 	}
@@ -491,7 +491,7 @@ public final class Formulas
 	 * @param target
 	 * @return {@code true} if hit missed (target evaded), {@code false} otherwise.
 	 */
-	public static boolean calcHitMiss(L2Character attacker, L2Character target)
+	public static boolean calcHitMiss(Creature attacker, Creature target)
 	{
 		int chance = (80 + (2 * (attacker.getAccuracy() - target.getEvasionRate()))) * 10;
 		
@@ -514,10 +514,10 @@ public final class Formulas
 	 * @param sendSysMsg
 	 * @return
 	 */
-	public static byte calcShldUse(L2Character attacker, L2Character target, boolean sendSysMsg)
+	public static byte calcShldUse(Creature attacker, Creature target, boolean sendSysMsg)
 	{
-		final L2Item item = target.getSecondaryWeaponItem();
-		if ((item == null) || !(item instanceof L2Armor) || (((L2Armor) item).getItemType() == ArmorType.SIGIL))
+		final Item item = target.getSecondaryWeaponItem();
+		if ((item == null) || !(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
 		}
@@ -554,7 +554,7 @@ public final class Formulas
 		
 		if (sendSysMsg && target.isPlayer())
 		{
-			final L2PcInstance enemy = target.getActingPlayer();
+			final PlayerInstance enemy = target.getActingPlayer();
 			
 			switch (shldSuccess)
 			{
@@ -574,12 +574,12 @@ public final class Formulas
 		return shldSuccess;
 	}
 	
-	public static byte calcShldUse(L2Character attacker, L2Character target)
+	public static byte calcShldUse(Creature attacker, Creature target)
 	{
 		return calcShldUse(attacker, target, true);
 	}
 	
-	public static boolean calcMagicAffected(L2Character actor, L2Character target, Skill skill)
+	public static boolean calcMagicAffected(Creature actor, Creature target, Skill skill)
 	{
 		// TODO: CHECK/FIX THIS FORMULA UP!!
 		double defence = 0;
@@ -604,7 +604,7 @@ public final class Formulas
 		return d > 0;
 	}
 	
-	public static double calcLvlBonusMod(L2Character attacker, L2Character target, Skill skill)
+	public static double calcLvlBonusMod(Creature attacker, Creature target, Skill skill)
 	{
 		final int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
 		final double skillLvlBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
@@ -619,10 +619,10 @@ public final class Formulas
 	 * @param skill the skill
 	 * @return {@code true} if the effect lands
 	 */
-	public static boolean calcEffectSuccess(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill)
 	{
 		// StaticObjects can not receive continuous effects.
-		if (target.isDoor() || (target instanceof L2SiegeFlagInstance) || (target instanceof L2StaticObjectInstance))
+		if (target.isDoor() || (target instanceof SiegeFlagInstance) || (target instanceof StaticObjectInstance))
 		{
 			return false;
 		}
@@ -690,7 +690,7 @@ public final class Formulas
 		return true;
 	}
 	
-	public static boolean calcCubicSkillSuccess(CubicInstance attacker, L2Character target, Skill skill, byte shld)
+	public static boolean calcCubicSkillSuccess(CubicInstance attacker, Creature target, Skill skill, byte shld)
 	{
 		if (skill.isDebuff())
 		{
@@ -747,7 +747,7 @@ public final class Formulas
 		return Rnd.get(100) < finalRate;
 	}
 	
-	public static boolean calcMagicSuccess(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcMagicSuccess(Creature attacker, Creature target, Skill skill)
 	{
 		final int mAccDiff = attacker.getMagicAccuracy() - target.getMagicEvasionRate();
 		int mAccModifier = 100;
@@ -788,7 +788,7 @@ public final class Formulas
 		return (Rnd.get(100) < rate);
 	}
 	
-	public static double calcManaDam(L2Character attacker, L2Character target, Skill skill, double power, byte shld, boolean sps, boolean bss, boolean mcrit, double critLimit)
+	public static double calcManaDam(Creature attacker, Creature target, Skill skill, double power, byte shld, boolean sps, boolean bss, boolean mcrit, double critLimit)
 	{
 		// Formula: (SQR(M.Atk)*Power*(Target Max MP/97))/M.Def
 		double mAtk = attacker.getMAtk();
@@ -851,7 +851,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double calculateSkillResurrectRestorePercent(double baseRestorePercent, L2Character caster)
+	public static double calculateSkillResurrectRestorePercent(double baseRestorePercent, Creature caster)
 	{
 		if ((baseRestorePercent == 0) || (baseRestorePercent == 100))
 		{
@@ -870,20 +870,20 @@ public final class Formulas
 		return restorePercent;
 	}
 	
-	public static boolean calcPhysicalSkillEvasion(L2Character activeChar, L2Character target, Skill skill)
+	public static boolean calcPhysicalSkillEvasion(Creature creature, Creature target, Skill skill)
 	{
 		if (Rnd.get(100) < target.getStat().getSkillEvasionTypeValue(skill.getMagicType()))
 		{
-			if (activeChar.isPlayer())
+			if (creature.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
 				sm.addString(target.getName());
-				activeChar.getActingPlayer().sendPacket(sm);
+				creature.getActingPlayer().sendPacket(sm);
 			}
 			if (target.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DODGED_C1_S_ATTACK);
-				sm.addString(activeChar.getName());
+				sm.addString(creature.getName());
 				target.getActingPlayer().sendPacket(sm);
 			}
 			return true;
@@ -891,7 +891,7 @@ public final class Formulas
 		return false;
 	}
 	
-	public static boolean calcSkillMastery(L2Character actor, Skill sk)
+	public static boolean calcSkillMastery(Creature actor, Skill sk)
 	{
 		// Static Skills are not affected by Skill Mastery.
 		if (sk.isStatic() || !actor.isPlayer())
@@ -923,7 +923,7 @@ public final class Formulas
 	 * @param skill Can be {@code null} if there is no skill used for the attack.
 	 * @return The attribute bonus
 	 */
-	public static double calcAttributeBonus(L2Character attacker, L2Character target, Skill skill)
+	public static double calcAttributeBonus(Creature attacker, Creature target, Skill skill)
 	{
 		int attack_attribute;
 		int defence_attribute;
@@ -952,7 +952,7 @@ public final class Formulas
 		return 1;
 	}
 	
-	public static void calcCounterAttack(L2Character attacker, L2Character target, Skill skill, boolean crit)
+	public static void calcCounterAttack(Creature attacker, Creature target, Skill skill, boolean crit)
 	{
 		// Only melee skills can be reflected
 		if (skill.isMagic() || (skill.getCastRange() > MELEE_ATTACK_RANGE))
@@ -991,7 +991,7 @@ public final class Formulas
 	 * @param skill
 	 * @return {@code true} if reflect, {@code false} otherwise.
 	 */
-	public static boolean calcBuffDebuffReflection(L2Character target, Skill skill)
+	public static boolean calcBuffDebuffReflection(Creature target, Skill skill)
 	{
 		if (!skill.isDebuff() || (skill.getActivateRate() == -1))
 		{
@@ -1002,17 +1002,17 @@ public final class Formulas
 	
 	/**
 	 * Calculate damage caused by falling
-	 * @param cha
+	 * @param creature
 	 * @param fallHeight
 	 * @return damage
 	 */
-	public static double calcFallDam(L2Character cha, int fallHeight)
+	public static double calcFallDam(Creature creature, int fallHeight)
 	{
 		if (!Config.ENABLE_FALLING_DAMAGE || (fallHeight < 0))
 		{
 			return 0;
 		}
-		return cha.getStat().getValue(Stats.FALL, (fallHeight * cha.getMaxHp()) / 1000.0);
+		return creature.getStat().getValue(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000.0);
 	}
 	
 	/**
@@ -1026,21 +1026,21 @@ public final class Formulas
 	 * <li>effect_bonus = (p2 + 100) / 100, p2 - 2nd param of effect. Blow chance of effect.</li>
 	 * </ul>
 	 * Chance cannot be higher than 80%.
-	 * @param activeChar
+	 * @param creature
 	 * @param target
 	 * @param skill
 	 * @param chanceBoost
 	 * @return
 	 */
-	public static boolean calcBlowSuccess(L2Character activeChar, L2Character target, Skill skill, double chanceBoost)
+	public static boolean calcBlowSuccess(Creature creature, Creature target, Skill skill, double chanceBoost)
 	{
-		final L2Weapon weapon = activeChar.getActiveWeaponItem();
-		final double weaponCritical = weapon != null ? weapon.getStats(Stats.CRITICAL_RATE, activeChar.getTemplate().getBaseCritRate()) : activeChar.getTemplate().getBaseCritRate();
+		final Weapon weapon = creature.getActiveWeaponItem();
+		final double weaponCritical = weapon != null ? weapon.getStats(Stats.CRITICAL_RATE, creature.getTemplate().getBaseCritRate()) : creature.getTemplate().getBaseCritRate();
 		// double dexBonus = BaseStats.DEX.calcBonus(activeChar); Not used in GOD
-		final double critHeightBonus = calcCriticalHeightBonus(activeChar, target);
-		final double criticalPosition = calcCriticalPositionBonus(activeChar, target); // 30% chance from back, 10% chance from side. Include buffs that give positional crit rate.
+		final double critHeightBonus = calcCriticalHeightBonus(creature, target);
+		final double criticalPosition = calcCriticalPositionBonus(creature, target); // 30% chance from back, 10% chance from side. Include buffs that give positional crit rate.
 		final double chanceBoostMod = (100 + chanceBoost) / 100;
-		final double blowRateMod = activeChar.getStat().getValue(Stats.BLOW_RATE, 1);
+		final double blowRateMod = creature.getStat().getValue(Stats.BLOW_RATE, 1);
 		
 		final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod;
 		
@@ -1048,7 +1048,7 @@ public final class Formulas
 		return Rnd.get(100) < Math.min(rate, 80);
 	}
 	
-	public static List<BuffInfo> calcCancelStealEffects(L2Character activeChar, L2Character target, Skill skill, DispelSlotType slot, int rate, int max)
+	public static List<BuffInfo> calcCancelStealEffects(Creature creature, Creature target, Skill skill, DispelSlotType slot, int rate, int max)
 	{
 		final List<BuffInfo> canceled = new ArrayList<>(max);
 		switch (slot)
@@ -1115,7 +1115,7 @@ public final class Formulas
 		return canceled;
 	}
 	
-	public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Skill skill, L2Character target)
+	public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Skill skill, Creature target)
 	{
 		final int chance = (int) (rate + ((cancelMagicLvl - info.getSkill().getMagicLevel()) * 2) + ((info.getAbnormalTime() / 120) * target.getStat().getValue(Stats.RESIST_DISPEL_BUFF, 1)));
 		return Rnd.get(100) < CommonUtil.constrain(chance, 25, 75); // TODO: i_dispel_by_slot_probability min = 40, max = 95.
@@ -1129,7 +1129,7 @@ public final class Formulas
 	 * @param skill the skill
 	 * @return the time that the effect will last
 	 */
-	public static int calcEffectAbnormalTime(L2Character caster, L2Character target, Skill skill)
+	public static int calcEffectAbnormalTime(Creature caster, Creature target, Skill skill)
 	{
 		int time = (skill == null) || skill.isPassive() || skill.isToggle() ? -1 : skill.getAbnormalTime();
 		
@@ -1163,7 +1163,7 @@ public final class Formulas
 	 * @param skill
 	 * @return chance for effect to succeed
 	 */
-	public static boolean calcProbability(double baseChance, L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcProbability(double baseChance, Creature attacker, Creature target, Skill skill)
 	{
 		// Skills without set probability should only test against trait invulnerability.
 		if (Double.isNaN(baseChance))
@@ -1182,7 +1182,7 @@ public final class Formulas
 	 * @param finalExp
 	 * @return the amount of karma player has loosed.
 	 */
-	public static int calculateKarmaLost(L2PcInstance player, double finalExp)
+	public static int calculateKarmaLost(PlayerInstance player, double finalExp)
 	{
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (finalExp > 0) // Received exp
@@ -1225,7 +1225,7 @@ public final class Formulas
 		return result;
 	}
 	
-	public static double calcGeneralTraitBonus(L2Character attacker, L2Character target, TraitType traitType, boolean ignoreResistance)
+	public static double calcGeneralTraitBonus(Creature attacker, Creature target, TraitType traitType, boolean ignoreResistance)
 	{
 		if (traitType == TraitType.NONE)
 		{
@@ -1265,12 +1265,12 @@ public final class Formulas
 		return CommonUtil.constrain(result, 0.05, 2.0);
 	}
 	
-	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
+	public static double calcWeaponTraitBonus(Creature attacker, Creature target)
 	{
 		return Math.max(0, 2.0 - target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()));
 	}
 	
-	public static double calcAttackTraitBonus(L2Character attacker, L2Character target)
+	public static double calcAttackTraitBonus(Creature attacker, Creature target)
 	{
 		final double weaponTraitBonus = calcWeaponTraitBonus(attacker, target);
 		if (weaponTraitBonus == 0)
@@ -1294,7 +1294,7 @@ public final class Formulas
 		return CommonUtil.constrain((weaponTraitBonus * weaknessBonus), 0.05, 2.0);
 	}
 	
-	public static double getBasicPropertyResistBonus(BasicProperty basicProperty, L2Character target)
+	public static double getBasicPropertyResistBonus(BasicProperty basicProperty, Creature target)
 	{
 		if ((basicProperty == BasicProperty.NONE) || !target.hasBasicPropertyResist())
 		{
@@ -1332,7 +1332,7 @@ public final class Formulas
 	 * @param ss if weapon item was charged by soulshot
 	 * @return
 	 */
-	public static double calcAutoAttackDamage(L2Character attacker, L2Character target, byte shld, boolean crit, boolean ss)
+	public static double calcAutoAttackDamage(Creature attacker, Creature target, byte shld, boolean crit, boolean ss)
 	{
 		// DEFENCE CALCULATION (pDef + sDef)
 		double defence = target.getPDef();
@@ -1350,7 +1350,7 @@ public final class Formulas
 			}
 		}
 		
-		final L2Weapon weapon = attacker.getActiveWeaponItem();
+		final Weapon weapon = attacker.getActiveWeaponItem();
 		final boolean isRanged = (weapon != null) && weapon.getItemType().isRanged();
 		final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
 		
@@ -1378,7 +1378,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double getAbnormalResist(BasicProperty basicProperty, L2Character target)
+	public static double getAbnormalResist(BasicProperty basicProperty, Creature target)
 	{
 		switch (basicProperty)
 		{
@@ -1397,7 +1397,7 @@ public final class Formulas
 		}
 	}
 	
-	public static double calcPveDamagePenalty(L2Character attacker, L2Character target, Skill skill, boolean crit)
+	public static double calcPveDamagePenalty(Creature attacker, Creature target, Skill skill, boolean crit)
 	{
 		if (target.isAttackable() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) > 1))
 		{
@@ -1419,16 +1419,16 @@ public final class Formulas
 	
 	/**
 	 * Calculates if the specified creature can get its stun effect removed due to damage taken.
-	 * @param activeChar the character to be checked
+	 * @param creature the creature to be checked
 	 * @return {@code true} if character should get its stun effects removed, {@code false} otherwise.
 	 */
-	public static boolean calcStunBreak(L2Character activeChar)
+	public static boolean calcStunBreak(Creature creature)
 	{
 		// Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
-		if (Config.ALT_GAME_STUN_BREAK && activeChar.hasBlockActions() && (Rnd.get(14) == 0))
+		if (Config.ALT_GAME_STUN_BREAK && creature.hasBlockActions() && (Rnd.get(14) == 0))
 		{
 			// Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
-			return activeChar.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
+			return creature.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
 		}
 		return false;
 	}
@@ -1501,11 +1501,11 @@ public final class Formulas
 	}
 	
 	/**
-	 * @param activeChar
+	 * @param creature
 	 * @param weapon
 	 * @return {@code (500_000 millis + 333 * WeaponItemReuseDelay) / PAttackSpeed}
 	 */
-	public static int calculateReuseTime(L2Character activeChar, L2Weapon weapon)
+	public static int calculateReuseTime(Creature creature, Weapon weapon)
 	{
 		if (weapon == null)
 		{
@@ -1513,7 +1513,7 @@ public final class Formulas
 		}
 		
 		final WeaponType defaultAttackType = weapon.getItemType();
-		final WeaponType weaponType = activeChar.getTransformation().map(transform -> transform.getBaseAttackType(activeChar, defaultAttackType)).orElse(defaultAttackType);
+		final WeaponType weaponType = creature.getTransformation().map(transform -> transform.getBaseAttackType(creature, defaultAttackType)).orElse(defaultAttackType);
 		int reuse = weapon.getReuseDelay();
 		
 		// only bows should continue for now
@@ -1522,13 +1522,13 @@ public final class Formulas
 			return 0;
 		}
 		
-		reuse *= activeChar.getStat().getWeaponReuseModifier();
-		double atkSpd = activeChar.getStat().getPAtkSpd();
+		reuse *= creature.getStat().getWeaponReuseModifier();
+		double atkSpd = creature.getStat().getPAtkSpd();
 		
 		return (int) ((500000 + (333 * reuse)) / atkSpd);
 	}
 	
-	public static double calculatePvpPveBonus(L2Character attacker, L2Character target, Skill skill, boolean crit)
+	public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill, boolean crit)
 	{
 		// PvP bonus
 		if (attacker.isPlayable() && target.isPlayable())

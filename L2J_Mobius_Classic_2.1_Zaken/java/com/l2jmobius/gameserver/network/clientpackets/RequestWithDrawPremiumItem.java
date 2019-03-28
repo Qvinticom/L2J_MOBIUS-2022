@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2PremiumItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.PremiumItem;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 import com.l2jmobius.gameserver.util.Util;
@@ -35,7 +35,7 @@ public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
 	private long _itemCount;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemNum = packet.readD();
 		_charId = packet.readD();
@@ -44,11 +44,11 @@ public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -56,28 +56,28 @@ public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if (activeChar.getObjectId() != _charId)
+		else if (player.getObjectId() != _charId)
 		{
-			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + player.getName(), Config.DEFAULT_PUNISH);
 			return;
 		}
-		else if (activeChar.getPremiumItemList().isEmpty())
+		else if (player.getPremiumItemList().isEmpty())
 		{
-			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "[RequestWithDrawPremiumItem] Player: " + player.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
 			return;
 		}
-		else if ((activeChar.getWeightPenalty() >= 3) || !activeChar.isInventoryUnder90(false))
+		else if ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(false))
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction())
+		else if (player.isProcessingTransaction())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
 			return;
 		}
 		
-		final L2PremiumItem _item = activeChar.getPremiumItemList().get(_itemNum);
+		final PremiumItem _item = player.getPremiumItemList().get(_itemNum);
 		if (_item == null)
 		{
 			return;
@@ -89,26 +89,26 @@ public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
 		
 		final long itemsLeft = (_item.getCount() - _itemCount);
 		
-		activeChar.addItem("PremiumItem", _item.getItemId(), _itemCount, activeChar.getTarget(), true);
+		player.addItem("PremiumItem", _item.getItemId(), _itemCount, player.getTarget(), true);
 		
 		if (itemsLeft > 0)
 		{
 			_item.updateCount(itemsLeft);
-			activeChar.updatePremiumItem(_itemNum, itemsLeft);
+			player.updatePremiumItem(_itemNum, itemsLeft);
 		}
 		else
 		{
-			activeChar.getPremiumItemList().remove(_itemNum);
-			activeChar.deletePremiumItem(_itemNum);
+			player.getPremiumItemList().remove(_itemNum);
+			player.deletePremiumItem(_itemNum);
 		}
 		
-		if (activeChar.getPremiumItemList().isEmpty())
+		if (player.getPremiumItemList().isEmpty())
 		{
 			client.sendPacket(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND);
 		}
 		else
 		{
-			client.sendPacket(new ExGetPremiumItemList(activeChar));
+			client.sendPacket(new ExGetPremiumItemList(player));
 		}
 	}
 }

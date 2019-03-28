@@ -17,7 +17,7 @@
 package custom.listeners;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -27,10 +27,10 @@ import com.l2jmobius.gameserver.model.events.annotations.Priority;
 import com.l2jmobius.gameserver.model.events.annotations.Range;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAnswer;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
 import com.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
@@ -63,12 +63,12 @@ public class ListenerTest extends AbstractNpcAI
 		// Manual listener registration
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_DLG_ANSWER, (OnPlayerDlgAnswer event) ->
 		{
-			LOGGER.info(getClass().getSimpleName() + ": " + event.getActiveChar() + " OnPlayerDlgAnswer: Answer: " + event.getAnswer() + " MessageId: " + event.getMessageId());
+			LOGGER.info(getClass().getSimpleName() + ": " + event.getPlayer() + " OnPlayerDlgAnswer: Answer: " + event.getAnswer() + " MessageId: " + event.getMessageId());
 		}, this));
 	}
 	
 	/**
-	 * This method will be invoked as soon as an L2Attackable (Rabbits 20432 and 22228) is being attacked from L2PcInstance (a player)
+	 * This method will be invoked as soon as an Attackable (Rabbits 20432 and 22228) is being attacked from PlayerInstance (a player)
 	 * @param event
 	 */
 	private void onAttackableAttack(OnAttackableAttack event)
@@ -77,7 +77,7 @@ public class ListenerTest extends AbstractNpcAI
 	}
 	
 	/**
-	 * This method will be invoked as soon as L2Attackable (Rabbits 20432 and 22228) are being killed by L2PcInstance (a player)<br>
+	 * This method will be invoked as soon as Attackable (Rabbits 20432 and 22228) are being killed by PlayerInstance (a player)<br>
 	 * This listener is registered into individual npcs container.
 	 * @param event
 	 */
@@ -138,7 +138,7 @@ public class ListenerTest extends AbstractNpcAI
 		// Make sure a player killed this monster.
 		if ((event.getAttacker() != null) && event.getAttacker().isPlayable() && event.getTarget().isAttackable())
 		{
-			final L2Attackable monster = (L2Attackable) event.getTarget();
+			final Attackable monster = (Attackable) event.getTarget();
 			monster.dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, Rnd.get(100, 1000)));
 		}
 	}
@@ -152,7 +152,7 @@ public class ListenerTest extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		LOGGER.info(getClass().getSimpleName() + ": Player: " + event.getActiveChar() + " has logged in!");
+		LOGGER.info(getClass().getSimpleName() + ": Player: " + event.getPlayer() + " has logged in!");
 	}
 	
 	/**

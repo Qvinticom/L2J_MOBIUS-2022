@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -32,7 +32,7 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 	private boolean _shiftPressed;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_magicId = packet.readD(); // Identifier of the used skill
 		_ctrlPressed = packet.readD() != 0; // True if it's a ForceAttack : Ctrl pressed
@@ -41,17 +41,17 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		// Get the current PlayerInstance of the player
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Get the level of the used skill
-		Skill skill = activeChar.getKnownSkill(_magicId);
+		Skill skill = player.getKnownSkill(_magicId);
 		if (skill == null)
 		{
 			if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) //
@@ -61,10 +61,10 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 			}
 			else
 			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				if (_magicId > 0)
 				{
-					LOGGER.warning("Skill Id " + _magicId + " not found in player: " + activeChar);
+					LOGGER.warning("Skill Id " + _magicId + " not found in player: " + player);
 				}
 				return;
 			}
@@ -73,18 +73,18 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 		// Skill is blocked from player use.
 		if (skill.isBlockActionUseSkill())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Avoid Use of Skills in AirShip.
-		if (activeChar.isInAirShip())
+		if (player.isInAirShip())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ACTION_IS_PROHIBITED_WHILE_MOUNTED_OR_ON_AN_AIRSHIP);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.THIS_ACTION_IS_PROHIBITED_WHILE_MOUNTED_OR_ON_AN_AIRSHIP);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.useMagic(skill, null, _ctrlPressed, _shiftPressed);
+		player.useMagic(skill, null, _ctrlPressed, _shiftPressed);
 	}
 }

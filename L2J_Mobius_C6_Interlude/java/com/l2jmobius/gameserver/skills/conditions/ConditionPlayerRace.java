@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.skills.conditions;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.Race;
 import com.l2jmobius.gameserver.skills.Env;
 
@@ -35,10 +35,10 @@ public class ConditionPlayerRace extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		if (!(env.player instanceof L2PcInstance))
+		if (!(env.player instanceof PlayerInstance))
 		{
 			return false;
 		}
-		return ((L2PcInstance) env.player).getRace() == _race;
+		return ((PlayerInstance) env.player).getRace() == _race;
 	}
 }

@@ -16,18 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Summon;
 
 /**
- * This class ...
  * @author Yme
  * @version $Revision: 1.3.2.2.2.4 $ $Date: 2005/03/29 23:15:10 $
  */
-public class PetStatusShow extends L2GameServerPacket
+public class PetStatusShow extends GameServerPacket
 {
 	private final int _summonType;
 	
-	public PetStatusShow(L2Summon summon)
+	public PetStatusShow(Summon summon)
 	{
 		_summonType = summon.getSummonType();
 	}

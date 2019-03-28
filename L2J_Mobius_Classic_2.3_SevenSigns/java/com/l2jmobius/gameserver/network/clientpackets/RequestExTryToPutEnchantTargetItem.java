@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 
@@ -34,22 +34,22 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		final EnchantItemRequest request = player.getRequest(EnchantItemRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			return;
@@ -57,8 +57,8 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 		
 		request.setEnchantingItem(_objectId);
 		
-		final L2ItemInstance item = request.getEnchantingItem();
-		final L2ItemInstance scroll = request.getEnchantingScroll();
+		final ItemInstance item = request.getEnchantingItem();
+		final ItemInstance scroll = request.getEnchantingScroll();
 		if ((item == null) || (scroll == null))
 		{
 			return;
@@ -68,7 +68,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
 		{
 			client.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			client.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{

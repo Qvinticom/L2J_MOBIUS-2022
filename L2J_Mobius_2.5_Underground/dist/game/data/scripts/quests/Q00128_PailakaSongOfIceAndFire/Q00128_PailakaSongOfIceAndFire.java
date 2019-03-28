@@ -17,14 +17,14 @@
 package quests.Q00128_PailakaSongOfIceAndFire;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -82,11 +82,11 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -106,18 +106,18 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			}
 			case "32497-03.htm":
 			{
-				if (!st.isStarted())
+				if (!qs.isStarted())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "32500-06.htm":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					giveItems(player, SWORD, 1);
 					giveItems(player, BOOK1, 1);
 					htmltext = event;
@@ -126,9 +126,9 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			}
 			case "32507-04.htm":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					takeItems(player, SWORD, -1);
 					takeItems(player, WATER_ESSENCE, -1);
 					takeItems(player, BOOK2, -1);
@@ -140,9 +140,9 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			}
 			case "32507-08.htm":
 			{
-				if (st.isCond(6))
+				if (qs.isCond(6))
 				{
-					st.setCond(7, true);
+					qs.setCond(7, true);
 					takeItems(player, ENH_SWORD1, -1);
 					takeItems(player, BOOK5, -1);
 					takeItems(player, FIRE_ESSENCE, -1);
@@ -170,7 +170,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				{
 					inst.finishInstance();
 				}
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				giveAdena(player, 187200, true);
 				giveItems(player, Integer.parseInt(event), 1);
 				giveItems(player, SCROLL_OF_ESCAPE, 1);
@@ -186,16 +186,16 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
 			case ADLER1:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -204,7 +204,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 					}
 					case State.STARTED:
 					{
-						htmltext = (st.getCond() > 1) ? "32497-00.htm" : "32497-01.htm";
+						htmltext = (qs.getCond() > 1) ? "32497-00.htm" : "32497-01.htm";
 						break;
 					}
 					case State.COMPLETED:
@@ -222,12 +222,12 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			}
 			case SINAI:
 			{
-				htmltext = (st.getCond() > 1) ? "32500-00.htm" : "32500-01.htm";
+				htmltext = (qs.getCond() > 1) ? "32500-00.htm" : "32500-01.htm";
 				break;
 			}
 			case INSPECTOR:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -265,11 +265,11 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			}
 			case ADLER2:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
 					htmltext = "32510-00.htm";
 				}
-				else if (st.isCond(9))
+				else if (qs.isCond(9))
 				{
 					htmltext = "32510-01.htm";
 				}
@@ -280,18 +280,18 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isStarted())
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case HILLAS:
 				{
-					if (st.isCond(2))
+					if (qs.isCond(2))
 					{
-						st.setCond(3);
+						qs.setCond(3);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						takeItems(player, BOOK1, -1);
 						giveItems(player, BOOK2, 1);
@@ -302,9 +302,9 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				}
 				case PAPION:
 				{
-					if (st.isCond(4))
+					if (qs.isCond(4))
 					{
-						st.setCond(5);
+						qs.setCond(5);
 						takeItems(player, BOOK3, -1);
 						giveItems(player, BOOK4, 1);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -314,9 +314,9 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				}
 				case KINSUS:
 				{
-					if (st.isCond(5))
+					if (qs.isCond(5))
 					{
-						st.setCond(6);
+						qs.setCond(6);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						takeItems(player, BOOK4, -1);
 						giveItems(player, BOOK5, 1);
@@ -327,9 +327,9 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				}
 				case GARGOS:
 				{
-					if (st.isCond(7))
+					if (qs.isCond(7))
 					{
-						st.setCond(8);
+						qs.setCond(8);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						takeItems(player, BOOK6, -1);
 						giveItems(player, BOOK7, 1);
@@ -339,9 +339,9 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				}
 				case ADIANTUM:
 				{
-					if (st.isCond(8))
+					if (qs.isCond(8))
 					{
-						st.setCond(9);
+						qs.setCond(9);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						takeItems(player, BOOK7, -1);
 						addSpawn(ADLER2, -53297, 185027, -4617, 33486, false, 0, false, npc.getInstanceId());
@@ -357,7 +357,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
 		
@@ -373,7 +373,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	{
 		if (event.getMarkId() == getId())
 		{
-			final L2PcInstance player = event.getActiveChar();
+			final PlayerInstance player = event.getPlayer();
 			player.sendPacket(new TutorialShowHtml(getHtm(player, "popup.html")));
 		}
 	}

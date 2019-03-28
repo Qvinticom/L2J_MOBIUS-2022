@@ -16,31 +16,31 @@
  */
 package com.l2jmobius.gameserver.model.events.impl.server;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author UnAfraid
  */
 public class OnPacketReceived implements IBaseEvent
 {
-	private final L2GameClient _client;
+	private final GameClient _client;
 	private final byte[] _data;
 	
-	public OnPacketReceived(L2GameClient client, byte[] data)
+	public OnPacketReceived(GameClient client, byte[] data)
 	{
 		_client = client;
 		_data = data;
 	}
 	
-	public L2PcInstance getActiveChar()
+	public PlayerInstance getActiveChar()
 	{
-		return _client.getActiveChar();
+		return _client.getPlayer();
 	}
 	
-	public L2GameClient getClient()
+	public GameClient getClient()
 	{
 		return _client;
 	}

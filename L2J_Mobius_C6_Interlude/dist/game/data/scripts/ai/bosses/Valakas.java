@@ -26,17 +26,17 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestTimer;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
@@ -59,9 +59,9 @@ public class Valakas extends Quest
 	private int i_quest2 = 0; // hate value for 1st player
 	private int i_quest3 = 0; // hate value for 2nd player
 	private int i_quest4 = 0; // hate value for 3rd player
-	private L2Character c_quest2 = null; // 1st most hated target
-	private L2Character c_quest3 = null; // 2nd most hated target
-	private L2Character c_quest4 = null; // 3rd most hated target
+	private Creature c_quest2 = null; // 1st most hated target
+	private Creature c_quest3 = null; // 2nd most hated target
+	private Creature c_quest4 = null; // 3rd most hated target
 	
 	private static final int VALAKAS = 29028;
 	
@@ -72,7 +72,7 @@ public class Valakas extends Quest
 	private static final byte FIGHTING = 2; // Valakas is engaged in battle, annihilating his foes. Entry is locked
 	private static final byte DEAD = 3; // Valakas has been killed. Entry is locked
 	
-	private static L2BossZone _Zone;
+	private static BossZone _Zone;
 	
 	// Boss: Valakas
 	public Valakas(int id, String name, String descr)
@@ -124,9 +124,9 @@ public class Valakas extends Quest
 			
 			final int hp = info.getInteger("currentHP");
 			final int mp = info.getInteger("currentMP");
-			final L2GrandBossInstance valakas = (L2GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
-			final L2NpcInstance _valakas = valakas;
+			final NpcInstance _valakas = valakas;
 			
 			ThreadPool.schedule(() ->
 			{
@@ -153,7 +153,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		if (npc != null)
 		{
@@ -162,10 +162,10 @@ public class Valakas extends Quest
 			{
 				int lvl = 0;
 				int sk_4691 = 0;
-				final L2Effect[] effects = npc.getAllEffects();
+				final Effect[] effects = npc.getAllEffects();
 				if ((effects != null) && (effects.length != 0))
 				{
-					for (L2Effect e : effects)
+					for (Effect e : effects)
 					{
 						if (e.getSkill().getId() == 4629)
 						{
@@ -186,7 +186,7 @@ public class Valakas extends Quest
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					
 					// delete the actual boss
-					final L2GrandBossInstance _boss_instance = GrandBossManager.getInstance().deleteBoss(VALAKAS);
+					final GrandBossInstance _boss_instance = GrandBossManager.getInstance().deleteBoss(VALAKAS);
 					_boss_instance.decayMe();
 					GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 					// npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
@@ -345,11 +345,11 @@ public class Valakas extends Quest
 			final int loc_z = -1595;
 			final int heading = 0;
 			
-			final L2GrandBossInstance valakas = (L2GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			
 			lastAttackTime = System.currentTimeMillis();
-			final L2NpcInstance _valakas = valakas;
+			final NpcInstance _valakas = valakas;
 			ThreadPool.schedule(() ->
 			{
 				try
@@ -364,7 +364,7 @@ public class Valakas extends Quest
 		}
 		else if (event.equals("valakas_unlock"))
 		{
-			// L2GrandBossInstance valakas = (L2GrandBossInstance) addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
+			// GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
 			// GrandBossManager.getInstance().addBoss(valakas);
 			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 		}
@@ -376,7 +376,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (npc.isInvul())
 		{
@@ -389,10 +389,10 @@ public class Valakas extends Quest
 		if (attacker.getMountType() == 1)
 		{
 			int sk_4258 = 0;
-			final L2Effect[] effects = attacker.getAllEffects();
+			final Effect[] effects = attacker.getAllEffects();
 			if ((effects != null) && (effects.length != 0))
 			{
-				for (L2Effect e : effects)
+				for (Effect e : effects)
 				{
 					if (e.getSkill().getId() == 4258)
 					{
@@ -605,7 +605,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0));
 		npc.broadcastPacket(new PlaySound(1, "B03_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -627,17 +627,17 @@ public class Valakas extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public void getRandomSkill(L2NpcInstance npc)
+	public void getRandomSkill(NpcInstance npc)
 	{
 		if (npc.isInvul() || npc.isCastingNow())
 		{
 			return;
 		}
-		L2Skill skill = null;
+		Skill skill = null;
 		int i0 = 0;
 		int i1 = 0;
 		int i2 = 0;
-		L2Character c2 = null;
+		Creature c2 = null;
 		if (c_quest2 == null)
 		{
 			i_quest2 = 0;
@@ -924,7 +924,7 @@ public class Valakas extends Quest
 		}
 	}
 	
-	public void callSkillAI(L2NpcInstance npc, L2Character c2, L2Skill skill)
+	public void callSkillAI(NpcInstance npc, Creature c2, Skill skill)
 	{
 		final QuestTimer timer = getQuestTimer("launch_random_skill", npc, null);
 		
@@ -951,7 +951,7 @@ public class Valakas extends Quest
 				return;
 			}
 		}
-		final L2Character target = c2;
+		final Creature target = c2;
 		if ((target == null) || target.isDead())
 		{
 			return;
@@ -972,18 +972,18 @@ public class Valakas extends Quest
 		}
 	}
 	
-	public void broadcastSpawn(L2NpcInstance npc)
+	public void broadcastSpawn(NpcInstance npc)
 	{
-		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
 		{
-			for (L2Object obj : objs)
+			for (WorldObject obj : objs)
 			{
-				if (obj instanceof L2PcInstance)
+				if (obj instanceof PlayerInstance)
 				{
 					if (Util.checkIfInRange(10000, npc, obj, true))
 					{
-						((L2Character) obj).sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
-						((L2Character) obj).sendPacket(new SocialAction(npc.getObjectId(), 3));
+						((Creature) obj).sendPacket(new PlaySound(1, "B03_A", 1, npc.getObjectId(), 212852, -114842, -1632));
+						((Creature) obj).sendPacket(new SocialAction(npc.getObjectId(), 3));
 					}
 				}
 			}
@@ -991,18 +991,18 @@ public class Valakas extends Quest
 		return;
 	}
 	
-	public L2Character getRandomTarget(L2NpcInstance npc)
+	public Creature getRandomTarget(NpcInstance npc)
 	{
-		final List<L2Character> result = new ArrayList<>();
-		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		final List<Creature> result = new ArrayList<>();
+		final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
 		{
-			for (L2Object obj : objs)
+			for (WorldObject obj : objs)
 			{
-				if ((obj instanceof L2PcInstance) || (obj instanceof L2Summon))
+				if ((obj instanceof PlayerInstance) || (obj instanceof Summon))
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead() && (obj instanceof L2PcInstance) && !((L2PcInstance) obj).isGM())
+					if (Util.checkIfInRange(5000, npc, obj, true) && !((Creature) obj).isDead() && (obj instanceof PlayerInstance) && !((PlayerInstance) obj).isGM())
 					{
-						result.add((L2Character) obj);
+						result.add((Creature) obj);
 					}
 				}
 			}
@@ -1010,13 +1010,13 @@ public class Valakas extends Quest
 		if (!result.isEmpty() && (result.size() != 0))
 		{
 			final Object[] characters = result.toArray();
-			return (L2Character) characters[Rnd.get(characters.length)];
+			return (Creature) characters[Rnd.get(characters.length)];
 		}
 		return null;
 	}
 	
 	@Override
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		if (npc.isInvul())
 		{
@@ -1030,7 +1030,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		int i1 = 0;
 		
@@ -1555,7 +1555,7 @@ public class Valakas extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(L2NpcInstance npc, L2PcInstance caster, L2Skill skill)
+	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		if (npc.isInvul())
 		{

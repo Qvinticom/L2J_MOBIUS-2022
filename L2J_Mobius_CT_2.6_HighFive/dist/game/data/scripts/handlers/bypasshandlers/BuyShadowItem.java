@@ -17,10 +17,10 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class BuyShadowItem implements IBypassHandler
@@ -31,32 +31,32 @@ public class BuyShadowItem implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!(target instanceof L2MerchantInstance))
+		if (!(target instanceof MerchantInstance))
 		{
 			return false;
 		}
 		
-		final NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-		if (activeChar.getLevel() < 40)
+		final NpcHtmlMessage html = new NpcHtmlMessage(((Npc) target).getObjectId());
+		if (player.getLevel() < 40)
 		{
-			html.setFile(activeChar, "data/html/common/shadow_item-lowlevel.htm");
+			html.setFile(player, "data/html/common/shadow_item-lowlevel.htm");
 		}
-		else if ((activeChar.getLevel() >= 40) && (activeChar.getLevel() < 46))
+		else if ((player.getLevel() >= 40) && (player.getLevel() < 46))
 		{
-			html.setFile(activeChar, "data/html/common/shadow_item_d.htm");
+			html.setFile(player, "data/html/common/shadow_item_d.htm");
 		}
-		else if ((activeChar.getLevel() >= 46) && (activeChar.getLevel() < 52))
+		else if ((player.getLevel() >= 46) && (player.getLevel() < 52))
 		{
-			html.setFile(activeChar, "data/html/common/shadow_item_c.htm");
+			html.setFile(player, "data/html/common/shadow_item_c.htm");
 		}
-		else if (activeChar.getLevel() >= 52)
+		else if (player.getLevel() >= 52)
 		{
-			html.setFile(activeChar, "data/html/common/shadow_item_b.htm");
+			html.setFile(player, "data/html/common/shadow_item_b.htm");
 		}
-		html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
-		activeChar.sendPacket(html);
+		html.replace("%objectId%", String.valueOf(((Npc) target).getObjectId()));
+		player.sendPacket(html);
 		
 		return true;
 	}

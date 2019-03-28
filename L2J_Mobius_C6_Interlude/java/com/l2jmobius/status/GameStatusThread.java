@@ -62,18 +62,18 @@ import com.l2jmobius.gameserver.instancemanager.Manager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
-import com.l2jmobius.gameserver.model.multisell.L2Multisell;
+import com.l2jmobius.gameserver.model.multisell.Multisell;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.Say2;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
@@ -335,7 +335,7 @@ public class GameStatusThread extends Thread
 						final StringTokenizer st = new StringTokenizer(val);
 						final String name = st.nextToken();
 						final String message = val.substring(name.length() + 1);
-						final L2PcInstance reciever = L2World.getInstance().getPlayer(name);
+						final PlayerInstance reciever = World.getInstance().getPlayer(name);
 						final CreatureSay cs = new CreatureSay(0, Say2.TELL, "Telnet Priv", message);
 						if (reciever != null)
 						{
@@ -392,7 +392,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						_usrCommand = _usrCommand.substring(5);
-						final L2PcInstance player = L2World.getInstance().getPlayer(_usrCommand);
+						final PlayerInstance player = World.getInstance().getPlayer(_usrCommand);
 						if (player != null)
 						{
 							player.sendMessage("You are kicked by gm");
@@ -455,13 +455,13 @@ public class GameStatusThread extends Thread
 					
 					try
 					{
-						final L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
+						final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
 						final int itemId = Integer.parseInt(st.nextToken());
 						final int amount = Integer.parseInt(st.nextToken());
 						
 						if (player != null)
 						{
-							final L2ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
+							final ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addItem(item);
 							player.sendPacket(iu);
@@ -489,7 +489,7 @@ public class GameStatusThread extends Thread
 					
 					try
 					{
-						final L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
+						final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
 						itemType = Integer.parseInt(st.nextToken());
 						enchant = Integer.parseInt(st.nextToken());
 						
@@ -603,7 +603,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final String playerName = st.nextToken();
-						final L2PcInstance playerObj = L2World.getInstance().getPlayer(playerName);
+						final PlayerInstance playerObj = World.getInstance().getPlayer(playerName);
 						int delay = 0;
 						try
 						{
@@ -612,11 +612,11 @@ public class GameStatusThread extends Thread
 						catch (NumberFormatException | NoSuchElementException nfe)
 						{
 						}
-						// L2PcInstance playerObj = L2World.getInstance().getPlayer(player);
+						// PlayerInstance playerObj = World.getInstance().getPlayer(player);
 						
 						if (playerObj != null)
 						{
-							playerObj.setPunishLevel(L2PcInstance.PunishLevel.JAIL, delay);
+							playerObj.setPunishLevel(PlayerInstance.PunishLevel.JAIL, delay);
 							_print.println("Character " + playerObj.getName() + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
 						}
 						else
@@ -638,11 +638,11 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final String playerName = st.nextToken();
-						final L2PcInstance playerObj = L2World.getInstance().getPlayer(playerName);
+						final PlayerInstance playerObj = World.getInstance().getPlayer(playerName);
 						
 						if (playerObj != null)
 						{
-							playerObj.setPunishLevel(L2PcInstance.PunishLevel.NONE, 0);
+							playerObj.setPunishLevel(PlayerInstance.PunishLevel.NONE, 0);
 							_print.println("Character " + playerObj.getName() + " removed from jail");
 						}
 						else
@@ -727,7 +727,7 @@ public class GameStatusThread extends Thread
 						if (type.equals("multisell"))
 						{
 							_print.print("Reloading multisell... ");
-							L2Multisell.getInstance().reload();
+							Multisell.getInstance().reload();
 							_print.println("done");
 						}
 						else if (type.equals("skill"))
@@ -783,7 +783,7 @@ public class GameStatusThread extends Thread
 							_print.print("Reloading spawns... ");
 							RaidBossSpawnManager.getInstance().cleanUp();
 							DayNightSpawnManager.getInstance().cleanUp();
-							L2World.getInstance().deleteVisibleNpcSpawns();
+							World.getInstance().deleteVisibleNpcSpawns();
 							NpcTable.getInstance().reloadAllNpc();
 							SpawnTable.getInstance().reloadAll();
 							RaidBossSpawnManager.getInstance().load();
@@ -804,10 +804,10 @@ public class GameStatusThread extends Thread
 						// name;type;x;y;itemId:enchant:price...
 						if (type.equals("privatestore"))
 						{
-							final Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers();
-							// synchronized (L2World.getInstance().getAllPlayers())
+							final Collection<PlayerInstance> pls = World.getInstance().getAllPlayers();
+							// synchronized (World.getInstance().getAllPlayers())
 							{
-								for (L2PcInstance player : pls)
+								for (PlayerInstance player : pls)
 								{
 									if (player.getPrivateStoreType() == 0)
 									{
@@ -867,14 +867,14 @@ public class GameStatusThread extends Thread
 		}
 	}
 	
-	private boolean setEnchant(L2PcInstance activeChar, int ench, int armorType)
+	private boolean setEnchant(PlayerInstance player, int ench, int armorType)
 	{
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
-		L2ItemInstance itemInstance = null;
+		ItemInstance itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		L2ItemInstance parmorInstance = activeChar.getInventory().getPaperdollItem(armorType);
+		ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -882,7 +882,7 @@ public class GameStatusThread extends Thread
 		else
 		{
 			// for bows/crossbows and double handed weapons
-			parmorInstance = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			parmorInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_RHAND))
 			{
 				itemInstance = parmorInstance;
@@ -894,24 +894,24 @@ public class GameStatusThread extends Thread
 			curEnchant = itemInstance.getEnchantLevel();
 			
 			// set enchant value
-			activeChar.getInventory().unEquipItemInSlot(armorType);
+			player.getInventory().unEquipItemInSlot(armorType);
 			itemInstance.setEnchantLevel(ench);
-			activeChar.getInventory().equipItem(itemInstance);
+			player.getInventory().equipItem(itemInstance);
 			
 			// send packets
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
-			activeChar.sendPacket(iu);
-			activeChar.broadcastPacket(new CharInfo(activeChar));
-			activeChar.sendPacket(new UserInfo(activeChar));
-			// activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
+			player.sendPacket(iu);
+			player.broadcastPacket(new CharInfo(player));
+			player.sendPacket(new UserInfo(player));
+			// player.broadcastPacket(new ExBrExtraUserInfo(player));
 			
 			// informations
-			activeChar.sendMessage("Changed enchantment of " + activeChar.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
-			activeChar.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
 			
 			// LOGGER
-			GMAudit.auditGMAction("TelnetAdministrator", "enchant", activeChar.getName(), itemInstance.getItem().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
+			GMAudit.auditGMAction("TelnetAdministrator", "enchant", player.getName(), itemInstance.getItem().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
 			return true;
 		}
 		return false;
@@ -925,7 +925,7 @@ public class GameStatusThread extends Thread
 			statement.setInt(1, -114356);
 			statement.setInt(2, -249645);
 			statement.setInt(3, -2984);
-			statement.setInt(4, L2PcInstance.PunishLevel.JAIL.value());
+			statement.setInt(4, PlayerInstance.PunishLevel.JAIL.value());
 			statement.setLong(5, delay * 60000);
 			statement.setString(6, name);
 			
@@ -1012,8 +1012,8 @@ public class GameStatusThread extends Thread
 		int objectCount = 0;
 		final int max = LoginServerThread.getInstance().getMaxPlayer();
 		
-		playerCount = L2World.getAllPlayersCount();
-		objectCount = L2World.getInstance().getAllVisibleObjectsCount();
+		playerCount = World.getAllPlayersCount();
+		objectCount = World.getInstance().getAllVisibleObjectsCount();
 		
 		int itemCount = 0;
 		int itemVoidCount = 0;
@@ -1028,25 +1028,25 @@ public class GameStatusThread extends Thread
 		int summonCount = 0;
 		int AICount = 0;
 		
-		final L2ObjectMap<L2Object> objs = L2World.getInstance().getAllVisibleObjects();
-		// synchronized (L2World.getInstance().getAllVisibleObjects())
+		final L2ObjectMap<WorldObject> objs = World.getInstance().getAllVisibleObjects();
+		// synchronized (World.getInstance().getAllVisibleObjects())
 		{
-			for (L2Object obj : objs)
+			for (WorldObject obj : objs)
 			{
 				if (obj == null)
 				{
 					continue;
 				}
-				if (obj instanceof L2Character)
+				if (obj instanceof Creature)
 				{
-					if (((L2Character) obj).hasAI())
+					if (((Creature) obj).hasAI())
 					{
 						AICount++;
 					}
 				}
-				if (obj instanceof L2ItemInstance)
+				if (obj instanceof ItemInstance)
 				{
-					if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+					if (((ItemInstance) obj).getLocation() == ItemInstance.ItemLocation.VOID)
 					{
 						itemVoidCount++;
 					}
@@ -1055,36 +1055,36 @@ public class GameStatusThread extends Thread
 						itemCount++;
 					}
 				}
-				else if (obj instanceof L2MonsterInstance)
+				else if (obj instanceof MonsterInstance)
 				{
 					monsterCount++;
-					if (((L2MonsterInstance) obj).hasMinions())
+					if (((MonsterInstance) obj).hasMinions())
 					{
-						minionCount += ((L2MonsterInstance) obj).getSpawnedMinions().size(); /* .countSpawnedMinions(); */
-						// minionsGroupCount += ((L2MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
+						minionCount += ((MonsterInstance) obj).getSpawnedMinions().size(); /* .countSpawnedMinions(); */
+						// minionsGroupCount += ((MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
 					}
 				}
-				else if (obj instanceof L2NpcInstance)
+				else if (obj instanceof NpcInstance)
 				{
 					npcCount++;
 				}
-				else if (obj instanceof L2PcInstance)
+				else if (obj instanceof PlayerInstance)
 				{
 					pcCount++;
-					if ((((L2PcInstance) obj).getClient() != null) && ((L2PcInstance) obj).getClient().isDetached())
+					if ((((PlayerInstance) obj).getClient() != null) && ((PlayerInstance) obj).getClient().isDetached())
 					{
 						detachedCount++;
 					}
 				}
-				else if (obj instanceof L2Summon)
+				else if (obj instanceof Summon)
 				{
 					summonCount++;
 				}
-				else if (obj instanceof L2DoorInstance)
+				else if (obj instanceof DoorInstance)
 				{
 					doorCount++;
 				}
-				else if (obj instanceof L2Character)
+				else if (obj instanceof Creature)
 				{
 					charCount++;
 				}
@@ -1096,16 +1096,16 @@ public class GameStatusThread extends Thread
 		sb.append("\r\n  ---> Offline Count: " + detachedCount + "/" + playerCount);
 		sb.append("\r\n  +-->  Object Count: " + objectCount);
 		sb.append("\r\n  +-->      AI Count: " + AICount);
-		sb.append("\r\n  +.... L2Item(Void): " + itemVoidCount);
-		sb.append("\r\n  +.......... L2Item: " + itemCount);
-		sb.append("\r\n  +....... L2Monster: " + monsterCount);
+		sb.append("\r\n  +.... Item(Void): " + itemVoidCount);
+		sb.append("\r\n  +.......... Item: " + itemCount);
+		sb.append("\r\n  +....... Monster: " + monsterCount);
 		sb.append("\r\n  +......... Minions: " + minionCount);
 		sb.append("\r\n  +.. Minions Groups: " + minionsGroupCount);
-		sb.append("\r\n  +........... L2Npc: " + npcCount);
-		sb.append("\r\n  +............ L2Pc: " + pcCount);
-		sb.append("\r\n  +........ L2Summon: " + summonCount);
-		sb.append("\r\n  +.......... L2Door: " + doorCount);
-		sb.append("\r\n  +.......... L2Char: " + charCount);
+		sb.append("\r\n  +........... Npc: " + npcCount);
+		sb.append("\r\n  +............ Player: " + pcCount);
+		sb.append("\r\n  +........ Summon: " + summonCount);
+		sb.append("\r\n  +.......... Door: " + doorCount);
+		sb.append("\r\n  +.......... Creature: " + charCount);
 		sb.append("\r\n  --->   Ingame Time: " + gameTime());
 		sb.append("\r\n  ---> Server Uptime: " + getUptime(_uptime));
 		sb.append("\r\n  --->      GM Count: " + getOnlineGMS());

@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.events.impl.item;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author UnAfraid
@@ -27,15 +27,15 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 public class OnItemCreate implements IBaseEvent
 {
 	private final String _process;
-	private final L2ItemInstance _item;
-	private final L2Character _activeChar;
+	private final ItemInstance _item;
+	private final Creature _creature;
 	private final Object _reference;
 	
-	public OnItemCreate(String process, L2ItemInstance item, L2Character actor, Object reference)
+	public OnItemCreate(String process, ItemInstance item, Creature actor, Object reference)
 	{
 		_process = process;
 		_item = item;
-		_activeChar = actor;
+		_creature = actor;
 		_reference = reference;
 	}
 	
@@ -44,14 +44,14 @@ public class OnItemCreate implements IBaseEvent
 		return _process;
 	}
 	
-	public L2ItemInstance getItem()
+	public ItemInstance getItem()
 	{
 		return _item;
 	}
 	
-	public L2Character getActiveChar()
+	public Creature getActiveChar()
 	{
-		return _activeChar;
+		return _creature;
 	}
 	
 	public Object getReference()

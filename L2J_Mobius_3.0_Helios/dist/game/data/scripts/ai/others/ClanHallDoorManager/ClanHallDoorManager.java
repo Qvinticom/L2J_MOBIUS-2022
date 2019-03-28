@@ -18,9 +18,9 @@ package ai.others.ClanHallDoorManager;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 
 import ai.AbstractNpcAI;
@@ -57,7 +57,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -93,7 +93,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final ClanHall clanHall = npc.getClanHall();
@@ -115,7 +115,7 @@ public final class ClanHallDoorManager extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean isOwningClan(L2PcInstance player, L2Npc npc)
+	private boolean isOwningClan(PlayerInstance player, Npc npc)
 	{
 		return ((npc.getClanHall().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}

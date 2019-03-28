@@ -16,33 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * 16 d6 6d c0 4b player id who dropped it ee cc 11 43 object id 39 00 00 00 item id 8f 14 00 00 x b7 f1 00 00 y 60 f2 ff ff z 01 00 00 00 show item-count 1=yes 7a 00 00 00 count . format dddddddd rev 377 ddddddddd rev 417
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class DropItem extends L2GameServerPacket
+public class DropItem extends GameServerPacket
 {
-	private final L2ItemInstance _item;
-	private final int _charObjId;
+	private final ItemInstance _item;
+	private final int _objectId;
 	
 	/**
 	 * Constructor of the DropItem server packet
-	 * @param item : L2ItemInstance designating the item
+	 * @param item : ItemInstance designating the item
 	 * @param playerObjId : int designating the player ID who dropped the item
 	 */
-	public DropItem(L2ItemInstance item, int playerObjId)
+	public DropItem(ItemInstance item, int playerObjId)
 	{
 		_item = item;
-		_charObjId = playerObjId;
+		_objectId = playerObjId;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x0c);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_item.getObjectId());
 		writeD(_item.getItemId());
 		

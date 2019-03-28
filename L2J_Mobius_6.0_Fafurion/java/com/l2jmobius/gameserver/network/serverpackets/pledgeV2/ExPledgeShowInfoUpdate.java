@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
 
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExPledgeShowInfoUpdate extends AbstractItemPacket
 {
-	final L2PcInstance _player;
+	final PlayerInstance _player;
 	
-	public ExPledgeShowInfoUpdate(L2PcInstance player)
+	public ExPledgeShowInfoUpdate(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -38,14 +38,14 @@ public class ExPledgeShowInfoUpdate extends AbstractItemPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final L2Clan clan = _player.getClan();
+		final Clan clan = _player.getClan();
 		if (clan == null)
 		{
 			return false;
 		}
 		
 		OutgoingPackets.EX_PLEDGE_SHOW_INFO_UPDATE.writeId(packet);
-		packet.writeD(clan.getId()); // Pledge ID
+		packet.writeD(clan.getId()); // Clan ID
 		packet.writeD(ClanLevelData.getLevelRequirement(clan.getLevel())); // Next level cost
 		packet.writeD(ClanLevelData.getCommonMemberLimit(clan.getLevel())); // Max pledge members
 		packet.writeD(ClanLevelData.getEliteMemberLimit(clan.getLevel())); // Max elite members

@@ -22,7 +22,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,14 +30,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ListPartyWating implements IClientOutgoingPacket
 {
-	private final L2PcInstance _cha;
+	private final PlayerInstance _player;
 	private final int _loc;
 	private final int _lim;
 	private final List<PartyMatchRoom> _rooms;
 	
-	public ListPartyWating(L2PcInstance player, int auto, int location, int limit)
+	public ListPartyWating(PlayerInstance player, int auto, int location, int limit)
 	{
-		_cha = player;
+		_player = player;
 		_loc = location;
 		_lim = limit;
 		_rooms = new ArrayList<>();
@@ -57,7 +57,7 @@ public class ListPartyWating implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			if ((_lim == 0) && ((_cha.getLevel() < room.getMinLvl()) || (_cha.getLevel() > room.getMaxLvl())))
+			if ((_lim == 0) && ((_player.getLevel() < room.getMinLvl()) || (_player.getLevel() > room.getMaxLvl())))
 			{
 				continue;
 			}
@@ -86,7 +86,7 @@ public class ListPartyWating implements IClientOutgoingPacket
 			packet.writeD(room.getMaxMembers());
 			packet.writeS(room.getOwner().getName());
 			packet.writeD(room.getMembers());
-			for (L2PcInstance member : room.getPartyMembers())
+			for (PlayerInstance member : room.getPartyMembers())
 			{
 				if (member != null)
 				{

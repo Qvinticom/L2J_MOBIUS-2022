@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GetOffVehicle implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _boatObjId;
 	private final int _x;
 	private final int _y;
@@ -39,7 +39,7 @@ public class GetOffVehicle implements IClientOutgoingPacket
 	 */
 	public GetOffVehicle(int charObjId, int boatObjId, int x, int y, int z)
 	{
-		_charObjId = charObjId;
+		_objectId = charObjId;
 		_boatObjId = boatObjId;
 		_x = x;
 		_y = y;
@@ -50,7 +50,7 @@ public class GetOffVehicle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GET_OFF_VEHICLE.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_boatObjId);
 		packet.writeD(_x);
 		packet.writeD(_y);

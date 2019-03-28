@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.ClanShopData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ClanShopProductHolder;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeItemBuy;
 
@@ -33,7 +33,7 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 	private int _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemId = packet.readD();
 		_count = packet.readD();
@@ -41,10 +41,10 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (activeChar.getClan() == null))
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || (player.getClan() == null))
 		{
 			client.sendPacket(new ExPledgeItemBuy(1));
 			return;
@@ -57,7 +57,7 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.getClan().getLevel() < product.getClanLevel())
+		if (player.getClan().getLevel() < product.getClanLevel())
 		{
 			client.sendPacket(new ExPledgeItemBuy(2));
 			return;
@@ -65,13 +65,13 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 		
 		final long slots = product.getTradeItem().getItem().isStackable() ? 1 : product.getTradeItem().getCount() * _count;
 		final long weight = product.getTradeItem().getItem().getWeight() * product.getTradeItem().getCount() * _count;
-		if (!activeChar.getInventory().validateWeight(weight) || !activeChar.getInventory().validateCapacity(slots))
+		if (!player.getInventory().validateWeight(weight) || !player.getInventory().validateCapacity(slots))
 		{
 			client.sendPacket(new ExPledgeItemBuy(3));
 			return;
 		}
 		
-		if ((activeChar.getAdena() < (product.getAdena() * _count)) || (activeChar.getFame() < (product.getFame() * _count)))
+		if ((player.getAdena() < (product.getAdena() * _count)) || (player.getFame() < (product.getFame() * _count)))
 		{
 			client.sendPacket(new ExPledgeItemBuy(3));
 			return;
@@ -79,14 +79,14 @@ public class RequestExPledgeItemBuy implements IClientIncomingPacket
 		
 		if (product.getAdena() > 0)
 		{
-			activeChar.reduceAdena("ClanShop", product.getAdena() * _count, activeChar, true);
+			player.reduceAdena("ClanShop", product.getAdena() * _count, player, true);
 		}
 		if (product.getFame() > 0)
 		{
-			activeChar.setFame(activeChar.getFame() - (product.getFame() * _count));
+			player.setFame(player.getFame() - (product.getFame() * _count));
 		}
 		
-		activeChar.addItem("ClanShop", _itemId, product.getCount() * _count, activeChar, true);
+		player.addItem("ClanShop", _itemId, product.getCount() * _count, player, true);
 		client.sendPacket(new ExPledgeItemBuy(0));
 	}
 }

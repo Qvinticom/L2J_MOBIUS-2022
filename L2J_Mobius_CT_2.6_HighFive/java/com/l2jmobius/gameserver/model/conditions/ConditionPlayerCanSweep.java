@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -47,23 +47,23 @@ public class ConditionPlayerCanSweep extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		boolean canSweep = false;
 		if (effector.getActingPlayer() != null)
 		{
-			final L2PcInstance sweeper = effector.getActingPlayer();
+			final PlayerInstance sweeper = effector.getActingPlayer();
 			if (skill != null)
 			{
-				final L2Object[] targets = skill.getTargetList(sweeper);
+				final WorldObject[] targets = skill.getTargetList(sweeper);
 				if (targets != null)
 				{
-					L2Attackable target;
-					for (L2Object objTarget : targets)
+					Attackable target;
+					for (WorldObject objTarget : targets)
 					{
 						if ((objTarget != null) && objTarget.isAttackable())
 						{
-							target = (L2Attackable) objTarget;
+							target = (Attackable) objTarget;
 							if (target.isDead())
 							{
 								if (target.isSpoiled())

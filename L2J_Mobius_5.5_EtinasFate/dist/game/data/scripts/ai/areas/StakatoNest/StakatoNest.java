@@ -19,10 +19,10 @@ package ai.areas.StakatoNest;
 import java.util.List;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -89,13 +89,13 @@ public final class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		final L2MonsterInstance mob = (L2MonsterInstance) npc;
+		final MonsterInstance mob = (MonsterInstance) npc;
 		
 		if ((mob.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
 		{
-			final L2MonsterInstance _follower = checkMinion(npc);
+			final MonsterInstance _follower = checkMinion(npc);
 			
 			if (_follower != null)
 			{
@@ -117,9 +117,9 @@ public final class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2MonsterInstance monster;
+		final MonsterInstance monster;
 		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
@@ -130,7 +130,7 @@ public final class StakatoNest extends AbstractNpcAI
 					Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
 					for (int i = 0; i < 3; i++)
 					{
-						final L2Npc spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
+						final Npc spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
 						addAttackPlayerDesire(spawned, killer);
 					}
 				}
@@ -138,7 +138,7 @@ public final class StakatoNest extends AbstractNpcAI
 			}
 			case STAKATO_BABY:
 			{
-				monster = ((L2MonsterInstance) npc).getLeader();
+				monster = ((MonsterInstance) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("nurse_change", 5000, monster, killer);
@@ -153,7 +153,7 @@ public final class StakatoNest extends AbstractNpcAI
 					Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
 					for (int i = 0; i < 3; i++)
 					{
-						final L2Npc spawned = addSpawn(STAKATO_GUARD, monster, true);
+						final Npc spawned = addSpawn(STAKATO_GUARD, monster, true);
 						addAttackPlayerDesire(spawned, killer);
 					}
 				}
@@ -161,7 +161,7 @@ public final class StakatoNest extends AbstractNpcAI
 			}
 			case STAKATO_FEMALE:
 			{
-				monster = ((L2MonsterInstance) npc).getLeader();
+				monster = ((MonsterInstance) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("male_change", 5000, monster, killer);
@@ -172,8 +172,8 @@ public final class StakatoNest extends AbstractNpcAI
 			{
 				if (killer.isInParty())
 				{
-					final List<L2PcInstance> party = killer.getParty().getMembers();
-					for (L2PcInstance member : party)
+					final List<PlayerInstance> party = killer.getParty().getMembers();
+					for (PlayerInstance member : party)
 					{
 						giveCocoon(member, npc);
 					}
@@ -189,19 +189,19 @@ public final class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (CommonUtil.contains(COCOONS, npc.getId()) && CommonUtil.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
 			npc.doDie(caster);
-			final L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
+			final Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
 			addAttackPlayerDesire(spawned, caster);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc == null) || (player == null) || npc.isDead())
 		{
@@ -226,18 +226,18 @@ public final class StakatoNest extends AbstractNpcAI
 		{
 			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
-			final L2Npc spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
+			final Npc spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
 			addAttackPlayerDesire(spawned, player);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private static L2MonsterInstance checkMinion(L2Npc npc)
+	private static MonsterInstance checkMinion(Npc npc)
 	{
-		final L2MonsterInstance mob = (L2MonsterInstance) npc;
+		final MonsterInstance mob = (MonsterInstance) npc;
 		if (mob.hasMinions())
 		{
-			final List<L2MonsterInstance> minion = mob.getMinionList().getSpawnedMinions();
+			final List<MonsterInstance> minion = mob.getMinionList().getSpawnedMinions();
 			if ((minion != null) && !minion.isEmpty() && (minion.get(0) != null) && !minion.get(0).isDead())
 			{
 				return minion.get(0);
@@ -246,7 +246,7 @@ public final class StakatoNest extends AbstractNpcAI
 		return null;
 	}
 	
-	private static void giveCocoon(L2PcInstance player, L2Npc npc)
+	private static void giveCocoon(PlayerInstance player, Npc npc)
 	{
 		player.addItem("StakatoCocoon", ((getRandom(100) > 80) ? LARGE_COCOON : SMALL_COCOON), 1, npc, true);
 	}

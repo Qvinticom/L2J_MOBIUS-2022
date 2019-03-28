@@ -28,8 +28,8 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import com.l2jmobius.gameserver.model.actor.templates.CharTemplate;
 
 /**
  * This class loads and holds all static object data.
@@ -39,7 +39,7 @@ public final class StaticObjectData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(StaticObjectData.class.getName());
 	
-	private final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();
+	private final Map<Integer, StaticObjectInstance> _staticObjects = new HashMap<>();
 	
 	/**
 	 * Instantiates a new static objects.
@@ -88,7 +88,7 @@ public final class StaticObjectData implements IGameXmlReader
 	 */
 	private void addObject(StatsSet set)
 	{
-		final L2StaticObjectInstance obj = new L2StaticObjectInstance(new L2CharTemplate(new StatsSet()), set.getInt("id"));
+		final StaticObjectInstance obj = new StaticObjectInstance(new CharTemplate(new StatsSet()), set.getInt("id"));
 		obj.setType(set.getInt("type", 0));
 		obj.setName(set.getString("name"));
 		obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));
@@ -100,7 +100,7 @@ public final class StaticObjectData implements IGameXmlReader
 	 * Gets the static objects.
 	 * @return a collection of static objects.
 	 */
-	public Collection<L2StaticObjectInstance> getStaticObjects()
+	public Collection<StaticObjectInstance> getStaticObjects()
 	{
 		return _staticObjects.values();
 	}

@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -65,10 +65,10 @@ public final class Q10395_NotATraitor extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -84,15 +84,15 @@ public final class Q10395_NotATraitor extends Quest
 			}
 			case "33863-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33862-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EAC, 5);
 					giveStoryQuestReward(player, 32);
 					if (player.getLevel() >= MIN_LEVEL)
@@ -108,12 +108,12 @@ public final class Q10395_NotATraitor extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -125,11 +125,11 @@ public final class Q10395_NotATraitor extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = npc.getId() == LEO ? "33863-04.htm" : "33862-01.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
 					htmltext = npc.getId() == LEO ? "33863-04.htm" : "33862-02.html";
 				}
@@ -148,34 +148,34 @@ public final class Q10395_NotATraitor extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(1) && (getRandom(100) < 75))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1) && (getRandom(100) < 75))
 		{
-			final int killedMonsters = st.getInt("killedMonsters") + 1;
-			st.set("killedMonsters", killedMonsters);
+			final int killedMonsters = qs.getInt("killedMonsters") + 1;
+			qs.set("killedMonsters", killedMonsters);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			
 			if (killedMonsters == 50)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_OEL_MAHUM_MONSTERS, st.getInt("killedMonsters")));
+			npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_OEL_MAHUM_MONSTERS, qs.getInt("killedMonsters")));
 			return npcLogList;
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

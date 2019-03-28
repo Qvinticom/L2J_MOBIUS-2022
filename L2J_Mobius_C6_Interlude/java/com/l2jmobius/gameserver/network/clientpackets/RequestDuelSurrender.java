@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.instancemanager.DuelManager;
  * Format:(ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestDuelSurrender extends L2GameClientPacket
+public final class RequestDuelSurrender extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -33,6 +33,6 @@ public final class RequestDuelSurrender extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		DuelManager.getInstance().doSurrender(getClient().getActiveChar());
+		DuelManager.getInstance().doSurrender(getClient().getPlayer());
 	}
 }

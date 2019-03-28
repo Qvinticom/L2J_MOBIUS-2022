@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-public class RequestSiegeInfo extends L2GameClientPacket
+public class RequestSiegeInfo extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

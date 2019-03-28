@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
-import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
+import com.l2jmobius.gameserver.model.zone.type.FishingZone;
+import com.l2jmobius.gameserver.model.zone.type.WaterZone;
 
 public class FishingZoneManager
 {
@@ -38,14 +38,14 @@ public class FishingZoneManager
 		return _instance;
 	}
 	
-	private List<L2FishingZone> _fishingZones;
-	private List<L2WaterZone> _waterZones;
+	private List<FishingZone> _fishingZones;
+	private List<WaterZone> _waterZones;
 	
 	public FishingZoneManager()
 	{
 	}
 	
-	public void addFishingZone(L2FishingZone fishingZone)
+	public void addFishingZone(FishingZone fishingZone)
 	{
 		if (_fishingZones == null)
 		{
@@ -55,7 +55,7 @@ public class FishingZoneManager
 		_fishingZones.add(fishingZone);
 	}
 	
-	public void addWaterZone(L2WaterZone waterZone)
+	public void addWaterZone(WaterZone waterZone)
 	{
 		if (_waterZones == null)
 		{
@@ -69,9 +69,9 @@ public class FishingZoneManager
 	 * isInsideFishingZone() - This function was modified to check the coordinates without caring for Z. This allows for the player to fish off bridges, into the water, or from other similar high places. One should be able to cast the line from up into the water, not only fishing whith one's feet
 	 * wet. :) TODO: Consider in the future, limiting the maximum height one can be above water, if we start getting "orbital fishing" players... xD
 	 */
-	public final L2FishingZone isInsideFishingZone(int x, int y, int z)
+	public final FishingZone isInsideFishingZone(int x, int y, int z)
 	{
-		for (L2FishingZone temp : _fishingZones)
+		for (FishingZone temp : _fishingZones)
 		{
 			if (temp.isInsideZone(x, y, temp.getWaterZ() - 10))
 			{
@@ -81,9 +81,9 @@ public class FishingZoneManager
 		return null;
 	}
 	
-	public final L2WaterZone isInsideWaterZone(int x, int y, int z)
+	public final WaterZone isInsideWaterZone(int x, int y, int z)
 	{
-		for (L2WaterZone temp : _waterZones)
+		for (WaterZone temp : _waterZones)
 		{
 			if (temp.isInsideZone(x, y, temp.getWaterZ()))
 			{

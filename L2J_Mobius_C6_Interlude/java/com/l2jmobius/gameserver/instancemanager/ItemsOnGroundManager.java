@@ -27,10 +27,10 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.templates.item.L2EtcItemType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.templates.item.EtcItemType;
 import com.l2jmobius.gameserver.thread.daemons.ItemsAutoDestroy;
 
 /**
@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.thread.daemons.ItemsAutoDestroy;
 public class ItemsOnGroundManager
 {
 	static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
-	protected List<L2ItemInstance> _items = new ArrayList<>();
+	protected List<ItemInstance> _items = new ArrayList<>();
 	
 	private ItemsOnGroundManager()
 	{
@@ -116,8 +116,8 @@ public class ItemsOnGroundManager
 			result = s.executeQuery("select object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable from itemsonground");
 			while (result.next())
 			{
-				L2ItemInstance item = new L2ItemInstance(result.getInt(1), result.getInt(2));
-				L2World.getInstance().storeObject(item);
+				ItemInstance item = new ItemInstance(result.getInt(1), result.getInt(2));
+				World.getInstance().storeObject(item);
 				if (item.isStackable() && (result.getInt(3) > 1))
 				{
 					item.setCount(result.getInt(3));
@@ -129,7 +129,7 @@ public class ItemsOnGroundManager
 				}
 				
 				item.getPosition().setWorldPosition(result.getInt(5), result.getInt(6), result.getInt(7));
-				item.getPosition().setWorldRegion(L2World.getInstance().getRegion(item.getPosition().getWorldPosition()));
+				item.getPosition().setWorldRegion(World.getInstance().getRegion(item.getPosition().getWorldPosition()));
 				item.getPosition().getWorldRegion().addVisibleObject(item);
 				item.setDropTime(result.getLong(8));
 				if (result.getLong(8) == -1)
@@ -142,7 +142,7 @@ public class ItemsOnGroundManager
 				}
 				
 				item.setIsVisible(true);
-				L2World.getInstance().addVisibleObject(item, item.getPosition().getWorldRegion(), null);
+				World.getInstance().addVisibleObject(item, item.getPosition().getWorldRegion(), null);
 				_items.add(item);
 				count++;
 				// add to ItemsAutoDestroy only items not protected
@@ -150,7 +150,7 @@ public class ItemsOnGroundManager
 				{
 					if (result.getLong(8) > -1)
 					{
-						if (((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != L2EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (item.getItemType() == L2EtcItemType.HERB)))
+						if (((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (item.getItemType() == EtcItemType.HERB)))
 						{
 							ItemsAutoDestroy.getInstance().addItem(item);
 						}
@@ -181,7 +181,7 @@ public class ItemsOnGroundManager
 		}
 	}
 	
-	public void save(L2ItemInstance item)
+	public void save(ItemInstance item)
 	{
 		if (!Config.SAVE_DROPPED_ITEM)
 		{
@@ -191,7 +191,7 @@ public class ItemsOnGroundManager
 		_items.add(item);
 	}
 	
-	public void removeObject(L2Object item)
+	public void removeObject(WorldObject item)
 	{
 		if (!Config.SAVE_DROPPED_ITEM)
 		{
@@ -243,7 +243,7 @@ public class ItemsOnGroundManager
 				return;
 			}
 			
-			for (L2ItemInstance item : _items)
+			for (ItemInstance item : _items)
 			{
 				
 				if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))

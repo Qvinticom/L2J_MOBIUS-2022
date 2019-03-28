@@ -22,13 +22,13 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -38,10 +38,10 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class AreaFriendly implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		final L2PcInstance player = activeChar.getActingPlayer();
+		final List<Creature> targetList = new ArrayList<>();
+		final PlayerInstance player = creature.getActingPlayer();
 		
 		if (!checkTarget(player, target) && (skill.getCastRange() >= 0))
 		{
@@ -51,7 +51,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (onlyFirst)
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
 				target
 			};
@@ -59,7 +59,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (player.getActingPlayer().isInOlympiadMode())
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
 				player
 			};
@@ -69,9 +69,9 @@ public class AreaFriendly implements ITargetTypeHandler
 		if (target != null)
 		{
 			final int maxTargets = skill.getAffectLimit();
-			L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, skill.getAffectRange(), obj ->
+			World.getInstance().forEachVisibleObjectInRange(target, Creature.class, skill.getAffectRange(), obj ->
 			{
-				if (!checkTarget(player, obj) || (obj == activeChar))
+				if (!checkTarget(player, obj) || (obj == creature))
 				{
 					return;
 				}
@@ -89,26 +89,26 @@ public class AreaFriendly implements ITargetTypeHandler
 		{
 			return EMPTY_TARGET_LIST;
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
-	private boolean checkTarget(L2PcInstance activeChar, L2Character target)
+	private boolean checkTarget(PlayerInstance player, Creature target)
 	{
-		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
+		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof SiegeFlagInstance) || target.isMonster())
 		{
 			return false;
 		}
 		
-		if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
+		if (!GeoEngine.getInstance().canSeeTarget(player, target))
 		{
 			return false;
 		}
 		
 		if (target.isPlayable())
 		{
-			final L2PcInstance targetPlayer = target.getActingPlayer();
+			final PlayerInstance targetPlayer = target.getActingPlayer();
 			
-			if (activeChar == targetPlayer)
+			if (player == targetPlayer)
 			{
 				return true;
 			}
@@ -118,12 +118,12 @@ public class AreaFriendly implements ITargetTypeHandler
 				return false;
 			}
 			
-			if (activeChar.isInDuelWith(target))
+			if (player.isInDuelWith(target))
 			{
 				return false;
 			}
 			
-			if (activeChar.isInPartyWith(target))
+			if (player.isInPartyWith(target))
 			{
 				return true;
 			}
@@ -133,7 +133,7 @@ public class AreaFriendly implements ITargetTypeHandler
 				return false;
 			}
 			
-			if (activeChar.isInClanWith(target) || activeChar.isInAllyWith(target) || activeChar.isInCommandChannelWith(target))
+			if (player.isInClanWith(target) || player.isInAllyWith(target) || player.isInCommandChannelWith(target))
 			{
 				return true;
 			}
@@ -146,18 +146,18 @@ public class AreaFriendly implements ITargetTypeHandler
 		return true;
 	}
 	
-	public class CharComparator implements Comparator<L2Character>
+	public class CharComparator implements Comparator<Creature>
 	{
 		@Override
-		public int compare(L2Character char1, L2Character char2)
+		public int compare(Creature char1, Creature char2)
 		{
 			return Double.compare((char1.getCurrentHp() / char1.getMaxHp()), (char2.getCurrentHp() / char2.getMaxHp()));
 		}
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.AREA_FRIENDLY;
+		return TargetType.AREA_FRIENDLY;
 	}
 }

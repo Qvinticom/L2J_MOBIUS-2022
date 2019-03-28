@@ -20,8 +20,8 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class PlayerHelp implements IBypassHandler
@@ -32,7 +32,7 @@ public class PlayerHelp implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		try
 		{
@@ -61,8 +61,8 @@ public class PlayerHelp implements IBypassHandler
 				html = new NpcHtmlMessage();
 			}
 			
-			html.setFile(activeChar, "data/html/help/" + cmd[0]);
-			activeChar.sendPacket(html);
+			html.setFile(player, "data/html/help/" + cmd[0]);
+			player.sendPacket(html);
 		}
 		catch (Exception e)
 		{

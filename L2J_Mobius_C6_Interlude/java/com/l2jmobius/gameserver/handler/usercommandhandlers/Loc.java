@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -30,9 +30,9 @@ public class Loc implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		final int _nearestTown = MapRegionTable.getInstance().getClosestTownNumber(activeChar);
+		final int _nearestTown = MapRegionTable.getInstance().getClosestTownNumber(player);
 		SystemMessageId msg;
 		
 		switch (_nearestTown)
@@ -139,10 +139,10 @@ public class Loc implements IUserCommandHandler
 		}
 		
 		SystemMessage sm = new SystemMessage(msg);
-		sm.addNumber(activeChar.getX());
-		sm.addNumber(activeChar.getY());
-		sm.addNumber(activeChar.getZ());
-		activeChar.sendPacket(sm);
+		sm.addNumber(player.getX());
+		sm.addNumber(player.getY());
+		sm.addNumber(player.getZ());
+		player.sendPacket(sm);
 		
 		return true;
 	}

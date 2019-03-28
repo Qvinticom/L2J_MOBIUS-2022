@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ChooseInventoryItem;
 
@@ -60,22 +60,22 @@ public class EnchantScrolls implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
-		if (activeChar.isCastingNow() || activeChar.isCastingPotionNow())
+		final PlayerInstance player = (PlayerInstance) playable;
+		if (player.isCastingNow() || player.isCastingPotionNow())
 		{
 			return;
 		}
 		
-		activeChar.setActiveEnchantItem(item);
-		activeChar.sendPacket(SystemMessageId.SELECT_ITEM_TO_ENCHANT);
-		activeChar.sendPacket(new ChooseInventoryItem(item.getItemId()));
+		player.setActiveEnchantItem(item);
+		player.sendPacket(SystemMessageId.SELECT_ITEM_TO_ENCHANT);
+		player.sendPacket(new ChooseInventoryItem(item.getItemId()));
 		return;
 	}
 	

@@ -25,18 +25,18 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
+import com.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -102,7 +102,7 @@ public final class Antharas extends AbstractNpcAI
 	private static final SkillHolder ANTH_FEAR_SHORT = new SkillHolder(5092, 1); // Antharas Terror
 	private static final SkillHolder ANTH_METEOR = new SkillHolder(5093, 1); // Antharas Meteor
 	// Zone
-	private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70050, L2NoRestartZone.class); // Antharas Nest zone
+	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70050, NoRestartZone.class); // Antharas Nest zone
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;
@@ -110,15 +110,15 @@ public final class Antharas extends AbstractNpcAI
 	private static final int DEAD = 3;
 	// Misc
 	private static final int MAX_PEOPLE = 200; // Max allowed players
-	private L2GrandBossInstance _antharas = null;
+	private GrandBossInstance _antharas = null;
 	private static long _lastAttack = 0;
 	private static int _minionCount = 0;
 	private static int minionMultipler = 0;
 	private static int moveChance = 0;
 	private static int sandStorm = 0;
-	private static L2PcInstance attacker_1 = null;
-	private static L2PcInstance attacker_2 = null;
-	private static L2PcInstance attacker_3 = null;
+	private static PlayerInstance attacker_1 = null;
+	private static PlayerInstance attacker_2 = null;
+	private static PlayerInstance attacker_3 = null;
 	private static int attacker_1_hate = 0;
 	private static int attacker_2_hate = 0;
 	private static int attacker_3_hate = 0;
@@ -149,14 +149,14 @@ public final class Antharas extends AbstractNpcAI
 		{
 			case ALIVE:
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				break;
 			}
 			case WAITING:
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
@@ -164,7 +164,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case IN_FIGHT:
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(ANTHARAS, loc_x, loc_y, loc_z, heading, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
 				_lastAttack = System.currentTimeMillis();
@@ -182,7 +182,7 @@ public final class Antharas extends AbstractNpcAI
 				else
 				{
 					setStatus(ALIVE);
-					_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+					_antharas = (GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 					addBoss(_antharas);
 				}
 				break;
@@ -191,7 +191,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -212,9 +212,9 @@ public final class Antharas extends AbstractNpcAI
 				}
 				else if (player.isInParty())
 				{
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
-					final List<L2PcInstance> members = isInCC ? party.getCommandChannel().getMembers() : party.getMembers();
+					final List<PlayerInstance> members = isInCC ? party.getCommandChannel().getMembers() : party.getMembers();
 					final boolean isPartyLeader = isInCC ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 					if (!isPartyLeader)
 					{
@@ -230,7 +230,7 @@ public final class Antharas extends AbstractNpcAI
 					}
 					else
 					{
-						for (L2PcInstance member : members)
+						for (PlayerInstance member : members)
 						{
 							if (member.isInsideRadius3D(npc, 1000))
 							{
@@ -312,7 +312,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "START_MOVE":
 			{
-				for (L2PcInstance players : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 4000))
+				for (PlayerInstance players : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 4000))
 				{
 					if (players.isHero())
 					{
@@ -363,24 +363,24 @@ public final class Antharas extends AbstractNpcAI
 				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
 				{
 					setStatus(ALIVE);
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature creature : zone.getCharactersInside())
 					{
-						if (charInside != null)
+						if (creature != null)
 						{
-							if (charInside.isNpc())
+							if (creature.isNpc())
 							{
-								if (charInside.getId() == ANTHARAS)
+								if (creature.getId() == ANTHARAS)
 								{
-									charInside.teleToLocation(185708, 114298, -8221);
+									creature.teleToLocation(185708, 114298, -8221);
 								}
 								else
 								{
-									charInside.deleteMe();
+									creature.deleteMe();
 								}
 							}
-							else if (charInside.isPlayer())
+							else if (creature.isPlayer())
 							{
-								charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+								creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 							}
 						}
 					}
@@ -438,17 +438,17 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "CLEAR_ZONE":
 			{
-				for (L2Character charInside : zone.getCharactersInside())
+				for (Creature creature : zone.getCharactersInside())
 				{
-					if (charInside != null)
+					if (creature != null)
 					{
-						if (charInside.isNpc())
+						if (creature.isNpc())
 						{
-							charInside.deleteMe();
+							creature.deleteMe();
 						}
-						else if (charInside.isPlayer())
+						else if (creature.isPlayer())
 						{
-							charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+							creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 						}
 					}
 				}
@@ -498,7 +498,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "CLEAR_STATUS":
 			{
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(ANTHARAS, 185708, 114298, -8221, 0, false, 0);
 				addBoss(_antharas);
 				Broadcast.toAllOnlinePlayers(new Earthquake(185708, 114298, -8221, 20, 10));
 				setStatus(ALIVE);
@@ -538,11 +538,11 @@ public final class Antharas extends AbstractNpcAI
 				if (getStatus() == IN_FIGHT)
 				{
 					_minionCount = 0;
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature creature : zone.getCharactersInside())
 					{
-						if ((charInside != null) && charInside.isNpc() && ((charInside.getId() == BEHEMOTH) || (charInside.getId() == TERASQUE)))
+						if ((creature != null) && creature.isNpc() && ((creature.getId() == BEHEMOTH) || (creature.getId() == TERASQUE)))
 						{
-							charInside.deleteMe();
+							creature.deleteMe();
 						}
 					}
 					if (player != null) // Player dont will be null just when is this event called from GM command
@@ -563,24 +563,24 @@ public final class Antharas extends AbstractNpcAI
 					setStatus(ALIVE);
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature creature : zone.getCharactersInside())
 					{
-						if (charInside != null)
+						if (creature != null)
 						{
-							if (charInside.isNpc())
+							if (creature.isNpc())
 							{
-								if (charInside.getId() == ANTHARAS)
+								if (creature.getId() == ANTHARAS)
 								{
-									charInside.teleToLocation(185708, 114298, -8221);
+									creature.teleToLocation(185708, 114298, -8221);
 								}
 								else
 								{
-									charInside.deleteMe();
+									creature.deleteMe();
 								}
 							}
-							else if (charInside.isPlayer() && !charInside.isGM())
+							else if (creature.isPlayer() && !creature.isGM())
 							{
-								charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+								creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 							}
 						}
 					}
@@ -602,7 +602,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		npc.doCast(DISPEL_BOM.getSkill());
 		npc.doDie(player);
@@ -610,7 +610,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
 		
@@ -662,7 +662,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{
@@ -691,20 +691,20 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onMoveFinished(L2Npc npc)
+	public void onMoveFinished(Npc npc)
 	{
 		npc.doCast(DISPEL_BOM.getSkill());
 		npc.doDie(null);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == ANTHARAS)
 		{
 			cancelQuestTimer("SET_REGEN", npc, null);
 			startQuestTimer("SET_REGEN", 60000, npc, null);
-			((L2Attackable) npc).setOnKillDelay(0);
+			((Attackable) npc).setOnKillDelay(0);
 		}
 		else
 		{
@@ -712,7 +712,7 @@ public final class Antharas extends AbstractNpcAI
 			{
 				final int x = npc.getTemplate().getParameters().getInt("suicide" + i + "_x");
 				final int y = npc.getTemplate().getParameters().getInt("suicide" + i + "_y");
-				final L2Attackable bomber = (L2Attackable) addSpawn(BOMBER, npc.getX(), npc.getY(), npc.getZ(), 0, true, 15000, true);
+				final Attackable bomber = (Attackable) addSpawn(BOMBER, npc.getX(), npc.getY(), npc.getZ(), 0, true, 15000, true);
 				bomber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, npc.getZ()));
 			}
 			npc.deleteMe();
@@ -721,7 +721,7 @@ public final class Antharas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if ((skill.getId() == ANTH_FEAR.getSkillId()) || (skill.getId() == ANTH_FEAR_SHORT.getSkillId()))
 		{
@@ -747,7 +747,7 @@ public final class Antharas extends AbstractNpcAI
 		return GrandBossManager.getInstance().getBossStatus(ANTHARAS);
 	}
 	
-	private void addBoss(L2GrandBossInstance grandboss)
+	private void addBoss(GrandBossInstance grandboss)
 	{
 		GrandBossManager.getInstance().addBoss(grandboss);
 	}
@@ -762,7 +762,7 @@ public final class Antharas extends AbstractNpcAI
 		GrandBossManager.getInstance().getStatsSet(ANTHARAS).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
-	private final void refreshAiParams(L2PcInstance attacker, int damage)
+	private final void refreshAiParams(PlayerInstance attacker, int damage)
 	{
 		if ((attacker_1 != null) && (attacker == attacker_1))
 		{
@@ -806,7 +806,7 @@ public final class Antharas extends AbstractNpcAI
 		}
 	}
 	
-	private void manageSkills(L2Npc npc)
+	private void manageSkills(Npc npc)
 	{
 		if (npc.isCastingNow() || npc.isCoreAIDisabled() || !npc.isInCombat())
 		{
@@ -815,7 +815,7 @@ public final class Antharas extends AbstractNpcAI
 		
 		int i1 = 0;
 		int i2 = 0;
-		L2PcInstance c2 = null;
+		PlayerInstance c2 = null;
 		if ((attacker_1 == null) || (npc.calculateDistance3D(attacker_1) > 9000) || attacker_1.isDead())
 		{
 			attacker_1_hate = 0;

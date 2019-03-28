@@ -124,7 +124,7 @@ import com.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
 import com.l2jmobius.gameserver.model.conditions.ConditionWithSkill;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -270,9 +270,9 @@ public abstract class DocumentBase
 		
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
 		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, functionName, order, stat, value);
-		if (template instanceof L2Item)
+		if (template instanceof Item)
 		{
-			((L2Item) template).attach(ft);
+			((Item) template).attach(ft);
 		}
 		else if (template instanceof AbstractEffect)
 		{
@@ -309,7 +309,7 @@ public abstract class DocumentBase
 		
 		final AbstractEffect effect = AbstractEffect.createEffect(attachCond, applayCond, set, parameters);
 		parseTemplate(n, effect);
-		if (template instanceof L2Item)
+		if (template instanceof Item)
 		{
 			LOGGER.severe("Item " + template + " with effects!!!");
 		}

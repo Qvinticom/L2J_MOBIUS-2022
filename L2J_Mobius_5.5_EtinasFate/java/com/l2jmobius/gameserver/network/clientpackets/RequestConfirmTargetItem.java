@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.VariationData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariationMake;
 
@@ -33,22 +33,22 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket
 	private int _itemObjId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemObjId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjId);
 		if (item == null)
 		{
 			return;
@@ -60,7 +60,7 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket
 			return;
 		}
 		
-		if (!isValid(activeChar, item))
+		if (!isValid(player, item))
 		{
 			// Different system message here
 			if (item.isAugmented())

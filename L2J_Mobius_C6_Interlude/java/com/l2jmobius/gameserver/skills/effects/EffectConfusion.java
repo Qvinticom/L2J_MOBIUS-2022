@@ -21,15 +21,15 @@ import java.util.List;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author littlecrow Implementation of the Confusion Effect
  */
-final class EffectConfusion extends L2Effect
+final class EffectConfusion extends Effect
 {
 	public EffectConfusion(Env env, EffectTemplate template)
 	{
@@ -58,20 +58,20 @@ final class EffectConfusion extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		
 		// Getting the possible targets
 		
-		for (L2Object obj : getEffected().getKnownList().getKnownObjects().values())
+		for (WorldObject obj : getEffected().getKnownList().getKnownObjects().values())
 		{
 			if (obj == null)
 			{
 				continue;
 			}
 			
-			if ((obj instanceof L2Character) && (obj != getEffected()))
+			if ((obj instanceof Creature) && (obj != getEffected()))
 			{
-				targetList.add((L2Character) obj);
+				targetList.add((Creature) obj);
 			}
 		}
 		// if there is no target, exit function
@@ -82,7 +82,7 @@ final class EffectConfusion extends L2Effect
 		
 		// Choosing randomly a new target
 		final int nextTargetIdx = Rnd.get(targetList.size());
-		final L2Object target = targetList.get(nextTargetIdx);
+		final WorldObject target = targetList.get(nextTargetIdx);
 		
 		// Attacking the target
 		getEffected().setTarget(target);

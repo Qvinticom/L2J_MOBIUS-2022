@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAutoSoulShot extends L2GameClientPacket
+public final class RequestAutoSoulShot extends GameClientPacket
 {
 	// format cd
 	private int _itemId;
@@ -40,9 +40,9 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -71,17 +71,17 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 			3951,
 			3952
 		};
-		if (activeChar.isSitting() && Arrays.toString(shots_ids).contains(String.valueOf(_itemId)))
+		if (player.isSitting() && Arrays.toString(shots_ids).contains(String.valueOf(_itemId)))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_AUTO_USE_LACK_OF_S1);
 			sm.addItemName(_itemId);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getActiveRequester() == null) && !activeChar.isDead())
+		if ((player.getPrivateStoreType() == 0) && (player.getActiveRequester() == null) && !player.isDead())
 		{
-			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
+			final ItemInstance item = player.getInventory().getItemByItemId(_itemId);
 			if (item != null)
 			{
 				if (_type == 1)
@@ -89,80 +89,80 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 					// Fishingshots are not automatic on retail
 					if ((_itemId < 6535) || (_itemId > 6540))
 					{
-						activeChar.addAutoSoulShot(_itemId);
+						player.addAutoSoulShot(_itemId);
 						
 						// Attempt to charge first shot on activation
 						if ((_itemId == 6645) || (_itemId == 6646) || (_itemId == 6647))
 						{
 							// Like L2OFF you can active automatic SS only if you have a pet
-							if (activeChar.getPet() != null)
+							if (player.getPet() != null)
 							{
-								// activeChar.addAutoSoulShot(_itemId);
+								// player.addAutoSoulShot(_itemId);
 								// ExAutoSoulShot atk = new ExAutoSoulShot(_itemId, _type);
-								// activeChar.sendPacket(atk);
+								// player.sendPacket(atk);
 								
 								// start the auto soulshot use
 								final SystemMessage sm = new SystemMessage(SystemMessageId.USE_OF_S1_WILL_BE_AUTO);
 								sm.addString(item.getItemName());
-								activeChar.sendPacket(sm);
+								player.sendPacket(sm);
 								
-								activeChar.rechargeAutoSoulShot(true, true, true);
+								player.rechargeAutoSoulShot(true, true, true);
 							}
 							else
 							{
 								final SystemMessage sm = new SystemMessage(SystemMessageId.NO_SERVITOR_CANNOT_AUTOMATE_USE);
 								sm.addString(item.getItemName());
-								activeChar.sendPacket(sm);
+								player.sendPacket(sm);
 								return;
 							}
 						}
 						else
 						{
-							if ((activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem()) && (item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getCrystalType()))
+							if ((player.getActiveWeaponItem() != player.getFistsWeaponItem()) && (item.getItem().getCrystalType() == player.getActiveWeaponItem().getCrystalType()))
 							{
-								if ((_itemId >= 3947) && (_itemId <= 3952) && activeChar.isInOlympiadMode())
+								if ((_itemId >= 3947) && (_itemId <= 3952) && player.isInOlympiadMode())
 								{
 									final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 									sm.addString(item.getItemName());
-									activeChar.sendPacket(sm);
+									player.sendPacket(sm);
 								}
 								else
 								{
-									// activeChar.addAutoSoulShot(_itemId);
+									// player.addAutoSoulShot(_itemId);
 									
 									// start the auto soulshot use
 									final SystemMessage sm = new SystemMessage(SystemMessageId.USE_OF_S1_WILL_BE_AUTO);
 									sm.addString(item.getItemName());
-									activeChar.sendPacket(sm);
+									player.sendPacket(sm);
 								}
 							}
 							else if (((_itemId >= 2509) && (_itemId <= 2514)) || ((_itemId >= 3947) && (_itemId <= 3952)) || (_itemId == 5790))
 							{
-								activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
+								player.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
 							}
 							else
 							{
-								activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
+								player.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
 							}
 							
-							activeChar.rechargeAutoSoulShot(true, true, false);
+							player.rechargeAutoSoulShot(true, true, false);
 						}
 					}
 				}
 				else if (_type == 0)
 				{
-					activeChar.removeAutoSoulShot(_itemId);
+					player.removeAutoSoulShot(_itemId);
 					// ExAutoSoulShot atk = new ExAutoSoulShot(_itemId, _type);
-					// activeChar.sendPacket(atk);
+					// player.sendPacket(atk);
 					
 					// cancel the auto soulshot use
 					final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
 					sm.addString(item.getItemName());
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 				}
 				
 				final ExAutoSoulShot atk = new ExAutoSoulShot(_itemId, _type);
-				activeChar.sendPacket(atk);
+				player.sendPacket(atk);
 			}
 		}
 	}

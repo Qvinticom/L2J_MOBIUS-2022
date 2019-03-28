@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="26100" level="99" type="L2Monster" name="Sirra's Knight">
+	<npc id="26100" level="99" type="Monster" name="Sirra's Knight">
 		<race>HUMANOID</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -28,7 +28,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="26101" level="99" type="L2Monster" name="Sirra's Ice Golem">
+	<npc id="26101" level="99" type="Monster" name="Sirra's Ice Golem">
 		<race>ELEMENTAL</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -56,7 +56,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="26102" level="101" type="L2RaidBoss" name="Dark Rider" title="Betrayed">
+	<npc id="26102" level="101" type="RaidBoss" name="Dark Rider" title="Betrayed">
 		<!-- Source: www.l2wiki.com -->
 		<race>DRAGON</race>
 		<acquire exp="58137911944" sp="116275894" raidPoints="7" />
@@ -172,7 +172,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26103" level="99" type="L2Monster" name="Berserk Dragon Warrior">
+	<npc id="26103" level="99" type="Monster" name="Berserk Dragon Warrior">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -201,7 +201,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26104" level="99" type="L2Monster" name="Berserk Dragon Wizard">
+	<npc id="26104" level="99" type="Monster" name="Berserk Dragon Wizard">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -230,7 +230,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="26105" level="99" type="L2RaidBoss" name="Veridan" title="Armed">
+	<npc id="26105" level="99" type="RaidBoss" name="Veridan" title="Armed">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
@@ -330,7 +330,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26106" level="99" type="L2RaidBoss" name="Veridan" title="Wealthy">
+	<npc id="26106" level="99" type="RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
@@ -396,7 +396,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26107" level="99" type="L2RaidBoss" name="Veridan" title="Wise">
+	<npc id="26107" level="99" type="RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" />
@@ -513,7 +513,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26108" level="99" type="L2RaidBoss" name="Veridan" title="Armed">
+	<npc id="26108" level="99" type="RaidBoss" name="Veridan" title="Armed">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" />
@@ -549,7 +549,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26109" level="99" type="L2RaidBoss" name="Veridan" title="Wealthy">
+	<npc id="26109" level="99" type="RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" />
@@ -585,7 +585,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26110" level="99" type="L2RaidBoss" name="Veridan" title="Wise">
+	<npc id="26110" level="99" type="RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" />
@@ -621,7 +621,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26111" level="99" type="L2RaidBoss" name="Kechi" title="Armed">
+	<npc id="26111" level="99" type="RaidBoss" name="Kechi" title="Armed">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="15510435336" sp="31020949" raidPoints="0" />
@@ -723,7 +723,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26112" level="99" type="L2RaidBoss" name="Kechi" title="Wealthy">
+	<npc id="26112" level="99" type="RaidBoss" name="Kechi" title="Wealthy">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12408348268" sp="24816720" raidPoints="0" />
@@ -791,7 +791,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26113" level="99" type="L2RaidBoss" name="Kechi" title="Wise">
+	<npc id="26113" level="99" type="RaidBoss" name="Kechi" title="Wise">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18612522403" sp="37225080" raidPoints="0" />
@@ -910,7 +910,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26114" level="99" type="L2RaidBoss" name="Michaela" title="Armed">
+	<npc id="26114" level="99" type="RaidBoss" name="Michaela" title="Armed">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="15510435336" sp="31020949" raidPoints="0" />
@@ -1009,7 +1009,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26115" level="99" type="L2RaidBoss" name="Michaela" title="Wealthy">
+	<npc id="26115" level="99" type="RaidBoss" name="Michaela" title="Wealthy">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -1075,7 +1075,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26116" level="99" type="L2RaidBoss" name="Michaela" title="Wise">
+	<npc id="26116" level="99" type="RaidBoss" name="Michaela" title="Wise">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -1192,7 +1192,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26120" level="99" type="L2RaidBoss" name="Michaela" title="Armed">
+	<npc id="26120" level="99" type="RaidBoss" name="Michaela" title="Armed">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="10340290224" sp="20680600" />
@@ -1321,7 +1321,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26121" level="99" type="L2RaidBoss" name="Michaela" title="Wealthy">
+	<npc id="26121" level="99" type="RaidBoss" name="Michaela" title="Wealthy">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="10340290224" sp="20680600" />
@@ -1450,7 +1450,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26122" level="99" type="L2RaidBoss" name="Michaela" title="Wise">
+	<npc id="26122" level="99" type="RaidBoss" name="Michaela" title="Wise">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="10340290224" sp="20680600" />
@@ -1579,7 +1579,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26123" level="99" type="L2Monster" name="Golden Pig" title="Dimensional Vagabond">
+	<npc id="26123" level="99" type="Monster" name="Golden Pig" title="Dimensional Vagabond">
 		<race>ETC</race>
 		<acquire exp="1121587236" sp="1794539" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1596,7 +1596,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="26124" level="104" type="L2RaidBoss" name="Kelbim" title="Fallen Guardian of Atelia">
+	<npc id="26124" level="104" type="RaidBoss" name="Kelbim" title="Fallen Guardian of Atelia">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="364810170816" sp="875542221" />
@@ -1722,7 +1722,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26125" level="104" type="L2Monster" name="Giant Atelia">
+	<npc id="26125" level="104" type="Monster" name="Giant Atelia">
 		<race>CONSTRUCT</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1328145" hpRegen="7.5" mp="50920" mpRegen="2.7" />
@@ -1736,7 +1736,7 @@
 			<height normal="350" />
 		</collision>
 	</npc>
-	<npc id="26126" level="102" type="L2Monster" name="Guardian Sinistra" title="Kelbim's Minion">
+	<npc id="26126" level="102" type="Monster" name="Guardian Sinistra" title="Kelbim's Minion">
 		<race>UNDEAD</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1328145" hpRegen="11.5" mp="50920" mpRegen="3.9" />
@@ -1765,7 +1765,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="26127" level="102" type="L2Monster" name="Guardian Destra" title="Kelbim's Minion">
+	<npc id="26127" level="102" type="Monster" name="Guardian Destra" title="Kelbim's Minion">
 		<race>UNDEAD</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1328145" hpRegen="11.5" mp="50920" mpRegen="3.9" />
@@ -1794,7 +1794,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="26128" level="104" type="L2Monster" name="Kelbim's Clone" title="Fallen Guardian of Atelia">
+	<npc id="26128" level="104" type="Monster" name="Kelbim's Clone" title="Fallen Guardian of Atelia">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1816,7 +1816,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="26129" level="103" type="L2Monster" name="Kelbim's Guard">
+	<npc id="26129" level="103" type="Monster" name="Kelbim's Guard">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17329" />
@@ -1836,7 +1836,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="26130" level="103" type="L2Monster" name="Atelia Safety Device">
+	<npc id="26130" level="103" type="Monster" name="Atelia Safety Device">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1855,7 +1855,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26131" level="104" type="L2RaidBoss" name="Isabella" title="Raid Boss">
+	<npc id="26131" level="104" type="RaidBoss" name="Isabella" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="26132" count="2" respawnTime="360" weightPoint="1" />
@@ -1888,7 +1888,7 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skillList>
 	</npc>
-	<npc id="26132" level="103" type="L2Monster" name="Croa" title="Raid Minion">
+	<npc id="26132" level="103" type="Monster" name="Croa" title="Raid Minion">
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1909,7 +1909,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="26133" level="103" type="L2Monster" name="Amis" title="Raid Minion">
+	<npc id="26133" level="103" type="Monster" name="Amis" title="Raid Minion">
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1925,7 +1925,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="26134" level="102" type="L2Monster" name="Atelia Dark Wizard">
+	<npc id="26134" level="102" type="Monster" name="Atelia Dark Wizard">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1968,7 +1968,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="26135" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
+	<npc id="26135" level="103" type="Monster" name="Geork" title="Embryo Master Artisan">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="35530389720" sp="71060779" />
@@ -1990,7 +1990,7 @@
 			<height normal="29.5" />
 		</collision>
 	</npc>
-	<npc id="26136" level="104" type="L2Monster" name="Burnstein" title="Embryo Commander">
+	<npc id="26136" level="104" type="Monster" name="Burnstein" title="Embryo Commander">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="88825974282" sp="177652042" />
@@ -2106,7 +2106,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26137" level="102" type="L2RaidBoss" name="Mimir" title="Great Sage">
+	<npc id="26137" level="102" type="RaidBoss" name="Mimir" title="Great Sage">
 		<parameters>
 			<skill name="Skill01_ID" id="16590" level="1" />
 			<skill name="Skill02_ID" id="16591" level="1" />
@@ -2218,7 +2218,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26138" level="101" type="L2Monster" name="Mimillion Bathus">
+	<npc id="26138" level="101" type="Monster" name="Mimillion Bathus">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2254,7 +2254,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="26139" level="101" type="L2Monster" name="Mimillion Carcass">
+	<npc id="26139" level="101" type="Monster" name="Mimillion Carcass">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -2290,7 +2290,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="26140" level="101" type="L2Monster" name="Mimillion Kshana">
+	<npc id="26140" level="101" type="Monster" name="Mimillion Kshana">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2326,7 +2326,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="26141" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
+	<npc id="26141" level="104" type="RaidBoss" name="Ramona" title="Queen">
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2358,7 +2358,7 @@
 			<height normal="87" />
 		</collision>
 	</npc>
-	<npc id="26142" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
+	<npc id="26142" level="104" type="RaidBoss" name="Ramona" title="Queen">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -2387,7 +2387,7 @@
 			<height normal="87" />
 		</collision>
 	</npc>
-	<npc id="26143" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
+	<npc id="26143" level="104" type="RaidBoss" name="Ramona" title="Queen">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -2492,7 +2492,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26144" level="104" type="L2Monster" name="Dancer of the Queen">
+	<npc id="26144" level="104" type="Monster" name="Dancer of the Queen">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2526,7 +2526,7 @@
 			<height normal="36.8" />
 		</collision>
 	</npc>
-	<npc id="26145" level="104" type="L2Monster" name="Commander of the Queen">
+	<npc id="26145" level="104" type="Monster" name="Commander of the Queen">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2560,7 +2560,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="26146" level="104" type="L2Monster" name="Shooter of the Queen">
+	<npc id="26146" level="104" type="Monster" name="Shooter of the Queen">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2594,7 +2594,7 @@
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26147" level="104" type="L2Monster" name="Wizard of the Queen">
+	<npc id="26147" level="104" type="Monster" name="Wizard of the Queen">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2628,7 +2628,7 @@
 			<height normal="45.5" />
 		</collision>
 	</npc>
-	<npc id="26148" level="103" type="L2RaidBoss" name="Enhanced Mimir" title="Helios' Calling">
+	<npc id="26148" level="103" type="RaidBoss" name="Enhanced Mimir" title="Helios' Calling">
 		<!-- Source: www.l2wiki.com -->
 		<parameters>
 			<skill name="Skill01_ID" id="16590" level="1" />
@@ -2760,7 +2760,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="26149" level="102" type="L2Monster" name="Enhanced Mimillion Bathus">
+	<npc id="26149" level="102" type="Monster" name="Enhanced Mimillion Bathus">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2796,7 +2796,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="26150" level="102" type="L2Monster" name="Enhanced Mimillion Carcass">
+	<npc id="26150" level="102" type="Monster" name="Enhanced Mimillion Carcass">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -2832,7 +2832,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="26151" level="102" type="L2Monster" name="Enhanced Mimillion Kshana">
+	<npc id="26151" level="102" type="Monster" name="Enhanced Mimillion Kshana">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2868,7 +2868,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="26152" level="97" type="L2RaidBoss" name="Enhanced Core" title="Helios' Calling">
+	<npc id="26152" level="97" type="RaidBoss" name="Enhanced Core" title="Helios' Calling">
 		<!-- Source: www.l2wiki.com -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2969,7 +2969,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26153" level="96" type="L2Npc" name="Enhance Death Knight">
+	<npc id="26153" level="96" type="Npc" name="Enhance Death Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2987,7 +2987,7 @@
 			<height normal="31.0" grown="36" />
 		</collision>
 	</npc>
-	<npc id="26154" level="96" type="L2Npc" name="Enhance Doom Wraith">
+	<npc id="26154" level="96" type="Npc" name="Enhance Doom Wraith">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3005,7 +3005,7 @@
 			<height normal="45.0" grown="52" />
 		</collision>
 	</npc>
-	<npc id="26155" level="96" type="L2Npc" name="Enhanced Validus">
+	<npc id="26155" level="96" type="Npc" name="Enhanced Validus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3022,7 +3022,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="26156" level="96" type="L2Npc" name="Enhanced Perum">
+	<npc id="26156" level="96" type="Npc" name="Enhanced Perum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3039,7 +3039,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="26157" level="92" type="L2RaidBoss" name="Enhanced Harnak's Wraith" title="Helios' Calling">
+	<npc id="26157" level="92" type="RaidBoss" name="Enhanced Harnak's Wraith" title="Helios' Calling">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -3149,7 +3149,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26158" level="91" type="L2Npc" name="Enhanced Demonic Bathus">
+	<npc id="26158" level="91" type="Npc" name="Enhanced Demonic Bathus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3166,7 +3166,7 @@
 			<height normal="46.15" grown="55" />
 		</collision>
 	</npc>
-	<npc id="26159" level="91" type="L2Npc" name="Enhanced Demonic Carcass">
+	<npc id="26159" level="91" type="Npc" name="Enhanced Demonic Carcass">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3184,7 +3184,7 @@
 			<height normal="36.0" grown="55" />
 		</collision>
 	</npc>
-	<npc id="26160" level="91" type="L2Npc" name="Enhanced Demonic Lotus">
+	<npc id="26160" level="91" type="Npc" name="Enhanced Demonic Lotus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3201,7 +3201,7 @@
 			<height normal="46.15" grown="55" />
 		</collision>
 	</npc>
-	<npc id="26161" level="91" type="L2Npc" name="Enhanced Demonic Rakzan">
+	<npc id="26161" level="91" type="Npc" name="Enhanced Demonic Rakzan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3218,7 +3218,7 @@
 			<height normal="79.0" grown="93" />
 		</collision>
 	</npc>
-	<npc id="26162" level="101" type="L2RaidBoss" name="Demon Worshipper Dorgon" title="Raid Boss">
+	<npc id="26162" level="101" type="RaidBoss" name="Demon Worshipper Dorgon" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3312,7 +3312,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26163" level="101" type="L2RaidBoss" name="Demon Worshipper Zarka" title="Raid Boss">
+	<npc id="26163" level="101" type="RaidBoss" name="Demon Worshipper Zarka" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3406,7 +3406,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26164" level="101" type="L2RaidBoss" name="Demon Worshipper Kultaan" title="Raid Boss">
+	<npc id="26164" level="101" type="RaidBoss" name="Demon Worshipper Kultaan" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3500,7 +3500,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26165" level="101" type="L2RaidBoss" name="Demon Worshipper Nortan" title="Raid Boss">
+	<npc id="26165" level="101" type="RaidBoss" name="Demon Worshipper Nortan" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3598,7 +3598,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26166" level="101" type="L2Npc" name="Banished Lizardman Warrior" title="Raid Minion">
+	<npc id="26166" level="101" type="Npc" name="Banished Lizardman Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3616,7 +3616,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26167" level="101" type="L2Npc" name="Banished Lizardman Archer" title="Raid Minion">
+	<npc id="26167" level="101" type="Npc" name="Banished Lizardman Archer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3634,7 +3634,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="26168" level="101" type="L2Npc" name="Banished Lizardman Sorcerer" title="Raid Minion">
+	<npc id="26168" level="101" type="Npc" name="Banished Lizardman Sorcerer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3652,7 +3652,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="26169" level="101" type="L2Npc" name="Banished Lizardman Healer" title="Raid Minion">
+	<npc id="26169" level="101" type="Npc" name="Banished Lizardman Healer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3670,7 +3670,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="26170" level="101" type="L2RaidBoss" name="Valac" title="Raid Boss">
+	<npc id="26170" level="101" type="RaidBoss" name="Valac" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3764,7 +3764,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26171" level="101" type="L2RaidBoss" name="Kurion" title="Raid Boss">
+	<npc id="26171" level="101" type="RaidBoss" name="Kurion" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3858,7 +3858,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26172" level="101" type="L2RaidBoss" name="Atluum" title="Raid Boss">
+	<npc id="26172" level="101" type="RaidBoss" name="Atluum" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3952,7 +3952,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26173" level="101" type="L2RaidBoss" name="Lebruum" title="Raid Boss">
+	<npc id="26173" level="101" type="RaidBoss" name="Lebruum" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -4050,7 +4050,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26174" level="101" type="L2Npc" name="Enslaved Chrysocolla" title="Raid Minion">
+	<npc id="26174" level="101" type="Npc" name="Enslaved Chrysocolla" title="Raid Minion">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -4070,7 +4070,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="26175" level="101" type="L2Npc" name="Slave Foreman Archer" title="Raid Minion">
+	<npc id="26175" level="101" type="Npc" name="Slave Foreman Archer" title="Raid Minion">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
@@ -4091,7 +4091,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="26176" level="101" type="L2Npc" name="Enslaved Pythia" title="Raid Minion">
+	<npc id="26176" level="101" type="Npc" name="Enslaved Pythia" title="Raid Minion">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" />
@@ -4112,7 +4112,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="26177" level="101" type="L2Npc" name="Slaver Foreman Healer" title="Raid Minion">
+	<npc id="26177" level="101" type="Npc" name="Slaver Foreman Healer" title="Raid Minion">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -4132,7 +4132,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="26178" level="105" type="L2RaidBoss" name="Berserker Hard" title="Raid Boss">
+	<npc id="26178" level="105" type="RaidBoss" name="Berserker Hard" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4226,7 +4226,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26179" level="105" type="L2RaidBoss" name="Patrol Commander Pho" title="Raid Boss">
+	<npc id="26179" level="105" type="RaidBoss" name="Patrol Commander Pho" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4320,7 +4320,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26180" level="105" type="L2RaidBoss" name="Guardian Gastra" title="Raid Boss">
+	<npc id="26180" level="105" type="RaidBoss" name="Guardian Gastra" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4414,7 +4414,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26181" level="105" type="L2RaidBoss" name="Dark Wizard Ruby" title="Raid Boss">
+	<npc id="26181" level="105" type="RaidBoss" name="Dark Wizard Ruby" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17425" />
@@ -4513,7 +4513,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26182" level="103" type="L2Npc" name="Outpost Patrol Warrior" title="Raid Minion">
+	<npc id="26182" level="103" type="Npc" name="Outpost Patrol Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4531,7 +4531,7 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="26183" level="103" type="L2Npc" name="Mercenary Sniper" title="Raid Minion">
+	<npc id="26183" level="103" type="Npc" name="Mercenary Sniper" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4549,7 +4549,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="26184" level="103" type="L2Npc" name="Mercenary Wizard" title="Raid Minion">
+	<npc id="26184" level="103" type="Npc" name="Mercenary Wizard" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4566,7 +4566,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="26185" level="103" type="L2Npc" name="Outpost Patrol Priest" title="Raid Minion">
+	<npc id="26185" level="103" type="Npc" name="Outpost Patrol Priest" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4584,7 +4584,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="26186" level="105" type="L2RaidBoss" name="Wandering Croamis" title="Raid Boss">
+	<npc id="26186" level="105" type="RaidBoss" name="Wandering Croamis" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4678,7 +4678,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26187" level="105" type="L2RaidBoss" name="Wandering Harpe" title="Raid Boss">
+	<npc id="26187" level="105" type="RaidBoss" name="Wandering Harpe" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4772,7 +4772,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26188" level="105" type="L2RaidBoss" name="Wandering Barrena" title="Raid Boss">
+	<npc id="26188" level="105" type="RaidBoss" name="Wandering Barrena" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4866,7 +4866,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26189" level="105" type="L2RaidBoss" name="Wandering Purka" title="Raid Boss">
+	<npc id="26189" level="105" type="RaidBoss" name="Wandering Purka" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
@@ -4964,7 +4964,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26190" level="103" type="L2Npc" name="Seduced Orc Outlaw" title="Raid Minion">
+	<npc id="26190" level="103" type="Npc" name="Seduced Orc Outlaw" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4982,7 +4982,7 @@
 			<height normal="25.8" />
 		</collision>
 	</npc>
-	<npc id="26191" level="103" type="L2Npc" name="Seduced Kamael Adventurer" title="Raid Minion">
+	<npc id="26191" level="103" type="Npc" name="Seduced Kamael Adventurer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -5000,7 +5000,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="26192" level="103" type="L2Npc" name="Seduced Sel Mahum Sorcerer" title="Raid Minion">
+	<npc id="26192" level="103" type="Npc" name="Seduced Sel Mahum Sorcerer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -5017,7 +5017,7 @@
 			<height normal="24.6" />
 		</collision>
 	</npc>
-	<npc id="26193" level="103" type="L2Npc" name="Seduced Wandering Monk" title="Raid Minion">
+	<npc id="26193" level="103" type="Npc" name="Seduced Wandering Monk" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -5035,7 +5035,7 @@
 			<height normal="25.4" />
 		</collision>
 	</npc>
-	<npc id="26194" level="101" type="L2RaidBoss" name="Dimensional Makkum">
+	<npc id="26194" level="101" type="RaidBoss" name="Dimensional Makkum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5098,7 +5098,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26195" level="101" type="L2RaidBoss" name="Dimensional Makkum">
+	<npc id="26195" level="101" type="RaidBoss" name="Dimensional Makkum">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16780" level="2" />
@@ -5176,7 +5176,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26196" level="101" type="L2RaidBoss" name="Dimensional Makkum">
+	<npc id="26196" level="101" type="RaidBoss" name="Dimensional Makkum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5240,7 +5240,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26197" level="101" type="L2RaidBoss" name="Dimensional Makkum">
+	<npc id="26197" level="101" type="RaidBoss" name="Dimensional Makkum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5304,7 +5304,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26198" level="101" type="L2RaidBoss" name="Dimensional Makkum">
+	<npc id="26198" level="101" type="RaidBoss" name="Dimensional Makkum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5361,7 +5361,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26199" level="102" type="L2RaidBoss" name="Sampson" title="Guard Captain">
+	<npc id="26199" level="102" type="RaidBoss" name="Sampson" title="Guard Captain">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />

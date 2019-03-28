@@ -20,16 +20,16 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * This class handles following admin commands: - kill = kills target L2Character - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
+ * This class handles following admin commands: - kill = kills target Creature - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
  * that radius will be killed.
  * @version $Revision: 1.2.4.5 $ $Date: 2007/07/31 10:06:06 $
  */
@@ -42,7 +42,7 @@ public class AdminKill implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_kill"))
 		{
@@ -52,7 +52,7 @@ public class AdminKill implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
-				final L2PcInstance plyr = L2World.getInstance().getPlayer(firstParam);
+				final PlayerInstance plyr = World.getInstance().getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -60,9 +60,9 @@ public class AdminKill implements IAdminCommandHandler
 						try
 						{
 							final int radius = Integer.parseInt(st.nextToken());
-							L2World.getInstance().forEachVisibleObjectInRange(plyr, L2Character.class, radius, knownChar ->
+							World.getInstance().forEachVisibleObjectInRange(plyr, Creature.class, radius, knownChar ->
 							{
-								if ((knownChar instanceof L2ControllableMobInstance) || (knownChar == activeChar))
+								if ((knownChar instanceof ControllableMobInstance) || (knownChar == activeChar))
 								{
 									return;
 								}
@@ -87,9 +87,9 @@ public class AdminKill implements IAdminCommandHandler
 					{
 						final int radius = Integer.parseInt(firstParam);
 						
-						L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, wo ->
+						World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
-							if ((wo instanceof L2ControllableMobInstance) || (wo == activeChar))
+							if ((wo instanceof ControllableMobInstance) || (wo == activeChar))
 							{
 								return;
 							}
@@ -108,25 +108,25 @@ public class AdminKill implements IAdminCommandHandler
 			}
 			else
 			{
-				final L2Object obj = activeChar.getTarget();
-				if ((obj instanceof L2ControllableMobInstance) || !obj.isCharacter())
+				final WorldObject obj = activeChar.getTarget();
+				if ((obj instanceof ControllableMobInstance) || !obj.isCreature())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{
-					kill(activeChar, (L2Character) obj);
+					kill(activeChar, (Creature) obj);
 				}
 			}
 		}
 		return true;
 	}
 	
-	private void kill(L2PcInstance activeChar, L2Character target)
+	private void kill(PlayerInstance activeChar, Creature target)
 	{
 		if (target.isPlayer())
 		{
-			if (!((L2PcInstance) target).isGM())
+			if (!((PlayerInstance) target).isGM())
 			{
 				target.stopAllEffects(); // e.g. invincibility effect
 			}

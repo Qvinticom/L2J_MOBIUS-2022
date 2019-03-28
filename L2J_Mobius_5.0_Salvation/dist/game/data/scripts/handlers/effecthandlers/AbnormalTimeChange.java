@@ -21,11 +21,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.AbnormalStatusUpdate;
@@ -84,7 +84,7 @@ public class AbnormalTimeChange extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		final AbnormalStatusUpdate asu = new AbnormalStatusUpdate();
 		
@@ -139,8 +139,8 @@ public class AbnormalTimeChange extends AbstractEffect
 		// @formatter:off
 		effected.getStatus().getStatusListener().stream()
 			.filter(Objects::nonNull)
-			.filter(L2Object::isPlayer)
-			.map(L2Character::getActingPlayer)
+			.filter(WorldObject::isPlayer)
+			.map(Creature::getActingPlayer)
 			.forEach(upd::sendTo);
 		// @formatter:on
 		

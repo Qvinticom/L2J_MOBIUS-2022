@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 
-public final class RequestPledgeCrest extends L2GameClientPacket
+public final class RequestPledgeCrest extends GameClientPacket
 {
 	private int _crestId;
 	

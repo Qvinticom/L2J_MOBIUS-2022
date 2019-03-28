@@ -34,10 +34,10 @@ import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CoupleManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.entity.GameEvent;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -63,7 +63,7 @@ public class Wedding implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
 	{
 		if (activeChar == null)
 		{
@@ -84,7 +84,7 @@ public class Wedding implements IVoicedCommandHandler
 		return false;
 	}
 	
-	public boolean divorce(L2PcInstance activeChar)
+	public boolean divorce(PlayerInstance activeChar)
 	{
 		if (activeChar.getPartnerId() == 0)
 		{
@@ -108,7 +108,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You have broken up as a couple.");
 		}
 		
-		final L2PcInstance partner = L2World.getInstance().getPlayer(_partnerId);
+		final PlayerInstance partner = World.getInstance().getPlayer(_partnerId);
 		if (partner != null)
 		{
 			partner.setPartnerId(0);
@@ -131,7 +131,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean engage(L2PcInstance activeChar)
+	public boolean engage(PlayerInstance activeChar)
 	{
 		if (activeChar.getTarget() == null)
 		{
@@ -176,7 +176,7 @@ public class Wedding implements IVoicedCommandHandler
 			}
 			return false;
 		}
-		final L2PcInstance ptarget = (L2PcInstance) activeChar.getTarget();
+		final PlayerInstance ptarget = (PlayerInstance) activeChar.getTarget();
 		// check if player target himself
 		if (ptarget.getObjectId() == activeChar.getObjectId())
 		{
@@ -246,7 +246,7 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
-	public boolean goToLove(L2PcInstance activeChar)
+	public boolean goToLove(PlayerInstance activeChar)
 	{
 		if (!activeChar.isMarried())
 		{
@@ -297,7 +297,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (L2Event.isParticipant(activeChar))
+		if (GameEvent.isParticipant(activeChar))
 		{
 			activeChar.sendMessage("You are in an event.");
 			return false;
@@ -346,7 +346,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final L2PcInstance partner = L2World.getInstance().getPlayer(activeChar.getPartnerId());
+		final PlayerInstance partner = World.getInstance().getPlayer(activeChar.getPartnerId());
 		if ((partner == null) || !partner.isOnline())
 		{
 			activeChar.sendMessage("Your partner is not online.");
@@ -383,7 +383,7 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (L2Event.isParticipant(partner))
+		if (GameEvent.isParticipant(partner))
 		{
 			activeChar.sendMessage("Your partner is in an event.");
 			return false;
@@ -480,13 +480,13 @@ public class Wedding implements IVoicedCommandHandler
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		private final Location _partnerLoc;
 		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(L2PcInstance activeChar, Location loc, boolean to7sDungeon)
+		EscapeFinalizer(PlayerInstance activeChar, Location loc, boolean to7sDungeon)
 		{
-			_activeChar = activeChar;
+			_player = activeChar;
 			_partnerLoc = loc;
 			_to7sDungeon = to7sDungeon;
 		}
@@ -494,24 +494,24 @@ public class Wedding implements IVoicedCommandHandler
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead())
+			if (_player.isDead())
 			{
 				return;
 			}
 			
 			if ((SiegeManager.getInstance().getSiege(_partnerLoc) != null) && SiegeManager.getInstance().getSiege(_partnerLoc).isInProgress())
 			{
-				_activeChar.sendMessage("Your partner is in siege, you can't go to your partner.");
+				_player.sendMessage("Your partner is in siege, you can't go to your partner.");
 				return;
 			}
 			
-			_activeChar.setIsIn7sDungeon(_to7sDungeon);
-			_activeChar.enableAllSkills();
-			_activeChar.setIsCastingNow(false);
+			_player.setIsIn7sDungeon(_to7sDungeon);
+			_player.enableAllSkills();
+			_player.setIsCastingNow(false);
 			
 			try
 			{
-				_activeChar.teleToLocation(_partnerLoc);
+				_player.teleToLocation(_partnerLoc);
 			}
 			catch (Exception e)
 			{

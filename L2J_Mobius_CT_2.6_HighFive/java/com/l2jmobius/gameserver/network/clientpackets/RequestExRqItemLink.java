@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExRpItemLink;
 
 /**
@@ -31,19 +31,19 @@ public class RequestExRqItemLink implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2Object object = L2World.getInstance().findObject(_objectId);
+		final WorldObject object = World.getInstance().findObject(_objectId);
 		if ((object != null) && object.isItem())
 		{
-			final L2ItemInstance item = (L2ItemInstance) object;
+			final ItemInstance item = (ItemInstance) object;
 			if (item.isPublished())
 			{
 				client.sendPacket(new ExRpItemLink(item));

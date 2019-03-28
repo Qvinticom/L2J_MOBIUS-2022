@@ -28,12 +28,12 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.stat.PcStat;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import com.l2jmobius.gameserver.model.base.SubClass;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
 import com.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
@@ -86,11 +86,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	@ScheduleTarget
 	private void onClanLeaderApply()
 	{
-		for (L2Clan clan : ClanTable.getInstance().getClans())
+		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if (clan.getNewLeaderId() != 0)
 			{
-				final L2ClanMember member = clan.getClanMember(clan.getNewLeaderId());
+				final ClanMember member = clan.getClanMember(clan.getNewLeaderId());
 				if (member == null)
 				{
 					continue;
@@ -110,13 +110,13 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			return;
 		}
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
-			player.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, false);
+			player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
 			
 			for (SubClass subclass : player.getSubClasses().values())
 			{
-				subclass.setVitalityPoints(PcStat.MAX_VITALITY_POINTS);
+				subclass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
 			}
 		}
 		
@@ -124,13 +124,13 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		{
 			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = ?"))
 			{
-				st.setInt(1, PcStat.MAX_VITALITY_POINTS);
+				st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
 				st.execute();
 			}
 			
 			try (PreparedStatement st = con.prepareStatement("UPDATE characters SET vitality_points = ?"))
 			{
-				st.setInt(1, PcStat.MAX_VITALITY_POINTS);
+				st.setInt(1, PlayerStat.MAX_VITALITY_POINTS);
 				st.execute();
 			}
 		}
@@ -143,7 +143,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	private void resetClanBonus()
 	{
-		ClanTable.getInstance().getClans().forEach(L2Clan::resetClanBonus);
+		ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
 		LOGGER.info("Daily clan bonus has been resetted.");
 	}
 	
@@ -162,7 +162,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		// Update data for online players.
-		L2World.getInstance().getPlayers().stream().forEach(player ->
+		World.getInstance().getPlayers().stream().forEach(player ->
 		{
 			player.getVariables().remove(PlayerVariables.EXTEND_DROP);
 			player.getVariables().storeMe();
@@ -213,7 +213,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		// Update data for online players.
-		L2World.getInstance().getPlayers().stream().forEach(player ->
+		World.getInstance().getPlayers().stream().forEach(player ->
 		{
 			player.setWorldChatUsed(0);
 			player.sendPacket(new ExWorldChatCnt(player));
@@ -244,7 +244,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			LOGGER.log(Level.SEVERE, "Could not reset Recommendations System: ", e);
 		}
 		
-		L2World.getInstance().getPlayers().stream().forEach(player ->
+		World.getInstance().getPlayers().stream().forEach(player ->
 		{
 			player.setRecomLeft(0);
 			player.setRecomHave(player.getRecomHave() - 20);
@@ -270,7 +270,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			}
 			
 			// Update data for online players.
-			L2World.getInstance().getPlayers().stream().forEach(player ->
+			World.getInstance().getPlayers().stream().forEach(player ->
 			{
 				player.resetTraingCampDuration();
 				player.getAccountVariables().storeMe();

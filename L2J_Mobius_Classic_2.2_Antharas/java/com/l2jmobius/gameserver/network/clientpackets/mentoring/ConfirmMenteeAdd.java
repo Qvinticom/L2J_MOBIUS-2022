@@ -24,11 +24,11 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMenteeAdd;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeAdd;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -45,7 +45,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 	private String _mentor;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_confirmed = packet.readD();
 		_mentor = packet.readS();
@@ -53,15 +53,15 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance mentee = client.getActiveChar();
+		final PlayerInstance mentee = client.getPlayer();
 		if (mentee == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance mentor = L2World.getInstance().getPlayer(_mentor);
+		final PlayerInstance mentor = World.getInstance().getPlayer(_mentor);
 		if (mentor == null)
 		{
 			return;
@@ -104,7 +104,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 	 * @param mentee
 	 * @return
 	 */
-	public static boolean validate(L2PcInstance mentor, L2PcInstance mentee)
+	public static boolean validate(PlayerInstance mentor, PlayerInstance mentee)
 	{
 		if ((mentor == null) || (mentee == null))
 		{

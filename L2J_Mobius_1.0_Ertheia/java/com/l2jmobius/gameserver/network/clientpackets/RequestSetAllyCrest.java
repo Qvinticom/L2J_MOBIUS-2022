@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Crest;
-import com.l2jmobius.gameserver.model.L2Crest.CrestType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.Crest;
+import com.l2jmobius.gameserver.model.Crest.CrestType;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -35,7 +35,7 @@ public final class RequestSetAllyCrest implements IClientIncomingPacket
 	private byte[] _data = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_length = packet.readD();
 		if (_length > 192)
@@ -48,37 +48,37 @@ public final class RequestSetAllyCrest implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (_length < 0)
 		{
-			activeChar.sendMessage("File transfer error.");
+			player.sendMessage("File transfer error.");
 			return;
 		}
 		
 		if (_length > 192)
 		{
-			activeChar.sendPacket(SystemMessageId.PLEASE_ADJUST_THE_IMAGE_SIZE_TO_8X12);
+			player.sendPacket(SystemMessageId.PLEASE_ADJUST_THE_IMAGE_SIZE_TO_8X12);
 			return;
 		}
 		
-		if (activeChar.getAllyId() == 0)
+		if (player.getAllyId() == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
 			return;
 		}
 		
-		final L2Clan leaderClan = ClanTable.getInstance().getClan(activeChar.getAllyId());
+		final Clan leaderClan = ClanTable.getInstance().getClan(player.getAllyId());
 		
-		if ((activeChar.getClanId() != leaderClan.getId()) || !activeChar.isClanLeader())
+		if ((player.getClanId() != leaderClan.getId()) || !player.isClanLeader())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
+			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
 			return;
 		}
 		
@@ -91,11 +91,11 @@ public final class RequestSetAllyCrest implements IClientIncomingPacket
 		}
 		else
 		{
-			final L2Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.ALLY);
+			final Crest crest = CrestTable.getInstance().createCrest(_data, CrestType.ALLY);
 			if (crest != null)
 			{
 				leaderClan.changeAllyCrest(crest.getId(), false);
-				activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
+				player.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
 			}
 		}
 	}

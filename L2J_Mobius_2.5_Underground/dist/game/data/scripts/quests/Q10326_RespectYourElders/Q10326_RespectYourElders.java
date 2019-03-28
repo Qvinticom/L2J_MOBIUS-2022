@@ -18,8 +18,8 @@ package quests.Q10326_RespectYourElders;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -68,7 +68,7 @@ public final class Q10326_RespectYourElders extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -83,7 +83,7 @@ public final class Q10326_RespectYourElders extends Quest
 			{
 				qs.startQuest();
 				htmltext = event;
-				final L2Npc handerMonkey = addSpawn(HANDERMONKEY, HANDERMONKEY_SPAWN, false, 300000);
+				final Npc handerMonkey = addSpawn(HANDERMONKEY, HANDERMONKEY_SPAWN, false, 300000);
 				startQuestTimer("MOVE_DELAY", 500, handerMonkey, player);
 				break;
 			}
@@ -105,7 +105,7 @@ public final class Q10326_RespectYourElders extends Quest
 			}
 			case "CHECK_PLAYER":
 			{
-				final L2PcInstance owner = npc.getVariables().getObject("OWNER", L2PcInstance.class);
+				final PlayerInstance owner = npc.getVariables().getObject("OWNER", PlayerInstance.class);
 				if (owner != null)
 				{
 					if (npc.calculateDistance2D(owner) < 120)
@@ -169,10 +169,10 @@ public final class Q10326_RespectYourElders extends Quest
 	}
 	
 	@Override
-	public void onMoveFinished(L2Npc npc)
+	public void onMoveFinished(Npc npc)
 	{
 		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ON_CREEK);
-		final L2PcInstance owner = npc.getVariables().getObject("OWNER", L2PcInstance.class);
+		final PlayerInstance owner = npc.getVariables().getObject("OWNER", PlayerInstance.class);
 		
 		if (owner != null)
 		{
@@ -183,7 +183,7 @@ public final class Q10326_RespectYourElders extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

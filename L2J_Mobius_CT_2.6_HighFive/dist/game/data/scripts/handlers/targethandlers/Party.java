@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
@@ -32,63 +32,63 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 public class Party implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		if (onlyFirst)
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
-				activeChar
+				creature
 			};
 		}
 		
-		targetList.add(activeChar);
+		targetList.add(creature);
 		
 		final int radius = skill.getAffectRange();
-		final L2PcInstance player = activeChar.getActingPlayer();
-		if (activeChar.isSummon())
+		final PlayerInstance player = creature.getActingPlayer();
+		if (creature.isSummon())
 		{
-			if (Skill.addCharacter(activeChar, player, radius, false))
+			if (Skill.addCharacter(creature, player, radius, false))
 			{
 				targetList.add(player);
 			}
 		}
-		else if (activeChar.isPlayer())
+		else if (creature.isPlayer())
 		{
-			if (Skill.addSummon(activeChar, player, radius, false))
+			if (Skill.addSummon(creature, player, radius, false))
 			{
 				targetList.add(player.getSummon());
 			}
 		}
 		
-		if (activeChar.isInParty())
+		if (creature.isInParty())
 		{
 			// Get a list of Party Members
-			for (L2PcInstance partyMember : activeChar.getParty().getMembers())
+			for (PlayerInstance partyMember : creature.getParty().getMembers())
 			{
 				if ((partyMember == null) || (partyMember == player))
 				{
 					continue;
 				}
 				
-				if (Skill.addCharacter(activeChar, partyMember, radius, false))
+				if (Skill.addCharacter(creature, partyMember, radius, false))
 				{
 					targetList.add(partyMember);
 				}
 				
-				if (Skill.addSummon(activeChar, partyMember, radius, false))
+				if (Skill.addSummon(creature, partyMember, radius, false))
 				{
 					targetList.add(partyMember.getSummon());
 				}
 			}
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.PARTY;
+		return TargetType.PARTY;
 	}
 }

@@ -31,8 +31,8 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.DatatablesManager;
 import com.l2jmobius.gameserver.instancemanager.Manager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.multisell.L2Multisell;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.multisell.Multisell;
 import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -47,7 +47,7 @@ public class AdminReload implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_reload"))
 		{
@@ -67,7 +67,7 @@ public class AdminReload implements IAdminCommandHandler
 				
 				if (type.equals("multisell"))
 				{
-					L2Multisell.getInstance().reload();
+					Multisell.getInstance().reload();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "Multisell reloaded.");
 				}
@@ -178,7 +178,7 @@ public class AdminReload implements IAdminCommandHandler
 	 * send reload page
 	 * @param activeChar
 	 */
-	private void sendReloadPage(L2PcInstance activeChar)
+	private void sendReloadPage(PlayerInstance activeChar)
 	{
 		AdminHelpPage.showSubMenuPage(activeChar, "reload_menu.htm");
 	}

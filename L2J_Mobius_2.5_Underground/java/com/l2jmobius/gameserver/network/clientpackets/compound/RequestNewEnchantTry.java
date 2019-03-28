@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.network.clientpackets.compound;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import com.l2jmobius.gameserver.model.items.combination.CombinationItem;
 import com.l2jmobius.gameserver.model.items.combination.CombinationItemReward;
 import com.l2jmobius.gameserver.model.items.combination.CombinationItemType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -39,33 +39,33 @@ import com.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantSucess;
 public class RequestNewEnchantTry implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		else if (activeChar.isInStoreMode())
+		else if (player.isInStoreMode())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		else if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
 		
-		final CompoundRequest request = activeChar.getRequest(CompoundRequest.class);
+		final CompoundRequest request = player.getRequest(CompoundRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			client.sendPacket(ExEnchantFail.STATIC_PACKET);
@@ -74,12 +74,12 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		
 		request.setProcessing(true);
 		
-		final L2ItemInstance itemOne = request.getItemOne();
-		final L2ItemInstance itemTwo = request.getItemTwo();
+		final ItemInstance itemOne = request.getItemOne();
+		final ItemInstance itemTwo = request.getItemTwo();
 		if ((itemOne == null) || (itemTwo == null))
 		{
 			client.sendPacket(ExEnchantFail.STATIC_PACKET);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -87,7 +87,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		if (itemOne.getObjectId() == itemTwo.getObjectId())
 		{
 			client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -97,7 +97,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		if (combinationItem == null)
 		{
 			client.sendPacket(new ExEnchantFail(itemOne.getId(), itemTwo.getId()));
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -105,12 +105,12 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 		iu.addRemovedItem(itemOne);
 		iu.addRemovedItem(itemTwo);
 		
-		if (activeChar.destroyItem("Compound-Item-One", itemOne, 1, null, true) && activeChar.destroyItem("Compound-Item-Two", itemTwo, 1, null, true))
+		if (player.destroyItem("Compound-Item-One", itemOne, 1, null, true) && player.destroyItem("Compound-Item-Two", itemTwo, 1, null, true))
 		{
 			final double random = (Rnd.nextDouble() * 100);
 			final boolean success = random <= combinationItem.getChance();
 			final CombinationItemReward rewardItem = combinationItem.getReward(success ? CombinationItemType.ON_SUCCESS : CombinationItemType.ON_FAILURE);
-			final L2ItemInstance item = activeChar.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
+			final ItemInstance item = player.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
 			
 			if (success)
 			{
@@ -122,7 +122,7 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			}
 		}
 		
-		activeChar.sendInventoryUpdate(iu);
-		activeChar.removeRequest(request.getClass());
+		player.sendInventoryUpdate(iu);
+		player.removeRequest(request.getClass());
 	}
 }

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets.primeshop;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -30,13 +30,13 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExBRProductList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _type;
 	private final Collection<PrimeShopGroup> _primeList;
 	
-	public ExBRProductList(L2PcInstance activeChar, int type, Collection<PrimeShopGroup> items)
+	public ExBRProductList(PlayerInstance player, int type, Collection<PrimeShopGroup> items)
 	{
-		_activeChar = activeChar;
+		_player = player;
 		_type = type;
 		_primeList = items;
 	}
@@ -46,7 +46,7 @@ public class ExBRProductList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
 		
-		packet.writeQ(_activeChar.getAdena()); // Adena
+		packet.writeQ(_player.getAdena()); // Adena
 		packet.writeQ(0x00); // Hero coins
 		packet.writeC(_type); // Type 0 - Home, 1 - History, 2 - Favorites
 		packet.writeD(_primeList.size());

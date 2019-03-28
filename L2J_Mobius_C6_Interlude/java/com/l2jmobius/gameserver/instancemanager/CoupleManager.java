@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Wedding;
 
 /**
@@ -91,7 +91,7 @@ public class CoupleManager
 		return null;
 	}
 	
-	public void createCouple(L2PcInstance player1, L2PcInstance player2)
+	public void createCouple(PlayerInstance player1, PlayerInstance player2)
 	{
 		if ((player1 != null) && (player2 != null))
 		{
@@ -117,8 +117,8 @@ public class CoupleManager
 		
 		if (wedding != null)
 		{
-			L2PcInstance player1 = (L2PcInstance) L2World.getInstance().findObject(wedding.getPlayer1Id());
-			L2PcInstance player2 = (L2PcInstance) L2World.getInstance().findObject(wedding.getPlayer2Id());
+			PlayerInstance player1 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer1Id());
+			PlayerInstance player2 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer2Id());
 			if (player1 != null)
 			{
 				player1.setPartnerId(0);

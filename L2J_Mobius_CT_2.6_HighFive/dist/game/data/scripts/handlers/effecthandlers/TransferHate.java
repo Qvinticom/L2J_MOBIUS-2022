@@ -16,9 +16,9 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -54,7 +54,7 @@ public final class TransferHate extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2World.getInstance().forEachVisibleObjectInRange(info.getEffector(), L2Attackable.class, info.getSkill().getAffectRange(), hater ->
+		World.getInstance().forEachVisibleObjectInRange(info.getEffector(), Attackable.class, info.getSkill().getAffectRange(), hater ->
 		{
 			if ((hater == null) || hater.isDead())
 			{

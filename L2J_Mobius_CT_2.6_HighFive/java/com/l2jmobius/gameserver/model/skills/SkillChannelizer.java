@@ -25,9 +25,9 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.util.Util;
@@ -40,23 +40,23 @@ public class SkillChannelizer implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillChannelizer.class.getName());
 	
-	private final L2Character _channelizer;
-	private List<L2Character> _channelized;
+	private final Creature _channelizer;
+	private List<Creature> _channelized;
 	
 	private Skill _skill;
 	private volatile ScheduledFuture<?> _task = null;
 	
-	public SkillChannelizer(L2Character channelizer)
+	public SkillChannelizer(Creature channelizer)
 	{
 		_channelizer = channelizer;
 	}
 	
-	public L2Character getChannelizer()
+	public Creature getChannelizer()
 	{
 		return _channelizer;
 	}
 	
-	public List<L2Character> getChannelized()
+	public List<Creature> getChannelized()
 	{
 		return _channelized;
 	}
@@ -96,9 +96,9 @@ public class SkillChannelizer implements Runnable
 		// Cancel target channelization and unset it.
 		if (_channelized != null)
 		{
-			for (L2Character chars : _channelized)
+			for (Creature creature : _channelized)
 			{
-				chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
+				creature.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
 			}
 			_channelized = null;
 		}
@@ -155,14 +155,14 @@ public class SkillChannelizer implements Runnable
 					return;
 				}
 				
-				final List<L2Character> targetList = new ArrayList<>();
+				final List<Creature> targetList = new ArrayList<>();
 				
-				for (L2Object chars : _skill.getTargetList(_channelizer))
+				for (WorldObject chars : _skill.getTargetList(_channelizer))
 				{
-					if (chars.isCharacter())
+					if (chars.isCreature())
 					{
-						targetList.add((L2Character) chars);
-						((L2Character) chars).getSkillChannelized().addChannelizer(_skill.getChannelingSkillId(), _channelizer);
+						targetList.add((Creature) chars);
+						((Creature) chars).getSkillChannelized().addChannelizer(_skill.getChannelingSkillId(), _channelizer);
 					}
 				}
 				
@@ -172,21 +172,21 @@ public class SkillChannelizer implements Runnable
 				}
 				_channelized = targetList;
 				
-				for (L2Character character : _channelized)
+				for (Creature creature : _channelized)
 				{
-					if (!Util.checkIfInRange(_skill.getEffectRange(), _channelizer, character, true))
+					if (!Util.checkIfInRange(_skill.getEffectRange(), _channelizer, creature, true))
 					{
 						continue;
 					}
-					else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character))
+					else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, creature))
 					{
 						continue;
 					}
 					else
 					{
 						final int maxSkillLevel = SkillData.getInstance().getMaxLevel(_skill.getChannelingSkillId());
-						final int skillLevel = Math.min(character.getSkillChannelized().getChannerlizersSize(_skill.getChannelingSkillId()), maxSkillLevel);
-						final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(_skill.getChannelingSkillId());
+						final int skillLevel = Math.min(creature.getSkillChannelized().getChannerlizersSize(_skill.getChannelingSkillId()), maxSkillLevel);
+						final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(_skill.getChannelingSkillId());
 						
 						if ((info == null) || (info.getSkill().getLevel() < skillLevel))
 						{
@@ -199,12 +199,12 @@ public class SkillChannelizer implements Runnable
 							}
 							
 							// Update PvP status
-							if (character.isPlayable() && _channelizer.isPlayer() && skill.isBad())
+							if (creature.isPlayable() && _channelizer.isPlayer() && skill.isBad())
 							{
-								((L2PcInstance) _channelizer).updatePvPStatus(character);
+								((PlayerInstance) _channelizer).updatePvPStatus(creature);
 							}
 							
-							skill.applyEffects(_channelizer, character);
+							skill.applyEffects(_channelizer, creature);
 							
 							// Reduce shots.
 							if (_skill.useSpiritShot())
@@ -219,7 +219,7 @@ public class SkillChannelizer implements Runnable
 							// Shots are re-charged every cast.
 							_channelizer.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot());
 						}
-						_channelizer.broadcastPacket(new MagicSkillLaunched(_channelizer, _skill.getId(), _skill.getLevel(), character));
+						_channelizer.broadcastPacket(new MagicSkillLaunched(_channelizer, _skill.getId(), _skill.getLevel(), creature));
 					}
 				}
 			}

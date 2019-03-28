@@ -21,9 +21,9 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 import ai.AbstractNpcAI;
@@ -50,9 +50,9 @@ public final class GateOfUnlimitedSummoning extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
-		final L2Character summoner = npc.getSummoner();
+		final Creature summoner = npc.getSummoner();
 		if ((summoner != null) && summoner.isPlayer())
 		{
 			getTimers().addTimer("SKILL_CAST_SLOW", 1000, npc, null);
@@ -63,7 +63,7 @@ public final class GateOfUnlimitedSummoning extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{

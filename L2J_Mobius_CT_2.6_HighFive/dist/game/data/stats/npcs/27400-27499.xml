@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="27400" level="51" type="L2Monster" name="Shilen's Evil Thoughts">
+	<npc id="27400" level="51" type="Monster" name="Shilen's Evil Thoughts">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5975" level="1" /> <!-- Dark Attack -->
@@ -43,7 +43,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27401" level="61" type="L2Monster" name="Shilen's Evil Thoughts">
+	<npc id="27401" level="61" type="Monster" name="Shilen's Evil Thoughts">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5975" level="1" /> <!-- Dark Attack -->
@@ -86,7 +86,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27402" level="79" type="L2Monster" name="Shilen's Evil Thoughts">
+	<npc id="27402" level="79" type="Monster" name="Shilen's Evil Thoughts">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -134,7 +134,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="27403" level="80" type="L2Npc" name="Trainee of Rest">
+	<npc id="27403" level="80" type="Npc" name="Trainee of Rest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -154,7 +154,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27404" level="80" type="L2Npc" name="Supplicant of Rest">
+	<npc id="27404" level="80" type="Npc" name="Supplicant of Rest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -174,7 +174,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27405" level="80" type="L2Npc" name="Monastic Pilgrim">
+	<npc id="27405" level="80" type="Npc" name="Monastic Pilgrim">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -194,7 +194,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27406" level="80" type="L2Npc" name="Monastic Crusader">
+	<npc id="27406" level="80" type="Npc" name="Monastic Crusader">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -214,7 +214,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27407" level="80" type="L2Monster" name="Solina Lay Brother">
+	<npc id="27407" level="80" type="Monster" name="Solina Lay Brother">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="8212" /> <!--Monster Only (Solina Brother Mace)-->
@@ -255,7 +255,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27408" level="80" type="L2Npc" name="Savior Solina">
+	<npc id="27408" level="80" type="Npc" name="Savior Solina">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -275,7 +275,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27409" level="80" type="L2Monster" name="Solina Knight Captain">
+	<npc id="27409" level="80" type="Monster" name="Solina Knight Captain">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -300,7 +300,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="27410" level="80" type="L2Monster" name="Solina Knights">
+	<npc id="27410" level="80" type="Monster" name="Solina Knights">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="8211" lhand="8210" /> <!--Monster Only (Monk Warrior Shield)-->
@@ -326,7 +326,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="27411" level="80" type="L2Npc" name="Divinity Manager">
+	<npc id="27411" level="80" type="Npc" name="Divinity Manager">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -346,7 +346,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27412" level="80" type="L2Monster" name="Divinity Supervisor">
+	<npc id="27412" level="80" type="Monster" name="Divinity Supervisor">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="8221" /> <!--Monster Only (Grail Apostle Spear)-->
@@ -372,7 +372,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="27413" level="80" type="L2Monster" name="Divinity Fighter">
+	<npc id="27413" level="80" type="Monster" name="Divinity Fighter">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -397,7 +397,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="27414" level="80" type="L2Monster" name="Divinity Magus">
+	<npc id="27414" level="80" type="Monster" name="Divinity Magus">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -427,7 +427,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="27415" level="80" type="L2Monster" name="Guide Solina">
+	<npc id="27415" level="80" type="Monster" name="Guide Solina">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="8212" /> <!-- rhand: Monster Only (Solina Brother Mace) -->
@@ -448,7 +448,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="27416" level="80" type="L2Npc" name="Relic Manager Golem">
+	<npc id="27416" level="80" type="Npc" name="Relic Manager Golem">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -468,7 +468,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27417" level="80" type="L2Monster" name="Mutant Archer">
+	<npc id="27417" level="80" type="Monster" name="Mutant Archer">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="274" /> <!--Reinforced Bow-->
@@ -498,7 +498,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="27418" level="80" type="L2Monster" name="Mutant Warrior">
+	<npc id="27418" level="80" type="Monster" name="Mutant Warrior">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="150" /> <!-- rhand: Elemental Sword -->
@@ -528,7 +528,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27419" level="80" type="L2Npc" name="Divinity Watcher">
+	<npc id="27419" level="80" type="Npc" name="Divinity Watcher">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -548,7 +548,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27420" level="80" type="L2Npc" name="Instructor Solina">
+	<npc id="27420" level="80" type="Npc" name="Instructor Solina">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -568,7 +568,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27421" level="80" type="L2Monster" name="Creature of the Dusk">
+	<npc id="27421" level="80" type="Monster" name="Creature of the Dusk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -588,7 +588,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="27422" level="79" type="L2Monster" name="Creature of the Dusk">
+	<npc id="27422" level="79" type="Monster" name="Creature of the Dusk">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -608,7 +608,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27423" level="80" type="L2Monster" name="Creature of the Dusk">
+	<npc id="27423" level="80" type="Monster" name="Creature of the Dusk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -628,7 +628,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27424" level="79" type="L2Monster" name="Creature of the Dusk">
+	<npc id="27424" level="79" type="Monster" name="Creature of the Dusk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="304" /> <!-- rhand: Orcish Halberd -->

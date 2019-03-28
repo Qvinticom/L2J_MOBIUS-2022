@@ -22,7 +22,7 @@ import java.util.function.Function;
 import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import com.l2jmobius.gameserver.handler.DailyMissionHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 
@@ -110,7 +110,7 @@ public class DailyMissionDataHolder
 		return _isDisplayedWhenNotAvailable;
 	}
 	
-	public boolean isDisplayable(L2PcInstance player)
+	public boolean isDisplayable(PlayerInstance player)
 	{
 		// Check if its main class only
 		if (isMainClassOnly() && (player.isSubClassActive() || player.isDualClassActive()))
@@ -140,7 +140,7 @@ public class DailyMissionDataHolder
 		return (!isOneTime() || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
 	}
 	
-	public void requestReward(L2PcInstance player)
+	public void requestReward(PlayerInstance player)
 	{
 		if ((_handler != null) && isDisplayable(player))
 		{
@@ -148,17 +148,17 @@ public class DailyMissionDataHolder
 		}
 	}
 	
-	public int getStatus(L2PcInstance player)
+	public int getStatus(PlayerInstance player)
 	{
 		return _handler != null ? _handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
-	public int getProgress(L2PcInstance player)
+	public int getProgress(PlayerInstance player)
 	{
 		return _handler != null ? _handler.getProgress(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
-	public boolean getRecentlyCompleted(L2PcInstance player)
+	public boolean getRecentlyCompleted(PlayerInstance player)
 	{
 		return (_handler != null) && _handler.getRecentlyCompleted(player);
 	}

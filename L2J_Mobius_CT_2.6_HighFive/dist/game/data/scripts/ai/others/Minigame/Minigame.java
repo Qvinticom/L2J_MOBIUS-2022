@@ -21,13 +21,13 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillUse;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -68,7 +68,7 @@ public final class Minigame extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final MinigameRoom room = getRoomByManager(npc);
 		switch (event)
@@ -114,7 +114,7 @@ public final class Minigame extends AbstractNpcAI
 				}
 				else
 				{
-					for (L2Npc burner : room.getBurners())
+					for (Npc burner : room.getBurners())
 					{
 						burner.setDisplayEffect(2);
 						burner.setWalking();
@@ -143,7 +143,7 @@ public final class Minigame extends AbstractNpcAI
 			{
 				if (room.getCurrentPot() < 9)
 				{
-					final L2Npc b = room.getBurners()[room.getOrder()[room.getCurrentPot()]];
+					final Npc b = room.getBurners()[room.getOrder()[room.getCurrentPot()]];
 					b.setDisplayEffect(1);
 					b.setWalking();
 					startQuestTimer("off", 2000, b, null); // Stopping burning each pot 2s after
@@ -195,7 +195,7 @@ public final class Minigame extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance talker)
+	public String onFirstTalk(Npc npc, PlayerInstance talker)
 	{
 		String htmltext = null;
 		final MinigameRoom room = getRoomByManager(npc);
@@ -234,7 +234,7 @@ public final class Minigame extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -255,14 +255,14 @@ public final class Minigame extends AbstractNpcAI
 	
 	public void onSkillUse(OnCreatureSkillUse event)
 	{
-		final MinigameRoom room = getRoomByParticipant((L2PcInstance) event.getCaster());
+		final MinigameRoom room = getRoomByParticipant((PlayerInstance) event.getCaster());
 		if (room.getStarted() && (event.getSkill().getId() == SKILL_TORCH_LIGHT))
 		{
-			for (L2Object obj : event.getTargets())
+			for (WorldObject obj : event.getTargets())
 			{
 				if ((obj != null) && obj.isNpc())
 				{
-					final L2Npc npc = (L2Npc) obj;
+					final Npc npc = (Npc) obj;
 					if (npc.getId() == BURNER)
 					{
 						npc.doCast(TRIGGER_MIRAGE.getSkill());
@@ -315,13 +315,13 @@ public final class Minigame extends AbstractNpcAI
 	 * @param manager the NPC instructor
 	 * @return MinigameRoom
 	 */
-	private MinigameRoom initRoom(L2Npc manager)
+	private MinigameRoom initRoom(Npc manager)
 	{
-		final L2Npc[] burners = new L2Npc[9];
-		L2Npc lastSpawn;
+		final Npc[] burners = new Npc[9];
+		Npc lastSpawn;
 		int potNumber = 0;
 		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(BURNER))
+		for (Spawn spawn : SpawnTable.getInstance().getSpawns(BURNER))
 		{
 			lastSpawn = spawn.getLastSpawn();
 			if ((potNumber <= 8) && Util.checkIfInRange(1000, manager, lastSpawn, false))
@@ -338,7 +338,7 @@ public final class Minigame extends AbstractNpcAI
 	 * @param manager the NPC instructor
 	 * @return MinigameRoom
 	 */
-	private MinigameRoom getRoomByManager(L2Npc manager)
+	private MinigameRoom getRoomByManager(Npc manager)
 	{
 		for (MinigameRoom room : _rooms)
 		{
@@ -352,10 +352,10 @@ public final class Minigame extends AbstractNpcAI
 	
 	/**
 	 * Retrieve a MinigameRoom by participant
-	 * @param participant the L2PcInstance participating
+	 * @param participant the PlayerInstance participating
 	 * @return MinigameRoom
 	 */
-	private MinigameRoom getRoomByParticipant(L2PcInstance participant)
+	private MinigameRoom getRoomByParticipant(PlayerInstance participant)
 	{
 		for (MinigameRoom room : _rooms)
 		{
@@ -373,16 +373,16 @@ public final class Minigame extends AbstractNpcAI
 	 */
 	private class MinigameRoom
 	{
-		private final L2Npc[] _burners;
-		private final L2Npc _manager;
-		private L2PcInstance _participant;
+		private final Npc[] _burners;
+		private final Npc _manager;
+		private PlayerInstance _participant;
 		private boolean _started;
 		private int _attemptNumber;
 		private int _currentPot;
 		private final int _order[];
 		private ConsumerEventListener _listener;
 		
-		public MinigameRoom(L2Npc[] burners, L2Npc manager)
+		public MinigameRoom(Npc[] burners, Npc manager)
 		{
 			_burners = burners;
 			_manager = manager;
@@ -395,10 +395,10 @@ public final class Minigame extends AbstractNpcAI
 		
 		/**
 		 * Retrieve the burner position into the array
-		 * @param npc the L2Npc burner
+		 * @param npc the Npc burner
 		 * @return the array index
 		 */
-		public int getBurnerPos(L2Npc npc)
+		public int getBurnerPos(Npc npc)
 		{
 			for (int i = 0; i < 9; i++)
 			{
@@ -415,7 +415,7 @@ public final class Minigame extends AbstractNpcAI
 		 */
 		public void burnThemAll()
 		{
-			for (L2Npc burner : _burners)
+			for (Npc burner : _burners)
 			{
 				burner.setDisplayEffect(1);
 				burner.setWalking();
@@ -424,36 +424,36 @@ public final class Minigame extends AbstractNpcAI
 		
 		/**
 		 * Retrieve a list of burners
-		 * @return An array of L2Npcs
+		 * @return An array of Npcs
 		 */
-		public L2Npc[] getBurners()
+		public Npc[] getBurners()
 		{
 			return _burners;
 		}
 		
 		/**
 		 * Retrieve the current game manager
-		 * @return The L2Npc game instructor
+		 * @return The Npc game instructor
 		 */
-		public L2Npc getManager()
+		public Npc getManager()
 		{
 			return _manager;
 		}
 		
 		/**
 		 * Retrieve the current game participant
-		 * @return The L2PcInstance who is participating
+		 * @return The PlayerInstance who is participating
 		 */
-		public L2PcInstance getParticipant()
+		public PlayerInstance getParticipant()
 		{
 			return _participant;
 		}
 		
 		/**
 		 * Set the current participant
-		 * @param participant The L2PcInstance participating
+		 * @param participant The PlayerInstance participating
 		 */
-		public void setParticipant(L2PcInstance participant)
+		public void setParticipant(PlayerInstance participant)
 		{
 			_participant = participant;
 		}

@@ -35,10 +35,10 @@ import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.Announcements;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * Auto Spawn Handler Allows spawning of a NPC object based on a timer. (From the official idea used for the Merchant and Blacksmith of Mammon) General Usage: - Call registerSpawn() with the parameters listed below. int npcId int[][] spawnPoints or specify NULL to add points later. int initialDelay
@@ -508,7 +508,7 @@ public class AutoSpawn
 				final int heading = locationList[locationIndex].getHeading();
 				
 				// Fetch the template for this NPC ID and create a new spawn.
-				L2NpcTemplate npcTemp = NpcTable.getInstance().getTemplate(spawnInst.getNpcId());
+				NpcTemplate npcTemp = NpcTable.getInstance().getTemplate(spawnInst.getNpcId());
 				
 				if (npcTemp == null)
 				{
@@ -516,7 +516,7 @@ public class AutoSpawn
 					return;
 				}
 				
-				L2Spawn newSpawn = new L2Spawn(npcTemp);
+				Spawn newSpawn = new Spawn(npcTemp);
 				
 				newSpawn.setX(x);
 				newSpawn.setY(y);
@@ -536,7 +536,7 @@ public class AutoSpawn
 				
 				// Add the new spawn information to the spawn table, but do not store it.
 				SpawnTable.getInstance().addNewSpawn(newSpawn, false);
-				L2NpcInstance npcInst = null;
+				NpcInstance npcInst = null;
 				
 				if (spawnInst._spawnCount == 1)
 				{
@@ -613,14 +613,14 @@ public class AutoSpawn
 					return;
 				}
 				
-				final L2NpcInstance[] npc_instances = spawnInst.getNPCInstanceList();
+				final NpcInstance[] npc_instances = spawnInst.getNPCInstanceList();
 				if (npc_instances == null)
 				{
 					LOGGER.info("AutoSpawnHandler: No spawn registered");
 					return;
 				}
 				
-				for (L2NpcInstance npcInst : npc_instances)
+				for (NpcInstance npcInst : npc_instances)
 				{
 					if (npcInst == null)
 					{
@@ -663,7 +663,7 @@ public class AutoSpawn
 		
 		protected int _lastLocIndex = -1;
 		
-		private final List<L2NpcInstance> _npcList = new ArrayList<>();
+		private final List<NpcInstance> _npcList = new ArrayList<>();
 		
 		private final List<Location> _locList = new ArrayList<>();
 		
@@ -686,12 +686,12 @@ public class AutoSpawn
 			_spawnActive = activeValue;
 		}
 		
-		protected boolean addNpcInstance(L2NpcInstance npcInst)
+		protected boolean addNpcInstance(NpcInstance npcInst)
 		{
 			return _npcList.add(npcInst);
 		}
 		
-		protected boolean removeNpcInstance(L2NpcInstance npcInst)
+		protected boolean removeNpcInstance(NpcInstance npcInst)
 		{
 			return _npcList.remove(npcInst);
 		}
@@ -731,29 +731,29 @@ public class AutoSpawn
 			return _locList.toArray(new Location[_locList.size()]);
 		}
 		
-		public L2NpcInstance[] getNPCInstanceList()
+		public NpcInstance[] getNPCInstanceList()
 		{
-			L2NpcInstance[] ret;
+			NpcInstance[] ret;
 			
 			synchronized (_npcList)
 			{
-				ret = new L2NpcInstance[_npcList.size()];
+				ret = new NpcInstance[_npcList.size()];
 				_npcList.toArray(ret);
 			}
 			
 			return ret;
 		}
 		
-		public L2Spawn[] getSpawns()
+		public Spawn[] getSpawns()
 		{
-			final List<L2Spawn> npcSpawns = new ArrayList<>();
+			final List<Spawn> npcSpawns = new ArrayList<>();
 			
-			for (L2NpcInstance npcInst : _npcList)
+			for (NpcInstance npcInst : _npcList)
 			{
 				npcSpawns.add(npcInst.getSpawn());
 			}
 			
-			return npcSpawns.toArray(new L2Spawn[npcSpawns.size()]);
+			return npcSpawns.toArray(new Spawn[npcSpawns.size()]);
 		}
 		
 		public void setSpawnCount(int spawnCount)

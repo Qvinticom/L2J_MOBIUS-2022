@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -39,7 +39,7 @@ public class AdminDonator implements IAdminCommandHandler
 	protected static final Logger LOGGER = Logger.getLogger(AdminDonator.class.getName());
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -48,11 +48,11 @@ public class AdminDonator implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_setdonator"))
 		{
-			L2Object target = activeChar.getTarget();
+			WorldObject target = activeChar.getTarget();
 			
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
-				L2PcInstance targetPlayer = (L2PcInstance) target;
+				PlayerInstance targetPlayer = (PlayerInstance) target;
 				final boolean newDonator = !targetPlayer.isDonator();
 				
 				if (newDonator)
@@ -84,7 +84,7 @@ public class AdminDonator implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void sendMessages(boolean forNewDonator, L2PcInstance player, L2PcInstance gm, boolean announce, boolean notifyGmList)
+	private void sendMessages(boolean forNewDonator, PlayerInstance player, PlayerInstance gm, boolean announce, boolean notifyGmList)
 	{
 		if (forNewDonator)
 		{
@@ -122,7 +122,7 @@ public class AdminDonator implements IAdminCommandHandler
 	 * @param player
 	 * @param newDonator
 	 */
-	private void updateDatabase(L2PcInstance player, boolean newDonator)
+	private void updateDatabase(PlayerInstance player, boolean newDonator)
 	{
 		if (player == null)
 		{

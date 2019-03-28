@@ -30,22 +30,22 @@ import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.appearance.PcAppearance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.stat.PcStat;
-import com.l2jmobius.gameserver.model.actor.templates.L2PcTemplate;
+import com.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.stat.PlayerStat;
+import com.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.PcItemTemplate;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.PlayerItemTemplate;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
@@ -72,7 +72,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 	private byte _face;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
 		_race = packet.readD();
@@ -91,7 +91,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		// Last Verified: May 30, 2009 - Gracia Final - Players are able to create characters with names consisting of as little as 1,2,3 letter/number combinations.
 		if ((_name.length() < 1) || (_name.length() > 16))
@@ -149,8 +149,8 @@ public final class CharacterCreate implements IClientIncomingPacket
 			return;
 		}
 		
-		L2PcInstance newChar = null;
-		L2PcTemplate template = null;
+		PlayerInstance newChar = null;
+		PlayerTemplate template = null;
 		boolean balthusKnights = false;
 		
 		/*
@@ -281,7 +281,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 					break;
 				}
 			}
-			newChar = L2PcInstance.create(template, client.getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
+			newChar = PlayerInstance.create(template, client.getAccountName(), _name, new PlayerAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
 		if (balthusKnights)
@@ -302,7 +302,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		client.sendPacket(CharCreateOk.STATIC_PACKET);
 		
-		L2World.getInstance().addObject(newChar);
+		World.getInstance().addObject(newChar);
 		
 		if (Config.STARTING_ADENA > 0)
 		{
@@ -331,7 +331,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		if (Config.ENABLE_VITALITY)
 		{
-			newChar.setVitalityPoints(Math.min(Config.STARTING_VITALITY_POINTS, PcStat.MAX_VITALITY_POINTS), true);
+			newChar.setVitalityPoints(Math.min(Config.STARTING_VITALITY_POINTS, PlayerStat.MAX_VITALITY_POINTS), true);
 		}
 		if (Config.STARTING_LEVEL > 1)
 		{
@@ -342,12 +342,12 @@ public final class CharacterCreate implements IClientIncomingPacket
 			newChar.getStat().addSp(Config.STARTING_SP);
 		}
 		
-		final List<PcItemTemplate> initialItems = InitialEquipmentData.getInstance().getEquipmentList(newChar.getClassId());
+		final List<PlayerItemTemplate> initialItems = InitialEquipmentData.getInstance().getEquipmentList(newChar.getClassId());
 		if (initialItems != null)
 		{
-			for (PcItemTemplate ie : initialItems)
+			for (PlayerItemTemplate ie : initialItems)
 			{
-				final L2ItemInstance item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
+				final ItemInstance item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
 				if (item == null)
 				{
 					LOGGER.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
@@ -364,7 +364,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		{
 			for (ItemHolder reward : Config.BALTHUS_KNIGHTS_REWARDS)
 			{
-				final L2ItemInstance item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
+				final ItemInstance item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
 				if (item == null)
 				{
 					LOGGER.warning("Could not create item during char creation: itemId " + reward.getId() + ", amount " + reward.getCount() + ".");
@@ -378,7 +378,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 			}
 		}
 		
-		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, false, true))
+		for (SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, false, true))
 		{
 			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 		}

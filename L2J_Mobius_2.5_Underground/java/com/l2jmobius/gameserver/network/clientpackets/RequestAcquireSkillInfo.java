@@ -21,13 +21,13 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquireSkillInfo;
 
@@ -42,7 +42,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 	private AcquireSkillType _skillType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_id = packet.readD();
 		_level = packet.readD();
@@ -51,7 +51,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if ((_id <= 0) || (_level <= 0))
 		{
@@ -59,14 +59,14 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Npc trainer = activeChar.getLastFolkNPC();
-		if ((_skillType != AcquireSkillType.CLASS) && ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(activeChar) && !activeChar.isGM())))
+		final Npc trainer = player.getLastFolkNPC();
+		if ((_skillType != AcquireSkillType.CLASS) && ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(player) && !player.isGM())))
 		{
 			return;
 		}
@@ -79,20 +79,20 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 		}
 		
 		// Hack check. Doesn't apply to all Skill Types
-		final int prevSkillLevel = activeChar.getSkillLevel(_id);
+		final int prevSkillLevel = player.getSkillLevel(_id);
 		if ((prevSkillLevel > 0) && !((_skillType == AcquireSkillType.TRANSFER) || (_skillType == AcquireSkillType.SUBPLEDGE)))
 		{
 			if (prevSkillLevel == _level)
 			{
-				LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is requesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
+				LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + player.getName() + " is requesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
 			}
 			else if (prevSkillLevel != (_level - 1))
 			{
-				LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is requesting info for skill Id: " + _id + " level " + _level + " without knowing it's previous level!");
+				LOGGER.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + player.getName() + " is requesting info for skill Id: " + _id + " level " + _level + " without knowing it's previous level!");
 			}
 		}
 		
-		final L2SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, activeChar);
+		final SkillLearn s = SkillTreesData.getInstance().getSkillLearn(_skillType, _id, _level, player);
 		if (s == null)
 		{
 			return;
@@ -112,12 +112,12 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case CLASS:
 			{
-				client.sendPacket(new ExAcquireSkillInfo(activeChar, s));
+				client.sendPacket(new ExAcquireSkillInfo(player, s));
 				break;
 			}
 			case PLEDGE:
 			{
-				if (!activeChar.isClanLeader())
+				if (!player.isClanLeader())
 				{
 					return;
 				}
@@ -126,7 +126,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case SUBPLEDGE:
 			{
-				if (!activeChar.isClanLeader() || !activeChar.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
+				if (!player.isClanLeader() || !player.hasClanPrivilege(ClanPrivilege.CL_TROOPS_FAME))
 				{
 					return;
 				}
@@ -135,7 +135,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case ALCHEMY:
 			{
-				if (activeChar.getRace() != Race.ERTHEIA)
+				if (player.getRace() != Race.ERTHEIA)
 				{
 					return;
 				}
@@ -144,7 +144,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case REVELATION:
 			{
-				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+				if ((player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					return;
 				}
@@ -153,7 +153,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case REVELATION_DUALCLASS:
 			{
-				if (!activeChar.isSubClassActive() || !activeChar.isDualClassActive())
+				if (!player.isSubClassActive() || !player.isDualClassActive())
 				{
 					return;
 				}

@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 
 /**
  * @author Luca Baldi
  */
-public class RelationChanged extends L2GameServerPacket
+public class RelationChanged extends GameServerPacket
 {
 	public static final int RELATION_PVP_FLAG = 0x00002; // pvp ???
 	public static final int RELATION_HAS_KARMA = 0x00004; // karma ???
@@ -41,20 +41,20 @@ public class RelationChanged extends L2GameServerPacket
 	private int _karma;
 	private int _pvpFlag;
 	
-	public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable)
+	public RelationChanged(Playable activeChar, int relation, boolean autoattackable)
 	{
 		_objId = activeChar.getObjectId();
 		_relation = relation;
 		_autoAttackable = autoattackable ? 1 : 0;
-		if (activeChar instanceof L2PcInstance)
+		if (activeChar instanceof PlayerInstance)
 		{
-			_karma = ((L2PcInstance) activeChar).getKarma();
-			_pvpFlag = ((L2PcInstance) activeChar).getPvpFlag();
+			_karma = ((PlayerInstance) activeChar).getKarma();
+			_pvpFlag = ((PlayerInstance) activeChar).getPvpFlag();
 		}
-		else if (activeChar instanceof L2SummonInstance)
+		else if (activeChar instanceof SummonInstance)
 		{
-			_karma = ((L2SummonInstance) activeChar).getOwner().getKarma();
-			_pvpFlag = ((L2SummonInstance) activeChar).getOwner().getPvpFlag();
+			_karma = ((SummonInstance) activeChar).getOwner().getKarma();
+			_pvpFlag = ((SummonInstance) activeChar).getOwner().getPvpFlag();
 		}
 	}
 	

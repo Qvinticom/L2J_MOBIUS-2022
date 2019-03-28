@@ -17,13 +17,13 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -53,12 +53,12 @@ public final class SoulEating extends AbstractEffect
 		}
 	}
 	
-	public void onExperienceReceived(L2Playable playable, long exp)
+	public void onExperienceReceived(Playable playable, long exp)
 	{
 		// TODO: Verify logic.
 		if (playable.isPlayer() && (exp >= _expNeeded))
 		{
-			final L2PcInstance player = playable.getActingPlayer();
+			final PlayerInstance player = playable.getActingPlayer();
 			final int maxSouls = (int) player.calcStat(Stats.MAX_SOULS, 0, null, null);
 			if (player.getChargedSouls() >= maxSouls)
 			{
@@ -70,7 +70,7 @@ public final class SoulEating extends AbstractEffect
 			
 			if ((player.getTarget() != null) && player.getTarget().isNpc())
 			{
-				final L2Npc npc = (L2Npc) playable.getTarget();
+				final Npc npc = (Npc) playable.getTarget();
 				player.broadcastPacket(new ExSpawnEmitter(player, npc), 500);
 			}
 		}

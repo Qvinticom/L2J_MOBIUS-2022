@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMoveToLocationInShuttle implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _airShipId;
 	private final int _targetX;
 	private final int _targetY;
@@ -35,9 +35,9 @@ public class ExMoveToLocationInShuttle implements IClientOutgoingPacket
 	private final int _fromY;
 	private final int _fromZ;
 	
-	public ExMoveToLocationInShuttle(L2PcInstance player, int fromX, int fromY, int fromZ)
+	public ExMoveToLocationInShuttle(PlayerInstance player, int fromX, int fromY, int fromZ)
 	{
-		_charObjId = player.getObjectId();
+		_objectId = player.getObjectId();
 		_airShipId = player.getShuttle().getObjectId();
 		_targetX = player.getInVehiclePosition().getX();
 		_targetY = player.getInVehiclePosition().getY();
@@ -52,7 +52,7 @@ public class ExMoveToLocationInShuttle implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_MOVE_TO_LOCATION_IN_SUTTLE.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_airShipId);
 		packet.writeD(_targetX);
 		packet.writeD(_targetY);

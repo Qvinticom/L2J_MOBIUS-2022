@@ -18,14 +18,14 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PledgeInfo implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
-	public PledgeInfo(L2Clan clan)
+	public PledgeInfo(Clan clan)
 	{
 		_clan = clan;
 	}

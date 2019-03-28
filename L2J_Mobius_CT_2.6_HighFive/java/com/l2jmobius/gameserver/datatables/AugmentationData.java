@@ -33,10 +33,10 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
-import com.l2jmobius.gameserver.model.L2Augmentation;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.Options;
 import com.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
 
@@ -517,13 +517,13 @@ public class AugmentationData
 	 * @param targetItem
 	 * @return
 	 */
-	public L2Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, L2ItemInstance targetItem)
+	public Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, ItemInstance targetItem)
 	{
 		switch (bodyPart)
 		{
-			case L2Item.SLOT_LR_FINGER:
-			case L2Item.SLOT_LR_EAR:
-			case L2Item.SLOT_NECK:
+			case Item.SLOT_LR_FINGER:
+			case Item.SLOT_LR_EAR:
+			case Item.SLOT_NECK:
 			{
 				return generateRandomAccessoryAugmentation(lifeStoneLevel, bodyPart, lifeStoneId);
 			}
@@ -534,7 +534,7 @@ public class AugmentationData
 		}
 	}
 	
-	private L2Augmentation generateRandomWeaponAugmentation(int lifeStoneLevel, int lifeStoneGrade, int lifeStoneId, L2ItemInstance item)
+	private Augmentation generateRandomWeaponAugmentation(int lifeStoneLevel, int lifeStoneGrade, int lifeStoneId, ItemInstance item)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -728,7 +728,7 @@ public class AugmentationData
 					}
 				}
 			}
-			return new L2Augmentation(((stat34 << 16) + stat12));
+			return new Augmentation(((stat34 << 16) + stat12));
 		}
 		boolean generateSkill = false;
 		boolean generateGlow = false;
@@ -907,10 +907,10 @@ public class AugmentationData
 		}
 		stat12 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
 		
-		return new L2Augmentation(((stat34 << 16) + stat12));
+		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	
-	private L2Augmentation generateRandomAccessoryAugmentation(int lifeStoneLevel, int bodyPart, int lifeStoneId)
+	private Augmentation generateRandomAccessoryAugmentation(int lifeStoneLevel, int bodyPart, int lifeStoneId)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -978,7 +978,7 @@ public class AugmentationData
 				}
 			}
 			
-			return new L2Augmentation(((stat34 << 16) + stat12));
+			return new Augmentation(((stat34 << 16) + stat12));
 		}
 		lifeStoneLevel = Math.min(lifeStoneLevel, 9);
 		int base = 0;
@@ -986,19 +986,19 @@ public class AugmentationData
 		
 		switch (bodyPart)
 		{
-			case L2Item.SLOT_LR_FINGER:
+			case Item.SLOT_LR_FINGER:
 			{
 				base = ACC_RING_START + (ACC_RING_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_RING_SKILLS;
 				break;
 			}
-			case L2Item.SLOT_LR_EAR:
+			case Item.SLOT_LR_EAR:
 			{
 				base = ACC_EAR_START + (ACC_EAR_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_EAR_SKILLS;
 				break;
 			}
-			case L2Item.SLOT_NECK:
+			case Item.SLOT_NECK:
 			{
 				base = ACC_NECK_START + (ACC_NECK_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_NECK_SKILLS;
@@ -1035,7 +1035,7 @@ public class AugmentationData
 		// stat12 has stats only
 		stat12 = base + skillsLength + (ACC_STAT_SUBBLOCKSIZE * resultColor) + stat12;
 		
-		return new L2Augmentation(((stat34 << 16) + stat12));
+		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	
 	public static AugmentationData getInstance()

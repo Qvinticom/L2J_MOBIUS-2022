@@ -21,7 +21,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.model.FortSiegeSpawn;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -107,7 +107,7 @@ public class ExShowFortressMapInfo implements IClientOutgoingPacket
 	private boolean isSpawned(int npcId)
 	{
 		boolean ret = false;
-		for (L2Spawn spawn : _fortress.getSiege().getCommanders())
+		for (Spawn spawn : _fortress.getSiege().getCommanders())
 		{
 			if (spawn.getId() == npcId)
 			{

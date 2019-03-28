@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -55,7 +55,7 @@ public final class LeopardDragonHachling extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc != null) && event.equals("MOVE_TO_TRANSFORM"))
 		{
@@ -64,7 +64,7 @@ public final class LeopardDragonHachling extends AbstractNpcAI
 				final int random = getRandom(1, 4);
 				for (int counter = 1; counter < random; counter++)
 				{
-					final L2Npc leopard = addSpawn(LEOPARD_DRAGON, npc.getLocation(), true, 300000); // 5 minute despawn time
+					final Npc leopard = addSpawn(LEOPARD_DRAGON, npc.getLocation(), true, 300000); // 5 minute despawn time
 					leopard.broadcastPacket(new NpcSay(leopard.getObjectId(), ChatType.NPC_GENERAL, LEOPARD_DRAGON, NpcStringId.I_M_GOING_TO_TRANSFORM_WITH_THE_POWER_OF_THE_VORTEX_YOU_JUST_WATCH));
 					addAttackDesire(leopard, player);
 				}
@@ -81,7 +81,7 @@ public final class LeopardDragonHachling extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.getScriptValue() == 0)
 		{
@@ -94,7 +94,7 @@ public final class LeopardDragonHachling extends AbstractNpcAI
 		return null;
 	}
 	
-	private Location nearestLocation(L2Npc npc)
+	private Location nearestLocation(Npc npc)
 	{
 		Location gotoLoc = TRANSFORM_LOCATIONS.get(0);
 		for (Location loc : TRANSFORM_LOCATIONS)

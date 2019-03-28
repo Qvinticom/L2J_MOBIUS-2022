@@ -16,8 +16,8 @@
  */
 package quests.Q00151_CureForFever;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -57,40 +57,40 @@ public class Q00151_CureForFever extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equalsIgnoreCase("30050-03.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equalsIgnoreCase("30050-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1) && (getRandom(5) == CHANCE))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1) && (getRandom(5) == CHANCE))
 		{
 			giveItems(killer, POISON_SAC, 1);
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ELLIAS:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -99,15 +99,15 @@ public class Q00151_CureForFever extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(3) && hasQuestItems(player, FEVER_MEDICINE))
+						if (qs.isCond(3) && hasQuestItems(player, FEVER_MEDICINE))
 						{
 							giveItems(player, ROUND_SHIELD, 1);
 							addExpAndSp(player, 13106, 613);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000); // TODO: Newbie Guide
 							htmltext = "30050-06.html";
 						}
-						else if (st.isCond(2) && hasQuestItems(player, POISON_SAC))
+						else if (qs.isCond(2) && hasQuestItems(player, POISON_SAC))
 						{
 							htmltext = "30050-05.html";
 						}
@@ -127,16 +127,16 @@ public class Q00151_CureForFever extends Quest
 			}
 			case YOHANES:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(2) && hasQuestItems(player, POISON_SAC))
+					if (qs.isCond(2) && hasQuestItems(player, POISON_SAC))
 					{
-						st.setCond(3, true);
+						qs.setCond(3, true);
 						takeItems(player, POISON_SAC, -1);
 						giveItems(player, FEVER_MEDICINE, 1);
 						htmltext = "30032-01.html";
 					}
-					else if (st.isCond(3) && hasQuestItems(player, FEVER_MEDICINE))
+					else if (qs.isCond(3) && hasQuestItems(player, FEVER_MEDICINE))
 					{
 						htmltext = "30032-02.html";
 					}

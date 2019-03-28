@@ -19,8 +19,8 @@ package quests.Q00358_IllegitimateChildOfTheGoddess;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -67,10 +67,10 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -86,7 +86,7 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 			}
 			case "30862-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -95,26 +95,26 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
-		if ((st != null) && giveItemRandomly(player, npc, SNAKE_SCALE, 1, SNAKE_SCALE_COUNT, MOBS.get(npc.getId()), true))
+		final QuestState qs = getRandomPartyMemberState(player, 1, 3, npc);
+		if ((qs != null) && giveItemRandomly(player, npc, SNAKE_SCALE, 1, SNAKE_SCALE_COUNT, MOBS.get(npc.getId()), true))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30862-01.htm" : "30862-05.html");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			if (getQuestItemsCount(player, SNAKE_SCALE) < SNAKE_SCALE_COUNT)
 			{
@@ -123,7 +123,7 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 			else
 			{
 				rewardItems(player, REWARDS[getRandom(REWARDS.length)], 1);
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = "30862-07.html";
 			}
 		}

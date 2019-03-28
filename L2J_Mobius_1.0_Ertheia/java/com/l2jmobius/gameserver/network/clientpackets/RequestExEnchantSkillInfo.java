@@ -22,9 +22,9 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import com.l2jmobius.gameserver.util.SkillEnchantConverter;
 
@@ -39,7 +39,7 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 	private int _skillSubLvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
 		final int level = packet.readD();
@@ -50,7 +50,7 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 		}
 		else
 		{
-			_skillLvl = client.getActiveChar().getKnownSkill(_skillId).getLevel();
+			_skillLvl = client.getPlayer().getKnownSkill(_skillId).getLevel();
 			_skillSubLvl = SkillEnchantConverter.levelToUnderground(level);
 		}
 		
@@ -58,21 +58,21 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0) || (_skillSubLvl < 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			return;
 		}
@@ -88,7 +88,7 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final Skill playerSkill = activeChar.getKnownSkill(_skillId);
+		final Skill playerSkill = player.getKnownSkill(_skillId);
 		if ((playerSkill.getLevel() != _skillLvl) || (playerSkill.getSubLevel() != _skillSubLvl))
 		{
 			return;

@@ -20,9 +20,9 @@ import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveRouteFinished;
 
 /**
  * Holds info about current walk progress.
@@ -47,7 +47,7 @@ public class WalkInfo
 	/**
 	 * @return name of route of this WalkInfo.
 	 */
-	public L2WalkRoute getRoute()
+	public WalkRoute getRoute()
 	{
 		return WalkingManager.getInstance().getRoute(_routeName);
 	}
@@ -55,7 +55,7 @@ public class WalkInfo
 	/**
 	 * @return current node of this WalkInfo.
 	 */
-	public L2NpcWalkerNode getCurrentNode()
+	public NpcWalkerNode getCurrentNode()
 	{
 		return getRoute().getNodeList().get(Math.min(Math.max(0, _currentNode), getRoute().getNodeList().size() - 1));
 	}
@@ -64,7 +64,7 @@ public class WalkInfo
 	 * Calculate next node for this WalkInfo and send debug message from given npc
 	 * @param npc NPC to debug message to be sent from
 	 */
-	public synchronized void calculateNextNode(L2Npc npc)
+	public synchronized void calculateNextNode(Npc npc)
 	{
 		// Check this first, within the bounds of random moving, we have no conception of "first" or "last" node
 		if (getRoute().getRepeatType() == WalkingManager.REPEAT_RANDOM)

@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2FeedableBeastInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.FeedableBeastInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class BeastSpice implements IItemHandler
@@ -35,32 +35,32 @@ public class BeastSpice implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		
-		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance))
+		if (!(player.getTarget() instanceof FeedableBeastInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return;
 		}
 		
-		final L2Object[] targets = new L2Object[1];
-		targets[0] = activeChar.getTarget();
+		final WorldObject[] targets = new WorldObject[1];
+		targets[0] = player.getTarget();
 		
 		final int itemId = item.getItemId();
 		if (itemId == 6643) // Golden Spice
 		{
-			activeChar.useMagic(SkillTable.getInstance().getInfo(2188, 1), false, false);
+			player.useMagic(SkillTable.getInstance().getInfo(2188, 1), false, false);
 		}
 		else if (itemId == 6644) // Crystal Spice
 		{
-			activeChar.useMagic(SkillTable.getInstance().getInfo(2189, 1), false, false);
+			player.useMagic(SkillTable.getInstance().getInfo(2189, 1), false, false);
 		}
 	}
 	

@@ -22,13 +22,13 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FortCommanderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FortCommanderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -52,7 +52,7 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		if ((effected == null) || effected.isRaid())
 		{
@@ -60,8 +60,8 @@ public final class Fear extends AbstractEffect
 		}
 		
 		return effected.isPlayer() || effected.isSummon() || (effected.isAttackable() //
-			&& !((effected instanceof L2DefenderInstance) || (effected instanceof L2FortCommanderInstance) //
-				|| (effected instanceof L2SiegeFlagInstance) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
+			&& !((effected instanceof DefenderInstance) || (effected instanceof FortCommanderInstance) //
+				|| (effected instanceof SiegeFlagInstance) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override
@@ -71,21 +71,21 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		fearAction(null, effected);
 		return false;
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		effected.getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
 		fearAction(effector, effected);
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (!effected.isPlayer())
 		{
@@ -93,7 +93,7 @@ public final class Fear extends AbstractEffect
 		}
 	}
 	
-	private void fearAction(L2Character effector, L2Character effected)
+	private void fearAction(Creature effector, Creature effected)
 	{
 		final double radians = Math.toRadians((effector != null) ? Util.calculateAngleFrom(effector, effected) : Util.convertHeadingToDegree(effected.getHeading()));
 		

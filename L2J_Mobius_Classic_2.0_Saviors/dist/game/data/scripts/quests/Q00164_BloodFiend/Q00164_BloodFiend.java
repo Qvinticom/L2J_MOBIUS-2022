@@ -18,8 +18,8 @@ package quests.Q00164_BloodFiend;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -51,37 +51,37 @@ public class Q00164_BloodFiend extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equals("30149-04.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equals("30149-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_HAVE_FULFILLED_MY_CONTRACT_WITH_TRADER_CREAMEES));
 			giveItems(killer, KIRUNAK_SKULL, 1);
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -90,10 +90,10 @@ public class Q00164_BloodFiend extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(2) && hasQuestItems(player, KIRUNAK_SKULL))
+				if (qs.isCond(2) && hasQuestItems(player, KIRUNAK_SKULL))
 				{
 					giveAdena(player, 12000, true);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30149-06.html";
 				}
 				else

@@ -16,8 +16,8 @@
  */
 package quests.Q10445_AnImpendingThreat;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -53,10 +53,10 @@ public final class Q10445_AnImpendingThreat extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -73,16 +73,16 @@ public final class Q10445_AnImpendingThreat extends Quest
 			}
 			case "31340-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, LETTER, 1);
 				htmltext = event;
 				break;
 			}
 			case "33839-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 					takeItems(player, LETTER, 1);
 					giveItems(player, BADGE, 1);
 					htmltext = event;
@@ -91,7 +91,7 @@ public final class Q10445_AnImpendingThreat extends Quest
 			}
 			case "33840-02.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					giveItems(player, ELIXIR_LIFE, 50);
 					giveItems(player, ELIXIR_MANA, 50);
@@ -102,7 +102,7 @@ public final class Q10445_AnImpendingThreat extends Quest
 					{
 						addExpAndSp(player, 100_506_183, 241_212);
 					}
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -112,12 +112,12 @@ public final class Q10445_AnImpendingThreat extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -133,7 +133,7 @@ public final class Q10445_AnImpendingThreat extends Quest
 				{
 					case MATHIAS:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "31340-05.html";
 						}
@@ -141,11 +141,11 @@ public final class Q10445_AnImpendingThreat extends Quest
 					}
 					case TUSKA:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "33839-01.html";
 						}
-						else if (st.isCond(2))
+						else if (qs.isCond(2))
 						{
 							htmltext = "33839-04.html";
 						}
@@ -153,7 +153,7 @@ public final class Q10445_AnImpendingThreat extends Quest
 					}
 					case BRUENER:
 					{
-						if (st.isCond(2))
+						if (qs.isCond(2))
 						{
 							htmltext = "33840-01.html";
 						}

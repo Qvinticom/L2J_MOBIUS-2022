@@ -40,13 +40,13 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
@@ -244,7 +244,7 @@ public class Hero
 					
 					if (action == ACTION_RAID_KILLED)
 					{
-						final L2NpcTemplate template = NpcData.getInstance().getTemplate(param);
+						final NpcTemplate template = NpcData.getInstance().getTemplate(param);
 						if (template != null)
 						{
 							_diaryentry.set("action", template.getName() + " was defeated");
@@ -434,7 +434,7 @@ public class Hero
 		HERO_MESSAGE.clear();
 	}
 	
-	public void showHeroDiary(L2PcInstance activeChar, int heroclass, int charid, int page)
+	public void showHeroDiary(PlayerInstance player, int heroclass, int charid, int page)
 	{
 		final int perpage = 10;
 		
@@ -442,7 +442,7 @@ public class Hero
 		if (mainList != null)
 		{
 			final NpcHtmlMessage diaryReply = new NpcHtmlMessage();
-			final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/olympiad/herodiary.htm");
+			final String htmContent = HtmCache.getInstance().getHtm(player, "data/html/olympiad/herodiary.htm");
 			final String heroMessage = HERO_MESSAGE.get(charid);
 			if ((htmContent != null) && (heroMessage != null))
 			{
@@ -512,12 +512,12 @@ public class Hero
 					diaryReply.replace("%buttnext%", "");
 				}
 				
-				activeChar.sendPacket(diaryReply);
+				player.sendPacket(diaryReply);
 			}
 		}
 	}
 	
-	public void showHeroFights(L2PcInstance activeChar, int heroclass, int charid, int page)
+	public void showHeroFights(PlayerInstance player, int heroclass, int charid, int page)
 	{
 		final int perpage = 20;
 		int _win = 0;
@@ -528,7 +528,7 @@ public class Hero
 		if (heroFights != null)
 		{
 			final NpcHtmlMessage FightReply = new NpcHtmlMessage();
-			final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/olympiad/herohistory.htm");
+			final String htmContent = HtmCache.getInstance().getHtm(player, "data/html/olympiad/herohistory.htm");
 			if (htmContent != null)
 			{
 				FightReply.setHtml(htmContent);
@@ -604,7 +604,7 @@ public class Hero
 				FightReply.replace("%draw%", String.valueOf(_draw));
 				FightReply.replace("%loos%", String.valueOf(_loss));
 				
-				activeChar.sendPacket(FightReply);
+				player.sendPacket(FightReply);
 			}
 		}
 	}
@@ -615,7 +615,7 @@ public class Hero
 		
 		for (Integer objectId : HEROES.keySet())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+			final PlayerInstance player = World.getInstance().getPlayer(objectId);
 			if (player == null)
 			{
 				continue;
@@ -625,7 +625,7 @@ public class Hero
 			
 			for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
 			{
-				final L2ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
+				final ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
 				if ((equippedItem != null) && equippedItem.isHeroItem())
 				{
 					player.getInventory().unEquipItemInSlot(i);
@@ -633,7 +633,7 @@ public class Hero
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance item : player.getInventory().getItems())
+			for (ItemInstance item : player.getInventory().getItems())
 			{
 				if ((item != null) && item.isHeroItem())
 				{
@@ -786,7 +786,7 @@ public class Hero
 	{
 		setDiaryData(charId, ACTION_RAID_KILLED, npcId);
 		
-		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
+		final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		final List<StatsSet> list = HERO_DIARY.get(charId);
 		if ((list == null) || (template == null))
 		{
@@ -842,7 +842,7 @@ public class Hero
 	 * @param player the player instance
 	 * @param message String to set
 	 */
-	public void setHeroMessage(L2PcInstance player, String message)
+	public void setHeroMessage(PlayerInstance player, String message)
 	{
 		HERO_MESSAGE.put(player.getObjectId(), message);
 	}
@@ -917,7 +917,7 @@ public class Hero
 	 * Claims the hero status for the given player.
 	 * @param player the player to become hero
 	 */
-	public void claimHero(L2PcInstance player)
+	public void claimHero(PlayerInstance player)
 	{
 		StatsSet hero = HEROES.get(player.getObjectId());
 		if (hero == null)
@@ -928,7 +928,7 @@ public class Hero
 		
 		hero.set(CLAIMED, true);
 		
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if ((clan != null) && (clan.getLevel() >= 5))
 		{
 			clan.addReputationScore(Config.HERO_POINTS, true);

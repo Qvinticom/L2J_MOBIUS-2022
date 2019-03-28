@@ -27,14 +27,14 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -207,7 +207,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
 		if (event.equalsIgnoreCase("enter"))
@@ -221,7 +221,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 			if (inst != null)
 			{
-				for (L2Npc _npc : inst.getNpcs())
+				for (Npc _npc : inst.getNpcs())
 				{
 					if ((_npc != null) && ((_npc.getId() >= NPC_KNIGHT) && (_npc.getId() <= NPC_WARRIOR)))
 					{
@@ -244,7 +244,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 		else if (event.equalsIgnoreCase("buff"))
 		{
-			for (L2PcInstance pl : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class))
+			for (PlayerInstance pl : World.getInstance().getVisibleObjects(npc, PlayerInstance.class))
 			{
 				if ((pl != null) && Util.checkIfInRange(75, npc, pl, false) && (NPC_BUFFS.get(npc.getId()) != null))
 				{
@@ -259,12 +259,12 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 			{
-				for (L2Character foe : L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange()))
+				for (Creature foe : World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange()))
 				{
-					if (foe.isAttackable() && !(foe instanceof L2QuestGuardInstance))
+					if (foe.isAttackable() && !(foe instanceof QuestGuardInstance))
 					{
-						((L2QuestGuardInstance) npc).addDamageHate(foe, 0, 999);
-						((L2QuestGuardInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, foe, null);
+						((QuestGuardInstance) npc).addDamageHate(foe, 0, 999);
+						((QuestGuardInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, foe, null);
 					}
 				}
 			}
@@ -295,7 +295,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 		if (tmpworld instanceof CAUWorld)
@@ -320,7 +320,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -387,7 +387,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
@@ -405,7 +405,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		
 		if (player != null)
 		{
-			final L2Playable attacker = (isSummon ? player.getSummon() : player);
+			final Playable attacker = (isSummon ? player.getSummon() : player);
 			if ((attacker.getLevel() - npc.getLevel()) >= 9)
 			{
 				if ((attacker.getBuffCount() > 0) || (attacker.getDanceCount() > 0))
@@ -415,7 +415,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 				}
 				else if (player.getParty() != null)
 				{
-					for (L2PcInstance pmember : player.getParty().getMembers())
+					for (PlayerInstance pmember : player.getParty().getMembers())
 					{
 						if ((pmember.getBuffCount() > 0) || (pmember.getDanceCount() > 0))
 						{
@@ -430,7 +430,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
@@ -459,7 +459,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 				
 				if (inst != null)
 				{
-					for (L2Npc _npc : inst.getNpcs())
+					for (Npc _npc : inst.getNpcs())
 					{
 						if ((_npc != null) && !_npc.isDead() && (CommonUtil.contains(BOSSES, _npc.getId()) || CommonUtil.contains(MONSTERS, _npc.getId())))
 						{
@@ -486,7 +486,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		// Buff players every two minutes, check for foes in aggro range
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
@@ -507,7 +507,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	private String checkEnterConditions(L2PcInstance player, L2Npc npc)
+	private String checkEnterConditions(PlayerInstance player, Npc npc)
 	{
 		if (DEBUG)
 		{
@@ -560,7 +560,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			return "CastleWarden-07.html";
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		
 		if (party == null)
 		{
@@ -572,7 +572,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			return getHtm(player, "CastleWarden-10.html").replace("%leader%", party.getLeader().getName());
 		}
 		
-		for (L2PcInstance partyMember : party.getMembers())
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			qs = partyMember.getQuestState(getName());
 			
@@ -602,7 +602,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(L2PcInstance player, String template, Location coords, CastleDungeon dungeon, String ret)
+	protected String enterInstance(PlayerInstance player, String template, Location coords, CastleDungeon dungeon, String ret)
 	{
 		// Check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -623,7 +623,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			return ret;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		world = new CAUWorld();
 		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
 		world.setInstance(instance);
@@ -642,7 +642,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			return "CastleWarden-09.html";
 		}
-		for (L2PcInstance partyMember : party.getMembers())
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			teleportPlayer(partyMember, coords, instanceId);
 			world.addAllowed(partyMember);
@@ -747,9 +747,9 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	private class completeDungeon implements Runnable
 	{
 		private final CAUWorld _world;
-		private final L2PcInstance _player;
+		private final PlayerInstance _player;
 		
-		public completeDungeon(CAUWorld world, L2PcInstance player)
+		public completeDungeon(CAUWorld world, PlayerInstance player)
 		{
 			_world = world;
 			_player = player;
@@ -766,7 +766,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					
 					final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 					
-					for (L2Npc _npc : inst.getNpcs())
+					for (Npc _npc : inst.getNpcs())
 					{
 						
 						if ((_npc != null) && ((_npc.getId() >= NPC_KNIGHT) && (_npc.getId() <= NPC_WARRIOR)))
@@ -783,7 +783,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					
 					if (_player != null)
 					{
-						final L2Party party = _player.getParty();
+						final Party party = _player.getParty();
 						
 						if (party == null)
 						{
@@ -791,7 +791,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 						}
 						else
 						{
-							for (L2PcInstance partyMember : party.getMembers())
+							for (PlayerInstance partyMember : party.getMembers())
 							{
 								if ((partyMember != null) && (partyMember.getInstanceId() == _player.getInstanceId()))
 								{
@@ -809,7 +809,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 	}
 	
-	protected void rewardPlayer(L2PcInstance player)
+	protected void rewardPlayer(PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if ((qs != null) && (qs.isCond(2)))

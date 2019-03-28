@@ -23,9 +23,9 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class HeroCustomItem implements IItemHandler
@@ -39,35 +39,35 @@ public class HeroCustomItem implements IItemHandler
 	String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator, hero_end_date) VALUES (?,?,?,?,?,?)";
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		if (Config.HERO_CUSTOM_ITEMS)
 		{
-			if (!(playable instanceof L2PcInstance))
+			if (!(playable instanceof PlayerInstance))
 			{
 				return;
 			}
 			
-			L2PcInstance activeChar = (L2PcInstance) playable;
+			PlayerInstance player = (PlayerInstance) playable;
 			
-			if (activeChar.isInOlympiadMode())
+			if (player.isInOlympiadMode())
 			{
-				activeChar.sendMessage("This Item Cannot Be Used On Olympiad Games.");
+				player.sendMessage("This Item Cannot Be Used On Olympiad Games.");
 			}
 			
-			if (activeChar.isHero())
+			if (player.isHero())
 			{
-				activeChar.sendMessage("You Are Already A Hero!.");
+				player.sendMessage("You Are Already A Hero!.");
 			}
 			else
 			{
-				activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 16));
-				activeChar.setHero(true);
-				updateDatabase(activeChar, Config.HERO_CUSTOM_DAY * 24 * 60 * 60 * 1000);
-				activeChar.sendMessage("You Are Now a Hero,You Are Granted With Hero Status , Skills ,Aura.");
-				activeChar.broadcastUserInfo();
+				player.broadcastPacket(new SocialAction(player.getObjectId(), 16));
+				player.setHero(true);
+				updateDatabase(player, Config.HERO_CUSTOM_DAY * 24 * 60 * 60 * 1000);
+				player.sendMessage("You Are Now a Hero,You Are Granted With Hero Status , Skills ,Aura.");
+				player.broadcastUserInfo();
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-				activeChar.getInventory().addItem("Wings", 6842, 1, activeChar, null);
+				player.getInventory().addItem("Wings", 6842, 1, player, null);
 			}
 		}
 	}
@@ -78,7 +78,7 @@ public class HeroCustomItem implements IItemHandler
 		return ITEM_IDS;
 	}
 	
-	private void updateDatabase(L2PcInstance player, long heroTime)
+	private void updateDatabase(PlayerInstance player, long heroTime)
 	{
 		if (player == null)
 		{

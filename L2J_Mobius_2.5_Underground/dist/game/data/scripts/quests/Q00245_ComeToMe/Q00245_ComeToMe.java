@@ -22,9 +22,9 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
-import com.l2jmobius.gameserver.model.L2Mentee;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Mentee;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -77,11 +77,11 @@ public class Q00245_ComeToMe extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player.isMentor() && event.equals("30847-13.html"))
 		{
-			L2PcInstance mentee = getCurrentMentee(player);
+			PlayerInstance mentee = getCurrentMentee(player);
 			if (mentee != null)
 			{
 				if (player.destroyItemByItemId("quest_245", CRYSTAL_A, 100, npc, true))
@@ -94,18 +94,18 @@ public class Q00245_ComeToMe extends Quest
 			return "30847-12.html";
 		}
 		
-		QuestState st = getQuestState(player, false);
-		if (st == null)
+		QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return event;
 		}
 		else if (event.equals("30847-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if (event.equals("30847-07.htm"))
 		{
-			st.set("talk", "1");
+			qs.set("talk", "1");
 			takeItems(player, FLAME_ASHES, -1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 		}
@@ -113,14 +113,14 @@ public class Q00245_ComeToMe extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (npc.getId() == FERRIS)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -136,7 +136,7 @@ public class Q00245_ComeToMe extends Quest
 				}
 				case State.STARTED:
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -145,13 +145,13 @@ public class Q00245_ComeToMe extends Quest
 						}
 						case 2:
 						{
-							if (!st.isSet("talk"))
+							if (!qs.isSet("talk"))
 							{
 								htmltext = "30847-06.html";
 							}
 							else if (player.isMentee())
 							{
-								L2PcInstance mentor = MentorManager.getInstance().getMentor(player.getObjectId()).getPlayerInstance();
+								PlayerInstance mentor = MentorManager.getInstance().getMentor(player.getObjectId()).getPlayerInstance();
 								if ((mentor != null) && mentor.isOnline() && Util.checkIfInRange(200, npc, mentor, true))
 								{
 									htmltext = "30847-10.html";
@@ -169,7 +169,7 @@ public class Q00245_ComeToMe extends Quest
 						}
 						case 3:
 						{
-							st.setCond(4, true);
+							qs.setCond(4, true);
 							htmltext = "30847-17.html";
 							break;
 						}
@@ -195,7 +195,7 @@ public class Q00245_ComeToMe extends Quest
 							{
 								htmltext = getNoQuestLevelRewardMsg(player);
 							}
-							st.exitQuest(QuestType.ONE_TIME, true);
+							qs.exitQuest(QuestType.ONE_TIME, true);
 							break;
 						}
 					}
@@ -212,16 +212,16 @@ public class Q00245_ComeToMe extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, true);
+		final QuestState qs = getQuestState(killer, true);
 		
-		if ((npc == null) || (st == null))
+		if ((npc == null) || (qs == null))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		if (st.getCond() == 1)
+		if (qs.getCond() == 1)
 		{
 			if (CommonUtil.contains(BLAZING_MOBS_1, npc.getId()) && (getRandom(100) < 50))
 			{
@@ -229,24 +229,24 @@ public class Q00245_ComeToMe extends Quest
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				if (getQuestItemsCount(killer, FLAME_ASHES) >= 15)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
-		else if (st.getCond() == 4)
+		else if (qs.getCond() == 4)
 		{
 			if (CommonUtil.contains(BLAZING_MOBS_2, npc.getId()))
 			{
 				if (killer.isMentee())
 				{
-					L2PcInstance mentor = MentorManager.getInstance().getMentor(killer.getObjectId()).getPlayerInstance();
+					PlayerInstance mentor = MentorManager.getInstance().getMentor(killer.getObjectId()).getPlayerInstance();
 					if ((mentor != null) && Util.checkIfInRange(500, killer, mentor, false))
 					{
 						giveItems(killer, CRYSTALS_OF_EXPERIENCE, 1);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						if (getQuestItemsCount(killer, CRYSTALS_OF_EXPERIENCE) >= 12)
 						{
-							st.setCond(5, true);
+							qs.setCond(5, true);
 						}
 					}
 				}
@@ -256,11 +256,11 @@ public class Q00245_ComeToMe extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (player.isMentor() && (npc.getId() == FERRIS))
 		{
-			final L2PcInstance mentee = getCurrentMentee(player);
+			final PlayerInstance mentee = getCurrentMentee(player);
 			if (mentee != null)
 			{
 				return "30847-11.html";
@@ -270,16 +270,16 @@ public class Q00245_ComeToMe extends Quest
 		return null;
 	}
 	
-	private L2PcInstance getCurrentMentee(L2PcInstance mentor)
+	private PlayerInstance getCurrentMentee(PlayerInstance mentor)
 	{
-		L2PcInstance mentee = null;
-		final Collection<L2Mentee> mentees = MentorManager.getInstance().getMentees(mentor.getObjectId());
-		for (L2Mentee pl : mentees)
+		PlayerInstance mentee = null;
+		final Collection<Mentee> mentees = MentorManager.getInstance().getMentees(mentor.getObjectId());
+		for (Mentee pl : mentees)
 		{
 			if (pl.isOnline() && Util.checkIfInRange(400, mentor, pl.getPlayerInstance(), false))
 			{
-				final QuestState st = getQuestState(pl.getPlayerInstance(), true);
-				if ((st != null) && (st.getCond() == 2))
+				final QuestState qs = getQuestState(pl.getPlayerInstance(), true);
+				if ((qs != null) && (qs.getCond() == 2))
 				{
 					mentee = pl.getPlayerInstance();
 				}

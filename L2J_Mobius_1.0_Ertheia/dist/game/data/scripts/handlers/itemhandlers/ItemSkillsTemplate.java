@@ -21,11 +21,11 @@ import java.util.List;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ItemSkillsTemplate implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer() && !playable.isPet())
 		{
@@ -79,7 +79,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			
 			if (itemSkill != null)
 			{
-				if (itemSkill.hasEffectType(L2EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
+				if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
 				{
 					playable.getActingPlayer().sendMessage("You've exceeded the limit and cannot retrieve the item. Please check your limit in the inventory.");
 					return false;
@@ -90,7 +90,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					hasConsumeSkill = true;
 				}
 				
-				if (!itemSkill.hasEffectType(L2EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
+				if (!itemSkill.hasEffectType(EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
 				{
 					continue;
 				}
@@ -119,7 +119,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					playable.sendPacket(sm);
 				}
 				
-				if (playable.isPlayer() && itemSkill.hasEffectType(L2EffectType.SUMMON_PET))
+				if (playable.isPlayer() && itemSkill.hasEffectType(EffectType.SUMMON_PET))
 				{
 					playable.doCast(itemSkill);
 					successfulUse = true;
@@ -166,7 +166,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * @param hasConsumeSkill
 	 * @return {@code true} check if item use consume item, {@code false} otherwise
 	 */
-	private boolean checkConsume(L2ItemInstance item, boolean hasConsumeSkill)
+	private boolean checkConsume(ItemInstance item, boolean hasConsumeSkill)
 	{
 		switch (item.getItem().getDefaultAction())
 		{
@@ -193,7 +193,7 @@ public class ItemSkillsTemplate implements IItemHandler
 	 * @param item the item being used
 	 * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
 	 */
-	private boolean checkReuse(L2Playable playable, Skill skill, L2ItemInstance item)
+	private boolean checkReuse(Playable playable, Skill skill, ItemInstance item)
 	{
 		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;

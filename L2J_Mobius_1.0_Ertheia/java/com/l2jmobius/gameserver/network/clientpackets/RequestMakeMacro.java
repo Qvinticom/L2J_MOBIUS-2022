@@ -23,8 +23,8 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.MacroType;
 import com.l2jmobius.gameserver.model.Macro;
 import com.l2jmobius.gameserver.model.MacroCmd;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class RequestMakeMacro implements IClientIncomingPacket
@@ -35,7 +35,7 @@ public final class RequestMakeMacro implements IClientIncomingPacket
 	private static final int MAX_MACRO_LENGTH = 12;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int _id = packet.readD();
 		final String _name = packet.readS();
@@ -64,9 +64,9 @@ public final class RequestMakeMacro implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

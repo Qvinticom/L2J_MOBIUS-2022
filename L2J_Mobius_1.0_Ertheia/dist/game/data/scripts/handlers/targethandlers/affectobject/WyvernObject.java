@@ -19,7 +19,7 @@ package handlers.targethandlers.affectobject;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 
 /**
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 public class WyvernObject implements IAffectObjectHandler
 {
 	@Override
-	public boolean checkAffectedObject(L2Character activeChar, L2Character target)
+	public boolean checkAffectedObject(Creature creature, Creature target)
 	{
 		// TODO Check if this is proper. Not sure if this is the object we are looking for.
 		return CategoryData.getInstance().isInCategory(CategoryType.WYVERN_GROUP, target.getId());

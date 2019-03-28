@@ -24,13 +24,13 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -38,7 +38,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.3.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestCrystallizeItem implements IClientIncomingPacket
@@ -47,7 +46,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 	private long _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_count = packet.readQ();
@@ -55,11 +54,11 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			LOGGER.finer("RequestCrystalizeItem: activeChar was null");
 			return;
@@ -67,38 +66,38 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		// if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
 		// {
-		// activeChar.sendMessage("You are crystallizing too fast.");
+		// player.sendMessage("You are crystallizing too fast.");
 		// return;
 		// }
 		
 		if (_count <= 0)
 		{
-			Util.handleIllegalPlayerAction(activeChar, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + activeChar.getName(), Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + player.getName(), Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() != PrivateStoreType.NONE) || !activeChar.isInCrystallize())
+		if ((player.getPrivateStoreType() != PrivateStoreType.NONE) || !player.isInCrystallize())
 		{
 			client.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
 		
-		final int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
+		final int skillLevel = player.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
 		if (skillLevel <= 0)
 		{
 			client.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
-			if ((activeChar.getRace() != Race.DWARF) && (activeChar.getClassId().ordinal() != 117) && (activeChar.getClassId().ordinal() != 55))
+			if ((player.getRace() != Race.DWARF) && (player.getClassId().ordinal() != 117) && (player.getClassId().ordinal() != 55))
 			{
-				LOGGER.info("Player " + activeChar + " used crystalize with classid: " + activeChar.getClassId().ordinal());
+				LOGGER.info("Player " + player + " used crystalize with classid: " + player.getClassId().ordinal());
 			}
 			return;
 		}
 		
-		final PcInventory inventory = activeChar.getInventory();
+		final PlayerInventory inventory = player.getInventory();
 		if (inventory != null)
 		{
-			final L2ItemInstance item = inventory.getItemByObjectId(_objectId);
+			final ItemInstance item = inventory.getItemByObjectId(_objectId);
 			if ((item == null) || item.isHeroItem() || (!Config.ALT_ALLOW_AUGMENT_DESTROY && item.isAugmented()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -107,11 +106,11 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			
 			if (_count > item.getCount())
 			{
-				_count = activeChar.getInventory().getItemByObjectId(_objectId).getCount();
+				_count = player.getInventory().getItemByObjectId(_objectId).getCount();
 			}
 		}
 		
-		final L2ItemInstance itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance itemToRemove = player.getInventory().getItemByObjectId(_objectId);
 		if ((itemToRemove == null) || itemToRemove.isShadowItem() || itemToRemove.isTimeLimitedItem())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -124,7 +123,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!activeChar.getInventory().canManipulateWithItemId(itemToRemove.getId()))
+		if (!player.getInventory().canManipulateWithItemId(itemToRemove.getId()))
 		{
 			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED);
 			return;
@@ -195,23 +194,23 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(itemToRemove);
 		if ((crystallizationRewards == null) || crystallizationRewards.isEmpty())
 		{
-			activeChar.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
+			player.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
 			return;
 		}
 		
-		// activeChar.setInCrystallize(true);
+		// player.setInCrystallize(true);
 		
 		// unequip if needed
 		SystemMessage sm;
 		if (itemToRemove.isEquipped())
 		{
-			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance item : unequiped)
+			for (ItemInstance item : unequiped)
 			{
 				iu.addModifiedItem(item);
 			}
-			activeChar.sendInventoryUpdate(iu);
+			player.sendInventoryUpdate(iu);
 			
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
@@ -228,11 +227,11 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		}
 		
 		// remove from inventory
-		final L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Crystalize", _objectId, _count, activeChar, null);
+		final ItemInstance removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
 		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
-		activeChar.sendInventoryUpdate(iu);
+		player.sendInventoryUpdate(iu);
 		
 		for (ItemChanceHolder holder : crystallizationRewards)
 		{
@@ -240,7 +239,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			if (rand < holder.getChance())
 			{
 				// add crystals
-				final L2ItemInstance createdItem = activeChar.getInventory().addItem("Crystalize", holder.getId(), holder.getCount(), activeChar, activeChar);
+				final ItemInstance createdItem = player.getInventory().addItem("Crystalize", holder.getId(), holder.getCount(), player, player);
 				
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				sm.addItemName(createdItem);
@@ -253,8 +252,8 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		sm.addItemName(removedItem);
 		client.sendPacket(sm);
 		
-		activeChar.broadcastUserInfo();
+		player.broadcastUserInfo();
 		
-		activeChar.setInCrystallize(false);
+		player.setInCrystallize(false);
 	}
 }

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.sayune;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.SayuneType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -34,12 +34,12 @@ public class ExFlyMoveBroadcast implements IClientOutgoingPacket
 	private final ILocational _targetLoc;
 	private final SayuneType _type;
 	
-	public ExFlyMoveBroadcast(L2PcInstance activeChar, SayuneType type, int mapId, ILocational targetLoc)
+	public ExFlyMoveBroadcast(PlayerInstance player, SayuneType type, int mapId, ILocational targetLoc)
 	{
-		_objectId = activeChar.getObjectId();
+		_objectId = player.getObjectId();
 		_type = type;
 		_mapId = mapId;
-		_currentLoc = activeChar;
+		_currentLoc = player;
 		_targetLoc = targetLoc;
 	}
 	

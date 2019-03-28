@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.util.StringUtil;
 
-public class ShowBoard extends L2GameServerPacket
+public class ShowBoard extends GameServerPacket
 {
 	public static final ShowBoard STATIC_SHOWBOARD_102 = new ShowBoard(null, "102");
 	public static final ShowBoard STATIC_SHOWBOARD_103 = new ShowBoard(null, "103");

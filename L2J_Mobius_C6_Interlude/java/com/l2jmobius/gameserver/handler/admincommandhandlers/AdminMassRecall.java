@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -39,7 +39,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_recallclan"))
 		{
@@ -47,7 +47,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			{
 				String val = command.substring(17).trim();
 				
-				L2Clan clan = ClanTable.getInstance().getClanByName(val);
+				Clan clan = ClanTable.getInstance().getClanByName(val);
 				
 				if (clan == null)
 				{
@@ -55,9 +55,9 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				L2PcInstance[] m = clan.getOnlineMembers("");
+				PlayerInstance[] m = clan.getOnlineMembers("");
 				
-				for (L2PcInstance element : m)
+				for (PlayerInstance element : m)
 				{
 					Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 				}
@@ -72,7 +72,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			try
 			{
 				String val = command.substring(17).trim();
-				L2Clan clan = ClanTable.getInstance().getClanByName(val);
+				Clan clan = ClanTable.getInstance().getClanByName(val);
 				
 				if (clan == null)
 				{
@@ -84,22 +84,22 @@ public class AdminMassRecall implements IAdminCommandHandler
 				
 				if (ally == 0)
 				{
-					L2PcInstance[] m = clan.getOnlineMembers("");
+					PlayerInstance[] m = clan.getOnlineMembers("");
 					
-					for (L2PcInstance element : m)
+					for (PlayerInstance element : m)
 					{
 						Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 					}
 				}
 				else
 				{
-					for (L2Clan aclan : ClanTable.getInstance().getClans())
+					for (Clan aclan : ClanTable.getInstance().getClans())
 					{
 						if (aclan.getAllyId() == ally)
 						{
-							L2PcInstance[] m = aclan.getOnlineMembers("");
+							PlayerInstance[] m = aclan.getOnlineMembers("");
 							
-							for (L2PcInstance element : m)
+							for (PlayerInstance element : m)
 							{
 								Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 							}
@@ -117,7 +117,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			try
 			{
 				String val = command.substring(18).trim();
-				L2PcInstance player = L2World.getInstance().getPlayer(val);
+				PlayerInstance player = World.getInstance().getPlayer(val);
 				
 				if (player == null)
 				{
@@ -131,9 +131,9 @@ public class AdminMassRecall implements IAdminCommandHandler
 					return true;
 				}
 				
-				L2Party p = player.getParty();
+				Party p = player.getParty();
 				
-				for (L2PcInstance ppl : p.getPartyMembers())
+				for (PlayerInstance ppl : p.getPartyMembers())
 				{
 					Teleport(ppl, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
 				}
@@ -146,7 +146,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void Teleport(L2PcInstance player, int X, int Y, int Z, String Message)
+	private void Teleport(PlayerInstance player, int X, int Y, int Z, String Message)
 	{
 		player.sendMessage(Message);
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

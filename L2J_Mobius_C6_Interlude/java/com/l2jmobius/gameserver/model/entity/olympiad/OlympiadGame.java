@@ -25,17 +25,17 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.HeroSkillTable;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2TamedBeastInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import com.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad.COMP_TYPE;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
@@ -62,8 +62,8 @@ class OlympiadGame
 	protected boolean _playerTwoDefaulted;
 	protected String _playerOneName;
 	protected String _playerTwoName;
-	protected List<L2Skill> _playerOneSkills = new ArrayList<>();
-	protected List<L2Skill> _playerTwoSkills = new ArrayList<>();
+	protected List<Skill> _playerOneSkills = new ArrayList<>();
+	protected List<Skill> _playerTwoSkills = new ArrayList<>();
 	
 	private static final String POINTS = "olympiad_points";
 	private static final String COMP_DONE = "competitions_done";
@@ -75,9 +75,9 @@ class OlympiadGame
 	public int _damageP1 = 0;
 	public int _damageP2 = 0;
 	
-	public L2PcInstance _playerOne;
-	public L2PcInstance _playerTwo;
-	protected List<L2PcInstance> _players;
+	public PlayerInstance _playerOne;
+	public PlayerInstance _playerTwo;
+	protected List<PlayerInstance> _players;
 	private int[] _stadiumPort;
 	private int x1;
 	private int y1;
@@ -90,7 +90,7 @@ class OlympiadGame
 	private SystemMessage _sm2;
 	private SystemMessage _sm3;
 	
-	protected OlympiadGame(int id, COMP_TYPE type, List<L2PcInstance> list)
+	protected OlympiadGame(int id, COMP_TYPE type, List<PlayerInstance> list)
 	{
 		_aborted = false;
 		_gamestarted = false;
@@ -145,7 +145,7 @@ class OlympiadGame
 		_playerTwoSkills.clear();
 	}
 	
-	protected void handleDisconnect(L2PcInstance player)
+	protected void handleDisconnect(PlayerInstance player)
 	{
 		if (_gamestarted)
 		{
@@ -176,14 +176,14 @@ class OlympiadGame
 			return;
 		}
 		
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			try
 			{
 				// Remove Clan Skills
 				if (player.getClan() != null)
 				{
-					for (L2Skill skill : player.getClan().getAllSkills())
+					for (Skill skill : player.getClan().getAllSkills())
 					{
 						player.removeSkill(skill, false);
 					}
@@ -200,14 +200,14 @@ class OlympiadGame
 				// Remove Hero Skills
 				if (player.isHero())
 				{
-					for (L2Skill skill : HeroSkillTable.getHeroSkills())
+					for (Skill skill : HeroSkillTable.getHeroSkills())
 					{
 						player.removeSkill(skill, false);
 					}
 				}
 				
 				// Remove Restricted skills
-				for (L2Skill skill : player.getAllSkills())
+				for (Skill skill : player.getAllSkills())
 				{
 					if (Config.LIST_OLY_RESTRICTED_SKILLS.contains(skill.getId()))
 					{
@@ -234,10 +234,10 @@ class OlympiadGame
 				// Remove Summon's Buffs
 				if (player.getPet() != null)
 				{
-					final L2Summon summon = player.getPet();
+					final Summon summon = player.getPet();
 					summon.stopAllEffects();
 					
-					if (summon instanceof L2PetInstance)
+					if (summon instanceof PetInstance)
 					{
 						summon.unSummon(player);
 					}
@@ -246,7 +246,7 @@ class OlympiadGame
 				// Remove Tamed Beast
 				if (player.getTrainedBeast() != null)
 				{
-					final L2TamedBeastInstance traindebeast = player.getTrainedBeast();
+					final TamedBeastInstance traindebeast = player.getTrainedBeast();
 					traindebeast.stopAllEffects();
 					
 					traindebeast.doDespawn();
@@ -256,7 +256,7 @@ class OlympiadGame
 				{
 					if (player.getCubics() != null)
 					{
-						for (L2CubicInstance cubic : player.getCubics().values())
+						for (CubicInstance cubic : player.getCubics().values())
 						{
 							cubic.stopAction();
 							player.delCubic(cubic.getId());
@@ -267,7 +267,7 @@ class OlympiadGame
 				else if (player.getCubics() != null)
 				{
 					boolean removed = false;
-					for (L2CubicInstance cubic : player.getCubics().values())
+					for (CubicInstance cubic : player.getCubics().values())
 					{
 						if (cubic.givenByOther())
 						{
@@ -285,7 +285,7 @@ class OlympiadGame
 				// Remove player from his party
 				if (player.getParty() != null)
 				{
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					party.removePartyMember(player);
 				}
 				
@@ -303,14 +303,14 @@ class OlympiadGame
 				// Discharge any active shots
 				if (player.getActiveWeaponInstance() != null)
 				{
-					player.getActiveWeaponInstance().setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
-					player.getActiveWeaponInstance().setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
+					player.getActiveWeaponInstance().setChargedSoulshot(ItemInstance.CHARGED_NONE);
+					player.getActiveWeaponInstance().setChargedSpiritshot(ItemInstance.CHARGED_NONE);
 				}
 				
 				// Skill recharge is a Gracia Final feature, but we have it configurable ;)
 				if (Config.ALT_OLY_RECHARGE_SKILLS)
 				{
-					for (L2Skill skill : player.getAllSkills())
+					for (Skill skill : player.getAllSkills())
 					{
 						if (skill.getId() != 1324)
 						{
@@ -389,8 +389,8 @@ class OlympiadGame
 			// teleport summon to
 			if (_playerOne.getPet() != null)
 			{
-				final L2Summon summon = _playerOne.getPet();
-				if (summon instanceof L2SummonInstance)
+				final Summon summon = _playerOne.getPet();
+				if (summon instanceof SummonInstance)
 				{
 					summon.teleToLocation(_stadiumPort[0] + 900, _stadiumPort[1], _stadiumPort[2], false);
 				}
@@ -399,8 +399,8 @@ class OlympiadGame
 			// teleport summon to
 			if (_playerTwo.getPet() != null)
 			{
-				final L2Summon summon = _playerTwo.getPet();
-				if (summon instanceof L2SummonInstance)
+				final Summon summon = _playerTwo.getPet();
+				if (summon instanceof SummonInstance)
 				{
 					summon.teleToLocation(_stadiumPort[0] - 900, _stadiumPort[1], _stadiumPort[2], false);
 				}
@@ -427,7 +427,7 @@ class OlympiadGame
 	
 	protected void additions()
 	{
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			try
 			{
@@ -436,7 +436,7 @@ class OlympiadGame
 				player.setCurrentHp(player.getMaxHp());
 				player.setCurrentMp(player.getMaxMp());
 				// Wind Walk Buff for Both
-				L2Skill skill;
+				Skill skill;
 				SystemMessage sm;
 				skill = SkillTable.getInstance().getInfo(1204, 2);
 				skill.getEffects(player, player);
@@ -485,7 +485,7 @@ class OlympiadGame
 		
 		_sm.addNumber(nsecond);
 		
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			try
 			{
@@ -513,7 +513,7 @@ class OlympiadGame
 	
 	protected void PlayersStatusBack()
 	{
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			try
 			{
@@ -530,7 +530,7 @@ class OlympiadGame
 				// Add Clan Skills
 				if (player.getClan() != null)
 				{
-					for (L2Skill skill : player.getClan().getAllSkills())
+					for (Skill skill : player.getClan().getAllSkills())
 					{
 						if (skill.getMinPledgeClass() <= player.getPledgeClass())
 						{
@@ -542,14 +542,14 @@ class OlympiadGame
 				// Add Hero Skills
 				if (player.isHero())
 				{
-					for (L2Skill skill : HeroSkillTable.getHeroSkills())
+					for (Skill skill : HeroSkillTable.getHeroSkills())
 					{
 						player.addSkill(skill, false);
 					}
 				}
 				
 				// Return Restricted Skills
-				List<L2Skill> rskills;
+				List<Skill> rskills;
 				if (player.getObjectId() == _playerOne.getObjectId())
 				{
 					rskills = _playerOneSkills;
@@ -558,7 +558,7 @@ class OlympiadGame
 				{
 					rskills = _playerTwoSkills;
 				}
-				for (L2Skill skill : rskills)
+				for (Skill skill : rskills)
 				{
 					player.addSkill(skill, false);
 				}
@@ -818,7 +818,7 @@ class OlympiadGame
 			
 			try
 			{
-				final L2ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerOne, null);
+				final ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerOne, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerOne.sendPacket(iu);
@@ -852,7 +852,7 @@ class OlympiadGame
 			
 			try
 			{
-				final L2ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerTwo, null);
+				final ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerTwo, null);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				_playerTwo.sendPacket(iu);
@@ -933,7 +933,7 @@ class OlympiadGame
 		_sm = new SystemMessage(SystemMessageId.STARTS_THE_GAME);
 		broadcastMessage(_sm, true);
 		
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			try
 			{
@@ -949,7 +949,7 @@ class OlympiadGame
 		return !_aborted;
 	}
 	
-	protected void addDamage(L2PcInstance player, int damage)
+	protected void addDamage(PlayerInstance player, int damage)
 	{
 		if ((_playerOne == null) || (_playerTwo == null))
 		{
@@ -972,9 +972,9 @@ class OlympiadGame
 		return msg;
 	}
 	
-	protected L2PcInstance[] getPlayers()
+	protected PlayerInstance[] getPlayers()
 	{
-		final L2PcInstance[] players = new L2PcInstance[2];
+		final PlayerInstance[] players = new PlayerInstance[2];
 		
 		if ((_playerOne == null) || (_playerTwo == null))
 		{
@@ -1001,7 +1001,7 @@ class OlympiadGame
 		
 		if (toAll && (OlympiadManager.STADIUMS[_stadiumID].getSpectators() != null))
 		{
-			for (L2PcInstance spec : OlympiadManager.STADIUMS[_stadiumID].getSpectators())
+			for (PlayerInstance spec : OlympiadManager.STADIUMS[_stadiumID].getSpectators())
 			{
 				if (spec != null)
 				{
@@ -1020,7 +1020,7 @@ class OlympiadGame
 	
 	protected void announceGame()
 	{
-		for (L2Spawn manager : Olympiad.olymanagers)
+		for (Spawn manager : Olympiad.olymanagers)
 		{
 			if ((manager != null) && (manager.getLastSpawn() != null))
 			{
@@ -1033,7 +1033,7 @@ class OlympiadGame
 		}
 	}
 	
-	public void sendPlayersStatus(L2PcInstance spec)
+	public void sendPlayersStatus(PlayerInstance spec)
 	{
 		spec.sendPacket(new ExOlympiadUserInfo(_playerOne, 1));
 		spec.sendPacket(new ExOlympiadUserInfo(_playerTwo, 2));
@@ -1069,7 +1069,7 @@ class OlympiadGameTask implements Runnable
 		_game = game;
 	}
 	
-	protected boolean checkObserverStatusBug(L2PcInstance player)
+	protected boolean checkObserverStatusBug(PlayerInstance player)
 	{
 		if ((player != null) && player.inObserverMode())
 		{
@@ -1080,7 +1080,7 @@ class OlympiadGameTask implements Runnable
 		return false;
 	}
 	
-	protected void removeObserverModeBug(L2PcInstance player)
+	protected void removeObserverModeBug(PlayerInstance player)
 	{
 		if ((player == null) || !player.inObserverMode())
 		{
@@ -1133,12 +1133,12 @@ class OlympiadGameTask implements Runnable
 		for (int i = 0; i < 2; i++)
 		{
 			boolean defaulted = false;
-			final L2PcInstance player = _game._players.get(i);
+			final PlayerInstance player = _game._players.get(i);
 			if (player != null)
 			{
 				player.setOlympiadGameId(_game._stadiumID);
 			}
-			final L2PcInstance otherPlayer = _game._players.get(i ^ 1);
+			final PlayerInstance otherPlayer = _game._players.get(i ^ 1);
 			SystemMessage sm = null;
 			
 			if ((player == null) || (player.isOnline() == 0))
@@ -1225,7 +1225,7 @@ class OlympiadGameTask implements Runnable
 			
 			if (OlympiadManager.STADIUMS[_game._stadiumID].getSpectators() != null)
 			{
-				for (L2PcInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
+				for (PlayerInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
 				{
 					spec.leaveOlympiadObserverMode(true);
 				}
@@ -1333,7 +1333,7 @@ class OlympiadGameTask implements Runnable
 		_game._playerTwo.sendPacket(new ExOlympiadUserInfo(_game._playerOne, 1));
 		if (OlympiadManager.STADIUMS[_game._stadiumID].getSpectators() != null)
 		{
-			for (L2PcInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
+			for (PlayerInstance spec : OlympiadManager.STADIUMS[_game._stadiumID].getSpectators())
 			{
 				_game.sendPlayersStatus(spec);
 			}

@@ -29,7 +29,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 
 /**
@@ -53,17 +53,17 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return _holder;
 	}
 	
-	public abstract boolean isAvailable(L2PcInstance player);
+	public abstract boolean isAvailable(PlayerInstance player);
 	
 	public abstract void init();
 	
-	public int getStatus(L2PcInstance player)
+	public int getStatus(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return entry != null ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
 	}
 	
-	public int getProgress(L2PcInstance player)
+	public int getProgress(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		return entry != null ? entry.getProgress() : 0;
@@ -88,7 +88,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		}
 	}
 	
-	public boolean requestReward(L2PcInstance player)
+	public boolean requestReward(PlayerInstance player)
 	{
 		if (isAvailable(player))
 		{
@@ -104,7 +104,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return false;
 	}
 	
-	protected void giveRewards(L2PcInstance player)
+	protected void giveRewards(PlayerInstance player)
 	{
 		_holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
 	}

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23800" level="102" type="L2Monster" name="Delta Kshana" title="Superion Scout">
+	<npc id="23800" level="102" type="Monster" name="Delta Kshana" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="908048947" sp="908061" />
 		<stats>
@@ -51,7 +51,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23801" level="89" type="L2Monster" name="Lillim Royal Knight">
+	<npc id="23801" level="89" type="Monster" name="Lillim Royal Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Lillim Royal Knight ?? -->
 		<race>DEMONIC</race>
@@ -89,7 +89,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23802" level="87" type="L2Monster" name="Lillim Slayer">
+	<npc id="23802" level="87" type="Monster" name="Lillim Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Lillim Slayer ?? -->
 		<race>DEMONIC</race>
@@ -122,7 +122,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23803" level="101" type="L2Monster" name="Gigantic Healer">
+	<npc id="23803" level="101" type="Monster" name="Gigantic Healer">
 		<!-- Gigantic Healer -->
 		<race>DIVINE</race>
 		<acquire exp="13963332" sp="13975" />
@@ -150,7 +150,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="23804" level="88" type="L2Monster" name="Lillim Great Magus">
+	<npc id="23804" level="88" type="Monster" name="Lillim Great Magus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Lillim Great Magus ?? -->
 		<race>DEMONIC</race>
@@ -182,7 +182,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23805" level="92" type="L2Monster" name="Nephilim Royal Guard">
+	<npc id="23805" level="92" type="Monster" name="Nephilim Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Nephilim Royal Guard ?? -->
 		<race>DIVINE</race>
@@ -215,7 +215,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23806" level="101" type="L2Monster" name="Wandering Dead of the Dimension" title="Attacker of the Rift">
+	<npc id="23806" level="101" type="Monster" name="Wandering Dead of the Dimension" title="Attacker of the Rift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Wandering Dead of the Dimension ?? -->
 		<race>UNDEAD</race>
@@ -243,7 +243,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23807" level="101" type="L2Monster" name="Wandering Dimensional Spirit" title="Attacker of the Rift">
+	<npc id="23807" level="101" type="Monster" name="Wandering Dimensional Spirit" title="Attacker of the Rift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Wandering Dimensional Spirit ?? -->
 		<race>BEAST</race>
@@ -271,7 +271,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23808" level="101" type="L2Monster" name="Lost Soul of the Dimension" title="Attacker of the Rift">
+	<npc id="23808" level="101" type="Monster" name="Lost Soul of the Dimension" title="Attacker of the Rift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Lost Soul of the Dimension ?? -->
 		<race>UNDEAD</race>
@@ -299,7 +299,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23809" level="101" type="L2Monster" name="Lost Dimensional Evil Thoughts" title="Attacker of the Rift">
+	<npc id="23809" level="101" type="Monster" name="Lost Dimensional Evil Thoughts" title="Attacker of the Rift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Lost Dimensional Evil Thoughts ?? -->
 		<race>DEMONIC</race>
@@ -327,7 +327,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23810" level="101" type="L2Monster" name="Roaming Vengeance of the Dimension" title="Attacker of the Rift">
+	<npc id="23810" level="101" type="Monster" name="Roaming Vengeance of the Dimension" title="Attacker of the Rift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Roaming Vengeance of the Dimension ?? -->
 		<race>HUMANOID</race>
@@ -356,7 +356,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23811" level="99" type="L2Monster" name="Cantera Tanya">
+	<npc id="23811" level="99" type="Monster" name="Cantera Tanya">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -394,7 +394,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23812" level="99" type="L2Monster" name="Cantera Deathmoz">
+	<npc id="23812" level="99" type="Monster" name="Cantera Deathmoz">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<acquire exp="20777923" sp="20778" />
@@ -431,7 +431,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23813" level="99" type="L2Monster" name="Cantera Floxis">
+	<npc id="23813" level="99" type="Monster" name="Cantera Floxis">
 		<!-- Source: www.l2wiki.com -->
 		<race>ETC</race>
 		<acquire exp="20777923" sp="20778" />
@@ -469,7 +469,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23814" level="99" type="L2Monster" name="Cantera Belika">
+	<npc id="23814" level="99" type="Monster" name="Cantera Belika">
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<acquire exp="20777923" sp="20778" />
@@ -506,7 +506,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23815" level="99" type="L2Monster" name="Cantera Bridget">
+	<npc id="23815" level="99" type="Monster" name="Cantera Bridget">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="20777923" sp="20778" />

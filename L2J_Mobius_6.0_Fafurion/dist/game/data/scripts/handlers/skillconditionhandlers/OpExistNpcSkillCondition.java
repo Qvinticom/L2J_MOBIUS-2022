@@ -18,11 +18,11 @@ package handlers.skillconditionhandlers;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -43,9 +43,9 @@ public class OpExistNpcSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		final List<L2Npc> npcs = L2World.getInstance().getVisibleObjectsInRange(caster, L2Npc.class, _range);
+		final List<Npc> npcs = World.getInstance().getVisibleObjectsInRange(caster, Npc.class, _range);
 		return _isAround == npcs.stream().anyMatch(npc -> _npcIds.contains(npc.getId()));
 	}
 }

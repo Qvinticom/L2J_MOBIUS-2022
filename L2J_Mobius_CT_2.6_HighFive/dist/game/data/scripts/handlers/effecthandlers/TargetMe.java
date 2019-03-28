@@ -17,8 +17,8 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -39,7 +39,7 @@ public final class TargetMe extends AbstractEffect
 	{
 		if (info.getEffected().isPlayable())
 		{
-			((L2Playable) info.getEffected()).setLockedTarget(null);
+			((Playable) info.getEffected()).setLockedTarget(null);
 		}
 	}
 	
@@ -50,7 +50,7 @@ public final class TargetMe extends AbstractEffect
 		{
 			if (info.getEffected().getTarget() != info.getEffector())
 			{
-				final L2PcInstance effector = info.getEffector().getActingPlayer();
+				final PlayerInstance effector = info.getEffector().getActingPlayer();
 				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
 				if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
 				{
@@ -59,7 +59,7 @@ public final class TargetMe extends AbstractEffect
 				}
 			}
 			
-			((L2Playable) info.getEffected()).setLockedTarget(info.getEffector());
+			((Playable) info.getEffected()).setLockedTarget(info.getEffector());
 		}
 	}
 }

@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 
-public class RequestUnEquipItem extends L2GameClientPacket
+public class RequestUnEquipItem extends GameClientPacket
 {
 	private int _slot;
 	
@@ -41,19 +41,19 @@ public class RequestUnEquipItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar._haveFlagCTF)
+		if (player._haveFlagCTF)
 		{
-			activeChar.sendMessage("You can't unequip a CTF flag.");
+			player.sendMessage("You can't unequip a CTF flag.");
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getPaperdollItemByL2ItemId(_slot);
+		final ItemInstance item = player.getInventory().getPaperdollItemByItemId(_slot);
 		if ((item != null) && item.isWear())
 		{
 			// Wear-items are not to be unequipped
@@ -61,54 +61,54 @@ public class RequestUnEquipItem extends L2GameClientPacket
 		}
 		
 		// Prevent of unequiping a cursed weapon
-		if ((_slot == L2Item.SLOT_LR_HAND) && activeChar.isCursedWeaponEquiped())
+		if ((_slot == Item.SLOT_LR_HAND) && player.isCursedWeaponEquiped())
 		{
 			// Message ?
 			return;
 		}
 		
 		// Prevent player from unequipping items in special conditions
-		if (activeChar.isStunned() || activeChar.isConfused() || activeChar.isAway() || activeChar.isParalyzed() || activeChar.isSleeping() || activeChar.isAlikeDead())
+		if (player.isStunned() || player.isConfused() || player.isAway() || player.isParalyzed() || player.isSleeping() || player.isAlikeDead())
 		{
-			activeChar.sendMessage("Your status does not allow you to do that.");
+			player.sendMessage("Your status does not allow you to do that.");
 			return;
 		}
 		
-		if (/* activeChar.isAttackingNow() || */activeChar.isCastingNow() || activeChar.isCastingPotionNow())
+		if (/* activeChar.isAttackingNow() || */player.isCastingNow() || player.isCastingPotionNow())
 		{
 			return;
 		}
 		
-		if (activeChar.isMoving() && activeChar.isAttackingNow() && ((_slot == L2Item.SLOT_LR_HAND) || (_slot == L2Item.SLOT_L_HAND) || (_slot == L2Item.SLOT_R_HAND)))
+		if (player.isMoving() && player.isAttackingNow() && ((_slot == Item.SLOT_LR_HAND) || (_slot == Item.SLOT_L_HAND) || (_slot == Item.SLOT_R_HAND)))
 		{
-			final L2Object target = activeChar.getTarget();
-			activeChar.setTarget(null);
-			activeChar.stopMove(null);
-			activeChar.setTarget(target);
-			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
+			final WorldObject target = player.getTarget();
+			player.setTarget(null);
+			player.stopMove(null);
+			player.setTarget(target);
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
 		}
 		
 		// Remove augmentation bonus
 		if ((item != null) && item.isAugmented())
 		{
-			item.getAugmentation().removeBonus(activeChar);
+			item.getAugmentation().removeBonus(player);
 		}
 		
-		final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		
 		// show the update in the inventory
 		final InventoryUpdate iu = new InventoryUpdate();
 		
-		for (L2ItemInstance element : unequiped)
+		for (ItemInstance element : unequiped)
 		{
-			activeChar.checkSSMatch(null, element);
+			player.checkSSMatch(null, element);
 			
 			iu.addModifiedItem(element);
 		}
 		
-		activeChar.sendPacket(iu);
+		player.sendPacket(iu);
 		
-		activeChar.broadcastUserInfo();
+		player.broadcastUserInfo();
 		
 		// this can be 0 if the user pressed the right mouse button twice very fast
 		if (unequiped.length > 0)
@@ -125,7 +125,7 @@ public class RequestUnEquipItem extends L2GameClientPacket
 				sm = new SystemMessage(SystemMessageId.S1_DISARMED);
 				sm.addItemName(unequiped[0].getItemId());
 			}
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 	}
 }

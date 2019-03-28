@@ -19,19 +19,19 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestSurrenderPersonally extends L2GameClientPacket
+public final class RequestSurrenderPersonally extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestSurrenderPledgeWar.class.getName());
 	
 	private String _pledgeName;
-	private L2Clan _clan;
-	private L2PcInstance _activeChar;
+	private Clan _clan;
+	private PlayerInstance _player;
 	
 	@Override
 	protected void readImpl()
@@ -42,15 +42,15 @@ public final class RequestSurrenderPersonally extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		_activeChar = getClient().getActiveChar();
-		if (_activeChar == null)
+		_player = getClient().getPlayer();
+		if (_player == null)
 		{
 			return;
 		}
 		
-		LOGGER.info("RequestSurrenderPersonally by " + getClient().getActiveChar().getName() + " with " + _pledgeName);
-		_clan = getClient().getActiveChar().getClan();
-		final L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
+		LOGGER.info("RequestSurrenderPersonally by " + getClient().getPlayer().getName() + " with " + _pledgeName);
+		_clan = getClient().getPlayer().getClan();
+		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		if (_clan == null)
 		{
 			return;
@@ -58,23 +58,23 @@ public final class RequestSurrenderPersonally extends L2GameClientPacket
 		
 		if (clan == null)
 		{
-			_activeChar.sendMessage("No such clan.");
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendMessage("No such clan.");
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!_clan.isAtWarWith(clan.getClanId()) || (_activeChar.getWantsPeace() == 1))
+		if (!_clan.isAtWarWith(clan.getClanId()) || (_player.getWantsPeace() == 1))
 		{
-			_activeChar.sendMessage("You aren't at war with this clan.");
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendMessage("You aren't at war with this clan.");
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		_activeChar.setWantsPeace(1);
-		_activeChar.deathPenalty(false);
+		_player.setWantsPeace(1);
+		_player.deathPenalty(false);
 		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_PERSONALLY_SURRENDERED_TO_THE_S1_CLAN);
 		msg.addString(_pledgeName);
-		_activeChar.sendPacket(msg);
+		_player.sendPacket(msg);
 		ClanTable.getInstance().checkSurrender(_clan, clan);
 	}
 }

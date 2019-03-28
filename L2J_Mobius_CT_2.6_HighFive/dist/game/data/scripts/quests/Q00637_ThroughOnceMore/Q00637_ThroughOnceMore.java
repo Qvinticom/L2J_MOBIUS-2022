@@ -18,8 +18,8 @@ package quests.Q00637_ThroughOnceMore;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -55,30 +55,30 @@ public final class Q00637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		if ("32010-03.htm".equals(event))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if ("32010-10.htm".equals(event))
 		{
-			st.exitQuest(true);
+			qs.exitQuest(true);
 		}
 		return event;
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && (st.getState() == State.STARTED))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (qs.getState() == State.STARTED))
 		{
 			final long count = getQuestItemsCount(player, NECRO_HEART);
 			if (count < 10)
@@ -95,7 +95,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 					if ((count + numItems) >= 10)
 					{
 						numItems = 10 - (int) count;
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					else
 					{
@@ -110,11 +110,11 @@ public final class Q00637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		final byte id = st.getState();
+		final byte id = qs.getState();
 		if (id == State.CREATED)
 		{
 			if (player.getLevel() > 72)
@@ -125,27 +125,27 @@ public final class Q00637_ThroughOnceMore extends Quest
 				}
 				if (hasQuestItems(player, VISITOR_MARK))
 				{
-					st.exitQuest(true);
+					qs.exitQuest(true);
 					return "32010-01a.htm";
 				}
 				if (hasQuestItems(player, MARK))
 				{
-					st.exitQuest(true);
+					qs.exitQuest(true);
 					return "32010-0.htm";
 				}
 			}
-			st.exitQuest(true);
+			qs.exitQuest(true);
 			return "32010-01.htm";
 		}
 		else if (id == State.STARTED)
 		{
-			if ((st.isCond(2)) && (getQuestItemsCount(player, NECRO_HEART) == 10))
+			if ((qs.isCond(2)) && (getQuestItemsCount(player, NECRO_HEART) == 10))
 			{
 				takeItems(player, NECRO_HEART, 10);
 				takeItems(player, FADED_MARK, 1);
 				giveItems(player, MARK, 1);
 				giveItems(player, 8273, 10);
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				return "32010-05.htm";
 			}
 			return "32010-04.htm";

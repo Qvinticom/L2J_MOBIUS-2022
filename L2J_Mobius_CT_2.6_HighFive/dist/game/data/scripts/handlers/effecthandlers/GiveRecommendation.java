@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -55,7 +55,7 @@ public final class GiveRecommendation extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2PcInstance target = (info.getEffected() != null) && info.getEffected().isPlayer() ? (L2PcInstance) info.getEffected() : null;
+		final PlayerInstance target = (info.getEffected() != null) && info.getEffected().isPlayer() ? (PlayerInstance) info.getEffected() : null;
 		if (target != null)
 		{
 			int recommendationsGiven = _amount;
@@ -80,7 +80,7 @@ public final class GiveRecommendation extends AbstractEffect
 			}
 			else
 			{
-				final L2PcInstance player = (info.getEffector() != null) && info.getEffector().isPlayer() ? (L2PcInstance) info.getEffector() : null;
+				final PlayerInstance player = (info.getEffector() != null) && info.getEffector().isPlayer() ? (PlayerInstance) info.getEffector() : null;
 				if (player != null)
 				{
 					player.sendPacket(SystemMessageId.NOTHING_HAPPENED);

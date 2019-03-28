@@ -21,7 +21,7 @@ import java.util.Vector;
 /**
  * @author kombat Format: cd d[d s/d/dd/ddd]
  */
-public class ConfirmDlg extends L2GameServerPacket
+public class ConfirmDlg extends GameServerPacket
 {
 	private final int _messageId;
 	private int _skillLvL = 1;
@@ -165,7 +165,7 @@ public class ConfirmDlg extends L2GameServerPacket
 			
 			if (_time > 0)
 			{
-				getClient().getActiveChar().addConfirmDlgRequestTime(_requesterId, _time);
+				getClient().getPlayer().addConfirmDlgRequestTime(_requesterId, _time);
 			}
 		}
 		else

@@ -18,14 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestQuestAbort implements IClientIncomingPacket
@@ -33,17 +32,17 @@ public final class RequestQuestAbort implements IClientIncomingPacket
 	private int _questId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_questId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -51,11 +50,11 @@ public final class RequestQuestAbort implements IClientIncomingPacket
 		final Quest qe = QuestManager.getInstance().getQuest(_questId);
 		if (qe != null)
 		{
-			final QuestState qs = activeChar.getQuestState(qe.getName());
+			final QuestState qs = player.getQuestState(qe.getName());
 			if (qs != null)
 			{
 				qs.exitQuest(true);
-				activeChar.sendPacket(new QuestList(activeChar));
+				player.sendPacket(new QuestList(player));
 			}
 		}
 	}

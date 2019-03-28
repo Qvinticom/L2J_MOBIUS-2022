@@ -22,10 +22,9 @@ import com.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import com.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
 
 /**
- * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-public class MultiSellList extends L2GameServerPacket
+public class MultiSellList extends GameServerPacket
 {
 	protected int _listId;
 	protected int _page;

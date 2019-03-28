@@ -21,7 +21,7 @@ import java.util.Comparator;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
-import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
+import com.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 

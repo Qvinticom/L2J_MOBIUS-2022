@@ -45,9 +45,9 @@ import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
@@ -291,7 +291,7 @@ public class Olympiad extends ListenersContainer
 		LOGGER.info("Olympiad System: Loaded " + NOBLES.size() + " Nobles");
 	}
 	
-	public int getOlympiadRank(L2PcInstance player)
+	public int getOlympiadRank(PlayerInstance player)
 	{
 		return NOBLES_RANK.getOrDefault(player.getObjectId(), 0);
 	}
@@ -356,7 +356,7 @@ public class Olympiad extends ListenersContainer
 			final int points = getOlympiadTradePoint(noblesId);
 			if (points > 0)
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(noblesId);
+				final PlayerInstance player = World.getInstance().getPlayer(noblesId);
 				if (player != null)
 				{
 					player.getVariables().set(UNCLAIMED_OLYMPIAD_POINTS_VAR, points);
@@ -837,7 +837,7 @@ public class Olympiad extends ListenersContainer
 		return _period;
 	}
 	
-	public boolean playerInStadia(L2PcInstance player)
+	public boolean playerInStadia(PlayerInstance player)
 	{
 		return ZoneManager.getInstance().getOlympiadStadium(player) != null;
 	}
@@ -1124,7 +1124,7 @@ public class Olympiad extends ListenersContainer
 		return points;
 	}
 	
-	public int getNoblePoints(L2PcInstance player)
+	public int getNoblePoints(PlayerInstance player)
 	{
 		if (!NOBLES.containsKey(player.getObjectId()))
 		{

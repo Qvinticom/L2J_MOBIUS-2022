@@ -31,7 +31,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -112,7 +112,7 @@ public class FishingChampionshipManager
 		}
 	}
 	
-	public synchronized void newFish(L2PcInstance pl, int lureId)
+	public synchronized void newFish(PlayerInstance pl, int lureId)
 	{
 		if (!Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
 		{
@@ -249,7 +249,7 @@ public class FishingChampionshipManager
 		return false;
 	}
 	
-	public void getReward(L2PcInstance pl)
+	public void getReward(PlayerInstance pl)
 	{
 		for (Fisher fisher : _winPlayers)
 		{
@@ -306,7 +306,7 @@ public class FishingChampionshipManager
 		}
 	}
 	
-	public void showMidResult(L2PcInstance pl)
+	public void showMidResult(PlayerInstance pl)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0);
 		
@@ -339,7 +339,7 @@ public class FishingChampionshipManager
 		pl.sendPacket(html);
 	}
 	
-	public void showChampScreen(L2PcInstance pl, int objectId)
+	public void showChampScreen(PlayerInstance pl, int objectId)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(objectId);
 		html.setFile("data/html/fisherman/championship/fish_event001.htm");

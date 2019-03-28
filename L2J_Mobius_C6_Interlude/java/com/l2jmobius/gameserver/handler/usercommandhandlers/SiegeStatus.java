@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class SiegeStatus implements IUserCommandHandler
 {
@@ -27,9 +27,9 @@ public class SiegeStatus implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		activeChar.sendMessage("Command /siegestatus not implemented yet.");
+		player.sendMessage("Command /siegestatus not implemented yet.");
 		return true;
 	}
 	

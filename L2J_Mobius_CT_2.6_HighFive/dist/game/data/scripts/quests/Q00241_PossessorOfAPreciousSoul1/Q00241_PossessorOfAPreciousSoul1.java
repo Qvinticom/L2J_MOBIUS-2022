@@ -17,8 +17,8 @@
 package quests.Q00241_PossessorOfAPreciousSoul1;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -70,10 +70,10 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -85,147 +85,182 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		switch (event)
 		{
 			case "31739-02.html":
-				st.startQuest();
+			{
+				qs.startQuest();
 				break;
+			}
 			case "30753-02.html":
-				if (st.isCond(1))
+			{
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				break;
+			}
 			case "30754-02.html":
-				if (st.isCond(2))
+			{
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 				break;
+			}
 			case "31739-05.html":
-				if (st.isCond(4) && hasQuestItems(player, LEGEND_OF_SEVENTEEN))
+			{
+				if (qs.isCond(4) && hasQuestItems(player, LEGEND_OF_SEVENTEEN))
 				{
 					takeItems(player, LEGEND_OF_SEVENTEEN, -1);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 				}
 				break;
+			}
 			case "31042-02.html":
-				if (st.isCond(5))
+			{
+				if (qs.isCond(5))
 				{
-					st.setCond(6, true);
+					qs.setCond(6, true);
 				}
 				break;
+			}
 			case "31042-05.html":
-				if (st.isCond(7) && (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) >= 10))
+			{
+				if (qs.isCond(7) && (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) >= 10))
 				{
 					takeItems(player, MALRUK_SUCCUBUS_CLAW, -1);
 					giveItems(player, ECHO_CRYSTAL, 1);
-					st.setCond(8, true);
+					qs.setCond(8, true);
 				}
 				break;
+			}
 			case "31739-08.html":
-				if (st.isCond(8) && hasQuestItems(player, ECHO_CRYSTAL))
+			{
+				if (qs.isCond(8) && hasQuestItems(player, ECHO_CRYSTAL))
 				{
 					takeItems(player, ECHO_CRYSTAL, -1);
-					st.setCond(9, true);
+					qs.setCond(9, true);
 				}
 				break;
+			}
 			case "30692-02.html":
-				if (st.isCond(9) && !hasQuestItems(player, POETRY_BOOK))
+			{
+				if (qs.isCond(9) && !hasQuestItems(player, POETRY_BOOK))
 				{
 					giveItems(player, POETRY_BOOK, 1);
-					st.setCond(10, true);
+					qs.setCond(10, true);
 				}
 				break;
+			}
 			case "31739-11.html":
-				if (st.isCond(10) && hasQuestItems(player, POETRY_BOOK))
+			{
+				if (qs.isCond(10) && hasQuestItems(player, POETRY_BOOK))
 				{
 					takeItems(player, POETRY_BOOK, -1);
-					st.setCond(11, true);
+					qs.setCond(11, true);
 				}
 				break;
+			}
 			case "31742-02.html":
-				if (st.isCond(11))
+			{
+				if (qs.isCond(11))
 				{
-					st.setCond(12, true);
+					qs.setCond(12, true);
 				}
 				break;
+			}
 			case "31744-02.html":
-				if (st.isCond(12))
+			{
+				if (qs.isCond(12))
 				{
-					st.setCond(13, true);
+					qs.setCond(13, true);
 				}
 				break;
+			}
 			case "31336-02.html":
-				if (st.isCond(13))
+			{
+				if (qs.isCond(13))
 				{
-					st.setCond(14, true);
+					qs.setCond(14, true);
 				}
 				break;
+			}
 			case "31336-05.html":
-				if (st.isCond(15) && (getQuestItemsCount(player, CRIMSON_MOSS) >= 5))
+			{
+				if (qs.isCond(15) && (getQuestItemsCount(player, CRIMSON_MOSS) >= 5))
 				{
 					takeItems(player, CRIMSON_MOSS, -1);
 					giveItems(player, RAHORAKTIS_MEDICINE, 1);
-					st.setCond(16, true);
+					qs.setCond(16, true);
 				}
 				break;
+			}
 			case "31743-02.html":
-				if (st.isCond(16) && hasQuestItems(player, RAHORAKTIS_MEDICINE))
+			{
+				if (qs.isCond(16) && hasQuestItems(player, RAHORAKTIS_MEDICINE))
 				{
 					takeItems(player, RAHORAKTIS_MEDICINE, -1);
-					st.setCond(17, true);
+					qs.setCond(17, true);
 				}
 				break;
+			}
 			case "31742-05.html":
-				if (st.isCond(17))
+			{
+				if (qs.isCond(17))
 				{
-					st.setCond(18, true);
+					qs.setCond(18, true);
 				}
 				break;
+			}
 			case "31740-05.html":
-				if (st.getCond() >= 18)
+			{
+				if (qs.getCond() >= 18)
 				{
 					giveItems(player, VIRGILS_LETTER, 1);
 					addExpAndSp(player, 263043, 0);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return event;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember;
-		final QuestState st;
+		final PlayerInstance partyMember;
+		final QuestState qs;
 		switch (npc.getId())
 		{
 			case BARAHAM:
+			{
 				partyMember = getRandomPartyMember(player, 3);
 				if (partyMember == null)
 				{
 					return null;
 				}
 				
-				st = getQuestState(partyMember, false);
+				qs = getQuestState(partyMember, false);
 				giveItems(player, LEGEND_OF_SEVENTEEN, 1);
-				st.setCond(4, true);
+				qs.setCond(4, true);
 				break;
+			}
 			case MALRUK_SUCCUBUS_1:
 			case MALRUK_SUCCUBUS_TUREN_1:
 			case MALRUK_SUCCUBUS_2:
 			case MALRUK_SUCCUBUS_TUREN_2:
+			{
 				partyMember = getRandomPartyMember(player, 6);
 				if (partyMember == null)
 				{
 					return null;
 				}
-				st = getQuestState(partyMember, false);
+				qs = getQuestState(partyMember, false);
 				if ((MALRUK_SUCCUBUS_CLAW_CHANCE >= getRandom(100)) && (getQuestItemsCount(partyMember, MALRUK_SUCCUBUS_CLAW) < 10))
 				{
 					giveItems(partyMember, MALRUK_SUCCUBUS_CLAW, 1);
 					if (getQuestItemsCount(partyMember, MALRUK_SUCCUBUS_CLAW) == 10)
 					{
-						st.setCond(7, true);
+						qs.setCond(7, true);
 					}
 					else
 					{
@@ -233,19 +268,21 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					}
 				}
 				break;
+			}
 			case TAIK_ORC_SUPPLY_LEADER:
+			{
 				partyMember = getRandomPartyMember(player, 14);
 				if (partyMember == null)
 				{
 					return null;
 				}
-				st = getQuestState(partyMember, false);
+				qs = getQuestState(partyMember, false);
 				if ((CRIMSON_MOSS_CHANCE >= getRandom(100)) && (getQuestItemsCount(partyMember, CRIMSON_MOSS) < 5))
 				{
 					giveItems(partyMember, CRIMSON_MOSS, 1);
 					if (getQuestItemsCount(partyMember, CRIMSON_MOSS) == 5)
 					{
-						st.setCond(15, true);
+						qs.setCond(15, true);
 					}
 					else
 					{
@@ -253,16 +290,17 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isStarted() && !player.isSubClassActive())
+		if (qs.isStarted() && !player.isSubClassActive())
 		{
 			return "no_sub.html";
 		}
@@ -270,172 +308,256 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		switch (npc.getId())
 		{
 			case TALIEN:
-				switch (st.getState())
+			{
+				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (((player.getLevel() >= 50) && player.isSubClassActive()) ? "31739-01.htm" : "31739-00.htm");
 						break;
+					}
 					case State.STARTED:
-						switch (st.getCond())
+					{
+						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31739-03.html";
 								break;
+							}
 							case 4:
+							{
 								if (hasQuestItems(player, LEGEND_OF_SEVENTEEN))
 								{
 									htmltext = "31739-04.html";
 								}
 								break;
+							}
 							case 5:
+							{
 								htmltext = "31739-06.html";
 								break;
+							}
 							case 8:
+							{
 								if (hasQuestItems(player, ECHO_CRYSTAL))
 								{
 									htmltext = "31739-07.html";
 								}
 								break;
+							}
 							case 9:
+							{
 								htmltext = "31739-09.html";
 								break;
+							}
 							case 10:
+							{
 								if (hasQuestItems(player, POETRY_BOOK))
 								{
 									htmltext = "31739-10.html";
 								}
 								break;
+							}
 							case 11:
+							{
 								htmltext = "31739-12.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case GABRIELLE:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 1:
+					{
 						htmltext = "30753-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "30753-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case GILMORE:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 2:
+					{
 						htmltext = "30754-01.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "30754-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case KANTABILON:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 5:
+					{
 						htmltext = "31042-01.html";
 						break;
+					}
 					case 6:
+					{
 						htmltext = "31042-04.html";
 						break;
+					}
 					case 7:
+					{
 						if (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) >= 10)
 						{
 							htmltext = "31042-03.html";
 						}
 						break;
+					}
 					case 8:
+					{
 						htmltext = "31042-06.html";
 						break;
+					}
 				}
 				break;
+			}
 			case STEDMIEL:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 9:
+					{
 						htmltext = "30692-01.html";
 						break;
+					}
 					case 10:
+					{
 						htmltext = "30692-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case VIRGIL:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 11:
+					{
 						htmltext = "31742-01.html";
 						break;
+					}
 					case 12:
+					{
 						htmltext = "31742-03.html";
 						break;
+					}
 					case 17:
+					{
 						htmltext = "31742-04.html";
 						break;
+					}
 					case 18:
+					{
 						htmltext = "31742-06.html";
 						break;
+					}
 				}
 				break;
+			}
 			case OGMAR:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 12:
+					{
 						htmltext = "31744-01.html";
 						break;
+					}
 					case 13:
+					{
 						htmltext = "31744-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case RAHORAKTI:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 13:
+					{
 						htmltext = "31336-01.html";
 						break;
+					}
 					case 14:
+					{
 						htmltext = "31336-04.html";
 						break;
+					}
 					case 15:
+					{
 						if (getQuestItemsCount(player, CRIMSON_MOSS) >= 5)
 						{
 							htmltext = "31336-03.html";
 						}
 						break;
+					}
 					case 16:
+					{
 						htmltext = "31336-06.html";
 						break;
+					}
 				}
 				break;
+			}
 			case KASSANDRA:
-				switch (st.getCond())
+			{
+				switch (qs.getCond())
 				{
 					case 16:
+					{
 						if (hasQuestItems(player, RAHORAKTIS_MEDICINE))
 						{
 							htmltext = "31743-01.html";
 						}
 						break;
+					}
 					case 17:
+					{
 						htmltext = "31743-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case CARADINE:
-				if (st.getCond() >= 18)
+			{
+				if (qs.getCond() >= 18)
 				{
 					htmltext = "31740-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

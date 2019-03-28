@@ -17,9 +17,9 @@
 package quests.Q00118_ToLeadAndBeLed;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -70,13 +70,13 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		// Manage Sponsor's quest events.
 		if (player.getApprentice() > 0)
 		{
-			final L2PcInstance apprentice = L2World.getInstance().getPlayer(player.getApprentice());
+			final PlayerInstance apprentice = World.getInstance().getPlayer(player.getApprentice());
 			if (apprentice == null)
 			{
 				return htmltext;
@@ -220,7 +220,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted())
@@ -246,7 +246,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 					{
 						if (killer.getSponsor() > 0)
 						{
-							final L2PcInstance c0 = L2World.getInstance().getPlayer(killer.getSponsor());
+							final PlayerInstance c0 = World.getInstance().getPlayer(killer.getSponsor());
 							if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
 							{
 								if (giveItemRandomly(killer, npc, LEG_OF_KING_ARANEID, 1, 8, 7, true))
@@ -264,7 +264,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final QuestState q123 = player.getQuestState(Q00123_TheLeaderAndTheFollower.class.getSimpleName());
@@ -324,7 +324,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 					}
 					else
 					{
-						final L2PcInstance c0 = L2World.getInstance().getPlayer(player.getSponsor());
+						final PlayerInstance c0 = World.getInstance().getPlayer(player.getSponsor());
 						if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
 						{
 							htmltext = "30298-07.html";

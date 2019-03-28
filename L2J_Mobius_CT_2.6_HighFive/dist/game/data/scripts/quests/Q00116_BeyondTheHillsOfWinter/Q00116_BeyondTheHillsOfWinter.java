@@ -16,8 +16,8 @@
  */
 package quests.Q00116_BeyondTheHillsOfWinter;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -51,10 +51,10 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -64,17 +64,17 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 		{
 			case "30535-02.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "30535-05.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
-					st.setMemoState(2);
-					st.setCond(2, true);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					giveItems(player, SUPPLYING_GOODS, 1);
 					htmltext = event;
 				}
@@ -82,7 +82,7 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 			}
 			case "32052-02.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					htmltext = event;
 				}
@@ -90,22 +90,22 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 			}
 			case "MATERIAL":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					rewardItems(player, SOULSHOT_D, 1740);
 					addExpAndSp(player, 82792, 4981);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "32052-03.html";
 				}
 				break;
 			}
 			case "ADENA":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					giveAdena(player, 17387, true);
 					addExpAndSp(player, 82792, 4981);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "32052-03.html";
 				}
 				break;
@@ -115,11 +115,11 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -143,11 +143,11 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 				{
 					case FILAUR:
 					{
-						if (st.isMemoState(1))
+						if (qs.isMemoState(1))
 						{
 							htmltext = (hasAllItems(player, true, THIEF_KEY, BANDAGE, ENERGY_STONE)) ? "30535-04.html" : "30535-06.html";
 						}
-						else if (st.isMemoState(2))
+						else if (qs.isMemoState(2))
 						{
 							htmltext = "30535-07.html";
 						}
@@ -155,7 +155,7 @@ public final class Q00116_BeyondTheHillsOfWinter extends Quest
 					}
 					case OBI:
 					{
-						if (st.isMemoState(2) && hasQuestItems(player, SUPPLYING_GOODS))
+						if (qs.isMemoState(2) && hasQuestItems(player, SUPPLYING_GOODS))
 						{
 							htmltext = "32052-01.html";
 						}

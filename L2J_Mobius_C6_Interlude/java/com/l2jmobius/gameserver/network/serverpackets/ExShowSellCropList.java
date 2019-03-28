@@ -21,31 +21,31 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * format(packet 0xFE) ch dd [ddddcdcdddc] c - id h - sub id d - manor id d - size [ d - Object id d - crop id d - seed level c d - reward 1 id c d - reward 2 id d - manor d - buy residual d - buy price d - reward ]
  * @author l3x
  */
 
-public class ExShowSellCropList extends L2GameServerPacket
+public class ExShowSellCropList extends GameServerPacket
 {
 	private int _manorId = 1;
-	private final Map<Integer, L2ItemInstance> _cropsItems;
+	private final Map<Integer, ItemInstance> _cropsItems;
 	private final Map<Integer, CropProcure> _castleCrops;
 	
-	public ExShowSellCropList(L2PcInstance player, int manorId, List<CropProcure> crops)
+	public ExShowSellCropList(PlayerInstance player, int manorId, List<CropProcure> crops)
 	{
 		_manorId = manorId;
 		_castleCrops = new HashMap<>();
 		_cropsItems = new HashMap<>();
 		
-		final List<Integer> allCrops = L2Manor.getInstance().getAllCrops();
+		final List<Integer> allCrops = Manor.getInstance().getAllCrops();
 		for (int cropId : allCrops)
 		{
-			final L2ItemInstance item = player.getInventory().getItemByItemId(cropId);
+			final ItemInstance item = player.getInventory().getItemByItemId(cropId);
 			if (item != null)
 			{
 				_cropsItems.put(cropId, item);
@@ -76,15 +76,15 @@ public class ExShowSellCropList extends L2GameServerPacket
 		writeD(_manorId); // manor id
 		writeD(_cropsItems.size()); // size
 		
-		for (L2ItemInstance item : _cropsItems.values())
+		for (ItemInstance item : _cropsItems.values())
 		{
 			writeD(item.getObjectId()); // Object id
 			writeD(item.getItemId()); // crop id
-			writeD(L2Manor.getInstance().getSeedLevelByCrop(item.getItemId())); // seed level
+			writeD(Manor.getInstance().getSeedLevelByCrop(item.getItemId())); // seed level
 			writeC(1);
-			writeD(L2Manor.getInstance().getRewardItem(item.getItemId(), 1)); // reward 1 id
+			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 1)); // reward 1 id
 			writeC(1);
-			writeD(L2Manor.getInstance().getRewardItem(item.getItemId(), 2)); // reward 2 id
+			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 2)); // reward 2 id
 			
 			if (_castleCrops.containsKey(item.getItemId()))
 			{

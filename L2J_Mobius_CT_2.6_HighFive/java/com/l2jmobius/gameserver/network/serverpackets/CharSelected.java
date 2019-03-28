@@ -18,21 +18,21 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharSelected implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _sessionId;
 	
 	/**
-	 * @param cha
+	 * @param player
 	 * @param sessionId
 	 */
-	public CharSelected(L2PcInstance cha, int sessionId)
+	public CharSelected(PlayerInstance player, int sessionId)
 	{
-		_activeChar = cha;
+		_player = player;
 		_sessionId = sessionId;
 	}
 	
@@ -41,38 +41,38 @@ public class CharSelected implements IClientOutgoingPacket
 	{
 		OutgoingPackets.CHARACTER_SELECTED.writeId(packet);
 		
-		packet.writeS(_activeChar.getName());
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeS(_activeChar.getTitle());
+		packet.writeS(_player.getName());
+		packet.writeD(_player.getObjectId());
+		packet.writeS(_player.getTitle());
 		packet.writeD(_sessionId);
-		packet.writeD(_activeChar.getClanId());
+		packet.writeD(_player.getClanId());
 		packet.writeD(0x00); // ??
-		packet.writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
-		packet.writeD(_activeChar.getRace().ordinal());
-		packet.writeD(_activeChar.getClassId().getId());
+		packet.writeD(_player.getAppearance().getSex() ? 1 : 0);
+		packet.writeD(_player.getRace().ordinal());
+		packet.writeD(_player.getClassId().getId());
 		packet.writeD(0x01); // active ??
-		packet.writeD(_activeChar.getX());
-		packet.writeD(_activeChar.getY());
-		packet.writeD(_activeChar.getZ());
+		packet.writeD(_player.getX());
+		packet.writeD(_player.getY());
+		packet.writeD(_player.getZ());
 		
-		packet.writeF(_activeChar.getCurrentHp());
-		packet.writeF(_activeChar.getCurrentMp());
-		packet.writeD((int) _activeChar.getSp());
-		packet.writeQ(_activeChar.getExp());
-		packet.writeD(_activeChar.getLevel());
-		packet.writeD(_activeChar.getKarma()); // thx evill33t
-		packet.writeD(_activeChar.getPkKills());
-		packet.writeD(_activeChar.getINT());
-		packet.writeD(_activeChar.getSTR());
-		packet.writeD(_activeChar.getCON());
-		packet.writeD(_activeChar.getMEN());
-		packet.writeD(_activeChar.getDEX());
-		packet.writeD(_activeChar.getWIT());
+		packet.writeF(_player.getCurrentHp());
+		packet.writeF(_player.getCurrentMp());
+		packet.writeD((int) _player.getSp());
+		packet.writeQ(_player.getExp());
+		packet.writeD(_player.getLevel());
+		packet.writeD(_player.getKarma()); // thx evill33t
+		packet.writeD(_player.getPkKills());
+		packet.writeD(_player.getINT());
+		packet.writeD(_player.getSTR());
+		packet.writeD(_player.getCON());
+		packet.writeD(_player.getMEN());
+		packet.writeD(_player.getDEX());
+		packet.writeD(_player.getWIT());
 		
 		packet.writeD(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
 		packet.writeD(0x00);
 		
-		packet.writeD(_activeChar.getClassId().getId());
+		packet.writeD(_player.getClassId().getId());
 		
 		packet.writeD(0x00);
 		packet.writeD(0x00);

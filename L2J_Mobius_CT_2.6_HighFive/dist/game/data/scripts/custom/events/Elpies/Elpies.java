@@ -22,9 +22,9 @@ import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2EventMonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.EventMonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.util.Broadcast;
 
@@ -63,7 +63,7 @@ public final class Elpies extends Event
 	// Non-final variables
 	private static boolean EVENT_ACTIVE = false;
 	private ScheduledFuture<?> _eventTask = null;
-	private final Set<L2Npc> _elpies = ConcurrentHashMap.newKeySet(ELPY_AMOUNT);
+	private final Set<Npc> _elpies = ConcurrentHashMap.newKeySet(ELPY_AMOUNT);
 	
 	private Elpies()
 	{
@@ -72,13 +72,13 @@ public final class Elpies extends Event
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
+	public boolean eventBypass(PlayerInstance player, String bypass)
 	{
 		return false;
 	}
 	
 	@Override
-	public boolean eventStart(L2PcInstance eventMaker)
+	public boolean eventStart(PlayerInstance eventMaker)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -134,7 +134,7 @@ public final class Elpies extends Event
 			_eventTask = null;
 		}
 		
-		for (L2Npc npc : _elpies)
+		for (Npc npc : _elpies)
 		{
 			npc.deleteMe();
 		}
@@ -146,7 +146,7 @@ public final class Elpies extends Event
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -166,10 +166,10 @@ public final class Elpies extends Event
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
-		((L2EventMonsterInstance) npc).eventSetDropOnGround(true);
-		((L2EventMonsterInstance) npc).eventSetBlockOffensiveSkills(true);
+		((EventMonsterInstance) npc).eventSetDropOnGround(true);
+		((EventMonsterInstance) npc).eventSetBlockOffensiveSkills(true);
 		return super.onSpawn(npc);
 	}
 	
@@ -219,7 +219,7 @@ public final class Elpies extends Event
 		}
 	}
 	
-	private static void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)
+	private static void dropItem(Npc mob, PlayerInstance player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
 		

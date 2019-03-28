@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.Playable;
 
-public class PlayableStatus extends CharStatus
+public class PlayableStatus extends CreatureStatus
 {
-	public PlayableStatus(L2Playable activeChar)
+	public PlayableStatus(Playable activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public L2Playable getActiveChar()
+	public Playable getActiveChar()
 	{
-		return (L2Playable) super.getActiveChar();
+		return (Playable) super.getActiveChar();
 	}
 }

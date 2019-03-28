@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class RestartResponse extends L2GameServerPacket
+public class RestartResponse extends GameServerPacket
 {
 	private static final RestartResponse STATIC_PACKET_TRUE = new RestartResponse(true);
 	private static final RestartResponse STATIC_PACKET_FALSE = new RestartResponse(false);

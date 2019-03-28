@@ -20,9 +20,9 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -66,13 +66,13 @@ public final class CabaleBuffer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return null;
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		ThreadPool.schedule(new CabaleAI(npc), 3000);
 		ThreadPool.schedule(new Talk(npc), 60000);
@@ -81,9 +81,9 @@ public final class CabaleBuffer extends AbstractNpcAI
 	
 	protected class Talk implements Runnable
 	{
-		private final L2Npc _npc;
+		private final Npc _npc;
 		
-		protected Talk(L2Npc npc)
+		protected Talk(Npc npc)
 		{
 			_npc = npc;
 		}
@@ -106,9 +106,9 @@ public final class CabaleBuffer extends AbstractNpcAI
 	
 	protected class CabaleAI implements Runnable
 	{
-		private final L2Npc _npc;
+		private final Npc _npc;
 		
-		protected CabaleAI(L2Npc npc)
+		protected CabaleAI(Npc npc)
 		{
 			_npc = npc;
 		}
@@ -136,7 +136,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 				losingCabal = SevenSigns.CABAL_DAWN;
 			}
 			
-			for (L2PcInstance player : L2World.getInstance().getVisibleObjects(_npc, L2PcInstance.class))
+			for (PlayerInstance player : World.getInstance().getVisibleObjects(_npc, PlayerInstance.class))
 			{
 				if ((player == null) || player.isInvul())
 				{
@@ -240,7 +240,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 		 * @param skillId
 		 * @return
 		 */
-		private boolean handleCast(L2PcInstance player, int skillId)
+		private boolean handleCast(PlayerInstance player, int skillId)
 		{
 			if (player.isDead() || !player.isSpawned() || !_npc.isInsideRadius2D(player, DISTANCE_TO_WATCH_OBJECT))
 			{
@@ -273,7 +273,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 		}
 	}
 	
-	public void broadcastSay(L2Npc npc, NpcStringId message, String param, int chance)
+	public void broadcastSay(Npc npc, NpcStringId message, String param, int chance)
 	{
 		if (chance == -1)
 		{
@@ -285,7 +285,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 		}
 	}
 	
-	public int getAbnormalLvl(L2PcInstance player, int skillId)
+	public int getAbnormalLvl(PlayerInstance player, int skillId)
 	{
 		final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(skillId);
 		return (info != null) ? info.getSkill().getAbnormalLvl() : 0;

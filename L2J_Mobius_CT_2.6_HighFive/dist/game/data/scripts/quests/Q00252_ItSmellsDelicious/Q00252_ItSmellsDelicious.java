@@ -16,8 +16,8 @@
  */
 package quests.Q00252_ItSmellsDelicious;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -58,7 +58,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -99,7 +99,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs;
 		if (npc.getId() == CHEF) // only the killer gets quest items from the chef
@@ -134,13 +134,13 @@ public class Q00252_ItSmellsDelicious extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(QuestState qs, L2Npc npc)
+	public boolean checkPartyMember(QuestState qs, Npc npc)
 	{
 		return !hasMaxDiaries(qs);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

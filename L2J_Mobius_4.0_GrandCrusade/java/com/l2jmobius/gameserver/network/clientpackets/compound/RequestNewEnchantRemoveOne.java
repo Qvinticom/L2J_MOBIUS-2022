@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets.compound;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.CompoundRequest;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.compound.ExEnchantOneFail;
@@ -35,41 +35,41 @@ public class RequestNewEnchantRemoveOne implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		else if (activeChar.isInStoreMode())
+		else if (player.isInStoreMode())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		else if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			return;
 		}
 		
-		final CompoundRequest request = activeChar.getRequest(CompoundRequest.class);
+		final CompoundRequest request = player.getRequest(CompoundRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			client.sendPacket(ExEnchantOneRemoveFail.STATIC_PACKET);
 			return;
 		}
 		
-		final L2ItemInstance item = request.getItemOne();
+		final ItemInstance item = request.getItemOne();
 		if ((item == null) || (item.getObjectId() != _objectId))
 		{
 			client.sendPacket(ExEnchantOneRemoveFail.STATIC_PACKET);

@@ -30,10 +30,10 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.AirShipTeleportList;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAirShipTeleportList;
 
 public class AirShipManager
@@ -44,9 +44,9 @@ public class AirShipManager
 	private static final String ADD_DB = "INSERT INTO airships (owner_id,fuel) VALUES (?,?)";
 	private static final String UPDATE_DB = "UPDATE airships SET fuel=? WHERE owner_id=?";
 	
-	private L2CharTemplate _airShipTemplate = null;
+	private CreatureTemplate _airShipTemplate = null;
 	private final Map<Integer, StatsSet> _airShipsInfo = new HashMap<>();
-	private final Map<Integer, L2AirShipInstance> _airShips = new HashMap<>();
+	private final Map<Integer, AirShipInstance> _airShips = new HashMap<>();
 	private final Map<Integer, AirShipTeleportList> _teleports = new HashMap<>();
 	
 	protected AirShipManager()
@@ -87,14 +87,14 @@ public class AirShipManager
 		npcDat.set("baseMpReg", 3.e-3f);
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
-		_airShipTemplate = new L2CharTemplate(npcDat);
+		_airShipTemplate = new CreatureTemplate(npcDat);
 		
 		load();
 	}
 	
-	public L2AirShipInstance getNewAirShip(int x, int y, int z, int heading)
+	public AirShipInstance getNewAirShip(int x, int y, int z, int heading)
 	{
-		final L2AirShipInstance airShip = new L2AirShipInstance(_airShipTemplate);
+		final AirShipInstance airShip = new AirShipInstance(_airShipTemplate);
 		
 		airShip.setHeading(heading);
 		airShip.setXYZInvisible(x, y, z);
@@ -104,7 +104,7 @@ public class AirShipManager
 		return airShip;
 	}
 	
-	public L2AirShipInstance getNewAirShip(int x, int y, int z, int heading, int ownerId)
+	public AirShipInstance getNewAirShip(int x, int y, int z, int heading, int ownerId)
 	{
 		final StatsSet info = _airShipsInfo.get(ownerId);
 		if (info == null)
@@ -112,7 +112,7 @@ public class AirShipManager
 			return null;
 		}
 		
-		final L2AirShipInstance airShip;
+		final AirShipInstance airShip;
 		if (_airShips.containsKey(ownerId))
 		{
 			airShip = _airShips.get(ownerId);
@@ -120,7 +120,7 @@ public class AirShipManager
 		}
 		else
 		{
-			airShip = new L2ControllableAirShipInstance(_airShipTemplate, ownerId);
+			airShip = new ControllableAirShipInstance(_airShipTemplate, ownerId);
 			_airShips.put(ownerId, airShip);
 			
 			airShip.setMaxFuel(600);
@@ -135,7 +135,7 @@ public class AirShipManager
 		return airShip;
 	}
 	
-	public void removeAirShip(L2AirShipInstance ship)
+	public void removeAirShip(AirShipInstance ship)
 	{
 		if (ship.getOwnerId() == 0)
 		{
@@ -182,7 +182,7 @@ public class AirShipManager
 	
 	public boolean hasAirShip(int ownerId)
 	{
-		final L2AirShipInstance ship = _airShips.get(ownerId);
+		final AirShipInstance ship = _airShips.get(ownerId);
 		return (ship != null) && (ship.isSpawned() || ship.isTeleporting());
 	}
 	
@@ -196,14 +196,14 @@ public class AirShipManager
 		_teleports.put(dockId, new AirShipTeleportList(locationId, fuelConsumption, tp));
 	}
 	
-	public void sendAirShipTeleportList(L2PcInstance player)
+	public void sendAirShipTeleportList(PlayerInstance player)
 	{
 		if ((player == null) || !player.isInAirShip())
 		{
 			return;
 		}
 		
-		final L2AirShipInstance ship = player.getAirShip();
+		final AirShipInstance ship = player.getAirShip();
 		if (!ship.isCaptain(player) || !ship.isInDock() || ship.isMoving())
 		{
 			return;

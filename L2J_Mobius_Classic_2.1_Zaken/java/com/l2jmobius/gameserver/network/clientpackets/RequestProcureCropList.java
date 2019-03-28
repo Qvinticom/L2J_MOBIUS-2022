@@ -24,13 +24,13 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.UniqueItemHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -45,7 +45,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 	private List<CropHolder> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int count = packet.readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
@@ -71,14 +71,14 @@ public class RequestProcureCropList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_items == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -91,8 +91,8 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Npc manager = player.getLastFolkNPC();
-		if (!(manager instanceof L2MerchantInstance) || !manager.canInteract(player))
+		final Npc manager = player.getLastFolkNPC();
+		if (!(manager instanceof MerchantInstance) || !manager.canInteract(player))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -109,7 +109,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 		int weight = 0;
 		for (CropHolder i : _items)
 		{
-			final L2ItemInstance item = player.getInventory().getItemByObjectId(i.getObjectId());
+			final ItemInstance item = player.getInventory().getItemByObjectId(i.getObjectId());
 			if ((item == null) || (item.getCount() < i.getCount()) || (item.getId() != i.getId()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -123,7 +123,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 				return;
 			}
 			
-			final L2Item template = ItemTable.getInstance().getTemplate(i.getRewardId());
+			final Item template = ItemTable.getInstance().getTemplate(i.getRewardId());
 			weight += (i.getCount() * template.getWeight());
 			
 			if (!template.isStackable())

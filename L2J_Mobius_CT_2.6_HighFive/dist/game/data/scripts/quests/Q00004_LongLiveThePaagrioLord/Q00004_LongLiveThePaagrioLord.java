@@ -18,8 +18,8 @@ package quests.Q00004_LongLiveThePaagrioLord;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -59,10 +59,10 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -72,7 +72,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		{
 			case "30578-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "30578-05.html":
@@ -89,15 +89,15 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case NAKUSIN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -106,7 +106,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30578-04.html";
 						}
@@ -117,7 +117,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 							addExpAndSp(player, 4254, 335);
 							giveAdena(player, 1850, true);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "30578-06.html";
 						}
 						break;
@@ -132,41 +132,41 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 			}
 			case VARKEES:
 			{
-				htmltext = giveItem(player, st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
+				htmltext = giveItem(player, qs, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
 			}
 			case URUTU:
 			{
-				htmltext = giveItem(player, st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
+				htmltext = giveItem(player, qs, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
 			}
 			case HESTUI:
 			{
-				htmltext = giveItem(player, st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
+				htmltext = giveItem(player, qs, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
 			}
 			case KUNAI:
 			{
-				htmltext = giveItem(player, st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
+				htmltext = giveItem(player, qs, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
 			}
 			case USKA:
 			{
-				htmltext = giveItem(player, st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
+				htmltext = giveItem(player, qs, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
 			}
 			case GROOKIN:
 			{
-				htmltext = giveItem(player, st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
+				htmltext = giveItem(player, qs, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
 			}
 		}
 		return htmltext;
 	}
 	
-	private static String giveItem(L2PcInstance player, QuestState st, int npcId, int itemId, int... items)
+	private static String giveItem(PlayerInstance player, QuestState qs, int npcId, int itemId, int... items)
 	{
-		if (!st.isStarted())
+		if (!qs.isStarted())
 		{
 			return getNoQuestMsg(player);
 		}
@@ -178,7 +178,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		if (hasQuestItems(player, items))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		return npcId + "-01.html";
 	}

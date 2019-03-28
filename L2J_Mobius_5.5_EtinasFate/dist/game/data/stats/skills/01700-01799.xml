@@ -1051,7 +1051,7 @@
 		<magicLvl>99</magicLvl>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
@@ -1155,7 +1155,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="1" toLevel="5">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>

@@ -16,7 +16,7 @@
  */
 package ai.areas.TalkingIsland;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -35,7 +35,7 @@ public final class TrainingGolem extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsImmobilized(true);
 		return super.onSpawn(npc);

@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -47,7 +47,7 @@ public final class CreatureSay implements IClientOutgoingPacket
 	 * @param messageType
 	 * @param text
 	 */
-	public CreatureSay(L2PcInstance sender, L2PcInstance receiver, String name, ChatType messageType, String text)
+	public CreatureSay(PlayerInstance sender, PlayerInstance receiver, String name, ChatType messageType, String text)
 	{
 		_objectId = sender.getObjectId();
 		_charName = name;
@@ -89,7 +89,7 @@ public final class CreatureSay implements IClientOutgoingPacket
 	 * @param messageType
 	 * @param text
 	 */
-	public CreatureSay(L2Npc sender, L2PcInstance receiver, String name, ChatType messageType, String text)
+	public CreatureSay(Npc sender, PlayerInstance receiver, String name, ChatType messageType, String text)
 	{
 		_objectId = sender.getObjectId();
 		_charName = name;
@@ -112,7 +112,7 @@ public final class CreatureSay implements IClientOutgoingPacket
 		_text = text;
 	}
 	
-	public CreatureSay(L2PcInstance player, ChatType messageType, String text)
+	public CreatureSay(PlayerInstance player, ChatType messageType, String text)
 	{
 		_objectId = player.getObjectId();
 		_textType = messageType;
@@ -196,7 +196,7 @@ public final class CreatureSay implements IClientOutgoingPacket
 	}
 	
 	@Override
-	public final void runImpl(L2PcInstance player)
+	public final void runImpl(PlayerInstance player)
 	{
 		if (player != null)
 		{

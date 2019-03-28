@@ -17,10 +17,10 @@
 package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -29,9 +29,9 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class PartyOther implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		if ((target != null) && (target != activeChar) && activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
+		if ((target != null) && (target != creature) && creature.isInParty() && target.isInParty() && (creature.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
 		{
 			if (!target.isDead())
 			{
@@ -44,7 +44,7 @@ public class PartyOther implements ITargetTypeHandler
 						{
 							if (!target.getActingPlayer().isMageClass())
 							{
-								return new L2Character[]
+								return new Creature[]
 								{
 									target
 								};
@@ -55,7 +55,7 @@ public class PartyOther implements ITargetTypeHandler
 						{
 							if (target.getActingPlayer().isMageClass())
 							{
-								return new L2Character[]
+								return new Creature[]
 								{
 									target
 								};
@@ -64,20 +64,20 @@ public class PartyOther implements ITargetTypeHandler
 						}
 					}
 				}
-				return new L2Character[]
+				return new Creature[]
 				{
 					target
 				};
 			}
 			return EMPTY_TARGET_LIST;
 		}
-		activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+		creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.PARTY_OTHER;
+		return TargetType.PARTY_OTHER;
 	}
 }

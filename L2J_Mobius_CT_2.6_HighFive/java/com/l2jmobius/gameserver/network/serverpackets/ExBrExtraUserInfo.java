@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,15 +27,15 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExBrExtraUserInfo implements IClientOutgoingPacket
 {
 	/** Player object ID. */
-	private final int _charObjId;
+	private final int _objectId;
 	/** Event abnormal visual effects map. */
 	private final int _abnormalVisualEffectsEvent;
 	/** Lecture mark. */
 	private final int _lectureMark;
 	
-	public ExBrExtraUserInfo(L2PcInstance player)
+	public ExBrExtraUserInfo(PlayerInstance player)
 	{
-		_charObjId = player.getObjectId();
+		_objectId = player.getObjectId();
 		_abnormalVisualEffectsEvent = player.getAbnormalVisualEffectEvent();
 		_lectureMark = 1; // TODO: Implement.
 	}
@@ -44,7 +44,7 @@ public class ExBrExtraUserInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_EXTRA_USER_INFO.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_abnormalVisualEffectsEvent);
 		packet.writeC(_lectureMark);
 		return true;

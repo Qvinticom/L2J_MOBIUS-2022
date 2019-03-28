@@ -19,10 +19,10 @@ package ai.areas.Hellbound.AI.Zones.TowerOfInfinitum;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -101,7 +101,7 @@ public final class TowerOfInfinitum extends AbstractNpcAI
 	private static final Location ENTER_LOCATION = new Location(-22204, 277056, -15023);
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		final int npcId = npc.getId();
@@ -110,17 +110,17 @@ public final class TowerOfInfinitum extends AbstractNpcAI
 		{
 			if (HellboundEngine.getInstance().getLevel() >= 11)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 				{
-					for (L2PcInstance partyMember : party.getMembers())
+					for (PlayerInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, partyMember, npc, true) || !partyMember.isAffectedBySkill(PASS_SKILL))
 						{
 							return "32302-02.htm";
 						}
 					}
-					for (L2PcInstance partyMember : party.getMembers())
+					for (PlayerInstance partyMember : party.getMembers())
 					{
 						partyMember.teleToLocation(ENTER_LOCATION, true);
 					}
@@ -139,7 +139,7 @@ public final class TowerOfInfinitum extends AbstractNpcAI
 		else if ((event.equalsIgnoreCase("up") || event.equalsIgnoreCase("down")) && (npcId >= GK_FIRST) && (npcId <= GK_LAST))
 		{
 			final int direction = event.equalsIgnoreCase("up") ? 0 : 1;
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			
 			if (party == null)
 			{
@@ -151,7 +151,7 @@ public final class TowerOfInfinitum extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance partyMember : party.getMembers())
+				for (PlayerInstance partyMember : party.getMembers())
 				{
 					if (!Util.checkIfInRange(1000, partyMember, npc, false) || (Math.abs(partyMember.getZ() - npc.getZ()) > 100))
 					{
@@ -162,7 +162,7 @@ public final class TowerOfInfinitum extends AbstractNpcAI
 				final Location tele = TELE_COORDS.get(npcId)[direction];
 				if (tele != null)
 				{
-					for (L2PcInstance partyMember : party.getMembers())
+					for (PlayerInstance partyMember : party.getMembers())
 					{
 						partyMember.teleToLocation(tele, true);
 					}

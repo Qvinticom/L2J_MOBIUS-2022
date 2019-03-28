@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.communitybbs.Manager;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class TopBBSManager extends BaseBBSManager
 {
@@ -32,22 +32,22 @@ public class TopBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, L2PcInstance activeChar)
+	public void parseCmd(String command, PlayerInstance player)
 	{
 		if (command.equals("_bbshome"))
 		{
-			loadStaticHtm("index.htm", activeChar);
+			loadStaticHtm("index.htm", player);
 		}
 		else if (command.startsWith("_bbshome;"))
 		{
 			StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			
-			loadStaticHtm(st.nextToken(), activeChar);
+			loadStaticHtm(st.nextToken(), player);
 		}
 		else
 		{
-			super.parseCmd(command, activeChar);
+			super.parseCmd(command, player);
 		}
 	}
 	

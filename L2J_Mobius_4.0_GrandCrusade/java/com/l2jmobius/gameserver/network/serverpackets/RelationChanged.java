@@ -20,7 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.Playable;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,7 +32,7 @@ public final class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_PARTY1 = 0x00001; // party member
 	public static final int RELATION_PARTY2 = 0x00002; // party member
 	public static final int RELATION_PARTY3 = 0x00004; // party member
-	public static final int RELATION_PARTY4 = 0x00008; // party member (for information, see L2PcInstance.getRelation())
+	public static final int RELATION_PARTY4 = 0x00008; // party member (for information, see PlayerInstance.getRelation())
 	public static final int RELATION_PARTYLEADER = 0x00010; // true if is party leader
 	public static final int RELATION_HAS_PARTY = 0x00020; // true if is in party
 	public static final int RELATION_CLAN_MEMBER = 0x00040; // true if is in clan
@@ -65,7 +65,7 @@ public final class RelationChanged implements IClientOutgoingPacket
 	private final List<Relation> _multi;
 	private byte _mask = 0x00;
 	
-	public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable)
+	public RelationChanged(Playable activeChar, int relation, boolean autoattackable)
 	{
 		_mask |= SEND_ONE;
 		
@@ -84,7 +84,7 @@ public final class RelationChanged implements IClientOutgoingPacket
 		_multi = new LinkedList<>();
 	}
 	
-	public void addRelation(L2Playable activeChar, int relation, boolean autoattackable)
+	public void addRelation(Playable activeChar, int relation, boolean autoattackable)
 	{
 		if (activeChar.isInvisible())
 		{

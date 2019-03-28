@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 
-public class CustomNpcInfo extends L2GameServerPacket
+public class CustomNpcInfo extends GameServerPacket
 {
-	private final L2NpcInstance _activeChar;
+	private final NpcInstance _activeChar;
 	
 	/**
 	 * @param cha
 	 */
-	public CustomNpcInfo(L2NpcInstance cha)
+	public CustomNpcInfo(NpcInstance cha)
 	{
 		_activeChar = cha;
 		_activeChar.setClientX(_activeChar.getPosition().getX());

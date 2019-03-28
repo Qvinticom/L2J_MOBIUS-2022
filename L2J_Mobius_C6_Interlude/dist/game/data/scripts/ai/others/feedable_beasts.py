@@ -5,7 +5,7 @@ import sys
 from com.l2jmobius.gameserver.ai import CtrlIntention
 from com.l2jmobius.gameserver.datatables.sql import NpcTable
 from com.l2jmobius.gameserver.idfactory import IdFactory
-from com.l2jmobius.gameserver.model.actor.instance import L2TamedBeastInstance
+from com.l2jmobius.gameserver.model.actor.instance import TamedBeastInstance
 from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jmobius.gameserver.network.serverpackets import CreatureSay
 from com.l2jmobius.gameserver.network.serverpackets import SocialAction
@@ -166,7 +166,7 @@ class feedable_beasts(JQuest) :
             #nextNpc.setHome(npc)
                 
             template = NpcTable.getInstance().getTemplate(nextNpcId)
-            nextNpc = L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, foodSkill[food], npc.getX(), npc.getY(), npc.getZ())
+            nextNpc = TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, foodSkill[food], npc.getX(), npc.getY(), npc.getZ())
             nextNpc.setRunning()
 
             objectId = nextNpc.getObjectId()

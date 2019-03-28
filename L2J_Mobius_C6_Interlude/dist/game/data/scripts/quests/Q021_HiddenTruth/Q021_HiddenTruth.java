@@ -17,8 +17,8 @@
 package quests.Q021_HiddenTruth;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -50,8 +50,8 @@ public class Q021_HiddenTruth extends Quest
 		new Location(51928, -51656, -3096)
 	};
 	
-	private L2NpcInstance _duke;
-	private L2NpcInstance _page;
+	private NpcInstance _duke;
+	private NpcInstance _page;
 	
 	public Q021_HiddenTruth()
 	{
@@ -64,7 +64,7 @@ public class Q021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -167,7 +167,7 @@ public class Q021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -344,7 +344,7 @@ public class Q021_HiddenTruth extends Quest
 		return htmltext;
 	}
 	
-	private void spawnTheDuke(L2PcInstance player)
+	private void spawnTheDuke(PlayerInstance player)
 	{
 		if (_duke == null)
 		{
@@ -355,7 +355,7 @@ public class Q021_HiddenTruth extends Quest
 		}
 	}
 	
-	private void spawnThePage(L2PcInstance player)
+	private void spawnThePage(PlayerInstance player)
 	{
 		if (_page == null)
 		{

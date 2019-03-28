@@ -21,8 +21,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -46,7 +46,7 @@ public class ExAcquireSkillInfo implements IClientOutgoingPacket
 	 * @param player
 	 * @param skillLearn the skill learn.
 	 */
-	public ExAcquireSkillInfo(L2PcInstance player, L2SkillLearn skillLearn)
+	public ExAcquireSkillInfo(PlayerInstance player, SkillLearn skillLearn)
 	{
 		_id = skillLearn.getSkillId();
 		_level = skillLearn.getSkillLevel();

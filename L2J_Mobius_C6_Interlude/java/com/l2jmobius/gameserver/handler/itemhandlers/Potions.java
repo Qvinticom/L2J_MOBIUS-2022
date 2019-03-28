@@ -27,14 +27,14 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Effect.EffectType;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Effect.EffectType;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -95,13 +95,13 @@ public class Potions implements IItemHandler
 	/** Task for Herbs */
 	private class HerbTask implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		private final int _magicId;
 		private final int _level;
 		
-		HerbTask(L2PcInstance activeChar, int magicId, int level)
+		HerbTask(PlayerInstance activeChar, int magicId, int level)
 		{
-			_activeChar = activeChar;
+			_player = activeChar;
 			_magicId = magicId;
 			_level = level;
 		}
@@ -111,7 +111,7 @@ public class Potions implements IItemHandler
 		{
 			try
 			{
-				usePotion(_activeChar, _magicId, _level);
+				usePotion(_player, _magicId, _level);
 			}
 			catch (Throwable t)
 			{
@@ -202,12 +202,12 @@ public class Potions implements IItemHandler
 	};
 	
 	@Override
-	public synchronized void useItem(L2Playable playable, L2ItemInstance item)
+	public synchronized void useItem(Playable playable, ItemInstance item)
 	{
-		if (playable instanceof L2PcInstance)
+		if (playable instanceof PlayerInstance)
 		{
-			L2PcInstance activeChar;
-			activeChar = (L2PcInstance) playable;
+			PlayerInstance activeChar;
+			activeChar = (PlayerInstance) playable;
 			
 			if (activeChar._inEventTvT && TvT.is_started() && !Config.TVT_ALLOW_POTIONS)
 			{
@@ -685,10 +685,10 @@ public class Potions implements IItemHandler
 				}
 			}
 		}
-		else if (playable instanceof L2PetInstance)
+		else if (playable instanceof PetInstance)
 		{
-			L2PetInstance activeChar;
-			activeChar = ((L2PetInstance) playable);
+			PetInstance activeChar;
+			activeChar = ((PetInstance) playable);
 			final int itemId = item.getItemId();
 			switch (itemId)
 			{
@@ -749,16 +749,16 @@ public class Potions implements IItemHandler
 		}
 	}
 	
-	private boolean isEffectReplaceable(L2Playable activeChar, Enum<EffectType> effectType, int itemId)
+	private boolean isEffectReplaceable(Playable activeChar, Enum<EffectType> effectType, int itemId)
 	{
-		final L2Effect[] effects = activeChar.getAllEffects();
+		final Effect[] effects = activeChar.getAllEffects();
 		
 		if (effects == null)
 		{
 			return true;
 		}
 		
-		for (L2Effect e : effects)
+		for (Effect e : effects)
 		{
 			if (e.getEffectType() == effectType)
 			{
@@ -781,11 +781,11 @@ public class Potions implements IItemHandler
 		return true;
 	}
 	
-	public boolean usePotion(L2Playable player, int magicId, int level)
+	public boolean usePotion(Playable player, int magicId, int level)
 	{
-		if (player instanceof L2PcInstance)
+		if (player instanceof PlayerInstance)
 		{
-			final L2PcInstance activeChar = player.getActingPlayer();
+			final PlayerInstance activeChar = player.getActingPlayer();
 			
 			if (activeChar.isCastingNow() && (magicId > 2277) && (magicId < 2285))
 			{
@@ -798,7 +798,7 @@ public class Potions implements IItemHandler
 				{
 					_herbstask -= 100;
 				}
-				final L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+				final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 				if (skill != null)
 				{
 					// Return false if potion is in reuse
@@ -842,10 +842,10 @@ public class Potions implements IItemHandler
 				}
 			}
 		}
-		else if (player instanceof L2PetInstance)
+		else if (player instanceof PetInstance)
 		{
-			final L2PetInstance activeChar = (L2PetInstance) player;
-			final L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+			final PetInstance activeChar = (PetInstance) player;
+			final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 			if (skill != null)
 			{
 				// Return false if potion is in reuse so is not destroyed from inventory
@@ -877,9 +877,9 @@ public class Potions implements IItemHandler
 		return ITEM_IDS;
 	}
 	
-	public static void delete_Potion_Item(L2Playable playable, Integer skill_id, Integer skill_level)
+	public static void delete_Potion_Item(Playable playable, Integer skill_id, Integer skill_level)
 	{
-		if (!(playable instanceof L2PcInstance) && !(playable instanceof L2Summon))
+		if (!(playable instanceof PlayerInstance) && !(playable instanceof Summon))
 		{
 			return;
 		}
@@ -895,23 +895,23 @@ public class Potions implements IItemHandler
 					continue;
 				}
 				
-				if (playable instanceof L2PcInstance)
+				if (playable instanceof PlayerInstance)
 				{
-					final L2PcInstance activeChar = (L2PcInstance) playable;
+					final PlayerInstance activeChar = (PlayerInstance) playable;
 					
 					if (activeChar.getInventory().getInventoryItemCount(potion, 0) > 0)
 					{
-						final L2ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
+						final ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
 						activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					}
 				}
-				else if (playable instanceof L2Summon)
+				else if (playable instanceof Summon)
 				{
-					final L2Summon activeChar = (L2Summon) playable;
+					final Summon activeChar = (Summon) playable;
 					
 					if (activeChar.getInventory().getInventoryItemCount(potion, 0) > 0)
 					{
-						final L2ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
+						final ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
 						activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					}
 				}

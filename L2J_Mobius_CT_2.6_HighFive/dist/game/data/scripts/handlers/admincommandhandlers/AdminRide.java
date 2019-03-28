@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -46,9 +46,9 @@ public class AdminRide implements IAdminCommandHandler
 	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		final L2PcInstance player = getRideTarget(activeChar);
+		final PlayerInstance player = getRideTarget(activeChar);
 		if (player == null)
 		{
 			return false;
@@ -128,9 +128,9 @@ public class AdminRide implements IAdminCommandHandler
 		return true;
 	}
 	
-	private L2PcInstance getRideTarget(L2PcInstance activeChar)
+	private PlayerInstance getRideTarget(PlayerInstance activeChar)
 	{
-		L2PcInstance player = null;
+		PlayerInstance player = null;
 		
 		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !activeChar.getTarget().isPlayer())
 		{
@@ -138,7 +138,7 @@ public class AdminRide implements IAdminCommandHandler
 		}
 		else
 		{
-			player = (L2PcInstance) activeChar.getTarget();
+			player = (PlayerInstance) activeChar.getTarget();
 		}
 		
 		return player;

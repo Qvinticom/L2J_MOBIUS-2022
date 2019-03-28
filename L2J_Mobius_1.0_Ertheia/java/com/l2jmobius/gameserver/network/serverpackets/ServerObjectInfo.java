@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class ServerObjectInfo implements IClientOutgoingPacket
 {
-	private final L2Npc _activeChar;
+	private final Npc _activeChar;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -37,7 +37,7 @@ public final class ServerObjectInfo implements IClientOutgoingPacket
 	private final double _collisionRadius;
 	private final String _name;
 	
-	public ServerObjectInfo(L2Npc activeChar, L2Character actor)
+	public ServerObjectInfo(Npc activeChar, Creature actor)
 	{
 		_activeChar = activeChar;
 		_idTemplate = _activeChar.getTemplate().getDisplayId();

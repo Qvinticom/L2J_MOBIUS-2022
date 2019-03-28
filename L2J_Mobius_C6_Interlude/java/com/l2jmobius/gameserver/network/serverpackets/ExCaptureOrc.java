@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author KenM
  */
-public class ExCaptureOrc extends L2GameServerPacket
+public class ExCaptureOrc extends GameServerPacket
 {
 	private static final byte[] _test;
 	static
@@ -94,7 +94,7 @@ public class ExCaptureOrc extends L2GameServerPacket
 	}
 	
 	/**
-	 * @see com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 * @see com.l2jmobius.gameserver.network.serverpackets.GameServerPacket#writeImpl()
 	 */
 	@Override
 	protected void writeImpl()

@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.model.stats.functions;
 
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -34,14 +34,14 @@ public class FuncEnchantHp extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		if ((getApplayCond() != null) && !getApplayCond().test(effector, effected, skill))
 		{
 			return initVal;
 		}
 		
-		final L2ItemInstance item = (L2ItemInstance) getFuncOwner();
+		final ItemInstance item = (ItemInstance) getFuncOwner();
 		if (item.getEnchantLevel() > 0)
 		{
 			return initVal + EnchantItemHPBonusData.getInstance().getHPBonus(item);

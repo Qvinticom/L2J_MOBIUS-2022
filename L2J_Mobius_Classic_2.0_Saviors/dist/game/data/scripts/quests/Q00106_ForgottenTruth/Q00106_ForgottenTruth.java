@@ -19,8 +19,8 @@ package quests.Q00106_ForgottenTruth;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -61,11 +61,11 @@ public final class Q00106_ForgottenTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -78,9 +78,9 @@ public final class Q00106_ForgottenTruth extends Quest
 			}
 			case "30358-05.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, ONYX_TALISMAN1, 1);
 					htmltext = event;
 				}
@@ -91,10 +91,10 @@ public final class Q00106_ForgottenTruth extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			if ((getRandom(100) < 20) && hasQuestItems(killer, ONYX_TALISMAN2))
 			{
@@ -105,7 +105,7 @@ public final class Q00106_ForgottenTruth extends Quest
 				}
 				else if (!hasQuestItems(killer, ANCIENT_CLAY_TABLET))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					giveItems(killer, ANCIENT_CLAY_TABLET, 1);
 				}
 			}
@@ -114,16 +114,16 @@ public final class Q00106_ForgottenTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
 		switch (npc.getId())
 		{
 			case THIFIELL:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -143,12 +143,12 @@ public final class Q00106_ForgottenTruth extends Quest
 						{
 							htmltext = "30358-06.html";
 						}
-						else if (st.isCond(4) && hasQuestItems(talker, KARTAS_TRANSLATION))
+						else if (qs.isCond(4) && hasQuestItems(talker, KARTAS_TRANSLATION))
 						{
 							// Q00281_HeadForTheHills.giveNewbieReward(talker);
 							rewardItems(talker, REWARDS, 1);
 							talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "30358-07.html";
 						}
 						break;
@@ -163,15 +163,15 @@ public final class Q00106_ForgottenTruth extends Quest
 			}
 			case KARTA:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
 							if (hasQuestItems(talker, ONYX_TALISMAN1))
 							{
-								st.setCond(2, true);
+								qs.setCond(2, true);
 								takeItems(talker, ONYX_TALISMAN1, -1);
 								giveItems(talker, ONYX_TALISMAN2, 1);
 								htmltext = "30133-01.html";
@@ -190,7 +190,7 @@ public final class Q00106_ForgottenTruth extends Quest
 						{
 							if (hasQuestItems(talker, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET))
 							{
-								st.setCond(4, true);
+								qs.setCond(4, true);
 								takeItems(talker, -1, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET, ONYX_TALISMAN2);
 								giveItems(talker, KARTAS_TRANSLATION, 1);
 								htmltext = "30133-03.html";

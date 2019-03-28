@@ -27,7 +27,7 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.ClanShopProductHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author Mobius
@@ -64,7 +64,7 @@ public class ClanShopData implements IGameXmlReader
 			final long adena = set.getLong("adena");
 			final int fame = set.getInt("fame");
 			
-			final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+			final Item item = ItemTable.getInstance().getTemplate(itemId);
 			if (item == null)
 			{
 				LOGGER.info(getClass().getSimpleName() + ": Could not create clan shop item " + itemId + ", it does not exist.");

@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
 /**
  * sample format d
  * @version $Revision: 1 $ $Date: 2005/04/10 00:17:44 $
  */
-public final class RequestShowMiniMap extends L2GameClientPacket
+public final class RequestShowMiniMap extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -34,12 +34,12 @@ public final class RequestShowMiniMap extends L2GameClientPacket
 	@Override
 	protected final void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ShowMiniMap(1665));
+		player.sendPacket(new ShowMiniMap(1665));
 	}
 }

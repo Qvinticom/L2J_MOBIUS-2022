@@ -16,9 +16,9 @@
  */
 package handlers.conditions;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.ICondition;
 
 /**
@@ -36,7 +36,7 @@ public class PlayerLevelCondition implements ICondition
 	}
 	
 	@Override
-	public boolean test(L2Character creature, L2Object object)
+	public boolean test(Creature creature, WorldObject object)
 	{
 		return creature.isPlayer() && (creature.getLevel() >= _minLevel) && (creature.getLevel() < _maxLevel);
 	}

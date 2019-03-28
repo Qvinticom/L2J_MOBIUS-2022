@@ -35,10 +35,10 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.AutoSpawnHandler;
 import com.l2jmobius.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -1204,7 +1204,7 @@ public class SevenSigns
 	 * Send info on the current Seven Signs period to the specified player.
 	 * @param player
 	 */
-	public void sendCurrentPeriodMsg(L2PcInstance player)
+	public void sendCurrentPeriodMsg(PlayerInstance player)
 	{
 		SystemMessage sm = null;
 		
@@ -1495,7 +1495,7 @@ public class SevenSigns
 	 */
 	protected void teleLosingCabalFromDungeons(String compWinner)
 	{
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			final StatsSet currPlayer = _signsPlayerData.get(player.getObjectId());
 			
@@ -1692,7 +1692,7 @@ public class SevenSigns
 	
 	public void giveCPMult(int strifeOwner)
 	{
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			// Gives "Victor of War" passive skill to all online characters with Cabal, which controls Seal of Strife
 			final int cabal = getPlayerCabal(player.getObjectId());
@@ -1714,16 +1714,16 @@ public class SevenSigns
 	public void removeCPMult()
 	{
 		// Remove SevenSigns' buffs/debuffs.
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			player.removeSkill(CommonSkill.THE_VICTOR_OF_WAR.getSkill());
 			player.removeSkill(CommonSkill.THE_VANQUISHED_OF_WAR.getSkill());
 		}
 	}
 	
-	public boolean checkSummonConditions(L2PcInstance activeChar)
+	public boolean checkSummonConditions(PlayerInstance player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return true;
 		}
@@ -1732,9 +1732,9 @@ public class SevenSigns
 		{
 			if (getSealOwner(SEAL_STRIFE) == CABAL_DAWN)
 			{
-				if (getPlayerCabal(activeChar.getObjectId()) == CABAL_DUSK)
+				if (getPlayerCabal(player.getObjectId()) == CABAL_DUSK)
 				{
-					activeChar.sendPacket(SystemMessageId.DUE_TO_THE_AFFECTS_OF_THE_SEAL_OF_STRIFE_IT_IS_NOT_POSSIBLE_TO_SUMMON_AT_THIS_TIME);
+					player.sendPacket(SystemMessageId.DUE_TO_THE_AFFECTS_OF_THE_SEAL_OF_STRIFE_IT_IS_NOT_POSSIBLE_TO_SUMMON_AT_THIS_TIME);
 					return true;
 				}
 			}

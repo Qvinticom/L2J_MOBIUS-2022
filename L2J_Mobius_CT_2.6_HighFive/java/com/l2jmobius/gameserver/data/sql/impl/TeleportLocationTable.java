@@ -26,13 +26,13 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2TeleportLocation;
+import com.l2jmobius.gameserver.model.TeleportLocation;
 
 public class TeleportLocationTable
 {
 	private static Logger LOGGER = Logger.getLogger(TeleportLocationTable.class.getName());
 	
-	private final Map<Integer, L2TeleportLocation> _teleports = new HashMap<>();
+	private final Map<Integer, TeleportLocation> _teleports = new HashMap<>();
 	
 	protected TeleportLocationTable()
 	{
@@ -46,10 +46,10 @@ public class TeleportLocationTable
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id, loc_x, loc_y, loc_z, price, fornoble, itemId FROM teleport"))
 		{
-			L2TeleportLocation teleport;
+			TeleportLocation teleport;
 			while (rs.next())
 			{
-				teleport = new L2TeleportLocation();
+				teleport = new TeleportLocation();
 				
 				teleport.setTeleId(rs.getInt("id"));
 				teleport.setLocX(rs.getInt("loc_x"));
@@ -78,10 +78,10 @@ public class TeleportLocationTable
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id, loc_x, loc_y, loc_z, price, fornoble, itemId FROM custom_teleport"))
 		{
-			L2TeleportLocation teleport;
+			TeleportLocation teleport;
 			while (rs.next())
 			{
-				teleport = new L2TeleportLocation();
+				teleport = new TeleportLocation();
 				teleport.setTeleId(rs.getInt("id"));
 				teleport.setLocX(rs.getInt("loc_x"));
 				teleport.setLocY(rs.getInt("loc_y"));
@@ -108,7 +108,7 @@ public class TeleportLocationTable
 	 * @param id
 	 * @return
 	 */
-	public L2TeleportLocation getTemplate(int id)
+	public TeleportLocation getTemplate(int id)
 	{
 		return _teleports.get(id);
 	}

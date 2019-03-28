@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.Util;
@@ -35,34 +35,34 @@ import com.l2jmobius.gameserver.util.Util;
 public class AreaCorpseMob implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
 		if ((target == null) || !target.isAttackable() || !target.isDead())
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
 				target
 			};
 		}
 		
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		targetList.add(target);
 		
-		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
-		L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, obj ->
+		final boolean srcInArena = creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE);
+		World.getInstance().forEachVisibleObject(creature, Creature.class, obj ->
 		{
 			if (!(obj.isAttackable() || obj.isPlayable()) || !Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
 			{
 				return;
 			}
 			
-			if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+			if (!Skill.checkForAreaOffensiveSkills(creature, obj, skill, srcInArena))
 			{
 				return;
 			}
@@ -74,12 +74,12 @@ public class AreaCorpseMob implements ITargetTypeHandler
 		{
 			return EMPTY_TARGET_LIST;
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.AREA_CORPSE_MOB;
+		return TargetType.AREA_CORPSE_MOB;
 	}
 }

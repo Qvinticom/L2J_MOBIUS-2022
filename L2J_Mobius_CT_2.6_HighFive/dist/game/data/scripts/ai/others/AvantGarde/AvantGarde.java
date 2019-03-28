@@ -23,11 +23,11 @@ import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -74,7 +74,7 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAcquireSkill(L2Npc npc, L2PcInstance player, Skill skill, AcquireSkillType type)
+	public String onAcquireSkill(Npc npc, PlayerInstance player, Skill skill, AcquireSkillType type)
 	{
 		switch (type)
 		{
@@ -93,7 +93,7 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -183,10 +183,10 @@ public class AvantGarde extends AbstractNpcAI
 				}
 				else
 				{
-					QuestState st = player.getQuestState(SubClassSkills.class.getSimpleName());
-					if (st == null)
+					QuestState qs = player.getQuestState(SubClassSkills.class.getSimpleName());
+					if (qs == null)
 					{
-						st = QuestManager.getInstance().getQuest(SubClassSkills.class.getSimpleName()).newQuestState(player);
+						qs = QuestManager.getInstance().getQuest(SubClassSkills.class.getSimpleName()).newQuestState(player);
 					}
 					
 					int activeCertifications = 0;
@@ -236,7 +236,7 @@ public class AvantGarde extends AbstractNpcAI
 									if (Util.isDigit(qvar))
 									{
 										final int itemObjId = Integer.parseInt(qvar);
-										L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(itemObjId);
+										ItemInstance itemInstance = player.getInventory().getItemByObjectId(itemObjId);
 										if (itemInstance != null)
 										{
 											player.destroyItem("CancelCertification", itemObjId, 1, player, false);
@@ -272,7 +272,7 @@ public class AvantGarde extends AbstractNpcAI
 					// Let's consume all certification books, even those not present in database.
 					for (int itemId : ITEMS)
 					{
-						final L2ItemInstance item = player.getInventory().getItemByItemId(itemId);
+						final ItemInstance item = player.getInventory().getItemByItemId(itemId);
 						if (item != null)
 						{
 							LOGGER.warning(getClass().getName() + ": player " + player + " had 'extra' certification skill books while cancelling sub-class certifications!");
@@ -287,13 +287,13 @@ public class AvantGarde extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "32323-01.html";
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		return "32323-01.html";
 	}
@@ -302,13 +302,13 @@ public class AvantGarde extends AbstractNpcAI
 	 * Display the Sub-Class Skill list to the player.
 	 * @param player the player
 	 */
-	public static void showSubClassSkillList(L2PcInstance player)
+	public static void showSubClassSkillList(PlayerInstance player)
 	{
-		final List<L2SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
+		final List<SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBCLASS);
 		int count = 0;
 		
-		for (L2SkillLearn s : subClassSkills)
+		for (SkillLearn s : subClassSkills)
 		{
 			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
 			{
@@ -330,13 +330,13 @@ public class AvantGarde extends AbstractNpcAI
 	 * This displays Transformation Skill List to the player.
 	 * @param player the active character.
 	 */
-	public static void showTransformSkillList(L2PcInstance player)
+	public static void showTransformSkillList(PlayerInstance player)
 	{
-		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransformSkills(player);
+		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransformSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFORM);
 		int counts = 0;
 		
-		for (L2SkillLearn s : skills)
+		for (SkillLearn s : skills)
 		{
 			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
 			{

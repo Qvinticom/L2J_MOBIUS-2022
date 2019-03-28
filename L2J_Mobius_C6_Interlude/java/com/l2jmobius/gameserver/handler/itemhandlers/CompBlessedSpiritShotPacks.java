@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -43,14 +43,14 @@ public class CompBlessedSpiritShotPacks implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		
 		final int itemId = item.getItemId();
 		int itemToCreateId;
@@ -67,16 +67,16 @@ public class CompBlessedSpiritShotPacks implements IItemHandler
 			amount = 1000;
 		}
 		
-		activeChar.getInventory().destroyItem("Extract", item, activeChar, null);
-		activeChar.getInventory().addItem("Extract", itemToCreateId, amount, activeChar, item);
+		player.getInventory().destroyItem("Extract", item, player, null);
+		player.getInventory().addItem("Extract", itemToCreateId, amount, player, item);
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
 		sm.addItemName(itemToCreateId);
 		sm.addNumber(amount);
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		
-		ItemList playerUI = new ItemList(activeChar, false);
-		activeChar.sendPacket(playerUI);
+		ItemList playerUI = new ItemList(player, false);
+		player.sendPacket(playerUI);
 	}
 	
 	@Override

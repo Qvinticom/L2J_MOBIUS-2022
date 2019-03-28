@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExAirShipStopMove implements IClientOutgoingPacket
@@ -29,7 +29,7 @@ public class ExAirShipStopMove implements IClientOutgoingPacket
 	private final int _y;
 	private final int _z;
 	
-	public ExAirShipStopMove(L2PcInstance player, L2AirShipInstance ship, int x, int y, int z)
+	public ExAirShipStopMove(PlayerInstance player, AirShipInstance ship, int x, int y, int z)
 	{
 		_playerId = player.getObjectId();
 		_airShipId = ship.getObjectId();

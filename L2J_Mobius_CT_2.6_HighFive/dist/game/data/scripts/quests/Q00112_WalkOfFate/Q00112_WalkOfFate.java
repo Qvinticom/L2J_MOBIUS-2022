@@ -16,8 +16,8 @@
  */
 package quests.Q00112_WalkOfFate;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,10 +44,10 @@ public class Q00112_WalkOfFate extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st == null) || (player.getLevel() < MIN_LEVEL))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) || (player.getLevel() < MIN_LEVEL))
 		{
 			return null;
 		}
@@ -57,7 +57,7 @@ public class Q00112_WalkOfFate extends Quest
 		{
 			case "30572-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -66,7 +66,7 @@ public class Q00112_WalkOfFate extends Quest
 				giveAdena(player, 22308, true);
 				addExpAndSp(player, 112876, 5774);
 				giveItems(player, SCROLL_ENCHANT_ARMOR_D_GRADE, 1);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				htmltext = event;
 			}
 		}
@@ -74,12 +74,12 @@ public class Q00112_WalkOfFate extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{

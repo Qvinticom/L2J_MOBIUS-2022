@@ -16,8 +16,8 @@
  */
 package ai.areas.FrozenLabyrinth;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 import ai.AbstractNpcAI;
@@ -40,7 +40,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.isScriptValue(0) && (skill != null) && !skill.isMagic())
 		{
@@ -51,7 +51,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 				final int x = diff < 60 ? npc.getX() + diff : npc.getX();
 				final int y = diff >= 60 ? npc.getY() + (diff - 40) : npc.getY();
 				
-				final L2Npc monster = addSpawn(spawnId, x, y, npc.getZ(), npc.getHeading(), false, 0);
+				final Npc monster = addSpawn(spawnId, x, y, npc.getZ(), npc.getHeading(), false, 0);
 				addAttackDesire(monster, attacker);
 				diff += 20;
 			}

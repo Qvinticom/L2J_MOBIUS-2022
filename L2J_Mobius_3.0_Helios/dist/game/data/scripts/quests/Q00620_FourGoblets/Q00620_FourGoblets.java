@@ -18,8 +18,8 @@ package quests.Q00620_FourGoblets;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -109,11 +109,11 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = player.getQuestState(getName());
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -122,9 +122,9 @@ public class Q00620_FourGoblets extends Quest
 		{
 			case "accept":
 			{
-				if ((st.getPlayer().getLevel() >= 74) && ((st.getPlayer().getLevel() <= 80)))
+				if ((qs.getPlayer().getLevel() >= 74) && ((qs.getPlayer().getLevel() <= 80)))
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = "31453-13.htm";
 					giveItems(player, ENTRANCE_PASS, 1);
 				}
@@ -493,7 +493,7 @@ public class Q00620_FourGoblets extends Quest
 					{
 						giveItems(player, ANTIQUE_BROOCH, 1);
 					}
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = "31453-16.htm";
 				}
 				else
@@ -504,14 +504,14 @@ public class Q00620_FourGoblets extends Quest
 			}
 			case "13":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = "31453-18.htm";
 				break;
 			}
 			case "14":
 			{
 				htmltext = "31453-13.htm";
-				if (st.getCond() == 2)
+				if (qs.getCond() == 2)
 				{
 					htmltext = "31453-19.htm";
 				}
@@ -521,13 +521,13 @@ public class Q00620_FourGoblets extends Quest
 			{
 				if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1)
 				{
-					st.getPlayer().teleToLocation(178298, -84574, -7216);
+					qs.getPlayer().teleToLocation(178298, -84574, -7216);
 					htmltext = null;
 				}
 				else if (getQuestItemsCount(player, GRAVE_PASS) >= 1)
 				{
 					takeItems(player, GRAVE_PASS, 1);
-					st.getPlayer().teleToLocation(178298, -84574, -7216);
+					qs.getPlayer().teleToLocation(178298, -84574, -7216);
 					htmltext = null;
 				}
 				else
@@ -540,13 +540,13 @@ public class Q00620_FourGoblets extends Quest
 			{
 				if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1)
 				{
-					st.getPlayer().teleToLocation(186942, -75602, -2834);
+					qs.getPlayer().teleToLocation(186942, -75602, -2834);
 					htmltext = null;
 				}
 				else if (getQuestItemsCount(player, GRAVE_PASS) >= 1)
 				{
 					takeItems(player, GRAVE_PASS, 1);
-					st.getPlayer().teleToLocation(186942, -75602, -2834);
+					qs.getPlayer().teleToLocation(186942, -75602, -2834);
 					htmltext = null;
 				}
 				else
@@ -559,12 +559,12 @@ public class Q00620_FourGoblets extends Quest
 			{
 				if (getQuestItemsCount(player, ANTIQUE_BROOCH) >= 1)
 				{
-					st.getPlayer().teleToLocation(169590, -90218, -2914);
+					qs.getPlayer().teleToLocation(169590, -90218, -2914);
 				}
 				else
 				{
 					takeItems(player, GRAVE_PASS, 1);
-					st.getPlayer().teleToLocation(169590, -90218, -2914);
+					qs.getPlayer().teleToLocation(169590, -90218, -2914);
 					htmltext = "31452-6.htm";
 				}
 				break;
@@ -932,70 +932,70 @@ public class Q00620_FourGoblets extends Quest
 			case "6881":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6883":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6885":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6887":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "7580":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6891":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6893":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6895":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6897":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
 			case "6899":
 			{
 				takeItems(player, RELIC, 1000);
-				giveItems(player, st.getInt(event), 1);
+				giveItems(player, qs.getInt(event), 1);
 				htmltext = "31454-17.htm";
 				break;
 			}
@@ -1004,18 +1004,18 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
 		switch (npc.getId())
 		{
 			case NAMELESS_SPIRIT:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					if ((st.getPlayer().getLevel() >= 74) && ((st.getPlayer().getLevel() <= 80)))
+					if ((qs.getPlayer().getLevel() >= 74) && ((qs.getPlayer().getLevel() <= 80)))
 					{
 						htmltext = "31453-1.htm";
 					}
@@ -1024,7 +1024,7 @@ public class Q00620_FourGoblets extends Quest
 						htmltext = "31453-12.htm";
 					}
 				}
-				else if (st.getCond() == 1)
+				else if (qs.getCond() == 1)
 				{
 					if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && (getQuestItemsCount(talker, GOBLETS[3]) >= 1))
 					{
@@ -1035,7 +1035,7 @@ public class Q00620_FourGoblets extends Quest
 						htmltext = "31453-14.htm";
 					}
 				}
-				else if (st.getCond() == 2)
+				else if (qs.getCond() == 2)
 				{
 					htmltext = "31453-17.htm";
 				}
@@ -1043,7 +1043,7 @@ public class Q00620_FourGoblets extends Quest
 			}
 			case GHOST_OF_WIGOTH_1:
 			{
-				if (st.getCond() == 1)
+				if (qs.getCond() == 1)
 				{
 					if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) == 1)
 					{
@@ -1054,7 +1054,7 @@ public class Q00620_FourGoblets extends Quest
 						htmltext = "31452-02.html";
 					}
 				}
-				else if (st.getCond() == 2)
+				else if (qs.getCond() == 2)
 				{
 					htmltext = "31452-02.html";
 				}
@@ -1151,12 +1151,12 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = killer.getQuestState(getName());
-		final L2PcInstance partyMember = getRandomPartyMember(killer, 3);
+		final QuestState qs = killer.getQuestState(getName());
+		final PlayerInstance partyMember = getRandomPartyMember(killer, 3);
 		final int npcId = npc.getId();
-		if ((st != null) && (st.getCond() > 0) && (npcId >= 18120) && (npcId <= 18256))
+		if ((qs != null) && (qs.getCond() > 0) && (npcId >= 18120) && (npcId <= 18256))
 		{
 			if (Rnd.get(100) < 15)
 			{

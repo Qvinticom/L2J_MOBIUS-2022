@@ -17,10 +17,10 @@
 package ai.others;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -53,7 +53,7 @@ public final class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("CLEAR_STATUS"))
 		{
@@ -71,7 +71,7 @@ public final class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		if (npc.getId() == GUARD_HEAD)
 		{
@@ -107,7 +107,7 @@ public final class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!caster.isAffectedBySkill(TIMER))
 		{
@@ -118,24 +118,24 @@ public final class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if ((skill == SILENCE.getSkill()) || (skill == STONE.getSkill()))
 		{
-			((L2Attackable) npc).clearAggroList();
+			((Attackable) npc).clearAggroList();
 			npc.setTarget(npc);
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	@Override
-	public boolean onNpcHate(L2Attackable mob, L2PcInstance player, boolean isSummon)
+	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
 	{
 		return player.isAffectedBySkill(TIMER);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == GUARD_HEAD)
 		{

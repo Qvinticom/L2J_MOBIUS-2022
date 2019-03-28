@@ -29,8 +29,8 @@ import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -46,7 +46,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_serverinfo"))
 		{
@@ -92,14 +92,14 @@ public class AdminServerInfo implements IAdminCommandHandler
 		{
 			case "ALL":
 			{
-				return L2World.getInstance().getPlayers().size();
+				return World.getInstance().getPlayers().size();
 			}
 			case "OFF_TRADE":
 			{
 				int offlineCount = 0;
 				
-				final Collection<L2PcInstance> objs = L2World.getInstance().getPlayers();
-				for (L2PcInstance player : objs)
+				final Collection<PlayerInstance> objs = World.getInstance().getPlayers();
+				for (PlayerInstance player : objs)
 				{
 					if ((player.getClient() == null) || player.getClient().isDetached())
 					{
@@ -111,7 +111,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "GM":
 			{
 				int onlineGMcount = 0;
-				for (L2PcInstance gm : AdminData.getInstance().getAllGms(true))
+				for (PlayerInstance gm : AdminData.getInstance().getAllGms(true))
 				{
 					if ((gm != null) && gm.isOnline() && (gm.getClient() != null) && !gm.getClient().isDetached())
 					{
@@ -124,7 +124,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			{
 				final Set<String> realPlayers = new HashSet<>();
 				
-				for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
+				for (PlayerInstance onlinePlayer : World.getInstance().getPlayers())
 				{
 					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 					{

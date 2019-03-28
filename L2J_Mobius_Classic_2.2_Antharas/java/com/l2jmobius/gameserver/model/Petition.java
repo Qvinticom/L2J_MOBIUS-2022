@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.enums.PetitionState;
 import com.l2jmobius.gameserver.enums.PetitionType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -42,10 +42,10 @@ public final class Petition
 	private PetitionState _state = PetitionState.PENDING;
 	private final String _content;
 	private final List<CreatureSay> _messageLog = new CopyOnWriteArrayList<>();
-	private final L2PcInstance _petitioner;
-	private L2PcInstance _responder;
+	private final PlayerInstance _petitioner;
+	private PlayerInstance _responder;
 	
-	public Petition(L2PcInstance petitioner, String petitionText, int petitionType)
+	public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
 	{
 		_id = IdFactory.getInstance().getNextId();
 		_type = PetitionType.values()[--petitionType];
@@ -111,12 +111,12 @@ public final class Petition
 		return _id;
 	}
 	
-	public L2PcInstance getPetitioner()
+	public PlayerInstance getPetitioner()
 	{
 		return _petitioner;
 	}
 	
-	public L2PcInstance getResponder()
+	public PlayerInstance getResponder()
 	{
 		return _responder;
 	}
@@ -166,7 +166,7 @@ public final class Petition
 		_state = state;
 	}
 	
-	public void setResponder(L2PcInstance respondingAdmin)
+	public void setResponder(PlayerInstance respondingAdmin)
 	{
 		if (_responder != null)
 		{

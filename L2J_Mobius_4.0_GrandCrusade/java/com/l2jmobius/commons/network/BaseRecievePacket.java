@@ -19,7 +19,6 @@ package com.l2jmobius.commons.network;
 import java.util.logging.Logger;
 
 /**
- * This class ...
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */
 public abstract class BaseRecievePacket

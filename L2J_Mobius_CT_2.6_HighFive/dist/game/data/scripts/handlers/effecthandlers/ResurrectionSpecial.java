@@ -17,12 +17,12 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -42,9 +42,9 @@ public final class ResurrectionSpecial extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.RESURRECTION_SPECIAL;
+		return EffectType.RESURRECTION_SPECIAL;
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 		{
 			return;
 		}
-		final L2PcInstance caster = info.getEffector().getActingPlayer();
+		final PlayerInstance caster = info.getEffector().getActingPlayer();
 		
 		final Skill skill = info.getSkill();
 		
@@ -71,7 +71,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 		}
 		if (info.getEffected().isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) info.getEffected();
+			final PetInstance pet = (PetInstance) info.getEffected();
 			info.getEffected().getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
 		}
 	}

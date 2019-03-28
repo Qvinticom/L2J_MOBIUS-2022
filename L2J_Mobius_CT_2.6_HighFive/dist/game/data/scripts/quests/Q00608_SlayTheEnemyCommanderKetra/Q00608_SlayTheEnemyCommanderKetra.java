@@ -17,8 +17,8 @@
 package quests.Q00608_SlayTheEnemyCommanderKetra;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -51,21 +51,21 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			giveItems(player, MOS_HEAD, 1);
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -75,16 +75,16 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 		{
 			case "31370-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "31370-07.html":
 			{
-				if (hasQuestItems(player, MOS_HEAD) && st.isCond(2))
+				if (hasQuestItems(player, MOS_HEAD) && qs.isCond(2))
 				{
 					giveItems(player, WISDOM_TOTEM, 1);
 					addExpAndSp(player, 10000, 0);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 				}
 				else
 				{
@@ -102,19 +102,19 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -123,7 +123,7 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (st.isCond(2) && hasQuestItems(player, MOS_HEAD)) ? "31370-05.html" : "31370-06.html";
+				htmltext = (qs.isCond(2) && hasQuestItems(player, MOS_HEAD)) ? "31370-05.html" : "31370-06.html";
 				break;
 			}
 		}

@@ -16,37 +16,37 @@
  */
 package com.l2jmobius.gameserver.skills;
 
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * @author ProGramMoS, eX1steam, An Env object is just a class to pass parameters to a calculator such as L2PcInstance, L2ItemInstance, Initial value.
+ * @author ProGramMoS, eX1steam, An Env object is just a class to pass parameters to a calculator such as PlayerInstance, ItemInstance, Initial value.
  */
 public final class Env
 {
-	public L2Character player;
-	public L2Character target;
-	public L2ItemInstance item;
-	public L2Skill skill;
+	public Creature player;
+	public Creature target;
+	public ItemInstance item;
+	public Skill skill;
 	public double value;
 	public double baseValue;
 	public boolean skillMastery = false;
-	private L2Character character;
-	private L2Character _target;
+	private Creature creature;
+	private Creature _target;
 	
-	public L2Character getCharacter()
+	public Creature getCharacter()
 	{
-		return character;
+		return creature;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
-		return character == null ? null : character.getActingPlayer();
+		return creature == null ? null : creature.getActingPlayer();
 	}
 	
-	public L2Character getTarget()
+	public Creature getTarget()
 	{
 		return _target;
 	}

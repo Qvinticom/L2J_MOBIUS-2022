@@ -18,9 +18,9 @@ package custom.NpcLocationInfo;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -268,7 +268,7 @@ public final class NpcLocationInfo extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		
@@ -282,7 +282,7 @@ public final class NpcLocationInfo extends AbstractNpcAI
 				int x = 0;
 				int y = 0;
 				int z = 0;
-				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
+				final Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
 				if (spawn != null)
 				{
 					x = spawn.getX();
@@ -297,7 +297,7 @@ public final class NpcLocationInfo extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final int npcId = npc.getId();

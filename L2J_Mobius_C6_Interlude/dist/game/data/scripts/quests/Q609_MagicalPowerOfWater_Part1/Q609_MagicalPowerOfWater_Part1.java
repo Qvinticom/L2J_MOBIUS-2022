@@ -16,8 +16,8 @@
  */
 package quests.Q609_MagicalPowerOfWater_Part1;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -52,7 +52,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -97,7 +97,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		String htmltext = getNoQuestMsg();
@@ -172,7 +172,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 	}
 	
 	@Override
-	public String onAggro(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggro(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
@@ -186,7 +186,7 @@ public class Q609_MagicalPowerOfWater_Part1 extends Quest
 			st.set("spawned", "1");
 			
 			// Spawn Asefa's eye.
-			L2NpcInstance asefaEye = addSpawn(EYE, player, true, 10000);
+			NpcInstance asefaEye = addSpawn(EYE, player, true, 10000);
 			if (asefaEye != null)
 			{
 				startQuestTimer("AsefaEyeDespawn", 9000, asefaEye, player, false);

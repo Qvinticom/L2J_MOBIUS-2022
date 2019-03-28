@@ -22,13 +22,13 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -130,7 +130,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		NpcStringId.WAIT_WAIT_IT_WILL_BE_BETTER_FOR_YOU_IF_YOU_LET_ME_LIVE,
 		NpcStringId.STOP_I_ONLY_HELPED_THE_ASHEN_SHADOW_REVOLUTIONARIES_FOR_A_LITTLE,
 	};
-	private static final L2ScriptZone TOWN_ZONE = ZoneManager.getInstance().getZoneById(60200, L2ScriptZone.class);
+	private static final ScriptZone TOWN_ZONE = ZoneManager.getInstance().getZoneById(60200, ScriptZone.class);
 	private static final int TEMPLATE_ID = 260;
 	
 	public AshenShadowRevolutionaries()
@@ -150,7 +150,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -180,7 +180,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 				{
 					world.setStatus(1);
 					world.spawnGroup("wave_1");
-					final L2Npc questGiver = addSpawn(QUEST_GIVERS[getRandom(QUEST_GIVERS.length)], QUEST_GIVER_LOCATION, false, 0, false, world.getId());
+					final Npc questGiver = addSpawn(QUEST_GIVERS[getRandom(QUEST_GIVERS.length)], QUEST_GIVER_LOCATION, false, 0, false, world.getId());
 					questGiver.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_NO_ONE_RIGHT);
 					if (questGiver.getId() == 34098) // Blacksmith Kluto
 					{
@@ -193,7 +193,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 					if (questGiver.getId() == 34097) // Adonius
 					{
 						world.getParameters().set("CAPTIVES", world.spawnGroup("captives"));
-						for (L2Npc captive : world.getParameters().getList("CAPTIVES", L2Npc.class))
+						for (Npc captive : world.getParameters().getList("CAPTIVES", Npc.class))
 						{
 							captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
 							captive.setTargetable(false);
@@ -222,7 +222,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -239,7 +239,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -260,10 +260,10 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 			}
 			else
 			{
-				final List<L2Npc> captives = world.getParameters().getList("CAPTIVES", L2Npc.class);
+				final List<Npc> captives = world.getParameters().getList("CAPTIVES", Npc.class);
 				if (captives != null)
 				{
-					for (L2Npc captive : captives)
+					for (Npc captive : captives)
 					{
 						captive.setTargetable(true);
 						captive.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
@@ -279,7 +279,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (getRandom(10) < 1)
 		{
@@ -289,7 +289,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		if (npc.getId() == 34103)
@@ -301,7 +301,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	}
 	
 	@Override
-	public String onExitZone(L2Character creature, L2ZoneType zone)
+	public String onExitZone(Creature creature, ZoneType zone)
 	{
 		final Instance world = creature.getInstanceWorld();
 		if (creature.isPlayer() && (world != null))

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ public class ExUnReadMailCount implements IClientOutgoingPacket
 {
 	private final int _mailUnreadCount;
 	
-	public ExUnReadMailCount(L2PcInstance player)
+	public ExUnReadMailCount(PlayerInstance player)
 	{
 		_mailUnreadCount = (int) MailManager.getInstance().getUnreadCount(player);
 	}

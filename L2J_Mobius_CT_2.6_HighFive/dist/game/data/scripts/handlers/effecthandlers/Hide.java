@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -41,10 +41,10 @@ public final class Hide extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			final L2PcInstance activeChar = info.getEffected().getActingPlayer();
-			if (!activeChar.inObserverMode())
+			final PlayerInstance player = info.getEffected().getActingPlayer();
+			if (!player.inObserverMode())
 			{
-				activeChar.setInvisible(false);
+				player.setInvisible(false);
 			}
 		}
 	}
@@ -54,17 +54,17 @@ public final class Hide extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			final L2PcInstance activeChar = info.getEffected().getActingPlayer();
-			activeChar.setInvisible(true);
+			final PlayerInstance player = info.getEffected().getActingPlayer();
+			player.setInvisible(true);
 			
-			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
+			if ((player.getAI().getNextIntention() != null) && (player.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
 			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			
-			L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, target ->
+			World.getInstance().forEachVisibleObject(player, Creature.class, target ->
 			{
-				if ((target != null) && (target.getTarget() == activeChar))
+				if ((target != null) && (target.getTarget() == player))
 				{
 					target.setTarget(null);
 					target.abortAttack();

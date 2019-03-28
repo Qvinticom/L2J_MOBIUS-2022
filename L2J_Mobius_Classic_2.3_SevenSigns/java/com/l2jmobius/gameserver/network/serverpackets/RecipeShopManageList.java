@@ -19,18 +19,18 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Iterator;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopManageList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _seller;
+	private final PlayerInstance _seller;
 	private final boolean _isDwarven;
-	private L2RecipeList[] _recipes;
+	private RecipeList[] _recipes;
 	
-	public RecipeShopManageList(L2PcInstance seller, boolean isDwarven)
+	public RecipeShopManageList(PlayerInstance seller, boolean isDwarven)
 	{
 		_seller = seller;
 		_isDwarven = isDwarven;
@@ -46,8 +46,8 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		
 		if (_seller.hasManufactureShop())
 		{
-			final Iterator<L2ManufactureItem> it = _seller.getManufactureItems().values().iterator();
-			L2ManufactureItem item;
+			final Iterator<ManufactureItem> it = _seller.getManufactureItems().values().iterator();
+			ManufactureItem item;
 			while (it.hasNext())
 			{
 				item = it.next();
@@ -78,7 +78,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 			
 			for (int i = 0; i < _recipes.length; i++)
 			{
-				final L2RecipeList temp = _recipes[i];
+				final RecipeList temp = _recipes[i];
 				packet.writeD(temp.getId());
 				packet.writeD(i + 1);
 			}
@@ -91,7 +91,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(_seller.getManufactureItems().size());
-			for (L2ManufactureItem item : _seller.getManufactureItems().values())
+			for (ManufactureItem item : _seller.getManufactureItems().values())
 			{
 				packet.writeD(item.getRecipeId());
 				packet.writeD(0x00);

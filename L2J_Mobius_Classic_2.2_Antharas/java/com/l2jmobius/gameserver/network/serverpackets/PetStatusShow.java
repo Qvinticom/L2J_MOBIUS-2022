@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ public class PetStatusShow implements IClientOutgoingPacket
 	private final int _summonType;
 	private final int _summonObjectId;
 	
-	public PetStatusShow(L2Summon summon)
+	public PetStatusShow(Summon summon)
 	{
 		_summonType = summon.getSummonType();
 		_summonObjectId = summon.getObjectId();

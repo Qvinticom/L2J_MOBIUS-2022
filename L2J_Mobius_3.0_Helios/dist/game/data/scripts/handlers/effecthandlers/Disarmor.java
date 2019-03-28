@@ -21,11 +21,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -45,33 +45,33 @@ public final class Disarmor extends AbstractEffect
 		_unequippedItems = new ConcurrentHashMap<>();
 		
 		final String slot = params.getString("slot", "chest");
-		_slot = ItemTable.SLOTS.getOrDefault(slot, L2Item.SLOT_NONE);
-		if (_slot == L2Item.SLOT_NONE)
+		_slot = ItemTable.SLOTS.getOrDefault(slot, Item.SLOT_NONE);
+		if (_slot == Item.SLOT_NONE)
 		{
 			LOGGER.severe("Unknown bodypart slot for effect: " + slot);
 		}
 	}
 	
 	@Override
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (_slot != L2Item.SLOT_NONE) && effected.isPlayer();
+		return (_slot != Item.SLOT_NONE) && effected.isPlayer();
 	}
 	
 	@Override
-	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effected.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = effected.getActingPlayer();
-		final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		final PlayerInstance player = effected.getActingPlayer();
+		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
 		if (unequiped.length > 0)
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance itm : unequiped)
+			for (ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
 			}
@@ -97,7 +97,7 @@ public final class Disarmor extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (!effected.isPlayer())
 		{
@@ -107,10 +107,10 @@ public final class Disarmor extends AbstractEffect
 		final Integer disarmedObjId = _unequippedItems.remove(effected.getObjectId());
 		if ((disarmedObjId != null) && (disarmedObjId > 0))
 		{
-			final L2PcInstance player = effected.getActingPlayer();
+			final PlayerInstance player = effected.getActingPlayer();
 			player.getInventory().unblockItemSlot(_slot);
 			
-			final L2ItemInstance item = player.getInventory().getItemByObjectId(disarmedObjId);
+			final ItemInstance item = player.getInventory().getItemByObjectId(disarmedObjId);
 			if (item != null)
 			{
 				player.getInventory().equipItem(item);

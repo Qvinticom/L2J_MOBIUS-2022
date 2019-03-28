@@ -17,10 +17,10 @@
 package handlers.skillconditionhandlers;
 
 import com.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -39,26 +39,26 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		switch (_affectType)
 		{
 			case CASTER:
 			{
-				return caster.getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
+				return caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
 			}
 			case TARGET:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return target.getActingPlayer().getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
+					return target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0;
 				}
 			}
 			case BOTH:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return (caster.getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0) && (target.getActingPlayer().getInventory().getItems(L2ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0);
+					return (caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0) && (target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).size() > 0);
 				}
 			}
 		}

@@ -18,15 +18,15 @@ package com.l2jmobius.gameserver.skills.effects;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author Gnat
  */
-public class EffectNegate extends L2Effect
+public class EffectNegate extends Effect
 {
 	protected static final Logger LOGGER = Logger.getLogger(EffectNegate.class.getName());
 	
@@ -44,7 +44,7 @@ public class EffectNegate extends L2Effect
 	@Override
 	public void onStart()
 	{
-		final L2Skill skill = getSkill();
+		final Skill skill = getSkill();
 		if (skill.getNegateId() != 0)
 		{
 			getEffected().stopSkillEffects(skill.getNegateId());

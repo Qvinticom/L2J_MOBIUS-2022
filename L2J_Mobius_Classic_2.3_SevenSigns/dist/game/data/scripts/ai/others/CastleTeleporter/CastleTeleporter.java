@@ -21,12 +21,12 @@ import java.util.StringTokenizer;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Siege;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -78,7 +78,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -158,7 +158,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 				msg.addStringParameter(npc.getCastle().getName());
 				npc.getCastle().oustAllPlayers();
 				npc.setScriptValue(0);
-				for (L2PcInstance pl : L2World.getInstance().getPlayers()) // TODO: Is it possible to get all the players for that region, instead of all players?
+				for (PlayerInstance pl : World.getInstance().getPlayers()) // TODO: Is it possible to get all the players for that region, instead of all players?
 				{
 					if (region == MapRegionManager.getInstance().getMapRegionLocId(pl))
 					{
@@ -172,7 +172,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (CommonUtil.contains(MASS_TELEPORTERS, npc.getId()))
@@ -209,7 +209,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 		return loc;
 	}
 	
-	private String getHtmlName(L2Npc npc)
+	private String getHtmlName(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -247,9 +247,9 @@ public final class CastleTeleporter extends AbstractNpcAI
 		return String.valueOf(npc.getId());
 	}
 	
-	private boolean isOwner(L2PcInstance player, L2Npc npc)
+	private boolean isOwner(PlayerInstance player, Npc npc)
 	{
-		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()) && player.isClanLeader());
+		return player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()) && player.isClanLeader());
 	}
 	
 	public static void main(String[] args)

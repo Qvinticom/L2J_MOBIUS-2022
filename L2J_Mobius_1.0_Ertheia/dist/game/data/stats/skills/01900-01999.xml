@@ -373,7 +373,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Undying Will -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
@@ -1689,7 +1689,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Dual - MP Drain -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1704,7 +1704,7 @@
 				<isCritical>false</isCritical>
 				<skillId>1995</skillId> <!-- Dual - MP Drain -->
 				<skillLevel>1</skillLevel>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -1823,7 +1823,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Dual - Berserker's Rage -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1916,7 +1916,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Dual - Light of Protection -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<skillId>1979</skillId> <!-- Dual - Light of Protection -->
@@ -1965,7 +1965,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Dual - Light of Blessing -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<skillId>1981</skillId> <!-- Dual - Light of Blessing -->

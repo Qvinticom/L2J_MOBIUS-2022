@@ -16,19 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
+import static com.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.buylist.BuyListHolder;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
@@ -47,7 +47,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 	private int[] _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_listId = packet.readD();
 		final int count = packet.readD();
@@ -65,9 +65,9 @@ public final class RequestRefundItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -91,16 +91,16 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Object target = player.getTarget();
-		L2Character merchant = null;
+		final WorldObject target = player.getTarget();
+		Creature merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if (!(target instanceof L2MerchantInstance) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceId() != target.getInstanceId()))
+			if (!(target instanceof MerchantInstance) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceId() != target.getInstanceId()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			merchant = (L2Character) target;
+			merchant = (Creature) target;
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
@@ -109,7 +109,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2BuyList buyList = BuyListData.getInstance().getBuyList(_listId);
+		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(_listId);
 		if (buyList == null)
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
@@ -126,7 +126,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 		long adena = 0;
 		long slots = 0;
 		
-		final L2ItemInstance[] refund = player.getRefund().getItems();
+		final ItemInstance[] refund = player.getRefund().getItems();
 		final int[] objectIds = new int[_items.length];
 		
 		for (int i = 0; i < _items.length; i++)
@@ -148,8 +148,8 @@ public final class RequestRefundItem implements IClientIncomingPacket
 				}
 			}
 			
-			final L2ItemInstance item = refund[idx];
-			final L2Item template = item.getItem();
+			final ItemInstance item = refund[idx];
+			final Item template = item.getItem();
 			objectIds[i] = item.getObjectId();
 			
 			// second check for duplicates - object ids
@@ -198,7 +198,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 		
 		for (int i = 0; i < _items.length; i++)
 		{
-			final L2ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
+			final ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
 			if (item == null)
 			{
 				LOGGER.warning("Error refunding object for char " + player.getName() + " (newitem == null)");

@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 
 /**
  * @author la2 Lets drink to code!
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
 public class DecayTaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
-	protected Map<L2Character, Long> _decayTasks = new ConcurrentHashMap<>();
+	protected Map<Creature, Long> _decayTasks = new ConcurrentHashMap<>();
 	
 	private static DecayTaskManager _instance;
 	
@@ -50,17 +50,17 @@ public class DecayTaskManager
 		return _instance;
 	}
 	
-	public void addDecayTask(L2Character actor)
+	public void addDecayTask(Creature actor)
 	{
 		_decayTasks.put(actor, System.currentTimeMillis());
 	}
 	
-	public void addDecayTask(L2Character actor, int interval)
+	public void addDecayTask(Creature actor, int interval)
 	{
 		_decayTasks.put(actor, System.currentTimeMillis() + interval);
 	}
 	
-	public void cancelDecayTask(L2Character actor)
+	public void cancelDecayTask(Creature actor)
 	{
 		try
 		{
@@ -86,9 +86,9 @@ public class DecayTaskManager
 			{
 				if (_decayTasks != null)
 				{
-					for (L2Character actor : _decayTasks.keySet())
+					for (Creature actor : _decayTasks.keySet())
 					{
-						if (actor instanceof L2RaidBossInstance)
+						if (actor instanceof RaidBossInstance)
 						{
 							delay = 30000;
 						}
@@ -120,7 +120,7 @@ public class DecayTaskManager
 		ret += "Tasks dump:\r\n";
 		
 		final Long current = System.currentTimeMillis();
-		for (L2Character actor : _decayTasks.keySet())
+		for (Creature actor : _decayTasks.keySet())
 		{
 			ret += "Class/Name: " + actor.getClass().getSimpleName() + "/" + actor.getName() + " decay timer: " + (current - _decayTasks.get(actor)) + "\r\n";
 		}

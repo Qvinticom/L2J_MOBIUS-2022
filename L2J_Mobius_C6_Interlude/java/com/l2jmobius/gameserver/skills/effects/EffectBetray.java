@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author decad
  */
-final class EffectBetray extends L2Effect
+final class EffectBetray extends Effect
 {
 	public EffectBetray(Env env, EffectTemplate template)
 	{
@@ -42,10 +42,10 @@ final class EffectBetray extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if ((getEffected() != null) && (getEffector() instanceof L2PcInstance) && (getEffected() instanceof L2Summon))
+		if ((getEffected() != null) && (getEffector() instanceof PlayerInstance) && (getEffected() instanceof Summon))
 		{
-			L2PcInstance targetOwner = null;
-			targetOwner = ((L2Summon) getEffected()).getOwner();
+			PlayerInstance targetOwner = null;
+			targetOwner = ((Summon) getEffected()).getOwner();
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
 			targetOwner.setIsBetrayed(true);
 			onActionTime();
@@ -56,10 +56,10 @@ final class EffectBetray extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if ((getEffected() != null) && (getEffector() instanceof L2PcInstance) && (getEffected() instanceof L2Summon))
+		if ((getEffected() != null) && (getEffector() instanceof PlayerInstance) && (getEffected() instanceof Summon))
 		{
-			L2PcInstance targetOwner = null;
-			targetOwner = ((L2Summon) getEffected()).getOwner();
+			PlayerInstance targetOwner = null;
+			targetOwner = ((Summon) getEffected()).getOwner();
 			targetOwner.setIsBetrayed(false);
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
@@ -68,8 +68,8 @@ final class EffectBetray extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		L2PcInstance targetOwner = null;
-		targetOwner = ((L2Summon) getEffected()).getOwner();
+		PlayerInstance targetOwner = null;
+		targetOwner = ((Summon) getEffected()).getOwner();
 		targetOwner.setIsBetrayed(true);
 		return false;
 	}

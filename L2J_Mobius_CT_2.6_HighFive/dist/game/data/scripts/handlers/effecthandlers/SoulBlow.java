@@ -18,11 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
@@ -47,9 +47,9 @@ public final class SoulBlow extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.PHYSICAL_ATTACK;
+		return EffectType.PHYSICAL_ATTACK;
 	}
 	
 	@Override
@@ -61,26 +61,26 @@ public final class SoulBlow extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		double damage = Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
-		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		final boolean ss = info.getSkill().useSoulShot() && creature.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
+		double damage = Formulas.calcBlowDamage(creature, target, info.getSkill(), shld, ss);
+		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && creature.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			final int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
+			final int chargedSouls = (creature.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? creature.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, info.getSkill());
-		target.notifyDamageReceived(damage, activeChar, info.getSkill(), false, false);
+		target.reduceCurrentHp(damage, creature, info.getSkill());
+		target.notifyDamageReceived(damage, creature, info.getSkill(), false, false);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
@@ -89,12 +89,12 @@ public final class SoulBlow extends AbstractEffect
 			target.breakCast();
 		}
 		
-		if (activeChar.isPlayer())
+		if (creature.isPlayer())
 		{
-			final L2PcInstance activePlayer = activeChar.getActingPlayer();
+			final PlayerInstance activePlayer = creature.getActingPlayer();
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
+		Formulas.calcDamageReflected(creature, target, info.getSkill(), true);
 	}
 }

@@ -21,7 +21,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.SayuneType;
 import com.l2jmobius.gameserver.model.SayuneEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -35,9 +35,9 @@ public class ExFlyMove implements IClientOutgoingPacket
 	private final int _mapId;
 	private final List<SayuneEntry> _locations;
 	
-	public ExFlyMove(L2PcInstance activeChar, SayuneType type, int mapId, List<SayuneEntry> locations)
+	public ExFlyMove(PlayerInstance player, SayuneType type, int mapId, List<SayuneEntry> locations)
 	{
-		_objectId = activeChar.getObjectId();
+		_objectId = player.getObjectId();
 		_type = type;
 		_mapId = mapId;
 		_locations = locations;

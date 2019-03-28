@@ -17,10 +17,10 @@
 package ai.areas.GardenOfSpirits;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -46,13 +46,13 @@ public class FuryKiku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
 			case "SPAWN":
 			{
-				L2Party party = player.getParty();
+				Party party = player.getParty();
 				if (party != null)
 				{
 					party.getMembers().forEach(p -> addSpawn(FURYKIKU, p, true, 180000, true, 0));
@@ -66,7 +66,7 @@ public class FuryKiku extends AbstractNpcAI
 			case "ATTACK":
 			{
 				npc.setRunning();
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 300, p ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, p ->
 				{
 					if ((p != null) && p.isPlayable() && !p.isDead())
 					{
@@ -80,7 +80,7 @@ public class FuryKiku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (getRandom(10) < 5)
 		{
@@ -90,7 +90,7 @@ public class FuryKiku extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("ATTACK", 1000, npc, null);
 		return super.onSpawn(npc);

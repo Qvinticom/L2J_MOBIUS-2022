@@ -33,17 +33,17 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.zone.type.ArenaZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
 
 public class MapRegionTable
 {
@@ -253,9 +253,9 @@ public class MapRegionTable
 		return (posY >> 15) + 10;// + centerTileX;
 	}
 	
-	public int getAreaCastle(L2Character activeChar)
+	public int getAreaCastle(Creature creature)
 	{
-		final int area = getClosestTownNumber(activeChar);
+		final int area = getClosestTownNumber(creature);
 		int castle;
 		
 		switch (area)
@@ -364,14 +364,14 @@ public class MapRegionTable
 		return castle;
 	}
 	
-	public int getClosestTownNumber(L2Character activeChar)
+	public int getClosestTownNumber(Creature creature)
 	{
-		return getMapRegion(activeChar.getX(), activeChar.getY());
+		return getMapRegion(creature.getX(), creature.getY());
 	}
 	
-	public String getClosestTownName(L2Character activeChar)
+	public String getClosestTownName(Creature creature)
 	{
-		final int nearestTownId = getMapRegion(activeChar.getX(), activeChar.getY());
+		final int nearestTownId = getMapRegion(creature.getX(), creature.getY());
 		String nearestTown;
 		
 		switch (nearestTownId)
@@ -476,13 +476,13 @@ public class MapRegionTable
 		return nearestTown;
 	}
 	
-	public Location getTeleToLocation(L2Character activeChar, TeleportWhereType teleportWhere)
+	public Location getTeleToLocation(Creature creature, TeleportWhereType teleportWhere)
 	{
 		int[] coord;
 		
-		if (activeChar instanceof L2PcInstance)
+		if (creature instanceof PlayerInstance)
 		{
-			final L2PcInstance player = (L2PcInstance) activeChar;
+			final PlayerInstance player = (PlayerInstance) creature;
 			
 			// If in Monster Derby Track
 			if (player.isInsideZone(ZoneId.MONSTERTRACK))
@@ -502,7 +502,7 @@ public class MapRegionTable
 					clanhall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
 					if (clanhall != null)
 					{
-						final L2ClanHallZone zone = clanhall.getZone();
+						final ClanHallZone zone = clanhall.getZone();
 						if (zone != null)
 						{
 							return zone.getSpawn();
@@ -546,11 +546,11 @@ public class MapRegionTable
 					if ((teleportWhere == TeleportWhereType.SiegeFlag) && castle.getSiege().getIsInProgress())
 					{
 						// Check if player's clan is attacker
-						List<L2NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
+						List<NpcInstance> flags = castle.getSiege().getFlag(player.getClan());
 						if ((flags != null) && !flags.isEmpty())
 						{
 							// Spawn to flag - Need more work to get player to the nearest flag
-							final L2NpcInstance flag = flags.get(0);
+							final NpcInstance flag = flags.get(0);
 							return new Location(flag.getX(), flag.getY(), flag.getZ());
 						}
 					}
@@ -569,12 +569,12 @@ public class MapRegionTable
 					if ((teleportWhere == TeleportWhereType.SiegeFlag) && fort.getSiege().getIsInProgress())
 					{
 						// check if player's clan is attacker
-						List<L2NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
+						List<NpcInstance> flags = fort.getSiege().getFlag(player.getClan());
 						
 						if ((flags != null) && !flags.isEmpty())
 						{
 							// spawn to flag
-							final L2NpcInstance flag = flags.get(0);
+							final NpcInstance flag = flags.get(0);
 							return new Location(flag.getX(), flag.getY(), flag.getZ());
 						}
 					}
@@ -590,7 +590,7 @@ public class MapRegionTable
 			// Karma player land out of city
 			if (player.getKarma() > 1)
 			{
-				final int closest = getMapRegion(activeChar.getX(), activeChar.getY());
+				final int closest = getMapRegion(creature.getX(), creature.getY());
 				
 				if ((closest >= 0) && (closest < _pointsWithKarmas.length))
 				{
@@ -600,7 +600,7 @@ public class MapRegionTable
 			}
 			
 			// Checking if in arena
-			final L2ArenaZone arena = ArenaManager.getInstance().getArena(player);
+			final ArenaZone arena = ArenaManager.getInstance().getArena(player);
 			if (arena != null)
 			{
 				coord = arena.getSpawnLoc();
@@ -609,8 +609,8 @@ public class MapRegionTable
 		}
 		
 		// Get the nearest town
-		L2TownZone local_zone = null;
-		if ((activeChar != null) && ((local_zone = TownManager.getInstance().getClosestTown(activeChar)) != null))
+		TownZone local_zone = null;
+		if ((creature != null) && ((local_zone = TownManager.getInstance().getClosestTown(creature)) != null))
 		{
 			coord = local_zone.getSpawnLoc();
 			return new Location(coord[0], coord[1], coord[2]);

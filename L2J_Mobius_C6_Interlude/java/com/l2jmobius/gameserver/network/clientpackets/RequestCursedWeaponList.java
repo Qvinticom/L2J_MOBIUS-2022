@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponList;
 
 /**
  * Format: (ch)
  * @author -Wooden-
  */
-public class RequestCursedWeaponList extends L2GameClientPacket
+public class RequestCursedWeaponList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -38,9 +38,8 @@ public class RequestCursedWeaponList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2Character activeChar = getClient().getActiveChar();
-		
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -52,6 +51,6 @@ public class RequestCursedWeaponList extends L2GameClientPacket
 			list.add(id);
 		}
 		
-		activeChar.sendPacket(new ExCursedWeaponList(list));
+		player.sendPacket(new ExCursedWeaponList(list));
 	}
 }

@@ -21,7 +21,7 @@ import com.l2jmobius.commons.crypt.nProtect;
 /**
  * @author zabbix Lets drink to code!
  */
-public class GameGuardQuery extends L2GameServerPacket
+public class GameGuardQuery extends GameServerPacket
 {
 	public GameGuardQuery()
 	{

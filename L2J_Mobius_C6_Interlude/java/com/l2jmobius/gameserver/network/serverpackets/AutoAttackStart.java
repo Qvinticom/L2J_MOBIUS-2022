@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class AutoAttackStart extends L2GameServerPacket
+public class AutoAttackStart extends GameServerPacket
 {
 	private final int _targetObjId;
 	

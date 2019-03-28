@@ -17,9 +17,9 @@
 package quests.Q227_TestOfTheReformer;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -81,9 +81,9 @@ public class Q227_TestOfTheReformer extends Quest
 	// Checks & Instances
 	private static long _timer;
 	
-	private static L2NpcInstance _olMahumInspector;
-	private static L2NpcInstance _olMahumPilgrim;
-	private static L2NpcInstance _olMahumBetrayer;
+	private static NpcInstance _olMahumInspector;
+	private static NpcInstance _olMahumPilgrim;
+	private static NpcInstance _olMahumBetrayer;
 	
 	private static boolean _crimsonWerewolf = false;
 	private static boolean _krudelLizardman = false;
@@ -107,7 +107,7 @@ public class Q227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -239,7 +239,7 @@ public class Q227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -336,11 +336,11 @@ public class Q227_TestOfTheReformer extends Quest
 								// Resets Ol Mahums' instances
 								startQuestTimer("ol_mahums_despawn", 5000, null, player, true);
 								
-								((L2Attackable) _olMahumInspector).addDamageHate(_olMahumPilgrim, 0, 99999);
+								((Attackable) _olMahumInspector).addDamageHate(_olMahumPilgrim, 0, 99999);
 								_olMahumInspector.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _olMahumPilgrim);
 								
-								// TODO : make L2Npc be able to attack L2Attackable.
-								// ((L2Attackable) _olMahumPilgrim).addDamageHate(_olMahumInspector, 0, 99999);
+								// TODO : make Npc be able to attack Attackable.
+								// ((Attackable) _olMahumPilgrim).addDamageHate(_olMahumInspector, 0, 99999);
 								// _olMahumPilgrim.getAI().setIntention(CtrlIntention.ATTACK, _olMahumInspector);
 							}
 						}
@@ -475,7 +475,7 @@ public class Q227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
@@ -508,7 +508,7 @@ public class Q227_TestOfTheReformer extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

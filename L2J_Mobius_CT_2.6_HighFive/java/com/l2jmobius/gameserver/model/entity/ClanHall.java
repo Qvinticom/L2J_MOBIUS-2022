@@ -28,12 +28,12 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 
 public abstract class ClanHall
@@ -41,12 +41,12 @@ public abstract class ClanHall
 	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
 	final int _clanHallId;
-	private ArrayList<L2DoorInstance> _doors;
+	private ArrayList<DoorInstance> _doors;
 	private final String _name;
 	private int _ownerId;
 	private final String _desc;
 	private final String _location;
-	private L2ClanHallZone _zone;
+	private ClanHallZone _zone;
 	protected boolean _isFree = true;
 	private final Map<Integer, ClanHallFunction> _functions;
 	
@@ -212,7 +212,7 @@ public abstract class ClanHall
 			return;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClan(_ownerId);
+		final Clan clan = ClanTable.getInstance().getClan(_ownerId);
 		if (clan != null)
 		{
 			clan.setHideoutId(_clanHallId);
@@ -266,7 +266,7 @@ public abstract class ClanHall
 	/**
 	 * @return all DoorInstance
 	 */
-	public final ArrayList<L2DoorInstance> getDoors()
+	public final ArrayList<DoorInstance> getDoors()
 	{
 		if (_doors == null)
 		{
@@ -279,13 +279,13 @@ public abstract class ClanHall
 	 * @param doorId
 	 * @return Door
 	 */
-	public final L2DoorInstance getDoor(int doorId)
+	public final DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
 			return null;
 		}
-		for (L2DoorInstance door : getDoors())
+		for (DoorInstance door : getDoors())
 		{
 			if (door.getId() == doorId)
 			{
@@ -308,7 +308,7 @@ public abstract class ClanHall
 	 * Sets this clan halls zone
 	 * @param zone
 	 */
-	public void setZone(L2ClanHallZone zone)
+	public void setZone(ClanHallZone zone)
 	{
 		_zone = zone;
 	}
@@ -327,7 +327,7 @@ public abstract class ClanHall
 	/**
 	 * @return the zone of this clan hall
 	 */
-	public L2ClanHallZone getZone()
+	public ClanHallZone getZone()
 	{
 		return _zone;
 	}
@@ -349,7 +349,7 @@ public abstract class ClanHall
 	 * Set owner if clan hall is free
 	 * @param clan
 	 */
-	public void setOwner(L2Clan clan)
+	public void setOwner(Clan clan)
 	{
 		// Verify that this ClanHall is Free and Clan isn't null
 		if ((_ownerId > 0) || (clan == null))
@@ -366,13 +366,13 @@ public abstract class ClanHall
 	
 	/**
 	 * Open or Close Door
-	 * @param activeChar
+	 * @param player
 	 * @param doorId
 	 * @param open
 	 */
-	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
+	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
+		if ((player != null) && (player.getClanId() == _ownerId))
 		{
 			openCloseDoor(doorId, open);
 		}
@@ -383,7 +383,7 @@ public abstract class ClanHall
 		openCloseDoor(getDoor(doorId), open);
 	}
 	
-	public void openCloseDoor(L2DoorInstance door, boolean open)
+	public void openCloseDoor(DoorInstance door, boolean open)
 	{
 		if (door != null)
 		{
@@ -398,9 +398,9 @@ public abstract class ClanHall
 		}
 	}
 	
-	public void openCloseDoors(L2PcInstance activeChar, boolean open)
+	public void openCloseDoors(PlayerInstance player, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
+		if ((player != null) && (player.getClanId() == _ownerId))
 		{
 			openCloseDoors(open);
 		}
@@ -408,7 +408,7 @@ public abstract class ClanHall
 	
 	public void openCloseDoors(boolean open)
 	{
-		for (L2DoorInstance door : getDoors())
+		for (DoorInstance door : getDoors())
 		{
 			if (door != null)
 			{
@@ -478,7 +478,7 @@ public abstract class ClanHall
 		}
 	}
 	
-	public boolean updateFunctions(L2PcInstance player, int type, int lvl, int lease, long rate, boolean addNew)
+	public boolean updateFunctions(PlayerInstance player, int type, int lvl, int lease, long rate, boolean addNew)
 	{
 		if ((player == null) || ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true)))
 		{

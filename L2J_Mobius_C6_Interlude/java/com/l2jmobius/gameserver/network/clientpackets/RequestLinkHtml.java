@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author zabbix Lets drink to code!
  */
-public final class RequestLinkHtml extends L2GameClientPacket
+public final class RequestLinkHtml extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestLinkHtml.class.getName());
 	private String _link;
@@ -38,7 +38,7 @@ public final class RequestLinkHtml extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		final L2PcInstance actor = getClient().getActiveChar();
+		final PlayerInstance actor = getClient().getPlayer();
 		if (actor == null)
 		{
 			return;

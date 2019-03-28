@@ -16,18 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PetItemList extends L2GameServerPacket
+public class PetItemList extends GameServerPacket
 {
-	private final L2PetInstance _activeChar;
+	private final PetInstance _activeChar;
 	
-	public PetItemList(L2PetInstance character)
+	public PetItemList(PetInstance character)
 	{
 		_activeChar = character;
 	}
@@ -37,11 +36,11 @@ public class PetItemList extends L2GameServerPacket
 	{
 		writeC(0xB2);
 		
-		final L2ItemInstance[] items = _activeChar.getInventory().getItems();
+		final ItemInstance[] items = _activeChar.getInventory().getItems();
 		final int count = items.length;
 		writeH(count);
 		
-		for (L2ItemInstance temp : items)
+		for (ItemInstance temp : items)
 		{
 			writeH(temp.getItem().getType1()); // item type1
 			writeD(temp.getObjectId());

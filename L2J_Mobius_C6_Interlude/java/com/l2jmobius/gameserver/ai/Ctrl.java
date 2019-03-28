@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.ai;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * Interface of AI and client state. To correctly send messages to client we need it's state. For example, if we've sent 'StartAutoAttack' message, we need to send 'StopAutoAttack' message before any other action. Or if we've sent 'MoveToPawn', we need to send 'StopMove' when the movement of a
@@ -32,7 +32,7 @@ public interface Ctrl
 	/**
 	 * @return the character this AI serves
 	 */
-	L2Character getActor();
+	Creature getActor();
 	
 	/**
 	 * @return the current intention.
@@ -42,7 +42,7 @@ public interface Ctrl
 	/**
 	 * @return the current attack target.
 	 */
-	L2Character getAttackTarget();
+	Creature getAttackTarget();
 	
 	/**
 	 * Set general state/intention for AI, with optional data

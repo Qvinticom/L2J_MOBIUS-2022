@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 /**
  * @author Nik
@@ -32,10 +32,10 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 public class RandomAnimationTask implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(RandomAnimationTask.class.getName());
-	private final L2Npc _npc;
+	private final Npc _npc;
 	private boolean _stopTask;
 	
-	public RandomAnimationTask(L2Npc npc)
+	public RandomAnimationTask(Npc npc)
 	{
 		_npc = npc;
 	}

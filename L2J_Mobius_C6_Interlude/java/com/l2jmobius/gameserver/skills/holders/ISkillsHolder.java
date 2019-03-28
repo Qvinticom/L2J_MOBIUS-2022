@@ -18,18 +18,18 @@ package com.l2jmobius.gameserver.skills.holders;
 
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
 
 /**
  * @author UnAfraid
  */
 public interface ISkillsHolder
 {
-	Map<Integer, L2Skill> getSkills();
+	Map<Integer, Skill> getSkills();
 	
-	L2Skill addSkill(L2Skill skill);
+	Skill addSkill(Skill skill);
 	
-	L2Skill getKnownSkill(int skillId);
+	Skill getKnownSkill(int skillId);
 	
 	int getSkillLevel(int skillId);
 }

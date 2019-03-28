@@ -22,10 +22,10 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -38,7 +38,7 @@ public class SkillList implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if ((target == null) || !target.isNpc())
 		{
@@ -52,16 +52,16 @@ public class SkillList implements IBypassHandler
 				final String id = command.substring(9).trim();
 				if (id.length() != 0)
 				{
-					L2NpcInstance.showSkillList(activeChar, (L2Npc) target, ClassId.getClassId(Integer.parseInt(id)));
+					NpcInstance.showSkillList(player, (Npc) target, ClassId.getClassId(Integer.parseInt(id)));
 				}
 				else
 				{
 					boolean own_class = false;
 					
-					final List<ClassId> classesToTeach = ((L2NpcInstance) target).getClassesToTeach();
+					final List<ClassId> classesToTeach = ((NpcInstance) target).getClassesToTeach();
 					for (ClassId cid : classesToTeach)
 					{
-						if (cid.equalsOrChildOf(activeChar.getClassId()))
+						if (cid.equalsOrChildOf(player.getClassId()))
 						{
 							own_class = true;
 							break;
@@ -72,7 +72,7 @@ public class SkillList implements IBypassHandler
 					
 					if (!own_class)
 					{
-						final String charType = activeChar.getClassId().isMage() ? "fighter" : "mage";
+						final String charType = player.getClassId().isMage() ? "fighter" : "mage";
 						text += "Skills of your class are the easiest to learn.<br>Skills of another class of your race are a little harder.<br>Skills for classes of another race are extremely difficult.<br>But the hardest of all to learn are the  " + charType + "skills!<br>";
 					}
 					
@@ -80,7 +80,7 @@ public class SkillList implements IBypassHandler
 					if (!classesToTeach.isEmpty())
 					{
 						int count = 0;
-						ClassId classCheck = activeChar.getClassId();
+						ClassId classCheck = player.getClassId();
 						
 						while ((count == 0) && (classCheck != null))
 						{
@@ -91,7 +91,7 @@ public class SkillList implements IBypassHandler
 									continue;
 								}
 								
-								if (SkillTreesData.getInstance().getAvailableSkills(activeChar, cid, false, false).isEmpty())
+								if (SkillTreesData.getInstance().getAvailableSkills(player, cid, false, false).isEmpty())
 								{
 									continue;
 								}
@@ -109,12 +109,12 @@ public class SkillList implements IBypassHandler
 					}
 					text += "</body></html>";
 					
-					final NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(((Npc) target).getObjectId());
 					html.setHtml(text);
-					html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
-					activeChar.sendPacket(html);
+					html.replace("%objectId%", String.valueOf(((Npc) target).getObjectId()));
+					player.sendPacket(html);
 					
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 			}
 			catch (Exception e)
@@ -124,7 +124,7 @@ public class SkillList implements IBypassHandler
 		}
 		else
 		{
-			L2NpcInstance.showSkillList(activeChar, (L2Npc) target, activeChar.getClassId());
+			NpcInstance.showSkillList(player, (Npc) target, player.getClassId());
 		}
 		return true;
 	}

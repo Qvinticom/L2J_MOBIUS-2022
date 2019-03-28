@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 @SuppressWarnings("unused")
-public final class AttackRequest extends L2GameClientPacket
+public final class AttackRequest extends GameClientPacket
 {
 	private int _objectId;
 	private int _originX;
@@ -47,29 +47,29 @@ public final class AttackRequest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if ((System.currentTimeMillis() - activeChar.getLastAttackPacket()) < 500)
+		if ((System.currentTimeMillis() - player.getLastAttackPacket()) < 500)
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		activeChar.setLastAttackPacket();
+		player.setLastAttackPacket();
 		
 		// avoid using expensive operations if not needed
-		final L2Object target;
+		final WorldObject target;
 		
-		if (activeChar.getTargetId() == _objectId)
+		if (player.getTargetId() == _objectId)
 		{
-			target = activeChar.getTarget();
+			target = player.getTarget();
 		}
 		else
 		{
-			target = L2World.getInstance().findObject(_objectId);
+			target = World.getInstance().findObject(_objectId);
 		}
 		
 		if (target == null)
@@ -78,48 +78,48 @@ public final class AttackRequest extends L2GameClientPacket
 		}
 		
 		// Like L2OFF
-		if (activeChar.isAttackingNow() && activeChar.isMoving())
+		if (player.isAttackingNow() && player.isMoving())
 		{
 			// If target is not attackable, send a Server->Client packet ActionFailed
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't attack objects in the other instances except from multiverse
-		if ((target.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		if ((target.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1))
 		{
 			return;
 		}
 		
 		// Only GMs can directly attack invisible characters
-		if ((target instanceof L2PcInstance) && ((L2PcInstance) target).getAppearance().getInvisible() && !activeChar.isGM())
+		if ((target instanceof PlayerInstance) && ((PlayerInstance) target).getAppearance().getInvisible() && !player.isGM())
 		{
 			return;
 		}
 		
 		// During teleport phase, players cant do any attack
-		if ((TvT.is_teleport() && activeChar._inEventTvT) || (CTF.is_teleport() && activeChar._inEventCTF) || (DM.is_teleport() && activeChar._inEventDM))
+		if ((TvT.is_teleport() && player._inEventTvT) || (CTF.is_teleport() && player._inEventCTF) || (DM.is_teleport() && player._inEventDM))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// No attacks to same team in Event
 		if (TvT.is_started())
 		{
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
-				if ((activeChar._inEventTvT && ((L2PcInstance) target)._inEventTvT) && activeChar._teamNameTvT.equals(((L2PcInstance) target)._teamNameTvT))
+				if ((player._inEventTvT && ((PlayerInstance) target)._inEventTvT) && player._teamNameTvT.equals(((PlayerInstance) target)._teamNameTvT))
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
-			else if (target instanceof L2SummonInstance)
+			else if (target instanceof SummonInstance)
 			{
-				if ((activeChar._inEventTvT && ((L2SummonInstance) target).getOwner()._inEventTvT) && activeChar._teamNameTvT.equals(((L2SummonInstance) target).getOwner()._teamNameTvT))
+				if ((player._inEventTvT && ((SummonInstance) target).getOwner()._inEventTvT) && player._teamNameTvT.equals(((SummonInstance) target).getOwner()._teamNameTvT))
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
@@ -128,32 +128,32 @@ public final class AttackRequest extends L2GameClientPacket
 		// No attacks to same team in Event
 		if (CTF.is_started())
 		{
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
-				if ((activeChar._inEventCTF && ((L2PcInstance) target)._inEventCTF) && activeChar._teamNameCTF.equals(((L2PcInstance) target)._teamNameCTF))
+				if ((player._inEventCTF && ((PlayerInstance) target)._inEventCTF) && player._teamNameCTF.equals(((PlayerInstance) target)._teamNameCTF))
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
-			else if (target instanceof L2SummonInstance)
+			else if (target instanceof SummonInstance)
 			{
-				if ((activeChar._inEventCTF && ((L2SummonInstance) target).getOwner()._inEventCTF) && activeChar._teamNameCTF.equals(((L2SummonInstance) target).getOwner()._teamNameCTF))
+				if ((player._inEventCTF && ((SummonInstance) target).getOwner()._inEventCTF) && player._teamNameCTF.equals(((SummonInstance) target).getOwner()._teamNameCTF))
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 		}
 		
-		if (activeChar.getTarget() != target)
+		if (player.getTarget() != target)
 		{
-			target.onAction(activeChar);
+			target.onAction(player);
 		}
-		else if ((target.getObjectId() != activeChar.getObjectId()) && (activeChar.getPrivateStoreType() == 0)
+		else if ((target.getObjectId() != player.getObjectId()) && (player.getPrivateStoreType() == 0)
 		/* && activeChar.getActiveRequester() ==null */)
 		{
-			target.onForcedAttack(activeChar);
+			target.onForcedAttack(player);
 		}
 		else
 		{

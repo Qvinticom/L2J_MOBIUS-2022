@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * Format (ch)ddddd
  * @author -Wooden-
  */
-public class ExFishingStart extends L2GameServerPacket
+public class ExFishingStart extends GameServerPacket
 {
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -32,9 +32,9 @@ public class ExFishingStart extends L2GameServerPacket
 	@SuppressWarnings("unused")
 	private final boolean _isNightLure;
 	
-	public ExFishingStart(L2Character character, int fishType, int x, int y, int z, boolean isNightLure)
+	public ExFishingStart(Creature creature, int fishType, int x, int y, int z, boolean isNightLure)
 	{
-		_activeChar = character;
+		_creature = creature;
 		_fishType = fishType;
 		_x = x;
 		_y = y;
@@ -51,7 +51,7 @@ public class ExFishingStart extends L2GameServerPacket
 	{
 		writeC(0xfe);
 		writeH(0x13);
-		writeD(_activeChar.getObjectId());
+		writeD(_creature.getObjectId());
 		writeD(_fishType); // fish type
 		writeD(_x); // x poisson
 		writeD(_y); // y poisson

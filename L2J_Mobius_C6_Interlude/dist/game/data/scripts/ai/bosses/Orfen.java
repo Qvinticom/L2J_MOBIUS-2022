@@ -21,9 +21,9 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -41,7 +41,7 @@ public class Orfen extends Quest
 	private boolean FirstAttacked = false;
 	private boolean Teleported = false;
 	
-	L2GrandBossInstance orfen = null;
+	GrandBossInstance orfen = null;
 	
 	enum Event
 	{
@@ -80,7 +80,7 @@ public class Orfen extends Quest
 					final int loc_y = 17368;
 					final int loc_z = -5412;
 					final int heading = 0;
-					orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+					orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 					if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 					{
 						Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
@@ -101,7 +101,7 @@ public class Orfen extends Quest
 				final int heading = 0;
 				final int hp = info.getInteger("currentHP");
 				final int mp = info.getInteger("currentMP");
-				orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
@@ -116,7 +116,7 @@ public class Orfen extends Quest
 				final int loc_y = 17368;
 				final int loc_z = -5412;
 				final int heading = 0;
-				orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
@@ -128,7 +128,7 @@ public class Orfen extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		final Event event_enum = Event.valueOf(event.toUpperCase());
 		
@@ -140,7 +140,7 @@ public class Orfen extends Quest
 				final int loc_y = 17368;
 				final int loc_z = -5412;
 				final int heading = 0;
-				orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
+				orfen = (GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss " + orfen.getName() + " spawned in world.");
@@ -202,7 +202,7 @@ public class Orfen extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if (npcId == ORFEN)
@@ -237,7 +237,7 @@ public class Orfen extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		if (npc.getNpcId() == ORFEN)
 		{

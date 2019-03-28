@@ -25,7 +25,7 @@ import javax.crypto.Cipher;
 import com.l2jmobius.commons.network.BaseRecievePacket;
 import com.l2jmobius.commons.util.crypt.NewCrypt;
 import com.l2jmobius.loginserver.GameServerThread;
-import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
+import com.l2jmobius.loginserver.network.GameServerPacketHandler.GameServerState;
 
 /**
  * @author -Wooden-

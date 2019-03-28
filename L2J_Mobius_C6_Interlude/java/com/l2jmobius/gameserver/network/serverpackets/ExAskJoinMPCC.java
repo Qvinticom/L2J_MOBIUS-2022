@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author chris_00 Asks the player to join a CC
  */
-public class ExAskJoinMPCC extends L2GameServerPacket
+public class ExAskJoinMPCC extends GameServerPacket
 {
 	private final String _requestorName;
 	

@@ -23,8 +23,8 @@ import java.util.concurrent.TimeUnit;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.TimerExecutor;
 
 /**
@@ -36,15 +36,15 @@ public class TimerHolder<T> implements Runnable
 	private final T _event;
 	private final StatsSet _params;
 	private final long _time;
-	private final L2Npc _npc;
-	private final L2PcInstance _player;
+	private final Npc _npc;
+	private final PlayerInstance _player;
 	private final boolean _isRepeating;
 	private final IEventTimerEvent<T> _eventScript;
 	private final IEventTimerCancel<T> _cancelScript;
 	private final TimerExecutor<T> _postExecutor;
 	private final ScheduledFuture<?> _task;
 	
-	public TimerHolder(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
+	public TimerHolder(T event, StatsSet params, long time, Npc npc, PlayerInstance player, boolean isRepeating, IEventTimerEvent<T> eventScript, IEventTimerCancel<T> cancelScript, TimerExecutor<T> postExecutor)
 	{
 		Objects.requireNonNull(event, getClass().getSimpleName() + ": \"event\" cannot be null!");
 		Objects.requireNonNull(eventScript, getClass().getSimpleName() + ": \"script\" cannot be null!");
@@ -81,7 +81,7 @@ public class TimerHolder<T> implements Runnable
 	/**
 	 * @return the npc of this timer
 	 */
-	public L2Npc getNpc()
+	public Npc getNpc()
 	{
 		return _npc;
 	}
@@ -89,7 +89,7 @@ public class TimerHolder<T> implements Runnable
 	/**
 	 * @return the player of this timer
 	 */
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
@@ -150,7 +150,7 @@ public class TimerHolder<T> implements Runnable
 	 * @param player
 	 * @return {@code true} if event, npc, player are equals to the ones stored in this TimerHolder, {@code false} otherwise
 	 */
-	public boolean isEqual(T event, L2Npc npc, L2PcInstance player)
+	public boolean isEqual(T event, Npc npc, PlayerInstance player)
 	{
 		return _event.equals(event) && (_npc == npc) && (_player == player);
 	}

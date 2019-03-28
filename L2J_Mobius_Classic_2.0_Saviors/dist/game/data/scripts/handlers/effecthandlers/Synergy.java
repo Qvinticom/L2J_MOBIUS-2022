@@ -20,12 +20,12 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -78,7 +78,7 @@ public final class Synergy extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (effector.isDead())
 		{
@@ -102,11 +102,11 @@ public final class Synergy extends AbstractEffect
 			
 			if (partyBuffSkill != null)
 			{
-				final L2Object target = partyBuffSkill.getTarget(effector, effected, false, false, false);
+				final WorldObject target = partyBuffSkill.getTarget(effector, effected, false, false, false);
 				
-				if ((target != null) && target.isCharacter())
+				if ((target != null) && target.isCreature())
 				{
-					SkillCaster.triggerCast(effector, (L2Character) target, partyBuffSkill);
+					SkillCaster.triggerCast(effector, (Creature) target, partyBuffSkill);
 				}
 			}
 			else

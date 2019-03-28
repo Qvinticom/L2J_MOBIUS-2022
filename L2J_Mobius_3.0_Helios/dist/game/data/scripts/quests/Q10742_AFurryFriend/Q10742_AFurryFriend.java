@@ -20,10 +20,10 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -62,7 +62,7 @@ public final class Q10742_AFurryFriend extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -84,7 +84,7 @@ public final class Q10742_AFurryFriend extends Quest
 				qs.startQuest();
 				qs.set("cave", getRandom(3));
 				showOnScreenMsg(player, NpcStringId.FOLLOW_RICKY, ExShowScreenMessage.TOP_CENTER, 10000);
-				final L2Npc ricky = addSpawn(RICKY, RICKY_SPAWN, false, 180000);
+				final Npc ricky = addSpawn(RICKY, RICKY_SPAWN, false, 180000);
 				ricky.setSummoner(player);
 				ricky.setTitle(player.getName());
 				htmltext = event;
@@ -101,13 +101,13 @@ public final class Q10742_AFurryFriend extends Quest
 						showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 8000);
 						htmltext = "33995-02.html";
 					}
-					else if (!L2World.getInstance().getVisibleObjectsInRange(player, L2Npc.class, 500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
+					else if (!World.getInstance().getVisibleObjectsInRange(player, Npc.class, 500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
 					{
 						showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 5000);
 						player.sendPacket(new ExSendUIEvent(player, false, false, 120, 0, NpcStringId.REMAINING_TIME));
 						
 						// Spawn Ricky
-						final L2Npc ricky = addSpawn(RICKY, player, true, 120000);
+						final Npc ricky = addSpawn(RICKY, player, true, 120000);
 						ricky.setSummoner(player);
 						ricky.setTitle(player.getName());
 						ricky.setRunning();
@@ -149,7 +149,7 @@ public final class Q10742_AFurryFriend extends Quest
 					}
 					else
 					{
-						final L2Npc leira = L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 300).stream().filter(n -> (n.getId() == LEIRA)).findAny().orElse(null);
+						final Npc leira = World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 300).stream().filter(n -> (n.getId() == LEIRA)).findAny().orElse(null);
 						if (leira != null)
 						{
 							qs.setCond(2, true);
@@ -178,7 +178,7 @@ public final class Q10742_AFurryFriend extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -218,14 +218,14 @@ public final class Q10742_AFurryFriend extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		return ((qs != null) && qs.isCond(1)) ? "33995-01.html" : "33995.html";
 	}
 	
 	@Override
-	public void onRouteFinished(L2Npc npc)
+	public void onRouteFinished(Npc npc)
 	{
 		WalkingManager.getInstance().cancelMoving(npc);
 		ThreadPool.schedule(() -> npc.deleteMe(), 1000);

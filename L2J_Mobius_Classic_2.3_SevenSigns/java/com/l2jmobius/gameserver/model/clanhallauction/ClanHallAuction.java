@@ -33,7 +33,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
@@ -66,7 +66,7 @@ public class ClanHallAuction
 			{
 				while (rs.next())
 				{
-					final L2Clan clan = ClanTable.getInstance().getClan(rs.getInt("clanId"));
+					final Clan clan = ClanTable.getInstance().getClan(rs.getInt("clanId"));
 					addBid(clan, rs.getLong("bid"), rs.getLong("bidTime"));
 				}
 			}
@@ -84,12 +84,12 @@ public class ClanHallAuction
 		return _bidders == null ? Collections.emptyMap() : _bidders;
 	}
 	
-	public void addBid(L2Clan clan, long bid)
+	public void addBid(Clan clan, long bid)
 	{
 		addBid(clan, bid, System.currentTimeMillis());
 	}
 	
-	public void addBid(L2Clan clan, long bid, long bidTime)
+	public void addBid(Clan clan, long bid, long bidTime)
 	{
 		if (_bidders == null)
 		{
@@ -118,7 +118,7 @@ public class ClanHallAuction
 		}
 	}
 	
-	public void removeBid(L2Clan clan)
+	public void removeBid(Clan clan)
 	{
 		getBids().remove(clan.getId());
 		try (Connection con = DatabaseFactory.getConnection();
@@ -139,7 +139,7 @@ public class ClanHallAuction
 		return getBids().values().stream().mapToLong(Bidder::getBid).max().orElse(clanHall.getMinBid());
 	}
 	
-	public long getClanBid(L2Clan clan)
+	public long getClanBid(Clan clan)
 	{
 		return getBids().get(clan.getId()).getBid();
 	}

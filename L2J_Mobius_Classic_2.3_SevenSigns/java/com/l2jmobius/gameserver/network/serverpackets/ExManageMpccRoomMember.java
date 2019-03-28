@@ -20,7 +20,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ExManagePartyRoomMemberType;
 import com.l2jmobius.gameserver.enums.MatchingMemberType;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -29,13 +29,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExManageMpccRoomMember implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final MatchingMemberType _memberType;
 	private final ExManagePartyRoomMemberType _type;
 	
-	public ExManageMpccRoomMember(L2PcInstance player, CommandChannelMatchingRoom room, ExManagePartyRoomMemberType mode)
+	public ExManageMpccRoomMember(PlayerInstance player, CommandChannelMatchingRoom room, ExManagePartyRoomMemberType mode)
 	{
-		_activeChar = player;
+		_player = player;
 		_memberType = room.getMemberType(player);
 		_type = mode;
 	}
@@ -46,11 +46,11 @@ public class ExManageMpccRoomMember implements IClientOutgoingPacket
 		OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER.writeId(packet);
 		
 		packet.writeD(_type.ordinal());
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeS(_activeChar.getName());
-		packet.writeD(_activeChar.getClassId().getId());
-		packet.writeD(_activeChar.getLevel());
-		packet.writeD(MapRegionManager.getInstance().getBBs(_activeChar.getLocation()));
+		packet.writeD(_player.getObjectId());
+		packet.writeS(_player.getName());
+		packet.writeD(_player.getClassId().getId());
+		packet.writeD(_player.getLevel());
+		packet.writeD(MapRegionManager.getInstance().getBBs(_player.getLocation()));
 		packet.writeD(_memberType.ordinal());
 		return true;
 	}

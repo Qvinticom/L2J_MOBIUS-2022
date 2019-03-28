@@ -21,9 +21,9 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.Elementals;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
@@ -37,16 +37,16 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -55,21 +55,21 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if (_objectId == 0xFFFFFFFF)
 		{
 			// Player canceled enchant
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
 		
 		if (!player.isOnline())
 		{
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
 		}
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
 		}
 		
@@ -78,16 +78,16 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		{
 			// Cancel trade
 			player.cancelActiveTrade();
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			player.sendMessage("You cannot add elemental power while trading.");
 			return;
 		}
 		
-		final L2ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		final L2ItemInstance stone = player.getInventory().getItemByObjectId(player.getActiveEnchantAttrItemId());
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance stone = player.getInventory().getItemByObjectId(player.getActiveEnchantAttrItemId());
 		if ((item == null) || (stone == null))
 		{
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
@@ -95,7 +95,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if (!item.isElementable())
 		{
 			player.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
 		}
 		
@@ -106,14 +106,14 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			{
 				if (item.getOwnerId() != player.getObjectId())
 				{
-					player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+					player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 					return;
 				}
 				break;
 			}
 			default:
 			{
-				player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+				player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 				return;
 			}
@@ -136,7 +136,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || (item.isArmor() && (item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 3)))
 		{
 			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
 		}
 		
@@ -147,7 +147,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			{
 				if (elm.getElement() == opositeElement)
 				{
-					player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+					player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
 					return;
 				}
@@ -164,7 +164,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if (powerToAdd <= 0)
 		{
 			player.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
 		}
 		
@@ -172,7 +172,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to attribute enchant with a stone he doesn't have", Config.DEFAULT_PUNISH);
-			player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
 		}
 		boolean success = false;
@@ -260,10 +260,10 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		player.sendPacket(new ExAttributeEnchantResult(powerToAdd));
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new ExBrExtraUserInfo(player));
-		player.setActiveEnchantAttrItemId(L2PcInstance.ID_NONE);
+		player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 	}
 	
-	public int getLimit(L2ItemInstance item, int sotneId)
+	public int getLimit(ItemInstance item, int sotneId)
 	{
 		final Elementals.ElementalItems elementItem = Elementals.getItemElemental(sotneId);
 		if (elementItem == null)
@@ -278,7 +278,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
 	}
 	
-	public int getPowerToAdd(int stoneId, int oldValue, L2ItemInstance item)
+	public int getPowerToAdd(int stoneId, int oldValue, ItemInstance item)
 	{
 		if (Elementals.getItemElement(stoneId) != Elementals.NONE)
 		{

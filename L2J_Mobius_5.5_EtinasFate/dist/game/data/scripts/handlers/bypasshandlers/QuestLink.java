@@ -25,9 +25,9 @@ import java.util.stream.Collectors;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -44,7 +44,7 @@ public class QuestLink implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		String quest = "";
 		try
@@ -56,32 +56,32 @@ public class QuestLink implements IBypassHandler
 		}
 		if (quest.isEmpty())
 		{
-			showQuestWindow(activeChar, (L2Npc) target);
+			showQuestWindow(player, (Npc) target);
 		}
 		else
 		{
 			final int questNameEnd = quest.indexOf(" ");
 			if (questNameEnd == -1)
 			{
-				showQuestWindow(activeChar, (L2Npc) target, quest);
+				showQuestWindow(player, (Npc) target, quest);
 			}
 			else
 			{
-				activeChar.processQuestEvent(quest.substring(0, questNameEnd), quest.substring(questNameEnd).trim());
+				player.processQuestEvent(quest.substring(0, questNameEnd), quest.substring(questNameEnd).trim());
 			}
 		}
 		return true;
 	}
 	
 	/**
-	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<br>
+	 * Open a choose quest window on client with all quests available of the NpcInstance.<br>
 	 * <b><u>Actions</u>:</b><br>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
-	 * @param player The L2PcInstance that talk with the L2NpcInstance
-	 * @param npc The table containing quests of the L2NpcInstance
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
+	 * @param player The PlayerInstance that talk with the NpcInstance
+	 * @param npc The table containing quests of the NpcInstance
 	 * @param quests
 	 */
-	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
+	private static void showQuestChooseWindow(PlayerInstance player, Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sbStarted = new StringBuilder(128);
 		final StringBuilder sbCanStart = new StringBuilder(128);
@@ -169,24 +169,24 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player);
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
 		content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 	}
 	
 	/**
-	 * Open a quest window on client with the text of the L2NpcInstance.<br>
+	 * Open a quest window on client with the text of the NpcInstance.<br>
 	 * <b><u>Actions</u>:</b><br>
 	 * <ul>
 	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
-	 * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance</li>
+	 * <li>Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet</li>
 	 * </ul>
-	 * @param player the L2PcInstance that talk with the {@code npc}
-	 * @param npc the L2NpcInstance that chats with the {@code player}
+	 * @param player the PlayerInstance that talk with the {@code npc}
+	 * @param npc the NpcInstance that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	private static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
+	private static void showQuestWindow(PlayerInstance player, Npc npc, String questId)
 	{
 		String content = null;
 		
@@ -225,23 +225,23 @@ public class QuestLink implements IBypassHandler
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
 		
-		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
+		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
 		if (content != null)
 		{
 			content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), content));
 		}
 		
-		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	/**
 	 * Collect awaiting quests/start points and display a QuestChooseWindow (if several available) or QuestWindow.
-	 * @param player the L2PcInstance that talk with the {@code npc}.
-	 * @param npc the L2NpcInstance that chats with the {@code player}.
+	 * @param player the PlayerInstance that talk with the {@code npc}.
+	 * @param npc the NpcInstance that chats with the {@code player}.
 	 */
-	private static void showQuestWindow(L2PcInstance player, L2Npc npc)
+	private static void showQuestWindow(PlayerInstance player, Npc npc)
 	{
 		//@formatter:off
 		final Set<Quest> quests = npc.getListeners(EventType.ON_NPC_TALK).stream()

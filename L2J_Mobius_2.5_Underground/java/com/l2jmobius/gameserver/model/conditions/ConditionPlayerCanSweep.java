@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.model.conditions;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -48,19 +48,19 @@ public class ConditionPlayerCanSweep extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final AtomicBoolean canSweep = new AtomicBoolean(false);
 		if (effector.getActingPlayer() != null)
 		{
-			final L2PcInstance sweeper = effector.getActingPlayer();
+			final PlayerInstance sweeper = effector.getActingPlayer();
 			if (skill != null)
 			{
 				skill.forEachTargetAffected(sweeper, effected, o ->
 				{
 					if ((o != null) && o.isAttackable())
 					{
-						final L2Attackable target = (L2Attackable) o;
+						final Attackable target = (Attackable) o;
 						if (target.isDead())
 						{
 							if (target.isSpoiled())

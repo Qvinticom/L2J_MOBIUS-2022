@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.model.zone;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.type.L2PeaceZone;
+import com.l2jmobius.gameserver.model.zone.type.PeaceZone;
 
 /**
  * @author Nos
@@ -30,7 +30,7 @@ public class ZoneRegion
 {
 	private final int _regionX;
 	private final int _regionY;
-	private final Map<Integer, L2ZoneType> _zones = new ConcurrentHashMap<>();
+	private final Map<Integer, ZoneType> _zones = new ConcurrentHashMap<>();
 	
 	public ZoneRegion(int regionX, int regionY)
 	{
@@ -38,7 +38,7 @@ public class ZoneRegion
 		_regionY = regionY;
 	}
 	
-	public Map<Integer, L2ZoneType> getZones()
+	public Map<Integer, ZoneType> getZones()
 	{
 		return _zones;
 	}
@@ -53,27 +53,27 @@ public class ZoneRegion
 		return _regionY;
 	}
 	
-	public void revalidateZones(L2Character character)
+	public void revalidateZones(Creature creature)
 	{
 		// do NOT update the world region while the character is still in the process of teleporting
 		// Once the teleport is COMPLETED, revalidation occurs safely, at that time.
 		
-		if (character.isTeleporting())
+		if (creature.isTeleporting())
 		{
 			return;
 		}
 		
-		for (L2ZoneType z : _zones.values())
+		for (ZoneType z : _zones.values())
 		{
-			z.revalidateInZone(character);
+			z.revalidateInZone(creature);
 		}
 	}
 	
-	public void removeFromZones(L2Character character)
+	public void removeFromZones(Creature creature)
 	{
-		for (L2ZoneType z : _zones.values())
+		for (ZoneType z : _zones.values())
 		{
-			z.removeCharacter(character);
+			z.removeCharacter(creature);
 		}
 	}
 	
@@ -85,9 +85,9 @@ public class ZoneRegion
 		final int left = x + range;
 		final int right = x - range;
 		
-		for (L2ZoneType e : _zones.values())
+		for (ZoneType e : _zones.values())
 		{
-			if (e instanceof L2PeaceZone)
+			if (e instanceof PeaceZone)
 			{
 				if (e.isInsideZone(x, up, z))
 				{
@@ -118,24 +118,24 @@ public class ZoneRegion
 		return true;
 	}
 	
-	public void onDeath(L2Character character)
+	public void onDeath(Creature creature)
 	{
-		for (L2ZoneType z : _zones.values())
+		for (ZoneType z : _zones.values())
 		{
-			if (z.isInsideZone(character))
+			if (z.isInsideZone(creature))
 			{
-				z.onDieInside(character);
+				z.onDieInside(creature);
 			}
 		}
 	}
 	
-	public void onRevive(L2Character character)
+	public void onRevive(Creature creature)
 	{
-		for (L2ZoneType z : _zones.values())
+		for (ZoneType z : _zones.values())
 		{
-			if (z.isInsideZone(character))
+			if (z.isInsideZone(creature))
 			{
-				z.onReviveInside(character);
+				z.onReviveInside(creature);
 			}
 		}
 	}

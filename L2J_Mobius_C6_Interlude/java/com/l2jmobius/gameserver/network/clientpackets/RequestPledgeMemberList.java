@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
-public final class RequestPledgeMemberList extends L2GameClientPacket
+public final class RequestPledgeMemberList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -31,17 +31,17 @@ public final class RequestPledgeMemberList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan != null)
 		{
-			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
-			activeChar.sendPacket(pm);
+			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, player);
+			player.sendPacket(pm);
 		}
 	}
 }

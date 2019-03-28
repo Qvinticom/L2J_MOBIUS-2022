@@ -23,10 +23,10 @@ import java.sql.SQLException;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2AccessLevel;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.AccessLevel;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -42,7 +42,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final String[] parts = command.split(" ");
 		if (parts.length == 2)
@@ -50,14 +50,14 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			try
 			{
 				final int lvl = Integer.parseInt(parts[1]);
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target == null) || !target.isPlayer())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{
-					onlineChange(activeChar, (L2PcInstance) target, lvl);
+					onlineChange(activeChar, (PlayerInstance) target, lvl);
 				}
 			}
 			catch (Exception e)
@@ -69,7 +69,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 		{
 			final String name = parts[1];
 			final int lvl = Integer.parseInt(parts[2]);
-			final L2PcInstance player = L2World.getInstance().getPlayer(name);
+			final PlayerInstance player = World.getInstance().getPlayer(name);
 			if (player != null)
 			{
 				onlineChange(activeChar, player, lvl);
@@ -113,13 +113,13 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 	 * @param player the online target
 	 * @param lvl the access level
 	 */
-	private static void onlineChange(L2PcInstance activeChar, L2PcInstance player, int lvl)
+	private static void onlineChange(PlayerInstance activeChar, PlayerInstance player, int lvl)
 	{
 		if (lvl >= 0)
 		{
 			if (AdminData.getInstance().hasAccessLevel(lvl))
 			{
-				final L2AccessLevel acccessLevel = AdminData.getInstance().getAccessLevel(lvl);
+				final AccessLevel acccessLevel = AdminData.getInstance().getAccessLevel(lvl);
 				player.setAccessLevel(lvl);
 				player.sendMessage("Your access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");
 				activeChar.sendMessage(player.getName() + "'s access level has been changed to " + acccessLevel.getName() + " (" + acccessLevel.getLevel() + ").");

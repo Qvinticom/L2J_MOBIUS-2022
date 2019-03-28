@@ -43,7 +43,7 @@ public class ClientInitializer extends ChannelInitializer<SocketChannel>
 	protected void initChannel(SocketChannel ch)
 	{
 		final SecretKey newKey = LoginController.getInstance().generateBlowfishKey();
-		final L2LoginClient client = new L2LoginClient(newKey);
+		final LoginClient client = new LoginClient(newKey);
 		ch.pipeline().addLast(new BannedIpFilter());
 		ch.pipeline().addLast("length-decoder", new LengthFieldBasedFrameDecoder(ByteOrder.LITTLE_ENDIAN, 0x8000 - 2, 0, 2, -2, 2, false));
 		ch.pipeline().addLast("length-encoder", LENGTH_ENCODER);

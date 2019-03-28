@@ -29,8 +29,8 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.StatFunction;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
@@ -85,21 +85,21 @@ public class EnchantItemHPBonusData implements IGameXmlReader
 			final Collection<Integer> armorIds = it.getAllArmorsId();
 			for (Integer itemId : armorIds)
 			{
-				final L2Item item = it.getTemplate(itemId);
+				final Item item = it.getTemplate(itemId);
 				if ((item != null) && (item.getCrystalType() != CrystalType.NONE))
 				{
 					switch (item.getBodyPart())
 					{
-						case L2Item.SLOT_CHEST:
-						case L2Item.SLOT_FEET:
-						case L2Item.SLOT_GLOVES:
-						case L2Item.SLOT_HEAD:
-						case L2Item.SLOT_LEGS:
-						case L2Item.SLOT_BACK:
-						case L2Item.SLOT_FULL_ARMOR:
-						case L2Item.SLOT_UNDERWEAR:
-						case L2Item.SLOT_L_HAND:
-						case L2Item.SLOT_BELT:
+						case Item.SLOT_CHEST:
+						case Item.SLOT_FEET:
+						case Item.SLOT_GLOVES:
+						case Item.SLOT_HEAD:
+						case Item.SLOT_LEGS:
+						case Item.SLOT_BACK:
+						case Item.SLOT_FULL_ARMOR:
+						case Item.SLOT_UNDERWEAR:
+						case Item.SLOT_L_HAND:
+						case Item.SLOT_BELT:
 						{
 							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
 							break;
@@ -127,7 +127,7 @@ public class EnchantItemHPBonusData implements IGameXmlReader
 	 * @param item the item
 	 * @return the HP bonus
 	 */
-	public final int getHPBonus(L2ItemInstance item)
+	public final int getHPBonus(ItemInstance item)
 	{
 		final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalTypePlus());
 		if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0))
@@ -136,7 +136,7 @@ public class EnchantItemHPBonusData implements IGameXmlReader
 		}
 		
 		final int bonus = values.get(Math.min(item.getOlyEnchantLevel(), values.size()) - 1);
-		if (item.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR)
+		if (item.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR)
 		{
 			return (int) (bonus * FULL_ARMOR_MODIFIER);
 		}

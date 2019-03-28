@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.DoorInfo;
 import com.l2jmobius.gameserver.network.serverpackets.DoorStatusUpdate;
@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 import com.l2jmobius.gameserver.thread.TaskPriority;
 
-public class RequestRecordInfo extends L2GameClientPacket
+public class RequestRecordInfo extends GameClientPacket
 {
 	/**
 	 * urgent messages, execute immediately
@@ -61,17 +61,17 @@ public class RequestRecordInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final PlayerInstance _player = getClient().getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
 		
-		_activeChar.getKnownList().updateKnownObjects();
-		_activeChar.sendPacket(new UserInfo(_activeChar));
+		_player.getKnownList().updateKnownObjects();
+		_player.sendPacket(new UserInfo(_player));
 		
-		for (L2Object object : _activeChar.getKnownList().getKnownObjects().values())
+		for (WorldObject object : _player.getKnownList().getKnownObjects().values())
 		{
 			if (object == null)
 			{
@@ -80,91 +80,91 @@ public class RequestRecordInfo extends L2GameClientPacket
 			
 			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 			{
-				_activeChar.sendPacket(new SpawnItemPoly(object));
+				_player.sendPacket(new SpawnItemPoly(object));
 			}
 			else
 			{
-				if (object instanceof L2ItemInstance)
+				if (object instanceof ItemInstance)
 				{
-					_activeChar.sendPacket(new SpawnItem((L2ItemInstance) object));
+					_player.sendPacket(new SpawnItem((ItemInstance) object));
 				}
-				else if (object instanceof L2DoorInstance)
+				else if (object instanceof DoorInstance)
 				{
-					_activeChar.sendPacket(new DoorInfo((L2DoorInstance) object, false));
-					_activeChar.sendPacket(new DoorStatusUpdate((L2DoorInstance) object));
+					_player.sendPacket(new DoorInfo((DoorInstance) object, false));
+					_player.sendPacket(new DoorStatusUpdate((DoorInstance) object));
 				}
-				else if (object instanceof L2BoatInstance)
+				else if (object instanceof BoatInstance)
 				{
-					if (!_activeChar.isInBoat() && (object != _activeChar.getBoat()))
+					if (!_player.isInBoat() && (object != _player.getBoat()))
 					{
-						_activeChar.sendPacket(new VehicleInfo((L2BoatInstance) object));
-						((L2BoatInstance) object).sendVehicleDeparture(_activeChar);
+						_player.sendPacket(new VehicleInfo((BoatInstance) object));
+						((BoatInstance) object).sendVehicleDeparture(_player);
 					}
 				}
-				else if (object instanceof L2StaticObjectInstance)
+				else if (object instanceof StaticObjectInstance)
 				{
-					_activeChar.sendPacket(new StaticObject((L2StaticObjectInstance) object));
+					_player.sendPacket(new StaticObject((StaticObjectInstance) object));
 				}
-				else if (object instanceof L2NpcInstance)
+				else if (object instanceof NpcInstance)
 				{
-					_activeChar.sendPacket(new NpcInfo((L2NpcInstance) object, _activeChar));
+					_player.sendPacket(new NpcInfo((NpcInstance) object, _player));
 				}
-				else if (object instanceof L2Summon)
+				else if (object instanceof Summon)
 				{
-					final L2Summon summon = (L2Summon) object;
+					final Summon summon = (Summon) object;
 					
-					// Check if the L2PcInstance is the owner of the Pet
-					if (_activeChar.equals(summon.getOwner()))
+					// Check if the PlayerInstance is the owner of the Pet
+					if (_player.equals(summon.getOwner()))
 					{
-						_activeChar.sendPacket(new PetInfo(summon));
+						_player.sendPacket(new PetInfo(summon));
 						
-						if (summon instanceof L2PetInstance)
+						if (summon instanceof PetInstance)
 						{
-							_activeChar.sendPacket(new PetItemList((L2PetInstance) summon));
+							_player.sendPacket(new PetItemList((PetInstance) summon));
 						}
 					}
 					else
 					{
-						_activeChar.sendPacket(new NpcInfo(summon, _activeChar));
+						_player.sendPacket(new NpcInfo(summon, _player));
 					}
 					
 					// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 					summon.updateEffectIcons(true);
 				}
-				else if (object instanceof L2PcInstance)
+				else if (object instanceof PlayerInstance)
 				{
-					final L2PcInstance otherPlayer = (L2PcInstance) object;
+					final PlayerInstance otherPlayer = (PlayerInstance) object;
 					
 					if (otherPlayer.isInBoat())
 					{
 						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getPosition().getWorldPosition());
-						_activeChar.sendPacket(new CharInfo(otherPlayer));
-						final int relation = otherPlayer.getRelation(_activeChar);
+						_player.sendPacket(new CharInfo(otherPlayer));
+						final int relation = otherPlayer.getRelation(_player);
 						
-						if ((otherPlayer.getKnownList().getKnownRelations().get(_activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(_activeChar.getObjectId()) != relation))
+						if ((otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != relation))
 						{
-							_activeChar.sendPacket(new RelationChanged(otherPlayer, relation, _activeChar.isAutoAttackable(otherPlayer)));
+							_player.sendPacket(new RelationChanged(otherPlayer, relation, _player.isAutoAttackable(otherPlayer)));
 						}
 						
-						_activeChar.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
+						_player.sendPacket(new GetOnVehicle(otherPlayer, otherPlayer.getBoat(), otherPlayer.getInBoatPosition().getX(), otherPlayer.getInBoatPosition().getY(), otherPlayer.getInBoatPosition().getZ()));
 					}
 					else
 					{
-						_activeChar.sendPacket(new CharInfo(otherPlayer));
-						final int relation = otherPlayer.getRelation(_activeChar);
+						_player.sendPacket(new CharInfo(otherPlayer));
+						final int relation = otherPlayer.getRelation(_player);
 						
-						if ((otherPlayer.getKnownList().getKnownRelations().get(_activeChar.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(_activeChar.getObjectId()) != relation))
+						if ((otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != null) && (otherPlayer.getKnownList().getKnownRelations().get(_player.getObjectId()) != relation))
 						{
-							_activeChar.sendPacket(new RelationChanged(otherPlayer, relation, _activeChar.isAutoAttackable(otherPlayer)));
+							_player.sendPacket(new RelationChanged(otherPlayer, relation, _player.isAutoAttackable(otherPlayer)));
 						}
 					}
 				}
 				
-				if (object instanceof L2Character)
+				if (object instanceof Creature)
 				{
-					// Update the state of the L2Character object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the L2PcInstance
-					final L2Character obj = (L2Character) object;
-					obj.getAI().describeStateToPlayer(_activeChar);
+					// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
+					final Creature obj = (Creature) object;
+					obj.getAI().describeStateToPlayer(_player);
 				}
 			}
 		}

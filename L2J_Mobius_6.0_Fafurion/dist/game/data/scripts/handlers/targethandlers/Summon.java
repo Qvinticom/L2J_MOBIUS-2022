@@ -17,8 +17,8 @@
 package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -35,13 +35,13 @@ public class Summon implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (activeChar.isPlayer() && activeChar.hasSummon())
+		if (creature.isPlayer() && creature.hasSummon())
 		{
-			return activeChar.getActingPlayer().getAnyServitor();
+			return creature.getActingPlayer().getAnyServitor();
 		}
 		
-		return activeChar.getPet();
+		return creature.getPet();
 	}
 }

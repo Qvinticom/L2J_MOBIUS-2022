@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -79,12 +79,12 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equalsIgnoreCase("30017-04.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equalsIgnoreCase("30017-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, GALLINTS_OAK_WAND, 3);
 			return event;
 		}
@@ -92,16 +92,16 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (getItemEquipped(killer, Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !hasQuestItems(killer, MONSTERS.get(npc.getId())))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && (qs.isCond(1) || qs.isCond(2)) && (getItemEquipped(killer, Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !hasQuestItems(killer, MONSTERS.get(npc.getId())))
 		{
 			takeItems(killer, GALLINTS_OAK_WAND, 1);
 			giveItems(killer, MONSTERS.get(npc.getId()), 1);
 			if (hasQuestItems(killer, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 			else
 			{
@@ -112,16 +112,16 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case GALLINT:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -130,7 +130,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(3) && hasQuestItems(player, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
+						if (qs.isCond(3) && hasQuestItems(player, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 						{
 							Q00281_HeadForTheHills.giveNewbieReward(player);
 							for (ItemHolder reward : REWARDS)
@@ -139,7 +139,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 							}
 							addExpAndSp(player, 39750, 3407);
 							giveAdena(player, 16866, true);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "30017-06.html";
 						}
 						else
@@ -160,15 +160,15 @@ public final class Q00104_SpiritOfMirrors extends Quest
 			case JOHNSTONE:
 			case KENYOS:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					if (!st.isSet(npc.getName()))
+					if (!qs.isSet(npc.getName()))
 					{
-						st.set(npc.getName(), "1");
+						qs.set(npc.getName(), "1");
 					}
-					if (st.isSet("Arnold") && st.isSet("Johnstone") && st.isSet("Kenyos"))
+					if (qs.isSet("Arnold") && qs.isSet("Johnstone") && qs.isSet("Kenyos"))
 					{
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 				}
 				htmltext = npc.getId() + "-01.html";

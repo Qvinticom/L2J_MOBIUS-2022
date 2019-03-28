@@ -22,11 +22,11 @@ import java.util.StringTokenizer;
 import com.l2jmobius.gameserver.data.xml.impl.FenceData;
 import com.l2jmobius.gameserver.enums.FenceState;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.PageResult;
-import com.l2jmobius.gameserver.model.actor.instance.L2FenceInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FenceInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.HtmlUtil;
@@ -46,7 +46,7 @@ public class AdminFence implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
@@ -92,10 +92,10 @@ public class AdminFence implements IAdminCommandHandler
 					}
 					else
 					{
-						final L2Object obj = L2World.getInstance().findObject(objId);
-						if (obj instanceof L2FenceInstance)
+						final WorldObject obj = World.getInstance().findObject(objId);
+						if (obj instanceof FenceInstance)
 						{
-							final L2FenceInstance fence = (L2FenceInstance) obj;
+							final FenceInstance fence = (FenceInstance) obj;
 							final FenceState state = FenceState.values()[fenceTypeOrdinal];
 							fence.setState(state);
 							BuilderUtil.sendSysMessage(activeChar, "Fence " + fence.getName() + "[" + fence.getId() + "]'s state has been changed to " + state.toString());
@@ -117,10 +117,10 @@ public class AdminFence implements IAdminCommandHandler
 				try
 				{
 					final int objId = Integer.parseInt(st.nextToken());
-					final L2Object obj = L2World.getInstance().findObject(objId);
-					if (obj instanceof L2FenceInstance)
+					final WorldObject obj = World.getInstance().findObject(objId);
+					if (obj instanceof FenceInstance)
 					{
-						((L2FenceInstance) obj).deleteMe();
+						((FenceInstance) obj).deleteMe();
 						BuilderUtil.sendSysMessage(activeChar, "Fence removed succesfully.");
 					}
 					else
@@ -150,7 +150,7 @@ public class AdminFence implements IAdminCommandHandler
 				try
 				{
 					final int objId = Integer.parseInt(st.nextToken());
-					final L2Object obj = L2World.getInstance().findObject(objId);
+					final WorldObject obj = World.getInstance().findObject(objId);
 					if (obj != null)
 					{
 						activeChar.teleToLocation(obj);
@@ -173,7 +173,7 @@ public class AdminFence implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private static void sendHtml(L2PcInstance activeChar, int page)
+	private static void sendHtml(PlayerInstance activeChar, int page)
 	{
 		final PageResult result = HtmlUtil.createPage(FenceData.getInstance().getFences().values(), page, 10, currentPage ->
 		{

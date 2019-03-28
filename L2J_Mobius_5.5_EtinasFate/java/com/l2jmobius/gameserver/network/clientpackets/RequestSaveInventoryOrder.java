@@ -21,10 +21,10 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format:(ch) d[dd]
@@ -38,7 +38,7 @@ public final class RequestSaveInventoryOrder implements IClientIncomingPacket
 	private static final int LIMIT = 125;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		int sz = packet.readD();
 		sz = Math.min(sz, LIMIT);
@@ -53,15 +53,15 @@ public final class RequestSaveInventoryOrder implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player != null)
 		{
 			final Inventory inventory = player.getInventory();
 			for (InventoryOrder order : _order)
 			{
-				final L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
+				final ItemInstance item = inventory.getItemByObjectId(order.objectID);
 				if ((item != null) && (item.getItemLocation() == ItemLocation.INVENTORY))
 				{
 					item.setItemLocation(ItemLocation.INVENTORY, order.order);

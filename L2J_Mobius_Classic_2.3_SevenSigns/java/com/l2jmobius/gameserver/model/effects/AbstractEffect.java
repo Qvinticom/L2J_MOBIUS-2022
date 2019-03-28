@@ -19,15 +19,15 @@ package com.l2jmobius.gameserver.model.effects;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Abstract effect implementation.<br>
- * Instant effects should not override {@link #onExit(L2Character, L2Character, Skill)}.<br>
- * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)}.<br>
- * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)} nor {@link #onExit(L2Character, L2Character, Skill)}.
+ * Instant effects should not override {@link #onExit(Creature, Creature, Skill)}.<br>
+ * Instant effects should not override {@link #canStart(Creature, Creature, Skill)}, all checks should be done {@link #onStart(Creature, Creature, Skill, ItemInstance)}.<br>
+ * Do not call super class methods {@link #onStart(Creature, Creature, Skill, ItemInstance)} nor {@link #onExit(Creature, Creature, Skill)}.
  * @author Zoey76
  */
 public abstract class AbstractEffect
@@ -69,7 +69,7 @@ public abstract class AbstractEffect
 	 * @param skill
 	 * @return {@code true} if this effect land, {@code false} otherwise
 	 */
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return true;
 	}
@@ -82,27 +82,27 @@ public abstract class AbstractEffect
 	 * @param skill
 	 * @return {@code true} if all the start conditions are meet, {@code false} otherwise
 	 */
-	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
+	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
 		return true;
 	}
 	
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		
 	}
 	
-	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		
 	}
 	
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		
 	}
 	
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		
 	}
@@ -116,7 +116,7 @@ public abstract class AbstractEffect
 	 * @param item
 	 * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
 	 */
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		return false;
 	}
@@ -150,7 +150,7 @@ public abstract class AbstractEffect
 	 * @param skill
 	 * @return {@code true} if pump can be invoked, {@code false} otherwise
 	 */
-	public boolean canPump(L2Character effector, L2Character effected, Skill skill)
+	public boolean canPump(Creature effector, Creature effected, Skill skill)
 	{
 		return true;
 	}
@@ -159,7 +159,7 @@ public abstract class AbstractEffect
 	 * @param effected
 	 * @param skill
 	 */
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		
 	}
@@ -169,9 +169,9 @@ public abstract class AbstractEffect
 	 * TODO: Remove.
 	 * @return the effect type
 	 */
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.NONE;
+		return EffectType.NONE;
 	}
 	
 	@Override

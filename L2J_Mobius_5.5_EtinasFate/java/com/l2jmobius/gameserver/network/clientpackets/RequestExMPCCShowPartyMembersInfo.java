@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
 
 /**
@@ -31,25 +31,25 @@ public final class RequestExMPCCShowPartyMembersInfo implements IClientIncomingP
 	private int _partyLeaderId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_partyLeaderId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = L2World.getInstance().getPlayer(_partyLeaderId);
-		if ((player != null) && (player.getParty() != null))
+		final PlayerInstance target = World.getInstance().getPlayer(_partyLeaderId);
+		if ((target != null) && (target.getParty() != null))
 		{
-			client.sendPacket(new ExMPCCShowPartyMemberInfo(player.getParty()));
+			client.sendPacket(new ExMPCCShowPartyMemberInfo(target.getParty()));
 		}
 	}
 }

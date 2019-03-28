@@ -22,10 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -105,7 +105,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -116,7 +116,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 				{
 					return null;
 				}
-				if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+				if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 				{
 					switch (world.getStatus())
 					{
@@ -129,7 +129,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 						}
 						case 3:
 						{
-							for (L2PcInstance member : world.getPlayers())
+							for (PlayerInstance member : world.getPlayers())
 							{
 								final QuestState qs = member.getQuestState(world.getTemplateId() < 89 ? Q00727_HopeWithinTheDarkness.class.getSimpleName() : Q00726_LightWithinTheDarkness.class.getSimpleName());
 								if ((qs != null) && qs.isCond(1))
@@ -154,7 +154,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 				{
 					return null;
 				}
-				List<L2Npc> monsters = new ArrayList<>();
+				List<Npc> monsters = new ArrayList<>();
 				switch (world.getStatus())
 				{
 					case 0:
@@ -179,9 +179,9 @@ public final class PailakaRuneCastle extends AbstractInstance
 				final List<FriendlyNpcInstance> helpers = world.getAliveNpcs(FriendlyNpcInstance.class);
 				if (!helpers.isEmpty())
 				{
-					for (L2Npc monster : monsters)
+					for (Npc monster : monsters)
 					{
-						final L2Npc helper = helpers.get(getRandom(helpers.size()));
+						final Npc helper = helpers.get(getRandom(helpers.size()));
 						helper.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 						addAttackDesire(helper, monster);
 						addAttackDesire(monster, helper);
@@ -227,7 +227,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -246,7 +246,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		if (MANAGERS.containsKey(npcId))
@@ -257,7 +257,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		// Put re-enter for instance
 		REENETER_HOLDER.put(instance.getTemplateId(), System.currentTimeMillis() + REENTER);
@@ -266,9 +266,9 @@ public final class PailakaRuneCastle extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean validateConditions(List<L2PcInstance> group, L2Npc npc, InstanceTemplate template)
+	protected boolean validateConditions(List<PlayerInstance> group, Npc npc, InstanceTemplate template)
 	{
-		final L2PcInstance groupLeader = group.get(0);
+		final PlayerInstance groupLeader = group.get(0);
 		if (template.getId() < 89) // Castle
 		{
 			final Castle castle = npc.getCastle();

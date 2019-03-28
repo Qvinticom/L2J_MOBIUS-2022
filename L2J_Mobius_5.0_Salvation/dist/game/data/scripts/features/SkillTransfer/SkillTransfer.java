@@ -20,15 +20,15 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionCancel;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionCancel;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -60,7 +60,7 @@ public final class SkillTransfer extends AbstractNpcAI
 	
 	public void onProfessionChange(OnPlayerProfessionChange event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final int index = getTransferClassIndex(player);
 		if (index < 0)
 		{
@@ -77,7 +77,7 @@ public final class SkillTransfer extends AbstractNpcAI
 	
 	public void onProfessionCancel(OnPlayerProfessionCancel event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final int index = getTransferClassIndex(player);
 		
 		// is a transfer class
@@ -88,8 +88,8 @@ public final class SkillTransfer extends AbstractNpcAI
 		
 		int pomanderId = PORMANDERS[index].getId();
 		// remove unsused HolyPomander
-		PcInventory inv = player.getInventory();
-		for (L2ItemInstance itemI : inv.getAllItemsByItemId(pomanderId))
+		PlayerInventory inv = player.getInventory();
+		for (ItemInstance itemI : inv.getAllItemsByItemId(pomanderId))
 		{
 			inv.destroyItem("[HolyPomander - remove]", itemI, player, null);
 		}
@@ -99,9 +99,9 @@ public final class SkillTransfer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterWorld(L2PcInstance player)
+	public String onEnterWorld(PlayerInstance player)
 	{
-		if (!player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)
+		if (!player.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS) || Config.SKILL_CHECK_GM)
 		{
 			final int index = getTransferClassIndex(player);
 			if (index < 0)
@@ -111,7 +111,7 @@ public final class SkillTransfer extends AbstractNpcAI
 			long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
 			for (Skill sk : player.getAllSkills())
 			{
-				for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
+				for (SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
 				{
 					if (s.getSkillId() == sk.getId())
 					{
@@ -143,7 +143,7 @@ public final class SkillTransfer extends AbstractNpcAI
 		return super.onEnterWorld(player);
 	}
 	
-	private static int getTransferClassIndex(L2PcInstance player)
+	private static int getTransferClassIndex(PlayerInstance player)
 	{
 		switch (player.getClassId())
 		{

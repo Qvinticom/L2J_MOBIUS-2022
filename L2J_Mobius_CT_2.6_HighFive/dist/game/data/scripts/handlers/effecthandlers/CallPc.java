@@ -20,7 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
@@ -64,9 +64,9 @@ public final class CallPc extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance target = info.getEffected().getActingPlayer();
-		final L2PcInstance activeChar = info.getEffector().getActingPlayer();
-		if (checkSummonTargetStatus(target, activeChar))
+		final PlayerInstance target = info.getEffected().getActingPlayer();
+		final PlayerInstance player = info.getEffector().getActingPlayer();
+		if (checkSummonTargetStatus(target, player))
 		{
 			if ((_itemId != 0) && (_itemCount != 0))
 			{
@@ -77,23 +77,23 @@ public final class CallPc extends AbstractEffect
 					target.sendPacket(sm);
 					return;
 				}
-				target.getInventory().destroyItemByItemId("Consume", _itemId, _itemCount, activeChar, target);
+				target.getInventory().destroyItemByItemId("Consume", _itemId, _itemCount, player, target);
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 				sm.addItemName(_itemId);
 				target.sendPacket(sm);
 			}
 			
-			target.addScript(new SummonRequestHolder(activeChar, info.getSkill()));
+			target.addScript(new SummonRequestHolder(player, info.getSkill()));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-			confirm.addString(activeChar.getName());
-			confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+			confirm.addString(player.getName());
+			confirm.addZoneName(player.getX(), player.getY(), player.getZ());
 			confirm.addTime(30000);
-			confirm.addRequesterId(activeChar.getObjectId());
+			confirm.addRequesterId(player.getObjectId());
 			target.sendPacket(confirm);
 		}
 	}
 	
-	public static boolean checkSummonTargetStatus(L2PcInstance target, L2PcInstance activeChar)
+	public static boolean checkSummonTargetStatus(PlayerInstance target, PlayerInstance activeChar)
 	{
 		if (target == activeChar)
 		{

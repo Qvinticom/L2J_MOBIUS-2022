@@ -16,13 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class CreatureSay extends L2GameServerPacket
+public class CreatureSay extends GameServerPacket
 {
 	private final int _objectId;
 	private final int _textType;
@@ -53,7 +52,7 @@ public class CreatureSay extends L2GameServerPacket
 		writeS(_charName);
 		writeS(_text);
 		
-		final L2PcInstance _pci = getClient().getActiveChar();
+		final PlayerInstance _pci = getClient().getPlayer();
 		if (_pci != null)
 		{
 			_pci.broadcastSnoop(_textType, _charName, _text, this);

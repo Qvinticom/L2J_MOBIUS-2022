@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * 0000: 75 7a 07 80 49 63 27 00 4a ea 01 00 00 c1 37 fe uz..Ic'.J.....7.
@@ -28,23 +28,23 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
  * <p>
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/04/06 16:13:46 $
  */
-public class MoveToPawn extends L2GameServerPacket
+public class MoveToPawn extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _targetId;
 	private final int _distance;
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	
-	public MoveToPawn(L2Character cha, L2Character target, int distance)
+	public MoveToPawn(Creature creature, Creature target, int distance)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		_targetId = target.getObjectId();
 		_distance = distance;
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override
@@ -52,7 +52,7 @@ public class MoveToPawn extends L2GameServerPacket
 	{
 		writeC(0x60);
 		
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_targetId);
 		writeD(_distance);
 		

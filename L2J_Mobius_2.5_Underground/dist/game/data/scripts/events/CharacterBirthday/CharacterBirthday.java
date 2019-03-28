@@ -16,8 +16,8 @@
  */
 package events.CharacterBirthday;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -64,7 +64,7 @@ public final class CharacterBirthday extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		if (event.equalsIgnoreCase("despawn_npc"))
@@ -95,7 +95,7 @@ public final class CharacterBirthday extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (SPAWNS >= 3)
 		{
@@ -104,7 +104,7 @@ public final class CharacterBirthday extends AbstractNpcAI
 		
 		if (!Util.checkIfInRange(10, npc, player, true))
 		{
-			final L2Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
+			final Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			startQuestTimer("despawn_npc", 180000, spawned, player);
 			SPAWNS++;
 		}

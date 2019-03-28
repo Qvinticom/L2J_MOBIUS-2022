@@ -21,19 +21,19 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 import com.l2jmobius.gameserver.util.Util;
 
 public class RaidbossInfo extends Quest
 {
 	private static final String qn = "RaidbossInfo";
-	private static final String BOSS_CLASS_TYPE = "L2RaidBoss";
+	private static final String BOSS_CLASS_TYPE = "RaidBoss";
 	
 	private static final Map<Integer, Location> RADARS = new HashMap<>();
 	
@@ -129,9 +129,9 @@ public class RaidbossInfo extends Quest
 		}
 		
 		// Add all Raid Bosses locations.
-		for (L2Spawn spawn : SpawnTable.getInstance().getAllTemplates().values())
+		for (Spawn spawn : SpawnTable.getInstance().getAllTemplates().values())
 		{
-			final L2NpcTemplate template = NpcTable.getInstance().getTemplate(spawn.getNpcId());
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(spawn.getNpcId());
 			if ((template != null) && template.type.equals(BOSS_CLASS_TYPE))
 			{
 				RADARS.put(spawn.getNpcId(), new Location(spawn.getX(), spawn.getY(), spawn.getZ()));
@@ -140,7 +140,7 @@ public class RaidbossInfo extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
@@ -164,7 +164,7 @@ public class RaidbossInfo extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		return "info.htm";
 	}

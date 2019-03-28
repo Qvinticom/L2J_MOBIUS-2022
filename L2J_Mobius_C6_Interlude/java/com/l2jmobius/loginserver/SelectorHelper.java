@@ -32,7 +32,7 @@ import com.l2jmobius.loginserver.network.serverpackets.Init;
 /**
  * @author KenM
  */
-public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFactory<L2LoginClient>, IAcceptFilter
+public class SelectorHelper implements IMMOExecutor<LoginClient>, IClientFactory<LoginClient>, IAcceptFilter
 {
 	private final ThreadPoolExecutor _generalPacketsThreadPool;
 	private final IPv4Filter _ipv4filter;
@@ -44,15 +44,15 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	}
 	
 	@Override
-	public void execute(ReceivablePacket<L2LoginClient> packet)
+	public void execute(ReceivablePacket<LoginClient> packet)
 	{
 		_generalPacketsThreadPool.execute(packet);
 	}
 	
 	@Override
-	public L2LoginClient create(MMOConnection<L2LoginClient> con)
+	public LoginClient create(MMOConnection<LoginClient> con)
 	{
-		final L2LoginClient client = new L2LoginClient(con);
+		final LoginClient client = new LoginClient(con);
 		client.sendPacket(new Init(client));
 		
 		return client;

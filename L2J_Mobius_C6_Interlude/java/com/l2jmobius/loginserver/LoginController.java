@@ -47,7 +47,6 @@ import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
 /**
- * This class ...
  * @version $Revision: 1.7.4.3 $ $Date: 2005/03/27 15:30:09 $
  */
 public class LoginController
@@ -64,7 +63,7 @@ public class LoginController
 				{
 					break;
 				}
-				for (L2LoginClient cl : _clients)
+				for (LoginClient cl : _clients)
 				{
 					try
 					{
@@ -100,10 +99,10 @@ public class LoginController
 	private static final int LOGIN_TIMEOUT = 60 * 1000;
 	
 	/** Clients that are on the LS but arent assocated with a account yet */
-	protected List<L2LoginClient> _clients = new CopyOnWriteArrayList<>();
+	protected List<LoginClient> _clients = new CopyOnWriteArrayList<>();
 	
 	/** Authed Clients on LoginServer */
-	protected Map<String, L2LoginClient> _loginServerClients = new ConcurrentHashMap<>();
+	protected Map<String, LoginClient> _loginServerClients = new ConcurrentHashMap<>();
 	
 	private final Map<InetAddress, BanInfo> _bannedIps = new ConcurrentHashMap<>();
 	
@@ -206,11 +205,11 @@ public class LoginController
 		return _blowfishKeys[(int) (Math.random() * BLOWFISH_KEYS)];
 	}
 	
-	public void addLoginClient(L2LoginClient client)
+	public void addLoginClient(LoginClient client)
 	{
 		if (_clients.size() >= Config.MAX_LOGINSESSIONS)
 		{
-			for (L2LoginClient cl : _clients)
+			for (LoginClient cl : _clients)
 			{
 				try
 				{
@@ -227,7 +226,7 @@ public class LoginController
 		}
 	}
 	
-	public void removeLoginClient(L2LoginClient client)
+	public void removeLoginClient(LoginClient client)
 	{
 		if (_clients.contains(client))
 		{
@@ -244,7 +243,7 @@ public class LoginController
 		}
 	}
 	
-	public SessionKey assignSessionKeyToClient(String account, L2LoginClient client)
+	public SessionKey assignSessionKeyToClient(String account, LoginClient client)
 	{
 		SessionKey key;
 		
@@ -269,7 +268,7 @@ public class LoginController
 		return _loginServerClients.containsKey(account);
 	}
 	
-	public L2LoginClient getAuthedClient(String account)
+	public LoginClient getAuthedClient(String account)
 	{
 		return _loginServerClients.get(account);
 	}
@@ -283,7 +282,7 @@ public class LoginController
 		AUTH_SUCCESS
 	}
 	
-	public AuthLoginResult tryAuthLogin(String account, String password, L2LoginClient client)
+	public AuthLoginResult tryAuthLogin(String account, String password, LoginClient client)
 	{
 		AuthLoginResult ret = AuthLoginResult.INVALID_PASSWORD;
 		// check auth
@@ -389,7 +388,7 @@ public class LoginController
 	
 	public SessionKey getKeyForAccount(String account)
 	{
-		final L2LoginClient client = _loginServerClients.get(account);
+		final LoginClient client = _loginServerClients.get(account);
 		
 		if (client != null)
 		{
@@ -478,7 +477,7 @@ public class LoginController
 	 * @param serverId
 	 * @return
 	 */
-	public boolean isLoginPossible(L2LoginClient client, int serverId)
+	public boolean isLoginPossible(LoginClient client, int serverId)
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		final int access = client.getAccessLevel();
@@ -571,7 +570,7 @@ public class LoginController
 	 * @param client
 	 * @return
 	 */
-	public synchronized boolean loginValid(String user, String password, L2LoginClient client)
+	public synchronized boolean loginValid(String user, String password, LoginClient client)
 	{
 		boolean ok = false;
 		InetAddress address = client.getConnection().getInetAddress();
@@ -820,7 +819,7 @@ public class LoginController
 			{
 				synchronized (_clients)
 				{
-					for (L2LoginClient client : _clients)
+					for (LoginClient client : _clients)
 					{
 						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= System.currentTimeMillis())
 						{
@@ -831,9 +830,9 @@ public class LoginController
 				
 				synchronized (_loginServerClients)
 				{
-					for (Entry<String, L2LoginClient> e : _loginServerClients.entrySet())
+					for (Entry<String, LoginClient> e : _loginServerClients.entrySet())
 					{
-						L2LoginClient client = e.getValue();
+						LoginClient client = e.getValue();
 						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= System.currentTimeMillis())
 						{
 							client.close(LoginFailReason.REASON_ACCESS_FAILED);

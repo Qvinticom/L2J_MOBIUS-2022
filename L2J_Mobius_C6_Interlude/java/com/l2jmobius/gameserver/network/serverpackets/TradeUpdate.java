@@ -18,26 +18,26 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.TradeList.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Beetle
  */
-public class TradeUpdate extends L2GameServerPacket
+public class TradeUpdate extends GameServerPacket
 {
-	private final L2ItemInstance[] _items;
+	private final ItemInstance[] _items;
 	private final TradeItem[] _trade_items;
 	
-	public TradeUpdate(TradeList trade, L2PcInstance activeChar)
+	public TradeUpdate(TradeList trade, PlayerInstance player)
 	{
-		_items = activeChar.getInventory().getItems();
+		_items = player.getInventory().getItems();
 		_trade_items = trade.getItems();
 	}
 	
 	private int getItemCount(int objectId)
 	{
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getObjectId() == objectId)
 			{

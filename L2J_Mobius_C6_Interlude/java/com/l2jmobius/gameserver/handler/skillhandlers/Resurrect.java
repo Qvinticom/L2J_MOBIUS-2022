@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillTargetType;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillTargetType;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -39,29 +39,29 @@ public class Resurrect implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
+		PlayerInstance player = null;
+		if (creature instanceof PlayerInstance)
 		{
-			player = (L2PcInstance) activeChar;
+			player = (PlayerInstance) creature;
 		}
 		
-		L2Character target = null;
-		L2PcInstance targetPlayer;
-		List<L2Character> targetToRes = new ArrayList<>();
+		Creature target = null;
+		PlayerInstance targetPlayer;
+		List<Creature> targetToRes = new ArrayList<>();
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
 			if (target2 == null)
 			{
 				continue;
 			}
 			
-			target = (L2Character) target2;
-			if (target instanceof L2PcInstance)
+			target = (Creature) target2;
+			if (target instanceof PlayerInstance)
 			{
-				targetPlayer = (L2PcInstance) target;
+				targetPlayer = (PlayerInstance) target;
 				
 				// Check for same party or for same clan, if target is for clan.
 				if (skill.getTargetType() == SkillTargetType.TARGET_CORPSE_CLAN)
@@ -81,57 +81,57 @@ public class Resurrect implements ISkillHandler
 		
 		if (targetToRes.size() == 0)
 		{
-			activeChar.abortCast();
-			activeChar.sendPacket(SystemMessage.sendString("No valid target to resurrect"));
+			creature.abortCast();
+			creature.sendPacket(SystemMessage.sendString("No valid target to resurrect"));
 		}
 		
-		for (L2Character cha : targetToRes)
+		for (Creature c : targetToRes)
 		{
-			if (activeChar instanceof L2PcInstance)
+			if (creature instanceof PlayerInstance)
 			{
-				if (cha instanceof L2PcInstance)
+				if (c instanceof PlayerInstance)
 				{
-					((L2PcInstance) cha).reviveRequest((L2PcInstance) activeChar, skill, false);
+					((PlayerInstance) c).reviveRequest((PlayerInstance) creature, skill, false);
 				}
-				else if (cha instanceof L2PetInstance)
+				else if (c instanceof PetInstance)
 				{
-					if (((L2PetInstance) cha).getOwner() == activeChar)
+					if (((PetInstance) c).getOwner() == creature)
 					{
-						cha.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), activeChar));
+						c.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), creature));
 					}
 					else
 					{
-						((L2PetInstance) cha).getOwner().reviveRequest((L2PcInstance) activeChar, skill, true);
+						((PetInstance) c).getOwner().reviveRequest((PlayerInstance) creature, skill, true);
 					}
 				}
 				else
 				{
-					cha.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), activeChar));
+					c.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), creature));
 				}
 			}
 			else
 			{
-				DecayTaskManager.getInstance().cancelDecayTask(cha);
-				cha.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), activeChar));
+				DecayTaskManager.getInstance().cancelDecayTask(c);
+				c.doRevive(Formulas.getInstance().calculateSkillResurrectRestorePercent(skill.getPower(), creature));
 			}
 		}
 		
 		if (skill.isMagic() && skill.useSpiritShot())
 		{
-			if (activeChar.checkBss())
+			if (creature.checkBss())
 			{
-				activeChar.removeBss();
+				creature.removeBss();
 			}
-			if (activeChar.checkSps())
+			if (creature.checkSps())
 			{
-				activeChar.removeSps();
+				creature.removeSps();
 			}
 		}
 		else if (skill.useSoulShot())
 		{
-			if (activeChar.checkSs())
+			if (creature.checkSs())
 			{
-				activeChar.removeSs();
+				creature.removeSs();
 			}
 		}
 	}

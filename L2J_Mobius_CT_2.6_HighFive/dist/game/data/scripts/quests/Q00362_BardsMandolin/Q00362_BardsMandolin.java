@@ -16,8 +16,8 @@
  */
 package quests.Q00362_BardsMandolin;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -49,10 +49,10 @@ public final class Q00362_BardsMandolin extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -62,19 +62,19 @@ public final class Q00362_BardsMandolin extends Quest
 		{
 			case "30957-02.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "30957-07.html":
 			case "30957-08.html":
 			{
-				if (st.isMemoState(5))
+				if (qs.isMemoState(5))
 				{
 					giveAdena(player, 10000, true);
 					rewardItems(player, THEME_OF_JOURNEY, 1);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -84,11 +84,11 @@ public final class Q00362_BardsMandolin extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -104,7 +104,7 @@ public final class Q00362_BardsMandolin extends Quest
 				{
 					case SWAN:
 					{
-						switch (st.getMemoState())
+						switch (qs.getMemoState())
 						{
 							case 1:
 							case 2:
@@ -114,8 +114,8 @@ public final class Q00362_BardsMandolin extends Quest
 							}
 							case 3:
 							{
-								st.setCond(4, true);
-								st.setMemoState(4);
+								qs.setCond(4, true);
+								qs.setMemoState(4);
 								giveItems(player, SWANS_LETTER, 1);
 								htmltext = "30957-05.html";
 								break;
@@ -135,14 +135,14 @@ public final class Q00362_BardsMandolin extends Quest
 					}
 					case GALION:
 					{
-						if (st.isMemoState(2))
+						if (qs.isMemoState(2))
 						{
-							st.setMemoState(3);
-							st.setCond(3, true);
+							qs.setMemoState(3);
+							qs.setCond(3, true);
 							giveItems(player, SWANS_FLUTE, 1);
 							htmltext = "30958-01.html";
 						}
-						else if (st.getMemoState() >= 3)
+						else if (qs.getMemoState() >= 3)
 						{
 							htmltext = "30958-02.html";
 						}
@@ -150,17 +150,17 @@ public final class Q00362_BardsMandolin extends Quest
 					}
 					case WOODROW:
 					{
-						if (st.isMemoState(1))
+						if (qs.isMemoState(1))
 						{
-							st.setMemoState(2);
-							st.setCond(2, true);
+							qs.setMemoState(2);
+							qs.setCond(2, true);
 							htmltext = "30837-01.html";
 						}
-						else if (st.isMemoState(2))
+						else if (qs.isMemoState(2))
 						{
 							htmltext = "30837-02.html";
 						}
-						else if (st.getMemoState() >= 3)
+						else if (qs.getMemoState() >= 3)
 						{
 							htmltext = "30837-03.html";
 						}
@@ -168,15 +168,15 @@ public final class Q00362_BardsMandolin extends Quest
 					}
 					case NANARIN:
 					{
-						if (st.isMemoState(4) && hasQuestItems(player, SWANS_FLUTE, SWANS_LETTER))
+						if (qs.isMemoState(4) && hasQuestItems(player, SWANS_FLUTE, SWANS_LETTER))
 						{
-							st.setMemoState(5);
-							st.setCond(5, true);
+							qs.setMemoState(5);
+							qs.setCond(5, true);
 							takeItems(player, SWANS_FLUTE, -1);
 							takeItems(player, SWANS_LETTER, -1);
 							htmltext = "30956-01.html";
 						}
-						else if (st.getMemoState() >= 5)
+						else if (qs.getMemoState() >= 5)
 						{
 							htmltext = "30956-02.html";
 						}

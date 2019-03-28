@@ -19,40 +19,40 @@ package com.l2jmobius.gameserver.model.actor.knownlist;
 import java.util.Collection;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.ai.CreatureAI;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class AttackableKnownList extends NpcKnownList
 {
-	public AttackableKnownList(L2Attackable activeChar)
+	public AttackableKnownList(Attackable activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public boolean removeKnownObject(L2Object object)
+	public boolean removeKnownObject(WorldObject object)
 	{
 		if (!super.removeKnownObject(object))
 		{
 			return false;
 		}
 		
-		// Remove the L2Object from the _aggrolist of the L2Attackable
-		if ((object != null) && (object instanceof L2Character))
+		// Remove the WorldObject from the _aggrolist of the Attackable
+		if ((object != null) && (object instanceof Creature))
 		{
 			getActiveChar().getAggroList().remove(object);
 		}
 		
-		// Set the L2Attackable Intention to AI_INTENTION_IDLE
-		final Collection<L2PcInstance> known = getKnownPlayers().values();
+		// Set the Attackable Intention to AI_INTENTION_IDLE
+		final Collection<PlayerInstance> known = getKnownPlayers().values();
 		
 		// FIXME: This is a temporary solution
-		L2CharacterAI ai = getActiveChar().getAI();
+		CreatureAI ai = getActiveChar().getAI();
 		if ((ai != null) && ((known == null) || known.isEmpty()))
 		{
 			ai.setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -62,13 +62,13 @@ public class AttackableKnownList extends NpcKnownList
 	}
 	
 	@Override
-	public L2Attackable getActiveChar()
+	public Attackable getActiveChar()
 	{
-		return (L2Attackable) super.getActiveChar();
+		return (Attackable) super.getActiveChar();
 	}
 	
 	@Override
-	public int getDistanceToForgetObject(L2Object object)
+	public int getDistanceToForgetObject(WorldObject object)
 	{
 		if (getActiveChar().getAggroList() != null)
 		{
@@ -81,14 +81,14 @@ public class AttackableKnownList extends NpcKnownList
 	}
 	
 	@Override
-	public int getDistanceToWatchObject(L2Object object)
+	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if ((object instanceof L2FolkInstance) || !(object instanceof L2Character))
+		if ((object instanceof FolkInstance) || !(object instanceof Creature))
 		{
 			return 0;
 		}
 		
-		if (object instanceof L2Playable)
+		if (object instanceof Playable)
 		{
 			return 1500;
 		}

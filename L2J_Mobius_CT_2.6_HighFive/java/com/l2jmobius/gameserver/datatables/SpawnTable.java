@@ -40,10 +40,10 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
  * Spawn data retriever.
@@ -53,7 +53,7 @@ public final class SpawnTable implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	private static final String OTHER_XML_FOLDER = "data/spawns/Others";
-	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
+	private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();
 	private static final Map<Integer, String> _spawnTemplates = new HashMap<>();
 	private int _spanwCount = 0;
 	
@@ -76,14 +76,14 @@ public final class SpawnTable implements IGameXmlReader
 	 */
 	private boolean checkTemplate(int npcId)
 	{
-		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
+		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
 		if (npcTemplate == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Data missing in NPC table for ID: " + npcId + ".");
 			return false;
 		}
 		
-		if (npcTemplate.isType("L2SiegeGuard") || npcTemplate.isType("L2RaidBoss") || (!Config.ALLOW_CLASS_MASTERS && npcTemplate.isType("L2ClassMaster")))
+		if (npcTemplate.isType("SiegeGuard") || npcTemplate.isType("RaidBoss") || (!Config.ALLOW_CLASS_MASTERS && npcTemplate.isType("ClassMaster")))
 		{
 			// Don't spawn
 			return false;
@@ -257,11 +257,11 @@ public final class SpawnTable implements IGameXmlReader
 	 */
 	private int addSpawn(StatsSet spawnInfo, Map<String, Integer> AIData)
 	{
-		L2Spawn spawnDat;
+		Spawn spawnDat;
 		int ret = 0;
 		try
 		{
-			spawnDat = new L2Spawn(spawnInfo.getInt("npcTemplateid"));
+			spawnDat = new Spawn(spawnInfo.getInt("npcTemplateid"));
 			spawnDat.setAmount(spawnInfo.getInt("count", 1));
 			spawnDat.setXYZ(spawnInfo.getInt("x", 0), spawnInfo.getInt("y", 0), spawnInfo.getInt("z", 0));
 			spawnDat.setHeading(spawnInfo.getInt("heading", -1));
@@ -334,7 +334,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * Gets the spawn data.
 	 * @return the spawn data
 	 */
-	public Map<Integer, Set<L2Spawn>> getSpawnTable()
+	public Map<Integer, Set<Spawn>> getSpawnTable()
 	{
 		return _spawnTable;
 	}
@@ -344,7 +344,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param npcId the NPC Id
 	 * @return the spawn set for the given npcId
 	 */
-	public Set<L2Spawn> getSpawns(int npcId)
+	public Set<Spawn> getSpawns(int npcId)
 	{
 		return _spawnTable.getOrDefault(npcId, Collections.emptySet());
 	}
@@ -364,7 +364,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param npcId the NPC Id
 	 * @return a spawn for the given NPC ID or {@code null}
 	 */
-	public L2Spawn getAnySpawn(int npcId)
+	public Spawn getAnySpawn(int npcId)
 	{
 		return getSpawns(npcId).stream().findFirst().orElse(null);
 	}
@@ -374,7 +374,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param spawn the spawn to add
 	 * @param store if {@code true} it'll be saved in the spawn XML files
 	 */
-	public synchronized void addNewSpawn(L2Spawn spawn, boolean store)
+	public synchronized void addNewSpawn(Spawn spawn, boolean store)
 	{
 		addSpawn(spawn);
 		
@@ -401,8 +401,8 @@ public final class SpawnTable implements IGameXmlReader
 			}
 			
 			// XML file for spawn
-			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
-			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 			final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			
 			// Write info to XML
@@ -468,7 +468,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param spawn the spawn to delete
 	 * @param update if {@code true} the spawn XML files will be updated
 	 */
-	public synchronized void deleteSpawn(L2Spawn spawn, boolean update)
+	public synchronized void deleteSpawn(Spawn spawn, boolean update)
 	{
 		if (!removeSpawn(spawn))
 		{
@@ -477,8 +477,8 @@ public final class SpawnTable implements IGameXmlReader
 		
 		if (update)
 		{
-			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
-			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 			final int npcSpawnTemplateId = spawn.getNpcSpawnTemplateId();
 			final File spawnFile = npcSpawnTemplateId > 0 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
@@ -552,7 +552,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * Add a spawn to the spawn set if present, otherwise add a spawn set and add the spawn to the newly created spawn set.
 	 * @param spawn the NPC spawn to add
 	 */
-	private void addSpawn(L2Spawn spawn)
+	private void addSpawn(Spawn spawn)
 	{
 		_spawnTable.computeIfAbsent(spawn.getId(), k -> ConcurrentHashMap.newKeySet(1)).add(spawn);
 	}
@@ -562,9 +562,9 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param spawn the NPC spawn to remove
 	 * @return {@code true} if the spawn was successfully removed, {@code false} otherwise
 	 */
-	private boolean removeSpawn(L2Spawn spawn)
+	private boolean removeSpawn(Spawn spawn)
 	{
-		final Set<L2Spawn> set = _spawnTable.get(spawn.getId());
+		final Set<Spawn> set = _spawnTable.get(spawn.getId());
 		if (set != null)
 		{
 			final boolean removed = set.remove(spawn);
@@ -583,11 +583,11 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param function the function to execute
 	 * @return {@code true} if all procedures were executed, {@code false} otherwise
 	 */
-	public boolean forEachSpawn(Function<L2Spawn, Boolean> function)
+	public boolean forEachSpawn(Function<Spawn, Boolean> function)
 	{
-		for (Set<L2Spawn> set : _spawnTable.values())
+		for (Set<Spawn> set : _spawnTable.values())
 		{
-			for (L2Spawn spawn : set)
+			for (Spawn spawn : set)
 			{
 				if (!function.apply(spawn))
 				{

@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,7 +32,7 @@ public class InventoryUpdate extends AbstractInventoryUpdate
 	{
 	}
 	
-	public InventoryUpdate(L2ItemInstance item)
+	public InventoryUpdate(ItemInstance item)
 	{
 		super(item);
 	}

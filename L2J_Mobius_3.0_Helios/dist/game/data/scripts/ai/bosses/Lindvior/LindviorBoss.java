@@ -16,8 +16,8 @@
  */
 package ai.bosses.Lindvior;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -66,7 +66,7 @@ public class LindviorBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
 		final int chance = getRandom(100);
@@ -161,7 +161,7 @@ public class LindviorBoss extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(true);
 		npc.doCast(MASS_HELL_BINDING.getSkill());

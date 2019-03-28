@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.instancemanager.TownManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
  * format (ch) d
  * @author -Wooden-
  */
-public final class RequestOustFromPartyRoom extends L2GameClientPacket
+public final class RequestOustFromPartyRoom extends GameClientPacket
 {
 	private int _charid;
 	
@@ -43,13 +43,13 @@ public final class RequestOustFromPartyRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance member = L2World.getInstance().getPlayer(_charid);
+		final PlayerInstance member = World.getInstance().getPlayer(_charid);
 		if (member == null)
 		{
 			return;
@@ -61,14 +61,14 @@ public final class RequestOustFromPartyRoom extends L2GameClientPacket
 			return;
 		}
 		
-		if (_room.getOwner() != activeChar)
+		if (_room.getOwner() != player)
 		{
 			return;
 		}
 		
-		if (activeChar.isInParty() && member.isInParty() && (activeChar.getParty().getPartyLeaderOID() == member.getParty().getPartyLeaderOID()))
+		if (player.isInParty() && member.isInParty() && (player.getParty().getPartyLeaderOID() == member.getParty().getPartyLeaderOID()))
 		{
-			activeChar.sendPacket(SystemMessageId.CANNOT_DISMISS_PARTY_MEMBER);
+			player.sendPacket(SystemMessageId.CANNOT_DISMISS_PARTY_MEMBER);
 		}
 		else
 		{

@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 0000: 01 7a 73 10 4c b2 0b 00 00 a3 fc 00 00 e8 f1 ff .zs.L........... 0010: ff bd 0b 00 00 b3 fc 00 00 e8 f1 ff ff ............. ddddddd
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class CharMoveToLocation extends L2GameServerPacket
+public class CharMoveToLocation extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -33,31 +33,31 @@ public class CharMoveToLocation extends L2GameServerPacket
 	private final int _yDst;
 	private final int _zDst;
 	
-	public CharMoveToLocation(L2Character cha)
+	public CharMoveToLocation(Creature creature)
 	{
-		_charObjId = cha.getObjectId();
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
-		_xDst = cha.getXdestination();
-		_yDst = cha.getYdestination();
-		_zDst = cha.getZdestination();
+		_objectId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
+		_xDst = creature.getXdestination();
+		_yDst = creature.getYdestination();
+		_zDst = creature.getZdestination();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		// reset old Moving task
-		if ((activeChar != null) && activeChar.isMovingTaskDefined())
+		if ((player != null) && player.isMovingTaskDefined())
 		{
-			activeChar.setMovingTaskDefined(false);
+			player.setMovingTaskDefined(false);
 		}
 		
 		writeC(0x01);
 		
-		writeD(_charObjId);
+		writeD(_objectId);
 		
 		writeD(_xDst);
 		writeD(_yDst);

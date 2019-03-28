@@ -20,10 +20,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.ArmorSet;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
@@ -50,17 +50,17 @@ public class FuncArmorSet extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		double value = initVal;
 		// Should not apply armor set bonus to summons.
 		if (effector.isPlayer())
 		{
-			final L2PcInstance player = effector.getActingPlayer();
-			final L2ItemInstance chest = player.getChestArmorInstance();
+			final PlayerInstance player = effector.getActingPlayer();
+			final ItemInstance chest = player.getChestArmorInstance();
 			if (chest != null)
 			{
-				final L2ArmorSet set = ArmorSetsData.getInstance().getSet(chest.getId());
+				final ArmorSet set = ArmorSetsData.getInstance().getSet(chest.getId());
 				if ((set != null) && set.containAll(player))
 				{
 					switch (getStat())

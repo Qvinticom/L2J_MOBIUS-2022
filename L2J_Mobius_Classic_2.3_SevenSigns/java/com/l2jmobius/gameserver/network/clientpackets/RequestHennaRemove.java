@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -31,17 +31,17 @@ public final class RequestHennaRemove implements IClientIncomingPacket
 	private int _symbolId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_symbolId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -52,20 +52,20 @@ public final class RequestHennaRemove implements IClientIncomingPacket
 			return;
 		}
 		
-		L2Henna henna;
+		Henna henna;
 		boolean found = false;
 		for (int i = 1; i <= 3; i++)
 		{
-			henna = activeChar.getHenna(i);
+			henna = player.getHenna(i);
 			if ((henna != null) && (henna.getDyeId() == _symbolId))
 			{
-				if (activeChar.getAdena() >= henna.getCancelFee())
+				if (player.getAdena() >= henna.getCancelFee())
 				{
-					activeChar.removeHenna(i);
+					player.removeHenna(i);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 					client.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 				found = true;
@@ -75,7 +75,7 @@ public final class RequestHennaRemove implements IClientIncomingPacket
 		// TODO: Test.
 		if (!found)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Player " + activeChar + " requested Henna Draw remove without any henna.");
+			LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " requested Henna Draw remove without any henna.");
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}

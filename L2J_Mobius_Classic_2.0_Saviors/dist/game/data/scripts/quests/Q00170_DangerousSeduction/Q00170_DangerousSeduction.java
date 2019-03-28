@@ -18,8 +18,8 @@ package quests.Q00170_DangerousSeduction;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,29 +54,29 @@ public class Q00170_DangerousSeduction extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		if (event.equalsIgnoreCase("30305-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 			giveItems(player, NIGHTMARE_CRYSTAL, 1);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.SEND_MY_SOUL_TO_LICH_KING_ICARUS));
 		}
@@ -84,12 +84,12 @@ public class Q00170_DangerousSeduction extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -98,14 +98,14 @@ public class Q00170_DangerousSeduction extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "30305-05.html";
 				}
 				else
 				{
 					rewardItems(player, PIECE_BONE_BREASTPLATE, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30305-06.html";
 				}
 				break;

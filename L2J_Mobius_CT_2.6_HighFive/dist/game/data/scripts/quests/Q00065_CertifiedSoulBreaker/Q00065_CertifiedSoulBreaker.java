@@ -22,8 +22,8 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -82,7 +82,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ("DESPAWN_5".equals(event))
 		{
@@ -94,8 +94,8 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 		}
 		else if ("DESPAWN_70".equals(event))
 		{
-			final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
-			final L2PcInstance c0 = npc.getVariables().getObject("player0", L2PcInstance.class);
+			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
+			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
 			if (npc0 != null)
 			{
 				if (npc0.getVariables().getBoolean("SPAWNED"))
@@ -295,7 +295,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -316,15 +316,15 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 				}
 				case GUARDIAN_ANGEL:
 				{
-					final L2PcInstance c0 = npc.getVariables().getObject("player0", L2PcInstance.class);
-					final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
+					final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (killer == c0)
 					{
 						if (c0 != null)
 						{
 							if (qs.isMemoState(12))
 							{
-								final L2Npc katenar = addSpawn(KATENAR, killer.getX() + 20, killer.getY() + 20, killer.getZ(), 0, false, 0);
+								final Npc katenar = addSpawn(KATENAR, killer.getX() + 20, killer.getY() + 20, killer.getZ(), 0, false, 0);
 								katenar.getVariables().set("player0", killer);
 								katenar.getVariables().set("npc0", npc);
 								qs.setMemoState(13);
@@ -350,7 +350,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int memoState = qs.getMemoState();
@@ -679,7 +679,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 						{
 							npc.getVariables().set("SPAWNED", true);
 							npc.getVariables().set("PLAYER_ID", player.getObjectId());
-							final L2Npc angel = addSpawn(GUARDIAN_ANGEL, 36110, 191921, -3712, 0, true, 0, false);
+							final Npc angel = addSpawn(GUARDIAN_ANGEL, 36110, 191921, -3712, 0, true, 0, false);
 							angel.getVariables().set("npc0", npc);
 							angel.getVariables().set("player0", player);
 							addAttackDesire(angel, player);
@@ -700,7 +700,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 						{
 							npc.getVariables().set("SPAWNED", true);
 							npc.getVariables().set("PLAYER_ID", player.getObjectId());
-							final L2Npc katenar = addSpawn(KATENAR, 36110, 191921, -3712, 0, false, 0);
+							final Npc katenar = addSpawn(KATENAR, 36110, 191921, -3712, 0, false, 0);
 							katenar.getVariables().set("player0", player);
 							katenar.getVariables().set("npc0", npc);
 							htmltext = "32243-06.html";
@@ -733,7 +733,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == SUSPICIOUS_MAN)
 		{
@@ -744,7 +744,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 		}
 		else if (npc.getId() == GUARDIAN_ANGEL)
 		{
-			final L2PcInstance c0 = npc.getVariables().getObject("player0", L2PcInstance.class);
+			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
 			startQuestTimer("DESPAWN_70", 70000, npc, null);
 			if (c0 != null)
 			{

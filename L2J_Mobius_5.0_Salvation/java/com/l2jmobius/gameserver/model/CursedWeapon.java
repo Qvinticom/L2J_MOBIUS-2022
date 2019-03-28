@@ -29,13 +29,13 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.L2Party.MessageType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party.MessageType;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -74,8 +74,8 @@ public class CursedWeapon implements INamable
 	long _endTime = 0;
 	
 	private int _playerId = 0;
-	protected L2PcInstance _player = null;
-	private L2ItemInstance _item = null;
+	protected PlayerInstance _player = null;
+	private ItemInstance _item = null;
 	private int _playerReputation = 0;
 	private int _playerPkKills = 0;
 	protected int transformationId = 0;
@@ -105,11 +105,11 @@ public class CursedWeapon implements INamable
 				removeSkill();
 				
 				// Remove
-				_player.getInventory().unEquipItemInBodySlot(L2Item.SLOT_LR_HAND);
+				_player.getInventory().unEquipItemInBodySlot(Item.SLOT_LR_HAND);
 				_player.storeMe();
 				
 				// Destroy
-				final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				final ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
 					final InventoryUpdate iu = new InventoryUpdate();
@@ -170,7 +170,7 @@ public class CursedWeapon implements INamable
 			if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
 			{
 				// Destroy
-				final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				final ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
 					final InventoryUpdate iu = new InventoryUpdate();
@@ -245,12 +245,12 @@ public class CursedWeapon implements INamable
 		}
 	}
 	
-	private void dropIt(L2Attackable attackable, L2PcInstance player)
+	private void dropIt(Attackable attackable, PlayerInstance player)
 	{
 		dropIt(attackable, player, null, true);
 	}
 	
-	private void dropIt(L2Attackable attackable, L2PcInstance player, L2Character killer, boolean fromMonster)
+	private void dropIt(Attackable attackable, PlayerInstance player, Creature killer, boolean fromMonster)
 	{
 		_isActivated = false;
 		
@@ -274,7 +274,7 @@ public class CursedWeapon implements INamable
 			_player.setCursedWeaponEquippedId(0);
 			removeSkill();
 			_player.abortAttack();
-			// L2ItemInstance item = _player.getInventory().getItemByItemId(_itemId);
+			// ItemInstance item = _player.getInventory().getItemByItemId(_itemId);
 			// _player.getInventory().dropItem("DieDrop", item, _player, null);
 			// _player.getInventory().getItemByItemId(_itemId).dropMe(_player, _player.getX(), _player.getY(), _player.getZ());
 		}
@@ -379,7 +379,7 @@ public class CursedWeapon implements INamable
 		
 	}
 	
-	public boolean checkDrop(L2Attackable attackable, L2PcInstance player)
+	public boolean checkDrop(Attackable attackable, PlayerInstance player)
 	{
 		if (Rnd.get(100000) < _dropRate)
 		{
@@ -396,7 +396,7 @@ public class CursedWeapon implements INamable
 		return false;
 	}
 	
-	public void activate(L2PcInstance player, L2ItemInstance item)
+	public void activate(PlayerInstance player, ItemInstance item)
 	{
 		// If the player is mounted, attempt to unmount first.
 		// Only allow picking up the cursed weapon if unmounting is successful.
@@ -434,7 +434,7 @@ public class CursedWeapon implements INamable
 		
 		// Equip with the weapon
 		_item = item;
-		// L2ItemInstance[] items =
+		// ItemInstance[] items =
 		_player.getInventory().equipItem(_item);
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1);
 		sm.addItemName(_item);
@@ -496,7 +496,7 @@ public class CursedWeapon implements INamable
 		}
 	}
 	
-	public void dropIt(L2Character killer)
+	public void dropIt(Creature killer)
 	{
 		if (Rnd.get(100) <= _disapearChance)
 		{
@@ -598,12 +598,12 @@ public class CursedWeapon implements INamable
 		_endTime = endTime;
 	}
 	
-	public void setPlayer(L2PcInstance player)
+	public void setPlayer(PlayerInstance player)
 	{
 		_player = player;
 	}
 	
-	public void setItem(L2ItemInstance item)
+	public void setItem(ItemInstance item)
 	{
 		_item = item;
 	}
@@ -644,7 +644,7 @@ public class CursedWeapon implements INamable
 		return _playerId;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
@@ -688,7 +688,7 @@ public class CursedWeapon implements INamable
 		return _endTime - System.currentTimeMillis();
 	}
 	
-	public void goTo(L2PcInstance player)
+	public void goTo(PlayerInstance player)
 	{
 		if (player == null)
 		{

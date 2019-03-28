@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GetOnVehicle implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _boatObjId;
 	private final Location _pos;
 	
@@ -36,7 +36,7 @@ public class GetOnVehicle implements IClientOutgoingPacket
 	 */
 	public GetOnVehicle(int charObjId, int boatObjId, Location pos)
 	{
-		_charObjId = charObjId;
+		_objectId = charObjId;
 		_boatObjId = boatObjId;
 		_pos = pos;
 	}
@@ -46,7 +46,7 @@ public class GetOnVehicle implements IClientOutgoingPacket
 	{
 		OutgoingPackets.GET_ON_VEHICLE.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_boatObjId);
 		packet.writeD(_pos.getX());
 		packet.writeD(_pos.getY());

@@ -45,7 +45,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.model.data.AccountInfo;
-import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.LoginClient;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
@@ -59,7 +59,7 @@ public class LoginController
 	public static final int LOGIN_TIMEOUT = 60 * 1000;
 	
 	/** Authed Clients on LoginServer */
-	protected Map<String, L2LoginClient> _loginServerClients = new ConcurrentHashMap<>();
+	protected Map<String, LoginClient> _loginServerClients = new ConcurrentHashMap<>();
 	
 	private final Map<InetAddress, Integer> _failedLoginAttemps = new HashMap<>();
 	private final Map<InetAddress, Long> _bannedIps = new ConcurrentHashMap<>();
@@ -103,7 +103,7 @@ public class LoginController
 		return _blowfishKeyGenerator.generateKey();
 	}
 	
-	public SessionKey assignSessionKeyToClient(String account, L2LoginClient client)
+	public SessionKey assignSessionKeyToClient(String account, LoginClient client)
 	{
 		final SessionKey key = new SessionKey(Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt());
 		
@@ -120,7 +120,7 @@ public class LoginController
 		_loginServerClients.remove(account);
 	}
 	
-	public L2LoginClient getAuthedClient(String account)
+	public LoginClient getAuthedClient(String account)
 	{
 		return _loginServerClients.get(account);
 	}
@@ -232,7 +232,7 @@ public class LoginController
 		}
 	}
 	
-	public AuthLoginResult tryCheckinAccount(L2LoginClient client, InetAddress address, AccountInfo info)
+	public AuthLoginResult tryCheckinAccount(LoginClient client, InetAddress address, AccountInfo info)
 	{
 		if (info.getAccessLevel() < 0)
 		{
@@ -343,7 +343,7 @@ public class LoginController
 	
 	public SessionKey getKeyForAccount(String account)
 	{
-		final L2LoginClient client = _loginServerClients.get(account);
+		final LoginClient client = _loginServerClients.get(account);
 		if (client != null)
 		{
 			return client.getSessionKey();
@@ -395,7 +395,7 @@ public class LoginController
 	 * @param serverId
 	 * @return
 	 */
-	public boolean isLoginPossible(L2LoginClient client, int serverId)
+	public boolean isLoginPossible(LoginClient client, int serverId)
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		final int access = client.getAccessLevel();
@@ -458,7 +458,7 @@ public class LoginController
 	
 	public void setCharactersOnServer(String account, int charsNum, long[] timeToDel, int serverId)
 	{
-		final L2LoginClient client = _loginServerClients.get(account);
+		final LoginClient client = _loginServerClients.get(account);
 		
 		if (client == null)
 		{
@@ -493,7 +493,7 @@ public class LoginController
 	 * @param info the account info to checkin
 	 * @return true when ok to checkin, false otherwise
 	 */
-	public boolean canCheckin(L2LoginClient client, InetAddress address, AccountInfo info)
+	public boolean canCheckin(LoginClient client, InetAddress address, AccountInfo info)
 	{
 		try
 		{
@@ -615,7 +615,7 @@ public class LoginController
 		{
 			while (!isInterrupted())
 			{
-				for (L2LoginClient client : _loginServerClients.values())
+				for (LoginClient client : _loginServerClients.values())
 				{
 					if (client == null)
 					{

@@ -17,17 +17,17 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveWarList extends L2GameServerPacket
+public class PledgeReceiveWarList extends GameServerPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final int _tab;
 	
-	public PledgeReceiveWarList(L2Clan clan, int tab)
+	public PledgeReceiveWarList(Clan clan, int tab)
 	{
 		_clan = clan;
 		_tab = tab;
@@ -44,7 +44,7 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 		writeD(_tab == 0 ? _clan.getWarList().size() : _clan.getAttackerList().size());
 		for (Integer i : _tab == 0 ? _clan.getWarList() : _clan.getAttackerList())
 		{
-			final L2Clan clan = ClanTable.getInstance().getClan(i);
+			final Clan clan = ClanTable.getInstance().getClan(i);
 			if (clan == null)
 			{
 				continue;

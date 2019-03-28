@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
-public class EffectSilenceMagicPhysical extends L2Effect
+public class EffectSilenceMagicPhysical extends Effect
 {
 	
 	public EffectSilenceMagicPhysical(Env env, EffectTemplate template)
@@ -30,7 +30,7 @@ public class EffectSilenceMagicPhysical extends L2Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return L2Effect.EffectType.SILENCE_MAGIC_PHYSICAL;
+		return Effect.EffectType.SILENCE_MAGIC_PHYSICAL;
 	}
 	
 	@Override

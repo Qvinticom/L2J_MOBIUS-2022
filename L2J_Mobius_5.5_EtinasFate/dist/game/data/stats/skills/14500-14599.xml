@@ -327,7 +327,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
@@ -666,7 +666,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
@@ -878,7 +878,7 @@
 				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
 				<skillLevel>2</skillLevel>
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -1132,7 +1132,7 @@
 				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
 				<skillLevel>2</skillLevel>
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -2285,7 +2285,7 @@
 				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
 				<skillLevel>2</skillLevel>
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>

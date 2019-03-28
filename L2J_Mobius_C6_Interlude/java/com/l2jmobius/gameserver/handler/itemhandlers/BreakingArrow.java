@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -34,26 +34,26 @@ public class BreakingArrow implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		final int itemId = item.getItemId();
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
-		final L2PcInstance activeChar = (L2PcInstance) playable;
-		final L2Object target = activeChar.getTarget();
-		if (!(target instanceof L2GrandBossInstance))
+		final PlayerInstance player = (PlayerInstance) playable;
+		final WorldObject target = player.getTarget();
+		if (!(target instanceof GrandBossInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		final L2GrandBossInstance Frintezza = (L2GrandBossInstance) target;
-		if (!activeChar.isInsideRadius(Frintezza, 500, false, false))
+		final GrandBossInstance Frintezza = (GrandBossInstance) target;
+		if (!player.isInsideRadius(Frintezza, 500, false, false))
 		{
-			activeChar.sendMessage("The purpose is inaccessible");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("The purpose is inaccessible");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		if ((itemId == 8192) && (Frintezza.getObjectId() == 29045))

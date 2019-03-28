@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author ProGramMoS
  */
-public final class RequestJoinSiege extends L2GameClientPacket
+public final class RequestJoinSiege extends GameClientPacket
 {
 	private int _castleId;
 	private int _isAttacker;
@@ -43,7 +43,7 @@ public final class RequestJoinSiege extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{

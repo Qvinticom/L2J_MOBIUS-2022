@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Playable;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author Faror
  */
-final class EffectPhoenixBless extends L2Effect
+final class EffectPhoenixBless extends Effect
 {
 	public EffectPhoenixBless(Env env, EffectTemplate template)
 	{
@@ -39,18 +39,18 @@ final class EffectPhoenixBless extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			((L2Playable) getEffected()).startPhoenixBlessing(this);
+			((Playable) getEffected()).startPhoenixBlessing(this);
 		}
 	}
 	
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			((L2Playable) getEffected()).stopPhoenixBlessing(this);
+			((Playable) getEffected()).stopPhoenixBlessing(this);
 		}
 	}
 	

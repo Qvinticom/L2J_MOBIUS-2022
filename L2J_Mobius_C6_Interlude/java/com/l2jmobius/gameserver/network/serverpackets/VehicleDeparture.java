@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 
 /**
  * @author Maktakien
  */
-public class VehicleDeparture extends L2GameServerPacket
+public class VehicleDeparture extends GameServerPacket
 {
-	private final L2BoatInstance _boat;
+	private final BoatInstance _boat;
 	private final int _speed1;
 	private final int _speed2;// rotation
 	private final int _x;
@@ -38,7 +38,7 @@ public class VehicleDeparture extends L2GameServerPacket
 	 * @param y
 	 * @param z
 	 */
-	public VehicleDeparture(L2BoatInstance boat, int speed1, int speed2, int x, int y, int z)
+	public VehicleDeparture(BoatInstance boat, int speed1, int speed2, int x, int y, int z)
 	{
 		_boat = boat;
 		_speed1 = speed1;

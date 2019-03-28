@@ -17,9 +17,9 @@
 package quests.Q231_TestOfTheMaestro;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -82,7 +82,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -138,15 +138,15 @@ public class Q231_TestOfTheMaestro extends Quest
 		// Spawns 3 King Bugbears
 		else if (event.equals("spawn_bugbears"))
 		{
-			final L2Attackable bugbear1 = (L2Attackable) addSpawn(KING_BUGBEAR, 140333, -194153, -3138, 0, false, 200000);
+			final Attackable bugbear1 = (Attackable) addSpawn(KING_BUGBEAR, 140333, -194153, -3138, 0, false, 200000);
 			bugbear1.addDamageHate(player, 0, 999);
 			bugbear1.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			
-			final L2Attackable bugbear2 = (L2Attackable) addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000);
+			final Attackable bugbear2 = (Attackable) addSpawn(KING_BUGBEAR, 140395, -194147, -3146, 0, false, 200000);
 			bugbear2.addDamageHate(player, 0, 999);
 			bugbear2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			
-			final L2Attackable bugbear3 = (L2Attackable) addSpawn(KING_BUGBEAR, 140304, -194082, -3157, 0, false, 200000);
+			final Attackable bugbear3 = (Attackable) addSpawn(KING_BUGBEAR, 140304, -194082, -3157, 0, false, 200000);
 			bugbear3.addDamageHate(player, 0, 999);
 			bugbear3.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			
@@ -157,7 +157,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -416,7 +416,7 @@ public class Q231_TestOfTheMaestro extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
 		if (st == null)

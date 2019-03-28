@@ -20,16 +20,16 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.model.L2PetData;
+import com.l2jmobius.gameserver.model.PetData;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.holders.PetItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
@@ -45,9 +45,9 @@ public final class SummonPet extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.SUMMON_PET;
+		return EffectType.SUMMON_PET;
 	}
 	
 	@Override
@@ -57,14 +57,14 @@ public final class SummonPet extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
+		final PlayerInstance player = effector.getActingPlayer();
 		
 		if (player.hasPet() || player.isMounted())
 		{
@@ -79,21 +79,21 @@ public final class SummonPet extends AbstractEffect
 			return;
 		}
 		
-		final L2ItemInstance collar = holder.getItem();
+		final ItemInstance collar = holder.getItem();
 		if (player.getInventory().getItemByObjectId(collar.getObjectId()) != collar)
 		{
 			LOGGER.warning("Player: " + player + " is trying to summon pet from item that he doesn't owns.");
 			return;
 		}
 		
-		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
+		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(collar.getId());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
 			return;
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
-		final L2PetInstance pet = L2PetInstance.spawnPet(npcTemplate, player, collar);
+		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
+		final PetInstance pet = PetInstance.spawnPet(npcTemplate, player, collar);
 		
 		pet.setShowSummonAnimation(true);
 		if (!pet.isRespawned())

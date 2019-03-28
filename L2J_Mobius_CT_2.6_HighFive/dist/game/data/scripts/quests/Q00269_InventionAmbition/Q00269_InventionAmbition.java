@@ -19,8 +19,8 @@ package quests.Q00269_InventionAmbition;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -60,10 +60,10 @@ public final class Q00269_InventionAmbition extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -83,14 +83,14 @@ public final class Q00269_InventionAmbition extends Quest
 			{
 				if (player.getLevel() >= MIN_LVL)
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "32486-07.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -104,26 +104,26 @@ public final class Q00269_InventionAmbition extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(killer, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
+		if(qs != null)
 		{
-			giveItemRandomly(st.getPlayer(), npc, ENERGY_ORE, 1, 0, MONSTERS.get(npc.getId()), true);
+			giveItemRandomly(qs.getPlayer(), npc, ENERGY_ORE, 1, 0, MONSTERS.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= MIN_LVL) ? "32486-01.htm" : "32486-02.html";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			if (hasQuestItems(player, ENERGY_ORE))
 			{

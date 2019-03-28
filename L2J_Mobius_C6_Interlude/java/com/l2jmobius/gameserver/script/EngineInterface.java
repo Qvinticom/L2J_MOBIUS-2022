@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 
 /**
@@ -56,7 +56,7 @@ public interface EngineInterface
 	
 	TeleportLocationTable teleTable = TeleportLocationTable.getInstance();
 	LevelUpData levelUpData = LevelUpData.getInstance();
-	L2World world = L2World.getInstance();
+	World world = World.getInstance();
 	SpawnTable spawnTable = SpawnTable.getInstance();
 	GameTimeController gameTimeController = GameTimeController.getInstance();
 	Announcements announcements = Announcements.getInstance();

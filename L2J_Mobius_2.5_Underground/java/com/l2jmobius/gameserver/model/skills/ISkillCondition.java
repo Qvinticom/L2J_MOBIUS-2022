@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.model.skills;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author NosBit
  */
 public interface ISkillCondition
 {
-	boolean canUse(L2Character caster, Skill skill, L2Object target);
+	boolean canUse(Creature caster, Skill skill, WorldObject target);
 }

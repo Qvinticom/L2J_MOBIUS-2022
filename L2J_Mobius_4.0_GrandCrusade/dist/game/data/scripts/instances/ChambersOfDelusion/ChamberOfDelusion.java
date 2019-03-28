@@ -28,11 +28,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -104,7 +104,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		// Choose start room
 		changeRoom(instance);
@@ -119,7 +119,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 			}
 			else
 			{
-				for (L2PcInstance plr : instance.getAllowed())
+				for (PlayerInstance plr : instance.getAllowed())
 				{
 					if ((plr != null) && plr.isOnline() && !plr.isInParty())
 					{
@@ -148,7 +148,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		// Teleport player to instance
 		super.onEnter(player, instance, firstEnter);
@@ -169,7 +169,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	protected void teleportPlayerIn(L2PcInstance player, Instance instance)
+	protected void teleportPlayerIn(PlayerInstance player, Instance instance)
 	{
 		final int room = instance.getParameters().getInt("currentRoom");
 		final Location loc = instance.getEnterLocations().get(room);
@@ -177,7 +177,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -238,7 +238,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		if (ENTRANCE_GATEKEEPER.containsKey(npcId))
@@ -249,7 +249,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if (!npc.isDead() && CommonUtil.contains(BOX, npc.getId()) && ((skill.getId() == FAIL_SKILL.getSkillId()) || (skill.getId() == SUCCESS_SKILL.getSkillId())))
 		{
@@ -259,7 +259,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onEventReceived(String eventName, L2Npc sender, L2Npc receiver, L2Object reference)
+	public String onEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference)
 	{
 		switch (eventName)
 		{
@@ -280,7 +280,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet, Skill skill)
 	{
 		if (!npc.isBusy() && (npc.getCurrentHp() < (npc.getMaxHp() / 10)))
 		{
@@ -315,7 +315,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -394,7 +394,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 			
 			// Broadcast instance duration change (NPC message)
 			final int raidGatekeeper = world.getTemplateParameters().getInt("raidGatekeeper");
-			final L2Npc gatekeeper = world.getNpc(raidGatekeeper);
+			final Npc gatekeeper = world.getNpc(raidGatekeeper);
 			if (gatekeeper != null)
 			{
 				gatekeeper.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TWENTY_MINUTES_ARE_ADDED_TO_THE_REMAINING_TIME_IN_THE_INSTANT_ZONE);
@@ -417,7 +417,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 				try
 				{
 					// Send earthquake packet
-					for (L2PcInstance player : world.getPlayers())
+					for (PlayerInstance player : world.getPlayers())
 					{
 						player.sendPacket(new Earthquake(player, 20, 10));
 					}

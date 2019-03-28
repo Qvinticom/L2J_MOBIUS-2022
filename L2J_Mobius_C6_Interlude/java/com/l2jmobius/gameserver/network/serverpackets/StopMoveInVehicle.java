@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Maktakien
  */
-public class StopMoveInVehicle extends L2GameServerPacket
+public class StopMoveInVehicle extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _boatId;
 	
 	/**
 	 * @param player
 	 * @param boatid
 	 */
-	public StopMoveInVehicle(L2PcInstance player, int boatid)
+	public StopMoveInVehicle(PlayerInstance player, int boatid)
 	{
-		_activeChar = player;
+		_player = player;
 		_boatId = boatid;
 	}
 	
@@ -44,11 +44,11 @@ public class StopMoveInVehicle extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeC(0x72);
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeD(_boatId);
-		writeD(_activeChar.getInBoatPosition().getX());
-		writeD(_activeChar.getInBoatPosition().getY());
-		writeD(_activeChar.getInBoatPosition().getZ());
-		writeD(_activeChar.getPosition().getHeading());
+		writeD(_player.getInBoatPosition().getX());
+		writeD(_player.getInBoatPosition().getY());
+		writeD(_player.getInBoatPosition().getZ());
+		writeD(_player.getPosition().getHeading());
 	}
 }

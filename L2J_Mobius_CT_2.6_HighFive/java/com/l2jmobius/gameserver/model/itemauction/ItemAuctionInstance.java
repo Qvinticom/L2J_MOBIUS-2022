@@ -45,10 +45,10 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -476,8 +476,8 @@ public final class ItemAuctionInstance
 		final ItemAuctionBid bid = auction.getHighestBid();
 		if (bid != null)
 		{
-			final L2ItemInstance item = auction.createNewItemInstance();
-			final L2PcInstance player = bid.getPlayer();
+			final ItemInstance item = auction.createNewItemInstance();
+			final PlayerInstance player = bid.getPlayer();
 			if (player != null)
 			{
 				player.getWarehouse().addItem("ItemAuction", item, null, null);
@@ -490,7 +490,7 @@ public final class ItemAuctionInstance
 				item.setOwnerId(bid.getPlayerObjId());
 				item.setItemLocation(ItemLocation.WAREHOUSE);
 				item.updateDatabase();
-				L2World.getInstance().removeObject(item);
+				World.getInstance().removeObject(item);
 				
 				LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Auction " + auction.getAuctionId() + " has finished. Highest bid by " + CharNameTable.getInstance().getNameById(bid.getPlayerObjId()) + " for instance " + _instanceId);
 			}

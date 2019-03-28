@@ -16,12 +16,12 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.skills.Env;
 
-class EffectHealOverTime extends L2Effect
+class EffectHealOverTime extends Effect
 {
 	public EffectHealOverTime(Env env, EffectTemplate template)
 	{
@@ -42,7 +42,7 @@ class EffectHealOverTime extends L2Effect
 			return false;
 		}
 		
-		if (getEffected() instanceof L2DoorInstance)
+		if (getEffected() instanceof DoorInstance)
 		{
 			return false;
 		}

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.skills.conditions;
 
 import com.l2jmobius.gameserver.skills.Env;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
+import com.l2jmobius.gameserver.templates.item.Weapon;
 
 /**
  * @author mkizub
@@ -39,7 +39,7 @@ public class ConditionTargetUsesWeaponKind extends Condition
 			return false;
 		}
 		
-		final L2Weapon item = env.target.getActiveWeaponItem();
+		final Weapon item = env.target.getActiveWeaponItem();
 		
 		if (item == null)
 		{

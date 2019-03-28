@@ -20,9 +20,9 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Dice;
@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.util.Util;
 public class RollingDice implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -41,47 +41,47 @@ public class RollingDice implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final PlayerInstance player = playable.getActingPlayer();
 		final int itemId = item.getId();
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
 			return false;
 		}
 		
-		final int number = rollDice(activeChar);
+		final int number = rollDice(player);
 		if (number == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
 			return false;
 		}
 		
 		// Mobius: Retail dice position land calculation.
-		final double angle = Util.convertHeadingToDegree(activeChar.getHeading());
+		final double angle = Util.convertHeadingToDegree(player.getHeading());
 		final double radian = Math.toRadians(angle);
 		final double course = Math.toRadians(180);
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * 40);
 		final int y1 = (int) (Math.sin(Math.PI + radian + course) * 40);
-		final int x = activeChar.getX() + x1;
-		final int y = activeChar.getY() + y1;
-		final int z = activeChar.getZ();
-		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceWorld());
+		final int x = player.getX() + x1;
+		final int y = player.getY() + y1;
+		final int z = player.getZ();
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(player.getX(), player.getY(), player.getZ(), x, y, z, player.getInstanceWorld());
 		
-		Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), itemId, number, destination.getX(), destination.getY(), destination.getZ()));
+		Broadcast.toSelfAndKnownPlayers(player, new Dice(player.getObjectId(), itemId, number, destination.getX(), destination.getY(), destination.getZ()));
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2);
-		sm.addString(activeChar.getName());
+		sm.addString(player.getName());
 		sm.addInt(number);
 		
-		activeChar.sendPacket(sm);
-		if (activeChar.isInsideZone(ZoneId.PEACE))
+		player.sendPacket(sm);
+		if (player.isInsideZone(ZoneId.PEACE))
 		{
-			Broadcast.toKnownPlayers(activeChar, sm);
+			Broadcast.toKnownPlayers(player, sm);
 		}
-		else if (activeChar.isInParty()) // TODO: Verify this!
+		else if (player.isInParty()) // TODO: Verify this!
 		{
-			activeChar.getParty().broadcastToPartyMembers(activeChar, sm);
+			player.getParty().broadcastToPartyMembers(player, sm);
 		}
 		return true;
 		
@@ -91,7 +91,7 @@ public class RollingDice implements IItemHandler
 	 * @param player
 	 * @return
 	 */
-	private int rollDice(L2PcInstance player)
+	private int rollDice(PlayerInstance player)
 	{
 		// Check if the dice is ready
 		if (!player.getFloodProtectors().getRollDice().tryPerformAction("roll dice"))

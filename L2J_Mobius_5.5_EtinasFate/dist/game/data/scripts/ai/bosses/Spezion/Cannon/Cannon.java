@@ -19,11 +19,11 @@ package ai.bosses.Spezion.Cannon;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -73,7 +73,7 @@ public final class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -109,12 +109,12 @@ public final class Cannon extends AbstractNpcAI
 			}
 			case "LIGHT_CHECK":
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 1000, monster ->
+				World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 1000, monster ->
 				{
 					final int monsterId = monster.getId();
 					if (TRANSFORM_DATA.containsKey(monsterId))
 					{
-						final L2Npc transformed = addSpawn(TRANSFORM_DATA.get(monster.getId()), monster);
+						final Npc transformed = addSpawn(TRANSFORM_DATA.get(monster.getId()), monster);
 						transformed.getVariables().set("DROP_MEMORY_FRAGMENT", true);
 						transformed.getVariables().set("COUNTDOWN_TIME", 21);
 						startQuestTimer("COUTDOWN", 100, transformed, null);
@@ -144,7 +144,7 @@ public final class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getVariables().getBoolean("DROP_MEMORY_FRAGMENT", false))
 		{
@@ -159,14 +159,14 @@ public final class Cannon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("CANNON_RECHARGE", 1000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if (skill.getId() == PRESENT_SKILL.getSkillId())
 		{
@@ -174,14 +174,14 @@ public final class Cannon extends AbstractNpcAI
 			
 			npc.broadcastPacket(new Earthquake(npc, 10, 5));
 			npc.broadcastPacket(new OnEventTrigger(npcParams.getInt("TRIGGER_ID"), true));
-			final L2Npc light = addSpawn(INVISIBLE_NPC, npcParams.getInt("LIGHT_ZONE_POS_X"), npcParams.getInt("LIGHT_ZONE_POS_Y"), npcParams.getInt("LIGHT_ZONE_POS_Z"), 0, false, 10000);
+			final Npc light = addSpawn(INVISIBLE_NPC, npcParams.getInt("LIGHT_ZONE_POS_X"), npcParams.getInt("LIGHT_ZONE_POS_Y"), npcParams.getInt("LIGHT_ZONE_POS_Z"), 0, false, 10000);
 			startQuestTimer("LIGHT_CHECK", 500, light, null);
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "cannon.html";
 	}

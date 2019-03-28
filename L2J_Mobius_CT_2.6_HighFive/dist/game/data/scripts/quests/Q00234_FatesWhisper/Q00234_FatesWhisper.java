@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -157,7 +157,7 @@ public final class Q00234_FatesWhisper extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -186,7 +186,7 @@ public final class Q00234_FatesWhisper extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
@@ -520,7 +520,7 @@ public final class Q00234_FatesWhisper extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -1030,7 +1030,7 @@ public final class Q00234_FatesWhisper extends Quest
 		return htmltext;
 	}
 	
-	private boolean calculateReward(QuestState qs, L2PcInstance player, int REWARD)
+	private boolean calculateReward(QuestState qs, PlayerInstance player, int REWARD)
 	{
 		switch (qs.getMemoState())
 		{
@@ -1090,7 +1090,7 @@ public final class Q00234_FatesWhisper extends Quest
 		return false;
 	}
 	
-	private boolean getReward(QuestState qs, L2PcInstance player, int ITEM1, int ITEM2, int ITEM3, int ITEM4, int REWARD)
+	private boolean getReward(QuestState qs, PlayerInstance player, int ITEM1, int ITEM2, int ITEM3, int ITEM4, int REWARD)
 	{
 		if (hasAtLeastOneQuestItem(player, ITEM1, ITEM2, ITEM3, ITEM4))
 		{
@@ -1120,7 +1120,7 @@ public final class Q00234_FatesWhisper extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -1159,7 +1159,7 @@ public final class Q00234_FatesWhisper extends Quest
 				case SEAL_ANGEL:
 				case SEAL_ANGEL_R:
 				{
-					final L2PcInstance member = qs.getPlayer();
+					final PlayerInstance member = qs.getPlayer();
 					if ((member != null) && (getQuestItemsCount(member, Q_WHITE_FABRIC_Q0234) != 0))
 					{
 						takeItems(member, Q_WHITE_FABRIC_Q0234, 1);
@@ -1183,7 +1183,7 @@ public final class Q00234_FatesWhisper extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && (npc.getId() == BAIUM))
@@ -1199,7 +1199,7 @@ public final class Q00234_FatesWhisper extends Quest
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private QuestState getRandomPlayerFromParty(L2PcInstance player, L2Npc npc, int memoState)
+	private QuestState getRandomPlayerFromParty(PlayerInstance player, Npc npc, int memoState)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();

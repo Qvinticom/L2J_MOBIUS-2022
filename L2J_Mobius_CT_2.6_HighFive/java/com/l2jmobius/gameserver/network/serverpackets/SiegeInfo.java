@@ -22,8 +22,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -48,15 +48,15 @@ public class SiegeInfo implements IClientOutgoingPacket
 {
 	private Castle _castle;
 	private ClanHall _hall;
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public SiegeInfo(Castle castle, L2PcInstance player)
+	public SiegeInfo(Castle castle, PlayerInstance player)
 	{
 		_castle = castle;
 		_player = player;
 	}
 	
-	public SiegeInfo(ClanHall hall, L2PcInstance player)
+	public SiegeInfo(ClanHall hall, PlayerInstance player)
 	{
 		_hall = hall;
 		_player = player;
@@ -76,7 +76,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 			packet.writeD(ownerId);
 			if (ownerId > 0)
 			{
-				final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
+				final Clan owner = ClanTable.getInstance().getClan(ownerId);
 				if (owner != null)
 				{
 					packet.writeS(owner.getName()); // Clan Name
@@ -129,7 +129,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 			packet.writeD(ownerId);
 			if (ownerId > 0)
 			{
-				final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
+				final Clan owner = ClanTable.getInstance().getClan(ownerId);
 				if (owner != null)
 				{
 					packet.writeS(owner.getName()); // Clan Name

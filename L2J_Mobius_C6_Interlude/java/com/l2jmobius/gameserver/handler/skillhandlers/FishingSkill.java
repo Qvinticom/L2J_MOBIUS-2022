@@ -17,18 +17,18 @@
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Fishing;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Fishing;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.Weapon;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 
 public class FishingSkill implements ISkillHandler
 {
@@ -39,16 +39,16 @@ public class FishingSkill implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		
-		L2Fishing fish = player.GetFishCombat();
+		Fishing fish = player.GetFishCombat();
 		if (fish == null)
 		{
 			if (skill.getSkillType() == SkillType.PUMPING)
@@ -65,12 +65,12 @@ public class FishingSkill implements ISkillHandler
 			return;
 		}
 		
-		L2Weapon weaponItem = player.getActiveWeaponItem();
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getItemType() != L2WeaponType.ROD))
+		Weapon weaponItem = player.getActiveWeaponItem();
+		ItemInstance weaponInst = creature.getActiveWeaponInstance();
+		if ((weaponInst == null) || (weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-			activeChar.sendPacket(sm);
+			creature.sendPacket(sm);
 			return;
 		}
 		

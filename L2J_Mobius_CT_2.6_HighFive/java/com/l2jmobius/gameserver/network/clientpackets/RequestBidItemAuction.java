@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuction;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author Forsaiken
@@ -33,7 +33,7 @@ public final class RequestBidItemAuction implements IClientIncomingPacket
 	private long _bid;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_instanceId = packet.readD();
 		_bid = packet.readQ();
@@ -41,10 +41,10 @@ public final class RequestBidItemAuction implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -52,7 +52,7 @@ public final class RequestBidItemAuction implements IClientIncomingPacket
 		// can't use auction fp here
 		if (!client.getFloodProtectors().getTransaction().tryPerformAction("auction"))
 		{
-			activeChar.sendMessage("You are bidding too fast.");
+			player.sendMessage("You are bidding too fast.");
 			return;
 		}
 		
@@ -67,7 +67,7 @@ public final class RequestBidItemAuction implements IClientIncomingPacket
 			final ItemAuction auction = instance.getCurrentAuction();
 			if (auction != null)
 			{
-				auction.registerBid(activeChar, _bid);
+				auction.registerBid(player, _bid);
 			}
 		}
 	}

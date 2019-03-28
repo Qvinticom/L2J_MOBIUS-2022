@@ -17,12 +17,11 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SocialAction extends L2GameServerPacket
+public class SocialAction extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _actionId;
 	
 	/**
@@ -32,7 +31,7 @@ public class SocialAction extends L2GameServerPacket
 	 */
 	public SocialAction(int playerId, int actionId)
 	{
-		_charObjId = playerId;
+		_objectId = playerId;
 		_actionId = actionId;
 	}
 	
@@ -40,7 +39,7 @@ public class SocialAction extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x2d);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_actionId);
 	}
 }

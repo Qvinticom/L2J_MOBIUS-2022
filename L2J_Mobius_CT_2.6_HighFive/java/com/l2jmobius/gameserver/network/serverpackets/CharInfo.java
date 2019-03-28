@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.actor.L2Decoy;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Decoy;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private int _objId;
 	private int _x;
 	private int _y;
@@ -72,38 +72,38 @@ public class CharInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_BELT
 	};
 	
-	public CharInfo(L2PcInstance cha, boolean gmSeeInvis)
+	public CharInfo(PlayerInstance player, boolean gmSeeInvis)
 	{
-		_activeChar = cha;
-		_objId = cha.getObjectId();
-		if ((_activeChar.getVehicle() != null) && (_activeChar.getInVehiclePosition() != null))
+		_player = player;
+		_objId = player.getObjectId();
+		if ((_player.getVehicle() != null) && (_player.getInVehiclePosition() != null))
 		{
-			_x = _activeChar.getInVehiclePosition().getX();
-			_y = _activeChar.getInVehiclePosition().getY();
-			_z = _activeChar.getInVehiclePosition().getZ();
-			_vehicleId = _activeChar.getVehicle().getObjectId();
+			_x = _player.getInVehiclePosition().getX();
+			_y = _player.getInVehiclePosition().getY();
+			_z = _player.getInVehiclePosition().getZ();
+			_vehicleId = _player.getVehicle().getObjectId();
 		}
 		else
 		{
-			_x = _activeChar.getX();
-			_y = _activeChar.getY();
-			_z = _activeChar.getZ();
+			_x = _player.getX();
+			_y = _player.getY();
+			_z = _player.getZ();
 		}
-		_heading = _activeChar.getHeading();
-		_mAtkSpd = _activeChar.getMAtkSpd();
-		_pAtkSpd = (int) _activeChar.getPAtkSpd();
+		_heading = _player.getHeading();
+		_mAtkSpd = _player.getMAtkSpd();
+		_pAtkSpd = (int) _player.getPAtkSpd();
 		
-		_moveMultiplier = cha.getMovementSpeedMultiplier();
-		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
-		_walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);
-		_swimRunSpd = (int) Math.round(cha.getSwimRunSpeed() / _moveMultiplier);
-		_swimWalkSpd = (int) Math.round(cha.getSwimWalkSpeed() / _moveMultiplier);
-		_flyRunSpd = cha.isFlying() ? _runSpd : 0;
-		_flyWalkSpd = cha.isFlying() ? _walkSpd : 0;
+		_moveMultiplier = player.getMovementSpeedMultiplier();
+		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
+		_walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);
+		_swimRunSpd = (int) Math.round(player.getSwimRunSpeed() / _moveMultiplier);
+		_swimWalkSpd = (int) Math.round(player.getSwimWalkSpeed() / _moveMultiplier);
+		_flyRunSpd = player.isFlying() ? _runSpd : 0;
+		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 		_gmSeeInvis = gmSeeInvis;
 	}
 	
-	public CharInfo(L2Decoy decoy, boolean gmSeeInvis)
+	public CharInfo(Decoy decoy, boolean gmSeeInvis)
 	{
 		this(decoy.getActingPlayer(), gmSeeInvis); // init
 		_objId = decoy.getObjectId();
@@ -122,26 +122,26 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_z);
 		packet.writeD(_vehicleId);
 		packet.writeD(_objId);
-		packet.writeS(_activeChar.getAppearance().getVisibleName());
-		packet.writeD(_activeChar.getRace().ordinal());
-		packet.writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
-		packet.writeD(_activeChar.getBaseClass());
+		packet.writeS(_player.getAppearance().getVisibleName());
+		packet.writeD(_player.getRace().ordinal());
+		packet.writeD(_player.getAppearance().getSex() ? 1 : 0);
+		packet.writeD(_player.getBaseClass());
 		
 		for (int slot : getPaperdollOrder())
 		{
-			packet.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
+			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot));
 		}
 		
 		for (int slot : getPaperdollOrder())
 		{
-			packet.writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
+			packet.writeD(_player.getInventory().getPaperdollAugmentationId(slot));
 		}
 		
-		packet.writeD(_activeChar.getInventory().getTalismanSlots());
-		packet.writeD(_activeChar.getInventory().canEquipCloak() ? 1 : 0);
+		packet.writeD(_player.getInventory().getTalismanSlots());
+		packet.writeD(_player.getInventory().canEquipCloak() ? 1 : 0);
 		
-		packet.writeD(_activeChar.getPvpFlag());
-		packet.writeD(_activeChar.getKarma());
+		packet.writeD(_player.getPvpFlag());
+		packet.writeD(_player.getKarma());
 		
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
@@ -157,23 +157,23 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_flyRunSpd);
 		packet.writeD(_flyWalkSpd);
 		packet.writeF(_moveMultiplier);
-		packet.writeF(_activeChar.getAttackSpeedMultiplier());
+		packet.writeF(_player.getAttackSpeedMultiplier());
 		
-		packet.writeF(_activeChar.getCollisionRadius());
-		packet.writeF(_activeChar.getCollisionHeight());
+		packet.writeF(_player.getCollisionRadius());
+		packet.writeF(_player.getCollisionHeight());
 		
-		packet.writeD(_activeChar.getAppearance().getHairStyle());
-		packet.writeD(_activeChar.getAppearance().getHairColor());
-		packet.writeD(_activeChar.getAppearance().getFace());
+		packet.writeD(_player.getAppearance().getHairStyle());
+		packet.writeD(_player.getAppearance().getHairColor());
+		packet.writeD(_player.getAppearance().getFace());
 		
-		packet.writeS(_gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
+		packet.writeS(_gmSeeInvis ? "Invisible" : _player.getAppearance().getVisibleTitle());
 		
-		if (!_activeChar.isCursedWeaponEquipped())
+		if (!_player.isCursedWeaponEquipped())
 		{
-			packet.writeD(_activeChar.getClanId());
-			packet.writeD(_activeChar.getClanCrestId());
-			packet.writeD(_activeChar.getAllyId());
-			packet.writeD(_activeChar.getAllyCrestId());
+			packet.writeD(_player.getClanId());
+			packet.writeD(_player.getClanCrestId());
+			packet.writeD(_player.getAllyId());
+			packet.writeD(_player.getAllyCrestId());
 		}
 		else
 		{
@@ -183,68 +183,68 @@ public class CharInfo implements IClientOutgoingPacket
 			packet.writeD(0x00);
 		}
 		
-		packet.writeC(_activeChar.isSitting() ? 0 : 1); // standing = 1 sitting = 0
-		packet.writeC(_activeChar.isRunning() ? 1 : 0); // running = 1 walking = 0
-		packet.writeC(_activeChar.isInCombat() ? 1 : 0);
+		packet.writeC(_player.isSitting() ? 0 : 1); // standing = 1 sitting = 0
+		packet.writeC(_player.isRunning() ? 1 : 0); // running = 1 walking = 0
+		packet.writeC(_player.isInCombat() ? 1 : 0);
 		
-		packet.writeC(!_activeChar.isInOlympiadMode() && _activeChar.isAlikeDead() ? 1 : 0);
+		packet.writeC(!_player.isInOlympiadMode() && _player.isAlikeDead() ? 1 : 0);
 		
-		packet.writeC(!_gmSeeInvis && _activeChar.isInvisible() ? 1 : 0); // invisible = 1 visible =0
+		packet.writeC(!_gmSeeInvis && _player.isInvisible() ? 1 : 0); // invisible = 1 visible =0
 		
-		packet.writeC(_activeChar.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-		packet.writeC(_activeChar.getPrivateStoreType().getId());
+		packet.writeC(_player.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+		packet.writeC(_player.getPrivateStoreType().getId());
 		
-		packet.writeH(_activeChar.getCubics().size());
-		for (int cubicId : _activeChar.getCubics().keySet())
+		packet.writeH(_player.getCubics().size());
+		for (int cubicId : _player.getCubics().keySet())
 		{
 			packet.writeH(cubicId);
 		}
 		
-		packet.writeC(_activeChar.isInPartyMatchRoom() ? 1 : 0);
+		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
 		
-		packet.writeD(_gmSeeInvis ? (_activeChar.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _activeChar.getAbnormalVisualEffects());
+		packet.writeD(_gmSeeInvis ? (_player.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _player.getAbnormalVisualEffects());
 		
-		packet.writeC(_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0);
+		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
 		
-		packet.writeH(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
-		packet.writeD(_activeChar.getMountNpcId() + 1000000);
-		packet.writeD(_activeChar.getClassId().getId());
+		packet.writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
+		packet.writeD(_player.getMountNpcId() + 1000000);
+		packet.writeD(_player.getClassId().getId());
 		packet.writeD(0x00); // ?
-		packet.writeC(_activeChar.isMounted() ? 0 : _activeChar.getEnchantEffect());
+		packet.writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
 		
-		packet.writeC(_activeChar.getTeam().getId());
+		packet.writeC(_player.getTeam().getId());
 		
-		packet.writeD(_activeChar.getClanCrestLargeId());
-		packet.writeC(_activeChar.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
-		packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
+		packet.writeD(_player.getClanCrestLargeId());
+		packet.writeC(_player.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
+		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
 		
-		packet.writeC(_activeChar.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
-		packet.writeD(_activeChar.getFishx());
-		packet.writeD(_activeChar.getFishy());
-		packet.writeD(_activeChar.getFishz());
+		packet.writeC(_player.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
+		packet.writeD(_player.getFishx());
+		packet.writeD(_player.getFishy());
+		packet.writeD(_player.getFishz());
 		
-		packet.writeD(_activeChar.getAppearance().getNameColor());
+		packet.writeD(_player.getAppearance().getNameColor());
 		
 		packet.writeD(_heading);
 		
-		packet.writeD(_activeChar.getPledgeClass());
-		packet.writeD(_activeChar.getPledgeType());
+		packet.writeD(_player.getPledgeClass());
+		packet.writeD(_player.getPledgeType());
 		
-		packet.writeD(_activeChar.getAppearance().getTitleColor());
+		packet.writeD(_player.getAppearance().getTitleColor());
 		
-		packet.writeD(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+		packet.writeD(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
 		
-		packet.writeD(_activeChar.getClanId() > 0 ? _activeChar.getClan().getReputationScore() : 0);
+		packet.writeD(_player.getClanId() > 0 ? _player.getClan().getReputationScore() : 0);
 		
 		// T1
-		packet.writeD(_activeChar.getTransformationDisplayId());
-		packet.writeD(_activeChar.getAgathionId());
+		packet.writeD(_player.getTransformationDisplayId());
+		packet.writeD(_player.getAgathionId());
 		
 		// T2
 		packet.writeD(0x01);
 		
 		// T2.3
-		packet.writeD(_activeChar.getAbnormalVisualEffectSpecial());
+		packet.writeD(_player.getAbnormalVisualEffectSpecial());
 		return true;
 	}
 	

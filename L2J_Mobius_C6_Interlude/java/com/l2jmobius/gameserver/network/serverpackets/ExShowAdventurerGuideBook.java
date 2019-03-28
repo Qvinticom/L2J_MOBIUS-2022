@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch (trigger).
  * @author KenM
  */
-public class ExShowAdventurerGuideBook extends L2GameServerPacket
+public class ExShowAdventurerGuideBook extends GameServerPacket
 {
 	@Override
 	protected void writeImpl()

@@ -19,21 +19,21 @@ package com.l2jmobius.gameserver.model;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik
  */
 public class PartyMatchWaitingList
 {
-	private final List<L2PcInstance> _members;
+	private final List<PlayerInstance> _members;
 	
 	protected PartyMatchWaitingList()
 	{
 		_members = new CopyOnWriteArrayList<>();
 	}
 	
-	public void addPlayer(L2PcInstance player)
+	public void addPlayer(PlayerInstance player)
 	{
 		// player.setPartyWait(1);
 		if (!_members.contains(player))
@@ -42,7 +42,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public void removePlayer(L2PcInstance player)
+	public void removePlayer(PlayerInstance player)
 	{
 		// player.setPartyWait(0);
 		if (_members.contains(player))
@@ -51,7 +51,7 @@ public class PartyMatchWaitingList
 		}
 	}
 	
-	public List<L2PcInstance> getPlayers()
+	public List<PlayerInstance> getPlayers()
 	{
 		return _members;
 	}

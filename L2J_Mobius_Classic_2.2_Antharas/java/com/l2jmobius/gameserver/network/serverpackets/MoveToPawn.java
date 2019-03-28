@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class MoveToPawn implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _targetId;
 	private final int _distance;
 	private final int _x;
@@ -33,14 +33,14 @@ public class MoveToPawn implements IClientOutgoingPacket
 	private final int _ty;
 	private final int _tz;
 	
-	public MoveToPawn(L2Character cha, L2Object target, int distance)
+	public MoveToPawn(Creature creature, WorldObject target, int distance)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		_targetId = target.getObjectId();
 		_distance = distance;
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 		_tx = target.getX();
 		_ty = target.getY();
 		_tz = target.getZ();
@@ -51,7 +51,7 @@ public class MoveToPawn implements IClientOutgoingPacket
 	{
 		OutgoingPackets.MOVE_TO_PAWN.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_targetId);
 		packet.writeD(_distance);
 		

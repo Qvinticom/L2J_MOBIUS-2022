@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.taskmanager.tasks;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.taskmanager.Task;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
@@ -43,7 +43,7 @@ public class TaskRecom extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.restartRecom();
 			player.sendPacket(new UserInfo(player));

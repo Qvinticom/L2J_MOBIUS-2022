@@ -24,9 +24,9 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -57,17 +57,17 @@ public class AdminShowQuests implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final String[] cmdParams = command.split(" ");
-		L2PcInstance target = null;
-		L2Object targetObject = null;
+		PlayerInstance target = null;
+		WorldObject targetObject = null;
 		final String[] val = new String[4];
 		val[0] = null;
 		
 		if (cmdParams.length > 1)
 		{
-			target = L2World.getInstance().getPlayer(cmdParams[1]);
+			target = World.getInstance().getPlayer(cmdParams[1]);
 			if (cmdParams.length > 2)
 			{
 				if (cmdParams[2].equals("0"))
@@ -152,7 +152,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		return true;
 	}
 	
-	private static void showFirstQuestMenu(L2PcInstance target, L2PcInstance actor)
+	private static void showFirstQuestMenu(PlayerInstance target, PlayerInstance actor)
 	{
 		final StringBuilder replyMSG = new StringBuilder("<html><body><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Player: " + target.getName() + "</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin6\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
@@ -170,7 +170,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		actor.sendPacket(adminReply);
 	}
 	
-	private static void showQuestMenu(L2PcInstance target, L2PcInstance actor, String[] val)
+	private static void showQuestMenu(PlayerInstance target, PlayerInstance actor, String[] val)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -316,7 +316,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		}
 	}
 	
-	private static void setQuestVar(L2PcInstance target, L2PcInstance actor, String[] val)
+	private static void setQuestVar(PlayerInstance target, PlayerInstance actor, String[] val)
 	{
 		QuestState qs = target.getQuestState(val[0]);
 		final String[] outval = new String[3];

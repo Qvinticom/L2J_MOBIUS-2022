@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExPutItemResultForVariationCancel implements IClientOutgoingPacket
@@ -28,7 +28,7 @@ public class ExPutItemResultForVariationCancel implements IClientOutgoingPacket
 	private final int _itemAug2;
 	private final int _price;
 	
-	public ExPutItemResultForVariationCancel(L2ItemInstance item, int price)
+	public ExPutItemResultForVariationCancel(ItemInstance item, int price)
 	{
 		_itemObjId = item.getObjectId();
 		_itemId = item.getDisplayId();

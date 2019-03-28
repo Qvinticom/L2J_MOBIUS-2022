@@ -17,8 +17,8 @@
 package ai.areas.Gracia.AI.NPC.AbyssGaze;
 
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -36,14 +36,14 @@ public class AbyssGaze extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		QuestState qs = player.getQuestState(getName());
+		if (qs == null)
 		{
-			st = newQuestState(player);
+			qs = newQuestState(player);
 		}
 		
 		if (event.equals("request_permission"))
@@ -72,7 +72,7 @@ public class AbyssGaze extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		QuestState qs = player.getQuestState(getName());
 		if (qs == null)

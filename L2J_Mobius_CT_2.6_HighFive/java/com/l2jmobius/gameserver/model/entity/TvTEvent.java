@@ -33,20 +33,20 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventFinish;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventKill;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventRegistrationStart;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventStart;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -84,11 +84,11 @@ public class TvTEvent
 	/**
 	 * The spawn of the participation npc<br>
 	 */
-	private static L2Spawn _npcSpawn = null;
+	private static Spawn _npcSpawn = null;
 	/**
 	 * the npc instance of the participation npc<br>
 	 */
-	private static L2Npc _lastNpcSpawn = null;
+	private static Npc _lastNpcSpawn = null;
 	/**
 	 * Instance id<br>
 	 */
@@ -111,7 +111,7 @@ public class TvTEvent
 	
 	/**
 	 * Starts the participation of the TvTEvent<br>
-	 * 1. Get L2NpcTemplate by Config.TVT_EVENT_PARTICIPATION_NPC_ID<br>
+	 * 1. Get NpcTemplate by Config.TVT_EVENT_PARTICIPATION_NPC_ID<br>
 	 * 2. Try to spawn a new npc of it<br>
 	 * <br>
 	 * @return boolean: true if success, otherwise false<br>
@@ -120,7 +120,7 @@ public class TvTEvent
 	{
 		try
 		{
-			_npcSpawn = new L2Spawn(Config.TVT_EVENT_PARTICIPATION_NPC_ID);
+			_npcSpawn = new Spawn(Config.TVT_EVENT_PARTICIPATION_NPC_ID);
 			
 			_npcSpawn.setXYZ(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0], Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1], Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[2]);
 			_npcSpawn.setAmount(1);
@@ -148,11 +148,11 @@ public class TvTEvent
 		return true;
 	}
 	
-	private static int highestLevelPcInstanceOf(Map<Integer, L2PcInstance> players)
+	private static int highestLevelPcInstanceOf(Map<Integer, PlayerInstance> players)
 	{
 		int maxLevel = Integer.MIN_VALUE;
 		int maxLevelId = -1;
-		for (L2PcInstance player : players.values())
+		for (PlayerInstance player : players.values())
 		{
 			if (player.getLevel() >= maxLevel)
 			{
@@ -179,7 +179,7 @@ public class TvTEvent
 		setState(EventState.STARTING);
 		
 		// Randomize and balance team distribution
-		final Map<Integer, L2PcInstance> allParticipants = new HashMap<>();
+		final Map<Integer, PlayerInstance> allParticipants = new HashMap<>();
 		allParticipants.putAll(_teams[0].getParticipatedPlayers());
 		allParticipants.putAll(_teams[1].getParticipatedPlayers());
 		_teams[0].cleanMe();
@@ -187,7 +187,7 @@ public class TvTEvent
 		
 		if (needParticipationFee())
 		{
-			for (L2PcInstance player : allParticipants.values())
+			for (PlayerInstance player : allParticipants.values())
 			{
 				if (!hasParticipationFee(player))
 				{
@@ -203,7 +203,7 @@ public class TvTEvent
 		};
 		int priority = 0;
 		int highestLevelPlayerId;
-		L2PcInstance highestLevelPlayer;
+		PlayerInstance highestLevelPlayer;
 		// TODO: allParticipants should be sorted by level instead of using highestLevelPcInstanceOf for every fetch
 		while (!allParticipants.isEmpty())
 		{
@@ -246,14 +246,14 @@ public class TvTEvent
 		
 		if (needParticipationFee())
 		{
-			for (L2PcInstance player : _teams[0].getParticipatedPlayers().values())
+			for (PlayerInstance player : _teams[0].getParticipatedPlayers().values())
 			{
 				if (!payParticipationFee(player))
 				{
 					_teams[0].removePlayer(player.getObjectId());
 				}
 			}
-			for (L2PcInstance player : _teams[1].getParticipatedPlayers().values())
+			for (PlayerInstance player : _teams[1].getParticipatedPlayers().values())
 			{
 				if (!payParticipationFee(player))
 				{
@@ -289,7 +289,7 @@ public class TvTEvent
 		for (TvTEventTeam team : _teams)
 		{
 			// Iterate over all participated player instances in this team
-			for (L2PcInstance playerInstance : team.getParticipatedPlayers().values())
+			for (PlayerInstance playerInstance : team.getParticipatedPlayers().values())
 			{
 				if (playerInstance != null)
 				{
@@ -355,7 +355,7 @@ public class TvTEvent
 	private static void rewardTeam(TvTEventTeam team)
 	{
 		// Iterate over all participated player instances of the winning team
-		for (L2PcInstance playerInstance : team.getParticipatedPlayers().values())
+		for (PlayerInstance playerInstance : team.getParticipatedPlayers().values())
 		{
 			// Check for nullpointer
 			if (playerInstance == null)
@@ -368,7 +368,7 @@ public class TvTEvent
 			// Iterate over all tvt event rewards
 			for (int[] reward : Config.TVT_EVENT_REWARDS)
 			{
-				final PcInventory inv = playerInstance.getInventory();
+				final PlayerInventory inv = playerInstance.getInventory();
 				
 				// Check for stackable item, non stackabe items need to be added one by one
 				if (ItemTable.getInstance().getTemplate(reward[0]).isStackable())
@@ -434,7 +434,7 @@ public class TvTEvent
 		// Iterate over all teams
 		for (TvTEventTeam team : _teams)
 		{
-			for (L2PcInstance playerInstance : team.getParticipatedPlayers().values())
+			for (PlayerInstance playerInstance : team.getParticipatedPlayers().values())
 			{
 				// Check for nullpointer
 				if (playerInstance != null)
@@ -460,10 +460,10 @@ public class TvTEvent
 	 * 1. Calculate the id of the team in which the player should be added<br>
 	 * 2. Add the player to the calculated team<br>
 	 * <br>
-	 * @param playerInstance as L2PcInstance<br>
+	 * @param playerInstance as PlayerInstance<br>
 	 * @return boolean: true if success, otherwise false<br>
 	 */
-	public static synchronized boolean addParticipant(L2PcInstance playerInstance)
+	public static synchronized boolean addParticipant(PlayerInstance playerInstance)
 	{
 		// Check for nullpoitner
 		if (playerInstance == null)
@@ -505,7 +505,7 @@ public class TvTEvent
 			// Remove the player from team
 			_teams[teamId].removePlayer(playerObjectId);
 			
-			final L2PcInstance player = L2World.getInstance().getPlayer(playerObjectId);
+			final PlayerInstance player = World.getInstance().getPlayer(playerObjectId);
 			if (player != null)
 			{
 				player.removeEventListener(TvTEventListener.class);
@@ -521,12 +521,12 @@ public class TvTEvent
 		return (Config.TVT_EVENT_PARTICIPATION_FEE[0] != 0) && (Config.TVT_EVENT_PARTICIPATION_FEE[1] != 0);
 	}
 	
-	public static boolean hasParticipationFee(L2PcInstance playerInstance)
+	public static boolean hasParticipationFee(PlayerInstance playerInstance)
 	{
 		return playerInstance.getInventory().getInventoryItemCount(Config.TVT_EVENT_PARTICIPATION_FEE[0], -1) >= Config.TVT_EVENT_PARTICIPATION_FEE[1];
 	}
 	
-	public static boolean payParticipationFee(L2PcInstance playerInstance)
+	public static boolean payParticipationFee(PlayerInstance playerInstance)
 	{
 		return playerInstance.destroyItemByItemId("TvT Participation Fee", Config.TVT_EVENT_PARTICIPATION_FEE[0], Config.TVT_EVENT_PARTICIPATION_FEE[1], _lastNpcSpawn, true);
 	}
@@ -553,7 +553,7 @@ public class TvTEvent
 	 */
 	public static void sysMsgToAllParticipants(String message)
 	{
-		for (L2PcInstance playerInstance : _teams[0].getParticipatedPlayers().values())
+		for (PlayerInstance playerInstance : _teams[0].getParticipatedPlayers().values())
 		{
 			if (playerInstance != null)
 			{
@@ -561,7 +561,7 @@ public class TvTEvent
 			}
 		}
 		
-		for (L2PcInstance playerInstance : _teams[1].getParticipatedPlayers().values())
+		for (PlayerInstance playerInstance : _teams[1].getParticipatedPlayers().values())
 		{
 			if (playerInstance != null)
 			{
@@ -570,9 +570,9 @@ public class TvTEvent
 		}
 	}
 	
-	private static L2DoorInstance getDoor(int doorId)
+	private static DoorInstance getDoor(int doorId)
 	{
-		L2DoorInstance door = null;
+		DoorInstance door = null;
 		if (_TvTEventInstance <= 0)
 		{
 			door = DoorData.getInstance().getDoor(doorId);
@@ -596,7 +596,7 @@ public class TvTEvent
 	{
 		for (int doorId : doors)
 		{
-			final L2DoorInstance doorInstance = getDoor(doorId);
+			final DoorInstance doorInstance = getDoor(doorId);
 			if (doorInstance != null)
 			{
 				doorInstance.closeMe();
@@ -612,7 +612,7 @@ public class TvTEvent
 	{
 		for (int doorId : doors)
 		{
-			final L2DoorInstance doorInstance = getDoor(doorId);
+			final DoorInstance doorInstance = getDoor(doorId);
 			if (doorInstance != null)
 			{
 				doorInstance.openMe();
@@ -637,9 +637,9 @@ public class TvTEvent
 	/**
 	 * Called when a player logs in<br>
 	 * <br>
-	 * @param playerInstance as L2PcInstance<br>
+	 * @param playerInstance as PlayerInstance<br>
 	 */
-	public static void onLogin(L2PcInstance playerInstance)
+	public static void onLogin(PlayerInstance playerInstance)
 	{
 		if ((playerInstance == null) || (!isStarting() && !isStarted()))
 		{
@@ -660,9 +660,9 @@ public class TvTEvent
 	/**
 	 * Called when a player logs out<br>
 	 * <br>
-	 * @param playerInstance as L2PcInstance<br>
+	 * @param playerInstance as PlayerInstance<br>
 	 */
-	public static void onLogout(L2PcInstance playerInstance)
+	public static void onLogout(PlayerInstance playerInstance)
 	{
 		if ((playerInstance != null) && (isStarting() || isStarted() || isParticipating()) && removeParticipant(playerInstance.getObjectId()))
 		{
@@ -671,13 +671,13 @@ public class TvTEvent
 	}
 	
 	/**
-	 * Called on every onAction in L2PcIstance<br>
+	 * Called on every onAction in PlayerIstance<br>
 	 * <br>
 	 * @param playerInstance
 	 * @param targetedPlayerObjectId
 	 * @return boolean: true if player is allowed to target, otherwise false
 	 */
-	public static boolean onAction(L2PcInstance playerInstance, int targetedPlayerObjectId)
+	public static boolean onAction(PlayerInstance playerInstance, int targetedPlayerObjectId)
 	{
 		if ((playerInstance == null) || !isStarted())
 		{
@@ -789,10 +789,10 @@ public class TvTEvent
 	/**
 	 * Is called when a player is killed<br>
 	 * <br>
-	 * @param killerCharacter as L2Character<br>
-	 * @param killedPlayerInstance as L2PcInstance<br>
+	 * @param killerCharacter as Creature<br>
+	 * @param killedPlayerInstance as PlayerInstance<br>
 	 */
-	public static void onKill(L2Character killerCharacter, L2PcInstance killedPlayerInstance)
+	public static void onKill(Creature killerCharacter, PlayerInstance killedPlayerInstance)
 	{
 		if ((killedPlayerInstance == null) || !isStarted())
 		{
@@ -813,11 +813,11 @@ public class TvTEvent
 			return;
 		}
 		
-		L2PcInstance killerPlayerInstance = null;
+		PlayerInstance killerPlayerInstance = null;
 		
 		if (killerCharacter.isPet() || killerCharacter.isServitor())
 		{
-			killerPlayerInstance = ((L2Summon) killerCharacter).getOwner();
+			killerPlayerInstance = ((Summon) killerCharacter).getOwner();
 			
 			if (killerPlayerInstance == null)
 			{
@@ -826,7 +826,7 @@ public class TvTEvent
 		}
 		else if (killerCharacter.isPlayer())
 		{
-			killerPlayerInstance = (L2PcInstance) killerCharacter;
+			killerPlayerInstance = (PlayerInstance) killerCharacter;
 		}
 		else
 		{
@@ -843,7 +843,7 @@ public class TvTEvent
 			
 			final CreatureSay cs = new CreatureSay(killerPlayerInstance.getObjectId(), ChatType.WHISPER, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
 			
-			for (L2PcInstance playerInstance : _teams[killerTeamId].getParticipatedPlayers().values())
+			for (PlayerInstance playerInstance : _teams[killerTeamId].getParticipatedPlayers().values())
 			{
 				if (playerInstance != null)
 				{
@@ -860,7 +860,7 @@ public class TvTEvent
 	 * Called on Appearing packet received (player finished teleporting)
 	 * @param playerInstance
 	 */
-	public static void onTeleported(L2PcInstance playerInstance)
+	public static void onTeleported(PlayerInstance playerInstance)
 	{
 		if (!isStarted() || (playerInstance == null) || !isPlayerParticipant(playerInstance.getObjectId()))
 		{
@@ -900,7 +900,7 @@ public class TvTEvent
 	 * @param skill
 	 * @return true if player valid for skill
 	 */
-	public static boolean checkForTvTSkill(L2PcInstance source, L2PcInstance target, Skill skill)
+	public static boolean checkForTvTSkill(PlayerInstance source, PlayerInstance target, Skill skill)
 	{
 		if (!isStarted())
 		{

@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author JIV
@@ -29,27 +29,27 @@ public final class EndScenePlayer implements IClientIncomingPacket
 	private int _movieId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_movieId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (_movieId == 0))
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || (_movieId == 0))
 		{
 			return;
 		}
 		
-		final MovieHolder holder = activeChar.getMovieHolder();
+		final MovieHolder holder = player.getMovieHolder();
 		if ((holder == null) || (holder.getMovie().getClientId() != _movieId))
 		{
 			LOGGER.warning("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
 			return;
 		}
-		activeChar.stopMovie();
+		player.stopMovie();
 	}
 }

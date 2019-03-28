@@ -20,8 +20,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -41,7 +41,7 @@ public final class RequestPetition implements IClientIncomingPacket
 	private int _type; // 1 = on : 0 = off;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_content = packet.readS();
 		_type = packet.readD();
@@ -49,10 +49,10 @@ public final class RequestPetition implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -69,7 +69,7 @@ public final class RequestPetition implements IClientIncomingPacket
 			return;
 		}
 		
-		if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar))
+		if (PetitionManager.getInstance().isPlayerPetitionPending(player))
 		{
 			client.sendPacket(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME);
 			return;
@@ -81,7 +81,7 @@ public final class RequestPetition implements IClientIncomingPacket
 			return;
 		}
 		
-		final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar) + 1;
+		final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(player) + 1;
 		
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
@@ -97,7 +97,7 @@ public final class RequestPetition implements IClientIncomingPacket
 			return;
 		}
 		
-		final int petitionId = PetitionManager.getInstance().submitPetition(activeChar, _content, _type);
+		final int petitionId = PetitionManager.getInstance().submitPetition(player, _content, _type);
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1);
 		sm.addInt(petitionId);

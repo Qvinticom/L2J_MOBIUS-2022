@@ -16,9 +16,9 @@
  */
 package ai.areas.TalkingIsland;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -38,13 +38,13 @@ public final class TrainningSoldier extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc != null) && !npc.isDead())
 		{
 			if (!npc.isInCombat())
 			{
-				for (L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 150))
+				for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 150))
 				{
 					if ((nearby != null) && (nearby.getId() == DUMMY))
 					{
@@ -59,7 +59,7 @@ public final class TrainningSoldier extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomAnimation(false);
 		startQuestTimer("START_ATTACK", 5000, npc, null);

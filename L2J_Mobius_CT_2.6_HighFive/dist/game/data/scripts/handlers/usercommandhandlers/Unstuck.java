@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -43,107 +43,107 @@ public class Unstuck implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		// Thanks nbd
-		if (!TvTEvent.onEscapeUse(activeChar.getObjectId()))
+		if (!TvTEvent.onEscapeUse(player.getObjectId()))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		else if (activeChar.isJailed())
+		else if (player.isJailed())
 		{
-			activeChar.sendMessage("You cannot use this function while you are jailed.");
-			return false;
-		}
-		
-		if (Config.FACTION_SYSTEM_ENABLED && !activeChar.isGood() && !activeChar.isEvil())
-		{
-			activeChar.sendMessage("You cannot use this function while you are neutral.");
+			player.sendMessage("You cannot use this function while you are jailed.");
 			return false;
 		}
 		
-		final int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
-		
-		if (activeChar.isInOlympiadMode())
+		if (Config.FACTION_SYSTEM_ENABLED && !player.isGood() && !player.isEvil())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_GRAND_OLYMPIAD_MATCH);
+			player.sendMessage("You cannot use this function while you are neutral.");
 			return false;
 		}
 		
-		if (activeChar.isCastingNow() || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
+		final int unstuckTimer = (player.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
+		
+		if (player.isInOlympiadMode())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_GRAND_OLYMPIAD_MATCH);
+			return false;
+		}
+		
+		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.inObserverMode() || player.isCombatFlagEquipped())
 		{
 			return false;
 		}
 		
-		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
+		player.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
 		final Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
-		if (activeChar.getAccessLevel().isGm())
+		if (player.getAccessLevel().isGm())
 		{
 			if (GM_escape != null)
 			{
-				activeChar.doCast(GM_escape);
+				player.doCast(GM_escape);
 				return true;
 			}
-			activeChar.sendMessage("You use Escape: 1 second.");
+			player.sendMessage("You use Escape: 1 second.");
 		}
 		else if ((Config.UNSTUCK_INTERVAL == 300) && (escape != null))
 		{
-			activeChar.doCast(escape);
+			player.doCast(escape);
 			return true;
 		}
 		else
 		{
 			if (Config.UNSTUCK_INTERVAL > 100)
 			{
-				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
+				player.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
 			}
 			else
 			{
-				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
+				player.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
 			}
 		}
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section
-		activeChar.setTarget(activeChar);
-		activeChar.disableAllSkills();
+		player.setTarget(player);
+		player.disableAllSkills();
 		
-		final MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 900);
-		final SetupGauge sg = new SetupGauge(activeChar.getObjectId(), 0, unstuckTimer);
-		activeChar.sendPacket(sg);
+		final MagicSkillUse msk = new MagicSkillUse(player, 1050, 1, unstuckTimer, 0);
+		Broadcast.toSelfAndKnownPlayersInRadius(player, msk, 900);
+		final SetupGauge sg = new SetupGauge(player.getObjectId(), 0, unstuckTimer);
+		player.sendPacket(sg);
 		// End SoE Animation section
 		
 		// continue execution later
-		activeChar.setSkillCast(ThreadPool.schedule(new EscapeFinalizer(activeChar), unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(new EscapeFinalizer(player), unstuckTimer));
 		
 		return true;
 	}
 	
 	private static class EscapeFinalizer implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		
-		protected EscapeFinalizer(L2PcInstance activeChar)
+		protected EscapeFinalizer(PlayerInstance player)
 		{
-			_activeChar = activeChar;
+			_player = player;
 		}
 		
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead())
+			if (_player.isDead())
 			{
 				return;
 			}
 			
-			_activeChar.setIsIn7sDungeon(false);
-			_activeChar.enableAllSkills();
-			_activeChar.setIsCastingNow(false);
-			_activeChar.setInstanceId(0);
-			_activeChar.teleToLocation(TeleportWhereType.TOWN);
+			_player.setIsIn7sDungeon(false);
+			_player.enableAllSkills();
+			_player.setIsCastingNow(false);
+			_player.setInstanceId(0);
+			_player.teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 	

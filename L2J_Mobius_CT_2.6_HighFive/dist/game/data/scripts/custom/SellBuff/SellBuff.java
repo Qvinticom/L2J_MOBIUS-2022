@@ -25,13 +25,13 @@ import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.SellBuffsManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -70,7 +70,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 	}
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		String cmd = "";
 		String params = "";
@@ -90,25 +90,25 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		{
 			return false;
 		}
-		return useBypass(cmd, activeChar, params);
+		return useBypass(cmd, player, params);
 	}
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance player, String params)
 	{
 		switch (command)
 		{
 			case "sellbuff":
 			case "sellbuffs":
 			{
-				SellBuffsManager.getInstance().sendSellMenu(activeChar);
+				SellBuffsManager.getInstance().sendSellMenu(player);
 				break;
 			}
 		}
 		return true;
 	}
 	
-	public boolean useBypass(String command, L2PcInstance activeChar, String params)
+	public boolean useBypass(String command, PlayerInstance player, String params)
 	{
 		if (!Config.SELLBUFF_ENABLED)
 		{
@@ -119,13 +119,13 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		{
 			case "sellbuffstart":
 			{
-				if (activeChar.isSellingBuffs() || (params == null) || params.isEmpty())
+				if (player.isSellingBuffs() || (params == null) || params.isEmpty())
 				{
 					return false;
 				}
-				else if (activeChar.getSellingBuffs().isEmpty())
+				else if (player.getSellingBuffs().isEmpty())
 				{
-					activeChar.sendMessage("Your list of buffs is empty, please add some buffs first!");
+					player.sendMessage("Your list of buffs is empty, please add some buffs first!");
 					return false;
 				}
 				else
@@ -139,25 +139,25 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					
 					if (title.length() > 40)
 					{
-						activeChar.sendMessage("Your title cannot exceed 29 characters in length. Please try again.");
+						player.sendMessage("Your title cannot exceed 29 characters in length. Please try again.");
 						return false;
 					}
 					
-					SellBuffsManager.getInstance().startSellBuffs(activeChar, title);
+					SellBuffsManager.getInstance().startSellBuffs(player, title);
 				}
 				break;
 			}
 			case "sellbuffstop":
 			{
-				if (activeChar.isSellingBuffs())
+				if (player.isSellingBuffs())
 				{
-					SellBuffsManager.getInstance().stopSellBuffs(activeChar);
+					SellBuffsManager.getInstance().stopSellBuffs(player);
 				}
 				break;
 			}
 			case "sellbuffadd":
 			{
-				if (!activeChar.isSellingBuffs())
+				if (!player.isSellingBuffs())
 				{
 					int index = 0;
 					if ((params != null) && !params.isEmpty() && Util.isDigit(params))
@@ -165,21 +165,21 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						index = Integer.parseInt(params);
 					}
 					
-					SellBuffsManager.getInstance().sendBuffChoiceMenu(activeChar, index);
+					SellBuffsManager.getInstance().sendBuffChoiceMenu(player, index);
 				}
 				break;
 			}
 			case "sellbuffedit":
 			{
-				if (!activeChar.isSellingBuffs())
+				if (!player.isSellingBuffs())
 				{
-					SellBuffsManager.getInstance().sendBuffEditMenu(activeChar);
+					SellBuffsManager.getInstance().sendBuffEditMenu(player);
 				}
 				break;
 			}
 			case "sellbuffchangeprice":
 			{
-				if (!activeChar.isSellingBuffs() && (params != null) && !params.isEmpty())
+				if (!player.isSellingBuffs() && (params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
 					
@@ -199,8 +199,8 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MAX_PRICE);
-							SellBuffsManager.getInstance().sendBuffEditMenu(activeChar);
+							player.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MAX_PRICE);
+							SellBuffsManager.getInstance().sendBuffEditMenu(player);
 						}
 					}
 					
@@ -209,25 +209,25 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final Skill skillToChange = activeChar.getKnownSkill(skillId);
+					final Skill skillToChange = player.getKnownSkill(skillId);
 					if (skillToChange == null)
 					{
 						return false;
 					}
 					
-					final SellBuffHolder holder = activeChar.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToChange.getId())).findFirst().orElse(null);
+					final SellBuffHolder holder = player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToChange.getId())).findFirst().orElse(null);
 					if ((holder != null))
 					{
-						activeChar.sendMessage("Price of " + activeChar.getKnownSkill(holder.getSkillId()).getName() + " has been changed to " + price + "!");
+						player.sendMessage("Price of " + player.getKnownSkill(holder.getSkillId()).getName() + " has been changed to " + price + "!");
 						holder.setPrice(price);
-						SellBuffsManager.getInstance().sendBuffEditMenu(activeChar);
+						SellBuffsManager.getInstance().sendBuffEditMenu(player);
 					}
 				}
 				break;
 			}
 			case "sellbuffremove":
 			{
-				if (!activeChar.isSellingBuffs() && (params != null) && !params.isEmpty())
+				if (!player.isSellingBuffs() && (params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
 					
@@ -243,24 +243,24 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final Skill skillToRemove = activeChar.getKnownSkill(skillId);
+					final Skill skillToRemove = player.getKnownSkill(skillId);
 					if (skillToRemove == null)
 					{
 						return false;
 					}
 					
-					final SellBuffHolder holder = activeChar.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToRemove.getId())).findFirst().orElse(null);
-					if ((holder != null) && activeChar.getSellingBuffs().remove(holder))
+					final SellBuffHolder holder = player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToRemove.getId())).findFirst().orElse(null);
+					if ((holder != null) && player.getSellingBuffs().remove(holder))
 					{
-						activeChar.sendMessage("Skill " + activeChar.getKnownSkill(holder.getSkillId()).getName() + " has been removed!");
-						SellBuffsManager.getInstance().sendBuffEditMenu(activeChar);
+						player.sendMessage("Skill " + player.getKnownSkill(holder.getSkillId()).getName() + " has been removed!");
+						SellBuffsManager.getInstance().sendBuffEditMenu(player);
 					}
 				}
 				break;
 			}
 			case "sellbuffaddskill":
 			{
-				if (!activeChar.isSellingBuffs() && (params != null) && !params.isEmpty())
+				if (!player.isSellingBuffs() && (params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
 					
@@ -280,8 +280,8 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MIN_PRICE);
-							SellBuffsManager.getInstance().sendBuffEditMenu(activeChar);
+							player.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MIN_PRICE);
+							SellBuffsManager.getInstance().sendBuffEditMenu(player);
 						}
 					}
 					
@@ -290,31 +290,31 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final Skill skillToAdd = activeChar.getKnownSkill(skillId);
+					final Skill skillToAdd = player.getKnownSkill(skillId);
 					if (skillToAdd == null)
 					{
 						return false;
 					}
 					else if (price < Config.SELLBUFF_MIN_PRICE)
 					{
-						activeChar.sendMessage("Too small price! Minimal price is " + Config.SELLBUFF_MIN_PRICE);
+						player.sendMessage("Too small price! Minimal price is " + Config.SELLBUFF_MIN_PRICE);
 						return false;
 					}
 					else if (price > Config.SELLBUFF_MAX_PRICE)
 					{
-						activeChar.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MAX_PRICE);
+						player.sendMessage("Too big price! Maximal price is " + Config.SELLBUFF_MAX_PRICE);
 						return false;
 					}
-					else if (activeChar.getSellingBuffs().size() >= Config.SELLBUFF_MAX_BUFFS)
+					else if (player.getSellingBuffs().size() >= Config.SELLBUFF_MAX_BUFFS)
 					{
-						activeChar.sendMessage("You already reached max count of buffs! Max buffs is: " + Config.SELLBUFF_MAX_BUFFS);
+						player.sendMessage("You already reached max count of buffs! Max buffs is: " + Config.SELLBUFF_MAX_BUFFS);
 						return false;
 					}
-					else if (!SellBuffsManager.getInstance().isInSellList(activeChar, skillToAdd))
+					else if (!SellBuffsManager.getInstance().isInSellList(player, skillToAdd))
 					{
-						activeChar.getSellingBuffs().add(new SellBuffHolder(skillToAdd.getId(), price));
-						activeChar.sendMessage(skillToAdd.getName() + " has been added!");
-						SellBuffsManager.getInstance().sendBuffChoiceMenu(activeChar, 0);
+						player.getSellingBuffs().add(new SellBuffHolder(skillToAdd.getId(), price));
+						player.sendMessage(skillToAdd.getName() + " has been added!");
+						SellBuffsManager.getInstance().sendBuffChoiceMenu(player, 0);
 					}
 				}
 				break;
@@ -337,15 +337,15 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						index = Integer.parseInt(st.nextToken());
 					}
 					
-					final L2PcInstance seller = L2World.getInstance().getPlayer(objId);
+					final PlayerInstance seller = World.getInstance().getPlayer(objId);
 					if (seller != null)
 					{
-						if (!seller.isSellingBuffs() || !activeChar.isInsideRadius3D(seller, L2Npc.INTERACTION_DISTANCE))
+						if (!seller.isSellingBuffs() || !player.isInsideRadius3D(seller, Npc.INTERACTION_DISTANCE))
 						{
 							return false;
 						}
 						
-						SellBuffsManager.getInstance().sendBuffMenu(activeChar, seller, index);
+						SellBuffsManager.getInstance().sendBuffMenu(player, seller, index);
 					}
 				}
 				break;
@@ -379,49 +379,49 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final L2PcInstance seller = L2World.getInstance().getPlayer(objId);
+					final PlayerInstance seller = World.getInstance().getPlayer(objId);
 					if (seller == null)
 					{
 						return false;
 					}
 					
 					final Skill skillToBuy = seller.getKnownSkill(skillId);
-					if (!seller.isSellingBuffs() || !Util.checkIfInRange(L2Npc.INTERACTION_DISTANCE, activeChar, seller, true) || (skillToBuy == null))
+					if (!seller.isSellingBuffs() || !Util.checkIfInRange(Npc.INTERACTION_DISTANCE, player, seller, true) || (skillToBuy == null))
 					{
 						return false;
 					}
 					
 					if (seller.getCurrentMp() < (skillToBuy.getMpConsume() * Config.SELLBUFF_MP_MULTIPLER))
 					{
-						activeChar.sendMessage(seller.getName() + " has no enough mana for " + skillToBuy.getName() + "!");
-						SellBuffsManager.getInstance().sendBuffMenu(activeChar, seller, index);
+						player.sendMessage(seller.getName() + " has no enough mana for " + skillToBuy.getName() + "!");
+						SellBuffsManager.getInstance().sendBuffMenu(player, seller, index);
 						return false;
 					}
 					
 					final SellBuffHolder holder = seller.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToBuy.getId())).findFirst().orElse(null);
 					if (holder != null)
 					{
-						if (AbstractScript.getQuestItemsCount(activeChar, Config.SELLBUFF_PAYMENT_ID) >= holder.getPrice())
+						if (AbstractScript.getQuestItemsCount(player, Config.SELLBUFF_PAYMENT_ID) >= holder.getPrice())
 						{
-							AbstractScript.takeItems(activeChar, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
+							AbstractScript.takeItems(player, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
 							AbstractScript.giveItems(seller, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
 							seller.reduceCurrentMp(skillToBuy.getMpConsume() * Config.SELLBUFF_MP_MULTIPLER);
-							skillToBuy.activateSkill(seller, activeChar);
+							skillToBuy.activateSkill(seller, player);
 						}
 						else
 						{
-							final L2Item item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
+							final Item item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
 							if (item != null)
 							{
-								activeChar.sendMessage("Not enough " + item.getName() + "!");
+								player.sendMessage("Not enough " + item.getName() + "!");
 							}
 							else
 							{
-								activeChar.sendMessage("Not enough items!");
+								player.sendMessage("Not enough items!");
 							}
 						}
 					}
-					SellBuffsManager.getInstance().sendBuffMenu(activeChar, seller, index);
+					SellBuffsManager.getInstance().sendBuffMenu(player, seller, index);
 				}
 				break;
 			}

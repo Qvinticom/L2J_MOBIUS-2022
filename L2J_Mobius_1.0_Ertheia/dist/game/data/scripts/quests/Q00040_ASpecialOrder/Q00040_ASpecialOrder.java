@@ -16,8 +16,8 @@
  */
 package quests.Q00040_ASpecialOrder;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -50,10 +50,10 @@ public final class Q00040_ASpecialOrder extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -68,15 +68,15 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case "30081-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31572-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					giveItems(player, FISH_CHEST, 1);
 					htmltext = event;
 				}
@@ -84,9 +84,9 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case "30511-02.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					giveItems(player, SEED_JAR, 1);
 					htmltext = event;
 				}
@@ -94,9 +94,9 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case "30081-06.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					takeItems(player, -1, FISH_CHEST, SEED_JAR);
 					htmltext = event;
 				}
@@ -107,12 +107,12 @@ public final class Q00040_ASpecialOrder extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -124,7 +124,7 @@ public final class Q00040_ASpecialOrder extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -180,7 +180,7 @@ public final class Q00040_ASpecialOrder extends Quest
 							{
 								takeItems(player, ELCYUM_CRYSTAL, 1);
 								giveItems(player, WONDEROUS_CUBIC, 1);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								htmltext = "30081-08.html";
 							}
 							else

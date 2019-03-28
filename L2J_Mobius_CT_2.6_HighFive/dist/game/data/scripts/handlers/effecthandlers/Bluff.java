@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -55,14 +55,14 @@ public final class Bluff extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected();
+		final Creature effected = info.getEffected();
 		// Headquarters NPC should not rotate
 		if ((effected.getId() == 35062) || effected.isRaid() || effected.isRaidMinion())
 		{
 			return;
 		}
 		
-		final L2Character effector = info.getEffector();
+		final Creature effector = info.getEffector();
 		effected.broadcastPacket(new StartRotation(effected.getObjectId(), effected.getHeading(), 1, 65535));
 		effected.broadcastPacket(new StopRotation(effected.getObjectId(), effector.getHeading(), 65535));
 		effected.setHeading(effector.getHeading());

@@ -26,12 +26,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.CharEffectList;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectTaskInfo;
 import com.l2jmobius.gameserver.model.effects.EffectTickTask;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.Options;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -47,8 +47,8 @@ public final class BuffInfo
 	// Data
 	/** Data. */
 	private final int _effectorObjectId;
-	private final L2Character _effector;
-	private final L2Character _effected;
+	private final Creature _effector;
+	private final Creature _effected;
 	private final Skill _skill;
 	/** The effects. */
 	private final List<AbstractEffect> _effects = new ArrayList<>(1);
@@ -68,7 +68,7 @@ public final class BuffInfo
 	/** If {@code true} then this effect is in use (or has been stop because an Herb took place). */
 	private volatile boolean _isInUse = true;
 	private final boolean _hideStartMessage;
-	private final L2ItemInstance _item;
+	private final ItemInstance _item;
 	private final Options _option;
 	
 	/**
@@ -80,7 +80,7 @@ public final class BuffInfo
 	 * @param item
 	 * @param option
 	 */
-	public BuffInfo(L2Character effector, L2Character effected, Skill skill, boolean hideStartMessage, L2ItemInstance item, Options option)
+	public BuffInfo(Creature effector, Creature effected, Skill skill, boolean hideStartMessage, ItemInstance item, Options option)
 	{
 		_effectorObjectId = (effector != null) ? effector.getObjectId() : 0;
 		_effector = effector;
@@ -181,7 +181,7 @@ public final class BuffInfo
 	/**
 	 * @return the item that triggered this skill
 	 */
-	public L2ItemInstance getItem()
+	public ItemInstance getItem()
 	{
 		return _item;
 	}
@@ -272,7 +272,7 @@ public final class BuffInfo
 	 * Gets the character that launched the buff.
 	 * @return the effector
 	 */
-	public L2Character getEffector()
+	public Creature getEffector()
 	{
 		return _effector;
 	}
@@ -281,7 +281,7 @@ public final class BuffInfo
 	 * Gets the target of the skill.
 	 * @return the effected
 	 */
-	public L2Character getEffected()
+	public Creature getEffected()
 	{
 		return _effected;
 	}
@@ -396,7 +396,7 @@ public final class BuffInfo
 		}
 		
 		// Set the proper system message.
-		if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages())
+		if ((_skill != null) && !(_effected.isSummon() && !((Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages())
 		{
 			SystemMessageId smId = null;
 			if (_skill.isToggle())

@@ -16,10 +16,10 @@
  */
 package ai.others;
 
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -38,19 +38,19 @@ public final class Gordon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		if (creature.isPlayer() && ((L2PcInstance) creature).isCursedWeaponEquipped())
+		if (creature.isPlayer() && ((PlayerInstance) creature).isCursedWeaponEquipped())
 		{
-			addAttackPlayerDesire(npc, (L2PcInstance) creature);
+			addAttackPlayerDesire(npc, (PlayerInstance) creature);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
-		((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+		((Attackable) npc).setCanReturnToSpawnPoint(false);
 		return super.onSpawn(npc);
 	}
 	

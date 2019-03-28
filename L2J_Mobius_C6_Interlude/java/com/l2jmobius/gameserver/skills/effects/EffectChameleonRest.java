@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 
-public final class EffectChameleonRest extends L2Effect
+public final class EffectChameleonRest extends Effect
 {
 	public EffectChameleonRest(Env env, EffectTemplate template)
 	{
@@ -41,12 +41,12 @@ public final class EffectChameleonRest extends L2Effect
 	@Override
 	public void onStart()
 	{
-		final L2Character effected = getEffected();
-		if (effected instanceof L2PcInstance)
+		final Creature effected = getEffected();
+		if (effected instanceof PlayerInstance)
 		{
 			setChameleon(true);
-			((L2PcInstance) effected).setSilentMoving(true);
-			((L2PcInstance) effected).sitDown();
+			((PlayerInstance) effected).setSilentMoving(true);
+			((PlayerInstance) effected).sitDown();
 		}
 		else
 		{
@@ -59,17 +59,17 @@ public final class EffectChameleonRest extends L2Effect
 	{
 		setChameleon(false);
 		
-		final L2Character effected = getEffected();
-		if (effected instanceof L2PcInstance)
+		final Creature effected = getEffected();
+		if (effected instanceof PlayerInstance)
 		{
-			((L2PcInstance) effected).setSilentMoving(false);
+			((PlayerInstance) effected).setSilentMoving(false);
 		}
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
-		final L2Character effected = getEffected();
+		final Creature effected = getEffected();
 		boolean retval = true;
 		
 		if (effected.isDead())
@@ -83,9 +83,9 @@ public final class EffectChameleonRest extends L2Effect
 			return false;
 		}
 		
-		if (effected instanceof L2PcInstance)
+		if (effected instanceof PlayerInstance)
 		{
-			if (!((L2PcInstance) effected).isSitting())
+			if (!((PlayerInstance) effected).isSitting())
 			{
 				retval = false;
 			}
@@ -113,10 +113,10 @@ public final class EffectChameleonRest extends L2Effect
 	
 	private void setChameleon(boolean val)
 	{
-		final L2Character effected = getEffected();
-		if (effected instanceof L2PcInstance)
+		final Creature effected = getEffected();
+		if (effected instanceof PlayerInstance)
 		{
-			((L2PcInstance) effected).setRelax(val);
+			((PlayerInstance) effected).setRelax(val);
 		}
 	}
 }

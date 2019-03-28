@@ -24,14 +24,14 @@ import java.util.Map;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -114,7 +114,7 @@ public final class KartiaHelperElise extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
@@ -147,7 +147,7 @@ public final class KartiaHelperElise extends AbstractNpcAI
 		}
 	}
 	
-	private void healFriends(L2Npc npc, L2PcInstance player)
+	private void healFriends(Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -156,21 +156,21 @@ public final class KartiaHelperElise extends AbstractNpcAI
 			final StatsSet instParams = instance.getTemplateParameters();
 			if (!npc.isCastingNow())
 			{
-				player = npcVars.getObject("PLAYER_OBJECT", L2PcInstance.class);
+				player = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
 				final SkillHolder progressiveHeal = instParams.getSkillHolder("eliseProgressiveHeal"); // AOE heal
 				final SkillHolder radiantHeal = instParams.getSkillHolder("eliseRadiantHeal"); // Single target heal
 				final SkillHolder recharge = instParams.getSkillHolder("eliseRecharge");
 				
 				// Get HP percentage for all friends
-				final Map<L2Object, Integer> hpMap = new HashMap<>();
+				final Map<WorldObject, Integer> hpMap = new HashMap<>();
 				instance.getAliveNpcs(KARTIA_FRIENDS).forEach(friend -> hpMap.put(friend, friend != null ? friend.getCurrentHpPercent() : 100));
 				hpMap.put(player, player != null ? player.getCurrentHpPercent() : 100);
-				Map<L2Object, Integer> sortedHpMap = new HashMap<>();
+				Map<WorldObject, Integer> sortedHpMap = new HashMap<>();
 				sortedHpMap = Util.sortByValue(hpMap, false);
 				
 				// See if any friends are below 80% HP and add to list of people to heal.
-				final List<L2Object> peopleToHeal = new ArrayList<>();
-				for (L2Object friend : sortedHpMap.keySet())
+				final List<WorldObject> peopleToHeal = new ArrayList<>();
+				for (WorldObject friend : sortedHpMap.keySet())
 				{
 					if ((friend != null) && (sortedHpMap.get(friend) < 80) && (sortedHpMap.get(friend) > 1))
 					{
@@ -189,16 +189,16 @@ public final class KartiaHelperElise extends AbstractNpcAI
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
 						npc.doCast(progressiveHeal.getSkill(), null, true, false);
 						npc.setTarget(npc);
-						for (L2Object personToHeal : peopleToHeal)
+						for (WorldObject personToHeal : peopleToHeal)
 						{
-							if (personToHeal.getInstanceType() == InstanceType.L2PcInstance)
+							if (personToHeal.getInstanceType() == InstanceType.PlayerInstance)
 							{
-								L2PcInstance thePlayer = (L2PcInstance) personToHeal;
+								PlayerInstance thePlayer = (PlayerInstance) personToHeal;
 								thePlayer.setCurrentHp((thePlayer.getMaxHp() * .20) + thePlayer.getCurrentHp());
 							}
 							else
 							{
-								L2Npc npcToHeal = (L2Npc) personToHeal;
+								Npc npcToHeal = (Npc) personToHeal;
 								npcToHeal.setCurrentHp((npcToHeal.getMaxHp() * .20) + npcToHeal.getCurrentHp());
 							}
 						}
@@ -206,7 +206,7 @@ public final class KartiaHelperElise extends AbstractNpcAI
 					else
 					{
 						// Only one person needs cure. Cast single target heal
-						for (L2Object personToHeal : peopleToHeal)
+						for (WorldObject personToHeal : peopleToHeal)
 						{
 							npc.setTarget(personToHeal);
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
@@ -242,7 +242,7 @@ public final class KartiaHelperElise extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer() || (creature instanceof FriendlyNpcInstance))
 		{
@@ -274,7 +274,7 @@ public final class KartiaHelperElise extends AbstractNpcAI
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{

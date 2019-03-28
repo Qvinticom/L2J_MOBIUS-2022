@@ -17,11 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestShortCutDel implements IClientIncomingPacket
@@ -30,7 +29,7 @@ public final class RequestShortCutDel implements IClientIncomingPacket
 	private int _page;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int id = packet.readD();
 		_slot = id % 12;
@@ -39,10 +38,10 @@ public final class RequestShortCutDel implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -52,7 +51,7 @@ public final class RequestShortCutDel implements IClientIncomingPacket
 			return;
 		}
 		
-		activeChar.deleteShortCut(_slot, _page);
+		player.deleteShortCut(_slot, _page);
 		// client needs no confirmation. this packet is just to inform the server
 	}
 }

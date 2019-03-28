@@ -31,15 +31,15 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.tasks.StartMovingTask;
-import com.l2jmobius.gameserver.model.L2NpcWalkerNode;
-import com.l2jmobius.gameserver.model.L2WalkRoute;
+import com.l2jmobius.gameserver.model.NpcWalkerNode;
+import com.l2jmobius.gameserver.model.WalkRoute;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.WalkInfo;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -61,7 +61,7 @@ public final class WalkingManager implements IGameXmlReader
 	public static final byte REPEAT_TELE_FIRST = 2;
 	public static final byte REPEAT_RANDOM = 3;
 	
-	private final Map<String, L2WalkRoute> _routes = new HashMap<>(); // all available routes
+	private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
 	private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
 	private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
 	
@@ -118,7 +118,7 @@ public final class WalkingManager implements IGameXmlReader
 					}
 				}
 				
-				final List<L2NpcWalkerNode> list = new ArrayList<>();
+				final List<NpcWalkerNode> list = new ArrayList<>();
 				for (Node r = d.getFirstChild(); r != null; r = r.getNextSibling())
 				{
 					if (r.getNodeName().equals("point"))
@@ -163,7 +163,7 @@ public final class WalkingManager implements IGameXmlReader
 								}
 							}
 						}
-						list.add(new L2NpcWalkerNode(x, y, z, delay, run, npcString, chatString));
+						list.add(new NpcWalkerNode(x, y, z, delay, run, npcString, chatString));
 					}
 					
 					else if (r.getNodeName().equals("target"))
@@ -186,7 +186,7 @@ public final class WalkingManager implements IGameXmlReader
 						}
 					}
 				}
-				_routes.put(routeName, new L2WalkRoute(routeName, list, repeat, false, repeatType));
+				_routes.put(routeName, new WalkRoute(routeName, list, repeat, false, repeatType));
 			}
 		}
 	}
@@ -195,9 +195,9 @@ public final class WalkingManager implements IGameXmlReader
 	 * @param npc NPC to check
 	 * @return {@code true} if given NPC, or its leader is controlled by Walking Manager and moves currently.
 	 */
-	public boolean isOnWalk(L2Npc npc)
+	public boolean isOnWalk(Npc npc)
 	{
-		final L2MonsterInstance monster = npc.isMonster() ? ((L2MonsterInstance) npc).getLeader() == null ? (L2MonsterInstance) npc : ((L2MonsterInstance) npc).getLeader() : null;
+		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return false;
@@ -207,7 +207,7 @@ public final class WalkingManager implements IGameXmlReader
 		return !walk.isStoppedByAttack() && !walk.isSuspended();
 	}
 	
-	public L2WalkRoute getRoute(String route)
+	public WalkRoute getRoute(String route)
 	{
 		return _routes.get(route);
 	}
@@ -216,7 +216,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * @param npc NPC to check
 	 * @return {@code true} if given NPC controlled by Walking Manager.
 	 */
-	public boolean isRegistered(L2Npc npc)
+	public boolean isRegistered(Npc npc)
 	{
 		return _activeRoutes.containsKey(npc.getObjectId());
 	}
@@ -225,7 +225,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * @param npc
 	 * @return name of route
 	 */
-	public String getRouteName(L2Npc npc)
+	public String getRouteName(Npc npc)
 	{
 		return _activeRoutes.containsKey(npc.getObjectId()) ? _activeRoutes.get(npc.getObjectId()).getRoute().getName() : "";
 	}
@@ -235,7 +235,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * @param npc NPC to move
 	 * @param routeName name of route to move by
 	 */
-	public void startMoving(L2Npc npc, String routeName)
+	public void startMoving(Npc npc, String routeName)
 	{
 		if (_routes.containsKey(routeName) && (npc != null) && !npc.isDead()) // check, if these route and NPC present
 		{
@@ -245,7 +245,7 @@ public final class WalkingManager implements IGameXmlReader
 				if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 				{
 					final WalkInfo walk = new WalkInfo(routeName);
-					L2NpcWalkerNode node = walk.getCurrentNode();
+					NpcWalkerNode node = walk.getCurrentNode();
 					
 					// adjust next waypoint, if NPC spawns at first waypoint
 					if ((npc.getX() == node.getX()) && (npc.getY() == node.getY()))
@@ -294,7 +294,7 @@ public final class WalkingManager implements IGameXmlReader
 				}
 				
 				walk.setBlocked(true);
-				final L2NpcWalkerNode node = walk.getCurrentNode();
+				final NpcWalkerNode node = walk.getCurrentNode();
 				if (node.runToLocation())
 				{
 					npc.setRunning();
@@ -314,7 +314,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * Cancel NPC moving permanently
 	 * @param npc NPC to cancel
 	 */
-	public synchronized void cancelMoving(L2Npc npc)
+	public synchronized void cancelMoving(Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
 		if (walk == null)
@@ -328,7 +328,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * Resumes previously stopped moving
 	 * @param npc NPC to resume
 	 */
-	public void resumeMoving(L2Npc npc)
+	public void resumeMoving(Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
 		if (walk == null)
@@ -346,9 +346,9 @@ public final class WalkingManager implements IGameXmlReader
 	 * @param suspend {@code true} if moving was temporarily suspended for some reasons of AI-controlling script
 	 * @param stoppedByAttack {@code true} if moving was suspended because of NPC was attacked or desired to attack
 	 */
-	public void stopMoving(L2Npc npc, boolean suspend, boolean stoppedByAttack)
+	public void stopMoving(Npc npc, boolean suspend, boolean stoppedByAttack)
 	{
-		final L2MonsterInstance monster = npc.isMonster() ? ((L2MonsterInstance) npc).getLeader() == null ? (L2MonsterInstance) npc : ((L2MonsterInstance) npc).getLeader() : null;
+		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
 		
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
@@ -376,7 +376,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * Manage "node arriving"-related tasks: schedule move to next node; send ON_NODE_ARRIVED event to Quest script
 	 * @param npc NPC to manage
 	 */
-	public void onArrived(L2Npc npc)
+	public void onArrived(Npc npc)
 	{
 		if (!_activeRoutes.containsKey(npc.getObjectId()))
 		{
@@ -393,7 +393,7 @@ public final class WalkingManager implements IGameXmlReader
 			return;
 		}
 		
-		final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
+		final NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
 		if (!npc.isInsideRadius2D(node, 10))
 		{
 			return;
@@ -418,7 +418,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * Manage "on death"-related tasks: permanently cancel moving of died NPC
 	 * @param npc NPC to manage
 	 */
-	public void onDeath(L2Npc npc)
+	public void onDeath(Npc npc)
 	{
 		cancelMoving(npc);
 	}
@@ -427,7 +427,7 @@ public final class WalkingManager implements IGameXmlReader
 	 * Manage "on spawn"-related tasks: start NPC moving, if there is route attached to its spawn point
 	 * @param npc NPC to manage
 	 */
-	public void onSpawn(L2Npc npc)
+	public void onSpawn(Npc npc)
 	{
 		if (_routesToAttach.containsKey(npc.getId()))
 		{

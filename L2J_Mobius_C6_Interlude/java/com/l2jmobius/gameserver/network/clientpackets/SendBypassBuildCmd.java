@@ -22,13 +22,13 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * This class handles all GM commands triggered by //command
  */
-public final class SendBypassBuildCmd extends L2GameClientPacket
+public final class SendBypassBuildCmd extends GameClientPacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(SendBypassBuildCmd.class.getName());
 	public static final int GM_MESSAGE = 9;
@@ -45,17 +45,17 @@ public final class SendBypassBuildCmd extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Checks The Access and notify requester if requester access it not allowed for that command
-		if (!AdminCommandAccessRights.getInstance().hasAccess(_command, activeChar.getAccessLevel()))
+		if (!AdminCommandAccessRights.getInstance().hasAccess(_command, player.getAccessLevel()))
 		{
-			activeChar.sendMessage("You don't have the access right to use this command!");
-			LOGGER.warning("Character " + activeChar.getName() + " tried to use admin command " + _command + ", but doesn't have access to it!");
+			player.sendMessage("You don't have the access right to use this command!");
+			LOGGER.warning("Character " + player.getName() + " tried to use admin command " + _command + ", but doesn't have access to it!");
 			return;
 		}
 		
@@ -67,14 +67,14 @@ public final class SendBypassBuildCmd extends L2GameClientPacket
 		{
 			if (Config.GMAUDIT)
 			{
-				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", _command, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
+				GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", _command, (player.getTarget() != null ? player.getTarget().getName() : "no-target"));
 			}
 			
-			ach.useAdminCommand(_command, activeChar);
+			ach.useAdminCommand(_command, player);
 		}
 		else
 		{
-			activeChar.sendMessage("The command " + _command + " doesn't exists!");
+			player.sendMessage("The command " + _command + " doesn't exists!");
 			LOGGER.warning("No handler registered for admin command '" + _command + "'");
 			return;
 		}

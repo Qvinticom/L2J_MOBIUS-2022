@@ -18,8 +18,8 @@ package quests.Q00753_ReactingToACrisis;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -77,7 +77,7 @@ public final class Q00753_ReactingToACrisis extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -108,7 +108,7 @@ public final class Q00753_ReactingToACrisis extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -149,7 +149,7 @@ public final class Q00753_ReactingToACrisis extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, com.l2jmobius.gameserver.model.L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, com.l2jmobius.gameserver.model.WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && (player.getTarget() == npc) && (skill.getId() == VACCINE))
 		{
@@ -160,7 +160,7 @@ public final class Q00753_ReactingToACrisis extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if (CommonUtil.contains(MOBS, npc.getId()))
@@ -191,7 +191,7 @@ public final class Q00753_ReactingToACrisis extends Quest
 			killer.sendPacket(log);
 			for (int i = 0; i < 4; i++)
 			{
-				final L2Npc mob = addSpawn(BATTLE_GOLEM, killer, true, 70000);
+				final Npc mob = addSpawn(BATTLE_GOLEM, killer, true, 70000);
 				addAttackPlayerDesire(mob, killer);
 			}
 		}

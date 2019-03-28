@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class MoveToLocationInVehicle implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _boatId;
 	private final Location _destination;
 	private final Location _origin;
@@ -36,9 +36,9 @@ public class MoveToLocationInVehicle implements IClientOutgoingPacket
 	 * @param destination
 	 * @param origin
 	 */
-	public MoveToLocationInVehicle(L2PcInstance player, Location destination, Location origin)
+	public MoveToLocationInVehicle(PlayerInstance player, Location destination, Location origin)
 	{
-		_charObjId = player.getObjectId();
+		_objectId = player.getObjectId();
 		_boatId = player.getBoat().getObjectId();
 		_destination = destination;
 		_origin = origin;
@@ -48,7 +48,7 @@ public class MoveToLocationInVehicle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MOVE_TO_LOCATION_IN_VEHICLE.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_boatId);
 		packet.writeD(_destination.getX());
 		packet.writeD(_destination.getY());

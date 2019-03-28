@@ -21,12 +21,12 @@ import java.util.StringTokenizer;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -44,7 +44,7 @@ public class AdminScan implements IAdminCommandHandler
 	private static final int DEFAULT_RADIUS = 500;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -81,8 +81,8 @@ public class AdminScan implements IAdminCommandHandler
 				{
 					final int objectId = Integer.parseInt(st.nextToken());
 					
-					final L2Object target = L2World.getInstance().findObject(objectId);
-					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
+					final WorldObject target = World.getInstance().findObject(objectId);
+					final Npc npc = target instanceof Npc ? (Npc) target : null;
 					if (npc == null)
 					{
 						BuilderUtil.sendSysMessage(activeChar, "NPC does not exist or object_id does not belong to an NPC");
@@ -91,7 +91,7 @@ public class AdminScan implements IAdminCommandHandler
 					
 					npc.deleteMe();
 					
-					final L2Spawn spawn = npc.getSpawn();
+					final Spawn spawn = npc.getSpawn();
 					if (spawn != null)
 					{
 						spawn.stopRespawn();
@@ -121,21 +121,21 @@ public class AdminScan implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void sendNpcList(L2PcInstance activeChar, int radius)
+	private void sendNpcList(PlayerInstance activeChar, int radius)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/admin/scan.htm");
 		final StringBuilder sb = new StringBuilder();
-		for (L2Character character : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Character.class, radius))
+		for (Creature creature : World.getInstance().getVisibleObjectsInRange(activeChar, Creature.class, radius))
 		{
-			if (character instanceof L2Npc)
+			if (creature instanceof Npc)
 			{
 				sb.append("<tr>");
-				sb.append("<td width=\"54\">" + character.getId() + "</td>");
-				sb.append("<td width=\"54\">" + character.getName() + "</td>");
-				sb.append("<td width=\"54\">" + Math.round(activeChar.calculateDistance2D(character)) + "</td>");
-				sb.append("<td width=\"54\"><a action=\"bypass -h admin_deleteNpcByObjectId " + character.getObjectId() + "\"><font color=\"LEVEL\">Delete</font></a></td>");
-				sb.append("<td width=\"54\"><a action=\"bypass -h admin_move_to " + character.getX() + " " + character.getY() + " " + character.getZ() + "\"><font color=\"LEVEL\">Go to</font></a></td>");
+				sb.append("<td width=\"54\">" + creature.getId() + "</td>");
+				sb.append("<td width=\"54\">" + creature.getName() + "</td>");
+				sb.append("<td width=\"54\">" + Math.round(activeChar.calculateDistance2D(creature)) + "</td>");
+				sb.append("<td width=\"54\"><a action=\"bypass -h admin_deleteNpcByObjectId " + creature.getObjectId() + "\"><font color=\"LEVEL\">Delete</font></a></td>");
+				sb.append("<td width=\"54\"><a action=\"bypass -h admin_move_to " + creature.getX() + " " + creature.getY() + " " + creature.getZ() + "\"><font color=\"LEVEL\">Go to</font></a></td>");
 				sb.append("</tr>");
 			}
 		}

@@ -16,11 +16,11 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.ai.L2SummonAI;
+import com.l2jmobius.gameserver.ai.SummonAI;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -30,26 +30,26 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public final class PetHold implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if ((activeChar.getPet() == null) || !activeChar.getPet().isPet())
+		if ((player.getPet() == null) || !player.getPet().isPet())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 			return;
 		}
 		
-		final L2PetInstance pet = activeChar.getPet();
+		final PetInstance pet = player.getPet();
 		if (pet.isUncontrollable())
 		{
-			activeChar.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
+			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
 		}
 		else if (pet.isBetrayed())
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 		}
 		else
 		{
-			((L2SummonAI) pet.getAI()).notifyFollowStatusChange();
+			((SummonAI) pet.getAI()).notifyFollowStatusChange();
 		}
 	}
 }

@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.model.stats.functions;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -33,7 +33,7 @@ public class FuncEnchant extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		double value = initVal;
 		if ((getApplayCond() != null) && !getApplayCond().test(effector, effected, skill))
@@ -41,7 +41,7 @@ public class FuncEnchant extends AbstractFunction
 			return value;
 		}
 		
-		final L2ItemInstance item = (L2ItemInstance) getFuncOwner();
+		final ItemInstance item = (ItemInstance) getFuncOwner();
 		int enchant = item.getEnchantLevel();
 		if (enchant <= 0)
 		{
@@ -112,7 +112,7 @@ public class FuncEnchant extends AbstractFunction
 			{
 				case S:
 				{
-					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
+					if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
 					{
 						if ((type == WeaponType.BOW) || (type == WeaponType.CROSSBOW))
 						{
@@ -137,7 +137,7 @@ public class FuncEnchant extends AbstractFunction
 				}
 				case A:
 				{
-					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
+					if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
 					{
 						if ((type == WeaponType.BOW) || (type == WeaponType.CROSSBOW))
 						{
@@ -163,7 +163,7 @@ public class FuncEnchant extends AbstractFunction
 				case B:
 				case C:
 				{
-					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
+					if (item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND)
 					{
 						if ((type == WeaponType.BOW) || (type == WeaponType.CROSSBOW))
 						{

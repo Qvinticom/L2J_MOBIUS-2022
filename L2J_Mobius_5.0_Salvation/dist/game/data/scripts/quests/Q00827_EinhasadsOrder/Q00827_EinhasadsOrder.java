@@ -21,8 +21,8 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -89,7 +89,7 @@ public class Q00827_EinhasadsOrder extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
@@ -129,7 +129,7 @@ public class Q00827_EinhasadsOrder extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -174,9 +174,9 @@ public class Q00827_EinhasadsOrder extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		List<L2PcInstance> members = new ArrayList<>();
+		List<PlayerInstance> members = new ArrayList<>();
 		if (player.getParty() != null)
 		{
 			members = player.getParty().getMembers();
@@ -185,7 +185,7 @@ public class Q00827_EinhasadsOrder extends Quest
 		{
 			members.add(player);
 		}
-		for (L2PcInstance member : members)
+		for (PlayerInstance member : members)
 		{
 			final QuestState qs = getQuestState(member, false);
 			if ((qs != null) && qs.isCond(1) && member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))

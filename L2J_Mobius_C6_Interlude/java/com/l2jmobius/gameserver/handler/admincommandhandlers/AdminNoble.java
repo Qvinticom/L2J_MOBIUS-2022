@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -38,7 +38,7 @@ public class AdminNoble implements IAdminCommandHandler
 	protected static final Logger LOGGER = Logger.getLogger(AdminNoble.class.getName());
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -47,11 +47,11 @@ public class AdminNoble implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_setnoble"))
 		{
-			L2Object target = activeChar.getTarget();
+			WorldObject target = activeChar.getTarget();
 			
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
-				L2PcInstance targetPlayer = (L2PcInstance) target;
+				PlayerInstance targetPlayer = (PlayerInstance) target;
 				
 				final boolean newNoble = !targetPlayer.isNoble();
 				
@@ -83,7 +83,7 @@ public class AdminNoble implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void sendMessages(boolean forNewNoble, L2PcInstance player, L2PcInstance gm, boolean announce, boolean notifyGmList)
+	private void sendMessages(boolean forNewNoble, PlayerInstance player, PlayerInstance gm, boolean announce, boolean notifyGmList)
 	{
 		if (forNewNoble)
 		{
@@ -107,7 +107,7 @@ public class AdminNoble implements IAdminCommandHandler
 		}
 	}
 	
-	private void updateDatabase(L2PcInstance player, boolean newNoble)
+	private void updateDatabase(PlayerInstance player, boolean newNoble)
 	{
 		if (player == null)
 		{

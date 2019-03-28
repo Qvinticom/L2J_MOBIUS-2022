@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22800" level="84" type="L2Monster" name="Divinity Magus">
+	<npc id="22800" level="84" type="Monster" name="Divinity Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -74,7 +74,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22801" level="87" type="L2Monster" name="Cruel Pincer Golem">
+	<npc id="22801" level="87" type="Monster" name="Cruel Pincer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9" />
@@ -118,7 +118,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22804" level="87" type="L2Monster" name="Horrifying Jackhammer Golem">
+	<npc id="22804" level="87" type="Monster" name="Horrifying Jackhammer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Privates01_sil" value="22805" />
@@ -165,7 +165,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22807" level="87" type="L2Monster" name="Scout-type Golem No. 28">
+	<npc id="22807" level="87" type="Monster" name="Scout-type Golem No. 28">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6610" level="9" />
@@ -210,7 +210,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22809" level="87" type="L2Monster" name="Guard Golem">
+	<npc id="22809" level="87" type="Monster" name="Guard Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -260,7 +260,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22810" level="87" type="L2Monster" name="Micro Scout Golem">
+	<npc id="22810" level="87" type="Monster" name="Micro Scout Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -311,7 +311,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22811" level="87" type="L2Monster" name="Great Chaos Golem">
+	<npc id="22811" level="87" type="Monster" name="Great Chaos Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -359,7 +359,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22812" level="87" type="L2Monster" name="Boom Golem">
+	<npc id="22812" level="87" type="Monster" name="Boom Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6264" level="1" />
@@ -406,7 +406,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22838" level="85" type="L2Monster" name="Maluk Leader">
+	<npc id="22838" level="85" type="Monster" name="Maluk Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -468,7 +468,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22839" level="85" type="L2Monster" name="Maluk Warlord">
+	<npc id="22839" level="85" type="Monster" name="Maluk Warlord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -530,7 +530,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22840" level="85" type="L2Monster" name="Maluk Hunter">
+	<npc id="22840" level="85" type="Monster" name="Maluk Hunter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -594,7 +594,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22841" level="85" type="L2Monster" name="Maluk Princess">
+	<npc id="22841" level="85" type="Monster" name="Maluk Princess">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -657,7 +657,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22842" level="85" type="L2Monster" name="Maluk Banshee">
+	<npc id="22842" level="85" type="Monster" name="Maluk Banshee">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -723,7 +723,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22843" level="85" type="L2Monster" name="Maluk Sniper">
+	<npc id="22843" level="85" type="Monster" name="Maluk Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -785,7 +785,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22844" level="85" type="L2Monster" name="Dragon Knight">
+	<npc id="22844" level="85" type="Monster" name="Dragon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -853,7 +853,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22845" level="85" type="L2Monster" name="Dragon Knight">
+	<npc id="22845" level="85" type="Monster" name="Dragon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -919,7 +919,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22846" level="85" type="L2Monster" name="Elite Dragon Knight">
+	<npc id="22846" level="85" type="Monster" name="Elite Dragon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -984,7 +984,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22847" level="85" type="L2Monster" name="Dragon Knight Warrior">
+	<npc id="22847" level="85" type="Monster" name="Dragon Knight Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" />
@@ -1046,7 +1046,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22848" level="85" type="L2Monster" name="Drake Leader">
+	<npc id="22848" level="85" type="Monster" name="Drake Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1112,7 +1112,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22849" level="85" type="L2Monster" name="Drake Warrior">
+	<npc id="22849" level="85" type="Monster" name="Drake Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" />
@@ -1175,7 +1175,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22850" level="85" type="L2Monster" name="Drake Scout">
+	<npc id="22850" level="85" type="Monster" name="Drake Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6764" level="1" />
@@ -1239,7 +1239,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22851" level="85" type="L2Monster" name="Drake Mage">
+	<npc id="22851" level="85" type="Monster" name="Drake Mage">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6766" level="1" />
@@ -1301,7 +1301,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22852" level="85" type="L2Monster" name="Dragon Guard">
+	<npc id="22852" level="85" type="Monster" name="Dragon Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1364,7 +1364,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22853" level="85" type="L2Monster" name="Dragon Mage">
+	<npc id="22853" level="85" type="Monster" name="Dragon Mage">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1428,7 +1428,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22854" level="85" type="L2Monster" name="Bloody Karik">
+	<npc id="22854" level="85" type="Monster" name="Bloody Karik">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1492,7 +1492,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22855" level="85" type="L2Monster" name="Bloody Berserker">
+	<npc id="22855" level="85" type="Monster" name="Bloody Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1556,7 +1556,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22856" level="85" type="L2Monster" name="Bloody Karinness">
+	<npc id="22856" level="85" type="Monster" name="Bloody Karinness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1623,7 +1623,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22857" level="85" type="L2Monster" name="Knoriks" title="Land Dragon's Patrol">
+	<npc id="22857" level="85" type="Monster" name="Knoriks" title="Land Dragon's Patrol">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1678,7 +1678,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22863" level="88" type="L2Monster" name="Fairy Warrior">
+	<npc id="22863" level="88" type="Monster" name="Fairy Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1751,7 +1751,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22864" level="90" type="L2Monster" name="Fairy Warrior" title="Wicked">
+	<npc id="22864" level="90" type="Monster" name="Fairy Warrior" title="Wicked">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1827,7 +1827,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22865" level="89" type="L2Monster" name="Fairy Warrior" title="Mature">
+	<npc id="22865" level="89" type="Monster" name="Fairy Warrior" title="Mature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1900,7 +1900,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22866" level="89" type="L2Monster" name="Fairy Warrior" title="Imperfect">
+	<npc id="22866" level="89" type="Monster" name="Fairy Warrior" title="Imperfect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1973,7 +1973,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22867" level="90" type="L2Monster" name="Fairy Warrior" title="Violent">
+	<npc id="22867" level="90" type="Monster" name="Fairy Warrior" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2048,7 +2048,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22868" level="92" type="L2Monster" name="Fairy Warrior" title="Brutal">
+	<npc id="22868" level="92" type="Monster" name="Fairy Warrior" title="Brutal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2127,7 +2127,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22869" level="91" type="L2Monster" name="Fairy Warrior" title="Fully Enraged">
+	<npc id="22869" level="91" type="Monster" name="Fairy Warrior" title="Fully Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2204,7 +2204,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22870" level="91" type="L2Monster" name="Fairy Warrior" title="Slightly Enraged">
+	<npc id="22870" level="91" type="Monster" name="Fairy Warrior" title="Slightly Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2280,7 +2280,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22871" level="88" type="L2Monster" name="Fairy Rogue">
+	<npc id="22871" level="88" type="Monster" name="Fairy Rogue">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2350,7 +2350,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22872" level="90" type="L2Monster" name="Fairy Rogue" title="Wicked">
+	<npc id="22872" level="90" type="Monster" name="Fairy Rogue" title="Wicked">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2423,7 +2423,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22873" level="89" type="L2Monster" name="Fairy Rogue" title="Mature">
+	<npc id="22873" level="89" type="Monster" name="Fairy Rogue" title="Mature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2493,7 +2493,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22874" level="89" type="L2Monster" name="Fairy Rogue" title="Imperfect">
+	<npc id="22874" level="89" type="Monster" name="Fairy Rogue" title="Imperfect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2563,7 +2563,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22875" level="90" type="L2Monster" name="Fairy Rogue" title="Violent">
+	<npc id="22875" level="90" type="Monster" name="Fairy Rogue" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2635,7 +2635,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22876" level="92" type="L2Monster" name="Fairy Rogue" title="Brutal">
+	<npc id="22876" level="92" type="Monster" name="Fairy Rogue" title="Brutal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2711,7 +2711,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22877" level="91" type="L2Monster" name="Fairy Rogue" title="Fully Enraged">
+	<npc id="22877" level="91" type="Monster" name="Fairy Rogue" title="Fully Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2785,7 +2785,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22878" level="91" type="L2Monster" name="Fairy Rogue" title="Slightly Enraged">
+	<npc id="22878" level="91" type="Monster" name="Fairy Rogue" title="Slightly Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2857,7 +2857,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22879" level="88" type="L2Monster" name="Fairy Knight">
+	<npc id="22879" level="88" type="Monster" name="Fairy Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2928,7 +2928,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22880" level="90" type="L2Monster" name="Fairy Knight" title="Wicked">
+	<npc id="22880" level="90" type="Monster" name="Fairy Knight" title="Wicked">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3002,7 +3002,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22881" level="89" type="L2Monster" name="Fairy Knight" title="Mature">
+	<npc id="22881" level="89" type="Monster" name="Fairy Knight" title="Mature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3073,7 +3073,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22882" level="89" type="L2Monster" name="Fairy Knight" title="Imperfect">
+	<npc id="22882" level="89" type="Monster" name="Fairy Knight" title="Imperfect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3144,7 +3144,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22883" level="90" type="L2Monster" name="Fairy Knight" title="Violent">
+	<npc id="22883" level="90" type="Monster" name="Fairy Knight" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3216,7 +3216,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22884" level="92" type="L2Monster" name="Fairy Knight" title="Brutal">
+	<npc id="22884" level="92" type="Monster" name="Fairy Knight" title="Brutal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3293,7 +3293,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22885" level="91" type="L2Monster" name="Fairy Knight" title="Fully Enraged">
+	<npc id="22885" level="91" type="Monster" name="Fairy Knight" title="Fully Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3369,7 +3369,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22886" level="91" type="L2Monster" name="Fairy Knight" title="Slightly Enraged">
+	<npc id="22886" level="91" type="Monster" name="Fairy Knight" title="Slightly Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3442,7 +3442,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22887" level="88" type="L2Monster" name="Satyr Wizard">
+	<npc id="22887" level="88" type="Monster" name="Satyr Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3516,7 +3516,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22888" level="90" type="L2Monster" name="Satyr Wizard" title="Wicked">
+	<npc id="22888" level="90" type="Monster" name="Satyr Wizard" title="Wicked">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3593,7 +3593,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22889" level="89" type="L2Monster" name="Satyr Wizard" title="Mature">
+	<npc id="22889" level="89" type="Monster" name="Satyr Wizard" title="Mature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3667,7 +3667,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22890" level="89" type="L2Monster" name="Satyr Wizard" title="Imperfect">
+	<npc id="22890" level="89" type="Monster" name="Satyr Wizard" title="Imperfect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3742,7 +3742,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22891" level="91" type="L2Monster" name="Satyr Wizard" title="Violent">
+	<npc id="22891" level="91" type="Monster" name="Satyr Wizard" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3813,7 +3813,7 @@
 			<id>1</id>
 		</extendDrop>
 	</npc>
-	<npc id="22892" level="92" type="L2Monster" name="Satyr Wizard" title="Brutal">
+	<npc id="22892" level="92" type="Monster" name="Satyr Wizard" title="Brutal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3893,7 +3893,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22893" level="91" type="L2Monster" name="Satyr Wizard" title="Fully Enraged">
+	<npc id="22893" level="91" type="Monster" name="Satyr Wizard" title="Fully Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3972,7 +3972,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22894" level="91" type="L2Monster" name="Satyr Wizard" title="Slightly Enraged">
+	<npc id="22894" level="91" type="Monster" name="Satyr Wizard" title="Slightly Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4049,7 +4049,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22895" level="88" type="L2Monster" name="Satyr Summoner">
+	<npc id="22895" level="88" type="Monster" name="Satyr Summoner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4122,7 +4122,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22896" level="90" type="L2Monster" name="Satyr Summoner" title="Wicked">
+	<npc id="22896" level="90" type="Monster" name="Satyr Summoner" title="Wicked">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4198,7 +4198,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22897" level="89" type="L2Monster" name="Satyr Summoner" title="Mature">
+	<npc id="22897" level="89" type="Monster" name="Satyr Summoner" title="Mature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4271,7 +4271,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22898" level="89" type="L2Monster" name="Satyr Summoner" title="Imperfect">
+	<npc id="22898" level="89" type="Monster" name="Satyr Summoner" title="Imperfect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4345,7 +4345,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22899" level="90" type="L2Monster" name="Satyr Summoner" title="Violent">
+	<npc id="22899" level="90" type="Monster" name="Satyr Summoner" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />

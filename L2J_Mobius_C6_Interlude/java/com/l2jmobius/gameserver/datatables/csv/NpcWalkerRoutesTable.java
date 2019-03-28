@@ -28,7 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2NpcWalkerNode;
+import com.l2jmobius.gameserver.model.NpcWalkerNode;
 
 /**
  * Main Table to Load Npc Walkers Routes and Chat SQL Table.<br>
@@ -41,7 +41,7 @@ public class NpcWalkerRoutesTable
 	
 	private static NpcWalkerRoutesTable _instance;
 	
-	private List<L2NpcWalkerNode> _routes;
+	private List<NpcWalkerNode> _routes;
 	
 	public static NpcWalkerRoutesTable getInstance()
 	{
@@ -75,7 +75,7 @@ public class NpcWalkerRoutesTable
 			buff = new BufferedReader(reader);
 			lnr = new LineNumberReader(buff);
 			
-			L2NpcWalkerNode route;
+			NpcWalkerNode route;
 			String line = null;
 			
 			// format:
@@ -87,7 +87,7 @@ public class NpcWalkerRoutesTable
 				{
 					continue;
 				}
-				route = new L2NpcWalkerNode();
+				route = new NpcWalkerNode();
 				final StringTokenizer st = new StringTokenizer(line, ";");
 				
 				final int route_id = Integer.parseInt(st.nextToken());
@@ -163,11 +163,11 @@ public class NpcWalkerRoutesTable
 		}
 	}
 	
-	public List<L2NpcWalkerNode> getRouteForNpc(int id)
+	public List<NpcWalkerNode> getRouteForNpc(int id)
 	{
-		final List<L2NpcWalkerNode> _return = new ArrayList<>();
+		final List<NpcWalkerNode> _return = new ArrayList<>();
 		
-		for (L2NpcWalkerNode node : _routes)
+		for (NpcWalkerNode node : _routes)
 		{
 			if (node.getNpcId() == id)
 			{

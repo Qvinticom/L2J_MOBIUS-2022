@@ -2347,7 +2347,7 @@
 		<effects>
 			<effect name="Untargetable" />
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>

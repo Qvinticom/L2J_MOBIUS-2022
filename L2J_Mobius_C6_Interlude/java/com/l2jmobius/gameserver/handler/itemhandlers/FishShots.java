@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.templates.item.L2Item;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.Item;
+import com.l2jmobius.gameserver.templates.item.Weapon;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -54,18 +54,18 @@ public class FishShots implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		PlayerInstance player = (PlayerInstance) playable;
+		ItemInstance weaponInst = player.getActiveWeaponInstance();
+		Weapon weaponItem = player.getActiveWeaponItem();
 		
-		if ((weaponInst == null) || (weaponItem.getItemType() != L2WeaponType.ROD))
+		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
 			return;
 		}
@@ -80,10 +80,10 @@ public class FishShots implements IItemHandler
 		final int grade = weaponItem.getCrystalType();
 		final int count = item.getCount();
 		
-		if (((grade == L2Item.CRYSTAL_NONE) && (FishshotId != 6535)) || ((grade == L2Item.CRYSTAL_D) && (FishshotId != 6536)) || ((grade == L2Item.CRYSTAL_C) && (FishshotId != 6537)) || ((grade == L2Item.CRYSTAL_B) && (FishshotId != 6538)) || ((grade == L2Item.CRYSTAL_A) && (FishshotId != 6539)) || ((grade == L2Item.CRYSTAL_S) && (FishshotId != 6540)))
+		if (((grade == Item.CRYSTAL_NONE) && (FishshotId != 6535)) || ((grade == Item.CRYSTAL_D) && (FishshotId != 6536)) || ((grade == Item.CRYSTAL_C) && (FishshotId != 6537)) || ((grade == Item.CRYSTAL_B) && (FishshotId != 6538)) || ((grade == Item.CRYSTAL_A) && (FishshotId != 6539)) || ((grade == Item.CRYSTAL_S) && (FishshotId != 6540)))
 		{
 			// 1479 - This fishing shot is not fit for the fishing pole crystal.
-			activeChar.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
+			player.sendPacket(SystemMessageId.WRONG_FISHINGSHOT_GRADE);
 			return;
 		}
 		
@@ -93,13 +93,13 @@ public class FishShots implements IItemHandler
 		}
 		
 		weaponInst.setChargedFishshot(true);
-		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
-		final L2Object oldTarget = activeChar.getTarget();
-		activeChar.setTarget(activeChar);
+		player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
+		final WorldObject oldTarget = player.getTarget();
+		player.setTarget(player);
 		
-		MagicSkillUse MSU = new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0);
-		Broadcast.toSelfAndKnownPlayers(activeChar, MSU);
-		activeChar.setTarget(oldTarget);
+		MagicSkillUse MSU = new MagicSkillUse(player, SKILL_IDS[grade], 1, 0, 0);
+		Broadcast.toSelfAndKnownPlayers(player, MSU);
+		player.setTarget(oldTarget);
 	}
 	
 	@Override

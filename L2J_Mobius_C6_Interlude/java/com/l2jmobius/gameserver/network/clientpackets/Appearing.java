@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * Appearing Packet Handler
  */
-public final class Appearing extends L2GameClientPacket
+public final class Appearing extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -33,19 +33,19 @@ public final class Appearing extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if ((activeChar == null) || (activeChar.isOnline() == 0))
+		if ((player == null) || (player.isOnline() == 0))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isTeleporting())
+		if (player.isTeleporting())
 		{
-			activeChar.onTeleported();
+			player.onTeleported();
 		}
 		
-		sendPacket(new UserInfo(activeChar));
+		sendPacket(new UserInfo(player));
 	}
 }

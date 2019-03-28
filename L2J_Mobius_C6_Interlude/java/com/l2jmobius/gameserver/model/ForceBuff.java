@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.skills.effects.EffectForce;
 
 /**
@@ -29,36 +29,36 @@ public final class ForceBuff
 {
 	protected int _forceId;
 	protected int _forceLevel;
-	protected L2Character _caster;
-	protected L2Character _target;
+	protected Creature _caster;
+	protected Creature _target;
 	
 	static final Logger LOGGER = Logger.getLogger(ForceBuff.class.getName());
 	
-	public L2Character getCaster()
+	public Creature getCaster()
 	{
 		return _caster;
 	}
 	
-	public L2Character getTarget()
+	public Creature getTarget()
 	{
 		return _target;
 	}
 	
-	public ForceBuff(L2Character caster, L2Character target, L2Skill skill)
+	public ForceBuff(Creature caster, Creature target, Skill skill)
 	{
 		_caster = caster;
 		_target = target;
 		_forceId = skill.getTriggeredId();
 		_forceLevel = skill.getTriggeredLevel();
 		
-		L2Effect effect = _target.getFirstEffect(_forceId);
+		Effect effect = _target.getFirstEffect(_forceId);
 		if (effect != null)
 		{
 			((EffectForce) effect).increaseForce();
 		}
 		else
 		{
-			final L2Skill force = SkillTable.getInstance().getInfo(_forceId, _forceLevel);
+			final Skill force = SkillTable.getInstance().getInfo(_forceId, _forceLevel);
 			if (force != null)
 			{
 				force.getEffects(_caster, _target, false, false, false);
@@ -73,7 +73,7 @@ public final class ForceBuff
 	public void onCastAbort()
 	{
 		_caster.setForceBuff(null);
-		L2Effect effect = _target.getFirstEffect(_forceId);
+		Effect effect = _target.getFirstEffect(_forceId);
 		if (effect != null)
 		{
 			if (effect instanceof EffectForce)

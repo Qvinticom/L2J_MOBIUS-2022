@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author Kerberos
  */
-public class ExShowScreenMessage extends L2GameServerPacket
+public class ExShowScreenMessage extends GameServerPacket
 {
 	private final int _type;
 	private final int _sysMessageId;

@@ -17,8 +17,8 @@
 package quests.Q00238_SuccessFailureOfBusiness;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -58,10 +58,10 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -76,15 +76,15 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			}
 			case "32641-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "32641-06.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -94,21 +94,21 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getId() == BRAZIER_OF_PURITY)
 		{
-			final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
+			final PlayerInstance partyMember = getRandomPartyMember(killer, 1);
 			if (partyMember != null)
 			{
-				final QuestState st = getQuestState(partyMember, false);
+				final QuestState qs = getQuestState(partyMember, false);
 				if (getQuestItemsCount(partyMember, BROKEN_PIECE_OF_MAGIC_FORCE) < BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 				{
 					giveItems(partyMember, BROKEN_PIECE_OF_MAGIC_FORCE, 1);
 				}
 				if (getQuestItemsCount(partyMember, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -118,17 +118,17 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 		}
 		else
 		{
-			final L2PcInstance partyMember = getRandomPartyMember(killer, 3);
+			final PlayerInstance partyMember = getRandomPartyMember(killer, 3);
 			if ((partyMember != null) && (getRandom(100) < CHANCE_FOR_FRAGMENT))
 			{
-				final QuestState st = getQuestState(partyMember, false);
+				final QuestState qs = getQuestState(partyMember, false);
 				if (getQuestItemsCount(partyMember, GUARDIAN_SPIRIT_FRAGMENT) < GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 				{
 					giveItems(partyMember, GUARDIAN_SPIRIT_FRAGMENT, 1);
 				}
 				if (getQuestItemsCount(partyMember, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 				}
 				else
 				{
@@ -140,12 +140,12 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		String htmltext = getNoQuestMsg(talker);
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -154,8 +154,8 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			}
 			case State.CREATED:
 			{
-				final QuestState q237 = st.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
-				final QuestState q239 = st.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
+				final QuestState q237 = qs.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
+				final QuestState q239 = qs.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
 				if ((q239 != null) && q239.isCompleted())
 				{
 					htmltext = "32641-10.html";
@@ -172,7 +172,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -201,7 +201,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 							giveAdena(talker, 283346, true);
 							takeItems(talker, VICINITY_OF_FOS, 1);
 							addExpAndSp(talker, 1319736, 103553);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 						}
 						break;
 					}

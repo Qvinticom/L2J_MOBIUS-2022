@@ -20,12 +20,12 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public class FishShots implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -46,16 +46,16 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final PlayerInstance player = playable.getActingPlayer();
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.FISHINGROD))
 		{
 			return false;
 		}
 		
-		if (activeChar.isChargedShot(ShotType.FISH_SOULSHOTS))
+		if (player.isChargedShot(ShotType.FISH_SOULSHOTS))
 		{
 			return false;
 		}
@@ -73,7 +73,7 @@ public class FishShots implements IItemHandler
 		
 		if (!gradeCheck)
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);
+			player.sendPacket(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE);
 			return false;
 		}
 		
@@ -82,13 +82,13 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		activeChar.setChargedShot(ShotType.FISH_SOULSHOTS, true);
-		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
-		final L2Object oldTarget = activeChar.getTarget();
-		activeChar.setTarget(activeChar);
+		player.setChargedShot(ShotType.FISH_SOULSHOTS, true);
+		player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
+		final WorldObject oldTarget = player.getTarget();
+		player.setTarget(player);
 		
-		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0));
-		activeChar.setTarget(oldTarget);
+		Broadcast.toSelfAndKnownPlayers(player, new MagicSkillUse(player, skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0));
+		player.setTarget(oldTarget);
 		return true;
 	}
 }

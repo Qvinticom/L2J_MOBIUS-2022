@@ -28,12 +28,12 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.AggroInfo;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -146,7 +146,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final Set<Integer> allowedPlayers = allowedPlayerMap.get(npc.getObjectId());
@@ -182,7 +182,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -234,7 +234,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -272,7 +272,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (!killer.isInParty() || !killer.getParty().isInCommandChannel())
 		{
@@ -280,14 +280,14 @@ public final class Q00456_DontKnowDontCare extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		final L2CommandChannel cc = killer.getParty().getCommandChannel();
+		final CommandChannel cc = killer.getParty().getCommandChannel();
 		
 		if (cc.getMemberCount() < MIN_PLAYERS)
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		final Map<L2Character, AggroInfo> playerList = ((L2Attackable) npc).getAggroList();
+		final Map<Creature, AggroInfo> playerList = ((Attackable) npc).getAggroList();
 		final Set<Integer> allowedPlayers = new HashSet<>();
 		
 		for (AggroInfo aggro : playerList.values())
@@ -297,7 +297,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 				continue;
 			}
 			
-			final L2PcInstance attacker = aggro.getAttacker().getActingPlayer();
+			final PlayerInstance attacker = aggro.getAttacker().getActingPlayer();
 			
 			if (attacker.isInParty() //
 				&& attacker.getParty().isInCommandChannel() //
@@ -311,7 +311,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 		if (!allowedPlayers.isEmpty())
 		{
 			// This depends on the boss respawn delay being at least 5 minutes.
-			final L2Npc spawned = addSpawn(MONSTER_NPCS.get(npc.getId()), npc, true, 0);
+			final Npc spawned = addSpawn(MONSTER_NPCS.get(npc.getId()), npc, true, 0);
 			allowedPlayerMap.put(spawned.getObjectId(), allowedPlayers);
 			startQuestTimer("unspawnRaidCorpse", 300000, npc, null);
 		}
@@ -319,7 +319,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private static void rewardPlayer(L2PcInstance player, L2Npc npc)
+	private static void rewardPlayer(PlayerInstance player, Npc npc)
 	{
 		final int chance = getRandom(10000);
 		final int reward;
@@ -360,7 +360,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 		}
 		
 		giveItems(player, reward, count);
-		final L2Item item = ItemTable.getInstance().getTemplate(reward);
+		final Item item = ItemTable.getInstance().getTemplate(reward);
 		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_RECEIVED_A_S2_ITEM_AS_A_REWARD_FROM_THE_SEPARATED_SOUL, player.getName(), item.getName());
 	}
 }

@@ -25,17 +25,17 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -1112,29 +1112,29 @@ public class Frintezza extends Quest
 	private static int _KillDarkChoirPlayer = 0;
 	private static int _KillDarkChoirCaptain = 0;
 	
-	private static L2BossZone _Zone;
-	private L2GrandBossInstance frintezza;
-	private L2GrandBossInstance weakScarlet;
-	private L2GrandBossInstance strongScarlet;
+	private static BossZone _Zone;
+	private GrandBossInstance frintezza;
+	private GrandBossInstance weakScarlet;
+	private GrandBossInstance strongScarlet;
 	@SuppressWarnings("unused")
-	private L2GrandBossInstance activeScarlet;
-	private L2MonsterInstance demon1;
-	private L2MonsterInstance demon2;
-	private L2MonsterInstance demon3;
-	private L2MonsterInstance demon4;
-	private L2MonsterInstance portrait1;
-	private L2MonsterInstance portrait2;
-	private L2MonsterInstance portrait3;
-	private L2MonsterInstance portrait4;
-	private L2NpcInstance _frintezzaDummy;
-	private L2NpcInstance _overheadDummy;
-	private L2NpcInstance _portraitDummy1;
-	private L2NpcInstance _portraitDummy3;
-	private L2NpcInstance _scarletDummy;
-	private final List<L2PcInstance> _PlayersInside = new CopyOnWriteArrayList<>();
-	private final List<L2NpcInstance> _Room1Mobs = new CopyOnWriteArrayList<>();
-	private final List<L2NpcInstance> _Room2Mobs = new CopyOnWriteArrayList<>();
-	private final List<L2Attackable> Minions = new CopyOnWriteArrayList<>();
+	private GrandBossInstance activeScarlet;
+	private MonsterInstance demon1;
+	private MonsterInstance demon2;
+	private MonsterInstance demon3;
+	private MonsterInstance demon4;
+	private MonsterInstance portrait1;
+	private MonsterInstance portrait2;
+	private MonsterInstance portrait3;
+	private MonsterInstance portrait4;
+	private NpcInstance _frintezzaDummy;
+	private NpcInstance _overheadDummy;
+	private NpcInstance _portraitDummy1;
+	private NpcInstance _portraitDummy3;
+	private NpcInstance _scarletDummy;
+	private final List<PlayerInstance> _PlayersInside = new CopyOnWriteArrayList<>();
+	private final List<NpcInstance> _Room1Mobs = new CopyOnWriteArrayList<>();
+	private final List<NpcInstance> _Room2Mobs = new CopyOnWriteArrayList<>();
+	private final List<Attackable> Minions = new CopyOnWriteArrayList<>();
 	
 	// Boss: Frintezza
 	public Frintezza(int id, String name, String descr)
@@ -1197,7 +1197,7 @@ public class Frintezza extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		long temp = 0;
 		if (event.equals("waiting"))
@@ -1210,7 +1210,7 @@ public class Frintezza extends Quest
 		{
 			for (int i = 0; i <= 17; i++)
 			{
-				final L2NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				synchronized (_Room1Mobs)
 				{
 					_Room1Mobs.add(mob);
@@ -1221,7 +1221,7 @@ public class Frintezza extends Quest
 		{
 			for (int i = 18; i <= 26; i++)
 			{
-				final L2NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				synchronized (_Room1Mobs)
 				{
 					_Room1Mobs.add(mob);
@@ -1232,7 +1232,7 @@ public class Frintezza extends Quest
 		{
 			for (int i = 27; i <= 32; i++)
 			{
-				final L2NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				synchronized (_Room1Mobs)
 				{
 					_Room1Mobs.add(mob);
@@ -1243,7 +1243,7 @@ public class Frintezza extends Quest
 		{
 			for (int i = 33; i <= 40; i++)
 			{
-				final L2NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				synchronized (_Room1Mobs)
 				{
 					_Room1Mobs.add(mob);
@@ -1254,7 +1254,7 @@ public class Frintezza extends Quest
 		{
 			for (int i = 41; i <= 44; i++)
 			{
-				final L2NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				synchronized (_Room2Mobs)
 				{
 					_Room2Mobs.add(mob);
@@ -1265,7 +1265,7 @@ public class Frintezza extends Quest
 		{
 			for (int i = 45; i <= 131; i++)
 			{
-				final L2NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
+				final NpcInstance mob = addSpawn(_mobLoc[i][0], _mobLoc[i][1], _mobLoc[i][2], _mobLoc[i][3], _mobLoc[i][4], false, 0);
 				synchronized (_Room2Mobs)
 				{
 					_Room2Mobs.add(mob);
@@ -1276,7 +1276,7 @@ public class Frintezza extends Quest
 		{
 			synchronized (_Room1Mobs)
 			{
-				for (L2NpcInstance mob : _Room1Mobs)
+				for (NpcInstance mob : _Room1Mobs)
 				{
 					if (mob != null)
 					{
@@ -1290,7 +1290,7 @@ public class Frintezza extends Quest
 		{
 			synchronized (_Room2Mobs)
 			{
-				for (L2NpcInstance mob : _Room2Mobs)
+				for (NpcInstance mob : _Room2Mobs)
 				{
 					if (mob != null)
 					{
@@ -1438,29 +1438,29 @@ public class Frintezza extends Quest
 		{
 			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 300, 90, -10, 6500, 7000));
 			
-			frintezza = (L2GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
+			frintezza = (GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
 			GrandBossManager.getInstance().addBoss(frintezza);
 			frintezza.setIsImobilised(true);
 			frintezza.setIsInvul(true);
 			frintezza.disableAllSkills();
 			_Zone.updateKnownList(frintezza);
 			
-			demon2 = (L2MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
+			demon2 = (MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
 			demon2.setIsImobilised(true);
 			demon2.disableAllSkills();
 			_Zone.updateKnownList(demon2);
 			
-			demon3 = (L2MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
+			demon3 = (MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
 			demon3.setIsImobilised(true);
 			demon3.disableAllSkills();
 			_Zone.updateKnownList(demon3);
 			
-			demon1 = (L2MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
+			demon1 = (MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
 			demon1.setIsImobilised(true);
 			demon1.disableAllSkills();
 			_Zone.updateKnownList(demon1);
 			
-			demon4 = (L2MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
+			demon4 = (MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
 			demon4.setIsImobilised(true);
 			demon4.disableAllSkills();
 			_Zone.updateKnownList(demon4);
@@ -1509,9 +1509,9 @@ public class Frintezza extends Quest
 			_Zone.broadcastPacket(new SocialAction(demon1.getObjectId(), 1));
 			_Zone.broadcastPacket(new SocialAction(demon4.getObjectId(), 1));
 			
-			for (L2Character pc : _Zone.getCharactersInside().values())
+			for (Creature pc : _Zone.getCharactersInside().values())
 			{
-				if (pc instanceof L2PcInstance)
+				if (pc instanceof PlayerInstance)
 				{
 					if (pc.getX() < getXFix(174232))
 					{
@@ -1527,9 +1527,9 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("camera_9c"))
 		{
-			for (L2Character pc : _Zone.getCharactersInside().values())
+			for (Creature pc : _Zone.getCharactersInside().values())
 			{
-				if (pc instanceof L2PcInstance)
+				if (pc instanceof PlayerInstance)
 				{
 					if (pc.getX() < getXFix(174232))
 					{
@@ -1595,7 +1595,7 @@ public class Frintezza extends Quest
 			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 600, 180, -25, 0, 10000));
 			_Zone.broadcastPacket(new MagicSkillUse(_scarletDummy, _overheadDummy, 5004, 1, 5800, 0));
 			
-			weakScarlet = (L2GrandBossInstance) addSpawn(SCARLET1, 174232, -88020, -5110, 16384, false, 0);
+			weakScarlet = (GrandBossInstance) addSpawn(SCARLET1, 174232, -88020, -5110, 16384, false, 0);
 			weakScarlet.setIsInvul(true);
 			weakScarlet.setIsImobilised(true);
 			weakScarlet.disableAllSkills();
@@ -1629,22 +1629,22 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("camera_22"))
 		{
-			portrait2 = (L2MonsterInstance) addSpawn(29049, 175876, -88713, -5000, 28205, false, 0);
+			portrait2 = (MonsterInstance) addSpawn(29049, 175876, -88713, -5000, 28205, false, 0);
 			portrait2.setIsImobilised(true);
 			portrait2.disableAllSkills();
 			_Zone.updateKnownList(portrait2);
 			
-			portrait3 = (L2MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
+			portrait3 = (MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
 			portrait3.setIsImobilised(true);
 			portrait3.disableAllSkills();
 			_Zone.updateKnownList(portrait3);
 			
-			portrait1 = (L2MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
+			portrait1 = (MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
 			portrait1.setIsImobilised(true);
 			portrait1.disableAllSkills();
 			_Zone.updateKnownList(portrait1);
 			
-			portrait4 = (L2MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
+			portrait4 = (MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
 			portrait4.setIsImobilised(true);
 			portrait4.disableAllSkills();
 			_Zone.updateKnownList(portrait4);
@@ -1690,15 +1690,15 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("stop_pc"))
 		{
-			for (L2Character cha : _Zone.getCharactersInside().values())
+			for (Creature creature : _Zone.getCharactersInside().values())
 			{
-				cha.abortAttack();
-				cha.abortCast();
-				cha.disableAllSkills();
-				cha.setTarget(null);
-				cha.stopMove(null);
-				cha.setIsImobilised(true);
-				cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				creature.abortAttack();
+				creature.abortCast();
+				creature.disableAllSkills();
+				creature.setTarget(null);
+				creature.stopMove(null);
+				creature.setIsImobilised(true);
+				creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 		}
 		else if (event.equals("stop_npc"))
@@ -1715,12 +1715,12 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("start_pc"))
 		{
-			for (L2Character cha : _Zone.getCharactersInside().values())
+			for (Creature creature : _Zone.getCharactersInside().values())
 			{
-				if (cha != frintezza)
+				if (creature != frintezza)
 				{
-					cha.enableAllSkills();
-					cha.setIsImobilised(false);
+					creature.enableAllSkills();
+					creature.setIsImobilised(false);
 				}
 			}
 		}
@@ -1751,7 +1751,7 @@ public class Frintezza extends Quest
 		else if (event.equals("morph_04"))
 		{
 			_Zone.broadcastPacket(new SocialAction(weakScarlet.getObjectId(), 4));
-			final L2Skill skill = SkillTable.getInstance().getInfo(5017, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(5017, 1);
 			if (skill != null)
 			{
 				skill.getEffects(weakScarlet, weakScarlet, false, false, false);
@@ -1785,7 +1785,7 @@ public class Frintezza extends Quest
 			weakScarlet.deleteMe();
 			weakScarlet = null;
 			activeScarlet = null;
-			weakScarlet = (L2GrandBossInstance) addSpawn(SCARLET1, _Scarlet_x, _Scarlet_y, _Scarlet_z, _Scarlet_h, false, 0);
+			weakScarlet = (GrandBossInstance) addSpawn(SCARLET1, _Scarlet_x, _Scarlet_y, _Scarlet_z, _Scarlet_h, false, 0);
 			weakScarlet.setIsInvul(true);
 			weakScarlet.setIsImobilised(true);
 			weakScarlet.disableAllSkills();
@@ -1830,7 +1830,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("morph_13"))
 		{
-			strongScarlet = (L2GrandBossInstance) addSpawn(SCARLET2, reverseXFix(_Scarlet_x), reverseYFix(_Scarlet_y), reverseZFix(_Scarlet_z), _Scarlet_h, false, 0);
+			strongScarlet = (GrandBossInstance) addSpawn(SCARLET2, reverseXFix(_Scarlet_x), reverseYFix(_Scarlet_y), reverseZFix(_Scarlet_z), _Scarlet_h, false, 0);
 			strongScarlet.setIsInvul(true);
 			strongScarlet.setIsImobilised(true);
 			strongScarlet.disableAllSkills();
@@ -1849,7 +1849,7 @@ public class Frintezza extends Quest
 		else if (event.equals("morph_15"))
 		{
 			_Zone.broadcastPacket(new SocialAction(strongScarlet.getObjectId(), 2));
-			final L2Skill skill = SkillTable.getInstance().getInfo(5017, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(5017, 1);
 			if (skill != null)
 			{
 				skill.getEffects(strongScarlet, strongScarlet, false, false, false);
@@ -1975,7 +1975,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("songs_effect"))
 		{
-			final L2Skill skill = SkillTable.getInstance().getInfo(5008, _OnSong);
+			final Skill skill = SkillTable.getInstance().getInfo(5008, _OnSong);
 			if (skill == null)
 			{
 				return null;
@@ -2029,31 +2029,31 @@ public class Frintezza extends Quest
 			}
 			else if (_OnSong == 4)
 			{
-				for (L2Character cha : _Zone.getCharactersInside().values())
+				for (Creature creature : _Zone.getCharactersInside().values())
 				{
-					if ((cha instanceof L2PcInstance) && (Rnd.get(100) < 80))
+					if ((creature instanceof PlayerInstance) && (Rnd.get(100) < 80))
 					{
-						skill.getEffects(frintezza, cha, false, false, false);
-						cha.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 4));
+						skill.getEffects(frintezza, creature, false, false, false);
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 4));
 					}
 				}
 			}
 			else if (_OnSong == 5)
 			{
-				for (L2Character cha : _Zone.getCharactersInside().values())
+				for (Creature creature : _Zone.getCharactersInside().values())
 				{
-					if ((cha instanceof L2PcInstance) && (Rnd.get(100) < 70))
+					if ((creature instanceof PlayerInstance) && (Rnd.get(100) < 70))
 					{
-						cha.abortAttack();
-						cha.abortCast();
-						cha.disableAllSkills();
-						cha.stopMove(null);
-						cha.setIsImobilised(true);
-						cha.setIsParalyzed(true);
-						cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						skill.getEffects(frintezza, cha, false, false, false);
-						cha.startAbnormalEffect(L2Character.ABNORMAL_EFFECT_DANCE_STUNNED);
-						cha.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 5));
+						creature.abortAttack();
+						creature.abortCast();
+						creature.disableAllSkills();
+						creature.stopMove(null);
+						creature.setIsImobilised(true);
+						creature.setIsParalyzed(true);
+						creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+						skill.getEffects(frintezza, creature, false, false, false);
+						creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_DANCE_STUNNED);
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 5));
 					}
 				}
 				startQuestTimer("stop_effect", 25000, frintezza, null);
@@ -2061,15 +2061,15 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("stop_effect"))
 		{
-			for (L2Character cha : _Zone.getCharactersInside().values())
+			for (Creature creature : _Zone.getCharactersInside().values())
 			{
-				if (cha instanceof L2PcInstance)
+				if (creature instanceof PlayerInstance)
 				{
-					cha.stopAbnormalEffect(L2Character.ABNORMAL_EFFECT_DANCE_STUNNED);
-					cha.stopAbnormalEffect(L2Character.ABNORMAL_EFFECT_FLOATING_ROOT);
-					cha.enableAllSkills();
-					cha.setIsImobilised(false);
-					cha.setIsParalyzed(false);
+					creature.stopAbnormalEffect(Creature.ABNORMAL_EFFECT_DANCE_STUNNED);
+					creature.stopAbnormalEffect(Creature.ABNORMAL_EFFECT_FLOATING_ROOT);
+					creature.enableAllSkills();
+					creature.setIsImobilised(false);
+					creature.setIsParalyzed(false);
 				}
 			}
 			_Abnormal = 0;
@@ -2118,7 +2118,7 @@ public class Frintezza extends Quest
 			if ((weakScarlet != null) && !weakScarlet.isDead() && (_SecondMorph == 0) && (_ThirdMorph == 0) && (_OnMorph == 0))
 			{
 				final int i = Rnd.get(0, 1);
-				final L2Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					weakScarlet.stopMove(null);
@@ -2142,7 +2142,7 @@ public class Frintezza extends Quest
 					i = Rnd.get(2, 4);
 				}
 				
-				final L2Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					weakScarlet.stopMove(null);
@@ -2172,7 +2172,7 @@ public class Frintezza extends Quest
 					i = Rnd.get(6, 9);
 				}
 				
-				final L2Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					strongScarlet.stopMove(null);
@@ -2196,20 +2196,20 @@ public class Frintezza extends Quest
 			}
 			else
 			{
-				for (L2Character cha : _Zone.getCharactersInside().values())
+				for (Creature creature : _Zone.getCharactersInside().values())
 				{
-					if (cha instanceof L2PcInstance)
+					if (creature instanceof PlayerInstance)
 					{
-						if (cha.getFirstEffect(5016) != null)
+						if (creature.getFirstEffect(5016) != null)
 						{
-							cha.abortAttack();
-							cha.abortCast();
-							cha.disableAllSkills();
-							cha.stopMove(null);
-							cha.setIsImobilised(true);
-							cha.setIsParalyzed(true);
-							cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							cha.startAbnormalEffect(L2Character.ABNORMAL_EFFECT_FLOATING_ROOT);
+							creature.abortAttack();
+							creature.abortCast();
+							creature.disableAllSkills();
+							creature.stopMove(null);
+							creature.setIsImobilised(true);
+							creature.setIsParalyzed(true);
+							creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+							creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_FLOATING_ROOT);
 						}
 					}
 				}
@@ -2268,7 +2268,7 @@ public class Frintezza extends Quest
 			{
 				for (int i = 0; i < Minions.size(); i++)
 				{
-					final L2Attackable mob = Minions.get(i);
+					final Attackable mob = Minions.get(i);
 					if (mob != null)
 					{
 						mob.decayMe();
@@ -2281,11 +2281,11 @@ public class Frintezza extends Quest
 		{
 			if ((npc != null) && !npc.isDead() && (frintezza != null) && !frintezza.isDead())
 			{
-				final L2NpcInstance mob = addSpawn(npc.getNpcId() + 2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
+				final NpcInstance mob = addSpawn(npc.getNpcId() + 2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				// mob.setIsRaidMinion(true);
 				synchronized (Minions)
 				{
-					Minions.add((L2Attackable) mob);
+					Minions.add((Attackable) mob);
 				}
 				
 				startQuestTimer("action", 200, mob, null);
@@ -2309,7 +2309,7 @@ public class Frintezza extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		if (npc.getNpcId() == CUBE)
 		{
@@ -2367,12 +2367,12 @@ public class Frintezza extends Quest
 					{
 						if (player.getParty() != null)
 						{
-							final L2CommandChannel CC = player.getParty().getCommandChannel();
+							final CommandChannel CC = player.getParty().getCommandChannel();
 							
 							if (CC != null)
 							{ // teleport all parties into CC
 								
-								for (L2Party party : CC.getPartys())
+								for (Party party : CC.getPartys())
 								{
 									if (party == null)
 									{
@@ -2381,7 +2381,7 @@ public class Frintezza extends Quest
 									
 									synchronized (_PlayersInside)
 									{
-										for (L2PcInstance member : party.getPartyMembers())
+										for (PlayerInstance member : party.getPartyMembers())
 										{
 											if ((member == null) || (member.getLevel() < 74))
 											{
@@ -2416,9 +2416,9 @@ public class Frintezza extends Quest
 							else
 							{ // teleport just actual party
 								
-								final L2Party party = player.getParty();
+								final Party party = player.getParty();
 								
-								for (L2PcInstance member : party.getPartyMembers())
+								for (PlayerInstance member : party.getPartyMembers())
 								{
 									if ((member == null) || (member.getLevel() < 74))
 									{
@@ -2462,9 +2462,9 @@ public class Frintezza extends Quest
 					}
 					else
 					{
-						final L2CommandChannel CC = player.getParty().getCommandChannel();
+						final CommandChannel CC = player.getParty().getCommandChannel();
 						
-						for (L2Party party : CC.getPartys())
+						for (Party party : CC.getPartys())
 						{
 							if (party == null)
 							{
@@ -2473,7 +2473,7 @@ public class Frintezza extends Quest
 							
 							synchronized (_PlayersInside)
 							{
-								for (L2PcInstance member : party.getPartyMembers())
+								for (PlayerInstance member : party.getPartyMembers())
 								{
 									if ((member == null) || (member.getLevel() < 74))
 									{
@@ -2517,7 +2517,7 @@ public class Frintezza extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		_LastAction = System.currentTimeMillis();
 		if (npc.getNpcId() == FRINTEZZA)
@@ -2565,7 +2565,7 @@ public class Frintezza extends Quest
 					_Bomber = 1;
 					startQuestTimer("bomber", 3000, npc, null);
 					
-					final L2Skill skill = SkillTable.getInstance().getInfo(5011, 1);
+					final Skill skill = SkillTable.getInstance().getInfo(5011, 1);
 					if (skill != null)
 					{
 						// npc.setIsCastingNow(true);
@@ -2579,7 +2579,7 @@ public class Frintezza extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
 		
@@ -2651,7 +2651,7 @@ public class Frintezza extends Quest
 				int outside = 0;
 				synchronized (_PlayersInside)
 				{
-					for (L2PcInstance room2_pc : _PlayersInside)
+					for (PlayerInstance room2_pc : _PlayersInside)
 					{
 						if (_Zone.isInsideZone(room2_pc) && (room2_pc.getY() > -86130))
 						{
@@ -2700,7 +2700,7 @@ public class Frintezza extends Quest
 	 * TODO: Update cords in script, im just lazy :)
 	 */
 	@Override
-	public L2NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
 		// cords fix:
 		return super.addSpawn(npcId, getXFix(x), getYFix(y), getZFix(z), heading, randomOffset, despawnDelay);

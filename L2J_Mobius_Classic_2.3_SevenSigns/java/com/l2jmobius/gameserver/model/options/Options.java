@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.options;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -157,7 +157,7 @@ public class Options
 		_activationSkills.add(holder);
 	}
 	
-	public void apply(L2PcInstance player)
+	public void apply(PlayerInstance player)
 	{
 		if (hasEffects())
 		{
@@ -213,7 +213,7 @@ public class Options
 		player.sendSkillList();
 	}
 	
-	public void remove(L2PcInstance player)
+	public void remove(PlayerInstance player)
 	{
 		if (hasEffects())
 		{
@@ -251,7 +251,7 @@ public class Options
 		player.sendSkillList();
 	}
 	
-	private void addSkill(L2PcInstance player, Skill skill)
+	private void addSkill(PlayerInstance player, Skill skill)
 	{
 		boolean updateTimeStamp = false;
 		

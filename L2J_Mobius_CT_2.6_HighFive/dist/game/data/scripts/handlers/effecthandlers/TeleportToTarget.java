@@ -20,10 +20,10 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
@@ -42,9 +42,9 @@ public final class TeleportToTarget extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.TELEPORT_TO_TARGET;
+		return EffectType.TELEPORT_TO_TARGET;
 	}
 	
 	@Override
@@ -56,8 +56,8 @@ public final class TeleportToTarget extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character activeChar = info.getEffector();
-		final L2Character target = info.getEffected();
+		final Creature creature = info.getEffector();
+		final Creature target = info.getEffected();
 		if (target == null)
 		{
 			return;
@@ -78,13 +78,13 @@ public final class TeleportToTarget extends AbstractEffect
 		final int y = (int) (py + (25 * Math.sin(ph)));
 		final int z = target.getZ();
 		
-		final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
+		final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceId());
 		
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
-		activeChar.abortAttack();
-		activeChar.abortCast();
-		activeChar.setXYZ(loc);
-		activeChar.broadcastPacket(new ValidateLocation(activeChar));
+		creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		creature.broadcastPacket(new FlyToLocation(creature, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
+		creature.abortAttack();
+		creature.abortCast();
+		creature.setXYZ(loc);
+		creature.broadcastPacket(new ValidateLocation(creature));
 	}
 }

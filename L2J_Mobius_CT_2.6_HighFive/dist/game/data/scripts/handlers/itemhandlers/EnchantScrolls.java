@@ -17,16 +17,16 @@
 package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ChooseInventoryItem;
 
 public class EnchantScrolls implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -34,20 +34,20 @@ public class EnchantScrolls implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (activeChar.isCastingNow())
+		final PlayerInstance player = playable.getActingPlayer();
+		if (player.isCastingNow())
 		{
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (player.isEnchanting())
 		{
-			activeChar.sendPacket(SystemMessageId.ANOTHER_ENCHANTMENT_IS_IN_PROGRESS_PLEASE_COMPLETE_THE_PREVIOUS_TASK_THEN_TRY_AGAIN);
+			player.sendPacket(SystemMessageId.ANOTHER_ENCHANTMENT_IS_IN_PROGRESS_PLEASE_COMPLETE_THE_PREVIOUS_TASK_THEN_TRY_AGAIN);
 			return false;
 		}
 		
-		activeChar.setActiveEnchantItemId(item.getObjectId());
-		activeChar.sendPacket(new ChooseInventoryItem(item.getId()));
+		player.setActiveEnchantItemId(item.getObjectId());
+		player.sendPacket(new ChooseInventoryItem(item.getId()));
 		return true;
 	}
 }

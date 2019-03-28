@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -43,7 +43,7 @@ public final class ConditionUsingItemType extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if ((effector == null) || !effector.isPlayer())
 		{
@@ -55,7 +55,7 @@ public final class ConditionUsingItemType extends Condition
 		if (_armor)
 		{
 			// Get the itemMask of the weared chest (if exists)
-			final L2ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+			final ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 			if (chest == null)
 			{
 				return false;
@@ -72,12 +72,12 @@ public final class ConditionUsingItemType extends Condition
 			
 			final int chestBodyPart = chest.getItem().getBodyPart();
 			// return True if chest armor is a Full Armor
-			if (chestBodyPart == L2Item.SLOT_FULL_ARMOR)
+			if (chestBodyPart == Item.SLOT_FULL_ARMOR)
 			{
 				return true;
 			}
 			// check legs armor
-			final L2ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+			final ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 			if (legs == null)
 			{
 				return false;

@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 /**
  * This class holds parameter, specific to certain NPCs.<br>
@@ -44,7 +44,7 @@ public class NpcPersonalAIData
 	 * @param spawnDat spawn to process
 	 * @param data Map of AI values
 	 */
-	public void storeData(L2Spawn spawnDat, Map<String, Integer> data)
+	public void storeData(Spawn spawnDat, Map<String, Integer> data)
 	{
 		if ((data != null) && !data.isEmpty())
 		{
@@ -86,7 +86,7 @@ public class NpcPersonalAIData
 	 * @param spawn link to NPC's spawn
 	 * @param spawnName name of spawn
 	 */
-	public void initializeNpcParameters(L2Npc npc, L2Spawn spawn, String spawnName)
+	public void initializeNpcParameters(Npc npc, Spawn spawn, String spawnName)
 	{
 		if (_AIData.containsKey(spawnName))
 		{

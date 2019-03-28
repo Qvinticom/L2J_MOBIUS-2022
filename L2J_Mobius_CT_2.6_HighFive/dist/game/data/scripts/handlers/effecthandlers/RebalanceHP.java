@@ -16,14 +16,14 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
@@ -40,9 +40,9 @@ public final class RebalanceHP extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.REBALANCE_HP;
+		return EffectType.REBALANCE_HP;
 	}
 	
 	@Override
@@ -61,10 +61,10 @@ public final class RebalanceHP extends AbstractEffect
 		
 		double fullHP = 0;
 		double currentHPs = 0;
-		final L2Party party = info.getEffector().getParty();
+		final Party party = info.getEffector().getParty();
 		final Skill skill = info.getSkill();
-		final L2Character effector = info.getEffector();
-		for (L2PcInstance member : party.getMembers())
+		final Creature effector = info.getEffector();
+		for (PlayerInstance member : party.getMembers())
 		{
 			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 			{
@@ -72,7 +72,7 @@ public final class RebalanceHP extends AbstractEffect
 				currentHPs += member.getCurrentHp();
 			}
 			
-			final L2Summon summon = member.getSummon();
+			final Summon summon = member.getSummon();
 			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 			{
 				fullHP += summon.getMaxHp();
@@ -81,7 +81,7 @@ public final class RebalanceHP extends AbstractEffect
 		}
 		
 		final double percentHP = currentHPs / fullHP;
-		for (L2PcInstance member : party.getMembers())
+		for (PlayerInstance member : party.getMembers())
 		{
 			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))
 			{
@@ -102,7 +102,7 @@ public final class RebalanceHP extends AbstractEffect
 				member.setCurrentHp(newHP);
 			}
 			
-			final L2Summon summon = member.getSummon();
+			final Summon summon = member.getSummon();
 			if ((summon != null) && (!summon.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, summon, true)))
 			{
 				double newHP = summon.getMaxHp() * percentHP;

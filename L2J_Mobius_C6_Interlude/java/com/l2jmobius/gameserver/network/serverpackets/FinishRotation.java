@@ -16,28 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * format dd
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class FinishRotation extends L2GameServerPacket
+public class FinishRotation extends GameServerPacket
 {
 	private final int _heading;
-	private final int _charObjId;
+	private final int _objectId;
 	
-	public FinishRotation(L2Character cha)
+	public FinishRotation(Creature creature)
 	{
-		_charObjId = cha.getObjectId();
-		_heading = cha.getHeading();
+		_objectId = creature.getObjectId();
+		_heading = creature.getHeading();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x63);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_heading);
 	}
 }

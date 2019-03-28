@@ -25,8 +25,8 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2ExtractableItem;
-import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
+import com.l2jmobius.gameserver.model.ExtractableItem;
+import com.l2jmobius.gameserver.model.ExtractableProductItem;
 
 /**
  * @author FBIagent
@@ -35,8 +35,8 @@ public class ExtractableItemsData
 {
 	private static Logger LOGGER = Logger.getLogger(ExtractableItemsData.class.getName());
 	
-	// Map<itemid, L2ExtractableItem>
-	private Map<Integer, L2ExtractableItem> _items;
+	// Map<itemid, ExtractableItem>
+	private Map<Integer, ExtractableItem> _items;
 	
 	private static ExtractableItemsData _instance = null;
 	
@@ -88,7 +88,7 @@ public class ExtractableItemsData
 					return;
 				}
 				
-				final List<L2ExtractableProductItem> product_temp = new ArrayList<>(lineSplit.length);
+				final List<ExtractableProductItem> product_temp = new ArrayList<>(lineSplit.length);
 				for (int i = 0; i < (lineSplit.length - 1); i++)
 				{
 					String[] lineSplit2 = lineSplit[i + 1].split(",");
@@ -116,11 +116,11 @@ public class ExtractableItemsData
 						continue;
 					}
 					
-					product_temp.add(new L2ExtractableProductItem(production, amount, chance));
+					product_temp.add(new ExtractableProductItem(production, amount, chance));
 				}
 				
 				int fullChances = 0;
-				for (L2ExtractableProductItem Pi : product_temp)
+				for (ExtractableProductItem Pi : product_temp)
 				{
 					fullChances += Pi.getChance();
 				}
@@ -132,7 +132,7 @@ public class ExtractableItemsData
 					continue;
 				}
 				
-				_items.put(itemID, new L2ExtractableItem(itemID, product_temp));
+				_items.put(itemID, new ExtractableItem(itemID, product_temp));
 			}
 			
 			LOGGER.info("Extractable items data: Loaded " + _items.size() + " extractable items!");
@@ -159,7 +159,7 @@ public class ExtractableItemsData
 		}
 	}
 	
-	public L2ExtractableItem getExtractableItem(int itemID)
+	public ExtractableItem getExtractableItem(int itemID)
 	{
 		return _items.get(itemID);
 	}
@@ -169,7 +169,7 @@ public class ExtractableItemsData
 		final int size = _items.size();
 		final int[] result = new int[size];
 		int i = 0;
-		for (L2ExtractableItem ei : _items.values())
+		for (ExtractableItem ei : _items.values())
 		{
 			result[i] = ei.getItemId();
 			i++;

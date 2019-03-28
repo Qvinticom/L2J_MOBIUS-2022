@@ -16,8 +16,8 @@
  */
 package quests.Q00651_RunawayYouth;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,10 +44,10 @@ public class Q00651_RunawayYouth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -63,7 +63,7 @@ public class Q00651_RunawayYouth extends Quest
 			{
 				return "32014-05.htm";
 			}
-			st.startQuest();
+			qs.startQuest();
 			takeItems(player, SOE, 1);
 			npc.deleteMe();
 			htmltext = event;
@@ -72,16 +72,16 @@ public class Q00651_RunawayYouth extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case IVAN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -98,10 +98,10 @@ public class Q00651_RunawayYouth extends Quest
 			}
 			case BATIDAE:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					giveAdena(player, 2883, true);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = "31989-01.html";
 				}
 				break;

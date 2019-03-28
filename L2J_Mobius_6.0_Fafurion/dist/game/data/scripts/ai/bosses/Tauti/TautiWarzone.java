@@ -20,9 +20,9 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
@@ -62,7 +62,7 @@ public final class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -101,7 +101,7 @@ public final class TautiWarzone extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				world.setStatus(4);
 				world.openCloseDoor(DOOR_2, true);
-				for (L2PcInstance member : world.getPlayers())
+				for (PlayerInstance member : world.getPlayers())
 				{
 					member.teleToLocation(TAUTI_TELEPORT, world);
 					startQuestTimer("PLAY_OPENING_B_MOVIE", 5000, null, member, false);
@@ -123,7 +123,7 @@ public final class TautiWarzone extends AbstractInstance
 			}
 			case "SPAWN_AXE":
 			{
-				final L2Npc axe = addSpawn(npc.getId() == TAUTI_EXTREME ? TAUTI_EXTREME_AXE : TAUTI_COMMON_AXE, npc, false, 0, false, npc.getInstanceId());
+				final Npc axe = addSpawn(npc.getId() == TAUTI_EXTREME ? TAUTI_EXTREME_AXE : TAUTI_COMMON_AXE, npc, false, 0, false, npc.getInstanceId());
 				axe.setRandomWalking(false);
 				axe.setIsImmobilized(true);
 				break;
@@ -140,7 +140,7 @@ public final class TautiWarzone extends AbstractInstance
 					world.setStatus(1);
 					world.spawnGroup("room1");
 					playMovie(world.getPlayers(), Movie.SC_TAUTI_OPENING);
-					for (L2PcInstance member : world.getPlayers())
+					for (PlayerInstance member : world.getPlayers())
 					{
 						takeItems(member, KEY_OF_DARKNESS, -1);
 					}
@@ -148,11 +148,11 @@ public final class TautiWarzone extends AbstractInstance
 				}
 				else if (world.isStatus(1))
 				{
-					if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+					if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 					{
 						world.setStatus(2);
-						final List<L2Npc> monsters = world.spawnGroup("room2");
-						for (L2Npc monster : monsters)
+						final List<Npc> monsters = world.spawnGroup("room2");
+						for (Npc monster : monsters)
 						{
 							monster.setRandomWalking(false);
 						}
@@ -166,7 +166,7 @@ public final class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
 		switch (npc.getId())
@@ -198,7 +198,7 @@ public final class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world.isStatus(5) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.15)))
@@ -218,7 +218,7 @@ public final class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getId() == ZAHAK)
 		{
@@ -235,7 +235,7 @@ public final class TautiWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		if (player != null)
 		{

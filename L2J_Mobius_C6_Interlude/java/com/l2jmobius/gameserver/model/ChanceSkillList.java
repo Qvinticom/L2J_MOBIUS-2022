@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.skills.Formulas;
@@ -28,27 +28,27 @@ import com.l2jmobius.gameserver.skills.Formulas;
 /**
  * @author kombat
  */
-public class ChanceSkillList extends ConcurrentHashMap<L2Skill, ChanceCondition>
+public class ChanceSkillList extends ConcurrentHashMap<Skill, ChanceCondition>
 {
-	private L2Character _owner;
+	private Creature _owner;
 	
-	public ChanceSkillList(L2Character owner)
+	public ChanceSkillList(Creature owner)
 	{
 		super();
 		_owner = owner;
 	}
 	
-	public L2Character getOwner()
+	public Creature getOwner()
 	{
 		return _owner;
 	}
 	
-	public void setOwner(L2Character owner)
+	public void setOwner(Creature owner)
 	{
 		_owner = owner;
 	}
 	
-	public void onHit(L2Character target, boolean ownerWasHit, boolean wasCrit)
+	public void onHit(Creature target, boolean ownerWasHit, boolean wasCrit)
 	{
 		int event;
 		if (ownerWasHit)
@@ -71,7 +71,7 @@ public class ChanceSkillList extends ConcurrentHashMap<L2Skill, ChanceCondition>
 		onEvent(event, target);
 	}
 	
-	public void onSkillHit(L2Character target, boolean ownerWasHit, boolean wasMagic, boolean wasOffensive)
+	public void onSkillHit(Creature target, boolean ownerWasHit, boolean wasMagic, boolean wasOffensive)
 	{
 		int event;
 		if (ownerWasHit)
@@ -97,7 +97,7 @@ public class ChanceSkillList extends ConcurrentHashMap<L2Skill, ChanceCondition>
 		onEvent(event, target);
 	}
 	
-	public static boolean canTriggerByCast(L2Character caster, L2Character target, L2Skill trigger)
+	public static boolean canTriggerByCast(Creature caster, Creature target, Skill trigger)
 	{
 		// crafting does not trigger any chance skills
 		// possibly should be unhardcoded
@@ -128,9 +128,9 @@ public class ChanceSkillList extends ConcurrentHashMap<L2Skill, ChanceCondition>
 		return true;
 	}
 	
-	public void onEvent(int event, L2Character target)
+	public void onEvent(int event, Creature target)
 	{
-		for (Entry<L2Skill, ChanceCondition> e : entrySet())
+		for (Entry<Skill, ChanceCondition> e : entrySet())
 		{
 			if ((e.getValue() != null) && e.getValue().trigger(event))
 			{
@@ -139,7 +139,7 @@ public class ChanceSkillList extends ConcurrentHashMap<L2Skill, ChanceCondition>
 		}
 	}
 	
-	private void makeCast(L2Skill skill, L2Character target)
+	private void makeCast(Skill skill, Creature target)
 	{
 		try
 		{
@@ -155,10 +155,10 @@ public class ChanceSkillList extends ConcurrentHashMap<L2Skill, ChanceCondition>
 				}
 				
 				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-				final L2Object[] targets = skill.getTargetList(_owner, false, target);
+				final WorldObject[] targets = skill.getTargetList(_owner, false, target);
 				
 				_owner.broadcastPacket(new MagicSkillLaunched(_owner, skill.getDisplayId(), skill.getLevel(), targets));
-				_owner.broadcastPacket(new MagicSkillUse(_owner, (L2Character) targets[0], skill.getDisplayId(), skill.getLevel(), 0, 0));
+				_owner.broadcastPacket(new MagicSkillUse(_owner, (Creature) targets[0], skill.getDisplayId(), skill.getLevel(), 0, 0));
 				
 				// Launch the magic skill and calculate its effects
 				if (handler != null)

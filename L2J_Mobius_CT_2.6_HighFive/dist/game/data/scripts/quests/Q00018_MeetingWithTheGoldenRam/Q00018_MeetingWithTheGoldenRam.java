@@ -16,8 +16,8 @@
  */
 package quests.Q00018_MeetingWithTheGoldenRam;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -45,11 +45,11 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -60,7 +60,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 			{
 				if (player.getLevel() >= 66)
 				{
-					st.startQuest();
+					qs.startQuest();
 				}
 				else
 				{
@@ -70,7 +70,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 			}
 			case "31315-02.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				giveItems(player, BOX, 1);
 				break;
 			}
@@ -80,7 +80,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 				{
 					giveAdena(player, 40000, true);
 					addExpAndSp(player, 126668, 11731);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}
@@ -89,13 +89,13 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		final int npcId = npc.getId();
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -118,9 +118,9 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 				}
 				else if (npcId == DAISY)
 				{
-					htmltext = (st.getCond() < 2) ? "31315-01.html" : "31315-03.html";
+					htmltext = (qs.getCond() < 2) ? "31315-01.html" : "31315-03.html";
 				}
-				else if ((npcId == ABERCROMBIE) && st.isCond(2) && hasQuestItems(player, BOX))
+				else if ((npcId == ABERCROMBIE) && qs.isCond(2) && hasQuestItems(player, BOX))
 				{
 					htmltext = "31555-01.html";
 				}

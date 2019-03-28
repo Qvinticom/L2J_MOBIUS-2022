@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class AllyLeave extends L2GameClientPacket
+public final class AllyLeave extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -31,7 +31,7 @@ public final class AllyLeave extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -50,7 +50,7 @@ public final class AllyLeave extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		if (clan.getAllyId() == 0)
 		{
@@ -68,7 +68,7 @@ public final class AllyLeave extends L2GameClientPacket
 		
 		clan.setAllyId(0);
 		clan.setAllyName(null);
-		clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_LEAVED * 86400000), L2Clan.PENALTY_TYPE_CLAN_LEAVED); // 24*60*60*1000 = 86400000
+		clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_LEAVED * 86400000), Clan.PENALTY_TYPE_CLAN_LEAVED); // 24*60*60*1000 = 86400000
 		clan.setAllyCrest(0);
 		clan.updateClanInDB();
 		

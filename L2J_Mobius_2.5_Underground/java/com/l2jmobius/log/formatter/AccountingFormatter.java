@@ -23,9 +23,9 @@ import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.StringUtil;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.ConnectionState;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 public class AccountingFormatter extends Formatter
 {
@@ -48,9 +48,9 @@ public class AccountingFormatter extends Formatter
 				
 				StringUtil.append(output, ", ");
 				
-				if (p instanceof L2GameClient)
+				if (p instanceof GameClient)
 				{
-					final L2GameClient client = (L2GameClient) p;
+					final GameClient client = (GameClient) p;
 					String address = null;
 					try
 					{
@@ -67,10 +67,10 @@ public class AccountingFormatter extends Formatter
 					{
 						case IN_GAME:
 						{
-							if (client.getActiveChar() != null)
+							if (client.getPlayer() != null)
 							{
-								StringUtil.append(output, client.getActiveChar().getName());
-								StringUtil.append(output, "(", String.valueOf(client.getActiveChar().getObjectId()), ") ");
+								StringUtil.append(output, client.getPlayer().getName());
+								StringUtil.append(output, "(", String.valueOf(client.getPlayer().getObjectId()), ") ");
 							}
 							break;
 						}
@@ -96,9 +96,9 @@ public class AccountingFormatter extends Formatter
 						}
 					}
 				}
-				else if (p instanceof L2PcInstance)
+				else if (p instanceof PlayerInstance)
 				{
-					final L2PcInstance player = (L2PcInstance) p;
+					final PlayerInstance player = (PlayerInstance) p;
 					StringUtil.append(output, player.getName());
 					StringUtil.append(output, "(", String.valueOf(player.getObjectId()), ")");
 				}

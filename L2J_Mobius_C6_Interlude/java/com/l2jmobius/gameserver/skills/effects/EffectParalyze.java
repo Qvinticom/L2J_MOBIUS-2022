@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.skills.Env;
 
-final class EffectParalyze extends L2Effect
+final class EffectParalyze extends Effect
 {
 	public EffectParalyze(Env env, EffectTemplate template)
 	{
@@ -37,14 +37,14 @@ final class EffectParalyze extends L2Effect
 	public void onStart()
 	{
 		getEffected().stopMove(null);
-		getEffected().startAbnormalEffect(L2Character.ABNORMAL_EFFECT_HOLD_1);
+		getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_HOLD_1);
 		getEffected().setIsParalyzed(true);
 	}
 	
 	@Override
 	public void onExit()
 	{
-		getEffected().stopAbnormalEffect(L2Character.ABNORMAL_EFFECT_HOLD_1);
+		getEffected().stopAbnormalEffect(Creature.ABNORMAL_EFFECT_HOLD_1);
 		getEffected().setIsParalyzed(false);
 	}
 	

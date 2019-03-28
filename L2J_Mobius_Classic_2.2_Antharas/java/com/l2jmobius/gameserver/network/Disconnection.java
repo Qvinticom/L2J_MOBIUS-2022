@@ -20,9 +20,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
@@ -33,90 +33,90 @@ public final class Disconnection
 {
 	private static final Logger LOGGER = Logger.getLogger(Disconnection.class.getName());
 	
-	public static L2GameClient getClient(L2GameClient client, L2PcInstance activeChar)
+	public static GameClient getClient(GameClient client, PlayerInstance player)
 	{
 		if (client != null)
 		{
 			return client;
 		}
 		
-		if (activeChar != null)
+		if (player != null)
 		{
-			return activeChar.getClient();
+			return player.getClient();
 		}
 		
 		return null;
 	}
 	
-	public static L2PcInstance getActiveChar(L2GameClient client, L2PcInstance activeChar)
+	public static PlayerInstance getActiveChar(GameClient client, PlayerInstance player)
 	{
-		if (activeChar != null)
+		if (player != null)
 		{
-			return activeChar;
+			return player;
 		}
 		
 		if (client != null)
 		{
-			return client.getActiveChar();
+			return client.getPlayer();
 		}
 		
 		return null;
 	}
 	
-	private final L2GameClient _client;
-	private final L2PcInstance _activeChar;
+	private final GameClient _client;
+	private final PlayerInstance _player;
 	
-	private Disconnection(L2GameClient client)
+	private Disconnection(GameClient client)
 	{
 		this(client, null);
 	}
 	
-	public static Disconnection of(L2GameClient client)
+	public static Disconnection of(GameClient client)
 	{
 		return new Disconnection(client);
 	}
 	
-	private Disconnection(L2PcInstance activeChar)
+	private Disconnection(PlayerInstance player)
 	{
-		this(null, activeChar);
+		this(null, player);
 	}
 	
-	public static Disconnection of(L2PcInstance activeChar)
+	public static Disconnection of(PlayerInstance player)
 	{
-		return new Disconnection(activeChar);
+		return new Disconnection(player);
 	}
 	
-	private Disconnection(L2GameClient client, L2PcInstance activeChar)
+	private Disconnection(GameClient client, PlayerInstance player)
 	{
-		_client = getClient(client, activeChar);
-		_activeChar = getActiveChar(client, activeChar);
+		_client = getClient(client, player);
+		_player = getActiveChar(client, player);
 		
 		// Anti Feed
 		AntiFeedManager.getInstance().onDisconnect(_client);
 		
 		if (_client != null)
 		{
-			_client.setActiveChar(null);
+			_client.setPlayer(null);
 		}
 		
-		if (_activeChar != null)
+		if (_player != null)
 		{
-			_activeChar.setClient(null);
+			_player.setClient(null);
 		}
 	}
 	
-	public static Disconnection of(L2GameClient client, L2PcInstance activeChar)
+	public static Disconnection of(GameClient client, PlayerInstance player)
 	{
-		return new Disconnection(client, activeChar);
+		return new Disconnection(client, player);
 	}
 	
 	public Disconnection storeMe()
 	{
 		try
 		{
-			if ((_activeChar != null) && _activeChar.isOnline())
+			if ((_player != null) && _player.isOnline())
 			{
-				_activeChar.storeMe();
+				_player.storeMe();
 			}
 		}
 		catch (RuntimeException e)
@@ -131,10 +131,10 @@ public final class Disconnection
 	{
 		try
 		{
-			if ((_activeChar != null) && _activeChar.isOnline())
+			if ((_player != null) && _player.isOnline())
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(_activeChar), _activeChar);
-				_activeChar.deleteMe();
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(_player), _player);
+				_player.deleteMe();
 			}
 		}
 		catch (RuntimeException e)
@@ -185,9 +185,9 @@ public final class Disconnection
 	
 	public void onDisconnection()
 	{
-		if (_activeChar != null)
+		if (_player != null)
 		{
-			ThreadPool.schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+			ThreadPool.schedule(() -> defaultSequence(), _player.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
 		}
 	}
 }

@@ -17,8 +17,8 @@
 package quests.Q10709_TheStolenSeed;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -58,21 +58,21 @@ public final class Q10709_TheStolenSeed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
 		if (event.equals("action"))
 		{
-			if ((st != null) && (st.isCond(1)) && (getQuestItemsCount(player, MEMORY_FRAGMENT) >= 1))
+			if ((qs != null) && (qs.isCond(1)) && (getQuestItemsCount(player, MEMORY_FRAGMENT) >= 1))
 			{
 				// Take items
 				takeItems(player, MEMORY_FRAGMENT, -1);
 				
 				// Spawn + chat
-				final L2Npc akum = addSpawn(REMEMBERED_AKUM, npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0, false, 0);
+				final Npc akum = addSpawn(REMEMBERED_AKUM, npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0, false, 0);
 				akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARGH_WHO_IS_HIDING_THERE);
-				final L2Npc embryo = addSpawn(REMEMBERED_EMBRYO, akum.getX() + 100, akum.getY() + 100, akum.getZ(), 0, false, 0);
+				final Npc embryo = addSpawn(REMEMBERED_EMBRYO, akum.getX() + 100, akum.getY() + 100, akum.getZ(), 0, false, 0);
 				embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.A_SMART_GIANT_HUH_WELL_HAND_IT_OVER_THE_KARTIA_S_SEED_IS_OURS);
 				
 				// Attack + invul
@@ -90,7 +90,7 @@ public final class Q10709_TheStolenSeed extends Quest
 			}
 		}
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -106,16 +106,16 @@ public final class Q10709_TheStolenSeed extends Quest
 			}
 			case "33866-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, MEMORY_FRAGMENT, 1);
 				htmltext = event;
 				break;
 			}
 			case "33866-07.html":
 			{
-				if (st.isCond(3) && (getQuestItemsCount(player, FRAGMENT) >= 1))
+				if (qs.isCond(3) && (getQuestItemsCount(player, FRAGMENT) >= 1))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					takeItems(player, FRAGMENT, -1);
 					giveItems(player, EAB, 5);
 					giveStoryQuestReward(player, 30);
@@ -129,10 +129,10 @@ public final class Q10709_TheStolenSeed extends Quest
 			}
 			case "EMBRYO_DELAY":
 			{
-				final L2Npc akum = (L2Npc) npc.getTarget();
+				final Npc akum = (Npc) npc.getTarget();
 				if (akum != null)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.KARTIA_S_SEED_GOT_IT);
 					akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARGHH);
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WORTHLESS_GIANT_CURSE_YOU_FOR_ETERNITY);
@@ -147,12 +147,12 @@ public final class Q10709_TheStolenSeed extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -166,7 +166,7 @@ public final class Q10709_TheStolenSeed extends Quest
 			{
 				if (npc.getId() == NOVIAN)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
@@ -196,14 +196,14 @@ public final class Q10709_TheStolenSeed extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
-			st.setCond(0);
-			st.setCond(3, true);
+			qs.setCond(0);
+			qs.setCond(3, true);
 			giveItems(killer, FRAGMENT, 1);
 		}
 		return super.onKill(npc, killer, isSummon);

@@ -18,21 +18,21 @@ package com.l2jmobius.gameserver.model.itemcontainer;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public class PetInventory extends Inventory
 {
-	private final L2PetInstance _owner;
+	private final PetInstance _owner;
 	
-	public PetInventory(L2PetInstance owner)
+	public PetInventory(PetInstance owner)
 	{
 		_owner = owner;
 	}
 	
 	@Override
-	public L2PetInstance getOwner()
+	public PetInstance getOwner()
 	{
 		return _owner;
 	}
@@ -40,7 +40,7 @@ public class PetInventory extends Inventory
 	@Override
 	public int getOwnerId()
 	{
-		// gets the L2PcInstance-owner's ID
+		// gets the PlayerInstance-owner's ID
 		int id;
 		try
 		{
@@ -63,7 +63,7 @@ public class PetInventory extends Inventory
 		_owner.updateAndBroadcastStatus(1);
 	}
 	
-	public boolean validateCapacity(L2ItemInstance item)
+	public boolean validateCapacity(ItemInstance item)
 	{
 		int slots = 0;
 		
@@ -81,10 +81,10 @@ public class PetInventory extends Inventory
 		return ((_items.size() + slots) <= _owner.getInventoryLimit());
 	}
 	
-	public boolean validateWeight(L2ItemInstance item, long count)
+	public boolean validateWeight(ItemInstance item, long count)
 	{
 		int weight = 0;
-		final L2Item template = ItemTable.getInstance().getTemplate(item.getId());
+		final Item template = ItemTable.getInstance().getTemplate(item.getId());
 		if (template == null)
 		{
 			return false;
@@ -116,7 +116,7 @@ public class PetInventory extends Inventory
 	{
 		super.restore();
 		// check for equiped items from other pets
-		for (L2ItemInstance item : _items.values())
+		for (ItemInstance item : _items.values())
 		{
 			if (item.isEquipped())
 			{
@@ -130,7 +130,7 @@ public class PetInventory extends Inventory
 	
 	public void transferItemsToOwner()
 	{
-		for (L2ItemInstance item : _items.values())
+		for (ItemInstance item : _items.values())
 		{
 			getOwner().transferItem("return", item.getObjectId(), item.getCount(), getOwner().getOwner().getInventory(), getOwner().getOwner(), getOwner());
 		}

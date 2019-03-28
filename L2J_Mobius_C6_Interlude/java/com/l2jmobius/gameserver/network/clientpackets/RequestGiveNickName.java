@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class RequestGiveNickName extends L2GameClientPacket
+public class RequestGiveNickName extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestGiveNickName.class.getName());
 	
@@ -41,34 +41,34 @@ public class RequestGiveNickName extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Noblesse can bestow a title to themselves
-		if (activeChar.isNoble() && _target.matches(activeChar.getName()))
+		if (player.isNoble() && _target.matches(player.getName()))
 		{
-			activeChar.setTitle(_title);
+			player.setTitle(_title);
 			final SystemMessage sm = new SystemMessage(SystemMessageId.TITLE_CHANGED);
-			activeChar.sendPacket(sm);
-			activeChar.broadcastTitleInfo();
+			player.sendPacket(sm);
+			player.broadcastTitleInfo();
 		}
 		// Can the player change/give a title?
-		else if ((activeChar.getClanPrivileges() & L2Clan.CP_CL_GIVE_TITLE) == L2Clan.CP_CL_GIVE_TITLE)
+		else if ((player.getClanPrivileges() & Clan.CP_CL_GIVE_TITLE) == Clan.CP_CL_GIVE_TITLE)
 		{
-			if (activeChar.getClan().getLevel() < 3)
+			if (player.getClan().getLevel() < 3)
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LVL_3_NEEDED_TO_ENDOWE_TITLE);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 				return;
 			}
 			
-			final L2ClanMember member1 = activeChar.getClan().getClanMember(_target);
+			final ClanMember member1 = player.getClan().getClanMember(_target);
 			if (member1 != null)
 			{
-				final L2PcInstance member = member1.getPlayerInstance();
+				final PlayerInstance member = member1.getPlayerInstance();
 				if (member != null)
 				{
 					// is target from the same clan?
@@ -81,14 +81,14 @@ public class RequestGiveNickName extends L2GameClientPacket
 				{
 					SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 					sm.addString("Target needs to be online to get a title");
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 				}
 			}
 			else
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Target does not belong to your clan");
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
 	}

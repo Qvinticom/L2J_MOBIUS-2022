@@ -16,10 +16,10 @@
  */
 package handlers.telnethandlers.player;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import com.l2jmobius.gameserver.util.GMAudit;
@@ -51,7 +51,7 @@ public class Enchant implements ITelnetCommand
 		{
 			return null;
 		}
-		final L2PcInstance player = L2World.getInstance().getPlayer(args[0]);
+		final PlayerInstance player = World.getInstance().getPlayer(args[0]);
 		if (player != null)
 		{
 			int itemType = Integer.parseInt(args[1]);
@@ -148,14 +148,14 @@ public class Enchant implements ITelnetCommand
 		return "Couldn't find player with such name.";
 	}
 	
-	private boolean setEnchant(L2PcInstance activeChar, int ench, int armorType)
+	private boolean setEnchant(PlayerInstance player, int ench, int armorType)
 	{
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
-		L2ItemInstance itemInstance = null;
+		ItemInstance itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		L2ItemInstance parmorInstance = activeChar.getInventory().getPaperdollItem(armorType);
+		ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -163,7 +163,7 @@ public class Enchant implements ITelnetCommand
 		else
 		{
 			// for bows/crossbows and double handed weapons
-			parmorInstance = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			parmorInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_RHAND))
 			{
 				itemInstance = parmorInstance;
@@ -175,22 +175,22 @@ public class Enchant implements ITelnetCommand
 			curEnchant = itemInstance.getEnchantLevel();
 			
 			// set enchant value
-			activeChar.getInventory().unEquipItemInSlot(armorType);
+			player.getInventory().unEquipItemInSlot(armorType);
 			itemInstance.setEnchantLevel(ench);
-			activeChar.getInventory().equipItem(itemInstance);
+			player.getInventory().equipItem(itemInstance);
 			
 			// send packets
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
-			activeChar.sendPacket(iu);
-			activeChar.broadcastUserInfo();
+			player.sendPacket(iu);
+			player.broadcastUserInfo();
 			
 			// informations
-			activeChar.sendMessage("Changed enchantment of " + activeChar.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
-			activeChar.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
 			
 			// log
-			GMAudit.auditGMAction("TelnetAdmin", "enchant", activeChar.getName(), itemInstance.getItem().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
+			GMAudit.auditGMAction("TelnetAdmin", "enchant", player.getName(), itemInstance.getItem().getName() + "(" + itemInstance.getObjectId() + ") from " + curEnchant + " to " + ench);
 			return true;
 		}
 		return false;

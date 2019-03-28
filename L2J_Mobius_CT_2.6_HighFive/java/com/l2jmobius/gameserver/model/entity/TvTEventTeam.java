@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.entity;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author HorridoJoho
@@ -39,7 +39,7 @@ public class TvTEventTeam
 	 */
 	private short _points;
 	/** Name and instance of all participated players in map. */
-	private final Map<Integer, L2PcInstance> _participatedPlayers = new ConcurrentHashMap<>();
+	private final Map<Integer, PlayerInstance> _participatedPlayers = new ConcurrentHashMap<>();
 	
 	/**
 	 * C'tor initialize the team<br>
@@ -57,10 +57,10 @@ public class TvTEventTeam
 	/**
 	 * Adds a player to the team<br>
 	 * <br>
-	 * @param playerInstance as L2PcInstance<br>
+	 * @param playerInstance as PlayerInstance<br>
 	 * @return boolean: true if success, otherwise false<br>
 	 */
-	public boolean addPlayer(L2PcInstance playerInstance)
+	public boolean addPlayer(PlayerInstance playerInstance)
 	{
 		if (playerInstance == null)
 		{
@@ -141,9 +141,9 @@ public class TvTEventTeam
 	/**
 	 * Returns name and instance of all participated players in Map<br>
 	 * <br>
-	 * @return Map<String, L2PcInstance>: map of players in this team<br>
+	 * @return Map<String, PlayerInstance>: map of players in this team<br>
 	 */
-	public Map<Integer, L2PcInstance> getParticipatedPlayers()
+	public Map<Integer, PlayerInstance> getParticipatedPlayers()
 	{
 		return _participatedPlayers;
 	}

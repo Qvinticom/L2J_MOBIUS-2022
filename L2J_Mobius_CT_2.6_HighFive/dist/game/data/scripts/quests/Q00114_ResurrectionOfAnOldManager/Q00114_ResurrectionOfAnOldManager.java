@@ -18,10 +18,10 @@ package quests.Q00114_ResurrectionOfAnOldManager;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -53,7 +53,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	// Monster
 	private static final int GUARDIAN = 27318;
 	
-	private static L2Attackable golem = null;
+	private static Attackable golem = null;
 	
 	public Q00114_ResurrectionOfAnOldManager()
 	{
@@ -66,7 +66,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		
@@ -239,7 +239,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			{
 				if ((golem == null) || ((golem != null) && golem.isDead()))
 				{
-					golem = (L2Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
+					golem = (Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
 					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
 					golem.setRunning();
 					golem.addDamageHate(player, 0, 999);
@@ -396,7 +396,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		
@@ -411,15 +411,15 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
 			final QuestState qs = getQuestState(creature.getActingPlayer(), false);
 			if ((qs != null) && qs.isCond(17))
 			{
-				takeItems((L2PcInstance) creature, DETCTOR, 1);
-				giveItems((L2PcInstance) creature, DETCTOR2, 1);
+				takeItems((PlayerInstance) creature, DETCTOR, 1);
+				giveItems((PlayerInstance) creature, DETCTOR2, 1);
 				qs.setCond(18, true);
 				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}
@@ -428,7 +428,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

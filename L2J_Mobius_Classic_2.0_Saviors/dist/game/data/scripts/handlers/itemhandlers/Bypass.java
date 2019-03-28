@@ -18,9 +18,9 @@ package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
@@ -29,28 +29,28 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 public class Bypass implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
 			return false;
 		}
-		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getId();
 		
 		final String filename = "data/html/item/" + itemId + ".htm";
-		final String content = HtmCache.getInstance().getHtm(activeChar, filename);
+		final String content = HtmCache.getInstance().getHtm(player, filename);
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, item.getId());
 		if (content == null)
 		{
 			html.setHtml("<html><body>My Text is missing:<br>" + filename + "</body></html>");
-			activeChar.sendPacket(html);
+			player.sendPacket(html);
 		}
 		else
 		{
 			html.setHtml(content);
 			html.replace("%itemId%", String.valueOf(item.getObjectId()));
-			activeChar.sendPacket(html);
+			player.sendPacket(html);
 		}
 		return true;
 	}

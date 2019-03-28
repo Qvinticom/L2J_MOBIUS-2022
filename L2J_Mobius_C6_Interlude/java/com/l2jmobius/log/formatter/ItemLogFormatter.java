@@ -19,7 +19,7 @@ package com.l2jmobius.log.formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * @author Advi
@@ -40,9 +40,9 @@ public class ItemLogFormatter extends AbstractFormatter
 				continue;
 			}
 			output.append(", ");
-			if (p instanceof L2ItemInstance)
+			if (p instanceof ItemInstance)
 			{
-				L2ItemInstance item = (L2ItemInstance) p;
+				ItemInstance item = (ItemInstance) p;
 				output.append("item ");
 				output.append(item.getObjectId());
 				output.append(":");

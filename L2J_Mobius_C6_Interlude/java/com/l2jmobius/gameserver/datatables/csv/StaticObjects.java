@@ -28,14 +28,14 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 
 public class StaticObjects
 {
 	private static Logger LOGGER = Logger.getLogger(StaticObjects.class.getName());
 	
 	private static StaticObjects _instance;
-	private final Map<Integer, L2StaticObjectInstance> _staticObjects;
+	private final Map<Integer, StaticObjectInstance> _staticObjects;
 	
 	public static StaticObjects getInstance()
 	{
@@ -76,7 +76,7 @@ public class StaticObjects
 					continue;
 				}
 				
-				L2StaticObjectInstance obj = parse(line);
+				StaticObjectInstance obj = parse(line);
 				_staticObjects.put(obj.getStaticObjectId(), obj);
 			}
 		}
@@ -128,7 +128,7 @@ public class StaticObjects
 		}
 	}
 	
-	public static L2StaticObjectInstance parse(String line)
+	public static StaticObjectInstance parse(String line)
 	{
 		StringTokenizer st = new StringTokenizer(line, ";");
 		
@@ -143,7 +143,7 @@ public class StaticObjects
 		final int map_x = Integer.parseInt(st.nextToken());
 		final int map_y = Integer.parseInt(st.nextToken());
 		
-		final L2StaticObjectInstance obj = new L2StaticObjectInstance(IdFactory.getInstance().getNextId());
+		final StaticObjectInstance obj = new StaticObjectInstance(IdFactory.getInstance().getNextId());
 		obj.setType(type);
 		obj.setStaticObjectId(id);
 		obj.setXYZ(x, y, z);

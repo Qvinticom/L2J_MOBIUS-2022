@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class RequestAnswerJoinAlly implements IClientIncomingPacket
@@ -27,22 +27,22 @@ public final class RequestAnswerJoinAlly implements IClientIncomingPacket
 	private int _response;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_response = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance requestor = activeChar.getRequest().getPartner();
+		final PlayerInstance requestor = player.getRequest().getPartner();
 		if (requestor == null)
 		{
 			return;
@@ -50,7 +50,7 @@ public final class RequestAnswerJoinAlly implements IClientIncomingPacket
 		
 		if (_response == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.NO_RESPONSE_YOUR_ENTRANCE_TO_THE_ALLIANCE_HAS_BEEN_CANCELLED);
+			player.sendPacket(SystemMessageId.NO_RESPONSE_YOUR_ENTRANCE_TO_THE_ALLIANCE_HAS_BEEN_CANCELLED);
 			requestor.sendPacket(SystemMessageId.NO_RESPONSE_INVITATION_TO_JOIN_AN_ALLIANCE_HAS_BEEN_CANCELLED);
 		}
 		else
@@ -60,22 +60,22 @@ public final class RequestAnswerJoinAlly implements IClientIncomingPacket
 				return; // hax
 			}
 			
-			final L2Clan clan = requestor.getClan();
+			final Clan clan = requestor.getClan();
 			// we must double check this cause of hack
-			if (clan.checkAllyJoinCondition(requestor, activeChar))
+			if (clan.checkAllyJoinCondition(requestor, player))
 			{
 				// TODO: Need correct message id
 				requestor.sendPacket(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST);
-				activeChar.sendPacket(SystemMessageId.YOU_HAVE_ACCEPTED_THE_ALLIANCE);
+				player.sendPacket(SystemMessageId.YOU_HAVE_ACCEPTED_THE_ALLIANCE);
 				
-				activeChar.getClan().setAllyId(clan.getAllyId());
-				activeChar.getClan().setAllyName(clan.getAllyName());
-				activeChar.getClan().setAllyPenaltyExpiryTime(0, 0);
-				activeChar.getClan().changeAllyCrest(clan.getAllyCrestId(), true);
-				activeChar.getClan().updateClanInDB();
+				player.getClan().setAllyId(clan.getAllyId());
+				player.getClan().setAllyName(clan.getAllyName());
+				player.getClan().setAllyPenaltyExpiryTime(0, 0);
+				player.getClan().changeAllyCrest(clan.getAllyCrestId(), true);
+				player.getClan().updateClanInDB();
 			}
 		}
 		
-		activeChar.getRequest().onRequestResponse();
+		player.getRequest().onRequestResponse();
 	}
 }

@@ -22,7 +22,7 @@ import java.util.List;
 import com.l2jmobius.gameserver.enums.SpeedType;
 import com.l2jmobius.gameserver.enums.StatModifierType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -48,7 +48,7 @@ public final class Speed extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		switch (_mode)
 		{

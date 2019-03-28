@@ -23,10 +23,10 @@ import java.util.function.Predicate;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 public class StaticObjectScope implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -45,7 +45,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 		
 		// Target checks.
 		final AtomicInteger affected = new AtomicInteger(0);
-		final Predicate<L2Character> filter = c ->
+		final Predicate<Creature> filter = c ->
 		{
 			if ((affectLimit > 0) && (affected.get() >= affectLimit))
 			{
@@ -56,12 +56,12 @@ public class StaticObjectScope implements IAffectScopeHandler
 				return false;
 			}
 			
-			if (!c.isDoor() && !(c instanceof L2StaticObjectInstance))
+			if (!c.isDoor() && !(c instanceof StaticObjectInstance))
 			{
 				return false;
 			}
 			
-			if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
+			if ((affectObject != null) && !affectObject.checkAffectedObject(creature, c))
 			{
 				return false;
 			}
@@ -71,13 +71,13 @@ public class StaticObjectScope implements IAffectScopeHandler
 		};
 		
 		// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-		if (target.isCharacter() && filter.test((L2Character) target))
+		if (target.isCreature() && filter.test((Creature) target))
 		{
 			action.accept(target);
 		}
 		
 		// Check and add targets.
-		L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, affectRange, c ->
+		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 		{
 			if (filter.test(c))
 			{

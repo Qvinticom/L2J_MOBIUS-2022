@@ -21,10 +21,10 @@ import java.util.Collections;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.skills.SkillCastingType;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -42,14 +42,14 @@ public final class MagicSkillUse implements IClientOutgoingPacket
 	private final int _reuseDelay;
 	private final int _actionId; // If skill is called from RequestActionUse, use that ID.
 	private final SkillCastingType _castingType; // Defines which client bar is going to use.
-	private final L2Character _activeChar;
-	private final L2Object _target;
+	private final Creature _creature;
+	private final WorldObject _target;
 	private final List<Integer> _unknown = Collections.emptyList();
 	private final List<Location> _groundLocations;
 	
-	public MagicSkillUse(L2Character cha, L2Object target, int skillId, int skillLevel, int hitTime, int reuseDelay, int reuseGroup, int actionId, SkillCastingType castingType)
+	public MagicSkillUse(Creature creature, WorldObject target, int skillId, int skillLevel, int hitTime, int reuseDelay, int reuseGroup, int actionId, SkillCastingType castingType)
 	{
-		_activeChar = cha;
+		_creature = creature;
 		_target = target;
 		_skillId = skillId;
 		_skillLevel = skillLevel;
@@ -59,9 +59,9 @@ public final class MagicSkillUse implements IClientOutgoingPacket
 		_actionId = actionId;
 		_castingType = castingType;
 		Location skillWorldPos = null;
-		if (cha.isPlayer())
+		if (creature.isPlayer())
 		{
-			final L2PcInstance player = cha.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			if (player.getCurrentSkillWorldPosition() != null)
 			{
 				skillWorldPos = player.getCurrentSkillWorldPosition();
@@ -70,14 +70,14 @@ public final class MagicSkillUse implements IClientOutgoingPacket
 		_groundLocations = skillWorldPos != null ? Arrays.asList(skillWorldPos) : Collections.emptyList();
 	}
 	
-	public MagicSkillUse(L2Character cha, L2Object target, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(Creature creature, WorldObject target, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		this(cha, target, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
+		this(creature, target, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
 	}
 	
-	public MagicSkillUse(L2Character cha, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(Creature creature, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
+		this(creature, creature, skillId, skillLevel, hitTime, reuseDelay, -1, -1, SkillCastingType.NORMAL);
 	}
 	
 	@Override
@@ -86,16 +86,16 @@ public final class MagicSkillUse implements IClientOutgoingPacket
 		OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
 		
 		packet.writeD(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeD(_target.getObjectId());
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);
 		packet.writeD(_hitTime);
 		packet.writeD(_reuseGroup);
 		packet.writeD(_reuseDelay);
-		packet.writeD(_activeChar.getX());
-		packet.writeD(_activeChar.getY());
-		packet.writeD(_activeChar.getZ());
+		packet.writeD(_creature.getX());
+		packet.writeD(_creature.getY());
+		packet.writeD(_creature.getZ());
 		packet.writeH(_unknown.size()); // TODO: Implement me!
 		for (int unknown : _unknown)
 		{

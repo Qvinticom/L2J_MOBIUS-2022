@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Maktakien
  */
-public class BoatKnownList extends CharKnownList
+public class BoatKnownList extends CreatureKnownList
 {
-	public BoatKnownList(L2Character activeChar)
+	public BoatKnownList(Creature creature)
 	{
-		super(activeChar);
+		super(creature);
 	}
 	
 	@Override
-	public int getDistanceToForgetObject(L2Object object)
+	public int getDistanceToForgetObject(WorldObject object)
 	{
-		if (!(object instanceof L2PcInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			return 0;
 		}
@@ -42,9 +42,9 @@ public class BoatKnownList extends CharKnownList
 	}
 	
 	@Override
-	public int getDistanceToWatchObject(L2Object object)
+	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if (!(object instanceof L2PcInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			return 0;
 		}

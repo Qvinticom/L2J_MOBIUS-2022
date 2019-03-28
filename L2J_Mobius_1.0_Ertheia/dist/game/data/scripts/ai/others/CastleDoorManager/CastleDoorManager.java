@@ -19,10 +19,10 @@ package ai.others.CastleDoorManager;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.entity.Castle;
 
 import ai.AbstractNpcAI;
@@ -35,7 +35,7 @@ public final class CastleDoorManager extends AbstractNpcAI
 {
 	// NPCs
 	// @formatter:off
-	private static final int[] DOORMENS_OUTTER =
+	private static final int[] DOORMEN_OUTTER =
 	{
 		35096, // Gludio
 		35138, // Dion
@@ -47,7 +47,7 @@ public final class CastleDoorManager extends AbstractNpcAI
 		35503, // Rune
 		35548, // Schuttgart
 	};
-	private static final int[] DOORMENS_INNER =
+	private static final int[] DOORMEN_INNER =
 	{
 		35097, // Gludio
 		35139, // Dion
@@ -63,16 +63,16 @@ public final class CastleDoorManager extends AbstractNpcAI
 	
 	private CastleDoorManager()
 	{
-		addStartNpc(DOORMENS_OUTTER);
-		addStartNpc(DOORMENS_INNER);
-		addTalkId(DOORMENS_OUTTER);
-		addTalkId(DOORMENS_INNER);
-		addFirstTalkId(DOORMENS_OUTTER);
-		addFirstTalkId(DOORMENS_INNER);
+		addStartNpc(DOORMEN_OUTTER);
+		addStartNpc(DOORMEN_INNER);
+		addTalkId(DOORMEN_OUTTER);
+		addTalkId(DOORMEN_INNER);
+		addFirstTalkId(DOORMEN_OUTTER);
+		addFirstTalkId(DOORMEN_INNER);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		final String action = st.nextToken();
@@ -137,19 +137,19 @@ public final class CastleDoorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return isOwningClan(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_OPEN_DOOR) ? getHtmlName(npc) + ".html" : getHtmlName(npc) + "-no.html";
 	}
 	
-	private String getHtmlName(L2Npc npc)
+	private String getHtmlName(Npc npc)
 	{
-		return CommonUtil.contains(DOORMENS_INNER, npc.getId()) ? "CastleDoorManager-Inner" : "CastleDoorManager-Outter";
+		return CommonUtil.contains(DOORMEN_INNER, npc.getId()) ? "CastleDoorManager-Inner" : "CastleDoorManager-Outter";
 	}
 	
-	private boolean isOwningClan(L2PcInstance player, L2Npc npc)
+	private boolean isOwningClan(PlayerInstance player, Npc npc)
 	{
-		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
+		return player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) || ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0));
 	}
 	
 	public static void main(String[] args)

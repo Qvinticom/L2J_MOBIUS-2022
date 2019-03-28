@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -31,7 +31,7 @@ public final class BuyList implements IClientOutgoingPacket
 	private final long _money;
 	private double _taxRate = 0;
 	
-	public BuyList(L2BuyList list, long currentMoney, double taxRate)
+	public BuyList(BuyListHolder list, long currentMoney, double taxRate)
 	{
 		_listId = list.getListId();
 		_list = list.getProducts();

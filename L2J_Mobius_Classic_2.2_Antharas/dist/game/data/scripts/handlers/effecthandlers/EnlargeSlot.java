@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.StorageType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -40,7 +40,7 @@ public class EnlargeSlot extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		Stats stat = Stats.INVENTORY_NORMAL;
 		
@@ -75,7 +75,7 @@ public class EnlargeSlot extends AbstractEffect
 		effected.getStat().mergeAdd(stat, _amount);
 		if (effected.isPlayer())
 		{
-			effected.sendPacket(new ExStorageMaxCount((L2PcInstance) effected));
+			effected.sendPacket(new ExStorageMaxCount((PlayerInstance) effected));
 		}
 	}
 }

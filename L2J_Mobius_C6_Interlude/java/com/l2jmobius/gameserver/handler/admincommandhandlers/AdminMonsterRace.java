@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.MonsterRace;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
@@ -40,7 +40,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	protected static int state = -1;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equalsIgnoreCase("admin_mons"))
 		{
@@ -56,7 +56,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleSendPacket(L2PcInstance activeChar)
+	private void handleSendPacket(PlayerInstance activeChar)
 	{
 		/*
 		 * -1 0 to initialize the race 0 15322 to start race 13765 -1 in middle of race -1 0 to end the race 8003 to 8027
@@ -118,9 +118,9 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	class RunRace implements Runnable
 	{
 		private final int[][] codes;
-		private final L2PcInstance activeChar;
+		private final PlayerInstance activeChar;
 		
-		public RunRace(int[][] pCodes, L2PcInstance pActiveChar)
+		public RunRace(int[][] pCodes, PlayerInstance pActiveChar)
 		{
 			codes = pCodes;
 			activeChar = pActiveChar;
@@ -138,9 +138,9 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	
 	class RunEnd implements Runnable
 	{
-		private final L2PcInstance activeChar;
+		private final PlayerInstance activeChar;
 		
-		public RunEnd(L2PcInstance pActiveChar)
+		public RunEnd(PlayerInstance pActiveChar)
 		{
 			activeChar = pActiveChar;
 		}

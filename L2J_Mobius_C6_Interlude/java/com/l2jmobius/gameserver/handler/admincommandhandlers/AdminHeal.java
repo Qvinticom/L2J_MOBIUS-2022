@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -37,7 +37,7 @@ public class AdminHeal implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_heal"))
 		{
@@ -66,18 +66,18 @@ public class AdminHeal implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleRes(L2PcInstance activeChar)
+	private void handleRes(PlayerInstance activeChar)
 	{
 		handleRes(activeChar, null);
 	}
 	
-	private void handleRes(L2PcInstance activeChar, String player)
+	private void handleRes(PlayerInstance activeChar, String player)
 	{
-		L2Object obj = activeChar.getTarget();
+		WorldObject obj = activeChar.getTarget();
 		
 		if (player != null)
 		{
-			L2PcInstance plyr = L2World.getInstance().getPlayer(player);
+			PlayerInstance plyr = World.getInstance().getPlayer(player);
 			
 			if (plyr != null)
 			{
@@ -88,16 +88,16 @@ public class AdminHeal implements IAdminCommandHandler
 				try
 				{
 					final int radius = Integer.parseInt(player);
-					for (L2Object object : activeChar.getKnownList().getKnownObjects().values())
+					for (WorldObject object : activeChar.getKnownList().getKnownObjects().values())
 					{
-						if (object instanceof L2Character)
+						if (object instanceof Creature)
 						{
-							L2Character character = (L2Character) object;
-							character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
+							Creature creature = (Creature) object;
+							creature.setCurrentHpMp(creature.getMaxHp(), creature.getMaxMp());
 							
-							if (object instanceof L2PcInstance)
+							if (object instanceof PlayerInstance)
 							{
-								character.setCurrentCp(character.getMaxCp());
+								creature.setCurrentCp(creature.getMaxCp());
 							}
 						}
 					}
@@ -115,12 +115,12 @@ public class AdminHeal implements IAdminCommandHandler
 			obj = activeChar;
 		}
 		
-		if (obj instanceof L2Character)
+		if (obj instanceof Creature)
 		{
-			final L2Character target = (L2Character) obj;
+			final Creature target = (Creature) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
 			
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
 				target.setCurrentCp(target.getMaxCp());
 			}

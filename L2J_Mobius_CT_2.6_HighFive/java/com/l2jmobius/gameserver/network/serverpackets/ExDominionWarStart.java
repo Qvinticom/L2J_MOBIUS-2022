@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,7 +30,7 @@ public class ExDominionWarStart implements IClientOutgoingPacket
 	private final int _terId;
 	private final boolean _isDisguised;
 	
-	public ExDominionWarStart(L2PcInstance player)
+	public ExDominionWarStart(PlayerInstance player)
 	{
 		_objId = player.getObjectId();
 		_terId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);

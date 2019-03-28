@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.QuestItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -124,7 +124,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final int chance = getRandom(100);
@@ -448,7 +448,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestItemHolder item = MONSTER_REWARDS.get(npc.getId());
 		if (npc.getId() == HALLATES_INSPECTOR)
@@ -467,7 +467,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 		
 		if (Util.checkIfInRange(1500, npc, killer, true) && (getRandom(1000) < item.getChance()))
 		{
-			L2PcInstance rewardedPlayer = null;
+			PlayerInstance rewardedPlayer = null;
 			if (!killer.isInParty())
 			{
 				final QuestState qs = getQuestState(killer, false);
@@ -479,7 +479,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 			else
 			{
 				int chance = 0;
-				for (L2PcInstance partyMember : killer.getParty().getMembers())
+				for (PlayerInstance partyMember : killer.getParty().getMembers())
 				{
 					final QuestState partyMemberQuestState = getQuestState(partyMember, false);
 					if ((partyMemberQuestState != null) && partyMemberQuestState.isStarted())
@@ -505,7 +505,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final int chance = getRandom(100);

@@ -16,17 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.5 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PartySmallWindowUpdate extends L2GameServerPacket
+public class PartySmallWindowUpdate extends GameServerPacket
 {
-	private final L2PcInstance _member;
+	private final PlayerInstance _member;
 	
-	public PartySmallWindowUpdate(L2PcInstance member)
+	public PartySmallWindowUpdate(PlayerInstance member)
 	{
 		_member = member;
 	}

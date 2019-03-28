@@ -21,14 +21,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class StartRotation implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _degree;
 	private final int _side;
 	private final int _speed;
 	
 	public StartRotation(int objectId, int degree, int side, int speed)
 	{
-		_charObjId = objectId;
+		_objectId = objectId;
 		_degree = degree;
 		_side = side;
 		_speed = speed;
@@ -39,7 +39,7 @@ public final class StartRotation implements IClientOutgoingPacket
 	{
 		OutgoingPackets.START_ROTATING.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_degree);
 		packet.writeD(_side);
 		packet.writeD(_speed);

@@ -35,9 +35,9 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 
 /**
  * Loads buy lists for NPCs.
@@ -47,7 +47,7 @@ public final class BuyListData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
 	
-	private final Map<Integer, L2BuyList> _buyLists = new HashMap<>();
+	private final Map<Integer, BuyListHolder> _buyLists = new HashMap<>();
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
 	protected BuyListData()
@@ -77,7 +77,7 @@ public final class BuyListData implements IGameXmlReader
 				final int itemId = rs.getInt("item_id");
 				final long count = rs.getLong("count");
 				final long nextRestockTime = rs.getLong("next_restock_time");
-				final L2BuyList buyList = getBuyList(buyListId);
+				final BuyListHolder buyList = getBuyList(buyListId);
 				if (buyList == null)
 				{
 					LOGGER.warning("BuyList found in database but not loaded from xml! BuyListId: " + buyListId);
@@ -113,7 +113,7 @@ public final class BuyListData implements IGameXmlReader
 			{
 				if ("list".equalsIgnoreCase(node.getNodeName()))
 				{
-					final L2BuyList buyList = new L2BuyList(buyListId);
+					final BuyListHolder buyList = new BuyListHolder(buyListId);
 					for (Node list_node = node.getFirstChild(); list_node != null; list_node = list_node.getNextSibling())
 					{
 						if ("item".equalsIgnoreCase(list_node.getNodeName()))
@@ -140,7 +140,7 @@ public final class BuyListData implements IGameXmlReader
 							{
 								count = Long.parseLong(attr.getNodeValue());
 							}
-							final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+							final Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
 								if ((price > -1) && (item.getReferencePrice() > price) && (buyList.getNpcsAllowed() != null))
@@ -186,7 +186,7 @@ public final class BuyListData implements IGameXmlReader
 		return NUMERIC_FILTER;
 	}
 	
-	public L2BuyList getBuyList(int listId)
+	public BuyListHolder getBuyList(int listId)
 	{
 		return _buyLists.get(listId);
 	}

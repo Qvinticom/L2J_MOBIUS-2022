@@ -30,17 +30,17 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2CharTemplate;
+import com.l2jmobius.gameserver.templates.creatures.CreatureTemplate;
 
 public class DoorTable
 {
 	private static Logger LOGGER = Logger.getLogger(DoorTable.class.getName());
 	
-	private Map<Integer, L2DoorInstance> _staticItems;
+	private Map<Integer, DoorInstance> _staticItems;
 	
 	private static DoorTable _instance;
 	
@@ -67,7 +67,7 @@ public class DoorTable
 	
 	public void respawn()
 	{
-		// L2DoorInstance[] currentDoors = getDoors();
+		// DoorInstance[] currentDoors = getDoors();
 		_staticItems = null;
 		_instance = new DoorTable();
 	}
@@ -96,7 +96,7 @@ public class DoorTable
 					continue;
 				}
 				
-				final L2DoorInstance door = parseList(line);
+				final DoorInstance door = parseList(line);
 				_staticItems.put(door.getDoorId(), door);
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				final ClanHall clanhall = ClanHallManager.getInstance().getNearbyClanHall(door.getX(), door.getY(), 500);
@@ -159,7 +159,7 @@ public class DoorTable
 		}
 	}
 	
-	public static L2DoorInstance parseList(String line)
+	public static DoorInstance parseList(String line)
 	{
 		StringTokenizer st = new StringTokenizer(line, ";");
 		
@@ -262,8 +262,8 @@ public class DoorTable
 		npcDat.set("basePDef", pdef);
 		npcDat.set("baseMDef", mdef);
 		
-		L2CharTemplate template = new L2CharTemplate(npcDat);
-		final L2DoorInstance door = new L2DoorInstance(IdFactory.getInstance().getNextId(), template, id, name, unlockable);
+		CreatureTemplate template = new CreatureTemplate(npcDat);
+		final DoorInstance door = new DoorInstance(IdFactory.getInstance().getNextId(), template, id, name, unlockable);
 		door.setRange(rangeXMin, rangeYMin, rangeZMin, rangeXMax, rangeYMax, rangeZMax);
 		try
 		{
@@ -287,19 +287,19 @@ public class DoorTable
 	
 	private boolean _initialized = true;
 	
-	public L2DoorInstance getDoor(Integer id)
+	public DoorInstance getDoor(Integer id)
 	{
 		return _staticItems.get(id);
 	}
 	
-	public void putDoor(L2DoorInstance door)
+	public void putDoor(DoorInstance door)
 	{
 		_staticItems.put(door.getDoorId(), door);
 	}
 	
-	public L2DoorInstance[] getDoors()
+	public DoorInstance[] getDoors()
 	{
-		final L2DoorInstance[] _allTemplates = _staticItems.values().toArray(new L2DoorInstance[_staticItems.size()]);
+		final DoorInstance[] _allTemplates = _staticItems.values().toArray(new DoorInstance[_staticItems.size()]);
 		return _allTemplates;
 	}
 	
@@ -308,7 +308,7 @@ public class DoorTable
 	 */
 	public void checkAutoOpen()
 	{
-		for (L2DoorInstance doorInst : getDoors())
+		for (DoorInstance doorInst : getDoors())
 		{
 			// Garden of Eva (every 7 minutes)
 			if (doorInst.getDoorName().startsWith("goe"))
@@ -345,7 +345,7 @@ public class DoorTable
 			return false;
 		}
 		
-		for (L2DoorInstance doorInst : getDoors())
+		for (DoorInstance doorInst : getDoors())
 		{
 			if (doorInst.getMapRegion() != region)
 			{

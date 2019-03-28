@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.AutoSpawnHandler;
 import com.l2jmobius.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -40,7 +40,7 @@ public class AdminMammon implements IAdminCommandHandler
 	private final boolean _isSealValidation = SevenSigns.getInstance().isSealValidationPeriod();
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		int teleportIndex = -1;
 		final AutoSpawnInstance blackSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
@@ -69,7 +69,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				final L2Npc blackInst = blackSpawnInst.getNPCInstanceList().peek();
+				final Npc blackInst = blackSpawnInst.getNPCInstanceList().peek();
 				if (blackInst != null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon: " + blackInst.getX() + " " + blackInst.getY() + " " + blackInst.getZ());
@@ -86,7 +86,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				final L2Npc merchInst = merchSpawnInst.getNPCInstanceList().peek();
+				final Npc merchInst = merchSpawnInst.getNPCInstanceList().peek();
 				if (merchInst != null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon: " + merchInst.getX() + " " + merchInst.getY() + " " + merchInst.getZ());

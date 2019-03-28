@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -82,11 +82,11 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -97,9 +97,9 @@ public final class Q00662_AGameOfCards extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					if (st.isCreated())
+					if (qs.isCreated())
 					{
-						st.startQuest();
+						qs.startQuest();
 					}
 					htmltext = event;
 				}
@@ -117,7 +117,7 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 			case "30845-07.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -223,8 +223,8 @@ public final class Q00662_AGameOfCards extends Quest
 					{
 						i5 = i5 - 14;
 					}
-					st.set("v1", (i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
-					st.set("ExMemoState", i5);
+					qs.set("v1", (i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1);
+					qs.set("ExMemoState", i5);
 					takeItems(player, RED_GEM, REQUIRED_CHIP_COUNT);
 					htmltext = event;
 				}
@@ -236,8 +236,8 @@ public final class Q00662_AGameOfCards extends Quest
 			case "turncard4":
 			case "turncard5":
 			{
-				final int cond = st.getInt("v1");
-				int i1 = st.getInt("ExMemoState");
+				final int cond = qs.getInt("v1");
+				int i1 = qs.getInt("ExMemoState");
 				int i5 = i1 % 100;
 				int i9 = i1 / 100;
 				i1 = cond % 100;
@@ -254,7 +254,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ExMemoState", (i9 * 100) + i5);
+							qs.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -266,7 +266,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ExMemoState", (i9 * 100) + i5);
+							qs.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -278,7 +278,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ExMemoState", (i9 * 100) + i5);
+							qs.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -290,7 +290,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ExMemoState", (i9 * 100) + i5);
+							qs.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -302,7 +302,7 @@ public final class Q00662_AGameOfCards extends Quest
 						}
 						if ((i9 % 32) < 31)
 						{
-							st.set("ExMemoState", (i9 * 100) + i5);
+							qs.set("ExMemoState", (i9 * 100) + i5);
 						}
 						break;
 					}
@@ -477,16 +477,16 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, ZIGGOS_GEMSTONE, 43);
 						rewardItems(player, 959, 3);
 						rewardItems(player, 729, 1);
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-13.html");
 					}
 					else if (i6 == 30)
 					{
 						rewardItems(player, 959, 2);
 						rewardItems(player, 951, 2);
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-14.html");
 					}
 					else if ((i6 == 21) || (i6 == 12))
@@ -494,35 +494,35 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 729, 1);
 						rewardItems(player, 947, 2);
 						rewardItems(player, 955, 1);
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
 						rewardItems(player, 951, 2);
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
 						rewardItems(player, 951, 1);
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
 						rewardItems(player, 956, 2);
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-18.html");
 					}
 					else if (i6 == 0)
 					{
-						st.set("ExMemoState", 0);
-						st.set("v1", 0);
+						qs.set("ExMemoState", 0);
+						qs.set("v1", 0);
 						htmltext = getHtm(player, "30845-19.html");
 					}
 				}
@@ -592,12 +592,12 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -606,14 +606,14 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = getQuestItemsCount(player, RED_GEM) < REQUIRED_CHIP_COUNT ? "30845-04.html" : "30845-05.html";
 				}
-				else if (st.getInt("ExMemoState") != 0)
+				else if (qs.getInt("ExMemoState") != 0)
 				{
-					int i0 = st.getInt("v1");
-					int i1 = st.getInt("ExMemoState");
+					int i0 = qs.getInt("v1");
+					int i1 = qs.getInt("ExMemoState");
 					int i5 = i1 % 100;
 					int i9 = i1 / 100;
 					i1 = i0 % 100;
@@ -687,15 +687,15 @@ public final class Q00662_AGameOfCards extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
+		final List<PlayerInstance> players = new ArrayList<>();
 		players.add(killer);
 		players.add(killer);
 		
 		if (killer.isInParty())
 		{
-			for (L2PcInstance member : killer.getParty().getMembers())
+			for (PlayerInstance member : killer.getParty().getMembers())
 			{
 				if (getQuestState(member, false) != null)
 				{
@@ -704,15 +704,15 @@ public final class Q00662_AGameOfCards extends Quest
 			}
 		}
 		
-		final L2PcInstance player = players.get(getRandom(players.size()));
+		final PlayerInstance player = players.get(getRandom(players.size()));
 		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{
-				final QuestState st = getQuestState(player, false);
-				if (st != null)
+				final QuestState qs = getQuestState(player, false);
+				if(qs != null)
 				{
-					giveItemRandomly(st.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
+					giveItemRandomly(qs.getPlayer(), npc, RED_GEM, 1, 0, MONSTERS.get(npc.getId()), true);
 				}
 			}
 		}

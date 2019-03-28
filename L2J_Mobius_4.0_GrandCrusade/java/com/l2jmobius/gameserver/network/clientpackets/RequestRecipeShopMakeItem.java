@@ -21,13 +21,13 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.RecipeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -46,7 +46,7 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 	private ItemHolder[] _offeredItems;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_recipeId = packet.readD();
@@ -67,17 +67,17 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (!Config.IS_CRAFTING_ENABLED)
 		{
-			activeChar.sendMessage("Item creation is currently disabled.");
+			player.sendMessage("Item creation is currently disabled.");
 			return;
 		}
 		
@@ -86,13 +86,13 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance manufacturer = L2World.getInstance().getPlayer(_objectId);
+		final PlayerInstance manufacturer = World.getInstance().getPlayer(_objectId);
 		if (manufacturer == null)
 		{
 			return;
 		}
 		
-		if ((manufacturer.getInstanceWorld() != activeChar.getInstanceWorld()) || (activeChar.calculateDistance2D(manufacturer) > 250))
+		if ((manufacturer.getInstanceWorld() != player.getInstanceWorld()) || (player.calculateDistance2D(manufacturer) > 250))
 		{
 			return;
 		}
@@ -102,31 +102,31 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.isProcessingTransaction() || manufacturer.isProcessingTransaction())
+		if (player.isProcessingTransaction() || manufacturer.isProcessingTransaction())
 		{
-			activeChar.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
+			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
 			return;
 		}
 		
 		// TODO: Check if its a retail-like check.
-		if (activeChar.isAlikeDead() || manufacturer.isAlikeDead())
+		if (player.isAlikeDead() || manufacturer.isAlikeDead())
 		{
 			return;
 		}
 		
 		// On retail if player is requesting trade, it is instantly canceled.
-		activeChar.cancelActiveTrade();
+		player.cancelActiveTrade();
 		
 		final RecipeHolder recipe = RecipeData.getInstance().getRecipe(_recipeId);
 		if (recipe == null)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
 			return;
 		}
 		
 		if (!manufacturer.hasRecipeList(recipe.getId()))
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -143,14 +143,14 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		}
 		
 		// Check if player can pay.
-		if (activeChar.getAdena() < manufactureRecipeCost)
+		if (player.getAdena() < manufactureRecipeCost)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
 		// Check if stats or ingredients are met.
-		if (!recipe.checkNecessaryStats(activeChar, manufacturer, true) || !recipe.checkNecessaryIngredients(activeChar, true))
+		if (!recipe.checkNecessaryStats(player, manufacturer, true) || !recipe.checkNecessaryIngredients(player, true))
 		{
 			return;
 		}
@@ -160,7 +160,7 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		{
 			for (ItemHolder offer : _offeredItems)
 			{
-				final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(offer.getId());
+				final ItemInstance item = player.getInventory().getItemByObjectId(offer.getId());
 				if ((item == null) || (item.getCount() < offer.getCount()) || !item.isDestroyable())
 				{
 					return;
@@ -170,7 +170,7 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		
 		if (manufacturer.isCrafting())
 		{
-			activeChar.sendPacket(SystemMessageId.CURRENTLY_CRAFTING_AN_ITEM_PLEASE_WAIT);
+			player.sendPacket(SystemMessageId.CURRENTLY_CRAFTING_AN_ITEM_PLEASE_WAIT);
 			return;
 		}
 		
@@ -180,11 +180,11 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		if (manufactureRecipeCost > 0)
 		{
 			// Attempt to pay the required manufacturing price by the manufacturer.
-			L2ItemInstance paidAdena = activeChar.transferItem("PayManufacture", activeChar.getInventory().getAdenaInstance().getObjectId(), manufactureRecipeCost, manufacturer.getInventory(), manufacturer);
+			ItemInstance paidAdena = player.transferItem("PayManufacture", player.getInventory().getAdenaInstance().getObjectId(), manufactureRecipeCost, manufacturer.getInventory(), manufacturer);
 			
 			if (paidAdena == null)
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
 		}
@@ -196,8 +196,8 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			long offeredAdenaWorth = 0;
 			for (ItemHolder offer : _offeredItems)
 			{
-				final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(offer.getId());
-				if (activeChar.destroyItem("CraftOffering", item, offer.getCount(), manufacturer, true))
+				final ItemInstance item = player.getInventory().getItemByObjectId(offer.getId());
+				if (player.destroyItem("CraftOffering", item, offer.getCount(), manufacturer, true))
 				{
 					offeredAdenaWorth += (item.getItem().getReferencePrice() * offer.getCount());
 				}
@@ -206,20 +206,20 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			offeringBonus = Math.min((offeredAdenaWorth / recipe.getMaxOffering()) * recipe.getMaxOfferingBonus(), recipe.getMaxOfferingBonus());
 		}
 		
-		final boolean success = activeChar.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
-		final boolean craftingCritical = success && (activeChar.getStat().getValue(Stats.CRAFTING_CRITICAL) > Rnd.get(100));
+		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
+		final boolean craftingCritical = success && (player.getStat().getValue(Stats.CRAFTING_CRITICAL) > Rnd.get(100));
 		
-		final ItemHolder craftedItem = recipe.doCraft(activeChar, manufacturer, success, craftingCritical, true);
+		final ItemHolder craftedItem = recipe.doCraft(player, manufacturer, success, craftingCritical, true);
 		if (success)
 		{
 			if (craftingCritical)
 			{
-				activeChar.sendPacket(SystemMessageId.CRAFTING_CRITICAL);
+				player.sendPacket(SystemMessageId.CRAFTING_CRITICAL);
 			}
 			if (craftedItem.getCount() > 1)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_CREATED_FOR_C1_AT_THE_PRICE_OF_S4_ADENA);
-				sm.addString(activeChar.getName());
+				sm.addString(player.getName());
 				sm.addInt((int) craftedItem.getCount());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
@@ -230,13 +230,13 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 				sm.addInt((int) craftedItem.getCount());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 			else
 			{
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_BEEN_CREATED_FOR_C1_AFTER_THE_PAYMENT_OF_S3_ADENA_WAS_RECEIVED);
-				sm.addString(activeChar.getName());
+				sm.addString(player.getName());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
 				manufacturer.sendPacket(sm);
@@ -245,13 +245,13 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 				sm.addString(manufacturer.getName());
 				sm.addItemName(craftedItem.getId());
 				sm.addLong(manufactureRecipeCost);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
 		else
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA);
-			sm.addString(activeChar.getName());
+			sm.addString(player.getName());
 			sm.addItemName(craftedItem.getId());
 			sm.addLong(manufactureRecipeCost);
 			manufacturer.sendPacket(sm);
@@ -260,11 +260,11 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			sm.addString(manufacturer.getName());
 			sm.addItemName(craftedItem.getId());
 			sm.addLong(manufactureRecipeCost);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		
 		// Show manufacturing window.
-		activeChar.sendPacket(new RecipeShopItemInfo(manufacturer, recipe.getId(), success, _manufacturePrice, recipe.getMaxOffering()));
+		player.sendPacket(new RecipeShopItemInfo(manufacturer, recipe.getId(), success, _manufacturePrice, recipe.getMaxOffering()));
 		
 		manufacturer.setIsCrafting(false);
 	}

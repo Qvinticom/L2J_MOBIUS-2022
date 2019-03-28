@@ -36,15 +36,15 @@ import com.l2jmobius.gameserver.instancemanager.FortSiegeGuardManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager.SiegeSpawn;
 import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.L2SiegeClan.SiegeClanType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ArtefactInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2CommanderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
+import com.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -214,12 +214,12 @@ public class FortSiege
 		}
 	}
 	
-	private final List<L2SiegeClan> _attackerClans = new ArrayList<>(); // L2SiegeClan
-	private final List<L2SiegeClan> _defenderClans = new ArrayList<>(); // L2SiegeClan
-	private final List<L2SiegeClan> _defenderWaitingClans = new ArrayList<>(); // L2SiegeClan
+	private final List<SiegeClan> _attackerClans = new ArrayList<>(); // SiegeClan
+	private final List<SiegeClan> _defenderClans = new ArrayList<>(); // SiegeClan
+	private final List<SiegeClan> _defenderWaitingClans = new ArrayList<>(); // SiegeClan
 	private int _defenderRespawnDelayPenalty;
-	private List<L2CommanderInstance> _commanders = new ArrayList<>();
-	private List<L2ArtefactInstance> _combatflag = new ArrayList<>();
+	private List<CommanderInstance> _commanders = new ArrayList<>();
+	private List<ArtefactInstance> _combatflag = new ArrayList<>();
 	private final Fort[] _fort;
 	boolean _isInProgress = false;
 	private boolean _isScheduled = false;
@@ -299,7 +299,7 @@ public class FortSiege
 	 * Removes the defender.
 	 * @param sc the sc
 	 */
-	private void removeDefender(L2SiegeClan sc)
+	private void removeDefender(SiegeClan sc)
 	{
 		if (sc != null)
 		{
@@ -311,7 +311,7 @@ public class FortSiege
 	 * Removes the attacker.
 	 * @param sc the sc
 	 */
-	private void removeAttacker(L2SiegeClan sc)
+	private void removeAttacker(SiegeClan sc)
 	{
 		if (sc != null)
 		{
@@ -324,7 +324,7 @@ public class FortSiege
 	 * @param sc the sc
 	 * @param type the type
 	 */
-	private void addDefender(L2SiegeClan sc, SiegeClanType type)
+	private void addDefender(SiegeClan sc, SiegeClanType type)
 	{
 		if (sc == null)
 		{
@@ -339,7 +339,7 @@ public class FortSiege
 	 * Adds the attacker.
 	 * @param sc the sc
 	 */
-	private void addAttacker(L2SiegeClan sc)
+	private void addAttacker(SiegeClan sc)
 	{
 		if (sc == null)
 		{
@@ -360,7 +360,7 @@ public class FortSiege
 		if (_isInProgress) // Siege still in progress
 		{
 			// defenders to attacker
-			for (L2SiegeClan sc : getDefenderClans())
+			for (SiegeClan sc : getDefenderClans())
 			{
 				if (sc != null)
 				{
@@ -370,7 +370,7 @@ public class FortSiege
 			}
 			
 			// owner as defender
-			L2SiegeClan sc_newowner = getAttackerClan(getFort().getOwnerId());
+			SiegeClan sc_newowner = getAttackerClan(getFort().getOwnerId());
 			removeAttacker(sc_newowner);
 			addDefender(sc_newowner, SiegeClanType.OWNER);
 			endSiege();
@@ -466,7 +466,7 @@ public class FortSiege
 		}
 		
 		// Get all players
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendMessage(message);
 		}
@@ -478,11 +478,11 @@ public class FortSiege
 	 */
 	public void updatePlayerSiegeStateFlags(boolean clear)
 	{
-		L2Clan clan;
-		for (L2SiegeClan siegeclan : getAttackerClans())
+		Clan clan;
+		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (L2PcInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers(""))
 			{
 				if (clear)
 				{
@@ -495,17 +495,17 @@ public class FortSiege
 				
 				member.sendPacket(new UserInfo(member));
 				
-				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
+				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
 				}
 			}
 		}
 		
-		for (L2SiegeClan siegeclan : getDefenderClans())
+		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (L2PcInstance member : clan.getOnlineMembers(""))
+			for (PlayerInstance member : clan.getOnlineMembers(""))
 			{
 				if (clear)
 				{
@@ -518,7 +518,7 @@ public class FortSiege
 				
 				member.sendPacket(new UserInfo(member));
 				
-				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
+				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
 				}
@@ -548,7 +548,7 @@ public class FortSiege
 	 * @param object the object
 	 * @return true if object is inside the zone
 	 */
-	public boolean checkIfInZone(L2Object object)
+	public boolean checkIfInZone(WorldObject object)
 	{
 		return checkIfInZone(object.getX(), object.getY(), object.getZ());
 	}
@@ -567,30 +567,30 @@ public class FortSiege
 	
 	/**
 	 * Check is attacker.
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @return true if clan is attacker
 	 */
-	public boolean checkIsAttacker(L2Clan clan)
+	public boolean checkIsAttacker(Clan clan)
 	{
 		return getAttackerClan(clan) != null;
 	}
 	
 	/**
 	 * Check is defender.
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @return true if clan is defender
 	 */
-	public boolean checkIsDefender(L2Clan clan)
+	public boolean checkIsDefender(Clan clan)
 	{
 		return getDefenderClan(clan) != null;
 	}
 	
 	/**
 	 * Check is defender waiting.
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @return true if clan is defender waiting approval
 	 */
-	public boolean checkIsDefenderWaiting(L2Clan clan)
+	public boolean checkIsDefenderWaiting(Clan clan)
 	{
 		return getDefenderWaitingClan(clan) != null;
 	}
@@ -656,18 +656,18 @@ public class FortSiege
 	
 	/**
 	 * Gets the attackers in zone.
-	 * @return list of L2PcInstance registered as attacker in the zone.
+	 * @return list of PlayerInstance registered as attacker in the zone.
 	 */
-	public List<L2PcInstance> getAttackersInZone()
+	public List<PlayerInstance> getAttackersInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
-		L2Clan clan;
+		final List<PlayerInstance> players = new ArrayList<>();
+		Clan clan;
 		
-		for (L2SiegeClan siegeclan : getAttackerClans())
+		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
-			for (L2PcInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers(""))
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -680,15 +680,15 @@ public class FortSiege
 	}
 	
 	/**
-	 * Return list of L2PcInstance registered as defender but not owner in the zone.
+	 * Return list of PlayerInstance registered as defender but not owner in the zone.
 	 * @return the defenders but not owners in zone
 	 */
-	public List<L2PcInstance> getDefendersButNotOwnersInZone()
+	public List<PlayerInstance> getDefendersButNotOwnersInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
-		L2Clan clan;
+		final List<PlayerInstance> players = new ArrayList<>();
+		Clan clan;
 		
-		for (L2SiegeClan siegeclan : getDefenderClans())
+		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
@@ -697,7 +697,7 @@ public class FortSiege
 				continue;
 			}
 			
-			for (L2PcInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers(""))
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -710,24 +710,24 @@ public class FortSiege
 	}
 	
 	/**
-	 * Return list of L2PcInstance in the zone.
+	 * Return list of PlayerInstance in the zone.
 	 * @return the players in zone
 	 */
-	public List<L2PcInstance> getPlayersInZone()
+	public List<PlayerInstance> getPlayersInZone()
 	{
 		return getFort().getZone().getAllPlayers();
 	}
 	
 	/**
-	 * Return list of L2PcInstance owning the fort in the zone.
+	 * Return list of PlayerInstance owning the fort in the zone.
 	 * @return the owners in zone
 	 */
-	public List<L2PcInstance> getOwnersInZone()
+	public List<PlayerInstance> getOwnersInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
-		L2Clan clan;
+		final List<PlayerInstance> players = new ArrayList<>();
+		Clan clan;
 		
-		for (L2SiegeClan siegeclan : getDefenderClans())
+		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			
@@ -736,7 +736,7 @@ public class FortSiege
 				continue;
 			}
 			
-			for (L2PcInstance player : clan.getOnlineMembers(""))
+			for (PlayerInstance player : clan.getOnlineMembers(""))
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
 				{
@@ -749,14 +749,14 @@ public class FortSiege
 	}
 	
 	/**
-	 * Return list of L2PcInstance not registered as attacker or defender in the zone.
+	 * Return list of PlayerInstance not registered as attacker or defender in the zone.
 	 * @return the spectators in zone
 	 */
-	public List<L2PcInstance> getSpectatorsInZone()
+	public List<PlayerInstance> getSpectatorsInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
+		final List<PlayerInstance> players = new ArrayList<>();
 		
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			// quick check from player states, which don't include siege number however
 			if (!player.isInsideZone(ZoneId.SIEGE) || (player.getSiegeState() != 0))
@@ -777,7 +777,7 @@ public class FortSiege
 	 * Control Tower was skilled.
 	 * @param ct the ct
 	 */
-	public void killedCT(L2NpcInstance ct)
+	public void killedCT(NpcInstance ct)
 	{
 		_defenderRespawnDelayPenalty += FortSiegeManager.getInstance().getControlTowerLosePenalty(); // Add respawn penalty to defenders for each control tower lose
 	}
@@ -786,7 +786,7 @@ public class FortSiege
 	 * Commanderr was skilled.
 	 * @param ct the ct
 	 */
-	public void killedCommander(L2CommanderInstance ct)
+	public void killedCommander(CommanderInstance ct)
 	{
 		if (_commanders != null)
 		{
@@ -803,7 +803,7 @@ public class FortSiege
 	 * Remove the flag that was killed.
 	 * @param flag the flag
 	 */
-	public void killedFlag(L2NpcInstance flag)
+	public void killedFlag(NpcInstance flag)
 	{
 		if (flag == null)
 		{
@@ -823,7 +823,7 @@ public class FortSiege
 	 * Display list of registered clans.
 	 * @param player the player
 	 */
-	public void listRegisterClan(L2PcInstance player)
+	public void listRegisterClan(PlayerInstance player)
 	{
 		player.sendPacket(new FortressSiegeInfo(getFort()));
 	}
@@ -832,9 +832,9 @@ public class FortSiege
 	 * Register clan as attacker<BR>
 	 * <BR>
 	 * .
-	 * @param player The L2PcInstance of the player trying to register
+	 * @param player The PlayerInstance of the player trying to register
 	 */
-	public void registerAttacker(L2PcInstance player)
+	public void registerAttacker(PlayerInstance player)
 	{
 		registerAttacker(player, false);
 	}
@@ -844,7 +844,7 @@ public class FortSiege
 	 * @param player the player
 	 * @param force the force
 	 */
-	public void registerAttacker(L2PcInstance player, boolean force)
+	public void registerAttacker(PlayerInstance player, boolean force)
 	{
 		if (player.getClan() == null)
 		{
@@ -892,9 +892,9 @@ public class FortSiege
 	 * Register clan as defender<BR>
 	 * <BR>
 	 * .
-	 * @param player The L2PcInstance of the player trying to register
+	 * @param player The PlayerInstance of the player trying to register
 	 */
-	public void registerDefender(L2PcInstance player)
+	public void registerDefender(PlayerInstance player)
 	{
 		registerDefender(player, false);
 	}
@@ -904,7 +904,7 @@ public class FortSiege
 	 * @param player the player
 	 * @param force the force
 	 */
-	public void registerDefender(L2PcInstance player, boolean force)
+	public void registerDefender(PlayerInstance player, boolean force)
 	{
 		if (getFort().getOwnerId() <= 0)
 		{
@@ -961,7 +961,7 @@ public class FortSiege
 	 * .
 	 * @param clan the clan
 	 */
-	public void removeSiegeClan(L2Clan clan)
+	public void removeSiegeClan(Clan clan)
 	{
 		if ((clan == null) || (clan.getHasFort() == getFort().getFortId()) || !FortSiegeManager.getInstance().checkIsRegistered(clan, getFort().getFortId()))
 		{
@@ -975,9 +975,9 @@ public class FortSiege
 	 * Remove clan from siege<BR>
 	 * <BR>
 	 * .
-	 * @param player The L2PcInstance of player/clan being removed
+	 * @param player The PlayerInstance of player/clan being removed
 	 */
-	public void removeSiegeClan(L2PcInstance player)
+	public void removeSiegeClan(PlayerInstance player)
 	{
 		removeSiegeClan(player.getClan());
 	}
@@ -1033,7 +1033,7 @@ public class FortSiege
 	 */
 	public void teleportPlayer(TeleportWhoType teleportWho, MapRegionTable.TeleportWhereType teleportWhere)
 	{
-		List<L2PcInstance> players;
+		List<PlayerInstance> players;
 		switch (teleportWho)
 		{
 			case Owner:
@@ -1062,7 +1062,7 @@ public class FortSiege
 			}
 		}
 		
-		for (L2PcInstance player : players)
+		for (PlayerInstance player : players)
 		{
 			if (player.isGM() || player.isInJail())
 			{
@@ -1081,7 +1081,7 @@ public class FortSiege
 	 */
 	private void addAttacker(int clanId)
 	{
-		getAttackerClans().add(new L2SiegeClan(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
+		getAttackerClans().add(new SiegeClan(clanId, SiegeClanType.ATTACKER)); // Add registered attacker to attacker list
 	}
 	
 	/**
@@ -1092,7 +1092,7 @@ public class FortSiege
 	 */
 	private void addDefender(int clanId)
 	{
-		getDefenderClans().add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER)); // Add registered defender to defender list
+		getDefenderClans().add(new SiegeClan(clanId, SiegeClanType.DEFENDER)); // Add registered defender to defender list
 	}
 	
 	/**
@@ -1105,7 +1105,7 @@ public class FortSiege
 	 */
 	private void addDefender(int clanId, SiegeClanType type)
 	{
-		getDefenderClans().add(new L2SiegeClan(clanId, type));
+		getDefenderClans().add(new SiegeClan(clanId, type));
 	}
 	
 	/**
@@ -1116,16 +1116,16 @@ public class FortSiege
 	 */
 	private void addDefenderWaiting(int clanId)
 	{
-		_defenderWaitingClans.add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
+		_defenderWaitingClans.add(new SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
 	}
 	
 	/**
 	 * Return true if the player can register.<BR>
 	 * <BR>
-	 * @param player The L2PcInstance of the player trying to register
+	 * @param player The PlayerInstance of the player trying to register
 	 * @return true, if successful
 	 */
-	private boolean checkIfCanRegister(L2PcInstance player)
+	private boolean checkIfCanRegister(PlayerInstance player)
 	{
 		if (_isRegistrationOver)
 		{
@@ -1232,7 +1232,7 @@ public class FortSiege
 		if (_commanders != null)
 		{
 			// Remove all instance of artifact for this fort
-			for (L2CommanderInstance commander : _commanders)
+			for (CommanderInstance commander : _commanders)
 			{
 				if (commander != null)
 				{
@@ -1246,14 +1246,14 @@ public class FortSiege
 	/** Remove all flags. */
 	private void removeFlags()
 	{
-		for (L2SiegeClan sc : getAttackerClans())
+		for (SiegeClan sc : getAttackerClans())
 		{
 			if (sc != null)
 			{
 				sc.removeFlags();
 			}
 		}
-		for (L2SiegeClan sc : getDefenderClans())
+		for (SiegeClan sc : getDefenderClans())
 		{
 			if (sc != null)
 			{
@@ -1292,11 +1292,11 @@ public class FortSiege
 	/**
 	 * Save registration to database.<BR>
 	 * <BR>
-	 * @param clan The L2Clan of player
+	 * @param clan The Clan of player
 	 * @param typeId -1 = owner 0 = defender, 1 = attacker, 2 = defender waiting
 	 * @param isUpdateRegistration the is update registration
 	 */
-	private void saveSiegeClan(L2Clan clan, int typeId, boolean isUpdateRegistration)
+	private void saveSiegeClan(Clan clan, int typeId, boolean isUpdateRegistration)
 	{
 		if (clan.getHasFort() > 0)
 		{
@@ -1355,7 +1355,7 @@ public class FortSiege
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: saveSiegeClan(L2Clan clan, int typeId, boolean isUpdateRegistration): " + e.getMessage());
+			LOGGER.warning("Exception: saveSiegeClan(Pledge clan, int typeId, boolean isUpdateRegistration): " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -1374,9 +1374,9 @@ public class FortSiege
 		
 		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(Id))
 		{
-			L2CommanderInstance commander;
+			CommanderInstance commander;
 			
-			commander = new L2CommanderInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			commander = new CommanderInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			commander.setCurrentHpMp(commander.getMaxHp(), commander.getMaxMp());
 			commander.setHeading(_sp.getLocation().getHeading());
 			commander.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
@@ -1398,9 +1398,9 @@ public class FortSiege
 		
 		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getFlagList(Id))
 		{
-			L2ArtefactInstance combatflag;
+			ArtefactInstance combatflag;
 			
-			combatflag = new L2ArtefactInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			combatflag = new ArtefactInstance(IdFactory.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			combatflag.setCurrentHpMp(combatflag.getMaxHp(), combatflag.getMaxMp());
 			combatflag.setHeading(_sp.getLocation().getHeading());
 			combatflag.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 10);
@@ -1417,7 +1417,7 @@ public class FortSiege
 		if (_combatflag != null)
 		{
 			// Remove all instance of artifact for this fort
-			for (L2ArtefactInstance _sp : _combatflag)
+			for (ArtefactInstance _sp : _combatflag)
 			{
 				if (_sp != null)
 				{
@@ -1442,7 +1442,7 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the attacker clan
 	 */
-	public final L2SiegeClan getAttackerClan(L2Clan clan)
+	public final SiegeClan getAttackerClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1457,9 +1457,9 @@ public class FortSiege
 	 * @param clanId the clan id
 	 * @return the attacker clan
 	 */
-	public final L2SiegeClan getAttackerClan(int clanId)
+	public final SiegeClan getAttackerClan(int clanId)
 	{
-		for (L2SiegeClan sc : getAttackerClans())
+		for (SiegeClan sc : getAttackerClans())
 		{
 			if ((sc != null) && (sc.getClanId() == clanId))
 			{
@@ -1474,7 +1474,7 @@ public class FortSiege
 	 * Gets the attacker clans.
 	 * @return the attacker clans
 	 */
-	public final List<L2SiegeClan> getAttackerClans()
+	public final List<SiegeClan> getAttackerClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1512,7 +1512,7 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the defender clan
 	 */
-	public final L2SiegeClan getDefenderClan(L2Clan clan)
+	public final SiegeClan getDefenderClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1527,9 +1527,9 @@ public class FortSiege
 	 * @param clanId the clan id
 	 * @return the defender clan
 	 */
-	public final L2SiegeClan getDefenderClan(int clanId)
+	public final SiegeClan getDefenderClan(int clanId)
 	{
-		for (L2SiegeClan sc : getDefenderClans())
+		for (SiegeClan sc : getDefenderClans())
 		{
 			if ((sc != null) && (sc.getClanId() == clanId))
 			{
@@ -1544,7 +1544,7 @@ public class FortSiege
 	 * Gets the defender clans.
 	 * @return the defender clans
 	 */
-	public final List<L2SiegeClan> getDefenderClans()
+	public final List<SiegeClan> getDefenderClans()
 	{
 		if (_isNormalSide)
 		{
@@ -1559,7 +1559,7 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the defender waiting clan
 	 */
-	public final L2SiegeClan getDefenderWaitingClan(L2Clan clan)
+	public final SiegeClan getDefenderWaitingClan(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -1574,9 +1574,9 @@ public class FortSiege
 	 * @param clanId the clan id
 	 * @return the defender waiting clan
 	 */
-	public final L2SiegeClan getDefenderWaitingClan(int clanId)
+	public final SiegeClan getDefenderWaitingClan(int clanId)
 	{
-		for (L2SiegeClan sc : _defenderWaitingClans)
+		for (SiegeClan sc : _defenderWaitingClans)
 		{
 			if ((sc != null) && (sc.getClanId() == clanId))
 			{
@@ -1591,7 +1591,7 @@ public class FortSiege
 	 * Gets the defender waiting clans.
 	 * @return the defender waiting clans
 	 */
-	public final List<L2SiegeClan> getDefenderWaitingClans()
+	public final List<SiegeClan> getDefenderWaitingClans()
 	{
 		return _defenderWaitingClans;
 	}
@@ -1655,11 +1655,11 @@ public class FortSiege
 	 * @param clan the clan
 	 * @return the flag
 	 */
-	public List<L2NpcInstance> getFlag(L2Clan clan)
+	public List<NpcInstance> getFlag(Clan clan)
 	{
 		if (clan != null)
 		{
-			final L2SiegeClan sc = getAttackerClan(clan);
+			final SiegeClan sc = getAttackerClan(clan);
 			if (sc != null)
 			{
 				return sc.getFlag();

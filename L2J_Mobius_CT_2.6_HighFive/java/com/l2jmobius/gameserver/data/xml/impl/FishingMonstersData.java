@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.fishing.L2FishingMonster;
+import com.l2jmobius.gameserver.model.fishing.FishingMonster;
 
 /**
  * This class holds the Fishing Monsters information.
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.fishing.L2FishingMonster;
  */
 public final class FishingMonstersData implements IGameXmlReader
 {
-	private final Map<Integer, L2FishingMonster> _fishingMonstersData = new HashMap<>();
+	private final Map<Integer, FishingMonster> _fishingMonstersData = new HashMap<>();
 	
 	/**
 	 * Instantiates a new fishing monsters data.
@@ -71,7 +71,7 @@ public final class FishingMonstersData implements IGameXmlReader
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						
-						final L2FishingMonster fishingMonster = new L2FishingMonster(set);
+						final FishingMonster fishingMonster = new FishingMonster(set);
 						_fishingMonstersData.put(fishingMonster.getFishingMonsterId(), fishingMonster);
 					}
 				}
@@ -84,9 +84,9 @@ public final class FishingMonstersData implements IGameXmlReader
 	 * @param lvl the fisherman level
 	 * @return a fishing monster given the fisherman level
 	 */
-	public L2FishingMonster getFishingMonster(int lvl)
+	public FishingMonster getFishingMonster(int lvl)
 	{
-		for (L2FishingMonster fishingMonster : _fishingMonstersData.values())
+		for (FishingMonster fishingMonster : _fishingMonstersData.values())
 		{
 			if ((lvl >= fishingMonster.getUserMinLevel()) && (lvl <= fishingMonster.getUserMaxLevel()))
 			{
@@ -101,7 +101,7 @@ public final class FishingMonstersData implements IGameXmlReader
 	 * @param id the fishing monster Id
 	 * @return the fishing monster by Id
 	 */
-	public L2FishingMonster getFishingMonsterById(int id)
+	public FishingMonster getFishingMonsterById(int id)
 	{
 		return _fishingMonstersData.containsKey(id) ? _fishingMonstersData.get(id) : null;
 	}

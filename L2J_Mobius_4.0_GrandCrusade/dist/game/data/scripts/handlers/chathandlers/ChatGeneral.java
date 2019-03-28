@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.handler.IChatHandler;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +43,7 @@ public final class ChatGeneral implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, L2PcInstance activeChar, String params, String text)
+	public void handleChat(ChatType type, PlayerInstance activeChar, String params, String text)
 	{
 		boolean vcd_used = false;
 		if (text.startsWith("."))
@@ -81,7 +81,7 @@ public final class ChatGeneral implements IChatHandler
 				return;
 			}
 			
-			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PlayerCondOverride.CHAT_CONDITIONS))
 			{
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_USE_GENERAL_CHAT_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
 				return;
@@ -89,7 +89,7 @@ public final class ChatGeneral implements IChatHandler
 			
 			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
 			final CreatureSay csRandom = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
-			L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, 1250, player ->
+			World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, 1250, player ->
 			{
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{

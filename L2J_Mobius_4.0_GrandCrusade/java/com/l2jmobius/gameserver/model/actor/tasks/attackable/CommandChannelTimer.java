@@ -18,16 +18,16 @@ package com.l2jmobius.gameserver.model.actor.tasks.attackable;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.Attackable;
 
 /**
  * @author xban1x
  */
 public final class CommandChannelTimer implements Runnable
 {
-	private final L2Attackable _attackable;
+	private final Attackable _attackable;
 	
-	public CommandChannelTimer(L2Attackable attackable)
+	public CommandChannelTimer(Attackable attackable)
 	{
 		_attackable = attackable;
 	}

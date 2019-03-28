@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25700" level="88" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
+	<npc id="25700" level="88" type="RaidBoss" name="Glakias" title="Ice Knight Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" />
@@ -57,7 +57,7 @@
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="25701" level="84" type="L2RaidBoss" name="Anais" title="Lord of Splendor">
+	<npc id="25701" level="84" type="RaidBoss" name="Anais" title="Lord of Splendor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6324" level="1" />
@@ -131,7 +131,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25702" level="84" type="L2Monster" name="Guardian of the Grail">
+	<npc id="25702" level="84" type="Monster" name="Guardian of the Grail">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" />
@@ -174,7 +174,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25703" level="76" type="L2RaidBoss" name="Gigantic Golem" title="Chaos">
+	<npc id="25703" level="76" type="RaidBoss" name="Gigantic Golem" title="Chaos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -248,7 +248,7 @@
 			<height normal="51.8" />
 		</collision>
 	</npc>
-	<npc id="25704" level="75" type="L2Monster" name="Gigantic Golem Subordinate" title="Chaos">
+	<npc id="25704" level="75" type="Monster" name="Gigantic Golem Subordinate" title="Chaos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Party_Type" value="1" />
@@ -293,7 +293,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="25705" level="74" type="L2Monster" name="Gigantic Boom Golem" title="Chaos">
+	<npc id="25705" level="74" type="Monster" name="Gigantic Boom Golem" title="Chaos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6265" level="1" />
@@ -333,7 +333,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="25706" level="83" type="L2Monster" name="Lost Watchman">
+	<npc id="25706" level="83" type="Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -390,7 +390,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="25707" level="83" type="L2Monster" name="Lost Watchman">
+	<npc id="25707" level="83" type="Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -444,7 +444,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="25708" level="83" type="L2Monster" name="Lost Beholder">
+	<npc id="25708" level="83" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -501,7 +501,7 @@
 			<height normal="27.2" />
 		</collision>
 	</npc>
-	<npc id="25709" level="83" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25709" level="83" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="6694" level="8" />
@@ -553,7 +553,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Guard Captain">
+	<npc id="25710" level="83" type="RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -628,7 +628,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="25711" level="83" type="L2Monster" name="Lost Guard">
+	<npc id="25711" level="83" type="Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -669,7 +669,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25712" level="83" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="25712" level="83" type="Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="8" />
@@ -719,7 +719,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25713" level="84" type="L2RaidBoss" name="Darnel" title="Torture Maiden">
+	<npc id="25713" level="84" type="RaidBoss" name="Darnel" title="Torture Maiden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
@@ -771,7 +771,7 @@
 			<height normal="40.5985" />
 		</collision>
 	</npc>
-	<npc id="25714" level="84" type="L2RaidBoss" name="Kechi" title="Flaming">
+	<npc id="25714" level="84" type="RaidBoss" name="Kechi" title="Flaming">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
@@ -825,7 +825,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25715" level="84" type="L2Monster" name="Kechi's Subordinate">
+	<npc id="25715" level="84" type="Monster" name="Kechi's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="0" />
@@ -878,7 +878,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25716" level="84" type="L2RaidBoss" name="Tears" title="Ice">
+	<npc id="25716" level="84" type="RaidBoss" name="Tears" title="Ice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
@@ -933,7 +933,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25717" level="84" type="L2Monster" name="Tears" title="Ice">
+	<npc id="25717" level="84" type="Monster" name="Tears" title="Ice">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -975,7 +975,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25718" level="84" type="L2RaidBoss" name="Emerald Horn" title="Raid Boss">
+	<npc id="25718" level="84" type="RaidBoss" name="Emerald Horn" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1045,7 +1045,7 @@
 			<height normal="77" />
 		</collision>
 	</npc>
-	<npc id="25719" level="84" type="L2RaidBoss" name="Dust Rider" title="Raid Boss">
+	<npc id="25719" level="84" type="RaidBoss" name="Dust Rider" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1115,7 +1115,7 @@
 			<height normal="53.5" />
 		</collision>
 	</npc>
-	<npc id="25720" level="84" type="L2RaidBoss" name="Bleeding Fly" title="Raid Boss">
+	<npc id="25720" level="84" type="RaidBoss" name="Bleeding Fly" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1192,7 +1192,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="25721" level="84" type="L2RaidBoss" name="Blackdagger Wing" title="Raid Boss">
+	<npc id="25721" level="84" type="RaidBoss" name="Blackdagger Wing" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1263,7 +1263,7 @@
 			<height normal="150" />
 		</collision>
 	</npc>
-	<npc id="25722" level="84" type="L2RaidBoss" name="Shadow Summoner" title="Raid Boss">
+	<npc id="25722" level="84" type="RaidBoss" name="Shadow Summoner" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1339,7 +1339,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="25723" level="84" type="L2RaidBoss" name="Spike Slasher" title="Raid Boss">
+	<npc id="25723" level="84" type="RaidBoss" name="Spike Slasher" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1413,7 +1413,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25724" level="84" type="L2RaidBoss" name="Muscle Bomber" title="Raid Boss">
+	<npc id="25724" level="84" type="RaidBoss" name="Muscle Bomber" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1479,7 +1479,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="25725" level="85" type="L2RaidBoss" name="Drake Lord" title="Raid Boss">
+	<npc id="25725" level="85" type="RaidBoss" name="Drake Lord" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
@@ -1532,7 +1532,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25726" level="85" type="L2RaidBoss" name="Behemoth Leader" title="Raid Boss">
+	<npc id="25726" level="85" type="RaidBoss" name="Behemoth Leader" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
@@ -1587,7 +1587,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25727" level="85" type="L2RaidBoss" name="Dragon Beast" title="Raid Boss">
+	<npc id="25727" level="85" type="RaidBoss" name="Dragon Beast" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
@@ -1648,7 +1648,7 @@
 			<height normal="84" />
 		</collision>
 	</npc>
-	<npc id="25728" level="85" type="L2Monster" name="Death Knight">
+	<npc id="25728" level="85" type="Monster" name="Death Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="hold_skill" id="6738" level="1" />
@@ -1693,7 +1693,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25729" level="85" type="L2Monster" name="Death Knight">
+	<npc id="25729" level="85" type="Monster" name="Death Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="fan_attack_skill" id="6889" level="1" />
@@ -1740,7 +1740,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25730" level="80" type="L2Monster" name="Demon's Banquet">
+	<npc id="25730" level="80" type="Monster" name="Demon's Banquet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1785,7 +1785,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25731" level="80" type="L2Monster" name="Demon's Banquet">
+	<npc id="25731" level="80" type="Monster" name="Demon's Banquet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1830,7 +1830,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25732" level="85" type="L2RaidBoss" name="Dragon Beast" title="Raid Boss">
+	<npc id="25732" level="85" type="RaidBoss" name="Dragon Beast" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
@@ -1874,7 +1874,7 @@
 			<height normal="84" />
 		</collision>
 	</npc>
-	<npc id="25733" level="83" type="L2Monster" name="Gem Dragon">
+	<npc id="25733" level="83" type="Monster" name="Gem Dragon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1922,7 +1922,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25734" level="83" type="L2Monster" name="Parasitic Leech">
+	<npc id="25734" level="83" type="Monster" name="Parasitic Leech">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1969,7 +1969,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="25735" level="90" type="L2RaidBoss" name="Fairy Warrior" title="Faithful Servant">
+	<npc id="25735" level="90" type="RaidBoss" name="Fairy Warrior" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2026,7 +2026,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25736" level="90" type="L2Monster" name="Fairy Rogue" title="Faithful Servant">
+	<npc id="25736" level="90" type="Monster" name="Fairy Rogue" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2081,7 +2081,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25737" level="90" type="L2Monster" name="Fairy Knight" title="Faithful Servant">
+	<npc id="25737" level="90" type="Monster" name="Fairy Knight" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2133,7 +2133,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25738" level="90" type="L2RaidBoss" name="Satyr Wizard" title="Faithful Servant">
+	<npc id="25738" level="90" type="RaidBoss" name="Satyr Wizard" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2192,7 +2192,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25739" level="90" type="L2Monster" name="Satyr Summoner" title="Faithful Servant">
+	<npc id="25739" level="90" type="Monster" name="Satyr Summoner" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2247,7 +2247,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25740" level="90" type="L2Monster" name="Satyr Witch" title="Faithful Servant">
+	<npc id="25740" level="90" type="Monster" name="Satyr Witch" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2302,7 +2302,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25741" level="90" type="L2RaidBoss" name="Treekin Defender" title="Faithful Servant">
+	<npc id="25741" level="90" type="RaidBoss" name="Treekin Defender" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2359,7 +2359,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25742" level="90" type="L2Monster" name="Centaur Archer" title="Faithful Servant">
+	<npc id="25742" level="90" type="Monster" name="Centaur Archer" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2412,7 +2412,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25743" level="90" type="L2Monster" name="Beorning Berserker" title="Faithful Servant">
+	<npc id="25743" level="90" type="Monster" name="Beorning Berserker" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2467,7 +2467,7 @@
 			<height normal="26.8" />
 		</collision>
 	</npc>
-	<npc id="25744" level="91" type="L2RaidBoss" name="Double Nightmare" title="Faithful Servant">
+	<npc id="25744" level="91" type="RaidBoss" name="Double Nightmare" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2528,7 +2528,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25745" level="92" type="L2RaidBoss" name="Kimerian" title="Fairy Leader">
+	<npc id="25745" level="92" type="RaidBoss" name="Kimerian" title="Fairy Leader">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2641,7 +2641,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25746" level="90" type="L2Monster" name="Kimerian Ghost">
+	<npc id="25746" level="90" type="Monster" name="Kimerian Ghost">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2687,7 +2687,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25747" level="25" type="L2RaidBoss" name="Kimerian" title="Fairy Leader">
+	<npc id="25747" level="25" type="RaidBoss" name="Kimerian" title="Fairy Leader">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2740,7 +2740,7 @@
 		</collision>
 		<race>FAIRY</race>
 	</npc>
-	<npc id="25748" level="93" type="L2Monster" name="Fairy Warrior" title="Faithful Servant">
+	<npc id="25748" level="93" type="Monster" name="Fairy Warrior" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2795,7 +2795,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25749" level="94" type="L2Monster" name="Fairy Rogue" title="Faithful Servant">
+	<npc id="25749" level="94" type="Monster" name="Fairy Rogue" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2849,7 +2849,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25750" level="93" type="L2RaidBoss" name="Fairy Knight" title="Faithful Servant">
+	<npc id="25750" level="93" type="RaidBoss" name="Fairy Knight" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2907,7 +2907,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25751" level="93" type="L2Monster" name="Satyr Wizard" title="Faithful Servant">
+	<npc id="25751" level="93" type="Monster" name="Satyr Wizard" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2964,7 +2964,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25752" level="94" type="L2Monster" name="Satyr Summoner" title="Faithful Servant">
+	<npc id="25752" level="94" type="Monster" name="Satyr Summoner" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3022,7 +3022,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25753" level="94" type="L2RaidBoss" name="Satyr Witch" title="Faithful Servant">
+	<npc id="25753" level="94" type="RaidBoss" name="Satyr Witch" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3084,7 +3084,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25754" level="94" type="L2RaidBoss" name="Treekin Defender" title="Faithful Servant">
+	<npc id="25754" level="94" type="RaidBoss" name="Treekin Defender" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3144,7 +3144,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25755" level="93" type="L2Monster" name="Centaur Archer" title="Faithful Servant">
+	<npc id="25755" level="93" type="Monster" name="Centaur Archer" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3197,7 +3197,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25756" level="94" type="L2Monster" name="Beorning Berserker" title="Faithful Servant">
+	<npc id="25756" level="94" type="Monster" name="Beorning Berserker" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3251,7 +3251,7 @@
 			<height normal="26.8" />
 		</collision>
 	</npc>
-	<npc id="25757" level="94" type="L2RaidBoss" name="Double Nightmare" title="Faithful Servant">
+	<npc id="25757" level="94" type="RaidBoss" name="Double Nightmare" title="Faithful Servant">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3309,7 +3309,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25758" level="95" type="L2RaidBoss" name="Kimerian" title="Fairy Leader">
+	<npc id="25758" level="95" type="RaidBoss" name="Kimerian" title="Fairy Leader">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3420,7 +3420,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25759" level="92" type="L2Monster" name="Kimerian Ghost" title="Fairy Leader">
+	<npc id="25759" level="92" type="Monster" name="Kimerian Ghost" title="Fairy Leader">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3466,7 +3466,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25760" level="98" type="L2RaidBoss" name="Turanclass" title="Raid Boss">
+	<npc id="25760" level="98" type="RaidBoss" name="Turanclass" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="boss_skill_01" id="14015" level="1" />
@@ -3550,7 +3550,7 @@
 			<height normal="84" />
 		</collision>
 	</npc>
-	<npc id="25761" level="97" type="L2RaidBoss" name="Georgios" title="Raid Boss">
+	<npc id="25761" level="97" type="RaidBoss" name="Georgios" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14012" level="2" />
@@ -3619,7 +3619,7 @@
 			<height normal="91" />
 		</collision>
 	</npc>
-	<npc id="25762" level="97" type="L2RaidBoss" name="Angelos" title="Raid Boss">
+	<npc id="25762" level="97" type="RaidBoss" name="Angelos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14001" level="3" />
@@ -3687,7 +3687,7 @@
 			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="25763" level="97" type="L2RaidBoss" name="Theofanis" title="Raid Boss">
+	<npc id="25763" level="97" type="RaidBoss" name="Theofanis" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14004" level="3" />
@@ -3766,7 +3766,7 @@
 			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="25764" level="97" type="L2RaidBoss" name="Steregos" title="Raid Boss">
+	<npc id="25764" level="97" type="RaidBoss" name="Steregos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14034" level="1" />
@@ -3832,7 +3832,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="25765" level="96" type="L2Monster" name="Beast" title="Raid Fighter">
+	<npc id="25765" level="96" type="Monster" name="Beast" title="Raid Fighter">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14036" level="1" />
@@ -3883,7 +3883,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25766" level="98" type="L2RaidBoss" name="Talicrome" title="Raid Boss">
+	<npc id="25766" level="98" type="RaidBoss" name="Talicrome" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="boss_skill_01" id="14019" level="1" />
@@ -3966,7 +3966,7 @@
 			<height normal="77" />
 		</collision>
 	</npc>
-	<npc id="25767" level="97" type="L2RaidBoss" name="Meikaliya" title="Raid Boss">
+	<npc id="25767" level="97" type="RaidBoss" name="Meikaliya" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -4043,7 +4043,7 @@
 			<height normal="86" />
 		</collision>
 	</npc>
-	<npc id="25768" level="97" type="L2RaidBoss" name="Evangelos" title="Raid Boss">
+	<npc id="25768" level="97" type="RaidBoss" name="Evangelos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -4107,7 +4107,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="25769" level="97" type="L2RaidBoss" name="Sotiris" title="Raid Boss">
+	<npc id="25769" level="97" type="RaidBoss" name="Sotiris" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -4171,7 +4171,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="25770" level="97" type="L2RaidBoss" name="Lazaros" title="Raid Boss">
+	<npc id="25770" level="97" type="RaidBoss" name="Lazaros" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -4252,7 +4252,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="25772" level="87" type="L2Npc" name="Harnak's Wraith" title="Greater Giant King">
+	<npc id="25772" level="87" type="Npc" name="Harnak's Wraith" title="Greater Giant King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4285,7 +4285,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="25775" level="94" type="L2RaidBoss" name="Apherus">
+	<npc id="25775" level="94" type="RaidBoss" name="Apherus">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />
@@ -4348,7 +4348,7 @@
 			<height normal="93" />
 		</collision>
 	</npc>
-	<npc id="25776" level="92" type="L2RaidBoss" name="Royal Guard" title="Apherus Garden">
+	<npc id="25776" level="92" type="RaidBoss" name="Royal Guard" title="Apherus Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4401,7 +4401,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25777" level="92" type="L2Monster" name="Chasseur" title="Apherus Garden">
+	<npc id="25777" level="92" type="Monster" name="Chasseur" title="Apherus Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4449,7 +4449,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25778" level="92" type="L2Monster" name="Escort" title="Apherus Garden">
+	<npc id="25778" level="92" type="Monster" name="Escort" title="Apherus Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4496,7 +4496,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25779" level="94" type="L2RaidBoss" name="Spezion" title="Raid Boss">
+	<npc id="25779" level="94" type="RaidBoss" name="Spezion" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4600,7 +4600,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="25780" level="94" type="L2Monster" name="Spezion's Subordinate">
+	<npc id="25780" level="94" type="Monster" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4646,7 +4646,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25781" level="94" type="L2Monster" name="Spezion's Subordinate">
+	<npc id="25781" level="94" type="Monster" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4691,7 +4691,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25782" level="94" type="L2RaidBoss" name="Spezion's Subordinate">
+	<npc id="25782" level="94" type="RaidBoss" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4742,7 +4742,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25783" level="20" type="L2Monster" name="Eyesaroch" title="Husk">
+	<npc id="25783" level="20" type="Monster" name="Eyesaroch" title="Husk">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14159" level="1" />
@@ -4784,7 +4784,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25784" level="10" type="L2RaidBoss" name="Overseer" title="Embryo">
+	<npc id="25784" level="10" type="RaidBoss" name="Overseer" title="Embryo">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4830,7 +4830,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25785" level="88" type="L2RaidBoss" name="Teredor">
+	<npc id="25785" level="88" type="RaidBoss" name="Teredor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4898,7 +4898,7 @@
 			<height normal="190" />
 		</collision>
 	</npc>
-	<npc id="25786" level="87" type="L2Monster" name="Lachikios" title="Son-in-law of the King">
+	<npc id="25786" level="87" type="Monster" name="Lachikios" title="Son-in-law of the King">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="3" />
@@ -4947,7 +4947,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="25787" level="87" type="L2RaidBoss" name="Lachikios" title="Son-in-law of the King">
+	<npc id="25787" level="87" type="RaidBoss" name="Lachikios" title="Son-in-law of the King">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14100" level="3" />
@@ -4998,7 +4998,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="25788" level="89" type="L2Monster" name="Lachikios" title="Queen's Companion">
+	<npc id="25788" level="89" type="Monster" name="Lachikios" title="Queen's Companion">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="5" />
@@ -5046,7 +5046,7 @@
 			<height normal="55.5" />
 		</collision>
 	</npc>
-	<npc id="25789" level="89" type="L2Monster" name="Lachikios" title="Queen's Companion">
+	<npc id="25789" level="89" type="Monster" name="Lachikios" title="Queen's Companion">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14100" level="5" />
@@ -5094,7 +5094,7 @@
 			<height normal="55.5" />
 		</collision>
 	</npc>
-	<npc id="25790" level="86" type="L2RaidBoss" name="Escort" title="Lachikios Subordinate">
+	<npc id="25790" level="86" type="RaidBoss" name="Escort" title="Lachikios Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5149,7 +5149,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="25791" level="88" type="L2Monster" name="Escort" title="Lachikios Subordinate">
+	<npc id="25791" level="88" type="Monster" name="Escort" title="Lachikios Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5199,7 +5199,7 @@
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="25792" level="88" type="L2Monster" name="Rachicues" title="Successor">
+	<npc id="25792" level="88" type="Monster" name="Rachicues" title="Successor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="4" />
@@ -5251,7 +5251,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25793" level="88" type="L2RaidBoss" name="Rachicues" title="Successor">
+	<npc id="25793" level="88" type="RaidBoss" name="Rachicues" title="Successor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14100" level="4" />
@@ -5314,7 +5314,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25794" level="90" type="L2RaidBoss" name="Rachicues" title="Queen">
+	<npc id="25794" level="90" type="RaidBoss" name="Rachicues" title="Queen">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14099" level="6" />
@@ -5372,7 +5372,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25795" level="90" type="L2Monster" name="Rachicues" title="Queen">
+	<npc id="25795" level="90" type="Monster" name="Rachicues" title="Queen">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14100" level="6" />
@@ -5428,7 +5428,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25796" level="98" type="L2RaidBoss" name="Veridan" title="Hell's Warden">
+	<npc id="25796" level="98" type="RaidBoss" name="Veridan" title="Hell's Warden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="Attack_BoostValue" value="151" />
@@ -5580,7 +5580,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25797" level="98" type="L2RaidBoss" name="Kechi" title="Flaming">
+	<npc id="25797" level="98" type="RaidBoss" name="Kechi" title="Flaming">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -5735,7 +5735,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25798" level="97" type="L2Monster" name="Kechi's Subordinate">
+	<npc id="25798" level="97" type="Monster" name="Kechi's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="selfbuff1" id="4084" level="2" />
@@ -5782,7 +5782,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25799" level="98" type="L2RaidBoss" name="Michaela" title="Grand Judge">
+	<npc id="25799" level="98" type="RaidBoss" name="Michaela" title="Grand Judge">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />

@@ -26,13 +26,12 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * This class ...
  * @author Nightmare
  * @version $Revision: 1.5.2.6.2.7 $ $Date: 2005/03/27 15:29:18 $
  */
@@ -42,7 +41,7 @@ public class SpawnTable
 	
 	private static final SpawnTable _instance = new SpawnTable();
 	
-	private final Map<Integer, L2Spawn> spawntable = new ConcurrentHashMap<>();
+	private final Map<Integer, Spawn> spawntable = new ConcurrentHashMap<>();
 	private int npcSpawnCount;
 	private int customSpawnCount;
 	
@@ -61,7 +60,7 @@ public class SpawnTable
 		}
 	}
 	
-	public Map<Integer, L2Spawn> getSpawnTable()
+	public Map<Integer, Spawn> getSpawnTable()
 	{
 		return spawntable;
 	}
@@ -83,33 +82,33 @@ public class SpawnTable
 			
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					if (template1.type.equalsIgnoreCase("L2SiegeGuard"))
+					if (template1.type.equalsIgnoreCase("SiegeGuard"))
 					{
 						// Don't spawn
 					}
-					else if (template1.type.equalsIgnoreCase("L2RaidBoss"))
+					else if (template1.type.equalsIgnoreCase("RaidBoss"))
 					{
 						// Don't spawn raidboss
 					}
-					else if (template1.type.equalsIgnoreCase("L2GrandBoss"))
+					else if (template1.type.equalsIgnoreCase("GrandBoss"))
 					{
 						// Don't spawn grandboss
 					}
-					else if (!Config.ALLOW_CLASS_MASTERS && template1.type.equals("L2ClassMaster"))
+					else if (!Config.ALLOW_CLASS_MASTERS && template1.type.equals("ClassMaster"))
 					{
 						// Dont' spawn class masters
 					}
 					else
 					{
-						spawnDat = new L2Spawn(template1);
+						spawnDat = new Spawn(template1);
 						spawnDat.setId(rset.getInt("id"));
 						spawnDat.setAmount(rset.getInt("count"));
 						spawnDat.setX(rset.getInt("locx"));
@@ -188,8 +187,8 @@ public class SpawnTable
 				
 				final ResultSet rset = statement.executeQuery();
 				
-				L2Spawn spawnDat;
-				L2NpcTemplate template1;
+				Spawn spawnDat;
+				NpcTemplate template1;
 				
 				while (rset.next())
 				{
@@ -197,21 +196,21 @@ public class SpawnTable
 					
 					if (template1 != null)
 					{
-						if (template1.type.equalsIgnoreCase("L2SiegeGuard"))
+						if (template1.type.equalsIgnoreCase("SiegeGuard"))
 						{
 							// Don't spawn
 						}
-						else if (template1.type.equalsIgnoreCase("L2RaidBoss"))
+						else if (template1.type.equalsIgnoreCase("RaidBoss"))
 						{
 							// Don't spawn raidboss
 						}
-						else if (!Config.ALLOW_CLASS_MASTERS && template1.type.equals("L2ClassMaster"))
+						else if (!Config.ALLOW_CLASS_MASTERS && template1.type.equals("ClassMaster"))
 						{
 							// Dont' spawn class masters
 						}
 						else
 						{
-							spawnDat = new L2Spawn(template1);
+							spawnDat = new Spawn(template1);
 							spawnDat.setId(rset.getInt("id"));
 							spawnDat.setAmount(rset.getInt("count"));
 							spawnDat.setX(rset.getInt("locx"));
@@ -270,12 +269,12 @@ public class SpawnTable
 		}
 	}
 	
-	public L2Spawn getTemplate(int id)
+	public Spawn getTemplate(int id)
 	{
 		return spawntable.get(id);
 	}
 	
-	public void addNewSpawn(L2Spawn spawn, boolean storeInDb)
+	public void addNewSpawn(Spawn spawn, boolean storeInDb)
 	{
 		_highestId++;
 		spawn.setId(_highestId);
@@ -305,7 +304,7 @@ public class SpawnTable
 		}
 	}
 	
-	public void deleteSpawn(L2Spawn spawn, boolean updateDb)
+	public void deleteSpawn(Spawn spawn, boolean updateDb)
 	{
 		if (spawntable.remove(spawn.getId()) == null)
 		{
@@ -355,14 +354,14 @@ public class SpawnTable
 	/**
 	 * Get all the spawn of a NPC<BR>
 	 * <BR>
-	 * @param activeChar
+	 * @param player
 	 * @param npcId : ID of the NPC to find.
 	 * @param teleportIndex
 	 */
-	public void findNPCInstances(L2PcInstance activeChar, int npcId, int teleportIndex)
+	public void findNPCInstances(PlayerInstance player, int npcId, int teleportIndex)
 	{
 		int index = 0;
-		for (L2Spawn spawn : spawntable.values())
+		for (Spawn spawn : spawntable.values())
 		{
 			if (npcId == spawn.getNpcId())
 			{
@@ -372,23 +371,23 @@ public class SpawnTable
 				{
 					if (teleportIndex == index)
 					{
-						activeChar.teleToLocation(spawn.getX(), spawn.getY(), spawn.getZ(), true);
+						player.teleToLocation(spawn.getX(), spawn.getY(), spawn.getZ(), true);
 					}
 				}
 				else
 				{
-					activeChar.sendMessage(index + " - " + spawn.getTemplate().name + " (" + spawn.getId() + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
+					player.sendMessage(index + " - " + spawn.getTemplate().name + " (" + spawn.getId() + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
 				}
 			}
 		}
 		
 		if (index == 0)
 		{
-			activeChar.sendMessage("No current spawns found.");
+			player.sendMessage("No current spawns found.");
 		}
 	}
 	
-	public Map<Integer, L2Spawn> getAllTemplates()
+	public Map<Integer, Spawn> getAllTemplates()
 	{
 		return spawntable;
 	}

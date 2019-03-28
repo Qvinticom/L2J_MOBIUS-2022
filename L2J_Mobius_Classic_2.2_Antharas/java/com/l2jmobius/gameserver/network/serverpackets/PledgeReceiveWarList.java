@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.ClanWar;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanWar;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,11 +28,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class PledgeReceiveWarList implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final int _tab;
 	private final Collection<ClanWar> _clanList;
 	
-	public PledgeReceiveWarList(L2Clan clan, int tab)
+	public PledgeReceiveWarList(Clan clan, int tab)
 	{
 		_clan = clan;
 		_tab = tab;
@@ -48,7 +48,7 @@ public class PledgeReceiveWarList implements IClientOutgoingPacket
 		packet.writeD(_clanList.size());
 		for (ClanWar clanWar : _clanList)
 		{
-			final L2Clan clan = clanWar.getOpposingClan(_clan);
+			final Clan clan = clanWar.getOpposingClan(_clan);
 			
 			if (clan == null)
 			{

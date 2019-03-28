@@ -28,8 +28,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -166,9 +166,9 @@ public class PlayerVariables extends AbstractVariables
 		return true;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
-		return L2World.getInstance().getPlayer(_objectId);
+		return World.getInstance().getPlayer(_objectId);
 	}
 	
 	public void addhdf4fReward(int rewardId)

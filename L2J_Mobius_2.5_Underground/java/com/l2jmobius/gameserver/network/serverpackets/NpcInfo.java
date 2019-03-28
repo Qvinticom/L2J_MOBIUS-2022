@@ -23,9 +23,9 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.NpcInfoType;
 import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GuardInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 {
-	private final L2Npc _npc;
+	private final Npc _npc;
 	private final byte[] _masks = new byte[]
 	{
 		(byte) 0x00,
@@ -57,7 +57,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 	private int _statusMask = 0;
 	private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	
-	public NpcInfo(L2Npc npc)
+	public NpcInfo(Npc npc)
 	{
 		_npc = npc;
 		_abnormalVisualEffects = npc.getEffectList().getCurrentAbnormalVisualEffects();
@@ -176,7 +176,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		
 		if (npc.getClanId() > 0)
 		{
-			final L2Clan clan = ClanTable.getInstance().getClan(npc.getClanId());
+			final Clan clan = ClanTable.getInstance().getClan(npc.getClanId());
 			if (clan != null)
 			{
 				_clanId = clan.getId();
@@ -232,7 +232,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		calcBlockSize(_npc, component);
 	}
 	
-	private void calcBlockSize(L2Npc npc, NpcInfoType type)
+	private void calcBlockSize(Npc npc, NpcInfoType type)
 	{
 		switch (type)
 		{
@@ -275,7 +275,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		
 		if (containsMask(NpcInfoType.ATTACKABLE))
 		{
-			packet.writeC(_npc.isAttackable() && !(_npc instanceof L2GuardInstance) ? 0x01 : 0x00);
+			packet.writeC(_npc.isAttackable() && !(_npc instanceof GuardInstance) ? 0x01 : 0x00);
 		}
 		if (containsMask(NpcInfoType.UNKNOWN1))
 		{

@@ -18,13 +18,13 @@ package handlers.effecthandlers;
 
 import java.util.Collections;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -42,20 +42,20 @@ public final class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		effected.getEffectList().stopEffects(Collections.singleton(_skill.getSkill().getAbnormalType()));
 		effected.getEffectList().addBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.getEffectList().removeBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (effector.isDead())
 		{
@@ -70,13 +70,13 @@ public final class CallSkillOnActionTime extends AbstractEffect
 				triggerSkill.applyEffects(effector, effector);
 			}
 			
-			L2World.getInstance().forEachVisibleObjectInRange(effector, L2Character.class, _skill.getSkill().getAffectRange(), c ->
+			World.getInstance().forEachVisibleObjectInRange(effector, Creature.class, _skill.getSkill().getAffectRange(), c ->
 			{
-				final L2Object target = triggerSkill.getTarget(effector, c, false, false, false);
+				final WorldObject target = triggerSkill.getTarget(effector, c, false, false, false);
 				
-				if ((target != null) && target.isCharacter())
+				if ((target != null) && target.isCreature())
 				{
-					SkillCaster.triggerCast(effector, (L2Character) target, triggerSkill);
+					SkillCaster.triggerCast(effector, (Creature) target, triggerSkill);
 				}
 			});
 		}

@@ -21,9 +21,9 @@ import java.util.logging.Level;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -47,7 +47,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	private static final int CHECK_INTERVAL = 600000; // 10 minutes
 	private static final int IDLE_INTERVAL = 2; // (X * CHECK_INTERVAL) = 20 minutes
 	
-	private L2NpcInstance _npc = null;
+	private NpcInstance _npc = null;
 	private int _status = -1;
 	
 	public Q616_MagicalPowerOfFire_Part2()
@@ -65,7 +65,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(SOUL_OF_FIRE_NASTRON))
 		{
 			case UNDEFINED:
-				LOGGER.log(Level.WARNING, qn + ": can not find spawned L2RaidBoss id=" + SOUL_OF_FIRE_NASTRON);
+				LOGGER.log(Level.WARNING, qn + ": can not find spawned RaidBoss id=" + SOUL_OF_FIRE_NASTRON);
 				break;
 			
 			case ALIVE:
@@ -77,12 +77,12 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		// global quest timer has player==null -> cannot get QuestState
 		if (event.equals("check"))
 		{
-			L2RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
+			RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
 			if ((raid != null) && (raid.getRaidStatus() == StatusEnum.ALIVE))
 			{
 				if ((_status >= 0) && (_status-- == 0))
@@ -160,7 +160,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -223,16 +223,16 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		_status = IDLE_INTERVAL;
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		for (L2PcInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
+		for (PlayerInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
 			QuestState st = partyMember.getQuestState(qn);
 			if (st == null)
@@ -269,10 +269,10 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 	
 	private boolean spawnRaid()
 	{
-		L2RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
+		RaidBossInstance raid = RaidBossSpawnManager.getInstance().getBosses().get(SOUL_OF_FIRE_NASTRON);
 		if ((raid != null) && (raid.getRaidStatus() == StatusEnum.ALIVE))
 		{
-			// set temporarily spawn location (to provide correct behavior of L2RaidBossInstance.checkAndReturnToSpawn())
+			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
 			raid.getSpawn().setLoc(142624, -82285, -6491, Rnd.get(65536));
 			
 			// teleport raid from secret place
@@ -288,7 +288,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		return false;
 	}
 	
-	private void despawnRaid(L2NpcInstance raid)
+	private void despawnRaid(NpcInstance raid)
 	{
 		// reset spawn location
 		raid.getSpawn().setLoc(-105300, -252700, -15542, 0);

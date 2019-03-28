@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21700" level="40" type="L2RiftInvader" name="Dimension Invader Elite Soldier">
+	<npc id="21700" level="40" type="RiftInvader" name="Dimension Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -64,7 +64,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21701" level="43" type="L2RiftInvader" name="Dimension Invader Elite Soldier">
+	<npc id="21701" level="43" type="RiftInvader" name="Dimension Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -128,7 +128,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21702" level="40" type="L2RiftInvader" name="Dimension Invader Elite Soldier">
+	<npc id="21702" level="40" type="RiftInvader" name="Dimension Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -199,7 +199,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21703" level="45" type="L2RiftInvader" name="Dimension Invader Elite Soldier">
+	<npc id="21703" level="45" type="RiftInvader" name="Dimension Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -276,7 +276,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21704" level="43" type="L2RiftInvader" name="Dimension Invader Magus">
+	<npc id="21704" level="43" type="RiftInvader" name="Dimension Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -356,7 +356,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21705" level="50" type="L2RiftInvader" name="Purgatory Invader Soldier">
+	<npc id="21705" level="50" type="RiftInvader" name="Purgatory Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -444,7 +444,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21706" level="55" type="L2RiftInvader" name="Purgatory Invader Soldier">
+	<npc id="21706" level="55" type="RiftInvader" name="Purgatory Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -525,7 +525,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21707" level="53" type="L2RiftInvader" name="Purgatory Invader Archer">
+	<npc id="21707" level="53" type="RiftInvader" name="Purgatory Invader Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -600,7 +600,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21708" level="55" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21708" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -680,7 +680,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21709" level="53" type="L2RiftInvader" name="Purgatory Invader Shaman">
+	<npc id="21709" level="53" type="RiftInvader" name="Purgatory Invader Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -769,7 +769,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21710" level="50" type="L2RiftInvader" name="Purgatory Invader Priest">
+	<npc id="21710" level="50" type="RiftInvader" name="Purgatory Invader Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -853,7 +853,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21711" level="55" type="L2RiftInvader" name="Purgatory Invader Magus">
+	<npc id="21711" level="55" type="RiftInvader" name="Purgatory Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -942,7 +942,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21712" level="50" type="L2RiftInvader" name="Purgatory Invader Martyrs">
+	<npc id="21712" level="50" type="RiftInvader" name="Purgatory Invader Martyrs">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1025,7 +1025,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21713" level="53" type="L2RiftInvader" name="Purgatory Invader Warrior">
+	<npc id="21713" level="53" type="RiftInvader" name="Purgatory Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1103,7 +1103,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21714" level="50" type="L2RiftInvader" name="Purgatory Invader Soldier">
+	<npc id="21714" level="50" type="RiftInvader" name="Purgatory Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -1184,7 +1184,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21715" level="53" type="L2RiftInvader" name="Purgatory Invader Disciples">
+	<npc id="21715" level="53" type="RiftInvader" name="Purgatory Invader Disciples">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1264,7 +1264,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21716" level="55" type="L2RiftInvader" name="Purgatory Invader Berserker">
+	<npc id="21716" level="55" type="RiftInvader" name="Purgatory Invader Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1345,7 +1345,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21717" level="50" type="L2Chest" name="Purgatory Invader Food">
+	<npc id="21717" level="50" type="Chest" name="Purgatory Invader Food">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1417,7 +1417,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="21718" level="55" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21718" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1497,7 +1497,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21719" level="55" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21719" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1586,7 +1586,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21720" level="55" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21720" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1667,7 +1667,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21721" level="50" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21721" level="50" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1746,7 +1746,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21722" level="53" type="L2RiftInvader" name="Purgatory Invader Warrior">
+	<npc id="21722" level="53" type="RiftInvader" name="Purgatory Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1828,7 +1828,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21723" level="50" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21723" level="50" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1896,7 +1896,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21724" level="53" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21724" level="53" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1964,7 +1964,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21725" level="50" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21725" level="50" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2055,7 +2055,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21726" level="55" type="L2RiftInvader" name="Purgatory Invader Elite Soldier">
+	<npc id="21726" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2132,7 +2132,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21727" level="53" type="L2RiftInvader" name="Purgatory Invader Magus">
+	<npc id="21727" level="53" type="RiftInvader" name="Purgatory Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2212,7 +2212,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21728" level="60" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21728" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -2296,7 +2296,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21729" level="65" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21729" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -2374,7 +2374,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21730" level="63" type="L2RiftInvader" name="Forbidden Path Invader Archer">
+	<npc id="21730" level="63" type="RiftInvader" name="Forbidden Path Invader Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -2449,7 +2449,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21731" level="65" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21731" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2533,7 +2533,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21732" level="63" type="L2RiftInvader" name="Forbidden Path Invader Shaman">
+	<npc id="21732" level="63" type="RiftInvader" name="Forbidden Path Invader Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2616,7 +2616,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21733" level="60" type="L2RiftInvader" name="Forbidden Path Invader Priest">
+	<npc id="21733" level="60" type="RiftInvader" name="Forbidden Path Invader Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2700,7 +2700,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21734" level="65" type="L2RiftInvader" name="Forbidden Path Invader Magus">
+	<npc id="21734" level="65" type="RiftInvader" name="Forbidden Path Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2782,7 +2782,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21735" level="60" type="L2RiftInvader" name="Forbidden Path Invader Martyrs">
+	<npc id="21735" level="60" type="RiftInvader" name="Forbidden Path Invader Martyrs">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2860,7 +2860,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21736" level="63" type="L2RiftInvader" name="Forbidden Path Invader Warrior">
+	<npc id="21736" level="63" type="RiftInvader" name="Forbidden Path Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2936,7 +2936,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21737" level="60" type="L2RiftInvader" name="Forbidden Path Invader Soldier">
+	<npc id="21737" level="60" type="RiftInvader" name="Forbidden Path Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -3018,7 +3018,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21738" level="63" type="L2RiftInvader" name="Forbidden Path Invader Disciple">
+	<npc id="21738" level="63" type="RiftInvader" name="Forbidden Path Invader Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3101,7 +3101,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21739" level="65" type="L2RiftInvader" name="Forbidden Path Invader Berserker">
+	<npc id="21739" level="65" type="RiftInvader" name="Forbidden Path Invader Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3185,7 +3185,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21740" level="60" type="L2Chest" name="Forbidden Path Invader Food">
+	<npc id="21740" level="60" type="Chest" name="Forbidden Path Invader Food">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3254,7 +3254,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="21741" level="65" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21741" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3335,7 +3335,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21742" level="65" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21742" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3413,7 +3413,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21743" level="65" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21743" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3494,7 +3494,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21744" level="60" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21744" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3576,7 +3576,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21745" level="63" type="L2RiftInvader" name="Forbidden Path Invader Warrior">
+	<npc id="21745" level="63" type="RiftInvader" name="Forbidden Path Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3655,7 +3655,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21746" level="60" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21746" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3723,7 +3723,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21747" level="63" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21747" level="63" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3791,7 +3791,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21748" level="60" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21748" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3869,7 +3869,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21749" level="65" type="L2RiftInvader" name="Forbidden Path Invader Elite Soldier">
+	<npc id="21749" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3948,7 +3948,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21750" level="63" type="L2RiftInvader" name="Forbidden Path Invader Magus">
+	<npc id="21750" level="63" type="RiftInvader" name="Forbidden Path Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4028,7 +4028,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21751" level="70" type="L2RiftInvader" name="Dark Omen Invader Soldier">
+	<npc id="21751" level="70" type="RiftInvader" name="Dark Omen Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4106,7 +4106,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21752" level="75" type="L2RiftInvader" name="Dark Omen Invader Soldier">
+	<npc id="21752" level="75" type="RiftInvader" name="Dark Omen Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4185,7 +4185,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21753" level="73" type="L2RiftInvader" name="Dark Omen Invader Archer">
+	<npc id="21753" level="73" type="RiftInvader" name="Dark Omen Invader Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -4266,7 +4266,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21754" level="75" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21754" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4344,7 +4344,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21755" level="73" type="L2RiftInvader" name="Dark Omen Invader Shaman">
+	<npc id="21755" level="73" type="RiftInvader" name="Dark Omen Invader Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4429,7 +4429,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21756" level="70" type="L2RiftInvader" name="Dark Omen Invader Priest">
+	<npc id="21756" level="70" type="RiftInvader" name="Dark Omen Invader Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4508,7 +4508,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21757" level="75" type="L2RiftInvader" name="Dark Omen Invader Magus">
+	<npc id="21757" level="75" type="RiftInvader" name="Dark Omen Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4588,7 +4588,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21758" level="70" type="L2RiftInvader" name="Dark Omen Invader Martyrs">
+	<npc id="21758" level="70" type="RiftInvader" name="Dark Omen Invader Martyrs">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4668,7 +4668,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21759" level="73" type="L2RiftInvader" name="Dark Omen Invader Warrior">
+	<npc id="21759" level="73" type="RiftInvader" name="Dark Omen Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4752,7 +4752,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21760" level="70" type="L2RiftInvader" name="Dark Omen Invader Soldier">
+	<npc id="21760" level="70" type="RiftInvader" name="Dark Omen Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4835,7 +4835,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21761" level="73" type="L2RiftInvader" name="Dark Omen Invader Disciple">
+	<npc id="21761" level="73" type="RiftInvader" name="Dark Omen Invader Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4914,7 +4914,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21762" level="75" type="L2RiftInvader" name="Dark Omen Invader Berserker">
+	<npc id="21762" level="75" type="RiftInvader" name="Dark Omen Invader Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4994,7 +4994,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21763" level="70" type="L2Chest" name="Dark Omen Invader Food">
+	<npc id="21763" level="70" type="Chest" name="Dark Omen Invader Food">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -5065,7 +5065,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="21764" level="75" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21764" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5143,7 +5143,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21765" level="75" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21765" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5221,7 +5221,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21766" level="75" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21766" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5300,7 +5300,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21767" level="70" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21767" level="70" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5377,7 +5377,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21768" level="73" type="L2RiftInvader" name="Dark Omen Invader Warrior">
+	<npc id="21768" level="73" type="RiftInvader" name="Dark Omen Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5456,7 +5456,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21769" level="70" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21769" level="70" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5524,7 +5524,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21770" level="73" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21770" level="73" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5593,7 +5593,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21771" level="70" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21771" level="70" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5666,7 +5666,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21772" level="75" type="L2RiftInvader" name="Dark Omen Invader Elite Soldier">
+	<npc id="21772" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5746,7 +5746,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="21773" level="73" type="L2RiftInvader" name="Dark Omen Invader Magus">
+	<npc id="21773" level="73" type="RiftInvader" name="Dark Omen Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5821,7 +5821,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21774" level="78" type="L2RiftInvader" name="Messenger Invader Soldier">
+	<npc id="21774" level="78" type="RiftInvader" name="Messenger Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5893,7 +5893,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21775" level="78" type="L2RiftInvader" name="Messenger Invader Soldier">
+	<npc id="21775" level="78" type="RiftInvader" name="Messenger Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5967,7 +5967,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21776" level="78" type="L2RiftInvader" name="Messenger Invader Archer">
+	<npc id="21776" level="78" type="RiftInvader" name="Messenger Invader Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -6045,7 +6045,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21777" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21777" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6120,7 +6120,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21778" level="78" type="L2RiftInvader" name="Messenger Invader Shaman">
+	<npc id="21778" level="78" type="RiftInvader" name="Messenger Invader Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6199,7 +6199,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21779" level="78" type="L2RiftInvader" name="Messenger Invader Priest">
+	<npc id="21779" level="78" type="RiftInvader" name="Messenger Invader Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6275,7 +6275,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21780" level="78" type="L2RiftInvader" name="Messenger Invader Magus">
+	<npc id="21780" level="78" type="RiftInvader" name="Messenger Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6353,7 +6353,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21781" level="78" type="L2RiftInvader" name="Messenger Invader Martyrs">
+	<npc id="21781" level="78" type="RiftInvader" name="Messenger Invader Martyrs">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6429,7 +6429,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21782" level="78" type="L2RiftInvader" name="Messenger Invader Warrior">
+	<npc id="21782" level="78" type="RiftInvader" name="Messenger Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -6511,7 +6511,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21783" level="78" type="L2RiftInvader" name="Messenger Invader Soldier">
+	<npc id="21783" level="78" type="RiftInvader" name="Messenger Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -6586,7 +6586,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21784" level="78" type="L2RiftInvader" name="Messenger Invader Disciple">
+	<npc id="21784" level="78" type="RiftInvader" name="Messenger Invader Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -6666,7 +6666,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21785" level="78" type="L2RiftInvader" name="Messenger Invader Berserker">
+	<npc id="21785" level="78" type="RiftInvader" name="Messenger Invader Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -6751,7 +6751,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21786" level="78" type="L2Chest" name="Messenger Invader Food">
+	<npc id="21786" level="78" type="Chest" name="Messenger Invader Food">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -6818,7 +6818,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="21787" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21787" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6898,7 +6898,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21788" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21788" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -6979,7 +6979,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21789" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21789" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7060,7 +7060,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21790" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21790" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7143,7 +7143,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21791" level="78" type="L2RiftInvader" name="Messenger Invader Warrior">
+	<npc id="21791" level="78" type="RiftInvader" name="Messenger Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -7226,7 +7226,7 @@
 			<height normal="30" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21792" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21792" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7293,7 +7293,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21793" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21793" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7360,7 +7360,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21794" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21794" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7436,7 +7436,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21795" level="78" type="L2RiftInvader" name="Messenger Invader Elite Soldier">
+	<npc id="21795" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7508,7 +7508,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21796" level="78" type="L2RiftInvader" name="Messenger Invader Magus">
+	<npc id="21796" level="78" type="RiftInvader" name="Messenger Invader Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7578,7 +7578,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21797" level="55" type="L2Monster" name="Spirit of Timiniel">
+	<npc id="21797" level="55" type="Monster" name="Spirit of Timiniel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -7658,7 +7658,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21798" level="76" type="L2Monster" name="Ghost of a Doorman">
+	<npc id="21798" level="76" type="Monster" name="Ghost of a Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -7733,7 +7733,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21799" level="76" type="L2Monster" name="Ghost of a Doorman">
+	<npc id="21799" level="76" type="Monster" name="Ghost of a Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />

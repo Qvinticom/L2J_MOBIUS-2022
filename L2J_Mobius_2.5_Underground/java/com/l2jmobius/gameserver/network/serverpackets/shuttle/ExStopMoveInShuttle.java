@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.shuttle;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -27,14 +27,14 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExStopMoveInShuttle implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _boatId;
 	private final Location _pos;
 	private final int _heading;
 	
-	public ExStopMoveInShuttle(L2PcInstance player, int boatId)
+	public ExStopMoveInShuttle(PlayerInstance player, int boatId)
 	{
-		_charObjId = player.getObjectId();
+		_objectId = player.getObjectId();
 		_boatId = boatId;
 		_pos = player.getInVehiclePosition();
 		_heading = player.getHeading();
@@ -45,7 +45,7 @@ public class ExStopMoveInShuttle implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_STOP_MOVE_IN_SHUTTLE.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_boatId);
 		packet.writeD(_pos.getX());
 		packet.writeD(_pos.getY());

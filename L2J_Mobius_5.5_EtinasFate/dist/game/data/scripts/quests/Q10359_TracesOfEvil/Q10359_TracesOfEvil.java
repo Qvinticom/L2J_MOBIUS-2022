@@ -18,8 +18,8 @@ package quests.Q10359_TracesOfEvil;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -69,10 +69,10 @@ public final class Q10359_TracesOfEvil extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -97,15 +97,15 @@ public final class Q10359_TracesOfEvil extends Quest
 			}
 			case "31795-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33179-03.htm":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = event;
 				}
@@ -120,10 +120,10 @@ public final class Q10359_TracesOfEvil extends Quest
 			case "32196-10.html":
 			case "30155-10.html":
 			{
-				if ((st.getCond() >= 4) && (st.getCond() <= 11))
+				if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 				{
 					addExpAndSp(player, 1800000, 216);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -133,12 +133,12 @@ public final class Q10359_TracesOfEvil extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -159,7 +159,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case FRED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -177,37 +177,37 @@ public final class Q10359_TracesOfEvil extends Quest
 								{
 									case HUMAN:
 									{
-										st.setCond(player.isMageClass() ? 4 : 5);
+										qs.setCond(player.isMageClass() ? 4 : 5);
 										htmltext = player.isMageClass() ? "33179-06.htm" : "33179-11.htm";
 										break;
 									}
 									case DARK_ELF:
 									{
-										st.setCond(6);
+										qs.setCond(6);
 										htmltext = "33179-05.htm";
 										break;
 									}
 									case ORC:
 									{
-										st.setCond(7);
+										qs.setCond(7);
 										htmltext = "33179-07.htm";
 										break;
 									}
 									case DWARF:
 									{
-										st.setCond(8);
+										qs.setCond(8);
 										htmltext = "33179-08.htm";
 										break;
 									}
 									case KAMAEL:
 									{
-										st.setCond(9);
+										qs.setCond(9);
 										htmltext = "33179-09.htm";
 										break;
 									}
 									case ELF:
 									{
-										st.setCond(player.isMageClass() ? 11 : 10);
+										qs.setCond(player.isMageClass() ? 11 : 10);
 										htmltext = player.isMageClass() ? "33179-12.htm" : "33179-10.htm";
 										break;
 									}
@@ -221,7 +221,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case RAYMOND:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -261,7 +261,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case RAINS:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -301,7 +301,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case TOBIAS:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -341,7 +341,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case DRIKUS:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -381,7 +381,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case MENDIO:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -421,7 +421,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case GERSHWIN:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -461,7 +461,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case ESRANDELL:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -501,7 +501,7 @@ public final class Q10359_TracesOfEvil extends Quest
 					}
 					case ELLENIA:
 					{
-						if ((st.getCond() >= 4) && (st.getCond() <= 11))
+						if ((qs.getCond() >= 4) && (qs.getCond() <= 11))
 						{
 							switch (player.getRace())
 							{
@@ -576,11 +576,11 @@ public final class Q10359_TracesOfEvil extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			if (getRandom(100) < 40)
 			{
@@ -591,7 +591,7 @@ public final class Q10359_TracesOfEvil extends Quest
 			if (getQuestItemsCount(killer, FRAGMENT) == 20)
 			{
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-				st.setCond(3);
+				qs.setCond(3);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

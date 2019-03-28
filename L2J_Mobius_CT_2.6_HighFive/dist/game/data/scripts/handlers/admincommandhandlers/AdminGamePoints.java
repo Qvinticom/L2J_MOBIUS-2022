@@ -17,8 +17,8 @@
 package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -39,7 +39,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_add_game_points"))
 		{
@@ -60,7 +60,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 		{
 			if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
-				L2PcInstance target = (L2PcInstance) activeChar.getTarget();
+				PlayerInstance target = (PlayerInstance) activeChar.getTarget();
 				activeChar.sendMessage(target.getName() + " has a total of " + target.getGamePoints() + " game points.");
 			}
 			else
@@ -105,20 +105,20 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void openGamePointsMenu(L2PcInstance activeChar)
+	private void openGamePointsMenu(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/admin/game_points.htm");
 		activeChar.sendPacket(html);
 	}
 	
-	private boolean addGamePoints(L2PcInstance admin, String val)
+	private boolean addGamePoints(PlayerInstance admin, String val)
 	{
-		L2Object target = admin.getTarget();
-		L2PcInstance player = null;
+		WorldObject target = admin.getTarget();
+		PlayerInstance player = null;
 		if (target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (PlayerInstance) target;
 		}
 		else
 		{
@@ -148,13 +148,13 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean setGamePoints(L2PcInstance admin, String val)
+	private boolean setGamePoints(PlayerInstance admin, String val)
 	{
-		L2Object target = admin.getTarget();
-		L2PcInstance player = null;
+		WorldObject target = admin.getTarget();
+		PlayerInstance player = null;
 		if (target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (PlayerInstance) target;
 		}
 		else
 		{
@@ -174,13 +174,13 @@ public class AdminGamePoints implements IAdminCommandHandler
 		return true;
 	}
 	
-	private boolean subtractGamePoints(L2PcInstance admin, String val)
+	private boolean subtractGamePoints(PlayerInstance admin, String val)
 	{
-		L2Object target = admin.getTarget();
-		L2PcInstance player = null;
+		WorldObject target = admin.getTarget();
+		PlayerInstance player = null;
 		if (target.isPlayer())
 		{
-			player = (L2PcInstance) target;
+			player = (PlayerInstance) target;
 		}
 		else
 		{

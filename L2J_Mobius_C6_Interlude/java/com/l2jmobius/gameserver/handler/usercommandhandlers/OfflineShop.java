@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.handler.usercommandhandlers;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -42,7 +42,7 @@ public class OfflineShop implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, L2PcInstance player)
+	public synchronized boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -132,7 +132,7 @@ public class OfflineShop implements IUserCommandHandler
 				return false;
 			}
 			
-			final L2Party playerParty = player.getParty();
+			final Party playerParty = player.getParty();
 			if (playerParty != null)
 			{
 				player.getParty().broadcastToPartyMembers(SystemMessage.sendString(player.getName() + " has been removed from the upcoming Festival."));
@@ -149,7 +149,7 @@ public class OfflineShop implements IUserCommandHandler
 			// Sleep effect, not official feature but however L2OFF features (like offline trade)
 			if (Config.OFFLINE_SLEEP_EFFECT)
 			{
-				player.startAbnormalEffect(L2Character.ABNORMAL_EFFECT_SLEEP);
+				player.startAbnormalEffect(Creature.ABNORMAL_EFFECT_SLEEP);
 			}
 			
 			player.sendMessage("Your private store has succesfully been flagged as an offline shop and will remain active for ever.");

@@ -2877,7 +2877,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Mirage -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
@@ -4072,7 +4072,7 @@
 				<skillId>5548</skillId> <!-- Critical Momentum Attack -->
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>

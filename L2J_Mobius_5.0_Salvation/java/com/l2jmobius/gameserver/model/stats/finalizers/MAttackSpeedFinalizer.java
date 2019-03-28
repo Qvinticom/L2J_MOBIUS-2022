@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.Optional;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class MAttackSpeedFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -46,7 +46,7 @@ public class MAttackSpeedFinalizer implements IStatsFunction
 		return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_MATK_SPEED);
 	}
 	
-	private double defaultValue(L2Character creature, Stats stat, double baseValue)
+	private double defaultValue(Creature creature, Stats stat, double baseValue)
 	{
 		final double mul = Math.max(creature.getStat().getMul(stat), 0.7);
 		final double add = creature.getStat().getAdd(stat);

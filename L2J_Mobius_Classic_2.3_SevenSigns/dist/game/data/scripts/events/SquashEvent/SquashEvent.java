@@ -22,10 +22,10 @@ import java.util.List;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -501,7 +501,7 @@ public class SquashEvent extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsImmobilized(true);
 		npc.disableCoreAI(true);
@@ -513,7 +513,7 @@ public class SquashEvent extends LongTimeEvent
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (LARGE_SQUASH_LIST.contains(npc.getId()))
 		{
@@ -534,7 +534,7 @@ public class SquashEvent extends LongTimeEvent
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()) && (skill.getId() == NECTAR_SKILL))
 		{
@@ -556,7 +556,7 @@ public class SquashEvent extends LongTimeEvent
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		if (SQUASH_LIST.contains(npc.getId()))
 		{
@@ -566,12 +566,12 @@ public class SquashEvent extends LongTimeEvent
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
-	private static final void dropItem(L2Npc mob, L2PcInstance player)
+	private static final void dropItem(Npc mob, PlayerInstance player)
 	{
 		final int npcId = mob.getId();
 		for (int[] drop : DROPLIST)
@@ -586,10 +586,10 @@ public class SquashEvent extends LongTimeEvent
 				{
 					if (ItemTable.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
 					{
-						((L2MonsterInstance) mob).dropItem(player, drop[1], 1);
+						((MonsterInstance) mob).dropItem(player, drop[1], 1);
 						break;
 					}
-					((L2MonsterInstance) mob).dropItem(player, drop[1], (getRandom(1, 3)));
+					((MonsterInstance) mob).dropItem(player, drop[1], (getRandom(1, 3)));
 					if (getRandomBoolean())
 					{
 						break;
@@ -599,7 +599,7 @@ public class SquashEvent extends LongTimeEvent
 		}
 	}
 	
-	private void randomSpawn(int low, int medium, int high, L2Npc npc, boolean delete)
+	private void randomSpawn(int low, int medium, int high, Npc npc, boolean delete)
 	{
 		final int _random = Rnd.get(100);
 		if (_random < 5)
@@ -620,7 +620,7 @@ public class SquashEvent extends LongTimeEvent
 		}
 	}
 	
-	private void ChronoText(L2Npc npc)
+	private void ChronoText(Npc npc)
 	{
 		if (Rnd.get(100) < 20)
 		{
@@ -628,7 +628,7 @@ public class SquashEvent extends LongTimeEvent
 		}
 	}
 	
-	private void noChronoText(L2Npc npc)
+	private void noChronoText(Npc npc)
 	{
 		if (Rnd.get(100) < 20)
 		{
@@ -636,7 +636,7 @@ public class SquashEvent extends LongTimeEvent
 		}
 	}
 	
-	private void nectarText(L2Npc npc)
+	private void nectarText(Npc npc)
 	{
 		if (Rnd.get(100) < 30)
 		{
@@ -644,7 +644,7 @@ public class SquashEvent extends LongTimeEvent
 		}
 	}
 	
-	private void spawnNext(int npcId, L2Npc npc)
+	private void spawnNext(int npcId, Npc npc)
 	{
 		addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 60000);
 		npc.deleteMe();

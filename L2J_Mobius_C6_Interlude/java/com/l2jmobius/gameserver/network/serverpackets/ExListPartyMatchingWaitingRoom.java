@@ -22,24 +22,24 @@ import java.util.List;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik
  */
-public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
+public class ExListPartyMatchingWaitingRoom extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	@SuppressWarnings("unused")
 	private final int _page;
 	private final int _minlvl;
 	private final int _maxlvl;
 	private final int _mode;
-	private final List<L2PcInstance> _members;
+	private final List<PlayerInstance> _members;
 	
-	public ExListPartyMatchingWaitingRoom(L2PcInstance player, int page, int minlvl, int maxlvl, int mode)
+	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minlvl, int maxlvl, int mode)
 	{
-		_activeChar = player;
+		_player = player;
 		_page = page;
 		_minlvl = minlvl;
 		_maxlvl = maxlvl;
@@ -57,8 +57,8 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 		if (_mode == 0)
 		{
 			// Retrieve the activeChar PartyMatchRoom
-			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_activeChar.getPartyRoom());
-			if ((_room != null) && (_room.getOwner() != null) && !_room.getOwner().equals(_activeChar))
+			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_player.getPartyRoom());
+			if ((_room != null) && (_room.getOwner() != null) && !_room.getOwner().equals(_player))
 			{
 				writeD(0);
 				writeD(0);
@@ -66,10 +66,10 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 			}
 		}
 		
-		for (L2PcInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
+		for (PlayerInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
 		{
 			// Don't add yourself in the list
-			if ((cha == null) || (cha == _activeChar))
+			if ((cha == null) || (cha == _player))
 			{
 				continue;
 			}

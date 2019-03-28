@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.AuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -52,16 +52,16 @@ public class ClanHall
 	public static final int FUNC_DECO_FRONTPLATEFORM = 7;
 	public static final int FUNC_DECO_CURTAINS = 8;
 	final int _clanHallId;
-	private final List<L2DoorInstance> _doors = new ArrayList<>();
+	private final List<DoorInstance> _doors = new ArrayList<>();
 	private final List<String> _doorDefault = new ArrayList<>();
 	final String _name;
 	private int _ownerId;
-	private L2Clan _ownerClan;
+	private Clan _ownerClan;
 	private final int _lease;
 	private final String _desc;
 	private final String _location;
 	protected long _paidUntil;
-	private L2ClanHallZone _zone;
+	private ClanHallZone _zone;
 	private final int _grade;
 	protected final int _chRate = 604800000;
 	protected boolean _isFree = true;
@@ -401,7 +401,7 @@ public class ClanHall
 	 * Return all DoorInstance.
 	 * @return the doors
 	 */
-	public final List<L2DoorInstance> getDoors()
+	public final List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
@@ -411,7 +411,7 @@ public class ClanHall
 	 * @param doorId the door id
 	 * @return the door
 	 */
-	public final L2DoorInstance getDoor(int doorId)
+	public final DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -420,7 +420,7 @@ public class ClanHall
 		
 		for (int i = 0; i < getDoors().size(); i++)
 		{
-			L2DoorInstance door = getDoors().get(i);
+			DoorInstance door = getDoors().get(i);
 			
 			if (door.getDoorId() == doorId)
 			{
@@ -444,7 +444,7 @@ public class ClanHall
 	 * Sets this clan halls zone.
 	 * @param zone the new zone
 	 */
-	public void setZone(L2ClanHallZone zone)
+	public void setZone(ClanHallZone zone)
 	{
 		_zone = zone;
 	}
@@ -453,7 +453,7 @@ public class ClanHall
 	 * Returns the zone of this clan hall.
 	 * @return the zone
 	 */
-	public L2ClanHallZone getZone()
+	public ClanHallZone getZone()
 	{
 		return _zone;
 	}
@@ -481,7 +481,7 @@ public class ClanHall
 	 * Set owner if clan hall is free.
 	 * @param clan the new owner
 	 */
-	public void setOwner(L2Clan clan)
+	public void setOwner(Clan clan)
 	{
 		// Verify that this ClanHall is Free and Clan isn't null
 		if ((_ownerId > 0) || (clan == null))
@@ -503,7 +503,7 @@ public class ClanHall
 	 * Gets the owner clan.
 	 * @return the owner clan
 	 */
-	public L2Clan getOwnerClan()
+	public Clan getOwnerClan()
 	{
 		if (_ownerId == 0)
 		{
@@ -525,7 +525,7 @@ public class ClanHall
 	{
 		for (int i = 0; i < getDoors().size(); i++)
 		{
-			L2DoorInstance door = getDoors().get(i);
+			DoorInstance door = getDoors().get(i);
 			
 			if (door.getCurrentHp() <= 0)
 			{
@@ -546,13 +546,13 @@ public class ClanHall
 	
 	/**
 	 * Open or Close Door.
-	 * @param activeChar the active char
+	 * @param player the player
 	 * @param doorId the door id
 	 * @param open the open
 	 */
-	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
+	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
+		if ((player != null) && (player.getClanId() == _ownerId))
 		{
 			openCloseDoor(doorId, open);
 		}
@@ -573,7 +573,7 @@ public class ClanHall
 	 * @param door the door
 	 * @param open the open
 	 */
-	public void openCloseDoor(L2DoorInstance door, boolean open)
+	public void openCloseDoor(DoorInstance door, boolean open)
 	{
 		if (door != null)
 		{
@@ -590,12 +590,12 @@ public class ClanHall
 	
 	/**
 	 * Open close doors.
-	 * @param activeChar the active char
+	 * @param player the player
 	 * @param open the open
 	 */
-	public void openCloseDoors(L2PcInstance activeChar, boolean open)
+	public void openCloseDoors(PlayerInstance player, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
+		if ((player != null) && (player.getClanId() == _ownerId))
 		{
 			openCloseDoors(open);
 		}
@@ -607,7 +607,7 @@ public class ClanHall
 	 */
 	public void openCloseDoors(boolean open)
 	{
-		for (L2DoorInstance door : getDoors())
+		for (DoorInstance door : getDoors())
 		{
 			if (door != null)
 			{
@@ -793,7 +793,7 @@ public class ClanHall
 					return;
 				}
 				
-				L2Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
+				Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
 				
 				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease())
 				{
@@ -871,7 +871,7 @@ public class ClanHall
 				// Create list of the door default for use when respawning dead doors
 				_doorDefault.add(rs.getString("name") + ";" + rs.getInt("id") + ";" + rs.getInt("x") + ";" + rs.getInt("y") + ";" + rs.getInt("z") + ";" + rs.getInt("range_xmin") + ";" + rs.getInt("range_ymin") + ";" + rs.getInt("range_zmin") + ";" + rs.getInt("range_xmax") + ";" + rs.getInt("range_ymax") + ";" + rs.getInt("range_zmax") + ";" + rs.getInt("hp") + ";" + rs.getInt("pDef") + ";" + rs.getInt("mDef"));
 				
-				L2DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorTable.getInstance().putDoor(door);

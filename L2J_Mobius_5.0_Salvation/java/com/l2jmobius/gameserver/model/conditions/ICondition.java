@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author Sdw
  */
 public interface ICondition
 {
-	boolean test(L2Character creature, L2Object object);
+	boolean test(Creature creature, WorldObject object);
 }

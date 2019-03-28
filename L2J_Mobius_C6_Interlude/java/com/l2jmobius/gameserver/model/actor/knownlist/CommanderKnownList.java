@@ -17,30 +17,30 @@
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2CommanderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author programmos
  */
 public class CommanderKnownList extends AttackableKnownList
 {
-	public CommanderKnownList(L2CommanderInstance activeChar)
+	public CommanderKnownList(CommanderInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object)
+	public boolean addKnownObject(WorldObject object)
 	{
 		return addKnownObject(object, null);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object, L2Character dropper)
+	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
 		if (!super.addKnownObject(object, dropper))
 		{
@@ -55,15 +55,15 @@ public class CommanderKnownList extends AttackableKnownList
 		// Check if siege is in progress
 		if ((getActiveChar().getFort() != null) && getActiveChar().getFort().getSiege().getIsInProgress())
 		{
-			L2PcInstance player = null;
+			PlayerInstance player = null;
 			
-			if (object instanceof L2PcInstance)
+			if (object instanceof PlayerInstance)
 			{
-				player = (L2PcInstance) object;
+				player = (PlayerInstance) object;
 			}
-			else if (object instanceof L2Summon)
+			else if (object instanceof Summon)
 			{
-				player = ((L2Summon) object).getOwner();
+				player = ((Summon) object).getOwner();
 			}
 			
 			// Check if player is not the defender
@@ -80,8 +80,8 @@ public class CommanderKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final L2CommanderInstance getActiveChar()
+	public final CommanderInstance getActiveChar()
 	{
-		return (L2CommanderInstance) super.getActiveChar();
+		return (CommanderInstance) super.getActiveChar();
 	}
 }

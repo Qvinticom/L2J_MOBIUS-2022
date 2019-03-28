@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets.shuttle;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.shuttle.ExStopMoveInShuttle;
 
@@ -35,7 +35,7 @@ public class CannotMoveAnymoreInShuttle implements IClientIncomingPacket
 	private int _boatId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_boatId = packet.readD();
 		_x = packet.readD();
@@ -46,21 +46,21 @@ public class CannotMoveAnymoreInShuttle implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isInShuttle())
+		if (player.isInShuttle())
 		{
-			if (activeChar.getShuttle().getObjectId() == _boatId)
+			if (player.getShuttle().getObjectId() == _boatId)
 			{
-				activeChar.setInVehiclePosition(new Location(_x, _y, _z));
-				activeChar.setHeading(_heading);
-				activeChar.broadcastPacket(new ExStopMoveInShuttle(activeChar, _boatId));
+				player.setInVehiclePosition(new Location(_x, _y, _z));
+				player.setHeading(_heading);
+				player.broadcastPacket(new ExStopMoveInShuttle(player, _boatId));
 			}
 		}
 	}

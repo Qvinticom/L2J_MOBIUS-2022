@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,14 +27,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExStopMoveInAirShip implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _shipObjId;
 	private final int _h;
 	private final Location _loc;
 	
-	public ExStopMoveInAirShip(L2PcInstance player, int shipObjId)
+	public ExStopMoveInAirShip(PlayerInstance player, int shipObjId)
 	{
-		_activeChar = player;
+		_player = player;
 		_shipObjId = shipObjId;
 		_h = player.getHeading();
 		_loc = player.getInVehiclePosition();
@@ -45,7 +45,7 @@ public class ExStopMoveInAirShip implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_STOP_MOVE_IN_AIR_SHIP.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_player.getObjectId());
 		packet.writeD(_shipObjId);
 		packet.writeD(_loc.getX());
 		packet.writeD(_loc.getY());

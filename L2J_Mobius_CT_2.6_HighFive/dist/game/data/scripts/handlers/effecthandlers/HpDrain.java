@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
@@ -41,9 +41,9 @@ public final class HpDrain extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.HP_DRAIN;
+		return EffectType.HP_DRAIN;
 	}
 	
 	@Override
@@ -55,20 +55,20 @@ public final class HpDrain extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		
 		// TODO: Unhardcode Cubic Skill to avoid double damage
-		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4050))
+		if (creature.isAlikeDead() || (info.getSkill().getId() == 4050))
 		{
 			return;
 		}
 		
-		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		final int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final boolean sps = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
+		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
+		final int damage = (int) Formulas.calcMagicDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		int drain = 0;
 		final int cp = (int) target.getCurrentCp();
@@ -88,8 +88,8 @@ public final class HpDrain extends AbstractEffect
 		}
 		
 		final double hpAdd = (_power * drain);
-		final double hpFinal = ((activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd));
-		activeChar.setCurrentHp(hpFinal);
+		final double hpFinal = ((creature.getCurrentHp() + hpAdd) > creature.getMaxHp() ? creature.getMaxHp() : (creature.getCurrentHp() + hpAdd));
+		creature.setCurrentHp(hpFinal);
 		
 		if (damage > 0)
 		{
@@ -99,9 +99,9 @@ public final class HpDrain extends AbstractEffect
 				target.breakAttack();
 				target.breakCast();
 			}
-			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
-			target.reduceCurrentHp(damage, activeChar, info.getSkill());
-			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit, false);
+			creature.sendDamageMessage(target, damage, mcrit, false, false);
+			target.reduceCurrentHp(damage, creature, info.getSkill());
+			target.notifyDamageReceived(damage, creature, info.getSkill(), mcrit, false);
 		}
 	}
 }

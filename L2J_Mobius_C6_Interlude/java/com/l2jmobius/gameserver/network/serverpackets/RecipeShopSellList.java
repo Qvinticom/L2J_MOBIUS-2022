@@ -16,20 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2ManufactureList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.ManufactureList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ... dddd d(ddd)
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class RecipeShopSellList extends L2GameServerPacket
+public class RecipeShopSellList extends GameServerPacket
 {
-	private final L2PcInstance _buyer;
-	private final L2PcInstance _manufacturer;
+	private final PlayerInstance _buyer;
+	private final PlayerInstance _manufacturer;
 	
-	public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer)
+	public RecipeShopSellList(PlayerInstance buyer, PlayerInstance manufacturer)
 	{
 		_buyer = buyer;
 		_manufacturer = manufacturer;
@@ -38,7 +37,7 @@ public class RecipeShopSellList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		final L2ManufactureList createList = _manufacturer.getCreateList();
+		final ManufactureList createList = _manufacturer.getCreateList();
 		
 		if (createList != null)
 		{
@@ -51,7 +50,7 @@ public class RecipeShopSellList extends L2GameServerPacket
 			
 			final int count = createList.size();
 			writeD(count);
-			L2ManufactureItem temp;
+			ManufactureItem temp;
 			
 			for (int i = 0; i < count; i++)
 			{

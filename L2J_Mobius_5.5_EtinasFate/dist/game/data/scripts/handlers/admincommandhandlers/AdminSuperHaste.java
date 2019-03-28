@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -40,7 +40,7 @@ public final class AdminSuperHaste implements IAdminCommandHandler
 	private static final int SUPER_HASTE_ID = 7029;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance player)
+	public boolean useAdminCommand(String command, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.cubics;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 
 /**
  * Cubic disappear task.
@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
  */
 public final class CubicDisappear implements Runnable
 {
-	private final L2CubicInstance _cubic;
+	private final CubicInstance _cubic;
 	
-	public CubicDisappear(L2CubicInstance cubic)
+	public CubicDisappear(CubicInstance cubic)
 	{
 		_cubic = cubic;
 	}

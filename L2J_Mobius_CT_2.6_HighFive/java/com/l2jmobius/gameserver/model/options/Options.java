@@ -20,10 +20,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
@@ -60,7 +60,7 @@ public class Options
 		return !_funcs.isEmpty();
 	}
 	
-	public List<AbstractFunction> getStatFuncs(L2ItemInstance item, L2Character player)
+	public List<AbstractFunction> getStatFuncs(ItemInstance item, Creature creature)
 	{
 		if (_funcs.isEmpty())
 		{
@@ -70,7 +70,7 @@ public class Options
 		final List<AbstractFunction> funcs = new ArrayList<>(_funcs.size());
 		for (FuncTemplate fuctionTemplate : _funcs)
 		{
-			final AbstractFunction fuction = fuctionTemplate.getFunc(player, player, item, this);
+			final AbstractFunction fuction = fuctionTemplate.getFunc(creature, creature, item, this);
 			if (fuction != null)
 			{
 				funcs.add(fuction);
@@ -154,7 +154,7 @@ public class Options
 		_activationSkills.add(holder);
 	}
 	
-	public void apply(L2PcInstance player)
+	public void apply(PlayerInstance player)
 	{
 		if (!_funcs.isEmpty())
 		{
@@ -179,7 +179,7 @@ public class Options
 		player.sendSkillList();
 	}
 	
-	public void remove(L2PcInstance player)
+	public void remove(PlayerInstance player)
 	{
 		if (!_funcs.isEmpty())
 		{
@@ -203,7 +203,7 @@ public class Options
 		player.sendSkillList();
 	}
 	
-	private final void addSkill(L2PcInstance player, Skill skill)
+	private final void addSkill(PlayerInstance player, Skill skill)
 	{
 		boolean updateTimeStamp = false;
 		

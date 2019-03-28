@@ -18,8 +18,8 @@ package quests.Q10707_FlamesOfSorrow;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -62,11 +62,11 @@ public final class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -81,15 +81,15 @@ public final class Q10707_FlamesOfSorrow extends Quest
 			}
 			case "33863-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33863-06.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -101,10 +101,10 @@ public final class Q10707_FlamesOfSorrow extends Quest
 			}
 			case "spawnMonster":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					npc.deleteMe();
-					final L2Npc spirit = addSpawn(VENGEFUL_SPIRIT, player, true, 60000);
+					final Npc spirit = addSpawn(VENGEFUL_SPIRIT, player, true, 60000);
 					addAttackPlayerDesire(spirit, player);
 					spirit.broadcastSay(ChatType.NPC_GENERAL, RANDOM_MSGS[getRandom(RANDOM_MSGS.length)]);
 				}
@@ -115,12 +115,12 @@ public final class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -134,11 +134,11 @@ public final class Q10707_FlamesOfSorrow extends Quest
 			{
 				if (npc.getId() == LEO)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "33863-04.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "33863-05.html";
 					}
@@ -158,29 +158,29 @@ public final class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(1) && (getRandom(100) < 75))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1) && (getRandom(100) < 75))
 		{
 			giveItems(killer, MARK, 1);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			final L2Npc spirit = addSpawn(SPIRIT, npc, false, 5000);
+			final Npc spirit = addSpawn(SPIRIT, npc, false, 5000);
 			spirit.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_DELIVER_THIS_MARK_OF_GRATITUDE_TO_LEO);
 			
 			if (getQuestItemsCount(killer, MARK) == 5)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		return (st != null) && st.isCond(1) ? "19545.html" : "19545-no.html";
+		final QuestState qs = getQuestState(player, false);
+		return(qs != null) && qs.isCond(1) ? "19545.html" : "19545-no.html";
 	}
 }

@@ -22,7 +22,7 @@ import java.util.function.BiFunction;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.stats.finalizers.AttributeFinalizer;
 import com.l2jmobius.gameserver.model.stats.finalizers.BaseStatsFinalizer;
 import com.l2jmobius.gameserver.model.stats.finalizers.MAccuracyFinalizer;
@@ -340,7 +340,7 @@ public enum Stats
 	 * @param baseValue
 	 * @return the final value
 	 */
-	public Double finalize(L2Character creature, Optional<Double> baseValue)
+	public Double finalize(Creature creature, Optional<Double> baseValue)
 	{
 		try
 		{
@@ -373,19 +373,19 @@ public enum Stats
 		return _resetMulValue;
 	}
 	
-	public static double weaponBaseValue(L2Character creature, Stats stat)
+	public static double weaponBaseValue(Creature creature, Stats stat)
 	{
 		return stat._valueFinalizer.calcWeaponBaseValue(creature, stat);
 	}
 	
-	public static double defaultValue(L2Character creature, Optional<Double> base, Stats stat)
+	public static double defaultValue(Creature creature, Optional<Double> base, Stats stat)
 	{
 		final double mul = creature.getStat().getMul(stat);
 		final double add = creature.getStat().getAdd(stat);
 		return base.isPresent() ? defaultValue(creature, stat, base.get()) : mul * (add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
 	}
 	
-	public static double defaultValue(L2Character creature, Stats stat, double baseValue)
+	public static double defaultValue(Creature creature, Stats stat, double baseValue)
 	{
 		final double mul = creature.getStat().getMul(stat);
 		final double add = creature.getStat().getAdd(stat);

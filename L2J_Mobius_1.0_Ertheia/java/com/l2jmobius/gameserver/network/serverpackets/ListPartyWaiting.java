@@ -22,7 +22,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -70,7 +70,7 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 			packet.writeD(room.getMaxMembers());
 			packet.writeS(room.getLeader().getName());
 			packet.writeD(room.getMembersCount());
-			for (L2PcInstance member : room.getMembers())
+			for (PlayerInstance member : room.getMembers())
 			{
 				packet.writeD(member.getClassId().getId());
 				packet.writeS(member.getName());

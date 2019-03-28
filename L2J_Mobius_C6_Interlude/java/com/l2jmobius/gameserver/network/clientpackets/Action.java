@@ -18,15 +18,15 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 @SuppressWarnings("unused")
-public final class Action extends L2GameClientPacket
+public final class Action extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(Action.class.getName());
 	private int _objectId;
@@ -48,30 +48,30 @@ public final class Action extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		// Get the current PlayerInstance of the player
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			activeChar.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2Object obj;
+		final WorldObject obj;
 		
-		if (activeChar.getTargetId() == _objectId)
+		if (player.getTargetId() == _objectId)
 		{
-			obj = activeChar.getTarget();
+			obj = player.getTarget();
 		}
 		else
 		{
-			obj = L2World.getInstance().findObject(_objectId);
+			obj = World.getInstance().findObject(_objectId);
 		}
 		
 		// If object requested does not exist
@@ -83,40 +83,40 @@ public final class Action extends L2GameClientPacket
 		}
 		
 		// Players can't interact with objects in the other instances except from multiverse
-		if ((obj.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
+		if ((obj.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1))
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly interact with invisible characters
-		if ((obj instanceof L2PcInstance) && (((L2PcInstance) obj).getAppearance().getInvisible()) && !activeChar.isGM())
+		if ((obj instanceof PlayerInstance) && (((PlayerInstance) obj).getAppearance().getInvisible()) && !player.isGM())
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// reset old Moving task
-		if (activeChar.isMovingTaskDefined())
+		if (player.isMovingTaskDefined())
 		{
-			activeChar.setMovingTaskDefined(false);
+			player.setMovingTaskDefined(false);
 		}
 		
 		// Check if the target is valid, if the player haven't a shop or isn't the requester of a transaction (ex : FriendInvite, JoinAlly, JoinParty...)
-		if (activeChar.getPrivateStoreType() == 0/* && activeChar.getActiveRequester() == null */)
+		if (player.getPrivateStoreType() == 0/* && activeChar.getActiveRequester() == null */)
 		{
 			switch (_actionId)
 			{
 				case 0:
 				{
-					obj.onAction(activeChar);
+					obj.onAction(player);
 					break;
 				}
 				case 1:
 				{
-					if ((obj instanceof L2Character) && ((L2Character) obj).isAlikeDead())
+					if ((obj instanceof Creature) && ((Creature) obj).isAlikeDead())
 					{
-						obj.onAction(activeChar);
+						obj.onAction(player);
 					}
 					else
 					{
@@ -127,7 +127,7 @@ public final class Action extends L2GameClientPacket
 				default:
 				{
 					// Invalid action detected (probably client cheating), LOGGER this
-					LOGGER.warning("Character: " + activeChar.getName() + " requested invalid action: " + _actionId);
+					LOGGER.warning("Character: " + player.getName() + " requested invalid action: " + _actionId);
 					getClient().sendPacket(ActionFailed.STATIC_PACKET);
 					break;
 				}

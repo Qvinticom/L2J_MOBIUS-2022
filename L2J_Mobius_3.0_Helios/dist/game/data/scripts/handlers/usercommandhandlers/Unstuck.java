@@ -21,7 +21,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.skills.SkillCastingType;
@@ -39,66 +39,66 @@ public class Unstuck implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		if (activeChar.isJailed())
+		if (player.isJailed())
 		{
-			activeChar.sendMessage("You cannot use this function while you are jailed.");
+			player.sendMessage("You cannot use this function while you are jailed.");
 			return false;
 		}
 		
-		if (Config.FACTION_SYSTEM_ENABLED && !activeChar.isGood() && !activeChar.isEvil())
+		if (Config.FACTION_SYSTEM_ENABLED && !player.isGood() && !player.isEvil())
 		{
-			activeChar.sendMessage("You cannot use this function while you are neutral.");
+			player.sendMessage("You cannot use this function while you are neutral.");
 			return false;
 		}
 		
-		final int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
+		final int unstuckTimer = (player.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
 			return false;
 		}
 		
-		if (activeChar.isCastingNow(SkillCaster::isAnyNormalType) || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
+		if (player.isCastingNow(SkillCaster::isAnyNormalType) || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.inObserverMode() || player.isCombatFlagEquipped())
 		{
 			return false;
 		}
 		
 		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
 		final Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
-		if (activeChar.getAccessLevel().isGm())
+		if (player.getAccessLevel().isGm())
 		{
 			if (GM_escape != null)
 			{
-				activeChar.doCast(GM_escape);
+				player.doCast(GM_escape);
 				return true;
 			}
-			activeChar.sendMessage("You use Escape: 1 second.");
+			player.sendMessage("You use Escape: 1 second.");
 		}
 		else if ((Config.UNSTUCK_INTERVAL == 300) && (escape != null))
 		{
-			activeChar.doCast(escape);
+			player.doCast(escape);
 			return true;
 		}
 		else
 		{
-			final SkillCaster skillCaster = SkillCaster.castSkill(activeChar, activeChar.getTarget(), escape, null, SkillCastingType.NORMAL, false, false, unstuckTimer);
+			final SkillCaster skillCaster = SkillCaster.castSkill(player, player.getTarget(), escape, null, SkillCastingType.NORMAL, false, false, unstuckTimer);
 			if (skillCaster == null)
 			{
-				activeChar.sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
-				activeChar.getAI().setIntention(AI_INTENTION_ACTIVE);
+				player.sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
+				player.getAI().setIntention(AI_INTENTION_ACTIVE);
 				return false;
 			}
 			
 			if (Config.UNSTUCK_INTERVAL > 100)
 			{
-				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
+				player.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
 			}
 			else
 			{
-				activeChar.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
+				player.sendMessage("You use Escape: " + (unstuckTimer / 1000) + " seconds.");
 			}
 		}
 		return true;

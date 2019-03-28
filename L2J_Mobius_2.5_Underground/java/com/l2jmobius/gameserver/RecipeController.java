@@ -30,15 +30,15 @@ import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.StatType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2RecipeInstance;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.L2RecipeStatInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.RecipeInstance;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.RecipeStatInstance;
 import com.l2jmobius.gameserver.model.TempItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -63,7 +63,7 @@ public class RecipeController
 		// Prevent external initialization.
 	}
 	
-	public void requestBookOpen(L2PcInstance player, boolean isDwarvenCraft)
+	public void requestBookOpen(PlayerInstance player, boolean isDwarvenCraft)
 	{
 		// Check if player is trying to alter recipe book while engaged in manufacturing.
 		if (!_activeMakers.containsKey(player.getObjectId()))
@@ -76,21 +76,21 @@ public class RecipeController
 		player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 	}
 	
-	public void requestMakeItemAbort(L2PcInstance player)
+	public void requestMakeItemAbort(PlayerInstance player)
 	{
 		_activeMakers.remove(player.getObjectId()); // TODO: anything else here?
 	}
 	
-	public void requestManufactureItem(L2PcInstance manufacturer, int recipeListId, L2PcInstance player)
+	public void requestManufactureItem(PlayerInstance manufacturer, int recipeListId, PlayerInstance player)
 	{
-		final L2RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
+		final RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
 		if (recipeList == null)
 		{
 			return;
 		}
 		
-		final List<L2RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
-		final List<L2RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
+		final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
+		final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -120,7 +120,7 @@ public class RecipeController
 		}
 	}
 	
-	public void requestMakeItem(L2PcInstance player, int recipeListId)
+	public void requestMakeItem(PlayerInstance player, int recipeListId)
 	{
 		// Check if player is trying to operate a private store or private workshop while engaged in combat.
 		if (player.isInCombat() || player.isInDuel())
@@ -129,14 +129,14 @@ public class RecipeController
 			return;
 		}
 		
-		final L2RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
+		final RecipeList recipeList = RecipeData.getInstance().getValidRecipeList(player, recipeListId);
 		if (recipeList == null)
 		{
 			return;
 		}
 		
-		final List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -174,9 +174,9 @@ public class RecipeController
 		private static final Logger LOGGER = Logger.getLogger(RecipeItemMaker.class.getName());
 		protected boolean _isValid;
 		protected List<TempItem> _items = null;
-		protected final L2RecipeList _recipeList;
-		protected final L2PcInstance _player; // "crafter"
-		protected final L2PcInstance _target; // "customer"
+		protected final RecipeList _recipeList;
+		protected final PlayerInstance _player; // "crafter"
+		protected final PlayerInstance _target; // "customer"
 		protected final Skill _skill;
 		protected final int _skillId;
 		protected final int _skillLevel;
@@ -188,7 +188,7 @@ public class RecipeController
 		protected int _totalItems;
 		protected int _delay;
 		
-		public RecipeItemMaker(L2PcInstance pPlayer, L2RecipeList pRecipeList, L2PcInstance pTarget)
+		public RecipeItemMaker(PlayerInstance pPlayer, RecipeList pRecipeList, PlayerInstance pTarget)
 		{
 			_player = pPlayer;
 			_target = pTarget;
@@ -248,7 +248,7 @@ public class RecipeController
 			// check that customer can afford to pay for creation services
 			if (_player != _target)
 			{
-				final L2ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
+				final ManufactureItem item = _player.getManufactureItems().get(_recipeList.getId());
 				if (item != null)
 				{
 					_price = item.getCost();
@@ -392,7 +392,7 @@ public class RecipeController
 			if ((_target != _player) && (_price > 0)) // customer must pay for services
 			{
 				// attempt to pay for item
-				final L2ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				
 				if (adenatransfer == null)
 				{
@@ -510,7 +510,7 @@ public class RecipeController
 		{
 			_itemGrab = _skillLevel;
 			
-			for (L2RecipeStatInstance altStatChange : _recipeList.getAltStatChange())
+			for (RecipeStatInstance altStatChange : _recipeList.getAltStatChange())
 			{
 				if (altStatChange.getType() == StatType.XP)
 				{
@@ -537,7 +537,7 @@ public class RecipeController
 		private boolean calculateStatUse(boolean isWait, boolean isReduce)
 		{
 			boolean ret = true;
-			for (L2RecipeStatInstance statUse : _recipeList.getStatUse())
+			for (RecipeStatInstance statUse : _recipeList.getStatUse())
 			{
 				final double modifiedValue = statUse.getValue() / _creationPasses;
 				if (statUse.getType() == StatType.HP)
@@ -598,16 +598,16 @@ public class RecipeController
 		
 		private List<TempItem> listItems(boolean remove)
 		{
-			final L2RecipeInstance[] recipes = _recipeList.getRecipes();
+			final RecipeInstance[] recipes = _recipeList.getRecipes();
 			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
 			SystemMessage sm;
 			
-			for (L2RecipeInstance recipe : recipes)
+			for (RecipeInstance recipe : recipes)
 			{
 				if (recipe.getQuantity() > 0)
 				{
-					final L2ItemInstance item = inv.getItemByItemId(recipe.getItemId());
+					final ItemInstance item = inv.getItemByItemId(recipe.getItemId());
 					final long itemQuantityAmount = item == null ? 0 : item.getCount();
 					
 					// check materials
@@ -658,12 +658,12 @@ public class RecipeController
 			_activeMakers.remove(_player.getObjectId());
 		}
 		
-		private void rewardPlayer(L2PcInstance player)
+		private void rewardPlayer(PlayerInstance player)
 		{
 			final int rareProdId = _recipeList.getRareItemId();
 			int itemId = _recipeList.getItemId();
 			int itemCount = _recipeList.getCount();
-			final L2Item template = ItemTable.getInstance().getTemplate(itemId);
+			final Item template = ItemTable.getInstance().getTemplate(itemId);
 			
 			// check that the current recipe has a rare production or not
 			if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK))

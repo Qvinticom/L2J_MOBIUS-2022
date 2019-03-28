@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,9 +25,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExPartyPetWindowUpdate implements IClientOutgoingPacket
 {
-	private final L2Summon _summon;
+	private final Summon _summon;
 	
-	public ExPartyPetWindowUpdate(L2Summon summon)
+	public ExPartyPetWindowUpdate(Summon summon)
 	{
 		_summon = summon;
 	}

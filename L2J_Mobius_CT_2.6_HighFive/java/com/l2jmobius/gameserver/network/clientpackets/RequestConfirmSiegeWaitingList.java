@@ -19,14 +19,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestConfirmSiegeWaitingList implements IClientIncomingPacket
@@ -36,7 +35,7 @@ public final class RequestConfirmSiegeWaitingList implements IClientIncomingPack
 	private int _clanId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_castleId = packet.readD();
 		_clanId = packet.readD();
@@ -45,16 +44,16 @@ public final class RequestConfirmSiegeWaitingList implements IClientIncomingPack
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Check if the player has a clan
-		if (activeChar.getClan() == null)
+		if (player.getClan() == null)
 		{
 			return;
 		}
@@ -66,12 +65,12 @@ public final class RequestConfirmSiegeWaitingList implements IClientIncomingPack
 		}
 		
 		// Check if leader of the clan who owns the castle?
-		if ((castle.getOwnerId() != activeChar.getClanId()) || (!activeChar.isClanLeader()))
+		if ((castle.getOwnerId() != player.getClanId()) || (!player.isClanLeader()))
 		{
 			return;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
+		final Clan clan = ClanTable.getInstance().getClan(_clanId);
 		if (clan == null)
 		{
 			return;
@@ -100,6 +99,6 @@ public final class RequestConfirmSiegeWaitingList implements IClientIncomingPack
 		}
 		
 		// Update the defender list
-		activeChar.sendPacket(new SiegeDefenderList(castle));
+		player.sendPacket(new SiegeDefenderList(castle));
 	}
 }

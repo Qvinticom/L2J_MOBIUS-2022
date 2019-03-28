@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25900" level="99" type="L2Npc" name="Skill Lind">
+	<npc id="25900" level="99" type="Npc" name="Skill Lind">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -31,7 +31,7 @@
 			<height normal="210" />
 		</collision>
 	</npc>
-	<npc id="25901" level="96" type="L2RaidBoss" name="Spicula Zero" title="Raid Boss">
+	<npc id="25901" level="96" type="RaidBoss" name="Spicula Zero" title="Raid Boss">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="2109284352" sp="506228" raidPoints="7" />
@@ -130,7 +130,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25902" level="96" type="L2RaidBoss" name="Gigantic Golem" title="Raid Boss">
+	<npc id="25902" level="96" type="RaidBoss" name="Gigantic Golem" title="Raid Boss">
 		<parameters>
 			<skill name="Skill01_ID" id="15369" level="1" />
 			<skill name="Skill02_ID" id="15367" level="1" />
@@ -232,7 +232,7 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="25903" level="95" type="L2Monster" name="Gigantic Golem Subordinate">
+	<npc id="25903" level="95" type="Monster" name="Gigantic Golem Subordinate">
 		<parameters>
 			<skill name="Skill01_ID" id="15370" level="1" />
 		</parameters>
@@ -266,7 +266,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25904" level="95" type="L2Monster" name="Gigantic Golem Subordinate">
+	<npc id="25904" level="95" type="Monster" name="Gigantic Golem Subordinate">
 		<parameters>
 			<skill name="Skill01_ID" id="15371" level="1" />
 		</parameters>
@@ -300,7 +300,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25905" level="92" type="L2Monster" name="Queen Ant">
+	<npc id="25905" level="92" type="Monster" name="Queen Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>FEMALE</sex>
@@ -338,7 +338,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="25906" level="92" type="L2Monster" name="Queen Ant Larva">
+	<npc id="25906" level="92" type="Monster" name="Queen Ant Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -373,7 +373,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="25907" level="92" type="L2Monster" name="Nurse Ant">
+	<npc id="25907" level="92" type="Monster" name="Nurse Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -409,7 +409,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="25908" level="92" type="L2Monster" name="Escort Ant">
+	<npc id="25908" level="92" type="Monster" name="Escort Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -449,7 +449,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="25909" level="92" type="L2Monster" name="Royal Guard Ant">
+	<npc id="25909" level="92" type="Monster" name="Royal Guard Ant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -489,7 +489,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="25910" level="92" type="L2Monster" name="Orfen">
+	<npc id="25910" level="92" type="Monster" name="Orfen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -532,7 +532,7 @@
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="25911" level="92" type="L2Monster" name="Laikel">
+	<npc id="25911" level="92" type="Monster" name="Laikel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -572,7 +572,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="25912" level="92" type="L2Monster" name="Laikel Leos">
+	<npc id="25912" level="92" type="Monster" name="Laikel Leos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -612,7 +612,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="25913" level="92" type="L2Monster" name="Riba">
+	<npc id="25913" level="92" type="Monster" name="Riba">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -652,7 +652,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25914" level="92" type="L2Monster" name="Riba Iren">
+	<npc id="25914" level="92" type="Monster" name="Riba Iren">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>FEMALE</sex>
@@ -688,7 +688,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25915" level="92" type="L2Monster" name="Anakim" title="Flames of Sacred Fire">
+	<npc id="25915" level="92" type="Monster" name="Anakim" title="Flames of Sacred Fire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="RangeDDMagic_a" id="4314" level="9" />
@@ -722,7 +722,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25916" level="92" type="L2Monster" name="Anakim's Guardian">
+	<npc id="25916" level="92" type="Monster" name="Anakim's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="8" />
@@ -757,7 +757,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="25917" level="92" type="L2Monster" name="Anakim's Royal Guard">
+	<npc id="25917" level="92" type="Monster" name="Anakim's Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -788,7 +788,7 @@
 			<height normal="43" grown="51.6" />
 		</collision>
 	</npc>
-	<npc id="25918" level="92" type="L2Monster" name="Anakim's Executor">
+	<npc id="25918" level="92" type="Monster" name="Anakim's Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -819,7 +819,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25919" level="92" type="L2Monster" name="Lilith" title="Holy Mother of Abyss">
+	<npc id="25919" level="92" type="Monster" name="Lilith" title="Holy Mother of Abyss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="RangeHold_a" id="4197" level="9" />
@@ -854,7 +854,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25920" level="92" type="L2Monster" name="Lilith' Agent">
+	<npc id="25920" level="92" type="Monster" name="Lilith' Agent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="DDMagic_a" id="4316" level="8" />
@@ -889,7 +889,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25921" level="92" type="L2Monster" name="Lilith' Escort">
+	<npc id="25921" level="92" type="Monster" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4179" level="8" />
@@ -925,7 +925,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25922" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
+	<npc id="25922" level="99" type="RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25924" count="2" respawnTime="360" weightPoint="1" />
@@ -1022,7 +1022,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25924" level="99" type="L2Monster" name="Nerva Orc Linebreaker">
+	<npc id="25924" level="99" type="Monster" name="Nerva Orc Linebreaker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
@@ -1050,7 +1050,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25928" level="99" type="L2RaidBoss" name="Tebot" title="Raid Monster">
+	<npc id="25928" level="99" type="RaidBoss" name="Tebot" title="Raid Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1141,7 +1141,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25929" level="99" type="L2RaidBoss" name="Tegaffe" title="Raid Monster">
+	<npc id="25929" level="99" type="RaidBoss" name="Tegaffe" title="Raid Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1232,7 +1232,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25930" level="99" type="L2RaidBoss" name="Thesakar" title="Raid Monster">
+	<npc id="25930" level="99" type="RaidBoss" name="Thesakar" title="Raid Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1323,7 +1323,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25931" level="99" type="L2RaidBoss" name="Theor" title="Raid Monster">
+	<npc id="25931" level="99" type="RaidBoss" name="Theor" title="Raid Monster">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1188371250" sp="1901394" raidPoints="30" />
@@ -1415,7 +1415,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25932" level="86" type="L2RaidBoss" name="Transformed: Dartanion" title="Raid Boss">
+	<npc id="25932" level="86" type="RaidBoss" name="Transformed: Dartanion" title="Raid Boss">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3394764000" sp="814743" raidPoints="30" />
@@ -1508,7 +1508,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25933" level="93" type="L2RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
+	<npc id="25933" level="93" type="RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25934" count="1" respawnTime="360" weightPoint="1" />
@@ -1608,7 +1608,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25934" level="93" type="L2Monster" name="Garden Patrol Minion" title="Raid Fighter">
+	<npc id="25934" level="93" type="Monster" name="Garden Patrol Minion" title="Raid Fighter">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1632,7 +1632,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25935" level="93" type="L2Monster" name="Gardener Minion" title="Raid Fighter">
+	<npc id="25935" level="93" type="Monster" name="Gardener Minion" title="Raid Fighter">
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1656,7 +1656,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25936" level="93" type="L2Monster" name="Garden Manager Minion" title="Raid Fighter">
+	<npc id="25936" level="93" type="Monster" name="Garden Manager Minion" title="Raid Fighter">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1680,7 +1680,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25937" level="95" type="L2RaidBoss" name="Spicula Negative" title="Raid Boss">
+	<npc id="25937" level="95" type="RaidBoss" name="Spicula Negative" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25938" count="2" respawnTime="360" weightPoint="1" />
@@ -1789,7 +1789,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="25938" level="95" type="L2Monster" name="Spicula Fighter Minion" title="Raid Fighter">
+	<npc id="25938" level="95" type="Monster" name="Spicula Fighter Minion" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1820,7 +1820,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25939" level="95" type="L2Monster" name="Spicula Archer Minion" title="Raid Fighter">
+	<npc id="25939" level="95" type="Monster" name="Spicula Archer Minion" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1851,7 +1851,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25940" level="81" type="L2RaidBoss" name="Yehan Klodekus" title="Raid Boss">
+	<npc id="25940" level="81" type="RaidBoss" name="Yehan Klodekus" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -1883,7 +1883,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="25941" level="81" type="L2RaidBoss" name="Yehan Klanikus" title="Raid Boss">
+	<npc id="25941" level="81" type="RaidBoss" name="Yehan Klanikus" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -1915,7 +1915,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="25942" level="98" type="L2RaidBoss" name="Flaming Ladar" title="Raid Boss">
+	<npc id="25942" level="98" type="RaidBoss" name="Flaming Ladar" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="9339738544" sp="2241537" raidPoints="300" />
@@ -2041,7 +2041,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25943" level="93" type="L2RaidBoss" name="Wind Cassius" title="Raid Boss">
+	<npc id="25943" level="93" type="RaidBoss" name="Wind Cassius" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7998784284" sp="1919708" raidPoints="300" />
@@ -2162,7 +2162,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25944" level="88" type="L2RaidBoss" name="Earth Terakan" title="Raid Boss">
+	<npc id="25944" level="88" type="RaidBoss" name="Earth Terakan" title="Raid Boss">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="6810821128" sp="1634597" raidPoints="300" />
@@ -2283,7 +2283,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25945" level="98" type="L2RaidBoss" name="Megaloprepis" title="Raid Boss">
+	<npc id="25945" level="98" type="RaidBoss" name="Megaloprepis" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25952" count="1" respawnTime="360" weightPoint="1" />
@@ -2392,7 +2392,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25946" level="98" type="L2RaidBoss" name="Antharas' Herald Komabor" title="Raid Boss">
+	<npc id="25946" level="98" type="RaidBoss" name="Antharas' Herald Komabor" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25952" count="1" respawnTime="360" weightPoint="1" />
@@ -2501,7 +2501,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25947" level="98" type="L2RaidBoss" name="Skellrus' Herald Iskios" title="Raid Boss">
+	<npc id="25947" level="98" type="RaidBoss" name="Skellrus' Herald Iskios" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25952" count="1" respawnTime="360" weightPoint="1" />
@@ -2610,7 +2610,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25948" level="98" type="L2RaidBoss" name="Valakas' Herald Potigia" title="Raid Boss">
+	<npc id="25948" level="98" type="RaidBoss" name="Valakas' Herald Potigia" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25952" count="1" respawnTime="360" weightPoint="1" />
@@ -2719,7 +2719,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25949" level="98" type="L2RaidBoss" name="Lindvior's Herald Numa" title="Raid Boss">
+	<npc id="25949" level="98" type="RaidBoss" name="Lindvior's Herald Numa" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25952" count="1" respawnTime="360" weightPoint="1" />
@@ -2828,7 +2828,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25950" level="98" type="L2RaidBoss" name="Fafurion's Herald Aquarion" title="Raid Boss">
+	<npc id="25950" level="98" type="RaidBoss" name="Fafurion's Herald Aquarion" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25952" count="1" respawnTime="360" weightPoint="1" />
@@ -2937,7 +2937,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25951" level="98" type="L2Monster" name="Mino Muscle Bomber" title="Raid Minion">
+	<npc id="25951" level="98" type="Monster" name="Mino Muscle Bomber" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2966,7 +2966,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25952" level="98" type="L2Monster" name="Mino Dragon" title="Raid Minion">
+	<npc id="25952" level="98" type="Monster" name="Mino Dragon" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2996,7 +2996,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="25953" level="98" type="L2Monster" name="Mino Povetor" title="Raid Minion">
+	<npc id="25953" level="98" type="Monster" name="Mino Povetor" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3024,7 +3024,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="25954" level="98" type="L2Monster" name="Mino Wyrm" title="Raid Minion">
+	<npc id="25954" level="98" type="Monster" name="Mino Wyrm" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3053,7 +3053,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="25955" level="98" type="L2Monster" name="Nepho" title="Raid Minion">
+	<npc id="25955" level="98" type="Monster" name="Nepho" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -3082,7 +3082,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25956" level="98" type="L2RaidBoss" name="Vengeful Eligos" title="Raid Boss">
+	<npc id="25956" level="98" type="RaidBoss" name="Vengeful Eligos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25964" count="1" respawnTime="360" weightPoint="1" />
@@ -3191,7 +3191,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25957" level="98" type="L2RaidBoss" name="Vengeful Agarez" title="Raid Boss">
+	<npc id="25957" level="98" type="RaidBoss" name="Vengeful Agarez" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25964" count="1" respawnTime="360" weightPoint="1" />
@@ -3300,7 +3300,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25958" level="98" type="L2RaidBoss" name="Vengeful Lerazia" title="Raid Boss">
+	<npc id="25958" level="98" type="RaidBoss" name="Vengeful Lerazia" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25964" count="1" respawnTime="360" weightPoint="1" />
@@ -3409,7 +3409,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25959" level="98" type="L2RaidBoss" name="Vengeful Oretross" title="Raid Boss">
+	<npc id="25959" level="98" type="RaidBoss" name="Vengeful Oretross" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25964" count="1" respawnTime="360" weightPoint="1" />
@@ -3518,7 +3518,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25960" level="98" type="L2RaidBoss" name="Vengeful Edaire" title="Raid Boss">
+	<npc id="25960" level="98" type="RaidBoss" name="Vengeful Edaire" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25964" count="1" respawnTime="360" weightPoint="1" />
@@ -3627,7 +3627,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25961" level="98" type="L2RaidBoss" name="Vengeful Agonia" title="Raid Boss">
+	<npc id="25961" level="98" type="RaidBoss" name="Vengeful Agonia" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25964" count="1" respawnTime="360" weightPoint="1" />
@@ -3736,7 +3736,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25962" level="98" type="L2Monster" name="Dark Spicula" title="Raid Minion">
+	<npc id="25962" level="98" type="Monster" name="Dark Spicula" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3765,7 +3765,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="25963" level="98" type="L2Monster" name="Bloody Spicula" title="Raid Minion">
+	<npc id="25963" level="98" type="Monster" name="Bloody Spicula" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3795,7 +3795,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25964" level="98" type="L2Monster" name="Dark Weiss" title="Raid Minion">
+	<npc id="25964" level="98" type="Monster" name="Dark Weiss" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3823,7 +3823,7 @@
 			<height normal="42.5" grown="46" />
 		</collision>
 	</npc>
-	<npc id="25965" level="98" type="L2Monster" name="Bloody Weiss" title="Raid Minion">
+	<npc id="25965" level="98" type="Monster" name="Bloody Weiss" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3851,7 +3851,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="25966" level="98" type="L2Monster" name="Spicula of Death" title="Raid Minion">
+	<npc id="25966" level="98" type="Monster" name="Spicula of Death" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3880,7 +3880,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="25967" level="97" type="L2RaidBoss" name="Zetahl" title="Raid Boss">
+	<npc id="25967" level="97" type="RaidBoss" name="Zetahl" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -3992,7 +3992,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25968" level="97" type="L2RaidBoss" name="Tabris" title="Raid Boss">
+	<npc id="25968" level="97" type="RaidBoss" name="Tabris" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -4104,7 +4104,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25969" level="97" type="L2RaidBoss" name="Stelos" title="Raid Boss">
+	<npc id="25969" level="97" type="RaidBoss" name="Stelos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -4216,7 +4216,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25970" level="97" type="L2RaidBoss" name="Ravolas" title="Raid Boss">
+	<npc id="25970" level="97" type="RaidBoss" name="Ravolas" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -4328,7 +4328,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25971" level="97" type="L2RaidBoss" name="Stelo Soma" title="Raid Boss">
+	<npc id="25971" level="97" type="RaidBoss" name="Stelo Soma" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -4440,7 +4440,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25972" level="97" type="L2RaidBoss" name="Dephracor" title="Raid Boss">
+	<npc id="25972" level="97" type="RaidBoss" name="Dephracor" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -4553,7 +4553,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25973" level="97" type="L2Monster" name="Puppet Orc Warrior" title="Raid Minion">
+	<npc id="25973" level="97" type="Monster" name="Puppet Orc Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4583,7 +4583,7 @@
 			<height normal="38.5" grown="46.2" />
 		</collision>
 	</npc>
-	<npc id="25974" level="97" type="L2Monster" name="Puppet Orc Archer" title="Raid Minion">
+	<npc id="25974" level="97" type="Monster" name="Puppet Orc Archer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4613,7 +4613,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25975" level="97" type="L2Monster" name="Puppet Orc Shaman" title="Raid Minion">
+	<npc id="25975" level="97" type="Monster" name="Puppet Orc Shaman" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4642,7 +4642,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25976" level="97" type="L2Monster" name="Puppet Orc Wizard" title="Raid Minion">
+	<npc id="25976" level="97" type="Monster" name="Puppet Orc Wizard" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4671,7 +4671,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25977" level="97" type="L2Monster" name="Puppet Orc" title="Raid Minion">
+	<npc id="25977" level="97" type="Monster" name="Puppet Orc" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4701,7 +4701,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="25978" level="97" type="L2RaidBoss" name="Garamor's Herald Gariott" title="Raid Boss">
+	<npc id="25978" level="97" type="RaidBoss" name="Garamor's Herald Gariott" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25986" count="1" respawnTime="360" weightPoint="1" />
@@ -4813,7 +4813,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25979" level="97" type="L2RaidBoss" name="Varvacion" title="Raid Boss">
+	<npc id="25979" level="97" type="RaidBoss" name="Varvacion" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25986" count="1" respawnTime="360" weightPoint="1" />
@@ -4925,7 +4925,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25980" level="97" type="L2RaidBoss" name="Varmoni" title="Raid Boss">
+	<npc id="25980" level="97" type="RaidBoss" name="Varmoni" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25986" count="1" respawnTime="360" weightPoint="1" />
@@ -5037,7 +5037,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25981" level="97" type="L2RaidBoss" name="Varvinos" title="Raid Boss">
+	<npc id="25981" level="97" type="RaidBoss" name="Varvinos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25986" count="1" respawnTime="360" weightPoint="1" />
@@ -5149,7 +5149,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25982" level="97" type="L2RaidBoss" name="Varmonia" title="Raid Boss">
+	<npc id="25982" level="97" type="RaidBoss" name="Varmonia" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25986" count="1" respawnTime="360" weightPoint="1" />
@@ -5261,7 +5261,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25983" level="97" type="L2RaidBoss" name="Varkaron" title="Raid Boss">
+	<npc id="25983" level="97" type="RaidBoss" name="Varkaron" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25986" count="1" respawnTime="360" weightPoint="1" />
@@ -5373,7 +5373,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25984" level="97" type="L2Monster" name="Monisac" title="Raid Minion">
+	<npc id="25984" level="97" type="Monster" name="Monisac" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5402,7 +5402,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25985" level="97" type="L2Monster" name="Monishe" title="Raid Minion">
+	<npc id="25985" level="97" type="Monster" name="Monishe" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -5432,7 +5432,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25986" level="97" type="L2Monster" name="Vinosac" title="Raid Minion">
+	<npc id="25986" level="97" type="Monster" name="Vinosac" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5460,7 +5460,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25987" level="97" type="L2Monster" name="Vinoshe" title="Raid Minion">
+	<npc id="25987" level="97" type="Monster" name="Vinoshe" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5488,7 +5488,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25988" level="97" type="L2Monster" name="Varkaron's Minion Karnon" title="Raid Minion">
+	<npc id="25988" level="97" type="Monster" name="Varkaron's Minion Karnon" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5517,7 +5517,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25989" level="93" type="L2RaidBoss" name="Harp's Clone" title="Raid Boss">
+	<npc id="25989" level="93" type="RaidBoss" name="Harp's Clone" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25995" count="1" respawnTime="360" weightPoint="1" />
@@ -5624,7 +5624,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25990" level="93" type="L2RaidBoss" name="Isadora's Avatar" title="Raid Boss">
+	<npc id="25990" level="93" type="RaidBoss" name="Isadora's Avatar" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25995" count="1" respawnTime="360" weightPoint="1" />
@@ -5726,7 +5726,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25991" level="93" type="L2RaidBoss" name="Maliss' Avatar" title="Raid Boss">
+	<npc id="25991" level="93" type="RaidBoss" name="Maliss' Avatar" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25995" count="1" respawnTime="360" weightPoint="1" />
@@ -5832,7 +5832,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25992" level="93" type="L2RaidBoss" name="Embryo Garron" title="Raid Boss">
+	<npc id="25992" level="93" type="RaidBoss" name="Embryo Garron" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25995" count="1" respawnTime="360" weightPoint="1" />
@@ -5939,7 +5939,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25993" level="93" type="L2RaidBoss" name="Embryo Nigel" title="Raid Boss">
+	<npc id="25993" level="93" type="RaidBoss" name="Embryo Nigel" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25995" count="1" respawnTime="360" weightPoint="1" />
@@ -6045,7 +6045,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25994" level="93" type="L2RaidBoss" name="Embryo Dabos" title="Raid Boss">
+	<npc id="25994" level="93" type="RaidBoss" name="Embryo Dabos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25995" count="1" respawnTime="360" weightPoint="1" />
@@ -6152,7 +6152,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25995" level="93" type="L2Monster" name="Embryo Warrior" title="Raid Minion">
+	<npc id="25995" level="93" type="Monster" name="Embryo Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -6182,7 +6182,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25996" level="93" type="L2Monster" name="Embryo Archer" title="Raid Minion">
+	<npc id="25996" level="93" type="Monster" name="Embryo Archer" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -6213,7 +6213,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25997" level="93" type="L2Monster" name="Embryo Wizard" title="Raid Minion">
+	<npc id="25997" level="93" type="Monster" name="Embryo Wizard" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -6242,7 +6242,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25998" level="93" type="L2Monster" name="Embryo Priest" title="Raid Minion">
+	<npc id="25998" level="93" type="Monster" name="Embryo Priest" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -6270,7 +6270,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25999" level="93" type="L2Monster" name="Embryo Infantry" title="Raid Minion">
+	<npc id="25999" level="93" type="Monster" name="Embryo Infantry" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

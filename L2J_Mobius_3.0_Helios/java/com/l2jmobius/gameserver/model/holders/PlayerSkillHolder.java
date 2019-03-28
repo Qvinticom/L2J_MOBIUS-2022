@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -31,7 +31,7 @@ public class PlayerSkillHolder implements ISkillsHolder
 {
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	
-	public PlayerSkillHolder(L2PcInstance player)
+	public PlayerSkillHolder(PlayerInstance player)
 	{
 		for (Skill skill : player.getSkills().values())
 		{
@@ -63,9 +63,9 @@ public class PlayerSkillHolder implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the level of a skill owned by the L2Character.
-	 * @param skillId The identifier of the L2Skill whose level must be returned
-	 * @return The level of the L2Skill identified by skillId
+	 * Return the level of a skill owned by the Creature.
+	 * @param skillId The identifier of the Skill whose level must be returned
+	 * @return The level of the Skill identified by skillId
 	 */
 	@Override
 	public int getSkillLevel(int skillId)
@@ -75,7 +75,7 @@ public class PlayerSkillHolder implements ISkillsHolder
 	}
 	
 	/**
-	 * @param skillId The identifier of the L2Skill to check the knowledge
+	 * @param skillId The identifier of the Skill to check the knowledge
 	 * @return the skill from the known skill.
 	 */
 	@Override

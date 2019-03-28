@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24100" level="105" type="L2Monster" name="Netherworld Butcher">
+	<npc id="24100" level="105" type="Monster" name="Netherworld Butcher">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="615801375" sp="551250" />
@@ -32,7 +32,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24101" level="85" type="L2Npc" name="Netherworld Mino">
+	<npc id="24101" level="85" type="Npc" name="Netherworld Mino">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -52,7 +52,7 @@
 			<height normal="49.5" />
 		</collision>
 	</npc>
-	<npc id="24102" level="85" type="L2Npc" name="Extraterrestrial Demon">
+	<npc id="24102" level="85" type="Npc" name="Extraterrestrial Demon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -71,7 +71,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="24103" level="85" type="L2Npc" name="Netherworld Shaman" title="Watcher">
+	<npc id="24103" level="85" type="Npc" name="Netherworld Shaman" title="Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -90,7 +90,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="24104" level="85" type="L2Npc" name="Netherworld Salamander" title="Hunter">
+	<npc id="24104" level="85" type="Npc" name="Netherworld Salamander" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -109,7 +109,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="24105" level="85" type="L2Npc" name="Netherworld Golem">
+	<npc id="24105" level="85" type="Npc" name="Netherworld Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -128,7 +128,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="24106" level="85" type="L2Npc" name="Netherworld Archon" title="Slayer">
+	<npc id="24106" level="85" type="Npc" name="Netherworld Archon" title="Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -147,7 +147,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="24107" level="85" type="L2Npc" name="Netherworld Banshee" title="Avenger">
+	<npc id="24107" level="85" type="Npc" name="Netherworld Banshee" title="Avenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -166,7 +166,7 @@
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="24108" level="106" type="L2Monster" name="Extraterrestrial Berserker">
+	<npc id="24108" level="106" type="Monster" name="Extraterrestrial Berserker">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="1129341596" sp="1011240" />
@@ -198,7 +198,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24109" level="85" type="L2Npc" name="Extraterrestrial Shaman" title="Watcher">
+	<npc id="24109" level="85" type="Npc" name="Extraterrestrial Shaman" title="Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -217,7 +217,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="24110" level="85" type="L2Npc" name="Extraterrestrial Salamander" title="Hunter">
+	<npc id="24110" level="85" type="Npc" name="Extraterrestrial Salamander" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -236,7 +236,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="24111" level="85" type="L2Npc" name="Extraterrestrial Golem">
+	<npc id="24111" level="85" type="Npc" name="Extraterrestrial Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -255,7 +255,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="24112" level="85" type="L2Npc" name="Extraterrestrial Archon" title="Slayer">
+	<npc id="24112" level="85" type="Npc" name="Extraterrestrial Archon" title="Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -274,7 +274,7 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="24113" level="85" type="L2Npc" name="Extraterrestrial Banshee" title="Avenger">
+	<npc id="24113" level="85" type="Npc" name="Extraterrestrial Banshee" title="Avenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -293,7 +293,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="24114" level="85" type="L2Npc" name="Extraterrestrial Binder">
+	<npc id="24114" level="85" type="Npc" name="Extraterrestrial Binder">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -312,7 +312,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="24115" level="106" type="L2Monster" name="Lithra Butterfly">
+	<npc id="24115" level="106" type="Monster" name="Lithra Butterfly">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -343,7 +343,7 @@
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24116" level="105" type="L2Monster" name="Lithra Needle">
+	<npc id="24116" level="105" type="Monster" name="Lithra Needle">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -374,7 +374,7 @@
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24117" level="104" type="L2Monster" name="Crystal Reep">
+	<npc id="24117" level="104" type="Monster" name="Crystal Reep">
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="906218560" sp="811200" />
@@ -421,7 +421,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24118" level="105" type="L2Monster" name="Crystal Reep" title="Repeat">
+	<npc id="24118" level="105" type="Monster" name="Crystal Reep" title="Repeat">
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1219342950" sp="1091475" />
@@ -468,7 +468,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24119" level="104" type="L2Monster" name="Crystal Needle">
+	<npc id="24119" level="104" type="Monster" name="Crystal Needle">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="906218560" sp="811200" />
@@ -515,7 +515,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24120" level="105" type="L2Monster" name="Crystal Needle" title="Repeat">
+	<npc id="24120" level="105" type="Monster" name="Crystal Needle" title="Repeat">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="1219342950" sp="1091475" />
@@ -562,7 +562,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24121" level="105" type="L2Monster" name="Treant Blossom">
+	<npc id="24121" level="105" type="Monster" name="Treant Blossom">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="923729625" sp="826875" />
@@ -609,7 +609,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24122" level="105" type="L2Monster" name="Treant Blossom" title="Repeat">
+	<npc id="24122" level="105" type="Monster" name="Treant Blossom" title="Repeat">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1219342950" sp="1091475" />
@@ -656,7 +656,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24123" level="105" type="L2Monster" name="Flush Teasle">
+	<npc id="24123" level="105" type="Monster" name="Flush Teasle">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1108486575" sp="992250" />
@@ -703,7 +703,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24124" level="105" type="L2Monster" name="Flush Teasle" title="Repeat">
+	<npc id="24124" level="105" type="Monster" name="Flush Teasle" title="Repeat">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1219342950" sp="1091475" />
@@ -750,7 +750,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24125" level="105" type="L2Monster" name="Creeper Rampike">
+	<npc id="24125" level="105" type="Monster" name="Creeper Rampike">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1108486575" sp="992250" />
@@ -797,7 +797,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24126" level="105" type="L2Monster" name="Creeper Rampike" title="Repeat">
+	<npc id="24126" level="105" type="Monster" name="Creeper Rampike" title="Repeat">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1219342950" sp="1091475" />
@@ -844,7 +844,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24127" level="105" type="L2Monster" name="Lithra Aprias" title="Lithra Bloom">
+	<npc id="24127" level="105" type="Monster" name="Lithra Aprias" title="Lithra Bloom">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1108486575" sp="992250" />
@@ -891,7 +891,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24128" level="105" type="L2Monster" name="Nerupa Aprias" title="Nerupa Bloom">
+	<npc id="24128" level="105" type="Monster" name="Nerupa Aprias" title="Nerupa Bloom">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1219342950" sp="1091475" />
@@ -938,7 +938,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24129" level="85" type="L2Npc" name="Spicula Security Captain">
+	<npc id="24129" level="85" type="Npc" name="Spicula Security Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -957,7 +957,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="24130" level="96" type="L2Monster" name="Berserk Control Golem">
+	<npc id="24130" level="96" type="Monster" name="Berserk Control Golem">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="8369786" sp="7464" />
@@ -1004,7 +1004,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24131" level="85" type="L2Npc" name="Explosive Energy">
+	<npc id="24131" level="85" type="Npc" name="Explosive Energy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1023,7 +1023,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="24132" level="85" type="L2Npc" name="Apparition Swordsman">
+	<npc id="24132" level="85" type="Npc" name="Apparition Swordsman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1042,7 +1042,7 @@
 			<height normal="44.5" />
 		</collision>
 	</npc>
-	<npc id="24133" level="85" type="L2Npc" name="Apparition Magus">
+	<npc id="24133" level="85" type="Npc" name="Apparition Magus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1061,7 +1061,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="24134" level="85" type="L2Npc" name="Apparition Monk">
+	<npc id="24134" level="85" type="Npc" name="Apparition Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1080,7 +1080,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="24135" level="85" type="L2Npc" name="Prison Warden">
+	<npc id="24135" level="85" type="Npc" name="Prison Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1099,7 +1099,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="24136" level="85" type="L2Npc" name="Prison Watchman">
+	<npc id="24136" level="85" type="Npc" name="Prison Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1118,7 +1118,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="24137" level="85" type="L2Npc" name="Prison Manager">
+	<npc id="24137" level="85" type="Npc" name="Prison Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1137,7 +1137,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24138" level="85" type="L2Npc" name="Nightmare Creature">
+	<npc id="24138" level="85" type="Npc" name="Nightmare Creature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1156,7 +1156,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="24139" level="104" type="L2Monster" name="Reep Child">
+	<npc id="24139" level="104" type="Monster" name="Reep Child">
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="174905536" sp="151424" />
@@ -1198,7 +1198,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24140" level="104" type="L2Monster" name="Needle Child">
+	<npc id="24140" level="104" type="Monster" name="Needle Child">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="174905536" sp="151424" />
@@ -1240,7 +1240,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24141" level="105" type="L2Monster" name="Blossom Child">
+	<npc id="24141" level="105" type="Monster" name="Blossom Child">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="213951150" sp="187425" />
@@ -1283,7 +1283,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24142" level="105" type="L2Monster" name="Teasle Child">
+	<npc id="24142" level="105" type="Monster" name="Teasle Child">
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="213951150" sp="187425" />
@@ -1325,7 +1325,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24143" level="85" type="L2Npc" name="Netherworld Archer" title="Scout">
+	<npc id="24143" level="85" type="Npc" name="Netherworld Archer" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1345,7 +1345,7 @@
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="24144" level="104" type="L2Monster" name="Death Rogue">
+	<npc id="24144" level="104" type="Monster" name="Death Rogue">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="190890718" sp="171758" />
@@ -1387,7 +1387,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24145" level="104" type="L2Monster" name="Death Shooter">
+	<npc id="24145" level="104" type="Monster" name="Death Shooter">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="48232" /> 
@@ -1430,7 +1430,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24146" level="105" type="L2Monster" name="Death Warrior">
+	<npc id="24146" level="105" type="Monster" name="Death Warrior">
 		<race>DEMONIC</race>
 		<acquire exp="233487009" sp="210136" />
 		<equipment rhand="48232" />
@@ -1472,7 +1472,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24147" level="105" type="L2Monster" name="Death Sorcerer">
+	<npc id="24147" level="105" type="Monster" name="Death Sorcerer">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="17391" /> 
@@ -1515,7 +1515,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24148" level="105" type="L2Monster" name="Death Pondus" title="Atelia Lookout">
+	<npc id="24148" level="105" type="Monster" name="Death Pondus" title="Atelia Lookout">
 		<race>DEMONIC</race>
 		<acquire exp="466987689" sp="420273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1555,7 +1555,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24149" level="104" type="L2Monster" name="Devil Nightmare">
+	<npc id="24149" level="104" type="Monster" name="Devil Nightmare">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="63625768" sp="57216" />
@@ -1596,7 +1596,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24150" level="104" type="L2Monster" name="Devil Warrior">
+	<npc id="24150" level="104" type="Monster" name="Devil Warrior">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="63625768" sp="57216" />
@@ -1637,7 +1637,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24151" level="105" type="L2Monster" name="Devil Guardian">
+	<npc id="24151" level="105" type="Monster" name="Devil Guardian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="77829003" sp="70008" />
@@ -1678,7 +1678,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24152" level="105" type="L2Monster" name="Devil Sinist">
+	<npc id="24152" level="105" type="Monster" name="Devil Sinist">
 		<race>DEMONIC</race>
 		<acquire exp="77829003" sp="70008" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1718,7 +1718,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24153" level="105" type="L2Monster" name="Devil Varos" title="Atelia Lookout">
+	<npc id="24153" level="105" type="Monster" name="Devil Varos" title="Atelia Lookout">
 		<race>DEMONIC</race>
 		<acquire exp="466987689" sp="420273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1759,7 +1759,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24154" level="104" type="L2Monster" name="Demonic Wizard">
+	<npc id="24154" level="104" type="Monster" name="Demonic Wizard">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="76353605" sp="68681" />
@@ -1800,7 +1800,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24155" level="104" type="L2Monster" name="Demonic Warrior">
+	<npc id="24155" level="104" type="Monster" name="Demonic Warrior">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="17425" /> 
@@ -1842,7 +1842,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24156" level="105" type="L2Monster" name="Demonic Archer">
+	<npc id="24156" level="105" type="Monster" name="Demonic Archer">
 		<race>DEMONIC</race>
 		<acquire exp="93386601" sp="84010" />
 		<equipment rhand="47898" />
@@ -1883,7 +1883,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24157" level="105" type="L2Monster" name="Demonic Keras">
+	<npc id="24157" level="105" type="Monster" name="Demonic Keras">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="17392" /> 
@@ -1925,7 +1925,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24158" level="105" type="L2Monster" name="Demonic Weiss" title="Atelia Lookout">
+	<npc id="24158" level="105" type="Monster" name="Demonic Weiss" title="Atelia Lookout">
 		<race>DEMONIC</race>
 		<acquire exp="466987689" sp="420273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1966,7 +1966,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24159" level="104" type="L2Monster" name="Atelia Yuyurina">
+	<npc id="24159" level="104" type="Monster" name="Atelia Yuyurina">
 		<race>UNDEAD</race>
 		<acquire exp="190890718" sp="171758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2008,7 +2008,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24160" level="105" type="L2Monster" name="Atelia Popobena">
+	<npc id="24160" level="105" type="Monster" name="Atelia Popobena">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="233487009" sp="210136" />
@@ -2051,7 +2051,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24161" level="105" type="L2Monster" name="Harke" title="Atelia Guardian">
+	<npc id="24161" level="105" type="Monster" name="Harke" title="Atelia Guardian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1867978098" sp="1681092" />
@@ -2102,7 +2102,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24162" level="105" type="L2Monster" name="Ergalion" title="Atelia Guardian">
+	<npc id="24162" level="105" type="Monster" name="Ergalion" title="Atelia Guardian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1867978098" sp="1681092" />
@@ -2153,7 +2153,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24163" level="106" type="L2Monster" name="Spira" title="Atelia Guardian">
+	<npc id="24163" level="106" type="Monster" name="Spira" title="Atelia Guardian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1903728064" sp="1713265" />
@@ -2199,7 +2199,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24164" level="105" type="L2Monster" name="Temple Raider">
+	<npc id="24164" level="105" type="Monster" name="Temple Raider">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17421" /> 
@@ -2226,7 +2226,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24165" level="105" type="L2Monster" name="Temple Passionate Soldier">
+	<npc id="24165" level="105" type="Monster" name="Temple Passionate Soldier">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17329" /> 
@@ -2253,7 +2253,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24166" level="106" type="L2Monster" name="Temple Guard Captain">
+	<npc id="24166" level="106" type="Monster" name="Temple Guard Captain">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -2280,7 +2280,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24167" level="106" type="L2Monster" name="Temple Elite Captain">
+	<npc id="24167" level="106" type="Monster" name="Temple Elite Captain">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17325" lhand="17401" />
@@ -2307,7 +2307,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24168" level="106" type="L2Monster" name="Creed Protector">
+	<npc id="24168" level="106" type="Monster" name="Creed Protector">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2333,7 +2333,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24169" level="105" type="L2Monster" name="Soul Reaper">
+	<npc id="24169" level="105" type="Monster" name="Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2359,7 +2359,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24170" level="105" type="L2Monster" name="Zealous Berserker">
+	<npc id="24170" level="105" type="Monster" name="Zealous Berserker">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2385,7 +2385,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24171" level="106" type="L2Monster" name="Soul Destroyer">
+	<npc id="24171" level="106" type="Monster" name="Soul Destroyer">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2411,7 +2411,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24172" level="106" type="L2Monster" name="Heretic Inquisitor">
+	<npc id="24172" level="106" type="Monster" name="Heretic Inquisitor">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2437,7 +2437,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24173" level="107" type="L2Monster" name="Great Temple Siege Ram">
+	<npc id="24173" level="107" type="Monster" name="Great Temple Siege Ram">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2463,7 +2463,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24174" level="105" type="L2Monster" name="Great Temple Dark Judge">
+	<npc id="24174" level="105" type="Monster" name="Great Temple Dark Judge">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2489,7 +2489,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24175" level="106" type="L2Monster" name="Great Temple Decurion">
+	<npc id="24175" level="106" type="Monster" name="Great Temple Decurion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2515,7 +2515,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24176" level="105" type="L2Monster" name="Great Temple Slayer">
+	<npc id="24176" level="105" type="Monster" name="Great Temple Slayer">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2541,7 +2541,7 @@
 			<skill id="16547" level="4" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24177" level="107" type="L2Monster" name="Paragon" title="Great Temple Guardian">
+	<npc id="24177" level="107" type="Monster" name="Paragon" title="Great Temple Guardian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2566,7 +2566,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24178" level="107" type="L2Monster" name="Camille" title="Final Apostle">
+	<npc id="24178" level="107" type="Monster" name="Camille" title="Final Apostle">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2592,7 +2592,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24179" level="107" type="L2Monster" name="Kain van Halter" title="Void Apostle">
+	<npc id="24179" level="107" type="Monster" name="Kain van Halter" title="Void Apostle">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2618,7 +2618,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24180" level="105" type="L2Monster" name="Temple Raider">
+	<npc id="24180" level="105" type="Monster" name="Temple Raider">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17421" /> 
@@ -2647,7 +2647,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24181" level="105" type="L2Monster" name="Temple Passionate Soldier">
+	<npc id="24181" level="105" type="Monster" name="Temple Passionate Soldier">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17329" /> 
@@ -2676,7 +2676,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24182" level="106" type="L2Monster" name="Temple Guard Captain">
+	<npc id="24182" level="106" type="Monster" name="Temple Guard Captain">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -2705,7 +2705,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24183" level="106" type="L2Monster" name="Temple Elite Captain">
+	<npc id="24183" level="106" type="Monster" name="Temple Elite Captain">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17325" lhand="17401" />
@@ -2734,7 +2734,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24184" level="106" type="L2Monster" name="Creed Protector">
+	<npc id="24184" level="106" type="Monster" name="Creed Protector">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2762,7 +2762,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24185" level="105" type="L2Monster" name="Soul Reaper">
+	<npc id="24185" level="105" type="Monster" name="Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2790,7 +2790,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24186" level="105" type="L2Monster" name="Zealous Berserker">
+	<npc id="24186" level="105" type="Monster" name="Zealous Berserker">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2818,7 +2818,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24187" level="106" type="L2Monster" name="Soul Destroyer">
+	<npc id="24187" level="106" type="Monster" name="Soul Destroyer">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2846,7 +2846,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24188" level="106" type="L2Monster" name="Heretic Inquisitor">
+	<npc id="24188" level="106" type="Monster" name="Heretic Inquisitor">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2874,7 +2874,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24189" level="107" type="L2Monster" name="Great Temple Siege Ram">
+	<npc id="24189" level="107" type="Monster" name="Great Temple Siege Ram">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2902,7 +2902,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24190" level="105" type="L2Monster" name="Great Temple Dark Judge">
+	<npc id="24190" level="105" type="Monster" name="Great Temple Dark Judge">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2930,7 +2930,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24191" level="106" type="L2Monster" name="Great Temple Decurion">
+	<npc id="24191" level="106" type="Monster" name="Great Temple Decurion">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2958,7 +2958,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24192" level="105" type="L2Monster" name="Great Temple Slayer">
+	<npc id="24192" level="105" type="Monster" name="Great Temple Slayer">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -2986,7 +2986,7 @@
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24193" level="107" type="L2Monster" name="Paragon" title="Great Temple Guardian">
+	<npc id="24193" level="107" type="Monster" name="Paragon" title="Great Temple Guardian">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -3011,7 +3011,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24194" level="107" type="L2RaidBoss" name="Camille" title="Final Apostle">
+	<npc id="24194" level="107" type="RaidBoss" name="Camille" title="Final Apostle">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" raidPoints="21" />
@@ -3037,7 +3037,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24195" level="107" type="L2RaidBoss" name="Kain van Halter" title="Void Apostle">
+	<npc id="24195" level="107" type="RaidBoss" name="Kain van Halter" title="Void Apostle">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="0" />
@@ -3063,7 +3063,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24196" level="106" type="L2Monster" name="Temple Dark Wizard">
+	<npc id="24196" level="106" type="Monster" name="Temple Dark Wizard">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17391" /> 
@@ -3089,7 +3089,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24197" level="106" type="L2Monster" name="Temple Flame Master">
+	<npc id="24197" level="106" type="Monster" name="Temple Flame Master">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17425" /> 
@@ -3115,7 +3115,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24198" level="107" type="L2Monster" name="Temple Archon">
+	<npc id="24198" level="107" type="Monster" name="Temple Archon">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17392" /> 
@@ -3141,7 +3141,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24199" level="85" type="L2Npc" name="Temple High Priest">
+	<npc id="24199" level="85" type="Npc" name="Temple High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

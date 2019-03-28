@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,11 +25,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBrPremiumState implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public ExBrPremiumState(L2PcInstance activeChar)
+	public ExBrPremiumState(PlayerInstance player)
 	{
-		_activeChar = activeChar;
+		_player = player;
 	}
 	
 	@Override
@@ -37,8 +37,8 @@ public class ExBrPremiumState implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_BR_PREMIUM_STATE.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeC(_activeChar.hasPremiumStatus() ? 0x01 : 0x00);
+		packet.writeD(_player.getObjectId());
+		packet.writeC(_player.hasPremiumStatus() ? 0x01 : 0x00);
 		return true;
 	}
 }

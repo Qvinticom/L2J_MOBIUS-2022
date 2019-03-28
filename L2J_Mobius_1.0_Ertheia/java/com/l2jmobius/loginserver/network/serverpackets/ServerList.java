@@ -27,7 +27,7 @@ import com.l2jmobius.commons.network.IOutgoingPacket;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
-import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.LoginClient;
 import com.l2jmobius.loginserver.network.OutgoingPackets;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 
@@ -82,7 +82,7 @@ public final class ServerList implements IOutgoingPacket
 		protected int _serverId;
 		protected int _serverType;
 		
-		ServerData(L2LoginClient client, GameServerInfo gsi)
+		ServerData(LoginClient client, GameServerInfo gsi)
 		{
 			try
 			{
@@ -111,7 +111,7 @@ public final class ServerList implements IOutgoingPacket
 		}
 	}
 	
-	public ServerList(L2LoginClient client)
+	public ServerList(LoginClient client)
 	{
 		_servers = new ArrayList<>(GameServerTable.getInstance().getRegisteredGameServers().size());
 		_lastServer = client.getLastServer();

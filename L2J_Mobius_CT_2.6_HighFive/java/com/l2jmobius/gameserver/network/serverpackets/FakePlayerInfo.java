@@ -20,8 +20,8 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.Sex;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.holders.FakePlayerHolder;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class FakePlayerInfo implements IClientOutgoingPacket
 {
-	private final L2Npc _npc;
+	private final Npc _npc;
 	private final int _objId;
 	private final int _x;
 	private final int _y;
@@ -48,9 +48,9 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 	private final double _moveMultiplier;
 	private final float _attackSpeedMultiplier;
 	private final FakePlayerHolder _fpcHolder;
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
-	public FakePlayerInfo(L2Npc npc)
+	public FakePlayerInfo(Npc npc)
 	{
 		_npc = npc;
 		_objId = npc.getObjectId();

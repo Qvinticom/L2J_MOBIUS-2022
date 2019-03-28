@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -34,7 +34,7 @@ public class ExMPCCPartyInfoUpdate implements IClientOutgoingPacket
 	 * @param party
 	 * @param mode 0 = Remove, 1 = Add
 	 */
-	public ExMPCCPartyInfoUpdate(L2Party party, int mode)
+	public ExMPCCPartyInfoUpdate(Party party, int mode)
 	{
 		_name = party.getLeader().getName();
 		_LeaderOID = party.getLeaderObjectId();

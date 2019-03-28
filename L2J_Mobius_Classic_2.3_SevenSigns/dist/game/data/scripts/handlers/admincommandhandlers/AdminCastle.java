@@ -24,8 +24,8 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.CastleSide;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -44,7 +44,7 @@ public final class AdminCastle implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -77,7 +77,7 @@ public final class AdminCastle implements IAdminCommandHandler
 				else
 				{
 					final String action = st.nextToken();
-					final L2PcInstance target = checkTarget(activeChar) ? activeChar.getActingPlayer() : null;
+					final PlayerInstance target = checkTarget(activeChar) ? activeChar.getActingPlayer() : null;
 					switch (action)
 					{
 						case "showRegWindow":
@@ -190,7 +190,7 @@ public final class AdminCastle implements IAdminCommandHandler
 						}
 						case "takeCastle":
 						{
-							final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+							final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 							if (clan != null)
 							{
 								castle.removeOwner(clan);
@@ -232,13 +232,13 @@ public final class AdminCastle implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showCastleMenu(L2PcInstance player, int castleId)
+	private void showCastleMenu(PlayerInstance player, int castleId)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 		
 		if (castle != null)
 		{
-			final L2Clan ownerClan = castle.getOwner();
+			final Clan ownerClan = castle.getOwner();
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setHtml(HtmCache.getInstance().getHtm(player, "data/html/admin/castlemanage_selected.htm"));
 			html.replace("%castleId%", castle.getResidenceId());
@@ -250,9 +250,9 @@ public final class AdminCastle implements IAdminCommandHandler
 		}
 	}
 	
-	private boolean checkTarget(L2PcInstance player)
+	private boolean checkTarget(PlayerInstance player)
 	{
-		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((L2PcInstance) player.getTarget()).getClan() != null));
+		return ((player.getTarget() != null) && player.getTarget().isPlayer() && (((PlayerInstance) player.getTarget()).getClan() != null));
 	}
 	
 	@Override

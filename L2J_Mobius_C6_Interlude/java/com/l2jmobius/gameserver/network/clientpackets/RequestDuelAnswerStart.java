@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Format:(ch) ddd
  */
-public final class RequestDuelAnswerStart extends L2GameClientPacket
+public final class RequestDuelAnswerStart extends GameClientPacket
 {
 	private int _partyDuel;
 	@SuppressWarnings("unused")
@@ -42,13 +42,13 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance requestor = player.getActiveRequester();
+		final PlayerInstance requestor = player.getActiveRequester();
 		
 		if (requestor == null)
 		{

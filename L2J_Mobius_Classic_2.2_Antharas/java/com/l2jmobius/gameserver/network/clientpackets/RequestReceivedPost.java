@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
 import com.l2jmobius.gameserver.network.serverpackets.ExReplyReceivedPost;
@@ -36,17 +36,17 @@ public final class RequestReceivedPost implements IClientIncomingPacket
 	private int _msgId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_msgId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || !Config.ALLOW_MAIL)
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || !Config.ALLOW_MAIL)
 		{
 			return;
 		}
@@ -57,15 +57,15 @@ public final class RequestReceivedPost implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!activeChar.isInsideZone(ZoneId.PEACE) && msg.hasAttachments())
+		if (!player.isInsideZone(ZoneId.PEACE) && msg.hasAttachments())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 			return;
 		}
 		
-		if (msg.getReceiverId() != activeChar.getObjectId())
+		if (msg.getReceiverId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to receive not own post!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to receive not own post!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

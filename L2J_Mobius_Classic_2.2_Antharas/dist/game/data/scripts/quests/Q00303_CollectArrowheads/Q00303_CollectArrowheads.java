@@ -16,8 +16,8 @@
  */
 package quests.Q00303_CollectArrowheads;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -48,39 +48,39 @@ public final class Q00303_CollectArrowheads extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equals("30029-04.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equals("30029-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		final PlayerInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
+			final QuestState qs = getQuestState(partyMember, false);
 			if (giveItemRandomly(player, npc, ORCISH_ARROWHEAD, 1, REQUIRED_ITEM_COUNT, 0.4, true))
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -89,7 +89,7 @@ public final class Q00303_CollectArrowheads extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -104,7 +104,7 @@ public final class Q00303_CollectArrowheads extends Quest
 						if (getQuestItemsCount(player, ORCISH_ARROWHEAD) >= REQUIRED_ITEM_COUNT)
 						{
 							giveAdena(player, 500, true);
-							st.exitQuest(true, true);
+							qs.exitQuest(true, true);
 							htmltext = "30029-06.html";
 						}
 						break;

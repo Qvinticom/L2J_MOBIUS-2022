@@ -23,28 +23,28 @@ import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.Formulas;
-import com.l2jmobius.gameserver.skills.l2skills.L2SkillSignetCasttime;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.skills.handlers.SkillSignetCasttime;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author Shyla
  */
-public final class EffectSignetMDam extends L2Effect
+public final class EffectSignetMDam extends Effect
 {
-	private L2EffectPointInstance _actor;
+	private EffectPointInstance _actor;
 	private boolean bss;
 	private boolean sps;
 	
@@ -62,29 +62,29 @@ public final class EffectSignetMDam extends L2Effect
 	@Override
 	public void onStart()
 	{
-		L2NpcTemplate template;
-		if (getSkill() instanceof L2SkillSignetCasttime)
+		NpcTemplate template;
+		if (getSkill() instanceof SkillSignetCasttime)
 		{
-			template = NpcTable.getInstance().getTemplate(((L2SkillSignetCasttime) getSkill())._effectNpcId);
+			template = NpcTable.getInstance().getTemplate(((SkillSignetCasttime) getSkill())._effectNpcId);
 		}
 		else
 		{
 			return;
 		}
 		
-		final L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
+		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		
-		L2World.getInstance().storeObject(effectPoint);
+		World.getInstance().storeObject(effectPoint);
 		
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
 		
-		if ((getEffector() instanceof L2PcInstance) && (getSkill().getTargetType() == L2Skill.SkillTargetType.TARGET_GROUND))
+		if ((getEffector() instanceof PlayerInstance) && (getSkill().getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
-			final Point3D wordPosition = ((L2PcInstance) getEffector()).getCurrentSkillWorldPosition();
+			final Point3D wordPosition = ((PlayerInstance) getEffector()).getCurrentSkillWorldPosition();
 			
 			if (wordPosition != null)
 			{
@@ -108,23 +108,23 @@ public final class EffectSignetMDam extends L2Effect
 		}
 		
 		final int mpConsume = getSkill().getMpConsume();
-		final L2PcInstance caster = (L2PcInstance) getEffector();
+		final PlayerInstance caster = (PlayerInstance) getEffector();
 		
 		sps = caster.checkSps();
 		bss = caster.checkBss();
 		
-		final List<L2Character> targets = new ArrayList<>();
+		final List<Creature> targets = new ArrayList<>();
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
-			if ((cha == null) || (cha == caster))
+			if ((creature == null) || (creature == caster))
 			{
 				continue;
 			}
 			
-			if ((cha instanceof L2Attackable) || (cha instanceof L2Playable))
+			if ((creature instanceof Attackable) || (creature instanceof Playable))
 			{
-				if (cha.isAlikeDead())
+				if (creature.isAlikeDead())
 				{
 					continue;
 				}
@@ -137,27 +137,27 @@ public final class EffectSignetMDam extends L2Effect
 				
 				caster.reduceCurrentMp(mpConsume);
 				
-				if (cha instanceof L2Playable)
+				if (creature instanceof Playable)
 				{
-					if ((!(cha instanceof L2Summon) || (((L2Summon) cha).getOwner() != caster)))
+					if ((!(creature instanceof Summon) || (((Summon) creature).getOwner() != caster)))
 					{
-						caster.updatePvPStatus(cha);
+						caster.updatePvPStatus(creature);
 					}
 				}
 				
-				targets.add(cha);
+				targets.add(creature);
 			}
 		}
 		
 		if (!targets.isEmpty())
 		{
-			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getDisplayId(), getSkill().getLevel(), targets.toArray(new L2Character[targets.size()])));
-			for (L2Character target : targets)
+			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getDisplayId(), getSkill().getLevel(), targets.toArray(new Creature[targets.size()])));
+			for (Creature target : targets)
 			{
 				final boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));
 				final int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), sps, bss, mcrit);
 				
-				if (target instanceof L2Summon)
+				if (target instanceof Summon)
 				{
 					target.broadcastStatusUpdate();
 				}
@@ -184,7 +184,7 @@ public final class EffectSignetMDam extends L2Effect
 	{
 		if (_actor != null)
 		{
-			final L2PcInstance caster = (L2PcInstance) getEffector();
+			final PlayerInstance caster = (PlayerInstance) getEffector();
 			
 			// remove shots
 			if (bss)

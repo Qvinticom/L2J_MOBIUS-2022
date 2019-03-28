@@ -22,7 +22,7 @@ import java.util.List;
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.CursedWeapon;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
 
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
  * Format: (ch)
  * @author ProGramMoS
  */
-public final class RequestCursedWeaponLocation extends L2GameClientPacket
+public final class RequestCursedWeaponLocation extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -41,8 +41,8 @@ public final class RequestCursedWeaponLocation extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2Character activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -65,7 +65,7 @@ public final class RequestCursedWeaponLocation extends L2GameClientPacket
 		
 		if (!list.isEmpty())
 		{
-			activeChar.sendPacket(new ExCursedWeaponLocation(list));
+			player.sendPacket(new ExCursedWeaponLocation(list));
 		}
 	}
 }

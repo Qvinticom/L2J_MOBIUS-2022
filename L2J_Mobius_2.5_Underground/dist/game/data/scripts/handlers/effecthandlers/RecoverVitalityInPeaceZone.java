@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.stat.PcStat;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -47,7 +47,7 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public boolean onActionTime(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if ((effected == null) //
 			|| effected.isDead() //
@@ -59,9 +59,9 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 		
 		long vitality = effected.getActingPlayer().getVitalityPoints();
 		vitality += _amount;
-		if (vitality >= PcStat.MAX_VITALITY_POINTS)
+		if (vitality >= PlayerStat.MAX_VITALITY_POINTS)
 		{
-			vitality = PcStat.MAX_VITALITY_POINTS;
+			vitality = PlayerStat.MAX_VITALITY_POINTS;
 		}
 		effected.getActingPlayer().setVitalityPoints((int) vitality, true);
 		
@@ -69,7 +69,7 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if ((effected != null) //
 			&& effected.isPlayer())
@@ -79,9 +79,9 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 			{
 				long vitality = effected.getActingPlayer().getVitalityPoints();
 				vitality += _amount * 100;
-				if (vitality >= PcStat.MAX_VITALITY_POINTS)
+				if (vitality >= PlayerStat.MAX_VITALITY_POINTS)
 				{
-					vitality = PcStat.MAX_VITALITY_POINTS;
+					vitality = PlayerStat.MAX_VITALITY_POINTS;
 				}
 				effected.getActingPlayer().setVitalityPoints((int) vitality, true);
 			}

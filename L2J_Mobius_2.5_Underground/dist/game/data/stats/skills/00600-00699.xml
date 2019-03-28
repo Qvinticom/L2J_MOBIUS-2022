@@ -1420,7 +1420,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Warrior Ability - Haste -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1443,7 +1443,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Knight Ability - Defense -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
@@ -1464,7 +1464,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Log Ability - Critical Chance -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1487,7 +1487,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Wizard Ability - Mana Steal -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1510,7 +1510,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Enchanter Ability - Barrier -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>

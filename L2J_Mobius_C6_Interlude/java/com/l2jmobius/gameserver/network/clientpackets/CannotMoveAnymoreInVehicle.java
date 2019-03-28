@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.util.Point3D;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
 /**
  * @author Maktakien
  */
-public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
+public final class CannotMoveAnymoreInVehicle extends GameClientPacket
 {
 	private int _x;
 	private int _y;
@@ -44,7 +44,7 @@ public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{

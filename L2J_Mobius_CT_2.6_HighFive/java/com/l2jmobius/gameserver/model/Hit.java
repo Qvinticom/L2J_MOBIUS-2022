@@ -30,7 +30,7 @@ public class Hit
 	private final int _damage;
 	private int _flags = 0;
 	
-	public Hit(L2Object target, int damage, boolean miss, boolean crit, byte shld, boolean soulshot, int ssGrade)
+	public Hit(WorldObject target, int damage, boolean miss, boolean crit, byte shld, boolean soulshot, int ssGrade)
 	{
 		_targetId = target.getObjectId();
 		_damage = damage;

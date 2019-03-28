@@ -25,10 +25,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -76,7 +76,7 @@ public class Core extends Quest
 	
 	private static boolean _firstAttacked;
 	
-	private static final List<L2Attackable> _minions = new CopyOnWriteArrayList<>();
+	private static final List<Attackable> _minions = new CopyOnWriteArrayList<>();
 	
 	public Core(int id, String name, String descr)
 	{
@@ -110,7 +110,7 @@ public class Core extends Quest
 			else
 			{
 				// The time has already expired while the server was offline. Immediately spawn Core.
-				final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+				final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
@@ -126,7 +126,7 @@ public class Core extends Quest
 			{
 				_firstAttacked = true;
 			}
-			final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
 				Announcements.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
@@ -142,29 +142,29 @@ public class Core extends Quest
 		saveGlobalQuestVar("Core_Attacked", val);
 	}
 	
-	public void spawnBoss(L2GrandBossInstance npc)
+	public void spawnBoss(GrandBossInstance npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		// Spawn minions
-		L2Attackable mob;
+		Attackable mob;
 		Location spawnLocation;
 		for (Entry<Integer, Location> spawn : MINNION_SPAWNS.entrySet())
 		{
 			spawnLocation = spawn.getValue();
-			mob = (L2Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), Rnd.get(61794), false, 0);
+			mob = (Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), Rnd.get(61794), false, 0);
 			_minions.add(mob);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(CORE);
 		
 		if (event.equals("core_unlock"))
 		{
-			final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
+			final GrandBossInstance core = (GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
 				Announcements.getInstance().announceToAll("Raid boss " + core.getName() + " spawned in world.");
@@ -178,13 +178,13 @@ public class Core extends Quest
 		}
 		else if (event.equals("spawn_minion") && (status == ALIVE))
 		{
-			_minions.add((L2Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0));
+			_minions.add((Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0));
 		}
 		else if (event.equals("despawn_minions"))
 		{
 			for (int i = 0; i < _minions.size(); i++)
 			{
-				final L2Attackable mob = _minions.get(i);
+				final Attackable mob = _minions.get(i);
 				if (mob != null)
 				{
 					mob.decayMe();
@@ -196,7 +196,7 @@ public class Core extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == CORE)
 		{
@@ -218,7 +218,7 @@ public class Core extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		final String name = npc.getName();

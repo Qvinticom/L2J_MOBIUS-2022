@@ -21,7 +21,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -60,7 +60,7 @@ public class ExShowCropInfo implements IClientOutgoingPacket
 				packet.writeQ(crop.getStartAmount()); // Buy
 				packet.writeQ(crop.getPrice()); // Buy price
 				packet.writeC(crop.getReward()); // Reward
-				final L2Seed seed = CastleManorManager.getInstance().getSeedByCrop(crop.getId());
+				final Seed seed = CastleManorManager.getInstance().getSeedByCrop(crop.getId());
 				if (seed == null)
 				{
 					packet.writeD(0); // Seed level

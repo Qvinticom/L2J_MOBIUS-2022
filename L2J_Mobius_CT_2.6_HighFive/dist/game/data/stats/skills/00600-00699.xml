@@ -401,7 +401,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
-			<target npcType="L2TrapInstance" />
+			<target npcType="TrapInstance" />
 		</cond>
 		<effect name="TrapRemove">
 			<param power="78" />
@@ -898,7 +898,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="2" />
 				<param skillId="5572" skillLevel="1" /> <!-- Warrior Ability - Haste -->
@@ -915,7 +915,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5573" skillLevel="1" /> <!-- Knight Ability - Defense -->
@@ -931,7 +931,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="2" />
 				<param skillId="5574" skillLevel="1" /> <!-- Log Ability - Critical Chance -->
@@ -948,7 +948,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="2" />
 				<param skillId="5575" skillLevel="1" /> <!-- Wizard Ability - Mana Steal -->
@@ -965,7 +965,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5576" skillLevel="1" /> <!-- Enchanter Ability - Barrier -->

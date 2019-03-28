@@ -20,10 +20,10 @@ import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class MercTicket implements IItemHandler
@@ -33,7 +33,7 @@ public class MercTicket implements IItemHandler
 	 * 1.e) Check if max number of tickets has been reached 1.f) Check if max number of tickets from this ticket's TYPE has been reached 2) If allowed, call the MercTicketManager to add the item and spawn in the world 3) Remove the item from the person's inventory
 	 */
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -42,8 +42,8 @@ public class MercTicket implements IItemHandler
 		}
 		
 		final int itemId = item.getId();
-		final L2PcInstance activeChar = (L2PcInstance) playable;
-		final Castle castle = CastleManager.getInstance().getCastle(activeChar);
+		final PlayerInstance player = (PlayerInstance) playable;
+		final Castle castle = CastleManager.getInstance().getCastle(player);
 		int castleId = -1;
 		if (castle != null)
 		{
@@ -53,17 +53,17 @@ public class MercTicket implements IItemHandler
 		// add check that certain tickets can only be placed in certain castles
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) != castleId)
 		{
-			activeChar.sendPacket(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE);
+			player.sendPacket(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE);
 			return false;
 		}
-		else if (!activeChar.isCastleLord(castleId))
+		else if (!player.isCastleLord(castleId))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_POSITION_MERCENARIES);
 			return false;
 		}
 		else if ((castle != null) && castle.getSiege().isInProgress())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
+			player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
 		
@@ -71,7 +71,7 @@ public class MercTicket implements IItemHandler
 		if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION)
 		{
 			// LOGGER.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
-			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
+			player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
 		// Checking the Seal of Strife status
@@ -82,7 +82,7 @@ public class MercTicket implements IItemHandler
 				if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
 				{
 					// LOGGER.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
-					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
+					player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 					return false;
 				}
 				break;
@@ -92,7 +92,7 @@ public class MercTicket implements IItemHandler
 				if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
 				{
 					// LOGGER.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
-					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
+					player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 					return false;
 				}
 				break;
@@ -105,23 +105,23 @@ public class MercTicket implements IItemHandler
 		
 		if (MercTicketManager.getInstance().isAtCasleLimit(item.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
+			player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
 		else if (MercTicketManager.getInstance().isAtTypeLimit(item.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
+			player.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
-		else if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(activeChar.getX(), activeChar.getY(), activeChar.getZ()))
+		else if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(player.getX(), player.getY(), player.getZ()))
 		{
-			activeChar.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_HERE_BECAUSE_THE_DISTANCE_BETWEEN_MERCENARIES_IS_TOO_SHORT);
+			player.sendPacket(SystemMessageId.POSITIONING_CANNOT_BE_DONE_HERE_BECAUSE_THE_DISTANCE_BETWEEN_MERCENARIES_IS_TOO_SHORT);
 			return false;
 		}
 		
-		MercTicketManager.getInstance().addTicket(item.getId(), activeChar);
-		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
-		activeChar.sendPacket(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
+		MercTicketManager.getInstance().addTicket(item.getId(), player);
+		player.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
+		player.sendPacket(SystemMessageId.PLACE_S1_IN_THE_CURRENT_LOCATION_AND_DIRECTION_DO_YOU_WISH_TO_CONTINUE);
 		return true;
 	}
 }

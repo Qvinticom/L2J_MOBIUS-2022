@@ -19,18 +19,18 @@ package handlers.effecthandlers;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillUse;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillUse;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger Skill By Skill effect implementation.
@@ -41,7 +41,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	private final int _castSkillId;
 	private final int _chance;
 	private final SkillHolder _skill;
-	private final L2TargetType _targetType;
+	private final TargetType _targetType;
 	
 	/**
 	 * @param attachCond
@@ -57,7 +57,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 		_castSkillId = params.getInt("castSkillId", 0);
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
-		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.ONE);
+		_targetType = params.getEnum("targetType", TargetType.class, TargetType.ONE);
 	}
 	
 	public void onSkillUseEvent(OnCreatureSkillUse event)
@@ -85,16 +85,16 @@ public final class TriggerSkillBySkill extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getCaster(), false, event.getTarget());
+		final WorldObject[] targets = targetHandler.getTargetList(triggerSkill, event.getCaster(), false, event.getTarget());
 		
-		for (L2Object triggerTarget : targets)
+		for (WorldObject triggerTarget : targets)
 		{
-			if ((triggerTarget == null) || !triggerTarget.isCharacter())
+			if ((triggerTarget == null) || !triggerTarget.isCreature())
 			{
 				continue;
 			}
 			
-			final L2Character targetChar = (L2Character) triggerTarget;
+			final Creature targetChar = (Creature) triggerTarget;
 			if (!targetChar.isInvul())
 			{
 				event.getCaster().makeTriggerCast(triggerSkill, targetChar);

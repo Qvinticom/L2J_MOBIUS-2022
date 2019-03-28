@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.Optional;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -31,16 +31,16 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class ShotsBonusFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
 		double baseValue = 1;
 		double rubyBonus = 0;
-		final L2PcInstance player = creature.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		if (player != null)
 		{
-			final L2ItemInstance weapon = player.getActiveWeaponInstance();
+			final ItemInstance weapon = player.getActiveWeaponInstance();
 			if ((weapon != null) && weapon.isEnchanted())
 			{
 				baseValue += (weapon.getEnchantLevel() * 0.7) / 100;

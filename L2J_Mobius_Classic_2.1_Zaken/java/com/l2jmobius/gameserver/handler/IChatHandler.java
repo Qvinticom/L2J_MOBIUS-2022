@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Interface for chat handlers
@@ -28,11 +28,11 @@ public interface IChatHandler
 	/**
 	 * Handles a specific type of chat messages
 	 * @param type
-	 * @param activeChar
+	 * @param player
 	 * @param target
 	 * @param text
 	 */
-	void handleChat(ChatType type, L2PcInstance activeChar, String target, String text);
+	void handleChat(ChatType type, PlayerInstance player, String target, String text);
 	
 	/**
 	 * Returns a list of all chat types registered to this handler

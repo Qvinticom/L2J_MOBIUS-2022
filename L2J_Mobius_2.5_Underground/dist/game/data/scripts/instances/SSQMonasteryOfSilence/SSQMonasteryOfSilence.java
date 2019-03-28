@@ -19,8 +19,8 @@ package instances.SSQMonasteryOfSilence;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -91,31 +91,31 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		
 		if (firstEnter)
 		{
-			final L2Npc elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId());
+			final Npc elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId());
 			startQuestTimer("FOLLOW", 3000, elcadia, player);
 			
-			final L2Npc guardianStaff = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
+			final Npc guardianStaff = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
 			guardianStaff.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianStaff.setIsInvul(true);
-			final L2Npc guardianSword = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
+			final Npc guardianSword = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
 			guardianSword.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianSword.setIsInvul(true);
-			final L2Npc guardianShield = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
+			final Npc guardianShield = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
 			guardianShield.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianShield.setIsInvul(true);
-			final L2Npc guardianScroll = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
+			final Npc guardianScroll = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
 			guardianScroll.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianScroll.setIsInvul(true);
 		}
 		else
 		{
-			final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+			final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 			if (elcadia != null)
 			{
 				elcadia.teleToLocation(player);
@@ -126,12 +126,12 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
 		{
-			final L2Npc elcadia = world.getNpc(ELCADIA_INSTANCE);
+			final Npc elcadia = world.getNpc(ELCADIA_INSTANCE);
 			switch (event)
 			{
 				case "TELE2":
@@ -222,7 +222,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{

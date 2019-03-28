@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import com.l2jmobius.gameserver.util.Util;
 
-public class SetPrivateStoreListSell extends L2GameClientPacket
+public class SetPrivateStoreListSell extends GameClientPacket
 {
 	private int _count;
 	private boolean _packageSale;
@@ -67,7 +67,7 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -117,8 +117,8 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 			
 			if (price <= 0)
 			{
-				final String msgErr = "[SetPrivateStoreListSell] player " + getClient().getActiveChar().getName() + " tried an overflow exploit (use PHX), ban this player!";
-				Util.handleIllegalPlayerAction(getClient().getActiveChar(), msgErr, Config.DEFAULT_PUNISH);
+				final String msgErr = "[SetPrivateStoreListSell] player " + getClient().getPlayer().getName() + " tried an overflow exploit (use PHX), ban this player!";
+				Util.handleIllegalPlayerAction(getClient().getPlayer(), msgErr, Config.DEFAULT_PUNISH);
 				_count = 0;
 				return;
 			}
@@ -136,7 +136,7 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 		
 		if (_count <= 0)
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
 			return;
 		}
@@ -159,11 +159,11 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 		player.sitDown();
 		if (_packageSale)
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_PACKAGE_SELL);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_PACKAGE_SELL);
 		}
 		else
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_SELL);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_SELL);
 		}
 		player.broadcastUserInfo();
 		player.broadcastPacket(new PrivateStoreMsgSell(player));

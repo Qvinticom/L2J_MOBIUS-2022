@@ -18,20 +18,20 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.instancemanager.TownManager;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik Mode : 0 - add 1 - modify 2 - quit
  */
-public class ExManagePartyRoomMember extends L2GameServerPacket
+public class ExManagePartyRoomMember extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExManagePartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode)
+	public ExManagePartyRoomMember(PlayerInstance player, PartyMatchRoom room, int mode)
 	{
-		_activeChar = player;
+		_player = player;
 		_room = room;
 		_mode = mode;
 	}
@@ -42,16 +42,16 @@ public class ExManagePartyRoomMember extends L2GameServerPacket
 		writeC(0xfe);
 		writeH(0x10);
 		writeD(_mode);
-		writeD(_activeChar.getObjectId());
-		writeS(_activeChar.getName());
-		writeD(_activeChar.getActiveClass());
-		writeD(_activeChar.getLevel());
-		writeD(TownManager.getClosestLocation(_activeChar));
-		if (_room.getOwner().equals(_activeChar))
+		writeD(_player.getObjectId());
+		writeS(_player.getName());
+		writeD(_player.getActiveClass());
+		writeD(_player.getLevel());
+		writeD(TownManager.getClosestLocation(_player));
+		if (_room.getOwner().equals(_player))
 		{
 			writeD(1);
 		}
-		else if ((_room.getOwner().isInParty() && _activeChar.isInParty()) && (_room.getOwner().getParty().getPartyLeaderOID() == _activeChar.getParty().getPartyLeaderOID()))
+		else if ((_room.getOwner().isInParty() && _player.isInParty()) && (_room.getOwner().getParty().getPartyLeaderOID() == _player.getParty().getPartyLeaderOID()))
 		{
 			writeD(2);
 		}

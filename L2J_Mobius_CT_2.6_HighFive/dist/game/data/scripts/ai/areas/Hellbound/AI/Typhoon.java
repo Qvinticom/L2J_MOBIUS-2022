@@ -17,9 +17,9 @@
 package ai.areas.Hellbound.AI;
 
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -40,7 +40,7 @@ public final class Typhoon extends AbstractNpcAI
 		addAggroRangeEnterId(TYPHOON);
 		addSpawnId(TYPHOON);
 		
-		final L2RaidBossInstance boss = RaidBossSpawnManager.getInstance().getBosses().get(TYPHOON);
+		final RaidBossInstance boss = RaidBossSpawnManager.getInstance().getBosses().get(TYPHOON);
 		if (boss != null)
 		{
 			onSpawn(boss);
@@ -48,7 +48,7 @@ public final class Typhoon extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("CAST") && (npc != null) && !npc.isDead())
 		{
@@ -59,14 +59,14 @@ public final class Typhoon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		npc.doSimultaneousCast(STORM.getSkill());
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		startQuestTimer("CAST", 5000, npc, null);
 		return super.onSpawn(npc);

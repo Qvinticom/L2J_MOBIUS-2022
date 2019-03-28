@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -29,20 +29,20 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GmViewQuestInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public GmViewQuestInfo(L2PcInstance cha)
+	public GmViewQuestInfo(PlayerInstance player)
 	{
-		_activeChar = cha;
+		_player = player;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_QUEST_INFO.writeId(packet);
-		packet.writeS(_activeChar.getName());
+		packet.writeS(_player.getName());
 		
-		final List<Quest> questList = _activeChar.getAllActiveQuests();
+		final List<Quest> questList = _player.getAllActiveQuests();
 		
 		if (questList.size() == 0)
 		{
@@ -58,7 +58,7 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(q.getId());
 			
-			final QuestState qs = _activeChar.getQuestState(q.getName());
+			final QuestState qs = _player.getQuestState(q.getName());
 			
 			if (qs == null)
 			{

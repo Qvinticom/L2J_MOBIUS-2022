@@ -24,17 +24,17 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantResultType;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -50,7 +50,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 	private int _supportId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_supportId = packet.readD();
@@ -58,15 +58,15 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		final EnchantItemRequest request = player.getRequest(EnchantItemRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			return;
@@ -75,25 +75,25 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		request.setEnchantingItem(_objectId);
 		request.setProcessing(true);
 		
-		if (!activeChar.isOnline() || client.isDetached())
+		if (!player.isOnline() || client.isDetached())
 		{
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
-		if (activeChar.isProcessingTransaction() || activeChar.isInStoreMode())
+		if (player.isProcessingTransaction() || player.isInStoreMode())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
-		final L2ItemInstance item = request.getEnchantingItem();
-		final L2ItemInstance scroll = request.getEnchantingScroll();
-		final L2ItemInstance support = request.getSupportItem();
+		final ItemInstance item = request.getEnchantingItem();
+		final ItemInstance scroll = request.getEnchantingScroll();
+		final ItemInstance support = request.getSupportItem();
 		if ((item == null) || (scroll == null))
 		{
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -110,7 +110,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		{
 			if (support.getObjectId() != _supportId)
 			{
-				activeChar.removeRequest(request.getClass());
+				player.removeRequest(request.getClass());
 				return;
 			}
 			supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
@@ -120,7 +120,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel())))
 		{
 			client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
@@ -128,18 +128,18 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		// fast auto-enchant cheat check
 		if ((request.getTimestamp() == 0) || ((System.currentTimeMillis() - request.getTimestamp()) < 2000))
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
-			activeChar.removeRequest(request.getClass());
+			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
+			player.removeRequest(request.getClass());
 			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
 		
 		// attempting to destroy scroll
-		if (activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item) == null)
+		if (player.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, player, item) == null)
 		{
 			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
-			activeChar.removeRequest(request.getClass());
+			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
+			player.removeRequest(request.getClass());
 			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
 		}
@@ -147,11 +147,11 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		// attempting to destroy support if exist
 		if (support != null)
 		{
-			if (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null)
+			if (player.getInventory().destroyItem("Enchant", support.getObjectId(), 1, player, item) == null)
 			{
 				client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
-				activeChar.removeRequest(request.getClass());
+				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
+				player.removeRequest(request.getClass());
 				client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
 			}
@@ -161,29 +161,29 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		synchronized (item)
 		{
 			// last validation check
-			if ((item.getOwnerId() != activeChar.getObjectId()) || (item.isEnchantable() == 0))
+			if ((item.getOwnerId() != player.getObjectId()) || (item.isEnchantable() == 0))
 			{
 				client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.removeRequest(request.getClass());
+				player.removeRequest(request.getClass());
 				client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
 			}
 			
-			final EnchantResultType resultType = scrollTemplate.calculateSuccess(activeChar, item, supportTemplate);
+			final EnchantResultType resultType = scrollTemplate.calculateSuccess(player, item, supportTemplate);
 			switch (resultType)
 			{
 				case ERROR:
 				{
 					client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-					activeChar.removeRequest(request.getClass());
+					player.removeRequest(request.getClass());
 					client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 					break;
 				}
 				case SUCCESS:
 				{
-					final L2Item it = item.getItem();
+					final Item it = item.getItem();
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
-					if (scrollTemplate.getChance(activeChar, item) > 0)
+					if (scrollTemplate.getChance(player, item) > 0)
 					{
 						if (scrollTemplate.isGiant())
 						{
@@ -210,20 +210,20 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 						{
 							if (support == null)
 							{
-								LOGGER_ENCHANT.info("Success, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+								LOGGER_ENCHANT.info("Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 							}
 							else
 							{
-								LOGGER_ENCHANT.info("Success, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+								LOGGER_ENCHANT.info("Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 							}
 						}
 						else if (support == null)
 						{
-							LOGGER_ENCHANT.info("Success, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+							LOGGER_ENCHANT.info("Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 						}
 						else
 						{
-							LOGGER_ENCHANT.info("Success, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+							LOGGER_ENCHANT.info("Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 						}
 					}
 					
@@ -233,15 +233,15 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					if ((item.getEnchantLevel() == minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
 					{
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
-						sm.addString(activeChar.getName());
+						sm.addString(player.getName());
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
-						activeChar.broadcastPacket(sm);
+						player.broadcastPacket(sm);
 						
 						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)
 						{
-							activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							player.broadcastPacket(new MagicSkillUse(player, player, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
 						}
 					}
 					
@@ -254,12 +254,12 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								// add skills bestowed from +4 armor
 								if (item.getEnchantLevel() >= holder.getValue())
 								{
-									activeChar.addSkill(holder.getSkill(), false);
-									activeChar.sendSkillList();
+									player.addSkill(holder.getSkill(), false);
+									player.sendSkillList();
 								}
 							});
 						}
-						activeChar.broadcastUserInfo(); // update user info
+						player.broadcastUserInfo(); // update user info
 					}
 					break;
 				}
@@ -277,20 +277,20 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 							{
 								if (support == null)
 								{
-									LOGGER_ENCHANT.info("Safe Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+									LOGGER_ENCHANT.info("Safe Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 								}
 								else
 								{
-									LOGGER_ENCHANT.info("Safe Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+									LOGGER_ENCHANT.info("Safe Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 								}
 							}
 							else if (support == null)
 							{
-								LOGGER_ENCHANT.info("Safe Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+								LOGGER_ENCHANT.info("Safe Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 							}
 							else
 							{
-								LOGGER_ENCHANT.info("Safe Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+								LOGGER_ENCHANT.info("Safe Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 							}
 						}
 					}
@@ -313,14 +313,14 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								client.sendPacket(sm);
 							}
 							
-							final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
-							for (L2ItemInstance itm : unequiped)
+							final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
+							for (ItemInstance itm : unequiped)
 							{
 								iu.addModifiedItem(itm);
 							}
 							
-							activeChar.sendInventoryUpdate(iu);
-							activeChar.broadcastUserInfo();
+							player.sendInventoryUpdate(iu);
+							player.broadcastUserInfo();
 						}
 						
 						if (scrollTemplate.isBlessed() || ((supportTemplate != null) && supportTemplate.isBlessed()))
@@ -338,20 +338,20 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								{
 									if (support == null)
 									{
-										LOGGER_ENCHANT.info("Blessed Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+										LOGGER_ENCHANT.info("Blessed Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 									}
 									else
 									{
-										LOGGER_ENCHANT.info("Blessed Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+										LOGGER_ENCHANT.info("Blessed Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 									}
 								}
 								else if (support == null)
 								{
-									LOGGER_ENCHANT.info("Blessed Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+									LOGGER_ENCHANT.info("Blessed Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 								}
 								else
 								{
-									LOGGER_ENCHANT.info("Blessed Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+									LOGGER_ENCHANT.info("Blessed Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 								}
 							}
 						}
@@ -365,11 +365,11 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								count = 1;
 							}
 							
-							if (activeChar.getInventory().destroyItem("Enchant", item, activeChar, null) == null)
+							if (player.getInventory().destroyItem("Enchant", item, player, null) == null)
 							{
 								// unable to destroy item, cheater ?
-								Util.handleIllegalPlayerAction(activeChar, "Unable to delete item on enchant failure from player " + activeChar.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
-								activeChar.removeRequest(request.getClass());
+								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
+								player.removeRequest(request.getClass());
 								client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 								
 								if (Config.LOG_ITEM_ENCHANTS)
@@ -378,30 +378,30 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 									{
 										if (support == null)
 										{
-											LOGGER_ENCHANT.info("Unable to destroy, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+											LOGGER_ENCHANT.info("Unable to destroy, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 										}
 										else
 										{
-											LOGGER_ENCHANT.info("Unable to destroy, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+											LOGGER_ENCHANT.info("Unable to destroy, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 										}
 									}
 									else if (support == null)
 									{
-										LOGGER_ENCHANT.info("Unable to destroy, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+										LOGGER_ENCHANT.info("Unable to destroy, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 									}
 									else
 									{
-										LOGGER_ENCHANT.info("Unable to destroy, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+										LOGGER_ENCHANT.info("Unable to destroy, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 									}
 								}
 								return;
 							}
 							
-							L2World.getInstance().removeObject(item);
-							L2ItemInstance crystals = null;
+							World.getInstance().removeObject(item);
+							ItemInstance crystals = null;
 							if (crystalId != 0)
 							{
-								crystals = activeChar.getInventory().addItem("Enchant", crystalId, count, activeChar, item);
+								crystals = player.getInventory().addItem("Enchant", crystalId, count, player, item);
 								
 								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 								sm.addItemName(crystals);
@@ -432,20 +432,20 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								{
 									if (support == null)
 									{
-										LOGGER_ENCHANT.info("Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+										LOGGER_ENCHANT.info("Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 									}
 									else
 									{
-										LOGGER_ENCHANT.info("Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+										LOGGER_ENCHANT.info("Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + item.getEnchantLevel() + " " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 									}
 								}
 								else if (support == null)
 								{
-									LOGGER_ENCHANT.info("Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
+									LOGGER_ENCHANT.info("Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "]");
 								}
 								else
 								{
-									LOGGER_ENCHANT.info("Fail, Character:" + activeChar.getName() + " [" + activeChar.getObjectId() + "] Account:" + activeChar.getAccountName() + " IP:" + activeChar.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
+									LOGGER_ENCHANT.info("Fail, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", " + item.getName() + "(" + item.getCount() + ") [" + item.getObjectId() + "], " + scroll.getName() + "(" + scroll.getCount() + ") [" + scroll.getObjectId() + "], " + support.getName() + "(" + support.getCount() + ") [" + support.getObjectId() + "]");
 								}
 							}
 						}
@@ -486,15 +486,15 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					}
 				}
 				
-				activeChar.sendInventoryUpdate(iu);
+				player.sendInventoryUpdate(iu);
 			}
 			else
 			{
-				activeChar.sendItemList();
+				player.sendItemList();
 			}
 			
 			request.setProcessing(false);
-			activeChar.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
+			player.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
 		}
 	}
 }

@@ -22,8 +22,8 @@ import java.util.Set;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -67,10 +67,10 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -86,19 +86,19 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			case "33851-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31683-02.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 178732196, 261);
 						giveStoryQuestReward(npc, player);
-						st.exitQuest(QuestType.ONE_TIME, true);
+						qs.exitQuest(QuestType.ONE_TIME, true);
 						htmltext = event;
 					}
 					else
@@ -113,12 +113,12 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -130,11 +130,11 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1) && (npc.getId() == JANITT))
+				if (qs.isCond(1) && (npc.getId() == JANITT))
 				{
 					htmltext = "33851-05.html";
 				}
-				if (st.isCond(2) && (npc.getId() == EYE_OF_ARGOS))
+				if (qs.isCond(2) && (npc.getId() == EYE_OF_ARGOS))
 				{
 					htmltext = "31683-01.html";
 				}
@@ -153,7 +153,7 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
@@ -173,7 +173,7 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1))

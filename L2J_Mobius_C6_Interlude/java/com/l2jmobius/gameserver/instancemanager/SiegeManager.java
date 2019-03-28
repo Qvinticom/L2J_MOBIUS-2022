@@ -34,11 +34,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.entity.siege.Siege;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -75,7 +75,7 @@ public class SiegeManager
 		load();
 	}
 	
-	public final void addSiegeSkills(L2PcInstance character)
+	public final void addSiegeSkills(PlayerInstance character)
 	{
 		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
 		character.addSkill(SkillTable.getInstance().getInfo(247, 1), false);
@@ -84,19 +84,19 @@ public class SiegeManager
 	/**
 	 * Return true if character summon<BR>
 	 * <BR>
-	 * @param activeChar The L2Character of the character can summon
+	 * @param creature The Creature of the creature can summon
 	 * @param isCheckOnly
 	 * @return
 	 */
-	public final boolean checkIfOkToSummon(L2Character activeChar, boolean isCheckOnly)
+	public final boolean checkIfOkToSummon(Creature creature, boolean isCheckOnly)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return false;
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
-		L2PcInstance player = (L2PcInstance) activeChar;
+		PlayerInstance player = (PlayerInstance) creature;
 		Castle castle = CastleManager.getInstance().getCastle(player);
 		
 		if ((castle == null) || (castle.getCastleId() <= 0))
@@ -124,7 +124,7 @@ public class SiegeManager
 		return false;
 	}
 	
-	public final boolean checkIsRegisteredInSiege(L2Clan clan)
+	public final boolean checkIsRegisteredInSiege(Clan clan)
 	{
 		
 		for (Castle castle : CastleManager.getInstance().getCastles())
@@ -140,11 +140,11 @@ public class SiegeManager
 	/**
 	 * Return true if the clan is registered or owner of a castle<BR>
 	 * <BR>
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @param castleid
 	 * @return
 	 */
-	public final boolean checkIsRegistered(L2Clan clan, int castleid)
+	public final boolean checkIsRegistered(Clan clan, int castleid)
 	{
 		if (clan == null)
 		{
@@ -182,7 +182,7 @@ public class SiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(L2PcInstance character)
+	public final void removeSiegeSkills(PlayerInstance character)
 	{
 		character.removeSkill(SkillTable.getInstance().getInfo(246, 1));
 		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
@@ -351,7 +351,7 @@ public class SiegeManager
 		return _flagMaxCount;
 	}
 	
-	public final Siege getSiege(L2Object activeObject)
+	public final Siege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}

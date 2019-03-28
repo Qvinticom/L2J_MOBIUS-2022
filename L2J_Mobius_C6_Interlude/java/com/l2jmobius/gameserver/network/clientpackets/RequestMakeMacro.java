@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Macro;
-import com.l2jmobius.gameserver.model.L2Macro.L2MacroCmd;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Macro;
+import com.l2jmobius.gameserver.model.Macro.MacroCmd;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestMakeMacro extends L2GameClientPacket
+public final class RequestMakeMacro extends GameClientPacket
 {
-	private L2Macro _macro;
+	private Macro _macro;
 	private int _commandsLenght = 0;
 	private static final int MAX_MACRO_LENGTH = 12;
 	
@@ -49,7 +49,7 @@ public final class RequestMakeMacro extends L2GameClientPacket
 			_count = MAX_MACRO_LENGTH;
 		}
 		
-		final L2MacroCmd[] commands = new L2MacroCmd[_count];
+		final MacroCmd[] commands = new MacroCmd[_count];
 		for (int i = 0; i < _count; i++)
 		{
 			final int entry = readC();
@@ -58,15 +58,15 @@ public final class RequestMakeMacro extends L2GameClientPacket
 			final int d2 = readC();
 			final String command = readS();
 			_commandsLenght += command.length() + 1;
-			commands[i] = new L2MacroCmd(entry, type, d1, d2, command);
+			commands[i] = new MacroCmd(entry, type, d1, d2, command);
 		}
-		_macro = new L2Macro(_id, _icon, _name, _desc, _acronym, commands);
+		_macro = new Macro(_id, _icon, _name, _desc, _acronym, commands);
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -108,7 +108,7 @@ public final class RequestMakeMacro extends L2GameClientPacket
 		}
 		
 		// Security Check
-		for (L2MacroCmd command : _macro.commands)
+		for (MacroCmd command : _macro.commands)
 		{
 			if (!checkSecurityOnCommand(command))
 			{
@@ -122,7 +122,7 @@ public final class RequestMakeMacro extends L2GameClientPacket
 		player.registerMacro(_macro);
 	}
 	
-	private boolean checkSecurityOnCommand(L2MacroCmd cmd)
+	private boolean checkSecurityOnCommand(MacroCmd cmd)
 	{
 		// not more then 2x ;
 		if ((cmd.cmd != null) && (cmd.cmd.split(";").length > 2))

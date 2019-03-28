@@ -30,21 +30,21 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoDManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.CommandChannel;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -57,16 +57,16 @@ public class SeedOfDestruction extends AbstractNpcAI
 {
 	private class SODWorld extends InstanceWorld
 	{
-		public Map<L2Npc, Boolean> npcList = new HashMap<>();
+		public Map<Npc, Boolean> npcList = new HashMap<>();
 		public int killedDevice = 0;
 		public int deviceSpawnedMobCount = 0;
 		public boolean ZoneWaitForTP = true;
-		public List<L2Npc> _mags = new ArrayList<>();
-		L2Npc _tiat;
-		L2Npc _naezdTR1;
-		L2Npc _naezdTR2;
-		L2Npc _naezdTL1;
-		L2Npc _naezdTL2;
+		public List<Npc> _mags = new ArrayList<>();
+		Npc _tiat;
+		Npc _naezdTR1;
+		Npc _naezdTR2;
+		Npc _naezdTL1;
+		Npc _naezdTL2;
 		
 		public SODWorld(Long time)
 		{
@@ -815,7 +815,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		addEnterZoneId(25253);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	private boolean checkConditions(PlayerInstance player)
 	{
 		if (DEBUG || player.isGM())
 		{
@@ -827,7 +827,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 			return false;
 		}
-		final L2CommandChannel channel = player.getParty().getCommandChannel();
+		final CommandChannel channel = player.getParty().getCommandChannel();
 		if (channel == null)
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
@@ -843,7 +843,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
 			return false;
 		}
-		for (L2PcInstance channelMember : channel.getMembers())
+		for (PlayerInstance channelMember : channel.getMembers())
 		{
 			if (channelMember.getLevel() < Config.MIN_TIAT_LEVEL)
 			{
@@ -871,7 +871,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		return true;
 	}
 	
-	private int checkworld(L2PcInstance player)
+	private int checkworld(PlayerInstance player)
 	{
 		final InstanceWorld checkworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (checkworld != null)
@@ -885,7 +885,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		return 2;
 	}
 	
-	protected int enterInstance(L2PcInstance player, teleCoord teleto)
+	protected int enterInstance(PlayerInstance player, teleCoord teleto)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		final int inst = checkworld(player);
@@ -912,7 +912,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			InstanceManager.getInstance().addWorld(world);
 			spawnState((SODWorld) world);
 			final int instanceId = world.getInstanceId();
-			for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
+			for (DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
 			{
 				if (CommonUtil.contains(ATTACKABLE_DOORS, door.getId()))
 				{
@@ -933,7 +933,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			else if (player.getParty().getCommandChannel() != null)
 			{
-				for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
+				for (PlayerInstance channelMember : player.getParty().getCommandChannel().getMembers())
 				{
 					player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
 					InstanceManager.getInstance().setInstanceTime(channelMember.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
@@ -944,7 +944,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
 					InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
@@ -957,7 +957,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 	}
 	
-	private static void removeBuffs(L2Character ch)
+	private static void removeBuffs(Creature ch)
 	{
 		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
 		if (ch.hasSummon())
@@ -966,7 +966,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 	}
 	
-	private void teleportplayerEnergy(L2PcInstance player, teleCoord teleto)
+	private void teleportplayerEnergy(PlayerInstance player, teleCoord teleto)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(teleto.instanceId);
@@ -974,12 +974,12 @@ public class SeedOfDestruction extends AbstractNpcAI
 		return;
 	}
 	
-	private void teleportplayer(L2PcInstance player, teleCoord teleto, SODWorld world)
+	private void teleportplayer(PlayerInstance player, teleCoord teleto, SODWorld world)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(teleto.instanceId);
 		player.teleToLocation(teleto.x, teleto.y, teleto.z);
-		final L2Summon pet = player.getSummon();
+		final Summon pet = player.getSummon();
 		if (pet != null)
 		{
 			pet.setInstanceId(teleto.instanceId);
@@ -987,7 +987,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 	}
 	
-	protected boolean checkKillProgress(L2Npc mob, SODWorld world)
+	protected boolean checkKillProgress(Npc mob, SODWorld world)
 	{
 		if (world.npcList.containsKey(mob))
 		{
@@ -1110,7 +1110,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				continue;
 			}
 			
-			final L2Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], mob[4], false, 0, false, world.getInstanceId());
+			final Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], mob[4], false, 0, false, world.getInstanceId());
 			if (addToKillTable)
 			{
 				world.npcList.put(npc, false);
@@ -1119,7 +1119,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			npc.setRandomWalking(false);
 			if (npc.isAttackable())
 			{
-				((L2Attackable) npc).setSeeThroughSilentMove(true);
+				((Attackable) npc).setSeeThroughSilentMove(true);
 			}
 			if (mob[0] == SPAWN_DEVICE)
 			{
@@ -1162,7 +1162,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	
 	private void sendScreenMessage(SODWorld world, ExShowScreenMessage message)
 	{
-		for (L2PcInstance player : world.getAllowed())
+		for (PlayerInstance player : world.getAllowed())
 		{
 			if (player != null)
 			{
@@ -1172,20 +1172,20 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.disableCoreAI(true);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof SODWorld)
@@ -1222,7 +1222,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc != null ? npc : player);
 		if (tmpworld instanceof SODWorld)
@@ -1243,22 +1243,22 @@ public class SeedOfDestruction extends AbstractNpcAI
 				
 				for (int i = 0; i < 12; i++)
 				{
-					final L2Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
+					final Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
 					npc1.setRandomWalking(false);
 					world._mags.add(npc1);
 					
-					final L2Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
+					final Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
 					npc2.setRandomWalking(false);
 				}
 				for (int i = 0; i < 6; i++)
 				{
-					final L2Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
+					final Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
 					npc3.setRandomWalking(false);
 					
-					final L2Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
+					final Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
 					npc4.setRandomWalking(false);
 					
-					final L2Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
+					final Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
 					npc5.setRandomWalking(false);
 				}
 				
@@ -1267,16 +1267,16 @@ public class SeedOfDestruction extends AbstractNpcAI
 			else if (event.equals("KillTiatPart1"))
 			{
 				playMovie(world, Movie.SC_BOSS_TIAT_ENDING_SUCCES);
-				InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs().forEach(L2Npc::deleteMe);
+				InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs().forEach(Npc::deleteMe);
 			}
 			else if (event.equals("Spawn"))
 			{
 				if (world.getStatus() <= 7)
 				{
-					final L2PcInstance target = world.getAllowed().stream().findAny().get();
+					final PlayerInstance target = world.getAllowed().stream().findAny().get();
 					if ((world.deviceSpawnedMobCount < MAX_DEVICE_SPAWNED_MOB_COUNT) && (target != null) && ((npc != null) && (target.getInstanceId() == npc.getInstanceId())) && !target.isDead())
 					{
-						final L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
+						final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
 						world.deviceSpawnedMobCount++;
 						mob.setSeeThroughSilentMove(true);
 						mob.setRunning();
@@ -1289,7 +1289,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		if (npc.getId() == SPAWN_DEVICE)
 		{
@@ -1340,7 +1340,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				{
 					world.incStatus();
 					SoDManager.getInstance().increaseSoDTiatKilled();
-					for (L2Npc mob : InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs())
+					for (Npc mob : InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs())
 					{
 						mob.deleteMe();
 					}
@@ -1354,7 +1354,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				}
 				else if (npc.getId() == NAEZD)
 				{
-					final L2Attackable mob = (L2Attackable) addSpawn(npc.getId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
+					final Attackable mob = (Attackable) addSpawn(npc.getId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
 					mob.setRandomWalking(false);
 					mob.setSeeThroughSilentMove(true);
 					mob.setIsRaidMinion(true);
@@ -1375,7 +1375,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		QuestState qs = player.getQuestState(getName());
@@ -1421,7 +1421,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (DEBUG)
 		{
@@ -1454,22 +1454,22 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character);
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(creature);
 			if (tmpworld instanceof SODWorld)
 			{
 				final SODWorld world = (SODWorld) tmpworld;
 				if ((zone.getId() == 25253) && world.ZoneWaitForTP)
 				{
-					startQuestTimer("ThroneSpawn", 55000, null, (L2PcInstance) character);
+					startQuestTimer("ThroneSpawn", 55000, null, (PlayerInstance) creature);
 					playMovie(world, Movie.SC_BOSS_TIAT_OPENING);
 					world.ZoneWaitForTP = false;
 				}
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 }

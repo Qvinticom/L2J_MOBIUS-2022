@@ -20,8 +20,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.conditions.Condition;
 import com.l2jmobius.gameserver.skills.funcs.FuncTemplate;
@@ -83,7 +83,7 @@ public final class EffectTemplate
 		}
 	}
 	
-	public L2Effect getEffect(Env env)
+	public Effect getEffect(Env env)
 	{
 		if ((attachCond != null) && !attachCond.test(env))
 		{
@@ -91,7 +91,7 @@ public final class EffectTemplate
 		}
 		try
 		{
-			final L2Effect effect = (L2Effect) _constructor.newInstance(env, this);
+			final Effect effect = (Effect) _constructor.newInstance(env, this);
 			return effect;
 		}
 		catch (IllegalAccessException e)

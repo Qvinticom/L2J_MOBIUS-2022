@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * Format: (ch) d [dd].
  * @author -Wooden-
  */
-public class PledgeSkillList extends L2GameServerPacket
+public class PledgeSkillList extends GameServerPacket
 {
 	/** The _clan. */
-	private final L2Clan _clan;
+	private final Clan _clan;
 	
 	/**
 	 * Instantiates a new pledge skill list.
 	 * @param clan the clan
 	 */
-	public PledgeSkillList(L2Clan clan)
+	public PledgeSkillList(Clan clan)
 	{
 		_clan = clan;
 	}
@@ -40,12 +40,12 @@ public class PledgeSkillList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		final L2Skill[] skills = _clan.getAllSkills();
+		final Skill[] skills = _clan.getAllSkills();
 		
 		writeC(0xfe);
 		writeH(0x39);
 		writeD(skills.length);
-		for (L2Skill sk : skills)
+		for (Skill sk : skills)
 		{
 			writeD(sk.getId());
 			writeD(sk.getLevel());

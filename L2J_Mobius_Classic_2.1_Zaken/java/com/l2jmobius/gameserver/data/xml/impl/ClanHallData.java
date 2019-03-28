@@ -33,10 +33,10 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.ClanHallGrade;
 import com.l2jmobius.gameserver.enums.ClanHallType;
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
 
@@ -63,7 +63,7 @@ public final class ClanHallData implements IGameXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		final List<L2DoorInstance> doors = new ArrayList<>();
+		final List<DoorInstance> doors = new ArrayList<>();
 		final List<Integer> npcs = new ArrayList<>();
 		final List<ClanHallTeleportHolder> teleports = new ArrayList<>();
 		final StatsSet params = new StatsSet();
@@ -115,7 +115,7 @@ public final class ClanHallData implements IGameXmlReader
 										{
 											final NamedNodeMap np = npcNode.getAttributes();
 											final int doorId = parseInteger(np, "id");
-											final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+											final DoorInstance door = DoorData.getInstance().getDoor(doorId);
 											if (door != null)
 											{
 												doors.add(door);
@@ -180,14 +180,14 @@ public final class ClanHallData implements IGameXmlReader
 		return _clanHalls.values().stream().filter(ch -> ch.getNpcs().contains(npcId)).findFirst().orElse(null);
 	}
 	
-	public ClanHall getClanHallByClan(L2Clan clan)
+	public ClanHall getClanHallByClan(Clan clan)
 	{
 		return _clanHalls.values().stream().filter(ch -> ch.getOwner() == clan).findFirst().orElse(null);
 	}
 	
 	public ClanHall getClanHallByDoorId(int doorId)
 	{
-		final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+		final DoorInstance door = DoorData.getInstance().getDoor(doorId);
 		return _clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
 	}
 	

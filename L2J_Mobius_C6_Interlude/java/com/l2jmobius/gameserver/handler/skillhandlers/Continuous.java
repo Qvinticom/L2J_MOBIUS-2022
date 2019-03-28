@@ -25,17 +25,17 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
@@ -53,8 +53,8 @@ public class Continuous implements ISkillHandler
 		SkillType.HOT,
 		SkillType.CPHOT,
 		SkillType.MPHOT,
-		// L2Skill.SkillType.MANAHEAL,
-		// L2Skill.SkillType.MANA_BY_LEVEL,
+		// Skill.SkillType.MANAHEAL,
+		// Skill.SkillType.MANA_BY_LEVEL,
 		SkillType.FEAR,
 		SkillType.CONT,
 		SkillType.WEAKNESS,
@@ -63,20 +63,20 @@ public class Continuous implements ISkillHandler
 		SkillType.AGGDEBUFF,
 		SkillType.FORCE_BUFF
 	};
-	private L2Skill _skill;
+	private Skill _skill;
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill2, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill2, WorldObject[] targets)
 	{
-		if (activeChar == null)
+		if (creature == null)
 		{
 			return;
 		}
 		
-		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
+		PlayerInstance player = null;
+		if (creature instanceof PlayerInstance)
 		{
-			player = (L2PcInstance) activeChar;
+			player = (PlayerInstance) creature;
 		}
 		
 		if (skill2.getEffectId() != 0)
@@ -98,29 +98,29 @@ public class Continuous implements ISkillHandler
 			}
 		}
 		
-		final L2Skill skill = skill2;
+		final Skill skill = skill2;
 		if (skill == null)
 		{
 			return;
 		}
 		
-		final boolean bss = activeChar.checkBss();
-		final boolean sps = activeChar.checkSps();
-		final boolean ss = activeChar.checkSs();
+		final boolean bss = creature.checkBss();
+		final boolean sps = creature.checkSps();
+		final boolean ss = creature.checkSs();
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
-			L2Character target = (L2Character) target2;
+			Creature target = (Creature) target2;
 			
 			if (target == null)
 			{
 				continue;
 			}
 			
-			if ((target instanceof L2PcInstance) && (activeChar instanceof L2Playable) && skill.isOffensive())
+			if ((target instanceof PlayerInstance) && (creature instanceof Playable) && skill.isOffensive())
 			{
-				final L2PcInstance _char = (activeChar instanceof L2PcInstance) ? (L2PcInstance) activeChar : ((L2Summon) activeChar).getOwner();
-				final L2PcInstance _attacked = (L2PcInstance) target;
+				final PlayerInstance _char = (creature instanceof PlayerInstance) ? (PlayerInstance) creature : ((Summon) creature).getOwner();
+				final PlayerInstance _attacked = (PlayerInstance) target;
 				if ((_attacked.getClanId() != 0) && (_char.getClanId() != 0) && (_attacked.getClanId() == _char.getClanId()) && (_attacked.getPvpFlag() == 0))
 				{
 					continue;
@@ -135,18 +135,18 @@ public class Continuous implements ISkillHandler
 			{
 				if (target.reflectSkill(skill))
 				{
-					target = activeChar;
+					target = creature;
 				}
 			}
 			
 			// Walls and Door should not be buffed
-			if ((target instanceof L2DoorInstance) && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HOT)))
+			if ((target instanceof DoorInstance) && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HOT)))
 			{
 				continue;
 			}
 			
 			// Anti-Buff Protection prevents you from getting buffs by other players
-			if ((activeChar instanceof L2Playable) && (target != activeChar) && target.isBuffProtected() && !skill.isHeroSkill() && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL_PERCENT) || (skill.getSkillType() == SkillType.FORCE_BUFF) || (skill.getSkillType() == SkillType.MANAHEAL_PERCENT) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.REFLECT)))
+			if ((creature instanceof Playable) && (target != creature) && target.isBuffProtected() && !skill.isHeroSkill() && ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL_PERCENT) || (skill.getSkillType() == SkillType.FORCE_BUFF) || (skill.getSkillType() == SkillType.MANAHEAL_PERCENT) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.REFLECT)))
 			{
 				continue;
 			}
@@ -154,9 +154,9 @@ public class Continuous implements ISkillHandler
 			// Player holding a cursed weapon can't be buffed and can't buff
 			if (skill.getSkillType() == SkillType.BUFF)
 			{
-				if (target != activeChar)
+				if (target != creature)
 				{
-					if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isCursedWeaponEquiped())
+					if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
 					{
 						continue;
 					}
@@ -168,27 +168,27 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// Possibility of a lethal strike
-			if (!target.isRaid() && (!(target instanceof L2NpcInstance) || (((L2NpcInstance) target).getNpcId() != 35062)))
+			if (!target.isRaid() && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)))
 			{
 				final int chance = Rnd.get(1000);
 				Formulas.getInstance();
-				if ((skill.getLethalChance2() > 0) && (chance < Formulas.calcLethal(activeChar, target, skill.getLethalChance2())))
+				if ((skill.getLethalChance2() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance2())))
 				{
-					if (target instanceof L2NpcInstance)
+					if (target instanceof NpcInstance)
 					{
-						target.reduceCurrentHp(target.getCurrentHp() - 1, activeChar);
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
+						target.reduceCurrentHp(target.getCurrentHp() - 1, creature);
+						creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
 				}
 				else
 				{
 					Formulas.getInstance();
-					if ((skill.getLethalChance1() > 0) && (chance < Formulas.calcLethal(activeChar, target, skill.getLethalChance1())))
+					if ((skill.getLethalChance1() > 0) && (chance < Formulas.calcLethal(creature, target, skill.getLethalChance1())))
 					{
-						if (target instanceof L2NpcInstance)
+						if (target instanceof NpcInstance)
 						{
-							target.reduceCurrentHp(target.getCurrentHp() / 2, activeChar);
-							activeChar.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
+							target.reduceCurrentHp(target.getCurrentHp() / 2, creature);
+							creature.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 						}
 					}
 				}
@@ -196,11 +196,11 @@ public class Continuous implements ISkillHandler
 			
 			if (skill.isOffensive())
 			{
-				final boolean acted = Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss);
+				final boolean acted = Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss);
 				
 				if (!acted)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+					creature.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
 					continue;
 				}
 			}
@@ -213,7 +213,7 @@ public class Continuous implements ISkillHandler
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 					continue;
 				}
@@ -223,10 +223,10 @@ public class Continuous implements ISkillHandler
 			{
 				boolean stopped = false;
 				
-				final L2Effect[] effects = target.getAllEffects();
+				final Effect[] effects = target.getAllEffects();
 				if (effects != null)
 				{
-					for (L2Effect e : effects)
+					for (Effect e : effects)
 					{
 						if (e != null)
 						{
@@ -246,25 +246,25 @@ public class Continuous implements ISkillHandler
 			}
 			
 			// If target is not in game anymore...
-			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).isOnline() == 0))
+			if ((target instanceof PlayerInstance) && (((PlayerInstance) target).isOnline() == 0))
 			{
 				continue;
 			}
 			
 			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
-			if ((target instanceof L2PcInstance) && (player != null) && ((L2PcInstance) target).isInDuel() && ((skill.getSkillType() == SkillType.DEBUFF) || (skill.getSkillType() == SkillType.BUFF)) && (player.getDuelId() == ((L2PcInstance) target).getDuelId()))
+			if ((target instanceof PlayerInstance) && (player != null) && ((PlayerInstance) target).isInDuel() && ((skill.getSkillType() == SkillType.DEBUFF) || (skill.getSkillType() == SkillType.BUFF)) && (player.getDuelId() == ((PlayerInstance) target).getDuelId()))
 			{
 				DuelManager dm = DuelManager.getInstance();
 				if (dm != null)
 				{
-					final L2Effect[] effects = skill.getEffects(activeChar, target, ss, sps, bss);
+					final Effect[] effects = skill.getEffects(creature, target, ss, sps, bss);
 					if (effects != null)
 					{
-						for (L2Effect buff : effects)
+						for (Effect buff : effects)
 						{
 							if (buff != null)
 							{
-								dm.onBuff(((L2PcInstance) target), buff);
+								dm.onBuff(((PlayerInstance) target), buff);
 							}
 						}
 					}
@@ -272,31 +272,31 @@ public class Continuous implements ISkillHandler
 			}
 			else
 			{
-				skill.getEffects(activeChar, target, ss, sps, bss);
+				skill.getEffects(creature, target, ss, sps, bss);
 			}
 			
 			if (skill.getSkillType() == SkillType.AGGDEBUFF)
 			{
-				if (target instanceof L2Attackable)
+				if (target instanceof Attackable)
 				{
-					target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) skill.getPower());
+					target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, creature, (int) skill.getPower());
 				}
-				else if (target instanceof L2Playable)
+				else if (target instanceof Playable)
 				{
-					if (target.getTarget() == activeChar)
+					if (target.getTarget() == creature)
 					{
-						target.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
+						target.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);
 					}
 					else
 					{
-						target.setTarget(activeChar);
+						target.setTarget(creature);
 					}
 				}
 			}
 			
-			if (target.isDead() && (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_AREA_CORPSE_MOB) && (target instanceof L2NpcInstance))
+			if (target.isDead() && (skill.getTargetType() == Skill.SkillTargetType.TARGET_AREA_CORPSE_MOB) && (target instanceof NpcInstance))
 			{
-				((L2NpcInstance) target).endDecayTask();
+				((NpcInstance) target).endDecayTask();
 			}
 		}
 		
@@ -306,20 +306,20 @@ public class Continuous implements ISkillHandler
 			{
 				if (bss)
 				{
-					activeChar.removeBss();
+					creature.removeBss();
 				}
 				else if (sps)
 				{
-					activeChar.removeSps();
+					creature.removeSps();
 				}
 			}
 			else if (skill.useSoulShot())
 			{
-				activeChar.removeSs();
+				creature.removeSs();
 			}
 		}
 		
-		skill.getEffectsSelf(activeChar);
+		skill.getEffectsSelf(creature);
 	}
 	
 	@Override

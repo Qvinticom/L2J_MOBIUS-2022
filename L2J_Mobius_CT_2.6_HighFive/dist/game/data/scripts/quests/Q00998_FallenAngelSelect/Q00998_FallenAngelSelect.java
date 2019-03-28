@@ -17,8 +17,8 @@
 package quests.Q00998_FallenAngelSelect;
 
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -48,7 +48,7 @@ public class Q00998_FallenAngelSelect extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -78,7 +78,7 @@ public class Q00998_FallenAngelSelect extends Quest
 		return null;
 	}
 	
-	private void startQuest(String name, L2PcInstance player)
+	private void startQuest(String name, PlayerInstance player)
 	{
 		final Quest q = QuestManager.getInstance().getQuest(name);
 		if (q != null)
@@ -90,7 +90,7 @@ public class Q00998_FallenAngelSelect extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		final QuestState qs = player.getQuestState(Q00141_ShadowFoxPart3.class.getSimpleName());

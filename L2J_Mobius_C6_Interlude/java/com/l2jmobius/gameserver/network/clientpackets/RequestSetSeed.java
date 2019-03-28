@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProductio
  * Format: (ch) dd [ddd] d - manor id d - size [ d - seed id d - sales d - price ]
  * @author l3x
  */
-public class RequestSetSeed extends L2GameClientPacket
+public class RequestSetSeed extends GameClientPacket
 {
 	private int _size;
 	private int _manorId;

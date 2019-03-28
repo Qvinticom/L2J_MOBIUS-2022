@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class RadarControl extends L2GameServerPacket
+public class RadarControl extends GameServerPacket
 {
 	private final int _showRadar;
 	private final int _type;

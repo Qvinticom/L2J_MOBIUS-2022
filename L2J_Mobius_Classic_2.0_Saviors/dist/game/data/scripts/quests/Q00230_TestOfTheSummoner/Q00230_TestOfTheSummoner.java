@@ -22,9 +22,9 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -163,7 +163,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -174,7 +174,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 			}
 			case "KILLED_ATTACKER":
 			{
-				final L2Summon summon = npc.getVariables().getObject("ATTACKER", L2Summon.class);
+				final Summon summon = npc.getVariables().getObject("ATTACKER", Summon.class);
 				if ((summon != null) && summon.isDead())
 				{
 					npc.deleteMe();
@@ -430,7 +430,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -460,7 +460,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_1ST) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_1ST) && (qs != null) && qs.isStarted())
@@ -504,7 +504,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_3RD) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_3RD) && (qs != null) && qs.isStarted())
@@ -547,7 +547,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_5TH) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_5TH) && (qs != null) && qs.isStarted())
@@ -590,7 +590,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_2ND) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_2ND) && (qs != null) && qs.isStarted())
@@ -633,7 +633,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_4TH) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_4TH) && (qs != null) && qs.isStarted())
@@ -676,7 +676,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					}
 					case 1:
 					{
-						if (!isSummon || (npc.getVariables().getObject("ATTACKER", L2Summon.class) != attacker.getAnyServitor()))
+						if (!isSummon || (npc.getVariables().getObject("ATTACKER", Summon.class) != attacker.getAnyServitor()))
 						{
 							final QuestState qs = getQuestState(attacker, false);
 							if (!hasQuestItems(attacker, CRYSTAL_OF_STARTING_6TH) && hasQuestItems(attacker, CRYSTAL_OF_INPROGRESS_6TH) && (qs != null) && qs.isStarted())
@@ -698,7 +698,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -833,7 +833,7 @@ public final class Q00230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

@@ -18,7 +18,7 @@ package com.l2jmobius.loginserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.IIncomingPacket;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.ServerList;
 
@@ -30,7 +30,7 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
  * c: ?
  * </pre>
  */
-public class RequestServerList implements IIncomingPacket<L2LoginClient>
+public class RequestServerList implements IIncomingPacket<LoginClient>
 {
 	private int _skey1;
 	private int _skey2;
@@ -38,7 +38,7 @@ public class RequestServerList implements IIncomingPacket<L2LoginClient>
 	private int _data3;
 	
 	@Override
-	public boolean read(L2LoginClient client, PacketReader packet)
+	public boolean read(LoginClient client, PacketReader packet)
 	{
 		if (packet.getReadableBytes() >= 8)
 		{
@@ -50,7 +50,7 @@ public class RequestServerList implements IIncomingPacket<L2LoginClient>
 	}
 	
 	@Override
-	public void run(L2LoginClient client)
+	public void run(LoginClient client)
 	{
 		if (client.getSessionKey().checkLoginPair(_skey1, _skey2))
 		{

@@ -16,8 +16,8 @@
  */
 package custom.HeroWeapon;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
@@ -48,7 +48,7 @@ public class HeroWeapon extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
 		
@@ -63,7 +63,7 @@ public class HeroWeapon extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
@@ -96,7 +96,7 @@ public class HeroWeapon extends Quest
 		return htmltext;
 	}
 	
-	private static boolean hasHeroWeapon(L2PcInstance player)
+	private static boolean hasHeroWeapon(PlayerInstance player)
 	{
 		for (int i : WEAPON_IDS)
 		{

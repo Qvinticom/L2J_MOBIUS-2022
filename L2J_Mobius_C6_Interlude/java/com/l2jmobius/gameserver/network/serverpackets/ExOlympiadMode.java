@@ -16,39 +16,38 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  * @author godson
  */
-public class ExOlympiadMode extends L2GameServerPacket
+public class ExOlympiadMode extends GameServerPacket
 {
 	private static int _mode;
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
 	/**
 	 * @param mode (0 = return, 3 = spectate)
 	 * @param player
 	 */
-	public ExOlympiadMode(int mode, L2PcInstance player)
+	public ExOlympiadMode(int mode, PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		_mode = mode;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
 		
 		if (_mode == 3)
 		{
-			_activeChar.setObserverMode(true);
+			_player.setObserverMode(true);
 		}
 		
 		writeC(0xfe);

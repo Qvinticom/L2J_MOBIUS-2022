@@ -18,8 +18,8 @@ package quests.Q00169_OffspringOfNightmares;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -53,28 +53,28 @@ public class Q00169_OffspringOfNightmares extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if(qs != null)
 		{
 			switch (event)
 			{
 				case "30145-03.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
 				case "30145-07.html":
 				{
-					if (st.isCond(2) && hasQuestItems(player, PERFECT_SKULL))
+					if (qs.isCond(2) && hasQuestItems(player, PERFECT_SKULL))
 					{
 						giveItems(player, BONE_GAITERS, 1);
 						addExpAndSp(player, 17475, 818);
 						giveAdena(player, 17030 + (10 * getQuestItemsCount(player, CRACKED_SKULL)), true);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000); // TODO: Newbie Guide
 						htmltext = event;
 					}
@@ -86,15 +86,15 @@ public class Q00169_OffspringOfNightmares extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isStarted())
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isStarted())
 		{
 			if ((getRandom(10) > 7) && !hasQuestItems(killer, PERFECT_SKULL))
 			{
 				giveItems(killer, PERFECT_SKULL, 1);
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else if (getRandom(10) > 4)
 			{
@@ -106,12 +106,12 @@ public class Q00169_OffspringOfNightmares extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -124,7 +124,7 @@ public class Q00169_OffspringOfNightmares extends Quest
 				{
 					htmltext = "30145-05.html";
 				}
-				else if (st.isCond(2) && hasQuestItems(player, PERFECT_SKULL))
+				else if (qs.isCond(2) && hasQuestItems(player, PERFECT_SKULL))
 				{
 					htmltext = "30145-06.html";
 				}

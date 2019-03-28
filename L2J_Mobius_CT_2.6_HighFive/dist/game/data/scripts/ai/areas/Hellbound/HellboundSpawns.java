@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
 
 /**
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.Location;
  */
 public final class HellboundSpawns implements IGameXmlReader
 {
-	private final List<L2Spawn> _spawns = new ArrayList<>();
+	private final List<Spawn> _spawns = new ArrayList<>();
 	private final Map<Integer, int[]> _spawnLevels = new HashMap<>();
 	
 	public HellboundSpawns()
@@ -119,7 +119,7 @@ public final class HellboundSpawns implements IGameXmlReader
 			
 			try
 			{
-				final L2Spawn spawn = new L2Spawn(npcId);
+				final Spawn spawn = new Spawn(npcId);
 				spawn.setAmount(1);
 				if (loc == null)
 				{
@@ -146,7 +146,7 @@ public final class HellboundSpawns implements IGameXmlReader
 	 * Gets all Hellbound spawns.
 	 * @return the list of Hellbound spawns.
 	 */
-	public List<L2Spawn> getSpawns()
+	public List<Spawn> getSpawns()
 	{
 		return _spawns;
 	}

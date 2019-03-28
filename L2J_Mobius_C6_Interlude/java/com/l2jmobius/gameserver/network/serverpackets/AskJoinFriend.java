@@ -24,7 +24,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * format cdd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class AskJoinFriend extends L2GameServerPacket
+public class AskJoinFriend extends GameServerPacket
 {
 	private final String _requestorName;
 	

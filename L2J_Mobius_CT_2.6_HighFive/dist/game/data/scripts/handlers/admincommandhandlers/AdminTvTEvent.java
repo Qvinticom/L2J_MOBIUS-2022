@@ -18,8 +18,8 @@ package handlers.admincommandhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.entity.TvTEventTeleporter;
 import com.l2jmobius.gameserver.model.entity.TvTManager;
@@ -38,11 +38,11 @@ public class AdminTvTEvent implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_tvt_add"))
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			
 			if ((target == null) || !target.isPlayer())
 			{
@@ -50,11 +50,11 @@ public class AdminTvTEvent implements IAdminCommandHandler
 				return true;
 			}
 			
-			add(activeChar, (L2PcInstance) target);
+			add(activeChar, (PlayerInstance) target);
 		}
 		else if (command.equals("admin_tvt_remove"))
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			
 			if ((target == null) || !target.isPlayer())
 			{
@@ -62,7 +62,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 				return true;
 			}
 			
-			remove(activeChar, (L2PcInstance) target);
+			remove(activeChar, (PlayerInstance) target);
 		}
 		else if (command.equals("admin_tvt_advance"))
 		{
@@ -78,7 +78,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void add(L2PcInstance activeChar, L2PcInstance playerInstance)
+	private void add(PlayerInstance activeChar, PlayerInstance playerInstance)
 	{
 		if (playerInstance.isOnEvent())
 		{
@@ -98,7 +98,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		}
 	}
 	
-	private void remove(L2PcInstance activeChar, L2PcInstance playerInstance)
+	private void remove(PlayerInstance activeChar, PlayerInstance playerInstance)
 	{
 		if (!TvTEvent.removeParticipant(playerInstance.getObjectId()))
 		{

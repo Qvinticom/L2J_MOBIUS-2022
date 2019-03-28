@@ -38,15 +38,15 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.MailType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.CommissionManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.commission.CommissionItem;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionBuyItem;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionDelete;
@@ -78,7 +78,7 @@ public final class CommissionManager
 	
 	protected CommissionManager()
 	{
-		final Map<Integer, L2ItemInstance> itemInstances = new HashMap<>();
+		final Map<Integer, ItemInstance> itemInstances = new HashMap<>();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS))
@@ -88,7 +88,7 @@ public final class CommissionManager
 				{
 					while (rs.next())
 					{
-						final L2ItemInstance itemInstance = new L2ItemInstance(rs);
+						final ItemInstance itemInstance = new ItemInstance(rs);
 						itemInstances.put(itemInstance.getObjectId(), itemInstance);
 					}
 				}
@@ -100,7 +100,7 @@ public final class CommissionManager
 				while (rs.next())
 				{
 					final long commissionId = rs.getLong("commission_id");
-					final L2ItemInstance itemInstance = itemInstances.get(rs.getInt("item_object_id"));
+					final ItemInstance itemInstance = itemInstances.get(rs.getInt("item_object_id"));
 					if (itemInstance == null)
 					{
 						LOGGER.warning(getClass().getSimpleName() + ": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
@@ -130,7 +130,7 @@ public final class CommissionManager
 	 * @param player the player
 	 * @param filter the filter
 	 */
-	public void showAuctions(L2PcInstance player, Predicate<L2Item> filter)
+	public void showAuctions(PlayerInstance player, Predicate<Item> filter)
 	{
 		//@formatter:off
 		final List<CommissionItem> commissionItems = _commissionItems.values().stream()
@@ -161,7 +161,7 @@ public final class CommissionManager
 	 * Shows the player his auctions.
 	 * @param player the player
 	 */
-	public void showPlayerAuctions(L2PcInstance player)
+	public void showPlayerAuctions(PlayerInstance player)
 	{
 		//@formatter:off
 		final List<CommissionItem> commissionItems = _commissionItems.values().stream()
@@ -188,7 +188,7 @@ public final class CommissionManager
 	 * @param pricePerUnit the price per unit
 	 * @param durationInDays the duration in days
 	 */
-	public void registerItem(L2PcInstance player, int itemObjectId, long itemCount, long pricePerUnit, byte durationInDays)
+	public void registerItem(PlayerInstance player, int itemObjectId, long itemCount, long pricePerUnit, byte durationInDays)
 	{
 		if (itemCount < 1)
 		{
@@ -205,7 +205,7 @@ public final class CommissionManager
 			return;
 		}
 		
-		L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(itemObjectId);
+		ItemInstance itemInstance = player.getInventory().getItemByObjectId(itemObjectId);
 		if ((itemInstance == null) || !itemInstance.isAvailable(player, false, false) || (itemInstance.getCount() < itemCount))
 		{
 			player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
@@ -282,7 +282,7 @@ public final class CommissionManager
 	 * @param player the player
 	 * @param commissionId the commission id
 	 */
-	public void deleteItem(L2PcInstance player, long commissionId)
+	public void deleteItem(PlayerInstance player, long commissionId)
 	{
 		final CommissionItem commissionItem = getCommissionItem(commissionId);
 		if (commissionItem == null)
@@ -331,7 +331,7 @@ public final class CommissionManager
 	 * @param player the player
 	 * @param commissionId the commission id
 	 */
-	public void buyItem(L2PcInstance player, long commissionId)
+	public void buyItem(PlayerInstance player, long commissionId)
 	{
 		final CommissionItem commissionItem = getCommissionItem(commissionId);
 		if (commissionItem == null)
@@ -341,7 +341,7 @@ public final class CommissionManager
 			return;
 		}
 		
-		final L2ItemInstance itemInstance = commissionItem.getItemInstance();
+		final ItemInstance itemInstance = commissionItem.getItemInstance();
 		if (itemInstance.getOwnerId() == player.getObjectId())
 		{
 			player.sendPacket(SystemMessageId.ITEM_PURCHASE_HAS_FAILED);
@@ -451,9 +451,9 @@ public final class CommissionManager
 	 * @param player the player
 	 * @return {@code true} if the player is allowed to interact, {@code false} otherwise
 	 */
-	public static boolean isPlayerAllowedToInteract(L2PcInstance player)
+	public static boolean isPlayerAllowedToInteract(PlayerInstance player)
 	{
-		final L2Npc npc = player.getLastFolkNPC();
+		final Npc npc = player.getLastFolkNPC();
 		if ((npc != null) && (npc instanceof CommissionManagerInstance))
 		{
 			return npc.calculateDistance3D(player) <= INTERACTION_DISTANCE;

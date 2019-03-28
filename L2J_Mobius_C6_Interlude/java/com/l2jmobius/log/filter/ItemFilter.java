@@ -19,7 +19,7 @@ package com.l2jmobius.log.filter;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * @author Advi
@@ -53,9 +53,9 @@ public class ItemFilter implements Filter
 		}
 		if (_excludeItemType != null)
 		{
-			// if (record.getParameters() == null || record.getParameters().length == 0 || !(record.getParameters()[0] instanceof L2ItemInstance))
+			// if (record.getParameters() == null || record.getParameters().length == 0 || !(record.getParameters()[0] instanceof ItemInstance))
 			// return true;
-			final L2ItemInstance item = (L2ItemInstance) record.getParameters()[0];
+			final ItemInstance item = (ItemInstance) record.getParameters()[0];
 			
 			if (!_excludeItemType.contains(item.getItemType().toString()))
 			{

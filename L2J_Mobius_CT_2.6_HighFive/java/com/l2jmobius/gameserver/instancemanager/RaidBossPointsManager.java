@@ -32,7 +32,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Kerberos, JIV
@@ -76,7 +76,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public final void updatePointsInDB(L2PcInstance player, int raidId, int points)
+	public final void updatePointsInDB(PlayerInstance player, int raidId, int points)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_raid_points (`charId`,`boss_id`,`points`) VALUES (?,?,?)"))
@@ -92,7 +92,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public final void addPoints(L2PcInstance player, int bossId, int points)
+	public final void addPoints(PlayerInstance player, int bossId, int points)
 	{
 		final Map<Integer, Integer> tmpPoint = _list.computeIfAbsent(player.getObjectId(), k -> new HashMap<>());
 		updatePointsInDB(player, bossId, tmpPoint.merge(bossId, points, Integer::sum));
@@ -115,7 +115,7 @@ public class RaidBossPointsManager
 		return totalPoints;
 	}
 	
-	public final Map<Integer, Integer> getList(L2PcInstance player)
+	public final Map<Integer, Integer> getList(PlayerInstance player)
 	{
 		return _list.get(player.getObjectId());
 	}

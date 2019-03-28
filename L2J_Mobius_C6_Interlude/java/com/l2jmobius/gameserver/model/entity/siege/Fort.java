@@ -28,13 +28,13 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
-import com.l2jmobius.gameserver.model.zone.type.L2FortZone;
+import com.l2jmobius.gameserver.model.zone.type.FortZone;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 
@@ -47,17 +47,17 @@ public class Fort
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
 	
 	private int _fortId = 0;
-	private final List<L2DoorInstance> _doors = new ArrayList<>();
+	private final List<DoorInstance> _doors = new ArrayList<>();
 	private final List<String> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
-	private L2Clan _fortOwner = null;
+	private Clan _fortOwner = null;
 	private FortSiege _siege = null;
 	private Calendar _siegeDate;
 	private int _siegeDayOfWeek = 7; // Default to saturday
 	private int _siegeHourOfDay = 20; // Default to 8 pm server time
-	private L2FortZone _zone;
-	private L2Clan _formerOwner = null;
+	private FortZone _zone;
+	private Clan _formerOwner = null;
 	
 	public Fort(int fortId)
 	{
@@ -66,12 +66,12 @@ public class Fort
 		loadDoor();
 	}
 	
-	public void EndOfSiege(L2Clan clan)
+	public void EndOfSiege(Clan clan)
 	{
 		ThreadPool.schedule(new endFortressSiege(this, clan), 1000);
 	}
 	
-	public void Engrave(L2Clan clan, int objId)
+	public void Engrave(Clan clan, int objId)
 	{
 		getSiege().announceToPlayer("Clan " + clan.getName() + " has finished to raise the flag.", true);
 		setOwner(clan);
@@ -120,12 +120,12 @@ public class Fort
 	 * Sets this forts zone
 	 * @param zone
 	 */
-	public void setZone(L2FortZone zone)
+	public void setZone(FortZone zone)
 	{
 		_zone = zone;
 	}
 	
-	public L2FortZone getZone()
+	public FortZone getZone()
 	{
 		return _zone;
 	}
@@ -135,29 +135,29 @@ public class Fort
 	 * @param obj
 	 * @return
 	 */
-	public double getDistance(L2Object obj)
+	public double getDistance(WorldObject obj)
 	{
 		return _zone.getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(L2PcInstance activeChar, int doorId)
+	public void closeDoor(PlayerInstance player, int doorId)
 	{
-		openCloseDoor(activeChar, doorId, false);
+		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(L2PcInstance activeChar, int doorId)
+	public void openDoor(PlayerInstance player, int doorId)
 	{
-		openCloseDoor(activeChar, doorId, true);
+		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
+	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
 	{
-		if (activeChar.getClanId() != _ownerId)
+		if (player.getClanId() != _ownerId)
 		{
 			return;
 		}
 		
-		L2DoorInstance door = getDoor(doorId);
+		DoorInstance door = getDoor(doorId);
 		
 		if (door != null)
 		{
@@ -179,13 +179,13 @@ public class Fort
 	}
 	
 	// This method updates the fort tax rate
-	public void setOwner(L2Clan clan)
+	public void setOwner(Clan clan)
 	{
 		// Remove old owner
 		if ((_ownerId > 0) && ((clan == null) || (clan.getClanId() != _ownerId)))
 		{
 			// Try to find clan instance
-			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId());
+			Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId());
 			
 			if (oldOwner != null)
 			{
@@ -212,7 +212,7 @@ public class Fort
 		_fortOwner = clan;
 	}
 	
-	public void removeOwner(L2Clan clan)
+	public void removeOwner(Clan clan)
 	{
 		if (clan != null)
 		{
@@ -234,7 +234,7 @@ public class Fort
 	}
 	
 	// This method updates the fort tax rate
-	public void setTaxPercent(L2PcInstance activeChar, int taxPercent)
+	public void setTaxPercent(PlayerInstance player, int taxPercent)
 	{
 		int maxTax;
 		
@@ -258,11 +258,11 @@ public class Fort
 		
 		if ((taxPercent < 0) || (taxPercent > maxTax))
 		{
-			activeChar.sendMessage("Tax value must be between 0 and " + maxTax + ".");
+			player.sendMessage("Tax value must be between 0 and " + maxTax + ".");
 			return;
 		}
 		
-		activeChar.sendMessage(_name + " fort tax changed to " + taxPercent + "%.");
+		player.sendMessage(_name + " fort tax changed to " + taxPercent + "%.");
 	}
 	
 	/**
@@ -282,7 +282,7 @@ public class Fort
 	{
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = _doors.get(i);
+			DoorInstance door = _doors.get(i);
 			
 			if (door.getCurrentHp() >= 0)
 			{
@@ -313,7 +313,7 @@ public class Fort
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		final L2DoorInstance door = getDoor(doorId);
+		final DoorInstance door = getDoor(doorId);
 		
 		if (door == null)
 		{
@@ -369,7 +369,7 @@ public class Fort
 			
 			if (_ownerId > 0)
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+				Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 				if (clan != null)
 				{
 					clan.setHasFort(_fortId);
@@ -402,7 +402,7 @@ public class Fort
 				// Create list of the door default for use when respawning dead doors
 				_doorDefault.add(rs.getString("name") + ";" + rs.getInt("id") + ";" + rs.getInt("x") + ";" + rs.getInt("y") + ";" + rs.getInt("z") + ";" + rs.getInt("range_xmin") + ";" + rs.getInt("range_ymin") + ";" + rs.getInt("range_zmin") + ";" + rs.getInt("range_xmax") + ";" + rs.getInt("range_ymax") + ";" + rs.getInt("range_zmax") + ";" + rs.getInt("hp") + ";" + rs.getInt("pDef") + ";" + rs.getInt("mDef"));
 				
-				L2DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				
 				_doors.add(door);
@@ -478,7 +478,7 @@ public class Fort
 		}
 	}
 	
-	private void updateOwnerInDB(L2Clan clan)
+	private void updateOwnerInDB(Clan clan)
 	{
 		if (clan != null)
 		{
@@ -510,7 +510,7 @@ public class Fort
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage());
+			LOGGER.warning("Exception: updateOwnerInDB(Pledge clan): " + e.getMessage());
 		}
 	}
 	
@@ -519,7 +519,7 @@ public class Fort
 		return _fortId;
 	}
 	
-	public final L2Clan getOwnerClan()
+	public final Clan getOwnerClan()
 	{
 		return _fortOwner;
 	}
@@ -529,7 +529,7 @@ public class Fort
 		return _ownerId;
 	}
 	
-	public final L2DoorInstance getDoor(int doorId)
+	public final DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -538,7 +538,7 @@ public class Fort
 		
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = _doors.get(i);
+			DoorInstance door = _doors.get(i);
 			
 			if (door.getDoorId() == doorId)
 			{
@@ -548,7 +548,7 @@ public class Fort
 		return null;
 	}
 	
-	public final List<L2DoorInstance> getDoors()
+	public final List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
@@ -599,7 +599,7 @@ public class Fort
 			{
 				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
 				
-				L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+				Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				
 				if (owner != null)
 				{
@@ -616,7 +616,7 @@ public class Fort
 		}
 		else
 		{
-			L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+			Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			if (owner != null)
 			{
 				owner.setReputationScore(owner.getReputationScore() + 500, true);
@@ -628,9 +628,9 @@ public class Fort
 	private class endFortressSiege implements Runnable
 	{
 		private final Fort _f;
-		private final L2Clan _clan;
+		private final Clan _clan;
 		
-		public endFortressSiege(Fort f, L2Clan clan)
+		public endFortressSiege(Fort f, Clan clan)
 		{
 			_f = f;
 			_clan = clan;

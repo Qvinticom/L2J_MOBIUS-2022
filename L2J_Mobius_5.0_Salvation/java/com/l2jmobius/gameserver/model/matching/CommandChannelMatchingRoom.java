@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.enums.MatchingMemberType;
 import com.l2jmobius.gameserver.enums.MatchingRoomType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExDissmissMPCCRoom;
 import com.l2jmobius.gameserver.network.serverpackets.ExMPCCRoomInfo;
@@ -36,25 +36,25 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class CommandChannelMatchingRoom extends MatchingRoom
 {
-	public CommandChannelMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, L2PcInstance leader)
+	public CommandChannelMatchingRoom(String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance leader)
 	{
 		super(title, loot, minlvl, maxlvl, maxmem, leader);
 	}
 	
 	@Override
-	protected void onRoomCreation(L2PcInstance player)
+	protected void onRoomCreation(PlayerInstance player)
 	{
 		player.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED);
 	}
 	
 	@Override
-	protected void notifyInvalidCondition(L2PcInstance player)
+	protected void notifyInvalidCondition(PlayerInstance player)
 	{
 		player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_THE_COMMAND_CHANNEL_MATCHING_ROOM_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 	}
 	
 	@Override
-	protected void notifyNewMember(L2PcInstance player)
+	protected void notifyNewMember(PlayerInstance player)
 	{
 		// Update others player
 		getMembers().stream().filter(p -> p != player).forEach(p ->
@@ -73,7 +73,7 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	protected void notifyRemovedMember(L2PcInstance player, boolean kicked, boolean leaderChanged)
+	protected void notifyRemovedMember(PlayerInstance player, boolean kicked, boolean leaderChanged)
 	{
 		getMembers().forEach(p ->
 		{
@@ -109,24 +109,24 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 	}
 	
 	@Override
-	public MatchingMemberType getMemberType(L2PcInstance player)
+	public MatchingMemberType getMemberType(PlayerInstance player)
 	{
 		if (isLeader(player))
 		{
 			return MatchingMemberType.COMMAND_CHANNEL_LEADER;
 		}
 		
-		final L2Party playerParty = player.getParty();
+		final Party playerParty = player.getParty();
 		
 		if (playerParty == null)
 		{
 			return MatchingMemberType.WAITING_PLAYER_NO_PARTY;
 		}
 		
-		final L2Party leaderParty = getLeader().getParty();
+		final Party leaderParty = getLeader().getParty();
 		if (leaderParty != null)
 		{
-			final L2CommandChannel cc = leaderParty.getCommandChannel();
+			final CommandChannel cc = leaderParty.getCommandChannel();
 			if ((leaderParty == playerParty) || ((cc != null) && cc.getPartys().contains(playerParty)))
 			{
 				return MatchingMemberType.COMMAND_CHANNEL_PARTY_MEMBER;

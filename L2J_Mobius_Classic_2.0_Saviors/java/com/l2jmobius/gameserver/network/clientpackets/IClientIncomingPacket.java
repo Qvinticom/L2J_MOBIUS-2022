@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.network.IIncomingPacket;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Packets received by the game server from clients
  * @author KenM
  */
-public interface IClientIncomingPacket extends IIncomingPacket<L2GameClient>
+public interface IClientIncomingPacket extends IIncomingPacket<GameClient>
 {
 	Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
 }

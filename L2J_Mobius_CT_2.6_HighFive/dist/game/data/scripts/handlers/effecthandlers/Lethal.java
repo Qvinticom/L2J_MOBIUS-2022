@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -51,9 +51,9 @@ public final class Lethal extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
-		if (activeChar.isPlayer() && !activeChar.getAccessLevel().canGiveDamage())
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
+		if (creature.isPlayer() && !creature.getAccessLevel().canGiveDamage())
 		{
 			return;
 		}
@@ -68,7 +68,7 @@ public final class Lethal extends AbstractEffect
 			return;
 		}
 		
-		final double chanceMultiplier = Formulas.calcAttributeBonus(activeChar, target, info.getSkill()) * Formulas.calcGeneralTraitBonus(activeChar, target, info.getSkill().getTraitType(), false);
+		final double chanceMultiplier = Formulas.calcAttributeBonus(creature, target, info.getSkill()) * Formulas.calcGeneralTraitBonus(creature, target, info.getSkill().getTraitType(), false);
 		// Lethal Strike
 		if (Rnd.get(100) < (_fullLethal * chanceMultiplier))
 		{
@@ -86,7 +86,7 @@ public final class Lethal extends AbstractEffect
 				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true, false);
 				target.setCurrentHp(1);
 			}
-			activeChar.sendPacket(SystemMessageId.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+			creature.sendPacket(SystemMessageId.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 		}
 		// Half-Kill
 		else if (Rnd.get(100) < (_halfLethal * chanceMultiplier))
@@ -104,7 +104,7 @@ public final class Lethal extends AbstractEffect
 				target.notifyDamageReceived(target.getCurrentHp() * 0.5, info.getEffector(), info.getSkill(), true, false);
 				target.setCurrentHp(target.getCurrentHp() * 0.5);
 			}
-			activeChar.sendPacket(SystemMessageId.HALF_KILL);
+			creature.sendPacket(SystemMessageId.HALF_KILL);
 		}
 	}
 }

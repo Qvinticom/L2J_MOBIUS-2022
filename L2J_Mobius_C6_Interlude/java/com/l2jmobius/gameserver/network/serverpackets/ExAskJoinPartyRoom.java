@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch S
  * @author KenM
  */
-public class ExAskJoinPartyRoom extends L2GameServerPacket
+public class ExAskJoinPartyRoom extends GameServerPacket
 {
 	private final String _charName;
 	

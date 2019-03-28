@@ -21,12 +21,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -59,9 +59,9 @@ public final class ResurrectionSpecial extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.RESURRECTION_SPECIAL;
+		return EffectType.RESURRECTION_SPECIAL;
 	}
 	
 	@Override
@@ -71,14 +71,14 @@ public final class ResurrectionSpecial extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (!effected.isPlayer() && !effected.isPet())
 		{
 			return;
 		}
 		
-		final L2PcInstance caster = effector.getActingPlayer();
+		final PlayerInstance caster = effector.getActingPlayer();
 		final Instance instance = caster.getInstanceWorld();
 		if (!_instanceId.isEmpty() && ((instance == null) || !_instanceId.contains(instance.getTemplateId())))
 		{
@@ -91,7 +91,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 		}
 		else if (effected.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) effected;
+			final PetInstance pet = (PetInstance) effected;
 			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
 		}
 	}

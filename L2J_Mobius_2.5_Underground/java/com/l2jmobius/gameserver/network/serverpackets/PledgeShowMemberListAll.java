@@ -21,23 +21,23 @@ import java.util.Collection;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
+import com.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final SubPledge _pledge;
 	private final String _name;
 	private final String _leaderName;
-	private final Collection<L2ClanMember> _members;
+	private final Collection<ClanMember> _members;
 	private final int _pledgeId;
 	private final boolean _isSubPledge;
 	
-	private PledgeShowMemberListAll(L2Clan clan, SubPledge pledge, boolean isSubPledge)
+	private PledgeShowMemberListAll(Clan clan, SubPledge pledge, boolean isSubPledge)
 	{
 		_clan = clan;
 		_pledge = pledge;
@@ -48,9 +48,9 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		_isSubPledge = isSubPledge;
 	}
 	
-	public static void sendAllTo(L2PcInstance player)
+	public static void sendAllTo(PlayerInstance player)
 	{
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		if (clan != null)
 		{
 			for (SubPledge subPledge : clan.getAllSubPledges())
@@ -90,7 +90,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(0x00); // Territory castle ID
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeId));
 		
-		for (L2ClanMember m : _members)
+		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() != _pledgeId)
 			{
@@ -99,7 +99,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());
 			packet.writeD(m.getClassId());
-			final L2PcInstance player = m.getPlayerInstance();
+			final PlayerInstance player = m.getPlayerInstance();
 			if (player != null)
 			{
 				packet.writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.util;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 
@@ -37,7 +37,7 @@ public final class BuilderUtil
 	 * @param player
 	 * @param message
 	 */
-	public static void sendSysMessage(L2PcInstance player, String message)
+	public static void sendSysMessage(PlayerInstance player, String message)
 	{
 		if (Config.GM_STARTUP_BUILDER_HIDE)
 		{
@@ -54,7 +54,7 @@ public final class BuilderUtil
 	 * @param player
 	 * @param message
 	 */
-	public static void sendHtmlMessage(L2PcInstance player, String message)
+	public static void sendHtmlMessage(PlayerInstance player, String message)
 	{
 		player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "HTML", message));
 	}
@@ -65,7 +65,7 @@ public final class BuilderUtil
 	 * @param hide
 	 * @return {@code true} if hide state was changed, otherwise {@code false}
 	 */
-	public static boolean setHiding(L2PcInstance player, boolean hide)
+	public static boolean setHiding(PlayerInstance player, boolean hide)
 	{
 		if (player.isInvisible() && hide)
 		{

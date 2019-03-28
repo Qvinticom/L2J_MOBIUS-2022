@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExGetOffAirShip implements IClientOutgoingPacket
@@ -28,9 +28,9 @@ public class ExGetOffAirShip implements IClientOutgoingPacket
 	private final int _y;
 	private final int _z;
 	
-	public ExGetOffAirShip(L2Character player, L2Character ship, int x, int y, int z)
+	public ExGetOffAirShip(Creature creature, Creature ship, int x, int y, int z)
 	{
-		_playerId = player.getObjectId();
+		_playerId = creature.getObjectId();
 		_airShipId = ship.getObjectId();
 		_x = x;
 		_y = y;

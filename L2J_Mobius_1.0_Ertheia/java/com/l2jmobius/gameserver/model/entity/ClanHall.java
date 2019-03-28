@@ -36,15 +36,15 @@ import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.enums.ClanHallGrade;
 import com.l2jmobius.gameserver.enums.ClanHallType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -61,12 +61,12 @@ public final class ClanHall extends AbstractResidence
 	final int _lease;
 	private final int _deposit;
 	private final List<Integer> _npcs;
-	private final List<L2DoorInstance> _doors;
+	private final List<DoorInstance> _doors;
 	private final List<ClanHallTeleportHolder> _teleports;
 	private final Location _ownerLocation;
 	private final Location _banishLocation;
 	// Dynamic parameters
-	L2Clan _owner = null;
+	Clan _owner = null;
 	long _paidUntil = 0;
 	protected ScheduledFuture<?> _checkPaymentTask = null;
 	// Other
@@ -86,7 +86,7 @@ public final class ClanHall extends AbstractResidence
 		_lease = params.getInt("lease");
 		_deposit = params.getInt("deposit");
 		_npcs = params.getList("npcList", Integer.class);
-		_doors = params.getList("doorList", L2DoorInstance.class);
+		_doors = params.getList("doorList", DoorInstance.class);
 		_teleports = params.getList("teleportList", ClanHallTeleportHolder.class);
 		_ownerLocation = params.getLocation("owner_loc");
 		_banishLocation = params.getLocation("banish_loc");
@@ -150,7 +150,7 @@ public final class ClanHall extends AbstractResidence
 	@Override
 	protected void initResidenceZone()
 	{
-		final L2ClanHallZone zone = ZoneManager.getInstance().getAllZones(L2ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getResidenceId()).findFirst().orElse(null);
+		final ClanHallZone zone = ZoneManager.getInstance().getAllZones(ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getResidenceId()).findFirst().orElse(null);
 		if (zone != null)
 		{
 			setResidenceZone(zone);
@@ -164,7 +164,7 @@ public final class ClanHall extends AbstractResidence
 	}
 	
 	/**
-	 * Teleport all non-owner players from {@link L2ClanHallZone} to {@link ClanHall#getBanishLocation()}.
+	 * Teleport all non-owner players from {@link ClanHallZone} to {@link ClanHall#getBanishLocation()}.
 	 */
 	public void banishOthers()
 	{
@@ -172,7 +172,7 @@ public final class ClanHall extends AbstractResidence
 	}
 	
 	/**
-	 * Open or close all {@link L2DoorInstance} related to this {@link ClanHall}.
+	 * Open or close all {@link DoorInstance} related to this {@link ClanHall}.
 	 * @param open {@code true} means open door, {@code false} means close door
 	 */
 	public void openCloseDoors(boolean open)
@@ -190,17 +190,17 @@ public final class ClanHall extends AbstractResidence
 	}
 	
 	/**
-	 * Gets all {@link L2DoorInstance} related to this {@link ClanHall}.
-	 * @return all {@link L2DoorInstance} related to this {@link ClanHall}
+	 * Gets all {@link DoorInstance} related to this {@link ClanHall}.
+	 * @return all {@link DoorInstance} related to this {@link ClanHall}
 	 */
-	public List<L2DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
 	
 	/**
-	 * Gets all {@link L2Npc} related to this {@link ClanHall}.
-	 * @return all {@link L2Npc} related to this {@link ClanHall}
+	 * Gets all {@link Npc} related to this {@link ClanHall}.
+	 * @return all {@link Npc} related to this {@link ClanHall}
 	 */
 	public List<Integer> getNpcs()
 	{
@@ -217,22 +217,22 @@ public final class ClanHall extends AbstractResidence
 	}
 	
 	/**
-	 * Gets the {@link L2Clan} which own this {@link ClanHall}.
-	 * @return {@link L2Clan} which own this {@link ClanHall}
+	 * Gets the {@link Clan} which own this {@link ClanHall}.
+	 * @return {@link Clan} which own this {@link ClanHall}
 	 */
-	public L2Clan getOwner()
+	public Clan getOwner()
 	{
 		return _owner;
 	}
 	
 	/**
-	 * Gets the {@link L2Clan} ID which own this {@link ClanHall}.
-	 * @return the {@link L2Clan} ID which own this {@link ClanHall}
+	 * Gets the {@link Clan} ID which own this {@link ClanHall}.
+	 * @return the {@link Clan} ID which own this {@link ClanHall}
 	 */
 	@Override
 	public int getOwnerId()
 	{
-		final L2Clan owner = _owner;
+		final Clan owner = _owner;
 		return (owner != null) ? owner.getId() : 0;
 	}
 	
@@ -247,9 +247,9 @@ public final class ClanHall extends AbstractResidence
 	
 	/**
 	 * Set the clan as owner of clan hall
-	 * @param clan the L2Clan object
+	 * @param clan the Clan object
 	 */
-	public void setOwner(L2Clan clan)
+	public void setOwner(Clan clan)
 	{
 		if (clan != null)
 		{

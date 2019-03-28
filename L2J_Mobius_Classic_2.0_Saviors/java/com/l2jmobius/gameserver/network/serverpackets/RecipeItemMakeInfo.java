@@ -18,47 +18,47 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeItemMakeInfo implements IClientOutgoingPacket
 {
 	private final int _id;
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final boolean _success;
 	
-	public RecipeItemMakeInfo(int id, L2PcInstance player, boolean success)
+	public RecipeItemMakeInfo(int id, PlayerInstance player, boolean success)
 	{
 		_id = id;
-		_activeChar = player;
+		_player = player;
 		_success = success;
 	}
 	
-	public RecipeItemMakeInfo(int id, L2PcInstance player)
+	public RecipeItemMakeInfo(int id, PlayerInstance player)
 	{
 		_id = id;
-		_activeChar = player;
+		_player = player;
 		_success = true;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final L2RecipeList recipe = RecipeData.getInstance().getRecipeList(_id);
+		final RecipeList recipe = RecipeData.getInstance().getRecipeList(_id);
 		if (recipe != null)
 		{
 			OutgoingPackets.RECIPE_ITEM_MAKE_INFO.writeId(packet);
 			packet.writeD(_id);
 			packet.writeD(recipe.isDwarvenRecipe() ? 0 : 1); // 0 = Dwarven - 1 = Common
-			packet.writeD((int) _activeChar.getCurrentMp());
-			packet.writeD(_activeChar.getMaxMp());
+			packet.writeD((int) _player.getCurrentMp());
+			packet.writeD(_player.getMaxMp());
 			packet.writeD(_success ? 1 : 0); // item creation success/failed
 			packet.writeC(0x00);
 			packet.writeQ(0x00);
 			return true;
 		}
-		LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
+		LOGGER.info("Character: " + _player + ": Requested unexisting recipe with id = " + _id);
 		return false;
 	}
 }

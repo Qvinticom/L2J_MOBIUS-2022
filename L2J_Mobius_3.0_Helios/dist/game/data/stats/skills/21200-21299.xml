@@ -1019,7 +1019,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Blood Seeker -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1041,7 +1041,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Greedy Throat -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1063,7 +1063,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Draconic Evolver -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1085,7 +1085,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Demonic Desire -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1107,7 +1107,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Fury of Darkness -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1129,7 +1129,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Jet Black Typhoon -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>

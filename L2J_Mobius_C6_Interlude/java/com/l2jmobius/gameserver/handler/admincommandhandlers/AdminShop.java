@@ -20,8 +20,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.StoreTradeList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.BuyList;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -41,7 +41,7 @@ public class AdminShop implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_buy"))
 		{
@@ -68,7 +68,7 @@ public class AdminShop implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleBuyRequest(L2PcInstance activeChar, String command)
+	private void handleBuyRequest(PlayerInstance activeChar, String command)
 	{
 		int val = -1;
 		
@@ -81,7 +81,7 @@ public class AdminShop implements IAdminCommandHandler
 			LOGGER.warning("admin buylist failed:" + command);
 		}
 		
-		L2TradeList list = TradeController.getInstance().getBuyList(val);
+		StoreTradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if (list != null)
 		{

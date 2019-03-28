@@ -20,15 +20,15 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -62,8 +62,8 @@ public final class Nursery extends AbstractInstance
 	private static final SkillHolder ENERGY_SKILL_3 = new SkillHolder(14230, 1);
 	private static final SkillHolder MAGUEN_STEAL_SKILL = new SkillHolder(14235, 1);
 	// Zones
-	private static final L2ScriptZone ENTER_ZONE_1 = ZoneManager.getInstance().getZoneById(23601, L2ScriptZone.class);
-	private static final L2ScriptZone ENTER_ZONE_2 = ZoneManager.getInstance().getZoneById(23602, L2ScriptZone.class);
+	private static final ScriptZone ENTER_ZONE_1 = ZoneManager.getInstance().getZoneById(23601, ScriptZone.class);
+	private static final ScriptZone ENTER_ZONE_2 = ZoneManager.getInstance().getZoneById(23602, ScriptZone.class);
 	// Misc
 	private static final int TEMPLATE_ID = 171;
 	
@@ -80,7 +80,7 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -135,7 +135,7 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		String htmltext = null;
@@ -195,7 +195,7 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -276,7 +276,7 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -297,7 +297,7 @@ public final class Nursery extends AbstractInstance
 					final int returnPoint = (npcVars.getInt("MAGUEN_STOLEN_COUNT", 0) / 2);
 					if (returnPoint > 0)
 					{
-						final L2Npc gameManager = instance.getNpc(TIE);
+						final Npc gameManager = instance.getNpc(TIE);
 						if (gameManager != null)
 						{
 							gameManager.getVariables().increaseInt("GAME_POINTS", returnPoint);
@@ -320,7 +320,7 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -351,7 +351,7 @@ public final class Nursery extends AbstractInstance
 			
 			if (getRandom(100) < 4)
 			{
-				final L2Npc maguen = addSpawn(MAGUEN, npc, false, 0, false, instance.getId());
+				final Npc maguen = addSpawn(MAGUEN, npc, false, 0, false, instance.getId());
 				maguen.setRunning();
 				maguen.getAI().startFollow(killer);
 				showOnScreenMsg(instance, NpcStringId.MAGUEN_APPEARANCE, ExShowScreenMessage.MIDDLE_CENTER, 4000);
@@ -388,7 +388,7 @@ public final class Nursery extends AbstractInstance
 					pointsCount += 3;
 				}
 				
-				final L2Npc gameManager = instance.getNpc(TIE);
+				final Npc gameManager = instance.getNpc(TIE);
 				if (gameManager != null)
 				{
 					gameManager.getVariables().increaseInt("GAME_POINTS", pointsCount);
@@ -399,12 +399,12 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
 		{
-			final L2Npc gameManager = instance.getNpc(TIE);
+			final Npc gameManager = instance.getNpc(TIE);
 			if (gameManager != null)
 			{
 				final StatsSet managerVars = gameManager.getVariables();
@@ -462,13 +462,13 @@ public final class Nursery extends AbstractInstance
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
-			enterInstance(character.getActingPlayer(), null, TEMPLATE_ID);
+			enterInstance(creature.getActingPlayer(), null, TEMPLATE_ID);
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	public static void main(String[] args)

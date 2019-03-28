@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SendTradeDone;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class AnswerTradeRequest extends L2GameClientPacket
+public final class AnswerTradeRequest extends GameClientPacket
 {
 	private int _response;
 	
@@ -36,7 +36,7 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -50,9 +50,9 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance partner = player.getActiveRequester();
+		final PlayerInstance partner = player.getActiveRequester();
 		
-		if ((partner == null) || (L2World.getInstance().findObject(partner.getObjectId()) == null))
+		if ((partner == null) || (World.getInstance().findObject(partner.getObjectId()) == null))
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new SendTradeDone(0));

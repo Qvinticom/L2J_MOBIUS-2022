@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20402" level="34" type="L2Monster" name="Veelan Bugbear Warrior" title="Enraged">
+	<npc id="20402" level="34" type="Monster" name="Veelan Bugbear Warrior" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -74,7 +74,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20403" level="16" type="L2Monster" name="Hunter Tarantula">
+	<npc id="20403" level="16" type="Monster" name="Hunter Tarantula">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -144,7 +144,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20410" level="15" type="L2Monster" name="Scavenger Spider">
+	<npc id="20410" level="15" type="Monster" name="Scavenger Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -212,7 +212,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20411" level="30" type="L2Monster" name="Scavenger Bat" title="Enraged">
+	<npc id="20411" level="30" type="Monster" name="Scavenger Bat" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -287,7 +287,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="20412" level="49" type="L2Monster" name="Susceptor">
+	<npc id="20412" level="49" type="Monster" name="Susceptor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -339,7 +339,7 @@
 			<height normal="35" grown="41.5" />
 		</collision>
 	</npc>
-	<npc id="20422" level="17" type="L2Monster" name="Akaste Skeleton Prefect">
+	<npc id="20422" level="17" type="Monster" name="Akaste Skeleton Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
@@ -402,7 +402,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="20423" level="14" type="L2Monster" name="Akaste Skeleton Archer">
+	<npc id="20423" level="14" type="Monster" name="Akaste Skeleton Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -462,7 +462,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20425" level="12" type="L2Monster" name="Akaste Skeleton Warrior">
+	<npc id="20425" level="12" type="Monster" name="Akaste Skeleton Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
@@ -522,7 +522,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="20426" level="10" type="L2Monster" name="Evil Eye">
+	<npc id="20426" level="10" type="Monster" name="Evil Eye">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -585,7 +585,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20428" level="14" type="L2Monster" name="Evil Eye Patrol">
+	<npc id="20428" level="14" type="Monster" name="Evil Eye Patrol">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -648,7 +648,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20435" level="15" type="L2Monster" name="Opal Beast">
+	<npc id="20435" level="15" type="Monster" name="Opal Beast">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -700,7 +700,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="20436" level="23" type="L2Monster" name="Ol Mahum Supplier">
+	<npc id="20436" level="23" type="Monster" name="Ol Mahum Supplier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -774,7 +774,7 @@
 			<height normal="29.2" />
 		</collision>
 	</npc>
-	<npc id="20437" level="21" type="L2Monster" name="Ol Mahum Recruit">
+	<npc id="20437" level="21" type="Monster" name="Ol Mahum Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -848,7 +848,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20438" level="26" type="L2Monster" name="Ol Mahum General">
+	<npc id="20438" level="26" type="Monster" name="Ol Mahum General">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -922,7 +922,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="20439" level="24" type="L2Monster" name="Ol Mahum Sergeant">
+	<npc id="20439" level="24" type="Monster" name="Ol Mahum Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -986,7 +986,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20446" level="6" type="L2Monster" name="Utuku Orc">
+	<npc id="20446" level="6" type="Monster" name="Utuku Orc">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -1054,7 +1054,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="20447" level="8" type="L2Monster" name="Utuku Orc Archer">
+	<npc id="20447" level="8" type="Monster" name="Utuku Orc Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
@@ -1122,7 +1122,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20448" level="7" type="L2Monster" name="Utuku Orc Soldier">
+	<npc id="20448" level="7" type="Monster" name="Utuku Orc Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -1189,7 +1189,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="20449" level="15" type="L2Monster" name="Will-O-Wisp">
+	<npc id="20449" level="15" type="Monster" name="Will-O-Wisp">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1247,7 +1247,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20458" level="33" type="L2Monster" name="Zombie Warrior" title="Enraged">
+	<npc id="20458" level="33" type="Monster" name="Zombie Warrior" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1325,7 +1325,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="20460" level="15" type="L2Monster" name="Crimson Spider">
+	<npc id="20460" level="15" type="Monster" name="Crimson Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1392,7 +1392,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20463" level="13" type="L2Monster" name="Dungeon Skeleton Archer">
+	<npc id="20463" level="13" type="Monster" name="Dungeon Skeleton Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -1452,7 +1452,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20464" level="12" type="L2Monster" name="Dungeon Skeleton Soldier">
+	<npc id="20464" level="12" type="Monster" name="Dungeon Skeleton Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
@@ -1512,7 +1512,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="20466" level="17" type="L2Monster" name="Pincer Spider">
+	<npc id="20466" level="17" type="Monster" name="Pincer Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1579,7 +1579,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20468" level="6" type="L2Monster" name="Kaboo Orc">
+	<npc id="20468" level="6" type="Monster" name="Kaboo Orc">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -1646,7 +1646,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="20469" level="8" type="L2Monster" name="Kaboo Orc Archer">
+	<npc id="20469" level="8" type="Monster" name="Kaboo Orc Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
@@ -1714,7 +1714,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20470" level="7" type="L2Monster" name="Kaboo Orc Soldier">
+	<npc id="20470" level="7" type="Monster" name="Kaboo Orc Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -1772,7 +1772,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="20471" level="10" type="L2Monster" name="Kaboo Orc Warrior">
+	<npc id="20471" level="10" type="Monster" name="Kaboo Orc Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -1830,7 +1830,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20472" level="12" type="L2Monster" name="Kaboo Orc Warrior Captain">
+	<npc id="20472" level="12" type="Monster" name="Kaboo Orc Warrior Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -1897,7 +1897,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20473" level="11" type="L2Monster" name="Kaboo Orc Warrior Lieutenant">
+	<npc id="20473" level="11" type="Monster" name="Kaboo Orc Warrior Lieutenant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -1964,7 +1964,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20474" level="15" type="L2Monster" name="Kasha Spider">
+	<npc id="20474" level="15" type="Monster" name="Kasha Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2021,7 +2021,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20475" level="4" type="L2Monster" name="Kasha Wolf">
+	<npc id="20475" level="4" type="Monster" name="Kasha Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2074,7 +2074,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="20476" level="16" type="L2Monster" name="Kasha Fang Spider">
+	<npc id="20476" level="16" type="Monster" name="Kasha Fang Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2132,7 +2132,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20477" level="6" type="L2Monster" name="Kasha Timber Wolf">
+	<npc id="20477" level="6" type="Monster" name="Kasha Timber Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2185,7 +2185,7 @@
 			<height normal="10.8" />
 		</collision>
 	</npc>
-	<npc id="20478" level="17" type="L2Monster" name="Kasha Blade Spider">
+	<npc id="20478" level="17" type="Monster" name="Kasha Blade Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2245,7 +2245,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20479" level="15" type="L2Monster" name="Kasha Bear">
+	<npc id="20479" level="15" type="Monster" name="Kasha Bear">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2298,7 +2298,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="20480" level="10" type="L2Monster" name="Blade Bat">
+	<npc id="20480" level="10" type="Monster" name="Blade Bat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2367,7 +2367,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="20483" level="17" type="L2Monster" name="Corpse Candle">
+	<npc id="20483" level="17" type="Monster" name="Corpse Candle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2426,7 +2426,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20492" level="21" type="L2Monster" name="Kirunak's Escort">
+	<npc id="20492" level="21" type="Monster" name="Kirunak's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2493,7 +2493,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="20494" level="31" type="L2Monster" name="Turek War Hound">
+	<npc id="20494" level="31" type="Monster" name="Turek War Hound">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2567,7 +2567,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="20495" level="39" type="L2Monster" name="Turek Orc Prefect">
+	<npc id="20495" level="39" type="Monster" name="Turek Orc Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2643,7 +2643,7 @@
 			<height normal="35" grown="27.6" />
 		</collision>
 	</npc>
-	<npc id="20496" level="36" type="L2Monster" name="Turek Orc Archer">
+	<npc id="20496" level="36" type="Monster" name="Turek Orc Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
@@ -2717,7 +2717,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20497" level="37" type="L2Monster" name="Turek Orc Skirmisher">
+	<npc id="20497" level="37" type="Monster" name="Turek Orc Skirmisher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2791,7 +2791,7 @@
 			<height normal="33" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20498" level="34" type="L2Monster" name="Turek Orc Supplier">
+	<npc id="20498" level="34" type="Monster" name="Turek Orc Supplier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2865,7 +2865,7 @@
 			<height normal="33" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20499" level="32" type="L2Monster" name="Turek Orc Footman">
+	<npc id="20499" level="32" type="Monster" name="Turek Orc Footman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />

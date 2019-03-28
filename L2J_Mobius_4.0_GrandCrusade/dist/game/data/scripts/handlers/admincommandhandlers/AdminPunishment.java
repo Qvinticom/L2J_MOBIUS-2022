@@ -29,8 +29,8 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
@@ -64,7 +64,7 @@ public class AdminPunishment implements IAdminCommandHandler
 	private static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		if (!st.hasMoreTokens())
@@ -156,7 +156,7 @@ public class AdminPunishment implements IAdminCommandHandler
 						}
 						case "player":
 						{
-							L2PcInstance target = null;
+							PlayerInstance target = null;
 							if (st.hasMoreTokens())
 							{
 								final String playerName = st.nextToken();
@@ -164,7 +164,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								{
 									return useAdminCommand("admin_punishment", activeChar);
 								}
-								target = L2World.getInstance().getPlayer(playerName);
+								target = World.getInstance().getPlayer(playerName);
 							}
 							if ((target == null) && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
 							{

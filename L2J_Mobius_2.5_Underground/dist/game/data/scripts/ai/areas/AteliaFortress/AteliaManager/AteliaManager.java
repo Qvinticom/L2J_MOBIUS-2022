@@ -22,10 +22,10 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -309,7 +309,7 @@ public final class AteliaManager extends AbstractNpcAI
 	private static final int SBCANCEL = 3600000; // Time 1 Hour
 	private static final int DDESPAWN = 10800000; // Time 3 Hour
 	
-	static ArrayList<L2Npc> FortessSpawns = new ArrayList<>();
+	static ArrayList<Npc> FortessSpawns = new ArrayList<>();
 	
 	private AteliaManager()
 	{
@@ -328,7 +328,7 @@ public final class AteliaManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -462,9 +462,9 @@ public final class AteliaManager extends AbstractNpcAI
 			{
 				for (int sb : SB_GROUP)
 				{
-					for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
+					for (Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
 					{
-						for (L2Npc monster : spawn.getSpawnedNpcs())
+						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							if ((monster.getZ() <= -2759) && (monster.getZ() >= -3246))
 							{
@@ -480,9 +480,9 @@ public final class AteliaManager extends AbstractNpcAI
 			{
 				for (int sb : SB_GROUP)
 				{
-					for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
+					for (Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
 					{
-						for (L2Npc monster : spawn.getSpawnedNpcs())
+						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							if ((monster.getZ() <= -2020) && (monster.getZ() >= -2759))
 							{
@@ -498,9 +498,9 @@ public final class AteliaManager extends AbstractNpcAI
 			{
 				for (int sb : SB_GROUP)
 				{
-					for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
+					for (Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
 					{
-						for (L2Npc monster : spawn.getSpawnedNpcs())
+						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							if ((monster.getZ() <= -1477) && (monster.getZ() >= -2212)) // need correct!
 							{
@@ -516,9 +516,9 @@ public final class AteliaManager extends AbstractNpcAI
 			{
 				for (int sb : SB_GROUP)
 				{
-					for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
+					for (Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
 					{
-						for (L2Npc monster : spawn.getSpawnedNpcs())
+						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							monster.getEffectList().stopEffects(AbnormalType.ALL_ATTACK_DOWN);
 							monster.stopSkillEffects(true, 16526);
@@ -531,9 +531,9 @@ public final class AteliaManager extends AbstractNpcAI
 			{
 				for (int sb : SB_GROUP)
 				{
-					for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
+					for (Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
 					{
-						for (L2Npc monster : spawn.getSpawnedNpcs())
+						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							monster.getEffectList().stopEffects(AbnormalType.MAX_HP_DOWN);
 							monster.stopSkillEffects(true, 16542);
@@ -546,9 +546,9 @@ public final class AteliaManager extends AbstractNpcAI
 			{
 				for (int sb : SB_GROUP)
 				{
-					for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
+					for (Spawn spawn : SpawnTable.getInstance().getSpawns(sb))
 					{
-						for (L2Npc monster : spawn.getSpawnedNpcs())
+						for (Npc monster : spawn.getSpawnedNpcs())
 						{
 							monster.getEffectList().stopEffects(AbnormalType.MAX_HP_DOWN);
 							monster.stopSkillEffects(true, 16542);
@@ -559,7 +559,7 @@ public final class AteliaManager extends AbstractNpcAI
 			}
 			case "SPY_CLEAR":
 			{
-				for (L2Npc spawn : FortessSpawns)
+				for (Npc spawn : FortessSpawns)
 				{
 					if (spawn != null)
 					{
@@ -589,7 +589,7 @@ public final class AteliaManager extends AbstractNpcAI
 				final int rnd = getRandom(3, 4);
 				for (int i = 0; i < rnd; i++)
 				{
-					final L2Npc alert = addSpawn(ALERT[i], npc.getX() + 10, npc.getY() + 10, npc.getZ() + 10, npc.getHeading(), false, 0, false);
+					final Npc alert = addSpawn(ALERT[i], npc.getX() + 10, npc.getY() + 10, npc.getZ() + 10, npc.getHeading(), false, 0, false);
 					alert.setTitle("On Alert Stage 1");
 					addAttackDesire(alert, player);
 				}
@@ -600,7 +600,7 @@ public final class AteliaManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final int chance = getRandom(1000);
 		if (CommonUtil.contains(ATELIA_CURSE, npc.getId()))
@@ -619,7 +619,7 @@ public final class AteliaManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		
 		if ((npc.getZ() <= -2804) && (npc.getZ() >= -2999) && (npc.getId() == INFUSER_1))
@@ -670,13 +670,13 @@ public final class AteliaManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + "-1.htm";
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{

@@ -19,18 +19,18 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 {
-	private final Collection<L2ItemInstance> _items;
+	private final Collection<ItemInstance> _items;
 	private long _price;
 	
-	public ExShowBaseAttributeCancelWindow(L2PcInstance player)
+	public ExShowBaseAttributeCancelWindow(PlayerInstance player)
 	{
-		_items = player.getInventory().getItems(L2ItemInstance::hasAttributes);
+		_items = player.getInventory().getItems(ItemInstance::hasAttributes);
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
 		
 		packet.writeD(_items.size());
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeQ(getPrice(item));
@@ -52,7 +52,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	 * @param item
 	 * @return
 	 */
-	private long getPrice(L2ItemInstance item)
+	private long getPrice(ItemInstance item)
 	{
 		switch (item.getItem().getCrystalType())
 		{

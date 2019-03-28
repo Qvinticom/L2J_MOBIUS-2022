@@ -25,7 +25,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -53,18 +53,18 @@ public class FavoriteBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
 	{
 		// None of this commands can be added to favorites.
 		if (command.startsWith("_bbsgetfav"))
 		{
 			// Load Favorite links
-			final String list = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/favorite_list.html");
+			final String list = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/favorite_list.html");
 			final StringBuilder sb = new StringBuilder();
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_FAVORITES))
 			{
-				ps.setInt(1, activeChar.getObjectId());
+				ps.setInt(1, player.getObjectId());
 				try (ResultSet rs = ps.executeQuery())
 				{
 					while (rs.next())
@@ -77,18 +77,18 @@ public class FavoriteBoard implements IParseBoardHandler
 						sb.append(link);
 					}
 				}
-				String html = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/favorite.html");
+				String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/favorite.html");
 				html = html.replaceAll("%fav_list%", sb.toString());
-				CommunityBoardHandler.separateAndSend(html, activeChar);
+				CommunityBoardHandler.separateAndSend(html, player);
 			}
 			catch (Exception e)
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't load favorite links for player " + activeChar.getName());
+				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't load favorite links for player " + player.getName());
 			}
 		}
 		else if (command.startsWith("bbs_add_fav"))
 		{
-			final String bypass = CommunityBoardHandler.getInstance().removeBypass(activeChar);
+			final String bypass = CommunityBoardHandler.getInstance().removeBypass(player);
 			if (bypass != null)
 			{
 				final String[] parts = bypass.split("&", 2);
@@ -101,16 +101,16 @@ public class FavoriteBoard implements IParseBoardHandler
 				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement ps = con.prepareStatement(ADD_FAVORITE))
 				{
-					ps.setInt(1, activeChar.getObjectId());
+					ps.setInt(1, player.getObjectId());
 					ps.setString(2, parts[0].trim());
 					ps.setString(3, parts[1].trim());
 					ps.execute();
 					// Callback
-					parseCommunityBoardCommand("_bbsgetfav", activeChar);
+					parseCommunityBoardCommand("_bbsgetfav", player);
 				}
 				catch (Exception e)
 				{
-					LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link " + bypass + " for player " + activeChar.getName());
+					LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link " + bypass + " for player " + player.getName());
 				}
 			}
 		}
@@ -126,15 +126,15 @@ public class FavoriteBoard implements IParseBoardHandler
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_FAVORITE))
 			{
-				ps.setInt(1, activeChar.getObjectId());
+				ps.setInt(1, player.getObjectId());
 				ps.setInt(2, Integer.parseInt(favId));
 				ps.execute();
 				// Callback
-				parseCommunityBoardCommand("_bbsgetfav", activeChar);
+				parseCommunityBoardCommand("_bbsgetfav", player);
 			}
 			catch (Exception e)
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + activeChar.getName());
+				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + player.getName());
 			}
 		}
 		return true;

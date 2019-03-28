@@ -23,13 +23,13 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Flood protector implementation.
@@ -44,7 +44,7 @@ public final class FloodProtectorAction
 	/**
 	 * Client for this instance of flood protector.
 	 */
-	private final L2GameClient _client;
+	private final GameClient _client;
 	/**
 	 * Configuration of this instance of flood protector.
 	 */
@@ -71,7 +71,7 @@ public final class FloodProtectorAction
 	 * @param client the game client for which flood protection is being created
 	 * @param config flood protector configuration
 	 */
-	public FloodProtectorAction(L2GameClient client, FloodProtectorConfig config)
+	public FloodProtectorAction(GameClient client, FloodProtectorConfig config)
 	{
 		super();
 		_client = client;
@@ -87,7 +87,7 @@ public final class FloodProtectorAction
 	{
 		final int curTick = GameTimeController.getInstance().getGameTicks();
 		
-		if ((_client.getActiveChar() != null) && _client.getActiveChar().canOverrideCond(PcCondOverride.FLOOD_CONDITIONS))
+		if ((_client.getPlayer() != null) && _client.getPlayer().canOverrideCond(PlayerCondOverride.FLOOD_CONDITIONS))
 		{
 			return true;
 		}
@@ -165,12 +165,12 @@ public final class FloodProtectorAction
 	 */
 	private void jailChar()
 	{
-		if (_client.getActiveChar() == null)
+		if (_client.getPlayer() == null)
 		{
 			return;
 		}
 		
-		final int charId = _client.getActiveChar().getObjectId();
+		final int charId = _client.getPlayer().getObjectId();
 		if (charId > 0)
 		{
 			PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
@@ -204,11 +204,11 @@ public final class FloodProtectorAction
 		{
 			case IN_GAME:
 			{
-				if (_client.getActiveChar() != null)
+				if (_client.getPlayer() != null)
 				{
-					output.append(_client.getActiveChar().getName());
+					output.append(_client.getPlayer().getName());
 					output.append("(");
-					output.append(_client.getActiveChar().getObjectId());
+					output.append(_client.getPlayer().getObjectId());
 					output.append(") ");
 				}
 				break;

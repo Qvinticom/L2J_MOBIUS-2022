@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29200" level="99" type="L2Monster" name="Earth Wyrm Tail">
+	<npc id="29200" level="99" type="Monster" name="Earth Wyrm Tail">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14342" level="1" />
@@ -41,7 +41,7 @@
 			<height normal="1600" />
 		</collision>
 	</npc>
-	<npc id="29201" level="99" type="L2Monster" name="Earth Wyrm Victim">
+	<npc id="29201" level="99" type="Monster" name="Earth Wyrm Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14351" level="1" />
@@ -86,7 +86,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="29202" level="99" type="L2Monster" name="Earth Wyrm Victim">
+	<npc id="29202" level="99" type="Monster" name="Earth Wyrm Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14350" level="1" />
@@ -131,7 +131,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="29203" level="99" type="L2Monster" name="Earth Wyrm Victim">
+	<npc id="29203" level="99" type="Monster" name="Earth Wyrm Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
@@ -174,7 +174,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="29204" level="99" type="L2Monster" name="Larva">
+	<npc id="29204" level="99" type="Monster" name="Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14349" level="1" />
@@ -219,7 +219,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="29205" level="99" type="L2Monster" name="Tentacle">
+	<npc id="29205" level="99" type="Monster" name="Tentacle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01" id="14332" level="1" />
@@ -264,7 +264,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="29206" level="99" type="L2Monster" name="Stomach Gland">
+	<npc id="29206" level="99" type="Monster" name="Stomach Gland">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
@@ -304,7 +304,7 @@
 			<height normal="55" grown="66" />
 		</collision>
 	</npc>
-	<npc id="29207" level="99" type="L2Monster" name="Larva">
+	<npc id="29207" level="99" type="Monster" name="Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14345" level="1" />
@@ -345,7 +345,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="29208" level="99" type="L2Monster" name="Larva">
+	<npc id="29208" level="99" type="Monster" name="Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14346" level="1" />
@@ -386,7 +386,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="29209" level="99" type="L2RaidBoss" name="Octavis">
+	<npc id="29209" level="99" type="RaidBoss" name="Octavis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14025" level="1" />
@@ -426,7 +426,7 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="29210" level="99" type="L2Monster" name="Octavis' Beast">
+	<npc id="29210" level="99" type="Monster" name="Octavis' Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14023" level="1" />
@@ -466,7 +466,7 @@
 			<height normal="56" />
 		</collision>
 	</npc>
-	<npc id="29211" level="99" type="L2RaidBoss" name="Octavis">
+	<npc id="29211" level="99" type="RaidBoss" name="Octavis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14026" level="1" />
@@ -506,7 +506,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="29212" level="99" type="L2RaidBoss" name="Octavis">
+	<npc id="29212" level="99" type="RaidBoss" name="Octavis">
 		<parameters>
 			<skill name="boss_skill_01" id="14030" level="1" />
 			<skill name="boss_skill_02" id="14031" level="1" />
@@ -644,7 +644,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29213" level="99" type="L2RaidBoss" name="Baylor" title="Warden">
+	<npc id="29213" level="99" type="RaidBoss" name="Baylor" title="Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" />
@@ -787,7 +787,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29214" level="97" type="L2Monster" name="Crystal Prison Guard">
+	<npc id="29214" level="97" type="Monster" name="Crystal Prison Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -829,7 +829,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="29215" level="97" type="L2Monster" name="Crystalline Golem">
+	<npc id="29215" level="97" type="Monster" name="Crystalline Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -864,7 +864,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="29216" level="97" type="L2Monster" name="Crystalline Golem">
+	<npc id="29216" level="97" type="Monster" name="Crystalline Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -899,7 +899,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="29217" level="97" type="L2Monster" name="Crystal Prison Guard">
+	<npc id="29217" level="97" type="Monster" name="Crystal Prison Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -938,7 +938,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="29218" level="99" type="L2RaidBoss" name="Balok" title="Hell's Warden">
+	<npc id="29218" level="99" type="RaidBoss" name="Balok" title="Hell's Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01" id="14366" level="1" />
@@ -1068,7 +1068,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29219" level="98" type="L2Monster" name="Hell's Disciple">
+	<npc id="29219" level="98" type="Monster" name="Hell's Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14250" level="1" />
@@ -1114,7 +1114,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="29220" level="99" type="L2Monster" name="Larva">
+	<npc id="29220" level="99" type="Monster" name="Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14348" level="1" />
@@ -1155,7 +1155,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="29221" level="99" type="L2Monster" name="Larva">
+	<npc id="29221" level="99" type="Monster" name="Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="skill01" id="14347" level="1" />
@@ -1196,7 +1196,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="29222" level="99" type="L2Monster" name="Earth Wyrm Tail">
+	<npc id="29222" level="99" type="Monster" name="Earth Wyrm Tail">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
@@ -1236,7 +1236,7 @@
 			<height normal="1600" />
 		</collision>
 	</npc>
-	<npc id="29223" level="97" type="L2Monster" name="Antharas" title="Land Dragon">
+	<npc id="29223" level="97" type="Monster" name="Antharas" title="Land Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SKILL_ANTARAS_MOUTH" id="14378" level="1" />
@@ -1283,7 +1283,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29224" level="97" type="L2Monster" name="Behemoth Dragon">
+	<npc id="29224" level="97" type="Monster" name="Behemoth Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="14391" level="1" />
@@ -1332,7 +1332,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29225" level="97" type="L2Monster" name="Tarask Dragon">
+	<npc id="29225" level="97" type="Monster" name="Tarask Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill02_ID" id="14392" level="1" />
@@ -1381,7 +1381,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29226" level="97" type="L2Monster" name="Dragon Bomber">
+	<npc id="29226" level="97" type="Monster" name="Dragon Bomber">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="14390" level="1" />
@@ -1418,7 +1418,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="29227" level="97" type="L2Monster" name="Dragon Bomber">
+	<npc id="29227" level="97" type="Monster" name="Dragon Bomber">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="14390" level="1" />
@@ -1455,7 +1455,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="29228" level="97" type="L2Monster" name="Valakas" title="Fire Dragon">
+	<npc id="29228" level="97" type="Monster" name="Valakas" title="Fire Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="NormalAttackLeft" id="14395" level="1" />
@@ -1512,7 +1512,7 @@
 			<height normal="335" />
 		</collision>
 	</npc>
-	<npc id="29229" level="97" type="L2Monster" name="Lavasaurus Alpha">
+	<npc id="29229" level="97" type="Monster" name="Lavasaurus Alpha">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="DDMagic" id="14407" level="1" />
@@ -1552,7 +1552,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="29230" level="97" type="L2Monster" name="Dragon Treater">
+	<npc id="29230" level="97" type="Monster" name="Dragon Treater">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14477" level="1" />
@@ -1587,7 +1587,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="29231" level="95" type="L2Monster" name="Earth Wyrm Victim">
+	<npc id="29231" level="95" type="Monster" name="Earth Wyrm Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="big_skill" id="14287" level="1" />
@@ -1640,7 +1640,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="29232" level="99" type="L2Npc" name="Reward" title="Earth Wyrm">
+	<npc id="29232" level="99" type="Npc" name="Reward" title="Earth Wyrm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1667,7 +1667,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29233" level="99" type="L2Monster" name="Tauti">
+	<npc id="29233" level="99" type="Monster" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="i_left_punch" id="15042" level="1" />
@@ -1715,7 +1715,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="29234" level="99" type="L2Monster" name="Tauti">
+	<npc id="29234" level="99" type="Monster" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="i_left_punch" id="15042" level="1" />
@@ -1763,7 +1763,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="29235" level="99" type="L2Monster" name="Tauti">
+	<npc id="29235" level="99" type="Monster" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="i_left_punch" id="15042" level="1" />
@@ -1811,7 +1811,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="29236" level="99" type="L2RaidBoss" name="Tauti">
+	<npc id="29236" level="99" type="RaidBoss" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1934,7 +1934,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29237" level="99" type="L2RaidBoss" name="Tauti">
+	<npc id="29237" level="99" type="RaidBoss" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2058,7 +2058,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29238" level="99" type="L2Monster" name="Tauti">
+	<npc id="29238" level="99" type="Monster" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2182,7 +2182,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29239" level="99" type="L2Monster" name="Tauti">
+	<npc id="29239" level="99" type="Monster" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2221,7 +2221,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="29240" level="104" type="L2GrandBoss" name="Lindvior" title="Wind Dragon">
+	<npc id="29240" level="104" type="GrandBoss" name="Lindvior" title="Wind Dragon">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->
@@ -2355,7 +2355,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29241" level="104" type="L2Monster" name="Lyn Draco">
+	<npc id="29241" level="104" type="Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2388,7 +2388,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="29242" level="99" type="L2Monster" name="Lyn Draco">
+	<npc id="29242" level="99" type="Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2424,7 +2424,7 @@
 			<height normal="77" />
 		</collision>
 	</npc>
-	<npc id="29243" level="99" type="L2Monster" name="Lyn Draco">
+	<npc id="29243" level="99" type="Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2456,7 +2456,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29244" level="99" type="L2Monster" name="Beleth">
+	<npc id="29244" level="99" type="Monster" name="Beleth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -2485,7 +2485,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="29245" level="99" type="L2Monster" name="Beleth">
+	<npc id="29245" level="99" type="Monster" name="Beleth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -2515,7 +2515,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="29246" level="99" type="L2Monster" name="Darion">
+	<npc id="29246" level="99" type="Monster" name="Darion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2545,7 +2545,7 @@
 			<height normal="81.2165" />
 		</collision>
 	</npc>
-	<npc id="29247" level="99" type="L2Monster" name="Beleth">
+	<npc id="29247" level="99" type="Monster" name="Beleth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -2574,7 +2574,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="29248" level="99" type="L2Monster" name="Darion's Minion">
+	<npc id="29248" level="99" type="Monster" name="Darion's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2603,7 +2603,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="29249" level="99" type="L2Monster" name="Darion's Minion">
+	<npc id="29249" level="99" type="Monster" name="Darion's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2632,7 +2632,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="29250" level="99" type="L2Monster" name="Beleth">
+	<npc id="29250" level="99" type="Monster" name="Beleth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -2662,7 +2662,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="29251" level="99" type="L2Monster" name="Ekimus" title="Immortal Lord">
+	<npc id="29251" level="99" type="Monster" name="Ekimus" title="Immortal Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2781,7 +2781,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29252" level="99" type="L2Monster" name="Curain" title="Screaming Ghost">
+	<npc id="29252" level="99" type="Monster" name="Curain" title="Screaming Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2809,7 +2809,7 @@
 			<height normal="40.8" />
 		</collision>
 	</npc>
-	<npc id="29253" level="99" type="L2Monster" name="Flan" title="Suffering Ghost">
+	<npc id="29253" level="99" type="Monster" name="Flan" title="Suffering Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2837,7 +2837,7 @@
 			<height normal="40.8" />
 		</collision>
 	</npc>
-	<npc id="29254" level="99" type="L2Monster" name="Aschedor" title="Howling Ghost">
+	<npc id="29254" level="99" type="Monster" name="Aschedor" title="Howling Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2864,7 +2864,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="29255" level="99" type="L2Monster" name="Panahon" title="Wailing Ghost">
+	<npc id="29255" level="99" type="Monster" name="Panahon" title="Wailing Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2891,7 +2891,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="29256" level="99" type="L2Monster" name="Yehan Klodekus' Ghost">
+	<npc id="29256" level="99" type="Monster" name="Yehan Klodekus' Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2919,7 +2919,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="29257" level="99" type="L2Monster" name="Yehan Klodekus' Ghost">
+	<npc id="29257" level="99" type="Monster" name="Yehan Klodekus' Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2947,7 +2947,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="29258" level="81" type="L2Monster" name="Yehan Klodekus">
+	<npc id="29258" level="81" type="Monster" name="Yehan Klodekus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2975,7 +2975,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="29259" level="81" type="L2Monster" name="Yehan Klanikus">
+	<npc id="29259" level="81" type="Monster" name="Yehan Klanikus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3003,7 +3003,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="29260" level="104" type="L2RaidBoss" name="Maliss" title="Dimensional Invader">
+	<npc id="29260" level="104" type="RaidBoss" name="Maliss" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3128,7 +3128,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29261" level="104" type="L2RaidBoss" name="Isadora" title="Dimensional Invader">
+	<npc id="29261" level="104" type="RaidBoss" name="Isadora" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3253,7 +3253,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29263" level="97" type="L2Monster" name="Harp" title="Dimensional Invader">
+	<npc id="29263" level="97" type="Monster" name="Harp" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3276,7 +3276,7 @@
 			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="29266" level="103" type="L2Monster" name="Corrupted Captain">
+	<npc id="29266" level="103" type="Monster" name="Corrupted Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3297,7 +3297,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="29267" level="103" type="L2Monster" name="Corrupted High Priest">
+	<npc id="29267" level="103" type="Monster" name="Corrupted High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3318,7 +3318,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="29268" level="97" type="L2RaidBoss" name="Crook the Mad" title="Dimensional Invader">
+	<npc id="29268" level="97" type="RaidBoss" name="Crook the Mad" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -3447,7 +3447,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29269" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Dimensional Invader">
+	<npc id="29269" level="97" type="RaidBoss" name="Houpon the Warden Overseer" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3577,7 +3577,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29270" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Dimensional Invader">
+	<npc id="29270" level="97" type="RaidBoss" name="Guillotine of Death" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3682,7 +3682,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29271" level="97" type="L2Monster" name="Tallion">
+	<npc id="29271" level="97" type="Monster" name="Tallion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3719,7 +3719,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29272" level="97" type="L2Monster" name="Krutati">
+	<npc id="29272" level="97" type="Monster" name="Krutati">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3754,7 +3754,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29273" level="98" type="L2RaidBoss" name="Lindvior's Herald Numa" title="Dimensional Invader">
+	<npc id="29273" level="98" type="RaidBoss" name="Lindvior's Herald Numa" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3859,7 +3859,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29274" level="98" type="L2RaidBoss" name="Valakas' Herald Potigia" title="Dimensional Invader">
+	<npc id="29274" level="98" type="RaidBoss" name="Valakas' Herald Potigia" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3964,7 +3964,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29275" level="98" type="L2RaidBoss" name="Antharas' Herald Komabor" title="Dimensional Invader">
+	<npc id="29275" level="98" type="RaidBoss" name="Antharas' Herald Komabor" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -4069,7 +4069,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29276" level="85" type="L2Monster" name="Mino Muscle Bomber">
+	<npc id="29276" level="85" type="Monster" name="Mino Muscle Bomber">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4090,7 +4090,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="29277" level="85" type="L2Monster" name="Mino Dragon">
+	<npc id="29277" level="85" type="Monster" name="Mino Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4112,7 +4112,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="29278" level="98" type="L2RaidBoss" name="Vengeful Agarez" title="Dimensional Invader">
+	<npc id="29278" level="98" type="RaidBoss" name="Vengeful Agarez" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4217,7 +4217,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29279" level="98" type="L2RaidBoss" name="Vengeful Oretross" title="Dimensional Invader">
+	<npc id="29279" level="98" type="RaidBoss" name="Vengeful Oretross" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4322,7 +4322,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29280" level="98" type="L2RaidBoss" name="Vengeful Eligos" title="Dimensional Invader">
+	<npc id="29280" level="98" type="RaidBoss" name="Vengeful Eligos" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4427,7 +4427,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29281" level="85" type="L2Monster" name="Dark Spicula">
+	<npc id="29281" level="85" type="Monster" name="Dark Spicula">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4448,7 +4448,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="29282" level="85" type="L2Monster" name="Bloody Spicula">
+	<npc id="29282" level="85" type="Monster" name="Bloody Spicula">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4470,7 +4470,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="29283" level="98" type="L2RaidBoss" name="Vengeful Lerazia" title="Dimensional Invader">
+	<npc id="29283" level="98" type="RaidBoss" name="Vengeful Lerazia" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4575,7 +4575,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29284" level="98" type="L2RaidBoss" name="Vengeful Edaire" title="Dimensional Invader">
+	<npc id="29284" level="98" type="RaidBoss" name="Vengeful Edaire" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4680,7 +4680,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29285" level="98" type="L2RaidBoss" name="Vengeful Agonia" title="Dimensional Invader">
+	<npc id="29285" level="98" type="RaidBoss" name="Vengeful Agonia" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4785,7 +4785,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29286" level="85" type="L2Monster" name="Dark Weiss">
+	<npc id="29286" level="85" type="Monster" name="Dark Weiss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4806,7 +4806,7 @@
 			<height normal="42.5" grown="46" />
 		</collision>
 	</npc>
-	<npc id="29287" level="85" type="L2Monster" name="Bloody Weiss">
+	<npc id="29287" level="85" type="Monster" name="Bloody Weiss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -4827,7 +4827,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="29288" level="92" type="L2RaidBoss" name="Nerva Orc Nergatt" title="Dimensional Invader">
+	<npc id="29288" level="92" type="RaidBoss" name="Nerva Orc Nergatt" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -4927,7 +4927,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29289" level="92" type="L2RaidBoss" name="Amden Orc Turation" title="Dimensional Invader">
+	<npc id="29289" level="92" type="RaidBoss" name="Amden Orc Turation" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5028,7 +5028,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29290" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Dimensional Invader">
+	<npc id="29290" level="99" type="RaidBoss" name="Nerva Chief Turakan" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5121,7 +5121,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29291" level="98" type="L2Monster" name="Nerva Orc Raider">
+	<npc id="29291" level="98" type="Monster" name="Nerva Orc Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5157,7 +5157,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29292" level="99" type="L2Monster" name="Nerva Orc Elite">
+	<npc id="29292" level="99" type="Monster" name="Nerva Orc Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5193,7 +5193,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29293" level="99" type="L2RaidBoss" name="Theor" title="Dimensional Invader">
+	<npc id="29293" level="99" type="RaidBoss" name="Theor" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5285,7 +5285,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29294" level="85" type="L2Monster" name="Tebird" title="Dimensional Invader">
+	<npc id="29294" level="85" type="Monster" name="Tebird" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -5308,7 +5308,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="29295" level="99" type="L2RaidBoss" name="Tegaffe" title="Dimensional Invader">
+	<npc id="29295" level="99" type="RaidBoss" name="Tegaffe" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5400,7 +5400,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29296" level="99" type="L2Monster" name="Nerva Orc Assassin">
+	<npc id="29296" level="99" type="Monster" name="Nerva Orc Assassin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5437,7 +5437,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29297" level="99" type="L2Monster" name="Nerva Orc Ambusher">
+	<npc id="29297" level="99" type="Monster" name="Nerva Orc Ambusher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -5474,7 +5474,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="29298" level="85" type="L2Monster" name="Varbasion" title="Dimensional Invader">
+	<npc id="29298" level="85" type="Monster" name="Varbasion" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -5497,7 +5497,7 @@
 			<height normal="88" />
 		</collision>
 	</npc>
-	<npc id="29299" level="97" type="L2RaidBoss" name="Varmonia" title="Dimensional Invader">
+	<npc id="29299" level="97" type="RaidBoss" name="Varmonia" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>

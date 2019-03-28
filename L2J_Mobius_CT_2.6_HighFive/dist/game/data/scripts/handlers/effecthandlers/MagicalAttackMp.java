@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -64,9 +64,9 @@ public final class MagicalAttackMp extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.MAGICAL_ATTACK;
+		return EffectType.MAGICAL_ATTACK;
 	}
 	
 	@Override
@@ -78,19 +78,19 @@ public final class MagicalAttackMp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		final double damage = Formulas.calcManaDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final boolean sps = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
+		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
+		final double damage = Formulas.calcManaDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
 		final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 		
 		if (damage > 0)
@@ -102,16 +102,16 @@ public final class MagicalAttackMp extends AbstractEffect
 		if (target.isPlayer())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
-			sm.addString(activeChar.getName());
+			sm.addString(creature.getName());
 			sm.addInt((int) mp);
 			target.sendPacket(sm);
 		}
 		
-		if (activeChar.isPlayer())
+		if (creature.isPlayer())
 		{
 			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 			sm2.addInt((int) mp);
-			activeChar.sendPacket(sm2);
+			creature.sendPacket(sm2);
 		}
 	}
 }

@@ -44,11 +44,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.Hero;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -62,10 +62,10 @@ public class Olympiad
 	private static Map<Integer, StatsSet> _nobles;
 	private static Map<Integer, StatsSet> _oldnobles;
 	protected static List<StatsSet> _heroesToBe;
-	private static List<L2PcInstance> _nonClassBasedRegisters;
-	private static Map<Integer, List<L2PcInstance>> _classBasedRegisters;
+	private static List<PlayerInstance> _nonClassBasedRegisters;
+	private static Map<Integer, List<PlayerInstance>> _classBasedRegisters;
 	public static final int OLY_MANAGER = 31688;
-	public static List<L2Spawn> olymanagers = new ArrayList<>();
+	public static List<Spawn> olymanagers = new ArrayList<>();
 	
 	private static final String OLYMPIAD_DATA_FILE = "config/olympiad.cfg";
 	public static final String OLYMPIAD_HTML_PATH = "data/html/olympiad/";
@@ -452,7 +452,7 @@ public class Olympiad
 		}
 	}
 	
-	public boolean registerNoble(L2PcInstance noble, boolean classBased)
+	public boolean registerNoble(PlayerInstance noble, boolean classBased)
 	{
 		SystemMessage sm;
 		
@@ -516,7 +516,7 @@ public class Olympiad
 			{
 				for (String character_name : players_in_boxes)
 				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(character_name);
+					final PlayerInstance player = World.getInstance().getPlayer(character_name);
 					
 					if ((player != null) && ((player.getOlympiadGameId() > 0) || player.isInOlympiadMode() || getInstance().isRegistered(player)))
 					{
@@ -531,8 +531,8 @@ public class Olympiad
 		
 		if (_classBasedRegisters.containsKey(noble.getClassId().getId()))
 		{
-			final List<L2PcInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
-			for (L2PcInstance participant : classed)
+			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+			for (PlayerInstance participant : classed)
 			{
 				if (participant.getObjectId() == noble.getObjectId())
 				{
@@ -580,7 +580,7 @@ public class Olympiad
 		{
 			if (_classBasedRegisters.containsKey(noble.getClassId().getId()))
 			{
-				final List<L2PcInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+				final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
 				classed.add(noble);
 				
 				_classBasedRegisters.remove(noble.getClassId().getId());
@@ -588,7 +588,7 @@ public class Olympiad
 			}
 			else
 			{
-				final List<L2PcInstance> classed = new ArrayList<>();
+				final List<PlayerInstance> classed = new ArrayList<>();
 				classed.add(noble);
 				
 				_classBasedRegisters.put(noble.getClassId().getId(), classed);
@@ -629,12 +629,12 @@ public class Olympiad
 		getInstance().saveOldNobleData(playerId);
 	}
 	
-	protected static List<L2PcInstance> getRegisteredNonClassBased()
+	protected static List<PlayerInstance> getRegisteredNonClassBased()
 	{
 		return _nonClassBasedRegisters;
 	}
 	
-	protected static Map<Integer, List<L2PcInstance>> getRegisteredClassBased()
+	protected static Map<Integer, List<PlayerInstance>> getRegisteredClassBased()
 	{
 		return _classBasedRegisters;
 	}
@@ -669,7 +669,7 @@ public class Olympiad
 		_classBasedRegisters.clear();
 	}
 	
-	public boolean isRegistered(L2PcInstance noble)
+	public boolean isRegistered(PlayerInstance noble)
 	{
 		boolean result = false;
 		
@@ -679,7 +679,7 @@ public class Olympiad
 		}
 		else if ((_classBasedRegisters != null) && _classBasedRegisters.containsKey(noble.getClassId().getId()))
 		{
-			final List<L2PcInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
 			if ((classed != null) && classed.contains(noble))
 			{
 				result = true;
@@ -689,7 +689,7 @@ public class Olympiad
 		return result;
 	}
 	
-	public boolean unRegisterNoble(L2PcInstance noble)
+	public boolean unRegisterNoble(PlayerInstance noble)
 	{
 		SystemMessage sm;
 		
@@ -734,7 +734,7 @@ public class Olympiad
 		}
 		else
 		{
-			final List<L2PcInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
+			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
 			classed.remove(noble);
 			
 			_classBasedRegisters.remove(noble.getClassId().getId());
@@ -747,14 +747,14 @@ public class Olympiad
 		return true;
 	}
 	
-	public void removeDisconnectedCompetitor(L2PcInstance player)
+	public void removeDisconnectedCompetitor(PlayerInstance player)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGame(player.getOlympiadGameId()) != null)
 		{
 			OlympiadManager.getInstance().getOlympiadGame(player.getOlympiadGameId()).handleDisconnect(player);
 		}
 		
-		final List<L2PcInstance> classed = _classBasedRegisters.get(player.getClassId().getId());
+		final List<PlayerInstance> classed = _classBasedRegisters.get(player.getClassId().getId());
 		
 		if (_nonClassBasedRegisters.contains(player))
 		{
@@ -769,7 +769,7 @@ public class Olympiad
 		}
 	}
 	
-	public void notifyCompetitorDamage(L2PcInstance player, int damage, int gameId)
+	public void notifyCompetitorDamage(PlayerInstance player, int damage, int gameId)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGames().get(gameId) != null)
 		{
@@ -1020,7 +1020,7 @@ public class Olympiad
 	}
 	
 	// returns the players for the given olympiad game Id
-	public L2PcInstance[] getPlayers(int Id)
+	public PlayerInstance[] getPlayers(int Id)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGame(Id) == null)
 		{
@@ -1034,7 +1034,7 @@ public class Olympiad
 		return _currentCycle;
 	}
 	
-	public static void addSpectator(int id, L2PcInstance spectator, boolean storeCoords)
+	public static void addSpectator(int id, PlayerInstance spectator, boolean storeCoords)
 	{
 		if (getInstance().isRegisteredInComp(spectator))
 		{
@@ -1054,7 +1054,7 @@ public class Olympiad
 		}
 	}
 	
-	public static int getSpectatorArena(L2PcInstance player)
+	public static int getSpectatorArena(PlayerInstance player)
 	{
 		for (int i = 0; i < OlympiadManager.STADIUMS.length; i++)
 		{
@@ -1066,12 +1066,12 @@ public class Olympiad
 		return -1;
 	}
 	
-	public static void removeSpectator(int id, L2PcInstance spectator)
+	public static void removeSpectator(int id, PlayerInstance spectator)
 	{
 		OlympiadManager.STADIUMS[id].removeSpectator(spectator);
 	}
 	
-	public List<L2PcInstance> getSpectators(int id)
+	public List<PlayerInstance> getSpectators(int id)
 	{
 		if (OlympiadManager.getInstance().getOlympiadGame(id) == null)
 		{
@@ -1085,7 +1085,7 @@ public class Olympiad
 		return OlympiadManager.getInstance().getOlympiadGames();
 	}
 	
-	public boolean playerInStadia(L2PcInstance player)
+	public boolean playerInStadia(PlayerInstance player)
 	{
 		return (OlympiadStadiaManager.getInstance().getStadium(player) != null);
 	}
@@ -1103,7 +1103,7 @@ public class Olympiad
 		
 		if (!_classBasedRegisters.isEmpty())
 		{
-			for (List<L2PcInstance> classed : _classBasedRegisters.values())
+			for (List<PlayerInstance> classed : _classBasedRegisters.values())
 			{
 				classCount += classed.size();
 			}
@@ -1458,7 +1458,7 @@ public class Olympiad
 		return points;
 	}
 	
-	public boolean isRegisteredInComp(L2PcInstance player)
+	public boolean isRegisteredInComp(PlayerInstance player)
 	{
 		boolean result = isRegistered(player);
 		
@@ -1627,7 +1627,7 @@ public class Olympiad
 		}
 	}
 	
-	public static void sendMatchList(L2PcInstance player)
+	public static void sendMatchList(PlayerInstance player)
 	{
 		final NpcHtmlMessage message = new NpcHtmlMessage(0);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
@@ -1653,7 +1653,7 @@ public class Olympiad
 		player.sendPacket(message);
 	}
 	
-	public static void bypassChangeArena(String command, L2PcInstance player)
+	public static void bypassChangeArena(String command, PlayerInstance player)
 	{
 		final String[] commands = command.split(" ");
 		final int id = Integer.parseInt(commands[1]);

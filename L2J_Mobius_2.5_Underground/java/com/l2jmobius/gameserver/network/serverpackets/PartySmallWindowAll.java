@@ -17,17 +17,17 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class PartySmallWindowAll implements IClientOutgoingPacket
 {
-	private final L2Party _party;
-	private final L2PcInstance _exclude;
+	private final Party _party;
+	private final PlayerInstance _exclude;
 	
-	public PartySmallWindowAll(L2PcInstance exclude, L2Party party)
+	public PartySmallWindowAll(PlayerInstance exclude, Party party)
 	{
 		_exclude = exclude;
 		_party = party;
@@ -42,7 +42,7 @@ public final class PartySmallWindowAll implements IClientOutgoingPacket
 		packet.writeC(_party.getDistributionType().getId());
 		packet.writeC(_party.getMemberCount() - 1);
 		
-		for (L2PcInstance member : _party.getMembers())
+		for (PlayerInstance member : _party.getMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{
@@ -61,7 +61,7 @@ public final class PartySmallWindowAll implements IClientOutgoingPacket
 				packet.writeH(member.getClassId().getId());
 				packet.writeC(0x01); // Unk
 				packet.writeH(member.getRace().ordinal());
-				final L2Summon pet = member.getPet();
+				final Summon pet = member.getPet();
 				packet.writeD(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
 				if (pet != null)
 				{

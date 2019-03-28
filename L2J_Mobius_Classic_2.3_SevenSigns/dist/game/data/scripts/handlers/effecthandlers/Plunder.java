@@ -21,14 +21,14 @@ import java.util.Collection;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -42,7 +42,7 @@ public final class Plunder extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
 		final double lvlModifier = Math.pow(1.3, lvlDifference);
@@ -69,7 +69,7 @@ public final class Plunder extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effector.isPlayer())
 		{
@@ -81,8 +81,8 @@ public final class Plunder extends AbstractEffect
 			return;
 		}
 		
-		final L2MonsterInstance monster = (L2MonsterInstance) effected;
-		final L2PcInstance player = effector.getActingPlayer();
+		final MonsterInstance monster = (MonsterInstance) effected;
+		final PlayerInstance player = effector.getActingPlayer();
 		
 		if (monster.isSpoiled())
 		{
@@ -103,7 +103,7 @@ public final class Plunder extends AbstractEffect
 			for (ItemHolder sweepedItem : items)
 			{
 				final ItemHolder rewardedItem = new ItemHolder(sweepedItem.getId(), sweepedItem.getCount());
-				final L2Party party = effector.getParty();
+				final Party party = effector.getParty();
 				if (party != null)
 				{
 					party.distributeItem(player, rewardedItem, true, monster);

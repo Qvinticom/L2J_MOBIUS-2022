@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewCharacterInfo;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.network.serverpackets.GMViewQuestList;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewSkillInfo;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewWarehouseWithdrawList;
 
-public final class RequestGMCommand extends L2GameClientPacket
+public final class RequestGMCommand extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestGMCommand.class.getName());
 	
@@ -45,10 +45,10 @@ public final class RequestGMCommand extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = L2World.getInstance().getPlayer(_targetName);
+		final PlayerInstance player = World.getInstance().getPlayer(_targetName);
 		
 		// prevent non gm or low level GMs from vieweing player stuff
-		if ((player == null) || !getClient().getActiveChar().getAccessLevel().allowAltG())
+		if ((player == null) || !getClient().getPlayer().getAccessLevel().allowAltG())
 		{
 			return;
 		}

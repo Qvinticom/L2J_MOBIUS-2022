@@ -23,10 +23,10 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.taskmanager.Task;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
@@ -53,14 +53,14 @@ public class TaskRaidPointsReset extends Task
 		{
 			// reward clan reputation points
 			final Map<Integer, Integer> rankList = RaidBossPointsManager.getRankList();
-			for (L2Clan c : ClanTable.getInstance().getClans())
+			for (Clan c : ClanTable.getInstance().getClans())
 			{
 				for (Map.Entry<Integer, Integer> entry : rankList.entrySet())
 				{
-					final L2Object obj = L2World.getInstance().findObject(entry.getKey());
-					if (obj instanceof L2PcInstance)
+					final WorldObject obj = World.getInstance().findObject(entry.getKey());
+					if (obj instanceof PlayerInstance)
 					{
-						playerName = ((L2PcInstance) obj).getName();
+						playerName = ((PlayerInstance) obj).getName();
 					}
 					if ((entry.getValue() <= 100) && c.isMember(playerName))
 					{

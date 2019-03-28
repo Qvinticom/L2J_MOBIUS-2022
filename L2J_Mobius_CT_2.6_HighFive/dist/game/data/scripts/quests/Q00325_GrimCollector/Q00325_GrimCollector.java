@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.QuestItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -79,10 +79,10 @@ public final class Q00325_GrimCollector extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -91,9 +91,9 @@ public final class Q00325_GrimCollector extends Quest
 		{
 			case "30336-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -168,7 +168,7 @@ public final class Q00325_GrimCollector extends Quest
 				
 				if (event.equals("30434-06.html"))
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 				}
 				
 				htmltext = event;
@@ -189,7 +189,7 @@ public final class Q00325_GrimCollector extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
@@ -216,16 +216,16 @@ public final class Q00325_GrimCollector extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case GUARD_CURTIZ:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -242,7 +242,7 @@ public final class Q00325_GrimCollector extends Quest
 			}
 			case VARSAK:
 			{
-				if (st.isStarted() && hasQuestItems(player, ANATOMY_DIAGRAM))
+				if (qs.isStarted() && hasQuestItems(player, ANATOMY_DIAGRAM))
 				{
 					htmltext = "30342-01.html";
 				}
@@ -250,7 +250,7 @@ public final class Q00325_GrimCollector extends Quest
 			}
 			case SAMED:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					if (!hasQuestItems(player, ANATOMY_DIAGRAM))
 					{

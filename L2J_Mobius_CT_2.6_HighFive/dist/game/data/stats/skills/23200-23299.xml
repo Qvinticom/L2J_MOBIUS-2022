@@ -639,7 +639,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="300" />
 				<param chance="80" />
 				<param skillId="6059" skillLevel="1" /> <!-- Counter Critical -->
@@ -1542,7 +1542,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="300" />
 				<param chance="80" />
 				<param skillId="6059" skillLevel="1" /> <!-- Counter Critical -->

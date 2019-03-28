@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -40,17 +40,17 @@ public class ConditionTargetAggro extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected != null)
 		{
 			if (effected.isMonster())
 			{
-				return ((L2MonsterInstance) effected).isAggressive() == _isAggro;
+				return ((MonsterInstance) effected).isAggressive() == _isAggro;
 			}
 			if (effected.isPlayer())
 			{
-				return ((L2PcInstance) effected).getKarma() > 0;
+				return ((PlayerInstance) effected).getKarma() > 0;
 			}
 		}
 		return false;

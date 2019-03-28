@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Mount user command.
@@ -31,13 +31,13 @@ public class Mount implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, L2PcInstance activeChar)
+	public synchronized boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
-		return activeChar.mountPlayer(activeChar.getPet());
+		return player.mountPlayer(player.getPet());
 	}
 	
 	@Override

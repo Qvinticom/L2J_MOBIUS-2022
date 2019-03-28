@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -33,56 +33,56 @@ public class PartyInfo implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		if (!activeChar.isInParty())
+		if (!player.isInParty())
 		{
 			return false;
 		}
 		
-		L2Party playerParty = activeChar.getParty();
+		Party playerParty = player.getParty();
 		final int memberCount = playerParty.getMemberCount();
 		final int lootDistribution = playerParty.getLootDistribution();
 		final String partyLeader = playerParty.getPartyMembers().get(0).getName();
 		
-		activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
+		player.sendPacket(SystemMessageId.PARTY_INFORMATION);
 		
 		switch (lootDistribution)
 		{
-			case L2Party.ITEM_LOOTER:
+			case Party.ITEM_LOOTER:
 			{
-				activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
+				player.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
 				break;
 			}
-			case L2Party.ITEM_ORDER:
+			case Party.ITEM_ORDER:
 			{
-				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
+				player.sendPacket(SystemMessageId.LOOTING_BY_TURN);
 				break;
 			}
-			case L2Party.ITEM_ORDER_SPOIL:
+			case Party.ITEM_ORDER_SPOIL:
 			{
-				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
+				player.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
 				break;
 			}
-			case L2Party.ITEM_RANDOM:
+			case Party.ITEM_RANDOM:
 			{
-				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
+				player.sendPacket(SystemMessageId.LOOTING_RANDOM);
 				break;
 			}
-			case L2Party.ITEM_RANDOM_SPOIL:
+			case Party.ITEM_RANDOM_SPOIL:
 			{
-				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
+				player.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
 				break;
 			}
 		}
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.PARTY_LEADER_S1).addString(partyLeader));
-		activeChar.sendMessage("Members: " + memberCount + "/9");
-		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
+		player.sendPacket(new SystemMessage(SystemMessageId.PARTY_LEADER_S1).addString(partyLeader));
+		player.sendMessage("Members: " + memberCount + "/9");
+		player.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
 		return true;
 	}
 	

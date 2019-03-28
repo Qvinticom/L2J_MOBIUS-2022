@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharCreateFail extends L2GameServerPacket
+public class CharCreateFail extends GameServerPacket
 {
 	public static final int REASON_CREATION_FAILED = 0x00;
 	public static final int REASON_TOO_MANY_CHARACTERS = 0x01;

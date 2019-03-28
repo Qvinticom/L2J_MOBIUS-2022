@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.skills.effects;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author programmos
  */
-public class EffectImmobileUntilAttacked extends L2Effect
+public class EffectImmobileUntilAttacked extends Effect
 {
 	static final Logger LOGGER = Logger.getLogger(EffectImmobileUntilAttacked.class.getName());
 	

@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.model.conditions;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -58,9 +58,9 @@ public final class ConditionSiegeZone extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final L2Character target = _self ? effector : effected;
+		final Creature target = _self ? effector : effected;
 		final Castle castle = CastleManager.getInstance().getCastle(target);
 		final Fort fort = FortManager.getInstance().getFort(target);
 		
@@ -85,19 +85,19 @@ public final class ConditionSiegeZone extends Condition
 	
 	/**
 	 * Check if ok.
-	 * @param activeChar the active char
+	 * @param creature the creature
 	 * @param castle the castle
 	 * @param value the value
 	 * @return true, if successful
 	 */
-	public static boolean checkIfOk(L2Character activeChar, Castle castle, int value)
+	public static boolean checkIfOk(Creature creature, Castle castle, int value)
 	{
-		if ((activeChar == null) || !activeChar.isPlayer())
+		if ((creature == null) || !creature.isPlayer())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((castle == null) || (castle.getResidenceId() <= 0))
 		{
@@ -131,19 +131,19 @@ public final class ConditionSiegeZone extends Condition
 	
 	/**
 	 * Check if ok.
-	 * @param activeChar the active char
+	 * @param creature the creature
 	 * @param fort the fort
 	 * @param value the value
 	 * @return true, if successful
 	 */
-	public static boolean checkIfOk(L2Character activeChar, Fort fort, int value)
+	public static boolean checkIfOk(Creature creature, Fort fort, int value)
 	{
-		if ((activeChar == null) || !activeChar.isPlayer())
+		if ((creature == null) || !creature.isPlayer())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		if ((fort == null) || (fort.getResidenceId() <= 0))
 		{

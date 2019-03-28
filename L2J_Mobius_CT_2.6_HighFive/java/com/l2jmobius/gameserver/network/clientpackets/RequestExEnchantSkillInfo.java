@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
@@ -34,7 +34,7 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 	private int _skillLvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
 		_skillLvl = packet.readD();
@@ -42,21 +42,21 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getLevel() < 76)
+		if (player.getLevel() < 76)
 		{
 			return;
 		}
@@ -72,12 +72,12 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		final int playerSkillLvl = activeChar.getSkillLevel(_skillId);
+		final int playerSkillLvl = player.getSkillLevel(_skillId);
 		if ((playerSkillLvl == -1) || (playerSkillLvl != _skillLvl))
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl));
+		player.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl));
 	}
 }

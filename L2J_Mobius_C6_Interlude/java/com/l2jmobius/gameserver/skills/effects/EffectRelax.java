@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 
-class EffectRelax extends L2Effect
+class EffectRelax extends Effect
 {
 	public EffectRelax(Env env, EffectTemplate template)
 	{
@@ -39,10 +39,10 @@ class EffectRelax extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected() instanceof PlayerInstance)
 		{
 			setRelax(true);
-			((L2PcInstance) getEffected()).sitDown();
+			((PlayerInstance) getEffected()).sitDown();
 		}
 		else
 		{
@@ -67,9 +67,9 @@ class EffectRelax extends L2Effect
 			retval = false;
 		}
 		
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected() instanceof PlayerInstance)
 		{
-			if (!((L2PcInstance) getEffected()).isSitting())
+			if (!((PlayerInstance) getEffected()).isSitting())
 			{
 				retval = false;
 			}
@@ -112,9 +112,9 @@ class EffectRelax extends L2Effect
 	
 	private void setRelax(boolean val)
 	{
-		if (getEffected() instanceof L2PcInstance)
+		if (getEffected() instanceof PlayerInstance)
 		{
-			((L2PcInstance) getEffected()).setRelax(val);
+			((PlayerInstance) getEffected()).setRelax(val);
 		}
 	}
 }

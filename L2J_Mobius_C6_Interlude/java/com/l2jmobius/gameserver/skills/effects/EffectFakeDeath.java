@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.skills.Env;
 /**
  * @author mkizub
  */
-final class EffectFakeDeath extends L2Effect
+final class EffectFakeDeath extends Effect
 {
 	public EffectFakeDeath(Env env, EffectTemplate template)
 	{

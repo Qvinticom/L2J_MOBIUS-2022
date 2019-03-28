@@ -19,11 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GuardInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
@@ -42,9 +42,9 @@ public final class Escape extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.TELEPORT;
+		return EffectType.TELEPORT;
 	}
 	
 	@Override
@@ -61,10 +61,10 @@ public final class Escape extends AbstractEffect
 			return;
 		}
 		
-		if (info.getEffected() instanceof L2GuardInstance)
+		if (info.getEffected() instanceof GuardInstance)
 		{
-			info.getEffected().teleToLocation(((L2Npc) info.getEffected()).getSpawn());
-			info.getEffected().setHeading(((L2Npc) info.getEffected()).getSpawn().getHeading());
+			info.getEffected().teleToLocation(((Npc) info.getEffected()).getSpawn());
+			info.getEffected().setHeading(((Npc) info.getEffected()).getSpawn().getHeading());
 		}
 		else
 		{

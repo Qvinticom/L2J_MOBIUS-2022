@@ -16,23 +16,22 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
+import static com.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.ItemRequest;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestPrivateStoreSell implements IClientIncomingPacket
@@ -43,7 +42,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 	private ItemRequest[] _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_storePlayerId = packet.readD();
 		final int count = packet.readD();
@@ -73,9 +72,9 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -106,7 +105,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance storePlayer = L2World.getInstance().getPlayer(_storePlayerId);
+		final PlayerInstance storePlayer = World.getInstance().getPlayer(_storePlayerId);
 		if ((storePlayer == null) || !player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
 		{
 			return;

@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -32,27 +32,27 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 	private String _pledgeName;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_pledgeName = packet.readS();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
-		final L2Clan playerClan = player.getClan();
+		final Clan playerClan = player.getClan();
 		if (playerClan == null)
 		{
 			return;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
+		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		
 		if (clan == null)
 		{
@@ -78,7 +78,7 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 		// LOGGER.info("RequestStopPledgeWar: By leader or authorized player: " + playerClan.getLeaderName() + " of clan: "
 		// + playerClan.getName() + " to clan: " + _pledgeName);
 		
-		// L2PcInstance leader = L2World.getInstance().getPlayer(clan.getLeaderName());
+		// PlayerInstance leader = World.getInstance().getPlayer(clan.getLeaderName());
 		// if(leader != null && leader.isOnline() == 0)
 		// {
 		// player.sendMessage("Clan leader isn't online.");
@@ -94,7 +94,7 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 		// return;
 		// }
 		
-		for (L2ClanMember member : playerClan.getMembers())
+		for (ClanMember member : playerClan.getMembers())
 		{
 			if ((member == null) || (member.getPlayerInstance() == null))
 			{
@@ -109,12 +109,12 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 		
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 		
-		for (L2PcInstance member : playerClan.getOnlineMembers(0))
+		for (PlayerInstance member : playerClan.getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();
 		}
 		
-		for (L2PcInstance member : clan.getOnlineMembers(0))
+		for (PlayerInstance member : clan.getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();
 		}

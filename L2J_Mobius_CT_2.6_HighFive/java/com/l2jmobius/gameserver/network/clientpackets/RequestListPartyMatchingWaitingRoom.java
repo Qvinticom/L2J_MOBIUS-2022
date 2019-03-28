@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
 /**
@@ -32,7 +32,7 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 	private int _mode; // 1 - waitlist 0 - room waitlist
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_page = packet.readD();
 		_minlvl = packet.readD();
@@ -42,15 +42,15 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance _activeChar = client.getActiveChar();
+		final PlayerInstance _player = client.getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
 		
-		_activeChar.sendPacket(new ExListPartyMatchingWaitingRoom(_activeChar, _page, _minlvl, _maxlvl, _mode));
+		_player.sendPacket(new ExListPartyMatchingWaitingRoom(_player, _page, _minlvl, _maxlvl, _mode));
 	}
 }

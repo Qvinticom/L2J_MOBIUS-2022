@@ -16,13 +16,13 @@
  */
 package quests.Q00636_TruthBeyond;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
  * The Truth Beyond the Gate (636)<br>
@@ -47,74 +47,74 @@ public final class Q00636_TruthBeyond extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		if ("31329-04.htm".equals(event))
 		{
-			st.startQuest();
+			qs.startQuest();
 		}
 		else if ("32010-02.htm".equals(event))
 		{
 			giveItems(player, VISITOR_MARK, 1);
-			st.exitQuest(true, true);
+			qs.exitQuest(true, true);
 		}
 		return event;
 	}
 	
 	@Override
-	public final String onEnterZone(L2Character character, L2ZoneType zone)
+	public final String onEnterZone(Creature creature, ZoneType zone)
 	{
 		// QuestState already null on enter because quest is finished
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
-			if (character.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
+			if (creature.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, creature, false))
 			{
-				character.getActingPlayer().addItem("Mark", FADED_MARK, 1, character, true);
+				creature.getActingPlayer().addItem("Mark", FADED_MARK, 1, creature, true);
 			}
 		}
 		return null;
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (npc.getId() == ELIYAH)
 		{
 			if (hasQuestItems(player, VISITOR_MARK) || hasQuestItems(player, FADED_MARK) || hasQuestItems(player, MARK))
 			{
-				st.exitQuest(true);
+				qs.exitQuest(true);
 				return "31329-mark.htm";
 			}
-			if (st.getState() == State.CREATED)
+			if (qs.getState() == State.CREATED)
 			{
 				if (player.getLevel() > 72)
 				{
 					return "31329-02.htm";
 				}
 				
-				st.exitQuest(true);
+				qs.exitQuest(true);
 				return "31329-01.htm";
 			}
-			else if (st.getState() == State.STARTED)
+			else if (qs.getState() == State.STARTED)
 			{
 				return "31329-05.htm";
 			}
 		}
-		else if (st.getState() == State.STARTED) // Flauron only
+		else if (qs.getState() == State.STARTED) // Flauron only
 		{
-			if (st.isCond(1))
+			if (qs.isCond(1))
 			{
 				return "32010-01.htm";
 			}
-			st.exitQuest(true);
+			qs.exitQuest(true);
 			return "32010-03.htm";
 		}
 		return getNoQuestMsg(player);

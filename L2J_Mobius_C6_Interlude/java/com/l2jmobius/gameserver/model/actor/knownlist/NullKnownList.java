@@ -16,42 +16,42 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
-public class NullKnownList extends ObjectKnownList
+public class NullKnownList extends WorldObjectKnownList
 {
-	public NullKnownList(L2Object activeObject)
+	public NullKnownList(WorldObject activeObject)
 	{
 		super(activeObject);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object, L2Character dropper)
+	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
 		return false;
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object)
+	public boolean addKnownObject(WorldObject object)
 	{
 		return false;
 	}
 	
 	@Override
-	public L2Object getActiveObject()
+	public WorldObject getActiveObject()
 	{
 		return super.getActiveObject();
 	}
 	
 	@Override
-	public int getDistanceToForgetObject(L2Object object)
+	public int getDistanceToForgetObject(WorldObject object)
 	{
 		return 0;
 	}
 	
 	@Override
-	public int getDistanceToWatchObject(L2Object object)
+	public int getDistanceToWatchObject(WorldObject object)
 	{
 		return 0;
 	}
@@ -62,7 +62,7 @@ public class NullKnownList extends ObjectKnownList
 	}
 	
 	@Override
-	public boolean removeKnownObject(L2Object object)
+	public boolean removeKnownObject(WorldObject object)
 	{
 		return false;
 	}

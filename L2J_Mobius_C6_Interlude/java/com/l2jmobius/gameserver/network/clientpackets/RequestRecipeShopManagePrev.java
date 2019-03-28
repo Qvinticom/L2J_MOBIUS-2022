@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
 
-public final class RequestRecipeShopManagePrev extends L2GameClientPacket
+public final class RequestRecipeShopManagePrev extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -31,7 +31,7 @@ public final class RequestRecipeShopManagePrev extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if ((player == null) || (player.getTarget() == null))
 		{
 			return;
@@ -44,12 +44,12 @@ public final class RequestRecipeShopManagePrev extends L2GameClientPacket
 			return;
 		}
 		
-		if (!(player.getTarget() instanceof L2PcInstance))
+		if (!(player.getTarget() instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance target = (L2PcInstance) player.getTarget();
+		final PlayerInstance target = (PlayerInstance) player.getTarget();
 		player.sendPacket(new RecipeShopSellList(player, target));
 	}
 }

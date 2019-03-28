@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
@@ -33,29 +33,29 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 public class FrontAura implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
+		final List<Creature> targetList = new ArrayList<>();
+		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
 		final int maxTargets = skill.getAffectLimit();
-		for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Character.class, skill.getAffectRange()))
+		for (Creature obj : World.getInstance().getVisibleObjectsInRange(creature, Creature.class, skill.getAffectRange()))
 		{
 			if (obj.isAttackable() || obj.isPlayable())
 			{
 				
-				if (!obj.isInFrontOf(activeChar))
+				if (!obj.isInFrontOf(creature))
 				{
 					continue;
 				}
 				
-				if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+				if (!Skill.checkForAreaOffensiveSkills(creature, obj, skill, srcInArena))
 				{
 					continue;
 				}
 				
 				if (onlyFirst)
 				{
-					return new L2Character[]
+					return new Creature[]
 					{
 						obj
 					};
@@ -69,12 +69,12 @@ public class FrontAura implements ITargetTypeHandler
 				targetList.add(obj);
 			}
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.FRONT_AURA;
+		return TargetType.FRONT_AURA;
 	}
 }

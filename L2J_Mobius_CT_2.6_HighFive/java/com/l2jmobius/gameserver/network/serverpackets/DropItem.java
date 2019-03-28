@@ -17,30 +17,30 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class DropItem implements IClientOutgoingPacket
 {
-	private final L2ItemInstance _item;
-	private final int _charObjId;
+	private final ItemInstance _item;
+	private final int _objectId;
 	
 	/**
 	 * Constructor of the DropItem server packet
-	 * @param item : L2ItemInstance designating the item
+	 * @param item : ItemInstance designating the item
 	 * @param playerObjId : int designating the player ID who dropped the item
 	 */
-	public DropItem(L2ItemInstance item, int playerObjId)
+	public DropItem(ItemInstance item, int playerObjId)
 	{
 		_item = item;
-		_charObjId = playerObjId;
+		_objectId = playerObjId;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DROP_ITEM.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_item.getObjectId());
 		packet.writeD(_item.getDisplayId());
 		

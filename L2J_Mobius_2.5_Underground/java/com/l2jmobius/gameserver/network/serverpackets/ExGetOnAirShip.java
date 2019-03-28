@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExGetOnAirShip implements IClientOutgoingPacket
@@ -28,7 +28,7 @@ public class ExGetOnAirShip implements IClientOutgoingPacket
 	private final int _airShipId;
 	private final Location _pos;
 	
-	public ExGetOnAirShip(L2PcInstance player, L2Character ship)
+	public ExGetOnAirShip(PlayerInstance player, Creature ship)
 	{
 		_playerId = player.getObjectId();
 		_airShipId = ship.getObjectId();

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * Format: (ch)ddd.
  */
-public class ExVariationCancelResult extends L2GameServerPacket
+public class ExVariationCancelResult extends GameServerPacket
 {
 	/** The _close window. */
 	private final int _closeWindow;

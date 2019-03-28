@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -30,9 +30,9 @@ public final class FlyToLocation implements IClientOutgoingPacket
 	private final int _destY;
 	private final int _destZ;
 	private final int _chaObjId;
-	private final int _chaX;
-	private final int _chaY;
-	private final int _chaZ;
+	private final int _orgX;
+	private final int _orgY;
+	private final int _orgZ;
 	private final FlyType _type;
 	private int _flySpeed;
 	private int _flyDelay;
@@ -52,24 +52,24 @@ public final class FlyToLocation implements IClientOutgoingPacket
 		WARP_FORWARD
 	}
 	
-	public FlyToLocation(L2Character cha, int destX, int destY, int destZ, FlyType type)
+	public FlyToLocation(Creature creature, int destX, int destY, int destZ, FlyType type)
 	{
-		_chaObjId = cha.getObjectId();
-		_chaX = cha.getX();
-		_chaY = cha.getY();
-		_chaZ = cha.getZ();
+		_chaObjId = creature.getObjectId();
+		_orgX = creature.getX();
+		_orgY = creature.getY();
+		_orgZ = creature.getZ();
 		_destX = destX;
 		_destY = destY;
 		_destZ = destZ;
 		_type = type;
 	}
 	
-	public FlyToLocation(L2Character cha, int destX, int destY, int destZ, FlyType type, int flySpeed, int flyDelay, int animationSpeed)
+	public FlyToLocation(Creature creature, int destX, int destY, int destZ, FlyType type, int flySpeed, int flyDelay, int animationSpeed)
 	{
-		_chaObjId = cha.getObjectId();
-		_chaX = cha.getX();
-		_chaY = cha.getY();
-		_chaZ = cha.getZ();
+		_chaObjId = creature.getObjectId();
+		_orgX = creature.getX();
+		_orgY = creature.getY();
+		_orgZ = creature.getZ();
 		_destX = destX;
 		_destY = destY;
 		_destZ = destZ;
@@ -79,14 +79,14 @@ public final class FlyToLocation implements IClientOutgoingPacket
 		_animationSpeed = animationSpeed;
 	}
 	
-	public FlyToLocation(L2Character cha, ILocational dest, FlyType type)
+	public FlyToLocation(Creature creature, ILocational dest, FlyType type)
 	{
-		this(cha, dest.getX(), dest.getY(), dest.getZ(), type);
+		this(creature, dest.getX(), dest.getY(), dest.getZ(), type);
 	}
 	
-	public FlyToLocation(L2Character cha, ILocational dest, FlyType type, int flySpeed, int flyDelay, int animationSpeed)
+	public FlyToLocation(Creature creature, ILocational dest, FlyType type, int flySpeed, int flyDelay, int animationSpeed)
 	{
-		this(cha, dest.getX(), dest.getY(), dest.getZ(), type, flySpeed, flyDelay, animationSpeed);
+		this(creature, dest.getX(), dest.getY(), dest.getZ(), type, flySpeed, flyDelay, animationSpeed);
 	}
 	
 	@Override
@@ -98,9 +98,9 @@ public final class FlyToLocation implements IClientOutgoingPacket
 		packet.writeD(_destX);
 		packet.writeD(_destY);
 		packet.writeD(_destZ);
-		packet.writeD(_chaX);
-		packet.writeD(_chaY);
-		packet.writeD(_chaZ);
+		packet.writeD(_orgX);
+		packet.writeD(_orgY);
+		packet.writeD(_orgZ);
 		packet.writeD(_type.ordinal());
 		packet.writeD(_flySpeed);
 		packet.writeD(_flyDelay);

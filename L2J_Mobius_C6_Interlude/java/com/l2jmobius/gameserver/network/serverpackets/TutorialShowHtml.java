@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class TutorialShowHtml extends L2GameServerPacket
+public class TutorialShowHtml extends GameServerPacket
 {
 	private final String _html;
 	

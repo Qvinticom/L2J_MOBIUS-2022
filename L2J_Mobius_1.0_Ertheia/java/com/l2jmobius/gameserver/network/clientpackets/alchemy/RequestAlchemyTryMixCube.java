@@ -25,14 +25,14 @@ import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.TryMixCubeResultType;
 import com.l2jmobius.gameserver.enums.TryMixCubeType;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.AlchemyResult;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -51,7 +51,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 	private final List<ItemHolder> _items = new LinkedList<>();
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int itemsCount = packet.readD();
 		if ((itemsCount <= 0) || (itemsCount > 4))
@@ -67,9 +67,9 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
 			return;
@@ -96,7 +96,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((player.getKnownSkill(CommonSkill.ALCHEMY_CUBE.getId()) == null) && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		if ((player.getKnownSkill(CommonSkill.ALCHEMY_CUBE.getId()) == null) && !player.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS))
 		{
 			player.sendPacket(new ExTryMixCube(TryMixCubeType.FAIL_SKILL_WRONG));
 			return;
@@ -108,7 +108,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 		// First loop for safety check + price calculation
 		for (ItemHolder item : _items)
 		{
-			final L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
+			final ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
 			if (itemInstance == null)
 			{
 				return;
@@ -158,7 +158,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 			// Second loop for items deletion if we're still in the game
 			for (ItemHolder item : _items)
 			{
-				final L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
+				final ItemInstance itemInstance = player.getInventory().getItemByObjectId(item.getId());
 				if (itemInstance == null)
 				{
 					return;
@@ -188,7 +188,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 				player.broadcastPacket(new MagicSkillUse(player, CommonSkill.ALCHEMY_CUBE_RANDOM_SUCCESS.getId(), TEMPEST_STONE_AMOUNT, 500, 1500));
 				
 				// Give Tempest Stone to the player
-				final L2ItemInstance tempestStonesInstance = player.addItem("Alchemy", Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, null, true);
+				final ItemInstance tempestStonesInstance = player.addItem("Alchemy", Inventory.TEMPEST_STONE_ID, TEMPEST_STONE_AMOUNT, null, true);
 				iu.addItem(tempestStonesInstance);
 				
 				// Add the alchemy result entry to the packet
@@ -202,7 +202,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 				airStonesCount *= Math.min(elcyumCrystals, 2);
 			}
 			
-			final L2ItemInstance airStonesInstance = player.addItem("Alchemy", Inventory.AIR_STONE_ID, airStonesCount, null, true);
+			final ItemInstance airStonesInstance = player.addItem("Alchemy", Inventory.AIR_STONE_ID, airStonesCount, null, true);
 			iu.addItem(airStonesInstance);
 			
 			// Add the Air Stones

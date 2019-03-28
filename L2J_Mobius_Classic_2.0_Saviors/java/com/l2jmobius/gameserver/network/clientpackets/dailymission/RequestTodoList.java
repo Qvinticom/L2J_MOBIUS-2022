@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets.dailymission;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
@@ -32,7 +32,7 @@ public class RequestTodoList implements IClientIncomingPacket
 	private int _showAllLevels;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_tab = packet.readC(); // Daily Reward = 9, Event = 1, Instance Zone = 2
 		_showAllLevels = packet.readC(); // Disabled = 0, Enabled = 1
@@ -40,9 +40,9 @@ public class RequestTodoList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;

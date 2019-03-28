@@ -20,10 +20,10 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -32,18 +32,18 @@ public final class RequestPetGetItem implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2World world = L2World.getInstance();
-		final L2ItemInstance item = (L2ItemInstance) world.findObject(_objectId);
-		if ((item == null) || (client.getActiveChar() == null) || !client.getActiveChar().hasPet())
+		final World world = World.getInstance();
+		final ItemInstance item = (ItemInstance) world.findObject(_objectId);
+		if ((item == null) || (client.getPlayer() == null) || !client.getPlayer().hasPet())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -62,7 +62,7 @@ public final class RequestPetGetItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) client.getActiveChar().getSummon();
+		final PetInstance pet = (PetInstance) client.getPlayer().getSummon();
 		if (pet.isDead() || pet.isOutOfControl())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);

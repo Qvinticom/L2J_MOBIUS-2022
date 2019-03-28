@@ -16,8 +16,8 @@
  */
 package ai.areas.FaeronVillage.AltarOfSouls;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -37,9 +37,9 @@ public final class AltarOfSouls extends AbstractNpcAI
 	private static final int APPARITION_STONE_93 = 38573;
 	private static final int APPARITION_STONE_98 = 38574;
 	// Misc
-	private L2Npc BOSS_88;
-	private L2Npc BOSS_93;
-	private L2Npc BOSS_98;
+	private Npc BOSS_88;
+	private Npc BOSS_93;
+	private Npc BOSS_98;
 	
 	private AltarOfSouls()
 	{
@@ -49,7 +49,7 @@ public final class AltarOfSouls extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -100,7 +100,7 @@ public final class AltarOfSouls extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "33920.html";
 	}

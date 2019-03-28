@@ -22,7 +22,7 @@ import java.util.Map.Entry;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class StatusUpdate implements IClientOutgoingPacket
@@ -34,10 +34,10 @@ public final class StatusUpdate implements IClientOutgoingPacket
 	private final Map<StatusUpdateType, Integer> _updates = new LinkedHashMap<>();
 	
 	/**
-	 * Create {@link StatusUpdate} packet for given {@link L2Object}.
+	 * Create {@link StatusUpdate} packet for given {@link WorldObject}.
 	 * @param object
 	 */
-	public StatusUpdate(L2Object object)
+	public StatusUpdate(WorldObject object)
 	{
 		_objectId = object.getObjectId();
 		_isPlayable = object.isPlayable();
@@ -61,7 +61,7 @@ public final class StatusUpdate implements IClientOutgoingPacket
 		}
 	}
 	
-	public void addCaster(L2Object object)
+	public void addCaster(WorldObject object)
 	{
 		_casterObjectId = object.getObjectId();
 	}

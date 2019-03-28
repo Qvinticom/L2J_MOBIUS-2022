@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Gnacik
  */
-public class PartyMatchDetail extends L2GameServerPacket
+public class PartyMatchDetail extends GameServerPacket
 {
 	private final PartyMatchRoom _room;
 	
@@ -30,7 +30,7 @@ public class PartyMatchDetail extends L2GameServerPacket
 	 * @param player
 	 * @param room
 	 */
-	public PartyMatchDetail(L2PcInstance player, PartyMatchRoom room)
+	public PartyMatchDetail(PlayerInstance player, PartyMatchRoom room)
 	{
 		_room = room;
 	}

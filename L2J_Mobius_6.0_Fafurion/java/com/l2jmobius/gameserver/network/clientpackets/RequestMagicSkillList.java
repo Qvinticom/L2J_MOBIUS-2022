@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author UnAfraid
@@ -31,7 +31,7 @@ public class RequestMagicSkillList implements IClientIncomingPacket
 	private int _unk;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_charId = packet.readD();
@@ -40,20 +40,20 @@ public class RequestMagicSkillList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getObjectId() != _objectId)
+		if (player.getObjectId() != _objectId)
 		{
-			LOGGER.warning("Player: " + activeChar + " requested " + getClass().getSimpleName() + " with different object id: " + _objectId);
+			LOGGER.warning("Player: " + player + " requested " + getClass().getSimpleName() + " with different object id: " + _objectId);
 			return;
 		}
 		
-		activeChar.sendSkillList();
+		player.sendSkillList();
 	}
 }

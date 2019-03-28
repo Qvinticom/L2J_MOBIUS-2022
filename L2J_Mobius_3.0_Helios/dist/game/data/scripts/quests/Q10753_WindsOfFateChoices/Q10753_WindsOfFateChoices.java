@@ -26,21 +26,21 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerItemAdd;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemAdd;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -135,7 +135,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -401,7 +401,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -559,7 +559,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 						else if (qs.isCond(10))
 						{
 							player.sendPacket(new ExSendUIEvent(player, true, false, 1, 0, NpcStringId.REMAINING_TIME));
-							L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 1000, box ->
+							World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 1000, box ->
 							{
 								if ((box.getId() == ATHREAS_BOX) && GeoEngine.getInstance().canSeeTarget(npc, box))
 								{
@@ -616,7 +616,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(2))
@@ -668,7 +668,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2))
@@ -695,7 +695,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(9) && npc.isScriptValue(0))
@@ -710,7 +710,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	@Id(ATHREAS_BELONGINGS)
 	public void onItemAdd(OnPlayerItemAdd event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.isCond(9)) && (getQuestItemsCount(player, ATHREAS_BELONGINGS) >= 4))
 		{
@@ -724,7 +724,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	{
 		if (event.getMarkId() == getId())
 		{
-			final L2PcInstance player = event.getActiveChar();
+			final PlayerInstance player = event.getPlayer();
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
 			{
@@ -747,7 +747,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	public void OnPlayerBypass(OnPlayerBypass event)
 	{
 		final String command = event.getCommand();
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		
 		if (qs == null)
@@ -804,7 +804,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
@@ -833,7 +833,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		
 		if ((qs == null) && player.getRace() == Race.ERTHEIA && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))

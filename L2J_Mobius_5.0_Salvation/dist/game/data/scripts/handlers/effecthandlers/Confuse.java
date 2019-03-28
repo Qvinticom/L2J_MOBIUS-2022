@@ -22,12 +22,12 @@ import java.util.List;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
@@ -45,7 +45,7 @@ public final class Confuse extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
@@ -63,20 +63,20 @@ public final class Confuse extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		effected.getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		// Getting the possible targets
 		
-		L2World.getInstance().forEachVisibleObject(effected, L2Character.class, targetList::add);
+		World.getInstance().forEachVisibleObject(effected, Creature.class, targetList::add);
 		
 		// if there is no target, exit function
 		if (!targetList.isEmpty())
 		{
 			// Choosing randomly a new target
-			final L2Character target = targetList.get(Rnd.get(targetList.size()));
+			final Creature target = targetList.get(Rnd.get(targetList.size()));
 			// Attacking the target
 			effected.setTarget(target);
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);

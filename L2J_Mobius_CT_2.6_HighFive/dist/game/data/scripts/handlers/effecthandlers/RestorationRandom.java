@@ -21,10 +21,10 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
-import com.l2jmobius.gameserver.model.L2ExtractableSkill;
+import com.l2jmobius.gameserver.model.ExtractableProductItem;
+import com.l2jmobius.gameserver.model.ExtractableSkill;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -58,7 +58,7 @@ public final class RestorationRandom extends AbstractEffect
 			return;
 		}
 		
-		final L2ExtractableSkill exSkill = info.getSkill().getExtractableSkill();
+		final ExtractableSkill exSkill = info.getSkill().getExtractableSkill();
 		if (exSkill == null)
 		{
 			return;
@@ -84,7 +84,7 @@ public final class RestorationRandom extends AbstractEffect
 		// If you get chance equal 45% you fall into the second zone 30-80.
 		// Meaning you get the second production list.
 		// Calculate extraction
-		for (L2ExtractableProductItem expi : exSkill.getProductItems())
+		for (ExtractableProductItem expi : exSkill.getProductItems())
 		{
 			chance = expi.getChance();
 			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
@@ -95,7 +95,7 @@ public final class RestorationRandom extends AbstractEffect
 			chanceFrom += chance;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final PlayerInstance player = info.getEffected().getActingPlayer();
 		if (creationList.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);

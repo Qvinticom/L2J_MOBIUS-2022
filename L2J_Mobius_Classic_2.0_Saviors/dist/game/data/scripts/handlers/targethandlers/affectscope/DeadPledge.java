@@ -23,11 +23,11 @@ import java.util.function.Predicate;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 public class DeadPledge implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -45,19 +45,19 @@ public class DeadPledge implements IAffectScopeHandler
 		
 		if (target.isPlayable())
 		{
-			final L2Playable playable = (L2Playable) target;
-			final L2PcInstance player = playable.getActingPlayer();
+			final Playable playable = (Playable) target;
+			final PlayerInstance player = playable.getActingPlayer();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<L2Playable> filter = plbl ->
+			final Predicate<Playable> filter = plbl ->
 			{
 				if ((affectLimit > 0) && (affected.get() >= affectLimit))
 				{
 					return false;
 				}
 				
-				final L2PcInstance p = plbl.getActingPlayer();
+				final PlayerInstance p = plbl.getActingPlayer();
 				if ((p == null) || !p.isDead())
 				{
 					return false;
@@ -67,7 +67,7 @@ public class DeadPledge implements IAffectScopeHandler
 					return false;
 				}
 				
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, p))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))
 				{
 					return false;
 				}
@@ -83,7 +83,7 @@ public class DeadPledge implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(playable, L2Playable.class, affectRange, c ->
+			World.getInstance().forEachVisibleObjectInRange(playable, Playable.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{

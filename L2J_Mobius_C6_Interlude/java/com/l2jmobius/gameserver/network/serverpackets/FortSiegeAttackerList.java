@@ -20,8 +20,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 //
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 
 /**
@@ -49,7 +49,7 @@ import com.l2jmobius.gameserver.model.entity.siege.Fort;
  * d = AllyCrestID<BR>
  * @author programmos, scoria dev
  */
-public final class FortSiegeAttackerList extends L2GameServerPacket
+public final class FortSiegeAttackerList extends GameServerPacket
 {
 	private final Fort _fort;
 	
@@ -69,11 +69,11 @@ public final class FortSiegeAttackerList extends L2GameServerPacket
 		final int size = _fort.getSiege().getAttackerClans().size();
 		if (size > 0)
 		{
-			L2Clan clan;
+			Clan clan;
 			
 			writeD(size);
 			writeD(size);
-			for (L2SiegeClan siegeclan : _fort.getSiege().getAttackerClans())
+			for (SiegeClan siegeclan : _fort.getSiege().getAttackerClans())
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 				if (clan == null)

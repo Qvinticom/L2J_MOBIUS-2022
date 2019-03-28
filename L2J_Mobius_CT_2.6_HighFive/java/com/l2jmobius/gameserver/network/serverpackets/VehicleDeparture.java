@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -35,7 +35,7 @@ public class VehicleDeparture implements IClientOutgoingPacket
 	/**
 	 * @param boat
 	 */
-	public VehicleDeparture(L2BoatInstance boat)
+	public VehicleDeparture(BoatInstance boat)
 	{
 		_objId = boat.getObjectId();
 		_x = boat.getXdestination();

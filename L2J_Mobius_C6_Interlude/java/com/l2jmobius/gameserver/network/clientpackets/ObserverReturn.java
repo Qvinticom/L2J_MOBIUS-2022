@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class ObserverReturn extends L2GameClientPacket
+public final class ObserverReturn extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -28,15 +28,15 @@ public final class ObserverReturn extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			activeChar.leaveObserverMode();
+			player.leaveObserverMode();
 		}
 	}
 }

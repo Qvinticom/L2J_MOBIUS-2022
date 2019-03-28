@@ -21,18 +21,18 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class PartyMatchList extends L2GameServerPacket
+public class PartyMatchList extends GameServerPacket
 {
-	private final L2PcInstance _cha;
+	private final PlayerInstance _player;
 	private final int _loc;
 	private final int _lim;
 	private final List<PartyMatchRoom> _rooms;
 	
-	public PartyMatchList(L2PcInstance player, int auto, int location, int limit)
+	public PartyMatchList(PlayerInstance player, int auto, int location, int limit)
 	{
-		_cha = player;
+		_player = player;
 		_loc = location;
 		_lim = limit;
 		_rooms = new ArrayList<>();
@@ -41,7 +41,7 @@ public class PartyMatchList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		if (getClient().getActiveChar() == null)
+		if (getClient().getPlayer() == null)
 		{
 			return;
 		}
@@ -59,7 +59,7 @@ public class PartyMatchList extends L2GameServerPacket
 				continue;
 			}
 			
-			if ((_lim == 0) && ((_cha.getLevel() < room.getMinLvl()) || (_cha.getLevel() > room.getMaxLvl())))
+			if ((_lim == 0) && ((_player.getLevel() < room.getMinLvl()) || (_player.getLevel() > room.getMaxLvl())))
 			{
 				continue;
 			}

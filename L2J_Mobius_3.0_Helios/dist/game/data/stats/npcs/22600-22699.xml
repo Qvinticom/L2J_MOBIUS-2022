@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22602" level="73" type="L2Monster" name="Mutant Bird">
+	<npc id="22602" level="73" type="Monster" name="Mutant Bird">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -78,7 +78,7 @@
 			<height normal="85" />
 		</collision>
 	</npc>
-	<npc id="22603" level="74" type="L2Monster" name="Mutant Bird">
+	<npc id="22603" level="74" type="Monster" name="Mutant Bird">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -160,7 +160,7 @@
 			<height normal="85" />
 		</collision>
 	</npc>
-	<npc id="22604" level="74" type="L2Monster" name="Dra Hawk">
+	<npc id="22604" level="74" type="Monster" name="Dra Hawk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -237,7 +237,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22605" level="75" type="L2Monster" name="Dra Hawk">
+	<npc id="22605" level="75" type="Monster" name="Dra Hawk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -314,7 +314,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22606" level="76" type="L2Monster" name="Floating Skull">
+	<npc id="22606" level="76" type="Monster" name="Floating Skull">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -398,7 +398,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22607" level="77" type="L2Monster" name="Floating Skull">
+	<npc id="22607" level="77" type="Monster" name="Floating Skull">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -470,7 +470,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22608" level="75" type="L2Monster" name="Floating Zombie">
+	<npc id="22608" level="75" type="Monster" name="Floating Zombie">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -539,7 +539,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="22609" level="76" type="L2Monster" name="Floating Zombie">
+	<npc id="22609" level="76" type="Monster" name="Floating Zombie">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -612,7 +612,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="22610" level="75" type="L2Monster" name="Mutated Drake Wing">
+	<npc id="22610" level="75" type="Monster" name="Mutated Drake Wing">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -688,7 +688,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="22611" level="76" type="L2Monster" name="Mutated Drake Wing">
+	<npc id="22611" level="76" type="Monster" name="Mutated Drake Wing">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -768,7 +768,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="22612" level="76" type="L2Monster" name="Drak">
+	<npc id="22612" level="76" type="Monster" name="Drak">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -851,7 +851,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22613" level="77" type="L2Monster" name="Drak">
+	<npc id="22613" level="77" type="Monster" name="Drak">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -932,7 +932,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22614" level="74" type="L2Monster" name="Vulture Rider">
+	<npc id="22614" level="74" type="Monster" name="Vulture Rider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
@@ -1018,7 +1018,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="22615" level="75" type="L2Monster" name="Vulture Rider">
+	<npc id="22615" level="75" type="Monster" name="Vulture Rider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
@@ -1098,7 +1098,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="22616" level="81" type="L2Monster" name="Seed of Pain">
+	<npc id="22616" level="81" type="Monster" name="Seed of Pain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5882" level="1" />
@@ -1152,7 +1152,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22617" level="82" type="L2Monster" name="Spiked Stakato">
+	<npc id="22617" level="82" type="Monster" name="Spiked Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
@@ -1222,7 +1222,7 @@
 			<height normal="43.2" />
 		</collision>
 	</npc>
-	<npc id="22618" level="82" type="L2Monster" name="Spiked Stakato Worker">
+	<npc id="22618" level="82" type="Monster" name="Spiked Stakato Worker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" />
@@ -1295,7 +1295,7 @@
 			<height normal="48.3" />
 		</collision>
 	</npc>
-	<npc id="22619" level="82" type="L2Monster" name="Spiked Stakato Guard">
+	<npc id="22619" level="82" type="Monster" name="Spiked Stakato Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" />
@@ -1366,7 +1366,7 @@
 			<height normal="22.8" />
 		</collision>
 	</npc>
-	<npc id="22620" level="82" type="L2Monster" name="Female Spiked Stakato">
+	<npc id="22620" level="82" type="Monster" name="Female Spiked Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_guard" />
@@ -1448,7 +1448,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="22621" level="82" type="L2Monster" name="Male Spiked Stakato">
+	<npc id="22621" level="82" type="Monster" name="Male Spiked Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1531,7 +1531,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22622" level="83" type="L2Monster" name="Male Spiked Stakato">
+	<npc id="22622" level="83" type="Monster" name="Male Spiked Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" />
@@ -1592,7 +1592,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="22623" level="82" type="L2Monster" name="Spiked Stakato Sorcerer">
+	<npc id="22623" level="82" type="Monster" name="Spiked Stakato Sorcerer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" />
@@ -1667,7 +1667,7 @@
 			<height normal="43.6" />
 		</collision>
 	</npc>
-	<npc id="22624" level="82" type="L2Monster" name="Cannibalistic Stakato Follower">
+	<npc id="22624" level="82" type="Monster" name="Cannibalistic Stakato Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4232" level="8" />
@@ -1744,7 +1744,7 @@
 			<height normal="29.8" />
 		</collision>
 	</npc>
-	<npc id="22625" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
+	<npc id="22625" level="83" type="Monster" name="Cannibalistic Stakato Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1829,7 +1829,7 @@
 			<height normal="48.8" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="22626" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
+	<npc id="22626" level="83" type="Monster" name="Cannibalistic Stakato Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6167" level="9" />
@@ -1908,7 +1908,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22627" level="83" type="L2Monster" name="Spiked Stakato Soldier">
+	<npc id="22627" level="83" type="Monster" name="Spiked Stakato Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
@@ -1979,7 +1979,7 @@
 			<height normal="43.2" />
 		</collision>
 	</npc>
-	<npc id="22628" level="83" type="L2Monster" name="Spiked Stakato Drone">
+	<npc id="22628" level="83" type="Monster" name="Spiked Stakato Drone">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" />
@@ -2051,7 +2051,7 @@
 			<height normal="47.3" />
 		</collision>
 	</npc>
-	<npc id="22629" level="83" type="L2Monster" name="Spiked Stakato Captain">
+	<npc id="22629" level="83" type="Monster" name="Spiked Stakato Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
@@ -2124,7 +2124,7 @@
 			<height normal="29.1" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="22630" level="83" type="L2Monster" name="Spiked Stakato Nurse">
+	<npc id="22630" level="83" type="Monster" name="Spiked Stakato Nurse">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2207,7 +2207,7 @@
 			<height normal="43.8" />
 		</collision>
 	</npc>
-	<npc id="22631" level="83" type="L2Monster" name="Spiked Stakato Nurse">
+	<npc id="22631" level="83" type="Monster" name="Spiked Stakato Nurse">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic1" id="4100" level="9" />
@@ -2285,7 +2285,7 @@
 			<height normal="36.4" />
 		</collision>
 	</npc>
-	<npc id="22632" level="82" type="L2Monster" name="Spiked Stakato Baby">
+	<npc id="22632" level="82" type="Monster" name="Spiked Stakato Baby">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_raider" />
@@ -2365,7 +2365,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="22633" level="83" type="L2Monster" name="Spiked Stakato Shaman">
+	<npc id="22633" level="83" type="Monster" name="Spiked Stakato Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" />
@@ -2442,7 +2442,7 @@
 			<height normal="43.6" />
 		</collision>
 	</npc>
-	<npc id="22634" level="78" type="L2Monster" name="Scarlet Stakato Worker">
+	<npc id="22634" level="78" type="Monster" name="Scarlet Stakato Worker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2506,7 +2506,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22635" level="78" type="L2Monster" name="Scarlet Stakato Soldier">
+	<npc id="22635" level="78" type="Monster" name="Scarlet Stakato Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2570,7 +2570,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="22636" level="78" type="L2Monster" name="Scarlet Stakato Noble">
+	<npc id="22636" level="78" type="Monster" name="Scarlet Stakato Noble">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2634,7 +2634,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22637" level="78" type="L2Monster" name="Tepra Scorpion">
+	<npc id="22637" level="78" type="Monster" name="Tepra Scorpion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2698,7 +2698,7 @@
 			<height normal="52.8" />
 		</collision>
 	</npc>
-	<npc id="22638" level="78" type="L2Monster" name="Tepra Scarab">
+	<npc id="22638" level="78" type="Monster" name="Tepra Scarab">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2762,7 +2762,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="22639" level="78" type="L2Monster" name="Assassin Beetle">
+	<npc id="22639" level="78" type="Monster" name="Assassin Beetle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2827,7 +2827,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="22640" level="78" type="L2Monster" name="Mercenary of Destruction">
+	<npc id="22640" level="78" type="Monster" name="Mercenary of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2893,7 +2893,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22641" level="78" type="L2Monster" name="Knight of Destruction">
+	<npc id="22641" level="78" type="Monster" name="Knight of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2957,7 +2957,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="22642" level="78" type="L2Monster" name="Lavastone Golem">
+	<npc id="22642" level="78" type="Monster" name="Lavastone Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3016,7 +3016,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22643" level="78" type="L2Monster" name="Magma Golem">
+	<npc id="22643" level="78" type="Monster" name="Magma Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3081,7 +3081,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="22644" level="78" type="L2Monster" name="Arimanes of Destruction">
+	<npc id="22644" level="78" type="Monster" name="Arimanes of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3149,7 +3149,7 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="22645" level="78" type="L2Monster" name="Balrog of Destruction">
+	<npc id="22645" level="78" type="Monster" name="Balrog of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3218,7 +3218,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="22646" level="78" type="L2Monster" name="Ashuras of Destruction">
+	<npc id="22646" level="78" type="Monster" name="Ashuras of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3285,7 +3285,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="22647" level="78" type="L2Monster" name="Lavasillisk">
+	<npc id="22647" level="78" type="Monster" name="Lavasillisk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3346,7 +3346,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22648" level="78" type="L2Monster" name="Blazing Ifrit">
+	<npc id="22648" level="78" type="Monster" name="Blazing Ifrit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3408,7 +3408,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="22649" level="78" type="L2Monster" name="Magma Drake">
+	<npc id="22649" level="78" type="Monster" name="Magma Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3469,7 +3469,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22650" level="83" type="L2Monster" name="Mucrokian Fanatic">
+	<npc id="22650" level="83" type="Monster" name="Mucrokian Fanatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
@@ -3550,7 +3550,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22651" level="83" type="L2Monster" name="Mucrokian Ascetic">
+	<npc id="22651" level="83" type="Monster" name="Mucrokian Ascetic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
@@ -3635,7 +3635,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22652" level="84" type="L2Monster" name="Mucrokian Savior">
+	<npc id="22652" level="84" type="Monster" name="Mucrokian Savior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
@@ -3720,7 +3720,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22653" level="84" type="L2Monster" name="Mucrokian Preacher">
+	<npc id="22653" level="84" type="Monster" name="Mucrokian Preacher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
@@ -3800,7 +3800,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22654" level="83" type="L2Monster" name="Contaminated Mucrokian">
+	<npc id="22654" level="83" type="Monster" name="Contaminated Mucrokian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3880,7 +3880,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="22655" level="84" type="L2Monster" name="Awakened Mucrokian">
+	<npc id="22655" level="84" type="Monster" name="Awakened Mucrokian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4072" level="9" />
@@ -3966,7 +3966,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="22656" level="83" type="L2Monster" name="Suppressor">
+	<npc id="22656" level="83" type="Monster" name="Suppressor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
@@ -4050,7 +4050,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="22657" level="84" type="L2Monster" name="Exterminator">
+	<npc id="22657" level="84" type="Monster" name="Exterminator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
@@ -4135,7 +4135,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22658" level="83" type="L2Monster" name="Sentinel Waterspirit">
+	<npc id="22658" level="83" type="Monster" name="Sentinel Waterspirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
@@ -4215,7 +4215,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22659" level="84" type="L2Monster" name="Guardian Waterspirit">
+	<npc id="22659" level="84" type="Monster" name="Guardian Waterspirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
@@ -4301,7 +4301,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22678" level="81" type="L2Monster" name="Grave Robber Summoner" title="Lunatic">
+	<npc id="22678" level="81" type="Monster" name="Grave Robber Summoner" title="Lunatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
@@ -4389,7 +4389,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22679" level="82" type="L2Monster" name="Grave Robber Wizard" title="Lunatic">
+	<npc id="22679" level="82" type="Monster" name="Grave Robber Wizard" title="Lunatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
@@ -4477,7 +4477,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22680" level="81" type="L2Monster" name="Grave Robber Worker" title="Lunatic">
+	<npc id="22680" level="81" type="Monster" name="Grave Robber Worker" title="Lunatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5082" level="1" />
@@ -4551,7 +4551,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22681" level="82" type="L2Monster" name="Grave Robber Warrior" title="Lunatic">
+	<npc id="22681" level="82" type="Monster" name="Grave Robber Warrior" title="Lunatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
@@ -4628,7 +4628,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22682" level="82" type="L2Monster" name="Grave Robber Berserker" title="Lunatic">
+	<npc id="22682" level="82" type="Monster" name="Grave Robber Berserker" title="Lunatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4705,7 +4705,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22683" level="81" type="L2Monster" name="Servitor of Darkness">
+	<npc id="22683" level="81" type="Monster" name="Servitor of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4643" level="9" />
@@ -4778,7 +4778,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="22684" level="81" type="L2Monster" name="Servitor of Darkness">
+	<npc id="22684" level="81" type="Monster" name="Servitor of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" />
@@ -4851,7 +4851,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22685" level="82" type="L2Monster" name="Servitor of Darkness">
+	<npc id="22685" level="82" type="Monster" name="Servitor of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" />
@@ -4924,7 +4924,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22686" level="82" type="L2Monster" name="Servitor of Darkness">
+	<npc id="22686" level="82" type="Monster" name="Servitor of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" />
@@ -4996,7 +4996,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="22687" level="81" type="L2Monster" name="Phantoms of the Mine">
+	<npc id="22687" level="81" type="Monster" name="Phantoms of the Mine">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
@@ -5076,7 +5076,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="22688" level="82" type="L2Monster" name="Evil Spirits of the Mine">
+	<npc id="22688" level="82" type="Monster" name="Evil Spirits of the Mine">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeBuffProb" value="3333" />
@@ -5156,7 +5156,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22689" level="82" type="L2Monster" name="Mine Bug">
+	<npc id="22689" level="82" type="Monster" name="Mine Bug">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5234,7 +5234,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="22690" level="82" type="L2Monster" name="Earthworm's Descendant">
+	<npc id="22690" level="82" type="Monster" name="Earthworm's Descendant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="5000" />
@@ -5312,7 +5312,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22691" level="81" type="L2Monster" name="Ragna Orc" title="Spirit Infested">
+	<npc id="22691" level="81" type="Monster" name="Ragna Orc" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
@@ -5395,7 +5395,7 @@
 			<height normal="25.25" />
 		</collision>
 	</npc>
-	<npc id="22692" level="82" type="L2Monster" name="Ragna Orc Warrior" title="Spirit Infested">
+	<npc id="22692" level="82" type="Monster" name="Ragna Orc Warrior" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="BuffDelay" value="10" />
@@ -5484,7 +5484,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22693" level="82" type="L2Monster" name="Ragna Orc Hero" title="Spirit Infested">
+	<npc id="22693" level="82" type="Monster" name="Ragna Orc Hero" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5581,7 +5581,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="22694" level="82" type="L2Monster" name="Ragna Orc Commander" title="Spirit Infested">
+	<npc id="22694" level="82" type="Monster" name="Ragna Orc Commander" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5682,7 +5682,7 @@
 			<height normal="27.6" />
 		</collision>
 	</npc>
-	<npc id="22695" level="81" type="L2Monster" name="Ragna Orc Healer" title="Spirit Infested">
+	<npc id="22695" level="81" type="Monster" name="Ragna Orc Healer" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
@@ -5775,7 +5775,7 @@
 			<height normal="20.8" />
 		</collision>
 	</npc>
-	<npc id="22696" level="81" type="L2Monster" name="Ragna Orc Shaman" title="Spirit Infested">
+	<npc id="22696" level="81" type="Monster" name="Ragna Orc Shaman" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeHealProb" value="1000" />
@@ -5873,7 +5873,7 @@
 			<height normal="20.8" />
 		</collision>
 	</npc>
-	<npc id="22697" level="82" type="L2Monster" name="Ragna Orc Priest" title="Spirit Infested">
+	<npc id="22697" level="82" type="Monster" name="Ragna Orc Priest" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5976,7 +5976,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="22698" level="81" type="L2Monster" name="Ragna Orc Archer" title="Spirit Infested">
+	<npc id="22698" level="81" type="Monster" name="Ragna Orc Archer" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -6065,7 +6065,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="22699" level="82" type="L2Monster" name="Ragna Orc Sniper" title="Spirit Infested">
+	<npc id="22699" level="82" type="Monster" name="Ragna Orc Sniper" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />

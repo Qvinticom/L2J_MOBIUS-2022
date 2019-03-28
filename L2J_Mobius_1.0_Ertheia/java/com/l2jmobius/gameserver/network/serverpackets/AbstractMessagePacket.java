@@ -21,12 +21,12 @@ import java.util.Arrays;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -184,7 +184,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
-	public final T addPcName(L2PcInstance pc)
+	public final T addPcName(PlayerInstance pc)
 	{
 		append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
 		return (T) this;
@@ -201,17 +201,17 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
-	public final T addNpcName(L2Npc npc)
+	public final T addNpcName(Npc npc)
 	{
 		return addNpcName(npc.getTemplate());
 	}
 	
-	public final T addNpcName(L2Summon npc)
+	public final T addNpcName(Summon npc)
 	{
 		return addNpcName(npc.getId());
 	}
 	
-	public final T addNpcName(L2NpcTemplate template)
+	public final T addNpcName(NpcTemplate template)
 	{
 		if (template.isUsingServerSideName())
 		{
@@ -226,19 +226,19 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
-	public T addItemName(L2ItemInstance item)
+	public T addItemName(ItemInstance item)
 	{
 		return addItemName(item.getId());
 	}
 	
-	public T addItemName(L2Item item)
+	public T addItemName(Item item)
 	{
 		return addItemName(item.getId());
 	}
 	
 	public final T addItemName(int id)
 	{
-		final L2Item item = ItemTable.getInstance().getTemplate(id);
+		final Item item = ItemTable.getInstance().getTemplate(id);
 		if (item.getDisplayId() != id)
 		{
 			return addString(item.getName());

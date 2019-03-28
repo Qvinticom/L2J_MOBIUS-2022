@@ -19,11 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -55,8 +55,8 @@ public final class Sow extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
+		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final MonsterInstance target = (MonsterInstance) info.getEffected();
 		
 		if (target.isDead() || (!target.getTemplate().canBeSown()) || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
 		{
@@ -64,7 +64,7 @@ public final class Sow extends AbstractEffect
 		}
 		
 		// Consuming used seed
-		final L2Seed seed = target.getSeed();
+		final Seed seed = target.getSeed();
 		if (!player.destroyItemByItemId("Consume", seed.getSeedId(), 1, target, false))
 		{
 			return;
@@ -95,12 +95,12 @@ public final class Sow extends AbstractEffect
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
-	private static boolean calcSuccess(L2Character activeChar, L2Character target, L2Seed seed)
+	private static boolean calcSuccess(Creature creature, Creature target, Seed seed)
 	{
 		// TODO: check all the chances
 		final int minlevelSeed = seed.getLevel() - 5;
 		final int maxlevelSeed = seed.getLevel() + 5;
-		final int levelPlayer = activeChar.getLevel(); // Attacker Level
+		final int levelPlayer = creature.getLevel(); // Attacker Level
 		final int levelTarget = target.getLevel(); // target Level
 		int basicSuccess = seed.isAlternative() ? 20 : 90;
 		

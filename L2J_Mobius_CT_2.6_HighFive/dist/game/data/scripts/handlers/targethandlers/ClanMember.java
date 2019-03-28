@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
@@ -33,21 +33,21 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 public class ClanMember implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		if (activeChar.isNpc())
+		final List<Creature> targetList = new ArrayList<>();
+		if (creature.isNpc())
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself
-			final L2Npc npc = (L2Npc) activeChar;
+			final Npc npc = (Npc) creature;
 			if ((npc.getTemplate().getClans() == null) || npc.getTemplate().getClans().isEmpty())
 			{
-				return new L2Character[]
+				return new Creature[]
 				{
-					activeChar
+					creature
 				};
 			}
-			for (L2Npc newTarget : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, skill.getCastRange()))
+			for (Npc newTarget : World.getInstance().getVisibleObjectsInRange(creature, Npc.class, skill.getCastRange()))
 			{
 				if (newTarget.isNpc() && npc.isInMyClan(newTarget))
 				{
@@ -64,12 +64,12 @@ public class ClanMember implements ITargetTypeHandler
 		{
 			return EMPTY_TARGET_LIST;
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.CLAN_MEMBER;
+		return TargetType.CLAN_MEMBER;
 	}
 }

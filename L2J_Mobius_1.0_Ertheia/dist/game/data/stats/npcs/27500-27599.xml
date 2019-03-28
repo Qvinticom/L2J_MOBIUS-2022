@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="27500" level="80" type="L2Monster" name="Ketra's Commander Tayr" title="Quest Monster">
+	<npc id="27500" level="80" type="Monster" name="Ketra's Commander Tayr" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -25,7 +25,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27501" level="80" type="L2Monster" name="Ketra's Chief Brakki" title="Quest Monster">
+	<npc id="27501" level="80" type="Monster" name="Ketra's Chief Brakki" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -50,7 +50,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="27502" level="80" type="L2Monster" name="Varka's Commander Mos" title="Quest Monster">
+	<npc id="27502" level="80" type="Monster" name="Varka's Commander Mos" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -75,7 +75,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="27503" level="80" type="L2Monster" name="Varka's Chief Horus" title="Quest Monster">
+	<npc id="27503" level="80" type="Monster" name="Varka's Chief Horus" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -100,7 +100,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="27504" level="60" type="L2Monster" name="Guardian Giant Akum" title="Quest Monster">
+	<npc id="27504" level="60" type="Monster" name="Guardian Giant Akum" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -125,7 +125,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="27505" level="84" type="L2Monster" name="Awakening Meccadan" title="Quest Monster">
+	<npc id="27505" level="84" type="Monster" name="Awakening Meccadan" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -150,7 +150,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="27506" level="84" type="L2Monster" name="Meccadan's Minion" title="Quest Monster">
+	<npc id="27506" level="84" type="Monster" name="Meccadan's Minion" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -175,7 +175,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="27507" level="99" type="L2Monster" name="One-armed Zombie" title="Quest Monster">
+	<npc id="27507" level="99" type="Monster" name="One-armed Zombie" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -216,7 +216,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27508" level="65" type="L2Monster" name="Swamp of Screams Scout" title="Embryo">
+	<npc id="27508" level="65" type="Monster" name="Swamp of Screams Scout" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -241,7 +241,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27509" level="65" type="L2Monster" name="Forest of the Dead Scout" title="Embryo">
+	<npc id="27509" level="65" type="Monster" name="Forest of the Dead Scout" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -266,7 +266,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27510" level="70" type="L2Monster" name="Ceremony Executor" title="Embryo">
+	<npc id="27510" level="70" type="Monster" name="Ceremony Executor" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -291,7 +291,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27511" level="76" type="L2Monster" name="Ketra Backup Shooter" title="Embryo">
+	<npc id="27511" level="76" type="Monster" name="Ketra Backup Shooter" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -316,7 +316,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27512" level="76" type="L2Monster" name="Ketra Backup Wizard" title="Embryo">
+	<npc id="27512" level="76" type="Monster" name="Ketra Backup Wizard" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -341,7 +341,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27513" level="78" type="L2Monster" name="Belos" title="Sakum's Clone">
+	<npc id="27513" level="78" type="Monster" name="Belos" title="Sakum's Clone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -366,7 +366,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27514" level="76" type="L2Monster" name="Varka Backup Shooter" title="Embryo">
+	<npc id="27514" level="76" type="Monster" name="Varka Backup Shooter" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -391,7 +391,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27515" level="76" type="L2Monster" name="Varka Backup Wizard" title="Embryo">
+	<npc id="27515" level="76" type="Monster" name="Varka Backup Wizard" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -416,7 +416,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27516" level="78" type="L2Monster" name="Kampf" title="Sakum's Clone">
+	<npc id="27516" level="78" type="Monster" name="Kampf" title="Sakum's Clone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -441,7 +441,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27517" level="65" type="L2Monster" name="Armed Assault" title="Embryo">
+	<npc id="27517" level="65" type="Monster" name="Armed Assault" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -466,7 +466,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27518" level="50" type="L2Monster" name="Mahum's Vengeful Spirit" title="Quest Monster">
+	<npc id="27518" level="50" type="Monster" name="Mahum's Vengeful Spirit" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -488,7 +488,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="27519" level="58" type="L2Monster" name="Lesser Laikel" title="Quest Monster">
+	<npc id="27519" level="58" type="Monster" name="Lesser Laikel" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>FEMALE</sex>
@@ -553,7 +553,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27520" level="60" type="L2Monster" name="Cursed Giant Akum" title="Quest Monster">
+	<npc id="27520" level="60" type="Monster" name="Cursed Giant Akum" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -575,7 +575,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="27521" level="64" type="L2Monster" name="Embryo" title="Quest Monster">
+	<npc id="27521" level="64" type="Monster" name="Embryo" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -597,7 +597,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27522" level="21" type="L2Monster" name="Windima" title="Clone">
+	<npc id="27522" level="21" type="Monster" name="Windima" title="Clone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -631,7 +631,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="27523" level="55" type="L2Monster" name="Sealbreaker" title="Quest Monster">
+	<npc id="27523" level="55" type="Monster" name="Sealbreaker" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
@@ -653,7 +653,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 	</npc>
-	<npc id="27524" level="60" type="L2Monster" name="Remembered Giant Akum">
+	<npc id="27524" level="60" type="Monster" name="Remembered Giant Akum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -675,7 +675,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="27525" level="60" type="L2Monster" name="Remembered Embryo">
+	<npc id="27525" level="60" type="Monster" name="Remembered Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -697,7 +697,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="27526" level="2" type="L2Monster" name="Floato" title="Quest Monster">
+	<npc id="27526" level="2" type="Monster" name="Floato" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -735,7 +735,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="27527" level="7" type="L2Monster" name="Ratel" title="Quest Monster">
+	<npc id="27527" level="7" type="Monster" name="Ratel" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -772,7 +772,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="27528" level="29" type="L2Monster" name="Skeleton Warrior" title="Quest Monster">
+	<npc id="27528" level="29" type="Monster" name="Skeleton Warrior" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -818,7 +818,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27529" level="40" type="L2Monster" name="Skeleton Archer" title="Quest Monster">
+	<npc id="27529" level="40" type="Monster" name="Skeleton Archer" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -840,7 +840,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27530" level="80" type="L2Monster" name="Vampiric Berise" title="Quest Monster">
+	<npc id="27530" level="80" type="Monster" name="Vampiric Berise" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -866,7 +866,7 @@
 			<height normal="29" grown="35.8" />
 		</collision>
 	</npc>
-	<npc id="27531" level="2" type="L2Monster" name="Floato" title="Quest Monster">
+	<npc id="27531" level="2" type="Monster" name="Floato" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -901,7 +901,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="27532" level="3" type="L2Monster" name="Training Golem">
+	<npc id="27532" level="3" type="Monster" name="Training Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -935,7 +935,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="27533" level="45" type="L2Monster" name="Fragment Eater" title="Quest Monster">
+	<npc id="27533" level="45" type="Monster" name="Fragment Eater" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -957,7 +957,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27534" level="50" type="L2Monster" name="Enraged Giant Narsides" title="Quest Monster">
+	<npc id="27534" level="50" type="Monster" name="Enraged Giant Narsides" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -979,7 +979,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="27535" level="50" type="L2Monster" name="Giant's Minion" title="Quest Monster">
+	<npc id="27535" level="50" type="Monster" name="Giant's Minion" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -1003,7 +1003,7 @@
 			<height normal="44" grown="52.5" />
 		</collision>
 	</npc>
-	<npc id="27536" level="65" type="L2Monster" name="Suspicious Cocoon" title="Quest Monster">
+	<npc id="27536" level="65" type="Monster" name="Suspicious Cocoon" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1025,7 +1025,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27537" level="65" type="L2Monster" name="Suspicious Cocoon" title="Quest Monster">
+	<npc id="27537" level="65" type="Monster" name="Suspicious Cocoon" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1047,7 +1047,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27538" level="65" type="L2Monster" name="Suspicious Cocoon" title="Quest Monster">
+	<npc id="27538" level="65" type="Monster" name="Suspicious Cocoon" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1069,7 +1069,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27539" level="58" type="L2Monster" name="Embryo Predator" title="Quest Monster">
+	<npc id="27539" level="58" type="Monster" name="Embryo Predator" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1091,7 +1091,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27540" level="60" type="L2Monster" name="Embryo Purifier" title="Quest Monster">
+	<npc id="27540" level="60" type="Monster" name="Embryo Purifier" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1113,7 +1113,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27541" level="60" type="L2Monster" name="Embryo Purifier" title="Quest Monster">
+	<npc id="27541" level="60" type="Monster" name="Embryo Purifier" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1135,7 +1135,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27542" level="68" type="L2Monster" name="Needle Stakato Captain" title="Quest Monster">
+	<npc id="27542" level="68" type="Monster" name="Needle Stakato Captain" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1159,7 +1159,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="27543" level="70" type="L2Monster" name="Needle Stakato" title="Quest Monster">
+	<npc id="27543" level="70" type="Monster" name="Needle Stakato" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -1206,7 +1206,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="27544" level="85" type="L2Monster" name="Nebulite Eye" title="Quest Monster">
+	<npc id="27544" level="85" type="Monster" name="Nebulite Eye" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1229,7 +1229,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="27545" level="85" type="L2Monster" name="Nebulite Watch" title="Quest Monster">
+	<npc id="27545" level="85" type="Monster" name="Nebulite Watch" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1252,7 +1252,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="27546" level="85" type="L2Monster" name="Nebulite Golem" title="Quest Monster">
+	<npc id="27546" level="85" type="Monster" name="Nebulite Golem" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>

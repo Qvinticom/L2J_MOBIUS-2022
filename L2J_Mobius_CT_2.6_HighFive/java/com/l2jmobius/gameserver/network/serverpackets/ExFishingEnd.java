@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,19 +27,19 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExFishingEnd implements IClientOutgoingPacket
 {
 	private final boolean _win;
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	
-	public ExFishingEnd(boolean win, L2PcInstance character)
+	public ExFishingEnd(boolean win, PlayerInstance character)
 	{
 		_win = win;
-		_activeChar = character;
+		_creature = character;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FISHING_END.writeId(packet);
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeC(_win ? 1 : 0);
 		return true;
 	}

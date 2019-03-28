@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ManagePledgePower implements IClientOutgoingPacket
 {
 	private final int _action;
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final int _rank;
 	
-	public ManagePledgePower(L2Clan clan, int action, int rank)
+	public ManagePledgePower(Clan clan, int action, int rank)
 	{
 		_clan = clan;
 		_action = action;

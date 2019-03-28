@@ -16,8 +16,8 @@
  */
 package quests.Q10267_JourneyToGracia;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -45,10 +45,10 @@ public class Q10267_JourneyToGracia extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -57,20 +57,20 @@ public class Q10267_JourneyToGracia extends Quest
 		{
 			case "30857-06.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, LETTER, 1);
 				break;
 			}
 			case "32564-02.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				break;
 			}
 			case "32548-02.html":
 			{
 				giveAdena(player, 92500, true);
 				addExpAndSp(player, 75480, 7570);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
 			}
 		}
@@ -78,16 +78,16 @@ public class Q10267_JourneyToGracia extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ORVEN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -109,19 +109,19 @@ public class Q10267_JourneyToGracia extends Quest
 			}
 			case PAPIKU:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					htmltext = st.isCond(1) ? "32564-01.html" : "32564-03.html";
+					htmltext = qs.isCond(1) ? "32564-01.html" : "32564-03.html";
 				}
 				break;
 			}
 			case KEUCEREUS:
 			{
-				if (st.isStarted() && st.isCond(2))
+				if (qs.isStarted() && qs.isCond(2))
 				{
 					htmltext = "32548-01.html";
 				}
-				else if (st.isCompleted())
+				else if (qs.isCompleted())
 				{
 					htmltext = "32548-03.html";
 				}

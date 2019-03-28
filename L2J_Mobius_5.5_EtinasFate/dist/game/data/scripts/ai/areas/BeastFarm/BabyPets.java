@@ -18,14 +18,14 @@ package ai.areas.BeastFarm;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -56,11 +56,11 @@ public final class BabyPets extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("HEAL") && (player != null))
 		{
-			final L2Summon summon = player.getPet();
+			final Summon summon = player.getPet();
 			
 			if (summon != null)
 			{
@@ -86,25 +86,25 @@ public final class BabyPets extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLogout(OnPlayerLogout event)
 	{
-		cancelQuestTimer("HEAL", null, event.getActiveChar());
+		cancelQuestTimer("HEAL", null, event.getPlayer());
 	}
 	
 	@Override
-	public void onSummonSpawn(L2Summon summon)
+	public void onSummonSpawn(Summon summon)
 	{
 		startQuestTimer("HEAL", 5000, null, summon.getOwner(), true);
 	}
 	
-	private int getHealLv(L2Summon summon)
+	private int getHealLv(Summon summon)
 	{
 		final int summonLv = summon.getLevel();
 		return CommonUtil.constrain(summonLv < 70 ? (summonLv / 10) : (7 + ((summonLv - 70) / 5)), 1, 12);
 	}
 	
-	private void castHeal(L2Summon summon, SkillHolder skill, int maxHpPer)
+	private void castHeal(Summon summon, SkillHolder skill, int maxHpPer)
 	{
 		final boolean previousFollowStatus = summon.getFollowStatus();
-		final L2PcInstance owner = summon.getOwner();
+		final PlayerInstance owner = summon.getOwner();
 		
 		if (!owner.isDead() && (((owner.getCurrentHp() / owner.getMaxHp()) * 100) < maxHpPer) && !summon.isHungry() && SkillCaster.checkUseConditions(summon, skill.getSkill()))
 		{

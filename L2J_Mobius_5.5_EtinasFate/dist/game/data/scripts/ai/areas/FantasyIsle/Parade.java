@@ -24,7 +24,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -120,7 +120,7 @@ public final class Parade extends AbstractNpcAI
 	// @formatter:on
 	
 	int npcIndex;
-	CopyOnWriteArrayList<L2Npc> spawns = new CopyOnWriteArrayList<>();
+	CopyOnWriteArrayList<Npc> spawns = new CopyOnWriteArrayList<>();
 	ScheduledFuture<?> spawnTask;
 	ScheduledFuture<?> deleteTask;
 	ScheduledFuture<?> cleanTask;
@@ -146,7 +146,7 @@ public final class Parade extends AbstractNpcAI
 	
 	void clean()
 	{
-		for (L2Npc spawn : spawns)
+		for (Npc spawn : spawns)
 		{
 			if (spawn != null)
 			{
@@ -209,7 +209,7 @@ public final class Parade extends AbstractNpcAI
 				{
 					final int[] start = START[route][i];
 					final int[] goal = GOAL[route][i];
-					final L2Npc actor = addSpawn(npcId, start[0], start[1], start[2], start[3], false, 0);
+					final Npc actor = addSpawn(npcId, start[0], start[1], start[2], start[3], false, 0);
 					actor.setRunning();
 					actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(goal[0], goal[1], goal[2], goal[3]));
 					spawns.add(actor);
@@ -231,7 +231,7 @@ public final class Parade extends AbstractNpcAI
 			{
 				return;
 			}
-			for (L2Npc actor : spawns)
+			for (Npc actor : spawns)
 			{
 				if (actor != null)
 				{

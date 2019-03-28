@@ -34,12 +34,12 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.skills.Stats;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * Raid Boss spawn manager.
@@ -49,8 +49,8 @@ public class RaidBossSpawnManager
 {
 	private static Logger LOGGER = Logger.getLogger(RaidBossSpawnManager.class.getName());
 	
-	protected static final Map<Integer, L2RaidBossInstance> _bosses = new ConcurrentHashMap<>();
-	protected static final Map<Integer, L2Spawn> _spawns = new ConcurrentHashMap<>();
+	protected static final Map<Integer, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
+	protected static final Map<Integer, Spawn> _spawns = new ConcurrentHashMap<>();
 	protected static final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
 	protected static final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 	
@@ -85,10 +85,10 @@ public class RaidBossSpawnManager
 		{
 			while (rset.next())
 			{
-				final L2NpcTemplate template = getValidTemplate(rset.getInt("boss_id"));
+				final NpcTemplate template = getValidTemplate(rset.getInt("boss_id"));
 				if (template != null)
 				{
-					final L2Spawn spawnDat = new L2Spawn(template);
+					final Spawn spawnDat = new Spawn(template);
 					spawnDat.setX(rset.getInt("loc_x"));
 					spawnDat.setY(rset.getInt("loc_y"));
 					spawnDat.setZ(rset.getInt("loc_z"));
@@ -134,7 +134,7 @@ public class RaidBossSpawnManager
 		@Override
 		public void run()
 		{
-			L2RaidBossInstance raidboss = null;
+			RaidBossInstance raidboss = null;
 			
 			if (bossId == 25328)
 			{
@@ -142,7 +142,7 @@ public class RaidBossSpawnManager
 			}
 			else
 			{
-				raidboss = (L2RaidBossInstance) _spawns.get(bossId).doSpawn();
+				raidboss = (RaidBossInstance) _spawns.get(bossId).doSpawn();
 			}
 			
 			if (raidboss != null)
@@ -179,7 +179,7 @@ public class RaidBossSpawnManager
 	 * @param boss the boss
 	 * @param isBossDead the is boss dead
 	 */
-	public void updateStatus(L2RaidBossInstance boss, boolean isBossDead)
+	public void updateStatus(RaidBossInstance boss, boolean isBossDead)
 	{
 		final StatsSet info = _storedInfo.get(boss.getNpcId());
 		if (info == null)
@@ -230,7 +230,7 @@ public class RaidBossSpawnManager
 	 * @param currentMP the current mp
 	 * @param storeInDb the store in db
 	 */
-	public void addNewSpawn(L2Spawn spawnDat, long respawnTime, double currentHP, double currentMP, boolean storeInDb)
+	public void addNewSpawn(Spawn spawnDat, long respawnTime, double currentHP, double currentMP, boolean storeInDb)
 	{
 		if ((spawnDat == null) || _spawns.containsKey(spawnDat.getId()))
 		{
@@ -244,7 +244,7 @@ public class RaidBossSpawnManager
 		
 		if ((respawnTime == 0) || (time > respawnTime))
 		{
-			final L2RaidBossInstance raidboss = bossId == 25328 ? DayNightSpawnManager.getInstance().handleBoss(spawnDat) : (L2RaidBossInstance) spawnDat.doSpawn();
+			final RaidBossInstance raidboss = bossId == 25328 ? DayNightSpawnManager.getInstance().handleBoss(spawnDat) : (RaidBossInstance) spawnDat.doSpawn();
 			if (raidboss != null)
 			{
 				final double bonus = raidboss.getStat().calcStat(Stats.MAX_HP, 1, raidboss, null);
@@ -310,7 +310,7 @@ public class RaidBossSpawnManager
 	 * @param spawnDat the spawn dat
 	 * @param updateDb the update db
 	 */
-	public void deleteSpawn(L2Spawn spawnDat, boolean updateDb)
+	public void deleteSpawn(Spawn spawnDat, boolean updateDb)
 	{
 		if (spawnDat == null)
 		{
@@ -372,7 +372,7 @@ public class RaidBossSpawnManager
 					continue;
 				}
 				
-				final L2RaidBossInstance boss = _bosses.get(bossId);
+				final RaidBossInstance boss = _bosses.get(bossId);
 				
 				if (boss == null)
 				{
@@ -431,7 +431,7 @@ public class RaidBossSpawnManager
 		
 		for (int i : _bosses.keySet())
 		{
-			final L2RaidBossInstance boss = _bosses.get(i);
+			final RaidBossInstance boss = _bosses.get(i);
 			
 			msg[index++] = boss.getName() + ": " + boss.getRaidStatus().name();
 		}
@@ -455,7 +455,7 @@ public class RaidBossSpawnManager
 		
 		if (_bosses.containsKey(bossId))
 		{
-			final L2RaidBossInstance boss = _bosses.get(bossId);
+			final RaidBossInstance boss = _bosses.get(bossId);
 			
 			msg += boss.getName() + ": " + boss.getRaidStatus().name();
 		}
@@ -484,15 +484,15 @@ public class RaidBossSpawnManager
 		}
 	}
 	
-	public L2NpcTemplate getValidTemplate(int bossId)
+	public NpcTemplate getValidTemplate(int bossId)
 	{
-		final L2NpcTemplate template = NpcTable.getInstance().getTemplate(bossId);
+		final NpcTemplate template = NpcTable.getInstance().getTemplate(bossId);
 		if (template == null)
 		{
 			return null;
 		}
 		
-		if (!template.type.equalsIgnoreCase("L2RaidBoss"))
+		if (!template.type.equalsIgnoreCase("RaidBoss"))
 		{
 			return null;
 		}
@@ -504,7 +504,7 @@ public class RaidBossSpawnManager
 	 * Notify spawn night boss.
 	 * @param raidboss the raidboss
 	 */
-	public void notifySpawnNightBoss(L2RaidBossInstance raidboss)
+	public void notifySpawnNightBoss(RaidBossInstance raidboss)
 	{
 		final StatsSet info = new StatsSet();
 		info.set("currentHP", raidboss.getCurrentHp());
@@ -534,7 +534,7 @@ public class RaidBossSpawnManager
 	 * Gets the bosses.
 	 * @return the bosses
 	 */
-	public Map<Integer, L2RaidBossInstance> getBosses()
+	public Map<Integer, RaidBossInstance> getBosses()
 	{
 		return _bosses;
 	}
@@ -543,7 +543,7 @@ public class RaidBossSpawnManager
 	 * Gets the spawns.
 	 * @return the spawns
 	 */
-	public Map<Integer, L2Spawn> getSpawns()
+	public Map<Integer, Spawn> getSpawns()
 	{
 		return _spawns;
 	}
@@ -584,7 +584,7 @@ public class RaidBossSpawnManager
 		return _storedInfo.get(bossId);
 	}
 	
-	public L2RaidBossInstance getBoss(int bossId)
+	public RaidBossInstance getBoss(int bossId)
 	{
 		return _bosses.get(bossId);
 	}

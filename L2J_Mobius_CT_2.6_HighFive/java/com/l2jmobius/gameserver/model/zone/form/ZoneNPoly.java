@@ -22,13 +22,13 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
+import com.l2jmobius.gameserver.model.zone.ZoneForm;
 
 /**
  * A not so primitive npoly zone
  * @author durgus
  */
-public class ZoneNPoly extends L2ZoneForm
+public class ZoneNPoly extends ZoneForm
 {
 	private final Polygon _p;
 	private final int _z1;

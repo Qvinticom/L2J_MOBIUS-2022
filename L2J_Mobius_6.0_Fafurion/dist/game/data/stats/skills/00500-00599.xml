@@ -2053,7 +2053,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Iron Shield -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
@@ -2255,7 +2255,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Chance -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
@@ -2275,7 +2275,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Rapid Shot -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
@@ -2295,7 +2295,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Dash -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
@@ -2315,7 +2315,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Mind -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
@@ -4294,7 +4294,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -4307,7 +4307,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>

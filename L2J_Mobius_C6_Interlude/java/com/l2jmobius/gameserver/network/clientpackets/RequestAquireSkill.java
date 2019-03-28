@@ -22,16 +22,16 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import com.l2jmobius.gameserver.model.L2PledgeSkillLearn;
-import com.l2jmobius.gameserver.model.L2ShortCut;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2FishermanInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterInstance;
+import com.l2jmobius.gameserver.model.PledgeSkillLearn;
+import com.l2jmobius.gameserver.model.ShortCut;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.VillageMasterInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.IllegalPlayerAction;
 import com.l2jmobius.gameserver.util.Util;
 
-public class RequestAquireSkill extends L2GameClientPacket
+public class RequestAquireSkill extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestAquireSkill.class.getName());
 	
@@ -62,14 +62,14 @@ public class RequestAquireSkill extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2FolkInstance trainer = player.getLastFolkNPC();
+		final FolkInstance trainer = player.getLastFolkNPC();
 		
 		if (trainer == null)
 		{
@@ -78,7 +78,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		final int npcid = trainer.getNpcId();
 		
-		if (!player.isInsideRadius(trainer, L2NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
+		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
 		{
 			return;
 		}
@@ -94,18 +94,18 @@ public class RequestAquireSkill extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(_id, _level);
+		final Skill skill = SkillTable.getInstance().getInfo(_id, _level);
 		
 		int counts = 0;
 		int _requiredSp = 10000000;
 		
 		if (_skillType == 0)
 		{
-			final L2SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
+			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
 			
-			for (L2SkillLearn s : skills)
+			for (SkillLearn s : skills)
 			{
-				final L2Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getSkillLearningClassId()) || !sk.canTeachBy(npcid))
 				{
 					continue;
@@ -125,7 +125,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 			{
 				int spbId = -1;
 				// divine inspiration require book for each level
-				if (Config.DIVINE_SP_BOOK_NEEDED && (skill.getId() == L2Skill.SKILL_DIVINE_INSPIRATION))
+				if (Config.DIVINE_SP_BOOK_NEEDED && (skill.getId() == Skill.SKILL_DIVINE_INSPIRATION))
 				{
 					spbId = SkillSpellbookTable.getInstance().getBookForSkill(skill, _level);
 				}
@@ -137,7 +137,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 				// spellbook required
 				if (spbId > -1)
 				{
-					final L2ItemInstance spb = player.getInventory().getItemByItemId(spbId);
+					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
 					
 					if (spb == null)
 					{
@@ -163,11 +163,11 @@ public class RequestAquireSkill extends L2GameClientPacket
 			int costid = 0;
 			int costcount = 0;
 			// Skill Learn bug Fix
-			final L2SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
+			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
 			
-			for (L2SkillLearn s : skillsc)
+			for (SkillLearn s : skillsc)
 			{
-				final L2Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
 				
 				if ((sk == null) || (sk != skill))
 				{
@@ -220,11 +220,11 @@ public class RequestAquireSkill extends L2GameClientPacket
 			int itemId = 0;
 			int repCost = 100000000;
 			// Skill Learn bug Fix
-			final L2PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
+			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
 			
-			for (L2PledgeSkillLearn s : skills)
+			for (PledgeSkillLearn s : skills)
 			{
-				final L2Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
 				
 				if ((sk == null) || (sk != skill))
 				{
@@ -278,14 +278,14 @@ public class RequestAquireSkill extends L2GameClientPacket
 			
 			player.getClan().broadcastToOnlineMembers(new PledgeSkillList(player.getClan()));
 			
-			for (L2PcInstance member : player.getClan().getOnlineMembers(""))
+			for (PlayerInstance member : player.getClan().getOnlineMembers(""))
 			{
 				member.sendSkillList();
 			}
 			
-			if (trainer instanceof L2VillageMasterInstance)
+			if (trainer instanceof VillageMasterInstance)
 			{
-				((L2VillageMasterInstance) trainer).showPledgeSkillList(player);
+				((VillageMasterInstance) trainer).showPledgeSkillList(player);
 			}
 			
 			return;
@@ -314,22 +314,22 @@ public class RequestAquireSkill extends L2GameClientPacket
 		// update all the shortcuts to this skill
 		if (_level > 1)
 		{
-			final L2ShortCut[] allShortCuts = player.getAllShortCuts();
+			final ShortCut[] allShortCuts = player.getAllShortCuts();
 			
-			for (L2ShortCut sc : allShortCuts)
+			for (ShortCut sc : allShortCuts)
 			{
-				if ((sc.getId() == _id) && (sc.getType() == L2ShortCut.TYPE_SKILL))
+				if ((sc.getId() == _id) && (sc.getType() == ShortCut.TYPE_SKILL))
 				{
-					final L2ShortCut newsc = new L2ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _level, 1);
+					final ShortCut newsc = new ShortCut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), _level, 1);
 					player.sendPacket(new ShortCutRegister(newsc));
 					player.registerShortCut(newsc);
 				}
 			}
 		}
 		
-		if (trainer instanceof L2FishermanInstance)
+		if (trainer instanceof FishermanInstance)
 		{
-			((L2FishermanInstance) trainer).showSkillList(player);
+			((FishermanInstance) trainer).showSkillList(player);
 		}
 		else
 		{

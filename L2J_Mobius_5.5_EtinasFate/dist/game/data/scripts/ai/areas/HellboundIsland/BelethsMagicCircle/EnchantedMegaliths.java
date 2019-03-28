@@ -19,12 +19,12 @@ package ai.areas.HellboundIsland.BelethsMagicCircle;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
@@ -61,7 +61,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 		23373
 	};
 	// Others
-	private static final L2ScriptZone HELLBOUND_ZONE = ZoneManager.getInstance().getZoneById(40101, L2ScriptZone.class);
+	private static final ScriptZone HELLBOUND_ZONE = ZoneManager.getInstance().getZoneById(40101, ScriptZone.class);
 	private static final String HB_MEGALITH_STAGE = "HB_MegalithStage";
 	private static final int KILL_COUNT = 300;
 	private static SpawnTemplate spawnTemplateNormal;
@@ -79,7 +79,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -105,11 +105,11 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character creature, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			switch (stage)
 			{
 				case 1:
@@ -202,7 +202,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 		{
 			case 1:
 			{
-				for (L2PcInstance pl : HELLBOUND_ZONE.getPlayersInside())
+				for (PlayerInstance pl : HELLBOUND_ZONE.getPlayersInside())
 				{
 					pl.sendPacket(new OnEventTrigger(19250032, true));
 					pl.sendPacket(new OnEventTrigger(19250014, true));
@@ -237,7 +237,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 			}
 			case 2:
 			{
-				for (L2PcInstance pl : HELLBOUND_ZONE.getPlayersInside())
+				for (PlayerInstance pl : HELLBOUND_ZONE.getPlayersInside())
 				{
 					pl.sendPacket(new OnEventTrigger(19250034, true));
 					pl.sendPacket(new OnEventTrigger(19250016, true));
@@ -274,7 +274,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 			}
 			case 3:
 			{
-				for (L2PcInstance pl : HELLBOUND_ZONE.getPlayersInside())
+				for (PlayerInstance pl : HELLBOUND_ZONE.getPlayersInside())
 				{
 					pl.sendPacket(new OnEventTrigger(19250036, true));
 					pl.sendPacket(new OnEventTrigger(19250018, true));
@@ -311,14 +311,14 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		kills++;
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if ((stage == 2) && (npc.getSpawn().getNpcSpawnTemplate().getSpawnTemplate().getName().equals("enchanted_megaliths_stage_1")))
 		{

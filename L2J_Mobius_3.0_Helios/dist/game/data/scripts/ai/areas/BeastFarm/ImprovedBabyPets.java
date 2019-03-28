@@ -19,14 +19,14 @@ package ai.areas.BeastFarm;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -56,11 +56,11 @@ public final class ImprovedBabyPets extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player != null)
 		{
-			final L2Summon summon = player.getPet();
+			final Summon summon = player.getPet();
 			
 			if (summon == null)
 			{
@@ -116,7 +116,7 @@ public final class ImprovedBabyPets extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSummonSpawn(L2Summon summon)
+	public void onSummonSpawn(Summon summon)
 	{
 		startQuestTimer("HEAL", 5000, null, summon.getOwner(), true);
 		startQuestTimer("BUFF", 10000, null, summon.getOwner(), true);
@@ -126,13 +126,13 @@ public final class ImprovedBabyPets extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLogout(OnPlayerLogout event)
 	{
-		cancelQuestTimer("HEAL", null, event.getActiveChar());
-		cancelQuestTimer("BUFF", null, event.getActiveChar());
+		cancelQuestTimer("HEAL", null, event.getPlayer());
+		cancelQuestTimer("BUFF", null, event.getPlayer());
 	}
 	
-	private boolean castBuff(L2Summon summon, int stepNumber, int buffNumber)
+	private boolean castBuff(Summon summon, int stepNumber, int buffNumber)
 	{
-		final L2PcInstance owner = summon.getOwner();
+		final PlayerInstance owner = summon.getOwner();
 		final StatsSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_buff0" + buffNumber, SkillHolder.class);
 		
@@ -173,10 +173,10 @@ public final class ImprovedBabyPets extends AbstractNpcAI
 		return false;
 	}
 	
-	private void castHeal(L2Summon summon, int stepNumber, int healNumber)
+	private void castHeal(Summon summon, int stepNumber, int healNumber)
 	{
 		final boolean previousFollowStatus = summon.getFollowStatus();
-		final L2PcInstance owner = summon.getOwner();
+		final PlayerInstance owner = summon.getOwner();
 		final StatsSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_heal0" + healNumber, SkillHolder.class);
 		final int targetType = parameters.getInt("step" + stepNumber + "_heal_target0" + healNumber, 0);

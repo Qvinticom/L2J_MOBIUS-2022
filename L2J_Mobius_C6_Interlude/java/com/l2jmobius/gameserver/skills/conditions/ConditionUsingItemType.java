@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.skills.conditions;
 
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Env;
-import com.l2jmobius.gameserver.templates.item.L2ArmorType;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.ArmorType;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * The Class ConditionUsingItemType.
@@ -39,23 +39,23 @@ public final class ConditionUsingItemType extends Condition
 	public ConditionUsingItemType(int mask)
 	{
 		_mask = mask;
-		_armor = (_mask & (L2ArmorType.MAGIC.mask() | L2ArmorType.LIGHT.mask() | L2ArmorType.HEAVY.mask())) != 0;
+		_armor = (_mask & (ArmorType.MAGIC.mask() | ArmorType.LIGHT.mask() | ArmorType.HEAVY.mask())) != 0;
 	}
 	
 	@Override
 	public boolean testImpl(Env env)
 	{
-		if (!(env.player instanceof L2PcInstance))
+		if (!(env.player instanceof PlayerInstance))
 		{
 			return false;
 		}
-		final Inventory inv = ((L2PcInstance) env.player).getInventory();
+		final Inventory inv = ((PlayerInstance) env.player).getInventory();
 		
 		// If ConditionUsingItemType is one between Light, Heavy or Magic
 		if (_armor)
 		{
 			// Get the itemMask of the weared chest (if exists)
-			final L2ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+			final ItemInstance chest = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 			if (chest == null)
 			{
 				return false;
@@ -72,12 +72,12 @@ public final class ConditionUsingItemType extends Condition
 			
 			final int chestBodyPart = chest.getItem().getBodyPart();
 			// return True if chest armor is a Full Armor
-			if (chestBodyPart == L2Item.SLOT_FULL_ARMOR)
+			if (chestBodyPart == Item.SLOT_FULL_ARMOR)
 			{
 				return true;
 			}
 			
-			final L2ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
+			final ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 			if (legs == null)
 			{
 				return false;

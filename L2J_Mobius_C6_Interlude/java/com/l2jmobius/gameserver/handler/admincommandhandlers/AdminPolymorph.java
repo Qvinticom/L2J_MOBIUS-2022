@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
@@ -43,12 +43,12 @@ public class AdminPolymorph implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_polymorph"))
 		{
 			StringTokenizer st = new StringTokenizer(command);
-			L2Object target = activeChar.getTarget();
+			WorldObject target = activeChar.getTarget();
 			
 			try
 			{
@@ -89,16 +89,16 @@ public class AdminPolymorph implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void doPolymorph(L2PcInstance activeChar, L2Object obj, String id, String type)
+	private void doPolymorph(PlayerInstance activeChar, WorldObject obj, String id, String type)
 	{
 		if (obj != null)
 		{
 			obj.getPoly().setPolyInfo(type, id);
 			
 			// animation
-			if (obj instanceof L2Character)
+			if (obj instanceof Creature)
 			{
-				L2Character Char = (L2Character) obj;
+				Creature Char = (Creature) obj;
 				MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0);
 				Char.broadcastPacket(msk);
 				SetupGauge sg = new SetupGauge(0, 4000);
@@ -116,7 +116,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 	}
 	
-	private void doUnpoly(L2PcInstance activeChar, L2Object target)
+	private void doUnpoly(PlayerInstance activeChar, WorldObject target)
 	{
 		if (target != null)
 		{
@@ -131,7 +131,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(PlayerInstance activeChar)
 	{
 		AdminHelpPage.showHelpPage(activeChar, "effects_menu.htm");
 	}

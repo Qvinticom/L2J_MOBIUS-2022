@@ -24,39 +24,38 @@ import java.util.TreeMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
-import com.l2jmobius.gameserver.templates.item.L2EtcItemType;
+import com.l2jmobius.gameserver.templates.item.EtcItemType;
 
 /**
- * This class ...
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:33 $
  */
 public class ShortCuts
 {
 	private static Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	
-	private final L2PcInstance _owner;
-	private final Map<Integer, L2ShortCut> _shortCuts = new TreeMap<>();
+	private final PlayerInstance _owner;
+	private final Map<Integer, ShortCut> _shortCuts = new TreeMap<>();
 	
-	public ShortCuts(L2PcInstance owner)
+	public ShortCuts(PlayerInstance owner)
 	{
 		_owner = owner;
 	}
 	
-	public L2ShortCut[] getAllShortCuts()
+	public ShortCut[] getAllShortCuts()
 	{
-		return _shortCuts.values().toArray(new L2ShortCut[_shortCuts.values().size()]);
+		return _shortCuts.values().toArray(new ShortCut[_shortCuts.values().size()]);
 	}
 	
-	public L2ShortCut getShortCut(int slot, int page)
+	public ShortCut getShortCut(int slot, int page)
 	{
-		L2ShortCut sc = _shortCuts.get(slot + (page * 12));
+		ShortCut sc = _shortCuts.get(slot + (page * 12));
 		
 		// verify shortcut
-		if ((sc != null) && (sc.getType() == L2ShortCut.TYPE_ITEM))
+		if ((sc != null) && (sc.getType() == ShortCut.TYPE_ITEM))
 		{
 			if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
 			{
@@ -67,13 +66,13 @@ public class ShortCuts
 		return sc;
 	}
 	
-	public synchronized void registerShortCut(L2ShortCut shortcut)
+	public synchronized void registerShortCut(ShortCut shortcut)
 	{
-		L2ShortCut oldShortCut = _shortCuts.put(shortcut.getSlot() + (12 * shortcut.getPage()), shortcut);
+		ShortCut oldShortCut = _shortCuts.put(shortcut.getSlot() + (12 * shortcut.getPage()), shortcut);
 		registerShortCutInDb(shortcut, oldShortCut);
 	}
 	
-	private void registerShortCutInDb(L2ShortCut shortcut, L2ShortCut oldShortCut)
+	private void registerShortCutInDb(ShortCut shortcut, ShortCut oldShortCut)
 	{
 		if (oldShortCut != null)
 		{
@@ -105,7 +104,7 @@ public class ShortCuts
 	 */
 	public synchronized void deleteShortCut(int slot, int page)
 	{
-		L2ShortCut old = _shortCuts.remove(slot + (page * 12));
+		ShortCut old = _shortCuts.remove(slot + (page * 12));
 		
 		if ((old == null) || (_owner == null))
 		{
@@ -114,11 +113,11 @@ public class ShortCuts
 		
 		deleteShortCutFromDb(old);
 		
-		if (old.getType() == L2ShortCut.TYPE_ITEM)
+		if (old.getType() == ShortCut.TYPE_ITEM)
 		{
-			L2ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
+			ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
 			
-			if ((item != null) && (item.getItemType() == L2EtcItemType.SHOT))
+			if ((item != null) && (item.getItemType() == EtcItemType.SHOT))
 			{
 				_owner.removeAutoSoulShot(item.getItemId());
 				_owner.sendPacket(new ExAutoSoulShot(item.getItemId(), 0));
@@ -135,11 +134,11 @@ public class ShortCuts
 	
 	public synchronized void deleteShortCutByObjectId(int objectId)
 	{
-		L2ShortCut toRemove = null;
+		ShortCut toRemove = null;
 		
-		for (L2ShortCut shortcut : _shortCuts.values())
+		for (ShortCut shortcut : _shortCuts.values())
 		{
-			if ((shortcut.getType() == L2ShortCut.TYPE_ITEM) && (shortcut.getId() == objectId))
+			if ((shortcut.getType() == ShortCut.TYPE_ITEM) && (shortcut.getId() == objectId))
 			{
 				toRemove = shortcut;
 				break;
@@ -155,7 +154,7 @@ public class ShortCuts
 	/**
 	 * @param shortcut
 	 */
-	private void deleteShortCutFromDb(L2ShortCut shortcut)
+	private void deleteShortCutFromDb(ShortCut shortcut)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -192,7 +191,7 @@ public class ShortCuts
 				final int id = rset.getInt("shortcut_id");
 				final int level = rset.getInt("level");
 				
-				L2ShortCut sc = new L2ShortCut(slot, page, type, id, level, 1);
+				ShortCut sc = new ShortCut(slot, page, type, id, level, 1);
 				_shortCuts.put(slot + (page * 12), sc);
 			}
 			
@@ -205,9 +204,9 @@ public class ShortCuts
 		}
 		
 		// verify shortcuts
-		for (L2ShortCut sc : getAllShortCuts())
+		for (ShortCut sc : getAllShortCuts())
 		{
-			if (sc.getType() == L2ShortCut.TYPE_ITEM)
+			if (sc.getType() == ShortCut.TYPE_ITEM)
 			{
 				if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
 				{

@@ -17,16 +17,15 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TradeDone;
 
 /**
- * This class ...
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class AnswerTradeRequest implements IClientIncomingPacket
@@ -34,16 +33,16 @@ public final class AnswerTradeRequest implements IClientIncomingPacket
 	private int _response;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_response = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -56,7 +55,7 @@ public final class AnswerTradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance partner = player.getActiveRequester();
+		final PlayerInstance partner = player.getActiveRequester();
 		if (partner == null)
 		{
 			// Trade partner not found, cancel trade
@@ -65,7 +64,7 @@ public final class AnswerTradeRequest implements IClientIncomingPacket
 			player.setActiveRequester(null);
 			return;
 		}
-		else if (L2World.getInstance().getPlayer(partner.getObjectId()) == null)
+		else if (World.getInstance().getPlayer(partner.getObjectId()) == null)
 		{
 			// Trade partner not found, cancel trade
 			player.sendPacket(new TradeDone(0));

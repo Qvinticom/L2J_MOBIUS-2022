@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -48,7 +48,7 @@ public final class CpHealPercent extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
+		final Creature target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
 			return;
@@ -66,7 +66,7 @@ public final class CpHealPercent extends AbstractEffect
 			target.setCurrentCp(amount + target.getCurrentCp());
 		}
 		
-		final L2Character caster = info.getEffector();
+		final Creature caster = info.getEffector();
 		if ((caster != null) && (caster != target))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);

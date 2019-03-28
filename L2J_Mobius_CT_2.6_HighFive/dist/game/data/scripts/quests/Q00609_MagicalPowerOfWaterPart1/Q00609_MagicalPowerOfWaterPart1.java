@@ -17,8 +17,8 @@
 package quests.Q00609_MagicalPowerOfWaterPart1;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -91,10 +91,10 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -103,7 +103,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 		{
 			case "31371-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -113,9 +113,9 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 				{
 					htmltext = "31561-02.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
-					if (st.isSet("spawned"))
+					if (qs.isSet("spawned"))
 					{
 						takeItems(player, KEY, 1);
 						htmltext = "31561-04.html";
@@ -124,7 +124,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 					{
 						giveItems(player, STOLEN_GREEN_TOTEM, 1);
 						takeItems(player, KEY, 1);
-						st.setCond(3, true);
+						qs.setCond(3, true);
 						htmltext = "31561-03.html";
 					}
 				}
@@ -141,15 +141,15 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		final QuestState st = getQuestState(attacker, false);
-		if ((st != null) && st.isCond(2) && !st.isSet("spawned"))
+		final QuestState qs = getQuestState(attacker, false);
+		if ((qs != null) && qs.isCond(2) && !qs.isSet("spawned"))
 		{
-			st.set("spawned", "1");
+			qs.set("spawned", "1");
 			npc.setTarget(attacker);
 			npc.doCast(GOW.getSkill());
-			final L2Npc eye = addSpawn(UDANS_EYE, npc);
+			final Npc eye = addSpawn(UDANS_EYE, npc);
 			eye.broadcastPacket(new NpcSay(eye, ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_T_AVOID_THE_EYES_OF_UDAN));
 			startQuestTimer("eye_despawn", 10000, eye, attacker);
 		}
@@ -157,16 +157,16 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case WAHKAN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -175,7 +175,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "31371-03.html";
 						}
@@ -186,21 +186,21 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 			}
 			case ASEFA:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
 							htmltext = "31372-01.html";
-							st.setCond(2, true);
+							qs.setCond(2, true);
 							break;
 						}
 						case 2:
 						{
-							if (st.isSet("spawned"))
+							if (qs.isSet("spawned"))
 							{
-								st.unset("spawned");
+								qs.unset("spawned");
 								npc.setTarget(player);
 								npc.doCast(DISPEL_GOW.getSkill());
 								htmltext = "31372-03.html";
@@ -215,7 +215,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 						{
 							giveItems(player, GREEN_TOTEM, 1);
 							giveItems(player, WISDOM_STONE, 1);
-							st.exitQuest(true, true);
+							qs.exitQuest(true, true);
 							htmltext = "31372-04.html";
 							break;
 						}
@@ -225,7 +225,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 			}
 			case UDANS_BOX:
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					htmltext = "31561-01.html";
 				}

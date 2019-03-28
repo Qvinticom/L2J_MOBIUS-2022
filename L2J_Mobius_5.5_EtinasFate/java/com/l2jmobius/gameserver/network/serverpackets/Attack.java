@@ -23,7 +23,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Hit;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class Attack implements IClientOutgoingPacket
@@ -37,7 +37,7 @@ public class Attack implements IClientOutgoingPacket
 	 * @param attacker
 	 * @param target
 	 */
-	public Attack(L2Character attacker, L2Character target)
+	public Attack(Creature attacker, Creature target)
 	{
 		_attackerObjId = attacker.getObjectId();
 		_attackerLoc = new Location(attacker);

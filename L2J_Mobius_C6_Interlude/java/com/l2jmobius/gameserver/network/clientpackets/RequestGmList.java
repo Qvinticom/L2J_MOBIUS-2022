@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.datatables.GmListTable;
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command
  */
-public final class RequestGmList extends L2GameClientPacket
+public final class RequestGmList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -31,11 +31,11 @@ public final class RequestGmList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (getClient().getActiveChar() == null)
+		if (getClient().getPlayer() == null)
 		{
 			return;
 		}
 		
-		GmListTable.getInstance().sendListToPlayer(getClient().getActiveChar());
+		GmListTable.getInstance().sendListToPlayer(getClient().getPlayer());
 	}
 }

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -31,12 +31,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class GMHennaInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
-	private final List<L2Henna> _hennas = new ArrayList<>();
+	private final PlayerInstance _player;
+	private final List<Henna> _hennas = new ArrayList<>();
 	
-	public GMHennaInfo(L2PcInstance player)
+	public GMHennaInfo(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		for (int i = 1; i < 4; i++)
 		{
 			if (player.getHenna(i) != null)
@@ -51,26 +51,26 @@ public final class GMHennaInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.GMHENNA_INFO.writeId(packet);
 		
-		packet.writeD(_activeChar.getHennaValue(BaseStats.INT)); // equip INT
-		packet.writeD(_activeChar.getHennaValue(BaseStats.STR)); // equip STR
-		packet.writeD(_activeChar.getHennaValue(BaseStats.CON)); // equip CON
-		packet.writeD(_activeChar.getHennaValue(BaseStats.MEN)); // equip MEN
-		packet.writeD(_activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
-		packet.writeD(_activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
-		packet.writeD(_activeChar.getHennaValue(BaseStats.LUC)); // equip LUC
-		packet.writeD(_activeChar.getHennaValue(BaseStats.CHA)); // equip CHA
+		packet.writeD(_player.getHennaValue(BaseStats.INT)); // equip INT
+		packet.writeD(_player.getHennaValue(BaseStats.STR)); // equip STR
+		packet.writeD(_player.getHennaValue(BaseStats.CON)); // equip CON
+		packet.writeD(_player.getHennaValue(BaseStats.MEN)); // equip MEN
+		packet.writeD(_player.getHennaValue(BaseStats.DEX)); // equip DEX
+		packet.writeD(_player.getHennaValue(BaseStats.WIT)); // equip WIT
+		packet.writeD(_player.getHennaValue(BaseStats.LUC)); // equip LUC
+		packet.writeD(_player.getHennaValue(BaseStats.CHA)); // equip CHA
 		packet.writeD(3); // Slots
 		packet.writeD(_hennas.size()); // Size
-		for (L2Henna henna : _hennas)
+		for (Henna henna : _hennas)
 		{
 			packet.writeD(henna.getDyeId());
 			packet.writeD(0x01);
 		}
-		if (_activeChar.getHenna(4) != null)
+		if (_player.getHenna(4) != null)
 		{
-			packet.writeD(_activeChar.getHenna(4).getDyeId());
+			packet.writeD(_player.getHenna(4).getDyeId());
 			packet.writeD(0x00); // Premium Slot Dye Time Left
-			packet.writeD(_activeChar.getHenna(4).isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00);
+			packet.writeD(_player.getHenna(4).isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
 		}
 		else
 		{

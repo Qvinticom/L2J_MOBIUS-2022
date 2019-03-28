@@ -22,15 +22,15 @@ import java.util.List;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -196,7 +196,7 @@ public final class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player);
 		if ((st == null) || !st.isStarted())
@@ -239,7 +239,7 @@ public final class EvilIncubator extends AbstractInstance
 							if (helperCount == 2)
 							{
 								st.setCond(7, true);
-								L2World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpcInstance.class, 1000).forEach(c -> c.deleteMe());
+								World.getInstance().getVisibleObjectsInRange(world.getNpc(ADOLPH), FriendlyNpcInstance.class, 1000).forEach(c -> c.deleteMe());
 							}
 						}
 						break;
@@ -289,7 +289,7 @@ public final class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player);
@@ -371,7 +371,7 @@ public final class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState st = getQuestState(player);
@@ -419,7 +419,7 @@ public final class EvilIncubator extends AbstractInstance
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -448,7 +448,7 @@ public final class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		
 	}
@@ -461,7 +461,7 @@ public final class EvilIncubator extends AbstractInstance
 			return;
 		}
 		
-		List<L2Npc> spawnedNpcs = null;
+		List<Npc> spawnedNpcs = null;
 		int waveId = world.getParameters().getInt("WORLD_WAVE", 1);
 		switch (waveId)
 		{
@@ -508,7 +508,7 @@ public final class EvilIncubator extends AbstractInstance
 				world.setParameter("WORLD_WAVE", waveId);
 				showOnScreenMsg(world, NpcStringId.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, ExShowScreenMessage.TOP_CENTER, 5000, true);
 				getTimers().addTimer("SPAWN_WAVE", 20000, e -> manageWaveSpawn(world));
-				final L2Npc boss = addSpawn(CLASS_BOSS.get(world.getFirstPlayer().getClassId()), BOSS_LOC, false, 0, false, world.getId());
+				final Npc boss = addSpawn(CLASS_BOSS.get(world.getFirstPlayer().getClassId()), BOSS_LOC, false, 0, false, world.getId());
 				world.broadcastPacket(new Earthquake(boss, 50, 10));
 				break;
 			}
@@ -516,13 +516,13 @@ public final class EvilIncubator extends AbstractInstance
 		managerWorldAttack(world, spawnedNpcs);
 	}
 	
-	private void managerWorldAttack(Instance world, List<L2Npc> spawnedNpcs)
+	private void managerWorldAttack(Instance world, List<Npc> spawnedNpcs)
 	{
-		final List<FriendlyNpcInstance> helperList = L2World.getInstance().getVisibleObjects(world.getFirstPlayer(), FriendlyNpcInstance.class);
+		final List<FriendlyNpcInstance> helperList = World.getInstance().getVisibleObjects(world.getFirstPlayer(), FriendlyNpcInstance.class);
 		
 		if ((spawnedNpcs != null) && !spawnedNpcs.isEmpty())
 		{
-			for (L2Npc npc : spawnedNpcs)
+			for (Npc npc : spawnedNpcs)
 			{
 				if (!helperList.isEmpty())
 				{
@@ -541,7 +541,7 @@ public final class EvilIncubator extends AbstractInstance
 		
 		for (FriendlyNpcInstance helper : helperList)
 		{
-			for (L2Attackable monster : L2World.getInstance().getVisibleObjects(helper, L2Attackable.class))
+			for (Attackable monster : World.getInstance().getVisibleObjects(helper, Attackable.class))
 			{
 				if (!(monster instanceof FriendlyNpcInstance))
 				{
@@ -551,7 +551,7 @@ public final class EvilIncubator extends AbstractInstance
 		}
 	}
 	
-	private QuestState getQuestState(L2PcInstance player)
+	private QuestState getQuestState(PlayerInstance player)
 	{
 		if (player == null)
 		{

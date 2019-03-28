@@ -26,8 +26,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.CharEffectList;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectTaskInfo;
 import com.l2jmobius.gameserver.model.effects.EffectTickTask;
@@ -44,8 +44,8 @@ public final class BuffInfo
 {
 	// Data
 	/** Data. */
-	private final L2Character _effector;
-	private final L2Character _effected;
+	private final Creature _effector;
+	private final Creature _effected;
 	private final Skill _skill;
 	/** The effects. */
 	private final List<AbstractEffect> _effects = new ArrayList<>(1);
@@ -71,7 +71,7 @@ public final class BuffInfo
 	 * @param effected
 	 * @param skill
 	 */
-	public BuffInfo(L2Character effector, L2Character effected, Skill skill)
+	public BuffInfo(Creature effector, Creature effected, Skill skill)
 	{
 		_effector = effector;
 		_effected = effected;
@@ -203,7 +203,7 @@ public final class BuffInfo
 	 * Gets the character that launched the buff.
 	 * @return the effector
 	 */
-	public L2Character getEffector()
+	public Creature getEffector()
 	{
 		return _effector;
 	}
@@ -212,7 +212,7 @@ public final class BuffInfo
 	 * Gets the target of the skill.
 	 * @return the effected
 	 */
-	public L2Character getEffected()
+	public Creature getEffected()
 	{
 		return _effected;
 	}
@@ -336,7 +336,7 @@ public final class BuffInfo
 		// Remove abnormal visual effects.
 		removeAbnormalVisualEffects();
 		// Set the proper system message.
-		if (!(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()))
+		if (!(_effected.isSummon() && !((Summon) _effected).getOwner().hasSummon()))
 		{
 			SystemMessageId smId = null;
 			if (_skill.isToggle())

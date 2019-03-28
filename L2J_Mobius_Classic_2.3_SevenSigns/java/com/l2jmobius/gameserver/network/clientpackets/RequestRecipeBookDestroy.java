@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
 public final class RequestRecipeBookDestroy implements IClientIncomingPacket
@@ -28,17 +28,17 @@ public final class RequestRecipeBookDestroy implements IClientIncomingPacket
 	private int _recipeID;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_recipeID = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -48,23 +48,23 @@ public final class RequestRecipeBookDestroy implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2RecipeList rp = RecipeData.getInstance().getRecipeList(_recipeID);
+		final RecipeList rp = RecipeData.getInstance().getRecipeList(_recipeID);
 		if (rp == null)
 		{
 			return;
 		}
-		activeChar.unregisterRecipeList(_recipeID);
+		player.unregisterRecipeList(_recipeID);
 		
-		final RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), activeChar.getMaxMp());
+		final RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), player.getMaxMp());
 		if (rp.isDwarvenRecipe())
 		{
-			response.addRecipes(activeChar.getDwarvenRecipeBook());
+			response.addRecipes(player.getDwarvenRecipeBook());
 		}
 		else
 		{
-			response.addRecipes(activeChar.getCommonRecipeBook());
+			response.addRecipes(player.getCommonRecipeBook());
 		}
 		
-		activeChar.sendPacket(response);
+		player.sendPacket(response);
 	}
 }

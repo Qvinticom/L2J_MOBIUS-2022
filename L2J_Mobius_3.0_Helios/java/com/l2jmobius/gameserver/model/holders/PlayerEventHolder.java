@@ -24,7 +24,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Player event holder, meant for restoring player after event has finished.<br>
@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class PlayerEventHolder
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private final String _name;
 	private final String _title;
 	private final int _clanId;
@@ -51,15 +51,15 @@ public final class PlayerEventHolder
 	private final int _pkKills;
 	private final int _reputation;
 	
-	private final Map<L2PcInstance, Integer> _kills = new ConcurrentHashMap<>();
+	private final Map<PlayerInstance, Integer> _kills = new ConcurrentHashMap<>();
 	private boolean _sitForced;
 	
-	public PlayerEventHolder(L2PcInstance player)
+	public PlayerEventHolder(PlayerInstance player)
 	{
 		this(player, false);
 	}
 	
-	public PlayerEventHolder(L2PcInstance player, boolean sitForced)
+	public PlayerEventHolder(PlayerInstance player, boolean sitForced)
 	{
 		_player = player;
 		_name = player.getName();
@@ -98,12 +98,12 @@ public final class PlayerEventHolder
 		return _sitForced;
 	}
 	
-	public Map<L2PcInstance, Integer> getKills()
+	public Map<PlayerInstance, Integer> getKills()
 	{
 		return Collections.unmodifiableMap(_kills);
 	}
 	
-	public void addKill(L2PcInstance player)
+	public void addKill(PlayerInstance player)
 	{
 		_kills.merge(player, 1, Integer::sum);
 	}

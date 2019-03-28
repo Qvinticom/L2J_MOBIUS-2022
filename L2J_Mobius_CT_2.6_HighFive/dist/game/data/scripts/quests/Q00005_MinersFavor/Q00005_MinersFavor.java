@@ -17,8 +17,8 @@
 package quests.Q00005_MinersFavor;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -56,10 +56,10 @@ public class Q00005_MinersFavor extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -69,7 +69,7 @@ public class Q00005_MinersFavor extends Quest
 		{
 			case "30554-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, BOLTERS_LIST, 1);
 				giveItems(player, BOLTERS_SMELLY_SOCKS, 1);
 				break;
@@ -82,7 +82,7 @@ public class Q00005_MinersFavor extends Quest
 				}
 				takeItems(player, BOLTERS_SMELLY_SOCKS, -1);
 				giveItems(player, MINERS_PICK, 1);
-				checkProgress(player, st);
+				checkProgress(player, qs);
 				break;
 			}
 			case "30554-05.html":
@@ -99,15 +99,15 @@ public class Q00005_MinersFavor extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case BOLTER:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -116,7 +116,7 @@ public class Q00005_MinersFavor extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30554-04.html";
 						}
@@ -125,7 +125,7 @@ public class Q00005_MinersFavor extends Quest
 							giveAdena(player, 2466, true);
 							addExpAndSp(player, 5672, 446);
 							giveItems(player, NECKLACE, 1);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 							htmltext = "30554-06.html";
@@ -142,7 +142,7 @@ public class Q00005_MinersFavor extends Quest
 			}
 			case BRUNON:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = (hasQuestItems(player, MINERS_PICK)) ? "30526-03.html" : "30526-01.html";
 				}
@@ -150,36 +150,36 @@ public class Q00005_MinersFavor extends Quest
 			}
 			case REED:
 			{
-				htmltext = giveItem(player, st, npc.getId(), REDSTONE_BEER);
+				htmltext = giveItem(player, qs, npc.getId(), REDSTONE_BEER);
 				break;
 			}
 			case SHARI:
 			{
-				htmltext = giveItem(player, st, npc.getId(), BOOMBOOM_POWDER);
+				htmltext = giveItem(player, qs, npc.getId(), BOOMBOOM_POWDER);
 				break;
 			}
 			case GARITA:
 			{
-				htmltext = giveItem(player, st, npc.getId(), MINING_BOOTS);
+				htmltext = giveItem(player, qs, npc.getId(), MINING_BOOTS);
 				break;
 			}
 		}
 		return htmltext;
 	}
 	
-	private static void checkProgress(L2PcInstance player, QuestState st)
+	private static void checkProgress(PlayerInstance player, QuestState qs)
 	{
 		if (hasQuestItems(player, BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 	}
 	
-	private static String giveItem(L2PcInstance player, QuestState st, int npcId, int itemId)
+	private static String giveItem(PlayerInstance player, QuestState qs, int npcId, int itemId)
 	{
-		if (!st.isStarted())
+		if (!qs.isStarted())
 		{
-			return getNoQuestMsg(st.getPlayer());
+			return getNoQuestMsg(qs.getPlayer());
 		}
 		else if (hasQuestItems(player, itemId))
 		{
@@ -187,7 +187,7 @@ public class Q00005_MinersFavor extends Quest
 		}
 		giveItems(player, itemId, 1);
 		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		checkProgress(player, st);
+		checkProgress(player, qs);
 		return npcId + "-01.html";
 	}
 }

@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.model.entity.siege.Castle;
  * d = AllyCrestID<BR>
  * @author KenM
  */
-public class SiegeAttackerList extends L2GameServerPacket
+public class SiegeAttackerList extends GameServerPacket
 {
 	private final Castle _castle;
 	
@@ -66,11 +66,11 @@ public class SiegeAttackerList extends L2GameServerPacket
 		final int size = _castle.getSiege().getAttackerClans().size();
 		if (size > 0)
 		{
-			L2Clan clan;
+			Clan clan;
 			
 			writeD(size);
 			writeD(size);
-			for (L2SiegeClan siegeclan : _castle.getSiege().getAttackerClans())
+			for (SiegeClan siegeclan : _castle.getSiege().getAttackerClans())
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 				if (clan == null)

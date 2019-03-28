@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 
-public class StaticObject extends L2GameServerPacket
+public class StaticObject extends GameServerPacket
 {
-	private final L2StaticObjectInstance _staticObject;
+	private final StaticObjectInstance _staticObject;
 	
 	/**
 	 * [S]0x99 StaticObjectPacket dd
 	 * @param StaticObject
 	 */
-	public StaticObject(L2StaticObjectInstance StaticObject)
+	public StaticObject(StaticObjectInstance StaticObject)
 	{
 		_staticObject = StaticObject; // staticObjectId
 	}

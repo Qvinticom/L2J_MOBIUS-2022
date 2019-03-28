@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -26,12 +26,12 @@ import com.l2jmobius.gameserver.templates.StatsSet;
  * Seven Signs Record Update packet type id 0xf5 format: c cc (Page Num = 1 -> 4, period) 1: [ddd cc dd ddd c ddd c] 2: [hc [cd (dc (S))] 3: [ccc (cccc)] 4: [(cchh)]
  * @author Tempy
  */
-public class SSQStatus extends L2GameServerPacket
+public class SSQStatus extends GameServerPacket
 {
-	private final L2PcInstance _activevChar;
+	private final PlayerInstance _activevChar;
 	private final int _page;
 	
-	public SSQStatus(L2PcInstance player, int recordPage)
+	public SSQStatus(PlayerInstance player, int recordPage)
 	{
 		_activevChar = player;
 		_page = recordPage;

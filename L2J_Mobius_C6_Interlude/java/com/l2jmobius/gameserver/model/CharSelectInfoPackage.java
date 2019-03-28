@@ -55,7 +55,7 @@ public class CharSelectInfoPackage
 	{
 		setObjectId(objectId);
 		_name = name;
-		_paperdoll = PcInventory.restoreVisibleInventory(objectId);
+		_paperdoll = PlayerInventory.restoreVisibleInventory(objectId);
 	}
 	
 	public int getObjectId()

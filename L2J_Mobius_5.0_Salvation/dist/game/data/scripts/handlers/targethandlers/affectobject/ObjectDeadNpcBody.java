@@ -17,7 +17,7 @@
 package handlers.targethandlers.affectobject;
 
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 
 /**
@@ -26,9 +26,9 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 public class ObjectDeadNpcBody implements IAffectObjectHandler
 {
 	@Override
-	public boolean checkAffectedObject(L2Character activeChar, L2Character target)
+	public boolean checkAffectedObject(Creature creature, Creature target)
 	{
-		if (activeChar == target)
+		if (creature == target)
 		{
 			return false;
 		}

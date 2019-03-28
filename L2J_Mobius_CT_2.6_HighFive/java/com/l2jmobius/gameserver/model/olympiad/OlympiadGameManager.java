@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 
 /**
  * @author GodKratos, DS
@@ -38,7 +38,7 @@ public class OlympiadGameManager implements Runnable
 	
 	protected OlympiadGameManager()
 	{
-		final Collection<L2OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class);
+		final Collection<OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class);
 		if ((zones == null) || zones.isEmpty())
 		{
 			throw new Error("No olympiad stadium zones defined !");
@@ -47,7 +47,7 @@ public class OlympiadGameManager implements Runnable
 		_tasks = new OlympiadGameTask[zones.size()];
 		int i = 0;
 		int instanceId = 0;
-		for (L2OlympiadStadiumZone zone : zones)
+		for (OlympiadStadiumZone zone : zones)
 		{
 			switch (zone.getName())
 			{
@@ -201,7 +201,7 @@ public class OlympiadGameManager implements Runnable
 		return _tasks.length;
 	}
 	
-	public final void notifyCompetitorDamage(L2PcInstance player, int damage)
+	public final void notifyCompetitorDamage(PlayerInstance player, int damage)
 	{
 		if (player == null)
 		{

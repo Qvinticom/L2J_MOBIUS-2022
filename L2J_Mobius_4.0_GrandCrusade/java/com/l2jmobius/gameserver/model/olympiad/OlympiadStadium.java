@@ -23,14 +23,14 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
@@ -43,20 +43,20 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class OlympiadStadium
 {
 	private static final Logger LOGGER = Logger.getLogger(OlympiadStadium.class.getName());
-	private final L2OlympiadStadiumZone _zone;
+	private final OlympiadStadiumZone _zone;
 	private final Instance _instance;
-	private final List<L2Spawn> _buffers;
+	private final List<Spawn> _buffers;
 	private OlympiadGameTask _task = null;
 	
-	protected OlympiadStadium(L2OlympiadStadiumZone olyzone, int stadium)
+	protected OlympiadStadium(OlympiadStadiumZone olyzone, int stadium)
 	{
 		_zone = olyzone;
 		_instance = InstanceManager.getInstance().createInstance(olyzone.getInstanceTemplateId(), null);
-		_buffers = _instance.getNpcs().stream().map(L2Npc::getSpawn).collect(Collectors.toList());
-		_buffers.stream().map(L2Spawn::getLastSpawn).forEach(L2Npc::decayMe);
+		_buffers = _instance.getNpcs().stream().map(Npc::getSpawn).collect(Collectors.toList());
+		_buffers.stream().map(Spawn::getLastSpawn).forEach(Npc::decayMe);
 	}
 	
-	public L2OlympiadStadiumZone getZone()
+	public OlympiadStadiumZone getZone()
 	{
 		return _zone;
 	}
@@ -78,30 +78,30 @@ public class OlympiadStadium
 	
 	public final void openDoors()
 	{
-		_instance.getDoors().forEach(L2DoorInstance::openMe);
+		_instance.getDoors().forEach(DoorInstance::openMe);
 	}
 	
 	public final void closeDoors()
 	{
-		_instance.getDoors().forEach(L2DoorInstance::closeMe);
+		_instance.getDoors().forEach(DoorInstance::closeMe);
 	}
 	
 	public final void spawnBuffers()
 	{
-		_buffers.forEach(L2Spawn::startRespawn);
-		_buffers.forEach(L2Spawn::doSpawn);
+		_buffers.forEach(Spawn::startRespawn);
+		_buffers.forEach(Spawn::doSpawn);
 	}
 	
 	public final void deleteBuffers()
 	{
-		_buffers.forEach(L2Spawn::stopRespawn);
-		_buffers.stream().map(L2Spawn::getLastSpawn).filter(Objects::nonNull).forEach(L2Npc::deleteMe);
+		_buffers.forEach(Spawn::stopRespawn);
+		_buffers.stream().map(Spawn::getLastSpawn).filter(Objects::nonNull).forEach(Npc::deleteMe);
 	}
 	
-	public final void broadcastStatusUpdate(L2PcInstance player)
+	public final void broadcastStatusUpdate(PlayerInstance player)
 	{
 		final ExOlympiadUserInfo packet = new ExOlympiadUserInfo(player);
-		for (L2PcInstance target : _instance.getPlayers())
+		for (PlayerInstance target : _instance.getPlayers())
 		{
 			if (target.inObserverMode() || (target.getOlympiadSide() != player.getOlympiadSide()))
 			{
@@ -117,7 +117,7 @@ public class OlympiadStadium
 	
 	public final void broadcastPacketToObservers(IClientOutgoingPacket packet)
 	{
-		for (L2PcInstance target : _instance.getPlayers())
+		for (PlayerInstance target : _instance.getPlayers())
 		{
 			if (target.inObserverMode())
 			{
@@ -144,7 +144,7 @@ public class OlympiadStadium
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}
 		
-		for (L2PcInstance player : _instance.getPlayers())
+		for (PlayerInstance player : _instance.getPlayers())
 		{
 			if (player.inObserverMode())
 			{
@@ -172,7 +172,7 @@ public class OlympiadStadium
 			return;
 		}
 		
-		for (L2PcInstance player : _instance.getPlayers())
+		for (PlayerInstance player : _instance.getPlayers())
 		{
 			if (!player.inObserverMode())
 			{

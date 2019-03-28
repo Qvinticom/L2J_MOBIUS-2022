@@ -20,8 +20,8 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ListPartyWating;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestPartyMatchConfig implements IClientIncomingPacket
@@ -39,7 +38,7 @@ public final class RequestPartyMatchConfig implements IClientIncomingPacket
 	private int _lvl;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_auto = packet.readD(); //
 		_loc = packet.readD(); // Location
@@ -48,23 +47,23 @@ public final class RequestPartyMatchConfig implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance _activeChar = client.getActiveChar();
+		final PlayerInstance _player = client.getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
 		
-		if (!_activeChar.isInPartyMatchRoom() && (_activeChar.getParty() != null) && (_activeChar.getParty().getLeader() != _activeChar))
+		if (!_player.isInPartyMatchRoom() && (_player.getParty() != null) && (_player.getParty().getLeader() != _player))
 		{
-			_activeChar.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (_activeChar.isInPartyMatchRoom())
+		if (_player.isInPartyMatchRoom())
 		{
 			// If Player is in Room show him room, not list
 			final PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
@@ -73,28 +72,28 @@ public final class RequestPartyMatchConfig implements IClientIncomingPacket
 				return;
 			}
 			
-			final PartyMatchRoom _room = _list.getPlayerRoom(_activeChar);
+			final PartyMatchRoom _room = _list.getPlayerRoom(_player);
 			if (_room == null)
 			{
 				return;
 			}
 			
-			_activeChar.sendPacket(new PartyMatchDetail(_activeChar, _room));
-			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 2));
+			_player.sendPacket(new PartyMatchDetail(_player, _room));
+			_player.sendPacket(new ExPartyRoomMember(_player, _room, 2));
 			
-			_activeChar.setPartyRoom(_room.getId());
+			_player.setPartyRoom(_room.getId());
 			// _activeChar.setPartyMatching(1);
-			_activeChar.broadcastUserInfo();
+			_player.broadcastUserInfo();
 		}
 		else
 		{
 			// Add to waiting list
-			PartyMatchWaitingList.getInstance().addPlayer(_activeChar);
+			PartyMatchWaitingList.getInstance().addPlayer(_player);
 			
 			// Send Room list
-			final ListPartyWating matchList = new ListPartyWating(_activeChar, _auto, _loc, _lvl);
+			final ListPartyWating matchList = new ListPartyWating(_player, _auto, _loc, _lvl);
 			
-			_activeChar.sendPacket(matchList);
+			_player.sendPacket(matchList);
 		}
 	}
 }

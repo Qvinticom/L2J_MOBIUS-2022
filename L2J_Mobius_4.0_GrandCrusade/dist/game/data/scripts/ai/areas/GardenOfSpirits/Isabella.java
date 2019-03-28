@@ -16,9 +16,9 @@
  */
 package ai.areas.GardenOfSpirits;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -42,21 +42,21 @@ public final class Isabella extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("SPAWN"))
 		{
-			final L2Npc minion1 = addSpawn(CROA, -51104, 83436, -5120, 61567, false, 300000, false);
+			final Npc minion1 = addSpawn(CROA, -51104, 83436, -5120, 61567, false, 300000, false);
 			addAttackPlayerDesire(minion1, player);
-			final L2Npc minion2 = addSpawn(AMIS, -50307, 83662, -5120, 45183, false, 300000, false);
+			final Npc minion2 = addSpawn(AMIS, -50307, 83662, -5120, 45183, false, 300000, false);
 			addAttackPlayerDesire(minion2, player);
-			final L2Npc minion3 = addSpawn(CROA, -50259, 82825, -5120, 23684, false, 300000, false);
+			final Npc minion3 = addSpawn(CROA, -50259, 82825, -5120, 23684, false, 300000, false);
 			addAttackPlayerDesire(minion3, player);
-			final L2Npc minion4 = addSpawn(AMIS, -50183, 82901, -5120, 28180, false, 300000, false);
+			final Npc minion4 = addSpawn(AMIS, -50183, 82901, -5120, 28180, false, 300000, false);
 			addAttackPlayerDesire(minion4, player);
-			final L2Npc minion5 = addSpawn(CROA, -50387, 83732, -5112, 45183, false, 300000, false);
+			final Npc minion5 = addSpawn(CROA, -50387, 83732, -5112, 45183, false, 300000, false);
 			addAttackPlayerDesire(minion5, player);
-			final L2Npc minion6 = addSpawn(AMIS, -51157, 83298, -5112, 64987, true, 300000, false);
+			final Npc minion6 = addSpawn(AMIS, -51157, 83298, -5112, 64987, true, 300000, false);
 			addAttackPlayerDesire(minion6, player);
 			return null;
 		}
@@ -64,7 +64,7 @@ public final class Isabella extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (!npc.isDead())
 		{
@@ -88,9 +88,9 @@ public final class Isabella extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 1500, minion ->
+		World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 1500, minion ->
 		{
 			if ((minion.getId() == CROA) || (minion.getId() == AMIS))
 			{

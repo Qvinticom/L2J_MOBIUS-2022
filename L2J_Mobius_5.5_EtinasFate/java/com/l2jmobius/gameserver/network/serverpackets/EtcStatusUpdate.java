@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -26,15 +26,15 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class EtcStatusUpdate implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private int _mask;
 	
-	public EtcStatusUpdate(L2PcInstance activeChar)
+	public EtcStatusUpdate(PlayerInstance player)
 	{
-		_activeChar = activeChar;
-		_mask = _activeChar.getMessageRefusal() || _activeChar.isChatBanned() || _activeChar.isSilenceMode() ? 1 : 0;
-		_mask |= _activeChar.isInsideZone(ZoneId.DANGER_AREA) ? 2 : 0;
-		_mask |= _activeChar.hasCharmOfCourage() ? 4 : 0;
+		_player = player;
+		_mask = _player.getMessageRefusal() || _player.isChatBanned() || _player.isSilenceMode() ? 1 : 0;
+		_mask |= _player.isInsideZone(ZoneId.DANGER_AREA) ? 2 : 0;
+		_mask |= _player.hasCharmOfCourage() ? 4 : 0;
 	}
 	
 	@Override
@@ -42,12 +42,12 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 	{
 		OutgoingPackets.ETC_STATUS_UPDATE.writeId(packet);
 		
-		packet.writeC(_activeChar.getCharges()); // 1-7 increase force, lvl
-		packet.writeD(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
-		packet.writeC(_activeChar.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]
-		packet.writeC(_activeChar.getExpertiseArmorPenalty()); // Armor Grade Penalty [1-4]
+		packet.writeC(_player.getCharges()); // 1-7 increase force, lvl
+		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+		packet.writeC(_player.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]
+		packet.writeC(_player.getExpertiseArmorPenalty()); // Armor Grade Penalty [1-4]
 		packet.writeC(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
-		packet.writeC(_activeChar.getChargedSouls());
+		packet.writeC(_player.getChargedSouls());
 		packet.writeC(_mask);
 		return true;
 	}

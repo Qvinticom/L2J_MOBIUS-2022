@@ -16,8 +16,8 @@
  */
 package quests.Q00110_ToThePrimevalIsle;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -46,10 +46,10 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		QuestState st = getQuestState(player, false);
-		if (st == null)
+		QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -69,19 +69,19 @@ public class Q00110_ToThePrimevalIsle extends Quest
 			case "31338-05.html":
 			{
 				giveItems(player, ANCIENT_BOOK, 1);
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "32113-04.html":
 			case "32113-05.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
 						giveAdena(player, 189208, true);
 						addExpAndSp(player, 887732, 213);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 					}
 					else
 					{
@@ -96,16 +96,16 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -119,14 +119,14 @@ public class Q00110_ToThePrimevalIsle extends Quest
 			{
 				if (npc.getId() == ANTON)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "32113-06.html";
 					}
 				}
 				else if (npc.getId() == MARQUEZ)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "32113-01.html";
 					}

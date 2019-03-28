@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad.COMP_TYPE;
 
 /**
@@ -122,7 +122,7 @@ class OlympiadManager implements Runnable
 								{
 									if (_olympiadInstances.get(i) != null)
 									{
-										for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
+										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
 											player.setIsInOlympiadMode(false);
@@ -155,7 +155,7 @@ class OlympiadManager implements Runnable
 								{
 									if (_olympiadInstances.get(i) != null)
 									{
-										for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
+										for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 										{
 											player.sendMessage("Your olympiad registration was canceled due to an error");
 											player.setIsInOlympiadMode(false);
@@ -188,7 +188,7 @@ class OlympiadManager implements Runnable
 							{
 								if (_olympiadInstances.get(i) != null)
 								{
-									for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
+									for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 									{
 										player.sendMessage("Your olympiad registration was canceled due to an error");
 										player.setIsInOlympiadMode(false);
@@ -220,7 +220,7 @@ class OlympiadManager implements Runnable
 							{
 								if (_olympiadInstances.get(i) != null)
 								{
-									for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
+									for (PlayerInstance player : _olympiadInstances.get(i).getPlayers())
 									{
 										player.sendMessage("Your olympiad registration was canceled due to an error");
 										player.setIsInOlympiadMode(false);
@@ -350,7 +350,7 @@ class OlympiadManager implements Runnable
 		return _olympiadInstances;
 	}
 	
-	protected List<L2PcInstance> getRandomClassList(Map<Integer, List<L2PcInstance>> list, List<Integer> classList)
+	protected List<PlayerInstance> getRandomClassList(Map<Integer, List<PlayerInstance>> list, List<Integer> classList)
 	{
 		if ((list == null) || (classList == null) || list.isEmpty() || classList.isEmpty())
 		{
@@ -360,9 +360,9 @@ class OlympiadManager implements Runnable
 		return list.get(classList.get(Rnd.get(classList.size())));
 	}
 	
-	protected List<L2PcInstance> nextOpponents(List<L2PcInstance> list)
+	protected List<PlayerInstance> nextOpponents(List<PlayerInstance> list)
 	{
-		final List<L2PcInstance> opponents = new ArrayList<>();
+		final List<PlayerInstance> opponents = new ArrayList<>();
 		if (list.isEmpty())
 		{
 			return opponents;
@@ -388,7 +388,7 @@ class OlympiadManager implements Runnable
 		return opponents;
 	}
 	
-	protected boolean existNextOpponents(List<L2PcInstance> list)
+	protected boolean existNextOpponents(List<PlayerInstance> list)
 	{
 		if (list == null)
 		{

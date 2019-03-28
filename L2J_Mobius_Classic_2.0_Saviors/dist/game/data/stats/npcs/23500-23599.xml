@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23500" level="99" type="L2Monster" name="Flame Crow">
+	<npc id="23500" level="99" type="Monster" name="Flame Crow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -26,7 +26,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="23501" level="99" type="L2Monster" name="Flame Rael">
+	<npc id="23501" level="99" type="Monster" name="Flame Rael">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -52,7 +52,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23502" level="99" type="L2Monster" name="Flame Salamander">
+	<npc id="23502" level="99" type="Monster" name="Flame Salamander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -78,7 +78,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23503" level="99" type="L2Monster" name="Flame Drake">
+	<npc id="23503" level="99" type="Monster" name="Flame Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -104,7 +104,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="23504" level="99" type="L2Monster" name="Flame Votis">
+	<npc id="23504" level="99" type="Monster" name="Flame Votis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -130,7 +130,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23505" level="101" type="L2Monster" name="Fortress Raider">
+	<npc id="23505" level="101" type="Monster" name="Fortress Raider">
         <!-- TODO: font https://l2wiki.com/Fortress_Raider -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -162,7 +162,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23506" level="101" type="L2Monster" name="Fortress Guardian Captain">
+	<npc id="23506" level="101" type="Monster" name="Fortress Guardian Captain">
         <!-- TODO: font https://l2wiki.com/Fortress_Raider -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -197,7 +197,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23507" level="101" type="L2Monster" name="Atelia Passionate Soldier">
+	<npc id="23507" level="101" type="Monster" name="Atelia Passionate Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17329" />
@@ -228,7 +228,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23508" level="101" type="L2Monster" name="Atelia Elite Captain">
+	<npc id="23508" level="101" type="Monster" name="Atelia Elite Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17325" lhand="17401" />
@@ -262,7 +262,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23509" level="102" type="L2Monster" name="Fortress Dark Wizard">
+	<npc id="23509" level="102" type="Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17391" />
@@ -296,7 +296,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
+	<npc id="23510" level="102" type="Monster" name="Atelia Flame Master">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17425" />
@@ -330,7 +330,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23511" level="102" type="L2Monster" name="Fortress Archon">
+	<npc id="23511" level="102" type="Monster" name="Fortress Archon">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17392" />
@@ -365,7 +365,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23512" level="102" type="L2Monster" name="Atelia High Priest">
+	<npc id="23512" level="102" type="Monster" name="Atelia High Priest">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17426" />
@@ -400,7 +400,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23530" level="101" type="L2Monster" name="Fortress Guardian Captain" title="Kelbim's Call">
+	<npc id="23530" level="101" type="Monster" name="Fortress Guardian Captain" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -434,7 +434,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23532" level="101" type="L2Monster" name="Atelia Elite Captain" title="Kelbim's Call">
+	<npc id="23532" level="101" type="Monster" name="Atelia Elite Captain" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -468,7 +468,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23535" level="102" type="L2Monster" name="Atelia Archon" title="Kelbim's Call">
+	<npc id="23535" level="102" type="Monster" name="Atelia Archon" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -502,7 +502,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23536" level="102" type="L2Monster" name="Atelia High Priest" title="Kelbim's Call">
+	<npc id="23536" level="102" type="Monster" name="Atelia High Priest" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -536,7 +536,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23537" level="101" type="L2Monster" name="Atelia Elite Captain" title="Atelia Infuser">
+	<npc id="23537" level="101" type="Monster" name="Atelia Elite Captain" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -571,7 +571,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23538" level="102" type="L2Monster" name="Atelia High Priest" title="Atelia Infuser">
+	<npc id="23538" level="102" type="Monster" name="Atelia High Priest" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -605,7 +605,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23539" level="104" type="L2Monster" name="Atelia Trial Guardian Captain" title="Trial Guardian">
+	<npc id="23539" level="104" type="Monster" name="Atelia Trial Guardian Captain" title="Trial Guardian">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -627,7 +627,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23541" level="100" type="L2Monster" name="Kerberos Liger">
+	<npc id="23541" level="100" type="Monster" name="Kerberos Liger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
@@ -658,7 +658,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23542" level="101" type="L2Monster" name="Kerberos Fort">
+	<npc id="23542" level="101" type="Monster" name="Kerberos Fort">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="160274270" sp="384658" />
@@ -689,7 +689,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23543" level="100" type="L2Monster" name="Kerberos Nero">
+	<npc id="23543" level="100" type="Monster" name="Kerberos Nero">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
@@ -720,7 +720,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23544" level="101" type="L2Monster" name="Fury Sylph Barrena">
+	<npc id="23544" level="101" type="Monster" name="Fury Sylph Barrena">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
@@ -751,7 +751,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23545" level="100" type="L2Monster" name="Fury Kiku">
+	<npc id="23545" level="100" type="Monster" name="Fury Kiku">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
 		<acquire exp="17848068" sp="42835" />
@@ -782,7 +782,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23546" level="101" type="L2Monster" name="Fury Sylph Temptress">
+	<npc id="23546" level="101" type="Monster" name="Fury Sylph Temptress">
 		<!-- FIX ME NO INFO ABOUT THIS NPC -->
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
@@ -813,7 +813,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23547" level="101" type="L2Monster" name="Fury Sylph Purka">
+	<npc id="23547" level="101" type="Monster" name="Fury Sylph Purka">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
         <sex>FEMALE</sex>
@@ -845,7 +845,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23548" level="100" type="L2Monster" name="Fury Kerberos Liger">
+	<npc id="23548" level="100" type="Monster" name="Fury Kerberos Liger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
@@ -875,7 +875,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23549" level="100" type="L2Monster" name="Fury Kerberos Nero">
+	<npc id="23549" level="100" type="Monster" name="Fury Kerberos Nero">
 		<!-- Source: www.l2wiki.com -->
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
@@ -905,7 +905,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23550" level="100" type="L2Monster" name="Kerberos Liger" title="Spirit of the Night">
+	<npc id="23550" level="100" type="Monster" name="Kerberos Liger" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
@@ -936,7 +936,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23551" level="101" type="L2Monster" name="Kerberos Fort" title="Spirit of the Night">
+	<npc id="23551" level="101" type="Monster" name="Kerberos Fort" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="160274270" sp="384658" />
@@ -967,7 +967,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23552" level="100" type="L2Monster" name="Kerberos Nero" title="Spirit of the Night">
+	<npc id="23552" level="100" type="Monster" name="Kerberos Nero" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
@@ -998,7 +998,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23553" level="101" type="L2Monster" name="Fury Sylph Barrena" title="Spirit of the Night">
+	<npc id="23553" level="101" type="Monster" name="Fury Sylph Barrena" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
@@ -1029,7 +1029,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23554" level="100" type="L2Monster" name="Fury Kiku">
+	<npc id="23554" level="100" type="Monster" name="Fury Kiku">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
 		<acquire exp="17848068" sp="42835" />
@@ -1060,7 +1060,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23555" level="101" type="L2Monster" name="Fury Sylph Temptress" title="Spirit of the Night">
+	<npc id="23555" level="101" type="Monster" name="Fury Sylph Temptress" title="Spirit of the Night">
 		<!-- FIX ME NO INFO ABOUT THIS NPC -->
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
@@ -1091,7 +1091,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23556" level="101" type="L2Monster" name="Fury Sylph Purka" title="Spirit of the Night">
+	<npc id="23556" level="101" type="Monster" name="Fury Sylph Purka" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
@@ -1122,7 +1122,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23557" level="100" type="L2Monster" name="Fury Kerberos Liger">
+	<npc id="23557" level="100" type="Monster" name="Fury Kerberos Liger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
@@ -1152,7 +1152,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23558" level="100" type="L2Monster" name="Fury Kerberos Nero">
+	<npc id="23558" level="100" type="Monster" name="Fury Kerberos Nero">
 		<!-- Source: www.l2wiki.com -->
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
@@ -1182,7 +1182,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23559" level="100" type="L2Monster" name="El Floato">
+	<npc id="23559" level="100" type="Monster" name="El Floato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ELEMENTAL</race>
 		<acquire exp="27915360" sp="66996" />
@@ -1214,7 +1214,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23560" level="100" type="L2Monster" name="El Floato">
+	<npc id="23560" level="100" type="Monster" name="El Floato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ELEMENTAL</race>
 		<acquire exp="27915360" sp="66996" />
@@ -1246,7 +1246,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23561" level="100" type="L2Monster" name="Harpe">
+	<npc id="23561" level="100" type="Monster" name="Harpe">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="0" sp="0" />
@@ -1267,7 +1267,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23562" level="101" type="L2Monster" name="Harpe" title="Separated Evil Thoughts">
+	<npc id="23562" level="101" type="Monster" name="Harpe" title="Separated Evil Thoughts">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="5177752173" sp="12426574" />
@@ -1292,7 +1292,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23563" level="101" type="L2Monster" name="Croamis" title="Gatekeeper">
+	<npc id="23563" level="101" type="Monster" name="Croamis" title="Gatekeeper">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ELEMENTAL</race>
 		<acquire exp="0" sp="0" />
@@ -1313,7 +1313,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23564" level="100" type="L2Monster" name="Croa">
+	<npc id="23564" level="100" type="Monster" name="Croa">
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<acquire exp="0" sp="0" />
@@ -1334,7 +1334,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23565" level="100" type="L2Monster" name="Amis">
+	<npc id="23565" level="100" type="Monster" name="Amis">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ELEMENTAL</race>
 		<acquire exp="0" sp="0" />
@@ -1355,7 +1355,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23566" level="100" type="L2Monster" name="Nymph Rose">
+	<npc id="23566" level="100" type="Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1376,7 +1376,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23567" level="100" type="L2Monster" name="Nymph Rose">
+	<npc id="23567" level="100" type="Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1397,7 +1397,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23568" level="100" type="L2Monster" name="Nymph Lily">
+	<npc id="23568" level="100" type="Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1418,7 +1418,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23569" level="103" type="L2Monster" name="Nymph Lily">
+	<npc id="23569" level="103" type="Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
@@ -1445,7 +1445,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
+	<npc id="23570" level="100" type="Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1466,7 +1466,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-		<npc id="23571" level="103" type="L2Monster" name="Nymph Tulip">
+		<npc id="23571" level="103" type="Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
@@ -1493,7 +1493,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23572" level="100" type="L2Monster" name="Nymph Cosmos">
+	<npc id="23572" level="100" type="Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1514,7 +1514,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23573" level="103" type="L2Monster" name="Nymph Cosmos">
+	<npc id="23573" level="103" type="Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
@@ -1541,7 +1541,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Fancy">
+	<npc id="23574" level="103" type="Monster" name="Nymph Rose" title="Fancy">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
@@ -1566,7 +1566,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23575" level="101" type="L2Monster" name="Nymph Lily" title="Fancy">
+	<npc id="23575" level="101" type="Monster" name="Nymph Lily" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1587,7 +1587,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23576" level="101" type="L2Monster" name="Nymph Tulip" title="Fancy">
+	<npc id="23576" level="101" type="Monster" name="Nymph Tulip" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1608,7 +1608,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23577" level="101" type="L2Monster" name="Nymph Cosmos" title="Fancy">
+	<npc id="23577" level="101" type="Monster" name="Nymph Cosmos" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1629,7 +1629,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23578" level="102" type="L2Monster" name="Nymph Guardian" title="Guardian of the Flower">
+	<npc id="23578" level="102" type="Monster" name="Nymph Guardian" title="Guardian of the Flower">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="112355490" sp="269653" />
@@ -1650,7 +1650,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23579" level="100" type="L2Monster" name="Buoyant Seed">
+	<npc id="23579" level="100" type="Monster" name="Buoyant Seed">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ELEMENTAL</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1671,7 +1671,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23580" level="100" type="L2Monster" name="Fluttering Seed">
+	<npc id="23580" level="100" type="Monster" name="Fluttering Seed">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ELEMENTAL</race>
 		<acquire exp="24981655" sp="59955" />
@@ -1692,7 +1692,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23581" level="100" type="L2Monster" name="Apherus" title="Instilled with life">
+	<npc id="23581" level="100" type="Monster" name="Apherus" title="Instilled with life">
 		<!-- Source: www.l2on.net -->
 		<race>PLANT</race>
 		<acquire exp="32981655" sp="71155" />
@@ -1713,7 +1713,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23582" level="101" type="L2Monster" name="Nymph Rose" title="Elegant">
+	<npc id="23582" level="101" type="Monster" name="Nymph Rose" title="Elegant">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1734,7 +1734,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23583" level="101" type="L2Monster" name="Nymph Lily" title="Elegant">
+	<npc id="23583" level="101" type="Monster" name="Nymph Lily" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1755,7 +1755,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23584" level="101" type="L2Monster" name="Nymph Tulip" title="Elegant">
+	<npc id="23584" level="101" type="Monster" name="Nymph Tulip" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1776,7 +1776,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23585" level="101" type="L2Monster" name="Nymph Cosmos" title="Elegant">
+	<npc id="23585" level="101" type="Monster" name="Nymph Cosmos" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
@@ -1797,7 +1797,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23586" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
+	<npc id="23586" level="103" type="Monster" name="Geork" title="Embryo Master Artisan">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="5639744400" sp="13535386" />
@@ -1827,7 +1827,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23587" level="104" type="L2Monster" name="Burnstein" title="Embryo Commander">
+	<npc id="23587" level="104" type="Monster" name="Burnstein" title="Embryo Commander">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="18973578624" sp="45536588" />
@@ -1852,7 +1852,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23588" level="102" type="L2Monster" name="Hummel" title="Embryo Quartermaster">
+	<npc id="23588" level="102" type="Monster" name="Hummel" title="Embryo Quartermaster">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="3456666576" sp="8295999" />
@@ -1877,7 +1877,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23589" level="102" type="L2Monster" name="Fortress Spy">
+	<npc id="23589" level="102" type="Monster" name="Fortress Spy">
 		<!-- FIXME: HAS NO INFO -->
 		<race>HUMANOID</race>
 		<equipment rhand="17421" />
@@ -1908,7 +1908,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23590" level="103" type="L2Npc" name="Adolph" title="Brainwashed Aden Vanguard">
+	<npc id="23590" level="103" type="Npc" name="Adolph" title="Brainwashed Aden Vanguard">
 		<!-- FIXME: HAS NO INFO -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1932,7 +1932,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="23591" level="103" type="L2Npc" name="Barton" title="Brainwashed Aden Vanguard">
+	<npc id="23591" level="103" type="Npc" name="Barton" title="Brainwashed Aden Vanguard">
 		<!-- FIXME: HAS NO INFO -->
 		<sex>MALE</sex>
 		<race>HUMAN</race>
@@ -1956,7 +1956,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="23592" level="103" type="L2Npc" name="Hayuk" title="Brainwashed Aden Vanguard">
+	<npc id="23592" level="103" type="Npc" name="Hayuk" title="Brainwashed Aden Vanguard">
 		<!-- FIXME: HAS NO INFO -->
 		<sex>MALE</sex>
 		<race>HUMAN</race>
@@ -1980,7 +1980,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="23593" level="103" type="L2Npc" name="Elise" title="Brainwashed Aden Vanguard">
+	<npc id="23593" level="103" type="Npc" name="Elise" title="Brainwashed Aden Vanguard">
 		<!-- FIXME: HAS NO INFO -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2004,7 +2004,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="23594" level="103" type="L2Npc" name="Eliyah" title="Brainwashed Aden Vanguard">
+	<npc id="23594" level="103" type="Npc" name="Eliyah" title="Brainwashed Aden Vanguard">
 		<!-- FIXME: HAS NO INFO -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2028,7 +2028,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="23595" level="101" type="L2Monster" name="Fortress Raider" usingServerSideTitle="true">
+	<npc id="23595" level="101" type="Monster" name="Fortress Raider" usingServerSideTitle="true">
 		<!-- TODO: font https://l2wiki.com/Fortress_Raider -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2060,7 +2060,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23596" level="101" type="L2Monster" name="Fortress Guardian Captain" usingServerSideTitle="true">
+	<npc id="23596" level="101" type="Monster" name="Fortress Guardian Captain" usingServerSideTitle="true">
 		 <!-- TODO: font https://l2wiki.com/Fortress_Raider -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2095,7 +2095,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23597" level="101" type="L2Monster" name="Atelia Passionate Soldier" usingServerSideTitle="true">
+	<npc id="23597" level="101" type="Monster" name="Atelia Passionate Soldier" usingServerSideTitle="true">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17329" />
@@ -2126,7 +2126,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23598" level="102" type="L2Monster" name="Atelia Elite Captain" usingServerSideTitle="true">
+	<npc id="23598" level="102" type="Monster" name="Atelia Elite Captain" usingServerSideTitle="true">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17325" lhand="17401" />
@@ -2160,7 +2160,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="23599" level="102" type="L2Monster" name="Fortress Dark Wizard" usingServerSideTitle="true">
+	<npc id="23599" level="102" type="Monster" name="Fortress Dark Wizard" usingServerSideTitle="true">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<equipment rhand="17391" />

@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -61,22 +61,22 @@ public class Q00165_ShilensHunt extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equalsIgnoreCase("30348-03.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equalsIgnoreCase("30348-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getId())))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getId())))
 		{
 			giveItems(killer, DARK_BEZOAR, 1);
 			if (getQuestItemsCount(killer, DARK_BEZOAR) < REQUIRED_COUNT)
@@ -85,19 +85,19 @@ public class Q00165_ShilensHunt extends Quest
 			}
 			else
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -106,10 +106,10 @@ public class Q00165_ShilensHunt extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(2) && (getQuestItemsCount(player, DARK_BEZOAR) >= REQUIRED_COUNT))
+				if (qs.isCond(2) && (getQuestItemsCount(player, DARK_BEZOAR) >= REQUIRED_COUNT))
 				{
 					giveItems(player, LESSER_HEALING_POTION, 2);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30348-05.html";
 				}
 				else

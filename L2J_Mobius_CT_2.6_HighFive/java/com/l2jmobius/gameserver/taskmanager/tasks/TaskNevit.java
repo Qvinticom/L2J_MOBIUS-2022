@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.taskmanager.tasks;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExNevitAdventTimeChange;
 import com.l2jmobius.gameserver.taskmanager.Task;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
@@ -46,7 +46,7 @@ public class TaskNevit extends Task
 			return;
 		}
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			if ((player == null) || !player.isOnline())
 			{

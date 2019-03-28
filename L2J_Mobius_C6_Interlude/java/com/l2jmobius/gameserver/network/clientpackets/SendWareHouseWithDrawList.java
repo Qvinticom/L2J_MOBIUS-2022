@@ -21,11 +21,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.ClanWarehouse;
 import com.l2jmobius.gameserver.model.ItemContainer;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.EnchantResult;
@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
-public final class SendWareHouseWithDrawList extends L2GameClientPacket
+public final class SendWareHouseWithDrawList extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(SendWareHouseWithDrawList.class.getName());
 	
@@ -72,7 +72,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -98,8 +98,8 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 			return;
 		}
 		
-		final L2FolkInstance manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius(manager, L2NpcInstance.INTERACTION_DISTANCE, false, false)) && !player.isGM())
+		final FolkInstance manager = player.getLastFolkNPC();
+		if (((manager == null) || !player.isInsideRadius(manager, NpcInstance.INTERACTION_DISTANCE, false, false)) && !player.isGM())
 		{
 			return;
 		}
@@ -119,7 +119,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 		
 		if (Config.ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH)
 		{
-			if ((warehouse instanceof ClanWarehouse) && ((player.getClanPrivileges() & L2Clan.CP_CL_VIEW_WAREHOUSE) != L2Clan.CP_CL_VIEW_WAREHOUSE))
+			if ((warehouse instanceof ClanWarehouse) && ((player.getClanPrivileges() & Clan.CP_CL_VIEW_WAREHOUSE) != Clan.CP_CL_VIEW_WAREHOUSE))
 			{
 				return;
 			}
@@ -140,7 +140,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 			final int count = _items[(i * 2) + 1];
 			
 			// Calculate needed slots
-			final L2ItemInstance item = warehouse.getItemByObjectId(objectId);
+			final ItemInstance item = warehouse.getItemByObjectId(objectId);
 			if (item == null)
 			{
 				continue;
@@ -186,12 +186,12 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 			final int objectId = _items[(i * 2) + 0];
 			final int count = _items[(i * 2) + 1];
 			
-			final L2ItemInstance oldItem = warehouse.getItemByObjectId(objectId);
+			final ItemInstance oldItem = warehouse.getItemByObjectId(objectId);
 			if ((oldItem == null) || (oldItem.getCount() < count))
 			{
 				player.sendMessage("Can't withdraw requested item" + (count > 1 ? "s" : ""));
 			}
-			final L2ItemInstance newItem = warehouse.transferItem("Warehouse", objectId, count, player.getInventory(), player, player.getLastFolkNPC());
+			final ItemInstance newItem = warehouse.transferItem("Warehouse", objectId, count, player.getInventory(), player, player.getLastFolkNPC());
 			if (newItem == null)
 			{
 				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName());

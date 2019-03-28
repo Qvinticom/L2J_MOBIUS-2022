@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 
 import ai.AbstractNpcAI;
@@ -43,10 +43,10 @@ public class MonsterBook extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2Party party = killer.getParty();
-		List<L2PcInstance> rewardedPlayers = new ArrayList<>();
+		final Party party = killer.getParty();
+		List<PlayerInstance> rewardedPlayers = new ArrayList<>();
 		if (party != null)
 		{
 			rewardedPlayers = party.isInCommandChannel() ? party.getCommandChannel().getMembers() : party.getMembers();
@@ -57,7 +57,7 @@ public class MonsterBook extends AbstractNpcAI
 		}
 		
 		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardByMonsterId(npc.getId());
-		for (L2PcInstance player : rewardedPlayers)
+		for (PlayerInstance player : rewardedPlayers)
 		{
 			if ((player != null) && (player.calculateDistance2D(killer) < MAXIMUM_REWARD_RANGE))
 			{

@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -34,24 +34,24 @@ public class ChannelLeave implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return false;
 		}
 		
-		if (activeChar.isInParty())
+		if (player.isInParty())
 		{
-			if (activeChar.getParty().isLeader(activeChar) && activeChar.getParty().isInCommandChannel())
+			if (player.getParty().isLeader(player) && player.getParty().isInCommandChannel())
 			{
-				L2CommandChannel channel = activeChar.getParty().getCommandChannel();
-				L2Party party = activeChar.getParty();
+				CommandChannel channel = player.getParty().getCommandChannel();
+				Party party = player.getParty();
 				channel.removeParty(party);
 				
 				party.getLeader().sendPacket(SystemMessageId.LEFT_COMMAND_CHANNEL);

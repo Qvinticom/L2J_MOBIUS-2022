@@ -20,9 +20,9 @@ import java.util.HashMap;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 
@@ -73,7 +73,7 @@ public final class DimensionalMerchant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -148,14 +148,14 @@ public final class DimensionalMerchant extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String giveMinion(L2PcInstance player, String event, int couponId, int eventCouponId)
+	private String giveMinion(PlayerInstance player, String event, int couponId, int eventCouponId)
 	{
 		if (hasAtLeastOneQuestItem(player, couponId, eventCouponId))
 		{
 			takeItems(player, (hasQuestItems(player, eventCouponId) ? eventCouponId : couponId), 1);
 			final int minionId = MINION_EXCHANGE.get(event);
 			giveItems(player, minionId, 1);
-			final L2ItemInstance summonItem = player.getInventory().getItemByItemId(minionId);
+			final ItemInstance summonItem = player.getInventory().getItemByItemId(minionId);
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(summonItem.getEtcItem());
 			if ((handler != null) && !player.hasPet())
 			{

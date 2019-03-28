@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: (ch) ddd b d: ? d: crest ID d: crest size b: raw data
  * @author -Wooden-
  */
-public class ExPledgeCrestLarge extends L2GameServerPacket
+public class ExPledgeCrestLarge extends GameServerPacket
 {
 	private final int _crestId;
 	private final byte[] _data;

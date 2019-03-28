@@ -17,19 +17,18 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * This class ...
  * @version $Revision: 1.7.2.4.2.9 $ $Date: 2005/04/11 10:05:54 $
  */
-public class NpcInfoPoly extends L2GameServerPacket
+public class NpcInfoPoly extends GameServerPacket
 {
-	private L2Character _activeChar;
-	private final L2Object _obj;
+	private Creature _creature;
+	private final WorldObject _obj;
 	private int _x;
 	private int _y;
 	private int _z;
@@ -55,7 +54,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 	private String _name;
 	private String _title;
 	private int _abnormalEffect;
-	L2NpcTemplate _template;
+	NpcTemplate _template;
 	private final int _collisionRadius;
 	private final int _collisionHeight;
 	
@@ -64,7 +63,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 	 * @param obj the obj
 	 * @param attacker the attacker
 	 */
-	public NpcInfoPoly(L2Object obj, L2Character attacker)
+	public NpcInfoPoly(WorldObject obj, Creature attacker)
 	{
 		_obj = obj;
 		_npcId = obj.getPoly().getPolyId();
@@ -75,15 +74,15 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_isSummoned = false;
 		_collisionRadius = _template.collisionRadius;
 		_collisionHeight = _template.collisionHeight;
-		if (_obj instanceof L2Character)
+		if (_obj instanceof Creature)
 		{
-			_activeChar = (L2Character) obj;
+			_creature = (Creature) obj;
 			_isAttackable = obj.isAutoAttackable(attacker);
 			_rhand = _template.rhand;
 			_lhand = _template.lhand;
 		}
 		
-		if (_obj instanceof L2ItemInstance)
+		if (_obj instanceof ItemInstance)
 		{
 			_x = _obj.getX();
 			_y = _obj.getY();
@@ -102,22 +101,22 @@ public class NpcInfoPoly extends L2GameServerPacket
 		}
 		else
 		{
-			_x = _activeChar.getX();
-			_y = _activeChar.getY();
-			_z = _activeChar.getZ();
-			_heading = _activeChar.getHeading();
-			_mAtkSpd = _activeChar.getMAtkSpd();
-			_pAtkSpd = _activeChar.getPAtkSpd();
-			_runSpd = _activeChar.getRunSpeed();
-			_walkSpd = _activeChar.getWalkSpeed();
+			_x = _creature.getX();
+			_y = _creature.getY();
+			_z = _creature.getZ();
+			_heading = _creature.getHeading();
+			_mAtkSpd = _creature.getMAtkSpd();
+			_pAtkSpd = _creature.getPAtkSpd();
+			_runSpd = _creature.getRunSpeed();
+			_walkSpd = _creature.getWalkSpeed();
 			_swimRunSpd = _flRunSpd = _flyRunSpd = _runSpd;
 			_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
-			_isRunning = _activeChar.isRunning();
-			_isInCombat = _activeChar.isInCombat();
-			_isAlikeDead = _activeChar.isAlikeDead();
-			_name = _activeChar.getName();
-			_title = _activeChar.getTitle();
-			_abnormalEffect = _activeChar.getAbnormalEffect();
+			_isRunning = _creature.isRunning();
+			_isInCombat = _creature.isInCombat();
+			_isAlikeDead = _creature.isAlikeDead();
+			_name = _creature.getName();
+			_title = _creature.getTitle();
+			_abnormalEffect = _creature.getAbnormalEffect();
 		}
 	}
 	

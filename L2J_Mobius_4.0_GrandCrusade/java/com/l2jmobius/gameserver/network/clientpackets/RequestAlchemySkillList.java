@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExAlchemySkillList;
 
 /**
@@ -28,19 +28,19 @@ import com.l2jmobius.gameserver.network.serverpackets.ExAlchemySkillList;
 public class RequestAlchemySkillList implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (activeChar.getRace() != Race.ERTHEIA))
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
 			return;
 		}
-		client.sendPacket(new ExAlchemySkillList(activeChar));
+		client.sendPacket(new ExAlchemySkillList(player));
 	}
 }

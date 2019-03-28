@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -41,7 +41,7 @@ public final class RequestExMagicSkillUseGround implements IClientIncomingPacket
 	private boolean _shiftPressed;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_x = packet.readD();
 		_y = packet.readD();
@@ -53,36 +53,36 @@ public final class RequestExMagicSkillUseGround implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		// Get the current PlayerInstance of the player
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Get the level of the used skill
-		final int level = activeChar.getSkillLevel(_skillId);
+		final int level = player.getSkillLevel(_skillId);
 		if (level <= 0)
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		// Get the L2Skill template corresponding to the skillID received from the client
+		// Get the Skill template corresponding to the skillID received from the client
 		final Skill skill = SkillData.getInstance().getSkill(_skillId, level);
 		
 		// Check the validity of the skill
 		if (skill != null)
 		{
-			activeChar.setCurrentSkillWorldPosition(new Location(_x, _y, _z));
+			player.setCurrentSkillWorldPosition(new Location(_x, _y, _z));
 			
 			// normally magicskilluse packet turns char client side but for these skills, it doesn't (even with correct target)
-			activeChar.setHeading(Util.calculateHeadingFrom(activeChar.getX(), activeChar.getY(), _x, _y));
-			Broadcast.toKnownPlayers(activeChar, new ValidateLocation(activeChar));
+			player.setHeading(Util.calculateHeadingFrom(player.getX(), player.getY(), _x, _y));
+			Broadcast.toKnownPlayers(player, new ValidateLocation(player));
 			
-			activeChar.useMagic(skill, null, _ctrlPressed, _shiftPressed);
+			player.useMagic(skill, null, _ctrlPressed, _shiftPressed);
 		}
 		else
 		{

@@ -26,8 +26,8 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
@@ -48,7 +48,7 @@ public final class QuestState
 	private final String _questName;
 	
 	/** The "owner" of this QuestState object */
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
 	/** The current state of the quest */
 	private byte _state;
@@ -67,7 +67,7 @@ public final class QuestState
 	 * @param player the owner of this {@link QuestState} object
 	 * @param state the initial state of the quest
 	 */
-	public QuestState(Quest quest, L2PcInstance player, byte state)
+	public QuestState(Quest quest, PlayerInstance player, byte state)
 	{
 		_questName = quest.getName();
 		_player = player;
@@ -93,9 +93,9 @@ public final class QuestState
 	}
 	
 	/**
-	 * @return the {@link L2PcInstance} object of the owner of this QuestState
+	 * @return the {@link PlayerInstance} object of the owner of this QuestState
 	 */
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
@@ -564,16 +564,16 @@ public final class QuestState
 	
 	/**
 	 * Add player to get notification of characters death
-	 * @param character the {@link L2Character} object of the character to get notification of death
+	 * @param creature the {@link Creature} object of the character to get notification of death
 	 */
-	public void addNotifyOfDeath(L2Character character)
+	public void addNotifyOfDeath(Creature creature)
 	{
-		if (!character.isPlayer())
+		if (!creature.isPlayer())
 		{
 			return;
 		}
 		
-		((L2PcInstance) character).addNotifyQuestOfDeath(this);
+		((PlayerInstance) creature).addNotifyQuestOfDeath(this);
 	}
 	
 	/**

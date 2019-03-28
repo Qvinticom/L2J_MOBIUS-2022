@@ -19,8 +19,8 @@ package handlers.bypasshandlers;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 
@@ -32,7 +32,7 @@ public class Augment implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -45,12 +45,12 @@ public class Augment implements IBypassHandler
 			{
 				case 1:
 				{
-					activeChar.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
+					player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
 					return true;
 				}
 				case 2:
 				{
-					activeChar.sendPacket(ExShowVariationCancelWindow.STATIC_PACKET);
+					player.sendPacket(ExShowVariationCancelWindow.STATIC_PACKET);
 					return true;
 				}
 			}

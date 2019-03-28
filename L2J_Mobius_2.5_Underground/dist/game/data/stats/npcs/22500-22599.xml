@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22500" level="78" type="L2Monster" name="Lost Watcher">
+	<npc id="22500" level="78" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -65,7 +65,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="22501" level="78" type="L2Monster" name="Lost Watcher">
+	<npc id="22501" level="78" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -127,7 +127,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="22502" level="78" type="L2Monster" name="Lost Beholder">
+	<npc id="22502" level="78" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -193,7 +193,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="22503" level="81" type="L2Monster" name="Lost Watcher">
+	<npc id="22503" level="81" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -258,7 +258,7 @@
 			<height normal="37.5" grown="46.8" />
 		</collision>
 	</npc>
-	<npc id="22504" level="81" type="L2Monster" name="Lost Watcher">
+	<npc id="22504" level="81" type="Monster" name="Lost Watcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -320,7 +320,7 @@
 			<height normal="37.5" grown="46.8" />
 		</collision>
 	</npc>
-	<npc id="22505" level="81" type="L2Monster" name="Lost Beholder">
+	<npc id="22505" level="81" type="Monster" name="Lost Beholder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -385,7 +385,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="22506" level="75" type="L2Monster" name="Boom - Child">
+	<npc id="22506" level="75" type="Monster" name="Boom - Child">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -429,7 +429,7 @@
 			<height normal="13.5" />
 		</collision>
 	</npc>
-	<npc id="22507" level="77" type="L2Monster" name="Boom - Child">
+	<npc id="22507" level="77" type="Monster" name="Boom - Child">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -473,7 +473,7 @@
 			<height normal="13.5" />
 		</collision>
 	</npc>
-	<npc id="22508" level="80" type="L2Monster" name="Boom - Child">
+	<npc id="22508" level="80" type="Monster" name="Boom - Child">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -517,7 +517,7 @@
 			<height normal="13.5" />
 		</collision>
 	</npc>
-	<npc id="22536" level="95" type="L2Monster" name="Royal Guard Captain">
+	<npc id="22536" level="95" type="Monster" name="Royal Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -573,7 +573,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="22537" level="95" type="L2Monster" name="Dragon Steed Troop Grand Magician">
+	<npc id="22537" level="95" type="Monster" name="Dragon Steed Troop Grand Magician">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -629,7 +629,7 @@
 			<height normal="49.9" />
 		</collision>
 	</npc>
-	<npc id="22538" level="95" type="L2Monster" name="Dragon Steed Troop Commander">
+	<npc id="22538" level="95" type="Monster" name="Dragon Steed Troop Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -686,7 +686,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="22539" level="95" type="L2Monster" name="Dragon Steed Troops No 1 Battalion Commander">
+	<npc id="22539" level="95" type="Monster" name="Dragon Steed Troops No 1 Battalion Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -743,7 +743,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="22540" level="95" type="L2Monster" name="White Dragon Leader">
+	<npc id="22540" level="95" type="Monster" name="White Dragon Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -800,7 +800,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22541" level="94" type="L2Monster" name="Dragon Steed Troop Infantry">
+	<npc id="22541" level="94" type="Monster" name="Dragon Steed Troop Infantry">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -857,7 +857,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22542" level="95" type="L2Monster" name="Dragon Steed Troop Magic Leader">
+	<npc id="22542" level="95" type="Monster" name="Dragon Steed Troop Magic Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -914,7 +914,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="22543" level="95" type="L2Monster" name="Dragon Steed Troop Magician">
+	<npc id="22543" level="95" type="Monster" name="Dragon Steed Troop Magician">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -972,7 +972,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="22544" level="94" type="L2Monster" name="Dragon Steed Troop Magic Soldier">
+	<npc id="22544" level="94" type="Monster" name="Dragon Steed Troop Magic Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -1031,7 +1031,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="22545" level="95" type="L2Monster" name="Wife of the Dragon of Darkness">
+	<npc id="22545" level="95" type="Monster" name="Wife of the Dragon of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -1087,7 +1087,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="22546" level="93" type="L2Monster" name="Warrior of Light">
+	<npc id="22546" level="93" type="Monster" name="Warrior of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="3333" />
@@ -1139,7 +1139,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="22547" level="93" type="L2Monster" name="Dragon Steed Troop Healer">
+	<npc id="22547" level="93" type="Monster" name="Dragon Steed Troop Healer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="2000" />
@@ -1194,7 +1194,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="22548" level="94" type="L2Monster" name="Dragon Steed Troop Javelin Thrower">
+	<npc id="22548" level="94" type="Monster" name="Dragon Steed Troop Javelin Thrower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
@@ -1247,7 +1247,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="22549" level="94" type="L2Monster" name="Dragon Steed Troop Javelin Thrower">
+	<npc id="22549" level="94" type="Monster" name="Dragon Steed Troop Javelin Thrower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
@@ -1301,7 +1301,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="22550" level="93" type="L2Monster" name="Savage Warrior">
+	<npc id="22550" level="93" type="Monster" name="Savage Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
@@ -1358,7 +1358,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="22551" level="93" type="L2Monster" name="Priest of Darkness">
+	<npc id="22551" level="93" type="Monster" name="Priest of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="10000" />
@@ -1411,7 +1411,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="22552" level="93" type="L2Monster" name="Mutated Drake">
+	<npc id="22552" level="93" type="Monster" name="Mutated Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
@@ -1461,7 +1461,7 @@
 			<height normal="53.5" />
 		</collision>
 	</npc>
-	<npc id="22553" level="75" type="L2Monster" name="Large Crystal Core">
+	<npc id="22553" level="75" type="Monster" name="Large Crystal Core">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1495,7 +1495,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="22554" level="75" type="L2Monster" name="Small Crystal Core">
+	<npc id="22554" level="75" type="Monster" name="Small Crystal Core">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1529,7 +1529,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="22555" level="75" type="L2Monster" name="Small Crystal Core">
+	<npc id="22555" level="75" type="Monster" name="Small Crystal Core">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1563,7 +1563,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="22556" level="75" type="L2Monster" name="Small Crystal Core">
+	<npc id="22556" level="75" type="Monster" name="Small Crystal Core">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1597,7 +1597,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="22557" level="75" type="L2Monster" name="Defense Mechanism">
+	<npc id="22557" level="75" type="Monster" name="Defense Mechanism">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="134" />
@@ -1643,7 +1643,7 @@
 			<height normal="133.5" />
 		</collision>
 	</npc>
-	<npc id="22558" level="75" type="L2Monster" name="Defense Battery">
+	<npc id="22558" level="75" type="Monster" name="Defense Battery">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="134" />
@@ -1688,7 +1688,7 @@
 			<height normal="133.5" />
 		</collision>
 	</npc>
-	<npc id="22593" level="94" type="L2Monster" name="Dragon Steed Troop Magic Soldier">
+	<npc id="22593" level="94" type="Monster" name="Dragon Steed Troop Magic Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -1747,7 +1747,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="22596" level="95" type="L2Monster" name="White Dragon Leader">
+	<npc id="22596" level="95" type="Monster" name="White Dragon Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -1806,7 +1806,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22597" level="94" type="L2Monster" name="Dragon Steed Troop Infantry">
+	<npc id="22597" level="94" type="Monster" name="Dragon Steed Troop Infantry">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />

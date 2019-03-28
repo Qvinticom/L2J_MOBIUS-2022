@@ -40,7 +40,7 @@ public final class DimensionalRiftRoom
 	private final Location _teleportCoords;
 	private final Shape _s;
 	private final boolean _isBossRoom;
-	private final List<L2Spawn> _roomSpawns = new ArrayList<>();
+	private final List<Spawn> _roomSpawns = new ArrayList<>();
 	private boolean _partyInside = false;
 	
 	public DimensionalRiftRoom(byte type, byte room, int xMin, int xMax, int yMin, int yMax, int zMin, int zMax, int xT, int yT, int zT, boolean isBossRoom)
@@ -105,14 +105,14 @@ public final class DimensionalRiftRoom
 		return _isBossRoom;
 	}
 	
-	public List<L2Spawn> getSpawns()
+	public List<Spawn> getSpawns()
 	{
 		return _roomSpawns;
 	}
 	
 	public void spawn()
 	{
-		for (L2Spawn spawn : _roomSpawns)
+		for (Spawn spawn : _roomSpawns)
 		{
 			spawn.doSpawn();
 			spawn.startRespawn();
@@ -121,7 +121,7 @@ public final class DimensionalRiftRoom
 	
 	public DimensionalRiftRoom unspawn()
 	{
-		for (L2Spawn spawn : _roomSpawns)
+		for (Spawn spawn : _roomSpawns)
 		{
 			spawn.stopRespawn();
 			if (spawn.getLastSpawn() != null)

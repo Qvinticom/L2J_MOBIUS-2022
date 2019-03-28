@@ -18,17 +18,17 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2BabyPetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.BabyPetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
+import com.l2jmobius.gameserver.templates.item.Weapon;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -45,24 +45,24 @@ public class BeastSpiritShot implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		if (playable == null)
 		{
 			return;
 		}
 		
-		L2PcInstance activeOwner = null;
+		PlayerInstance activeOwner = null;
 		
-		if (playable instanceof L2Summon)
+		if (playable instanceof Summon)
 		{
-			activeOwner = ((L2Summon) playable).getOwner();
+			activeOwner = ((Summon) playable).getOwner();
 			activeOwner.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
 			return;
 		}
-		else if (playable instanceof L2PcInstance)
+		else if (playable instanceof PlayerInstance)
 		{
-			activeOwner = (L2PcInstance) playable;
+			activeOwner = (PlayerInstance) playable;
 		}
 		
 		if (activeOwner == null)
@@ -70,7 +70,7 @@ public class BeastSpiritShot implements IItemHandler
 			return;
 		}
 		
-		L2Summon activePet = activeOwner.getPet();
+		Summon activePet = activeOwner.getPet();
 		if (activePet == null)
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
@@ -87,13 +87,13 @@ public class BeastSpiritShot implements IItemHandler
 		final boolean isBlessed = itemId == 6647;
 		int shotConsumption = 1;
 		
-		L2ItemInstance weaponInst = null;
-		L2Weapon weaponItem = null;
+		ItemInstance weaponInst = null;
+		Weapon weaponItem = null;
 		
-		if ((activePet instanceof L2PetInstance) && !(activePet instanceof L2BabyPetInstance))
+		if ((activePet instanceof PetInstance) && !(activePet instanceof BabyPetInstance))
 		{
-			weaponInst = ((L2PetInstance) activePet).getActiveWeaponInstance();
-			weaponItem = ((L2PetInstance) activePet).getActiveWeaponItem();
+			weaponInst = ((PetInstance) activePet).getActiveWeaponInstance();
+			weaponItem = ((PetInstance) activePet).getActiveWeaponItem();
 			
 			if (weaponInst == null)
 			{
@@ -101,7 +101,7 @@ public class BeastSpiritShot implements IItemHandler
 				return;
 			}
 			
-			if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+			if (weaponInst.getChargedSpiritshot() != ItemInstance.CHARGED_NONE)
 			{
 				// SpiritShots are already active.
 				return;
@@ -125,27 +125,27 @@ public class BeastSpiritShot implements IItemHandler
 			
 			if (isBlessed)
 			{
-				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
+				weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 			}
 			else
 			{
-				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_SPIRITSHOT);
+				weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_SPIRITSHOT);
 			}
 		}
 		else
 		{
-			if (activePet.getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
+			if (activePet.getChargedSpiritShot() != ItemInstance.CHARGED_NONE)
 			{
 				return;
 			}
 			
 			if (isBlessed)
 			{
-				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
+				activePet.setChargedSpiritShot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 			}
 			else
 			{
-				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_SPIRITSHOT);
+				activePet.setChargedSpiritShot(ItemInstance.CHARGED_SPIRITSHOT);
 			}
 		}
 		

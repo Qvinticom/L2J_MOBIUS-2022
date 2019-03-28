@@ -19,15 +19,15 @@ package instances.MuseumDungeon;
 import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -69,16 +69,16 @@ public final class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		
-		final L2Attackable toyron = (L2Attackable) instance.getNpc(TOYRON);
+		final Attackable toyron = (Attackable) instance.getNpc(TOYRON);
 		if (firstEnter)
 		{
 			// Set desk status
-			final List<L2Npc> desks = instance.getNpcs(DESK);
-			final L2Npc desk = desks.get(getRandom(desks.size()));
+			final List<Npc> desks = instance.getNpcs(DESK);
+			final Npc desk = desks.get(getRandom(desks.size()));
 			desk.getVariables().set("book", true);
 			
 			// Set Toyron
@@ -105,7 +105,7 @@ public final class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enter_instance"))
 		{
@@ -125,14 +125,14 @@ public final class MuseumDungeon extends AbstractInstance
 					}
 					case "SPAWN_THIEFS_STAGE_1":
 					{
-						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
-						for (L2Npc thief : thiefs)
+						final List<Npc> thiefs = world.spawnGroup("thiefs");
+						for (Npc thief : thiefs)
 						{
 							thief.setRunning();
 							addAttackPlayerDesire(thief, player);
 							thief.broadcastSay(ChatType.NPC_GENERAL, THIEF_SHOUT[getRandom(2)]);
 						}
-						final L2Npc toyron = world.getNpc(TOYRON);
+						final Npc toyron = world.getNpc(TOYRON);
 						toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHEN_DID_THEY_GET_IN_HERE);
 						startQuestTimer("TOYRON_MSG_1", 2500, toyron, player);
 						startQuestTimer("SKILL_MSG", 4500, toyron, player);
@@ -140,8 +140,8 @@ public final class MuseumDungeon extends AbstractInstance
 					}
 					case "SPAWN_THIEFS_STAGE_2":
 					{
-						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
-						for (L2Npc thief : thiefs)
+						final List<Npc> thiefs = world.spawnGroup("thiefs");
+						for (Npc thief : thiefs)
 						{
 							thief.setRunning();
 						}
@@ -170,7 +170,7 @@ public final class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
@@ -193,7 +193,7 @@ public final class MuseumDungeon extends AbstractInstance
 				showOnScreenMsg(player, NpcStringId.WATCH_OUT_YOU_ARE_BEING_ATTACKED, ExShowScreenMessage.TOP_CENTER, 4500);
 				htmltext = "33126-01.html";
 				
-				final L2Npc toyron = world.getNpc(TOYRON);
+				final Npc toyron = world.getNpc(TOYRON);
 				startQuestTimer("SPAWN_THIEFS_STAGE_1", 500, null, player);
 				startQuestTimer("TOYRON_FOLLOW", 500, toyron, player);
 			}
@@ -206,12 +206,12 @@ public final class MuseumDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
 		{
-			final L2Npc toyron = instance.getNpc(TOYRON);
+			final Npc toyron = instance.getNpc(TOYRON);
 			if (!toyron.isInCombat())
 			{
 				toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
@@ -228,12 +228,12 @@ public final class MuseumDungeon extends AbstractInstance
 	@Id(THIEF)
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
-			final L2PcInstance player = world.getFirstPlayer();
+			final PlayerInstance player = world.getFirstPlayer();
 			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
 			if ((qs != null) && qs.isCond(2) && world.getAliveNpcs(THIEF).isEmpty())
 			{

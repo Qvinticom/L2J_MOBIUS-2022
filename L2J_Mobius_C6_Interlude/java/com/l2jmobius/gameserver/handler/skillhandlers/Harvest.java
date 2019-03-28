@@ -21,14 +21,14 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -45,20 +45,20 @@ public class Harvest implements ISkillHandler
 		SkillType.HARVEST
 	};
 	
-	private L2PcInstance _activeChar;
-	private L2MonsterInstance _target;
+	private PlayerInstance _player;
+	private MonsterInstance _target;
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		_activeChar = (L2PcInstance) activeChar;
+		_player = (PlayerInstance) creature;
 		
-		L2Object[] targetList = skill.getTargetList(activeChar);
+		WorldObject[] targetList = skill.getTargetList(creature);
 		
 		InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		
@@ -67,19 +67,19 @@ public class Harvest implements ISkillHandler
 			return;
 		}
 		
-		for (L2Object aTargetList : targetList)
+		for (WorldObject aTargetList : targetList)
 		{
-			if (!(aTargetList instanceof L2MonsterInstance))
+			if (!(aTargetList instanceof MonsterInstance))
 			{
 				continue;
 			}
 			
-			_target = (L2MonsterInstance) aTargetList;
+			_target = (MonsterInstance) aTargetList;
 			
-			if (_activeChar != _target.getSeeder())
+			if (_player != _target.getSeeder())
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
-				_activeChar.sendPacket(sm);
+				_player.sendPacket(sm);
 				continue;
 			}
 			
@@ -92,19 +92,19 @@ public class Harvest implements ISkillHandler
 			{
 				if (calcSuccess())
 				{
-					L2Attackable.RewardItem[] items = _target.takeHarvest();
+					Attackable.RewardItem[] items = _target.takeHarvest();
 					if ((items != null) && (items.length > 0))
 					{
-						for (L2Attackable.RewardItem ritem : items)
+						for (Attackable.RewardItem ritem : items)
 						{
 							cropId = ritem.getItemId(); // always got 1 type of crop as reward
-							if (_activeChar.isInParty())
+							if (_player.isInParty())
 							{
-								_activeChar.getParty().distributeItem(_activeChar, ritem, true, _target);
+								_player.getParty().distributeItem(_player, ritem, true, _target);
 							}
 							else
 							{
-								L2ItemInstance item = _activeChar.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _activeChar, _target);
+								ItemInstance item = _player.getInventory().addItem("Manor", ritem.getItemId(), ritem.getCount(), _player, _target);
 								if (iu != null)
 								{
 									iu.addItem(item);
@@ -118,36 +118,36 @@ public class Harvest implements ISkillHandler
 							SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
 							smsg.addNumber(total);
 							smsg.addItemName(cropId);
-							_activeChar.sendPacket(smsg);
+							_player.sendPacket(smsg);
 							
-							if (_activeChar.getParty() != null)
+							if (_player.getParty() != null)
 							{
 								smsg = new SystemMessage(SystemMessageId.S1_HARVESTED_S3_S2S);
-								smsg.addString(_activeChar.getName());
+								smsg.addString(_player.getName());
 								smsg.addNumber(total);
 								smsg.addItemName(cropId);
-								_activeChar.getParty().broadcastToPartyMembers(_activeChar, smsg);
+								_player.getParty().broadcastToPartyMembers(_player, smsg);
 							}
 							
 							if (iu != null)
 							{
-								_activeChar.sendPacket(iu);
+								_player.sendPacket(iu);
 							}
 							else
 							{
-								_activeChar.sendPacket(new ItemList(_activeChar, false));
+								_player.sendPacket(new ItemList(_player, false));
 							}
 						}
 					}
 				}
 				else
 				{
-					_activeChar.sendPacket(SystemMessageId.THE_HARVEST_HAS_FAILED);
+					_player.sendPacket(SystemMessageId.THE_HARVEST_HAS_FAILED);
 				}
 			}
 			else
 			{
-				_activeChar.sendPacket(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
+				_player.sendPacket(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
 			}
 		}
 	}
@@ -155,7 +155,7 @@ public class Harvest implements ISkillHandler
 	private boolean calcSuccess()
 	{
 		int basicSuccess = 100;
-		final int levelPlayer = _activeChar.getLevel();
+		final int levelPlayer = _player.getLevel();
 		final int levelTarget = _target.getLevel();
 		
 		int diff = (levelPlayer - levelTarget);

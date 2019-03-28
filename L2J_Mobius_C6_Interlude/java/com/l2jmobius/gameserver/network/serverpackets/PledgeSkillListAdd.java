@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: (ch) dd
  * @author -Wooden-
  */
-public class PledgeSkillListAdd extends L2GameServerPacket
+public class PledgeSkillListAdd extends GameServerPacket
 {
 	private final int _id;
 	private final int _lvl;

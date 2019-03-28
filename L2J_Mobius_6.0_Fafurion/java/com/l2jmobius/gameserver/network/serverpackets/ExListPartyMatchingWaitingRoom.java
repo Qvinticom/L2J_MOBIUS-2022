@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -37,11 +37,11 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 {
 	private static final int NUM_PER_PAGE = 64;
 	private final int _size;
-	private final List<L2PcInstance> _players = new LinkedList<>();
+	private final List<PlayerInstance> _players = new LinkedList<>();
 	
-	public ExListPartyMatchingWaitingRoom(L2PcInstance player, int page, int minLevel, int maxLevel, List<ClassId> classIds, String query)
+	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minLevel, int maxLevel, List<ClassId> classIds, String query)
 	{
-		final List<L2PcInstance> players = MatchingRoomManager.getInstance().getPlayerInWaitingList(minLevel, maxLevel, classIds, query);
+		final List<PlayerInstance> players = MatchingRoomManager.getInstance().getPlayerInWaitingList(minLevel, maxLevel, classIds, query);
 		
 		_size = players.size();
 		final int startIndex = (page - 1) * NUM_PER_PAGE;
@@ -63,7 +63,7 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 		
 		packet.writeD(_size);
 		packet.writeD(_players.size());
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			packet.writeS(player.getName());
 			packet.writeD(player.getClassId().getId());

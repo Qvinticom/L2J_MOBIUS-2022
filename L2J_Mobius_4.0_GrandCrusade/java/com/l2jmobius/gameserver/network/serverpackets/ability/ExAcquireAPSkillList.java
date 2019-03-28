@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -39,14 +39,14 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 	private final boolean _enable;
 	private final List<Skill> _skills = new ArrayList<>();
 	
-	public ExAcquireAPSkillList(L2PcInstance activeChar)
+	public ExAcquireAPSkillList(PlayerInstance player)
 	{
-		_abilityPoints = activeChar.getAbilityPoints();
-		_usedAbilityPoints = activeChar.getAbilityPointsUsed();
+		_abilityPoints = player.getAbilityPoints();
+		_usedAbilityPoints = player.getAbilityPointsUsed();
 		// _price = AbilityPointsData.getInstance().getPrice(_abilityPoints); Removed on Grand Crusade
-		for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+		for (SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
 		{
-			final Skill knownSkill = activeChar.getKnownSkill(sk.getSkillId());
+			final Skill knownSkill = player.getKnownSkill(sk.getSkillId());
 			if (knownSkill != null)
 			{
 				if (knownSkill.getLevel() == sk.getSkillLevel())
@@ -55,7 +55,7 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 				}
 			}
 		}
-		_enable = (!activeChar.isSubClassActive() || activeChar.isDualClassActive()) && (activeChar.getLevel() >= 85);
+		_enable = (!player.isSubClassActive() || player.isDualClassActive()) && (player.getLevel() >= 85);
 	}
 	
 	@Override

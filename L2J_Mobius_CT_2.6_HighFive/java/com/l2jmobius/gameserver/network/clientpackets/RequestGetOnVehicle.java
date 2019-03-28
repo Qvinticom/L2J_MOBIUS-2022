@@ -19,15 +19,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestGetOnVehicle implements IClientIncomingPacket
@@ -36,7 +35,7 @@ public final class RequestGetOnVehicle implements IClientIncomingPacket
 	private Location _pos;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_boatId = packet.readD();
 		_pos = new Location(packet.readD(), packet.readD(), packet.readD());
@@ -44,18 +43,18 @@ public final class RequestGetOnVehicle implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		L2BoatInstance boat;
-		if (activeChar.isInBoat())
+		BoatInstance boat;
+		if (player.isInBoat())
 		{
-			boat = activeChar.getBoat();
+			boat = player.getBoat();
 			if (boat.getObjectId() != _boatId)
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
@@ -65,19 +64,19 @@ public final class RequestGetOnVehicle implements IClientIncomingPacket
 		else
 		{
 			boat = BoatManager.getInstance().getBoat(_boatId);
-			if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius3D(boat, 1000))
+			if ((boat == null) || boat.isMoving() || !player.isInsideRadius3D(boat, 1000))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
 		
-		activeChar.setInVehiclePosition(_pos);
-		activeChar.setVehicle(boat);
-		activeChar.broadcastPacket(new GetOnVehicle(activeChar.getObjectId(), boat.getObjectId(), _pos));
+		player.setInVehiclePosition(_pos);
+		player.setVehicle(boat);
+		player.broadcastPacket(new GetOnVehicle(player.getObjectId(), boat.getObjectId(), _pos));
 		
-		activeChar.setXYZ(boat.getX(), boat.getY(), boat.getZ());
-		activeChar.setInsideZone(ZoneId.PEACE, true);
-		activeChar.revalidateZone(true);
+		player.setXYZ(boat.getX(), boat.getY(), boat.getZ());
+		player.setInsideZone(ZoneId.PEACE, true);
+		player.revalidateZone(true);
 	}
 }

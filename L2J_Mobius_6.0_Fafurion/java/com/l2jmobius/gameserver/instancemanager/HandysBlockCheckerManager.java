@@ -27,8 +27,8 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -145,7 +145,7 @@ public final class HandysBlockCheckerManager
 	 * @param arenaId
 	 * @return
 	 */
-	public boolean addPlayerToArena(L2PcInstance player, int arenaId)
+	public boolean addPlayerToArena(PlayerInstance player, int arenaId)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		
@@ -220,7 +220,7 @@ public final class HandysBlockCheckerManager
 	 * @param arenaId
 	 * @param team
 	 */
-	public void removePlayer(L2PcInstance player, int arenaId, int team)
+	public void removePlayer(PlayerInstance player, int arenaId, int team)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		synchronized (holder)
@@ -248,7 +248,7 @@ public final class HandysBlockCheckerManager
 	 * @param arena
 	 * @param team
 	 */
-	public void changePlayerToTeam(L2PcInstance player, int arena, int team)
+	public void changePlayerToTeam(PlayerInstance player, int arena, int team)
 	{
 		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
 		
@@ -327,7 +327,7 @@ public final class HandysBlockCheckerManager
 	 * Called when played logs out while participating in Block Checker Event
 	 * @param player
 	 */
-	public void onDisconnect(L2PcInstance player)
+	public void onDisconnect(PlayerInstance player)
 	{
 		final int arena = player.getBlockCheckerArena();
 		final int team = getHolder(arena).getPlayerTeam(player);
@@ -339,7 +339,7 @@ public final class HandysBlockCheckerManager
 			player.setTeam(Team.NONE);
 			
 			// Remove the event items
-			final PcInventory inv = player.getInventory();
+			final PlayerInventory inv = player.getInventory();
 			
 			if (inv.getItemByItemId(13787) != null)
 			{

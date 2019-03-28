@@ -20,7 +20,7 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -79,7 +79,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 	 * @param player
 	 * @return {@code true} if player is on event, {@code false} otherwise.
 	 */
-	public boolean isOnEvent(L2PcInstance player)
+	public boolean isOnEvent(PlayerInstance player)
 	{
 		return _members.containsKey(player.getObjectId());
 	}
@@ -88,7 +88,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 	 * @param player
 	 * @return {@code true} if player is blocked from leaving the game, {@code false} otherwise.
 	 */
-	public boolean isBlockingExit(L2PcInstance player)
+	public boolean isBlockingExit(PlayerInstance player)
 	{
 		return false;
 	}
@@ -97,7 +97,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 	 * @param player
 	 * @return {@code true} if player is blocked from receiving death penalty upon death, {@code false} otherwise.
 	 */
-	public boolean isBlockingDeathPenalty(L2PcInstance player)
+	public boolean isBlockingDeathPenalty(PlayerInstance player)
 	{
 		return false;
 	}
@@ -106,7 +106,7 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 	 * @param player
 	 * @return {@code true} if player can revive after death, {@code false} otherwise.
 	 */
-	public boolean canRevive(L2PcInstance player)
+	public boolean canRevive(PlayerInstance player)
 	{
 		return true;
 	}

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 /**
  * @author programmos
  */
-public class RequestPledgeExtendedInfo extends L2GameClientPacket
+public class RequestPledgeExtendedInfo extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private String _name;

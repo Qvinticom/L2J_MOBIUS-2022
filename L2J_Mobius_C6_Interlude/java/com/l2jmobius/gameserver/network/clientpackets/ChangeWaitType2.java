@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
-public final class ChangeWaitType2 extends L2GameClientPacket
+public final class ChangeWaitType2 extends GameClientPacket
 {
 	private boolean _typeStand;
 	
@@ -36,13 +36,13 @@ public final class ChangeWaitType2 extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		
 		if (getClient() != null)
 		{
@@ -57,9 +57,9 @@ public final class ChangeWaitType2 extends L2GameClientPacket
 				return;
 			}
 			
-			if ((target != null) && !player.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius(target, L2StaticObjectInstance.INTERACTION_DISTANCE, false, false))
+			if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius(target, StaticObjectInstance.INTERACTION_DISTANCE, false, false))
 			{
-				final ChairSit cs = new ChairSit(player, ((L2StaticObjectInstance) target).getStaticObjectId());
+				final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
 				player.sendPacket(cs);
 				player.sitDown();
 				player.broadcastPacket(cs);

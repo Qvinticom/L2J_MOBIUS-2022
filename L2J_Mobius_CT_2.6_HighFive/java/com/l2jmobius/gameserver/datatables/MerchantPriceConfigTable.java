@@ -34,7 +34,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.InstanceListManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 
 /**
@@ -55,7 +55,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	private final Map<Integer, MerchantPriceConfig> _mpcs = new HashMap<>();
 	private MerchantPriceConfig _defaultMpc;
 	
-	public MerchantPriceConfig getMerchantPriceConfig(L2MerchantInstance npc)
+	public MerchantPriceConfig getMerchantPriceConfig(MerchantInstance npc)
 	{
 		for (MerchantPriceConfig mpc : _mpcs.values())
 		{

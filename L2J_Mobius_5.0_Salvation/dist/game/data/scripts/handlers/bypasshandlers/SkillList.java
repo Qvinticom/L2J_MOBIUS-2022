@@ -17,10 +17,10 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class SkillList implements IBypassHandler
 {
@@ -30,13 +30,13 @@ public class SkillList implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if ((target == null) || !target.isNpc())
 		{
 			return false;
 		}
-		L2NpcInstance.showSkillList(activeChar, (L2Npc) target, activeChar.getClassId());
+		NpcInstance.showSkillList(player, (Npc) target, player.getClassId());
 		return true;
 	}
 	

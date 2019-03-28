@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCrestLarge;
  * Fomat : chd c: (id) 0xD0 h: (subid) 0x10 d: the crest id This is a trigger
  * @author -Wooden-
  */
-public final class RequestExPledgeCrestLarge extends L2GameClientPacket
+public final class RequestExPledgeCrestLarge extends GameClientPacket
 {
 	private int _crestId;
 	

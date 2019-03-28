@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.stats.functions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -34,14 +34,14 @@ public class FuncShare extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		if ((getApplayCond() == null) || getApplayCond().test(effector, effected, skill))
 		{
 			if ((effector != null) && effector.isServitor())
 			{
-				final L2Summon summon = (L2Summon) effector;
-				final L2PcInstance player = summon.getOwner();
+				final Summon summon = (Summon) effector;
+				final PlayerInstance player = summon.getOwner();
 				if (player != null)
 				{
 					return initVal + (getBaseValue(getStat(), player) * getValue());
@@ -51,7 +51,7 @@ public class FuncShare extends AbstractFunction
 		return initVal;
 	}
 	
-	public static double getBaseValue(Stats stat, L2PcInstance player)
+	public static double getBaseValue(Stats stat, PlayerInstance player)
 	{
 		switch (stat)
 		{

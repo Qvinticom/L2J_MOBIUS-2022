@@ -19,8 +19,8 @@ package instances.FaeronTrainingGrounds1;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -68,7 +68,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
 		String htmltext = null;
@@ -121,7 +121,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q10735_ASpecialPower.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
@@ -185,7 +185,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		// Check if monster is inside instance
 		final Instance world = npc.getInstanceWorld();
@@ -231,7 +231,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, com.l2jmobius.gameserver.model.L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, com.l2jmobius.gameserver.model.WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && (player.getTarget() == npc))
 		{
@@ -247,7 +247,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	 * @param qs quest state of killer
 	 * @return {@code true} when all monsters are killed, otherwise {@code false}
 	 */
-	private boolean onKillQuestChange(L2PcInstance killer, QuestState qs)
+	private boolean onKillQuestChange(PlayerInstance killer, QuestState qs)
 	{
 		final int value = qs.getMemoStateEx(Q10735_ASpecialPower.KILL_COUNT_VAR) + 1;
 		if (value >= 2)
@@ -267,7 +267,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	 * @param npcId template id of training monster
 	 * @param player player that owns instance
 	 */
-	private void spawnMonsters(int npcId, L2PcInstance player)
+	private void spawnMonsters(int npcId, PlayerInstance player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -275,9 +275,9 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 			final StatsSet params = world.getParameters();
 			for (int i = 0; i < MOB_SPAWNS.length; i++)
 			{
-				if (params.getObject("Mob" + i, L2Npc.class) == null)
+				if (params.getObject("Mob" + i, Npc.class) == null)
 				{
-					final L2Npc npc = addSpawn(npcId, MOB_SPAWNS[i], false, 0, false, world.getId());
+					final Npc npc = addSpawn(npcId, MOB_SPAWNS[i], false, 0, false, world.getId());
 					npc.setScriptValue(i);
 					params.set("Mob" + i, npc);
 				}
@@ -289,7 +289,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	 * Despawn training monsters inside instance
 	 * @param player player that owns instance
 	 */
-	private void despawnMonsters(L2PcInstance player)
+	private void despawnMonsters(PlayerInstance player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -297,7 +297,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 			final StatsSet params = world.getParameters();
 			for (int i = 0; i < MOB_SPAWNS.length; i++)
 			{
-				final L2Npc mob = params.getObject("Mob" + i, L2Npc.class);
+				final Npc mob = params.getObject("Mob" + i, Npc.class);
 				if (mob != null)
 				{
 					mob.deleteMe();

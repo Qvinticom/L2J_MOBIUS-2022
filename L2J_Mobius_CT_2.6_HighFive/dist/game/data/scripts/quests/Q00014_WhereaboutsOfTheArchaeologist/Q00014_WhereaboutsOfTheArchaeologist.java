@@ -16,8 +16,8 @@
  */
 package quests.Q00014_WhereaboutsOfTheArchaeologist;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,11 +44,11 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -57,17 +57,17 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 		{
 			case "31263-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, LETTER, 1);
 				break;
 			}
 			case "31538-01.html":
 			{
-				if (st.isCond(1) && hasQuestItems(player, LETTER))
+				if (qs.isCond(1) && hasQuestItems(player, LETTER))
 				{
 					giveAdena(player, 136928, true);
 					addExpAndSp(player, 325881, 32524);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
@@ -80,13 +80,13 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		final int npcId = npc.getId();
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -103,7 +103,7 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					switch (npcId)
 					{

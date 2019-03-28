@@ -19,22 +19,22 @@ package com.l2jmobius.gameserver.enums;
 import java.util.function.Function;
 
 import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 
 /**
  * @author UnAfraid
  */
 public enum ClanRewardType
 {
-	MEMBERS_ONLINE(0, L2Clan::getPreviousMaxOnlinePlayers),
-	HUNTING_MONSTERS(1, L2Clan::getPreviousHuntingPoints);
+	MEMBERS_ONLINE(0, Clan::getPreviousMaxOnlinePlayers),
+	HUNTING_MONSTERS(1, Clan::getPreviousHuntingPoints);
 	
 	final int _clientId;
 	final int _mask;
-	final Function<L2Clan, Integer> _pointsFunction;
+	final Function<Clan, Integer> _pointsFunction;
 	
-	ClanRewardType(int clientId, Function<L2Clan, Integer> pointsFunction)
+	ClanRewardType(int clientId, Function<Clan, Integer> pointsFunction)
 	{
 		_clientId = clientId;
 		_mask = 1 << clientId;
@@ -51,7 +51,7 @@ public enum ClanRewardType
 		return _mask;
 	}
 	
-	public ClanRewardBonus getAvailableBonus(L2Clan clan)
+	public ClanRewardBonus getAvailableBonus(Clan clan)
 	{
 		ClanRewardBonus availableBonus = null;
 		for (ClanRewardBonus bonus : ClanRewardData.getInstance().getClanRewardBonuses(this))

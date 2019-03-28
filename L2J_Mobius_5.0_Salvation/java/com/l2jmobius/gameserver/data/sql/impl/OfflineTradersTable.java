@@ -31,12 +31,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 public class OfflineTradersTable
 {
@@ -68,7 +68,7 @@ public class OfflineTradersTable
 			stm2.execute();
 			con.setAutoCommit(false); // avoid halfway done
 			
-			for (L2PcInstance pc : L2World.getInstance().getPlayers())
+			for (PlayerInstance pc : World.getInstance().getPlayers())
 			{
 				try
 				{
@@ -214,14 +214,14 @@ public class OfflineTradersTable
 					continue;
 				}
 				
-				L2PcInstance player = null;
+				PlayerInstance player = null;
 				
 				try
 				{
-					final L2GameClient client = new L2GameClient();
+					final GameClient client = new GameClient();
 					client.setDetached(true);
-					player = L2PcInstance.load(rs.getInt("charId"));
-					client.setActiveChar(player);
+					player = PlayerInstance.load(rs.getInt("charId"));
+					client.setPlayer(player);
 					player.setOnlineStatus(true, false);
 					client.setAccountName(player.getAccountNamePlayer());
 					player.setClient(client);
@@ -331,7 +331,7 @@ public class OfflineTradersTable
 		}
 	}
 	
-	public static synchronized void onTransaction(L2PcInstance trader, boolean finished, boolean firstCall)
+	public static synchronized void onTransaction(PlayerInstance trader, boolean finished, boolean firstCall)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);

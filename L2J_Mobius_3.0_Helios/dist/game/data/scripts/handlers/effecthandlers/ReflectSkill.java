@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -38,7 +38,7 @@ public class ReflectSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		effected.getStat().mergeAdd(_stat, _amount);
 	}

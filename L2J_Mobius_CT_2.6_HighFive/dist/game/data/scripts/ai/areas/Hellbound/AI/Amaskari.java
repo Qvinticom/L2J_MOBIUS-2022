@@ -18,9 +18,9 @@ package ai.areas.Hellbound.AI;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -71,13 +71,13 @@ public final class Amaskari extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("stop_toggle"))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[2]);
-			((L2MonsterInstance) npc).clearAggroList();
-			((L2MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+			((MonsterInstance) npc).clearAggroList();
+			((MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			npc.setIsInvul(false);
 			// npc.doCast(INVINCIBILITY.getSkill())
 		}
@@ -97,12 +97,12 @@ public final class Amaskari extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if ((npc.getId() == AMASKARI) && (getRandom(1000) < 25))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[0]);
-			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
+			for (MonsterInstance minion : ((MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && (getRandom(10) == 0))
 				{
@@ -115,11 +115,11 @@ public final class Amaskari extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getId() == AMASKARI_PRISONER)
 		{
-			final L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
+			final MonsterInstance master = ((MonsterInstance) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
 				master.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[1]);
@@ -152,7 +152,7 @@ public final class Amaskari extends AbstractNpcAI
 		}
 		else if (npc.getId() == AMASKARI)
 		{
-			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
+			for (MonsterInstance minion : ((MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead())
 				{
@@ -169,7 +169,7 @@ public final class Amaskari extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		startQuestTimer("onspawn_msg", (getRandom(3) + 1) * 30000, npc, null);
 		return super.onSpawn(npc);

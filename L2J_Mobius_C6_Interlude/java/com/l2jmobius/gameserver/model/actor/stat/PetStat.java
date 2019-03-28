@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.model.actor.stat;
 
-import com.l2jmobius.gameserver.datatables.sql.L2PetDataTable;
+import com.l2jmobius.gameserver.datatables.sql.PetDataTable;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.skills.Stats;
 
 public class PetStat extends SummonStat
 {
-	public PetStat(L2PetInstance activeChar)
+	public PetStat(PetInstance activeChar)
 	{
 		super(activeChar);
 	}
@@ -91,7 +91,7 @@ public class PetStat extends SummonStat
 		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());
 		getActiveChar().broadcastPacket(su);
 		
-		// Send a Server->Client packet PetInfo to the L2PcInstance
+		// Send a Server->Client packet PetInfo to the PlayerInstance
 		getActiveChar().getOwner().sendPacket(new PetInfo(getActiveChar()));
 		// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 		getActiveChar().updateEffectIcons(true);
@@ -107,13 +107,13 @@ public class PetStat extends SummonStat
 	@Override
 	public final long getExpForLevel(int level)
 	{
-		return L2PetDataTable.getInstance().getPetData(getActiveChar().getNpcId(), level).getPetMaxExp();
+		return PetDataTable.getInstance().getPetData(getActiveChar().getNpcId(), level).getPetMaxExp();
 	}
 	
 	@Override
-	public L2PetInstance getActiveChar()
+	public PetInstance getActiveChar()
 	{
-		return (L2PetInstance) super.getActiveChar();
+		return (PetInstance) super.getActiveChar();
 	}
 	
 	public final int getFeedBattle()
@@ -132,7 +132,7 @@ public class PetStat extends SummonStat
 		getActiveChar().stopFeed();
 		super.setLevel(value);
 		
-		getActiveChar().setPetData(L2PetDataTable.getInstance().getPetData(getActiveChar().getTemplate().npcId, getLevel()));
+		getActiveChar().setPetData(PetDataTable.getInstance().getPetData(getActiveChar().getTemplate().npcId, getLevel()));
 		getActiveChar().startFeed(false);
 		
 		if (getActiveChar().getControlItem() != null)
@@ -159,7 +159,7 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public int getMAtk(L2Character target, L2Skill skill)
+	public int getMAtk(Creature target, Skill skill)
 	{
 		double attack = getActiveChar().getPetData().getPetMAtk();
 		Stats stat = skill == null ? null : skill.getStat();
@@ -250,7 +250,7 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public int getMDef(L2Character target, L2Skill skill)
+	public int getMDef(Creature target, Skill skill)
 	{
 		final double defence = getActiveChar().getPetData().getPetMDef();
 		
@@ -258,13 +258,13 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public int getPAtk(L2Character target)
+	public int getPAtk(Creature target)
 	{
 		return (int) calcStat(Stats.POWER_ATTACK, getActiveChar().getPetData().getPetPAtk(), target, null);
 	}
 	
 	@Override
-	public int getPDef(L2Character target)
+	public int getPDef(Creature target)
 	{
 		return (int) calcStat(Stats.POWER_DEFENCE, getActiveChar().getPetData().getPetPDef(), target, null);
 	}
@@ -276,13 +276,13 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public int getCriticalHit(L2Character target, L2Skill skill)
+	public int getCriticalHit(Creature target, Skill skill)
 	{
 		return (int) calcStat(Stats.CRITICAL_RATE, getActiveChar().getPetData().getPetCritical(), target, null);
 	}
 	
 	@Override
-	public int getEvasionRate(L2Character target)
+	public int getEvasionRate(Creature target)
 	{
 		return (int) calcStat(Stats.EVASION_RATE, getActiveChar().getPetData().getPetEvasion(), target, null);
 	}

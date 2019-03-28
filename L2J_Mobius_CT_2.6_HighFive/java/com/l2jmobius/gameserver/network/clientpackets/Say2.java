@@ -23,22 +23,21 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.ChatHandler;
 import com.l2jmobius.gameserver.handler.IChatHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChat;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChat;
 import com.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class ...
  * @version $Revision: 1.16.2.12.2.7 $ $Date: 2005/04/11 10:06:11 $
  */
 public final class Say2 implements IClientIncomingPacket
@@ -89,7 +88,7 @@ public final class Say2 implements IClientIncomingPacket
 	private String _target;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_text = packet.readS();
 		_type = packet.readD();
@@ -98,10 +97,10 @@ public final class Say2 implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -109,61 +108,61 @@ public final class Say2 implements IClientIncomingPacket
 		ChatType chatType = ChatType.findByClientId(_type);
 		if (chatType == null)
 		{
-			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + activeChar.getName() + " text: " + _text);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			Disconnection.of(activeChar).defaultSequence(false);
+			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + player.getName() + " text: " + _text);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			Disconnection.of(player).defaultSequence(false);
 			return;
 		}
 		
 		if (_text.isEmpty())
 		{
-			LOGGER.warning(activeChar.getName() + ": sending empty text. Possible packet hack!");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			Disconnection.of(activeChar).defaultSequence(false);
+			LOGGER.warning(player.getName() + ": sending empty text. Possible packet hack!");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			Disconnection.of(player).defaultSequence(false);
 			return;
 		}
 		
 		// Even though the client can handle more characters than it's current limit allows, an overflow (critical error) happens if you pass a huge (1000+) message.
 		// July 11, 2011 - Verified on High Five 4 official client as 105.
 		// Allow higher limit if player shift some item (text is longer then).
-		if (!activeChar.isGM() && (((_text.indexOf(8) >= 0) && (_text.length() > 500)) || ((_text.indexOf(8) < 0) && (_text.length() > 105))))
+		if (!player.isGM() && (((_text.indexOf(8) >= 0) && (_text.length() > 500)) || ((_text.indexOf(8) < 0) && (_text.length() > 105))))
 		{
-			activeChar.sendPacket(SystemMessageId.WHEN_A_USER_S_KEYBOARD_INPUT_EXCEEDS_A_CERTAIN_CUMULATIVE_SCORE_A_CHAT_BAN_WILL_BE_APPLIED_THIS_IS_DONE_TO_DISCOURAGE_SPAMMING_PLEASE_AVOID_POSTING_THE_SAME_MESSAGE_MULTIPLE_TIMES_DURING_A_SHORT_PERIOD);
+			player.sendPacket(SystemMessageId.WHEN_A_USER_S_KEYBOARD_INPUT_EXCEEDS_A_CERTAIN_CUMULATIVE_SCORE_A_CHAT_BAN_WILL_BE_APPLIED_THIS_IS_DONE_TO_DISCOURAGE_SPAMMING_PLEASE_AVOID_POSTING_THE_SAME_MESSAGE_MULTIPLE_TIMES_DURING_A_SHORT_PERIOD);
 			return;
 		}
 		
 		if (Config.L2WALKER_PROTECTION && (chatType == ChatType.WHISPER) && checkBot(_text))
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Client Emulator Detect: Player " + activeChar.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Client Emulator Detect: Player " + player.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if (activeChar.isCursedWeaponEquipped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT)))
+		if (player.isCursedWeaponEquipped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT)))
 		{
-			activeChar.sendPacket(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON);
+			player.sendPacket(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON);
 			return;
 		}
 		
-		if (activeChar.isChatBanned() && (_text.charAt(0) != '.'))
+		if (player.isChatBanned() && (_text.charAt(0) != '.'))
 		{
-			if (activeChar.getEffectList().getFirstEffect(L2EffectType.CHAT_BLOCK) != null)
+			if (player.getEffectList().getFirstEffect(EffectType.CHAT_BLOCK) != null)
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);
+				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_CHATTING_IS_NOT_ALLOWED);
 			}
 			else if (Config.BAN_CHAT_CHANNELS.contains(chatType))
 			{
-				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
+				player.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			}
 			return;
 		}
 		
-		if (activeChar.isJailed() && Config.JAIL_DISABLE_CHAT && ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)))
+		if (player.isJailed() && Config.JAIL_DISABLE_CHAT && ((chatType == ChatType.WHISPER) || (chatType == ChatType.SHOUT) || (chatType == ChatType.TRADE) || (chatType == ChatType.HERO_VOICE)))
 		{
-			activeChar.sendMessage("You can not chat with players outside of the jail.");
+			player.sendMessage("You can not chat with players outside of the jail.");
 			return;
 		}
 		
-		if ((chatType == ChatType.PETITION_PLAYER) && activeChar.isGM())
+		if ((chatType == ChatType.PETITION_PLAYER) && player.isGM())
 		{
 			chatType = ChatType.PETITION_GM;
 		}
@@ -172,20 +171,20 @@ public final class Say2 implements IClientIncomingPacket
 		{
 			if (chatType == ChatType.WHISPER)
 			{
-				LOGGER_CHAT.info(chatType.name() + " [" + activeChar + " to " + _target + "] " + _text);
+				LOGGER_CHAT.info(chatType.name() + " [" + player + " to " + _target + "] " + _text);
 			}
 			else
 			{
-				LOGGER_CHAT.info(chatType.name() + " [" + activeChar + "] " + _text);
+				LOGGER_CHAT.info(chatType.name() + " [" + player + "] " + _text);
 			}
 		}
 		
-		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(activeChar))
+		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(player))
 		{
 			return;
 		}
 		
-		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);
+		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(player, World.getInstance().getPlayer(_target), _text, chatType), ChatFilterReturn.class);
 		if (filter != null)
 		{
 			_text = filter.getFilteredText();
@@ -200,7 +199,7 @@ public final class Say2 implements IClientIncomingPacket
 		final IChatHandler handler = ChatHandler.getInstance().getHandler(chatType);
 		if (handler != null)
 		{
-			handler.handleChat(chatType, activeChar, _target, _text);
+			handler.handleChat(chatType, player, _target, _text);
 		}
 		else
 		{
@@ -230,7 +229,7 @@ public final class Say2 implements IClientIncomingPacket
 		_text = filteredText;
 	}
 	
-	private boolean parseAndPublishItem(L2PcInstance owner)
+	private boolean parseAndPublishItem(PlayerInstance owner)
 	{
 		int pos1 = -1;
 		while ((pos1 = _text.indexOf(8, pos1)) > -1)
@@ -247,7 +246,7 @@ public final class Say2 implements IClientIncomingPacket
 				result.append(_text.charAt(pos++));
 			}
 			final int id = Integer.parseInt(result.toString());
-			final L2Object item = L2World.getInstance().findObject(id);
+			final WorldObject item = World.getInstance().findObject(id);
 			if (item.isItem())
 			{
 				if (owner.getInventory().getItemByObjectId(id) == null)
@@ -255,7 +254,7 @@ public final class Say2 implements IClientIncomingPacket
 					LOGGER.info(owner.getClient() + " trying publish item which doesnt own! ID:" + id);
 					return false;
 				}
-				((L2ItemInstance) item).publish();
+				((ItemInstance) item).publish();
 			}
 			else
 			{

@@ -23,7 +23,7 @@ public class SocialAction implements IClientOutgoingPacket
 {
 	public static final int LEVEL_UP = 2122;
 	
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _actionId;
 	
 	/**
@@ -32,7 +32,7 @@ public class SocialAction implements IClientOutgoingPacket
 	 */
 	public SocialAction(int objectId, int actionId)
 	{
-		_charObjId = objectId;
+		_objectId = objectId;
 		_actionId = actionId;
 	}
 	
@@ -40,7 +40,7 @@ public class SocialAction implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SOCIAL_ACTION.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_actionId);
 		return true;
 	}

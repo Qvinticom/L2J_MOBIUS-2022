@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,13 +30,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class HennaInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
-	private final List<L2Henna> _hennas = new ArrayList<>();
+	private final PlayerInstance _player;
+	private final List<Henna> _hennas = new ArrayList<>();
 	
-	public HennaInfo(L2PcInstance player)
+	public HennaInfo(PlayerInstance player)
 	{
-		_activeChar = player;
-		for (L2Henna henna : _activeChar.getHennaList())
+		_player = player;
+		for (Henna henna : _player.getHennaList())
 		{
 			if (henna != null)
 			{
@@ -49,15 +49,15 @@ public final class HennaInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_INFO.writeId(packet);
-		packet.writeC(_activeChar.getHennaStatINT()); // equip INT
-		packet.writeC(_activeChar.getHennaStatSTR()); // equip STR
-		packet.writeC(_activeChar.getHennaStatCON()); // equip CON
-		packet.writeC(_activeChar.getHennaStatMEN()); // equip MEN
-		packet.writeC(_activeChar.getHennaStatDEX()); // equip DEX
-		packet.writeC(_activeChar.getHennaStatWIT()); // equip WIT
+		packet.writeC(_player.getHennaStatINT()); // equip INT
+		packet.writeC(_player.getHennaStatSTR()); // equip STR
+		packet.writeC(_player.getHennaStatCON()); // equip CON
+		packet.writeC(_player.getHennaStatMEN()); // equip MEN
+		packet.writeC(_player.getHennaStatDEX()); // equip DEX
+		packet.writeC(_player.getHennaStatWIT()); // equip WIT
 		packet.writeD(3); // Slots
 		packet.writeD(_hennas.size()); // Size
-		for (L2Henna henna : _hennas)
+		for (Henna henna : _hennas)
 		{
 			packet.writeD(henna.getDyeId());
 			packet.writeD(0x01);

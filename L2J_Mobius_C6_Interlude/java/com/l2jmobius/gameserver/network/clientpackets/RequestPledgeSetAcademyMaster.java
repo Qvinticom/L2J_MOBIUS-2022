@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) dSS
  * @author -Wooden-
  */
-public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
+public final class RequestPledgeSetAcademyMaster extends GameClientPacket
 {
 	private String _currPlayerName;
 	private int _set; // 1 set, 0 delete
@@ -43,32 +43,32 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		final L2Clan clan = activeChar.getClan();
+		final PlayerInstance player = getClient().getPlayer();
+		final Clan clan = player.getClan();
 		
 		if (clan == null)
 		{
 			return;
 		}
 		
-		if ((activeChar.getClanPrivileges() & L2Clan.CP_CL_MASTER_RIGHTS) != L2Clan.CP_CL_MASTER_RIGHTS)
+		if ((player.getClanPrivileges() & Clan.CP_CL_MASTER_RIGHTS) != Clan.CP_CL_MASTER_RIGHTS)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_DISMISS_AN_APPRENTICE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_DISMISS_AN_APPRENTICE);
 			return;
 		}
 		
-		final L2ClanMember currentMember = clan.getClanMember(_currPlayerName);
-		final L2ClanMember targetMember = clan.getClanMember(_targetPlayerName);
+		final ClanMember currentMember = clan.getClanMember(_currPlayerName);
+		final ClanMember targetMember = clan.getClanMember(_targetPlayerName);
 		
 		if ((currentMember == null) || (targetMember == null))
 		{
 			return;
 		}
 		
-		L2ClanMember apprenticeMember;
-		L2ClanMember sponsorMember;
+		ClanMember apprenticeMember;
+		ClanMember sponsorMember;
 		
-		if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
+		if (currentMember.getPledgeType() == Clan.SUBUNIT_ACADEMY)
 		{
 			apprenticeMember = currentMember;
 			sponsorMember = targetMember;
@@ -79,8 +79,8 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 			sponsorMember = currentMember;
 		}
 		
-		final L2PcInstance apprentice = apprenticeMember.getPlayerInstance();
-		final L2PcInstance sponsor = sponsorMember.getPlayerInstance();
+		final PlayerInstance apprentice = apprenticeMember.getPlayerInstance();
+		final PlayerInstance sponsor = sponsorMember.getPlayerInstance();
 		
 		SystemMessage sm = null;
 		
@@ -116,7 +116,7 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 		{
 			if ((apprenticeMember.getSponsor() != 0) || (sponsorMember.getApprentice() != 0) || (apprenticeMember.getApprentice() != 0) || (sponsorMember.getSponsor() != 0))
 			{
-				activeChar.sendMessage("Remove previous connections first.");
+				player.sendMessage("Remove previous connections first.");
 				return;
 			}
 			
@@ -149,9 +149,9 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 		sm.addString(sponsorMember.getName());
 		sm.addString(apprenticeMember.getName());
 		
-		if ((sponsor != activeChar) && (sponsor != apprentice))
+		if ((sponsor != player) && (sponsor != apprentice))
 		{
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		
 		if (sponsor != null)

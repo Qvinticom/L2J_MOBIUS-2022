@@ -18,9 +18,9 @@ package quests.Q00503_PursuitOfClanAmbition;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -86,7 +86,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.startsWith("DESPAWN"))
 		{
@@ -308,9 +308,9 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "SPAWN_WITCH":
 			{
-				final L2Npc athrea = addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 0);
+				final Npc athrea = addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 0);
 				athrea.setScriptValue(50301);
-				final L2Npc kalis = addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 0);
+				final Npc kalis = addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 0);
 				kalis.setScriptValue(50302);
 				break;
 			}
@@ -319,7 +319,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs == null) || !qs.isStarted() || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
@@ -327,13 +327,13 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		final L2Clan clan = killer.getClan();
+		final Clan clan = killer.getClan();
 		if (clan == null)
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		final L2PcInstance leader = clan.getLeader().getPlayerInstance();
+		final PlayerInstance leader = clan.getLeader().getPlayerInstance();
 		if ((leader == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, leader, true))
 		{
 			return super.onKill(npc, killer, isSummon);
@@ -431,7 +431,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final QuestState lqs = getLeaderQuestState(player, getName());
@@ -442,7 +442,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				if (player.isClanLeader())
 				{
-					final L2Clan clan = player.getClan();
+					final Clan clan = player.getClan();
 					if (clan != null)
 					{
 						if (clan.getLevel() < 4)
@@ -797,7 +797,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -834,11 +834,11 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 		return super.onSpawn(npc);
 	}
 	
-	private static QuestState getLeaderQuestState(L2PcInstance player, String quest)
+	private static QuestState getLeaderQuestState(PlayerInstance player, String quest)
 	{
 		if (player.getClan() != null)
 		{
-			final L2PcInstance leader = player.getClan().getLeader().getPlayerInstance();
+			final PlayerInstance leader = player.getClan().getLeader().getPlayerInstance();
 			if (leader != null)
 			{
 				return leader.getQuestState(quest);

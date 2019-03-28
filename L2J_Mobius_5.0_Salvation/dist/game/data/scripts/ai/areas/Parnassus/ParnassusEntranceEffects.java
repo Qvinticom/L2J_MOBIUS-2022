@@ -16,8 +16,8 @@
  */
 package ai.areas.Parnassus;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 import ai.AbstractNpcAI;
@@ -43,7 +43,7 @@ public class ParnassusEntranceEffects extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature != null)
 		{

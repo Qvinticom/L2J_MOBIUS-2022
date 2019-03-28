@@ -16,13 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestChangePartyLeader extends L2GameClientPacket
+public final class RequestChangePartyLeader extends GameClientPacket
 {
 	private String _name;
 	
@@ -35,15 +34,15 @@ public final class RequestChangePartyLeader extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isInParty() && activeChar.getParty().isLeader(activeChar))
+		if (player.isInParty() && player.getParty().isLeader(player))
 		{
-			activeChar.getParty().changePartyLeader(_name);
+			player.getParty().changePartyLeader(_name);
 		}
 	}
 }

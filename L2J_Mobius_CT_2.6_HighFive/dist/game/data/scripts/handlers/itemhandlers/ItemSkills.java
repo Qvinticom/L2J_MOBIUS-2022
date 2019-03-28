@@ -16,9 +16,9 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -27,12 +27,12 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class ItemSkills extends ItemSkillsTemplate
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		if ((activeChar != null) && activeChar.isInOlympiadMode())
+		final PlayerInstance player = playable.getActingPlayer();
+		if ((player != null) && player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_MATCH);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_MATCH);
 			return false;
 		}
 		return super.useItem(playable, item, forceUse);

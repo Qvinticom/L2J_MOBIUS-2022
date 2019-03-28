@@ -150,7 +150,7 @@ public final class ItemAuctionManager implements IGameXmlReader
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
+			LOGGER.log(Level.SEVERE, "ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
 		}
 	}
 	

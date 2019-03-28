@@ -20,10 +20,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -40,7 +40,7 @@ public class AdminHeal implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_heal"))
 		{
@@ -71,18 +71,18 @@ public class AdminHeal implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleHeal(L2PcInstance activeChar)
+	private void handleHeal(PlayerInstance activeChar)
 	{
 		handleHeal(activeChar, null);
 	}
 	
-	private void handleHeal(L2PcInstance activeChar, String player)
+	private void handleHeal(PlayerInstance activeChar, String player)
 	{
 		
-		L2Object obj = activeChar.getTarget();
+		WorldObject obj = activeChar.getTarget();
 		if (player != null)
 		{
-			final L2PcInstance plyr = L2World.getInstance().getPlayer(player);
+			final PlayerInstance plyr = World.getInstance().getPlayer(player);
 			
 			if (plyr != null)
 			{
@@ -93,7 +93,7 @@ public class AdminHeal implements IAdminCommandHandler
 				try
 				{
 					final int radius = Integer.parseInt(player);
-					L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
+					World.getInstance().forEachVisibleObject(activeChar, Creature.class, character ->
 					{
 						character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
 						if (character.isPlayer())
@@ -114,9 +114,9 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			obj = activeChar;
 		}
-		if (obj.isCharacter())
+		if (obj.isCreature())
 		{
-			final L2Character target = (L2Character) obj;
+			final Creature target = (Creature) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
 			if (target.isPlayer())
 			{

@@ -18,12 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.trap.OnTrapAction;
+import com.l2jmobius.gameserver.model.events.impl.creature.trap.OnTrapAction;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -56,7 +56,7 @@ public final class TrapRemove extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
+		final Creature target = info.getEffected();
 		if (!target.isTrap())
 		{
 			return;
@@ -67,7 +67,7 @@ public final class TrapRemove extends AbstractEffect
 			return;
 		}
 		
-		final L2TrapInstance trap = (L2TrapInstance) target;
+		final TrapInstance trap = (TrapInstance) target;
 		if (!trap.canBeSeen(info.getEffector()))
 		{
 			if (info.getEffector().isPlayer())

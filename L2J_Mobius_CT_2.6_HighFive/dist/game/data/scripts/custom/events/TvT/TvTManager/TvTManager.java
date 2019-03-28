@@ -20,8 +20,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -55,7 +55,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((player == null) || !TvTEvent.isParticipating())
 		{
@@ -130,7 +130,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (TvTEvent.isParticipating())
@@ -158,7 +158,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 	}
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance player, String params)
 	{
 		String html = null;
 		switch (command)
@@ -167,7 +167,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 			{
 				if (TvTEvent.isStarting() || TvTEvent.isStarted())
 				{
-					html = getTvTStatus(activeChar);
+					html = getTvTStatus(player);
 				}
 				else
 				{
@@ -177,24 +177,24 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 			}
 			case "tvtjoin":
 			{
-				html = onAdvEvent("join", null, activeChar);
+				html = onAdvEvent("join", null, player);
 				break;
 			}
 			case "tvtleave":
 			{
-				html = onAdvEvent("remove", null, activeChar);
+				html = onAdvEvent("remove", null, player);
 				break;
 			}
 		}
 		
 		if (html != null)
 		{
-			activeChar.sendPacket(new NpcHtmlMessage(html));
+			player.sendPacket(new NpcHtmlMessage(html));
 		}
 		return true;
 	}
 	
-	private String getTvTStatus(L2PcInstance player)
+	private String getTvTStatus(PlayerInstance player)
 	{
 		final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
 		final int[] teamsPointsCounts = TvTEvent.getTeamsPoints();

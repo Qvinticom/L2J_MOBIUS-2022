@@ -17,15 +17,14 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestJoinPledge implements IClientIncomingPacket
@@ -34,7 +33,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 	private int _pledgeType;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_target = packet.readD();
 		_pledgeType = packet.readD();
@@ -42,40 +41,40 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance target = L2World.getInstance().getPlayer(_target);
+		final PlayerInstance target = World.getInstance().getPlayer(_target);
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return;
 		}
 		
-		if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType))
+		if (!clan.checkClanJoinCondition(player, target, _pledgeType))
 		{
 			return;
 		}
 		
-		if (!activeChar.getRequest().setRequest(target, this))
+		if (!player.getRequest().setRequest(target, this))
 		{
 			return;
 		}
 		
-		final String pledgeName = activeChar.getClan().getName();
-		final String subPledgeName = (activeChar.getClan().getSubPledge(_pledgeType) != null ? activeChar.getClan().getSubPledge(_pledgeType).getName() : null);
-		target.sendPacket(new AskJoinPledge(activeChar.getObjectId(), subPledgeName, _pledgeType, pledgeName));
+		final String pledgeName = player.getClan().getName();
+		final String subPledgeName = (player.getClan().getSubPledge(_pledgeType) != null ? player.getClan().getSubPledge(_pledgeType).getName() : null);
+		target.sendPacket(new AskJoinPledge(player.getObjectId(), subPledgeName, _pledgeType, pledgeName));
 	}
 	
 	public int getPledgeType()

@@ -17,10 +17,10 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 
@@ -36,30 +36,30 @@ public final class ExperienceGain implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance player, String params)
 	{
 		if (command.equals("expoff"))
 		{
-			if (!activeChar.getVariables().getBoolean("EXPOFF", false))
+			if (!player.getVariables().getBoolean("EXPOFF", false))
 			{
-				activeChar.addListener(new FunctionEventListener(activeChar, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), event.getNewExp() - event.getOldExp()), this));
-				activeChar.getVariables().set("EXPOFF", true);
-				activeChar.sendMessage("Experience gain is disabled.");
+				player.addListener(new FunctionEventListener(player, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), event.getNewExp() - event.getOldExp()), this));
+				player.getVariables().set("EXPOFF", true);
+				player.sendMessage("Experience gain is disabled.");
 			}
 		}
 		else if (command.equals("expon"))
 		{
-			if (activeChar.getVariables().getBoolean("EXPOFF", false))
+			if (player.getVariables().getBoolean("EXPOFF", false))
 			{
-				activeChar.removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
-				activeChar.getVariables().set("EXPOFF", false);
-				activeChar.sendMessage("Experience gain is enabled.");
+				player.removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
+				player.getVariables().set("EXPOFF", false);
+				player.sendMessage("Experience gain is enabled.");
 			}
 		}
 		return true;
 	}
 	
-	public TerminateReturn onExperienceReceived(L2Playable playable, long exp)
+	public TerminateReturn onExperienceReceived(Playable playable, long exp)
 	{
 		if (playable.isPlayer() && (playable.getActingPlayer().isDead()))
 		{

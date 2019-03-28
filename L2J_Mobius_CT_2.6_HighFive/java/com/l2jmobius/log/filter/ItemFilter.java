@@ -21,7 +21,7 @@ import java.util.Set;
 import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
 
@@ -51,6 +51,6 @@ public class ItemFilter implements Filter
 		}
 		
 		final String[] messageList = record.getMessage().split(":");
-		return (messageList.length < 2) || !EXCLUDE_PROCESS.contains(messageList[1]) || !EXCLUDED_ITEM_TYPES.contains(((L2ItemInstance) record.getParameters()[0]).getItemType());
+		return (messageList.length < 2) || !EXCLUDE_PROCESS.contains(messageList[1]) || !EXCLUDED_ITEM_TYPES.contains(((ItemInstance) record.getParameters()[0]).getItemType());
 	}
 }

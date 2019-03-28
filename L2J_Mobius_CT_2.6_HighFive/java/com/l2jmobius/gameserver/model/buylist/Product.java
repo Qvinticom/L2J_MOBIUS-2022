@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author NosBit
@@ -36,14 +36,14 @@ public final class Product
 	private static final Logger LOGGER = Logger.getLogger(Product.class.getName());
 	
 	private final int _buyListId;
-	private final L2Item _item;
+	private final Item _item;
 	private final long _price;
 	private final long _restockDelay;
 	private final long _maxCount;
 	private AtomicLong _count = null;
 	private ScheduledFuture<?> _restockTask = null;
 	
-	public Product(int buyListId, L2Item item, long price, long restockDelay, long maxCount)
+	public Product(int buyListId, Item item, long price, long restockDelay, long maxCount)
 	{
 		_buyListId = buyListId;
 		_item = item;
@@ -61,7 +61,7 @@ public final class Product
 		return _buyListId;
 	}
 	
-	public L2Item getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

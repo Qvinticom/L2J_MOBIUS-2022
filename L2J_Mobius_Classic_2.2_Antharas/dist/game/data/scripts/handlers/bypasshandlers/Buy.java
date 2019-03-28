@@ -20,9 +20,9 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class Buy implements IBypassHandler
 {
@@ -32,9 +32,9 @@ public class Buy implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!(target instanceof L2MerchantInstance))
+		if (!(target instanceof MerchantInstance))
 		{
 			return false;
 		}
@@ -49,7 +49,7 @@ public class Buy implements IBypassHandler
 				return false;
 			}
 			
-			((L2MerchantInstance) target).showBuyWindow(activeChar, Integer.parseInt(st.nextToken()));
+			((MerchantInstance) target).showBuyWindow(player, Integer.parseInt(st.nextToken()));
 			return true;
 		}
 		catch (Exception e)

@@ -19,9 +19,9 @@ package quests.Q00711_PathToBecomingALordInnadril;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -60,12 +60,12 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
 		final Castle castle = CastleManager.getInstance().getCastleById(InnadrilCastle);
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		if (event.equals("neurath_q711_03.htm"))
 		{
 			qs.startQuest();
@@ -118,7 +118,7 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -127,7 +127,7 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 		{
 			return "Castle has no lord";
 		}
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		
 		switch (npc.getId())
 		{
@@ -234,7 +234,7 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		
@@ -255,8 +255,8 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 	private boolean isLordAvailable(int cond, QuestState qs)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(InnadrilCastle);
-		final L2Clan owner = castle.getOwner();
-		final L2PcInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
+		final Clan owner = castle.getOwner();
+		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
 		if (owner != null)
 		{
 			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond)))

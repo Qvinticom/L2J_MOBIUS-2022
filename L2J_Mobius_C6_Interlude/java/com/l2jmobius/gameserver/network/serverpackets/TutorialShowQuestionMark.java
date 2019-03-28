@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class TutorialShowQuestionMark extends L2GameServerPacket
+public class TutorialShowQuestionMark extends GameServerPacket
 {
 	private final int _blink;
 	

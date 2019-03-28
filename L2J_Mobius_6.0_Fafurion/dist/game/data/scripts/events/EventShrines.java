@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.instancemanager.EventShrineManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 /**
@@ -57,20 +57,20 @@ public final class EventShrines extends Quest
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
 			if (EventShrineManager.getInstance().areShrinesEnabled())
 			{
-				character.sendPacket(new OnEventTrigger(ZONE_TRIGGERS.get(zone.getId()), true));
+				creature.sendPacket(new OnEventTrigger(ZONE_TRIGGERS.get(zone.getId()), true));
 			}
 			else // Deactivate shrine.
 			{
-				character.sendPacket(new OnEventTrigger(ZONE_TRIGGERS.get(zone.getId()) + 2, true));
+				creature.sendPacket(new OnEventTrigger(ZONE_TRIGGERS.get(zone.getId()) + 2, true));
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	public static void main(String[] args)

@@ -19,18 +19,17 @@ package com.l2jmobius.commons.util.object;
 import java.util.Iterator;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
 
 /**
- * This class ...
  * @author luisantonioa
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  * @param <T>
  */
-public abstract class L2ObjectSet<T extends L2Object> implements Iterable<T>
+public abstract class L2ObjectSet<T extends WorldObject> implements Iterable<T>
 {
-	public static L2ObjectSet<L2Object> createL2ObjectSet()
+	public static L2ObjectSet<WorldObject> createL2ObjectSet()
 	{
 		switch (Config.SET_TYPE)
 		{
@@ -45,7 +44,7 @@ public abstract class L2ObjectSet<T extends L2Object> implements Iterable<T>
 		}
 	}
 	
-	public static L2ObjectSet<L2Playable> createL2PlayerSet()
+	public static L2ObjectSet<Playable> createL2PlayerSet()
 	{
 		switch (Config.SET_TYPE)
 		{

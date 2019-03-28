@@ -21,10 +21,10 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.VillageMasterInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -87,19 +87,19 @@ public final class SubclassCertification extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		st.setState(State.STARTED);
+		final QuestState qs = getQuestState(player, true);
+		qs.setState(State.STARTED);
 		return "Main.html";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -116,7 +116,7 @@ public final class SubclassCertification extends AbstractNpcAI
 				{
 					htmltext = "NotMinLevel.html";
 				}
-				else if (((L2VillageMasterInstance) npc).checkVillageMaster(player.getActiveClass()))
+				else if (((VillageMasterInstance) npc).checkVillageMaster(player.getActiveClass()))
 				{
 					htmltext = "CertificationList.html";
 				}
@@ -148,27 +148,27 @@ public final class SubclassCertification extends AbstractNpcAI
 			}
 			case "lvl65Emergent":
 			{
-				htmltext = doCertification(player, st, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 65);
+				htmltext = doCertification(player, qs, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 65);
 				break;
 			}
 			case "lvl70Emergent":
 			{
-				htmltext = doCertification(player, st, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 70);
+				htmltext = doCertification(player, qs, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 70);
 				break;
 			}
 			case "lvl75Master":
 			{
-				htmltext = doCertification(player, st, "ClassAbility", CERTIFICATE_MASTER_ABILITY, 75);
+				htmltext = doCertification(player, qs, "ClassAbility", CERTIFICATE_MASTER_ABILITY, 75);
 				break;
 			}
 			case "lvl75Class":
 			{
-				htmltext = doCertification(player, st, "ClassAbility", ABILITY_CERTIFICATES.get(getClassIndex(player)), 75);
+				htmltext = doCertification(player, qs, "ClassAbility", ABILITY_CERTIFICATES.get(getClassIndex(player)), 75);
 				break;
 			}
 			case "lvl80Class":
 			{
-				htmltext = doCertification(player, st, "ClassAbility", TRANSFORMATION_SEALBOOKS.get(getClassIndex(player)), 80);
+				htmltext = doCertification(player, qs, "ClassAbility", TRANSFORMATION_SEALBOOKS.get(getClassIndex(player)), 80);
 				break;
 			}
 			case "Main.html":
@@ -182,7 +182,7 @@ public final class SubclassCertification extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String replaceHtml(L2PcInstance player, String htmlFile, boolean replaceClass, String levelToReplace)
+	private String replaceHtml(PlayerInstance player, String htmlFile, boolean replaceClass, String levelToReplace)
 	{
 		String htmltext = getHtm(player, htmlFile);
 		if (replaceClass)
@@ -196,7 +196,7 @@ public final class SubclassCertification extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private static int getClassIndex(L2PcInstance player)
+	private static int getClassIndex(PlayerInstance player)
 	{
 		if (player.isInCategory(CategoryType.SUB_GROUP_WARRIOR))
 		{
@@ -230,7 +230,7 @@ public final class SubclassCertification extends AbstractNpcAI
 		return -1;
 	}
 	
-	private String doCertification(L2PcInstance player, QuestState qs, String variable, Integer itemId, int level)
+	private String doCertification(PlayerInstance player, QuestState qs, String variable, Integer itemId, int level)
 	{
 		if (itemId == null)
 		{
@@ -251,7 +251,7 @@ public final class SubclassCertification extends AbstractNpcAI
 		else
 		{
 			// Add items to player's inventory
-			final L2ItemInstance item = player.getInventory().addItem("Quest", itemId, 1, player, player.getTarget());
+			final ItemInstance item = player.getInventory().addItem("Quest", itemId, 1, player, player.getTarget());
 			if (item == null)
 			{
 				return null;

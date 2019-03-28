@@ -17,8 +17,8 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -34,55 +34,55 @@ public class PartyInfo implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
-		if (activeChar.isInParty())
+		player.sendPacket(SystemMessageId.PARTY_INFORMATION);
+		if (player.isInParty())
 		{
-			final L2Party party = activeChar.getParty();
+			final Party party = player.getParty();
 			switch (party.getDistributionType())
 			{
 				case FINDERS_KEEPERS:
 				{
-					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS);
+					player.sendPacket(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS);
 					break;
 				}
 				case RANDOM:
 				{
-					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM);
+					player.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM);
 					break;
 				}
 				case RANDOM_INCLUDING_SPOIL:
 				{
-					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
+					player.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
 					break;
 				}
 				case BY_TURN:
 				{
-					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN);
+					player.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN);
 					break;
 				}
 				case BY_TURN_INCLUDING_SPOIL:
 				{
-					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL);
+					player.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL);
 					break;
 				}
 			}
 			
-			if (!party.isLeader(activeChar))
+			if (!party.isLeader(player))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1);
 				sm.addPcName(party.getLeader());
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
-			activeChar.sendMessage("Members: " + party.getMemberCount() + "/9"); // TODO: Custom?
+			player.sendMessage("Members: " + party.getMemberCount() + "/9"); // TODO: Custom?
 		}
-		activeChar.sendPacket(SystemMessageId.EMPTY_3);
+		player.sendPacket(SystemMessageId.EMPTY_3);
 		return true;
 	}
 	

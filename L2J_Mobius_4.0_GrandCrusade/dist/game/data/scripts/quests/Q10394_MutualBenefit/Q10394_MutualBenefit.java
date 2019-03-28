@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -54,10 +54,10 @@ public final class Q10394_MutualBenefit extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -73,15 +73,15 @@ public final class Q10394_MutualBenefit extends Quest
 			}
 			case "33862-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33862-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -96,12 +96,12 @@ public final class Q10394_MutualBenefit extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -110,11 +110,11 @@ public final class Q10394_MutualBenefit extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "33862-05.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
 					htmltext = "33862-06.html";
 				}
@@ -130,15 +130,15 @@ public final class Q10394_MutualBenefit extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
-			int killedGargoyle = st.getInt("killed_" + GARGOYLE);
-			int killedBasilisk = st.getInt("killed_" + BASILISK);
-			int killedElderBasilisk = st.getInt("killed_" + ELDER_BASILISK);
+			int killedGargoyle = qs.getInt("killed_" + GARGOYLE);
+			int killedBasilisk = qs.getInt("killed_" + BASILISK);
+			int killedElderBasilisk = qs.getInt("killed_" + ELDER_BASILISK);
 			
 			switch (npc.getId())
 			{
@@ -147,7 +147,7 @@ public final class Q10394_MutualBenefit extends Quest
 					if (killedGargoyle < 30)
 					{
 						killedGargoyle++;
-						st.set("killed_" + GARGOYLE, killedGargoyle);
+						qs.set("killed_" + GARGOYLE, killedGargoyle);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -157,7 +157,7 @@ public final class Q10394_MutualBenefit extends Quest
 					if (killedBasilisk < 40)
 					{
 						killedBasilisk++;
-						st.set("killed_" + BASILISK, killedBasilisk);
+						qs.set("killed_" + BASILISK, killedBasilisk);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -167,7 +167,7 @@ public final class Q10394_MutualBenefit extends Quest
 					if (killedElderBasilisk < 40)
 					{
 						killedElderBasilisk++;
-						st.set("killed_" + ELDER_BASILISK, killedElderBasilisk);
+						qs.set("killed_" + ELDER_BASILISK, killedElderBasilisk);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -176,24 +176,24 @@ public final class Q10394_MutualBenefit extends Quest
 			
 			if ((killedGargoyle == 30) && (killedBasilisk == 40) && (killedElderBasilisk == 40))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(3);
-			npcLogList.add(new NpcLogListHolder(GARGOYLE, false, st.getInt("killed_" + GARGOYLE)));
-			npcLogList.add(new NpcLogListHolder(BASILISK, false, st.getInt("killed_" + BASILISK)));
-			npcLogList.add(new NpcLogListHolder(ELDER_BASILISK, false, st.getInt("killed_" + ELDER_BASILISK)));
+			npcLogList.add(new NpcLogListHolder(GARGOYLE, false, qs.getInt("killed_" + GARGOYLE)));
+			npcLogList.add(new NpcLogListHolder(BASILISK, false, qs.getInt("killed_" + BASILISK)));
+			npcLogList.add(new NpcLogListHolder(ELDER_BASILISK, false, qs.getInt("killed_" + ELDER_BASILISK)));
 			return npcLogList;
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

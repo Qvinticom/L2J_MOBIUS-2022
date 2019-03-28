@@ -21,9 +21,9 @@ import java.util.StringTokenizer;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -43,7 +43,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 	private static final int SUPER_HASTE_ID = 7029;
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance player)
+	public boolean useAdminCommand(String command, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -73,7 +73,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 					}
 					else if ((val >= 1) && (val <= 4))
 					{
-						final L2Skill gmSpeedSkill = SkillTable.getInstance().getInfo(SUPER_HASTE_ID, val);
+						final Skill gmSpeedSkill = SkillTable.getInstance().getInfo(SUPER_HASTE_ID, val);
 						player.doCast(gmSpeedSkill);
 					}
 				}
@@ -101,11 +101,11 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2PcInstance targetCharacter;
-			final L2Object target = player.getTarget();
+			final PlayerInstance targetCharacter;
+			final WorldObject target = player.getTarget();
 			if ((target != null) && target.isPlayer())
 			{
-				targetCharacter = (L2PcInstance) target;
+				targetCharacter = (PlayerInstance) target;
 			}
 			else
 			{

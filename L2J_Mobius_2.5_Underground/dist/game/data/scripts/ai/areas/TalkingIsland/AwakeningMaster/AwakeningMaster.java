@@ -26,18 +26,18 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChangeToAwakenedClass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChangeToAwakenedClass;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangeToAwakenedClass;
@@ -98,10 +98,10 @@ public final class AwakeningMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st == null)
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -204,7 +204,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (player.getRace() == Race.ERTHEIA)
 		{
@@ -250,7 +250,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 		return npc.getId() + ".html";
 	}
 	
-	private String setNextErtheiaQuestState(L2Npc npc, QuestState qs, int npcId, int cond, SkillHolder skill)
+	private String setNextErtheiaQuestState(Npc npc, QuestState qs, int npcId, int cond, SkillHolder skill)
 	{
 		npc.setTarget(qs.getPlayer());
 		npc.doCast(skill.getSkill());
@@ -262,7 +262,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerChangeToAwakenedClass(OnPlayerChangeToAwakenedClass event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		
 		if (player.isSubClassActive() && !player.isDualClassActive())
 		{
@@ -292,7 +292,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 			return;
 		}
 		
-		final L2ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
+		final ItemInstance item = player.getInventory().getItemByItemId(SCROLL_OF_AFTERLIFE);
 		if (item == null)
 		{
 			return;
@@ -345,7 +345,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 		giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 2);
 		
 		SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-		for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+		for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
 		{
 			player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 		}

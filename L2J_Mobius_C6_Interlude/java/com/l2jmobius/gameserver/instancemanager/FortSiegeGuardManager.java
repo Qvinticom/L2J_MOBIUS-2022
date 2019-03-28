@@ -25,10 +25,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author programmos, scoria dev
@@ -38,7 +38,7 @@ public class FortSiegeGuardManager
 	private static final Logger LOGGER = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
 	private final Fort _fort;
-	private final List<L2Spawn> _siegeGuardSpawn = new ArrayList<>();
+	private final List<Spawn> _siegeGuardSpawn = new ArrayList<>();
 	
 	public FortSiegeGuardManager(Fort fort)
 	{
@@ -48,17 +48,17 @@ public class FortSiegeGuardManager
 	/**
 	 * Add guard.<BR>
 	 * <BR>
-	 * @param activeChar
+	 * @param player
 	 * @param npcId
 	 */
-	public void addSiegeGuard(L2PcInstance activeChar, int npcId)
+	public void addSiegeGuard(PlayerInstance player, int npcId)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		addSiegeGuard(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getHeading(), npcId);
+		addSiegeGuard(player.getX(), player.getY(), player.getZ(), player.getHeading(), npcId);
 	}
 	
 	/**
@@ -78,17 +78,17 @@ public class FortSiegeGuardManager
 	/**
 	 * Hire merc.<BR>
 	 * <BR>
-	 * @param activeChar
+	 * @param player
 	 * @param npcId
 	 */
-	public void hireMerc(L2PcInstance activeChar, int npcId)
+	public void hireMerc(PlayerInstance player, int npcId)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		hireMerc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getHeading(), npcId);
+		hireMerc(player.getX(), player.getY(), player.getZ(), player.getHeading(), npcId);
 	}
 	
 	/**
@@ -158,7 +158,7 @@ public class FortSiegeGuardManager
 		try
 		{
 			loadSiegeGuard();
-			for (L2Spawn spawn : _siegeGuardSpawn)
+			for (Spawn spawn : _siegeGuardSpawn)
 			{
 				if (spawn != null)
 				{
@@ -178,7 +178,7 @@ public class FortSiegeGuardManager
 	 */
 	public void unspawnSiegeGuard()
 	{
-		for (L2Spawn spawn : _siegeGuardSpawn)
+		for (Spawn spawn : _siegeGuardSpawn)
 		{
 			if (spawn == null)
 			{
@@ -204,15 +204,15 @@ public class FortSiegeGuardManager
 			statement.setInt(1, _fort.getFortId());
 			ResultSet rs = statement.executeQuery();
 			
-			L2Spawn spawn1;
-			L2NpcTemplate template1;
+			Spawn spawn1;
+			NpcTemplate template1;
 			
 			while (rs.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rs.getInt("npcId"));
 				if (template1 != null)
 				{
-					spawn1 = new L2Spawn(template1);
+					spawn1 = new Spawn(template1);
 					spawn1.setId(rs.getInt("id"));
 					spawn1.setAmount(1);
 					spawn1.setX(rs.getInt("x"));
@@ -281,7 +281,7 @@ public class FortSiegeGuardManager
 		return _fort;
 	}
 	
-	public final List<L2Spawn> getSiegeGuardSpawn()
+	public final List<Spawn> getSiegeGuardSpawn()
 	{
 		return _siegeGuardSpawn;
 	}

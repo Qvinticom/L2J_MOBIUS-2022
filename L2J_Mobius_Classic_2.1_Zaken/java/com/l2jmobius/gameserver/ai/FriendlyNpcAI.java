@@ -22,36 +22,36 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author Sdw
  */
-public class FriendlyNpcAI extends L2AttackableAI
+public class FriendlyNpcAI extends AttackableAI
 {
-	public FriendlyNpcAI(L2Attackable attackable)
+	public FriendlyNpcAI(Attackable attackable)
 	{
 		super(attackable);
 	}
 	
 	@Override
-	protected void onEvtAttacked(L2Character attacker)
+	protected void onEvtAttacked(Creature attacker)
 	{
 		
 	}
 	
 	@Override
-	protected void onEvtAggression(L2Character target, int aggro)
+	protected void onEvtAggression(Creature target, int aggro)
 	{
 		
 	}
 	
 	@Override
-	protected void onIntentionAttack(L2Character target)
+	protected void onIntentionAttack(Creature target)
 	{
 		if (target == null)
 		{
@@ -86,14 +86,14 @@ public class FriendlyNpcAI extends L2AttackableAI
 	@Override
 	protected void thinkAttack()
 	{
-		final L2Attackable npc = getActiveChar();
+		final Attackable npc = getActiveChar();
 		if (npc.isCastingNow() || npc.isCoreAIDisabled())
 		{
 			return;
 		}
 		
-		final L2Object target = getTarget();
-		final L2Character originalAttackTarget = (target != null) && target.isCharacter() ? (L2Character) target : null;
+		final WorldObject target = getTarget();
+		final Creature originalAttackTarget = (target != null) && target.isCreature() ? (Creature) target : null;
 		// Check if target is dead or if timeout is expired to stop this attack
 		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead())
 		{
@@ -118,7 +118,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 		
 		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
-			for (L2Attackable nearby : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class))
+			for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class))
 			{
 				if (npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget))
 				{
@@ -224,7 +224,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 	@Override
 	protected void thinkCast()
 	{
-		final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+		final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
 		if (checkTargetLost(target))
 		{
 			setTarget(null);

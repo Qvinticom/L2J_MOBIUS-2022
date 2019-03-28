@@ -20,10 +20,10 @@ import java.util.logging.Level;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 
 import ai.AbstractNpcAI;
@@ -37,7 +37,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 	{
 		private final ILocational _middlePoint;
 		private final int[] _bossNpcIds;
-		private L2Npc _spawnedBoss;
+		private Npc _spawnedBoss;
 		
 		protected Altar(ILocational middlePoint, int... bossNpcIds)
 		{
@@ -53,7 +53,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 				throw new IllegalStateException();
 			}
 			
-			final L2Spawn spawn = new L2Spawn(_bossNpcIds[Rnd.get(_bossNpcIds.length)]);
+			final Spawn spawn = new Spawn(_bossNpcIds[Rnd.get(_bossNpcIds.length)]);
 			spawn.setAmount(1);
 			spawn.setHeading(Rnd.get(65536));
 			
@@ -268,7 +268,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (isSpawnBossEvt(event))
 		{

@@ -18,12 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnTrapAction;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnTrapAction;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -52,7 +52,7 @@ public final class TrapRemove extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effected.isTrap())
 		{
@@ -64,7 +64,7 @@ public final class TrapRemove extends AbstractEffect
 			return;
 		}
 		
-		final L2TrapInstance trap = (L2TrapInstance) effected;
+		final TrapInstance trap = (TrapInstance) effected;
 		if (!trap.canBeSeen(effector))
 		{
 			if (effector.isPlayer())

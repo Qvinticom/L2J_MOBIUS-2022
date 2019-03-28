@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.fishing.L2FishingRod;
+import com.l2jmobius.gameserver.model.fishing.FishingRod;
 
 /**
  * This class holds the Fishing Rods information.
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.fishing.L2FishingRod;
  */
 public final class FishingRodsData implements IGameXmlReader
 {
-	private final Map<Integer, L2FishingRod> _fishingRods = new HashMap<>();
+	private final Map<Integer, FishingRod> _fishingRods = new HashMap<>();
 	
 	/**
 	 * Instantiates a new fishing rods data.
@@ -71,7 +71,7 @@ public final class FishingRodsData implements IGameXmlReader
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						
-						final L2FishingRod fishingRod = new L2FishingRod(set);
+						final FishingRod fishingRod = new FishingRod(set);
 						_fishingRods.put(fishingRod.getFishingRodItemId(), fishingRod);
 					}
 				}
@@ -84,7 +84,7 @@ public final class FishingRodsData implements IGameXmlReader
 	 * @param itemId the item id
 	 * @return A fishing Rod by Item Id
 	 */
-	public L2FishingRod getFishingRod(int itemId)
+	public FishingRod getFishingRod(int itemId)
 	{
 		return _fishingRods.get(itemId);
 	}

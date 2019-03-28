@@ -18,8 +18,8 @@ package quests.Q10290_LandDragonConqueror;
 
 import java.util.function.Function;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,7 +54,7 @@ public final class Q10290_LandDragonConqueror extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -71,14 +71,14 @@ public final class Q10290_LandDragonConqueror extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		if (!player.isInParty())
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		final Function<L2PcInstance, Boolean> rewardCheck = p ->
+		final Function<PlayerInstance, Boolean> rewardCheck = p ->
 		{
 			if (Util.checkIfInRange(8000, npc, p, false))
 			{
@@ -107,7 +107,7 @@ public final class Q10290_LandDragonConqueror extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

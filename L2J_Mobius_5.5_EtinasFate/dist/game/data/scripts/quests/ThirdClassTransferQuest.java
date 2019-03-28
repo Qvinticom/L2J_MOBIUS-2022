@@ -24,16 +24,16 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -133,10 +133,10 @@ public abstract class ThirdClassTransferQuest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -146,19 +146,19 @@ public abstract class ThirdClassTransferQuest extends Quest
 		{
 			case "33407-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33407-05.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
-					st.unset("vanguard");
+					qs.setCond(4, true);
+					qs.unset("vanguard");
 					takeItems(player, RACE_TAGS.get(player.getRace()), -1);
 					htmltext = event;
 				}
@@ -166,27 +166,27 @@ public abstract class ThirdClassTransferQuest extends Quest
 			}
 			case "33165-02.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "collectTag":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					final int bit = 1 << (VANGUARDS[0] - npc.getId());
-					final int vanguard = st.getInt("vanguard");
+					final int vanguard = qs.getInt("vanguard");
 					if ((vanguard & bit) != bit)
 					{
 						giveItems(player, RACE_TAGS.get(player.getRace()), 1);
-						st.set("vanguard", vanguard | bit);
+						qs.set("vanguard", vanguard | bit);
 						
 						if (getQuestItemsCount(player, RACE_TAGS.get(player.getRace())) == 4)
 						{
-							st.setCond(3, true);
+							qs.setCond(3, true);
 							htmltext = "vanguard-04.html";
 						}
 						else
@@ -203,7 +203,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			}
 			case "nextClassInfo":
 			{
-				if ((st.getInt("STARTED_CLASS") != player.getClassId().getId()) && (player.getLevel() >= _minLevel))
+				if ((qs.getInt("STARTED_CLASS") != player.getClassId().getId()) && (player.getLevel() >= _minLevel))
 				{
 					htmltext = npc.getId() + "-10.html";
 					break;
@@ -218,7 +218,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			}
 			case "classTransfer":
 			{
-				if ((st.getInt("STARTED_CLASS") != player.getClassId().getId()) && (player.getLevel() >= _minLevel))
+				if ((qs.getInt("STARTED_CLASS") != player.getClassId().getId()) && (player.getLevel() >= _minLevel))
 				{
 					htmltext = npc.getId() + "-10.html";
 					break;
@@ -250,7 +250,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 					giveItems(player, BLESSED_SCROLL_OF_RESURRECTION, 3);
 					giveItems(player, PAULINAS_EQUIPMENT_SET, 1);
 					addExpAndSp(player, 42000000, 0);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = npc.getId() + "-09.html";
 				}
 				break;
@@ -260,18 +260,18 @@ public abstract class ThirdClassTransferQuest extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		if (st.getState() == State.STARTED)
+		if (qs.getState() == State.STARTED)
 		{
 			switch (npc.getId())
 			{
 				case QUARTERMASTER:
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -306,7 +306,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 				}
 				case VANGUARD_MEMBER:
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 4:
 						case 5:
@@ -326,7 +326,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 				}
 				default:
 				{
-					if (st.isCond(2) && CommonUtil.contains(VANGUARDS, npc.getId()))
+					if (qs.isCond(2) && CommonUtil.contains(VANGUARDS, npc.getId()))
 					{
 						htmltext = "vanguard-01.html";
 					}
@@ -343,7 +343,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 	{
 		if (event.getMarkId() == QUESTION_MARK_ID)
 		{
-			final L2PcInstance player = event.getActiveChar();
+			final PlayerInstance player = event.getPlayer();
 			player.sendPacket(new TutorialShowHtml(getHtm(player, "popupInvite.html")));
 		}
 	}
@@ -357,7 +357,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
 		
@@ -376,7 +376,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		
 		if ((player.getLevel() >= _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{

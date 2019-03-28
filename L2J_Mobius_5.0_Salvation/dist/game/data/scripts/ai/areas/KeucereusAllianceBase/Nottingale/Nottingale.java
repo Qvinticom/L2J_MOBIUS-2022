@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
@@ -59,7 +59,7 @@ public final class Nottingale extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -76,8 +76,8 @@ public final class Nottingale extends AbstractNpcAI
 					}
 					else
 					{
-						final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-						if ((st != null) && st.isCompleted())
+						final QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+						if ((qs != null) && qs.isCompleted())
 						{
 							htmltext = event;
 						}
@@ -90,8 +90,8 @@ public final class Nottingale extends AbstractNpcAI
 				}
 				else
 				{
-					final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					if ((st != null) && st.isCompleted())
+					final QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+					if ((qs != null) && qs.isCompleted())
 					{
 						htmltext = event;
 					}

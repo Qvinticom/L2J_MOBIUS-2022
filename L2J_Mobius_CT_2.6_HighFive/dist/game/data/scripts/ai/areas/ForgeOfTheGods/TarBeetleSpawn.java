@@ -30,10 +30,10 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2Territory;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.Territory;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 /**
  * Tar Beetle zone spawn
@@ -135,13 +135,13 @@ public class TarBeetleSpawn implements IGameXmlReader
 		zones.clear();
 	}
 	
-	public final void removeBeetle(L2Npc npc)
+	public final void removeBeetle(Npc npc)
 	{
 		zones.get(npc.getVariables().getInt("zoneIndex", 0)).removeSpawn(npc);
 		npc.deleteMe();
 	}
 	
-	private final class Zone extends L2Territory
+	private final class Zone extends Territory
 	{
 		private List<Zone> _bannedZones;
 		
@@ -189,7 +189,7 @@ public class TarBeetleSpawn implements IGameXmlReader
 	private final class SpawnZone
 	{
 		private final List<Zone> _zones = new ArrayList<>();
-		private final List<L2Npc> _spawn = new CopyOnWriteArrayList<>();
+		private final List<Npc> _spawn = new CopyOnWriteArrayList<>();
 		private final int _maxNpcCount;
 		private final int _index;
 		
@@ -204,14 +204,14 @@ public class TarBeetleSpawn implements IGameXmlReader
 			_zones.add(zone);
 		}
 		
-		public final void removeSpawn(L2Npc obj)
+		public final void removeSpawn(Npc obj)
 		{
 			_spawn.remove(obj);
 		}
 		
 		public final void unload()
 		{
-			_spawn.forEach(L2Npc::deleteMe);
+			_spawn.forEach(Npc::deleteMe);
 			_spawn.clear();
 			_zones.clear();
 		}
@@ -225,10 +225,10 @@ public class TarBeetleSpawn implements IGameXmlReader
 					final Location location = _zones.get(Rnd.get(_zones.size())).getRandomPoint();
 					if (location != null)
 					{
-						final L2Spawn spawn = new L2Spawn(18804);
+						final Spawn spawn = new Spawn(18804);
 						spawn.setHeading(Rnd.get(65535));
 						spawn.setXYZ(location.getX(), location.getY(), GeoEngine.getInstance().getHeight(location.getX(), location.getY(), location.getZ()));
-						final L2Npc npc = spawn.doSpawn();
+						final Npc npc = spawn.doSpawn();
 						spawn.stopRespawn();
 						npc.setRandomWalking(false);
 						npc.setIsImmobilized(true);
@@ -250,7 +250,7 @@ public class TarBeetleSpawn implements IGameXmlReader
 		{
 			if (_spawn.size() > 0)
 			{
-				for (L2Npc npc : _spawn)
+				for (Npc npc : _spawn)
 				{
 					final int val = npc.getScriptValue();
 					if (val == 5)

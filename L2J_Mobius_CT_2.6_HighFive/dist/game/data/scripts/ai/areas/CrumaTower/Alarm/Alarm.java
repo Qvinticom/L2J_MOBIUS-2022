@@ -18,8 +18,8 @@ package ai.areas.CrumaTower.Alarm;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -48,11 +48,11 @@ public final class Alarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final L2PcInstance player0 = npc.getVariables().getObject("player0", L2PcInstance.class);
-		final L2Npc npc0 = npc.getVariables().getObject("npc0", L2Npc.class);
+		final PlayerInstance player0 = npc.getVariables().getObject("player0", PlayerInstance.class);
+		final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 		switch (event)
 		{
 			case "SELF_DESTRUCT_IN_60":
@@ -203,12 +203,12 @@ public final class Alarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance talker)
+	public String onFirstTalk(Npc npc, PlayerInstance talker)
 	{
 		String htmltext = getNoQuestMsg(talker);
 		if (verifyMemoState(talker, ART_OF_PERSUASION_ID, 3) || verifyMemoState(talker, NIKOLAS_COOPERATION_ID, 3))
 		{
-			if (npc.getVariables().getObject("player0", L2PcInstance.class) == talker)
+			if (npc.getVariables().getObject("player0", PlayerInstance.class) == talker)
 			{
 				htmltext = "32367-01.html";
 			}
@@ -221,11 +221,11 @@ public final class Alarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("SELF_DESTRUCT_IN_60", 60000, npc, null);
 		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.INTRUDER_ALERT_THE_ALARM_WILL_SELF_DESTRUCT_IN_2_MINUTES);
-		final L2PcInstance player = npc.getVariables().getObject("player0", L2PcInstance.class);
+		final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);
 		if (player != null)
 		{
 			playSound(player, QuestSound.ITEMSOUND_SIREN);
@@ -240,7 +240,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param memoState the memo state, if memo state is less than zero, only quest state is checked
 	 * @return {@code true} if the player has the memo state, {@code false} otherwise
 	 */
-	private static boolean verifyMemoState(L2PcInstance player, int questId, int memoState)
+	private static boolean verifyMemoState(PlayerInstance player, int questId, int memoState)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -265,7 +265,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param questId the quest ID
 	 * @param memoState the memo state
 	 */
-	private static void setMemoState(L2PcInstance player, int questId, int memoState)
+	private static void setMemoState(PlayerInstance player, int questId, int memoState)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -294,7 +294,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param slot the slot
 	 * @return the memo state ex
 	 */
-	private static int getMemoStateEx(L2PcInstance player, int questId, int slot)
+	private static int getMemoStateEx(PlayerInstance player, int questId, int slot)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -320,7 +320,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param slot the slot
 	 * @param memoStateEx the memo state ex
 	 */
-	private static void setMemoStateEx(L2PcInstance player, int questId, int slot, int memoStateEx)
+	private static void setMemoStateEx(PlayerInstance player, int questId, int slot, int memoStateEx)
 	{
 		QuestState qs = null;
 		switch (questId)

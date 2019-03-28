@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ChangeWaitType implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _moveType;
 	private final int _x;
 	private final int _y;
@@ -33,14 +33,14 @@ public class ChangeWaitType implements IClientOutgoingPacket
 	public static final int WT_START_FAKEDEATH = 2;
 	public static final int WT_STOP_FAKEDEATH = 3;
 	
-	public ChangeWaitType(L2Character character, int newMoveType)
+	public ChangeWaitType(Creature creature, int newMoveType)
 	{
-		_charObjId = character.getObjectId();
+		_objectId = creature.getObjectId();
 		_moveType = newMoveType;
 		
-		_x = character.getX();
-		_y = character.getY();
-		_z = character.getZ();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override
@@ -48,7 +48,7 @@ public class ChangeWaitType implements IClientOutgoingPacket
 	{
 		OutgoingPackets.CHANGE_WAIT_TYPE.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_moveType);
 		packet.writeD(_x);
 		packet.writeD(_y);

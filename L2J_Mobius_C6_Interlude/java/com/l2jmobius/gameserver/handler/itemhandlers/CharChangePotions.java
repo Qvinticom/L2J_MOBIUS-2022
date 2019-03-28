@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -50,28 +50,28 @@ public class CharChangePotions implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
 		final int itemId = item.getItemId();
 		
-		L2PcInstance activeChar;
+		PlayerInstance player;
 		
-		if (playable instanceof L2PcInstance)
+		if (playable instanceof PlayerInstance)
 		{
-			activeChar = (L2PcInstance) playable;
+			player = (PlayerInstance) playable;
 		}
-		else if (playable instanceof L2PetInstance)
+		else if (playable instanceof PetInstance)
 		{
-			activeChar = ((L2PetInstance) playable).getOwner();
+			player = ((PetInstance) playable).getOwner();
 		}
 		else
 		{
 			return;
 		}
 		
-		if (activeChar.isAllSkillsDisabled())
+		if (player.isAllSkillsDisabled())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -79,89 +79,89 @@ public class CharChangePotions implements IItemHandler
 		{
 			case 5235:
 			{
-				activeChar.getAppearance().setFace(0);
+				player.getAppearance().setFace(0);
 				break;
 			}
 			case 5236:
 			{
-				activeChar.getAppearance().setFace(1);
+				player.getAppearance().setFace(1);
 				break;
 			}
 			case 5237:
 			{
-				activeChar.getAppearance().setFace(2);
+				player.getAppearance().setFace(2);
 				break;
 			}
 			case 5238:
 			{
-				activeChar.getAppearance().setHairColor(0);
+				player.getAppearance().setHairColor(0);
 				break;
 			}
 			case 5239:
 			{
-				activeChar.getAppearance().setHairColor(1);
+				player.getAppearance().setHairColor(1);
 				break;
 			}
 			case 5240:
 			{
-				activeChar.getAppearance().setHairColor(2);
+				player.getAppearance().setHairColor(2);
 				break;
 			}
 			case 5241:
 			{
-				activeChar.getAppearance().setHairColor(3);
+				player.getAppearance().setHairColor(3);
 				break;
 			}
 			case 5242:
 			{
-				activeChar.getAppearance().setHairStyle(0);
+				player.getAppearance().setHairStyle(0);
 				break;
 			}
 			case 5243:
 			{
-				activeChar.getAppearance().setHairStyle(1);
+				player.getAppearance().setHairStyle(1);
 				break;
 			}
 			case 5244:
 			{
-				activeChar.getAppearance().setHairStyle(2);
+				player.getAppearance().setHairStyle(2);
 				break;
 			}
 			case 5245:
 			{
-				activeChar.getAppearance().setHairStyle(3);
+				player.getAppearance().setHairStyle(3);
 				break;
 			}
 			case 5246:
 			{
-				activeChar.getAppearance().setHairStyle(4);
+				player.getAppearance().setHairStyle(4);
 				break;
 			}
 			case 5247:
 			{
-				activeChar.getAppearance().setHairStyle(5);
+				player.getAppearance().setHairStyle(5);
 				break;
 			}
 			case 5248:
 			{
-				activeChar.getAppearance().setHairStyle(6);
+				player.getAppearance().setHairStyle(6);
 				break;
 			}
 		}
 		
 		// Create a summon effect!
-		MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2003, 1, 1, 0);
-		activeChar.broadcastPacket(MSU);
+		MagicSkillUse MSU = new MagicSkillUse(playable, player, 2003, 1, 1, 0);
+		player.broadcastPacket(MSU);
 		
 		// Update the changed stat for the character in the DB.
-		activeChar.store();
+		player.store();
 		
 		// Remove the item from inventory.
-		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
+		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		
 		// Broadcast the changes to the char and all those nearby.
-		UserInfo ui = new UserInfo(activeChar);
-		activeChar.broadcastPacket(ui);
+		UserInfo ui = new UserInfo(player);
+		player.broadcastPacket(ui);
 	}
 	
 	@Override

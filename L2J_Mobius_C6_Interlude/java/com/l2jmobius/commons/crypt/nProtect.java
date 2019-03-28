@@ -20,8 +20,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
 
 /**
@@ -136,7 +136,7 @@ public class nProtect
 		}
 	}
 	
-	public boolean checkGameGuardRepy(L2GameClient cl, int[] reply)
+	public boolean checkGameGuardRepy(GameClient cl, int[] reply)
 	{
 		try
 		{
@@ -152,7 +152,7 @@ public class nProtect
 		return true;
 	}
 	
-	public ScheduledFuture<?> startTask(L2GameClient client)
+	public ScheduledFuture<?> startTask(GameClient client)
 	{
 		try
 		{
@@ -168,7 +168,7 @@ public class nProtect
 		return null;
 	}
 	
-	public void sendRequest(L2GameClient cl)
+	public void sendRequest(GameClient cl)
 	{
 		if (_sendRequest != null)
 		{
@@ -183,7 +183,7 @@ public class nProtect
 		}
 	}
 	
-	public void closeSession(L2GameClient cl)
+	public void closeSession(GameClient cl)
 	{
 		if (_closeSession != null)
 		{
@@ -197,7 +197,7 @@ public class nProtect
 		}
 	}
 	
-	public boolean checkRestriction(L2PcInstance player, RestrictionType type, Object... params)
+	public boolean checkRestriction(PlayerInstance player, RestrictionType type, Object... params)
 	{
 		try
 		{

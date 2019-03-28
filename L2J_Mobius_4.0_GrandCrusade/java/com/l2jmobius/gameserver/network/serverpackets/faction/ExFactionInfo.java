@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.faction;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.Faction;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -27,10 +27,10 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExFactionInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private final boolean _openDialog;
 	
-	public ExFactionInfo(L2PcInstance player, boolean openDialog)
+	public ExFactionInfo(PlayerInstance player, boolean openDialog)
 	{
 		_player = player;
 		_openDialog = openDialog;

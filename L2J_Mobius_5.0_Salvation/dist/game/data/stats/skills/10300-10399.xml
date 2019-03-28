@@ -1450,7 +1450,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Winged Spear - Stun -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1464,7 +1464,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Winged Spear - Stun -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1573,7 +1573,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Punch Drunk -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -1587,7 +1587,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Punch Drunk -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>

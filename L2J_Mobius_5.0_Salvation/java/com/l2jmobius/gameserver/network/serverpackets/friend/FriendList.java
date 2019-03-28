@@ -25,8 +25,8 @@ import java.util.List;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -57,12 +57,12 @@ public class FriendList implements IClientOutgoingPacket
 		}
 	}
 	
-	public FriendList(L2PcInstance player)
+	public FriendList(PlayerInstance player)
 	{
 		for (int objId : player.getFriendList())
 		{
 			final String name = CharNameTable.getInstance().getNameById(objId);
-			final L2PcInstance player1 = L2World.getInstance().getPlayer(objId);
+			final PlayerInstance player1 = World.getInstance().getPlayer(objId);
 			
 			boolean online = false;
 			int classid = 0;

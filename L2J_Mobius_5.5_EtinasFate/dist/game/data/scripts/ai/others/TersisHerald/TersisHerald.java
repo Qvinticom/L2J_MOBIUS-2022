@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -64,7 +64,7 @@ public final class TersisHerald extends AbstractNpcAI
 		NpcStringId.SHOUT_TO_CELEBRATE_THE_VICTORY_OF_THE_HEROES,
 		NpcStringId.PRAISE_THE_ACHIEVEMENT_OF_THE_HEROES_AND_RECEIVE_TERSI_S_BLESSING,
 	};
-	private static final List<L2Npc> SPAWNED_NPCS = new ArrayList<>();
+	private static final List<Npc> SPAWNED_NPCS = new ArrayList<>();
 	
 	private TersisHerald()
 	{
@@ -75,7 +75,7 @@ public final class TersisHerald extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("giveBuff"))
 		{
@@ -91,12 +91,12 @@ public final class TersisHerald extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("DESPAWN_NPCS"))
 		{
 			cancelQuestTimer("TEXT_SPAM", null, null);
-			SPAWNED_NPCS.stream().forEach(L2Npc::deleteMe);
+			SPAWNED_NPCS.stream().forEach(Npc::deleteMe);
 			SPAWNED_NPCS.clear();
 		}
 		else if (event.equals("TEXT_SPAM"))
@@ -106,7 +106,7 @@ public final class TersisHerald extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final NpcStringId npcStringId;
 		switch (npc.getId())
@@ -132,7 +132,7 @@ public final class TersisHerald extends AbstractNpcAI
 			}
 		}
 		
-		L2World.getInstance().getPlayers().stream().forEach(p -> showOnScreenMsg(p, npcStringId, 2, 10000, true));
+		World.getInstance().getPlayers().stream().forEach(p -> showOnScreenMsg(p, npcStringId, 2, 10000, true));
 		
 		if (!SPAWNED_NPCS.isEmpty())
 		{

@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -45,7 +45,7 @@ public class AdminEvents implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -147,7 +147,7 @@ public class AdminEvents implements IAdminCommandHandler
 		return false;
 	}
 	
-	private void showMenu(L2PcInstance activeChar)
+	private void showMenu(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/admin/gm_events.htm");

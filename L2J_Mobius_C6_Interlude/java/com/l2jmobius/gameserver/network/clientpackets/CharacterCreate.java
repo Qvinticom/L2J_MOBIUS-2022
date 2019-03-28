@@ -31,23 +31,23 @@ import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2ShortCut;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ShortCut;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
-import com.l2jmobius.gameserver.templates.chars.L2PcTemplate;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")
-public final class CharacterCreate extends L2GameClientPacket
+public final class CharacterCreate extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(CharacterCreate.class.getName());
 	private static final Object CREATION_LOCK = new Object();
@@ -93,8 +93,8 @@ public final class CharacterCreate extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance newChar = null;
-		L2PcTemplate template = null;
+		PlayerInstance newChar = null;
+		PlayerTemplate template = null;
 		
 		// Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
 		synchronized (CharNameTable.getInstance())
@@ -118,7 +118,7 @@ public final class CharacterCreate extends L2GameClientPacket
 			}
 			
 			final int objectId = IdFactory.getInstance().getNextId();
-			newChar = L2PcInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
+			newChar = PlayerInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
 			
 			newChar.setCurrentHp(newChar.getMaxHp());// L2Off like
 			// newChar.setCurrentCp(template.baseCpMax);
@@ -157,10 +157,10 @@ public final class CharacterCreate extends L2GameClientPacket
 		return result;
 	}
 	
-	private void initNewChar(L2GameClient client, L2PcInstance newChar)
+	private void initNewChar(GameClient client, PlayerInstance newChar)
 	{
-		L2World.getInstance().storeObject(newChar);
-		final L2PcTemplate template = newChar.getTemplate();
+		World.getInstance().storeObject(newChar);
+		final PlayerTemplate template = newChar.getTemplate();
 		
 		// Starting Items
 		if (Config.STARTING_ADENA > 0)
@@ -240,45 +240,45 @@ public final class CharacterCreate extends L2GameClientPacket
 		}
 		
 		// Shortcuts
-		newChar.registerShortCut(new L2ShortCut(0, 0, 3, 2, -1, 1)); // Attack
-		newChar.registerShortCut(new L2ShortCut(3, 0, 3, 5, -1, 1)); // Take
-		newChar.registerShortCut(new L2ShortCut(10, 0, 3, 0, -1, 1)); // Sit
+		newChar.registerShortCut(new ShortCut(0, 0, 3, 2, -1, 1)); // Attack
+		newChar.registerShortCut(new ShortCut(3, 0, 3, 5, -1, 1)); // Take
+		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1, 1)); // Sit
 		
 		final ItemTable itemTable = ItemTable.getInstance();
-		final L2Item[] items = template.getItems();
+		final Item[] items = template.getItems();
 		
-		for (L2Item item2 : items)
+		for (Item item2 : items)
 		{
-			final L2ItemInstance item = newChar.getInventory().addItem("Init", item2.getItemId(), 1, newChar, null);
+			final ItemInstance item = newChar.getInventory().addItem("Init", item2.getItemId(), 1, newChar, null);
 			
 			if (item.getItemId() == 5588)
 			{
-				newChar.registerShortCut(new L2ShortCut(11, 0, 1, item.getObjectId(), -1, 1)); // Tutorial Book shortcut
+				newChar.registerShortCut(new ShortCut(11, 0, 1, item.getObjectId(), -1, 1)); // Tutorial Book shortcut
 			}
 			
 			if (item.isEquipable())
 			{
-				if ((newChar.getActiveWeaponItem() == null) || (item.getItem().getType2() == L2Item.TYPE2_WEAPON))
+				if ((newChar.getActiveWeaponItem() == null) || (item.getItem().getType2() == Item.TYPE2_WEAPON))
 				{
 					newChar.getInventory().equipItemAndRecord(item);
 				}
 			}
 		}
 		
-		final L2SkillLearn[] startSkills = SkillTreeTable.getInstance().getAvailableSkills(newChar, newChar.getClassId());
+		final SkillLearn[] startSkills = SkillTreeTable.getInstance().getAvailableSkills(newChar, newChar.getClassId());
 		
-		for (L2SkillLearn startSkill : startSkills)
+		for (SkillLearn startSkill : startSkills)
 		{
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()), true);
 			
 			if ((startSkill.getId() == 1001) || (startSkill.getId() == 1177))
 			{
-				newChar.registerShortCut(new L2ShortCut(1, 0, 2, startSkill.getId(), 1, 1));
+				newChar.registerShortCut(new ShortCut(1, 0, 2, startSkill.getId(), 1, 1));
 			}
 			
 			if (startSkill.getId() == 1216)
 			{
-				newChar.registerShortCut(new L2ShortCut(10, 0, 2, startSkill.getId(), 1, 1));
+				newChar.registerShortCut(new ShortCut(10, 0, 2, startSkill.getId(), 1, 1));
 			}
 		}
 		
@@ -299,7 +299,7 @@ public final class CharacterCreate extends L2GameClientPacket
 		client.setCharSelection(cl.getCharInfo());
 	}
 	
-	public void startTutorialQuest(L2PcInstance player)
+	public void startTutorialQuest(PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState("255_Tutorial");
 		Quest q = null;

@@ -18,8 +18,8 @@ package instances.NornilsGardenQuest;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -48,14 +48,14 @@ public final class NornilsGardenQuest extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(L2PcInstance player)
+	protected boolean checkConditions(PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q00236_SeedsOfChaos.class.getSimpleName());
 		return (qs != null) && (qs.getMemoState() >= 40) && (qs.getMemoState() <= 45);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState q236 = player.getQuestState(Q00236_SeedsOfChaos.class.getSimpleName());
@@ -95,7 +95,7 @@ public final class NornilsGardenQuest extends AbstractInstance
 	}
 	
 	@Override
-	protected void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	protected void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -105,7 +105,7 @@ public final class NornilsGardenQuest extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState q236 = player.getQuestState(Q00236_SeedsOfChaos.class.getSimpleName());

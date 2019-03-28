@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 
 /**
  * @author Maktakien
  */
-public class MoveToLocationInVehicle extends L2GameServerPacket
+public class MoveToLocationInVehicle extends GameServerPacket
 {
-	private int _charObjId;
+	private int _objectId;
 	private int _boatId;
 	private Location _destination;
 	private Location _origin;
@@ -35,21 +35,21 @@ public class MoveToLocationInVehicle extends L2GameServerPacket
 	 * @param destination
 	 * @param origin
 	 */
-	public MoveToLocationInVehicle(L2Character actor, Location destination, Location origin)
+	public MoveToLocationInVehicle(Creature actor, Location destination, Location origin)
 	{
-		if (!(actor instanceof L2PcInstance))
+		if (!(actor instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = (L2PcInstance) actor;
+		final PlayerInstance player = (PlayerInstance) actor;
 		
 		if (player.getBoat() == null)
 		{
 			return;
 		}
 		
-		_charObjId = player.getObjectId();
+		_objectId = player.getObjectId();
 		_boatId = player.getBoat().getObjectId();
 		_destination = destination;
 		_origin = origin;
@@ -63,7 +63,7 @@ public class MoveToLocationInVehicle extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeC(0x71);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_boatId);
 		writeD(_destination.getX());
 		writeD(_destination.getY());

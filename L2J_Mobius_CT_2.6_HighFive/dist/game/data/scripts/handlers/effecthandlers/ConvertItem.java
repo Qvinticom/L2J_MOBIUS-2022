@@ -18,12 +18,12 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -54,19 +54,19 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final PlayerInstance player = info.getEffected().getActingPlayer();
 		if (player.isEnchanting())
 		{
 			return;
 		}
 		
-		final L2Weapon weaponItem = player.getActiveWeaponItem();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		if (weaponItem == null)
 		{
 			return;
 		}
 		
-		L2ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (wpn == null)
 		{
 			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
@@ -85,9 +85,9 @@ public final class ConvertItem extends AbstractEffect
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final Elementals elementals = wpn.getElementals() == null ? null : wpn.getElementals()[0];
-		final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 		final InventoryUpdate iu = new InventoryUpdate();
-		for (L2ItemInstance item : unequiped)
+		for (ItemInstance item : unequiped)
 		{
 			iu.addModifiedItem(item);
 		}
@@ -98,9 +98,9 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		byte count = 0;
-		for (L2ItemInstance item : unequiped)
+		for (ItemInstance item : unequiped)
 		{
-			if (!(item.getItem() instanceof L2Weapon))
+			if (!(item.getItem() instanceof Weapon))
 			{
 				count++;
 				continue;
@@ -126,13 +126,13 @@ public final class ConvertItem extends AbstractEffect
 			return;
 		}
 		
-		final L2ItemInstance destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
+		final ItemInstance destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
 		if (destroyItem == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
+		final ItemInstance newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
 		if (newItem == null)
 		{
 			return;

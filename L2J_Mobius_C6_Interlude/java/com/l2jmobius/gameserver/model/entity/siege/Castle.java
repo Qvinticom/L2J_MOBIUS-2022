@@ -36,15 +36,15 @@ import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
 import com.l2jmobius.gameserver.instancemanager.CrownManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
-import com.l2jmobius.gameserver.model.zone.type.L2CastleTeleportZone;
-import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleTeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleZone;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.updaters.CastleUpdater;
@@ -67,7 +67,7 @@ public class Castle
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
 	
 	private int _castleId = 0;
-	private final List<L2DoorInstance> _doors = new ArrayList<>();
+	private final List<DoorInstance> _doors = new ArrayList<>();
 	private final List<String> _doorDefault = new ArrayList<>();
 	private String _name = "";
 	private int _ownerId = 0;
@@ -78,9 +78,9 @@ public class Castle
 	private int _taxPercent = 0;
 	private double _taxRate = 0;
 	private int _treasury = 0;
-	private L2CastleZone _zone;
-	private L2CastleTeleportZone _teleZone;
-	private L2Clan _formerOwner = null;
+	private CastleZone _zone;
+	private CastleTeleportZone _teleZone;
+	private Clan _formerOwner = null;
 	private int _nbArtifact = 1;
 	private final int[] _gate =
 	{
@@ -102,7 +102,7 @@ public class Castle
 		loadDoor();
 	}
 	
-	public void Engrave(L2Clan clan, int objId)
+	public void Engrave(Clan clan, int objId)
 	{
 		_engrave.put(objId, clan.getClanId());
 		
@@ -251,22 +251,22 @@ public class Castle
 	 * Sets this castles zone
 	 * @param zone
 	 */
-	public void setZone(L2CastleZone zone)
+	public void setZone(CastleZone zone)
 	{
 		_zone = zone;
 	}
 	
-	public L2CastleZone getZone()
+	public CastleZone getZone()
 	{
 		return _zone;
 	}
 	
-	public void setTeleZone(L2CastleTeleportZone zone)
+	public void setTeleZone(CastleTeleportZone zone)
 	{
 		_teleZone = zone;
 	}
 	
-	public L2CastleTeleportZone getTeleZone()
+	public CastleTeleportZone getTeleZone()
 	{
 		return _teleZone;
 	}
@@ -276,29 +276,29 @@ public class Castle
 	 * @param obj
 	 * @return
 	 */
-	public double getDistance(L2Object obj)
+	public double getDistance(WorldObject obj)
 	{
 		return _zone.getDistanceToZone(obj);
 	}
 	
-	public void closeDoor(L2PcInstance activeChar, int doorId)
+	public void closeDoor(PlayerInstance player, int doorId)
 	{
-		openCloseDoor(activeChar, doorId, false);
+		openCloseDoor(player, doorId, false);
 	}
 	
-	public void openDoor(L2PcInstance activeChar, int doorId)
+	public void openDoor(PlayerInstance player, int doorId)
 	{
-		openCloseDoor(activeChar, doorId, true);
+		openCloseDoor(player, doorId, true);
 	}
 	
-	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
+	public void openCloseDoor(PlayerInstance player, int doorId, boolean open)
 	{
-		if (activeChar.getClanId() != _ownerId)
+		if (player.getClanId() != _ownerId)
 		{
 			return;
 		}
 		
-		L2DoorInstance door = getDoor(doorId);
+		DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -319,12 +319,12 @@ public class Castle
 	}
 	
 	// This method updates the castle tax rate
-	public void setOwner(L2Clan clan)
+	public void setOwner(Clan clan)
 	{
 		// Remove old owner
 		if ((_ownerId > 0) && ((clan == null) || (clan.getClanId() != _ownerId)))
 		{
-			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+			Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 			
 			if (oldOwner != null)
 			{
@@ -354,7 +354,7 @@ public class Castle
 		updateClansReputation();
 	}
 	
-	public void removeOwner(L2Clan clan)
+	public void removeOwner(Clan clan)
 	{
 		if (clan != null)
 		{
@@ -382,7 +382,7 @@ public class Castle
 	}
 	
 	// This method updates the castle tax rate
-	public void setTaxPercent(L2PcInstance activeChar, int taxPercent)
+	public void setTaxPercent(PlayerInstance player, int taxPercent)
 	{
 		int maxTax;
 		
@@ -406,12 +406,12 @@ public class Castle
 		
 		if ((taxPercent < 0) || (taxPercent > maxTax))
 		{
-			activeChar.sendMessage("Tax value must be between 0 and " + maxTax + ".");
+			player.sendMessage("Tax value must be between 0 and " + maxTax + ".");
 			return;
 		}
 		
 		setTaxPercent(taxPercent);
-		activeChar.sendMessage(_name + " castle tax changed to " + taxPercent + "%.");
+		player.sendMessage(_name + " castle tax changed to " + taxPercent + "%.");
 	}
 	
 	public void setTaxPercent(int taxPercent)
@@ -450,7 +450,7 @@ public class Castle
 	{
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = _doors.get(i);
+			DoorInstance door = _doors.get(i);
 			if (door.getCurrentHp() <= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
@@ -479,7 +479,7 @@ public class Castle
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		final L2DoorInstance door = getDoor(doorId);
+		final DoorInstance door = getDoor(doorId);
 		if (door == null)
 		{
 			return;
@@ -547,7 +547,7 @@ public class Castle
 			
 			if (_ownerId > 0)
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+				Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 				ThreadPool.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 			}
 			
@@ -574,7 +574,7 @@ public class Castle
 				// Create list of the door default for use when respawning dead doors
 				_doorDefault.add(rs.getString("name") + ";" + rs.getInt("id") + ";" + rs.getInt("x") + ";" + rs.getInt("y") + ";" + rs.getInt("z") + ";" + rs.getInt("range_xmin") + ";" + rs.getInt("range_ymin") + ";" + rs.getInt("range_zmin") + ";" + rs.getInt("range_xmax") + ";" + rs.getInt("range_ymax") + ";" + rs.getInt("range_zmax") + ";" + rs.getInt("hp") + ";" + rs.getInt("pDef") + ";" + rs.getInt("mDef"));
 				
-				L2DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
+				DoorInstance door = DoorTable.parseList(_doorDefault.get(_doorDefault.size() - 1));
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				_doors.add(door);
 				DoorTable.getInstance().putDoor(door);
@@ -645,7 +645,7 @@ public class Castle
 		}
 	}
 	
-	private void updateOwnerInDB(L2Clan clan)
+	private void updateOwnerInDB(Clan clan)
 	{
 		if (clan != null)
 		{
@@ -699,7 +699,7 @@ public class Castle
 		return _castleId;
 	}
 	
-	public final L2DoorInstance getDoor(int doorId)
+	public final DoorInstance getDoor(int doorId)
 	{
 		if (doorId <= 0)
 		{
@@ -708,7 +708,7 @@ public class Castle
 		
 		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = _doors.get(i);
+			DoorInstance door = _doors.get(i);
 			
 			if (door.getDoorId() == doorId)
 			{
@@ -718,7 +718,7 @@ public class Castle
 		return null;
 	}
 	
-	public final List<L2DoorInstance> getDoors()
+	public final List<DoorInstance> getDoors()
 	{
 		return _doors;
 	}
@@ -856,7 +856,7 @@ public class Castle
 		{
 			for (SeedProduction seed : production)
 			{
-				total += L2Manor.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
+				total += Manor.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
 			}
 		}
 		
@@ -1166,7 +1166,7 @@ public class Castle
 				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
 				_formerOwner.setReputationScore(_formerOwner.getReputationScore() - 1000, true);
 				
-				L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+				Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				
 				if (owner != null)
 				{
@@ -1183,7 +1183,7 @@ public class Castle
 		}
 		else
 		{
-			L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+			Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			
 			if (owner != null)
 			{

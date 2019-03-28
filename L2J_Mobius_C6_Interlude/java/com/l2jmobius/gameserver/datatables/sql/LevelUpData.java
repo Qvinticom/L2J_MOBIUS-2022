@@ -24,11 +24,10 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2LvlupData;
+import com.l2jmobius.gameserver.model.LvlupData;
 import com.l2jmobius.gameserver.model.base.ClassId;
 
 /**
- * This class ...
  * @author NightMarez
  * @version $Revision: 1.3.2.4.2.3 $ $Date: 2005/03/27 15:29:18 $
  */
@@ -51,7 +50,7 @@ public class LevelUpData
 	
 	private static LevelUpData _instance;
 	
-	private final Map<Integer, L2LvlupData> lvlTable;
+	private final Map<Integer, LvlupData> lvlTable;
 	
 	public static LevelUpData getInstance()
 	{
@@ -70,11 +69,11 @@ public class LevelUpData
 		{
 			final PreparedStatement statement = con.prepareStatement(SELECT_ALL);
 			final ResultSet rset = statement.executeQuery();
-			L2LvlupData lvlDat;
+			LvlupData lvlDat;
 			
 			while (rset.next())
 			{
-				lvlDat = new L2LvlupData();
+				lvlDat = new LvlupData();
 				lvlDat.setClassid(rset.getInt(CLASS_ID));
 				lvlDat.setClassLvl(rset.getInt(CLASS_LVL));
 				lvlDat.setClassHpBase(rset.getFloat(HP_BASE));
@@ -105,12 +104,12 @@ public class LevelUpData
 	 * @param classId
 	 * @return
 	 */
-	public L2LvlupData getTemplate(int classId)
+	public LvlupData getTemplate(int classId)
 	{
 		return lvlTable.get(classId);
 	}
 	
-	public L2LvlupData getTemplate(ClassId classId)
+	public LvlupData getTemplate(ClassId classId)
 	{
 		return lvlTable.get(classId.getId());
 	}

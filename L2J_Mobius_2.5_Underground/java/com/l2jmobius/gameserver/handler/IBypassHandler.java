@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.handler;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author nBd
@@ -31,11 +31,11 @@ public interface IBypassHandler
 	/**
 	 * This is the worker method that is called when someone uses an bypass command.
 	 * @param command
-	 * @param activeChar
+	 * @param player
 	 * @param bypassOrigin
 	 * @return success
 	 */
-	boolean useBypass(String command, L2PcInstance activeChar, L2Character bypassOrigin);
+	boolean useBypass(String command, PlayerInstance player, Creature bypassOrigin);
 	
 	/**
 	 * This method is called at initialization to register all bypasses automatically.

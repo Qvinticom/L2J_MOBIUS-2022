@@ -17,10 +17,10 @@
 package ai.areas.FairySettlement.LargeCocoon;
 
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
 import com.l2jmobius.gameserver.model.quest.Quest;
 
 import ai.AbstractNpcAI;
@@ -60,7 +60,7 @@ public final class LargeCocoon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -138,7 +138,7 @@ public final class LargeCocoon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (getRandom(3) < 1)
 		{
@@ -270,8 +270,8 @@ public final class LargeCocoon extends AbstractNpcAI
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
-		final L2Playable playable = (L2Playable) event.getAttacker();
+		final Npc npc = (Npc) event.getTarget();
+		final Playable playable = (Playable) event.getAttacker();
 		
 		// TODO: Quest 466 stuffs
 		final Quest qs10305 = QuestManager.getInstance().getQuest(Q10305_UnstoppableFutileEfforts.class.getSimpleName());

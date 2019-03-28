@@ -19,11 +19,11 @@ package ai.bosses.Anais;
 import java.util.ArrayList;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.QuestTimer;
 
@@ -42,9 +42,9 @@ public final class Anais extends AbstractNpcAI
 	// Skill
 	private static SkillHolder DIVINE_NOVA = new SkillHolder(6326, 1);
 	// Instances
-	ArrayList<L2Npc> _divineBurners = new ArrayList<>(4);
-	private L2PcInstance _nextTarget = null;
-	private L2Npc _current = null;
+	ArrayList<Npc> _divineBurners = new ArrayList<>(4);
+	private PlayerInstance _nextTarget = null;
+	private Npc _current = null;
 	private int _pot = 0;
 	
 	private Anais()
@@ -54,9 +54,9 @@ public final class Anais extends AbstractNpcAI
 		addKillId(GRAIL_WARD);
 	}
 	
-	private void burnerOnAttack(int pot, L2Npc anais)
+	private void burnerOnAttack(int pot, Npc anais)
 	{
-		final L2Npc npc = _divineBurners.get(pot);
+		final Npc npc = _divineBurners.get(pot);
 		npc.setDisplayEffect(1);
 		npc.setWalking();
 		if (pot < 4)
@@ -75,7 +75,7 @@ public final class Anais extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -87,14 +87,14 @@ public final class Anais extends AbstractNpcAI
 				}
 				if ((_current != null) || (_pot < 4))
 				{
-					final L2Object target = npc.getTarget();
-					_nextTarget = (target != null) && target.isPlayer() ? (L2PcInstance) target : null;
-					final L2Npc b = _divineBurners.get(_pot);
+					final WorldObject target = npc.getTarget();
+					_nextTarget = (target != null) && target.isPlayer() ? (PlayerInstance) target : null;
+					final Npc b = _divineBurners.get(_pot);
 					_pot += 1;
 					b.setDisplayEffect(1);
 					b.setWalking();
-					final L2Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
-					((L2Attackable) ward).addDamageHate(_nextTarget, 0, 999);
+					final Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
+					((Attackable) ward).addDamageHate(_nextTarget, 0, 999);
 					ward.setRunning();
 					ward.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _nextTarget, null);
 					startQuestTimer("GUARD_ATTACK", 1000, ward, _nextTarget, true);
@@ -138,7 +138,7 @@ public final class Anais extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (_pot == 0)
 		{
@@ -160,14 +160,14 @@ public final class Anais extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		_divineBurners.add(npc);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		npc.doCast(DIVINE_NOVA.getSkill());
 		cancelQuestTimer("GUARD_ATTACK", npc, _nextTarget);

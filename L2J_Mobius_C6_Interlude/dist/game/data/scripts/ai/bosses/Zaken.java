@@ -26,15 +26,15 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.templates.StatsSet;
 
@@ -54,11 +54,11 @@ public class Zaken extends Quest
 	private int _quest0 = 0; // used for teleporting progress
 	private int _quest1 = 0; // used for most hated players progress
 	private int _quest2 = 0; // used for zaken HP check for teleport
-	private L2PcInstance c_quest0 = null; // 1st player used for area teleport
-	private L2PcInstance c_quest1 = null; // 2nd player used for area teleport
-	private L2PcInstance c_quest2 = null; // 3rd player used for area teleport
-	private L2PcInstance c_quest3 = null; // 4th player used for area teleport
-	private L2PcInstance c_quest4 = null; // 5th player used for area teleport
+	private PlayerInstance c_quest0 = null; // 1st player used for area teleport
+	private PlayerInstance c_quest1 = null; // 2nd player used for area teleport
+	private PlayerInstance c_quest2 = null; // 3rd player used for area teleport
+	private PlayerInstance c_quest3 = null; // 4th player used for area teleport
+	private PlayerInstance c_quest4 = null; // 5th player used for area teleport
 	private static final int ZAKEN = 29022;
 	private static final int doll_blader_b = 29023;
 	private static final int vale_master_b = 29024;
@@ -123,7 +123,7 @@ public class Zaken extends Quest
 	private static final byte ALIVE = 0; // Zaken is spawned.
 	private static final byte DEAD = 1; // Zaken has been killed.
 	
-	private static L2BossZone _Zone;
+	private static BossZone _Zone;
 	
 	public Zaken(int questId, String name, String descr)
 	{
@@ -178,7 +178,7 @@ public class Zaken extends Quest
 			else
 			{
 				// the time has already expired while the server was offline. Immediately spawn zaken.
-				final L2GrandBossInstance zaken = (L2GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
+				final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 				spawnBoss(zaken);
 			}
@@ -191,13 +191,13 @@ public class Zaken extends Quest
 			final int heading = info.getInteger("heading");
 			final int hp = info.getInteger("currentHP");
 			final int mp = info.getInteger("currentMP");
-			final L2GrandBossInstance zaken = (L2GrandBossInstance) addSpawn(ZAKEN, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, loc_x, loc_y, loc_z, heading, false, 0);
 			zaken.setCurrentHpMp(hp, mp);
 			spawnBoss(zaken);
 		}
 	}
 	
-	public void spawnBoss(L2GrandBossInstance npc)
+	public void spawnBoss(GrandBossInstance npc)
 	{
 		if (npc == null)
 		{
@@ -229,7 +229,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
 		
@@ -247,10 +247,10 @@ public class Zaken extends Quest
 			}
 			int sk_4223 = 0;
 			int sk_4227 = 0;
-			final L2Effect[] effects = npc.getAllEffects();
+			final Effect[] effects = npc.getAllEffects();
 			if ((effects != null) && (effects.length != 0))
 			{
-				for (L2Effect e : effects)
+				for (Effect e : effects)
 				{
 					if (e.getSkill().getId() == 4227)
 					{
@@ -281,9 +281,9 @@ public class Zaken extends Quest
 				{
 					int i0 = 0;
 					int i1 = 1;
-					if (((L2Attackable) npc).getMostHated() != null)
+					if (((Attackable) npc).getMostHated() != null)
 					{
-						if ((((((L2Attackable) npc).getMostHated().getX() - _ai1) * (((L2Attackable) npc).getMostHated().getX() - _ai1)) + ((((L2Attackable) npc).getMostHated().getY() - _ai2) * (((L2Attackable) npc).getMostHated().getY() - _ai2))) > (1500 * 1500))
+						if ((((((Attackable) npc).getMostHated().getX() - _ai1) * (((Attackable) npc).getMostHated().getX() - _ai1)) + ((((Attackable) npc).getMostHated().getY() - _ai2) * (((Attackable) npc).getMostHated().getY() - _ai2))) > (1500 * 1500))
 						{
 							i0 = 1;
 						}
@@ -408,27 +408,27 @@ public class Zaken extends Quest
 					_ai2 = npc.getY();
 					_ai3 = npc.getZ();
 				}
-				L2Character c_ai0 = null;
+				Creature c_ai0 = null;
 				if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK) && (_quest1 == 0))
 				{
-					if (((L2Attackable) npc).getMostHated() != null)
+					if (((Attackable) npc).getMostHated() != null)
 					{
-						c_ai0 = ((L2Attackable) npc).getMostHated();
+						c_ai0 = ((Attackable) npc).getMostHated();
 						_quest1 = 1;
 					}
 				}
 				else if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK) && (_quest1 != 0))
 				{
-					if (((L2Attackable) npc).getMostHated() != null)
+					if (((Attackable) npc).getMostHated() != null)
 					{
-						if (c_ai0 == ((L2Attackable) npc).getMostHated())
+						if (c_ai0 == ((Attackable) npc).getMostHated())
 						{
 							_quest1 = (_quest1 + 1);
 						}
 						else
 						{
 							_quest1 = 1;
-							c_ai0 = ((L2Attackable) npc).getMostHated();
+							c_ai0 = ((Attackable) npc).getMostHated();
 						}
 					}
 				}
@@ -438,8 +438,8 @@ public class Zaken extends Quest
 				}
 				if (_quest1 > 5)
 				{
-					((L2Attackable) npc).stopHating(c_ai0);
-					final L2Character nextTarget = ((L2Attackable) npc).getMostHated();
+					((Attackable) npc).stopHating(c_ai0);
+					final Creature nextTarget = ((Attackable) npc).getMostHated();
 					if (nextTarget != null)
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, nextTarget);
@@ -606,7 +606,7 @@ public class Zaken extends Quest
 		
 		else if (event.equals("zaken_unlock"))
 		{
-			final L2GrandBossInstance zaken = (L2GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
+			final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, 55312, 219168, -3223, 0, false, 0);
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 			spawnBoss(zaken);
 		}
@@ -618,7 +618,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onFactionCall(L2NpcInstance npc, L2NpcInstance caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(NpcInstance npc, NpcInstance caller, PlayerInstance attacker, boolean isPet)
 	{
 		if ((caller == null) || (npc == null))
 		{
@@ -643,7 +643,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		if (npc.getNpcId() == ZAKEN)
 		{
@@ -657,8 +657,8 @@ public class Zaken extends Quest
 			{
 				final int i1 = Rnd.get(15);
 				player.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-				((L2Attackable) npc).stopHating(player);
-				final L2Character nextTarget = ((L2Attackable) npc).getMostHated();
+				((Attackable) npc).stopHating(player);
+				final Creature nextTarget = ((Attackable) npc).getMostHated();
 				if (nextTarget != null)
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, nextTarget);
@@ -669,7 +669,7 @@ public class Zaken extends Quest
 				int i0 = 0;
 				int i1 = Rnd.get(15);
 				player.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-				((L2Attackable) npc).stopHating(player);
+				((Attackable) npc).stopHating(player);
 				
 				if ((c_quest0 != null) && (_quest0 > 0) && (c_quest0 != player) && (c_quest0.getZ() > (player.getZ() - 100)) && (c_quest0.getZ() < (player.getZ() + 100)))
 				{
@@ -685,7 +685,7 @@ public class Zaken extends Quest
 					{
 						i1 = Rnd.get(15);
 						c_quest0.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-						((L2Attackable) npc).stopHating(c_quest0);
+						((Attackable) npc).stopHating(c_quest0);
 					}
 				}
 				if ((c_quest1 != null) && (_quest0 > 1) && (c_quest1 != player) && (c_quest1.getZ() > (player.getZ() - 100)) && (c_quest1.getZ() < (player.getZ() + 100)))
@@ -702,7 +702,7 @@ public class Zaken extends Quest
 					{
 						i1 = Rnd.get(15);
 						c_quest1.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-						((L2Attackable) npc).stopHating(c_quest1);
+						((Attackable) npc).stopHating(c_quest1);
 					}
 				}
 				if ((c_quest2 != null) && (_quest0 > 2) && (c_quest2 != player) && (c_quest2.getZ() > (player.getZ() - 100)) && (c_quest2.getZ() < (player.getZ() + 100)))
@@ -719,7 +719,7 @@ public class Zaken extends Quest
 					{
 						i1 = Rnd.get(15);
 						c_quest2.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-						((L2Attackable) npc).stopHating(c_quest2);
+						((Attackable) npc).stopHating(c_quest2);
 					}
 				}
 				if ((c_quest3 != null) && (_quest0 > 3) && (c_quest3 != player) && (c_quest3.getZ() > (player.getZ() - 100)) && (c_quest3.getZ() < (player.getZ() + 100)))
@@ -736,7 +736,7 @@ public class Zaken extends Quest
 					{
 						i1 = Rnd.get(15);
 						c_quest3.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-						((L2Attackable) npc).stopHating(c_quest3);
+						((Attackable) npc).stopHating(c_quest3);
 					}
 				}
 				if ((c_quest4 != null) && (_quest0 > 4) && (c_quest4 != player) && (c_quest4.getZ() > (player.getZ() - 100)) && (c_quest4.getZ() < (player.getZ() + 100)))
@@ -753,10 +753,10 @@ public class Zaken extends Quest
 					{
 						i1 = Rnd.get(15);
 						c_quest4.teleToLocation(Xcoords[i1] + Rnd.get(650), Ycoords[i1] + Rnd.get(650), Zcoords[i1]);
-						((L2Attackable) npc).stopHating(c_quest4);
+						((Attackable) npc).stopHating(c_quest4);
 					}
 				}
-				final L2Character nextTarget = ((L2Attackable) npc).getMostHated();
+				final Creature nextTarget = ((Attackable) npc).getMostHated();
 				if (nextTarget != null)
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, nextTarget);
@@ -767,7 +767,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -775,10 +775,10 @@ public class Zaken extends Quest
 			if (attacker.getMountType() == 1)
 			{
 				int sk_4258 = 0;
-				final L2Effect[] effects = attacker.getAllEffects();
+				final Effect[] effects = attacker.getAllEffects();
 				if ((effects != null) && (effects.length != 0))
 				{
-					for (L2Effect e : effects)
+					for (Effect e : effects)
 					{
 						if (e.getSkill().getId() == 4258)
 						{
@@ -792,9 +792,9 @@ public class Zaken extends Quest
 					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
 				}
 			}
-			final L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+			final Creature originalAttacker = isPet ? attacker.getPet() : attacker;
 			final int hate = (int) (((damage / npc.getMaxHp()) / 0.05) * 20000);
-			((L2Attackable) npc).addDamageHate(originalAttacker, 0, hate);
+			((Attackable) npc).addDamageHate(originalAttacker, 0, hate);
 			if (Rnd.get(10) < 1)
 			{
 				final int i0 = Rnd.get((15 * 15));
@@ -820,13 +820,13 @@ public class Zaken extends Quest
 				}
 				else if (i0 < 15)
 				{
-					for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(100))
+					for (Creature creature : npc.getKnownList().getKnownCharactersInRadius(100))
 					{
-						if (character != attacker)
+						if (creature != attacker)
 						{
 							continue;
 						}
-						if (attacker != ((L2Attackable) npc).getMostHated())
+						if (attacker != ((Attackable) npc).getMostHated())
 						{
 							npc.setTarget(attacker);
 							npc.doCast(SkillTable.getInstance().getInfo(4221, 1));
@@ -835,7 +835,7 @@ public class Zaken extends Quest
 				}
 				if (Rnd.nextBoolean())
 				{
-					if (attacker == ((L2Attackable) npc).getMostHated())
+					if (attacker == ((Attackable) npc).getMostHated())
 					{
 						npc.setTarget(attacker);
 						npc.doCast(SkillTable.getInstance().getInfo(4220, 1));
@@ -860,7 +860,7 @@ public class Zaken extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		
@@ -895,23 +895,23 @@ public class Zaken extends Quest
 	}
 	
 	/*
-	 * public String onSkillSee(L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) { int npcId = npc.getNpcId(); if (npcId == ZAKEN) { if (skill.getAggroPoints() > 0) { ((L2Attackable) npc).addDamageHate(caster, 0, (((skill.getAggroPoints() / npc.getMaxHp()) *
+	 * public String onSkillSee(NpcInstance npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet) { int npcId = npc.getNpcId(); if (npcId == ZAKEN) { if (skill.getAggroPoints() > 0) { ((Attackable) npc).addDamageHate(caster, 0, (((skill.getAggroPoints() / npc.getMaxHp()) *
 	 * 10) * 150)); } if (Rnd.get(12) < 1) { int i0 = Rnd.get((15 * 15)); if (i0 < 1) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4216, 1)); } else if (i0 < 2) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4217, 1)); } else if (i0 < 4) {
-	 * npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4219, 1)); } else if (i0 < 8) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4218, 1)); } else if (i0 < 15) { for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(100)) { if
-	 * (character != caster) continue; if (caster != ((L2Attackable) npc).getMostHated()) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4221, 1)); } } } if (Rnd.get(2)ss < 1) { if (caster == ((L2Attackable) npc).getMostHated()) { npc.setTarget(caster);
+	 * npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4219, 1)); } else if (i0 < 8) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4218, 1)); } else if (i0 < 15) { for (Creature creature : npc.getKnownList().getKnownCharactersInRadius(100)) { if (character
+	 * != caster) continue; if (caster != ((Attackable) npc).getMostHated()) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4221, 1)); } } } if (Rnd.get(2)ss < 1) { if (caster == ((Attackable) npc).getMostHated()) { npc.setTarget(caster);
 	 * npc.doCast(SkillTable.getInstance().getInfo(4220, 1)); } } } } return super.onSkillSee(npc, caster, skill, targets, isPet); }
 	 */
 	
 	@Override
-	public String onAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
 		{
 			if (_Zone.isInsideZone(npc))
 			{
-				final L2Character target = isPet ? player.getPet() : player;
-				((L2Attackable) npc).addDamageHate(target, 1, 200);
+				final Creature target = isPet ? player.getPet() : player;
+				((Attackable) npc).addDamageHate(target, 1, 200);
 			}
 			if ((player.getZ() > (npc.getZ() - 100)) && (player.getZ() < (npc.getZ() + 100)))
 			{
@@ -964,13 +964,13 @@ public class Zaken extends Quest
 					}
 					else if (i0 < 15)
 					{
-						for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(100))
+						for (Creature creature : npc.getKnownList().getKnownCharactersInRadius(100))
 						{
-							if (character != player)
+							if (creature != player)
 							{
 								continue;
 							}
-							if (player != ((L2Attackable) npc).getMostHated())
+							if (player != ((Attackable) npc).getMostHated())
 							{
 								npc.setTarget(player);
 								npc.doCast(SkillTable.getInstance().getInfo(4221, 1));
@@ -979,7 +979,7 @@ public class Zaken extends Quest
 					}
 					if (Rnd.nextBoolean())
 					{
-						if (player == ((L2Attackable) npc).getMostHated())
+						if (player == ((Attackable) npc).getMostHated())
 						{
 							npc.setTarget(player);
 							npc.doCast(SkillTable.getInstance().getInfo(4220, 1));

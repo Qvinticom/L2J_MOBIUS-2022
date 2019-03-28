@@ -38,19 +38,19 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -230,13 +230,13 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "test_server_helper001.html";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (!_isEnabled)
 		{
@@ -425,7 +425,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+						for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
 						{
 							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 						}
@@ -491,7 +491,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		return htmltext;
 	}
 	
-	private String getFirstOccupationChangeHtml(L2PcInstance player)
+	private String getFirstOccupationChangeHtml(PlayerInstance player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
@@ -585,7 +585,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		return htmltext;
 	}
 	
-	private String getSecondOccupationChangeHtml(L2PcInstance player)
+	private String getSecondOccupationChangeHtml(PlayerInstance player)
 	{
 		String htmltext = null;
 		if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP))
@@ -773,7 +773,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		return htmltext;
 	}
 	
-	private boolean changeToNextClass(L2PcInstance player)
+	private boolean changeToNextClass(PlayerInstance player)
 	{
 		ClassId newClass = null;
 		if (player.getClassId() == ClassId.FEMALE_SOUL_HOUND)
@@ -856,7 +856,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
 				SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-				for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+				for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
 				{
 					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 				}
@@ -872,7 +872,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		}
 	}
 	
-	private void showPopupWindow(L2PcInstance player)
+	private void showPopupWindow(PlayerInstance player)
 	{
 		if (!_showPopupWindow)
 		{
@@ -894,7 +894,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		
 		if (!_showPopupWindow || (event.getMarkId() != 1)) // mark id was 1001 - used 1 for tutorial text
 		{
@@ -921,7 +921,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		
 		if (html != null)
 		{
-			showResult(event.getActiveChar(), html);
+			showResult(event.getPlayer(), html);
 			// player.sendPacket(new TutorialShowHtml(html));
 		}
 	}
@@ -932,9 +932,9 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	{
 		if (event.getCommand().startsWith("Quest ClassMaster "))
 		{
-			final String html = onAdvEvent(event.getCommand().substring(18), null, event.getActiveChar());
-			event.getActiveChar().sendPacket(TutorialCloseHtml.STATIC_PACKET);
-			showResult(event.getActiveChar(), html);
+			final String html = onAdvEvent(event.getCommand().substring(18), null, event.getPlayer());
+			event.getPlayer().sendPacket(TutorialCloseHtml.STATIC_PACKET);
+			showResult(event.getPlayer(), html);
 		}
 	}
 	
@@ -942,24 +942,24 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerProfessionChange(OnPlayerProfessionChange event)
 	{
-		showPopupWindow(event.getActiveChar());
+		showPopupWindow(event.getPlayer());
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		showPopupWindow(event.getActiveChar());
+		showPopupWindow(event.getPlayer());
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		showPopupWindow(event.getActiveChar());
+		showPopupWindow(event.getPlayer());
 	}
 	
-	private String getClassChangeOptions(L2PcInstance player, int selectedClassId)
+	private String getClassChangeOptions(PlayerInstance player, int selectedClassId)
 	{
 		final StringBuilder sb = new StringBuilder();
 		
@@ -1054,7 +1054,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			return _appliedCategories != null ? _appliedCategories : Collections.emptyList();
 		}
 		
-		public boolean isInCategory(L2PcInstance player)
+		public boolean isInCategory(PlayerInstance player)
 		{
 			if (_appliedCategories != null)
 			{
@@ -1111,7 +1111,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		}
 	}
 	
-	private boolean checkIfClassChangeHasOptions(L2PcInstance player)
+	private boolean checkIfClassChangeHasOptions(PlayerInstance player)
 	{
 		boolean showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRequired().isEmpty()).anyMatch(ccd -> ccd.isInCategory(player)); // Check if there are requirements
 		if (!showOptions)

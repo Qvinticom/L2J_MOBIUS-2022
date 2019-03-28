@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,7 +35,7 @@ public class CombatPointHeal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature actChar, Skill skill, WorldObject[] targets)
 	{
 		// check for other effects
 		try
@@ -51,14 +51,14 @@ public class CombatPointHeal implements ISkillHandler
 		{
 		}
 		
-		for (L2Object object : targets)
+		for (WorldObject object : targets)
 		{
-			if (!(object instanceof L2Character))
+			if (!(object instanceof Creature))
 			{
 				continue;
 			}
 			
-			final L2Character target = (L2Character) object;
+			final Creature target = (Creature) object;
 			double cp = skill.getPower();
 			if (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL)
 			{

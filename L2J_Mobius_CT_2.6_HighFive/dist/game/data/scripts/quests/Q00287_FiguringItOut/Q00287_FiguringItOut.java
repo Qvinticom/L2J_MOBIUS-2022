@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -95,11 +95,11 @@ public class Q00287_FiguringItOut extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -109,7 +109,7 @@ public class Q00287_FiguringItOut extends Quest
 		{
 			case "32742-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "Icarus":
@@ -148,14 +148,14 @@ public class Q00287_FiguringItOut extends Quest
 			{
 				if (!hasQuestItems(player, VIAL_OF_TANTA_BLOOD))
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = "32742-12.html";
 				}
 				break;
 			}
 			case "32742-13.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				break;
 			}
 			case "32742-02.htm":
@@ -173,9 +173,9 @@ public class Q00287_FiguringItOut extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		final PlayerInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return super.onKill(npc, player, isSummon);
@@ -189,13 +189,13 @@ public class Q00287_FiguringItOut extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		final QuestState prev = player.getQuestState(Q00250_WatchWhatYouEat.class.getSimpleName());
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{

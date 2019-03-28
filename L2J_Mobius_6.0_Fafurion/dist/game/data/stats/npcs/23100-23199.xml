@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23100" level="39" type="L2Monster" name="Ant Warrior Captain">
+	<npc id="23100" level="39" type="Monster" name="Ant Warrior Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -61,7 +61,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23101" level="61" type="L2Monster" name="Slaughter Bathin">
+	<npc id="23101" level="61" type="Monster" name="Slaughter Bathin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -113,7 +113,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23102" level="62" type="L2Monster" name="Bathin's Knight">
+	<npc id="23102" level="62" type="Monster" name="Bathin's Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -168,7 +168,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23103" level="62" type="L2Monster" name="Bathin's Wizard">
+	<npc id="23103" level="62" type="Monster" name="Bathin's Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -226,7 +226,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23104" level="65" type="L2Monster" name="Elmoreden's Lady">
+	<npc id="23104" level="65" type="Monster" name="Elmoreden's Lady">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -277,7 +277,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23105" level="64" type="L2Monster" name="Elmoreden's Archer">
+	<npc id="23105" level="64" type="Monster" name="Elmoreden's Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -327,7 +327,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23106" level="64" type="L2Monster" name="Elmoreden's Maid">
+	<npc id="23106" level="64" type="Monster" name="Elmoreden's Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -377,7 +377,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23107" level="64" type="L2Monster" name="Elmoreden's Warrior">
+	<npc id="23107" level="64" type="Monster" name="Elmoreden's Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -426,7 +426,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23108" level="69" type="L2Monster" name="Binder">
+	<npc id="23108" level="69" type="Monster" name="Binder">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -477,7 +477,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23109" level="68" type="L2Monster" name="Bound Warrior">
+	<npc id="23109" level="68" type="Monster" name="Bound Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -527,7 +527,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23110" level="68" type="L2Monster" name="Bound Archer">
+	<npc id="23110" level="68" type="Monster" name="Bound Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -578,7 +578,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23111" level="74" type="L2Monster" name="Heaven's Palace Seraphim">
+	<npc id="23111" level="74" type="Monster" name="Heaven's Palace Seraphim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -628,7 +628,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23112" level="73" type="L2Monster" name="Heaven's Palace Seraphim Escort">
+	<npc id="23112" level="73" type="Monster" name="Heaven's Palace Seraphim Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="191" />
@@ -675,7 +675,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23113" level="10" type="L2Monster" name="Crawler" title="Husk">
+	<npc id="23113" level="10" type="Monster" name="Crawler" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -708,7 +708,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="23114" level="8" type="L2Monster" name="Stalker" title="Husk">
+	<npc id="23114" level="8" type="Monster" name="Stalker" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -742,7 +742,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23115" level="16" type="L2Monster" name="Critter" title="Husk">
+	<npc id="23115" level="16" type="Monster" name="Critter" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -775,7 +775,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23116" level="14" type="L2Monster" name="Avian" title="Husk">
+	<npc id="23116" level="14" type="Monster" name="Avian" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -808,7 +808,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="23117" level="18" type="L2Monster" name="Rider" title="Husk">
+	<npc id="23117" level="18" type="Monster" name="Rider" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -842,7 +842,7 @@
 			<height normal="36.5" />
 		</collision>
 	</npc>
-	<npc id="23118" level="14" type="L2Monster" name="Krapher" title="Husk">
+	<npc id="23118" level="14" type="Monster" name="Krapher" title="Husk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -876,7 +876,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23119" level="18" type="L2Monster" name="Handyman" title="Embryo">
+	<npc id="23119" level="18" type="Monster" name="Handyman" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -924,7 +924,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23120" level="18" type="L2Monster" name="Operative" title="Embryo">
+	<npc id="23120" level="18" type="Monster" name="Operative" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -972,7 +972,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23121" level="8" type="L2Monster" name="Thief">
+	<npc id="23121" level="8" type="Monster" name="Thief">
 		<!-- TODO: Confirm me -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1021,7 +1021,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23122" level="20" type="L2Monster" name="Eyesaroch" title="Husk">
+	<npc id="23122" level="20" type="Monster" name="Eyesaroch" title="Husk">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1067,7 +1067,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23123" level="98" type="L2Monster" name="Isolation Room Warden">
+	<npc id="23123" level="98" type="Monster" name="Isolation Room Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1110,7 +1110,7 @@
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="23124" level="97" type="L2Monster" name="Istina's Creation">
+	<npc id="23124" level="97" type="Monster" name="Istina's Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14231" level="1" />
@@ -1144,7 +1144,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23125" level="97" type="L2Monster" name="Istina's Creation">
+	<npc id="23125" level="97" type="Monster" name="Istina's Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14231" level="1" />
@@ -1178,7 +1178,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23126" level="104" type="L2Monster" name="Embryo Elite Escort">
+	<npc id="23126" level="104" type="Monster" name="Embryo Elite Escort">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1683" level="1" />
@@ -1218,7 +1218,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23127" level="104" type="L2Monster" name="Embryo Elite Chaser">
+	<npc id="23127" level="104" type="Monster" name="Embryo Elite Chaser">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1692" level="1" />
@@ -1260,7 +1260,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23128" level="104" type="L2Monster" name="Embryo Elite Warrior">
+	<npc id="23128" level="104" type="Monster" name="Embryo Elite Warrior">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1687" level="1" />
@@ -1302,7 +1302,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23129" level="104" type="L2Monster" name="Embryo Elite Alchemist">
+	<npc id="23129" level="104" type="Monster" name="Embryo Elite Alchemist">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1698" level="1" />
@@ -1344,7 +1344,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23130" level="104" type="L2Monster" name="Embryo Elite High Priest">
+	<npc id="23130" level="104" type="Monster" name="Embryo Elite High Priest">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4002" level="11" />
@@ -1386,7 +1386,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23131" level="104" type="L2Monster" name="Embryo Executor Captain" title="Watchman of the Altar">
+	<npc id="23131" level="104" type="Monster" name="Embryo Executor Captain" title="Watchman of the Altar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5483" level="1" />
@@ -1424,7 +1424,7 @@
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="23132" level="104" type="L2Monster" name="Etina Gospel">
+	<npc id="23132" level="104" type="Monster" name="Etina Gospel">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1652" level="1" />
@@ -1470,7 +1470,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23133" level="104" type="L2Monster" name="Etina Priests">
+	<npc id="23133" level="104" type="Monster" name="Etina Priests">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4002" level="12" />
@@ -1516,7 +1516,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23134" level="104" type="L2Monster" name="Etina Protectors">
+	<npc id="23134" level="104" type="Monster" name="Etina Protectors">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="5483" level="1" />
@@ -1562,7 +1562,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23135" level="104" type="L2Monster" name="Etina Punishers">
+	<npc id="23135" level="104" type="Monster" name="Etina Punishers">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1687" level="1" />
@@ -1608,7 +1608,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23136" level="104" type="L2Monster" name="Etina Commination">
+	<npc id="23136" level="104" type="Monster" name="Etina Commination">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1697" level="1" />
@@ -1654,7 +1654,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23137" level="104" type="L2Monster" name="Etina Darkmongers">
+	<npc id="23137" level="104" type="Monster" name="Etina Darkmongers">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6093" level="1" />
@@ -1700,7 +1700,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23138" level="104" type="L2Monster" name="Etina Bladesmen" title="Watchman of the Altar">
+	<npc id="23138" level="104" type="Monster" name="Etina Bladesmen" title="Watchman of the Altar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6093" level="1" />
@@ -1738,7 +1738,7 @@
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 	</npc>
-	<npc id="23139" level="103" type="L2Monster" name="Embryo Researcher">
+	<npc id="23139" level="103" type="Monster" name="Embryo Researcher">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1653" level="1" />
@@ -1781,7 +1781,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23140" level="103" type="L2Monster" name="Embryo Watchman">
+	<npc id="23140" level="103" type="Monster" name="Embryo Watchman">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1654" level="1" />
@@ -1823,7 +1823,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23141" level="103" type="L2Monster" name="Embryo Fighter">
+	<npc id="23141" level="103" type="Monster" name="Embryo Fighter">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1687" level="1" />
@@ -1866,7 +1866,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23142" level="103" type="L2Monster" name="Embryo Guard">
+	<npc id="23142" level="103" type="Monster" name="Embryo Guard">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="1682" level="1" />
@@ -1909,7 +1909,7 @@
 			</clanList>
 		</ai>
 	</npc>
-	<npc id="23143" level="99" type="L2Monster" name="Octavis' Gladiator">
+	<npc id="23143" level="99" type="Monster" name="Octavis' Gladiator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1951,7 +1951,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="23144" level="99" type="L2Monster" name="Beast of the Arena">
+	<npc id="23144" level="99" type="Monster" name="Beast of the Arena">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1993,7 +1993,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23145" level="97" type="L2Monster" name="Octavis' Gladiator">
+	<npc id="23145" level="97" type="Monster" name="Octavis' Gladiator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2037,7 +2037,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="23146" level="97" type="L2Monster" name="Beast of the Arena">
+	<npc id="23146" level="97" type="Monster" name="Beast of the Arena">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2082,7 +2082,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23147" level="95" type="L2Monster" name="Resurrected Creation">
+	<npc id="23147" level="95" type="Monster" name="Resurrected Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2160,7 +2160,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23148" level="95" type="L2Monster" name="Lunatic Creature">
+	<npc id="23148" level="95" type="Monster" name="Lunatic Creature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2239,7 +2239,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23149" level="95" type="L2Monster" name="Undead Creature">
+	<npc id="23149" level="95" type="Monster" name="Undead Creature">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2318,7 +2318,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23150" level="96" type="L2Monster" name="Hellish Creature">
+	<npc id="23150" level="96" type="Monster" name="Hellish Creature">
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -2395,7 +2395,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23151" level="96" type="L2Monster" name="Shilen's Messenger">
+	<npc id="23151" level="96" type="Monster" name="Shilen's Messenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
@@ -2479,7 +2479,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23152" level="20" type="L2Monster" name="Eyesaroch">
+	<npc id="23152" level="20" type="Monster" name="Eyesaroch">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2526,7 +2526,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="23153" level="51" type="L2Monster" name="Achelando">
+	<npc id="23153" level="51" type="Monster" name="Achelando">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2586,7 +2586,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23154" level="51" type="L2Monster" name="Styrindo">
+	<npc id="23154" level="51" type="Monster" name="Styrindo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2646,7 +2646,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23155" level="51" type="L2Monster" name="Ashende">
+	<npc id="23155" level="51" type="Monster" name="Ashende">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2709,7 +2709,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23156" level="51" type="L2Monster" name="Meforde">
+	<npc id="23156" level="51" type="Monster" name="Meforde">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
@@ -2775,7 +2775,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23157" level="51" type="L2Monster" name="Rorka">
+	<npc id="23157" level="51" type="Monster" name="Rorka">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2840,7 +2840,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23158" level="51" type="L2Monster" name="Shumerun">
+	<npc id="23158" level="51" type="Monster" name="Shumerun">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2901,7 +2901,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23159" level="45" type="L2Monster" name="Accencio" title="Event Monster">
+	<npc id="23159" level="45" type="Monster" name="Accencio" title="Event Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14274" level="1" />
@@ -2942,7 +2942,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23160" level="93" type="L2Monster" name="Garden Chief Priest">
+	<npc id="23160" level="93" type="Monster" name="Garden Chief Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3010,7 +3010,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23161" level="92" type="L2Monster" name="Garden Priest">
+	<npc id="23161" level="92" type="Monster" name="Garden Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveArounding" value="1" />
@@ -3054,7 +3054,7 @@
 			<id>5</id>
 		</extendDrop>
 	</npc>
-	<npc id="23162" level="87" type="L2Monster" name="Corpse Devourer">
+	<npc id="23162" level="87" type="Monster" name="Corpse Devourer">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3117,7 +3117,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23163" level="87" type="L2Monster" name="Corpse Absorber">
+	<npc id="23163" level="87" type="Monster" name="Corpse Absorber">
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
 			<param name="MoveAroundSocial1" value="170" />
@@ -3181,7 +3181,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23164" level="88" type="L2Monster" name="Corpse Shredder">
+	<npc id="23164" level="88" type="Monster" name="Corpse Shredder">
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3249,7 +3249,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23165" level="87" type="L2Monster" name="Plagueworm">
+	<npc id="23165" level="87" type="Monster" name="Plagueworm">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3314,7 +3314,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23166" level="88" type="L2Monster" name="Contaminated Rotten Root">
+	<npc id="23166" level="88" type="Monster" name="Contaminated Rotten Root">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3380,7 +3380,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23167" level="88" type="L2Monster" name="Decayed Spore">
+	<npc id="23167" level="88" type="Monster" name="Decayed Spore">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3445,7 +3445,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23168" level="89" type="L2Monster" name="Swamp Tracker">
+	<npc id="23168" level="89" type="Monster" name="Swamp Tracker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3511,7 +3511,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23169" level="89" type="L2Monster" name="Swamp Assassin">
+	<npc id="23169" level="89" type="Monster" name="Swamp Assassin">
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -3581,7 +3581,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23170" level="90" type="L2Monster" name="Swamp Watcher">
+	<npc id="23170" level="90" type="Monster" name="Swamp Watcher">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3654,7 +3654,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23171" level="90" type="L2Monster" name="Corpse Collector">
+	<npc id="23171" level="90" type="Monster" name="Corpse Collector">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3719,7 +3719,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23172" level="90" type="L2Monster" name="Delegate of Blood">
+	<npc id="23172" level="90" type="Monster" name="Delegate of Blood">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3785,7 +3785,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23173" level="90" type="L2Monster" name="Blood Aide">
+	<npc id="23173" level="90" type="Monster" name="Blood Aide">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3849,7 +3849,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23174" level="85" type="L2Monster" name="Arbitor of Darkness">
+	<npc id="23174" level="85" type="Monster" name="Arbitor of Darkness">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3914,7 +3914,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23175" level="85" type="L2Monster" name="Altar of Evil Spirit Offering Box">
+	<npc id="23175" level="85" type="Monster" name="Altar of Evil Spirit Offering Box">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3988,7 +3988,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23176" level="86" type="L2Monster" name="Mutated Cerberos">
+	<npc id="23176" level="86" type="Monster" name="Mutated Cerberos">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4054,7 +4054,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23177" level="85" type="L2Monster" name="Dartanion">
+	<npc id="23177" level="85" type="Monster" name="Dartanion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4121,7 +4121,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23178" level="87" type="L2Monster" name="Insane Phion">
+	<npc id="23178" level="87" type="Monster" name="Insane Phion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4183,7 +4183,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23179" level="87" type="L2Monster" name="Dimensional Rifter">
+	<npc id="23179" level="87" type="Monster" name="Dimensional Rifter">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4248,7 +4248,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23180" level="87" type="L2Monster" name="Hellgate Fighting Dog">
+	<npc id="23180" level="87" type="Monster" name="Hellgate Fighting Dog">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4311,7 +4311,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23181" level="78" type="L2Monster" name="Succubus Soldier">
+	<npc id="23181" level="78" type="Monster" name="Succubus Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4375,7 +4375,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23182" level="79" type="L2Monster" name="Succubus Warrior">
+	<npc id="23182" level="79" type="Monster" name="Succubus Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4442,7 +4442,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23183" level="78" type="L2Monster" name="Succubus Archer">
+	<npc id="23183" level="78" type="Monster" name="Succubus Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4509,7 +4509,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23184" level="78" type="L2Monster" name="Succubus Shaman">
+	<npc id="23184" level="78" type="Monster" name="Succubus Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4577,7 +4577,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23185" level="81" type="L2Monster" name="Bloody Succubus" title="Succubus Disciple">
+	<npc id="23185" level="81" type="Monster" name="Bloody Succubus" title="Succubus Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4638,7 +4638,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23186" level="80" type="L2Monster" name="Phantom Soldier">
+	<npc id="23186" level="80" type="Monster" name="Phantom Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -4704,7 +4704,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23187" level="81" type="L2Monster" name="Phantom Warrior">
+	<npc id="23187" level="81" type="Monster" name="Phantom Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -4770,7 +4770,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23188" level="81" type="L2Monster" name="Phantom Archer">
+	<npc id="23188" level="81" type="Monster" name="Phantom Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -4837,7 +4837,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23189" level="81" type="L2Monster" name="Phantom Shaman">
+	<npc id="23189" level="81" type="Monster" name="Phantom Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4905,7 +4905,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23190" level="81" type="L2Monster" name="Phantom Martyr">
+	<npc id="23190" level="81" type="Monster" name="Phantom Martyr">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4972,7 +4972,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23191" level="82" type="L2Monster" name="Succubus of Death" title="Succubus Disciple">
+	<npc id="23191" level="82" type="Monster" name="Succubus of Death" title="Succubus Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5036,7 +5036,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23192" level="82" type="L2Monster" name="Succubus of Darkness" title="Succubus Disciple">
+	<npc id="23192" level="82" type="Monster" name="Succubus of Darkness" title="Succubus Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5099,7 +5099,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23193" level="82" type="L2Monster" name="Apparition Destroyer">
+	<npc id="23193" level="82" type="Monster" name="Apparition Destroyer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5165,7 +5165,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23194" level="83" type="L2Monster" name="Apparition Assassin">
+	<npc id="23194" level="83" type="Monster" name="Apparition Assassin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -5231,7 +5231,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23195" level="83" type="L2Monster" name="Apparition Sniper">
+	<npc id="23195" level="83" type="Monster" name="Apparition Sniper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
@@ -5298,7 +5298,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23196" level="83" type="L2Monster" name="Apparition Wizard">
+	<npc id="23196" level="83" type="Monster" name="Apparition Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
@@ -5365,7 +5365,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23197" level="84" type="L2Monster" name="Succubus of Lunacy" title="Succubus Disciple">
+	<npc id="23197" level="84" type="Monster" name="Succubus of Lunacy" title="Succubus Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -5428,7 +5428,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23198" level="84" type="L2Monster" name="Succubus of Silence" title="Succubus Disciple">
+	<npc id="23198" level="84" type="Monster" name="Succubus of Silence" title="Succubus Disciple">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -5491,7 +5491,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23199" level="96" type="L2Monster" name="Sadiac the Killer">
+	<npc id="23199" level="96" type="Monster" name="Sadiac the Killer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />

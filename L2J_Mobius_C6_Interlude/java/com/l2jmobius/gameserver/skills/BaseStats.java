@@ -27,11 +27,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 
 /**
  * @author DS
@@ -69,7 +69,7 @@ public enum BaseStats
 		_stat = s;
 	}
 	
-	public final double calcBonus(L2Character actor)
+	public final double calcBonus(Creature actor)
 	{
 		if (actor != null)
 		{
@@ -95,25 +95,25 @@ public enum BaseStats
 	
 	private interface BaseStat
 	{
-		double calcBonus(L2Character actor);
+		double calcBonus(Creature actor);
 	}
 	
 	protected static final class STR implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
-			if (((actor instanceof L2RaidBossInstance) || (actor instanceof L2GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
+			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
+			if ((actor instanceof MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2PetInstance) && Config.ALT_PETS_STATS_BONUS)
+			if ((actor instanceof PetInstance) && Config.ALT_PETS_STATS_BONUS)
 			{
 				return 1;
 			}
@@ -130,19 +130,19 @@ public enum BaseStats
 	protected static final class INT implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
-			if (((actor instanceof L2RaidBossInstance) || (actor instanceof L2GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
+			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
+			if ((actor instanceof MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2PetInstance) && Config.ALT_PETS_STATS_BONUS)
+			if ((actor instanceof PetInstance) && Config.ALT_PETS_STATS_BONUS)
 			{
 				return 1;
 			}
@@ -159,19 +159,19 @@ public enum BaseStats
 	protected static final class DEX implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
-			if (((actor instanceof L2RaidBossInstance) || (actor instanceof L2GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
+			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
+			if ((actor instanceof MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2PetInstance) && Config.ALT_PETS_STATS_BONUS)
+			if ((actor instanceof PetInstance) && Config.ALT_PETS_STATS_BONUS)
 			{
 				return 1;
 			}
@@ -188,19 +188,19 @@ public enum BaseStats
 	protected static final class WIT implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
-			if (((actor instanceof L2RaidBossInstance) || (actor instanceof L2GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
+			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
+			if ((actor instanceof MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2PetInstance) && Config.ALT_PETS_STATS_BONUS)
+			if ((actor instanceof PetInstance) && Config.ALT_PETS_STATS_BONUS)
 			{
 				return 1;
 			}
@@ -217,19 +217,19 @@ public enum BaseStats
 	protected static final class CON implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
-			if (((actor instanceof L2RaidBossInstance) || (actor instanceof L2GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
+			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
+			if ((actor instanceof MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2PetInstance) && Config.ALT_PETS_STATS_BONUS)
+			if ((actor instanceof PetInstance) && Config.ALT_PETS_STATS_BONUS)
 			{
 				return 1;
 			}
@@ -246,19 +246,19 @@ public enum BaseStats
 	protected static final class MEN implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
-			if (((actor instanceof L2RaidBossInstance) || (actor instanceof L2GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
+			if (((actor instanceof RaidBossInstance) || (actor instanceof GrandBossInstance)) && Config.ALT_RAIDS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
+			if ((actor instanceof MonsterInstance) && Config.ALT_MOBS_STATS_BONUS)
 			{
 				return 1;
 			}
 			
-			if ((actor instanceof L2PetInstance) && Config.ALT_PETS_STATS_BONUS)
+			if ((actor instanceof PetInstance) && Config.ALT_PETS_STATS_BONUS)
 			{
 				return 1;
 			}
@@ -275,7 +275,7 @@ public enum BaseStats
 	protected static final class NULL implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return 1f;
 		}

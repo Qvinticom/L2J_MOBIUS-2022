@@ -17,8 +17,8 @@
 package quests.Q10386_MysteriousJourney;
 
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -50,10 +50,10 @@ public final class Q10386_MysteriousJourney extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -72,7 +72,7 @@ public final class Q10386_MysteriousJourney extends Quest
 			}
 			case "30499-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, VACCINE_BOX, 1);
 				playMovie(player, Movie.SC_SOULISLAND_QUEST);
 				htmltext = event;
@@ -80,18 +80,18 @@ public final class Q10386_MysteriousJourney extends Quest
 			}
 			case "33780-04.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33797-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					takeItems(player, VACCINE_BOX, 1);
 					htmltext = event;
 				}
@@ -99,9 +99,9 @@ public final class Q10386_MysteriousJourney extends Quest
 			}
 			case "33796-03.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
@@ -111,12 +111,12 @@ public final class Q10386_MysteriousJourney extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -132,7 +132,7 @@ public final class Q10386_MysteriousJourney extends Quest
 				{
 					case TAPOY:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30499-04.html";
 						}
@@ -140,7 +140,7 @@ public final class Q10386_MysteriousJourney extends Quest
 					}
 					case HESED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -160,7 +160,7 @@ public final class Q10386_MysteriousJourney extends Quest
 								{
 									addExpAndSp(player, 27_244_350, 6_538);
 								}
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								htmltext = "33780-06.html";
 								break;
 							}
@@ -169,11 +169,11 @@ public final class Q10386_MysteriousJourney extends Quest
 					}
 					case SEAL_WATCHMAN:
 					{
-						if (st.isCond(2))
+						if (qs.isCond(2))
 						{
 							htmltext = "33797-01.html";
 						}
-						else if (st.isCond(3))
+						else if (qs.isCond(3))
 						{
 							htmltext = "33797-03.html";
 						}
@@ -181,11 +181,11 @@ public final class Q10386_MysteriousJourney extends Quest
 					}
 					case VERNA:
 					{
-						if (st.isCond(3))
+						if (qs.isCond(3))
 						{
 							htmltext = "33796-01.html";
 						}
-						else if (st.isCond(4))
+						else if (qs.isCond(4))
 						{
 							htmltext = "33796-04.html";
 						}

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ public class OnEventTrigger implements IClientOutgoingPacket
 	private final int _emitterId;
 	private final int _enabled;
 	
-	public OnEventTrigger(L2DoorInstance door, boolean enabled)
+	public OnEventTrigger(DoorInstance door, boolean enabled)
 	{
 		_emitterId = door.getEmitter();
 		_enabled = enabled ? 1 : 0;

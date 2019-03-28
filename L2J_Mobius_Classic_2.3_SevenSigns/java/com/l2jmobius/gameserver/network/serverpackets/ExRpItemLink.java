@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,9 +25,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class ExRpItemLink extends AbstractItemPacket
 {
-	private final L2ItemInstance _item;
+	private final ItemInstance _item;
 	
-	public ExRpItemLink(L2ItemInstance item)
+	public ExRpItemLink(ItemInstance item)
 	{
 		_item = item;
 	}

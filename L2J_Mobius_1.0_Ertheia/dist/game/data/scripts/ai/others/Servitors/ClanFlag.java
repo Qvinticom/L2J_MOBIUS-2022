@@ -17,11 +17,11 @@
 package ai.others.Servitors;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -43,7 +43,7 @@ public class ClanFlag extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		getTimers().addTimer("END_OF_LIFE", 1800000, npc, null);
 		getTimers().addTimer("SKILL_CAST", 1000, npc, null);
@@ -51,7 +51,7 @@ public class ClanFlag extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -59,14 +59,14 @@ public class ClanFlag extends AbstractNpcAI
 			{
 				if (npc.getSummoner() != null)
 				{
-					final L2Clan summonerClan = npc.getSummoner().getClan();
+					final Clan summonerClan = npc.getSummoner().getClan();
 					if (summonerClan != null)
 					{
-						L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 2000, target ->
+						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 2000, target ->
 						{
 							if ((target != null) && !target.isDead() && GeoEngine.getInstance().canSeeTarget(npc, target))
 							{
-								final L2Clan targetClan = target.getClan();
+								final Clan targetClan = target.getClan();
 								if (targetClan != null)
 								{
 									if (targetClan == summonerClan)

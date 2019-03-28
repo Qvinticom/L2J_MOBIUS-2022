@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
 
-public final class RequestJoinPledge extends L2GameClientPacket
+public final class RequestJoinPledge extends GameClientPacket
 {
 	private int _target;
 	private int _pledgeType;
@@ -37,33 +37,33 @@ public final class RequestJoinPledge extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!(L2World.getInstance().findObject(_target) instanceof L2PcInstance))
+		if (!(World.getInstance().findObject(_target) instanceof PlayerInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return;
 		}
 		
-		final L2PcInstance target = (L2PcInstance) L2World.getInstance().findObject(_target);
-		final L2Clan clan = activeChar.getClan();
+		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_target);
+		final Clan clan = player.getClan();
 		
-		if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType))
-		{
-			return;
-		}
-		
-		if (!activeChar.getRequest().setRequest(target, this))
+		if (!clan.checkClanJoinCondition(player, target, _pledgeType))
 		{
 			return;
 		}
 		
-		final AskJoinPledge ap = new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName());
+		if (!player.getRequest().setRequest(target, this))
+		{
+			return;
+		}
+		
+		final AskJoinPledge ap = new AskJoinPledge(player.getObjectId(), player.getClan().getName());
 		target.sendPacket(ap);
 	}
 	

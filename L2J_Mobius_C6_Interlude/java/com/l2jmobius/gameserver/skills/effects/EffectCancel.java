@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.Stats;
 
-final class EffectCancel extends L2Effect
+final class EffectCancel extends Effect
 {
 	public EffectCancel(Env env, EffectTemplate template)
 	{
@@ -44,13 +44,13 @@ final class EffectCancel extends L2Effect
 		final int landrate = (int) getEffector().calcStat(Stats.CANCEL_VULN, 90, getEffected(), null);
 		if (Rnd.get(100) < landrate)
 		{
-			L2Effect[] effects = getEffected().getAllEffects();
+			Effect[] effects = getEffected().getAllEffects();
 			int maxdisp = (int) getSkill().getNegatePower();
 			if (maxdisp == 0)
 			{
 				maxdisp = 5;
 			}
-			for (L2Effect e : effects)
+			for (Effect e : effects)
 			{
 				switch (e.getEffectType())
 				{
@@ -98,7 +98,7 @@ final class EffectCancel extends L2Effect
 				}
 			}
 		}
-		else if (getEffector() instanceof L2PcInstance)
+		else if (getEffector() instanceof PlayerInstance)
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 			sm.addString(getEffected().getName());

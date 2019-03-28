@@ -21,9 +21,9 @@ import java.util.function.Consumer;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import com.l2jmobius.gameserver.util.Util;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.util.Util;
 public class SummonExceptMaster implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -42,12 +42,12 @@ public class SummonExceptMaster implements IAffectScopeHandler
 		
 		if (target.isPlayable())
 		{
-			final L2PcInstance player = target.getActingPlayer();
+			final PlayerInstance player = target.getActingPlayer();
 			//@formatter:off
 			player.getServitorsAndPets().stream()
 			.filter(c -> !c.isDead())
 			.filter(c -> affectRange > 0 ? Util.checkIfInRange(affectRange, c, target, true) : true)
-			.filter(c -> (affectObject == null) || affectObject.checkAffectedObject(activeChar, c))
+			.filter(c -> (affectObject == null) || affectObject.checkAffectedObject(creature, c))
 			.limit(affectLimit > 0 ? affectLimit : Long.MAX_VALUE)
 			.forEach(action);
 			//@formatter:on

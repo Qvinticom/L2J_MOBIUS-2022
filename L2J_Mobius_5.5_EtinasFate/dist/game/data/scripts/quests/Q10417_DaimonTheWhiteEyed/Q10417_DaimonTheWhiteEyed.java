@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -72,10 +72,10 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -91,29 +91,29 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 			}
 			case "31683-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31683-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
-				else if (st.isCond(3))
+				else if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = "31683-07.html";
 				}
 				break;
 			}
 			case "31683-03.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() > MIN_LEVEL)
@@ -129,21 +129,21 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.getState() == State.CREATED)
+		if (qs.getState() == State.CREATED)
 		{
 			if (npc.getId() == EYE_OF_ARGOS)
 			{
 				htmltext = "31683-01.htm";
 			}
 		}
-		else if (st.getState() == State.STARTED)
+		else if (qs.getState() == State.STARTED)
 		{
-			switch (st.getCond())
+			switch (qs.getCond())
 			{
 				case 1:
 				{
@@ -171,33 +171,33 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
 		{
-			int count = st.getInt(KILL_COUNT_VAR);
-			st.set(KILL_COUNT_VAR, ++count);
+			int count = qs.getInt(KILL_COUNT_VAR);
+			qs.set(KILL_COUNT_VAR, ++count);
 			if (count >= 100)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		else if ((st != null) && st.isCond(2))
+		else if ((qs != null) && qs.isCond(2))
 		{
-			int killeddaimoneye = st.getInt("killed_" + DAIMON_THE_WHITEEYED);
+			int killeddaimoneye = qs.getInt("killed_" + DAIMON_THE_WHITEEYED);
 			if (npc.getId() == DAIMON_THE_WHITEEYED)
 			{
 				killeddaimoneye++;
-				st.set("killed_" + DAIMON_THE_WHITEEYED, killeddaimoneye);
+				qs.set("killed_" + DAIMON_THE_WHITEEYED, killeddaimoneye);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				if (killeddaimoneye > 0)
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 			}
 		}
@@ -205,12 +205,12 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && st.isStarted())
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && qs.isStarted())
 		{
-			final int killCount = st.getInt(KILL_COUNT_VAR);
+			final int killCount = qs.getInt(KILL_COUNT_VAR);
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();

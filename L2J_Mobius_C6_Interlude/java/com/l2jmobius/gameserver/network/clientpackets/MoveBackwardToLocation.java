@@ -21,7 +21,7 @@ import java.nio.BufferUnderflowException;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.util.IllegalPlayerAction;
 import com.l2jmobius.gameserver.util.Util;
 
-public class MoveBackwardToLocation extends L2GameClientPacket
+public class MoveBackwardToLocation extends GameClientPacket
 {
 	private int _targetX;
 	private int _targetY;
@@ -57,11 +57,11 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		catch (BufferUnderflowException e)
 		{
 			// Ignore for now
-			if (Config.L2WALKER_PROTEC)
+			if (Config.L2WALKER_PROTECTION)
 			{
-				final L2PcInstance activeChar = getClient().getActiveChar();
-				activeChar.sendPacket(SystemMessageId.HACKING_TOOL);
-				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
+				final PlayerInstance player = getClient().getPlayer();
+				player.sendPacket(SystemMessageId.HACKING_TOOL);
+				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
 			}
 		}
 	}
@@ -69,9 +69,9 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -79,49 +79,49 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		// Move flood protection
 		if (!getClient().getFloodProtectors().getMoveAction().tryPerformAction("MoveBackwardToLocation"))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Like L2OFF movements prohibited when char is sitting
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Like L2OFF movements prohibited when char is teleporting
-		if (activeChar.isTeleporting())
+		if (player.isTeleporting())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Like L2OFF the enchant window will close
-		if (activeChar.getActiveEnchantItem() != null)
+		if (player.getActiveEnchantItem() != null)
 		{
-			activeChar.sendPacket(new EnchantResult(0));
-			activeChar.setActiveEnchantItem(null);
+			player.sendPacket(new EnchantResult(0));
+			player.setActiveEnchantItem(null);
 		}
 		
 		if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ))
 		{
-			activeChar.sendPacket(new StopMove(activeChar));
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(new StopMove(player));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Mobius: Check for possible door logout and move over exploit. Also checked at ValidatePosition.
-		if (DoorTable.getInstance().checkIfDoorsBetween(activeChar.getX(), activeChar.getY(), activeChar.getZ(), _targetX, _targetY, _targetZ))
+		if (DoorTable.getInstance().checkIfDoorsBetween(player.getX(), player.getY(), player.getZ(), _targetX, _targetY, _targetZ))
 		{
-			activeChar.stopMove(activeChar.getLastServerPosition());
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.stopMove(player.getLastServerPosition());
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (_movementMode == 1)
 		{
-			activeChar.setCursorKeyMovement(false);
+			player.setCursorKeyMovement(false);
 		}
 		else // 0
 		{
@@ -129,36 +129,36 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			{
 				return;
 			}
-			activeChar.setCursorKeyMovement(true);
+			player.setCursorKeyMovement(true);
 		}
 		
-		if (activeChar.getTeleMode() > 0)
+		if (player.getTeleMode() > 0)
 		{
-			if (activeChar.getTeleMode() == 1)
+			if (player.getTeleMode() == 1)
 			{
-				activeChar.setTeleMode(0);
+				player.setTeleMode(0);
 			}
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			activeChar.teleToLocation(new Location(_targetX, _targetY, _targetZ), false);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.teleToLocation(new Location(_targetX, _targetY, _targetZ), false);
 			return;
 		}
 		
-		final double dx = _targetX - activeChar.getX();
-		final double dy = _targetY - activeChar.getY();
+		final double dx = _targetX - player.getX();
+		final double dy = _targetY - player.getY();
 		// Can't move if character is confused, or trying to move a huge distance
-		if (activeChar.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
+		if (player.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// This is to avoid exploit with Hit + Fast movement
-		if ((activeChar.isMoving() && activeChar.isAttackingNow()))
+		if ((player.isMoving() && player.isAttackingNow()))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
 	}
 }

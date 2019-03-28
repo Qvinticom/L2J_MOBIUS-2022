@@ -18,14 +18,14 @@ package handlers.effecthandlers;
 
 import java.util.Collection;
 
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -45,15 +45,15 @@ public final class Sweeper extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!effector.isPlayer() || !effected.isAttackable())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
-		final L2Attackable monster = (L2Attackable) effected;
+		final PlayerInstance player = effector.getActingPlayer();
+		final Attackable monster = (Attackable) effected;
 		if (!monster.checkSpoilOwner(player, false))
 		{
 			return;
@@ -69,7 +69,7 @@ public final class Sweeper extends AbstractEffect
 		{
 			for (ItemHolder sweepedItem : items)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				if (party != null)
 				{
 					party.distributeItem(player, sweepedItem, true, monster);

@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.GetOffVehicle;
 
 /**
  * @author Maktakien
  */
-public final class RequestGetOffVehicle extends L2GameClientPacket
+public final class RequestGetOffVehicle extends GameClientPacket
 {
 	private int _id;
 	private int _x;
@@ -43,15 +43,15 @@ public final class RequestGetOffVehicle extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2BoatInstance boat = BoatManager.getInstance().GetBoat(_id);
-		final GetOffVehicle Gon = new GetOffVehicle(activeChar, boat, _x, _y, _z);
-		activeChar.broadcastPacket(Gon);
+		final BoatInstance boat = BoatManager.getInstance().GetBoat(_id);
+		final GetOffVehicle Gon = new GetOffVehicle(player, boat, _x, _y, _z);
+		player.broadcastPacket(Gon);
 	}
 }

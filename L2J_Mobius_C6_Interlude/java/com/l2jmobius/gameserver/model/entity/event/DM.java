@@ -33,24 +33,24 @@ import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.event.manager.EventTask;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class DM implements EventTask
 {
@@ -59,7 +59,7 @@ public class DM implements EventTask
 	private static String _eventName = new String();
 	private static String _eventDesc = new String();
 	private static String _joiningLocationName = new String();
-	private static L2Spawn _npcSpawn;
+	private static Spawn _npcSpawn;
 	private static boolean _joining = false;
 	private static boolean _teleport = false;
 	private static boolean _started = false;
@@ -87,8 +87,8 @@ public class DM implements EventTask
 	private static long _intervalBetweenMatchs = 0;
 	private String startEventTime;
 	protected static boolean _teamEvent = false; // TODO to be integrated
-	public static Vector<L2PcInstance> _players = new Vector<>();
-	public static List<L2PcInstance> _topPlayers = new ArrayList<>();
+	public static Vector<PlayerInstance> _players = new Vector<>();
+	public static List<PlayerInstance> _topPlayers = new ArrayList<>();
 	public static Vector<String> _savePlayers = new Vector<>();
 	
 	/**
@@ -662,14 +662,14 @@ public class DM implements EventTask
 	
 	/**
 	 * Sets the npc pos.
-	 * @param activeChar the new npc pos
+	 * @param player the new npc pos
 	 */
-	public static void setNpcPos(L2PcInstance activeChar)
+	public static void setNpcPos(PlayerInstance player)
 	{
-		_npcX = activeChar.getX();
-		_npcY = activeChar.getY();
-		_npcZ = activeChar.getZ();
-		_npcHeading = activeChar.getHeading();
+		_npcX = player.getX();
+		_npcY = player.getY();
+		_npcZ = player.getZ();
+		_npcHeading = player.getHeading();
 	}
 	
 	/**
@@ -677,11 +677,11 @@ public class DM implements EventTask
 	 */
 	private static void spawnEventNpc()
 	{
-		final L2NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_npcId);
+		final NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_npcId);
 		
 		try
 		{
-			_npcSpawn = new L2Spawn(tmpl);
+			_npcSpawn = new Spawn(tmpl);
 			
 			_npcSpawn.setX(_npcX);
 			_npcSpawn.setY(_npcY);
@@ -800,7 +800,7 @@ public class DM implements EventTask
 			
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if (player != null)
 					{
@@ -809,10 +809,10 @@ public class DM implements EventTask
 							// Remove Summon's buffs
 							if (player.getPet() != null)
 							{
-								final L2Summon summon = player.getPet();
+								final Summon summon = player.getPet();
 								summon.stopAllEffects();
 								
-								if (summon instanceof L2PetInstance)
+								if (summon instanceof PetInstance)
 								{
 									summon.unSummon(player);
 								}
@@ -827,7 +827,7 @@ public class DM implements EventTask
 						// Remove player from his party
 						if (player.getParty() != null)
 						{
-							final L2Party party = player.getParty();
+							final Party party = player.getParty();
 							party.removePartyMember(player);
 						}
 						
@@ -882,11 +882,11 @@ public class DM implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player.getParty() != null)
 				{
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					party.removePartyMember(player);
 				}
 			}
@@ -961,7 +961,7 @@ public class DM implements EventTask
 			if (_topKills != 0)
 			{
 				String winners = "";
-				for (L2PcInstance winner : _topPlayers)
+				for (PlayerInstance winner : _topPlayers)
 				{
 					winners = winners + " " + winner.getName();
 				}
@@ -1046,7 +1046,7 @@ public class DM implements EventTask
 		{
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if (player != null)
 					{
@@ -1284,7 +1284,7 @@ public class DM implements EventTask
 		
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -1322,9 +1322,9 @@ public class DM implements EventTask
 					return;
 				}
 				
-				final List<L2PcInstance> toBeRemoved = new ArrayList<>();
+				final List<PlayerInstance> toBeRemoved = new ArrayList<>();
 				
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if (player == null)
 					{
@@ -1396,7 +1396,7 @@ public class DM implements EventTask
 	 * @param eventPlayer the event player
 	 * @return true, if successful
 	 */
-	private static boolean addPlayerOk(L2PcInstance eventPlayer)
+	private static boolean addPlayerOk(PlayerInstance eventPlayer)
 	{
 		if (eventPlayer.isAio() && !Config.ALLOW_AIO_IN_EVENTS)
 		{
@@ -1428,7 +1428,7 @@ public class DM implements EventTask
 			{
 				for (String character_name : players_in_boxes)
 				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(character_name);
+					final PlayerInstance player = World.getInstance().getPlayer(character_name);
 					
 					if ((player != null) && player._inEventDM)
 					{
@@ -1453,7 +1453,7 @@ public class DM implements EventTask
 				return false;
 			}
 			
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player.getObjectId() == eventPlayer.getObjectId())
 				{
@@ -1478,7 +1478,7 @@ public class DM implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				player._originalNameColorDM = player.getAppearance().getNameColor();
 				player._originalKarmaDM = player.getKarma();
@@ -1547,14 +1547,14 @@ public class DM implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("##################################");
-		LOGGER.info("# _players(Vector<L2PcInstance>) #");
+		LOGGER.info("# _players(Vector<PlayerInstance>) #");
 		LOGGER.info("##################################");
 		
 		synchronized (_players)
 		{
 			LOGGER.info("Total Players : " + _players.size());
 			
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -1719,7 +1719,7 @@ public class DM implements EventTask
 	 * @param eventPlayer the event player
 	 * @param objectId the object id
 	 */
-	public static void showEventHtml(L2PcInstance eventPlayer, String objectId)
+	public static void showEventHtml(PlayerInstance eventPlayer, String objectId)
 	{
 		try
 		{
@@ -1790,7 +1790,7 @@ public class DM implements EventTask
 			adminReply.setHtml(replyMSG.toString());
 			eventPlayer.sendPacket(adminReply);
 			
-			// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+			// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 			eventPlayer.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 		catch (Exception e)
@@ -1803,7 +1803,7 @@ public class DM implements EventTask
 	 * Adds the player.
 	 * @param player the player
 	 */
-	public static void addPlayer(L2PcInstance player)
+	public static void addPlayer(PlayerInstance player)
 	{
 		if (!addPlayerOk(player))
 		{
@@ -1825,7 +1825,7 @@ public class DM implements EventTask
 	 * Removes the player.
 	 * @param player the player
 	 */
-	public static void removePlayer(L2PcInstance player)
+	public static void removePlayer(PlayerInstance player)
 	{
 		if ((player != null) && player._inEventDM)
 		{
@@ -1861,7 +1861,7 @@ public class DM implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -1921,7 +1921,7 @@ public class DM implements EventTask
 	 * Clean event player.
 	 * @param player the player
 	 */
-	private static void cleanEventPlayer(L2PcInstance player)
+	private static void cleanEventPlayer(PlayerInstance player)
 	{
 		// nothing
 	}
@@ -1930,7 +1930,7 @@ public class DM implements EventTask
 	 * Adds the disconnected player.
 	 * @param player the player
 	 */
-	public static void addDisconnectedPlayer(L2PcInstance player)
+	public static void addDisconnectedPlayer(PlayerInstance player)
 	{
 		synchronized (_players)
 		{
@@ -1991,7 +1991,7 @@ public class DM implements EventTask
 	{
 		if (_topPlayers.size() > 0)
 		{
-			for (L2PcInstance _topPlayer : _topPlayers)
+			for (PlayerInstance _topPlayer : _topPlayers)
 			{
 				_topPlayer.addItem("DM Event: " + _eventName, _rewardId, _rewardAmount, _topPlayer, true);
 				
@@ -2007,7 +2007,7 @@ public class DM implements EventTask
 				nhm.setHtml(replyMSG.toString());
 				_topPlayer.sendPacket(nhm);
 				
-				// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+				// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 				_topPlayer.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 		}
@@ -2020,7 +2020,7 @@ public class DM implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player._countDMkills > _topKills)
 				{
@@ -2059,13 +2059,13 @@ public class DM implements EventTask
 	
 	/**
 	 * Sets the players pos.
-	 * @param activeChar the new players pos
+	 * @param player the new players pos
 	 */
-	public static void setPlayersPos(L2PcInstance activeChar)
+	public static void setPlayersPos(PlayerInstance player)
 	{
-		_playerX = activeChar.getX();
-		_playerY = activeChar.getY();
-		_playerZ = activeChar.getZ();
+		_playerX = player.getX();
+		_playerY = player.getY();
+		_playerZ = player.getZ();
 	}
 	
 	/**
@@ -2075,7 +2075,7 @@ public class DM implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				player.getAppearance().setNameColor(player._originalNameColorDM);
 				player.setTitle(player._originalTitleDM);
@@ -2144,7 +2144,7 @@ public class DM implements EventTask
 	 * On disconnect.
 	 * @param player the player
 	 */
-	public static void onDisconnect(L2PcInstance player)
+	public static void onDisconnect(PlayerInstance player)
 	{
 		if (player._inEventDM)
 		{

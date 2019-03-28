@@ -23,11 +23,11 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.WarehouseItem;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.MaterialType;
@@ -41,7 +41,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	public static final int FREIGHT = 4; // not sure
 	
 	private long _playerAdena;
-	private List<L2WarehouseItem> _objects = new ArrayList<>();
+	private List<WarehouseItem> _objects = new ArrayList<>();
 	private int _whType;
 	
 	public enum WarehouseListType
@@ -86,7 +86,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param itemtype is the Itemtype to sort for
 	 * @param sortorder is the integer Sortorder like 1 for A..Z (use public constant)
 	 */
-	public SortedWareHouseWithdrawalList(L2PcInstance player, int type, WarehouseListType itemtype, byte sortorder)
+	public SortedWareHouseWithdrawalList(PlayerInstance player, int type, WarehouseListType itemtype, byte sortorder)
 	{
 		_whType = type;
 		
@@ -268,7 +268,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This is the common Comparator to sort the items by Name
 	 */
-	private static class WarehouseItemNameComparator implements Comparator<L2WarehouseItem>
+	private static class WarehouseItemNameComparator implements Comparator<WarehouseItem>
 	{
 		private byte order = 0;
 		
@@ -278,13 +278,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		}
 		
 		@Override
-		public int compare(L2WarehouseItem o1, L2WarehouseItem o2)
+		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
+			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
+			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -297,7 +297,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This Comparator is used to sort by Recipe Level
 	 */
-	private static class WarehouseItemRecipeComparator implements Comparator<L2WarehouseItem>
+	private static class WarehouseItemRecipeComparator implements Comparator<WarehouseItem>
 	{
 		private int order = 0;
 		
@@ -310,13 +310,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		}
 		
 		@Override
-		public int compare(L2WarehouseItem o1, L2WarehouseItem o2)
+		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
+			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
+			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -324,8 +324,8 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 			{
 				try
 				{
-					final L2RecipeList rp1 = rd.getRecipeByItemId(o1.getItemId());
-					final L2RecipeList rp2 = rd.getRecipeByItemId(o2.getItemId());
+					final RecipeList rp1 = rd.getRecipeByItemId(o1.getItemId());
+					final RecipeList rp2 = rd.getRecipeByItemId(o2.getItemId());
 					
 					if (rp1 == null)
 					{
@@ -356,7 +356,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This Comparator is used to sort the Items by BodyPart
 	 */
-	private static class WarehouseItemBodypartComparator implements Comparator<L2WarehouseItem>
+	private static class WarehouseItemBodypartComparator implements Comparator<WarehouseItem>
 	{
 		private byte order = 0;
 		
@@ -366,13 +366,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		}
 		
 		@Override
-		public int compare(L2WarehouseItem o1, L2WarehouseItem o2)
+		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
+			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
+			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -385,7 +385,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This Comparator is used to sort by the Item Grade (e.g. Non..S-Grade)
 	 */
-	private static class WarehouseItemGradeComparator implements Comparator<L2WarehouseItem>
+	private static class WarehouseItemGradeComparator implements Comparator<WarehouseItem>
 	{
 		byte order = 0;
 		
@@ -395,13 +395,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		}
 		
 		@Override
-		public int compare(L2WarehouseItem o1, L2WarehouseItem o2)
+		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
+			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
+			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -414,7 +414,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This Comparator will sort by Item Type. Unfortunatly this will only have a good result if the Database Table for the ETCITEM.TYPE column is fixed!
 	 */
-	private static class WarehouseItemTypeComparator implements Comparator<L2WarehouseItem>
+	private static class WarehouseItemTypeComparator implements Comparator<WarehouseItem>
 	{
 		byte order = 0;
 		
@@ -424,13 +424,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		}
 		
 		@Override
-		public int compare(L2WarehouseItem o1, L2WarehouseItem o2)
+		public int compare(WarehouseItem o1, WarehouseItem o2)
 		{
-			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY))
+			if ((o1.getType2() == Item.TYPE2_MONEY) && (o2.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? Z2A : A2Z);
 			}
-			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY))
+			if ((o2.getType2() == Item.TYPE2_MONEY) && (o1.getType2() != Item.TYPE2_MONEY))
 			{
 				return (order == A2Z ? A2Z : Z2A);
 			}
@@ -455,16 +455,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createWeaponList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createWeaponList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if (item.isWeapon() || (item.getItem().getType2() == L2Item.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if (item.isWeapon() || (item.getItem().getType2() == Item.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -482,16 +482,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createArmorList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createArmorList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if (item.isArmor() || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if (item.isArmor() || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -509,16 +509,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createEtcItemList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createEtcItemList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if (item.isEtcItem() || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if (item.isEtcItem() || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -536,16 +536,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createMatList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createMatList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -563,16 +563,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createRecipeList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createRecipeList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -590,16 +590,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createAmulettList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createAmulettList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -617,16 +617,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createSpellbookList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createSpellbookList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -644,16 +644,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createConsumableList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createConsumableList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -671,16 +671,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createShotList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createShotList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -698,16 +698,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createScrollList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createScrollList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -725,16 +725,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createSeedList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createSeedList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -752,16 +752,16 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createOtherList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createOtherList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
-			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
+			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
 				if (list.size() < MAX_SORT_LIST_ITEMS)
 				{
-					list.add(new L2WarehouseItem(item));
+					list.add(new WarehouseItem(item));
 				}
 				else
 				{
@@ -778,14 +778,14 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * @param _items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<L2WarehouseItem> createAllList(L2ItemInstance[] _items)
+	private List<WarehouseItem> createAllList(ItemInstance[] _items)
 	{
-		final List<L2WarehouseItem> list = new ArrayList<>();
-		for (L2ItemInstance item : _items)
+		final List<WarehouseItem> list = new ArrayList<>();
+		for (ItemInstance item : _items)
 		{
 			if (list.size() < MAX_SORT_LIST_ITEMS)
 			{
-				list.add(new L2WarehouseItem(item));
+				list.add(new WarehouseItem(item));
 			}
 			else
 			{
@@ -806,7 +806,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		packet.writeQ(_playerAdena);
 		packet.writeH(_objects.size());
 		
-		for (L2WarehouseItem item : _objects)
+		for (WarehouseItem item : _objects)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getDisplayId());

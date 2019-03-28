@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author -Nemesiss-
  */
-public class EffectPsychicalMute extends L2Effect
+public class EffectPsychicalMute extends Effect
 {
 	
 	public EffectPsychicalMute(Env env, EffectTemplate template)
@@ -33,7 +33,7 @@ public class EffectPsychicalMute extends L2Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return L2Effect.EffectType.PSYCHICAL_MUTE;
+		return Effect.EffectType.PSYCHICAL_MUTE;
 	}
 	
 	@Override

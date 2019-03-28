@@ -28,13 +28,13 @@ import java.util.function.Consumer;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 /**
@@ -49,9 +49,9 @@ public class PremiumManager
 	
 	class PremiumExpireTask implements Runnable
 	{
-		final L2PcInstance player;
+		final PlayerInstance player;
 		
-		PremiumExpireTask(L2PcInstance player)
+		PremiumExpireTask(PlayerInstance player)
 		{
 			this.player = player;
 		}
@@ -74,7 +74,7 @@ public class PremiumManager
 	
 	private final Consumer<OnPlayerLogin> playerLoginEvent = (event) ->
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final String accountName = player.getAccountName();
 		loadPremiumData(accountName);
 		final long now = System.currentTimeMillis();
@@ -93,7 +93,7 @@ public class PremiumManager
 	
 	private final Consumer<OnPlayerLogout> playerLogoutEvent = (event) ->
 	{
-		L2PcInstance player = event.getActiveChar();
+		PlayerInstance player = event.getPlayer();
 		stopExpireTask(player);
 	};
 	
@@ -107,7 +107,7 @@ public class PremiumManager
 	 * @param player
 	 * @param delay
 	 */
-	private void startExpireTask(L2PcInstance player, long delay)
+	private void startExpireTask(PlayerInstance player, long delay)
 	{
 		ScheduledFuture<?> task = ThreadPool.schedule(new PremiumExpireTask(player), delay);
 		expiretasks.put(player.getAccountName(), task);
@@ -116,7 +116,7 @@ public class PremiumManager
 	/**
 	 * @param player
 	 */
-	private void stopExpireTask(L2PcInstance player)
+	private void stopExpireTask(PlayerInstance player)
 	{
 		ScheduledFuture<?> task = expiretasks.remove(player.getAccountName());
 		if (task != null)
@@ -176,7 +176,7 @@ public class PremiumManager
 		premiumData.put(accountName, newPremiumExpiration);
 		
 		// UPDATE PlAYER PREMIUMSTATUS
-		L2PcInstance playerOnline = L2World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
+		PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
 		if (playerOnline != null)
 		{
 			stopExpireTask(playerOnline);
@@ -193,7 +193,7 @@ public class PremiumManager
 	{
 		if (checkOnline)
 		{
-			L2PcInstance playerOnline = L2World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
+			PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
 			if ((playerOnline != null) && playerOnline.hasPremiumStatus())
 			{
 				playerOnline.setPremiumStatus(false);

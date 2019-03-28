@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.enums.DailyMissionStatus;
 import com.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -46,7 +46,7 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler
 	}
 	
 	@Override
-	public boolean isAvailable(L2PcInstance player)
+	public boolean isAvailable(PlayerInstance player)
 	{
 		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
 		if (entry != null)
@@ -68,9 +68,9 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler
 		event.getSiege().getDefenderClans().forEach(this::processSiegeClan);
 	}
 	
-	private void processSiegeClan(L2SiegeClan siegeClan)
+	private void processSiegeClan(SiegeClan siegeClan)
 	{
-		final L2Clan clan = ClanTable.getInstance().getClan(siegeClan.getClanId());
+		final Clan clan = ClanTable.getInstance().getClan(siegeClan.getClanId());
 		if (clan != null)
 		{
 			clan.getOnlineMembers(0).forEach(player ->

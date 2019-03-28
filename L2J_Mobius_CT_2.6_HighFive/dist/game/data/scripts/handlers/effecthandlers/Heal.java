@@ -18,11 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
@@ -46,9 +46,9 @@ public final class Heal extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.HEAL;
+		return EffectType.HEAL;
 	}
 	
 	@Override
@@ -60,8 +60,8 @@ public final class Heal extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character target = info.getEffected();
-		final L2Character activeChar = info.getEffector();
+		final Creature target = info.getEffected();
+		final Creature creature = info.getEffector();
 		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return;
@@ -70,16 +70,16 @@ public final class Heal extends AbstractEffect
 		double amount = _power;
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
-		final boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		final boolean bss = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean sps = info.getSkill().isMagic() && creature.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().isMagic() && creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
+		if (((sps || bss) && (creature.isPlayer() && creature.getActingPlayer().isMageClass())) || creature.isSummon())
 		{
 			staticShotBonus = info.getSkill().getMpConsume(); // static bonus for spiritshots
 			mAtkMul = bss ? 4 : 2;
 			staticShotBonus *= bss ? 2.4 : 1.0;
 		}
-		else if ((sps || bss) && activeChar.isNpc())
+		else if ((sps || bss) && creature.isNpc())
 		{
 			staticShotBonus = 2.4 * info.getSkill().getMpConsume(); // always blessed spiritshots
 			mAtkMul = 4;
@@ -88,7 +88,7 @@ public final class Heal extends AbstractEffect
 		{
 			// no static bonus
 			// grade dynamic bonus
-			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+			final ItemInstance weaponInst = creature.getActiveWeaponInstance();
 			if (weaponInst != null)
 			{
 				mAtkMul = weaponInst.getItem().getCrystalType() == CrystalType.S84 ? 4 : weaponInst.getItem().getCrystalType() == CrystalType.S80 ? 2 : 1;
@@ -99,10 +99,10 @@ public final class Heal extends AbstractEffect
 		
 		if (!info.getSkill().isStatic())
 		{
-			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
+			amount += staticShotBonus + Math.sqrt(mAtkMul * creature.getMAtk(creature, null));
 			amount = target.calcStat(Stats.HEAL_EFFECT, amount, null, null);
 			// Heal critic, since CT2.3 Gracia Final
-			if (info.getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill())))
+			if (info.getSkill().isMagic() && Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill())))
 			{
 				amount *= 3;
 			}
@@ -123,10 +123,10 @@ public final class Heal extends AbstractEffect
 			}
 			else
 			{
-				if (activeChar.isPlayer() && (activeChar != target))
+				if (creature.isPlayer() && (creature != target))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
-					sm.addString(activeChar.getName());
+					sm.addString(creature.getName());
 					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}

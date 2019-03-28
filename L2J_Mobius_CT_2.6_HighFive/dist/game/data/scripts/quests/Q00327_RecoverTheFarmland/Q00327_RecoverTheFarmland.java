@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -105,10 +105,10 @@ public final class Q00327_RecoverTheFarmland extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -132,21 +132,21 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			}
 			case "30382-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, LEIKANS_LETTER, 1);
-				st.setCond(2);
+				qs.setCond(2);
 				html = event;
 				break;
 			}
 			case "30597-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				html = event;
 				break;
 			}
 			case "30597-06.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				html = event;
 				break;
 			}
@@ -343,10 +343,10 @@ public final class Q00327_RecoverTheFarmland extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if (st != null)
+		final QuestState qs = getQuestState(killer, false);
+		if(qs != null)
 		{
 			if ((npc.getId() == TUREK_ORK_SHAMAN) || (npc.getId() == TUREK_ORK_WARLORD))
 			{
@@ -366,20 +366,20 @@ public final class Q00327_RecoverTheFarmland extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String html = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case LEIKAN:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					html = ((player.getLevel() >= MIN_LVL) ? "30382-02.htm" : "30382-01.htm");
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					if (hasQuestItems(player, LEIKANS_LETTER))
 					{
@@ -388,24 +388,24 @@ public final class Q00327_RecoverTheFarmland extends Quest
 					else
 					{
 						html = "30382-05.html";
-						st.setCond(5, true);
+						qs.setCond(5, true);
 					}
 				}
 				break;
 			}
 			case PIOTUR:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					html = ((player.getLevel() >= MIN_LVL) ? "30597-02.htm" : "30597-01.htm");
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					if (hasQuestItems(player, LEIKANS_LETTER))
 					{
 						html = "30597-03a.htm";
 						takeItems(player, LEIKANS_LETTER, -1);
-						st.setCond(3, true);
+						qs.setCond(3, true);
 					}
 					else
 					{
@@ -422,7 +422,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 							giveAdena(player, rewardCount, true);
 							takeItems(player, TUREK_DOG_TAG, -1);
 							takeItems(player, TUREK_MEDALLION, -1);
-							st.setCond(4, true);
+							qs.setCond(4, true);
 						}
 					}
 				}
@@ -430,7 +430,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			}
 			case IRIS:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					html = "30034-01.html";
 				}
@@ -438,7 +438,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			}
 			case ASHA:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					html = "30313-01.html";
 				}
@@ -446,7 +446,7 @@ public final class Q00327_RecoverTheFarmland extends Quest
 			}
 			case NESTLE:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					html = "30314-01.html";
 				}

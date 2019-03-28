@@ -17,8 +17,8 @@
 package quests.Q00367_ElectrifyingRecharge;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -56,10 +56,10 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -69,7 +69,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 		{
 			case "30673-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, TITAN_LAMP1, 1);
 				htmltext = event;
 				break;
@@ -81,7 +81,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 			}
 			case "30673-06.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -90,7 +90,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(367))
 		{
@@ -113,7 +113,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 			npc.doCast(NPC_THUNDER_STORM, attacker, null);
 		}
 		
-		final L2PcInstance luckyPlayer = getRandomPartyMember(attacker, npc);
+		final PlayerInstance luckyPlayer = getRandomPartyMember(attacker, npc);
 		if (luckyPlayer == null)
 		{
 			return super.onAttack(npc, attacker, damage, isSummon);
@@ -161,15 +161,15 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30673-01.htm" : "30673-03.html";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			if (!hasAtLeastOneQuestItem(player, TITAN_LAMP5, BROKEN_TITAN_LAMP))
 			{

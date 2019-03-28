@@ -17,8 +17,8 @@
 package ai.areas.DragonValley;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -43,7 +43,7 @@ public final class DragonValleySummoners extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (getRandom(100) < CHANCE)
 		{
@@ -51,25 +51,25 @@ public final class DragonValleySummoners extends AbstractNpcAI
 			{
 				case BLOODY_GRAVE_WARRIOR:
 				{
-					final L2Npc summon1 = addSpawn(BLOODY_GRAVE_WARRIOR, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
+					final Npc summon1 = addSpawn(BLOODY_GRAVE_WARRIOR, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
 					addAttackPlayerDesire(summon1, killer);
 					break;
 				}
 				case DARK_GRAVE_WARRIOR:
 				{
-					final L2Npc summon2 = addSpawn(DARK_GRAVE_WARRIOR, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
+					final Npc summon2 = addSpawn(DARK_GRAVE_WARRIOR, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
 					addAttackPlayerDesire(summon2, killer);
 					break;
 				}
 				case CAVE_SERVANT_ARCHER:
 				{
-					final L2Npc summon3 = addSpawn(CAVE_SERVANT_ARCHER, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
+					final Npc summon3 = addSpawn(CAVE_SERVANT_ARCHER, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
 					addAttackPlayerDesire(summon3, killer);
 					break;
 				}
 				case CAVE_SERVANT_WARRIOR:
 				{
-					final L2Npc summon4 = addSpawn(CAVE_SERVANT_WARRIOR, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
+					final Npc summon4 = addSpawn(CAVE_SERVANT_WARRIOR, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000, true);
 					addAttackPlayerDesire(summon4, killer);
 					break;
 				}

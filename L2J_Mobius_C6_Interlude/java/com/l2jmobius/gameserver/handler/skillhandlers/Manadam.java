@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,25 +41,25 @@ public class Manadam implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		L2Character target = null;
+		Creature target = null;
 		
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean sps = activeChar.checkSps();
-		final boolean bss = activeChar.checkBss();
+		final boolean sps = creature.checkSps();
+		final boolean bss = creature.checkBss();
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
-			target = (L2Character) target2;
+			target = (Creature) target2;
 			
 			if (target.reflectSkill(skill))
 			{
-				target = activeChar;
+				target = creature;
 			}
 			
 			if (target == null)
@@ -67,14 +67,14 @@ public class Manadam implements ISkillHandler
 				continue;
 			}
 			
-			final boolean acted = Formulas.getInstance().calcMagicAffected(activeChar, target, skill);
+			final boolean acted = Formulas.getInstance().calcMagicAffected(creature, target, skill);
 			if (target.isInvul() || !acted)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.MISSED_TARGET));
+				creature.sendPacket(new SystemMessage(SystemMessageId.MISSED_TARGET));
 			}
 			else
 			{
-				final double damage = Formulas.getInstance().calcManaDam(activeChar, target, skill, sps, bss);
+				final double damage = Formulas.getInstance().calcManaDam(creature, target, skill, sps, bss);
 				
 				final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 				target.reduceCurrentMp(mp);
@@ -93,39 +93,39 @@ public class Manadam implements ISkillHandler
 				
 				SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_S1);
 				
-				if (activeChar instanceof L2NpcInstance)
+				if (creature instanceof NpcInstance)
 				{
-					final int mobId = ((L2NpcInstance) activeChar).getNpcId();
+					final int mobId = ((NpcInstance) creature).getNpcId();
 					sm.addNpcName(mobId);
 				}
-				else if (activeChar instanceof L2Summon)
+				else if (creature instanceof Summon)
 				{
-					final int mobId = ((L2Summon) activeChar).getNpcId();
+					final int mobId = ((Summon) creature).getNpcId();
 					sm.addNpcName(mobId);
 				}
 				else
 				{
-					sm.addString(activeChar.getName());
+					sm.addString(creature.getName());
 				}
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 				
-				if (activeChar instanceof L2PcInstance)
+				if (creature instanceof PlayerInstance)
 				{
 					final SystemMessage sm2 = new SystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
 					sm2.addNumber((int) mp);
-					activeChar.sendPacket(sm2);
+					creature.sendPacket(sm2);
 				}
 			}
 		}
 		
 		if (bss)
 		{
-			activeChar.removeBss();
+			creature.removeBss();
 		}
 		else if (sps)
 		{
-			activeChar.removeSps();
+			creature.removeSps();
 		}
 		
 	}

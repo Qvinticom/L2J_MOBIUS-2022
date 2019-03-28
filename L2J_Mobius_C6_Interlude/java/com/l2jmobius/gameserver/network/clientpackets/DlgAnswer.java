@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * @author Dezmond_snz - Packet Format: cddd
  */
-public final class DlgAnswer extends L2GameClientPacket
+public final class DlgAnswer extends GameClientPacket
 {
 	private int _messageId;
 	private int _answer;
@@ -40,45 +40,45 @@ public final class DlgAnswer extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final Long answerTime = getClient().getActiveChar().getConfirmDlgRequestTime(_requestId);
+		final Long answerTime = getClient().getPlayer().getConfirmDlgRequestTime(_requestId);
 		if ((_answer == 1) && (answerTime != null) && (System.currentTimeMillis() > answerTime))
 		{
 			_answer = 0;
 		}
-		getClient().getActiveChar().removeConfirmDlgRequestTime(_requestId);
+		getClient().getPlayer().removeConfirmDlgRequestTime(_requestId);
 		
 		if (_messageId == SystemMessageId.RESSURECTION_REQUEST.getId())
 		{
-			activeChar.reviveAnswer(_answer);
+			player.reviveAnswer(_answer);
 		}
 		else if (_messageId == SystemMessageId.S1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId())
 		{
-			activeChar.teleportAnswer(_answer, _requestId);
+			player.teleportAnswer(_answer, _requestId);
 		}
 		else if (_messageId == SystemMessageId.WOULD_YOU_LIKE_TO_OPEN_THE_GATE.getId())
 		{
-			activeChar.gatesAnswer(_answer, 1);
+			player.gatesAnswer(_answer, 1);
 		}
 		else if (_messageId == SystemMessageId.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE.getId())
 		{
-			activeChar.gatesAnswer(_answer, 0);
+			player.gatesAnswer(_answer, 0);
 		}
 		else if ((_messageId == 614) && Config.L2JMOD_ALLOW_WEDDING)
 		{
-			activeChar.EngageAnswer(_answer);
+			player.EngageAnswer(_answer);
 		}
 		else if (_messageId == SystemMessageId.S1.getId())
 		{
-			if (activeChar.dialog != null)
+			if (player.dialog != null)
 			{
-				activeChar.dialog.onDlgAnswer(activeChar);
-				activeChar.dialog = null;
+				player.dialog.onDlgAnswer(player);
+				player.dialog = null;
 			}
 		}
 	}

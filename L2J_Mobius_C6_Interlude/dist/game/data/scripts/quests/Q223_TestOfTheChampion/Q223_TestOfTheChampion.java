@@ -18,10 +18,10 @@ package quests.Q223_TestOfTheChampion;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -89,7 +89,7 @@ public class Q223_TestOfTheChampion extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -160,7 +160,7 @@ public class Q223_TestOfTheChampion extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -337,7 +337,7 @@ public class Q223_TestOfTheChampion extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
@@ -350,12 +350,12 @@ public class Q223_TestOfTheChampion extends Quest
 			case HARPY: // Possibility to spawn an HARPY _MATRIARCH.
 				if ((st.getInt("cond") == 6) && Rnd.nextBoolean() && !npc.isScriptValue(1))
 				{
-					final L2Character originalKiller = isPet ? attacker.getPet() : attacker;
+					final Creature originalKiller = isPet ? attacker.getPet() : attacker;
 					
 					// Spawn one or two matriarchs.
 					for (int i = 1; i < ((Rnd.get(10) < 7) ? 2 : 3); i++)
 					{
-						final L2Attackable collector = (L2Attackable) addSpawn(HARPY_MATRIARCH, npc, true, 0);
+						final Attackable collector = (Attackable) addSpawn(HARPY_MATRIARCH, npc, true, 0);
 						
 						collector.setRunning();
 						collector.addDamageHate(originalKiller, 0, 999);
@@ -368,12 +368,12 @@ public class Q223_TestOfTheChampion extends Quest
 			case ROAD_SCAVENGER: // Possibility to spawn a Road Collector.
 				if ((st.getInt("cond") == 10) && Rnd.nextBoolean() && !npc.isScriptValue(1))
 				{
-					final L2Character originalKiller = isPet ? attacker.getPet() : attacker;
+					final Creature originalKiller = isPet ? attacker.getPet() : attacker;
 					
 					// Spawn one or two collectors.
 					for (int i = 1; i < ((Rnd.get(10) < 7) ? 2 : 3); i++)
 					{
-						final L2Attackable collector = (L2Attackable) addSpawn(ROAD_COLLECTOR, npc, true, 0);
+						final Attackable collector = (Attackable) addSpawn(ROAD_COLLECTOR, npc, true, 0);
 						
 						collector.setRunning();
 						collector.addDamageHate(originalKiller, 0, 999);
@@ -388,7 +388,7 @@ public class Q223_TestOfTheChampion extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

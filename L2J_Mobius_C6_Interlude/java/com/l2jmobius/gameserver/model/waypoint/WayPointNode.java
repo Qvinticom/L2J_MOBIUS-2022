@@ -25,12 +25,12 @@ import java.util.WeakHashMap;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 
-public class WayPointNode extends L2Object
+public class WayPointNode extends WorldObject
 {
 	private int _id;
 	private String _title;
@@ -49,7 +49,7 @@ public class WayPointNode extends L2Object
 	}
 	
 	@Override
-	public boolean isAutoAttackable(L2Character attacker)
+	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
@@ -63,7 +63,7 @@ public class WayPointNode extends L2Object
 		return newNode;
 	}
 	
-	public static WayPointNode spawn(boolean isItemId, int id, L2PcInstance player)
+	public static WayPointNode spawn(boolean isItemId, int id, PlayerInstance player)
 	{
 		return spawn(isItemId ? "item" : "npc", id, player.getX(), player.getY(), player.getZ());
 	}
@@ -78,13 +78,13 @@ public class WayPointNode extends L2Object
 		return spawn(Config.NEW_NODE_TYPE, Config.NEW_NODE_ID, point.getX(), point.getY(), point.getZ());
 	}
 	
-	public static WayPointNode spawn(L2PcInstance player)
+	public static WayPointNode spawn(PlayerInstance player)
 	{
 		return spawn(Config.NEW_NODE_TYPE, Config.NEW_NODE_ID, player.getX(), player.getY(), player.getZ());
 	}
 	
 	@Override
-	public void onAction(L2PcInstance player)
+	public void onAction(PlayerInstance player)
 	{
 		if (player.getTarget() != this)
 		{

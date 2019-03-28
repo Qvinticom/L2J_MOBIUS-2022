@@ -24,17 +24,17 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableAirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -103,7 +103,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	protected Movie _movie = null;
 	
 	private boolean _isBusy = false;
-	L2ControllableAirShipInstance _dockedShip = null;
+	ControllableAirShipInstance _dockedShip = null;
 	private final Runnable _decayTask = new DecayTask();
 	
 	private final Runnable _departTask = new DepartTask();
@@ -119,7 +119,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_YOU_DON_T_HAVE_ENOUGH_S1).addItemName(STARSTONE);
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ("summon".equalsIgnoreCase(event))
 		{
@@ -159,7 +159,7 @@ public abstract class AirShipController extends AbstractNpcAI
 			}
 			
 			_isBusy = true;
-			final L2AirShipInstance ship = AirShipManager.getInstance().getNewAirShip(_shipSpawnX, _shipSpawnY, _shipSpawnZ, _shipHeading, ownerId);
+			final AirShipInstance ship = AirShipManager.getInstance().getNewAirShip(_shipSpawnX, _shipSpawnY, _shipSpawnZ, _shipHeading, ownerId);
 			if (ship != null)
 			{
 				if (_arrivalPath != null)
@@ -281,13 +281,13 @@ public abstract class AirShipController extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character instanceof L2ControllableAirShipInstance)
+		if (creature instanceof ControllableAirShipInstance)
 		{
 			if (_dockedShip == null)
 			{
-				_dockedShip = (L2ControllableAirShipInstance) character;
+				_dockedShip = (ControllableAirShipInstance) creature;
 				_dockedShip.setInDock(_dockZone);
 				_dockedShip.setOustLoc(_oustLoc);
 				
@@ -311,11 +311,11 @@ public abstract class AirShipController extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onExitZone(L2Character character, L2ZoneType zone)
+	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if (character instanceof L2ControllableAirShipInstance)
+		if (creature instanceof ControllableAirShipInstance)
 		{
-			if (character.equals(_dockedShip))
+			if (creature.equals(_dockedShip))
 			{
 				if (_departSchedule != null)
 				{
@@ -332,14 +332,14 @@ public abstract class AirShipController extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
 	protected void validityCheck()
 	{
-		final L2ScriptZone zone = ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class);
+		final ScriptZone zone = ZoneManager.getInstance().getZoneById(_dockZone, ScriptZone.class);
 		if (zone == null)
 		{
 			LOGGER.warning(getName() + ": Invalid zone " + _dockZone + ", controller disabled");
@@ -367,7 +367,7 @@ public abstract class AirShipController extends AbstractNpcAI
 		}
 		if (_arrivalPath == null)
 		{
-			if (!ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
+			if (!ZoneManager.getInstance().getZoneById(_dockZone, ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
 			{
 				LOGGER.warning(getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
 				_isBusy = true;

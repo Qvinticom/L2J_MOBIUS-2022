@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 public class RingRange implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -46,7 +46,7 @@ public class RingRange implements IAffectScopeHandler
 		
 		// Target checks.
 		final AtomicInteger affected = new AtomicInteger(0);
-		final Predicate<L2Character> filter = c ->
+		final Predicate<Creature> filter = c ->
 		{
 			if ((affectLimit > 0) && (affected.get() >= affectLimit))
 			{
@@ -64,7 +64,7 @@ public class RingRange implements IAffectScopeHandler
 				return false;
 			}
 			
-			if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, c))
+			if ((affectObject != null) && !affectObject.checkAffectedObject(creature, c))
 			{
 				return false;
 			}
@@ -79,7 +79,7 @@ public class RingRange implements IAffectScopeHandler
 		};
 		
 		// Check and add targets.
-		L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, affectRange, c ->
+		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 		{
 			if (filter.test(c))
 			{

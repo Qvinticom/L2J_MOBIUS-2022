@@ -18,8 +18,8 @@ package quests.Q00551_OlympiadStarter;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -51,10 +51,10 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -64,9 +64,9 @@ public class Q00551_OlympiadStarter extends Quest
 		{
 			case "31688-03.html":
 			{
-				st.startQuest();
-				st.setMemoState(1);
-				st.setMemoStateEx(1, 0);
+				qs.startQuest();
+				qs.setMemoState(1);
+				qs.setMemoStateEx(1, 0);
 				break;
 			}
 			case "31688-04.html":
@@ -86,7 +86,7 @@ public class Q00551_OlympiadStarter extends Quest
 						takeItems(player, CERT_5, -1);
 					}
 					
-					st.exitQuest(QuestType.DAILY, true);
+					qs.exitQuest(QuestType.DAILY, true);
 				}
 				break;
 			}
@@ -95,33 +95,33 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
+	public void onOlympiadLose(PlayerInstance loser, CompetitionType type)
 	{
 		if (loser != null)
 		{
-			final QuestState st = getQuestState(loser, false);
-			if ((st != null) && st.isStarted() && st.isMemoState(1))
+			final QuestState qs = getQuestState(loser, false);
+			if ((qs != null) && qs.isStarted() && qs.isMemoState(1))
 			{
-				final int memoStateEx = st.getMemoStateEx(1);
+				final int memoStateEx = qs.getMemoStateEx(1);
 				if (memoStateEx == 9)
 				{
-					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
-					st.setMemoState(2);
-					st.setCond(2, true);
+					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					giveItems(loser, CERT_10, 1);
 				}
 				else if (memoStateEx < 9)
 				{
-					if (st.isMemoStateEx(1, 2))
+					if (qs.isMemoStateEx(1, 2))
 					{
 						giveItems(loser, CERT_3, 1);
 					}
-					else if (st.isMemoStateEx(1, 4))
+					else if (qs.isMemoStateEx(1, 4))
 					{
 						giveItems(loser, CERT_5, 1);
 					}
 					
-					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1);
 					playSound(loser, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -133,34 +133,34 @@ public class Q00551_OlympiadStarter extends Quest
 	{
 		if (winner != null)
 		{
-			final L2PcInstance player = winner.getPlayer();
+			final PlayerInstance player = winner.getPlayer();
 			if (player == null)
 			{
 				return;
 			}
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted() && st.isMemoState(1))
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted() && qs.isMemoState(1))
 			{
-				final int memoStateEx = st.getMemoStateEx(1);
+				final int memoStateEx = qs.getMemoStateEx(1);
 				if (memoStateEx == 9)
 				{
-					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
-					st.setMemoState(2);
-					st.setCond(2, true);
+					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					giveItems(player, CERT_10, 1);
 				}
 				else if (memoStateEx < 9)
 				{
-					if (st.isMemoStateEx(1, 2))
+					if (qs.isMemoStateEx(1, 2))
 					{
 						giveItems(player, CERT_3, 1);
 					}
-					else if (st.isMemoStateEx(1, 4))
+					else if (qs.isMemoStateEx(1, 4))
 					{
 						giveItems(player, CERT_5, 1);
 					}
 					
-					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -168,34 +168,34 @@ public class Q00551_OlympiadStarter extends Quest
 		
 		if (looser != null)
 		{
-			final L2PcInstance player = looser.getPlayer();
+			final PlayerInstance player = looser.getPlayer();
 			if (player == null)
 			{
 				return;
 			}
-			final QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isStarted() && st.isMemoState(1))
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isStarted() && qs.isMemoState(1))
 			{
-				final int memoStateEx = st.getMemoStateEx(1);
+				final int memoStateEx = qs.getMemoStateEx(1);
 				if (memoStateEx == 9)
 				{
-					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
-					st.setMemoState(2);
-					st.setCond(2, true);
+					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					giveItems(player, CERT_10, 1);
 				}
 				else if (memoStateEx < 9)
 				{
-					if (st.isMemoStateEx(1, 2))
+					if (qs.isMemoStateEx(1, 2))
 					{
 						giveItems(player, CERT_3, 1);
 					}
-					else if (st.isMemoStateEx(1, 4))
+					else if (qs.isMemoStateEx(1, 4))
 					{
 						giveItems(player, CERT_5, 1);
 					}
 					
-					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -203,24 +203,24 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if ((player.getLevel() < 75) || !player.isNoble())
 		{
 			htmltext = "31688-00.htm";
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			htmltext = "31688-01.htm";
 		}
-		else if (st.isCompleted())
+		else if (qs.isCompleted())
 		{
-			if (st.isNowAvailable())
+			if (qs.isNowAvailable())
 			{
-				st.setState(State.CREATED);
+				qs.setState(State.CREATED);
 				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
@@ -228,17 +228,17 @@ public class Q00551_OlympiadStarter extends Quest
 				htmltext = "31688-05.html";
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			if (st.isMemoState(1))
+			if (qs.isMemoState(1))
 			{
 				htmltext = (((getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5) + getQuestItemsCount(player, CERT_10)) > 0) ? "31688-07.html" : "31688-06.html");
 			}
-			else if (st.isMemoState(2))
+			else if (qs.isMemoState(2))
 			{
 				giveItems(player, OLY_CHEST, 4);
 				giveItems(player, MEDAL_OF_GLORY, 5);
-				st.exitQuest(QuestType.DAILY, true);
+				qs.exitQuest(QuestType.DAILY, true);
 				htmltext = "31688-04.html";
 			}
 		}

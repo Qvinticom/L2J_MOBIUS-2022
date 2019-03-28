@@ -30,7 +30,7 @@ import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Kerberos
@@ -81,7 +81,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public static final void updatePointsInDB(L2PcInstance player, int raidId, int points)
+	public static final void updatePointsInDB(PlayerInstance player, int raidId, int points)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -99,7 +99,7 @@ public class RaidBossPointsManager
 		}
 	}
 	
-	public static final void addPoints(L2PcInstance player, int bossId, int points)
+	public static final void addPoints(PlayerInstance player, int bossId, int points)
 	{
 		final int ownerId = player.getObjectId();
 		Map<Integer, Integer> tmpPoint = new HashMap<>();
@@ -147,7 +147,7 @@ public class RaidBossPointsManager
 		return totalPoints;
 	}
 	
-	public static final Map<Integer, Integer> getList(L2PcInstance player)
+	public static final Map<Integer, Integer> getList(PlayerInstance player)
 	{
 		return _list.get(player.getObjectId());
 	}

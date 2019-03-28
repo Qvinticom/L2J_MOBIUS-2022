@@ -21,8 +21,8 @@ import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class WareHouseWithdrawalList extends AbstractItemPacket
@@ -32,10 +32,10 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
 	private final int _sendType;
-	private L2PcInstance _activeChar;
+	private PlayerInstance _player;
 	private long _playerAdena;
 	private final int _invSize;
-	private Collection<L2ItemInstance> _items;
+	private Collection<ItemInstance> _items;
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
 	 * <ul>
@@ -47,23 +47,23 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	 */
 	private int _whType;
 	
-	public WareHouseWithdrawalList(int sendType, L2PcInstance player, int type)
+	public WareHouseWithdrawalList(int sendType, PlayerInstance player, int type)
 	{
 		_sendType = sendType;
-		_activeChar = player;
+		_player = player;
 		_whType = type;
 		
-		_playerAdena = _activeChar.getAdena();
+		_playerAdena = _player.getAdena();
 		_invSize = player.getInventory().getSize();
-		if (_activeChar.getActiveWarehouse() == null)
+		if (_player.getActiveWarehouse() == null)
 		{
-			LOGGER.warning("error while sending withdraw request to: " + _activeChar.getName());
+			LOGGER.warning("error while sending withdraw request to: " + _player.getName());
 			return;
 		}
 		
-		_items = _activeChar.getActiveWarehouse().getItems();
+		_items = _player.getActiveWarehouse().getItems();
 		
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.isStackable())
 			{
@@ -82,7 +82,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 			packet.writeH(0x00);
 			packet.writeD(_invSize);
 			packet.writeD(_items.size());
-			for (L2ItemInstance item : _items)
+			for (ItemInstance item : _items)
 			{
 				writeItem(packet, item);
 				packet.writeD(item.getObjectId());

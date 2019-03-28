@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestRecipeShopManageQuit extends L2GameClientPacket
+public final class RequestRecipeShopManageQuit extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -29,13 +29,13 @@ public final class RequestRecipeShopManageQuit extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+		player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
 		player.broadcastUserInfo();
 		player.standUp();
 	}

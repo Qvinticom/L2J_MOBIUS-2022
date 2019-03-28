@@ -28,10 +28,10 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.clanhallauction.Bidder;
 import com.l2jmobius.gameserver.model.clanhallauction.ClanHallAuction;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
@@ -64,7 +64,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -84,7 +84,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			}
 			case "cancelBid":
 			{
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan == null)
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_PARTICIPATE_IN_AN_AUCTION);
@@ -113,7 +113,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			}
 			case "cancel":
 			{
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan == null)
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_PARTICIPATE_IN_AN_AUCTION);
@@ -144,7 +144,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			{
 				if (player.hasClanPrivilege(ClanPrivilege.CH_AUCTION))
 				{
-					final L2Clan clan = player.getClan();
+					final Clan clan = player.getClan();
 					final ClanHallAuction clanHallAuction = ClanHallAuctionManager.getInstance().getClanHallAuctionByClan(clan);
 					if (clanHallAuction != null)
 					{
@@ -165,7 +165,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			}
 			case "my_auction":
 			{
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan == null)
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_PARTICIPATE_IN_AN_AUCTION);
@@ -188,7 +188,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 				// THE_CLAN_DOES_NOT_OWN_A_CLAN_HALL
 				
 				final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallAuction.getClanHallId());
-				final L2Clan owner = clanHall.getOwner();
+				final Clan owner = clanHall.getOwner();
 				final long remainingTime = clanHallAuction.getRemaingTime();
 				final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
 				
@@ -230,12 +230,12 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "ClanHallAuctioneer.html";
 	}
 	
-	private void processClanHallBypass(L2PcInstance player, L2Npc npc, BypassParser parser)
+	private void processClanHallBypass(PlayerInstance player, Npc npc, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);
@@ -246,7 +246,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			if (clanHall != null)
 			{
 				final ClanHallAuction clanHallAuction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId);
-				final L2Clan owner = clanHall.getOwner();
+				final Clan owner = clanHall.getOwner();
 				final long remainingTime = clanHallAuction.getRemaingTime();
 				final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
 				final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
@@ -310,7 +310,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 		}
 	}
 	
-	private void processBidBypass(L2PcInstance player, L2Npc npc, BypassParser parser)
+	private void processBidBypass(PlayerInstance player, Npc npc, BypassParser parser)
 	{
 		final int clanHallId = parser.getInt("id", 0);
 		final long bid = parser.getLong("bid", 0);
@@ -322,7 +322,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			{
 				return;
 			}
-			final L2Clan clan = player.getClan();
+			final Clan clan = player.getClan();
 			if (clan == null)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_PARTICIPATE_IN_AN_AUCTION);
@@ -379,7 +379,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 				if (bidder.isPresent())
 				{
 					auction.returnAdenas(bidder.get());
-					final L2PcInstance leader = bidder.get().getClan().getLeader().getPlayerInstance();
+					final PlayerInstance leader = bidder.get().getClan().getLeader().getPlayerInstance();
 					if ((leader != null) && leader.isOnline())
 					{
 						leader.sendPacket(SystemMessageId.YOU_WERE_OUTBID_THE_NEW_HIGHEST_BID_IS_S1_ADENA);
@@ -394,7 +394,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 		}
 	}
 	
-	private void processBiddersBypass(L2PcInstance player, L2Npc npc, BypassParser parser)
+	private void processBiddersBypass(PlayerInstance player, Npc npc, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);

@@ -17,28 +17,28 @@
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author UnAfraid
  */
 public class TeleportTask implements Runnable
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final Location _loc;
 	
-	public TeleportTask(L2PcInstance player, Location loc)
+	public TeleportTask(PlayerInstance player, Location loc)
 	{
-		_activeChar = player;
+		_player = player;
 		_loc = loc;
 	}
 	
 	@Override
 	public void run()
 	{
-		if ((_activeChar != null) && _activeChar.isOnline())
+		if ((_player != null) && _player.isOnline())
 		{
-			_activeChar.teleToLocation(_loc, true);
+			_player.teleToLocation(_loc, true);
 		}
 	}
 }

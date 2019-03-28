@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
-import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import com.l2jmobius.gameserver.model.EnchantSkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -45,10 +45,10 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	private int _sp;
 	private final int _adenacount;
 	
-	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, L2PcInstance ply)
+	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, PlayerInstance ply)
 	{
 		
-		final L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
+		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?
 		if (enchantLearn != null)

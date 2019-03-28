@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.model.actor.stat;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 
-public class DoorStat extends CharStat
+public class DoorStat extends CreatureStat
 {
-	public DoorStat(L2DoorInstance activeChar)
+	public DoorStat(DoorInstance activeChar)
 	{
 		super(activeChar);
 		
@@ -28,9 +28,9 @@ public class DoorStat extends CharStat
 	}
 	
 	@Override
-	public L2DoorInstance getActiveChar()
+	public DoorInstance getActiveChar()
 	{
-		return (L2DoorInstance) super.getActiveChar();
+		return (DoorInstance) super.getActiveChar();
 	}
 	
 	@Override

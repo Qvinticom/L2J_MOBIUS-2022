@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 /**
  * author: Gnacik Packetformat Rev650 cdddddS
  */
-public class RequestPartyMatchList extends L2GameClientPacket
+public class RequestPartyMatchList extends GameClientPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(RequestPartyMatchList.class.getName());
 	
@@ -54,8 +54,8 @@ public class RequestPartyMatchList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		if (_activeChar == null)
+		final PlayerInstance _player = getClient().getPlayer();
+		if (_player == null)
 		{
 			return;
 		}
@@ -65,21 +65,21 @@ public class RequestPartyMatchList extends L2GameClientPacket
 			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 			if (_room != null)
 			{
-				LOGGER.info("PartyMatchRoom #" + _room.getId() + " changed by " + _activeChar.getName());
+				LOGGER.info("PartyMatchRoom #" + _room.getId() + " changed by " + _player.getName());
 				_room.setMaxMembers(_membersmax);
 				_room.setMinLvl(_lvlmin);
 				_room.setMaxLvl(_lvlmax);
 				_room.setLootType(_loot);
 				_room.setTitle(_roomtitle);
 				
-				for (L2PcInstance _member : _room.getPartyMembers())
+				for (PlayerInstance _member : _room.getPartyMembers())
 				{
 					if (_member == null)
 					{
 						continue;
 					}
 					
-					_member.sendPacket(new PartyMatchDetail(_activeChar, _room));
+					_member.sendPacket(new PartyMatchDetail(_player, _room));
 					_member.sendPacket(SystemMessageId.PARTY_ROOM_REVISED);
 				}
 			}
@@ -88,23 +88,23 @@ public class RequestPartyMatchList extends L2GameClientPacket
 		{
 			final int _maxid = PartyMatchRoomList.getInstance().getMaxId();
 			
-			final PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _activeChar);
+			final PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _player);
 			
-			LOGGER.info("PartyMatchRoom #" + _maxid + " created by " + _activeChar.getName());
+			LOGGER.info("PartyMatchRoom #" + _maxid + " created by " + _player.getName());
 			
 			// Remove from waiting list, and add to current room
-			PartyMatchWaitingList.getInstance().removePlayer(_activeChar);
+			PartyMatchWaitingList.getInstance().removePlayer(_player);
 			PartyMatchRoomList.getInstance().addPartyMatchRoom(_maxid, _room);
 			
-			if (_activeChar.isInParty())
+			if (_player.isInParty())
 			{
-				for (L2PcInstance ptmember : _activeChar.getParty().getPartyMembers())
+				for (PlayerInstance ptmember : _player.getParty().getPartyMembers())
 				{
 					if (ptmember == null)
 					{
 						continue;
 					}
-					if (ptmember == _activeChar)
+					if (ptmember == _player)
 					{
 						continue;
 					}
@@ -115,13 +115,13 @@ public class RequestPartyMatchList extends L2GameClientPacket
 				}
 			}
 			
-			_activeChar.sendPacket(new PartyMatchDetail(_activeChar, _room));
-			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 1));
+			_player.sendPacket(new PartyMatchDetail(_player, _room));
+			_player.sendPacket(new ExPartyRoomMember(_player, _room, 1));
 			
-			_activeChar.sendPacket(SystemMessageId.PARTY_ROOM_CREATED);
+			_player.sendPacket(SystemMessageId.PARTY_ROOM_CREATED);
 			
-			_activeChar.setPartyRoom(_maxid);
-			_activeChar.broadcastUserInfo();
+			_player.setPartyRoom(_maxid);
+			_player.broadcastUserInfo();
 		}
 	}
 }

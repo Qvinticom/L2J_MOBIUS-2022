@@ -17,8 +17,8 @@
 package quests.Q00006_StepIntoTheFuture;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -49,7 +49,7 @@ public class Q00006_StepIntoTheFuture extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -98,16 +98,16 @@ public class Q00006_StepIntoTheFuture extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ROXXY:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -116,11 +116,11 @@ public class Q00006_StepIntoTheFuture extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30006-04.html";
 						}
-						else if (st.isCond(3))
+						else if (qs.isCond(3))
 						{
 							htmltext = "30006-05.html";
 						}
@@ -136,13 +136,13 @@ public class Q00006_StepIntoTheFuture extends Quest
 			}
 			case BAULRO:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "30033-01.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "30033-03.html";
 					}
@@ -151,13 +151,13 @@ public class Q00006_StepIntoTheFuture extends Quest
 			}
 			case SIR_COLLIN:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(2))
+					if (qs.isCond(2))
 					{
 						htmltext = "30311-01.html";
 					}
-					else if (st.isCond(3))
+					else if (qs.isCond(3))
 					{
 						htmltext = "30311-04.html";
 					}

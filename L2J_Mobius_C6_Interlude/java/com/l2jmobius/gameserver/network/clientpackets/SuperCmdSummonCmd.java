@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
  * Format chS c: (id) 0x39 h: (subid) 0x01 S: the summon name (or maybe cmd string ?)
  * @author -Wooden-
  */
-public class SuperCmdSummonCmd extends L2GameClientPacket
+public class SuperCmdSummonCmd extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private String _summonName;

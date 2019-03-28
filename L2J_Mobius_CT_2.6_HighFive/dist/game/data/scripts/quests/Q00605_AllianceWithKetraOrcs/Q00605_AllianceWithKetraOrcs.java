@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -164,28 +164,28 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 		registerQuestItems(VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN);
 	}
 	
-	private boolean canGetItem(QuestState st, int itemId)
+	private boolean canGetItem(QuestState qs, int itemId)
 	{
 		int count = 0;
 		switch (itemId)
 		{
 			case VARKA_BADGE_SOLDIER:
 			{
-				count = SOLDIER_BADGE_COUNT[st.getCond() - 1];
+				count = SOLDIER_BADGE_COUNT[qs.getCond() - 1];
 				break;
 			}
 			case VARKA_BADGE_OFFICER:
 			{
-				count = OFFICER_BADGE_COUNT[st.getCond() - 1];
+				count = OFFICER_BADGE_COUNT[qs.getCond() - 1];
 				break;
 			}
 			case VARKA_BADGE_CAPTAIN:
 			{
-				count = CAPTAIN_BADGE_COUNT[st.getCond() - 1];
+				count = CAPTAIN_BADGE_COUNT[qs.getCond() - 1];
 				break;
 			}
 		}
-		if (getQuestItemsCount(st.getPlayer(), itemId) < count)
+		if (getQuestItemsCount(qs.getPlayer(), itemId) < count)
 		{
 			return true;
 		}
@@ -193,10 +193,10 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -216,17 +216,17 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				{
 					return "31371-03.htm";
 				}
-				st.setState(State.STARTED);
+				qs.setState(State.STARTED);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 				for (int i = 0; i < KETRA_MARKS.length; i++)
 				{
 					if (hasQuestItems(player, KETRA_MARKS[i]))
 					{
-						st.setCond(i + 2);
+						qs.setCond(i + 2);
 						return "31371-0" + (i + 5) + ".htm";
 					}
 				}
-				st.setCond(1);
+				qs.setCond(1);
 				break;
 			}
 			case "31371-12.html":
@@ -237,7 +237,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				}
 				takeItems(player, VARKA_BADGE_SOLDIER, -1);
 				giveItems(player, KETRA_MARKS[0], 1);
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				break;
 			}
 			case "31371-15.html":
@@ -248,7 +248,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				}
 				takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, KETRA_MARKS[0]);
 				giveItems(player, KETRA_MARKS[1], 1);
-				st.setCond(3, true);
+				qs.setCond(3, true);
 				break;
 			}
 			case "31371-18.html":
@@ -259,7 +259,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				}
 				takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN, KETRA_MARKS[1]);
 				giveItems(player, KETRA_MARKS[2], 1);
-				st.setCond(4, true);
+				qs.setCond(4, true);
 				break;
 			}
 			case "31371-21.html":
@@ -270,14 +270,14 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				}
 				takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN, VALOR_TOTEM, KETRA_MARKS[2]);
 				giveItems(player, KETRA_MARKS[3], 1);
-				st.setCond(5, true);
+				qs.setCond(5, true);
 				break;
 			}
 			case "31371-26.html":
 			{
 				takeItems(player, -1, KETRA_MARKS);
 				takeItems(player, -1, VALOR_TOTEM, WISDOM_TOTEM);
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				break;
 			}
 			default:
@@ -290,14 +290,14 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2PcInstance member = getRandomPartyMemberState(killer, State.STARTED);
+		final PlayerInstance member = getRandomPartyMemberState(killer, State.STARTED);
 		if (member != null)
 		{
-			final QuestState st = getQuestState(member, false);
+			final QuestState qs = getQuestState(member, false);
 			final DropInfo info = MOBS.get(npc.getId());
-			if ((st.getCond() >= info.getMinCond()) && (st.getCond() < 6) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
+			if ((qs.getCond() >= info.getMinCond()) && (qs.getCond() < 6) && canGetItem(qs, info.getItemId()) && (getRandom(1000) < info.getChance()))
 			{
 				giveItems(member, info.getItemId(), 1);
 			}
@@ -306,12 +306,12 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -320,7 +320,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -348,7 +348,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 						{
 							return "31371-22.html";
 						}
-						st.setCond(6, true);
+						qs.setCond(6, true);
 						takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN, WISDOM_TOTEM, KETRA_MARKS[3]);
 						giveItems(player, KETRA_MARKS[4], 1);
 						htmltext = "31371-23.html";

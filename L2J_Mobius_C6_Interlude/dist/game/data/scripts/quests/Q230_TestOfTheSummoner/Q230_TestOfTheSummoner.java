@@ -21,11 +21,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -181,7 +181,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -356,7 +356,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -734,19 +734,19 @@ public class Q230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onDeath(L2Character killer, L2Character victim, QuestState st)
+	public String onDeath(Creature killer, Creature victim, QuestState st)
 	{
 		if (st == null)
 		{
 			return null;
 		}
 		
-		if (!(killer instanceof L2Attackable))
+		if (!(killer instanceof Attackable))
 		{
 			return super.onDeath(killer, victim, st);
 		}
 		
-		switch (((L2NpcInstance) killer).getNpcId())
+		switch (((NpcInstance) killer).getNpcId())
 		{
 			case PAKO_THE_CAT:
 				if (st.getInt("Almors") == 3)
@@ -807,7 +807,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)
@@ -1001,7 +1001,7 @@ public class Q230_TestOfTheSummoner extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
@@ -1031,7 +1031,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					// check if the attacker is the same pet as the one that attacked before.
 					if (!isPet || (attacker.getPet() != duel.getPet())) // if a foul occured find the player who had the duel in progress and give a foul crystal
 					{
-						L2PcInstance foulPlayer = duel.getAttacker();
+						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(qn);
@@ -1065,7 +1065,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						L2PcInstance foulPlayer = duel.getAttacker();
+						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(qn);
@@ -1099,7 +1099,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						L2PcInstance foulPlayer = duel.getAttacker();
+						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(qn);
@@ -1133,7 +1133,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						L2PcInstance foulPlayer = duel.getAttacker();
+						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(qn);
@@ -1167,7 +1167,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						L2PcInstance foulPlayer = duel.getAttacker();
+						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(qn);
@@ -1201,7 +1201,7 @@ public class Q230_TestOfTheSummoner extends Quest
 					ProgressDuelMob duel = _duelsInProgress.get(npcId);
 					if (!isPet || (attacker.getPet() != duel.getPet()))
 					{
-						L2PcInstance foulPlayer = duel.getAttacker();
+						PlayerInstance foulPlayer = duel.getAttacker();
 						if (foulPlayer != null)
 						{
 							st = foulPlayer.getQuestState(qn);
@@ -1226,21 +1226,21 @@ public class Q230_TestOfTheSummoner extends Quest
 	
 	private final class ProgressDuelMob
 	{
-		private final L2PcInstance _attacker;
-		private final L2Summon _pet;
+		private final PlayerInstance _attacker;
+		private final Summon _pet;
 		
-		public ProgressDuelMob(L2PcInstance attacker, L2Summon pet)
+		public ProgressDuelMob(PlayerInstance attacker, Summon pet)
 		{
 			_attacker = attacker;
 			_pet = pet;
 		}
 		
-		public L2PcInstance getAttacker()
+		public PlayerInstance getAttacker()
 		{
 			return _attacker;
 		}
 		
-		public L2Summon getPet()
+		public Summon getPet()
 		{
 			return _pet;
 		}

@@ -30,7 +30,7 @@ import java.util.Set;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author luisantonioa
@@ -240,7 +240,7 @@ public enum PlayerClass
 		_type = pType;
 	}
 	
-	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
+	public final Set<PlayerClass> getAvailableSubclasses(PlayerInstance player)
 	{
 		Set<PlayerClass> subclasses = null;
 		

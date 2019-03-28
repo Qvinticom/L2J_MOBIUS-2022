@@ -17,8 +17,8 @@
 package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -34,7 +34,7 @@ public class AdminInvul implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		
 		if (command.equals("admin_invul"))
@@ -44,10 +44,10 @@ public class AdminInvul implements IAdminCommandHandler
 		}
 		if (command.equals("admin_setinvul"))
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			if ((target != null) && target.isPlayer())
 			{
-				handleInvul((L2PcInstance) target);
+				handleInvul((PlayerInstance) target);
 			}
 		}
 		return true;
@@ -59,7 +59,7 @@ public class AdminInvul implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleInvul(L2PcInstance activeChar)
+	private void handleInvul(PlayerInstance activeChar)
 	{
 		String text;
 		if (activeChar.isInvul())

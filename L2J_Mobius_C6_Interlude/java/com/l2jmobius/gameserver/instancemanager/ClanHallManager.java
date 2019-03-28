@@ -26,9 +26,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 
 /**
  * @author Steuf
@@ -98,7 +98,7 @@ public class ClanHallManager
 				}
 				else
 				{
-					final L2Clan clan = ClanTable.getInstance().getClan(ownerId);
+					final Clan clan = ClanTable.getInstance().getClan(ownerId);
 					if (clan != null)
 					{
 						_clanHall.put(id, ch);
@@ -181,7 +181,7 @@ public class ClanHallManager
 	 * @param chId the clanHall id to make checks on.
 	 * @param clan the new clan owner.
 	 */
-	public final synchronized void setOwner(int chId, L2Clan clan)
+	public final synchronized void setOwner(int chId, Clan clan)
 	{
 		if (!_clanHall.containsKey(chId))
 		{
@@ -217,7 +217,7 @@ public class ClanHallManager
 	
 	public final ClanHall getNearbyClanHall(int x, int y, int maxDist)
 	{
-		L2ClanHallZone zone = null;
+		ClanHallZone zone = null;
 		
 		for (Map.Entry<Integer, ClanHall> ch : _clanHall.entrySet())
 		{
@@ -242,7 +242,7 @@ public class ClanHallManager
 	 * @param clan the clan to use.
 	 * @return a clanHall by its owner.
 	 */
-	public final ClanHall getClanHallByOwner(L2Clan clan)
+	public final ClanHall getClanHallByOwner(Clan clan)
 	{
 		for (Map.Entry<Integer, ClanHall> ch : _clanHall.entrySet())
 		{

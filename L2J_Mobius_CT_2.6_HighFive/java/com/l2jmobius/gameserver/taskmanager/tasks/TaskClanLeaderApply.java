@@ -20,8 +20,8 @@ import java.util.Calendar;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.taskmanager.Task;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
@@ -48,11 +48,11 @@ public class TaskClanLeaderApply extends Task
 			return;
 		}
 		
-		for (L2Clan clan : ClanTable.getInstance().getClans())
+		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if (clan.getNewLeaderId() != 0)
 			{
-				final L2ClanMember member = clan.getClanMember(clan.getNewLeaderId());
+				final ClanMember member = clan.getClanMember(clan.getNewLeaderId());
 				if (member == null)
 				{
 					continue;

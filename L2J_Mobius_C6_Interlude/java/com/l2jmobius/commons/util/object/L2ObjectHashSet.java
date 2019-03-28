@@ -21,7 +21,7 @@ import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
  * This class is a highly optimized hashtable, where keys are integers. The main goal of this class is to allow concurent read/iterate and write access to this table, plus minimal used memory. This class uses plain array as the table of values, and keys are used to get position in the table. If the
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.L2Object;
  * @author mkizub
  * @param <T> type of values stored in this hashtable
  */
-public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
+public final class L2ObjectHashSet<T extends WorldObject>extends L2ObjectSet<T>
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2ObjectHashSet.class.getName());
 	
@@ -132,7 +132,7 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 	public L2ObjectHashSet()
 	{
 		final int size = PRIMES[0];
-		_table = (T[]) new L2Object[size];
+		_table = (T[]) new WorldObject[size];
 		_collisions = new int[(size + 31) >> 5];
 	}
 	
@@ -153,7 +153,7 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 	public synchronized void clear()
 	{
 		final int size = PRIMES[0];
-		_table = (T[]) new L2Object[size];
+		_table = (T[]) new WorldObject[size];
 		_collisions = new int[(size + 31) >> 5];
 		_count = 0;
 	}
@@ -337,13 +337,13 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 	private/* already synchronized in put() */void expand()
 	{
 		final int newSize = getPrime(_table.length + 1);
-		final L2Object[] newTable = new L2Object[newSize];
+		final WorldObject[] newTable = new WorldObject[newSize];
 		final int[] newCollisions = new int[(newSize + 31) >> 5];
 		
 		// over all old entries
 		next_entry: for (int i = 0; i < _table.length; i++)
 		{
-			final L2Object obj = _table[i];
+			final WorldObject obj = _table[i];
 			if (obj == null)
 			{
 				continue;

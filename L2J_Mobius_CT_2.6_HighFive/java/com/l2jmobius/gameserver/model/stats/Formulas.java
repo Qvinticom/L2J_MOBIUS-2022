@@ -31,21 +31,21 @@ import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.Siege;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -69,10 +69,10 @@ import com.l2jmobius.gameserver.model.stats.functions.formulas.FuncPAtkMod;
 import com.l2jmobius.gameserver.model.stats.functions.formulas.FuncPAtkSpeed;
 import com.l2jmobius.gameserver.model.stats.functions.formulas.FuncPDefMod;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
-import com.l2jmobius.gameserver.model.zone.type.L2FortZone;
-import com.l2jmobius.gameserver.model.zone.type.L2MotherTreeZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.FortZone;
+import com.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
@@ -92,13 +92,13 @@ public final class Formulas
 	private static final byte MELEE_ATTACK_RANGE = 40;
 	
 	/**
-	 * Return the period between 2 regeneration task (3s for L2Character, 5 min for L2DoorInstance).
-	 * @param cha
+	 * Return the period between 2 regeneration task (3s for Creature, 5 min for DoorInstance).
+	 * @param creature
 	 * @return
 	 */
-	public static int getRegeneratePeriod(L2Character cha)
+	public static int getRegeneratePeriod(Creature creature)
 	{
-		return cha.isDoor() ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
+		return creature.isDoor() ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
 	}
 	
 	/**
@@ -106,7 +106,7 @@ public final class Formulas
 	 * <B><U>Concept</U>:</B><br>
 	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function : <br>
 	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
-	 * To reduce cache memory use, L2NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<br>
+	 * To reduce cache memory use, NPCInstances who don't have skills share the same Calculator set called <B>NPC_STD_CALCULATOR</B>.<br>
 	 * @return
 	 */
 	public static Calculator[] getStdNPCCalculators()
@@ -179,82 +179,82 @@ public final class Formulas
 	}
 	
 	/**
-	 * Add basics Func objects to L2PcInstance and L2Summon.<br>
+	 * Add basics Func objects to PlayerInstance and Summon.<br>
 	 * <B><U>Concept</U>:</B><br>
 	 * A calculator is created to manage and dynamically calculate the effect of a character property (ex : MAX_HP, REGENERATE_HP_RATE...). In fact, each calculator is a table of Func object in which each Func represents a mathematic function : <br>
 	 * FuncAtkAccuracy -> Math.sqrt(_player.getDEX())*6+_player.getLevel()<br>
-	 * @param cha L2PcInstance or L2Summon that must obtain basic Func objects
+	 * @param creature PlayerInstance or Summon that must obtain basic Func objects
 	 */
-	public static void addFuncsToNewCharacter(L2Character cha)
+	public static void addFuncsToNewCharacter(Creature creature)
 	{
-		if (cha.isPlayer())
+		if (creature.isPlayer())
 		{
-			cha.addStatFunc(FuncMaxHpMul.getInstance());
-			cha.addStatFunc(FuncMaxCpMul.getInstance());
-			cha.addStatFunc(FuncMaxMpMul.getInstance());
-			cha.addStatFunc(FuncPAtkMod.getInstance());
-			cha.addStatFunc(FuncMAtkMod.getInstance());
-			cha.addStatFunc(FuncPDefMod.getInstance());
-			cha.addStatFunc(FuncMDefMod.getInstance());
-			cha.addStatFunc(FuncAtkCritical.getInstance());
-			cha.addStatFunc(FuncMAtkCritical.getInstance());
-			cha.addStatFunc(FuncAtkAccuracy.getInstance());
-			cha.addStatFunc(FuncAtkEvasion.getInstance());
-			cha.addStatFunc(FuncPAtkSpeed.getInstance());
-			cha.addStatFunc(FuncMAtkSpeed.getInstance());
-			cha.addStatFunc(FuncMoveSpeed.getInstance());
+			creature.addStatFunc(FuncMaxHpMul.getInstance());
+			creature.addStatFunc(FuncMaxCpMul.getInstance());
+			creature.addStatFunc(FuncMaxMpMul.getInstance());
+			creature.addStatFunc(FuncPAtkMod.getInstance());
+			creature.addStatFunc(FuncMAtkMod.getInstance());
+			creature.addStatFunc(FuncPDefMod.getInstance());
+			creature.addStatFunc(FuncMDefMod.getInstance());
+			creature.addStatFunc(FuncAtkCritical.getInstance());
+			creature.addStatFunc(FuncMAtkCritical.getInstance());
+			creature.addStatFunc(FuncAtkAccuracy.getInstance());
+			creature.addStatFunc(FuncAtkEvasion.getInstance());
+			creature.addStatFunc(FuncPAtkSpeed.getInstance());
+			creature.addStatFunc(FuncMAtkSpeed.getInstance());
+			creature.addStatFunc(FuncMoveSpeed.getInstance());
 			
-			cha.addStatFunc(FuncHenna.getInstance(Stats.STAT_STR));
-			cha.addStatFunc(FuncHenna.getInstance(Stats.STAT_DEX));
-			cha.addStatFunc(FuncHenna.getInstance(Stats.STAT_INT));
-			cha.addStatFunc(FuncHenna.getInstance(Stats.STAT_MEN));
-			cha.addStatFunc(FuncHenna.getInstance(Stats.STAT_CON));
-			cha.addStatFunc(FuncHenna.getInstance(Stats.STAT_WIT));
+			creature.addStatFunc(FuncHenna.getInstance(Stats.STAT_STR));
+			creature.addStatFunc(FuncHenna.getInstance(Stats.STAT_DEX));
+			creature.addStatFunc(FuncHenna.getInstance(Stats.STAT_INT));
+			creature.addStatFunc(FuncHenna.getInstance(Stats.STAT_MEN));
+			creature.addStatFunc(FuncHenna.getInstance(Stats.STAT_CON));
+			creature.addStatFunc(FuncHenna.getInstance(Stats.STAT_WIT));
 			
-			cha.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_STR));
-			cha.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_DEX));
-			cha.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_INT));
-			cha.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_MEN));
-			cha.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_CON));
-			cha.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_WIT));
+			creature.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_STR));
+			creature.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_DEX));
+			creature.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_INT));
+			creature.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_MEN));
+			creature.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_CON));
+			creature.addStatFunc(FuncArmorSet.getInstance(Stats.STAT_WIT));
 		}
-		else if (cha.isSummon())
+		else if (creature.isSummon())
 		{
-			cha.addStatFunc(FuncMaxHpMul.getInstance());
-			cha.addStatFunc(FuncMaxMpMul.getInstance());
-			cha.addStatFunc(FuncPAtkMod.getInstance());
-			cha.addStatFunc(FuncMAtkMod.getInstance());
-			cha.addStatFunc(FuncPDefMod.getInstance());
-			cha.addStatFunc(FuncMDefMod.getInstance());
-			cha.addStatFunc(FuncAtkCritical.getInstance());
-			cha.addStatFunc(FuncMAtkCritical.getInstance());
-			cha.addStatFunc(FuncAtkAccuracy.getInstance());
-			cha.addStatFunc(FuncAtkEvasion.getInstance());
-			cha.addStatFunc(FuncMoveSpeed.getInstance());
-			cha.addStatFunc(FuncPAtkSpeed.getInstance());
-			cha.addStatFunc(FuncMAtkSpeed.getInstance());
+			creature.addStatFunc(FuncMaxHpMul.getInstance());
+			creature.addStatFunc(FuncMaxMpMul.getInstance());
+			creature.addStatFunc(FuncPAtkMod.getInstance());
+			creature.addStatFunc(FuncMAtkMod.getInstance());
+			creature.addStatFunc(FuncPDefMod.getInstance());
+			creature.addStatFunc(FuncMDefMod.getInstance());
+			creature.addStatFunc(FuncAtkCritical.getInstance());
+			creature.addStatFunc(FuncMAtkCritical.getInstance());
+			creature.addStatFunc(FuncAtkAccuracy.getInstance());
+			creature.addStatFunc(FuncAtkEvasion.getInstance());
+			creature.addStatFunc(FuncMoveSpeed.getInstance());
+			creature.addStatFunc(FuncPAtkSpeed.getInstance());
+			creature.addStatFunc(FuncMAtkSpeed.getInstance());
 		}
 	}
 	
 	/**
 	 * Calculate the HP regen rate (base + modifiers).
-	 * @param cha
+	 * @param creature
 	 * @return
 	 */
-	public static double calcHpRegen(L2Character cha)
+	public static double calcHpRegen(Creature creature)
 	{
-		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseHpRegen(cha.getLevel()) : cha.getTemplate().getBaseHpReg();
-		double hpRegenMultiplier = cha.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
+		double init = creature.isPlayer() ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();
+		double hpRegenMultiplier = creature.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
 		double hpRegenBonus = 0;
 		
-		if (Config.CHAMPION_ENABLE && cha.isChampion())
+		if (Config.CHAMPION_ENABLE && creature.isChampion())
 		{
 			hpRegenMultiplier *= Config.CHAMPION_HP_REGEN;
 		}
 		
-		if (cha.isPlayer())
+		if (creature.isPlayer())
 		{
-			final L2PcInstance player = cha.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			
 			// SevenSigns Festival modifier
 			if (SevenSignsFestival.getInstance().isFestivalInProgress() && player.isFestivalParticipant())
@@ -272,7 +272,7 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0))
 			{
-				final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
+				final ClanHallZone zone = ZoneManager.getInstance().getZone(player, ClanHallZone.class);
 				final int posChIndex = zone == null ? -1 : zone.getResidenceId();
 				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
@@ -290,7 +290,7 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0))
 			{
-				final L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
+				final CastleZone zone = ZoneManager.getInstance().getZone(player, CastleZone.class);
 				final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
 				final int castleIndex = player.getClan().getCastleId();
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
@@ -308,7 +308,7 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
 			{
-				final L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
+				final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
 				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
 				final int fortIndex = player.getClan().getFortId();
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
@@ -327,7 +327,7 @@ public final class Formulas
 			// Mother Tree effect is calculated at last
 			if (player.isInsideZone(ZoneId.MOTHER_TREE))
 			{
-				final L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
+				final MotherTreeZone zone = ZoneManager.getInstance().getZone(player, MotherTreeZone.class);
 				final int hpBonus = zone == null ? 0 : zone.getHpRegenBonus();
 				hpRegenBonus += hpBonus;
 			}
@@ -347,30 +347,30 @@ public final class Formulas
 			}
 			
 			// Add CON bonus
-			init *= cha.getLevelMod() * BaseStats.CON.calcBonus(cha);
+			init *= creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
 		}
-		else if (cha.isPet())
+		else if (creature.isPet())
 		{
-			init = ((L2PetInstance) cha).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
+			init = ((PetInstance) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
 		}
 		
-		return (cha.calcStat(Stats.REGENERATE_HP_RATE, Math.max(1, init), null, null) * hpRegenMultiplier) + hpRegenBonus;
+		return (creature.calcStat(Stats.REGENERATE_HP_RATE, Math.max(1, init), null, null) * hpRegenMultiplier) + hpRegenBonus;
 	}
 	
 	/**
 	 * Calculate the MP regen rate (base + modifiers).
-	 * @param cha
+	 * @param creature
 	 * @return
 	 */
-	public static double calcMpRegen(L2Character cha)
+	public static double calcMpRegen(Creature creature)
 	{
-		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseMpRegen(cha.getLevel()) : cha.getTemplate().getBaseMpReg();
-		double mpRegenMultiplier = cha.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
+		double init = creature.isPlayer() ? creature.getActingPlayer().getTemplate().getBaseMpRegen(creature.getLevel()) : creature.getTemplate().getBaseMpReg();
+		double mpRegenMultiplier = creature.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
 		double mpRegenBonus = 0;
 		
-		if (cha.isPlayer())
+		if (creature.isPlayer())
 		{
-			final L2PcInstance player = cha.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			
 			// SevenSigns Festival modifier
 			if (SevenSignsFestival.getInstance().isFestivalInProgress() && player.isFestivalParticipant())
@@ -381,14 +381,14 @@ public final class Formulas
 			// Mother Tree effect is calculated at last'
 			if (player.isInsideZone(ZoneId.MOTHER_TREE))
 			{
-				final L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
+				final MotherTreeZone zone = ZoneManager.getInstance().getZone(player, MotherTreeZone.class);
 				final int mpBonus = zone == null ? 0 : zone.getMpRegenBonus();
 				mpRegenBonus += mpBonus;
 			}
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0))
 			{
-				final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
+				final ClanHallZone zone = ZoneManager.getInstance().getZone(player, ClanHallZone.class);
 				final int posChIndex = zone == null ? -1 : zone.getResidenceId();
 				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
@@ -406,7 +406,7 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0))
 			{
-				final L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
+				final CastleZone zone = ZoneManager.getInstance().getZone(player, CastleZone.class);
 				final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
 				final int castleIndex = player.getClan().getCastleId();
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
@@ -424,7 +424,7 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
 			{
-				final L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
+				final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
 				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
 				final int fortIndex = player.getClan().getFortId();
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
@@ -455,14 +455,14 @@ public final class Formulas
 			}
 			
 			// Add MEN bonus
-			init *= cha.getLevelMod() * BaseStats.MEN.calcBonus(cha);
+			init *= creature.getLevelMod() * BaseStats.MEN.calcBonus(creature);
 		}
-		else if (cha.isPet())
+		else if (creature.isPet())
 		{
-			init = ((L2PetInstance) cha).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
+			init = ((PetInstance) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
 		}
 		
-		return (cha.calcStat(Stats.REGENERATE_MP_RATE, Math.max(1, init), null, null) * mpRegenMultiplier) + mpRegenBonus;
+		return (creature.calcStat(Stats.REGENERATE_MP_RATE, Math.max(1, init), null, null) * mpRegenMultiplier) + mpRegenBonus;
 	}
 	
 	/**
@@ -470,7 +470,7 @@ public final class Formulas
 	 * @param player the player
 	 * @return the CP regeneration rate
 	 */
-	public static double calcCpRegen(L2PcInstance player)
+	public static double calcCpRegen(PlayerInstance player)
 	{
 		// With CON bonus
 		final double init = player.getActingPlayer().getTemplate().getBaseCpRegen(player.getLevel()) * player.getLevelMod() * BaseStats.CON.calcBonus(player);
@@ -490,9 +490,9 @@ public final class Formulas
 		return player.calcStat(Stats.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier;
 	}
 	
-	public static double calcFestivalRegenModifier(L2PcInstance activeChar)
+	public static double calcFestivalRegenModifier(PlayerInstance player)
 	{
-		final int[] festivalInfo = SevenSignsFestival.getInstance().getFestivalForPlayer(activeChar);
+		final int[] festivalInfo = SevenSignsFestival.getInstance().getFestivalForPlayer(player);
 		final int oracle = festivalInfo[0];
 		final int festivalId = festivalInfo[1];
 		int[] festivalCenter;
@@ -514,26 +514,26 @@ public final class Formulas
 		}
 		
 		// Check the distance between the player and the player spawn point, in the center of the arena.
-		final double distToCenter = activeChar.calculateDistance2D(festivalCenter[0], festivalCenter[1], 0);
+		final double distToCenter = player.calculateDistance2D(festivalCenter[0], festivalCenter[1], 0);
 		
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}
 	
-	public static double calcSiegeRegenModifier(L2PcInstance activeChar)
+	public static double calcSiegeRegenModifier(PlayerInstance player)
 	{
-		if ((activeChar == null) || (activeChar.getClan() == null))
+		if ((player == null) || (player.getClan() == null))
 		{
 			return 0;
 		}
 		
-		final Siege siege = SiegeManager.getInstance().getSiege(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		final Siege siege = SiegeManager.getInstance().getSiege(player.getX(), player.getY(), player.getZ());
 		if ((siege == null) || !siege.isInProgress())
 		{
 			return 0;
 		}
 		
-		final L2SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
-		if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, activeChar, siegeClan.getFlag().get(0), true))
+		final SiegeClan siegeClan = siege.getAttackerClan(player.getClan().getId());
+		if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, player, siegeClan.getFlag().get(0), true))
 		{
 			return 0;
 		}
@@ -541,7 +541,7 @@ public final class Formulas
 		return 1.5; // If all is true, then modifier will be 50% more
 	}
 	
-	public static double calcBlowDamage(L2Character attacker, L2Character target, Skill skill, byte shld, boolean ss)
+	public static double calcBlowDamage(Creature attacker, Creature target, Skill skill, byte shld, boolean ss)
 	{
 		double defence = target.getPDef(attacker);
 		
@@ -612,7 +612,7 @@ public final class Formulas
 		return Math.max(damage, 1);
 	}
 	
-	public static double calcBackstabDamage(L2Character attacker, L2Character target, Skill skill, byte shld, boolean ss)
+	public static double calcBackstabDamage(Creature attacker, Creature target, Skill skill, byte shld, boolean ss)
 	{
 		double defence = target.getPDef(attacker);
 		
@@ -691,7 +691,7 @@ public final class Formulas
 	 * @param ss if weapon item was charged by soulshot
 	 * @return
 	 */
-	public static double calcPhysDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean crit, boolean ss)
+	public static double calcPhysDam(Creature attacker, Creature target, Skill skill, byte shld, boolean crit, boolean ss)
 	{
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
@@ -780,7 +780,7 @@ public final class Formulas
 		damage *= calcAttributeBonus(attacker, target, skill);
 		if (target.isAttackable())
 		{
-			final L2Weapon weapon = attacker.getActiveWeaponItem();
+			final Weapon weapon = attacker.getActiveWeaponItem();
 			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
 			{
 				if (skill != null)
@@ -837,7 +837,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double calcMagicDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
+	public static double calcMagicDam(Creature attacker, Creature target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
 	{
 		double mDef = target.getMDef(attacker, skill);
 		switch (shld)
@@ -882,7 +882,7 @@ public final class Formulas
 			{
 				if (calcMagicSuccess(attacker, target, skill) && ((target.getLevel() - attacker.getLevel()) <= 9))
 				{
-					if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+					if (skill.hasEffectType(EffectType.HP_DRAIN))
 					{
 						attacker.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_PERCENT_SUCCESSFUL);
 					}
@@ -904,7 +904,7 @@ public final class Formulas
 			
 			if (target.isPlayer())
 			{
-				final SystemMessage sm = (skill.hasEffectType(L2EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+				final SystemMessage sm = (skill.hasEffectType(EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
 				sm.addString(attacker.getName());
 				target.sendPacket(sm);
 			}
@@ -946,7 +946,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double calcMagicDam(L2CubicInstance attacker, L2Character target, Skill skill, boolean mcrit, byte shld)
+	public static double calcMagicDam(CubicInstance attacker, Creature target, Skill skill, boolean mcrit, byte shld)
 	{
 		double mDef = target.getMDef(attacker.getOwner(), skill);
 		switch (shld)
@@ -970,12 +970,12 @@ public final class Formulas
 		double damage = 91 * ((mAtk + skill.getPower(isPvP, isPvE)) / mDef);
 		
 		// Failure calculation
-		final L2PcInstance owner = attacker.getOwner();
+		final PlayerInstance owner = attacker.getOwner();
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(owner, target, skill))
 		{
 			if (calcMagicSuccess(owner, target, skill) && ((target.getLevel() - skill.getMagicLevel()) <= 9))
 			{
-				if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+				if (skill.hasEffectType(EffectType.HP_DRAIN))
 				{
 					owner.sendPacket(SystemMessageId.DRAIN_WAS_ONLY_50_PERCENT_SUCCESSFUL);
 				}
@@ -996,7 +996,7 @@ public final class Formulas
 			
 			if (target.isPlayer())
 			{
-				if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+				if (skill.hasEffectType(EffectType.HP_DRAIN))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN);
 					sm.addString(owner.getName());
@@ -1036,7 +1036,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static boolean calcCrit(L2Character attacker, L2Character target)
+	public static boolean calcCrit(Creature attacker, Creature target)
 	{
 		return calcCrit(attacker, target, null);
 	}
@@ -1048,7 +1048,7 @@ public final class Formulas
 	 * @param skill
 	 * @return
 	 */
-	public static boolean calcCrit(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcCrit(Creature attacker, Creature target, Skill skill)
 	{
 		double rate = 0.d;
 		if (skill != null)
@@ -1072,7 +1072,7 @@ public final class Formulas
 	 * @param dmg
 	 * @return true in case when ATTACK is canceled due to hit
 	 */
-	public static boolean calcAtkBreak(L2Character target, double dmg)
+	public static boolean calcAtkBreak(Creature target, double dmg)
 	{
 		if (target.isChanneling())
 		{
@@ -1087,7 +1087,7 @@ public final class Formulas
 		}
 		if (Config.ALT_GAME_CANCEL_BOW && target.isAttackingNow())
 		{
-			final L2Weapon wpn = target.getActiveWeaponItem();
+			final Weapon wpn = target.getActiveWeaponItem();
 			if ((wpn != null) && (wpn.getItemType() == WeaponType.BOW))
 			{
 				init = 15;
@@ -1121,7 +1121,7 @@ public final class Formulas
 	 * @param rate
 	 * @return
 	 */
-	public static int calcPAtkSpd(L2Character attacker, L2Character target, double rate)
+	public static int calcPAtkSpd(Creature attacker, Creature target, double rate)
 	{
 		// measured Oct 2006 by Tank6585, formula by Sami
 		// attack speed 312 equals 1500 ms delay... (or 300 + 40 ms delay?)
@@ -1139,7 +1139,7 @@ public final class Formulas
 	 * @param skillTime
 	 * @return
 	 */
-	public static int calcAtkSpd(L2Character attacker, Skill skill, double skillTime)
+	public static int calcAtkSpd(Creature attacker, Skill skill, double skillTime)
 	{
 		if (skill.isMagic())
 		{
@@ -1154,7 +1154,7 @@ public final class Formulas
 	 * @param target
 	 * @return {@code true} if hit missed (target evaded), {@code false} otherwise.
 	 */
-	public static boolean calcHitMiss(L2Character attacker, L2Character target)
+	public static boolean calcHitMiss(Creature attacker, Creature target)
 	{
 		int chance = (80 + (2 * (attacker.getAccuracy() - target.getEvasionRate(attacker)))) * 10;
 		
@@ -1178,15 +1178,15 @@ public final class Formulas
 	 * @param sendSysMsg
 	 * @return
 	 */
-	public static byte calcShldUse(L2Character attacker, L2Character target, Skill skill, boolean sendSysMsg)
+	public static byte calcShldUse(Creature attacker, Creature target, Skill skill, boolean sendSysMsg)
 	{
 		if ((skill != null) && skill.ignoreShield())
 		{
 			return 0;
 		}
 		
-		final L2Item item = target.getSecondaryWeaponItem();
-		if ((item == null) || !(item instanceof L2Armor) || (((L2Armor) item).getItemType() == ArmorType.SIGIL))
+		final Item item = target.getSecondaryWeaponItem();
+		if ((item == null) || !(item instanceof Armor) || (((Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
 		}
@@ -1206,7 +1206,7 @@ public final class Formulas
 		byte shldSuccess = SHIELD_DEFENSE_FAILED;
 		// if attacker
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
-		final L2Weapon at_weapon = attacker.getActiveWeaponItem();
+		final Weapon at_weapon = attacker.getActiveWeaponItem();
 		if ((at_weapon != null) && (at_weapon.getItemType() == WeaponType.BOW))
 		{
 			shldRate *= 1.3;
@@ -1223,7 +1223,7 @@ public final class Formulas
 		
 		if (sendSysMsg && target.isPlayer())
 		{
-			final L2PcInstance enemy = target.getActingPlayer();
+			final PlayerInstance enemy = target.getActingPlayer();
 			
 			switch (shldSuccess)
 			{
@@ -1243,17 +1243,17 @@ public final class Formulas
 		return shldSuccess;
 	}
 	
-	public static byte calcShldUse(L2Character attacker, L2Character target, Skill skill)
+	public static byte calcShldUse(Creature attacker, Creature target, Skill skill)
 	{
 		return calcShldUse(attacker, target, skill, true);
 	}
 	
-	public static byte calcShldUse(L2Character attacker, L2Character target)
+	public static byte calcShldUse(Creature attacker, Creature target)
 	{
 		return calcShldUse(attacker, target, null, true);
 	}
 	
-	public static boolean calcMagicAffected(L2Character actor, L2Character target, Skill skill)
+	public static boolean calcMagicAffected(Creature actor, Creature target, Skill skill)
 	{
 		// TODO: CHECK/FIX THIS FORMULA UP!!
 		double defence = 0;
@@ -1277,7 +1277,7 @@ public final class Formulas
 		return d > 0;
 	}
 	
-	public static double calcLvlBonusMod(L2Character attacker, L2Character target, Skill skill)
+	public static double calcLvlBonusMod(Creature attacker, Creature target, Skill skill)
 	{
 		final int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
 		final double skillLvlBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
@@ -1292,10 +1292,10 @@ public final class Formulas
 	 * @param skill the skill
 	 * @return {@code true} if the effect lands
 	 */
-	public static boolean calcEffectSuccess(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill)
 	{
 		// StaticObjects can not receive continuous effects.
-		if (target.isDoor() || (target instanceof L2SiegeFlagInstance) || (target instanceof L2StaticObjectInstance))
+		if (target.isDoor() || (target instanceof SiegeFlagInstance) || (target instanceof StaticObjectInstance))
 		{
 			return false;
 		}
@@ -1389,7 +1389,7 @@ public final class Formulas
 		return true;
 	}
 	
-	public static boolean calcCubicSkillSuccess(L2CubicInstance attacker, L2Character target, Skill skill, byte shld)
+	public static boolean calcCubicSkillSuccess(CubicInstance attacker, Creature target, Skill skill, byte shld)
 	{
 		if (skill.isDebuff())
 		{
@@ -1440,7 +1440,7 @@ public final class Formulas
 		return (Rnd.get(100) < finalRate);
 	}
 	
-	public static boolean calcMagicSuccess(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcMagicSuccess(Creature attacker, Creature target, Skill skill)
 	{
 		if (skill.getPower() == -1)
 		{
@@ -1470,7 +1470,7 @@ public final class Formulas
 		return (Rnd.get(100) < rate);
 	}
 	
-	public static double calcManaDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
+	public static double calcManaDam(Creature attacker, Creature target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
 	{
 		// Formula: (SQR(M.Atk)*Power*(Target Max MP/97))/M.Def
 		double mAtk = attacker.getMAtk(target, skill);
@@ -1544,7 +1544,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static double calculateSkillResurrectRestorePercent(double baseRestorePercent, L2Character caster)
+	public static double calculateSkillResurrectRestorePercent(double baseRestorePercent, Creature caster)
 	{
 		if ((baseRestorePercent == 0) || (baseRestorePercent == 100))
 		{
@@ -1563,7 +1563,7 @@ public final class Formulas
 		return restorePercent;
 	}
 	
-	public static boolean calcPhysicalSkillEvasion(L2Character activeChar, L2Character target, Skill skill)
+	public static boolean calcPhysicalSkillEvasion(Creature creature, Creature target, Skill skill)
 	{
 		if (skill.isMagic() || skill.isDebuff())
 		{
@@ -1571,16 +1571,16 @@ public final class Formulas
 		}
 		if (Rnd.get(100) < target.calcStat(Stats.P_SKILL_EVASION, 0, null, skill))
 		{
-			if (activeChar.isPlayer())
+			if (creature.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_THE_ATTACK);
 				sm.addString(target.getName());
-				activeChar.getActingPlayer().sendPacket(sm);
+				creature.getActingPlayer().sendPacket(sm);
 			}
 			if (target.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_C1_S_ATTACK_2);
-				sm.addString(activeChar.getName());
+				sm.addString(creature.getName());
 				target.getActingPlayer().sendPacket(sm);
 			}
 			return true;
@@ -1588,7 +1588,7 @@ public final class Formulas
 		return false;
 	}
 	
-	public static boolean calcSkillMastery(L2Character actor, Skill sk)
+	public static boolean calcSkillMastery(Creature actor, Skill sk)
 	{
 		// Static Skills are not affected by Skill Mastery.
 		if (sk.isStatic())
@@ -1633,7 +1633,7 @@ public final class Formulas
 	 * @param skill Can be {@code null} if there is no skill used for the attack.
 	 * @return The attribute bonus
 	 */
-	public static double calcAttributeBonus(L2Character attacker, L2Character target, Skill skill)
+	public static double calcAttributeBonus(Creature attacker, Creature target, Skill skill)
 	{
 		int attack_attribute;
 		if (skill != null)
@@ -1803,7 +1803,7 @@ public final class Formulas
 		return result;
 	}
 	
-	public static void calcDamageReflected(L2Character attacker, L2Character target, Skill skill, boolean crit)
+	public static void calcDamageReflected(Creature attacker, Creature target, Skill skill, boolean crit)
 	{
 		// Only melee skills can be reflected
 		if (skill.isMagic() || (skill.getCastRange() > MELEE_ATTACK_RANGE))
@@ -1846,7 +1846,7 @@ public final class Formulas
 	 * @param skill
 	 * @return {@code true} if reflect, {@code false} otherwise.
 	 */
-	public static boolean calcBuffDebuffReflection(L2Character target, Skill skill)
+	public static boolean calcBuffDebuffReflection(Creature target, Skill skill)
 	{
 		if (!skill.isDebuff() || (skill.getActivateRate() == -1))
 		{
@@ -1858,36 +1858,36 @@ public final class Formulas
 	
 	/**
 	 * Calculate damage caused by falling
-	 * @param cha
+	 * @param creature
 	 * @param fallHeight
 	 * @return damage
 	 */
-	public static double calcFallDam(L2Character cha, int fallHeight)
+	public static double calcFallDam(Creature creature, int fallHeight)
 	{
 		if (!Config.ENABLE_FALLING_DAMAGE || (fallHeight < 0))
 		{
 			return 0;
 		}
-		final double damage = cha.calcStat(Stats.FALL, (fallHeight * cha.getMaxHp()) / 1000.0, null, null);
+		final double damage = creature.calcStat(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000.0, null, null);
 		return damage;
 	}
 	
-	public static boolean calcBlowSuccess(L2Character activeChar, L2Character target, Skill skill)
+	public static boolean calcBlowSuccess(Creature creature, Creature target, Skill skill)
 	{
-		final double dexMod = BaseStats.DEX.calcBonus(activeChar);
+		final double dexMod = BaseStats.DEX.calcBonus(creature);
 		// Apply DEX Mod.
 		final double blowChance = skill.getBlowChance();
 		// Apply Position Bonus (TODO: values are unconfirmed, possibly custom, remove or update when confirmed).
-		final double sideMod = (activeChar.isInFrontOf(target)) ? 1 : (activeChar.isBehind(target)) ? 2 : 1.5;
+		final double sideMod = (creature.isInFrontOf(target)) ? 1 : (creature.isBehind(target)) ? 2 : 1.5;
 		// Apply all mods.
 		final double baseRate = blowChance * dexMod * sideMod;
 		// Apply blow rates
-		final double rate = activeChar.calcStat(Stats.BLOW_RATE, baseRate, target, null);
+		final double rate = creature.calcStat(Stats.BLOW_RATE, baseRate, target, null);
 		
 		return Rnd.get(100) < rate;
 	}
 	
-	public static List<BuffInfo> calcCancelStealEffects(L2Character activeChar, L2Character target, Skill skill, String slot, int rate, int max)
+	public static List<BuffInfo> calcCancelStealEffects(Creature creature, Creature target, Skill skill, String slot, int rate, int max)
 	{
 		final List<BuffInfo> canceled = new ArrayList<>(max);
 		switch (slot)
@@ -1897,7 +1897,7 @@ public final class Formulas
 				// Resist Modifier.
 				final int cancelMagicLvl = skill.getMagicLevel();
 				final double vuln = target.calcStat(Stats.CANCEL_VULN, 0, target, null);
-				final double prof = activeChar.calcStat(Stats.CANCEL_PROF, 0, target, null);
+				final double prof = creature.calcStat(Stats.CANCEL_PROF, 0, target, null);
 				final double resMod = 1 + (((vuln + prof) * -1) / 100);
 				final double finalRate = rate / resMod;
 				
@@ -1962,7 +1962,7 @@ public final class Formulas
 	 * @param skill the skill
 	 * @return the time that the effect will last
 	 */
-	public static int calcEffectAbnormalTime(L2Character caster, L2Character target, Skill skill)
+	public static int calcEffectAbnormalTime(Creature caster, Creature target, Skill skill)
 	{
 		int time = skill.isPassive() || skill.isToggle() ? -1 : skill.getAbnormalTime();
 		
@@ -2009,7 +2009,7 @@ public final class Formulas
 	 * @param skill
 	 * @return chance for effect to succeed
 	 */
-	public static boolean calcProbability(double baseChance, L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcProbability(double baseChance, Creature attacker, Creature target, Skill skill)
 	{
 		return Rnd.get(100) < ((((((skill.getMagicLevel() + baseChance) - target.getLevel()) + 30) - target.getINT()) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
 	}
@@ -2020,7 +2020,7 @@ public final class Formulas
 	 * @param exp
 	 * @return the amount of karma player has loosed.
 	 */
-	public static int calculateKarmaLost(L2PcInstance player, long exp)
+	public static int calculateKarmaLost(PlayerInstance player, long exp)
 	{
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (exp > 0) // Received exp
@@ -2063,7 +2063,7 @@ public final class Formulas
 		return result;
 	}
 	
-	public static double calcGeneralTraitBonus(L2Character attacker, L2Character target, TraitType traitType, boolean ignoreResistance)
+	public static double calcGeneralTraitBonus(Creature attacker, Creature target, TraitType traitType, boolean ignoreResistance)
 	{
 		if (traitType == TraitType.NONE)
 		{
@@ -2103,14 +2103,14 @@ public final class Formulas
 		return Util.constrain(result, 0.05, 2.0);
 	}
 	
-	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
+	public static double calcWeaponTraitBonus(Creature attacker, Creature target)
 	{
 		final TraitType type = attacker.getAttackType().getTraitType();
 		final double result = target.getStat().getDefenceTraits()[type.ordinal()] - 1.0;
 		return 1.0 - result;
 	}
 	
-	public static double calcAttackTraitBonus(L2Character attacker, L2Character target)
+	public static double calcAttackTraitBonus(Creature attacker, Creature target)
 	{
 		final double weaponTraitBonus = calcWeaponTraitBonus(attacker, target);
 		if (weaponTraitBonus == 0)

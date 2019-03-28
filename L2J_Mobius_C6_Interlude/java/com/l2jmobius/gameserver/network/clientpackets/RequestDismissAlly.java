@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestDismissAlly extends L2GameClientPacket
+public final class RequestDismissAlly extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -30,19 +30,19 @@ public final class RequestDismissAlly extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.isClanLeader())
+		if (!player.isClanLeader())
 		{
-			activeChar.sendPacket(SystemMessageId.FEATURE_ONLY_FOR_ALLIANCE_LEADER);
+			player.sendPacket(SystemMessageId.FEATURE_ONLY_FOR_ALLIANCE_LEADER);
 			return;
 		}
 		
-		activeChar.getClan().dissolveAlly(activeChar);
+		player.getClan().dissolveAlly(player);
 	}
 }

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,9 +28,9 @@ public class ExWorldChatCnt implements IClientOutgoingPacket
 {
 	private final int _points;
 	
-	public ExWorldChatCnt(L2PcInstance activeChar)
+	public ExWorldChatCnt(PlayerInstance player)
 	{
-		_points = activeChar.getLevel() < Config.WORLD_CHAT_MIN_LEVEL ? 0 : Math.max(activeChar.getWorldChatPoints() - activeChar.getWorldChatUsed(), 0);
+		_points = player.getLevel() < Config.WORLD_CHAT_MIN_LEVEL ? 0 : Math.max(player.getWorldChatPoints() - player.getWorldChatUsed(), 0);
 	}
 	
 	@Override

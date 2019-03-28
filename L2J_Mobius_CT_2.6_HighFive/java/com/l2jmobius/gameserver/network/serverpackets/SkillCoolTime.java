@@ -22,7 +22,7 @@ import java.util.Map;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TimeStamp;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,7 +33,7 @@ public class SkillCoolTime implements IClientOutgoingPacket
 {
 	private final List<TimeStamp> _skillReuseTimeStamps = new ArrayList<>();
 	
-	public SkillCoolTime(L2PcInstance player)
+	public SkillCoolTime(PlayerInstance player)
 	{
 		final Map<Integer, TimeStamp> skillReuseTimeStamps = player.getSkillReuseTimeStamps();
 		if (skillReuseTimeStamps != null)

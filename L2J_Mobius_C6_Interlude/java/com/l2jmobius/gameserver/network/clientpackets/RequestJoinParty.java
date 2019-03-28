@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestJoinParty extends L2GameClientPacket
+public final class RequestJoinParty extends GameClientPacket
 {
 	private String _name;
 	private int _itemDistribution;
@@ -42,8 +42,8 @@ public final class RequestJoinParty extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance requestor = getClient().getActiveChar();
-		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
+		final PlayerInstance requestor = getClient().getPlayer();
+		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		
 		if (requestor == null)
 		{
@@ -141,7 +141,7 @@ public final class RequestJoinParty extends L2GameClientPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void addTargetToParty(L2PcInstance target, L2PcInstance requestor)
+	private void addTargetToParty(PlayerInstance target, PlayerInstance requestor)
 	{
 		SystemMessage msg;
 		
@@ -186,13 +186,13 @@ public final class RequestJoinParty extends L2GameClientPacket
 	 * @param target
 	 * @param requestor
 	 */
-	private void createNewParty(L2PcInstance target, L2PcInstance requestor)
+	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
 	{
 		SystemMessage msg;
 		
 		if (!target.isProcessingRequest())
 		{
-			requestor.setParty(new L2Party(requestor, _itemDistribution));
+			requestor.setParty(new Party(requestor, _itemDistribution));
 			
 			requestor.onTransactionRequest(target);
 			target.sendPacket(new AskJoinParty(requestor.getName(), _itemDistribution));

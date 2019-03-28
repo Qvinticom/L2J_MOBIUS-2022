@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.model.ItemInfo;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * @author Yme
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $ Rebuild 23.2.2006 by Advi
  */
-public class PetInventoryUpdate extends L2GameServerPacket
+public class PetInventoryUpdate extends GameServerPacket
 {
 	private final List<ItemInfo> _items;
 	
@@ -43,29 +43,29 @@ public class PetInventoryUpdate extends L2GameServerPacket
 		this(new ArrayList<ItemInfo>());
 	}
 	
-	public void addItem(L2ItemInstance item)
+	public void addItem(ItemInstance item)
 	{
 		_items.add(new ItemInfo(item));
 	}
 	
-	public void addNewItem(L2ItemInstance item)
+	public void addNewItem(ItemInstance item)
 	{
 		_items.add(new ItemInfo(item, 1));
 	}
 	
-	public void addModifiedItem(L2ItemInstance item)
+	public void addModifiedItem(ItemInstance item)
 	{
 		_items.add(new ItemInfo(item, 2));
 	}
 	
-	public void addRemovedItem(L2ItemInstance item)
+	public void addRemovedItem(ItemInstance item)
 	{
 		_items.add(new ItemInfo(item, 3));
 	}
 	
-	public void addItems(List<L2ItemInstance> items)
+	public void addItems(List<ItemInstance> items)
 	{
-		for (L2ItemInstance item : items)
+		for (ItemInstance item : items)
 		{
 			_items.add(new ItemInfo(item));
 		}

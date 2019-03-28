@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.VariationData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.VariationFee;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
 
@@ -37,7 +37,7 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 	private long _feeCount;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_targetItemObjId = packet.readD();
 		_mineralItemObjId = packet.readD();
@@ -47,34 +47,34 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
+		final ItemInstance refinerItem = player.getInventory().getItemByObjectId(_mineralItemObjId);
 		if (refinerItem == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
+		final ItemInstance gemStoneItem = player.getInventory().getItemByObjectId(_feeItemObjId);
 		if (gemStoneItem == null)
 		{
 			return;
 		}
 		
 		final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), refinerItem.getId());
-		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem, fee))
+		if (!isValid(player, targetItem, refinerItem, gemStoneItem, fee))
 		{
 			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;

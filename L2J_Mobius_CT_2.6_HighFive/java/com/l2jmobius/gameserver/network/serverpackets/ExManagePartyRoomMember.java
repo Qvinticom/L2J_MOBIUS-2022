@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,13 +32,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExManagePartyRoomMember implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExManagePartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode)
+	public ExManagePartyRoomMember(PlayerInstance player, PartyMatchRoom room, int mode)
 	{
-		_activeChar = player;
+		_player = player;
 		_room = room;
 		_mode = mode;
 	}
@@ -48,18 +48,18 @@ public class ExManagePartyRoomMember implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER.writeId(packet);
 		packet.writeD(_mode);
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeS(_activeChar.getName());
-		packet.writeD(_activeChar.getActiveClass());
-		packet.writeD(_activeChar.getLevel());
+		packet.writeD(_player.getObjectId());
+		packet.writeS(_player.getName());
+		packet.writeD(_player.getActiveClass());
+		packet.writeD(_player.getLevel());
 		packet.writeD(_room.getLocation());
-		if (_room.getOwner().equals(_activeChar))
+		if (_room.getOwner().equals(_player))
 		{
 			packet.writeD(1);
 		}
 		else
 		{
-			if ((_room.getOwner().isInParty() && _activeChar.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == _activeChar.getParty().getLeaderObjectId()))
+			if ((_room.getOwner().isInParty() && _player.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == _player.getParty().getLeaderObjectId()))
 			{
 				packet.writeD(0x02);
 			}

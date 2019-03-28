@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,10 +25,10 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExTacticalSign implements IClientOutgoingPacket
 {
-	private final L2Character _target;
+	private final Creature _target;
 	private final int _tokenId;
 	
-	public ExTacticalSign(L2Character target, int tokenId)
+	public ExTacticalSign(Creature target, int tokenId)
 	{
 		_target = target;
 		_tokenId = tokenId;

@@ -18,11 +18,11 @@ package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import com.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.appearance.ExChooseShapeShiftingItem;
 
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.serverpackets.appearance.ExChooseShapeSh
 public class Appearance implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -40,7 +40,7 @@ public class Appearance implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance player = playable.getActingPlayer();
+		final PlayerInstance player = playable.getActingPlayer();
 		if (player.hasRequest(ShapeShiftingItemRequest.class))
 		{
 			player.sendPacket(SystemMessageId.APPEARANCE_MODIFICATION_OR_RESTORATION_IN_PROGRESS_PLEASE_TRY_AGAIN_AFTER_COMPLETING_THIS_TASK);

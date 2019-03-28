@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.extender;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
  * @author Azagthtot BaseExtender
@@ -27,15 +27,15 @@ public class BaseExtender
 	{
 		LOAD("load"), // null
 		STORE("store"), // null
-		CAST("cast"), // L2Skill , L2Character, L2Character[]
-		ATTACK("attack"), // L2Character
+		CAST("cast"), // Skill , Creature, Creature[]
+		ATTACK("attack"), // Creature
 		CRAFT("craft"),
 		ENCHANT("enchant"),
 		SPAWN("spawn"), // null
 		DELETE("delete"), // null
 		SETOWNER("setwoner"), // int, String
 		DROP("drop"), // null
-		DIE("die"), // L2Character
+		DIE("die"), // Creature
 		REVIVE("revive"), // null
 		SETINTENTION("setintention"); // CtrlIntention
 		public final String name;
@@ -47,21 +47,21 @@ public class BaseExtender
 	}
 	
 	/**
-	 * @param object as L2Object<br>
+	 * @param object as WorldObject<br>
 	 * @return as boolean<br>
 	 */
-	public static boolean canCreateFor(L2Object object)
+	public static boolean canCreateFor(WorldObject object)
 	{
 		return true;
 	}
 	
-	protected L2Object _owner;
+	protected WorldObject _owner;
 	private BaseExtender _next = null;
 	
 	/**
-	 * @param owner - L2Object
+	 * @param owner - WorldObject
 	 */
-	public BaseExtender(L2Object owner)
+	public BaseExtender(WorldObject owner)
 	{
 		_owner = owner;
 	}
@@ -69,7 +69,7 @@ public class BaseExtender
 	/**
 	 * @return as Object
 	 */
-	public L2Object getOwner()
+	public WorldObject getOwner()
 	{
 		return _owner;
 	}

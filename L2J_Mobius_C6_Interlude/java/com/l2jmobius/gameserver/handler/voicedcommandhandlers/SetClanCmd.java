@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,12 +31,12 @@ public class SetClanCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		if (command.startsWith("set privileges"))
 		{
 			final int n = Integer.parseInt(command.substring(15));
-			L2PcInstance pc = (L2PcInstance) activeChar.getTarget();
+			PlayerInstance pc = (PlayerInstance) activeChar.getTarget();
 			
 			if (pc != null)
 			{

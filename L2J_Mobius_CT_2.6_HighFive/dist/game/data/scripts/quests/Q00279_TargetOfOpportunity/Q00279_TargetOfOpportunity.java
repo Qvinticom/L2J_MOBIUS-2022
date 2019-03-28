@@ -20,8 +20,8 @@ import java.util.Arrays;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -65,40 +65,40 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if ((st == null) || (player.getLevel() < 82))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs == null) || (player.getLevel() < 82))
 		{
 			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("32302-05.html"))
 		{
-			st.startQuest();
-			st.set("progress", "1");
+			qs.startQuest();
+			qs.set("progress", "1");
 		}
-		else if (event.equalsIgnoreCase("32302-08.html") && (st.getInt("progress") == 1) && hasQuestItems(player, SEAL_COMPONENTS[0]) && hasQuestItems(player, SEAL_COMPONENTS[1]) && hasQuestItems(player, SEAL_COMPONENTS[2]) && hasQuestItems(player, SEAL_COMPONENTS[3]))
+		else if (event.equalsIgnoreCase("32302-08.html") && (qs.getInt("progress") == 1) && hasQuestItems(player, SEAL_COMPONENTS[0]) && hasQuestItems(player, SEAL_COMPONENTS[1]) && hasQuestItems(player, SEAL_COMPONENTS[2]) && hasQuestItems(player, SEAL_COMPONENTS[3]))
 		{
 			giveItems(player, SEAL_BREAKERS[0], 1);
 			giveItems(player, SEAL_BREAKERS[1], 1);
-			st.exitQuest(true, true);
+			qs.exitQuest(true, true);
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
+		final PlayerInstance pl = getRandomPartyMember(player, "progress", "1");
 		final int idx = Arrays.binarySearch(MONSTERS, npc.getId());
 		if ((pl == null) || (idx < 0))
 		{
 			return null;
 		}
 		
-		final QuestState st = getQuestState(pl, false);
+		final QuestState qs = getQuestState(pl, false);
 		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
 		{
 			if (!hasQuestItems(player, SEAL_COMPONENTS[idx]))
@@ -106,7 +106,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 				giveItems(player, SEAL_COMPONENTS[idx], 1);
 				if (haveAllExceptThis(player, idx))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -118,23 +118,23 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.getState() == State.CREATED)
+		if (qs.getState() == State.CREATED)
 		{
 			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.html";
 		}
-		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
+		else if ((qs.getState() == State.STARTED) && (qs.getInt("progress") == 1))
 		{
 			htmltext = (hasQuestItems(player, SEAL_COMPONENTS[0]) && hasQuestItems(player, SEAL_COMPONENTS[1]) && hasQuestItems(player, SEAL_COMPONENTS[2]) && hasQuestItems(player, SEAL_COMPONENTS[3])) ? "32302-07.html" : "32302-06.html";
 		}
 		return htmltext;
 	}
 	
-	private static boolean haveAllExceptThis(L2PcInstance player, int idx)
+	private static boolean haveAllExceptThis(PlayerInstance player, int idx)
 	{
 		for (int i = 0; i < SEAL_COMPONENTS.length; i++)
 		{

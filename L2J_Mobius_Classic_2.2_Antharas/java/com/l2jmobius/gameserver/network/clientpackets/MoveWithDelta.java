@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format: (c) ddd d: dx d: dy d: dz
@@ -33,7 +33,7 @@ public class MoveWithDelta implements IClientIncomingPacket
 	private int _dz;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_dx = packet.readD();
 		_dy = packet.readD();
@@ -42,7 +42,7 @@ public class MoveWithDelta implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		// TODO this
 	}

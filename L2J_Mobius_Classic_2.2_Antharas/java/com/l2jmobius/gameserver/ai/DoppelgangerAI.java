@@ -22,20 +22,20 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.DoppelgangerInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 
-public class DoppelgangerAI extends L2CharacterAI
+public class DoppelgangerAI extends CreatureAI
 {
 	private volatile boolean _thinking; // to prevent recursive thinking
 	private volatile boolean _startFollow;
-	private L2Character _lastAttack = null;
+	private Creature _lastAttack = null;
 	
 	public DoppelgangerAI(DoppelgangerInstance clone)
 	{
@@ -65,8 +65,8 @@ public class DoppelgangerAI extends L2CharacterAI
 	
 	private void thinkAttack()
 	{
-		final L2Object target = getTarget();
-		final L2Character attackTarget = (target != null) && target.isCharacter() ? (L2Character) target : null;
+		final WorldObject target = getTarget();
+		final Creature attackTarget = (target != null) && target.isCreature() ? (Creature) target : null;
 		
 		if (checkTargetLostOrDead(attackTarget))
 		{
@@ -88,7 +88,7 @@ public class DoppelgangerAI extends L2CharacterAI
 			return;
 		}
 		
-		final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+		final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
 		
 		if (checkTargetLost(target))
 		{
@@ -108,7 +108,7 @@ public class DoppelgangerAI extends L2CharacterAI
 	
 	private void thinkInteract()
 	{
-		final L2Object target = getTarget();
+		final WorldObject target = getTarget();
 		if (checkTargetLost(target))
 		{
 			return;
@@ -191,11 +191,11 @@ public class DoppelgangerAI extends L2CharacterAI
 	}
 	
 	@Override
-	protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove)
+	protected void onIntentionCast(Skill skill, WorldObject target, ItemInstance item, boolean forceUse, boolean dontMove)
 	{
 		if (getIntention() == AI_INTENTION_ATTACK)
 		{
-			_lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (L2Character) getTarget() : null;
+			_lastAttack = (getTarget() != null) && getTarget().isCreature() ? (Creature) getTarget() : null;
 		}
 		else
 		{
@@ -205,7 +205,7 @@ public class DoppelgangerAI extends L2CharacterAI
 	}
 	
 	@Override
-	protected void moveToPawn(L2Object pawn, int offset)
+	protected void moveToPawn(WorldObject pawn, int offset)
 	{
 		// Check if actor can move
 		if (!_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0))

@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.templates.L2PcTemplate;
+import com.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class NewCharacterSuccess implements IClientOutgoingPacket
 {
-	private final List<L2PcTemplate> _chars = new ArrayList<>();
+	private final List<PlayerTemplate> _chars = new ArrayList<>();
 	
-	public void addChar(L2PcTemplate template)
+	public void addChar(PlayerTemplate template)
 	{
 		_chars.add(template);
 	}
@@ -38,7 +38,7 @@ public final class NewCharacterSuccess implements IClientOutgoingPacket
 		OutgoingPackets.NEW_CHARACTER_SUCCESS.writeId(packet);
 		
 		packet.writeD(_chars.size());
-		for (L2PcTemplate chr : _chars)
+		for (PlayerTemplate chr : _chars)
 		{
 			if (chr == null)
 			{

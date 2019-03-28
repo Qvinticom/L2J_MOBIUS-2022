@@ -18,8 +18,8 @@ package quests.Q10272_LightFragment;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -71,10 +71,10 @@ public class Q10272_LightFragment extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -83,17 +83,17 @@ public class Q10272_LightFragment extends Quest
 		{
 			case "32560-06.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "32559-03.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				break;
 			}
 			case "32559-07.html":
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 				break;
 			}
 			case "pay":
@@ -111,12 +111,12 @@ public class Q10272_LightFragment extends Quest
 			}
 			case "32567-04.html":
 			{
-				st.setCond(4, true);
+				qs.setCond(4, true);
 				break;
 			}
 			case "32559-12.html":
 			{
-				st.setCond(5, true);
+				qs.setCond(5, true);
 				break;
 			}
 			case "32557-03.html":
@@ -124,7 +124,7 @@ public class Q10272_LightFragment extends Quest
 				if (getQuestItemsCount(player, LIGHT_FRAGMENT_POWDER) >= 100)
 				{
 					takeItems(player, LIGHT_FRAGMENT_POWDER, 100);
-					st.set("wait", "1");
+					qs.set("wait", "1");
 				}
 				else
 				{
@@ -141,10 +141,10 @@ public class Q10272_LightFragment extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(5))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(5))
 		{
 			final long count = getQuestItemsCount(player, FRAGMENT_POWDER);
 			if (count < 100)
@@ -174,16 +174,16 @@ public class Q10272_LightFragment extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
 			case ORBYU:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -193,8 +193,8 @@ public class Q10272_LightFragment extends Quest
 						}
 						else
 						{
-							st = player.getQuestState(Q10271_TheEnvelopingDarkness.class.getSimpleName());
-							htmltext = ((st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
+							qs = player.getQuestState(Q10271_TheEnvelopingDarkness.class.getSimpleName());
+							htmltext = ((qs != null) && qs.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						}
 						break;
 					}
@@ -213,13 +213,13 @@ public class Q10272_LightFragment extends Quest
 			}
 			case ARTIUS:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
 					htmltext = "32559-19.html";
 				}
 				else
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -246,7 +246,7 @@ public class Q10272_LightFragment extends Quest
 							if (getQuestItemsCount(player, FRAGMENT_POWDER) >= 100)
 							{
 								htmltext = "32559-15.html";
-								st.setCond(6, true);
+								qs.setCond(6, true);
 							}
 							else
 							{
@@ -263,7 +263,7 @@ public class Q10272_LightFragment extends Quest
 							else
 							{
 								htmltext = "32559-17.html";
-								st.setCond(7, true);
+								qs.setCond(7, true);
 							}
 							break;
 						}
@@ -277,7 +277,7 @@ public class Q10272_LightFragment extends Quest
 							htmltext = "32559-18.html";
 							giveAdena(player, 556980, true);
 							addExpAndSp(player, 1009016, 91363);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							break;
 						}
 					}
@@ -286,7 +286,7 @@ public class Q10272_LightFragment extends Quest
 			}
 			case GINBY:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					case 2:
@@ -319,7 +319,7 @@ public class Q10272_LightFragment extends Quest
 			}
 			case LELRIKIA:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 3:
 					{
@@ -336,15 +336,15 @@ public class Q10272_LightFragment extends Quest
 			}
 			case LEKON:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 7:
 					{
-						if (st.getInt("wait") == 1)
+						if (qs.getInt("wait") == 1)
 						{
 							htmltext = "32557-05.html";
-							st.unset("wait");
-							st.setCond(8, true);
+							qs.unset("wait");
+							qs.setCond(8, true);
 							giveItems(player, LIGHT_FRAGMENT, 1);
 						}
 						else

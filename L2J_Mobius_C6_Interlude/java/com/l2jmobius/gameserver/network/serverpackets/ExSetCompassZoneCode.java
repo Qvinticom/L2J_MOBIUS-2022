@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch d.
  * @author KenM
  */
-public class ExSetCompassZoneCode extends L2GameServerPacket
+public class ExSetCompassZoneCode extends GameServerPacket
 {
 	/** The Constant SIEGEWARZONE1. */
 	public static final int SIEGEWARZONE1 = 0x0A;

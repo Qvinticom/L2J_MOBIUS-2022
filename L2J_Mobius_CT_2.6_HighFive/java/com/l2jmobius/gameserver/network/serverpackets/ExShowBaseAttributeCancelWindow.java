@@ -17,17 +17,17 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 {
-	private final L2ItemInstance[] _items;
+	private final ItemInstance[] _items;
 	private long _price;
 	
-	public ExShowBaseAttributeCancelWindow(L2PcInstance player)
+	public ExShowBaseAttributeCancelWindow(PlayerInstance player)
 	{
 		_items = player.getInventory().getElementItems();
 	}
@@ -37,7 +37,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
 		packet.writeD(_items.length);
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeQ(getPrice(item));
@@ -50,13 +50,13 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	 * @param item
 	 * @return
 	 */
-	private long getPrice(L2ItemInstance item)
+	private long getPrice(ItemInstance item)
 	{
 		switch (item.getItem().getCrystalType())
 		{
 			case S:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 50000;
 				}
@@ -68,7 +68,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 			}
 			case S80:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 100000;
 				}
@@ -80,7 +80,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 			}
 			case S84:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 200000;
 				}

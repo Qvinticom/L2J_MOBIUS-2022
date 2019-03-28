@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class SpecialCamera extends L2GameServerPacket
+public class SpecialCamera extends GameServerPacket
 {
 	private final int _id;
 	private final int _dist;

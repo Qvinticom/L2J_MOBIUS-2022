@@ -16,21 +16,20 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class StopRotation extends L2GameServerPacket
+public class StopRotation extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _degree;
 	private final int _speed;
 	
-	public StopRotation(L2Character player, int degree, int speed)
+	public StopRotation(Creature creature, int degree, int speed)
 	{
-		_charObjId = player.getObjectId();
+		_objectId = creature.getObjectId();
 		_degree = degree;
 		_speed = speed;
 	}
@@ -39,7 +38,7 @@ public class StopRotation extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x63);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_degree);
 		writeD(_speed);
 		writeC(0); // ?

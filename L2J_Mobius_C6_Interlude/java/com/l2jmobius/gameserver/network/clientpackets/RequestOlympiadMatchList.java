@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x13
  * @author -Wooden-
  */
-public final class RequestOlympiadMatchList extends L2GameClientPacket
+public final class RequestOlympiadMatchList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -34,14 +34,14 @@ public final class RequestOlympiadMatchList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			Olympiad.sendMatchList(activeChar);
+			Olympiad.sendMatchList(player);
 		}
 	}
 }

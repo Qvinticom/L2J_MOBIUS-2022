@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author Mobius
@@ -31,7 +31,7 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 	private int _type;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_type = packet.readH(); // action?
@@ -39,9 +39,9 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -49,7 +49,7 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 		
 		if (_type == 1)
 		{
-			for (L2Object object : L2World.getInstance().getVisibleObjects(player, L2Object.class))
+			for (WorldObject object : World.getInstance().getVisibleObjects(player, WorldObject.class))
 			{
 				if (_objectId == object.getObjectId())
 				{

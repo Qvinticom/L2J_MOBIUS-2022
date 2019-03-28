@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.instancemanager.TownManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -37,9 +37,9 @@ public class PartyMatchRoom
 	private int _minlvl;
 	private int _maxlvl;
 	private int _maxmem;
-	private final List<L2PcInstance> _members = new ArrayList<>();
+	private final List<PlayerInstance> _members = new ArrayList<>();
 	
-	public PartyMatchRoom(int id, String title, int loot, int minlvl, int maxlvl, int maxmem, L2PcInstance owner)
+	public PartyMatchRoom(int id, String title, int loot, int minlvl, int maxlvl, int maxmem, PlayerInstance owner)
 	{
 		_id = id;
 		_title = title;
@@ -51,17 +51,17 @@ public class PartyMatchRoom
 		_members.add(owner);
 	}
 	
-	public List<L2PcInstance> getPartyMembers()
+	public List<PlayerInstance> getPartyMembers()
 	{
 		return _members;
 	}
 	
-	public void addMember(L2PcInstance player)
+	public void addMember(PlayerInstance player)
 	{
 		_members.add(player);
 	}
 	
-	public void deleteMember(L2PcInstance player)
+	public void deleteMember(PlayerInstance player)
 	{
 		if (player != _members.get(0)) // owner
 		{
@@ -79,9 +79,9 @@ public class PartyMatchRoom
 		}
 	}
 	
-	public void notifyMembersAboutExit(L2PcInstance player)
+	public void notifyMembersAboutExit(PlayerInstance player)
 	{
-		for (L2PcInstance _member : _members)
+		for (PlayerInstance _member : _members)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_LEFT_PARTY_ROOM);
 			sm.addString(player.getName());
@@ -90,10 +90,10 @@ public class PartyMatchRoom
 		}
 	}
 	
-	public void changeLeader(L2PcInstance newLeader)
+	public void changeLeader(PlayerInstance newLeader)
 	{
 		// Get current leader
-		final L2PcInstance oldLeader = _members.get(0);
+		final PlayerInstance oldLeader = _members.get(0);
 		// Remove new leader
 		if (_members.contains(newLeader))
 		{
@@ -117,7 +117,7 @@ public class PartyMatchRoom
 		}
 		
 		// Broadcast change
-		for (L2PcInstance member : _members)
+		for (PlayerInstance member : _members)
 		{
 			member.sendPacket(new ExManagePartyRoomMember(newLeader, this, 1));
 			member.sendPacket(new ExManagePartyRoomMember(oldLeader, this, 1));
@@ -130,7 +130,7 @@ public class PartyMatchRoom
 		return _id;
 	}
 	
-	public L2PcInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _members.get(0);
 	}

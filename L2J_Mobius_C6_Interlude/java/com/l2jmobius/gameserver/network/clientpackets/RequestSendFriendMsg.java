@@ -20,15 +20,15 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.FriendRecvMsg;
 
 /**
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
  */
-public final class RequestSendFriendMsg extends L2GameClientPacket
+public final class RequestSendFriendMsg extends GameClientPacket
 {
 	private static java.util.logging.Logger _logChat = java.util.logging.Logger.getLogger("chat");
 	
@@ -45,16 +45,16 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(_reciever);
-		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId()))
+		final PlayerInstance targetPlayer = World.getInstance().getPlayer(_reciever);
+		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(player.getObjectId()))
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			player.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			return;
 		}
 		
@@ -65,13 +65,13 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 			record.setParameters(new Object[]
 			{
 				"PRIV_MSG",
-				"[" + activeChar.getName() + " to " + _reciever + "]"
+				"[" + player.getName() + " to " + _reciever + "]"
 			});
 			
 			_logChat.log(record);
 		}
 		
-		final FriendRecvMsg frm = new FriendRecvMsg(activeChar.getName(), _reciever, _message);
+		final FriendRecvMsg frm = new FriendRecvMsg(player.getName(), _reciever, _message);
 		targetPlayer.sendPacket(frm);
 	}
 }

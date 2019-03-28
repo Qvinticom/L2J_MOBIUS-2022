@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExConfirmVariationItem;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * Format:(ch) d
  * @author -Wooden-
  */
-public final class RequestConfirmTargetItem extends L2GameClientPacket
+public final class RequestConfirmTargetItem extends GameClientPacket
 {
 	private int _itemObjId;
 	
@@ -40,17 +40,17 @@ public final class RequestConfirmTargetItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(_itemObjId);
+		final PlayerInstance player = getClient().getPlayer();
+		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemObjId);
 		
 		if (item == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getLevel() < 46)
+		if (player.getLevel() < 46)
 		{
-			activeChar.sendMessage("You have to be level 46 in order to augment an item");
+			player.sendMessage("You have to be level 46 in order to augment an item");
 			return;
 		}
 		
@@ -60,48 +60,48 @@ public final class RequestConfirmTargetItem extends L2GameClientPacket
 		
 		if (item.isAugmented())
 		{
-			activeChar.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
+			player.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
 			return;
 		}
 		// TODO: can do better? : currently: using isdestroyable() as a check for hero / cursed weapons
-		else if ((itemGrade < L2Item.CRYSTAL_C) || (itemType != L2Item.TYPE2_WEAPON) || !item.isDestroyable() || item.isShadowItem())
+		else if ((itemGrade < Item.CRYSTAL_C) || (itemType != Item.TYPE2_WEAPON) || !item.isDestroyable() || item.isShadowItem())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
 		// check if the player can augment
-		if (activeChar.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION);
 			return;
 		}
 		
-		if (activeChar.isDead())
+		if (player.isDead())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_DEAD);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_DEAD);
 			return;
 		}
 		
-		if (activeChar.isParalyzed())
+		if (player.isParalyzed())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_PARALYZED);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_PARALYZED);
 			return;
 		}
 		
-		if (activeChar.isFishing())
+		if (player.isFishing())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_FISHING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_FISHING);
 			return;
 		}
 		
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_SITTING_DOWN);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_AUGMENT_ITEMS_WHILE_SITTING_DOWN);
 			return;
 		}
 		
-		activeChar.sendPacket(new ExConfirmVariationItem(_itemObjId));
-		activeChar.sendPacket(SystemMessageId.SELECT_THE_CATALYST_FOR_AUGMENTATION);
+		player.sendPacket(new ExConfirmVariationItem(_itemObjId));
+		player.sendPacket(SystemMessageId.SELECT_THE_CATALYST_FOR_AUGMENTATION);
 	}
 }

@@ -18,14 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
 public final class RequestGetItemFromPet implements IClientIncomingPacket
@@ -36,7 +35,7 @@ public final class RequestGetItemFromPet implements IClientIncomingPacket
 	private int _unknown;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_amount = packet.readQ();
@@ -45,9 +44,9 @@ public final class RequestGetItemFromPet implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if ((_amount <= 0) || (player == null) || !player.hasPet())
 		{
 			return;
@@ -59,13 +58,13 @@ public final class RequestGetItemFromPet implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) player.getSummon();
-		if (player.getActiveEnchantItemId() != L2PcInstance.ID_NONE)
+		final PetInstance pet = (PetInstance) player.getSummon();
+		if (player.getActiveEnchantItemId() != PlayerInstance.ID_NONE)
 		{
 			return;
 		}
 		
-		final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			return;

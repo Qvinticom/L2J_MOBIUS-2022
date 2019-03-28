@@ -19,11 +19,11 @@ package quests.Q00021_HiddenTruth;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -73,11 +73,11 @@ public class Q00021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
@@ -104,11 +104,11 @@ public class Q00021_HiddenTruth extends Quest
 				}
 				case "31328-05.html":
 				{
-					if (st.isCond(7))
+					if (qs.isCond(7))
 					{
 						giveItems(player, CROSS_OF_EINHASAD2, 1);
 						addExpAndSp(player, 131228, 11978);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = event;
 					}
 					break;
@@ -121,7 +121,7 @@ public class Q00021_HiddenTruth extends Quest
 					}
 					else
 					{
-						st.startQuest();
+						qs.startQuest();
 						htmltext = event;
 					}
 					break;
@@ -135,11 +135,11 @@ public class Q00021_HiddenTruth extends Quest
 					}
 					else
 					{
-						final L2Npc ghost = addSpawn(GHOST_OF_VON_HELLMAN, GHOST_LOC, false, 0);
+						final Npc ghost = addSpawn(GHOST_OF_VON_HELLMAN, GHOST_LOC, false, 0);
 						ghost.broadcastPacket(new NpcSay(ghost.getObjectId(), ChatType.GENERAL, ghost.getId(), NpcStringId.WHO_AWOKE_ME));
 						GHOST_SPAWNED = true;
 						startQuestTimer("DESPAWN_GHOST", 1000 * 300, ghost, player);
-						st.setCond(2);
+						qs.setCond(2);
 						playSound(player, QuestSound.SKILLSOUND_HORROR_2);
 						htmltext = event;
 					}
@@ -149,12 +149,12 @@ public class Q00021_HiddenTruth extends Quest
 				{
 					if (PAGE_COUNT < 5)
 					{
-						final L2Npc page = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, false, 0);
+						final Npc page = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, false, 0);
 						page.setScriptValue(player.getObjectId());
 						page.broadcastPacket(new NpcSay(page.getObjectId(), ChatType.NPC_GENERAL, page.getId(), NpcStringId.MY_MASTER_HAS_INSTRUCTED_ME_TO_BE_YOUR_GUIDE_S1).addStringParameter(player.getName()));
 						WalkingManager.getInstance().startMoving(page, PAGE_ROUTE_NAME);
 						PAGE_COUNT++;
-						st.setCond(3);
+						qs.setCond(3);
 						htmltext = event;
 					}
 					else
@@ -171,16 +171,16 @@ public class Q00021_HiddenTruth extends Quest
 				}
 				case "31526-07.html":
 				{
-					st.setCond(4);
+					qs.setCond(4);
 					htmltext = event;
 					break;
 				}
 				case "31526-08.html":
 				{
-					if (!st.isCond(5))
+					if (!qs.isCond(5))
 					{
 						playSound(player, QuestSound.AMDSOUND_ED_CHIMES);
-						st.setCond(5);
+						qs.setCond(5);
 						htmltext = event;
 					}
 					else
@@ -192,7 +192,7 @@ public class Q00021_HiddenTruth extends Quest
 				case "31526-14.html":
 				{
 					giveItems(player, CROSS_OF_EINHASAD, 1);
-					st.setCond(6);
+					qs.setCond(6);
 					htmltext = event;
 					break;
 				}
@@ -214,16 +214,16 @@ public class Q00021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case MYSTERIOUS_WIZARD:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -250,7 +250,7 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case GHOST_OF_VON_HELLMAN:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 2:
 					{
@@ -267,7 +267,7 @@ public class Q00021_HiddenTruth extends Quest
 						{
 							if (PAGE_COUNT < 5)
 							{
-								final L2Npc PAGE = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, true, 0);
+								final Npc PAGE = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, true, 0);
 								PAGE_COUNT++;
 								PAGE_SPAWNED = true;
 								PAGE.setScriptValue(player.getObjectId());
@@ -291,7 +291,7 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case GHOST_OF_VON_HELLMANS_PAGE:
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					if (MOVE_ENDED)
 					{
@@ -307,7 +307,7 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case BROKEN_BOOKSHELF:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 3:
 					{
@@ -316,7 +316,7 @@ public class Q00021_HiddenTruth extends Quest
 					}
 					case 4:
 					{
-						st.setCond(5);
+						qs.setCond(5);
 						playSound(player, QuestSound.AMDSOUND_ED_CHIMES);
 						htmltext = "31526-10.html";
 						break;
@@ -336,15 +336,15 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case AGRIPEL:
 			{
-				if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+				if (hasQuestItems(player, CROSS_OF_EINHASAD) && qs.isCond(6))
 				{
-					st.set("AGRIPEL", "1");
-					if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
+					qs.set("AGRIPEL", "1");
+					if ((qs.getInt("AGRIPEL") == 1) && (qs.getInt("DOMINIC") == 1) && (qs.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31348-03.html";
-						st.setCond(7);
+						qs.setCond(7);
 					}
-					else if ((st.getInt("DOMINIC") == 1) || (st.getInt("BENEDICT") == 1))
+					else if ((qs.getInt("DOMINIC") == 1) || (qs.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31348-02.html";
 					}
@@ -353,7 +353,7 @@ public class Q00021_HiddenTruth extends Quest
 						htmltext = "31348-01.html";
 					}
 				}
-				else if (st.isCond(7))
+				else if (qs.isCond(7))
 				{
 					htmltext = "31348-03.html";
 				}
@@ -362,16 +362,16 @@ public class Q00021_HiddenTruth extends Quest
 			
 			case BENEDICT:
 			{
-				if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+				if (hasQuestItems(player, CROSS_OF_EINHASAD) && qs.isCond(6))
 				{
 					
-					st.set("BENEDICT", "1");
-					if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
+					qs.set("BENEDICT", "1");
+					if ((qs.getInt("AGRIPEL") == 1) && (qs.getInt("DOMINIC") == 1) && (qs.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31349-03.html";
-						st.setCond(7);
+						qs.setCond(7);
 					}
-					else if ((st.getInt("AGRIPEL") == 1) || (st.getInt("DOMINIC") == 1))
+					else if ((qs.getInt("AGRIPEL") == 1) || (qs.getInt("DOMINIC") == 1))
 					{
 						htmltext = "31349-02.html";
 					}
@@ -380,7 +380,7 @@ public class Q00021_HiddenTruth extends Quest
 						htmltext = "31349-01.html";
 					}
 				}
-				else if (st.isCond(7))
+				else if (qs.isCond(7))
 				{
 					htmltext = "31349-03.html";
 				}
@@ -388,15 +388,15 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case DOMINIC:
 			{
-				if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+				if (hasQuestItems(player, CROSS_OF_EINHASAD) && qs.isCond(6))
 				{
-					st.set("DOMINIC", "1");
-					if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
+					qs.set("DOMINIC", "1");
+					if ((qs.getInt("AGRIPEL") == 1) && (qs.getInt("DOMINIC") == 1) && (qs.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31350-03.html";
-						st.setCond(7);
+						qs.setCond(7);
 					}
-					else if ((st.getInt("AGRIPEL") == 1) || (st.getInt("BENEDICT") == 1))
+					else if ((qs.getInt("AGRIPEL") == 1) || (qs.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31350-02.html";
 					}
@@ -405,7 +405,7 @@ public class Q00021_HiddenTruth extends Quest
 						htmltext = "31350-01.html";
 					}
 				}
-				else if (st.isCond(7))
+				else if (qs.isCond(7))
 				{
 					htmltext = "31350-03.html";
 				}
@@ -413,14 +413,14 @@ public class Q00021_HiddenTruth extends Quest
 			}
 			case INNOCENTIN:
 			{
-				if (st.isCond(7) && hasQuestItems(player, CROSS_OF_EINHASAD))
+				if (qs.isCond(7) && hasQuestItems(player, CROSS_OF_EINHASAD))
 				{
 					htmltext = "31328-01.html";
 				}
-				else if (st.isCompleted())
+				else if (qs.isCompleted())
 				{
-					st = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
-					if (st == null)
+					qs = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
+					if (qs == null)
 					{
 						htmltext = "31328-06.html";
 					}
@@ -432,20 +432,20 @@ public class Q00021_HiddenTruth extends Quest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
-			playSound((L2PcInstance) creature, QuestSound.HORROR_01);
+			playSound((PlayerInstance) creature, QuestSound.HORROR_01);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
-	public void onRouteFinished(L2Npc npc)
+	public void onRouteFinished(Npc npc)
 	{
-		final QuestState st = L2World.getInstance().getPlayer(npc.getScriptValue()).getQuestState(getName());
-		if (st != null)
+		final QuestState qs = World.getInstance().getPlayer(npc.getScriptValue()).getQuestState(getName());
+		if (qs != null)
 		{
 			startQuestTimer("DESPAWN", 15000, npc, null);
 			MOVE_ENDED = true;

@@ -25,14 +25,14 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2ManufactureList;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.ManufactureList;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.TradeList.TradeItem;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
+import com.l2jmobius.gameserver.network.GameClient.GameClientState;
 import com.l2jmobius.gameserver.thread.LoginServerThread;
 
 /**
@@ -69,12 +69,12 @@ public class OfflineTradeTable
 			stm = con.prepareStatement(SAVE_OFFLINE_STATUS);
 			final PreparedStatement stm_items = con.prepareStatement(SAVE_ITEMS);
 			
-			for (L2PcInstance pc : L2World.getInstance().getAllPlayers())
+			for (PlayerInstance pc : World.getInstance().getAllPlayers())
 			{
 				try
 				{
 					// without second check, server will store all guys that are in shop mode
-					if ((pc.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)/* && (pc.isOffline()) */)
+					if ((pc.getPrivateStoreType() != PlayerInstance.STORE_PRIVATE_NONE)/* && (pc.isOffline()) */)
 					{
 						stm.setInt(1, pc.getObjectId()); // Char Id
 						stm.setLong(2, pc.getOfflineStartTime());
@@ -83,7 +83,7 @@ public class OfflineTradeTable
 						
 						switch (pc.getPrivateStoreType())
 						{
-							case L2PcInstance.STORE_PRIVATE_BUY:
+							case PlayerInstance.STORE_PRIVATE_BUY:
 							{
 								if (!Config.OFFLINE_TRADE_ENABLE)
 								{
@@ -102,8 +102,8 @@ public class OfflineTradeTable
 								}
 								break;
 							}
-							case L2PcInstance.STORE_PRIVATE_SELL:
-							case L2PcInstance.STORE_PRIVATE_PACKAGE_SELL:
+							case PlayerInstance.STORE_PRIVATE_SELL:
+							case PlayerInstance.STORE_PRIVATE_PACKAGE_SELL:
 							{
 								if (!Config.OFFLINE_TRADE_ENABLE)
 								{
@@ -123,14 +123,14 @@ public class OfflineTradeTable
 								}
 								break;
 							}
-							case L2PcInstance.STORE_PRIVATE_MANUFACTURE:
+							case PlayerInstance.STORE_PRIVATE_MANUFACTURE:
 							{
 								if (!Config.OFFLINE_CRAFT_ENABLE)
 								{
 									continue;
 								}
 								title = pc.getCreateList().getStoreName();
-								for (L2ManufactureItem i : pc.getCreateList().getList())
+								for (ManufactureItem i : pc.getCreateList().getList())
 								{
 									stm_items.setInt(1, pc.getObjectId());
 									stm_items.setInt(2, i.getRecipeId());
@@ -194,17 +194,17 @@ public class OfflineTradeTable
 				}
 				
 				final int type = rs.getInt("type");
-				if (type == L2PcInstance.STORE_PRIVATE_NONE)
+				if (type == PlayerInstance.STORE_PRIVATE_NONE)
 				{
 					continue;
 				}
 				
-				L2PcInstance player = null;
+				PlayerInstance player = null;
 				try
 				{
-					final L2GameClient client = new L2GameClient(null);
-					player = L2PcInstance.load(rs.getInt("charId"));
-					client.setActiveChar(player);
+					final GameClient client = new GameClient(null);
+					player = PlayerInstance.load(rs.getInt("charId"));
+					client.setPlayer(player);
 					client.setAccountName(player.getAccountName());
 					client.setState(GameClientState.IN_GAME);
 					player.setClient(client);
@@ -213,7 +213,7 @@ public class OfflineTradeTable
 					player.setOfflineStartTime(time);
 					if (Config.OFFLINE_SLEEP_EFFECT)
 					{
-						player.startAbnormalEffect(L2Character.ABNORMAL_EFFECT_SLEEP);
+						player.startAbnormalEffect(Creature.ABNORMAL_EFFECT_SLEEP);
 					}
 					player.spawnMe(player.getX(), player.getY(), player.getZ());
 					LoginServerThread.getInstance().addGameServerLogin(player.getAccountName(), client);
@@ -223,7 +223,7 @@ public class OfflineTradeTable
 					
 					switch (type)
 					{
-						case L2PcInstance.STORE_PRIVATE_BUY:
+						case PlayerInstance.STORE_PRIVATE_BUY:
 						{
 							while (items.next())
 							{
@@ -232,23 +232,23 @@ public class OfflineTradeTable
 							player.getBuyList().setTitle(rs.getString("title"));
 							break;
 						}
-						case L2PcInstance.STORE_PRIVATE_SELL:
-						case L2PcInstance.STORE_PRIVATE_PACKAGE_SELL:
+						case PlayerInstance.STORE_PRIVATE_SELL:
+						case PlayerInstance.STORE_PRIVATE_PACKAGE_SELL:
 						{
 							while (items.next())
 							{
 								player.getSellList().addItem(items.getInt(2), items.getInt(3), items.getInt(4));
 							}
 							player.getSellList().setTitle(rs.getString("title"));
-							player.getSellList().setPackaged(type == L2PcInstance.STORE_PRIVATE_PACKAGE_SELL);
+							player.getSellList().setPackaged(type == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL);
 							break;
 						}
-						case L2PcInstance.STORE_PRIVATE_MANUFACTURE:
+						case PlayerInstance.STORE_PRIVATE_MANUFACTURE:
 						{
-							final L2ManufactureList createList = new L2ManufactureList();
+							final ManufactureList createList = new ManufactureList();
 							while (items.next())
 							{
-								createList.add(new L2ManufactureItem(items.getInt(2), items.getInt(4)));
+								createList.add(new ManufactureItem(items.getInt(2), items.getInt(4)));
 							}
 							player.setCreateList(createList);
 							player.getCreateList().setStoreName(rs.getString("title"));
@@ -298,9 +298,9 @@ public class OfflineTradeTable
 		}
 	}
 	
-	public static void storeOffliner(L2PcInstance pc)
+	public static void storeOffliner(PlayerInstance pc)
 	{
-		if ((pc.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_NONE) || (!pc.isInOfflineMode()))
+		if ((pc.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_NONE) || (!pc.isInOfflineMode()))
 		{
 			return;
 		}
@@ -333,7 +333,7 @@ public class OfflineTradeTable
 				
 				switch (pc.getPrivateStoreType())
 				{
-					case L2PcInstance.STORE_PRIVATE_BUY:
+					case PlayerInstance.STORE_PRIVATE_BUY:
 					{
 						if (!Config.OFFLINE_TRADE_ENABLE)
 						{
@@ -352,8 +352,8 @@ public class OfflineTradeTable
 						}
 						break;
 					}
-					case L2PcInstance.STORE_PRIVATE_SELL:
-					case L2PcInstance.STORE_PRIVATE_PACKAGE_SELL:
+					case PlayerInstance.STORE_PRIVATE_SELL:
+					case PlayerInstance.STORE_PRIVATE_PACKAGE_SELL:
 					{
 						if (!Config.OFFLINE_TRADE_ENABLE)
 						{
@@ -373,14 +373,14 @@ public class OfflineTradeTable
 						}
 						break;
 					}
-					case L2PcInstance.STORE_PRIVATE_MANUFACTURE:
+					case PlayerInstance.STORE_PRIVATE_MANUFACTURE:
 					{
 						if (!Config.OFFLINE_CRAFT_ENABLE)
 						{
 							break;
 						}
 						title = pc.getCreateList().getStoreName();
-						for (L2ManufactureItem i : pc.getCreateList().getList())
+						for (ManufactureItem i : pc.getCreateList().getList())
 						{
 							stm_items.setInt(1, pc.getObjectId());
 							stm_items.setInt(2, i.getRecipeId());

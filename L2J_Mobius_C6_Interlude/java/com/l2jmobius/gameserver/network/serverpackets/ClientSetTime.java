@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.GameTimeController;
 
-public class ClientSetTime extends L2GameServerPacket
+public class ClientSetTime extends GameServerPacket
 {
 	@Override
 	protected final void writeImpl()

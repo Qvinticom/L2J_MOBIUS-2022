@@ -20,12 +20,12 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2WarehouseInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.WarehouseInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
@@ -40,7 +40,7 @@ public class ClanWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!Config.ALLOW_WAREHOUSE)
 		{
@@ -52,24 +52,24 @@ public class ClanWarehouse implements IBypassHandler
 			return false;
 		}
 		
-		final L2Npc npc = (L2Npc) target;
-		if (!(npc instanceof L2WarehouseInstance) && (npc.getClan() != null))
+		final Npc npc = (Npc) target;
+		if (!(npc instanceof WarehouseInstance) && (npc.getClan() != null))
 		{
 			return false;
 		}
 		
-		if (activeChar.hasItemRequest())
+		if (player.hasItemRequest())
 		{
 			return false;
 		}
-		else if (activeChar.getClan() == null)
+		else if (player.getClan() == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 			return false;
 		}
-		else if (activeChar.getClan().getLevel() == 0)
+		else if (player.getClan().getLevel() == 0)
 		{
-			activeChar.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_ABOVE_CAN_USE_A_CLAN_WAREHOUSE);
+			player.sendPacket(SystemMessageId.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_ABOVE_CAN_USE_A_CLAN_WAREHOUSE);
 			return false;
 		}
 		else
@@ -78,39 +78,39 @@ public class ClanWarehouse implements IBypassHandler
 			{
 				if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawC
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 					
-					if (!activeChar.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
+					if (!player.hasClanPrivilege(ClanPrivilege.CL_VIEW_WAREHOUSE))
 					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
 						return true;
 					}
 					
-					activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
+					player.setActiveWarehouse(player.getClan().getWarehouse());
 					
-					if (activeChar.getActiveWarehouse().getSize() == 0)
+					if (player.getActiveWarehouse().getSize() == 0)
 					{
-						activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
+						player.sendPacket(SystemMessageId.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
 						return true;
 					}
 					
-					for (L2ItemInstance i : activeChar.getActiveWarehouse().getItems())
+					for (ItemInstance i : player.getActiveWarehouse().getItems())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{
-							activeChar.getActiveWarehouse().destroyItem("L2ItemInstance", i, activeChar, null);
+							player.getActiveWarehouse().destroyItem("ItemInstance", i, player, null);
 						}
 					}
 					
-					activeChar.sendPacket(new WareHouseWithdrawalList(activeChar, WareHouseWithdrawalList.CLAN));
+					player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN));
 					return true;
 				}
 				else if (command.toLowerCase().startsWith(COMMANDS[1])) // DepositC
 				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
-					activeChar.setInventoryBlockingStatus(true);
-					activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					player.setActiveWarehouse(player.getClan().getWarehouse());
+					player.setInventoryBlockingStatus(true);
+					player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.CLAN));
 					return true;
 				}
 				

@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestShortCutDel extends L2GameClientPacket
+public final class RequestShortCutDel extends GameClientPacket
 {
 	private int _slot;
 	private int _page;
@@ -34,13 +34,13 @@ public final class RequestShortCutDel extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		activeChar.deleteShortCut(_slot, _page);
+		player.deleteShortCut(_slot, _page);
 		// client needs no confirmation. this packet is just to inform the server
 	}
 }

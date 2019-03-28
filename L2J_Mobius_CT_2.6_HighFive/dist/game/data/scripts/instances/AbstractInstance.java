@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -46,7 +46,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	{
 	}
 	
-	protected void enterInstance(L2PcInstance player, int templateId)
+	protected void enterInstance(PlayerInstance player, int templateId)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -170,7 +170,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	protected void handleRemoveBuffs(InstanceWorld world)
 	{
-		for (L2PcInstance player : world.getAllowed())
+		for (PlayerInstance player : world.getAllowed())
 		{
 			if (player != null)
 			{
@@ -179,9 +179,9 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		}
 	}
 	
-	protected abstract void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance);
+	protected abstract void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance);
 	
-	protected boolean checkConditions(L2PcInstance player)
+	protected boolean checkConditions(PlayerInstance player)
 	{
 		return true;
 	}
@@ -193,7 +193,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 */
 	protected void setReenterTime(InstanceWorld world, long time)
 	{
-		for (L2PcInstance player : world.getAllowed())
+		for (PlayerInstance player : world.getAllowed())
 		{
 			if (player != null)
 			{
@@ -206,7 +206,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		}
 	}
 	
-	private void handleRemoveBuffs(L2PcInstance player, InstanceWorld world)
+	private void handleRemoveBuffs(PlayerInstance player, InstanceWorld world)
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		switch (inst.getRemoveBuffType())
@@ -215,7 +215,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			{
 				player.stopAllEffectsExceptThoseThatLastThroughDeath();
 				
-				final L2Summon summon = player.getSummon();
+				final Summon summon = player.getSummon();
 				if (summon != null)
 				{
 					summon.stopAllEffectsExceptThoseThatLastThroughDeath();
@@ -232,7 +232,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					}
 				}
 				
-				final L2Summon summon = player.getSummon();
+				final Summon summon = player.getSummon();
 				if (summon != null)
 				{
 					for (BuffInfo info : summon.getEffectList().getBuffs())
@@ -255,7 +255,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					}
 				}
 				
-				final L2Summon summon = player.getSummon();
+				final Summon summon = player.getSummon();
 				if (summon != null)
 				{
 					for (BuffInfo info : summon.getEffectList().getBuffs())

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class StopPledgeWar extends L2GameServerPacket
+public class StopPledgeWar extends GameServerPacket
 {
 	private final String _pledgeName;
 	private final String _playerName;

@@ -18,21 +18,21 @@ package com.l2jmobius.gameserver.handler;
 
 import java.io.IOException;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 public interface ISkillHandler
 {
 	/**
 	 * this is the worker method that is called when using an item.
-	 * @param activeChar
+	 * @param creature
 	 * @param skill
 	 * @param targets
 	 * @throws IOException
 	 */
-	void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) throws IOException;
+	void useSkill(Creature creature, Skill skill, WorldObject[] targets) throws IOException;
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

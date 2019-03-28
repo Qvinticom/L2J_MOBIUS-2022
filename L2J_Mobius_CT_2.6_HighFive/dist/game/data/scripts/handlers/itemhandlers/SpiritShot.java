@@ -20,11 +20,11 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public class SpiritShot implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -41,9 +41,9 @@ public class SpiritShot implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
-		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final PlayerInstance player = (PlayerInstance) playable;
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
 		final int itemId = item.getId();
@@ -57,15 +57,15 @@ public class SpiritShot implements IItemHandler
 		// Check if Spirit shot can be used
 		if ((weaponInst == null) || (weaponItem.getSpiritShotCount() == 0))
 		{
-			if (!activeChar.getAutoSoulShot().contains(itemId))
+			if (!player.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
+				player.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
 			}
 			return false;
 		}
 		
 		// Check if Spirit shot is already active
-		if (activeChar.isChargedShot(ShotType.SPIRITSHOTS))
+		if (player.isChargedShot(ShotType.SPIRITSHOTS))
 		{
 			return false;
 		}
@@ -74,30 +74,30 @@ public class SpiritShot implements IItemHandler
 		
 		if (!gradeCheck)
 		{
-			if (!activeChar.getAutoSoulShot().contains(itemId))
+			if (!player.getAutoSoulShot().contains(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
+				player.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 			}
 			
 			return false;
 		}
 		
 		// Consume Spirit shot if player has enough of them
-		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
+		if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
-			if (!activeChar.disableAutoShot(itemId))
+			if (!player.disableAutoShot(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT);
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT);
 			}
 			return false;
 		}
 		
 		// Charge Spirit shot
-		activeChar.setChargedShot(ShotType.SPIRITSHOTS, true);
+		player.setChargedShot(ShotType.SPIRITSHOTS, true);
 		
 		// Send message to client
-		activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0), 600);
+		player.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
+		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0), 600);
 		return true;
 	}
 }

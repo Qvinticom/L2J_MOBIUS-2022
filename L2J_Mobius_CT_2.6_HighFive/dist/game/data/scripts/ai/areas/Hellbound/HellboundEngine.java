@@ -19,10 +19,10 @@ package ai.areas.Hellbound;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 import ai.AbstractNpcAI;
@@ -68,7 +68,7 @@ public final class HellboundEngine extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals(UPDATE_EVENT))
 		{
@@ -99,9 +99,9 @@ public final class HellboundEngine extends AbstractNpcAI
 		int added = 0;
 		int deleted = 0;
 		final HellboundSpawns hellboundSpawns = HellboundSpawns.getInstance();
-		for (L2Spawn spawn : hellboundSpawns.getSpawns())
+		for (Spawn spawn : hellboundSpawns.getSpawns())
 		{
-			final L2Npc npc = spawn.getLastSpawn();
+			final Npc npc = spawn.getLastSpawn();
 			if ((getLevel() < hellboundSpawns.getSpawnMinLevel(spawn.getId())) || (getLevel() > hellboundSpawns.getSpawnMaxLevel(spawn.getId())))
 			{
 				spawn.stopRespawn();
@@ -220,7 +220,7 @@ public final class HellboundEngine extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		final HellboundPointData hellboundPointData = HellboundPointData.getInstance();
@@ -264,7 +264,7 @@ public final class HellboundEngine extends AbstractNpcAI
 		{
 			try
 			{
-				final L2DoorInstance door = DoorData.getInstance().getDoor(doorData[0]);
+				final DoorInstance door = DoorData.getInstance().getDoor(doorData[0]);
 				if (door.isOpen())
 				{
 					if (newLevel < doorData[1])

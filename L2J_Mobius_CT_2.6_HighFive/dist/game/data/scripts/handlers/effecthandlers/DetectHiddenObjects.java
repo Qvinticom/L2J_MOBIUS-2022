@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -47,7 +47,7 @@ public final class DetectHiddenObjects extends AbstractEffect
 			return;
 		}
 		
-		final L2DoorInstance door = (L2DoorInstance) info.getEffected();
+		final DoorInstance door = (DoorInstance) info.getEffected();
 		if (door.getTemplate().isStealth())
 		{
 			door.setMeshIndex(1);

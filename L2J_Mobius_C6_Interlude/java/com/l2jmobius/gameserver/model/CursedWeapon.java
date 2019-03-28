@@ -29,10 +29,10 @@ import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 public class CursedWeapon
 {
@@ -67,8 +67,8 @@ public class CursedWeapon
 	long _endTime = 0;
 	
 	private int _playerId = 0;
-	private L2PcInstance _player = null;
-	private L2ItemInstance _item = null;
+	private PlayerInstance _player = null;
+	private ItemInstance _item = null;
 	private int _playerKarma = 0;
 	private int _playerPkKills = 0;
 	
@@ -97,7 +97,7 @@ public class CursedWeapon
 				removeSkill();
 				
 				// Remove and destroy
-				_player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_LR_HAND);
+				_player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_LR_HAND);
 				_player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
 				_player.store();
 				
@@ -145,7 +145,7 @@ public class CursedWeapon
 		}
 		else if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null)) // either this cursed weapon is in the inventory of someone who has another cursed weapon equipped, OR this cursed weapon is on the ground.
 		{
-			final L2ItemInstance rhand = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			final ItemInstance rhand = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (rhand != null)
 			{
 				_player.getInventory().unEquipItemInSlotAndRecord(rhand.getEquipSlot());
@@ -163,7 +163,7 @@ public class CursedWeapon
 		else if (_item != null)
 		{
 			_item.decayMe();
-			L2World.getInstance().removeObject(_item);
+			World.getInstance().removeObject(_item);
 			LOGGER.info(_name + " item has been removed from World.");
 		}
 		
@@ -209,12 +209,12 @@ public class CursedWeapon
 		}
 	}
 	
-	private void dropIt(L2Attackable attackable, L2PcInstance player)
+	private void dropIt(Attackable attackable, PlayerInstance player)
 	{
 		dropIt(attackable, player, null, true);
 	}
 	
-	public void dropIt(L2Attackable attackable, L2PcInstance player, L2Character killer, boolean fromMonster)
+	public void dropIt(Attackable attackable, PlayerInstance player, Creature killer, boolean fromMonster)
 	{
 		_isActivated = false;
 		
@@ -230,7 +230,7 @@ public class CursedWeapon
 			ExRedSky packet = new ExRedSky(10);
 			Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
 			
-			for (L2PcInstance aPlayer : L2World.getInstance().getAllPlayers())
+			for (PlayerInstance aPlayer : World.getInstance().getAllPlayers())
 			{
 				aPlayer.sendPacket(packet);
 				aPlayer.sendPacket(eq);
@@ -253,7 +253,7 @@ public class CursedWeapon
 			removeSkill();
 			
 			// Remove
-			_player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_LR_HAND);
+			_player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_LR_HAND);
 			
 			// drop
 			_player.dropItem("DieDrop", _item, killer, true, true);
@@ -291,7 +291,7 @@ public class CursedWeapon
 			level = _skillMaxLevel;
 		}
 		
-		L2Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
+		Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
 		// To properly support subclasses this skill can not be stored.
 		_player.addSkill(skill, false);
 		
@@ -325,7 +325,7 @@ public class CursedWeapon
 		}
 	}
 	
-	public boolean checkDrop(L2Attackable attackable, L2PcInstance player)
+	public boolean checkDrop(Attackable attackable, PlayerInstance player)
 	{
 		
 		if (Rnd.get(100000) < _dropRate)
@@ -344,7 +344,7 @@ public class CursedWeapon
 		return false;
 	}
 	
-	public void activate(L2PcInstance player, L2ItemInstance item)
+	public void activate(PlayerInstance player, ItemInstance item)
 	{
 		_player = player;
 		// if the player is mounted, attempt to unmount first. Only allow picking up the zariche if unmounting is successful.
@@ -415,7 +415,7 @@ public class CursedWeapon
 		
 		// Equip with the weapon
 		_item = item;
-		// L2ItemInstance[] items =
+		// ItemInstance[] items =
 		_player.getInventory().equipItemAndRecord(_item);
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_EQUIPPED);
@@ -471,7 +471,7 @@ public class CursedWeapon
 		}
 	}
 	
-	public void dropIt(L2Character killer)
+	public void dropIt(Creature killer)
 	{
 		if (Rnd.get(100) <= _disapearChance)
 		{
@@ -563,12 +563,12 @@ public class CursedWeapon
 		
 	}
 	
-	public void setPlayer(L2PcInstance player)
+	public void setPlayer(PlayerInstance player)
 	{
 		_player = player;
 	}
 	
-	public void setItem(L2ItemInstance item)
+	public void setItem(ItemInstance item)
 	{
 		_item = item;
 	}
@@ -608,7 +608,7 @@ public class CursedWeapon
 		return _playerId;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
@@ -657,7 +657,7 @@ public class CursedWeapon
 		return _duration;
 	}
 	
-	public void goTo(L2PcInstance player)
+	public void goTo(PlayerInstance player)
 	{
 		if (player == null)
 		{

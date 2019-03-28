@@ -33,26 +33,25 @@ import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * This class ... control for sequence of fight against Antharas.
  * @version $Revision: $ $Date: $
  * @author L2J_JP SANDMAN
  */
@@ -89,15 +88,15 @@ public class Antharas extends Quest
 		}
 	};
 	
-	protected List<L2Spawn> _teleportCubeSpawn = new CopyOnWriteArrayList<>();
-	protected List<L2NpcInstance> _teleportCube = new CopyOnWriteArrayList<>();
+	protected List<Spawn> _teleportCubeSpawn = new CopyOnWriteArrayList<>();
+	protected List<NpcInstance> _teleportCube = new CopyOnWriteArrayList<>();
 	
 	// Spawn data of monsters.
-	protected Map<Integer, L2Spawn> _monsterSpawn = new ConcurrentHashMap<>();
+	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
 	
 	// Instance of monsters.
-	protected List<L2NpcInstance> _monsters = new CopyOnWriteArrayList<>();
-	protected L2GrandBossInstance _antharas = null;
+	protected List<NpcInstance> _monsters = new CopyOnWriteArrayList<>();
+	protected GrandBossInstance _antharas = null;
 	
 	// monstersId
 	private static final int ANTHARASOLDID = 29019;
@@ -125,7 +124,7 @@ public class Antharas extends Quest
 	
 	protected static long _LastAction = 0;
 	
-	protected static L2BossZone _Zone;
+	protected static BossZone _Zone;
 	
 	// Boss: Antharas
 	public Antharas(int id, String name, String descr)
@@ -157,12 +156,12 @@ public class Antharas extends Quest
 		try
 		{
 			_Zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
-			L2NpcTemplate template1;
-			L2Spawn tempSpawn;
+			NpcTemplate template1;
+			Spawn tempSpawn;
 			
 			// Old Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARASOLDID);
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -174,7 +173,7 @@ public class Antharas extends Quest
 			
 			// Weak Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARASWEAKID);
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -186,7 +185,7 @@ public class Antharas extends Quest
 			
 			// Normal Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARASNORMALID);
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -198,7 +197,7 @@ public class Antharas extends Quest
 			
 			// Strong Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARASSTRONGID);
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(181323);
 			tempSpawn.setY(114850);
 			tempSpawn.setZ(-7623);
@@ -216,11 +215,11 @@ public class Antharas extends Quest
 		// Setting spawn data of teleport cube.
 		try
 		{
-			final L2NpcTemplate Cube = NpcTable.getInstance().getTemplate(_teleportCubeId);
-			L2Spawn spawnDat;
+			final NpcTemplate Cube = NpcTable.getInstance().getTemplate(_teleportCubeId);
+			Spawn spawnDat;
 			for (int[] element : _teleportCubeLocation)
 			{
-				spawnDat = new L2Spawn(Cube);
+				spawnDat = new Spawn(Cube);
 				spawnDat.setAmount(1);
 				spawnDat.setX(element[0]);
 				spawnDat.setY(element[1]);
@@ -258,7 +257,7 @@ public class Antharas extends Quest
 				final int heading = info.getInteger("heading");
 				final int hp = info.getInteger("currentHP");
 				final int mp = info.getInteger("currentMP");
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
 				_LastAction = System.currentTimeMillis();
@@ -311,7 +310,7 @@ public class Antharas extends Quest
 				final int heading = info.getInteger("heading");
 				final int hp = info.getInteger("currentHP");
 				final int mp = info.getInteger("currentMP");
-				_antharas = (L2GrandBossInstance) addSpawn(antharasId, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (GrandBossInstance) addSpawn(antharasId, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
 				_LastAction = System.currentTimeMillis();
@@ -356,7 +355,7 @@ public class Antharas extends Quest
 			_activityCheckTask = null;
 		}
 		
-		for (L2Spawn spawnDat : _teleportCubeSpawn)
+		for (Spawn spawnDat : _teleportCubeSpawn)
 		{
 			_teleportCube.add(spawnDat.doSpawn());
 		}
@@ -411,7 +410,7 @@ public class Antharas extends Quest
 	private class AntharasSpawn implements Runnable
 	{
 		private int _taskId = 0;
-		private Collection<L2Character> _players;
+		private Collection<Creature> _players;
 		
 		AntharasSpawn(int taskId)
 		{
@@ -426,7 +425,7 @@ public class Antharas extends Quest
 		public void run()
 		{
 			int npcId;
-			L2Spawn antharasSpawn = null;
+			Spawn antharasSpawn = null;
 			
 			switch (_taskId)
 			{
@@ -454,7 +453,7 @@ public class Antharas extends Quest
 					}
 					// Do spawn.
 					antharasSpawn = _monsterSpawn.get(npcId);
-					_antharas = (L2GrandBossInstance) antharasSpawn.doSpawn();
+					_antharas = (GrandBossInstance) antharasSpawn.doSpawn();
 					GrandBossManager.getInstance().addBoss(_antharas);
 					_monsters.add(_antharas);
 					_antharas.setIsImobilised(true);
@@ -562,15 +561,15 @@ public class Antharas extends Quest
 		}
 	}
 	
-	protected void broadcastPacket(L2GameServerPacket mov)
+	protected void broadcastPacket(GameServerPacket mov)
 	{
 		if (_Zone != null)
 		{
-			for (L2Character characters : _Zone.getCharactersInside().values())
+			for (Creature creatures : _Zone.getCharactersInside().values())
 			{
-				if (characters instanceof L2PcInstance)
+				if (creatures instanceof PlayerInstance)
 				{
-					characters.sendPacket(mov);
+					creatures.sendPacket(mov);
 				}
 			}
 		}
@@ -586,8 +585,8 @@ public class Antharas extends Quest
 		@Override
 		public void run()
 		{
-			L2NpcTemplate template1;
-			L2Spawn tempSpawn;
+			NpcTemplate template1;
+			Spawn tempSpawn;
 			final boolean isBehemoth = Rnd.get(100) < FWA_PERCENTOFBEHEMOTH;
 			try
 			{
@@ -609,7 +608,7 @@ public class Antharas extends Quest
 						npcId = Rnd.get(29070, 29076);
 					}
 					template1 = NpcTable.getInstance().getTemplate(npcId);
-					tempSpawn = new L2Spawn(template1);
+					tempSpawn = new Spawn(template1);
 					// allocates it at random in the lair of Antharas.
 					int tried = 0;
 					boolean notFound = true;
@@ -655,7 +654,7 @@ public class Antharas extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		switch (npc.getNpcId())
 		{
@@ -680,9 +679,9 @@ public class Antharas extends Quest
 	// Do self destruction.
 	private class SelfDestructionOfBomber implements Runnable
 	{
-		private final L2NpcInstance _bomber;
+		private final NpcInstance _bomber;
 		
-		public SelfDestructionOfBomber(L2NpcInstance bomber)
+		public SelfDestructionOfBomber(NpcInstance bomber)
 		{
 			_bomber = bomber;
 		}
@@ -690,7 +689,7 @@ public class Antharas extends Quest
 		@Override
 		public void run()
 		{
-			L2Skill skill = null;
+			Skill skill = null;
 			switch (_bomber.getNpcId())
 			{
 				case 29070:
@@ -721,7 +720,7 @@ public class Antharas extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		if (npc.isInvul())
 		{
@@ -811,7 +810,7 @@ public class Antharas extends Quest
 		}
 		
 		// Delete monsters.
-		for (L2NpcInstance mob : _monsters)
+		for (NpcInstance mob : _monsters)
 		{
 			mob.getSpawn().stopRespawn();
 			mob.deleteMe();
@@ -819,7 +818,7 @@ public class Antharas extends Quest
 		_monsters.clear();
 		
 		// Delete teleport cube.
-		for (L2NpcInstance cube : _teleportCube)
+		for (NpcInstance cube : _teleportCube)
 		{
 			cube.getSpawn().stopRespawn();
 			cube.deleteMe();
@@ -868,7 +867,7 @@ public class Antharas extends Quest
 			GrandBossManager.getInstance().setBossStatus(_bossId, DORMANT);
 			if (FWA_DOSERVEREARTHQUAKE)
 			{
-				for (L2PcInstance p : L2World.getInstance().getAllPlayers())
+				for (PlayerInstance p : World.getInstance().getAllPlayers())
 				{
 					p.broadcastPacket(new Earthquake(185708, 114298, -8221, 20, 10));
 				}
@@ -879,9 +878,9 @@ public class Antharas extends Quest
 	// Action is enabled the boss.
 	private class SetMobilised implements Runnable
 	{
-		private final L2GrandBossInstance _boss;
+		private final GrandBossInstance _boss;
 		
-		public SetMobilised(L2GrandBossInstance boss)
+		public SetMobilised(GrandBossInstance boss)
 		{
 			_boss = boss;
 		}
@@ -903,10 +902,10 @@ public class Antharas extends Quest
 	// Move at random on after Antharas appears.
 	private static class MoveAtRandom implements Runnable
 	{
-		private final L2NpcInstance _npc;
+		private final NpcInstance _npc;
 		private final Location _pos;
 		
-		public MoveAtRandom(L2NpcInstance npc, Location pos)
+		public MoveAtRandom(NpcInstance npc, Location pos)
 		{
 			_npc = npc;
 			_pos = pos;
@@ -920,7 +919,7 @@ public class Antharas extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (((npc.getSpawn() != null) && !npc.getSpawn().is_customBossInstance() && (npc.getNpcId() == 29019)) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
@@ -934,7 +933,7 @@ public class Antharas extends Quest
 		}
 		else if ((npc.getNpcId() > 29069) && (npc.getNpcId() < 29077) && (npc.getCurrentHp() <= damage))
 		{
-			L2Skill skill = null;
+			Skill skill = null;
 			switch (npc.getNpcId())
 			{
 				case 29070:
@@ -960,7 +959,7 @@ public class Antharas extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
@@ -984,11 +983,11 @@ public class Antharas extends Quest
 			final int countMPHerb = Rnd.get(6, 18);
 			for (int i = 0; i < countHPHerb; i++)
 			{
-				((L2MonsterInstance) npc).DropItem(killer, 8602, 1);
+				((MonsterInstance) npc).DropItem(killer, 8602, 1);
 			}
 			for (int i = 0; i < countMPHerb; i++)
 			{
-				((L2MonsterInstance) npc).DropItem(killer, 8605, 1);
+				((MonsterInstance) npc).DropItem(killer, 8605, 1);
 			}
 		}
 		if (_monsters.contains(npc))

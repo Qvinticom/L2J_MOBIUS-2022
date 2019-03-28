@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.HTMLFilter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -142,7 +142,7 @@ public class HtmCache
 		return null;
 	}
 	
-	public String getHtmForce(L2PcInstance player, String path)
+	public String getHtmForce(PlayerInstance player, String path)
 	{
 		String content = getHtm(player, path);
 		if (content == null)
@@ -153,7 +153,7 @@ public class HtmCache
 		return content;
 	}
 	
-	public String getHtm(L2PcInstance player, String path)
+	public String getHtm(PlayerInstance player, String path)
 	{
 		final String prefix = player != null ? player.getHtmlPrefix() : "en";
 		String newPath = null;

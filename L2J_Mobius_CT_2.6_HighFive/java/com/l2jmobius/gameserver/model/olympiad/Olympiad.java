@@ -40,9 +40,9 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -382,7 +382,7 @@ public class Olympiad extends ListenersContainer
 			final int points = getNoblessePasses(noblesId);
 			if (points > 0)
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(noblesId);
+				final PlayerInstance player = World.getInstance().getPlayer(noblesId);
 				if (player != null)
 				{
 					player.getVariables().set(UNCLAIMED_OLYMPIAD_PASSES_VAR, points);
@@ -870,7 +870,7 @@ public class Olympiad extends ListenersContainer
 		return _period;
 	}
 	
-	public boolean playerInStadia(L2PcInstance player)
+	public boolean playerInStadia(PlayerInstance player)
 	{
 		return ZoneManager.getInstance().getOlympiadStadium(player) != null;
 	}

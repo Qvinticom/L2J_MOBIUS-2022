@@ -20,19 +20,19 @@ import java.util.Collection;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private final String _name;
 	private final String _leaderName;
-	private final Collection<L2ClanMember> _members;
+	private final Collection<ClanMember> _members;
 	
-	private PledgeShowMemberListAll(L2Clan clan, boolean isSubPledge)
+	private PledgeShowMemberListAll(Clan clan, boolean isSubPledge)
 	{
 		_clan = clan;
 		_leaderName = clan.getLeaderName();
@@ -40,13 +40,13 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		_members = _clan.getMembers();
 	}
 	
-	public static void sendAllTo(L2PcInstance player)
+	public static void sendAllTo(PlayerInstance player)
 	{
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		player.sendPacket(new PledgeShowMemberListAll(clan, true));
-		for (L2ClanMember member : clan.getMembers())
+		for (ClanMember member : clan.getMembers())
 		{
-			if (member.getPledgeType() != L2Clan.PLEDGE_CLASS_COMMON)
+			if (member.getPledgeType() != Clan.PLEDGE_CLASS_COMMON)
 			{
 				player.sendPacket(new PledgeShowMemberListUpdate(member));
 			}
@@ -82,7 +82,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(0x00); // Territory castle ID
 		
 		packet.writeD(_members.size());
-		for (L2ClanMember m : _members)
+		for (ClanMember m : _members)
 		{
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());

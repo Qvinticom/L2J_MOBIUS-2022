@@ -16,9 +16,9 @@
  */
 package ai.areas.TalkingIsland;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -42,14 +42,14 @@ public final class DrillSergeant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("SOCIAL_SHOW"))
 		{
 			final int socialActionId = SOCIAL_ACTIONS[getRandom(SOCIAL_ACTIONS.length)];
 			npc.broadcastSocialAction(socialActionId);
 			
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 500, chars ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 500, chars ->
 			{
 				if (chars.getId() == GUARD)
 				{
@@ -70,7 +70,7 @@ public final class DrillSergeant extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == SERGANT)
 		{

@@ -22,11 +22,11 @@ import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.L2AccessLevel;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.AccessLevel;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
@@ -35,42 +35,42 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class Die implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final boolean _canTeleport;
 	private final boolean _sweepable;
-	private L2AccessLevel _access = AdminData.getInstance().getAccessLevel(0);
-	private L2Clan _clan;
-	private final L2Character _activeChar;
+	private AccessLevel _access = AdminData.getInstance().getAccessLevel(0);
+	private Clan _clan;
+	private final Creature _creature;
 	private boolean _isJailed;
 	private boolean _staticRes = false;
 	
-	public Die(L2Character cha)
+	public Die(Creature creature)
 	{
-		_charObjId = cha.getObjectId();
-		_activeChar = cha;
-		if (cha.isPlayer())
+		_objectId = creature.getObjectId();
+		_creature = creature;
+		if (creature.isPlayer())
 		{
-			final L2PcInstance player = cha.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			_access = player.getAccessLevel();
 			_clan = player.getClan();
 			_isJailed = player.isJailed();
 		}
-		_canTeleport = cha.canRevive() && !cha.isPendingRevive();
-		_sweepable = cha.isSweepActive();
+		_canTeleport = creature.canRevive() && !creature.isPendingRevive();
+		_sweepable = creature.isSweepActive();
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DIE.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_canTeleport ? 0x01 : 0x00);
 		
-		if (_activeChar.isPlayer())
+		if (_creature.isPlayer())
 		{
-			if (!OlympiadManager.getInstance().isRegistered(_activeChar.getActingPlayer()) && !_activeChar.isOnEvent())
+			if (!OlympiadManager.getInstance().isRegistered(_creature.getActingPlayer()) && !_creature.isOnEvent())
 			{
-				_staticRes = _activeChar.getInventory().haveItemForSelfResurrection();
+				_staticRes = _creature.getInventory().haveItemForSelfResurrection();
 			}
 			
 			// Verify if player can use fixed resurrection without Feather
@@ -85,10 +85,10 @@ public class Die implements IClientOutgoingPacket
 			boolean isInCastleDefense = false;
 			boolean isInFortDefense = false;
 			
-			L2SiegeClan siegeClan = null;
-			final Castle castle = CastleManager.getInstance().getCastle(_activeChar);
-			final Fort fort = FortManager.getInstance().getFort(_activeChar);
-			final SiegableHall hall = CHSiegeManager.getInstance().getNearbyClanHall(_activeChar);
+			SiegeClan siegeClan = null;
+			final Castle castle = CastleManager.getInstance().getCastle(_creature);
+			final Fort fort = FortManager.getInstance().getFort(_creature);
+			final SiegableHall hall = CHSiegeManager.getInstance().getNearbyClanHall(_creature);
 			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				// siege in progress

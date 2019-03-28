@@ -23,106 +23,106 @@ import com.l2jmobius.gameserver.datatables.csv.SummonItemsData;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2SummonItem;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance.SkillDat;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.SummonItem;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance.SkillDat;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class SummonItems implements IItemHandler
 {
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		
-		if (!activeChar.getFloodProtectors().getItemPetSummon().tryPerformAction("summon pet"))
+		if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("summon pet"))
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar._inEventTvT && TvT.is_started() && !Config.TVT_ALLOW_SUMMON)
+		if (player._inEventTvT && TvT.is_started() && !Config.TVT_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
-			activeChar.sendPacket(af);
+			player.sendPacket(af);
 			return;
 		}
 		
-		if (activeChar._inEventDM && DM.is_started() && !Config.DM_ALLOW_SUMMON)
+		if (player._inEventDM && DM.is_started() && !Config.DM_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
-			activeChar.sendPacket(af);
+			player.sendPacket(af);
 			return;
 		}
 		
-		if (activeChar._inEventCTF && CTF.is_started() && !Config.CTF_ALLOW_SUMMON)
+		if (player._inEventCTF && CTF.is_started() && !Config.CTF_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
-			activeChar.sendPacket(af);
+			player.sendPacket(af);
 			return;
 		}
 		
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			player.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
 			return;
 		}
 		
-		if (activeChar.isParalyzed())
+		if (player.isParalyzed())
 		{
-			activeChar.sendMessage("You Cannot Use This While You Are Paralyzed");
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendMessage("You Cannot Use This While You Are Paralyzed");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		
-		L2SummonItem sitem = SummonItemsData.getInstance().getSummonItem(item.getItemId());
+		SummonItem sitem = SummonItemsData.getInstance().getSummonItem(item.getItemId());
 		
-		if (((activeChar.getPet() != null) || activeChar.isMounted()) && sitem.isPetSummon())
+		if (((player.getPet() != null) || player.isMounted()) && sitem.isPetSummon())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return;
 		}
 		
 		// Like L2OFF you can't summon pet in combat
-		if (activeChar.isAttackingNow() || activeChar.isInCombat())
+		if (player.isAttackingNow() || player.isInCombat())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT);
 			return;
 		}
 		
-		if (activeChar.isCursedWeaponEquiped() && sitem.isPetSummon())
+		if (player.isCursedWeaponEquiped() && sitem.isPetSummon())
 		{
-			activeChar.sendPacket(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
+			player.sendPacket(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
 			return;
 		}
 		
@@ -133,7 +133,7 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(npcID);
+		NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(npcID);
 		
 		if (npcTemplate == null)
 		{
@@ -146,54 +146,54 @@ public class SummonItems implements IItemHandler
 			{
 				try
 				{
-					L2Spawn spawn = new L2Spawn(npcTemplate);
+					Spawn spawn = new Spawn(npcTemplate);
 					spawn.setId(IdFactory.getInstance().getNextId());
-					spawn.setX(activeChar.getX());
-					spawn.setY(activeChar.getY());
-					spawn.setZ(activeChar.getZ());
-					L2World.getInstance().storeObject(spawn.spawnOne());
-					activeChar.destroyItem("Summon", item.getObjectId(), 1, null, false);
-					activeChar.sendMessage("Created " + npcTemplate.name + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
+					spawn.setX(player.getX());
+					spawn.setY(player.getY());
+					spawn.setZ(player.getZ());
+					World.getInstance().storeObject(spawn.spawnOne());
+					player.destroyItem("Summon", item.getObjectId(), 1, null, false);
+					player.sendMessage("Created " + npcTemplate.name + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Target is not ingame.");
+					player.sendMessage("Target is not ingame.");
 				}
 				break;
 			}
 			case 1: // pet summons
 			{
-				activeChar.setTarget(activeChar);
+				player.setTarget(player);
 				// Skill 2046 used only for animation
-				final L2Skill skill = SkillTable.getInstance().getInfo(2046, 1);
-				activeChar.useMagic(skill, true, true);
-				activeChar.sendPacket(SystemMessageId.SUMMON_A_PET);
-				ThreadPool.schedule(new PetSummonFinalizer(activeChar, npcTemplate, item), 4800);
+				final Skill skill = SkillTable.getInstance().getInfo(2046, 1);
+				player.useMagic(skill, true, true);
+				player.sendPacket(SystemMessageId.SUMMON_A_PET);
+				ThreadPool.schedule(new PetSummonFinalizer(player, npcTemplate, item), 4800);
 				break;
 			}
 			case 2: // wyvern
 			{
-				if (!activeChar.disarmWeapons())
+				if (!player.disarmWeapons())
 				{
 					return;
 				}
-				final Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, sitem.getNpcId());
-				activeChar.sendPacket(mount);
-				activeChar.broadcastPacket(mount);
-				activeChar.setMountType(mount.getMountType());
-				activeChar.setMountObjectID(item.getObjectId());
+				final Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, sitem.getNpcId());
+				player.sendPacket(mount);
+				player.broadcastPacket(mount);
+				player.setMountType(mount.getMountType());
+				player.setMountObjectID(item.getObjectId());
 			}
 		}
 	}
 	
 	static class PetSummonFeedWait implements Runnable
 	{
-		private final L2PcInstance _activeChar;
-		private final L2PetInstance _petSummon;
+		private final PlayerInstance _player;
+		private final PetInstance _petSummon;
 		
-		PetSummonFeedWait(L2PcInstance activeChar, L2PetInstance petSummon)
+		PetSummonFeedWait(PlayerInstance player, PetInstance petSummon)
 		{
-			_activeChar = activeChar;
+			_player = player;
 			_petSummon = petSummon;
 		}
 		
@@ -204,7 +204,7 @@ public class SummonItems implements IItemHandler
 			{
 				if (_petSummon.getCurrentFed() <= 0)
 				{
-					_petSummon.unSummon(_activeChar);
+					_petSummon.unSummon(_player);
 				}
 				else
 				{
@@ -219,13 +219,13 @@ public class SummonItems implements IItemHandler
 	
 	static class PetSummonFinalizer implements Runnable
 	{
-		private final L2PcInstance _activeChar;
-		private final L2ItemInstance _item;
-		private final L2NpcTemplate _npcTemplate;
+		private final PlayerInstance _player;
+		private final ItemInstance _item;
+		private final NpcTemplate _npcTemplate;
 		
-		PetSummonFinalizer(L2PcInstance activeChar, L2NpcTemplate npcTemplate, L2ItemInstance item)
+		PetSummonFinalizer(PlayerInstance player, NpcTemplate npcTemplate, ItemInstance item)
 		{
-			_activeChar = activeChar;
+			_player = player;
 			_npcTemplate = npcTemplate;
 			_item = item;
 		}
@@ -235,29 +235,29 @@ public class SummonItems implements IItemHandler
 		{
 			try
 			{
-				final SkillDat skilldat = _activeChar.getCurrentSkill();
+				final SkillDat skilldat = _player.getCurrentSkill();
 				
-				if (!_activeChar.isCastingNow() || ((skilldat != null) && (skilldat.getSkillId() != 2046)))
+				if (!_player.isCastingNow() || ((skilldat != null) && (skilldat.getSkillId() != 2046)))
 				{
 					return;
 				}
 				
-				_activeChar.sendPacket(new MagicSkillLaunched(_activeChar, 2046, 1));
+				_player.sendPacket(new MagicSkillLaunched(_player, 2046, 1));
 				
 				// check for summon item validity
-				if ((_item == null) || (_item.getOwnerId() != _activeChar.getObjectId()) || (_item.getLocation() != L2ItemInstance.ItemLocation.INVENTORY))
+				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getLocation() != ItemInstance.ItemLocation.INVENTORY))
 				{
 					return;
 				}
 				
-				final L2PetInstance petSummon = L2PetInstance.spawnPet(_npcTemplate, _activeChar, _item);
+				final PetInstance petSummon = PetInstance.spawnPet(_npcTemplate, _player, _item);
 				
 				if (petSummon == null)
 				{
 					return;
 				}
 				
-				petSummon.setTitle(_activeChar.getName());
+				petSummon.setTitle(_player.getName());
 				
 				if (!petSummon.isRespawned())
 				{
@@ -274,17 +274,17 @@ public class SummonItems implements IItemHandler
 					petSummon.store();
 				}
 				
-				_activeChar.setPet(petSummon);
+				_player.setPet(petSummon);
 				
-				L2World.getInstance().storeObject(petSummon);
-				petSummon.spawnMe(_activeChar.getX() + 50, _activeChar.getY() + 100, _activeChar.getZ());
-				_activeChar.sendPacket(new PetInfo(petSummon));
+				World.getInstance().storeObject(petSummon);
+				petSummon.spawnMe(_player.getX() + 50, _player.getY() + 100, _player.getZ());
+				_player.sendPacket(new PetInfo(petSummon));
 				petSummon.startFeed(false);
 				_item.setEnchantLevel(petSummon.getLevel());
 				
 				if (petSummon.getCurrentFed() <= 0)
 				{
-					ThreadPool.schedule(new PetSummonFeedWait(_activeChar, petSummon), 60000);
+					ThreadPool.schedule(new PetSummonFeedWait(_player, petSummon), 60000);
 				}
 				else
 				{

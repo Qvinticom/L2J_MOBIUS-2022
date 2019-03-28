@@ -18,8 +18,8 @@ package ai.areas.HellboundIsland.Theorn;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -60,7 +60,7 @@ public class Theorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -181,7 +181,7 @@ public class Theorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (player.getEffectList().getBuffInfoBySkillId(REWARD_BUFF_X2) != null)
 		{
@@ -206,7 +206,7 @@ public class Theorn extends AbstractNpcAI
 		return "33897.html";
 	}
 	
-	private String tryLuck(L2Npc npc, L2PcInstance player, Skill skill, boolean isLight)
+	private String tryLuck(Npc npc, PlayerInstance player, Skill skill, boolean isLight)
 	{
 		if ((player.getSp() < 500000) || (player.getAdena() < 100000))
 		{
@@ -225,7 +225,7 @@ public class Theorn extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("BROADCAST_TEXT", 3000, npc, null);
 		return super.onSpawn(npc);

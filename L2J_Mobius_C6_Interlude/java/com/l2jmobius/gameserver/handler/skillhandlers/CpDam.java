@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Formulas;
 
 /**
@@ -36,32 +36,32 @@ public class CpDam implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (!(activeChar instanceof L2Playable))
+		if (!(creature instanceof Playable))
 		{
 			return;
 		}
 		
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean bss = activeChar.checkBss();
-		final boolean sps = activeChar.checkSps();
-		final boolean ss = activeChar.checkSs();
+		final boolean bss = creature.checkBss();
+		final boolean sps = creature.checkSps();
+		final boolean ss = creature.checkSs();
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
 			if (target2 == null)
 			{
 				continue;
 			}
 			
-			L2Character target = (L2Character) target2;
+			Creature target = (Creature) target2;
 			
-			if ((activeChar instanceof L2PcInstance) && (target instanceof L2PcInstance) && target.isAlikeDead() && target.isFakeDeath())
+			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);
 			}
@@ -75,7 +75,7 @@ public class CpDam implements ISkillHandler
 				continue;
 			}
 			
-			if (!Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, ss, sps, bss))
+			if (!Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 			{
 				return;
 			}
@@ -88,8 +88,8 @@ public class CpDam implements ISkillHandler
 				target.breakAttack();
 				target.breakCast();
 			}
-			skill.getEffects(activeChar, target, ss, sps, bss);
-			activeChar.sendDamageMessage(target, damage, false, false, false);
+			skill.getEffects(creature, target, ss, sps, bss);
+			creature.sendDamageMessage(target, damage, false, false, false);
 			target.setCurrentCp(target.getCurrentCp() - damage);
 		}
 		
@@ -97,16 +97,16 @@ public class CpDam implements ISkillHandler
 		{
 			if (bss)
 			{
-				activeChar.removeBss();
+				creature.removeBss();
 			}
 			else if (sps)
 			{
-				activeChar.removeSps();
+				creature.removeSps();
 			}
 		}
 		else
 		{
-			activeChar.removeSs();
+			creature.removeSs();
 		}
 	}
 	

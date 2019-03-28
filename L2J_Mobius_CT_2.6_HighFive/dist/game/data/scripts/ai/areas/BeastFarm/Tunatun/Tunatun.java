@@ -16,8 +16,8 @@
  */
 package ai.areas.BeastFarm.Tunatun;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -44,7 +44,7 @@ public final class Tunatun extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ("Whip".equals(event))
 		{
@@ -53,12 +53,12 @@ public final class Tunatun extends AbstractNpcAI
 				return "31537-01.html";
 			}
 			
-			final QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
-			if ((st == null) && (player.getLevel() < MIN_LEVEL))
+			final QuestState qs = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
+			if ((qs == null) && (player.getLevel() < MIN_LEVEL))
 			{
 				return "31537-02.html";
 			}
-			else if ((st != null) || (player.getLevel() >= MIN_LEVEL))
+			else if ((qs != null) || (player.getLevel() >= MIN_LEVEL))
 			{
 				giveItems(player, BEAST_HANDLERS_WHIP, 1);
 				return "31537-03.html";

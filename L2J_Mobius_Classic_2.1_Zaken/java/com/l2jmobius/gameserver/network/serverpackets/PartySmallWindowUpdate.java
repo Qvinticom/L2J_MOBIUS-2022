@@ -18,15 +18,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowUpdateType>
 {
-	private final L2PcInstance _member;
+	private final PlayerInstance _member;
 	private int _flags = 0;
 	
-	public PartySmallWindowUpdate(L2PcInstance member, boolean addAllFlags)
+	public PartySmallWindowUpdate(PlayerInstance member, boolean addAllFlags)
 	{
 		_member = member;
 		if (addAllFlags)

@@ -17,9 +17,9 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -35,23 +35,23 @@ public class ChannelLeave implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		if (!activeChar.isInParty() || !activeChar.getParty().isLeader(activeChar))
+		if (!player.isInParty() || !player.getParty().isLeader(player))
 		{
-			activeChar.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_LEAVE_A_COMMAND_CHANNEL);
+			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_LEAVE_A_COMMAND_CHANNEL);
 			return false;
 		}
 		
-		if (activeChar.getParty().isInCommandChannel())
+		if (player.getParty().isInCommandChannel())
 		{
-			final L2CommandChannel channel = activeChar.getParty().getCommandChannel();
-			final L2Party party = activeChar.getParty();
+			final CommandChannel channel = player.getParty().getCommandChannel();
+			final Party party = player.getParty();
 			channel.removeParty(party);
 			party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL);
 			

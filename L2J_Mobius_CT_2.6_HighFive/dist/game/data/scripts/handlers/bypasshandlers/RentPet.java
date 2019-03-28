@@ -20,10 +20,10 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 
@@ -35,9 +35,9 @@ public class RentPet implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!(target instanceof L2MerchantInstance))
+		if (!(target instanceof MerchantInstance))
 		{
 			return false;
 		}
@@ -59,14 +59,14 @@ public class RentPet implements IBypassHandler
 			
 			if (st.countTokens() < 1)
 			{
-				final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
+				final NpcHtmlMessage msg = new NpcHtmlMessage(((Npc) target).getObjectId());
 				msg.setHtml("<html><body>Pet Manager:<br>You can rent a wyvern or strider for adena.<br>My prices:<br1><table border=0><tr><td>Ride</td></tr><tr><td>Wyvern</td><td>Strider</td></tr><tr><td><a action=\"bypass -h npc_%objectId%_RentPet 1\">30 sec/1800 adena</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 11\">30 sec/900 adena</a></td></tr><tr><td><a action=\"bypass -h npc_%objectId%_RentPet 2\">1 min/7200 adena</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 12\">1 min/3600 adena</a></td></tr><tr><td><a action=\"bypass -h npc_%objectId%_RentPet 3\">10 min/720000 adena</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 13\">10 min/360000 adena</a></td></tr><tr><td><a action=\"bypass -h npc_%objectId%_RentPet 4\">30 min/6480000 adena</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 14\">30 min/3240000 adena</a></td></tr></table></body></html>");
-				msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
-				activeChar.sendPacket(msg);
+				msg.replace("%objectId%", String.valueOf(((Npc) target).getObjectId()));
+				player.sendPacket(msg);
 			}
 			else
 			{
-				tryRentPet(activeChar, Integer.parseInt(st.nextToken()));
+				tryRentPet(player, Integer.parseInt(st.nextToken()));
 			}
 			
 			return true;
@@ -78,7 +78,7 @@ public class RentPet implements IBypassHandler
 		return false;
 	}
 	
-	public static void tryRentPet(L2PcInstance player, int val)
+	public static void tryRentPet(PlayerInstance player, int val)
 	{
 		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
 		{

@@ -37,35 +37,35 @@ import com.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldRegion;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
-import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
-import com.l2jmobius.gameserver.model.zone.type.L2BigheadZone;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
-import com.l2jmobius.gameserver.model.zone.type.L2CastleTeleportZone;
-import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
-import com.l2jmobius.gameserver.model.zone.type.L2CustomZone;
-import com.l2jmobius.gameserver.model.zone.type.L2DamageZone;
-import com.l2jmobius.gameserver.model.zone.type.L2DerbyTrackZone;
-import com.l2jmobius.gameserver.model.zone.type.L2EffectZone;
-import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
-import com.l2jmobius.gameserver.model.zone.type.L2FortZone;
-import com.l2jmobius.gameserver.model.zone.type.L2JailZone;
-import com.l2jmobius.gameserver.model.zone.type.L2MotherTreeZone;
-import com.l2jmobius.gameserver.model.zone.type.L2NoHqZone;
-import com.l2jmobius.gameserver.model.zone.type.L2NoLandingZone;
-import com.l2jmobius.gameserver.model.zone.type.L2NoStoreZone;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
-import com.l2jmobius.gameserver.model.zone.type.L2PeaceZone;
-import com.l2jmobius.gameserver.model.zone.type.L2PoisonZone;
-import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
-import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
+import com.l2jmobius.gameserver.model.zone.type.ArenaZone;
+import com.l2jmobius.gameserver.model.zone.type.BigheadZone;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleTeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.CustomZone;
+import com.l2jmobius.gameserver.model.zone.type.DamageZone;
+import com.l2jmobius.gameserver.model.zone.type.DerbyTrackZone;
+import com.l2jmobius.gameserver.model.zone.type.EffectZone;
+import com.l2jmobius.gameserver.model.zone.type.FishingZone;
+import com.l2jmobius.gameserver.model.zone.type.FortZone;
+import com.l2jmobius.gameserver.model.zone.type.JailZone;
+import com.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
+import com.l2jmobius.gameserver.model.zone.type.NoHqZone;
+import com.l2jmobius.gameserver.model.zone.type.NoLandingZone;
+import com.l2jmobius.gameserver.model.zone.type.NoStoreZone;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.zone.type.PeaceZone;
+import com.l2jmobius.gameserver.model.zone.type.PoisonZone;
+import com.l2jmobius.gameserver.model.zone.type.SwampZone;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
+import com.l2jmobius.gameserver.model.zone.type.WaterZone;
 
 /**
  * This class manages the augmentation data and can also create new augmentations.
@@ -108,7 +108,7 @@ public class ZoneData
 		int zoneCount = 0;
 		
 		// Get the world regions
-		final L2WorldRegion[][] worldRegions = L2World.getInstance().getAllWorldRegions();
+		final WorldRegion[][] worldRegions = World.getInstance().getAllWorldRegions();
 		
 		boolean done = false;
 		
@@ -148,93 +148,93 @@ public class ZoneData
 								String zoneShape = attrs.getNamedItem("shape").getNodeValue();
 								
 								// Create the zone
-								L2ZoneType temp = null;
+								ZoneType temp = null;
 								
 								switch (zoneType)
 								{
 									case "FishingZone":
 									{
-										temp = new L2FishingZone(zoneId);
+										temp = new FishingZone(zoneId);
 										break;
 									}
 									case "ClanHallZone":
 									{
-										temp = new L2ClanHallZone(zoneId);
+										temp = new ClanHallZone(zoneId);
 										break;
 									}
 									case "PeaceZone":
 									{
-										temp = new L2PeaceZone(zoneId);
+										temp = new PeaceZone(zoneId);
 										break;
 									}
 									case "Town":
 									{
-										temp = new L2TownZone(zoneId);
+										temp = new TownZone(zoneId);
 										break;
 									}
 									case "OlympiadStadium":
 									{
-										temp = new L2OlympiadStadiumZone(zoneId);
+										temp = new OlympiadStadiumZone(zoneId);
 										break;
 									}
 									case "CastleZone":
 									{
-										temp = new L2CastleZone(zoneId);
+										temp = new CastleZone(zoneId);
 										break;
 									}
 									case "FortZone":
 									{
-										temp = new L2FortZone(zoneId);
+										temp = new FortZone(zoneId);
 										break;
 									}
 									case "DamageZone":
 									{
-										temp = new L2DamageZone(zoneId);
+										temp = new DamageZone(zoneId);
 										break;
 									}
 									case "Arena":
 									{
-										temp = new L2ArenaZone(zoneId);
+										temp = new ArenaZone(zoneId);
 										break;
 									}
 									case "MotherTree":
 									{
-										temp = new L2MotherTreeZone(zoneId);
+										temp = new MotherTreeZone(zoneId);
 										break;
 									}
 									case "BigheadZone":
 									{
-										temp = new L2BigheadZone(zoneId);
+										temp = new BigheadZone(zoneId);
 										break;
 									}
 									case "NoLandingZone":
 									{
-										temp = new L2NoLandingZone(zoneId);
+										temp = new NoLandingZone(zoneId);
 										break;
 									}
 									case "NoStoreZone":
 									{
-										temp = new L2NoStoreZone(zoneId);
+										temp = new NoStoreZone(zoneId);
 										break;
 									}
 									case "JailZone":
 									{
-										temp = new L2JailZone(zoneId);
+										temp = new JailZone(zoneId);
 										break;
 									}
 									case "DerbyTrackZone":
 									{
-										temp = new L2DerbyTrackZone(zoneId);
+										temp = new DerbyTrackZone(zoneId);
 										break;
 									}
 									case "WaterZone":
 									{
-										temp = new L2WaterZone(zoneId);
+										temp = new WaterZone(zoneId);
 										break;
 									}
 									case "NoHqZone":
 									{
-										temp = new L2NoHqZone(zoneId);
+										temp = new NoHqZone(zoneId);
 										break;
 									}
 									case "BossZone":
@@ -248,34 +248,34 @@ public class ZoneData
 										{
 											e.printStackTrace();
 										}
-										temp = new L2BossZone(zoneId, boss_id);
+										temp = new BossZone(zoneId, boss_id);
 										break;
 									}
 									case "EffectZone":
 									{
 										zoneId = effect_zone_id;
 										effect_zone_id++;
-										temp = new L2EffectZone(zoneId);
+										temp = new EffectZone(zoneId);
 										break;
 									}
 									case "PoisonZone":
 									{
-										temp = new L2PoisonZone(zoneId);
+										temp = new PoisonZone(zoneId);
 										break;
 									}
 									case "CastleTeleportZone":
 									{
-										temp = new L2CastleTeleportZone(zoneId);
+										temp = new CastleTeleportZone(zoneId);
 										break;
 									}
 									case "CustomZone":
 									{
-										temp = new L2CustomZone(zoneId);
+										temp = new CustomZone(zoneId);
 										break;
 									}
 									case "SwampZone":
 									{
-										temp = new L2SwampZone(zoneId);
+										temp = new SwampZone(zoneId);
 										break;
 									}
 								}
@@ -486,15 +486,15 @@ public class ZoneData
 								}
 								
 								// Skip checks for fishing zones & add to fishing zone manager
-								if (temp instanceof L2FishingZone)
+								if (temp instanceof FishingZone)
 								{
-									FishingZoneManager.getInstance().addFishingZone((L2FishingZone) temp);
+									FishingZoneManager.getInstance().addFishingZone((FishingZone) temp);
 									continue;
 								}
 								
-								if (temp instanceof L2WaterZone)
+								if (temp instanceof WaterZone)
 								{
-									FishingZoneManager.getInstance().addWaterZone((L2WaterZone) temp);
+									FishingZoneManager.getInstance().addWaterZone((WaterZone) temp);
 								}
 								
 								// Register the zone into any world region it intersects with currently 11136 test for each zone :>
@@ -507,10 +507,10 @@ public class ZoneData
 								{
 									for (int y = 0; y < worldRegions[x].length; y++)
 									{
-										ax = (x - L2World.OFFSET_X) << L2World.SHIFT_BY;
-										bx = ((x + 1) - L2World.OFFSET_X) << L2World.SHIFT_BY;
-										ay = (y - L2World.OFFSET_Y) << L2World.SHIFT_BY;
-										by = ((y + 1) - L2World.OFFSET_Y) << L2World.SHIFT_BY;
+										ax = (x - World.OFFSET_X) << World.SHIFT_BY;
+										bx = ((x + 1) - World.OFFSET_X) << World.SHIFT_BY;
+										ay = (y - World.OFFSET_Y) << World.SHIFT_BY;
+										by = ((y + 1) - World.OFFSET_Y) << World.SHIFT_BY;
 										
 										if (temp.getZone().intersectsRectangle(ax, bx, ay, by))
 										{
@@ -520,21 +520,21 @@ public class ZoneData
 								}
 								
 								// Special managers for arenas, towns...
-								if (temp instanceof L2ArenaZone)
+								if (temp instanceof ArenaZone)
 								{
-									ArenaManager.getInstance().addArena((L2ArenaZone) temp);
+									ArenaManager.getInstance().addArena((ArenaZone) temp);
 								}
-								else if (temp instanceof L2TownZone)
+								else if (temp instanceof TownZone)
 								{
-									TownManager.getInstance().addTown((L2TownZone) temp);
+									TownManager.getInstance().addTown((TownZone) temp);
 								}
-								else if (temp instanceof L2OlympiadStadiumZone)
+								else if (temp instanceof OlympiadStadiumZone)
 								{
-									OlympiadStadiaManager.getInstance().addStadium((L2OlympiadStadiumZone) temp);
+									OlympiadStadiaManager.getInstance().addStadium((OlympiadStadiumZone) temp);
 								}
-								else if (temp instanceof L2BossZone)
+								else if (temp instanceof BossZone)
 								{
-									GrandBossManager.getInstance().addZone((L2BossZone) temp);
+									GrandBossManager.getInstance().addZone((BossZone) temp);
 								}
 								
 								// Increase the counter

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * Format: (ch)ddd
  */
-public class ExConfirmCancelItem extends L2GameServerPacket
+public class ExConfirmCancelItem extends GameServerPacket
 {
 	private final int _itemObjId;
 	private final int _price;

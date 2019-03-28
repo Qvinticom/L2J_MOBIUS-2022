@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -35,7 +35,7 @@ public class AdminTarget implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_target"))
 		{
@@ -51,14 +51,14 @@ public class AdminTarget implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleTarget(String command, L2PcInstance activeChar)
+	private void handleTarget(String command, PlayerInstance activeChar)
 	{
 		try
 		{
 			String targetName = command.substring(13);
-			L2Object obj = L2World.getInstance().getPlayer(targetName);
+			WorldObject obj = World.getInstance().getPlayer(targetName);
 			
-			if ((obj != null) && (obj instanceof L2PcInstance))
+			if ((obj != null) && (obj instanceof PlayerInstance))
 			{
 				obj.onAction(activeChar);
 			}

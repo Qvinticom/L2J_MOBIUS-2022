@@ -25,11 +25,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2ExtractableProduct;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2EtcItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.ExtractableProduct;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.EtcItem;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class ExtractableItems implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -49,34 +49,34 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
-		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
+		final PlayerInstance player = playable.getActingPlayer();
+		final EtcItem etcitem = (EtcItem) item.getItem();
+		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
 		{
 			LOGGER.info("No extractable data defined for " + etcitem);
 			return false;
 		}
 		
-		if (!activeChar.isInventoryUnder80(false))
+		if (!player.isInventoryUnder80(false))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
+			player.sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
 			return false;
 		}
 		
 		// destroy item
-		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
+		if (!player.destroyItem("Extract", item.getObjectId(), 1, player, true))
 		{
 			return false;
 		}
 		
-		final Map<L2ItemInstance, Long> extractedItems = new HashMap<>();
-		final List<L2ItemInstance> enchantedItems = new ArrayList<>();
+		final Map<ItemInstance, Long> extractedItems = new HashMap<>();
+		final List<ItemInstance> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
 		{
 			while (extractedItems.size() < etcitem.getExtractableCountMin())
 			{
-				for (L2ExtractableProduct expi : exitems)
+				for (ExtractableProduct expi : exitems)
 				{
 					if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 					{
@@ -96,7 +96,7 @@ public class ExtractableItems implements IItemHandler
 						
 						// Do not extract the same item.
 						boolean alreadyExtracted = false;
-						for (L2ItemInstance i : extractedItems.keySet())
+						for (ItemInstance i : extractedItems.keySet())
 						{
 							if (i.getItem().getId() == expi.getId())
 							{
@@ -111,7 +111,7 @@ public class ExtractableItems implements IItemHandler
 						
 						if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 						{
-							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+							final ItemInstance newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
 							if (expi.getMaxEnchant() > 0)
 							{
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -123,7 +123,7 @@ public class ExtractableItems implements IItemHandler
 						{
 							while (createItemAmount > 0)
 							{
-								final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+								final ItemInstance newItem = player.addItem("Extract", expi.getId(), 1, player, false);
 								if (expi.getMaxEnchant() > 0)
 								{
 									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -139,7 +139,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		else
 		{
-			for (L2ExtractableProduct expi : exitems)
+			for (ExtractableProduct expi : exitems)
 			{
 				if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 				{
@@ -159,7 +159,7 @@ public class ExtractableItems implements IItemHandler
 					
 					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
-						final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+						final ItemInstance newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
 						if (expi.getMaxEnchant() > 0)
 						{
 							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -171,7 +171,7 @@ public class ExtractableItems implements IItemHandler
 					{
 						while (createItemAmount > 0)
 						{
-							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+							final ItemInstance newItem = player.addItem("Extract", expi.getId(), 1, player, false);
 							if (expi.getMaxEnchant() > 0)
 							{
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
@@ -187,27 +187,27 @@ public class ExtractableItems implements IItemHandler
 		
 		if (extractedItems.isEmpty())
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 		}
 		if (!enchantedItems.isEmpty())
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			for (L2ItemInstance i : enchantedItems)
+			for (ItemInstance i : enchantedItems)
 			{
 				playerIU.addModifiedItem(i);
 			}
-			activeChar.sendPacket(playerIU);
+			player.sendPacket(playerIU);
 		}
 		
-		for (L2ItemInstance i : extractedItems.keySet())
+		for (ItemInstance i : extractedItems.keySet())
 		{
-			sendMessage(activeChar, i, extractedItems.get(i));
+			sendMessage(player, i, extractedItems.get(i));
 		}
 		
 		return true;
 	}
 	
-	private void addItem(Map<L2ItemInstance, Long> extractedItems, L2ItemInstance newItem)
+	private void addItem(Map<ItemInstance, Long> extractedItems, ItemInstance newItem)
 	{
 		if (extractedItems.get(newItem) != null)
 		{
@@ -219,7 +219,7 @@ public class ExtractableItems implements IItemHandler
 		}
 	}
 	
-	private void sendMessage(L2PcInstance player, L2ItemInstance item, Long count)
+	private void sendMessage(PlayerInstance player, ItemInstance item, Long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

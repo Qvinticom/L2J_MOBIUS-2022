@@ -21,8 +21,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -48,15 +48,15 @@ public final class ServitorShare extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canPump(L2Character effector, L2Character effected, Skill skill)
+	public boolean canPump(Creature effector, Creature effected, Skill skill)
 	{
 		return effected.isSummon();
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
-		final L2PcInstance owner = effected.getActingPlayer();
+		final PlayerInstance owner = effected.getActingPlayer();
 		if (owner != null)
 		{
 			for (Entry<Stats, Float> stats : _sharedStats.entrySet())

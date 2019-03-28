@@ -23,15 +23,15 @@ import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -53,8 +53,8 @@ public final class AncientArcanCity extends AbstractNpcAI
 	private static final Location ANCIENT_ARCAN_CITY = new Location(207559, 86429, -1000);
 	private static final Location EARTHQUAKE = new Location(207088, 88720, -1128);
 	// Zones
-	private static final L2ScriptZone BROADCAST_ZONE = ZoneManager.getInstance().getZoneById(23600, L2ScriptZone.class); // Ancient Arcan City zone
-	private static final L2ScriptZone TELEPORT_ZONE = ZoneManager.getInstance().getZoneById(12015, L2ScriptZone.class); // Anghel Waterfall teleport zone
+	private static final ScriptZone BROADCAST_ZONE = ZoneManager.getInstance().getZoneById(23600, ScriptZone.class); // Ancient Arcan City zone
+	private static final ScriptZone TELEPORT_ZONE = ZoneManager.getInstance().getZoneById(12015, ScriptZone.class); // Anghel Waterfall teleport zone
 	// Misc
 	private static final int CHANGE_STATE_TIME = 1800000; // 30min
 	private boolean isCeremonyRunning = false;
@@ -67,13 +67,13 @@ public final class AncientArcanCity extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("CHANGE_STATE"))
 		{
 			isCeremonyRunning = !isCeremonyRunning;
 			
-			for (L2PcInstance temp : BROADCAST_ZONE.getPlayersInside())
+			for (PlayerInstance temp : BROADCAST_ZONE.getPlayersInside())
 			{
 				temp.sendPacket(new OnEventTrigger(262001, !isCeremonyRunning));
 				temp.sendPacket(new OnEventTrigger(262003, isCeremonyRunning));
@@ -103,11 +103,11 @@ public final class AncientArcanCity extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character creature, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			
 			if (zone.getId() == TELEPORT_ZONE.getId())
 			{
@@ -153,7 +153,7 @@ public final class AncientArcanCity extends AbstractNpcAI
 	// }
 	
 	@Override
-	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
+	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
 		if (npc.getId() == CEREMONIAL_CAT)
 		{

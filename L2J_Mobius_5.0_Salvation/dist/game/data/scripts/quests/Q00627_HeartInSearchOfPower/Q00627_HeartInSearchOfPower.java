@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -78,10 +78,10 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -90,7 +90,7 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 		{
 			case "31518-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "31518-06.html":
@@ -101,7 +101,7 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 				}
 				giveItems(player, SEAL_OF_LIGHT, 1);
 				takeItems(player, BEAD_OF_OBEDIENCE, -1);
-				st.setCond(3);
+				qs.setCond(3);
 				break;
 			}
 			case "cokes":
@@ -112,16 +112,16 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 				giveAdena(player, 6400, true);
 				giveItems(player, itemId, itemCount);
 				htmltext = "31518-10.html";
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				break;
 			}
 			case "31519-02.html":
 			{
-				if (hasQuestItems(player, SEAL_OF_LIGHT) && st.isCond(3))
+				if (hasQuestItems(player, SEAL_OF_LIGHT) && qs.isCond(3))
 				{
 					giveItems(player, GEM_OF_SAINTS, 1);
 					takeItems(player, SEAL_OF_LIGHT, -1);
-					st.setCond(4);
+					qs.setCond(4);
 				}
 				else
 				{
@@ -143,12 +143,12 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
+		final PlayerInstance partyMember = getRandomPartyMember(killer, 1);
 		if (partyMember != null)
 		{
-			final QuestState st = getQuestState(partyMember, false);
+			final QuestState qs = getQuestState(partyMember, false);
 			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
@@ -159,7 +159,7 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 				}
 				else
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -167,12 +167,12 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -186,7 +186,7 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 			{
 				if (npc.getId() == MYSTERIOUS_NECROMANCER)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -212,11 +212,11 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 				}
 				else if (npc.getId() == ENFEUX)
 				{
-					if (st.isCond(3))
+					if (qs.isCond(3))
 					{
 						htmltext = "31519-01.html";
 					}
-					else if (st.isCond(4))
+					else if (qs.isCond(4))
 					{
 						htmltext = "31519-03.html";
 					}

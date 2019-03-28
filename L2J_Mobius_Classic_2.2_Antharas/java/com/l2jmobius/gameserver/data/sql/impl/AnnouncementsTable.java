@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.announce.Announcement;
 import com.l2jmobius.gameserver.model.announce.AnnouncementType;
 import com.l2jmobius.gameserver.model.announce.AutoAnnouncement;
@@ -92,7 +92,7 @@ public final class AnnouncementsTable
 	 * Sending all announcements to the player
 	 * @param player
 	 */
-	public void showAnnouncements(L2PcInstance player)
+	public void showAnnouncements(PlayerInstance player)
 	{
 		sendAnnouncements(player, AnnouncementType.NORMAL);
 		sendAnnouncements(player, AnnouncementType.CRITICAL);
@@ -104,7 +104,7 @@ public final class AnnouncementsTable
 	 * @param player
 	 * @param type
 	 */
-	private void sendAnnouncements(L2PcInstance player, AnnouncementType type)
+	private void sendAnnouncements(PlayerInstance player, AnnouncementType type)
 	{
 		for (IAnnouncement announce : _announcements.values())
 		{

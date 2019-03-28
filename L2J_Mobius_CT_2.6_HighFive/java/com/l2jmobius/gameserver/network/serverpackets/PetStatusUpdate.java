@@ -17,33 +17,32 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ServitorInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * This class ...
  * @version $Revision: 1.5.2.3.2.5 $ $Date: 2005/03/29 23:15:10 $
  */
 public class PetStatusUpdate implements IClientOutgoingPacket
 {
-	private final L2Summon _summon;
+	private final Summon _summon;
 	private int _maxFed;
 	private int _curFed;
 	
-	public PetStatusUpdate(L2Summon summon)
+	public PetStatusUpdate(Summon summon)
 	{
 		_summon = summon;
 		if (_summon.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) _summon;
+			final PetInstance pet = (PetInstance) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
 		else if (_summon.isServitor())
 		{
-			final L2ServitorInstance sum = (L2ServitorInstance) _summon;
+			final ServitorInstance sum = (ServitorInstance) _summon;
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
 		}

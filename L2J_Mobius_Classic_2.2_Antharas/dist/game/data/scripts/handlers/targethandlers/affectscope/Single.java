@@ -21,8 +21,8 @@ import java.util.function.Consumer;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -34,17 +34,17 @@ import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 public class Single implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		
-		if (target.isCharacter())
+		if (target.isCreature())
 		{
 			if (skill.getTargetType() == TargetType.GROUND)
 			{
-				action.accept(activeChar); // Return yourself to mark that effects can use your current skill's world position.
+				action.accept(creature); // Return yourself to mark that effects can use your current skill's world position.
 			}
-			if (((affectObject == null) || affectObject.checkAffectedObject(activeChar, (L2Character) target)))
+			if (((affectObject == null) || affectObject.checkAffectedObject(creature, (Creature) target)))
 			{
 				action.accept(target); // Return yourself to mark that effects can use your current skill's world position.
 			}

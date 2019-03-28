@@ -19,10 +19,9 @@ package com.l2jmobius.gameserver.datatables;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
- * This class ...
  * @version $Revision$ $Date$
  */
 
@@ -109,7 +108,7 @@ public class DesireTable
 		}
 	}
 	
-	private final Map<L2Object, Desires> _objectDesireTable;
+	private final Map<WorldObject, Desires> _objectDesireTable;
 	private final Desires _generalDesires;
 	private final DesireType[] _desireTypes;
 	
@@ -125,7 +124,7 @@ public class DesireTable
 		return _generalDesires.getDesireValue(type).getValue();
 	}
 	
-	public float getDesireValue(L2Object object, DesireType type)
+	public float getDesireValue(WorldObject object, DesireType type)
 	{
 		final Desires desireList = _objectDesireTable.get(object);
 		
@@ -142,7 +141,7 @@ public class DesireTable
 		_generalDesires.addValue(type, value);
 	}
 	
-	public void addDesireValue(L2Object object, DesireType type, float value)
+	public void addDesireValue(WorldObject object, DesireType type, float value)
 	{
 		Desires desireList = _objectDesireTable.get(object);
 		
@@ -162,7 +161,7 @@ public class DesireTable
 		_generalDesires.deleteDesire(type);
 	}
 	
-	public void createDesire(L2Object object, DesireType type)
+	public void createDesire(WorldObject object, DesireType type)
 	{
 		Desires desireList = _objectDesireTable.get(object);
 		
@@ -172,7 +171,7 @@ public class DesireTable
 		}
 	}
 	
-	public void deleteDesire(L2Object object, DesireType type)
+	public void deleteDesire(WorldObject object, DesireType type)
 	{
 		Desires desireList = _objectDesireTable.get(object);
 		
@@ -182,7 +181,7 @@ public class DesireTable
 		}
 	}
 	
-	public void addKnownObject(L2Object object)
+	public void addKnownObject(WorldObject object)
 	{
 		if (object != null)
 		{
@@ -190,7 +189,7 @@ public class DesireTable
 		}
 	}
 	
-	public void addKnownObject(L2Object object, DesireType... desireList)
+	public void addKnownObject(WorldObject object, DesireType... desireList)
 	{
 		if (object != null)
 		{

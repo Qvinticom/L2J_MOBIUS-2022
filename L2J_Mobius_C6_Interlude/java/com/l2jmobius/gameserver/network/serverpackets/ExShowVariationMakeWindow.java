@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch Trigger packet.
  * @author KenM
  */
-public class ExShowVariationMakeWindow extends L2GameServerPacket
+public class ExShowVariationMakeWindow extends GameServerPacket
 {
 	@Override
 	protected void writeImpl()

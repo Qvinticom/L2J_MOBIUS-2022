@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.geoengine.geodata.BlockFlat;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockMultilayer;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 
 /**
  * @author Hasha
@@ -80,9 +80,9 @@ public final class GeoDataConverter
 		
 		// load geo files
 		int converted = 0;
-		for (int rx = L2World.TILE_X_MIN; rx <= L2World.TILE_X_MAX; rx++)
+		for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++)
 		{
-			for (int ry = L2World.TILE_Y_MIN; ry <= L2World.TILE_Y_MAX; ry++)
+			for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++)
 			{
 				final String input = String.format(_format.getFilename(), rx, ry);
 				final String filepath = Config.GEODATA_PATH;

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
  * Format (ch) dd
  * @author -Wooden-
  */
-public final class RequestWithdrawPartyRoom extends L2GameClientPacket
+public final class RequestWithdrawPartyRoom extends GameClientPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")
@@ -42,9 +42,9 @@ public final class RequestWithdrawPartyRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final PlayerInstance _player = getClient().getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
@@ -55,18 +55,18 @@ public final class RequestWithdrawPartyRoom extends L2GameClientPacket
 			return;
 		}
 		
-		if ((_activeChar.isInParty() && _room.getOwner().isInParty()) && (_activeChar.getParty().getPartyLeaderOID() == _room.getOwner().getParty().getPartyLeaderOID()))
+		if ((_player.isInParty() && _room.getOwner().isInParty()) && (_player.getParty().getPartyLeaderOID() == _room.getOwner().getParty().getPartyLeaderOID()))
 		{
 			// If user is in party with Room Owner is not removed from Room
 		}
 		else
 		{
-			_room.deleteMember(_activeChar);
-			_activeChar.setPartyRoom(0);
-			_activeChar.broadcastUserInfo();
+			_room.deleteMember(_player);
+			_player.setPartyRoom(0);
+			_player.broadcastUserInfo();
 			
-			_activeChar.sendPacket(new ExClosePartyRoom());
-			_activeChar.sendPacket(SystemMessageId.PARTY_ROOM_EXITED);
+			_player.sendPacket(new ExClosePartyRoom());
+			_player.sendPacket(SystemMessageId.PARTY_ROOM_EXITED);
 		}
 	}
 }

@@ -24,13 +24,13 @@ import java.util.Map.Entry;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * A holder representing a craftable recipe based on the former L2RecipeList.<br>
+ * A holder representing a craftable recipe based on the former RecipeList.<br>
  * It contains all the recipe data and methods required for crafting this recipe.
  * @author Nik
  */
@@ -83,7 +83,7 @@ public class RecipeHolder implements IIdentifiable
 	}
 	
 	/**
-	 * @return the crafting level needed to use this L2RecipeList.
+	 * @return the crafting level needed to use this RecipeList.
 	 */
 	public int getLevel()
 	{
@@ -99,7 +99,7 @@ public class RecipeHolder implements IIdentifiable
 	}
 	
 	/**
-	 * @return the name of the L2RecipeList.
+	 * @return the name of the RecipeList.
 	 */
 	public String getName()
 	{
@@ -107,7 +107,7 @@ public class RecipeHolder implements IIdentifiable
 	}
 	
 	/**
-	 * @return the crafting success rate when using the L2RecipeList.
+	 * @return the crafting success rate when using the RecipeList.
 	 */
 	public double getSuccessRate()
 	{
@@ -147,7 +147,7 @@ public class RecipeHolder implements IIdentifiable
 	}
 	
 	/**
-	 * @return the table containing all L2RecipeStatInstance of the statUse parameter of the L2RecipeList.
+	 * @return the table containing all RecipeStatInstance of the statUse parameter of the RecipeList.
 	 */
 	public Map<StatusUpdateType, Double> getStatUse()
 	{
@@ -191,7 +191,7 @@ public class RecipeHolder implements IIdentifiable
 		return null;
 	}
 	
-	public boolean checkNecessaryStats(L2PcInstance player, L2PcInstance manufacturer, boolean sendMessage)
+	public boolean checkNecessaryStats(PlayerInstance player, PlayerInstance manufacturer, boolean sendMessage)
 	{
 		for (Entry<StatusUpdateType, Double> entry : _statUse.entrySet())
 		{
@@ -234,7 +234,7 @@ public class RecipeHolder implements IIdentifiable
 	 * @param sendMessage send system messages for item requirements if there is missing ingredient.
 	 * @return {@code true} if all necessary ingredients are met, {@code false} if there are missing ingredients.
 	 */
-	public boolean checkNecessaryIngredients(L2PcInstance player, boolean sendMessage)
+	public boolean checkNecessaryIngredients(PlayerInstance player, boolean sendMessage)
 	{
 		for (ItemHolder ingredient : _materials)
 		{
@@ -264,7 +264,7 @@ public class RecipeHolder implements IIdentifiable
 	 * @param sendMessage send system messages of the process.
 	 * @return {@code ItemHolder} of the randomly created product (even if its failing craft), {@code null} if the item creation was not performed due to failed checks.
 	 */
-	public ItemHolder doCraft(L2PcInstance player, L2PcInstance manufacturer, boolean success, boolean craftingCritical, boolean sendMessage)
+	public ItemHolder doCraft(PlayerInstance player, PlayerInstance manufacturer, boolean success, boolean craftingCritical, boolean sendMessage)
 	{
 		if (!checkNecessaryStats(player, manufacturer, sendMessage))
 		{

@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.Arrays;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2EtcItem;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.EtcItem;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -40,22 +40,22 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 	 * Packet type id 0x16 format: cd
 	 */
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_slot = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getPaperdollItemByL2ItemId(_slot);
+		final ItemInstance item = player.getInventory().getPaperdollItemByItemId(_slot);
 		// Wear-items are not to be unequipped.
 		if (item == null)
 		{
@@ -63,44 +63,44 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 		}
 		
 		// The English system message say weapon, but it's applied to any equipped item.
-		if (activeChar.isAttackingNow() || activeChar.isCastingNow())
+		if (player.isAttackingNow() || player.isCastingNow())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_WEAPONS_DURING_AN_ATTACK);
 			return;
 		}
 		
 		// Arrows and bolts.
-		if ((_slot == L2Item.SLOT_L_HAND) && (item.getItem() instanceof L2EtcItem))
+		if ((_slot == Item.SLOT_L_HAND) && (item.getItem() instanceof EtcItem))
 		{
 			return;
 		}
 		
 		// Prevent of unequipping a cursed weapon.
-		if ((_slot == L2Item.SLOT_LR_HAND) && (activeChar.isCursedWeaponEquipped() || activeChar.isCombatFlagEquipped()))
+		if ((_slot == Item.SLOT_LR_HAND) && (player.isCursedWeaponEquipped() || player.isCombatFlagEquipped()))
 		{
 			return;
 		}
 		
 		// Prevent player from unequipping items in special conditions.
-		if (activeChar.hasBlockActions() || activeChar.isAlikeDead())
+		if (player.hasBlockActions() || player.isAlikeDead())
 		{
 			return;
 		}
 		
-		if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
-		{
-			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
-			return;
-		}
-		
-		if (item.isWeapon() && item.getWeaponItem().isForceEquip() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
+		if (!player.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
 			return;
 		}
 		
-		final L2ItemInstance[] unequipped = activeChar.getInventory().unEquipItemInBodySlotAndRecord(_slot);
-		activeChar.broadcastUserInfo();
+		if (item.isWeapon() && item.getWeaponItem().isForceEquip() && !player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS))
+		{
+			client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
+			return;
+		}
+		
+		final ItemInstance[] unequipped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+		player.broadcastUserInfo();
 		
 		// This can be 0 if the user pressed the right mouse button twice very fast.
 		if (unequipped.length > 0)
@@ -120,7 +120,7 @@ public class RequestUnEquipItem implements IClientIncomingPacket
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItems(Arrays.asList(unequipped));
-			activeChar.sendInventoryUpdate(iu);
+			player.sendInventoryUpdate(iu);
 		}
 	}
 }

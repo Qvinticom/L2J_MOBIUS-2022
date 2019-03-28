@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,7 +29,7 @@ public class ExBrGamePoint implements IClientOutgoingPacket
 	private final int _playerObj;
 	private long _points;
 	
-	public ExBrGamePoint(L2PcInstance player)
+	public ExBrGamePoint(PlayerInstance player)
 	{
 		_playerObj = player.getObjectId();
 		

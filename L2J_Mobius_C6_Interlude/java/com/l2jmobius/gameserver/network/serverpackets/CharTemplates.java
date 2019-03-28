@@ -19,17 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.templates.chars.L2PcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.PlayerTemplate;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharTemplates extends L2GameServerPacket
+public class CharTemplates extends GameServerPacket
 {
-	private final List<L2PcTemplate> _chars = new ArrayList<>();
+	private final List<PlayerTemplate> _chars = new ArrayList<>();
 	
-	public void addChar(L2PcTemplate template)
+	public void addChar(PlayerTemplate template)
 	{
 		_chars.add(template);
 	}
@@ -40,7 +39,7 @@ public class CharTemplates extends L2GameServerPacket
 		writeC(0x17);
 		writeD(_chars.size());
 		
-		for (L2PcTemplate temp : _chars)
+		for (PlayerTemplate temp : _chars)
 		{
 			writeD(temp.race.ordinal());
 			writeD(temp.classId.getId());

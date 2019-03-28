@@ -64,7 +64,7 @@ import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.datatables.sql.CustomArmorSetsTable;
 import com.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
 import com.l2jmobius.gameserver.datatables.sql.HennaTreeTable;
-import com.l2jmobius.gameserver.datatables.sql.L2PetDataTable;
+import com.l2jmobius.gameserver.datatables.sql.PetDataTable;
 import com.l2jmobius.gameserver.datatables.sql.LevelUpData;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
@@ -112,8 +112,8 @@ import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.entity.Announcements;
@@ -127,10 +127,10 @@ import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import com.l2jmobius.gameserver.model.entity.siege.clanhalls.BanditStrongholdSiege;
 import com.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import com.l2jmobius.gameserver.model.entity.siege.clanhalls.FortressOfResistance;
-import com.l2jmobius.gameserver.model.multisell.L2Multisell;
+import com.l2jmobius.gameserver.model.multisell.Multisell;
 import com.l2jmobius.gameserver.model.spawn.AutoSpawn;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GamePacketHandler;
+import com.l2jmobius.gameserver.network.GameClient;
+import com.l2jmobius.gameserver.network.GamePacketHandler;
 import com.l2jmobius.gameserver.script.EventDroplist;
 import com.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import com.l2jmobius.gameserver.scripting.CompiledScriptCache;
@@ -148,9 +148,9 @@ public class GameServer
 {
 	private static Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
-	private static SelectorThread<L2GameClient> _selectorThread;
+	private static SelectorThread<GameClient> _selectorThread;
 	private static LoginServerThread _loginThread;
-	private static L2GamePacketHandler _gamePacketHandler;
+	private static GamePacketHandler _gamePacketHandler;
 	private static Status _statusServer;
 	
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
@@ -213,7 +213,7 @@ public class GameServer
 		}
 		
 		Util.printSection("World");
-		L2World.getInstance();
+		World.getInstance();
 		MapRegionTable.getInstance();
 		Announcements.getInstance();
 		AutoAnnouncementHandler.getInstance();
@@ -301,7 +301,7 @@ public class GameServer
 		
 		Util.printSection("Economy");
 		TradeController.getInstance();
-		L2Multisell.getInstance();
+		Multisell.getInstance();
 		LOGGER.info("Multisell: loaded.");
 		
 		Util.printSection("Clan Halls");
@@ -349,7 +349,7 @@ public class GameServer
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();
 		TaskManager.getInstance();
-		L2PetDataTable.getInstance().loadPetsData();
+		PetDataTable.getInstance().loadPetsData();
 		if (Config.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance();
@@ -360,7 +360,7 @@ public class GameServer
 		}
 		
 		Util.printSection("Manor");
-		L2Manor.getInstance();
+		Manor.getInstance();
 		CastleManorManager.getInstance();
 		
 		Util.printSection("Castles");
@@ -575,7 +575,7 @@ public class GameServer
 			LOGGER.info("Bypass Validation actived.");
 		}
 		
-		if (Config.L2WALKER_PROTEC)
+		if (Config.L2WALKER_PROTECTION)
 		{
 			LOGGER.info("L2Walker protection actived.");
 		}
@@ -612,7 +612,7 @@ public class GameServer
 		sc.setSleepTime(NetcoreConfig.getInstance().MMO_SELECTOR_SLEEP_TIME);
 		sc.setHelperBufferCount(NetcoreConfig.getInstance().MMO_HELPER_BUFFER_COUNT);
 		
-		_gamePacketHandler = new L2GamePacketHandler();
+		_gamePacketHandler = new GamePacketHandler();
 		
 		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler, new IPv4Filter());
 		
@@ -641,7 +641,7 @@ public class GameServer
 		_selectorThread.start();
 	}
 	
-	public static SelectorThread<L2GameClient> getSelectorThread()
+	public static SelectorThread<GameClient> getSelectorThread()
 	{
 		return _selectorThread;
 	}

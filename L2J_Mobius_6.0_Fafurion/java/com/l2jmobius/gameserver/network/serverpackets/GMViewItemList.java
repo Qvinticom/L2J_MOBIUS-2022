@@ -20,35 +20,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewItemList extends AbstractItemPacket
 {
 	private final int _sendType;
-	private final List<L2ItemInstance> _items = new ArrayList<>();
+	private final List<ItemInstance> _items = new ArrayList<>();
 	private final int _limit;
 	private final String _playerName;
 	
-	public GMViewItemList(int sendType, L2PcInstance cha)
+	public GMViewItemList(int sendType, PlayerInstance player)
 	{
 		_sendType = sendType;
-		_playerName = cha.getName();
-		_limit = cha.getInventoryLimit();
-		for (L2ItemInstance item : cha.getInventory().getItems())
+		_playerName = player.getName();
+		_limit = player.getInventoryLimit();
+		for (ItemInstance item : player.getInventory().getItems())
 		{
 			_items.add(item);
 		}
 	}
 	
-	public GMViewItemList(int sendType, L2PetInstance cha)
+	public GMViewItemList(int sendType, PetInstance cha)
 	{
 		_sendType = sendType;
 		_playerName = cha.getName();
 		_limit = cha.getInventoryLimit();
-		for (L2ItemInstance item : cha.getInventory().getItems())
+		for (ItemInstance item : cha.getInventory().getItems())
 		{
 			_items.add(item);
 		}
@@ -69,7 +69,7 @@ public class GMViewItemList extends AbstractItemPacket
 			packet.writeD(_limit); // inventory limit
 		}
 		packet.writeD(_items.size());
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			writeItem(packet, item);
 		}

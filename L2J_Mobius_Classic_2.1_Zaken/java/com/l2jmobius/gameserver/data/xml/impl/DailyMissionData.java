@@ -30,7 +30,7 @@ import org.w3c.dom.Document;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 
@@ -110,7 +110,7 @@ public class DailyMissionData implements IGameXmlReader
 		//@formatter:on
 	}
 	
-	public Collection<DailyMissionDataHolder> getDailyMissionData(L2PcInstance player)
+	public Collection<DailyMissionDataHolder> getDailyMissionData(PlayerInstance player)
 	{
 		//@formatter:off
 		return _dailyMissionRewards.values()

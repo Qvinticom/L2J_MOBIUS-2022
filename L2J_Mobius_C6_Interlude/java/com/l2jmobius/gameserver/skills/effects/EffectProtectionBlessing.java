@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Playable;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author eX1steam
  */
-public class EffectProtectionBlessing extends L2Effect
+public class EffectProtectionBlessing extends Effect
 {
 	public EffectProtectionBlessing(Env env, EffectTemplate template)
 	{
@@ -39,18 +39,18 @@ public class EffectProtectionBlessing extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			((L2Playable) getEffected()).startProtectionBlessing(this);
+			((Playable) getEffected()).startProtectionBlessing(this);
 		}
 	}
 	
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			((L2Playable) getEffected()).stopProtectionBlessing(this);
+			((Playable) getEffected()).stopProtectionBlessing(this);
 		}
 	}
 	

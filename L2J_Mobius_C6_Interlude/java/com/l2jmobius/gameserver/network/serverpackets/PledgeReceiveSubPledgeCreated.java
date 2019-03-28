@@ -16,12 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
+import com.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
+public class PledgeReceiveSubPledgeCreated extends GameServerPacket
 {
 	private final SubPledge _subPledge;
 	

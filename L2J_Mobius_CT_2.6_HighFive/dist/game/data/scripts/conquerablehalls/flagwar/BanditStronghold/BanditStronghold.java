@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceHallTeleportZone;
 
 import conquerablehalls.flagwar.FlagWar;
 
@@ -62,9 +62,9 @@ public final class BanditStronghold extends FlagWar
 		FLAG_COORDS[5] = new Location(81981, -15708, -1858, 60392);
 		FLAG_COORDS[6] = new Location(84375, -17060, -1860, 27712);
 		
-		final Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
+		final Collection<ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(ResidenceHallTeleportZone.class);
 		
-		for (L2ResidenceHallTeleportZone teleZone : zoneList)
+		for (ResidenceHallTeleportZone teleZone : zoneList)
 		{
 			if (teleZone.getResidenceId() != BANDIT_STRONGHOLD)
 			{

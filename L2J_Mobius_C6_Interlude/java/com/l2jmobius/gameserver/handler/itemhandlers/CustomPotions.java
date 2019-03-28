@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -45,33 +45,33 @@ public class CustomPotions implements IItemHandler
 	};
 	
 	@Override
-	public synchronized void useItem(L2Playable playable, L2ItemInstance item)
+	public synchronized void useItem(Playable playable, ItemInstance item)
 	{
-		L2PcInstance activeChar;
+		PlayerInstance player;
 		boolean res = false;
 		
-		if (playable instanceof L2PcInstance)
+		if (playable instanceof PlayerInstance)
 		{
-			activeChar = (L2PcInstance) playable;
+			player = (PlayerInstance) playable;
 		}
-		else if (playable instanceof L2PetInstance)
+		else if (playable instanceof PetInstance)
 		{
-			activeChar = ((L2PetInstance) playable).getOwner();
+			player = ((PetInstance) playable).getOwner();
 		}
 		else
 		{
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		
-		if (activeChar.isAllSkillsDisabled())
+		if (player.isAllSkillsDisabled())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -79,7 +79,7 @@ public class CustomPotions implements IItemHandler
 		
 		if ((itemId >= 9720) && (itemId <= 9731))
 		{
-			res = usePotion(activeChar, itemId, 1);
+			res = usePotion(player, itemId, 1);
 		}
 		
 		if (res)
@@ -88,13 +88,13 @@ public class CustomPotions implements IItemHandler
 		}
 	}
 	
-	public boolean usePotion(L2PcInstance activeChar, int magicId, int level)
+	public boolean usePotion(PlayerInstance player, int magicId, int level)
 	{
-		final L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 		if (skill != null)
 		{
-			activeChar.doCast(skill);
-			if (((!activeChar.isSitting() && !activeChar.isParalyzed() && !activeChar.isAway() && !activeChar.isFakeDeath()) || skill.isPotion()))
+			player.doCast(skill);
+			if (((!player.isSitting() && !player.isParalyzed() && !player.isAway() && !player.isFakeDeath()) || skill.isPotion()))
 			{
 				return true;
 			}

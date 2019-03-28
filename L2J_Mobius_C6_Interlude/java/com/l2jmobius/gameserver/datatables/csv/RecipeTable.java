@@ -29,8 +29,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.RecipeController;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2RecipeInstance;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.instance.RecipeInstance;
 
 /**
  * @author programmos
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2RecipeInstance;
 public class RecipeTable extends RecipeController
 {
 	private static final Logger LOGGER = Logger.getLogger(RecipeTable.class.getName());
-	private final Map<Integer, L2RecipeList> _lists;
+	private final Map<Integer, RecipeList> _lists;
 	
 	private static RecipeTable instance;
 	
@@ -136,7 +136,7 @@ public class RecipeTable extends RecipeController
 		try
 		{
 			StringTokenizer st = new StringTokenizer(line, ";");
-			final List<L2RecipeInstance> recipePartList = new ArrayList<>();
+			final List<RecipeInstance> recipePartList = new ArrayList<>();
 			
 			// we use common/dwarf for easy reading of the recipes.csv file
 			String recipeTypeString = st.nextToken();
@@ -170,7 +170,7 @@ public class RecipeTable extends RecipeController
 				StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
 				final int rpItemId = Integer.parseInt(st3.nextToken());
 				final int quantity = Integer.parseInt(st3.nextToken());
-				L2RecipeInstance rp = new L2RecipeInstance(rpItemId, quantity);
+				RecipeInstance rp = new RecipeInstance(rpItemId, quantity);
 				recipePartList.add(rp);
 			}
 			
@@ -183,9 +183,9 @@ public class RecipeTable extends RecipeController
 			final int mpCost = Integer.parseInt(st.nextToken());
 			final int successRate = Integer.parseInt(st.nextToken());
 			
-			L2RecipeList recipeList = new L2RecipeList(id, level, recipeId, recipeName, successRate, mpCost, itemId, count, isDwarvenRecipe);
+			RecipeList recipeList = new RecipeList(id, level, recipeId, recipeName, successRate, mpCost, itemId, count, isDwarvenRecipe);
 			
-			for (L2RecipeInstance recipePart : recipePartList)
+			for (RecipeInstance recipePart : recipePartList)
 			{
 				recipeList.addRecipe(recipePart);
 			}
@@ -202,16 +202,16 @@ public class RecipeTable extends RecipeController
 		return _lists.size();
 	}
 	
-	public L2RecipeList getRecipeList(int listId)
+	public RecipeList getRecipeList(int listId)
 	{
 		return _lists.get(listId);
 	}
 	
-	public L2RecipeList getRecipeByItemId(int itemId)
+	public RecipeList getRecipeByItemId(int itemId)
 	{
 		for (int i = 0; i < _lists.size(); i++)
 		{
-			final L2RecipeList find = _lists.get(i);
+			final RecipeList find = _lists.get(i);
 			if (find.getRecipeId() == itemId)
 			{
 				return find;
@@ -220,11 +220,11 @@ public class RecipeTable extends RecipeController
 		return null;
 	}
 	
-	public L2RecipeList getRecipeById(int recId)
+	public RecipeList getRecipeById(int recId)
 	{
 		for (int i = 0; i < _lists.size(); i++)
 		{
-			final L2RecipeList find = _lists.get(i);
+			final RecipeList find = _lists.get(i);
 			if (find.getId() == recId)
 			{
 				return find;

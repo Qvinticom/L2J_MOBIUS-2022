@@ -21,9 +21,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -36,11 +36,11 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 public final class CubicAction implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicAction.class.getName());
-	private final L2CubicInstance _cubic;
+	private final CubicInstance _cubic;
 	private final AtomicInteger _currentCount = new AtomicInteger();
 	private final int _chance;
 	
-	public CubicAction(L2CubicInstance cubic, int chance)
+	public CubicAction(CubicInstance cubic, int chance)
 	{
 		_cubic = cubic;
 		_chance = chance;
@@ -91,7 +91,7 @@ public final class CubicAction implements Runnable
 			
 			// Smart Cubic debuff cancel is 100%
 			boolean useCubicCure = false;
-			if ((_cubic.getId() >= L2CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= L2CubicInstance.SMART_CUBIC_SPECTRALMASTER))
+			if ((_cubic.getId() >= CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= CubicInstance.SMART_CUBIC_SPECTRALMASTER))
 			{
 				for (BuffInfo info : _cubic.getOwner().getEffectList().getDebuffs())
 				{
@@ -106,7 +106,7 @@ public final class CubicAction implements Runnable
 			if (useCubicCure)
 			{
 				// Smart Cubic debuff cancel is needed, no other skill is used in this activation period
-				final MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
+				final MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
 				_cubic.getOwner().broadcastPacket(msu);
 				
 				// The cubic has done an action, increase the current count
@@ -120,7 +120,7 @@ public final class CubicAction implements Runnable
 					return;
 				}
 				
-				if (skill.getId() == L2CubicInstance.SKILL_CUBIC_HEAL)
+				if (skill.getId() == CubicInstance.SKILL_CUBIC_HEAL)
 				{
 					// friendly skill, so we look a target in owner's party
 					_cubic.cubicTargetForHeal();
@@ -129,17 +129,17 @@ public final class CubicAction implements Runnable
 				{
 					// offensive skill, we look for an enemy target
 					_cubic.getCubicTarget();
-					if (!L2CubicInstance.isInCubicRange(_cubic.getOwner(), _cubic.getTarget()))
+					if (!CubicInstance.isInCubicRange(_cubic.getOwner(), _cubic.getTarget()))
 					{
 						_cubic.setTarget(null);
 					}
 				}
-				final L2Character target = _cubic.getTarget();
+				final Creature target = _cubic.getTarget();
 				if ((target != null) && !target.isDead())
 				{
 					_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
 					
-					final L2Character[] targets =
+					final Creature[] targets =
 					{
 						target
 					};
@@ -153,23 +153,23 @@ public final class CubicAction implements Runnable
 						skill.activateSkill(_cubic, targets);
 					}
 					
-					if (skill.hasEffectType(L2EffectType.MAGICAL_ATTACK))
+					if (skill.hasEffectType(EffectType.MAGICAL_ATTACK))
 					{
 						_cubic.useCubicMdam(skill, targets);
 					}
-					else if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+					else if (skill.hasEffectType(EffectType.HP_DRAIN))
 					{
 						_cubic.useCubicDrain(skill, targets);
 					}
-					else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT, L2EffectType.PARALYZE))
+					else if (skill.hasEffectType(EffectType.STUN, EffectType.ROOT, EffectType.PARALYZE))
 					{
 						_cubic.useCubicDisabler(skill, targets);
 					}
-					else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
+					else if (skill.hasEffectType(EffectType.DMG_OVER_TIME, EffectType.DMG_OVER_TIME_PERCENT))
 					{
 						_cubic.useCubicContinuous(skill, targets);
 					}
-					else if (skill.hasEffectType(L2EffectType.AGGRESSION))
+					else if (skill.hasEffectType(EffectType.AGGRESSION))
 					{
 						_cubic.useCubicDisabler(skill, targets);
 					}

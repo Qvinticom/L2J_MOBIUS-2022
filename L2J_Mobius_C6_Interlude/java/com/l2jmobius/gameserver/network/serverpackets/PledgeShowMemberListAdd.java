@@ -16,14 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PledgeShowMemberListAdd extends L2GameServerPacket
+public class PledgeShowMemberListAdd extends GameServerPacket
 {
 	private String _name;
 	private int _lvl;
@@ -31,7 +30,7 @@ public class PledgeShowMemberListAdd extends L2GameServerPacket
 	private int _isOnline;
 	private int _pledgeType;
 	
-	public PledgeShowMemberListAdd(L2PcInstance player)
+	public PledgeShowMemberListAdd(PlayerInstance player)
 	{
 		_name = player.getName();
 		_lvl = player.getLevel();
@@ -40,7 +39,7 @@ public class PledgeShowMemberListAdd extends L2GameServerPacket
 		_pledgeType = player.getPledgeType();
 	}
 	
-	public PledgeShowMemberListAdd(L2ClanMember cm)
+	public PledgeShowMemberListAdd(ClanMember cm)
 	{
 		try
 		{

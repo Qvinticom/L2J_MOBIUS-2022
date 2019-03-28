@@ -499,7 +499,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Maximum Ability -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
@@ -521,7 +521,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Maximum Ability -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>

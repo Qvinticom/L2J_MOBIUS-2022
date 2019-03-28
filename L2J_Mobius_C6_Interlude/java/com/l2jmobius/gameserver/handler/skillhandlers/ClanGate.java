@@ -20,13 +20,13 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,12 +40,12 @@ public class ClanGate implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
+		PlayerInstance player = null;
+		if (creature instanceof PlayerInstance)
 		{
-			player = (L2PcInstance) activeChar;
+			player = (PlayerInstance) creature;
 		}
 		else
 		{
@@ -58,7 +58,7 @@ public class ClanGate implements ISkillHandler
 			return;
 		}
 		
-		L2Clan clan = player.getClan();
+		Clan clan = player.getClan();
 		if (clan != null)
 		{
 			if (CastleManager.getInstance().getCastleByOwner(clan) != null)
@@ -75,7 +75,7 @@ public class ClanGate implements ISkillHandler
 			}
 		}
 		
-		final L2Effect effect = player.getFirstEffect(skill.getId());
+		final Effect effect = player.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			effect.exit(false);
@@ -86,9 +86,9 @@ public class ClanGate implements ISkillHandler
 	private class RemoveClanGate implements Runnable
 	{
 		private final int castle;
-		private final L2PcInstance player;
+		private final PlayerInstance player;
 		
-		protected RemoveClanGate(int castle, L2PcInstance player)
+		protected RemoveClanGate(int castle, PlayerInstance player)
 		{
 			this.castle = castle;
 			this.player = player;

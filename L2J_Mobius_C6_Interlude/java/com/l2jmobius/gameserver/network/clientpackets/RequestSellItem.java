@@ -18,12 +18,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2FishermanInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestSellItem extends L2GameClientPacket
+public final class RequestSellItem extends GameClientPacket
 {
 	private int _listId;
 	private int _count;
@@ -74,7 +74,7 @@ public final class RequestSellItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -93,25 +93,25 @@ public final class RequestSellItem extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null // No target (ie GM Shop)
-		) || !(target instanceof L2MerchantInstance) // Target not a merchant and not mercmanager
-			|| !player.isInsideRadius(target, L2NpcInstance.INTERACTION_DISTANCE, false, false)))
+		) || !(target instanceof MerchantInstance) // Target not a merchant and not mercmanager
+			|| !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false)))
 		{
 			return; // Distance is too far
 		}
 		
 		String htmlFolder = "";
-		L2NpcInstance merchant = null;
-		if (target instanceof L2MerchantInstance)
+		NpcInstance merchant = null;
+		if (target instanceof MerchantInstance)
 		{
 			htmlFolder = "merchant";
-			merchant = (L2NpcInstance) target;
+			merchant = (NpcInstance) target;
 		}
-		else if (target instanceof L2FishermanInstance)
+		else if (target instanceof FishermanInstance)
 		{
 			htmlFolder = "fisherman";
-			merchant = (L2NpcInstance) target;
+			merchant = (NpcInstance) target;
 		}
 		else
 		{
@@ -145,7 +145,7 @@ public final class RequestSellItem extends L2GameClientPacket
 				return;
 			}
 			
-			L2ItemInstance item = player.checkItemManipulation(objectId, count, "sell");
+			ItemInstance item = player.checkItemManipulation(objectId, count, "sell");
 			
 			// Check Item
 			if ((item == null) || !item.getItem().isSellable())
@@ -177,7 +177,7 @@ public final class RequestSellItem extends L2GameClientPacket
 			item = player.getInventory().destroyItem("Sell", objectId, count, player, null);
 			
 			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) int price = item.getReferencePrice()*(int)count/2; L2ItemInstance li = null; L2ItemInstance la = null; if (_listId > 1000000) { li = merchant.findLeaseItem(item.getItemId(),item.getEnchantLevel()); la = merchant.getLeaseAdena(); if
+			 * TODO: Disabled until Leaseholders are rewritten ;-) int price = item.getReferencePrice()*(int)count/2; ItemInstance li = null; ItemInstance la = null; if (_listId > 1000000) { li = merchant.findLeaseItem(item.getItemId(),item.getEnchantLevel()); la = merchant.getLeaseAdena(); if
 			 * (li == null || la == null) continue; price = li.getPriceToBuy()*(int)count; // player sells, thus merchant buys. if (price > la.getCount()) continue; }
 			 */
 			/*

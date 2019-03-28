@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.util;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Collection of flood protectors for single player.
@@ -114,7 +114,7 @@ public final class FloodProtectors
 	 * Creates new instance of FloodProtectors.
 	 * @param client for which the collection of flood protectors is being created.
 	 */
-	public FloodProtectors(L2GameClient client)
+	public FloodProtectors(GameClient client)
 	{
 		super();
 		_useItem = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_USE_ITEM);

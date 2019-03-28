@@ -19,8 +19,8 @@ package quests.Q10275_ContainingTheAttributePower;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -60,11 +60,11 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -74,28 +74,28 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			case "30839-02.html":
 			case "31307-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "30839-05.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				break;
 			}
 			case "31307-05.html":
 			{
-				st.setCond(7, true);
+				qs.setCond(7, true);
 				break;
 			}
 			case "32325-03.html":
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 				giveItems(player, YINSWORD, 1, AttributeType.FIRE, 10);
 				break;
 			}
 			case "32326-03.html":
 			{
-				st.setCond(8, true);
+				qs.setCond(8, true);
 				giveItems(player, YANGSWORD, 1, AttributeType.EARTH, 10);
 				break;
 			}
@@ -121,14 +121,14 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 			case "32325-09.html":
 			{
-				st.setCond(5, true);
+				qs.setCond(5, true);
 				BLESSING_OF_FIRE.getSkill().applyEffects(player, player);
 				giveItems(player, YINSWORD, 1, AttributeType.FIRE, 10);
 				break;
 			}
 			case "32326-09.html":
 			{
-				st.setCond(10, true);
+				qs.setCond(10, true);
 				BLESSING_OF_EARTH.getSkill().applyEffects(player, player);
 				giveItems(player, YANGSWORD, 1, AttributeType.EARTH, 10);
 				break;
@@ -140,16 +140,16 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			htmltext = npc.getId() + "-1" + event + ".html";
 			giveItems(player, 10520 + CommonUtil.constrain(Integer.parseInt(event), 0, 6), 2);
 			addExpAndSp(player, 202160, 20375);
-			st.exitQuest(false, true);
+			qs.exitQuest(false, true);
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -158,12 +158,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		{
 			case AIR:
 			{
-				if ((st.isCond(8) || st.isCond(10)) && (getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (getQuestItemsCount(player, SOULPIECEAIR) < 6) && (getRandom(100) < 30))
+				if ((qs.isCond(8) || qs.isCond(10)) && (getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (getQuestItemsCount(player, SOULPIECEAIR) < 6) && (getRandom(100) < 30))
 				{
 					giveItems(player, SOULPIECEAIR, 1);
 					if (getQuestItemsCount(player, SOULPIECEAIR) >= 6)
 					{
-						st.setCond(st.getCond() + 1, true);
+						qs.setCond(qs.getCond() + 1, true);
 					}
 					else
 					{
@@ -174,12 +174,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 			case WATER:
 			{
-				if (((st.getCond() >= 3) || (st.getCond() <= 5)) && (getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == YINSWORD) && (getQuestItemsCount(player, SOULPIECEWATER) < 6) && (getRandom(100) < 30))
+				if (((qs.getCond() >= 3) || (qs.getCond() <= 5)) && (getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == YINSWORD) && (getQuestItemsCount(player, SOULPIECEWATER) < 6) && (getRandom(100) < 30))
 				{
 					giveItems(player, SOULPIECEWATER, 1);
 					if (getQuestItemsCount(player, SOULPIECEWATER) >= 6)
 					{
-						st.setCond(st.getCond() + 1, true);
+						qs.setCond(qs.getCond() + 1, true);
 					}
 					else
 					{
@@ -194,16 +194,16 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
 			case HOLLY:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -212,7 +212,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -237,7 +237,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 			case WEBER:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -246,7 +246,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -271,9 +271,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 			case YIN:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 2:
 						{
@@ -304,9 +304,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 			case YANG:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 7:
 						{

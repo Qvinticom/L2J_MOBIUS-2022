@@ -19,11 +19,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
- * This class ...
  * @version $Revision: 1.1.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class CannotMoveAnymore implements IClientIncomingPacket
@@ -34,7 +33,7 @@ public final class CannotMoveAnymore implements IClientIncomingPacket
 	private int _heading;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_x = packet.readD();
 		_y = packet.readD();
@@ -44,9 +43,9 @@ public final class CannotMoveAnymore implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -66,12 +65,12 @@ public final class CannotMoveAnymore implements IClientIncomingPacket
 		// LOGGER.fine("client: x:"+_x+" y:"+_y+" z:"+_z+
 		// " server x:"+player.getX()+" y:"+player.getZ()+" z:"+player.getZ());
 		// StopMove smwl = new StopMove(player);
-		// getClient().getActiveChar().sendPacket(smwl);
-		// getClient().getActiveChar().broadcastPacket(smwl);
+		// getClient().getPlayer().sendPacket(smwl);
+		// getClient().getPlayer().broadcastPacket(smwl);
 		//
-		// StopRotation sr = new StopRotation(getClient().getActiveChar(),
+		// StopRotation sr = new StopRotation(getClient().getPlayer(),
 		// _heading);
-		// getClient().getActiveChar().sendPacket(sr);
-		// getClient().getActiveChar().broadcastPacket(sr);
+		// getClient().getPlayer().sendPacket(sr);
+		// getClient().getPlayer().broadcastPacket(sr);
 	}
 }

@@ -20,13 +20,13 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -66,7 +66,7 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -88,7 +88,7 @@ public final class Quarry extends AbstractNpcAI
 			}
 			case "TIME_LIMIT":
 			{
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(npc))
+				for (ZoneType zone : ZoneManager.getInstance().getZones(npc))
 				{
 					if (zone.getId() == 40108)
 					{
@@ -114,7 +114,7 @@ public final class Quarry extends AbstractNpcAI
 						{
 							if (getRandom(10000) < item.getChance())
 							{
-								npc.dropItem((L2PcInstance) npc.getTarget(), item.getId(), (int) (item.getCount() * Config.RATE_QUEST_DROP));
+								npc.dropItem((PlayerInstance) npc.getTarget(), item.getId(), (int) (item.getCount() * Config.RATE_QUEST_DROP));
 								break;
 							}
 						}
@@ -131,18 +131,18 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		npc.setAutoAttackable(false);
-		if (npc instanceof L2QuestGuardInstance)
+		if (npc instanceof QuestGuardInstance)
 		{
-			((L2QuestGuardInstance) npc).setPassive(true);
+			((QuestGuardInstance) npc).setPassive(true);
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (HellboundEngine.getInstance().getLevel() != 5)
 		{
@@ -152,18 +152,18 @@ public final class Quarry extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		npc.setAutoAttackable(false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public final String onEnterZone(L2Character character, L2ZoneType zone)
+	public final String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isAttackable())
+		if (creature.isAttackable())
 		{
-			final L2Attackable npc = (L2Attackable) character;
+			final Attackable npc = (Attackable) creature;
 			if (npc.getId() == SLAVE)
 			{
 				if (!npc.isDead() && !npc.isDecayed() && (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW))
@@ -183,6 +183,6 @@ public final class Quarry extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 }

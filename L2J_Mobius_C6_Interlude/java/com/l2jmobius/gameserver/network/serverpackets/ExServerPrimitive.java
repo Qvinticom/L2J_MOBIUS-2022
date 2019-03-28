@@ -25,7 +25,7 @@ import java.util.List;
  * <b>Note:</b> Names in points and lines are bugged they will appear even when not looking at them.
  * @author NosBit
  */
-public class ExServerPrimitive extends L2GameServerPacket
+public class ExServerPrimitive extends GameServerPacket
 {
 	private final String _name;
 	private final int _x;

@@ -20,9 +20,9 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -60,7 +60,7 @@ public class AdminPledge implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		
@@ -75,11 +75,11 @@ public class AdminPledge implements IAdminCommandHandler
 		{
 			case admin_pledge:
 			{
-				final L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
+				final WorldObject target = activeChar.getTarget();
+				PlayerInstance player = null;
+				if (target instanceof PlayerInstance)
 				{
-					player = (L2PcInstance) target;
+					player = (PlayerInstance) target;
 				}
 				else
 				{
@@ -124,7 +124,7 @@ public class AdminPledge implements IAdminCommandHandler
 							}
 							final long cet = player.getClanCreateExpiryTime();
 							player.setClanCreateExpiryTime(0);
-							final L2Clan clan = ClanTable.getInstance().createClan(player, parameter);
+							final Clan clan = ClanTable.getInstance().createClan(player, parameter);
 							if (clan != null)
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Clan " + parameter + " created. Leader: " + player.getName());
@@ -138,7 +138,7 @@ public class AdminPledge implements IAdminCommandHandler
 						case dismiss:
 						{
 							ClanTable.getInstance().destroyClan(player.getClanId());
-							final L2Clan clan = player.getClan();
+							final Clan clan = player.getClan();
 							if (clan == null)
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Clan disbanded.");
@@ -173,7 +173,7 @@ public class AdminPledge implements IAdminCommandHandler
 								showMainPage(activeChar);
 								return false;
 							}
-							L2Clan clan = player.getClan();
+							Clan clan = player.getClan();
 							if (clan.getLevel() < 5)
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Only clans of level 5 or above may receive reputation points.");
@@ -239,7 +239,7 @@ public class AdminPledge implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(PlayerInstance activeChar)
 	{
 		AdminHelpPage.showHelpPage(activeChar, "game_menu.htm");
 	}

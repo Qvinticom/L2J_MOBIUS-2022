@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class QuestStateManager
 {
@@ -54,7 +54,7 @@ public class QuestStateManager
 	 * @param player
 	 * @param state
 	 */
-	public void addQuestState(Quest quest, L2PcInstance player, byte state)
+	public void addQuestState(Quest quest, PlayerInstance player, byte state)
 	{
 		QuestState qs = getQuestState(player);
 		if (qs == null)
@@ -101,7 +101,7 @@ public class QuestStateManager
 	 * @param player
 	 * @return
 	 */
-	public QuestState getQuestState(L2PcInstance player)
+	public QuestState getQuestState(PlayerInstance player)
 	{
 		for (int i = 0; i < getQuestStates().size(); i++)
 		{

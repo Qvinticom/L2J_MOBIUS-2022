@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.network.clientpackets.attributechange;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -42,7 +42,7 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 	private int _newElementId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_consumeItemId = packet.readD();
 		_itemObjId = packet.readD();
@@ -51,23 +51,23 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PcInventory inventory = activeChar.getInventory();
-		final L2ItemInstance item = inventory.getItemByObjectId(_itemObjId);
+		final PlayerInventory inventory = player.getInventory();
+		final ItemInstance item = inventory.getItemByObjectId(_itemObjId);
 		
 		// attempting to destroy item
-		if (activeChar.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, activeChar, item) == null)
+		if (player.getInventory().destroyItemByItemId("ChangeAttribute", _consumeItemId, 1, player, item) == null)
 		{
 			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			client.sendPacket(ExChangeAttributeFail.STATIC);
-			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -82,15 +82,15 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		msg.addItemName(item);
 		msg.addAttribute(oldElementId);
 		msg.addAttribute(_newElementId);
-		activeChar.sendPacket(msg);
+		player.sendPacket(msg);
 		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
-		for (L2ItemInstance i : activeChar.getInventory().getItemsByItemId(_consumeItemId))
+		for (ItemInstance i : player.getInventory().getItemsByItemId(_consumeItemId))
 		{
 			iu.addItem(i);
 		}
-		activeChar.sendPacket(iu);
-		activeChar.broadcastUserInfo();
-		activeChar.sendPacket(ExChangeAttributeOk.STATIC);
+		player.sendPacket(iu);
+		player.broadcastUserInfo();
+		player.sendPacket(ExChangeAttributeOk.STATIC);
 	}
 }

@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -44,7 +44,7 @@ public final class OutpostDestroy extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final PlayerInstance player = info.getEffector().getActingPlayer();
 		if (!player.isClanLeader())
 		{
 			return;
@@ -52,7 +52,7 @@ public final class OutpostDestroy extends AbstractEffect
 		
 		if (TerritoryWarManager.getInstance().isTWInProgress())
 		{
-			final L2SiegeFlagInstance flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
+			final SiegeFlagInstance flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
 			if (flag != null)
 			{
 				flag.deleteMe();

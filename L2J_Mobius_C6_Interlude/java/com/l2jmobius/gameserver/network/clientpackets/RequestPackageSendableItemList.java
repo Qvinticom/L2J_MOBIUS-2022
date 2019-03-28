@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
 /**
  * Format: (c)d d: char object id (?)
  * @author -Wooden-
  */
-public final class RequestPackageSendableItemList extends L2GameClientPacket
+public final class RequestPackageSendableItemList extends GameClientPacket
 {
 	private int _objectID;
 	
@@ -38,7 +38,7 @@ public final class RequestPackageSendableItemList extends L2GameClientPacket
 	public void runImpl()
 	{
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -57,9 +57,9 @@ public final class RequestPackageSendableItemList extends L2GameClientPacket
 		}
 		
 		/*
-		 * L2PcInstance target = (L2PcInstance) L2World.getInstance().findObject(_objectID); if(target == null) return;
+		 * PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_objectID); if(target == null) return;
 		 */
-		final L2ItemInstance[] items = getClient().getActiveChar().getInventory().getAvailableItems(true);
+		final ItemInstance[] items = getClient().getPlayer().getInventory().getAvailableItems(true);
 		// build list...
 		sendPacket(new PackageSendableList(items, _objectID));
 	}

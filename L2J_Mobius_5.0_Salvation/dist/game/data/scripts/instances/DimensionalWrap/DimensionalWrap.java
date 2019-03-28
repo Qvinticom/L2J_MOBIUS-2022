@@ -24,11 +24,11 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -122,7 +122,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final Instance world = npc.getInstanceWorld();
@@ -144,9 +144,9 @@ public class DimensionalWrap extends AbstractInstance
 				}
 				else
 				{
-					final L2Party party = player.getParty();
-					final List<L2PcInstance> members = party.getMembers();
-					for (L2PcInstance member : members)
+					final Party party = player.getParty();
+					final List<PlayerInstance> members = party.getMembers();
+					for (PlayerInstance member : members)
 					{
 						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
@@ -289,7 +289,7 @@ public class DimensionalWrap extends AbstractInstance
 						break;
 					}
 					
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						if (n.getId() != EINSTER)
 						{
@@ -303,7 +303,7 @@ public class DimensionalWrap extends AbstractInstance
 						cancelQuestTimers("THRID_SPAWN");
 						startQuestTimer("START_STAGE", 5000, npc, null);
 					}
-					for (L2PcInstance pl : world.getPlayers())
+					for (PlayerInstance pl : world.getPlayers())
 					{
 						pl.teleToLocation(FIRST_TELEPORT, world.getTemplateId());
 					}
@@ -321,7 +321,7 @@ public class DimensionalWrap extends AbstractInstance
 						htmltext = "33975-05.html";
 						break;
 					}
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						if (n.getId() != EINSTER)
 						{
@@ -335,7 +335,7 @@ public class DimensionalWrap extends AbstractInstance
 						cancelQuestTimers("THRID_SPAWN");
 						startQuestTimer("START_STAGE", 5000, npc, null);
 					}
-					for (L2PcInstance pl : world.getPlayers())
+					for (PlayerInstance pl : world.getPlayers())
 					{
 						pl.teleToLocation(SECOND_TELEPORT, world.getTemplateId());
 					}
@@ -353,7 +353,7 @@ public class DimensionalWrap extends AbstractInstance
 						htmltext = "33975-05.html";
 						break;
 					}
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						if (n.getId() != EINSTER)
 						{
@@ -367,7 +367,7 @@ public class DimensionalWrap extends AbstractInstance
 						cancelQuestTimers("THRID_SPAWN");
 						startQuestTimer("START_STAGE", 5000, npc, null);
 					}
-					for (L2PcInstance pl : world.getPlayers())
+					for (PlayerInstance pl : world.getPlayers())
 					{
 						pl.teleToLocation(THRID_TELEPORT, world.getTemplateId());
 					}
@@ -385,7 +385,7 @@ public class DimensionalWrap extends AbstractInstance
 						htmltext = "33975-05.html";
 						break;
 					}
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						if (n.getId() != EINSTER)
 						{
@@ -399,7 +399,7 @@ public class DimensionalWrap extends AbstractInstance
 						cancelQuestTimers("THRID_SPAWN");
 						startQuestTimer("START_STAGE", 5000, npc, null);
 					}
-					for (L2PcInstance pl : world.getPlayers())
+					for (PlayerInstance pl : world.getPlayers())
 					{
 						pl.teleToLocation(TELEPORTS, world.getTemplateId());
 					}
@@ -417,7 +417,7 @@ public class DimensionalWrap extends AbstractInstance
 						htmltext = "33975-05.html";
 						break;
 					}
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						if (n.getId() != EINSTER)
 						{
@@ -431,7 +431,7 @@ public class DimensionalWrap extends AbstractInstance
 						cancelQuestTimers("THRID_SPAWN");
 						startQuestTimer("START_STAGE", 5000, npc, null);
 					}
-					for (L2PcInstance pl : world.getPlayers())
+					for (PlayerInstance pl : world.getPlayers())
 					{
 						pl.teleToLocation(FOURTH_TELEPORT, world.getTemplateId());
 					}
@@ -447,9 +447,9 @@ public class DimensionalWrap extends AbstractInstance
 				{
 					if (getRandom(100) < (_worldState / 2))
 					{
-						final L2Npc salamandra = addSpawn(_worldState < 17 ? DIMENSIONAL_SALAMANDRA : UNWORDLY_SALAMANDER, npc, false, 0, false, world.getId());
+						final Npc salamandra = addSpawn(_worldState < 17 ? DIMENSIONAL_SALAMANDRA : UNWORDLY_SALAMANDER, npc, false, 0, false, world.getId());
 						salamandra.setRunning();
-						L2World.getInstance().forEachVisibleObjectInRange(salamandra, L2PcInstance.class, 2500, p ->
+						World.getInstance().forEachVisibleObjectInRange(salamandra, PlayerInstance.class, 2500, p ->
 						{
 							if ((p != null) && !p.isDead())
 							{
@@ -491,7 +491,7 @@ public class DimensionalWrap extends AbstractInstance
 							_skilllevel = 4;
 						}
 						final Skill skill = SkillData.getInstance().getSkill(DIMENSIONAL_DARK_FORCES, _skilllevel);
-						for (L2PcInstance p : world.getPlayers())
+						for (PlayerInstance p : world.getPlayers())
 						{
 							if ((p != null) && !p.isDead())
 							{
@@ -539,7 +539,7 @@ public class DimensionalWrap extends AbstractInstance
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_SECONDS_HAVE_BEEN_ADDED_TO_THE_INSTANCE_ZONE_DURATION, ExShowScreenMessage.TOP_CENTER, 5000, true, String.valueOf(180)));
 					world.setDuration((int) ((world.getRemainingTime() / 60000) + 3));
 					startQuestTimer("START_STAGE", 8000, npc, null);
-					for (L2Npc n : world.getAliveNpcs())
+					for (Npc n : world.getAliveNpcs())
 					{
 						if (n.getId() != EINSTER)
 						{
@@ -554,7 +554,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -588,7 +588,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (_worldState == 20)
 		{
@@ -598,7 +598,7 @@ public class DimensionalWrap extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -626,14 +626,14 @@ public class DimensionalWrap extends AbstractInstance
 		return super.onSpawn(npc);
 	}
 	
-	public void CheckCrystallCount(Instance world, L2PcInstance player, L2Npc npc)
+	public void CheckCrystallCount(Instance world, PlayerInstance player, Npc npc)
 	{
 		boolean canStart = true;
-		for (L2PcInstance p : world.getPlayers())
+		for (PlayerInstance p : world.getPlayers())
 		{
 			if (p.getInventory().getInventoryItemCount(WARP_CRYSTAL, -1) < _count)
 			{
-				for (L2PcInstance ps : world.getPlayers())
+				for (PlayerInstance ps : world.getPlayers())
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(ps, "33975-03.html"));
@@ -650,7 +650,7 @@ public class DimensionalWrap extends AbstractInstance
 		}
 		
 		startQuestTimer("START_STAGE", 1000, npc, null);
-		for (L2PcInstance p : world.getPlayers())
+		for (PlayerInstance p : world.getPlayers())
 		{
 			takeItems(p, WARP_CRYSTAL, _count);
 		}

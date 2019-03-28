@@ -17,8 +17,8 @@
 package quests.Q00131_BirdInACage;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -50,10 +50,10 @@ public class Q00131_BirdInACage extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -65,14 +65,14 @@ public class Q00131_BirdInACage extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "32264-06.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -80,9 +80,9 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case "32264-07.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 					htmltext = event;
 				}
 				break;
@@ -91,7 +91,7 @@ public class Q00131_BirdInACage extends Quest
 			case "32264-10.html":
 			case "32264-11.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					htmltext = event;
 				}
@@ -99,10 +99,10 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case "32264-12.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					giveItems(player, ECHO_CRYSTAL_OF_FREE_THOUGHT, 1);
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -110,7 +110,7 @@ public class Q00131_BirdInACage extends Quest
 			case "32264-14.html":
 			case "32264-15.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					htmltext = event;
 				}
@@ -118,28 +118,28 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case "32264-17.html":
 			{
-				if (st.isCond(4) && hasQuestItems(player, PARMES_LETTER))
+				if (qs.isCond(4) && hasQuestItems(player, PARMES_LETTER))
 				{
 					takeItems(player, PARMES_LETTER, -1);
-					st.setCond(5);
+					qs.setCond(5);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32264-19.html":
 			{
-				if (st.isCond(5) && hasQuestItems(player, ECHO_CRYSTAL_OF_FREE_THOUGHT))
+				if (qs.isCond(5) && hasQuestItems(player, ECHO_CRYSTAL_OF_FREE_THOUGHT))
 				{
 					addExpAndSp(player, 250677, 25019);
 					giveItems(player, FIRE_STONE + getRandom(4), 4);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32271-03.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					htmltext = event;
 				}
@@ -147,10 +147,10 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case "32271-04.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveItems(player, PARMES_LETTER, 1);
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					player.setInstanceId(0);
 					player.teleToLocation(INSTANCE_EXIT, true);
 					htmltext = event;
@@ -162,12 +162,12 @@ public class Q00131_BirdInACage extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -186,7 +186,7 @@ public class Q00131_BirdInACage extends Quest
 			{
 				if (npc.getId() == KANIS)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -217,11 +217,11 @@ public class Q00131_BirdInACage extends Quest
 				}
 				else if (npc.getId() == PARME)
 				{
-					if (st.getCond() < 3)
+					if (qs.getCond() < 3)
 					{
 						htmltext = "32271-01.html";
 					}
-					else if (st.isCond(3))
+					else if (qs.isCond(3))
 					{
 						htmltext = "32271-02.html";
 					}

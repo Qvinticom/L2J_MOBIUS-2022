@@ -17,25 +17,25 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewWarehouseWithdrawList extends AbstractItemPacket
 {
-	private final L2ItemInstance[] _items;
+	private final ItemInstance[] _items;
 	private final String _playerName;
 	private final long _money;
 	
-	public GMViewWarehouseWithdrawList(L2PcInstance cha)
+	public GMViewWarehouseWithdrawList(PlayerInstance player)
 	{
-		_items = cha.getWarehouse().getItems();
-		_playerName = cha.getName();
-		_money = cha.getWarehouse().getAdena();
+		_items = player.getWarehouse().getItems();
+		_playerName = player.getName();
+		_money = player.getWarehouse().getAdena();
 	}
 	
-	public GMViewWarehouseWithdrawList(L2Clan clan)
+	public GMViewWarehouseWithdrawList(Clan clan)
 	{
 		_playerName = clan.getLeaderName();
 		_items = clan.getWarehouse().getItems();
@@ -49,7 +49,7 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket
 		packet.writeS(_playerName);
 		packet.writeQ(_money);
 		packet.writeH(_items.length);
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			writeItem(packet, item);
 			packet.writeD(item.getObjectId());

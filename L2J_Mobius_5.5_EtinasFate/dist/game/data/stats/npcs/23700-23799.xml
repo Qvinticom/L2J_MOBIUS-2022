@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23700" level="100" type="L2Monster" name="Altar Guardian">
+	<npc id="23700" level="100" type="Monster" name="Altar Guardian">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -19,7 +19,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23701" level="100" type="L2Monster" name="Knight Guard" title="Dragonclaw Clan">
+	<npc id="23701" level="100" type="Monster" name="Knight Guard" title="Dragonclaw Clan">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -38,7 +38,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23702" level="101" type="L2Npc" name="L2Monster" title="Dragonclaw Royal Guard">
+	<npc id="23702" level="101" type="Npc" name="L2Monster" title="Dragonclaw Royal Guard">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="946520799" sp="1893101" />
@@ -69,7 +69,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23703" level="101" type="L2Monster" name="Ice Knight">
+	<npc id="23703" level="101" type="Monster" name="Ice Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="3117951155" sp="6235973" />
@@ -104,7 +104,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23704" level="101" type="L2Monster" name="Ifrit" title="Master of Flames">
+	<npc id="23704" level="101" type="Monster" name="Ifrit" title="Master of Flames">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="1019330130" sp="2038669" />
@@ -140,7 +140,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23705" level="101" type="L2Npc" name="L2Monster" title="Master of Flames">
+	<npc id="23705" level="101" type="Npc" name="L2Monster" title="Master of Flames">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1019330130" sp="2038669" />
@@ -176,7 +176,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23706" level="100" type="L2Monster" name="Kelbim's Follower">
+	<npc id="23706" level="100" type="Monster" name="Kelbim's Follower">
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -195,7 +195,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23707" level="100" type="L2Monster" name="Kelbim's Follower">
+	<npc id="23707" level="100" type="Monster" name="Kelbim's Follower">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -214,7 +214,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23708" level="100" type="L2Monster" name="Kelbim's Follower">
+	<npc id="23708" level="100" type="Monster" name="Kelbim's Follower">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -233,7 +233,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23709" level="100" type="L2Monster" name="Flame Scarab">
+	<npc id="23709" level="100" type="Monster" name="Flame Scarab">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="499622600" sp="999300" />
@@ -257,7 +257,7 @@
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="23710" level="100" type="L2Monster" name="Knight Guardian">
+	<npc id="23710" level="100" type="Monster" name="Knight Guardian">
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
 		<acquire exp="463935300" sp="927900" />
@@ -276,7 +276,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23711" level="100" type="L2Monster" name="Altar Guardian Soldier">
+	<npc id="23711" level="100" type="Monster" name="Altar Guardian Soldier">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -295,7 +295,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23712" level="100" type="L2Monster" name="Altar Guardian Archer">
+	<npc id="23712" level="100" type="Monster" name="Altar Guardian Archer">
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" /> 
@@ -315,7 +315,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23713" level="100" type="L2Monster" name="Altar Guardian Wizard">
+	<npc id="23713" level="100" type="Monster" name="Altar Guardian Wizard">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -334,7 +334,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23714" level="85" type="L2Npc" name="Cyclone" title="Typhoon's Guardian">
+	<npc id="23714" level="85" type="Npc" name="Cyclone" title="Typhoon's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -351,7 +351,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23715" level="85" type="L2Npc" name="Hurricane" title="Typhoon's Guardian">
+	<npc id="23715" level="85" type="Npc" name="Hurricane" title="Typhoon's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -368,7 +368,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23716" level="100" type="L2Monster" name="Wild Hog Cannon">
+	<npc id="23716" level="100" type="Monster" name="Wild Hog Cannon">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -387,7 +387,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="23717" level="100" type="L2Monster" name="Siege Golem">
+	<npc id="23717" level="100" type="Monster" name="Siege Golem">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -406,7 +406,7 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="23718" level="100" type="L2Monster" name="Glacier Golem">
+	<npc id="23718" level="100" type="Monster" name="Glacier Golem">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="191032200" sp="382100" />
@@ -429,7 +429,7 @@
 			<height normal="37.4" />
 		</collision>
 	</npc>
-	<npc id="23719" level="100" type="L2Monster" name="Frozen Knight">
+	<npc id="23719" level="100" type="Monster" name="Frozen Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -457,7 +457,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23720" level="100" type="L2Monster" name="Panthera">
+	<npc id="23720" level="100" type="Monster" name="Panthera">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -495,7 +495,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
+	<npc id="23721" level="100" type="Npc" name="Maze Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -531,7 +531,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="23722" level="100" type="L2Monster" name="Frost Buffalo">
+	<npc id="23722" level="100" type="Monster" name="Frost Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -564,7 +564,7 @@
 			<height normal="34.7" />
 		</collision>
 	</npc>
-	<npc id="23723" level="100" type="L2Npc" name="Frost Ursus">
+	<npc id="23723" level="100" type="Npc" name="Frost Ursus">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -601,7 +601,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23724" level="100" type="L2Monster" name="Buffalo">
+	<npc id="23724" level="100" type="Monster" name="Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -639,7 +639,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="23725" level="100" type="L2Monster" name="Ursus">
+	<npc id="23725" level="100" type="Monster" name="Ursus">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -677,7 +677,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23726" level="100" type="L2Monster" name="Frost Glacier Golem">
+	<npc id="23726" level="100" type="Monster" name="Frost Glacier Golem">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="1528257600" sp="3056600" />
@@ -703,7 +703,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="23727" level="100" type="L2Monster" name="Shaqrima Bathus">
+	<npc id="23727" level="100" type="Monster" name="Shaqrima Bathus">
 		<race>GIANT</race>
 		<acquire exp="666656799" sp="666700" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -757,7 +757,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23728" level="100" type="L2Monster" name="Shaqrima Carcass">
+	<npc id="23728" level="100" type="Monster" name="Shaqrima Carcass">
 		<race>GIANT</race>
 		<acquire exp="666656799" sp="666700" />
 		<equipment rhand="15304" />
@@ -806,7 +806,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23729" level="100" type="L2Monster" name="Shaqrima Kshana">
+	<npc id="23729" level="100" type="Monster" name="Shaqrima Kshana">
 		<race>GIANT</race>
 		<acquire exp="666656799" sp="666700" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -855,7 +855,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23730" level="101" type="L2Monster" name="Om Bathus">
+	<npc id="23730" level="101" type="Monster" name="Om Bathus">
 		<race>GIANT</race>
 		<acquire exp="593525905" sp="593596" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -905,7 +905,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23731" level="101" type="L2Monster" name="Om Carcass">
+	<npc id="23731" level="101" type="Monster" name="Om Carcass">
 		<race>GIANT</race>
 		<acquire exp="593525905" sp="593596" />
 		<equipment rhand="15304" />
@@ -953,7 +953,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23732" level="101" type="L2Monster" name="Om Kshana">
+	<npc id="23732" level="101" type="Monster" name="Om Kshana">
 		<race>GIANT</race>
 		<acquire exp="593525905" sp="593596" />
 		<stats>
@@ -1001,7 +1001,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23733" level="100" type="L2Monster" name="Lesser Giant Warrior">
+	<npc id="23733" level="100" type="Monster" name="Lesser Giant Warrior">
 		<race>GIANT</race>
 		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="46741" />
@@ -1045,7 +1045,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23734" level="100" type="L2Monster" name="Lesser Giant Wizard">
+	<npc id="23734" level="100" type="Monster" name="Lesser Giant Wizard">
 		<race>GIANT</race>
 		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="46742" />
@@ -1090,7 +1090,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23735" level="100" type="L2Monster" name="Captive Familiar Spirit">
+	<npc id="23735" level="100" type="Monster" name="Captive Familiar Spirit">
 		<race>DEMONIC</race>
 		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1134,7 +1134,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23736" level="100" type="L2Monster" name="Captive Hell Demon">
+	<npc id="23736" level="100" type="Monster" name="Captive Hell Demon">
 		<race>DEMONIC</race>
 		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1177,7 +1177,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23737" level="100" type="L2Monster" name="Captive Succubus">
+	<npc id="23737" level="100" type="Monster" name="Captive Succubus">
 		<race>DEMONIC</race>
 		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1220,7 +1220,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23738" level="100" type="L2Monster" name="Captive Phantom">
+	<npc id="23738" level="100" type="Monster" name="Captive Phantom">
 		<race>DEMONIC</race>
 		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1263,7 +1263,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23739" level="101" type="L2Monster" name="Marka" title="Halisha's Henchman">
+	<npc id="23739" level="101" type="Monster" name="Marka" title="Halisha's Henchman">
 		<race>DEMONIC</race>
 		<acquire exp="395685670" sp="395696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1309,7 +1309,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23740" level="101" type="L2Monster" name="Schlien" title="Halisha's Henchman">
+	<npc id="23740" level="101" type="Monster" name="Schlien" title="Halisha's Henchman">
 		<race>DEMONIC</race>
 		<acquire exp="395685670" sp="395696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1355,7 +1355,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23741" level="101" type="L2Monster" name="Berimah" title="Halisha's Henchman">
+	<npc id="23741" level="101" type="Monster" name="Berimah" title="Halisha's Henchman">
 		<race>DEMONIC</race>
 		<acquire exp="395685670" sp="395696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1401,7 +1401,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23742" level="101" type="L2Monster" name="Naia Bathus" title="Demons Foreman">
+	<npc id="23742" level="101" type="Monster" name="Naia Bathus" title="Demons Foreman">
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1445,7 +1445,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23743" level="101" type="L2Monster" name="Naia Carcass" title="Demons Foreman">
+	<npc id="23743" level="101" type="Monster" name="Naia Carcass" title="Demons Foreman">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
@@ -1491,7 +1491,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23744" level="101" type="L2Monster" name="Naia Kshana" title="Demons Foreman">
+	<npc id="23744" level="101" type="Monster" name="Naia Kshana" title="Demons Foreman">
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1535,7 +1535,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23745" level="101" type="L2Monster" name="Naia Lucas" title="Demons Foreman">
+	<npc id="23745" level="101" type="Monster" name="Naia Lucas" title="Demons Foreman">
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
 		<equipment rhand="15304" />
@@ -1580,7 +1580,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23746" level="101" type="L2Monster" name="Recovering Lesser Giant Warrior">
+	<npc id="23746" level="101" type="Monster" name="Recovering Lesser Giant Warrior">
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
 		<equipment rhand="46741" />
@@ -1625,7 +1625,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23747" level="101" type="L2Monster" name="Recovering Lesser Giant Wizard">
+	<npc id="23747" level="101" type="Monster" name="Recovering Lesser Giant Wizard">
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
 		<equipment rhand="46742" />
@@ -1669,7 +1669,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23748" level="100" type="L2Monster" name="Lesser Giant Soldier">
+	<npc id="23748" level="100" type="Monster" name="Lesser Giant Soldier">
 		<race>GIANT</race>
 		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="4028" />
@@ -1713,7 +1713,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23749" level="100" type="L2Monster" name="Root of the Lesser Giant">
+	<npc id="23749" level="100" type="Monster" name="Root of the Lesser Giant">
 		<race>CONSTRUCT</race>
 		<acquire exp="65181100" sp="65199" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1757,7 +1757,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23750" level="100" type="L2Monster" name="Shaqrima Lucas">
+	<npc id="23750" level="100" type="Monster" name="Shaqrima Lucas">
 		<race>GIANT</race>
 		<acquire exp="666656799" sp="666700" />
 		<equipment rhand="15304" />
@@ -1808,7 +1808,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23751" level="101" type="L2Monster" name="Om Lucas">
+	<npc id="23751" level="101" type="Monster" name="Om Lucas">
 		<race>GIANT</race>
 		<acquire exp="593525905" sp="593596" />
 		<equipment rhand="15304" />
@@ -1856,7 +1856,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23752" level="100" type="L2Monster" name="Lesser Giant Archer">
+	<npc id="23752" level="100" type="Monster" name="Lesser Giant Archer">
 		<race>GIANT</race>
 		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="4028" />
@@ -1900,7 +1900,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23753" level="100" type="L2Monster" name="Lesser Giant Support Troop">
+	<npc id="23753" level="100" type="Monster" name="Lesser Giant Support Troop">
 		<race>GIANT</race>
 		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="4028" />
@@ -1944,7 +1944,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23754" level="100" type="L2Monster" name="Essence of the Lesser Giant">
+	<npc id="23754" level="100" type="Monster" name="Essence of the Lesser Giant">
 		<race>CONSTRUCT</race>
 		<acquire exp="65181100" sp="65199" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1988,7 +1988,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23755" level="101" type="L2Monster" name="Wandering Dead of the Dimension">
+	<npc id="23755" level="101" type="Monster" name="Wandering Dead of the Dimension">
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2016,7 +2016,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23757" level="101" type="L2Monster" name="Lost Soul of the Dimension">
+	<npc id="23757" level="101" type="Monster" name="Lost Soul of the Dimension">
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2044,7 +2044,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23759" level="101" type="L2Monster" name="Roaming Vengeance of the Dimension">
+	<npc id="23759" level="101" type="Monster" name="Roaming Vengeance of the Dimension">
 		<race>HUMANOID</race>
 		<acquire exp="27926665" sp="27950" />
 		<equipment rhand="10128" />
@@ -2073,7 +2073,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23760" level="98" type="L2Monster" name="Dimensional Vagabond" title="Lost">
+	<npc id="23760" level="98" type="Monster" name="Dimensional Vagabond" title="Lost">
 		<race>UNDEAD</race>
 		<acquire exp="213022290" sp="213112" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2101,7 +2101,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23761" level="98" type="L2Monster" name="Dimension Dissolver" title="Master of the Rift">
+	<npc id="23761" level="98" type="Monster" name="Dimension Dissolver" title="Master of the Rift">
 		<race>HUMANOID</race>
 		<acquire exp="2130291283" sp="2130359" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2129,7 +2129,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23762" level="85" type="L2Npc" name="Fairy Knight">
+	<npc id="23762" level="85" type="Npc" name="Fairy Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2148,7 +2148,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23763" level="85" type="L2Npc" name="Fairy Knight" title="Enraged">
+	<npc id="23763" level="85" type="Npc" name="Fairy Knight" title="Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2167,7 +2167,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23764" level="85" type="L2Npc" name="Fairy Rogue">
+	<npc id="23764" level="85" type="Npc" name="Fairy Rogue">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2186,7 +2186,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23765" level="85" type="L2Npc" name="Fairy Rogue" title="Enraged">
+	<npc id="23765" level="85" type="Npc" name="Fairy Rogue" title="Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2205,7 +2205,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23766" level="85" type="L2Npc" name="Fairy Warrior">
+	<npc id="23766" level="85" type="Npc" name="Fairy Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2224,7 +2224,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23767" level="85" type="L2Npc" name="Fairy Warrior" title="Enraged">
+	<npc id="23767" level="85" type="Npc" name="Fairy Warrior" title="Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2243,7 +2243,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23768" level="85" type="L2Npc" name="Satyr Summoner">
+	<npc id="23768" level="85" type="Npc" name="Satyr Summoner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2262,7 +2262,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23769" level="85" type="L2Npc" name="Satyr Summoner" title="Enraged">
+	<npc id="23769" level="85" type="Npc" name="Satyr Summoner" title="Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2281,7 +2281,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23770" level="85" type="L2Npc" name="Satyr Witch">
+	<npc id="23770" level="85" type="Npc" name="Satyr Witch">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2300,7 +2300,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23771" level="85" type="L2Npc" name="Satyr Witch" title="Enraged">
+	<npc id="23771" level="85" type="Npc" name="Satyr Witch" title="Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2319,7 +2319,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23772" level="85" type="L2Npc" name="Satyr Wizard">
+	<npc id="23772" level="85" type="Npc" name="Satyr Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2338,7 +2338,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23773" level="85" type="L2Npc" name="Satyr Wizard" title="Enraged">
+	<npc id="23773" level="85" type="Npc" name="Satyr Wizard" title="Enraged">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2357,7 +2357,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23774" level="102" type="L2Monster" name="Delta Bathus">
+	<npc id="23774" level="102" type="Monster" name="Delta Bathus">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16653" level="1" />
@@ -2416,7 +2416,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23775" level="102" type="L2Monster" name="Delta Carcass">
+	<npc id="23775" level="102" type="Monster" name="Delta Carcass">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16653" level="1" />
@@ -2475,7 +2475,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23776" level="102" type="L2Monster" name="Delta Kshana">
+	<npc id="23776" level="102" type="Monster" name="Delta Kshana">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16655" level="1" />
@@ -2535,7 +2535,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23777" level="103" type="L2Monster" name="Royal Templar">
+	<npc id="23777" level="103" type="Monster" name="Royal Templar">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16657" level="1" />
@@ -2594,7 +2594,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23778" level="103" type="L2Monster" name="Royal Shooter">
+	<npc id="23778" level="103" type="Monster" name="Royal Shooter">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16659" level="1" />
@@ -2653,7 +2653,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23779" level="103" type="L2Monster" name="Royal Wizard">
+	<npc id="23779" level="103" type="Monster" name="Royal Wizard">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16662" level="1" />
@@ -2712,7 +2712,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23780" level="103" type="L2Monster" name="Royal Templar Colonel">
+	<npc id="23780" level="103" type="Monster" name="Royal Templar Colonel">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16665" level="1" />
@@ -2773,7 +2773,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23781" level="103" type="L2Monster" name="Royal Sharpshooter">
+	<npc id="23781" level="103" type="Monster" name="Royal Sharpshooter">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16667" level="1" />
@@ -2833,7 +2833,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23782" level="103" type="L2Monster" name="Royal Archmage">
+	<npc id="23782" level="103" type="Monster" name="Royal Archmage">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16670" level="1" />
@@ -2895,7 +2895,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23783" level="103" type="L2Monster" name="Royal Gatekeeper">
+	<npc id="23783" level="103" type="Monster" name="Royal Gatekeeper">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16674" level="1" />
@@ -2940,7 +2940,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23784" level="100" type="L2Monster" name="Dark Wizard of the Magic Circle">
+	<npc id="23784" level="100" type="Monster" name="Dark Wizard of the Magic Circle">
 		<race>DEMONIC</race>
 		<acquire exp="48805500" sp="48900" />
 		<equipment rhand="17332" />
@@ -2971,7 +2971,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23785" level="100" type="L2Monster" name="Scorpion King">
+	<npc id="23785" level="100" type="Monster" name="Scorpion King">
 		<race>DEMONIC</race>
 		<acquire exp="411732500" sp="411800" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3007,7 +3007,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23786" level="102" type="L2Monster" name="Nymph Rose" title="Contaminated">
+	<npc id="23786" level="102" type="Monster" name="Nymph Rose" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3049,7 +3049,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23787" level="102" type="L2Monster" name="Nymph Lily" title="Contaminated">
+	<npc id="23787" level="102" type="Monster" name="Nymph Lily" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3091,7 +3091,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23788" level="102" type="L2Monster" name="Nymph Tulip" title="Contaminated">
+	<npc id="23788" level="102" type="Monster" name="Nymph Tulip" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3131,7 +3131,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23789" level="102" type="L2Monster" name="Nymph Cosmos" title="Contaminated">
+	<npc id="23789" level="102" type="Monster" name="Nymph Cosmos" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3171,7 +3171,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23790" level="102" type="L2Monster" name="Kimerian's Shadows" title="Fairy Leader">
+	<npc id="23790" level="102" type="Monster" name="Kimerian's Shadows" title="Fairy Leader">
 		<race>FAIRY</race>
 		<acquire exp="82709042" sp="198501" />
 		<stats>
@@ -3211,7 +3211,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23790" level="85" type="L2Npc" name="Kimerian's Shadows" title="Fairy Leader">
+	<npc id="23790" level="85" type="Npc" name="Kimerian's Shadows" title="Fairy Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3228,7 +3228,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="23791" level="85" type="L2Npc" name="Bathus" title="Marred">
+	<npc id="23791" level="85" type="Npc" name="Bathus" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3245,7 +3245,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="23792" level="85" type="L2Npc" name="Carcass" title="Marred">
+	<npc id="23792" level="85" type="Npc" name="Carcass" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3263,7 +3263,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="23793" level="85" type="L2Npc" name="Kshana" title="Marred">
+	<npc id="23793" level="85" type="Npc" name="Kshana" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3280,7 +3280,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="23794" level="85" type="L2Npc" name="Lucas" title="Marred">
+	<npc id="23794" level="85" type="Npc" name="Lucas" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3298,7 +3298,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="23795" level="85" type="L2Npc" name="Viper Cherkia" title="Oasis Mirage">
+	<npc id="23795" level="85" type="Npc" name="Viper Cherkia" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3315,7 +3315,7 @@
 			<height normal="97" />
 		</collision>
 	</npc>
-	<npc id="23796" level="85" type="L2Npc" name="Viper Cherkia" title="Oasis Mirage">
+	<npc id="23796" level="85" type="Npc" name="Viper Cherkia" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3332,7 +3332,7 @@
 			<height normal="97" />
 		</collision>
 	</npc>
-	<npc id="23797" level="85" type="L2Npc" name="El Fera">
+	<npc id="23797" level="85" type="Npc" name="El Fera">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3349,7 +3349,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="23798" level="102" type="L2Monster" name="Delta Bathus" title="Superion Scout">
+	<npc id="23798" level="102" type="Monster" name="Delta Bathus" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="908048947" sp="908061" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3400,7 +3400,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23799" level="102" type="L2Monster" name="Delta Carcass" title="Superion Scout">
+	<npc id="23799" level="102" type="Monster" name="Delta Carcass" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="908048947" sp="908061" />
 		<equipment rhand="15304" />

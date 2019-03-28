@@ -19,15 +19,15 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.data.xml.impl.FishingRodsData;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.fishing.L2Fishing;
-import com.l2jmobius.gameserver.model.fishing.L2FishingRod;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.fishing.Fishing;
+import com.l2jmobius.gameserver.model.fishing.FishingRod;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -59,22 +59,22 @@ public final class Reeling extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.FISHING;
+		return EffectType.FISHING;
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character activeChar = info.getEffector();
-		if (!activeChar.isPlayer())
+		final Creature creature = info.getEffector();
+		if (!creature.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
-		final L2Fishing fish = player.getFishCombat();
+		final PlayerInstance player = creature.getActingPlayer();
+		final Fishing fish = player.getFishCombat();
 		if (fish == null)
 		{
 			// Reeling skill is available only while fishing
@@ -82,19 +82,19 @@ public final class Reeling extends AbstractEffect
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		final L2Weapon weaponItem = player.getActiveWeaponItem();
-		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+		final Weapon weaponItem = player.getActiveWeaponItem();
+		final ItemInstance weaponInst = creature.getActiveWeaponInstance();
 		if ((weaponInst == null) || (weaponItem == null))
 		{
 			return;
 		}
 		int SS = 1;
 		int pen = 0;
-		if (activeChar.isChargedShot(ShotType.FISH_SOULSHOTS))
+		if (creature.isChargedShot(ShotType.FISH_SOULSHOTS))
 		{
 			SS = 2;
 		}
-		final L2FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
+		final FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
 		final double gradeBonus = fishingRod.getFishingRodLevel() * 0.1; // TODO: Check this formula (is guessed)
 		int dmg = (int) ((fishingRod.getFishingRodDamage() + player.calcStat(Stats.FISHING_EXPERTISE, 1, null, null) + _power) * gradeBonus * SS);
 		// Penalty 5% less damage dealt

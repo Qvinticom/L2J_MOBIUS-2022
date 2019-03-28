@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExEnchantSkillInfo extends L2GameServerPacket
+public class ExEnchantSkillInfo extends GameServerPacket
 {
 	private final List<Req> _reqs;
 	private final int _id;

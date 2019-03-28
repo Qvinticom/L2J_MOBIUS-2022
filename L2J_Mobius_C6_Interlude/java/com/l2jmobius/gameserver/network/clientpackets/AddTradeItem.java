@@ -18,16 +18,16 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
 import com.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 
-public final class AddTradeItem extends L2GameClientPacket
+public final class AddTradeItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
 	private int _tradeId;
@@ -49,7 +49,7 @@ public final class AddTradeItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -64,7 +64,7 @@ public final class AddTradeItem extends L2GameClientPacket
 		}
 		
 		// Check Partner and ocbjectId
-		if ((trade.getPartner() == null) || (L2World.getInstance().findObject(trade.getPartner().getObjectId()) == null))
+		if ((trade.getPartner() == null) || (World.getInstance().findObject(trade.getPartner().getObjectId()) == null))
 		{
 			// Trade partner not found, cancel trade
 			if (trade.getPartner() != null)

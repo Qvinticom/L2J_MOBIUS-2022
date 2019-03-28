@@ -21,23 +21,23 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
-import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.FishingZone;
+import com.l2jmobius.gameserver.model.zone.type.WaterZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -62,23 +62,23 @@ public final class Fishing extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.FISHING_START;
+		return EffectType.FISHING_START;
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2Character activeChar = info.getEffector();
-		if (!activeChar.isPlayer())
+		final Creature creature = info.getEffector();
+		if (!creature.isPlayer())
 		{
 			return;
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		
-		if (!Config.ALLOW_FISHING && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		if (!Config.ALLOW_FISHING && !player.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS))
 		{
 			player.sendMessage("Fishing is disabled!");
 			return;
@@ -100,7 +100,7 @@ public final class Fishing extends AbstractEffect
 		}
 		
 		// check for equiped fishing rod
-		final L2Weapon equipedWeapon = player.getActiveWeaponItem();
+		final Weapon equipedWeapon = player.getActiveWeaponItem();
 		if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
@@ -108,7 +108,7 @@ public final class Fishing extends AbstractEffect
 		}
 		
 		// check for equiped lure
-		final L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
 		{
 			player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
@@ -143,17 +143,17 @@ public final class Fishing extends AbstractEffect
 		int baitY = (int) (player.getY() + (sin * distance));
 		
 		// search for fishing and water zone
-		L2FishingZone fishingZone = null;
-		L2WaterZone waterZone = null;
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+		FishingZone fishingZone = null;
+		WaterZone waterZone = null;
+		for (ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 		{
-			if (zone instanceof L2FishingZone)
+			if (zone instanceof FishingZone)
 			{
-				fishingZone = (L2FishingZone) zone;
+				fishingZone = (FishingZone) zone;
 			}
-			else if (zone instanceof L2WaterZone)
+			else if (zone instanceof WaterZone)
 			{
-				waterZone = (L2WaterZone) zone;
+				waterZone = (WaterZone) zone;
 			}
 			
 			if ((fishingZone != null) && (waterZone != null))
@@ -173,15 +173,15 @@ public final class Fishing extends AbstractEffect
 				// search for fishing and water zone again
 				fishingZone = null;
 				waterZone = null;
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+				for (ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 				{
-					if (zone instanceof L2FishingZone)
+					if (zone instanceof FishingZone)
 					{
-						fishingZone = (L2FishingZone) zone;
+						fishingZone = (FishingZone) zone;
 					}
-					else if (zone instanceof L2WaterZone)
+					else if (zone instanceof WaterZone)
 					{
-						waterZone = (L2WaterZone) zone;
+						waterZone = (WaterZone) zone;
 					}
 					
 					if ((fishingZone != null) && (waterZone != null))
@@ -223,7 +223,7 @@ public final class Fishing extends AbstractEffect
 	 * @param waterZone the water zone
 	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
 	 */
-	private static int computeBaitZ(L2PcInstance player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone)
+	private static int computeBaitZ(PlayerInstance player, int baitX, int baitY, FishingZone fishingZone, WaterZone waterZone)
 	{
 		if ((fishingZone == null))
 		{

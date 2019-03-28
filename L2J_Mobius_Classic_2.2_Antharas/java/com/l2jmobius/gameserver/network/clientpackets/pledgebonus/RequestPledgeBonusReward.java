@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets.pledgebonus;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
+import com.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
@@ -35,16 +35,16 @@ public class RequestPledgeBonusReward implements IClientIncomingPacket
 	private int _type;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_type = packet.readC();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null))
 		{
 			return;
@@ -55,9 +55,9 @@ public class RequestPledgeBonusReward implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		final ClanRewardType type = ClanRewardType.values()[_type];
-		final L2ClanMember member = clan.getClanMember(player.getObjectId());
+		final ClanMember member = clan.getClanMember(player.getObjectId());
 		if (clan.canClaimBonusReward(player, type))
 		{
 			final ClanRewardBonus bonus = type.getAvailableBonus(player.getClan());

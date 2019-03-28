@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 
 /**
  * @author -Wooden-
  */
-public class PledgeShowMemberListUpdate extends L2GameServerPacket
+public class PledgeShowMemberListUpdate extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _pledgeType;
 	private int _hasSponsor;
 	private final String _name;
@@ -34,32 +34,32 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 	private final int _objectId;
 	private int _isOnline;
 	
-	public PledgeShowMemberListUpdate(L2PcInstance player)
+	public PledgeShowMemberListUpdate(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		_pledgeType = player.getPledgeType();
-		if (_pledgeType == L2Clan.SUBUNIT_ACADEMY)
+		if (_pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
-			_hasSponsor = _activeChar.getSponsor() != 0 ? 1 : 0;
+			_hasSponsor = _player.getSponsor() != 0 ? 1 : 0;
 		}
-		else if (_activeChar.isOnline() == 1)
+		else if (_player.isOnline() == 1)
 		{
-			_hasSponsor = _activeChar.isClanLeader() ? 1 : 0;
+			_hasSponsor = _player.isClanLeader() ? 1 : 0;
 		}
 		else
 		{
 			_hasSponsor = 0;
 		}
-		_name = _activeChar.getName();
-		_level = _activeChar.getLevel();
-		_classId = _activeChar.getClassId().getId();
-		_objectId = _activeChar.getObjectId();
-		_isOnline = _activeChar.isOnline();
+		_name = _player.getName();
+		_level = _player.getLevel();
+		_classId = _player.getClassId().getId();
+		_objectId = _player.getObjectId();
+		_isOnline = _player.isOnline();
 	}
 	
-	public PledgeShowMemberListUpdate(L2ClanMember player)
+	public PledgeShowMemberListUpdate(ClanMember player)
 	{
-		_activeChar = player.getPlayerInstance();
+		_player = player.getPlayerInstance();
 		_name = player.getName();
 		_level = player.getLevel();
 		_classId = player.getClassId();
@@ -73,13 +73,13 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 			_isOnline = 0;
 		}
 		_pledgeType = player.getPledgeType();
-		if (_pledgeType == L2Clan.SUBUNIT_ACADEMY)
+		if (_pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
-			_hasSponsor = _activeChar.getSponsor() != 0 ? 1 : 0;
+			_hasSponsor = _player.getSponsor() != 0 ? 1 : 0;
 		}
 		else if (player.isOnline())
 		{
-			_hasSponsor = _activeChar.isClanLeader() ? 1 : 0;
+			_hasSponsor = _player.isClanLeader() ? 1 : 0;
 		}
 		else
 		{

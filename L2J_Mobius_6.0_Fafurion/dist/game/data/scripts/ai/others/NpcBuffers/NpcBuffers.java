@@ -17,8 +17,8 @@
 package ai.others.NpcBuffers;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -42,13 +42,13 @@ public final class NpcBuffers extends AbstractNpcAI
 	
 	// TODO: Cleanup once npc rework is finished and default html is configurable.
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return null;
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final NpcBufferData data = _npcBuffers.getNpcBuffer(npc.getId());
 		for (NpcBufferSkillData skill : data.getSkills())

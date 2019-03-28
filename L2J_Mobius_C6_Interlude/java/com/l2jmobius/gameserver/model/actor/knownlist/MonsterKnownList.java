@@ -18,34 +18,34 @@ package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class MonsterKnownList extends AttackableKnownList
 {
-	public MonsterKnownList(L2MonsterInstance activeChar)
+	public MonsterKnownList(MonsterInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object)
+	public boolean addKnownObject(WorldObject object)
 	{
 		return addKnownObject(object, null);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object, L2Character dropper)
+	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
 		if (!super.addKnownObject(object, dropper))
 		{
 			return false;
 		}
 		
-		// Set the L2MonsterInstance Intention to AI_INTENTION_ACTIVE if the state was AI_INTENTION_IDLE
-		if ((object instanceof L2PcInstance) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		// Set the MonsterInstance Intention to AI_INTENTION_ACTIVE if the state was AI_INTENTION_IDLE
+		if ((object instanceof PlayerInstance) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
 			getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 		}
@@ -54,27 +54,27 @@ public class MonsterKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public boolean removeKnownObject(L2Object object)
+	public boolean removeKnownObject(WorldObject object)
 	{
 		if (!super.removeKnownObject(object))
 		{
 			return false;
 		}
 		
-		if (!(object instanceof L2Character))
+		if (!(object instanceof Creature))
 		{
 			return true;
 		}
 		
 		if (getActiveChar().hasAI())
 		{
-			// Notify the L2MonsterInstance AI with EVT_FORGET_OBJECT
+			// Notify the MonsterInstance AI with EVT_FORGET_OBJECT
 			getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
 		}
 		
 		if (getActiveChar().isVisible() && getKnownPlayers().isEmpty())
 		{
-			// Clear the _aggroList of the L2MonsterInstance
+			// Clear the _aggroList of the MonsterInstance
 			getActiveChar().clearAggroList();
 		}
 		
@@ -82,8 +82,8 @@ public class MonsterKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final L2MonsterInstance getActiveChar()
+	public final MonsterInstance getActiveChar()
 	{
-		return (L2MonsterInstance) super.getActiveChar();
+		return (MonsterInstance) super.getActiveChar();
 	}
 }

@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Objects;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExMultiPartyCommandChannelInfo implements IClientOutgoingPacket
 {
-	private final L2CommandChannel _channel;
+	private final CommandChannel _channel;
 	
-	public ExMultiPartyCommandChannelInfo(L2CommandChannel channel)
+	public ExMultiPartyCommandChannelInfo(CommandChannel channel)
 	{
 		Objects.requireNonNull(channel);
 		_channel = channel;
@@ -46,7 +46,7 @@ public class ExMultiPartyCommandChannelInfo implements IClientOutgoingPacket
 		packet.writeD(_channel.getMemberCount());
 		
 		packet.writeD(_channel.getPartys().size());
-		for (L2Party p : _channel.getPartys())
+		for (Party p : _channel.getPartys())
 		{
 			packet.writeS(p.getLeader().getName());
 			packet.writeD(p.getLeaderObjectId());

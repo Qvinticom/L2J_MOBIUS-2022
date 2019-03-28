@@ -171,14 +171,6 @@
 		<icon>icon.skill11402</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
-		<passiveConditions>
-			<condition name="OpCheckAbnormal">
-				<type>STUN</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
-				<L2Character>caster</L2Character>
-			</condition>
-		</passiveConditions>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>

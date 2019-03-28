@@ -21,13 +21,13 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulStone;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -44,7 +44,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 	private EnsoulItemOption[] _options;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemObjectId = packet.readD();
 		final int options = packet.readC();
@@ -68,9 +68,9 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -116,7 +116,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
 		if (item == null)
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul item without having it!");
@@ -159,7 +159,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 		for (EnsoulItemOption itemOption : _options)
 		{
 			final int position = itemOption.getPosition() - 1;
-			final L2ItemInstance soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
+			final ItemInstance soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
 			if (soulCrystal == null)
 			{
 				player.sendPacket(SystemMessageId.THE_RUNE_DOES_NOT_FIT);
@@ -222,7 +222,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				continue;
 			}
 			
-			final L2ItemInstance gemStones = player.getInventory().getItemByItemId(fee.getId());
+			final ItemInstance gemStones = player.getInventory().getItemByItemId(fee.getId());
 			if ((gemStones == null) || (gemStones.getCount() < fee.getCount()))
 			{
 				continue;

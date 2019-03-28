@@ -42,17 +42,17 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.enums.InstanceRemoveBuffType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import com.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -73,9 +73,9 @@ public final class Instance
 	/** Allow random walk for NPCs, global parameter. */
 	private boolean _allowRandomWalk = true;
 	private final List<Integer> _players = new CopyOnWriteArrayList<>();
-	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
+	private final List<Npc> _npcs = new CopyOnWriteArrayList<>();
 	private final List<StatsSet> _doorTemplates = new CopyOnWriteArrayList<>();
-	private final Map<Integer, L2DoorInstance> _doors = new ConcurrentHashMap<>();
+	private final Map<Integer, DoorInstance> _doors = new ConcurrentHashMap<>();
 	private final List<StatsSet> _spawnTemplates = new CopyOnWriteArrayList<>();
 	private List<Location> _enterLocations = new CopyOnWriteArrayList<>();
 	private Location _exitLocation = null;
@@ -230,12 +230,12 @@ public final class Instance
 		setDuration((int) (_instanceEndTime - System.currentTimeMillis() - 500));
 	}
 	
-	public void addNpc(L2Npc npc)
+	public void addNpc(Npc npc)
 	{
 		_npcs.add(npc);
 	}
 	
-	public void removeNpc(L2Npc npc)
+	public void removeNpc(Npc npc)
 	{
 		if (npc.getSpawn() != null)
 		{
@@ -268,7 +268,7 @@ public final class Instance
 			// Create new door instance
 			final int doorId = template.getInt("DoorId");
 			final StatsSet doorTemplate = DoorData.getInstance().getDoorTemplate(doorId);
-			final L2DoorInstance newdoor = new L2DoorInstance(new L2DoorTemplate(doorTemplate));
+			final DoorInstance newdoor = new DoorInstance(new DoorTemplate(doorTemplate));
 			newdoor.setInstanceId(_id);
 			newdoor.setCurrentHp(newdoor.getMaxHp());
 			newdoor.spawnMe(newdoor.getTemplate().getX(), newdoor.getTemplate().getY(), newdoor.getTemplate().getZ());
@@ -282,17 +282,17 @@ public final class Instance
 		return _players;
 	}
 	
-	public List<L2Npc> getNpcs()
+	public List<Npc> getNpcs()
 	{
 		return _npcs;
 	}
 	
-	public Collection<L2DoorInstance> getDoors()
+	public Collection<DoorInstance> getDoors()
 	{
 		return _doors.values();
 	}
 	
-	public L2DoorInstance getDoor(int id)
+	public DoorInstance getDoor(int id)
 	{
 		return _doors.get(id);
 	}
@@ -360,7 +360,7 @@ public final class Instance
 	{
 		for (Integer objectId : _players)
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+			final PlayerInstance player = World.getInstance().getPlayer(objectId);
 			if ((player != null) && (player.getInstanceId() == _id))
 			{
 				player.setInstanceId(0);
@@ -379,7 +379,7 @@ public final class Instance
 	
 	public void removeNpcs()
 	{
-		for (L2Npc mob : _npcs)
+		for (Npc mob : _npcs)
 		{
 			if (mob != null)
 			{
@@ -395,11 +395,11 @@ public final class Instance
 	
 	public void removeDoors()
 	{
-		for (L2DoorInstance door : _doors.values())
+		for (DoorInstance door : _doors.values())
 		{
 			if (door != null)
 			{
-				final L2WorldRegion region = door.getWorldRegion();
+				final WorldRegion region = door.getWorldRegion();
 				door.decayMe();
 				
 				if (region != null)
@@ -407,7 +407,7 @@ public final class Instance
 					region.removeVisibleObject(door);
 				}
 				
-				L2World.getInstance().removeObject(door);
+				World.getInstance().removeObject(door);
 			}
 		}
 		_doors.clear();
@@ -418,16 +418,16 @@ public final class Instance
 	 * @param groupName - name of group from XML definition to spawn
 	 * @return list of spawned NPCs
 	 */
-	public List<L2Npc> spawnGroup(String groupName)
+	public List<Npc> spawnGroup(String groupName)
 	{
-		List<L2Npc> spawnedNpcs = new ArrayList<>();
+		List<Npc> spawnedNpcs = new ArrayList<>();
 		for (StatsSet set : _spawnTemplates)
 		{
 			if (set.getString("spawnGroup").equals(groupName))
 			{
 				try
 				{
-					final L2Spawn spawnDat = new L2Spawn(set.getInt("npcId"));
+					final Spawn spawnDat = new Spawn(set.getInt("npcId"));
 					
 					spawnDat.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));
 					spawnDat.setAmount(1);
@@ -435,10 +435,10 @@ public final class Instance
 					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));
 					spawnDat.setInstanceId(_id);
 					spawnDat.setRandomWalking(set.getBoolean("allowRandomWalk"));
-					final L2Npc spawned = spawnDat.doSpawn();
+					final Npc spawned = spawnDat.doSpawn();
 					if ((set.getInt("delay") >= 0) && spawned.isAttackable())
 					{
-						((L2Attackable) spawned).setOnKillDelay(set.getInt("delay"));
+						((Attackable) spawned).setOnKillDelay(set.getInt("delay"));
 					}
 					if (set.getInt("respawn") == 0)
 					{
@@ -841,7 +841,7 @@ public final class Instance
 		{
 			for (Integer objectId : _players)
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+				final PlayerInstance player = World.getInstance().getPlayer(objectId);
 				if ((player != null) && (player.getInstanceId() == _id))
 				{
 					player.sendPacket(cs);
@@ -867,7 +867,7 @@ public final class Instance
 		}
 	}
 	
-	public void cancelEjectDeadPlayer(L2PcInstance player)
+	public void cancelEjectDeadPlayer(PlayerInstance player)
 	{
 		final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
 		if (task != null)
@@ -880,7 +880,7 @@ public final class Instance
 	 * This method is called when player dies inside instance.
 	 * @param player
 	 */
-	public void notifyDeath(L2PcInstance player)
+	public void notifyDeath(PlayerInstance player)
 	{
 		if (!player.isOnEvent() && (_ejectTime > 0))
 		{

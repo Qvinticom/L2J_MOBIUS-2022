@@ -18,9 +18,9 @@ package quests.Q10791_TheManOfMystery;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -66,7 +66,7 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -112,7 +112,7 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -145,19 +145,19 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "33993.html";
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				final L2Npc creature = addSpawn(NEEDLE_STAKATO, npc.getX() + getRandom(-20, 20), npc.getY() + getRandom(-20, 20), npc.getZ(), npc.getHeading(), true, 120000, false);
+				final Npc creature = addSpawn(NEEDLE_STAKATO, npc.getX() + getRandom(-20, 20), npc.getY() + getRandom(-20, 20), npc.getZ(), npc.getHeading(), true, 120000, false);
 				addAttackPlayerDesire(creature, attacker);
 				npc.setScriptValue(1);
 			}
@@ -166,7 +166,7 @@ public class Q10791_TheManOfMystery extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, true);
 		if ((qs != null) && (qs.getCond() > 0))
@@ -186,7 +186,7 @@ public class Q10791_TheManOfMystery extends Quest
 					}
 					if (kills >= 5)
 					{
-						final L2Npc monster = addSpawn(NEEDLE_STAKATO_CAPTAIN, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000, false);
+						final Npc monster = addSpawn(NEEDLE_STAKATO_CAPTAIN, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000, false);
 						final FriendlyNpcInstance kain = (FriendlyNpcInstance) addSpawn(KAIN_VAN_HALTER, killer.getX() + getRandom(-100, 100), killer.getY() + getRandom(-100, 100), killer.getZ(), 0, true, 300000, false);
 						kain.setRunning();
 						kain.setIsInvul(true);

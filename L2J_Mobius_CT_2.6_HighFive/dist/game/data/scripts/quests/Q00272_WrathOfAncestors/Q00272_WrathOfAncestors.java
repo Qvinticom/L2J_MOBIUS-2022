@@ -18,8 +18,8 @@ package quests.Q00272_WrathOfAncestors;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -53,27 +53,27 @@ public final class Q00272_WrathOfAncestors extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equalsIgnoreCase("30572-04.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equalsIgnoreCase("30572-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			giveItems(killer, GRAVE_ROBBERS_HEAD, 1);
 			if (getQuestItemsCount(killer, GRAVE_ROBBERS_HEAD) >= 50)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
@@ -84,12 +84,12 @@ public final class Q00272_WrathOfAncestors extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -98,7 +98,7 @@ public final class Q00272_WrathOfAncestors extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -108,7 +108,7 @@ public final class Q00272_WrathOfAncestors extends Quest
 					case 2:
 					{
 						giveAdena(player, 1500, true);
-						st.exitQuest(true, true);
+						qs.exitQuest(true, true);
 						htmltext = "30572-06.html";
 						break;
 					}

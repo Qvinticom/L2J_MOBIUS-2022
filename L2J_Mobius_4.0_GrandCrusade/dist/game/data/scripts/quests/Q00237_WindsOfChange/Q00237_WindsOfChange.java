@@ -16,8 +16,8 @@
  */
 package quests.Q00237_WindsOfChange;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -56,10 +56,10 @@ public class Q00237_WindsOfChange extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -87,7 +87,7 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case "30899-06.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, FLAUENS_LETTER, 1);
 				htmltext = event;
 				break;
@@ -100,47 +100,47 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case "30969-05.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30897-03.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30925-03.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30969-09.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
 					giveItems(player, DOSKOZER_LETTER, 1);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30969-10.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
 					giveItems(player, ATHENIA_LETTER, 1);
-					st.setCond(6, true);
+					qs.setCond(6, true);
 					htmltext = event;
 				}
 				break;
@@ -150,7 +150,7 @@ public class Q00237_WindsOfChange extends Quest
 				giveAdena(player, 213876, true);
 				giveItems(player, VICINITY_OF_FOS, 1);
 				addExpAndSp(player, 892773, 60012);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
 			}
@@ -159,7 +159,7 @@ public class Q00237_WindsOfChange extends Quest
 				giveAdena(player, 213876, true);
 				giveItems(player, SUPPORT_CERTIFICATE, 1);
 				addExpAndSp(player, 892773, 60012);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
 			}
@@ -168,16 +168,16 @@ public class Q00237_WindsOfChange extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		String htmltext = getNoQuestMsg(talker);
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		
 		switch (npc.getId())
 		{
 			case FLAUEN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.COMPLETED:
 					{
@@ -191,7 +191,7 @@ public class Q00237_WindsOfChange extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							case 4:
@@ -222,13 +222,13 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case IASON:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
 					htmltext = Quest.getNoQuestMsg(talker);
 				}
 				else
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -257,7 +257,7 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case ROMAN:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 2:
 					{
@@ -275,7 +275,7 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case MORELYN:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 3:
 					{
@@ -292,16 +292,16 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case HELVETICA:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
-					final QuestState q238 = st.getPlayer().getQuestState(Q00238_SuccessFailureOfBusiness.class.getSimpleName());
+					final QuestState q238 = qs.getPlayer().getQuestState(Q00238_SuccessFailureOfBusiness.class.getSimpleName());
 					htmltext = (hasQuestItems(talker, VICINITY_OF_FOS) || ((q238 != null) && q238.isCompleted())) ? "32641-03.html" : "32641-05.html";
 				}
-				else if (st.isCond(5))
+				else if (qs.isCond(5))
 				{
 					htmltext = "32641-01.html";
 				}
-				else if (st.isCond(6))
+				else if (qs.isCond(6))
 				{
 					htmltext = "32641-04.html";
 				}
@@ -309,16 +309,16 @@ public class Q00237_WindsOfChange extends Quest
 			}
 			case ATHENIA:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
-					final QuestState q239 = st.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
+					final QuestState q239 = qs.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
 					htmltext = (hasQuestItems(talker, SUPPORT_CERTIFICATE) || ((q239 != null) && q239.isCompleted())) ? "32643-03.html" : "32643-05.html";
 				}
-				else if (st.isCond(5))
+				else if (qs.isCond(5))
 				{
 					htmltext = "32643-04.html";
 				}
-				else if (st.isCond(6))
+				else if (qs.isCond(6))
 				{
 					htmltext = "32643-01.html";
 				}

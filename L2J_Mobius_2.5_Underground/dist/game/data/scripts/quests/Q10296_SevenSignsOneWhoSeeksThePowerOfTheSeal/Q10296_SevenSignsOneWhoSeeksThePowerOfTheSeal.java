@@ -18,8 +18,8 @@ package quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal;
 
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -60,7 +60,7 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -93,13 +93,13 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 			}
 			case "teleport_to_unknown":
 			{
-				final L2Npc etis = player.getInstanceWorld().getNpc(ETIS_VAN_ETINA);
+				final Npc etis = player.getInstanceWorld().getNpc(ETIS_VAN_ETINA);
 				if (etis != null)
 				{
 					etis.deleteMe();
 				}
 				player.teleToLocation(UNKNOWN_LOC);
-				final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+				final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 				elcadia.teleToLocation(player, true);
 				qs.setCond(2, true);
 				startQuestTimer("spawn_etis", 10000, null, player);
@@ -107,7 +107,7 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 			}
 			case "spawn_etis":
 			{
-				final L2Npc etis = player.getInstanceWorld().getNpc(ETIS_VAN_ETINA);
+				final Npc etis = player.getInstanceWorld().getNpc(ETIS_VAN_ETINA);
 				if (etis == null)
 				{
 					addSpawn(ETIS_VAN_ETINA, UNKNOWN_LOC, false, 0, false, player.getInstanceId());
@@ -165,7 +165,7 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -253,12 +253,12 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		qs.set("erisKilled", 1);
 		npc.deleteMe();
-		final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+		final Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
 		elcadia.deleteMe();
 		startQuestTimer("respawn_elcadia", 60000, null, player);
 		playMovie(player, Movie.SSQ2_BOSS_CLOSING);

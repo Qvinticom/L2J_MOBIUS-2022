@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill.SkillTargetType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill.SkillTargetType;
+import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
 
-class EffectDamOverTime extends L2Effect
+class EffectDamOverTime extends Effect
 {
 	public EffectDamOverTime(Env env, EffectTemplate template)
 	{
@@ -67,7 +67,7 @@ class EffectDamOverTime extends L2Effect
 			}
 		}
 		
-		final boolean awake = !(getEffected() instanceof L2Attackable) && ((getSkill().getTargetType() != SkillTargetType.TARGET_SELF) || !getSkill().isToggle());
+		final boolean awake = !(getEffected() instanceof Attackable) && ((getSkill().getTargetType() != SkillTargetType.TARGET_SELF) || !getSkill().isToggle());
 		getEffected().reduceCurrentHpByDamOverTime(damage, getEffector(), awake, getPeriod());
 		return true;
 	}

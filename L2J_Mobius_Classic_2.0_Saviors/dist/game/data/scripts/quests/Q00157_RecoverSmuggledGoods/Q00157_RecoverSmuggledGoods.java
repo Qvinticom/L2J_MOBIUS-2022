@@ -17,8 +17,8 @@
 package quests.Q00157_RecoverSmuggledGoods;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -49,11 +49,11 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if(qs != null)
 		{
 			switch (event)
 			{
@@ -64,7 +64,7 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 				}
 				case "30005-04.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 					break;
 				}
@@ -74,15 +74,15 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1) && (getRandom(10) < 4) && (getQuestItemsCount(killer, ADAMANTITE_ORE) < 20))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1) && (getRandom(10) < 4) && (getQuestItemsCount(killer, ADAMANTITE_ORE) < 20))
 		{
 			giveItems(killer, ADAMANTITE_ORE, 1);
 			if (getQuestItemsCount(killer, ADAMANTITE_ORE) >= 20)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			else
 			{
@@ -93,12 +93,12 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -107,10 +107,10 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(2) && (getQuestItemsCount(player, ADAMANTITE_ORE) >= 20))
+				if (qs.isCond(2) && (getQuestItemsCount(player, ADAMANTITE_ORE) >= 20))
 				{
 					giveItems(player, BUCKLER, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30005-06.html";
 				}
 				else

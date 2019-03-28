@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -27,13 +27,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExReplyPostItemList extends AbstractItemPacket
 {
-	L2PcInstance _activeChar;
-	private final L2ItemInstance[] _itemList;
+	PlayerInstance _player;
+	private final ItemInstance[] _itemList;
 	
-	public ExReplyPostItemList(L2PcInstance activeChar)
+	public ExReplyPostItemList(PlayerInstance player)
 	{
-		_activeChar = activeChar;
-		_itemList = _activeChar.getInventory().getAvailableItems(true, false, false);
+		_player = player;
+		_itemList = _player.getInventory().getAvailableItems(true, false, false);
 	}
 	
 	@Override
@@ -41,7 +41,7 @@ public class ExReplyPostItemList extends AbstractItemPacket
 	{
 		OutgoingPackets.EX_REPLY_POST_ITEM_LIST.writeId(packet);
 		packet.writeD(_itemList.length);
-		for (L2ItemInstance item : _itemList)
+		for (ItemInstance item : _itemList)
 		{
 			writeItem(packet, item);
 		}

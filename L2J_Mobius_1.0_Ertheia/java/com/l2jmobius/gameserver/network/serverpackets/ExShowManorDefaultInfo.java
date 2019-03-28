@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class ExShowManorDefaultInfo implements IClientOutgoingPacket
 {
-	private final List<L2Seed> _crops;
+	private final List<Seed> _crops;
 	private final boolean _hideButtons;
 	
 	public ExShowManorDefaultInfo(boolean hideButtons)
@@ -44,7 +44,7 @@ public final class ExShowManorDefaultInfo implements IClientOutgoingPacket
 		
 		packet.writeC(_hideButtons ? 0x01 : 0x00); // Hide "Seed Purchase" and "Crop Sales" buttons
 		packet.writeD(_crops.size());
-		for (L2Seed crop : _crops)
+		for (Seed crop : _crops)
 		{
 			packet.writeD(crop.getCropId()); // crop Id
 			packet.writeD(crop.getLevel()); // level

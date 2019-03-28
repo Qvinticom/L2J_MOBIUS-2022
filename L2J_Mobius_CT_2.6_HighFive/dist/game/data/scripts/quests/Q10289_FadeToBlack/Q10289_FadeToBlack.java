@@ -16,9 +16,9 @@
  */
 package quests.Q10289_FadeToBlack;
 
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -48,7 +48,7 @@ public class Q10289_FadeToBlack extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -248,7 +248,7 @@ public class Q10289_FadeToBlack extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc anays, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc anays, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, anays);
 		if (qs != null)
@@ -256,11 +256,11 @@ public class Q10289_FadeToBlack extends Quest
 			if (qs.getPlayer().isInParty())
 			{
 				// if player is in party, reward all members
-				final L2Party party = qs.getPlayer().getParty();
+				final Party party = qs.getPlayer().getParty();
 				final int rnd = getRandom(party.getMemberCount());
 				int idx = 0;
 				
-				for (L2PcInstance member : party.getMembers())
+				for (PlayerInstance member : party.getMembers())
 				{
 					// only one lucky player will get the good item, the rest will get the bad one
 					rewardPlayer(getQuestState(member, false), idx == rnd);
@@ -277,13 +277,13 @@ public class Q10289_FadeToBlack extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(QuestState qs, L2Npc npc)
+	public boolean checkPartyMember(QuestState qs, Npc npc)
 	{
 		return qs.getCond() < 3;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

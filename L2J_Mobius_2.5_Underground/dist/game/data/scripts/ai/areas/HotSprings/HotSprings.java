@@ -17,9 +17,9 @@
 package ai.areas.HotSprings;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -53,7 +53,7 @@ public final class HotSprings extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (getRandom(100) < DISEASE_CHANCE)
 		{
@@ -87,15 +87,15 @@ public final class HotSprings extends AbstractNpcAI
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
-	private void tryToInfect(L2Npc npc, L2Character player, int diseaseId)
+	private void tryToInfect(Npc npc, Creature creature, int diseaseId)
 	{
-		final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(diseaseId);
+		final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(diseaseId);
 		final int skillLevel = (info == null) ? 1 : (info.getSkill().getLevel() < 10) ? info.getSkill().getLevel() + 1 : 10;
 		final Skill skill = SkillData.getInstance().getSkill(diseaseId, skillLevel);
 		
 		if ((skill != null) && SkillCaster.checkUseConditions(npc, skill))
 		{
-			npc.setTarget(player);
+			npc.setTarget(creature);
 			npc.doCast(skill);
 		}
 	}

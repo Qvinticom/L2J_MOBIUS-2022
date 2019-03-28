@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.model.shuttle.L2ShuttleStop;
+import com.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import com.l2jmobius.gameserver.model.shuttle.ShuttleStop;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -30,10 +30,10 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExShuttleInfo implements IClientOutgoingPacket
 {
-	private final L2ShuttleInstance _shuttle;
-	private final List<L2ShuttleStop> _stops;
+	private final ShuttleInstance _shuttle;
+	private final List<ShuttleStop> _stops;
 	
-	public ExShuttleInfo(L2ShuttleInstance shuttle)
+	public ExShuttleInfo(ShuttleInstance shuttle)
 	{
 		_shuttle = shuttle;
 		_stops = shuttle.getStops();
@@ -51,7 +51,7 @@ public class ExShuttleInfo implements IClientOutgoingPacket
 		packet.writeD(_shuttle.getHeading());
 		packet.writeD(_shuttle.getId());
 		packet.writeD(_stops.size());
-		for (L2ShuttleStop stop : _stops)
+		for (ShuttleStop stop : _stops)
 		{
 			packet.writeD(stop.getId());
 			for (Location loc : stop.getDimensions())

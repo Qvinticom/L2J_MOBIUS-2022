@@ -20,15 +20,15 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import com.l2jmobius.gameserver.model.L2PledgeSkillLearn;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PledgeSkillLearn;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
-public class RequestAquireSkillInfo extends L2GameClientPacket
+public class RequestAquireSkillInfo extends GameClientPacket
 {
 	private int _id;
 	private int _level;
@@ -45,25 +45,25 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2FolkInstance trainer = activeChar.getLastFolkNPC();
+		final FolkInstance trainer = player.getLastFolkNPC();
 		if (trainer == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.isGM() && !activeChar.isInsideRadius(trainer, L2NpcInstance.INTERACTION_DISTANCE, false, false))
+		if (!player.isGM() && !player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false))
 		{
 			return;
 		}
 		
 		boolean canteach = false;
-		final L2Skill skill = SkillTable.getInstance().getInfo(_id, _level);
+		final Skill skill = SkillTable.getInstance().getInfo(_id, _level);
 		if (skill == null)
 		{
 			return;
@@ -71,14 +71,14 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 		
 		if (_skillType == 0)
 		{
-			if (!trainer.getTemplate().canTeach(activeChar.getSkillLearningClassId()))
+			if (!trainer.getTemplate().canTeach(player.getSkillLearningClassId()))
 			{
 				return; // cheater
 			}
 			
-			final L2SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(activeChar, activeChar.getSkillLearningClassId());
+			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
 			
-			for (L2SkillLearn s : skills)
+			for (SkillLearn s : skills)
 			{
 				if ((s.getId() == _id) && (s.getLevel() == _level))
 				{
@@ -92,11 +92,11 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 				return; // cheater
 			}
 			
-			final int requiredSp = SkillTreeTable.getInstance().getSkillCost(activeChar, skill);
+			final int requiredSp = SkillTreeTable.getInstance().getSkillCost(player, skill);
 			final AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp, 0);
 			
 			int spbId = -1;
-			if (Config.DIVINE_SP_BOOK_NEEDED && (skill.getId() == L2Skill.SKILL_DIVINE_INSPIRATION))
+			if (Config.DIVINE_SP_BOOK_NEEDED && (skill.getId() == Skill.SKILL_DIVINE_INSPIRATION))
 			{
 				spbId = SkillSpellbookTable.getInstance().getBookForSkill(skill, _level);
 			}
@@ -116,9 +116,9 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 		{
 			int requiredRep = 0;
 			int itemId = 0;
-			final L2PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(activeChar);
+			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
 			
-			for (L2PledgeSkillLearn s : skills)
+			for (PledgeSkillLearn s : skills)
 			{
 				if ((s.getId() == _id) && (s.getLevel() == _level))
 				{
@@ -150,11 +150,11 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 			int costcount = 0;
 			int spcost = 0;
 			
-			final L2SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(activeChar);
+			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
 			
-			for (L2SkillLearn s : skillsc)
+			for (SkillLearn s : skillsc)
 			{
-				final L2Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
 				
 				if ((sk == null) || (sk != skill))
 				{

@@ -25,7 +25,7 @@ import org.w3c.dom.NamedNodeMap;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author DS, Sdw, UnAfraid
@@ -54,7 +54,7 @@ public enum BaseStats
 		return _stat;
 	}
 	
-	public int calcValue(L2Character creature)
+	public int calcValue(Creature creature)
 	{
 		if ((creature != null) && (_stat != null))
 		{
@@ -64,7 +64,7 @@ public enum BaseStats
 		return 0;
 	}
 	
-	public double calcBonus(L2Character creature)
+	public double calcBonus(Creature creature)
 	{
 		if (creature != null)
 		{

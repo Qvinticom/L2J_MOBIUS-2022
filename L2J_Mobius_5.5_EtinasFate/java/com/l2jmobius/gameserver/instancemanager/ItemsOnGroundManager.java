@@ -30,8 +30,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ItemsAutoDestroy;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * This class manage all items on ground.
@@ -41,7 +41,7 @@ public final class ItemsOnGroundManager implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
-	private final Set<L2ItemInstance> _items = ConcurrentHashMap.newKeySet();
+	private final Set<ItemInstance> _items = ConcurrentHashMap.newKeySet();
 	
 	protected ItemsOnGroundManager()
 	{
@@ -99,11 +99,11 @@ public final class ItemsOnGroundManager implements Runnable
 			int count = 0;
 			try (ResultSet rs = ps.executeQuery())
 			{
-				L2ItemInstance item;
+				ItemInstance item;
 				while (rs.next())
 				{
-					item = new L2ItemInstance(rs.getInt(1), rs.getInt(2));
-					L2World.getInstance().addObject(item);
+					item = new ItemInstance(rs.getInt(1), rs.getInt(2));
+					World.getInstance().addObject(item);
 					// this check and..
 					if (item.isStackable() && (rs.getInt(3) > 1))
 					{
@@ -115,13 +115,13 @@ public final class ItemsOnGroundManager implements Runnable
 						item.setEnchantLevel(rs.getInt(4));
 					}
 					item.setXYZ(rs.getInt(5), rs.getInt(6), rs.getInt(7));
-					item.setWorldRegion(L2World.getInstance().getRegion(item));
+					item.setWorldRegion(World.getInstance().getRegion(item));
 					item.getWorldRegion().addVisibleObject(item);
 					final long dropTime = rs.getLong(8);
 					item.setDropTime(dropTime);
 					item.setProtected(dropTime == -1);
 					item.setSpawned(true);
-					L2World.getInstance().addVisibleObject(item, item.getWorldRegion());
+					World.getInstance().addVisibleObject(item, item.getWorldRegion());
 					_items.add(item);
 					count++;
 					// add to ItemsAutoDestroy only items not protected
@@ -150,7 +150,7 @@ public final class ItemsOnGroundManager implements Runnable
 		}
 	}
 	
-	public void save(L2ItemInstance item)
+	public void save(ItemInstance item)
 	{
 		if (Config.SAVE_DROPPED_ITEM)
 		{
@@ -158,7 +158,7 @@ public final class ItemsOnGroundManager implements Runnable
 		}
 	}
 	
-	public void removeObject(L2ItemInstance item)
+	public void removeObject(ItemInstance item)
 	{
 		if (Config.SAVE_DROPPED_ITEM)
 		{
@@ -207,7 +207,7 @@ public final class ItemsOnGroundManager implements Runnable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) VALUES(?,?,?,?,?,?,?,?,?)"))
 		{
-			for (L2ItemInstance item : _items)
+			for (ItemInstance item : _items)
 			{
 				if (item == null)
 				{

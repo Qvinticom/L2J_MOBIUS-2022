@@ -24,7 +24,7 @@ import com.l2jmobius.commons.util.Point3D;
  * Format: (ch) d[ddddd].
  * @author -Wooden-
  */
-public class ExCursedWeaponLocation extends L2GameServerPacket
+public class ExCursedWeaponLocation extends GameServerPacket
 {
 	/** The _cursed weapon info. */
 	private final List<CursedWeaponInfo> _cursedWeaponInfo;

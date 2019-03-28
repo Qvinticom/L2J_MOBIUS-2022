@@ -23,9 +23,9 @@ import java.util.StringTokenizer;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
@@ -44,7 +44,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 	private static final Set<Stats> SPEED_STATS = EnumSet.of(Stats.RUN_SPEED, Stats.WALK_SPEED, Stats.SWIM_RUN_SPEED, Stats.SWIM_WALK_SPEED, Stats.FLY_RUN_SPEED, Stats.FLY_WALK_SPEED);
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance player)
+	public boolean useAdminCommand(String command, PlayerInstance player)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -78,11 +78,11 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 				return false;
 			}
 			
-			final L2Character targetCharacter;
-			final L2Object target = player.getTarget();
-			if ((target != null) && target.isCharacter())
+			final Creature targetCharacter;
+			final WorldObject target = player.getTarget();
+			if ((target != null) && target.isCreature())
 			{
-				targetCharacter = (L2Character) target;
+				targetCharacter = (Creature) target;
 			}
 			else
 			{
@@ -99,7 +99,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 			targetCharacter.getStat().recalculateStats(false);
 			if (targetCharacter.isPlayer())
 			{
-				((L2PcInstance) targetCharacter).broadcastUserInfo();
+				((PlayerInstance) targetCharacter).broadcastUserInfo();
 			}
 			else
 			{

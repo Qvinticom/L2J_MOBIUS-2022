@@ -22,15 +22,15 @@ import java.util.List;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -89,9 +89,9 @@ public final class BalokWarzone extends AbstractInstance
         {153608, 140371, -12712}
 	};
 	//@formatter:on	
-	private final List<L2Npc> minionList = new ArrayList<>();
-	private L2Npc currentMinion;
-	private L2Npc balok;
+	private final List<Npc> minionList = new ArrayList<>();
+	private Npc currentMinion;
+	private Npc balok;
 	
 	public BalokWarzone()
 	{
@@ -108,7 +108,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enterInstance"))
 		{
@@ -122,7 +122,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -150,11 +150,11 @@ public final class BalokWarzone extends AbstractInstance
 				case "stage_last_send_minions":
 				{
 					
-					L2Npc minion = minionList.get(Rnd.get(minionList.size()));
+					Npc minion = minionList.get(Rnd.get(minionList.size()));
 					if (minion != null)
 					{
 						minion.setRunning();
-						((L2Attackable) minion).setCanReturnToSpawnPoint(false);
+						((Attackable) minion).setCanReturnToSpawnPoint(false);
 						currentMinion = minion;
 						getTimers().addTimer("stage_last_minion_walk", 2000, minion, player);
 					}
@@ -183,7 +183,7 @@ public final class BalokWarzone extends AbstractInstance
 				{
 					for (int i = 0; i < 4; i++)
 					{
-						L2Npc disciple = addSpawn(HELL_DISCIPLE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 600000, false, world.getId());
+						Npc disciple = addSpawn(HELL_DISCIPLE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 600000, false, world.getId());
 						addAttackPlayerDesire(disciple, player);
 					}
 					break;
@@ -200,7 +200,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -211,7 +211,7 @@ public final class BalokWarzone extends AbstractInstance
 				{
 					for (int[] a : MINION_SPAWN)
 					{
-						L2Npc minion = addSpawn(MINION, a[0], a[1], a[2], a[3], false, 0, false, world.getId());
+						Npc minion = addSpawn(MINION, a[0], a[1], a[2], a[3], false, 0, false, world.getId());
 						minionList.add(minion);
 						INVINCIBILITY_ACTIVATION.getSkill().applyEffects(minion, minion);
 						world.setStatus(2);
@@ -224,7 +224,7 @@ public final class BalokWarzone extends AbstractInstance
 						INVINCIBILITY_ACTIVATION.getSkill().applyEffects(npc, npc);
 						npc.setScriptValue(1);
 					}
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 300, instPlayer ->
+					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 300, instPlayer ->
 					{
 						if ((instPlayer == null) || (Rnd.get(100) > 2))
 						{
@@ -249,7 +249,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -269,7 +269,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final Instance world = npc.getInstanceWorld();
 		
@@ -311,8 +311,8 @@ public final class BalokWarzone extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
@@ -322,7 +322,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && caster.isBehind(npc))
 		{
@@ -338,7 +338,7 @@ public final class BalokWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == INVISIBLE_NPC_1)
 		{

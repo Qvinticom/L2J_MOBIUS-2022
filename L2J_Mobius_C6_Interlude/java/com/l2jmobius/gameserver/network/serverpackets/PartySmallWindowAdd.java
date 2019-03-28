@@ -16,20 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $
  */
-public final class PartySmallWindowAdd extends L2GameServerPacket
+public final class PartySmallWindowAdd extends GameServerPacket
 {
-	private final L2PcInstance _member;
+	private final PlayerInstance _member;
 	private final int _leaderId;
 	private final int _distribution;
 	
-	public PartySmallWindowAdd(L2PcInstance member, L2Party party)
+	public PartySmallWindowAdd(PlayerInstance member, Party party)
 	{
 		_member = member;
 		_leaderId = party.getPartyLeaderOID();

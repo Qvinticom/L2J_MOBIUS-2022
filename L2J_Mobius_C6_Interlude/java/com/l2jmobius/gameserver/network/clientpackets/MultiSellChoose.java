@@ -22,12 +22,12 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.L2Augmentation;
-import com.l2jmobius.gameserver.model.PcInventory;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.multisell.L2Multisell;
+import com.l2jmobius.gameserver.model.Augmentation;
+import com.l2jmobius.gameserver.model.PlayerInventory;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.multisell.Multisell;
 import com.l2jmobius.gameserver.model.multisell.MultiSellEntry;
 import com.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import com.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
@@ -37,14 +37,14 @@ import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Armor;
-import com.l2jmobius.gameserver.templates.item.L2Item;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
+import com.l2jmobius.gameserver.templates.item.Armor;
+import com.l2jmobius.gameserver.templates.item.Item;
+import com.l2jmobius.gameserver.templates.item.Weapon;
 
 /**
  * @author programmos
  */
-public class MultiSellChoose extends L2GameClientPacket
+public class MultiSellChoose extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(MultiSellChoose.class.getName());
 	private int _listId;
@@ -68,7 +68,7 @@ public class MultiSellChoose extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -86,16 +86,16 @@ public class MultiSellChoose extends L2GameClientPacket
 			return;
 		}
 		
-		final L2NpcInstance merchant = player.getTarget() instanceof L2NpcInstance ? (L2NpcInstance) player.getTarget() : null;
+		final NpcInstance merchant = player.getTarget() instanceof NpcInstance ? (NpcInstance) player.getTarget() : null;
 		
 		// Possible fix to Multisell Radius
-		if ((merchant == null) || !player.isInsideRadius(merchant, L2NpcInstance.INTERACTION_DISTANCE, false, false))
+		if ((merchant == null) || !player.isInsideRadius(merchant, NpcInstance.INTERACTION_DISTANCE, false, false))
 		{
 			player.setMultiSellId(-1);
 			return;
 		}
 		
-		final MultiSellListContainer list = L2Multisell.getInstance().getList(_listId);
+		final MultiSellListContainer list = Multisell.getInstance().getList(_listId);
 		
 		final int selectedList = player.getMultiSellId();
 		if ((list == null) || (list.getListId() != _listId) || (selectedList != _listId))
@@ -124,14 +124,14 @@ public class MultiSellChoose extends L2GameClientPacket
 		}
 	}
 	
-	private void doExchange(L2PcInstance player, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantment)
+	private void doExchange(PlayerInstance player, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantment)
 	{
-		final PcInventory inv = player.getInventory();
+		final PlayerInventory inv = player.getInventory();
 		boolean maintainItemFound = false;
 		
 		// given the template entry and information about maintaining enchantment and applying taxes re-create the instance of
 		// the entry that will be used for this exchange i.e. change the enchantment level of select ingredient/products and adena amount appropriately.
-		final L2NpcInstance merchant = player.getTarget() instanceof L2NpcInstance ? (L2NpcInstance) player.getTarget() : null;
+		final NpcInstance merchant = player.getTarget() instanceof NpcInstance ? (NpcInstance) player.getTarget() : null;
 		
 		// if(merchant == null) TODO: Check this
 		// return;
@@ -239,7 +239,7 @@ public class MultiSellChoose extends L2GameClientPacket
 		}
 		
 		_ingredientsList.clear();
-		final List<L2Augmentation> augmentation = new ArrayList<>();
+		final List<Augmentation> augmentation = new ArrayList<>();
 		/** All ok, remove items and add final product */
 		
 		for (MultiSellIngredient e : entry.getIngredients())
@@ -259,7 +259,7 @@ public class MultiSellChoose extends L2GameClientPacket
 						return;
 					}
 				}
-				L2ItemInstance itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
+				ItemInstance itemToTake = inv.getItemByItemId(e.getItemId()); // initialize and initial guess for the item to take.
 				
 				// this is a cheat, transaction will be aborted and if any items already tanken will not be returned back to inventory!
 				if (itemToTake == null)
@@ -292,7 +292,7 @@ public class MultiSellChoose extends L2GameClientPacket
 					if (maintainEnchantment)
 					{
 						// loop through this list and remove (one by one) each item until the required amount is taken.
-						final L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
+						final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
 						for (int i = 0; i < (e.getItemCount() * _amount); i++)
 						{
 							if (inventoryContents[i].isAugmented())
@@ -331,14 +331,14 @@ public class MultiSellChoose extends L2GameClientPacket
 						// choice 1. Small number of items exchanged. No sorting.
 						for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 						{
-							final L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId());
+							final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId());
 							
 							itemToTake = inventoryContents[0];
 							// get item with the LOWEST enchantment level from the inventory...
 							// +0 is lowest by default...
 							if (itemToTake.getEnchantLevel() > 0)
 							{
-								for (L2ItemInstance inventoryContent : inventoryContents)
+								for (ItemInstance inventoryContent : inventoryContents)
 								{
 									if (inventoryContent.getEnchantLevel() < itemToTake.getEnchantLevel())
 									{
@@ -391,7 +391,7 @@ public class MultiSellChoose extends L2GameClientPacket
 			}
 			else
 			{
-				L2ItemInstance product = null;
+				ItemInstance product = null;
 				for (int i = 0; i < (e.getItemCount() * _amount); i++)
 				{
 					product = inv.addItem("Multisell[" + _listId + "]", e.getItemId(), 1, player, player.getTarget());
@@ -399,7 +399,7 @@ public class MultiSellChoose extends L2GameClientPacket
 					{
 						if (i < augmentation.size())
 						{
-							product.setAugmentation(new L2Augmentation(product, augmentation.get(i).getAugmentationId(), augmentation.get(i).getSkill(), true));
+							product.setAugmentation(new Augmentation(product, augmentation.get(i).getAugmentationId(), augmentation.get(i).getSkill(), true));
 						}
 						product.setEnchantLevel(e.getEnchantmentLevel());
 					}
@@ -455,7 +455,7 @@ public class MultiSellChoose extends L2GameClientPacket
 	// example: If the template has an item worth 120aa, and the tax is 10%,
 	// then from 120aa, take 5/6 so that is 100aa, apply the 10% tax in adena (10a)
 	// so the final price will be 120aa and 10a!
-	private MultiSellEntry prepareEntry(L2NpcInstance merchant, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantLevel)
+	private MultiSellEntry prepareEntry(NpcInstance merchant, MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantLevel)
 	{
 		final MultiSellEntry newEntry = new MultiSellEntry();
 		newEntry.setEntryId(templateEntry.getEntryId());
@@ -491,8 +491,8 @@ public class MultiSellChoose extends L2GameClientPacket
 			// If it is an armor/weapon, modify the enchantment level appropriately, if necessary
 			else if (maintainEnchantment)
 			{
-				final L2Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
-				if ((tempItem instanceof L2Armor) || (tempItem instanceof L2Weapon))
+				final Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
+				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
 					hasIngredient = true;
@@ -518,9 +518,9 @@ public class MultiSellChoose extends L2GameClientPacket
 			{
 				// If it is an armor/weapon, modify the enchantment level appropriately
 				// (note, if maintain enchantment is "false" this modification will result to a +0)
-				final L2Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
+				final Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
 				
-				if ((tempItem instanceof L2Armor) || (tempItem instanceof L2Weapon))
+				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					if ((enchantLevel == 0) && maintainEnchantment)
 					{

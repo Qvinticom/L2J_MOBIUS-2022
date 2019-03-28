@@ -20,11 +20,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
@@ -35,72 +35,72 @@ import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillLi
 public class RequestResetAbilityPoint implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isSubClassActive() && !activeChar.isDualClassActive())
+		if (player.isSubClassActive() && !player.isDualClassActive())
 		{
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() != PrivateStoreType.NONE) || (activeChar.getActiveRequester() != null))
+		if ((player.getPrivateStoreType() != PrivateStoreType.NONE) || (player.getActiveRequester() != null))
 		{
 			return;
 		}
-		else if ((activeChar.getLevel() < 99) || !activeChar.isNoble())
+		else if ((player.getLevel() < 99) || !player.isNoble())
 		{
 			client.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;
 		}
-		else if (activeChar.isInOlympiadMode() || activeChar.isOnEvent(CeremonyOfChaosEvent.class))
+		else if (player.isInOlympiadMode() || player.isOnEvent(CeremonyOfChaosEvent.class))
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
-		else if (activeChar.isOnEvent()) // custom event message
+		else if (player.isOnEvent()) // custom event message
 		{
-			activeChar.sendMessage("You cannot use or reset Ability Points while participating in an event.");
+			player.sendMessage("You cannot use or reset Ability Points while participating in an event.");
 			return;
 		}
-		else if (activeChar.getAbilityPoints() == 0)
+		else if (player.getAbilityPoints() == 0)
 		{
-			activeChar.sendMessage("You don't have ability points to reset!");
+			player.sendMessage("You don't have ability points to reset!");
 			return;
 		}
-		else if (activeChar.getAbilityPointsUsed() == 0)
+		else if (player.getAbilityPointsUsed() == 0)
 		{
-			activeChar.sendMessage("You haven't used your ability points yet!");
+			player.sendMessage("You haven't used your ability points yet!");
 			return;
 		}
-		else if (activeChar.getAdena() < Config.ABILITY_POINTS_RESET_ADENA)
+		else if (player.getAdena() < Config.ABILITY_POINTS_RESET_ADENA)
 		{
 			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
-		if (activeChar.reduceAdena("AbilityPointsReset", Config.ABILITY_POINTS_RESET_ADENA, activeChar, true))
+		if (player.reduceAdena("AbilityPointsReset", Config.ABILITY_POINTS_RESET_ADENA, player, true))
 		{
-			for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+			for (SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
 			{
-				final Skill skill = activeChar.getKnownSkill(sk.getSkillId());
+				final Skill skill = player.getKnownSkill(sk.getSkillId());
 				if (skill != null)
 				{
-					activeChar.removeSkill(skill);
+					player.removeSkill(skill);
 				}
 			}
-			activeChar.setAbilityPointsUsed(0);
-			client.sendPacket(new ExAcquireAPSkillList(activeChar));
+			player.setAbilityPointsUsed(0);
+			client.sendPacket(new ExAcquireAPSkillList(player));
 		}
 	}
 }

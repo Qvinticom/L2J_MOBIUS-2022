@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
@@ -42,7 +42,7 @@ public final class RandomizeHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return Formulas.calcProbability(_chance, effector, effected, skill);
 	}
@@ -54,21 +54,21 @@ public final class RandomizeHate extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if ((effected == effector) || !effected.isAttackable())
 		{
 			return;
 		}
 		
-		final L2Attackable effectedMob = (L2Attackable) effected;
-		final List<L2Character> targetList = new ArrayList<>();
-		L2World.getInstance().forEachVisibleObject(effected, L2Character.class, cha ->
+		final Attackable effectedMob = (Attackable) effected;
+		final List<Creature> targetList = new ArrayList<>();
+		World.getInstance().forEachVisibleObject(effected, Creature.class, cha ->
 		{
 			if ((cha != effectedMob) && (cha != effector))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha.isAttackable() && ((L2Attackable) cha).isInMyClan(effectedMob))
+				if (cha.isAttackable() && ((Attackable) cha).isInMyClan(effectedMob))
 				{
 					return;
 				}
@@ -83,7 +83,7 @@ public final class RandomizeHate extends AbstractEffect
 		}
 		
 		// Choosing randomly a new target
-		final L2Character target = targetList.get(Rnd.get(targetList.size()));
+		final Creature target = targetList.get(Rnd.get(targetList.size()));
 		final int hate = effectedMob.getHating(effector);
 		effectedMob.stopHating(effector);
 		effectedMob.addDamageHate(target, 0, hate);

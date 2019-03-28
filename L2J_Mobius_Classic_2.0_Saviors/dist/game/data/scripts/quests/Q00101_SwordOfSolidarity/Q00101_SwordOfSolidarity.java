@@ -18,8 +18,8 @@ package quests.Q00101_SwordOfSolidarity;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -63,11 +63,11 @@ public class Q00101_SwordOfSolidarity extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if(qs != null)
 		{
 			switch (event)
 			{
@@ -79,29 +79,29 @@ public class Q00101_SwordOfSolidarity extends Quest
 				}
 				case "30008-04.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, ROIENS_LETTER, 1);
 					htmltext = event;
 					break;
 				}
 				case "30283-02.html":
 				{
-					if (st.isCond(1) && hasQuestItems(player, ROIENS_LETTER))
+					if (qs.isCond(1) && hasQuestItems(player, ROIENS_LETTER))
 					{
 						takeItems(player, ROIENS_LETTER, -1);
 						giveItems(player, DIRECTIONS_TO_RUINS, 1);
-						st.setCond(2, true);
+						qs.setCond(2, true);
 						htmltext = event;
 					}
 					break;
 				}
 				case "30283-07.html":
 				{
-					if (st.isCond(5) && hasQuestItems(player, BROKEN_SWORD_HANDLE))
+					if (qs.isCond(5) && hasQuestItems(player, BROKEN_SWORD_HANDLE))
 					{
 						// Q00281_HeadForTheHills.giveNewbieReward(player);
 						rewardItems(player, REWARDS, 1);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = event;
 					}
 					break;
@@ -112,17 +112,17 @@ public class Q00101_SwordOfSolidarity extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(2) && (getRandom(5) == 0))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(2) && (getRandom(5) == 0))
 		{
 			if (!hasQuestItems(killer, BROKEN_BLADE_TOP))
 			{
 				giveItems(killer, BROKEN_BLADE_TOP, 1);
 				if (hasQuestItems(killer, BROKEN_BLADE_BOTTOM))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 				else
 				{
@@ -134,7 +134,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 				giveItems(killer, BROKEN_BLADE_BOTTOM, 1);
 				if (hasQuestItems(killer, BROKEN_BLADE_TOP))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 				}
 				else
 				{
@@ -146,16 +146,16 @@ public class Q00101_SwordOfSolidarity extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ROIEN:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -164,7 +164,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -200,7 +200,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 								{
 									takeItems(player, ALTRANS_NOTE, -1);
 									giveItems(player, BROKEN_SWORD_HANDLE, 1);
-									st.setCond(5, true);
+									qs.setCond(5, true);
 									htmltext = "30008-06.html";
 								}
 								break;
@@ -226,7 +226,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 			}
 			case ALTRAN:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -254,7 +254,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 						{
 							takeItems(player, -1, DIRECTIONS_TO_RUINS, BROKEN_BLADE_TOP, BROKEN_BLADE_BOTTOM);
 							giveItems(player, ALTRANS_NOTE, 1);
-							st.setCond(4, true);
+							qs.setCond(4, true);
 							htmltext = "30283-04.html";
 						}
 						break;

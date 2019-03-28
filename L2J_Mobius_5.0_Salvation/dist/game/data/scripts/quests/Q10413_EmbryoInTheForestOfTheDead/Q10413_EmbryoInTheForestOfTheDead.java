@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -102,10 +102,10 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -121,15 +121,15 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 			}
 			case "33849-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33849-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -144,12 +144,12 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -158,7 +158,7 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.isCond(1) ? "33849-05.html" : "33849-06.html";
+				htmltext = qs.isCond(1) ? "33849-05.html" : "33849-06.html";
 				break;
 			}
 			case State.COMPLETED:
@@ -171,19 +171,19 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(1))
+		if ((qs != null) && qs.isCond(1))
 		{
 			if (npc.getId() == EMBRYO)
 			{
-				int count = st.getInt("KillCount");
-				st.set("KillCount", ++count);
+				int count = qs.getInt("KillCount");
+				qs.set("KillCount", ++count);
 				if (count >= 300)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -192,7 +192,7 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 			}
 			else
 			{
-				final L2Npc embryo = addSpawn(EMBRYO, npc, false, 60000);
+				final Npc embryo = addSpawn(EMBRYO, npc, false, 60000);
 				addAttackPlayerDesire(embryo, killer);
 				embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DARE_INTERFERE_WITH_EMBRYO_SURELY_YOU_WISH_FOR_DEATH);
 			}
@@ -201,15 +201,15 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-			npcLogList.add(new NpcLogListHolder(EMBRYO, false, st.getInt("KillCount")));
+			npcLogList.add(new NpcLogListHolder(EMBRYO, false, qs.getInt("KillCount")));
 			return npcLogList;
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

@@ -17,9 +17,9 @@
 package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class CharmOfCourage implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		
 		if (!playable.isPlayer())
@@ -39,9 +39,9 @@ public class CharmOfCourage implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final PlayerInstance player = playable.getActingPlayer();
 		
-		int level = activeChar.getLevel();
+		int level = player.getLevel();
 		final int itemLevel = item.getItem().getCrystalType().getLevel();
 		
 		if (level < 20)
@@ -73,14 +73,14 @@ public class CharmOfCourage implements IItemHandler
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item.getId());
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return false;
 		}
 		
-		if (activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false))
+		if (player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false))
 		{
-			activeChar.setCharmOfCourage(true);
-			activeChar.sendPacket(new EtcStatusUpdate(activeChar));
+			player.setCharmOfCourage(true);
+			player.sendPacket(new EtcStatusUpdate(player));
 			return true;
 		}
 		return false;

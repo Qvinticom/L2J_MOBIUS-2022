@@ -20,38 +20,38 @@ import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.WarehouseItem;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
- * Get all information from L2ItemInstance to generate ItemInfo.
+ * Get all information from ItemInstance to generate ItemInfo.
  */
 public class ItemInfo
 {
-	/** Identifier of the L2ItemInstance */
+	/** Identifier of the ItemInstance */
 	private int _objectId;
 	
-	/** The L2Item template of the L2ItemInstance */
-	private L2Item _item;
+	/** The Item template of the ItemInstance */
+	private Item _item;
 	
-	/** The level of enchant on the L2ItemInstance */
+	/** The level of enchant on the ItemInstance */
 	private int _enchantLevel;
 	
 	/** The augmentation of the item */
 	private VariationInstance _augmentation;
 	
-	/** The quantity of L2ItemInstance */
+	/** The quantity of ItemInstance */
 	private long _count;
 	
-	/** The price of the L2ItemInstance */
+	/** The price of the ItemInstance */
 	private int _price;
 	
-	/** The custom L2ItemInstance types (used loto, race tickets) */
+	/** The custom ItemInstance types (used loto, race tickets) */
 	private int _type1;
 	private int _type2;
 	
-	/** If True the L2ItemInstance is equipped */
+	/** If True the ItemInstance is equipped */
 	private int _equipped;
 	
 	/** The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE) */
@@ -82,49 +82,49 @@ public class ItemInfo
 	private long _visualExpiration;
 	
 	/**
-	 * Get all information from L2ItemInstance to generate ItemInfo.
+	 * Get all information from ItemInstance to generate ItemInfo.
 	 * @param item
 	 */
-	public ItemInfo(L2ItemInstance item)
+	public ItemInfo(ItemInstance item)
 	{
 		Objects.requireNonNull(item);
 		
-		// Get the Identifier of the L2ItemInstance
+		// Get the Identifier of the ItemInstance
 		_objectId = item.getObjectId();
 		
-		// Get the L2Item of the L2ItemInstance
+		// Get the Item of the ItemInstance
 		_item = item.getItem();
 		
-		// Get the enchant level of the L2ItemInstance
+		// Get the enchant level of the ItemInstance
 		_enchantLevel = item.getEnchantLevel();
 		
 		// Get the augmentation bonus
 		_augmentation = item.getAugmentation();
 		
-		// Get the quantity of the L2ItemInstance
+		// Get the quantity of the ItemInstance
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the L2ItemInstance is equipped
+		// Verify if the ItemInstance is equipped
 		_equipped = item.isEquipped() ? 1 : 0;
 		
 		// Get the action to do clientside
 		switch (item.getLastChange())
 		{
-			case L2ItemInstance.ADDED:
+			case ItemInstance.ADDED:
 			{
 				_change = 1;
 				break;
 			}
-			case L2ItemInstance.MODIFIED:
+			case ItemInstance.MODIFIED:
 			{
 				_change = 2;
 				break;
 			}
-			case L2ItemInstance.REMOVED:
+			case ItemInstance.REMOVED:
 			{
 				_change = 3;
 				break;
@@ -148,7 +148,7 @@ public class ItemInfo
 		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
 	}
 	
-	public ItemInfo(L2ItemInstance item, int change)
+	public ItemInfo(ItemInstance item, int change)
 	{
 		this(item);
 		_change = change;
@@ -162,13 +162,13 @@ public class ItemInfo
 			return;
 		}
 		
-		// Get the Identifier of the L2ItemInstance
+		// Get the Identifier of the ItemInstance
 		_objectId = item.getObjectId();
 		
-		// Get the L2Item of the L2ItemInstance
+		// Get the Item of the ItemInstance
 		_item = item.getItem();
 		
-		// Get the enchant level of the L2ItemInstance
+		// Get the enchant level of the ItemInstance
 		_enchantLevel = item.getEnchant();
 		
 		// Get the augmentation bonus
@@ -177,14 +177,14 @@ public class ItemInfo
 			_augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
 		}
 		
-		// Get the quantity of the L2ItemInstance
+		// Get the quantity of the ItemInstance
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the L2ItemInstance is equipped
+		// Verify if the ItemInstance is equipped
 		_equipped = 0;
 		
 		// Get the action to do clientside
@@ -214,26 +214,26 @@ public class ItemInfo
 			return;
 		}
 		
-		// Get the Identifier of the L2ItemInstance
+		// Get the Identifier of the ItemInstance
 		_objectId = 0;
 		
-		// Get the L2Item of the L2ItemInstance
+		// Get the Item of the ItemInstance
 		_item = item.getItem();
 		
-		// Get the enchant level of the L2ItemInstance
+		// Get the enchant level of the ItemInstance
 		_enchantLevel = 0;
 		
 		// Get the augmentation bonus
 		_augmentation = null;
 		
-		// Get the quantity of the L2ItemInstance
+		// Get the quantity of the ItemInstance
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getItem().getType1();
 		_type2 = item.getItem().getType2();
 		
-		// Verify if the L2ItemInstance is equipped
+		// Verify if the ItemInstance is equipped
 		_equipped = 0;
 		
 		// Get the action to do clientside
@@ -246,33 +246,33 @@ public class ItemInfo
 		_location = 0;
 	}
 	
-	public ItemInfo(L2WarehouseItem item)
+	public ItemInfo(WarehouseItem item)
 	{
 		if (item == null)
 		{
 			return;
 		}
 		
-		// Get the Identifier of the L2ItemInstance
+		// Get the Identifier of the ItemInstance
 		_objectId = item.getObjectId();
 		
-		// Get the L2Item of the L2ItemInstance
+		// Get the Item of the ItemInstance
 		_item = item.getItem();
 		
-		// Get the enchant level of the L2ItemInstance
+		// Get the enchant level of the ItemInstance
 		_enchantLevel = item.getEnchantLevel();
 		
 		// Get the augmentation bonus
 		_augmentation = item.getAugmentation();
 		
-		// Get the quantity of the L2ItemInstance
+		// Get the quantity of the ItemInstance
 		_count = item.getCount();
 		
 		// Get custom item types (used loto, race tickets)
 		_type1 = item.getCustomType1();
 		_type2 = item.getCustomType2();
 		
-		// Verify if the L2ItemInstance is equipped
+		// Verify if the ItemInstance is equipped
 		_equipped = 0;
 		
 		// Get shadow item mana
@@ -294,7 +294,7 @@ public class ItemInfo
 		return _objectId;
 	}
 	
-	public L2Item getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

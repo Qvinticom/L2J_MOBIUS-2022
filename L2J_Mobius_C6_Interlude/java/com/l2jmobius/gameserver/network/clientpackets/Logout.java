@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public final class Logout extends L2GameClientPacket
+public final class Logout extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -39,7 +39,7 @@ public final class Logout extends L2GameClientPacket
 	protected void runImpl()
 	{
 		// Dont allow leaving if player is fighting
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -106,7 +106,7 @@ public final class Logout extends L2GameClientPacket
 				return;
 			}
 			
-			final L2Party playerParty = player.getParty();
+			final Party playerParty = player.getParty();
 			if (playerParty != null)
 			{
 				player.getParty().broadcastToPartyMembers(SystemMessage.sendString(player.getName() + " has been removed from the upcoming Festival."));
@@ -125,7 +125,7 @@ public final class Logout extends L2GameClientPacket
 				// Sleep effect, not official feature but however L2OFF features (like offline trade)
 				if (Config.OFFLINE_SLEEP_EFFECT)
 				{
-					player.startAbnormalEffect(L2Character.ABNORMAL_EFFECT_SLEEP);
+					player.startAbnormalEffect(Creature.ABNORMAL_EFFECT_SLEEP);
 				}
 				
 				player.store();

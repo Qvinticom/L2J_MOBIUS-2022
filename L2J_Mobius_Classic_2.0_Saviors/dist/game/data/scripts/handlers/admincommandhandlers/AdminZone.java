@@ -24,10 +24,10 @@ import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -44,7 +44,7 @@ public class AdminZone implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (activeChar == null)
 		{
@@ -87,11 +87,11 @@ public class AdminZone implements IAdminCommandHandler
 			final String next = st.nextToken();
 			if (next.equalsIgnoreCase("all"))
 			{
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
+				for (ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
 				{
 					zone.visualizeZone(activeChar.getZ());
 				}
-				for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+				for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 				{
 					territory.visualizeZone(activeChar.getZ());
 				}
@@ -111,7 +111,7 @@ public class AdminZone implements IAdminCommandHandler
 		return true;
 	}
 	
-	private static void showHtml(L2PcInstance activeChar)
+	private static void showHtml(PlayerInstance activeChar)
 	{
 		final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/zone.htm");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
@@ -135,7 +135,7 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%TAX%", (activeChar.isInsideZone(ZoneId.TAX) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		
 		final StringBuilder zones = new StringBuilder(100);
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
+		for (ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
 		{
 			if (zone.getName() != null)
 			{
@@ -154,7 +154,7 @@ public class AdminZone implements IAdminCommandHandler
 			}
 			zones.append(" ");
 		}
-		for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+		for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 		{
 			zones.append(territory.getName());
 			zones.append("<br1>");
@@ -163,7 +163,7 @@ public class AdminZone implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private static void getGeoRegionXY(L2PcInstance activeChar)
+	private static void getGeoRegionXY(PlayerInstance activeChar)
 	{
 		final int worldX = activeChar.getX();
 		final int worldY = activeChar.getY();

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author Beetle
  */
-public final class TradePressOtherOk extends L2GameServerPacket
+public final class TradePressOtherOk extends GameServerPacket
 {
 	public static final TradePressOtherOk STATIC_PACKET = new TradePressOtherOk();
 	

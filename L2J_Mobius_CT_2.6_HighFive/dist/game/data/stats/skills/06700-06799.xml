@@ -337,7 +337,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="60" />
 				<param chance="60" />
 				<param skillId="6726" skillLevel="1" /> <!-- Bless the Blood -->

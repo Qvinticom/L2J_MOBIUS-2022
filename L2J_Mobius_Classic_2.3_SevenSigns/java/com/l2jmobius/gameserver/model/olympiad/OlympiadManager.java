@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -88,12 +88,12 @@ public class OlympiadManager
 		AntiFeedManager.getInstance().clear(AntiFeedManager.OLYMPIAD_ID);
 	}
 	
-	public final boolean isRegistered(L2PcInstance noble)
+	public final boolean isRegistered(PlayerInstance noble)
 	{
 		return isRegistered(noble, noble, false);
 	}
 	
-	private boolean isRegistered(L2PcInstance noble, L2PcInstance player, boolean showMessage)
+	private boolean isRegistered(PlayerInstance noble, PlayerInstance player, boolean showMessage)
 	{
 		final Integer objId = Integer.valueOf(noble.getObjectId());
 		if (_nonClassBasedRegisters.contains(objId))
@@ -122,12 +122,12 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final boolean isRegisteredInComp(L2PcInstance noble)
+	public final boolean isRegisteredInComp(PlayerInstance noble)
 	{
 		return isRegistered(noble, noble, false) || isInCompetition(noble, noble, false);
 	}
 	
-	private boolean isInCompetition(L2PcInstance noble, L2PcInstance player, boolean showMessage)
+	private boolean isInCompetition(PlayerInstance noble, PlayerInstance player, boolean showMessage)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -173,7 +173,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final boolean registerNoble(L2PcInstance player, CompetitionType type)
+	public final boolean registerNoble(PlayerInstance player, CompetitionType type)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -254,7 +254,7 @@ public class OlympiadManager
 		return true;
 	}
 	
-	public final boolean unRegisterNoble(L2PcInstance noble)
+	public final boolean unRegisterNoble(PlayerInstance noble)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -308,7 +308,7 @@ public class OlympiadManager
 		return false;
 	}
 	
-	public final void removeDisconnectedCompetitor(L2PcInstance player)
+	public final void removeDisconnectedCompetitor(PlayerInstance player)
 	{
 		final OlympiadGameTask task = OlympiadGameManager.getInstance().getOlympiadTask(player.getOlympiadGameId());
 		if ((task != null) && task.isGameStarted())
@@ -335,7 +335,7 @@ public class OlympiadManager
 		protected static final OlympiadManager _instance = new OlympiadManager();
 	}
 	
-	private int getClassGroup(L2PcInstance player)
+	private int getClassGroup(PlayerInstance player)
 	{
 		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
 		{

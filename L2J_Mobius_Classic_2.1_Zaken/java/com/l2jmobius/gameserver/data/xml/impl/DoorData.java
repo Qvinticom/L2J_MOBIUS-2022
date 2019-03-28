@@ -37,8 +37,8 @@ import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 
 /**
@@ -51,9 +51,9 @@ public final class DoorData implements IGameXmlReader
 	
 	// Info holders
 	private final Map<String, Set<Integer>> _groups = new HashMap<>();
-	private final Map<Integer, L2DoorInstance> _doors = new HashMap<>();
+	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
 	private final Map<Integer, StatsSet> _templates = new HashMap<>();
-	private final Map<Integer, List<L2DoorInstance>> _regions = new HashMap<>();
+	private final Map<Integer, List<DoorInstance>> _regions = new HashMap<>();
 	
 	protected DoorData()
 	{
@@ -79,7 +79,7 @@ public final class DoorData implements IGameXmlReader
 	public StatsSet parseDoor(Node doorNode)
 	{
 		final StatsSet params = new StatsSet(parseAttributes(doorNode));
-		params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in L2CharTemplate
+		params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate
 		
 		forEach(doorNode, IXmlReader::isNode, innerDoorNode ->
 		{
@@ -143,11 +143,11 @@ public final class DoorData implements IGameXmlReader
 	 * @param set
 	 * @return
 	 */
-	public L2DoorInstance spawnDoor(StatsSet set)
+	public DoorInstance spawnDoor(StatsSet set)
 	{
 		// Create door template + door instance
-		final L2DoorTemplate template = new L2DoorTemplate(set);
-		final L2DoorInstance door = spawnDoor(template, null);
+		final DoorTemplate template = new DoorTemplate(set);
+		final DoorInstance door = spawnDoor(template, null);
 		
 		// Register the door
 		_templates.put(door.getId(), set);
@@ -162,9 +162,9 @@ public final class DoorData implements IGameXmlReader
 	 * @param instance
 	 * @return a new door instance based on provided template
 	 */
-	public L2DoorInstance spawnDoor(L2DoorTemplate template, Instance instance)
+	public DoorInstance spawnDoor(DoorTemplate template, Instance instance)
 	{
-		final L2DoorInstance door = new L2DoorInstance(template);
+		final DoorInstance door = new DoorInstance(template);
 		door.setCurrentHp(door.getMaxHp());
 		
 		// Set instance world if provided
@@ -189,7 +189,7 @@ public final class DoorData implements IGameXmlReader
 		return _templates.get(doorId);
 	}
 	
-	public L2DoorInstance getDoor(int doorId)
+	public DoorInstance getDoor(int doorId)
 	{
 		return _doors.get(doorId);
 	}
@@ -199,7 +199,7 @@ public final class DoorData implements IGameXmlReader
 		return _groups.getOrDefault(groupName, Collections.emptySet());
 	}
 	
-	public Collection<L2DoorInstance> getDoors()
+	public Collection<DoorInstance> getDoors()
 	{
 		return _doors.values();
 	}
@@ -228,13 +228,13 @@ public final class DoorData implements IGameXmlReader
 	 */
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean doubleFaceCheck)
 	{
-		final Collection<L2DoorInstance> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
+		final Collection<DoorInstance> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
 		if (allDoors == null)
 		{
 			return false;
 		}
 		
-		for (L2DoorInstance doorInst : allDoors)
+		for (DoorInstance doorInst : allDoors)
 		{
 			// check dead and open
 			if (doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0))

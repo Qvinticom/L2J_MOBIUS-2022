@@ -19,16 +19,16 @@ package com.l2jmobius.gameserver.skills.holders;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
 
 /**
  * @author UnAfraid
  */
 public class PlayerSkillHolder implements ISkillsHolder
 {
-	private final Map<Integer, L2Skill> _skills = new HashMap<>();
+	private final Map<Integer, Skill> _skills = new HashMap<>();
 	
-	public PlayerSkillHolder(Map<Integer, L2Skill> map)
+	public PlayerSkillHolder(Map<Integer, Skill> map)
 	{
 		_skills.putAll(map);
 	}
@@ -37,7 +37,7 @@ public class PlayerSkillHolder implements ISkillsHolder
 	 * @return the map containing this character skills.
 	 */
 	@Override
-	public Map<Integer, L2Skill> getSkills()
+	public Map<Integer, Skill> getSkills()
 	{
 		return _skills;
 	}
@@ -47,29 +47,29 @@ public class PlayerSkillHolder implements ISkillsHolder
 	 * @param skill
 	 */
 	@Override
-	public L2Skill addSkill(L2Skill skill)
+	public Skill addSkill(Skill skill)
 	{
 		return _skills.put(skill.getId(), skill);
 	}
 	
 	/**
-	 * Return the level of a skill owned by the L2Character.
-	 * @param skillId The identifier of the L2Skill whose level must be returned
-	 * @return The level of the L2Skill identified by skillId
+	 * Return the level of a skill owned by the Creature.
+	 * @param skillId The identifier of the Skill whose level must be returned
+	 * @return The level of the Skill identified by skillId
 	 */
 	@Override
 	public int getSkillLevel(int skillId)
 	{
-		final L2Skill skill = getKnownSkill(skillId);
+		final Skill skill = getKnownSkill(skillId);
 		return (skill == null) ? 0 : skill.getLevel();
 	}
 	
 	/**
-	 * @param skillId The identifier of the L2Skill to check the knowledge
+	 * @param skillId The identifier of the Skill to check the knowledge
 	 * @return the skill from the known skill.
 	 */
 	@Override
-	public L2Skill getKnownSkill(int skillId)
+	public Skill getKnownSkill(int skillId)
 	{
 		return _skills.get(skillId);
 	}

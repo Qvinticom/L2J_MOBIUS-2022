@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.skills.conditions;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
@@ -36,15 +36,15 @@ public class ConditionTargetRaceId extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		if ((_raceIds == null) || (env.target == null) || !(env.target instanceof L2NpcInstance))
+		if ((_raceIds == null) || (env.target == null) || !(env.target instanceof NpcInstance))
 		{
 			return false;
 		}
 		
-		final L2NpcInstance target = (L2NpcInstance) env.target;
+		final NpcInstance target = (NpcInstance) env.target;
 		if ((target.getTemplate() != null) && (target.getTemplate().race != null))
 		{
-			return _raceIds.contains(((L2NpcInstance) env.target).getTemplate().race.ordinal() + 1);
+			return _raceIds.contains(((NpcInstance) env.target).getTemplate().race.ordinal() + 1);
 		}
 		return false;
 	}

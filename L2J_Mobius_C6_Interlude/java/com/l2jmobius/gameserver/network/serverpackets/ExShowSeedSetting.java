@@ -21,14 +21,14 @@ import java.util.List;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProduction;
-import com.l2jmobius.gameserver.model.L2Manor;
+import com.l2jmobius.gameserver.model.Manor;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
  * format(packet 0xFE) ch dd [ddcdcdddddddd] c - id h - sub id d - manor id d - size [ d - seed id d - level c d - reward 1 id c d - reward 2 id d - next sale limit d - price for castle to produce 1 d - min seed price d - max seed price d - today sales d - today price d - next sales d - next price ]
  * @author l3x
  */
-public class ExShowSeedSetting extends L2GameServerPacket
+public class ExShowSeedSetting extends GameServerPacket
 {
 	private final int _manorId;
 	private final int _count;
@@ -43,20 +43,20 @@ public class ExShowSeedSetting extends L2GameServerPacket
 	{
 		_manorId = manorId;
 		final Castle c = CastleManager.getInstance().getCastleById(_manorId);
-		final List<Integer> seeds = L2Manor.getInstance().getSeedsForCastle(_manorId);
+		final List<Integer> seeds = Manor.getInstance().getSeedsForCastle(_manorId);
 		_count = seeds.size();
 		_seedData = new int[_count * 12];
 		int i = 0;
 		for (int s : seeds)
 		{
 			_seedData[(i * 12) + 0] = s;
-			_seedData[(i * 12) + 1] = L2Manor.getInstance().getSeedLevel(s);
-			_seedData[(i * 12) + 2] = L2Manor.getInstance().getRewardItemBySeed(s, 1);
-			_seedData[(i * 12) + 3] = L2Manor.getInstance().getRewardItemBySeed(s, 2);
-			_seedData[(i * 12) + 4] = L2Manor.getInstance().getSeedSaleLimit(s);
-			_seedData[(i * 12) + 5] = L2Manor.getInstance().getSeedBuyPrice(s);
-			_seedData[(i * 12) + 6] = (L2Manor.getInstance().getSeedBasicPrice(s) * 60) / 100;
-			_seedData[(i * 12) + 7] = L2Manor.getInstance().getSeedBasicPrice(s) * 10;
+			_seedData[(i * 12) + 1] = Manor.getInstance().getSeedLevel(s);
+			_seedData[(i * 12) + 2] = Manor.getInstance().getRewardItemBySeed(s, 1);
+			_seedData[(i * 12) + 3] = Manor.getInstance().getRewardItemBySeed(s, 2);
+			_seedData[(i * 12) + 4] = Manor.getInstance().getSeedSaleLimit(s);
+			_seedData[(i * 12) + 5] = Manor.getInstance().getSeedBuyPrice(s);
+			_seedData[(i * 12) + 6] = (Manor.getInstance().getSeedBasicPrice(s) * 60) / 100;
+			_seedData[(i * 12) + 7] = Manor.getInstance().getSeedBasicPrice(s) * 10;
 			SeedProduction seedPr = c.getSeed(s, CastleManorManager.PERIOD_CURRENT);
 			if (seedPr != null)
 			{

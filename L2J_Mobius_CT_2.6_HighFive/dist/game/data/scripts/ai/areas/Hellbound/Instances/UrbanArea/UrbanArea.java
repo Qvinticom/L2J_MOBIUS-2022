@@ -21,12 +21,12 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.QuestGuardInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -91,7 +91,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (!npc.isAffectedBySkill(STONE.getSkillId()))
 		{
@@ -101,12 +101,12 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (npc.getId() == KANAF)
 		{
-			if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+			if (!player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 			{
 				if (HellboundEngine.getInstance().getLevel() < 10)
 				{
@@ -129,7 +129,7 @@ public final class UrbanArea extends AbstractInstance
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 			if (world != null)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				
 				if (party == null)
 				{
@@ -141,7 +141,7 @@ public final class UrbanArea extends AbstractInstance
 				}
 				else if (player.getInventory().getInventoryItemCount(KEY, -1, false) >= 1)
 				{
-					for (L2PcInstance partyMember : party.getMembers())
+					for (PlayerInstance partyMember : party.getMembers())
 					{
 						if (!Util.checkIfInRange(300, npc, partyMember, true))
 						{
@@ -170,7 +170,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -201,7 +201,7 @@ public final class UrbanArea extends AbstractInstance
 						HellboundEngine.getInstance().updateTrust(10, true);
 						npc.scheduleDespawn(3000);
 						// Try to call Amaskari
-						final L2Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", L2Npc.class);
+						final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
 						if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, spawnedAmaskari, false))
 						{
 							final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
@@ -219,12 +219,12 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		if (npc.getId() == DOWNTOWN_NATIVE)
 		{
-			((L2QuestGuardInstance) npc).setPassive(true);
-			((L2QuestGuardInstance) npc).setAutoAttackable(false);
+			((QuestGuardInstance) npc).setPassive(true);
+			((QuestGuardInstance) npc).setAutoAttackable(false);
 			STONE.getSkill().applyEffects(npc, npc);
 			startQuestTimer("rebuff", 357000, npc, null);
 		}
@@ -237,7 +237,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -247,7 +247,7 @@ public final class UrbanArea extends AbstractInstance
 				npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[0]);
 				npc.setBusy(true);
 				
-				final L2Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", L2Npc.class);
+				final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
 				if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, spawnedAmaskari, false))
 				{
 					final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
@@ -263,7 +263,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -299,7 +299,7 @@ public final class UrbanArea extends AbstractInstance
 				npc.setBusy(true);
 				npc.setBusyMessage("atk");
 				
-				final L2Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", L2Npc.class);
+				final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
 				if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, spawnedAmaskari, false))
 				{
 					final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
@@ -315,7 +315,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -326,14 +326,14 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(L2PcInstance player)
+	protected boolean checkConditions(PlayerInstance player)
 	{
-		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+		if (player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		
 		if ((party == null) || !party.isLeader(player))
 		{
@@ -341,7 +341,7 @@ public final class UrbanArea extends AbstractInstance
 			return false;
 		}
 		
-		for (L2PcInstance partyMember : party.getMembers())
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < MIN_LV)
 			{
@@ -365,7 +365,7 @@ public final class UrbanArea extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -376,7 +376,7 @@ public final class UrbanArea extends AbstractInstance
 			}
 			else
 			{
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -392,9 +392,9 @@ public final class UrbanArea extends AbstractInstance
 	
 	private static class CallAmaskari implements Runnable
 	{
-		private final L2Npc _caller;
+		private final Npc _caller;
 		
-		public CallAmaskari(L2Npc caller)
+		public CallAmaskari(Npc caller)
 		{
 			_caller = caller;
 		}
@@ -407,7 +407,7 @@ public final class UrbanArea extends AbstractInstance
 				final InstanceWorld world = InstanceManager.getInstance().getWorld(_caller);
 				if (world != null)
 				{
-					final L2Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", L2Npc.class);
+					final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
 					if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead())
 					{
 						spawnedAmaskari.teleToLocation(_caller.getLocation());
@@ -420,10 +420,10 @@ public final class UrbanArea extends AbstractInstance
 	
 	private class ExitInstance implements Runnable
 	{
-		private final L2Party _party;
+		private final Party _party;
 		private final InstanceWorld _world;
 		
-		public ExitInstance(L2Party party, InstanceWorld world)
+		public ExitInstance(Party party, InstanceWorld world)
 		{
 			_party = party;
 			_world = world;
@@ -434,7 +434,7 @@ public final class UrbanArea extends AbstractInstance
 		{
 			if ((_party != null) && (_world != null))
 			{
-				for (L2PcInstance partyMember : _party.getMembers())
+				for (PlayerInstance partyMember : _party.getMembers())
 				{
 					if ((partyMember != null) && !partyMember.isDead())
 					{

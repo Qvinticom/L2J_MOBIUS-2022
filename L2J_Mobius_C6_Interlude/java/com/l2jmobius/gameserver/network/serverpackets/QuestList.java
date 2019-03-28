@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -24,10 +24,10 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
  * sample for rev 377: 98 05 00 number of quests ff 00 00 00 0a 01 00 00 39 01 00 00 04 01 00 00 a2 00 00 00 format h (d) h (dddh) rev 377 format h (dd) h (dddd) rev 417
  * @version $Revision: 1.4.2.2.2.2 $ $Date: 2005/02/10 16:44:28 $
  */
-public class QuestList extends L2GameServerPacket
+public class QuestList extends GameServerPacket
 {
 	private Quest[] _quests;
-	private L2PcInstance _activeChar;
+	private PlayerInstance _player;
 	
 	public QuestList()
 	{
@@ -36,10 +36,10 @@ public class QuestList extends L2GameServerPacket
 	@Override
 	public void runImpl()
 	{
-		if ((getClient() != null) && (getClient().getActiveChar() != null))
+		if ((getClient() != null) && (getClient().getPlayer() != null))
 		{
-			_activeChar = getClient().getActiveChar();
-			_quests = _activeChar.getAllActiveQuests();
+			_player = getClient().getPlayer();
+			_quests = _player.getAllActiveQuests();
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class QuestList extends L2GameServerPacket
 		for (Quest q : _quests)
 		{
 			writeD(q.getQuestIntId());
-			final QuestState qs = _activeChar.getQuestState(q.getName());
+			final QuestState qs = _player.getQuestState(q.getName());
 			if (qs == null)
 			{
 				writeD(0);

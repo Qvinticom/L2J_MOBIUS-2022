@@ -17,9 +17,9 @@
 package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -31,23 +31,23 @@ public class SupportBlessing implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
 			return false;
 		}
 		
-		final L2Npc npc = (L2Npc) target;
+		final Npc npc = (Npc) target;
 		
 		// If the player is too high level, display a message and return
-		if ((activeChar.getLevel() > 39) || (activeChar.getClassId().level() >= 2))
+		if ((player.getLevel() > 39) || (player.getClassId().level() >= 2))
 		{
-			npc.showChatWindow(activeChar, "data/html/default/SupportBlessingHighLevel.htm");
+			npc.showChatWindow(player, "data/html/default/SupportBlessingHighLevel.htm");
 			return true;
 		}
-		npc.setTarget(activeChar);
-		SkillCaster.triggerCast(npc, activeChar, CommonSkill.BLESSING_OF_PROTECTION.getSkill());
+		npc.setTarget(player);
+		SkillCaster.triggerCast(npc, player, CommonSkill.BLESSING_OF_PROTECTION.getSkill());
 		return false;
 	}
 	

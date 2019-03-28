@@ -18,7 +18,7 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -57,7 +57,7 @@ public final class Spoil extends AbstractEffect
 			return;
 		}
 		
-		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
+		final MonsterInstance target = (MonsterInstance) info.getEffected();
 		if (target.isSpoiled())
 		{
 			info.getEffector().sendPacket(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED);

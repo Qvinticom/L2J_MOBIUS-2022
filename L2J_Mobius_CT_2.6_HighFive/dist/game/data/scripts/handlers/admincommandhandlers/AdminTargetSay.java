@@ -18,16 +18,16 @@ package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
- * This class handles following admin commands: - targetsay <message> = makes talk a L2Character
+ * This class handles following admin commands: - targetsay <message> = makes talk a Creature
  * @author nonom
  */
 public class AdminTargetSay implements IAdminCommandHandler
@@ -38,21 +38,21 @@ public class AdminTargetSay implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_targetsay"))
 		{
 			try
 			{
-				final L2Object obj = activeChar.getTarget();
-				if ((obj instanceof L2StaticObjectInstance) || !obj.isCharacter())
+				final WorldObject obj = activeChar.getTarget();
+				if ((obj instanceof StaticObjectInstance) || !obj.isCreature())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
 				}
 				
 				final String message = command.substring(16);
-				final L2Character target = (L2Character) obj;
+				final Creature target = (Creature) obj;
 				target.broadcastPacket(new CreatureSay(target.getObjectId(), (target.isPlayer() ? ChatType.GENERAL : ChatType.NPC_GENERAL), target.getName(), message));
 			}
 			catch (StringIndexOutOfBoundsException e)

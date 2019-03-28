@@ -31,16 +31,16 @@ import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
-import com.l2jmobius.gameserver.model.items.L2EtcItem;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.EtcItem;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -53,7 +53,7 @@ public final class UseItem implements IClientIncomingPacket
 	private int _itemId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_ctrlPressed = packet.readD() != 0;
@@ -61,10 +61,10 @@ public final class UseItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -75,28 +75,28 @@ public final class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.getActiveTradeList() != null)
+		if (player.getActiveTradeList() != null)
 		{
-			activeChar.cancelActiveTrade();
+			player.cancelActiveTrade();
 		}
 		
-		if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
+		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			activeChar.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		if (item == null)
 		{
 			// gm can use other player item
-			if (activeChar.isGM())
+			if (player.isGM())
 			{
-				final L2Object obj = L2World.getInstance().findObject(_objectId);
+				final WorldObject obj = World.getInstance().findObject(_objectId);
 				if (obj.isItem())
 				{
-					AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_use_item " + _objectId, true);
+					AdminCommandHandler.getInstance().useAdminCommand(player, "admin_use_item " + _objectId, true);
 				}
 			}
 			return;
@@ -104,42 +104,42 @@ public final class UseItem implements IClientIncomingPacket
 		
 		if (item.isQuestItem() && (item.getItem().getDefaultAction() != ActionType.NONE))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
 			return;
 		}
 		
 		// No UseItem is allowed while the player is in special conditions
-		if (activeChar.hasBlockActions() || activeChar.isControlBlocked() || activeChar.isAlikeDead())
+		if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead())
 		{
 			return;
 		}
 		
 		// Char cannot use item when dead
-		if (activeChar.isDead() || !activeChar.getInventory().canManipulateWithItemId(item.getId()))
+		if (player.isDead() || !player.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addItemName(item);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
-		if (!item.isEquipped() && !item.getItem().checkCondition(activeChar, activeChar, true))
+		if (!item.isEquipped() && !item.getItem().checkCondition(player, player, true))
 		{
 			return;
 		}
 		
 		_itemId = item.getId();
-		if (activeChar.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
+		if (player.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}
 		
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getReputation() < 0))
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0))
 		{
 			final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
-			if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasEffectType(L2EffectType.TELEPORT)))
+			if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasEffectType(EffectType.TELEPORT)))
 			{
 				return;
 			}
@@ -151,19 +151,19 @@ public final class UseItem implements IClientIncomingPacket
 		final int sharedReuseGroup = item.getSharedReuseGroup();
 		if (reuseDelay > 0)
 		{
-			final long reuse = activeChar.getItemRemainingReuseTime(item.getObjectId());
+			final long reuse = player.getItemRemainingReuseTime(item.getObjectId());
 			if (reuse > 0)
 			{
-				reuseData(activeChar, item, reuse);
-				sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuse, reuseDelay);
+				reuseData(player, item, reuse);
+				sendSharedGroupUpdate(player, sharedReuseGroup, reuse, reuseDelay);
 				return;
 			}
 			
-			final long reuseOnGroup = activeChar.getReuseDelayOnGroup(sharedReuseGroup);
+			final long reuseOnGroup = player.getReuseDelayOnGroup(sharedReuseGroup);
 			if (reuseOnGroup > 0)
 			{
-				reuseData(activeChar, item, reuseOnGroup);
-				sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseOnGroup, reuseDelay);
+				reuseData(player, item, reuseOnGroup);
+				sendSharedGroupUpdate(player, sharedReuseGroup, reuseOnGroup, reuseDelay);
 				return;
 			}
 		}
@@ -171,7 +171,7 @@ public final class UseItem implements IClientIncomingPacket
 		if (item.isEquipable())
 		{
 			// Don't allow to put formal wear while a cursed weapon is equipped.
-			if (activeChar.isCursedWeaponEquipped() && (_itemId == 6408))
+			if (player.isCursedWeaponEquipped() && (_itemId == 6408))
 			{
 				return;
 			}
@@ -182,90 +182,90 @@ public final class UseItem implements IClientIncomingPacket
 				return; // no message
 			}
 			
-			if (activeChar.isCombatFlagEquipped())
+			if (player.isCombatFlagEquipped())
 			{
 				return;
 			}
 			
-			if (activeChar.getInventory().isItemSlotBlocked(item.getItem().getBodyPart()))
+			if (player.getInventory().isItemSlotBlocked(item.getItem().getBodyPart()))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
 			// Prevent players to equip weapon while wearing combat flag
 			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
-			if ((item.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) || (item.getItem().getBodyPart() == L2Item.SLOT_L_HAND) || (item.getItem().getBodyPart() == L2Item.SLOT_R_HAND))
+			if ((item.getItem().getBodyPart() == Item.SLOT_LR_HAND) || (item.getItem().getBodyPart() == Item.SLOT_L_HAND) || (item.getItem().getBodyPart() == Item.SLOT_R_HAND))
 			{
-				if ((activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getId() == 9819))
+				if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 					return;
 				}
-				if (activeChar.isMounted() || activeChar.isDisarmed())
+				if (player.isMounted() || player.isDisarmed())
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 					return;
 				}
-				if (activeChar.isCursedWeaponEquipped())
+				if (player.isCursedWeaponEquipped())
 				{
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == L2Item.SLOT_DECO)
+			else if (item.getItem().getBodyPart() == Item.SLOT_DECO)
 			{
-				if (!item.isEquipped() && (activeChar.getInventory().getTalismanSlots() == 0))
+				if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL)
+			else if (item.getItem().getBodyPart() == Item.SLOT_BROOCH_JEWEL)
 			{
-				if (!item.isEquipped() && (activeChar.getInventory().getBroochJewelSlots() == 0))
+				if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
 					sm.addItemName(item);
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 					return;
 				}
 			}
-			else if (item.getItem().getBodyPart() == L2Item.SLOT_AGATHION)
+			else if (item.getItem().getBodyPart() == Item.SLOT_AGATHION)
 			{
-				if (!item.isEquipped() && (activeChar.getInventory().getAgathionSlots() == 0))
+				if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 					return;
 				}
 			}
 			
-			if (activeChar.isCastingNow())
+			if (player.isCastingNow())
 			{
 				// Create and Bind the next action to the AI.
-				activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
+				player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> player.useEquippableItem(item, true)));
 			}
-			else if (activeChar.isAttackingNow())
+			else if (player.isAttackingNow())
 			{
 				ThreadPool.schedule(() ->
 				{
 					// Check if the item is still on inventory.
-					final L2ItemInstance equipItem = activeChar.getInventory().getItemByObjectId(_objectId);
+					final ItemInstance equipItem = player.getInventory().getItemByObjectId(_objectId);
 					if (equipItem == null)
 					{
 						return;
 					}
 					
 					// Equip or unEquip.
-					activeChar.useEquippableItem(equipItem, false);
-				}, activeChar.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+					player.useEquippableItem(equipItem, false);
+				}, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
 			{
-				activeChar.useEquippableItem(item, true);
+				player.useEquippableItem(item, true);
 			}
 		}
 		else
 		{
-			final L2EtcItem etcItem = item.getEtcItem();
+			final EtcItem etcItem = item.getEtcItem();
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
 			if (handler == null)
 			{
@@ -274,20 +274,20 @@ public final class UseItem implements IClientIncomingPacket
 					LOGGER.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
 				}
 			}
-			else if (handler.useItem(activeChar, item, _ctrlPressed))
+			else if (handler.useItem(player, item, _ctrlPressed))
 			{
 				// Item reuse time should be added if the item is successfully used.
 				// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
 				if (reuseDelay > 0)
 				{
-					activeChar.addTimeStampItem(item, reuseDelay);
-					sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseDelay, reuseDelay);
+					player.addTimeStampItem(item, reuseDelay);
+					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 				}
 			}
 		}
 	}
 	
-	private void reuseData(L2PcInstance activeChar, L2ItemInstance item, long remainingTime)
+	private void reuseData(PlayerInstance player, ItemInstance item, long remainingTime)
 	{
 		final int hours = (int) (remainingTime / 3600000);
 		final int minutes = (int) (remainingTime % 3600000) / 60000;
@@ -312,14 +312,14 @@ public final class UseItem implements IClientIncomingPacket
 			sm.addItemName(item);
 		}
 		sm.addInt(seconds);
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 	}
 	
-	private void sendSharedGroupUpdate(L2PcInstance activeChar, int group, long remaining, int reuse)
+	private void sendSharedGroupUpdate(PlayerInstance player, int group, long remaining, int reuse)
 	{
 		if (group > 0)
 		{
-			activeChar.sendPacket(new ExUseSharedGroupItem(_itemId, group, remaining, reuse));
+			player.sendPacket(new ExUseSharedGroupItem(_itemId, group, remaining, reuse));
 		}
 	}
 }

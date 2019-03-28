@@ -16,7 +16,7 @@
  */
 package ai.others.Spawns;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 
@@ -32,7 +32,7 @@ public final class NoRandomActivity extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
+	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{
 		npc.setRandomAnimation(npc.getParameters().getBoolean("disableRandomAnimation", false));
 		npc.setRandomWalking(npc.getParameters().getBoolean("disableRandomWalk", false));

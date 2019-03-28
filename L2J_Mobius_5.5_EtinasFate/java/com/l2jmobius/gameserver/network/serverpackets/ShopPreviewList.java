@@ -22,7 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -74,7 +74,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 				packet.writeD(product.getItemId());
 				packet.writeH(product.getItem().getType2()); // item type2
 				
-				if (product.getItem().getType1() != L2Item.TYPE1_ITEM_QUESTITEM_ADENA)
+				if (product.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeQ(product.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}

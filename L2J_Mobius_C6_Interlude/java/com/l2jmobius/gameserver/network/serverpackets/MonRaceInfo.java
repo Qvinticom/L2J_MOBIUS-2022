@@ -16,20 +16,20 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 
 /**
  * sample 06 8f19904b 2522d04b 00000000 80 950c0000 4af50000 08f2ffff 0000 - 0 damage (missed 0x80) 06 85071048 bc0e504b 32000000 10 fc41ffff fd240200 a6f5ffff 0100 bc0e504b 33000000 10 3.... format dddc dddh (ddc)
  * @version $Revision: 1.1.6.2 $ $Date: 2005/03/27 15:29:39 $
  */
-public class MonRaceInfo extends L2GameServerPacket
+public class MonRaceInfo extends GameServerPacket
 {
 	private final int _unknown1;
 	private final int _unknown2;
-	private final L2NpcInstance[] _monsters;
+	private final NpcInstance[] _monsters;
 	private final int[][] _speeds;
 	
-	public MonRaceInfo(int unknown1, int unknown2, L2NpcInstance[] monsters, int[][] speeds)
+	public MonRaceInfo(int unknown1, int unknown2, NpcInstance[] monsters, int[][] speeds)
 	{
 		/*
 		 * -1 0 to initial the race 0 15322 to start race 13765 -1 in middle of race -1 0 to end the race

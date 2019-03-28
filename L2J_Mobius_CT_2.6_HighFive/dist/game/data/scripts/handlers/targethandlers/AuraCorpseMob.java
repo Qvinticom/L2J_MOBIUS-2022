@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
@@ -33,18 +33,18 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 public class AuraCorpseMob implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
-		// Go through the L2Character _knownList
+		final List<Creature> targetList = new ArrayList<>();
+		// Go through the Creature _knownList
 		final int maxTargets = skill.getAffectLimit();
-		for (L2Attackable obj : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Attackable.class, skill.getAffectRange()))
+		for (Attackable obj : World.getInstance().getVisibleObjectsInRange(creature, Attackable.class, skill.getAffectRange()))
 		{
 			if (obj.isDead())
 			{
 				if (onlyFirst)
 				{
-					return new L2Character[]
+					return new Creature[]
 					{
 						obj
 					};
@@ -58,12 +58,12 @@ public class AuraCorpseMob implements ITargetTypeHandler
 				targetList.add(obj);
 			}
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.AURA_CORPSE_MOB;
+		return TargetType.AURA_CORPSE_MOB;
 	}
 }

@@ -25,19 +25,19 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
@@ -57,11 +57,11 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 	
 	private class RemoveWearItemsTask implements Runnable
 	{
-		private final L2PcInstance activeChar;
+		private final PlayerInstance _player;
 		
-		protected RemoveWearItemsTask(L2PcInstance player)
+		protected RemoveWearItemsTask(PlayerInstance player)
 		{
-			activeChar = player;
+			_player = player;
 		}
 		
 		@Override
@@ -69,8 +69,8 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		{
 			try
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT_2);
-				activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
+				_player.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT_2);
+				_player.sendPacket(new ExUserInfoEquipSlot(_player));
 			}
 			catch (Exception e)
 			{
@@ -80,7 +80,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_unk = packet.readD();
 		_listId = packet.readD();
@@ -107,7 +107,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_items == null)
 		{
@@ -115,29 +115,29 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		}
 		
 		// Get the current player and return if null
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
 		{
-			activeChar.sendMessage("You are buying too fast.");
+			player.sendMessage("You are buying too fast.");
 			return;
 		}
 		
 		// If Alternate rule Karma punishment is set to true, forbid Wear to player with Karma
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (activeChar.getReputation() < 0))
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getReputation() < 0))
 		{
 			return;
 		}
 		
 		// Check current target of the player and the INTERACTION_DISTANCE
-		final L2Object target = activeChar.getTarget();
-		if (!activeChar.isGM() && ((target == null // No target (i.e. GM Shop)
-		) || !((target instanceof L2MerchantInstance)) // Target not a merchant
-			|| !activeChar.isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE) // Distance is too far
+		final WorldObject target = player.getTarget();
+		if (!player.isGM() && ((target == null // No target (i.e. GM Shop)
+		) || !((target instanceof MerchantInstance)) // Target not a merchant
+			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE) // Distance is too far
 		))
 		{
 			return;
@@ -150,7 +150,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		}
 		
 		// Get the current merchant targeted by the player
-		final L2MerchantInstance merchant = (target instanceof L2MerchantInstance) ? (L2MerchantInstance) target : null;
+		final MerchantInstance merchant = (target instanceof MerchantInstance) ? (MerchantInstance) target : null;
 		if (merchant == null)
 		{
 			LOGGER.warning("Null merchant!");
@@ -160,7 +160,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
 		if (buyList == null)
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -174,11 +174,11 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 			final Product product = buyList.getProductByItemId(itemId);
 			if (product == null)
 			{
-				Util.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false BuyList list_id " + _listId + " and item_id " + itemId, Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId + " and item_id " + itemId, Config.DEFAULT_PUNISH);
 				return;
 			}
 			
-			final L2Item template = product.getItem();
+			final Item template = product.getItem();
 			if (template == null)
 			{
 				continue;
@@ -190,9 +190,9 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 				continue;
 			}
 			
-			if (template instanceof L2Weapon)
+			if (template instanceof Weapon)
 			{
-				if (activeChar.getRace() == Race.KAMAEL)
+				if (player.getRace() == Race.KAMAEL)
 				{
 					if (template.getItemType() == WeaponType.NONE)
 					{
@@ -204,9 +204,9 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 					}
 				}
 			}
-			else if (template instanceof L2Armor)
+			else if (template instanceof Armor)
 			{
-				if (activeChar.getRace() == Race.KAMAEL)
+				if (player.getRace() == Race.KAMAEL)
 				{
 					if ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC))
 					{
@@ -217,7 +217,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 			
 			if (itemList.containsKey(slot))
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_CAN_NOT_TRY_THOSE_ITEMS_ON_AT_THE_SAME_TIME);
+				player.sendPacket(SystemMessageId.YOU_CAN_NOT_TRY_THOSE_ITEMS_ON_AT_THE_SAME_TIME);
 				return;
 			}
 			
@@ -225,23 +225,23 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 			totalPrice += Config.WEAR_PRICE;
 			if (totalPrice > Inventory.MAX_ADENA)
 			{
-				Util.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Inventory.MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
 				return;
 			}
 		}
 		
 		// Charge buyer and add tax to castle treasury if not owned by npc clan because a Try On is not Free
-		if ((totalPrice < 0) || !activeChar.reduceAdena("Wear", totalPrice, activeChar.getLastFolkNPC(), true))
+		if ((totalPrice < 0) || !player.reduceAdena("Wear", totalPrice, player.getLastFolkNPC(), true))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
 		if (!itemList.isEmpty())
 		{
-			activeChar.sendPacket(new ShopPreviewInfo(itemList));
+			player.sendPacket(new ShopPreviewInfo(itemList));
 			// Schedule task
-			ThreadPool.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
+			ThreadPool.schedule(new RemoveWearItemsTask(player), Config.WEAR_DELAY * 1000);
 		}
 	}
 	

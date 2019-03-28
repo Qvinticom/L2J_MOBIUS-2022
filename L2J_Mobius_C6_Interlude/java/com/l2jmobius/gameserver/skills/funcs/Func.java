@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.skills.conditions.Condition;
  */
 public abstract class Func
 {
-	/** Statistics, that is affected by this function (See L2Character.CALCULATOR_XXX constants) */
+	/** Statistics, that is affected by this function (See Creature.CALCULATOR_XXX constants) */
 	public final Stats stat;
 	
 	/**

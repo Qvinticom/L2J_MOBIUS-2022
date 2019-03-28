@@ -18,18 +18,18 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.datatables.sql.L2PetDataTable;
+import com.l2jmobius.gameserver.datatables.sql.PetDataTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestPetUseItem extends L2GameClientPacket
+public final class RequestPetUseItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestPetUseItem.class.getName());
 	private int _objectId;
@@ -43,9 +43,9 @@ public final class RequestPetUseItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -55,14 +55,14 @@ public final class RequestPetUseItem extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) activeChar.getPet();
+		final PetInstance pet = (PetInstance) player.getPet();
 		
 		if (pet == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
 		
 		if (item == null)
 		{
@@ -76,78 +76,78 @@ public final class RequestPetUseItem extends L2GameClientPacket
 		
 		final int itemId = item.getItemId();
 		
-		if (activeChar.isAlikeDead() || pet.isDead())
+		if (player.isAlikeDead() || pet.isDead())
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addItemName(item.getItemId());
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			return;
 		}
 		
 		// check if the item matches the pet
 		if (item.isEquipable())
 		{
-			if (L2PetDataTable.isWolf(pet.getNpcId()) && // wolf
+			if (PetDataTable.isWolf(pet.getNpcId()) && // wolf
 				item.getItem().isForWolf())
 			{
-				useItem(pet, item, activeChar);
+				useItem(pet, item, player);
 				return;
 			}
-			else if (L2PetDataTable.isHatchling(pet.getNpcId()) && // hatchlings
+			else if (PetDataTable.isHatchling(pet.getNpcId()) && // hatchlings
 				item.getItem().isForHatchling())
 			{
-				useItem(pet, item, activeChar);
+				useItem(pet, item, player);
 				return;
 			}
-			else if (L2PetDataTable.isStrider(pet.getNpcId()) && // striders
+			else if (PetDataTable.isStrider(pet.getNpcId()) && // striders
 				item.getItem().isForStrider())
 			{
-				useItem(pet, item, activeChar);
+				useItem(pet, item, player);
 				return;
 			}
-			else if (L2PetDataTable.isBaby(pet.getNpcId()) && // baby pets (buffalo, cougar, kookaboora)
+			else if (PetDataTable.isBaby(pet.getNpcId()) && // baby pets (buffalo, cougar, kookaboora)
 				item.getItem().isForBabyPet())
 			{
-				useItem(pet, item, activeChar);
+				useItem(pet, item, player);
 				return;
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+				player.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 				return;
 			}
 		}
-		else if (L2PetDataTable.isPetFood(itemId))
+		else if (PetDataTable.isPetFood(itemId))
 		{
-			if (L2PetDataTable.isWolf(pet.getNpcId()) && L2PetDataTable.isWolfFood(itemId))
+			if (PetDataTable.isWolf(pet.getNpcId()) && PetDataTable.isWolfFood(itemId))
 			{
-				feed(activeChar, pet, item);
+				feed(player, pet, item);
 				return;
 			}
 			
-			if (L2PetDataTable.isSinEater(pet.getNpcId()) && L2PetDataTable.isSinEaterFood(itemId))
+			if (PetDataTable.isSinEater(pet.getNpcId()) && PetDataTable.isSinEaterFood(itemId))
 			{
-				feed(activeChar, pet, item);
+				feed(player, pet, item);
 				return;
 			}
-			else if (L2PetDataTable.isHatchling(pet.getNpcId()) && L2PetDataTable.isHatchlingFood(itemId))
+			else if (PetDataTable.isHatchling(pet.getNpcId()) && PetDataTable.isHatchlingFood(itemId))
 			{
-				feed(activeChar, pet, item);
+				feed(player, pet, item);
 				return;
 			}
-			else if (L2PetDataTable.isStrider(pet.getNpcId()) && L2PetDataTable.isStriderFood(itemId))
+			else if (PetDataTable.isStrider(pet.getNpcId()) && PetDataTable.isStriderFood(itemId))
 			{
-				feed(activeChar, pet, item);
+				feed(player, pet, item);
 				return;
 			}
-			else if (L2PetDataTable.isWyvern(pet.getNpcId()) && L2PetDataTable.isWyvernFood(itemId))
+			else if (PetDataTable.isWyvern(pet.getNpcId()) && PetDataTable.isWyvernFood(itemId))
 			{
-				feed(activeChar, pet, item);
+				feed(player, pet, item);
 				return;
 			}
-			else if (L2PetDataTable.isBaby(pet.getNpcId()) && L2PetDataTable.isBabyFood(itemId))
+			else if (PetDataTable.isBaby(pet.getNpcId()) && PetDataTable.isBabyFood(itemId))
 			{
-				feed(activeChar, pet, item);
+				feed(player, pet, item);
 				return;
 			}
 		}
@@ -156,18 +156,18 @@ public final class RequestPetUseItem extends L2GameClientPacket
 		
 		if (handler != null)
 		{
-			useItem(pet, item, activeChar);
+			useItem(pet, item, player);
 		}
 		else
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		
 		return;
 	}
 	
-	private synchronized void useItem(L2PetInstance pet, L2ItemInstance item, L2PcInstance activeChar)
+	private synchronized void useItem(PetInstance pet, ItemInstance item, PlayerInstance player)
 	{
 		if (item.isEquipable())
 		{
@@ -181,10 +181,10 @@ public final class RequestPetUseItem extends L2GameClientPacket
 			}
 			
 			final PetItemList pil = new PetItemList(pet);
-			activeChar.sendPacket(pil);
+			player.sendPacket(pil);
 			
 			final PetInfo pi = new PetInfo(pet);
-			activeChar.sendPacket(pi);
+			player.sendPacket(pi);
 			// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 			pet.updateEffectIcons(true);
 		}
@@ -213,7 +213,7 @@ public final class RequestPetUseItem extends L2GameClientPacket
 	 * @param pet
 	 * @param item
 	 */
-	private void feed(L2PcInstance player, L2PetInstance pet, L2ItemInstance item)
+	private void feed(PlayerInstance player, PetInstance pet, ItemInstance item)
 	{
 		// if pet has food in inventory
 		if (pet.destroyItem("Feed", item.getObjectId(), 1, pet, false))

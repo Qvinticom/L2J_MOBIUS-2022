@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.model.conditions;
 import java.util.List;
 
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
  * @author UnAfraid
@@ -37,14 +37,14 @@ public class ConditionPlayerInsideZoneId extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effector.getActingPlayer() == null)
 		{
 			return false;
 		}
 		
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(effector))
+		for (ZoneType zone : ZoneManager.getInstance().getZones(effector))
 		{
 			if (_zones.contains(zone.getId()))
 			{

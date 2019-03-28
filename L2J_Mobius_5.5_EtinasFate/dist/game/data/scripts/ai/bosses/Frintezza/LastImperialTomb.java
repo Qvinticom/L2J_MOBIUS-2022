@@ -24,9 +24,9 @@ import java.util.Map;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -166,7 +166,7 @@ public final class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -204,21 +204,21 @@ public final class LastImperialTomb extends AbstractInstance
 			{
 				final Instance world = player.getInstanceWorld();
 				
-				final L2Npc frintezzaDummy = addSpawn(DUMMY, -87784, -155083, -9087, 16048, false, 0, false, world.getId());
+				final Npc frintezzaDummy = addSpawn(DUMMY, -87784, -155083, -9087, 16048, false, 0, false, world.getId());
 				world.setParameter("frintezzaDummy", frintezzaDummy);
 				
-				final L2Npc overheadDummy = addSpawn(DUMMY, -87784, -153298, -9175, 16384, false, 0, false, world.getId());
+				final Npc overheadDummy = addSpawn(DUMMY, -87784, -153298, -9175, 16384, false, 0, false, world.getId());
 				overheadDummy.setCollisionHeight(600);
 				broadCastPacket(world, new NpcInfo(overheadDummy));
 				world.setParameter("overheadDummy", overheadDummy);
 				
-				final L2Npc portraitDummy1 = addSpawn(DUMMY, -89566, -153168, -9165, 16048, false, 0, false, world.getId());
+				final Npc portraitDummy1 = addSpawn(DUMMY, -89566, -153168, -9165, 16048, false, 0, false, world.getId());
 				world.setParameter("portraitDummy1", portraitDummy1);
 				
-				final L2Npc portraitDummy3 = addSpawn(DUMMY, -86004, -153168, -9165, 16048, false, 0, false, world.getId());
+				final Npc portraitDummy3 = addSpawn(DUMMY, -86004, -153168, -9165, 16048, false, 0, false, world.getId());
 				world.setParameter("portraitDummy3", portraitDummy3);
 				
-				final L2Npc scarletDummy = addSpawn(DUMMY2, -87784, -153298, -9175, 16384, false, 0, false, world.getId());
+				final Npc scarletDummy = addSpawn(DUMMY2, -87784, -153298, -9175, 16384, false, 0, false, world.getId());
 				world.setParameter("scarletDummy", scarletDummy);
 				
 				disablePlayers(world);
@@ -227,16 +227,16 @@ public final class LastImperialTomb extends AbstractInstance
 				broadCastPacket(world, new SpecialCamera(overheadDummy, 0, 75, -89, 0, 100, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(overheadDummy, 300, 90, -10, 6500, 7000, 0, 0, 1, 0, 0));
 				
-				final L2Npc frintezza = addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, world.getId());
+				final Npc frintezza = addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, world.getId());
 				frintezza.setIsImmobilized(true);
 				frintezza.setIsInvul(true);
 				frintezza.disableAllSkills();
 				world.setParameter("frintezza", frintezza);
 				
-				final List<L2Npc> demons = new ArrayList<>();
+				final List<Npc> demons = new ArrayList<>();
 				for (int[] element : PORTRAIT_SPAWNS)
 				{
-					final L2MonsterInstance demon = (L2MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, world.getId());
+					final MonsterInstance demon = (MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, world.getId());
 					demon.setIsImmobilized(true);
 					demon.disableAllSkills();
 					demons.add(demon);
@@ -249,7 +249,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_3":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezzaDummy = world.getParameters().getObject("frintezzaDummy", L2Npc.class);
+				final Npc frintezzaDummy = world.getParameters().getObject("frintezzaDummy", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezzaDummy, 1800, 90, 8, 6500, 7000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_4", 900, null, player, false);
 				break;
@@ -257,7 +257,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_4":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezzaDummy = world.getParameters().getObject("frintezzaDummy", L2Npc.class);
+				final Npc frintezzaDummy = world.getParameters().getObject("frintezzaDummy", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezzaDummy, 140, 90, 10, 2500, 4500, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_5", 4000, null, player, false);
 				break;
@@ -265,7 +265,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_5":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 40, 75, -10, 0, 1000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(frintezza, 40, 75, -10, 0, 12000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_6", 1350, null, player, false);
@@ -274,9 +274,9 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_6":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SocialAction(frintezza.getObjectId(), 2));
-				final L2Npc frintezzaDummy = world.getParameters().getObject("frintezzaDummy", L2Npc.class);
+				final Npc frintezzaDummy = world.getParameters().getObject("frintezzaDummy", Npc.class);
 				frintezzaDummy.deleteMe();
 				startQuestTimer("FRINTEZZA_INTRO_7", 8000, null, player, false);
 				break;
@@ -284,7 +284,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_7":
 			{
 				final Instance world = player.getInstanceWorld();
-				final List<L2Npc> demons = world.getParameters().getList("demons", L2Npc.class);
+				final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
 				broadCastPacket(world, new SocialAction(demons.get(1).getObjectId(), 1));
 				broadCastPacket(world, new SocialAction(demons.get(2).getObjectId(), 1));
 				startQuestTimer("FRINTEZZA_INTRO_8", 400, null, player, false);
@@ -293,9 +293,9 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_8":
 			{
 				final Instance world = player.getInstanceWorld();
-				final List<L2Npc> demons = world.getParameters().getList("demons", L2Npc.class);
-				final L2Npc portraitDummy1 = world.getParameters().getObject("portraitDummy1", L2Npc.class);
-				final L2Npc portraitDummy3 = world.getParameters().getObject("portraitDummy3", L2Npc.class);
+				final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
+				final Npc portraitDummy1 = world.getParameters().getObject("portraitDummy1", Npc.class);
+				final Npc portraitDummy3 = world.getParameters().getObject("portraitDummy3", Npc.class);
 				broadCastPacket(world, new SocialAction(demons.get(0).getObjectId(), 1));
 				broadCastPacket(world, new SocialAction(demons.get(3).getObjectId(), 1));
 				sendPacketX(world, new SpecialCamera(portraitDummy1, 1000, 118, 0, 0, 1000, 0, 0, 1, 0, 0), new SpecialCamera(portraitDummy3, 1000, 62, 0, 0, 1000, 0, 0, 1, 0, 0), -87784);
@@ -306,9 +306,9 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_9":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
-				final L2Npc portraitDummy1 = world.getParameters().getObject("portraitDummy1", L2Npc.class);
-				final L2Npc portraitDummy3 = world.getParameters().getObject("portraitDummy3", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
+				final Npc portraitDummy1 = world.getParameters().getObject("portraitDummy1", Npc.class);
+				final Npc portraitDummy3 = world.getParameters().getObject("portraitDummy3", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 240, 90, 0, 0, 1000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(frintezza, 240, 90, 25, 5500, 10000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SocialAction(frintezza.getObjectId(), 3));
@@ -320,7 +320,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_10":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 100, 195, 35, 0, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_11", 700, null, player, false);
 				break;
@@ -328,7 +328,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_11":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 100, 195, 35, 0, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_12", 1300, null, player, false);
 				break;
@@ -336,7 +336,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_12":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new ExShowScreenMessage(NpcStringId.MOURNFUL_CHORALE_PRELUDE, 2, 5000));
 				broadCastPacket(world, new SpecialCamera(frintezza, 120, 180, 45, 1500, 10000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
@@ -346,7 +346,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_13":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 520, 135, 45, 8000, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_14", 7500, null, player, false);
 				break;
@@ -354,7 +354,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_14":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 1500, 110, 25, 10000, 13000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_15", 9500, null, player, false);
 				break;
@@ -362,8 +362,8 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_15":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc overheadDummy = world.getParameters().getObject("overheadDummy", L2Npc.class);
-				final L2Npc scarletDummy = world.getParameters().getObject("scarletDummy", L2Npc.class);
+				final Npc overheadDummy = world.getParameters().getObject("overheadDummy", Npc.class);
+				final Npc scarletDummy = world.getParameters().getObject("scarletDummy", Npc.class);
 				broadCastPacket(world, new SpecialCamera(overheadDummy, 930, 160, -20, 0, 1000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(overheadDummy, 600, 180, -25, 0, 10000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new MagicSkillUse(scarletDummy, overheadDummy, 5004, 1, 5800, 0));
@@ -373,8 +373,8 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_16":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc scarletDummy = world.getParameters().getObject("scarletDummy", L2Npc.class);
-				final L2Npc activeScarlet = addSpawn(SCARLET1, -87789, -153295, -9176, 16384, false, 0, false, world.getId());
+				final Npc scarletDummy = world.getParameters().getObject("scarletDummy", Npc.class);
+				final Npc activeScarlet = addSpawn(SCARLET1, -87789, -153295, -9176, 16384, false, 0, false, world.getId());
 				world.setParameter("activeScarlet", activeScarlet);
 				activeScarlet.setRHandId(FIRST_SCARLET_WEAPON);
 				activeScarlet.setIsInvul(true);
@@ -388,7 +388,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_17":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				broadCastPacket(world, new SpecialCamera(activeScarlet, 300, 60, 8, 0, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("FRINTEZZA_INTRO_18", 2000, null, player, false);
 				break;
@@ -396,7 +396,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_18":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				broadCastPacket(world, new SpecialCamera(activeScarlet, 500, 90, 10, 3000, 5000, 0, 0, 1, 0, 0));
 				world.setParameter("isPlayingSong", false);
 				playRandomSong(world);
@@ -406,15 +406,15 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_19":
 			{
 				final Instance world = player.getInstanceWorld();
-				final Map<L2Npc, Integer> portraits = new HashMap<>();
+				final Map<Npc, Integer> portraits = new HashMap<>();
 				for (int i = 0; i < PORTRAIT_SPAWNS.length; i++)
 				{
-					final L2Npc portrait = addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, world.getId());
+					final Npc portrait = addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, world.getId());
 					portraits.put(portrait, i);
 				}
 				world.setParameter("portraits", portraits);
-				final L2Npc overheadDummy = world.getParameters().getObject("overheadDummy", L2Npc.class);
-				final L2Npc scarletDummy = world.getParameters().getObject("scarletDummy", L2Npc.class);
+				final Npc overheadDummy = world.getParameters().getObject("overheadDummy", Npc.class);
+				final Npc scarletDummy = world.getParameters().getObject("scarletDummy", Npc.class);
 				overheadDummy.deleteMe();
 				scarletDummy.deleteMe();
 				startQuestTimer("FRINTEZZA_INTRO_20", 2000, null, player, false);
@@ -423,10 +423,10 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_20":
 			{
 				final Instance world = player.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
-				final List<L2Npc> demons = world.getParameters().getList("demons", L2Npc.class);
-				for (L2Npc demon : demons)
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
+				final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
+				for (Npc demon : demons)
 				{
 					demon.setIsImmobilized(false);
 					demon.enableAllSkills();
@@ -447,17 +447,17 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SPAWN_DEMONS":
 			{
 				final Instance world = player.getInstanceWorld();
-				final Map<L2Npc, Integer> portraits = world.getParameters().getMap("portraits", L2Npc.class, Integer.class);
+				final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
 				if (!portraits.isEmpty())
 				{
-					final List<L2Npc> demons = world.getParameters().getList("demons", L2Npc.class);
+					final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
 					for (int i : portraits.values())
 					{
 						if (demons.size() > MAX_DEMONS)
 						{
 							break;
 						}
-						final L2Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
+						final Npc demon = addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, world.getId());
 						demons.add(demon);
 					}
 					world.setParameter("demons", demons);
@@ -486,7 +486,7 @@ public final class LastImperialTomb extends AbstractInstance
 			{
 				final Instance world = npc.getInstanceWorld();
 				disablePlayers(world);
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				activeScarlet.abortAttack();
 				activeScarlet.abortCast();
 				activeScarlet.setIsInvul(true);
@@ -499,7 +499,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_1":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SocialAction(frintezza.getObjectId(), 4));
 				broadCastPacket(world, new SpecialCamera(frintezza, 250, 120, 15, 0, 1000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(frintezza, 250, 120, 15, 0, 10000, 0, 0, 1, 0, 0));
@@ -510,7 +510,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_2":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
 				broadCastPacket(world, new SpecialCamera(frintezza, 500, 70, 15, 3000, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_3", 3000, npc, null, false);
@@ -519,7 +519,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_3":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 2500, 90, 12, 6000, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_4", 3000, npc, null, false);
 				break;
@@ -527,7 +527,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_4":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final Location scarletLocation = activeScarlet.getLocation();
 				int newHeading = 0;
 				if (scarletLocation.getHeading() < 32768)
@@ -548,7 +548,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_5":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final int newHeading = world.getParameters().getInt("newHeading");
 				activeScarlet.doDie(activeScarlet);
 				broadCastPacket(world, new SpecialCamera(activeScarlet, 450, newHeading, 14, 8000, 8000, 0, 0, 1, 0, 0));
@@ -559,7 +559,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_6":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				activeScarlet.deleteMe();
 				break;
 			}
@@ -568,7 +568,7 @@ public final class LastImperialTomb extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				final int newHeading = world.getParameters().getInt("newHeading");
 				final Location scarletLocation = world.getParameters().getLocation("scarletLocation");
-				final L2Npc activeScarlet = addSpawn(SCARLET2, scarletLocation, false, 0, false, world.getId());
+				final Npc activeScarlet = addSpawn(SCARLET2, scarletLocation, false, 0, false, world.getId());
 				world.setParameter("activeScarlet", activeScarlet);
 				activeScarlet.setRHandId(SECOND_SCARLET_WEAPON);
 				activeScarlet.setIsInvul(true);
@@ -581,7 +581,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_8":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				broadCastPacket(world, new SocialAction(activeScarlet.getObjectId(), 2));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_9", 9000, npc, null, false);
 				break;
@@ -589,7 +589,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "SCARLET_SECOND_MORPH_CAMERA_9":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				activeScarlet.setIsInvul(false);
 				activeScarlet.setIsImmobilized(false);
 				activeScarlet.enableAllSkills();
@@ -599,7 +599,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FINISH_CAMERA_1":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc activeScarlet = world.getParameters().getObject("activeScarlet", L2Npc.class);
+				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final int newHeading = world.getParameters().getInt("newHeading");
 				broadCastPacket(world, new SpecialCamera(activeScarlet, 300, newHeading - 180, 5, 0, 7000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(activeScarlet, 200, newHeading, 85, 4000, 10000, 0, 0, 1, 0, 0));
@@ -610,14 +610,14 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FINISH_CAMERA_2":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				frintezza.doDie(frintezza);
 				break;
 			}
 			case "FINISH_CAMERA_3":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 100, 120, 5, 0, 7000, 0, 0, 1, 0, 0));
 				broadCastPacket(world, new SpecialCamera(frintezza, 100, 90, 5, 5000, 15000, 0, 0, 1, 0, 0));
 				startQuestTimer("FINISH_CAMERA_4", 7000, npc, null, false);
@@ -626,7 +626,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FINISH_CAMERA_4":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadCastPacket(world, new SpecialCamera(frintezza, 900, 90, 25, 7000, 10000, 0, 0, 1, 0, 0));
 				startQuestTimer("FINISH_CAMERA_5", 9000, npc, null, false);
 				break;
@@ -658,7 +658,7 @@ public final class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == GUIDE)
 		{
@@ -676,7 +676,7 @@ public final class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		npc.setIsImmobilized(true);
@@ -692,7 +692,7 @@ public final class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		if (npc.getId() == SCARLET1)
 		{
@@ -719,7 +719,7 @@ public final class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if (skill.isSuicideAttack())
 		{
@@ -729,38 +729,38 @@ public final class LastImperialTomb extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = killer.getInstanceWorld();
 		if ((npc.getId() == HALL_ALARM) && (world.getStatus() == 0))
 		{
 			world.setStatus(1);
 			world.spawnGroup("room1");
-			final List<L2MonsterInstance> monsters = world.getAliveNpcs(L2MonsterInstance.class);
+			final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
 			world.setParameter("monstersCount", monsters.size() - 1);
 			for (int doorId : FIRST_ROOM_DOORS)
 			{
 				world.openCloseDoor(doorId, true);
 			}
-			for (L2Npc monster : monsters)
+			for (Npc monster : monsters)
 			{
 				monster.reduceCurrentHp(1, killer, null); // TODO: Find better way for attack
 			}
 		}
 		else if (npc.getId() == SCARLET2)
 		{
-			final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+			final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 			broadCastPacket(world, new MagicSkillCanceld(frintezza.getObjectId()));
 			startQuestTimer("FINISH_CAMERA_1", 500, npc, null, false);
 		}
 		else if (CommonUtil.contains(DEMONS, npc.getId()))
 		{
-			final List<L2Npc> demons = world.getParameters().getList("demons", L2Npc.class);
+			final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
 			demons.remove(npc);
 		}
 		else if (CommonUtil.contains(PORTRAITS, npc.getId()))
 		{
-			final Map<L2Npc, Integer> portraits = world.getParameters().getMap("portraits", L2Npc.class, Integer.class);
+			final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
 			portraits.remove(npc);
 		}
 		else
@@ -775,7 +775,7 @@ public final class LastImperialTomb extends AbstractInstance
 					{
 						world.setStatus(2);
 						world.spawnGroup("room2_part1");
-						final List<L2MonsterInstance> monsters = world.getAliveNpcs(L2MonsterInstance.class);
+						final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
 						world.setParameter("monstersCount", monsters.size() - 1);
 						for (int doorId : FIRST_ROUTE_DOORS)
 						{
@@ -787,13 +787,13 @@ public final class LastImperialTomb extends AbstractInstance
 					{
 						world.setStatus(3);
 						world.spawnGroup("room2_part2");
-						final List<L2MonsterInstance> monsters = world.getAliveNpcs(L2MonsterInstance.class);
+						final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
 						world.setParameter("monstersCount", monsters.size() - 1);
 						for (int doorId : SECOND_ROOM_DOORS)
 						{
 							world.openCloseDoor(doorId, true);
 						}
-						for (L2Npc monster : monsters)
+						for (Npc monster : monsters)
 						{
 							monster.reduceCurrentHp(1, killer, null); // TODO: Find better way for attack
 						}
@@ -821,7 +821,7 @@ public final class LastImperialTomb extends AbstractInstance
 	
 	private void playRandomSong(Instance world)
 	{
-		final L2Npc frintezza = world.getParameters().getObject("frintezza", L2Npc.class);
+		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 		final boolean isPlayingSong = world.getParameters().getBoolean("isPlayingSong");
 		if (isPlayingSong)
 		{
@@ -833,7 +833,7 @@ public final class LastImperialTomb extends AbstractInstance
 		final SkillHolder skillEffect = new SkillHolder(5008, random);
 		broadCastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));
 		broadCastPacket(world, new MagicSkillUse(frintezza, frintezza, skill.getSkillId(), skill.getSkillLevel(), skill.getSkill().getHitTime(), 0));
-		for (L2PcInstance player : world.getPlayers())
+		for (PlayerInstance player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -846,7 +846,7 @@ public final class LastImperialTomb extends AbstractInstance
 	
 	private void disablePlayers(Instance world)
 	{
-		for (L2PcInstance player : world.getPlayers())
+		for (PlayerInstance player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -863,7 +863,7 @@ public final class LastImperialTomb extends AbstractInstance
 	
 	private void enablePlayers(Instance world)
 	{
-		for (L2PcInstance player : world.getPlayers())
+		for (PlayerInstance player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -875,7 +875,7 @@ public final class LastImperialTomb extends AbstractInstance
 	
 	void broadCastPacket(Instance world, IClientOutgoingPacket packet)
 	{
-		for (L2PcInstance player : world.getPlayers())
+		for (PlayerInstance player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -886,7 +886,7 @@ public final class LastImperialTomb extends AbstractInstance
 	
 	private void sendPacketX(Instance world, IClientOutgoingPacket packet1, IClientOutgoingPacket packet2, int x)
 	{
-		for (L2PcInstance player : world.getPlayers())
+		for (PlayerInstance player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())
 			{

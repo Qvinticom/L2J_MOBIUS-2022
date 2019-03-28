@@ -16,9 +16,9 @@
  */
 package instances.DimensionalWrap;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -53,7 +53,7 @@ public class DimensionalTrap extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc != null)
 		{
@@ -61,7 +61,7 @@ public class DimensionalTrap extends AbstractNpcAI
 			{
 				case "debuff_player":
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, _type, p ->
+					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
 					{
 						if ((p != null) && p.isPlayer() && !p.isDead())
 						{
@@ -74,7 +74,7 @@ public class DimensionalTrap extends AbstractNpcAI
 				}
 				case "demage_player":
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, _type, p ->
+					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
 					{
 						if ((p != null) && p.isPlayer() && !p.isDead())
 						{
@@ -87,7 +87,7 @@ public class DimensionalTrap extends AbstractNpcAI
 				}
 				case "heal_player":
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, _type, p ->
+					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
 					{
 						if ((p != null) && p.isPlayer() && !p.isDead())
 						{
@@ -104,7 +104,7 @@ public class DimensionalTrap extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setIsInvul(true);
 		switch (npc.getId())

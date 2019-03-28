@@ -30,8 +30,8 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.IParameterized;
 import com.l2jmobius.gameserver.model.interfaces.ITerritorized;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.zone.type.L2BannedSpawnTerritory;
-import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.BannedSpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 
 /**
  * @author UnAfraid
@@ -42,8 +42,8 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	private final String _ai;
 	private final boolean _spawnByDefault;
 	private final File _file;
-	private List<L2SpawnTerritory> _territories;
-	private List<L2BannedSpawnTerritory> _bannedTerritories;
+	private List<SpawnTerritory> _territories;
+	private List<BannedSpawnTerritory> _bannedTerritories;
 	private final List<SpawnGroup> _groups = new ArrayList<>();
 	private StatsSet _parameters;
 	
@@ -81,7 +81,7 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	}
 	
 	@Override
-	public void addTerritory(L2SpawnTerritory territory)
+	public void addTerritory(SpawnTerritory territory)
 	{
 		if (_territories == null)
 		{
@@ -91,13 +91,13 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	}
 	
 	@Override
-	public List<L2SpawnTerritory> getTerritories()
+	public List<SpawnTerritory> getTerritories()
 	{
 		return _territories != null ? _territories : Collections.emptyList();
 	}
 	
 	@Override
-	public void addBannedTerritory(L2BannedSpawnTerritory territory)
+	public void addBannedTerritory(BannedSpawnTerritory territory)
 	{
 		if (_bannedTerritories == null)
 		{
@@ -107,7 +107,7 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	}
 	
 	@Override
-	public List<L2BannedSpawnTerritory> getBannedTerritories()
+	public List<BannedSpawnTerritory> getBannedTerritories()
 	{
 		return _bannedTerritories != null ? _bannedTerritories : Collections.emptyList();
 	}
@@ -197,13 +197,13 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 		template.setParameters(_parameters);
 		
 		// Clone banned territories
-		for (L2BannedSpawnTerritory territory : getBannedTerritories())
+		for (BannedSpawnTerritory territory : getBannedTerritories())
 		{
 			template.addBannedTerritory(territory);
 		}
 		
 		// Clone territories
-		for (L2SpawnTerritory territory : getTerritories())
+		for (SpawnTerritory territory : getTerritories())
 		{
 			template.addTerritory(territory);
 		}

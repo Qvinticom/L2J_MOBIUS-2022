@@ -28,7 +28,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author DS
@@ -66,7 +66,7 @@ public enum BaseStats
 		_stat = s;
 	}
 	
-	public final double calcBonus(L2Character actor)
+	public final double calcBonus(Creature actor)
 	{
 		if (actor != null)
 		{
@@ -91,13 +91,13 @@ public enum BaseStats
 	
 	private interface BaseStat
 	{
-		double calcBonus(L2Character actor);
+		double calcBonus(Creature actor);
 	}
 	
 	protected static final class STR implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return STRbonus[actor.getSTR()];
 		}
@@ -106,7 +106,7 @@ public enum BaseStats
 	protected static final class INT implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return INTbonus[actor.getINT()];
 		}
@@ -115,7 +115,7 @@ public enum BaseStats
 	protected static final class DEX implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return DEXbonus[actor.getDEX()];
 		}
@@ -124,7 +124,7 @@ public enum BaseStats
 	protected static final class WIT implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return WITbonus[actor.getWIT()];
 		}
@@ -133,7 +133,7 @@ public enum BaseStats
 	protected static final class CON implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return CONbonus[actor.getCON()];
 		}
@@ -142,7 +142,7 @@ public enum BaseStats
 	protected static final class MEN implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return MENbonus[actor.getMEN()];
 		}
@@ -151,7 +151,7 @@ public enum BaseStats
 	protected static final class NONE implements BaseStat
 	{
 		@Override
-		public final double calcBonus(L2Character actor)
+		public final double calcBonus(Creature actor)
 		{
 			return 1f;
 		}

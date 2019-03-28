@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Player event holder, meant for restoring player after event has finished.<br>
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class PlayerEventHolder
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private final String _name;
 	private final String _title;
 	private final int _clanId;
@@ -48,15 +48,15 @@ public final class PlayerEventHolder
 	private final int _pkKills;
 	private final int _karma;
 	
-	private final List<L2PcInstance> _kills = new CopyOnWriteArrayList<>();
+	private final List<PlayerInstance> _kills = new CopyOnWriteArrayList<>();
 	private boolean _sitForced;
 	
-	public PlayerEventHolder(L2PcInstance player)
+	public PlayerEventHolder(PlayerInstance player)
 	{
 		this(player, false);
 	}
 	
-	public PlayerEventHolder(L2PcInstance player, boolean sitForced)
+	public PlayerEventHolder(PlayerInstance player, boolean sitForced)
 	{
 		_player = player;
 		_name = player.getName();
@@ -92,7 +92,7 @@ public final class PlayerEventHolder
 		return _sitForced;
 	}
 	
-	public List<L2PcInstance> getKills()
+	public List<PlayerInstance> getKills()
 	{
 		return _kills;
 	}

@@ -18,17 +18,17 @@ package com.l2jmobius.gameserver.model.actor.tasks.player;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.ItemHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author Mobius
  */
 public class AutoPotionTask implements Runnable
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public AutoPotionTask(L2PcInstance player)
+	public AutoPotionTask(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -47,7 +47,7 @@ public class AutoPotionTask implements Runnable
 			final boolean restoreHP = ((_player.getStatus().getCurrentHp() / _player.getMaxHp()) * 100) < Config.AUTO_HP_PERCENTAGE;
 			for (int itemId : Config.AUTO_HP_ITEM_IDS)
 			{
-				final L2ItemInstance hpPotion = _player.getInventory().getItemByItemId(itemId);
+				final ItemInstance hpPotion = _player.getInventory().getItemByItemId(itemId);
 				if ((hpPotion != null) && (hpPotion.getCount() > 0))
 				{
 					success = true;
@@ -65,7 +65,7 @@ public class AutoPotionTask implements Runnable
 			final boolean restoreCP = ((_player.getStatus().getCurrentCp() / _player.getMaxCp()) * 100) < Config.AUTO_CP_PERCENTAGE;
 			for (int itemId : Config.AUTO_CP_ITEM_IDS)
 			{
-				final L2ItemInstance cpPotion = _player.getInventory().getItemByItemId(itemId);
+				final ItemInstance cpPotion = _player.getInventory().getItemByItemId(itemId);
 				if ((cpPotion != null) && (cpPotion.getCount() > 0))
 				{
 					success = true;
@@ -83,7 +83,7 @@ public class AutoPotionTask implements Runnable
 			final boolean restoreMP = ((_player.getStatus().getCurrentMp() / _player.getMaxMp()) * 100) < Config.AUTO_MP_PERCENTAGE;
 			for (int itemId : Config.AUTO_MP_ITEM_IDS)
 			{
-				final L2ItemInstance mpPotion = _player.getInventory().getItemByItemId(itemId);
+				final ItemInstance mpPotion = _player.getInventory().getItemByItemId(itemId);
 				if ((mpPotion != null) && (mpPotion.getCount() > 0))
 				{
 					success = true;

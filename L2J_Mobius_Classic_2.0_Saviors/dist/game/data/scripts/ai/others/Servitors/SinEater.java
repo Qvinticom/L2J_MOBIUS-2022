@@ -17,16 +17,16 @@
 package ai.others.Servitors;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -48,14 +48,14 @@ public final class SinEater extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("TALK") && (player != null) && (player.getPet() != null))
 		{
 			if (getRandom(100) < 30)
 			{
 				final int random = getRandom(100);
-				final L2Summon summon = player.getPet();
+				final Summon summon = player.getPet();
 				
 				if (random < 20)
 				{
@@ -89,7 +89,7 @@ public final class SinEater extends AbstractNpcAI
 	public void onCreatureKill(OnCreatureDeath event)
 	{
 		final int random = getRandom(100);
-		final L2Summon summon = (L2Summon) event.getTarget();
+		final Summon summon = (Summon) event.getTarget();
 		
 		if (random < 30)
 		{
@@ -113,7 +113,7 @@ public final class SinEater extends AbstractNpcAI
 		if (getRandom(100) < 30)
 		{
 			final int random = getRandom(100);
-			final L2Summon summon = (L2Summon) event.getTarget();
+			final Summon summon = (Summon) event.getTarget();
 			
 			if (random < 35)
 			{
@@ -131,14 +131,14 @@ public final class SinEater extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onSummonSpawn(L2Summon summon)
+	public void onSummonSpawn(Summon summon)
 	{
 		broadcastSummonSay(summon, getRandomBoolean() ? NpcStringId.HEY_IT_SEEMS_LIKE_YOU_NEED_MY_HELP_DOESN_T_IT : NpcStringId.ALMOST_GOT_IT_OUCH_STOP_DAMN_THESE_BLOODY_MANACLES);
 		startQuestTimer("TALK", 60000, null, summon.getOwner());
 	}
 	
 	@Override
-	public void onSummonTalk(L2Summon summon)
+	public void onSummonTalk(Summon summon)
 	{
 		if (getRandom(100) < 10)
 		{
@@ -163,7 +163,7 @@ public final class SinEater extends AbstractNpcAI
 		}
 	}
 	
-	private void broadcastSummonSay(L2Summon summon, NpcStringId npcstringId)
+	private void broadcastSummonSay(Summon summon, NpcStringId npcstringId)
 	{
 		summon.broadcastPacket(new NpcSay(summon.getObjectId(), ChatType.NPC_GENERAL, summon.getId(), npcstringId));
 	}

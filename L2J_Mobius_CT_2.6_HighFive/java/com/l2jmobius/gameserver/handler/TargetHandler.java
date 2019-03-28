@@ -19,14 +19,14 @@ package com.l2jmobius.gameserver.handler;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
  */
-public class TargetHandler implements IHandler<ITargetTypeHandler, Enum<L2TargetType>>
+public class TargetHandler implements IHandler<ITargetTypeHandler, Enum<TargetType>>
 {
-	private final Map<Enum<L2TargetType>, ITargetTypeHandler> _datatable;
+	private final Map<Enum<TargetType>, ITargetTypeHandler> _datatable;
 	
 	protected TargetHandler()
 	{
@@ -46,7 +46,7 @@ public class TargetHandler implements IHandler<ITargetTypeHandler, Enum<L2Target
 	}
 	
 	@Override
-	public ITargetTypeHandler getHandler(Enum<L2TargetType> targetType)
+	public ITargetTypeHandler getHandler(Enum<TargetType> targetType)
 	{
 		return _datatable.get(targetType);
 	}

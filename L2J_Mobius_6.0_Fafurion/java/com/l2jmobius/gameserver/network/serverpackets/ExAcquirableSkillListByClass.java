@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
+import com.l2jmobius.gameserver.model.SkillLearn;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -28,10 +28,10 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExAcquirableSkillListByClass implements IClientOutgoingPacket
 {
-	final List<L2SkillLearn> _learnable;
+	final List<SkillLearn> _learnable;
 	final AcquireSkillType _type;
 	
-	public ExAcquirableSkillListByClass(List<L2SkillLearn> learnable, AcquireSkillType type)
+	public ExAcquirableSkillListByClass(List<SkillLearn> learnable, AcquireSkillType type)
 	{
 		_learnable = learnable;
 		_type = type;
@@ -44,7 +44,7 @@ public class ExAcquirableSkillListByClass implements IClientOutgoingPacket
 		
 		packet.writeH(_type.getId());
 		packet.writeH(_learnable.size());
-		for (L2SkillLearn skill : _learnable)
+		for (SkillLearn skill : _learnable)
 		{
 			packet.writeD(skill.getSkillId());
 			packet.writeH(skill.getSkillLevel());

@@ -18,15 +18,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
  * @version $Revision: 1.0.0.0 $ $Date: 2005/07/11 15:29:30 $
  */
 public final class RequestAutoSoulShot implements IClientIncomingPacket
@@ -36,7 +35,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 	private int _type; // 1 = on : 0 = off;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemId = packet.readD();
 		_type = packet.readD();
@@ -44,17 +43,17 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null) && !activeChar.isDead())
+		if ((player.getPrivateStoreType() == PrivateStoreType.NONE) && (player.getActiveRequester() == null) && !player.isDead())
 		{
-			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
+			final ItemInstance item = player.getInventory().getItemByItemId(_itemId);
 			if (item == null)
 			{
 				return;
@@ -62,9 +61,9 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 			
 			if (_type == 1)
 			{
-				if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
+				if (!player.getInventory().canManipulateWithItemId(item.getId()))
 				{
-					activeChar.sendMessage("Cannot use this item.");
+					player.sendMessage("Cannot use this item.");
 					return;
 				}
 				
@@ -74,81 +73,81 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					// Attempt to charge first shot on activation
 					if ((_itemId == 6645) || (_itemId == 6646) || (_itemId == 6647) || (_itemId == 20332) || (_itemId == 20333) || (_itemId == 20334))
 					{
-						if (activeChar.hasSummon())
+						if (player.hasSummon())
 						{
 							if (item.getEtcItem().getHandlerName().equals("BeastSoulShot"))
 							{
-								if (activeChar.getSummon().getSoulShotsPerHit() > item.getCount())
+								if (player.getSummon().getSoulShotsPerHit() > item.getCount())
 								{
-									activeChar.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+									player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 									return;
 								}
 							}
 							else
 							{
-								if (activeChar.getSummon().getSpiritShotsPerHit() > item.getCount())
+								if (player.getSummon().getSpiritShotsPerHit() > item.getCount())
 								{
-									activeChar.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+									player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
 									return;
 								}
 							}
-							activeChar.addAutoSoulShot(_itemId);
-							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+							player.addAutoSoulShot(_itemId);
+							player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 							
 							// start the auto soulshot use
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 							sm.addItemName(item);
-							activeChar.sendPacket(sm);
+							player.sendPacket(sm);
 							
-							activeChar.rechargeShots(true, true);
-							activeChar.getSummon().rechargeShots(true, true);
+							player.rechargeShots(true, true);
+							player.getSummon().rechargeShots(true, true);
 							
 						}
 						else
 						{
-							activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 						}
 					}
 					else
 					{
-						if ((activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem()) && (item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getCrystalTypePlus()))
+						if ((player.getActiveWeaponItem() != player.getFistsWeaponItem()) && (item.getItem().getCrystalType() == player.getActiveWeaponItem().getCrystalTypePlus()))
 						{
-							activeChar.addAutoSoulShot(_itemId);
-							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+							player.addAutoSoulShot(_itemId);
+							player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 						}
 						else
 						{
 							if (((_itemId >= 2509) && (_itemId <= 2514)) || ((_itemId >= 3947) && (_itemId <= 3952)) || (_itemId == 5790) || ((_itemId >= 22072) && (_itemId <= 22081)))
 							{
-								activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
+								player.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 							}
 							else
 							{
-								activeChar.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
+								player.sendPacket(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON);
 							}
 							
-							activeChar.addAutoSoulShot(_itemId);
-							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+							player.addAutoSoulShot(_itemId);
+							player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 						}
 						
 						// start the auto soulshot use
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
 						sm.addItemName(item);
-						activeChar.sendPacket(sm);
+						player.sendPacket(sm);
 						
-						activeChar.rechargeShots(true, true);
+						player.rechargeShots(true, true);
 					}
 				}
 			}
 			else if (_type == 0)
 			{
-				activeChar.removeAutoSoulShot(_itemId);
-				activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+				player.removeAutoSoulShot(_itemId);
+				player.sendPacket(new ExAutoSoulShot(_itemId, _type));
 				
 				// cancel the auto soulshot use
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 				sm.addItemName(item);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
 	}

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,17 +26,17 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExValidateLocationInAirShip implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int shipId;
 	private final int x;
 	private final int y;
 	private final int z;
 	private final int h;
 	
-	public ExValidateLocationInAirShip(L2PcInstance player)
+	public ExValidateLocationInAirShip(PlayerInstance player)
 	{
-		_activeChar = player;
-		shipId = _activeChar.getAirShip().getObjectId();
+		_player = player;
+		shipId = _player.getAirShip().getObjectId();
 		x = player.getInVehiclePosition().getX();
 		y = player.getInVehiclePosition().getY();
 		z = player.getInVehiclePosition().getZ();
@@ -47,7 +47,7 @@ public class ExValidateLocationInAirShip implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VALIDATE_LOCATION_IN_AIRSHIP.writeId(packet);
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_player.getObjectId());
 		packet.writeD(shipId);
 		packet.writeD(x);
 		packet.writeD(y);

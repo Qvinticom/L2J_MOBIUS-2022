@@ -19,12 +19,12 @@ package instances.KartiasLabyrinth;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 
@@ -87,7 +87,7 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
@@ -112,7 +112,7 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 				}
 				else if (!npc.isInCombat() || (npc.getTarget() == null))
 				{
-					final L2Character monster = (L2Character) adolph.getTarget();
+					final Creature monster = (Creature) adolph.getTarget();
 					if ((monster != null) && adolph.isInCombat() && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 					{
 						npc.setTarget(monster);
@@ -137,7 +137,7 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
@@ -152,7 +152,7 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		if (npc != null)
 		{
 			final Instance instance = npc.getInstanceWorld();
@@ -165,7 +165,7 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{

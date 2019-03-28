@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -61,11 +61,11 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -80,13 +80,13 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			}
 			case "30873-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30873-10.html":
 			{
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
 			}
@@ -95,10 +95,10 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
 		{
 			return super.onKill(npc, killer, isPet);
 		}
@@ -126,12 +126,12 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{

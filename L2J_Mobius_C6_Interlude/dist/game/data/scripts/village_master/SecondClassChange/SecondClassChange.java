@@ -19,8 +19,8 @@ package village_master.SecondClassChange;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.Race;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -127,7 +127,7 @@ public class SecondClassChange extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -180,7 +180,7 @@ public class SecondClassChange extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -470,7 +470,7 @@ public class SecondClassChange extends Quest
 	 * @param player : The player to make checks on.
 	 * @return a String corresponding to html directory.
 	 */
-	private static String getClassHtml(L2PcInstance player)
+	private static String getClassHtml(PlayerInstance player)
 	{
 		String change = "";
 		

@@ -20,8 +20,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,40 +30,40 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class MagicSkillLaunched implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _skillId;
 	private final int _skillLevel;
-	private final List<L2Object> _targets;
+	private final List<WorldObject> _targets;
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, L2Object... targets)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel, WorldObject... targets)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		
 		//@formatter:off
 		if (targets == null)
 		{
-			targets = new L2Object[] { cha };
+			targets = new WorldObject[] { creature };
 		}
 		//@formatter:on
 		_targets = Arrays.asList(targets);
 	}
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel)
 	{
-		this(cha, skillId, skillId, cha);
+		this(creature, skillId, skillId, creature);
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);
 		packet.writeD(_targets.size());
-		for (L2Object target : _targets)
+		for (WorldObject target : _targets)
 		{
 			packet.writeD(target.getObjectId());
 		}

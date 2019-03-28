@@ -16,25 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * sample 0000: 8e d8 a8 10 48 10 04 00 00 01 00 00 00 01 00 00 ....H........... 0010: 00 d8 a8 10 48 ....H format ddddd d
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class MagicSkillLaunched extends L2GameServerPacket
+public class MagicSkillLaunched extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _skillId;
 	private final int _skillLevel;
 	private int _numberOfTargets;
-	private L2Object[] _targets;
+	private WorldObject[] _targets;
 	private final int _singleTargetId;
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, L2Object[] targets)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel, WorldObject[] targets)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		
@@ -46,9 +46,9 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		else
 		{
 			_numberOfTargets = 1;
-			final L2Object[] objs =
+			final WorldObject[] objs =
 			{
-				cha
+				creature
 			};
 			_targets = objs;
 		}
@@ -56,20 +56,20 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		_singleTargetId = 0;
 	}
 	
-	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel)
 	{
-		_charObjId = cha.getObjectId();
+		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_numberOfTargets = 1;
-		_singleTargetId = cha.getTargetId();
+		_singleTargetId = creature.getTargetId();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x76);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_skillId);
 		writeD(_skillLevel);
 		writeD(_numberOfTargets); // also failed or not?
@@ -79,7 +79,7 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		}
 		else
 		{
-			for (L2Object target : _targets)
+			for (WorldObject target : _targets)
 			{
 				try
 				{

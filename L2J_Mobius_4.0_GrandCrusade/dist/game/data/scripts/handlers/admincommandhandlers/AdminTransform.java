@@ -17,9 +17,9 @@
 package handlers.admincommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
@@ -37,7 +37,7 @@ public class AdminTransform implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_transform_menu"))
 		{
@@ -46,25 +46,25 @@ public class AdminTransform implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_untransform"))
 		{
-			final L2Object obj = activeChar.getTarget() == null ? activeChar : activeChar.getTarget();
-			if (!obj.isCharacter() || !((L2Character) obj).isTransformed())
+			final WorldObject obj = activeChar.getTarget() == null ? activeChar : activeChar.getTarget();
+			if (!obj.isCreature() || !((Creature) obj).isTransformed())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
-			((L2Character) obj).stopTransformation(true);
+			((Creature) obj).stopTransformation(true);
 		}
 		else if (command.startsWith("admin_transform"))
 		{
-			final L2Object obj = activeChar.getTarget();
+			final WorldObject obj = activeChar.getTarget();
 			if ((obj == null) || !obj.isPlayer())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
 			}
 			
-			final L2PcInstance player = obj.getActingPlayer();
+			final PlayerInstance player = obj.getActingPlayer();
 			if (activeChar.isSitting())
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_TRANSFORM_WHILE_SITTING);

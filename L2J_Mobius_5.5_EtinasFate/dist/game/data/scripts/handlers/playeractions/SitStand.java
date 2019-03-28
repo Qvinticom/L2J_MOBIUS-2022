@@ -22,9 +22,9 @@ import com.l2jmobius.gameserver.ai.NextAction;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
@@ -35,56 +35,56 @@ import com.l2jmobius.gameserver.network.serverpackets.ChairSit;
 public final class SitStand implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (activeChar.isSitting() || !activeChar.isMoving() || activeChar.isFakeDeath())
+		if (player.isSitting() || !player.isMoving() || player.isFakeDeath())
 		{
-			useSit(activeChar, activeChar.getTarget());
+			useSit(player, player.getTarget());
 		}
 		else
 		{
 			// Sit when arrive using next action.
 			// Creating next action class.
-			final NextAction nextAction = new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(activeChar, activeChar.getTarget()));
+			final NextAction nextAction = new NextAction(CtrlEvent.EVT_ARRIVED, CtrlIntention.AI_INTENTION_MOVE_TO, () -> useSit(player, player.getTarget()));
 			
 			// Binding next action to AI.
-			activeChar.getAI().setNextAction(nextAction);
+			player.getAI().setNextAction(nextAction);
 		}
 	}
 	
 	/**
 	 * Use the sit action.
-	 * @param activeChar the player trying to sit
+	 * @param player the player trying to sit
 	 * @param target the target to sit, throne, bench or chair
 	 * @return {@code true} if the player can sit, {@code false} otherwise
 	 */
-	private boolean useSit(L2PcInstance activeChar, L2Object target)
+	private boolean useSit(PlayerInstance player, WorldObject target)
 	{
-		if (activeChar.getMountType() != MountType.NONE)
+		if (player.getMountType() != MountType.NONE)
 		{
 			return false;
 		}
 		
-		if (!activeChar.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && activeChar.isInsideRadius2D(target, L2StaticObjectInstance.INTERACTION_DISTANCE))
+		if (!player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
 		{
-			final ChairSit cs = new ChairSit(activeChar, target.getId());
-			activeChar.sendPacket(cs);
-			activeChar.sitDown();
-			activeChar.broadcastPacket(cs);
+			final ChairSit cs = new ChairSit(player, target.getId());
+			player.sendPacket(cs);
+			player.sitDown();
+			player.broadcastPacket(cs);
 			return true;
 		}
 		
-		if (activeChar.isFakeDeath())
+		if (player.isFakeDeath())
 		{
-			activeChar.stopEffects(EffectFlag.FAKE_DEATH);
+			player.stopEffects(EffectFlag.FAKE_DEATH);
 		}
-		else if (activeChar.isSitting())
+		else if (player.isSitting())
 		{
-			activeChar.standUp();
+			player.standUp();
 		}
 		else
 		{
-			activeChar.sitDown();
+			player.sitDown();
 		}
 		return true;
 	}

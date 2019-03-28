@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.model;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -31,10 +31,10 @@ public class TerritoryWard
 {
 	// private static final Logger LOGGER = Logger.getLogger(CombatFlag.class.getName());
 	
-	protected L2PcInstance _player = null;
+	protected PlayerInstance _player = null;
 	public int playerId = 0;
-	private L2ItemInstance _item = null;
-	private L2Npc _npc = null;
+	private ItemInstance _item = null;
+	private Npc _npc = null;
 	
 	private Location _location;
 	private Location _oldLocation;
@@ -44,7 +44,7 @@ public class TerritoryWard
 	
 	private final int _territoryId;
 	
-	public TerritoryWard(int territory_id, int x, int y, int z, int heading, int item_id, int castleId, L2Npc npc)
+	public TerritoryWard(int territory_id, int x, int y, int z, int heading, int item_id, int castleId, Npc npc)
 	{
 		_territoryId = territory_id;
 		_location = new Location(x, y, z, heading);
@@ -68,17 +68,17 @@ public class TerritoryWard
 		_ownerCastleId = newOwner;
 	}
 	
-	public L2Npc getNpc()
+	public Npc getNpc()
 	{
 		return _npc;
 	}
 	
-	public void setNpc(L2Npc npc)
+	public void setNpc(Npc npc)
 	{
 		_npc = npc;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}
@@ -90,7 +90,7 @@ public class TerritoryWard
 			dropIt();
 		}
 		
-		// Init the dropped L2WardInstance and add it in the world as a visible object at the position where last Pc got it
+		// Init the dropped WardInstance and add it in the world as a visible object at the position where last Pc got it
 		_npc = TerritoryWarManager.getInstance().spawnNPC(36491 + _territoryId, _oldLocation);
 	}
 	
@@ -101,7 +101,7 @@ public class TerritoryWard
 			dropIt();
 		}
 		
-		// Init the dropped L2WardInstance and add it in the world as a visible object at the position where Pc was last
+		// Init the dropped WardInstance and add it in the world as a visible object at the position where Pc was last
 		_npc = TerritoryWarManager.getInstance().spawnNPC(36491 + _territoryId, _location);
 	}
 	
@@ -117,7 +117,7 @@ public class TerritoryWard
 		}
 	}
 	
-	public boolean activate(L2PcInstance player, L2ItemInstance item)
+	public boolean activate(PlayerInstance player, ItemInstance item)
 	{
 		if (player.isMounted())
 		{

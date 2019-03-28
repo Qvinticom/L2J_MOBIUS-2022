@@ -35,12 +35,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.CombatFlag;
 import com.l2jmobius.gameserver.model.FortSiegeSpawn;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.FortSiege;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -67,18 +67,18 @@ public final class FortSiegeManager
 		load();
 	}
 	
-	public final void addSiegeSkills(L2PcInstance character)
+	public final void addSiegeSkills(PlayerInstance character)
 	{
 		character.addSkill(CommonSkill.SEAL_OF_RULER.getSkill(), false);
 		character.addSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill(), false);
 	}
 	
 	/**
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @param fortid
 	 * @return true if the clan is registered or owner of a fort
 	 */
-	public final boolean checkIsRegistered(L2Clan clan, int fortid)
+	public final boolean checkIsRegistered(Clan clan, int fortid)
 	{
 		if (clan == null)
 		{
@@ -106,7 +106,7 @@ public final class FortSiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(L2PcInstance character)
+	public final void removeSiegeSkills(PlayerInstance character)
 	{
 		character.removeSkill(CommonSkill.SEAL_OF_RULER.getSkill());
 		character.removeSkill(CommonSkill.BUILD_HEADQUARTERS.getSkill());
@@ -226,7 +226,7 @@ public final class FortSiegeManager
 		return _suspiciousMerchantRespawnDelay;
 	}
 	
-	public final FortSiege getSiege(L2Object activeObject)
+	public final FortSiege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
@@ -277,7 +277,7 @@ public final class FortSiegeManager
 		return (itemId == 9819);
 	}
 	
-	public boolean activateCombatFlag(L2PcInstance player, L2ItemInstance item)
+	public boolean activateCombatFlag(PlayerInstance player, ItemInstance item)
 	{
 		if (!checkIfCanPickup(player))
 		{
@@ -297,7 +297,7 @@ public final class FortSiegeManager
 		return true;
 	}
 	
-	public boolean checkIfCanPickup(L2PcInstance player)
+	public boolean checkIfCanPickup(PlayerInstance player)
 	{
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED);
 		sm.addItemName(9819);
@@ -330,7 +330,7 @@ public final class FortSiegeManager
 		return true;
 	}
 	
-	public void dropCombatFlag(L2PcInstance player, int fortId)
+	public void dropCombatFlag(PlayerInstance player, int fortId)
 	{
 		final Fort fort = FortManager.getInstance().getFortById(fortId);
 		final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());

@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * 15 ee cc 11 43 object id 39 00 00 00 item id 8f 14 00 00 x b7 f1 00 00 y 60 f2 ff ff z 01 00 00 00 show item count 7a 00 00 00 count . format dddddddd
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SpawnItemPoly extends L2GameServerPacket
+public class SpawnItemPoly extends GameServerPacket
 {
 	private int _objectId;
 	private int _itemId;
@@ -33,11 +33,11 @@ public class SpawnItemPoly extends L2GameServerPacket
 	private int _stackable;
 	private int _count;
 	
-	public SpawnItemPoly(L2Object object)
+	public SpawnItemPoly(WorldObject object)
 	{
-		if (object instanceof L2ItemInstance)
+		if (object instanceof ItemInstance)
 		{
-			final L2ItemInstance item = (L2ItemInstance) object;
+			final ItemInstance item = (ItemInstance) object;
 			_objectId = object.getObjectId();
 			_itemId = object.getPoly().getPolyId();
 			_x = item.getX();

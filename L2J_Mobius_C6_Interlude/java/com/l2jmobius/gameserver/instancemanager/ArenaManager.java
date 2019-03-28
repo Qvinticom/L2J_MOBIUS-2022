@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.zone.type.ArenaZone;
 
 public class ArenaManager
 {
@@ -38,13 +38,13 @@ public class ArenaManager
 		return _instance;
 	}
 	
-	private List<L2ArenaZone> _arenas;
+	private List<ArenaZone> _arenas;
 	
 	public ArenaManager()
 	{
 	}
 	
-	public void addArena(L2ArenaZone arena)
+	public void addArena(ArenaZone arena)
 	{
 		if (_arenas == null)
 		{
@@ -54,13 +54,13 @@ public class ArenaManager
 		_arenas.add(arena);
 	}
 	
-	public final L2ArenaZone getArena(L2Character character)
+	public final ArenaZone getArena(Creature creature)
 	{
 		if (_arenas != null)
 		{
-			for (L2ArenaZone temp : _arenas)
+			for (ArenaZone temp : _arenas)
 			{
-				if (temp.isCharacterInZone(character))
+				if (temp.isCharacterInZone(creature))
 				{
 					return temp;
 				}
@@ -70,11 +70,11 @@ public class ArenaManager
 		return null;
 	}
 	
-	public final L2ArenaZone getArena(int x, int y, int z)
+	public final ArenaZone getArena(int x, int y, int z)
 	{
 		if (_arenas != null)
 		{
-			for (L2ArenaZone temp : _arenas)
+			for (ArenaZone temp : _arenas)
 			{
 				if (temp.isInsideZone(x, y, z))
 				{

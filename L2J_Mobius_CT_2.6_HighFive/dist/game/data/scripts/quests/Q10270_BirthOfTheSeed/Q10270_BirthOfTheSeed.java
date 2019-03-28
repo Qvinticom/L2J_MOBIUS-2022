@@ -19,8 +19,8 @@ package quests.Q10270_BirthOfTheSeed;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -63,10 +63,10 @@ public final class Q10270_BirthOfTheSeed extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isMemoState(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isMemoState(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			switch (npc.getId())
 			{
@@ -102,10 +102,10 @@ public final class Q10270_BirthOfTheSeed extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -120,15 +120,15 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			}
 			case "32563-03.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = event;
 				break;
 			}
 			case "32566-02.html":
 			{
-				if (st.isMemoState(4))
+				if (qs.isMemoState(4))
 				{
 					final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
 					if ((st1 == null) || (st1.isStarted() && (st1.getMemoState() < 10)))
@@ -144,7 +144,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			}
 			case "32566-04.html":
 			{
-				if (st.isMemoState(4))
+				if (qs.isMemoState(4))
 				{
 					if (getQuestItemsCount(player, Inventory.ADENA_ID) < 10000)
 					{
@@ -153,7 +153,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 					else
 					{
 						takeItems(player, Inventory.ADENA_ID, 10000);
-						st.setMemoState(5);
+						qs.setMemoState(5);
 						htmltext = "32566-05.html";
 					}
 				}
@@ -161,7 +161,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			}
 			case "32566-06.html":
 			{
-				if (st.isMemoState(5))
+				if (qs.isMemoState(5))
 				{
 					htmltext = event;
 				}
@@ -170,7 +170,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			case "32567-02.html":
 			case "32567-03.html":
 			{
-				if (st.isMemoState(10))
+				if (qs.isMemoState(10))
 				{
 					htmltext = event;
 				}
@@ -178,19 +178,19 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			}
 			case "32567-04.html":
 			{
-				if (st.isMemoState(10))
+				if (qs.isMemoState(10))
 				{
-					st.setMemoState(11);
-					st.setCond(5, true);
+					qs.setMemoState(11);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32567-05.html":
 			{
-				if (st.isMemoState(11))
+				if (qs.isMemoState(11))
 				{
-					st.setMemoState(20);
+					qs.setMemoState(20);
 					player.setInstanceId(0);
 					player.teleToLocation(INSTANCE_EXIT, true);
 					htmltext = event;
@@ -199,23 +199,23 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			}
 			case "32559-02.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
-					st.setMemoState(2);
-					st.setCond(2, true);
+					qs.setMemoState(2);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32559-08.html":
 			{
-				if (st.isMemoState(3))
+				if (qs.isMemoState(3))
 				{
 					final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
 					if ((st1 == null) || (st1.isStarted() && (st1.getMemoState() < 10)))
 					{
-						st.setMemoState(4);
-						st.setCond(4, true);
+						qs.setMemoState(4);
+						qs.setCond(4, true);
 						htmltext = event;
 					}
 				}
@@ -223,13 +223,13 @@ public final class Q10270_BirthOfTheSeed extends Quest
 			}
 			case "32559-10.html":
 			{
-				if (st.isMemoState(3))
+				if (qs.isMemoState(3))
 				{
 					final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
 					if ((st1 != null) && ((st1.isStarted() && (st1.getMemoState() >= 10)) || st1.isCompleted()))
 					{
-						st.setMemoState(4);
-						st.setCond(4, true);
+						qs.setMemoState(4);
+						qs.setCond(4, true);
 						htmltext = event;
 					}
 				}
@@ -240,18 +240,18 @@ public final class Q10270_BirthOfTheSeed extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCompleted())
+		if (qs.isCompleted())
 		{
 			if (npc.getId() == PLENOS)
 			{
@@ -262,17 +262,17 @@ public final class Q10270_BirthOfTheSeed extends Quest
 				htmltext = "32559-03.html";
 			}
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= MIN_LEVEL) ? "32563-01.htm" : "32563-04.htm";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case PLENOS:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32563-06.html";
 					}
@@ -280,7 +280,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 				}
 				case GINBY:
 				{
-					final int memoState = st.getMemoState();
+					final int memoState = qs.getMemoState();
 					if (memoState == 4)
 					{
 						htmltext = "32566-01.html";
@@ -305,7 +305,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 				}
 				case LELRIKIA:
 				{
-					final int memoState = st.getMemoState();
+					final int memoState = qs.getMemoState();
 					if (memoState == 10)
 					{
 						htmltext = "32567-01.html";
@@ -318,7 +318,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 				}
 				case ARTIUS:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 1:
 						{
@@ -329,8 +329,8 @@ public final class Q10270_BirthOfTheSeed extends Quest
 						{
 							if (hasQuestItems(player, YEHAN_KLODEKUS_BADGE, YEHAN_KLANIKUS_BADGE, LICH_CRYSTAL))
 							{
-								st.setMemoState(3);
-								st.setCond(3, true);
+								qs.setMemoState(3);
+								qs.setCond(3, true);
 								takeItems(player, -1, YEHAN_KLODEKUS_BADGE, YEHAN_KLANIKUS_BADGE, LICH_CRYSTAL);
 								htmltext = "32559-04.html";
 							}
@@ -366,7 +366,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 							{
 								giveAdena(player, 133590, true);
 								addExpAndSp(player, 625343, 48222);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								htmltext = "32559-11.html";
 							}
 							break;

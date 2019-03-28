@@ -20,9 +20,9 @@ import java.lang.reflect.Constructor;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.StatFunction;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -109,7 +109,7 @@ public final class FuncTemplate
 	 * @param owner the owner
 	 * @return the function if conditions are met, {@code null} otherwise
 	 */
-	public AbstractFunction getFunc(L2Character caster, L2Character target, Skill skill, Object owner)
+	public AbstractFunction getFunc(Creature caster, Creature target, Skill skill, Object owner)
 	{
 		return getFunc(caster, target, skill, null, owner);
 	}
@@ -122,7 +122,7 @@ public final class FuncTemplate
 	 * @param owner the owner
 	 * @return the function if conditions are met, {@code null} otherwise
 	 */
-	public AbstractFunction getFunc(L2Character caster, L2Character target, L2ItemInstance item, Object owner)
+	public AbstractFunction getFunc(Creature caster, Creature target, ItemInstance item, Object owner)
 	{
 		return getFunc(caster, target, null, item, owner);
 	}
@@ -136,7 +136,7 @@ public final class FuncTemplate
 	 * @param owner the owner
 	 * @return the function if conditions are met, {@code null} otherwise
 	 */
-	private AbstractFunction getFunc(L2Character caster, L2Character target, Skill skill, L2ItemInstance item, Object owner)
+	private AbstractFunction getFunc(Creature caster, Creature target, Skill skill, ItemInstance item, Object owner)
 	{
 		if ((_attachCond != null) && !_attachCond.test(caster, target, skill))
 		{

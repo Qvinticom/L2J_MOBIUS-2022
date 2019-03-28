@@ -23,12 +23,12 @@ import java.util.stream.Stream;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2CubicTemplate;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.CubicTemplate;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -38,13 +38,13 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class CubicInstance
 {
-	private final L2PcInstance _owner;
-	private final L2PcInstance _caster;
-	private final L2CubicTemplate _template;
+	private final PlayerInstance _owner;
+	private final PlayerInstance _caster;
+	private final CubicTemplate _template;
 	private ScheduledFuture<?> _skillUseTask;
 	private ScheduledFuture<?> _expireTask;
 	
-	public CubicInstance(L2PcInstance owner, L2PcInstance caster, L2CubicTemplate template)
+	public CubicInstance(PlayerInstance owner, PlayerInstance caster, CubicTemplate template)
 	{
 		_owner = owner;
 		_caster = caster == null ? owner : caster;
@@ -121,7 +121,7 @@ public class CubicInstance
 	private void actionToCurrentTarget()
 	{
 		final CubicSkill skill = chooseSkill();
-		final L2Object target = _owner.getTarget();
+		final WorldObject target = _owner.getTarget();
 		if ((skill != null) && (target != null))
 		{
 			tryToUseSkill(target, skill);
@@ -137,7 +137,7 @@ public class CubicInstance
 			{
 				case TARGET:
 				{
-					final L2Object target = _owner.getTarget();
+					final WorldObject target = _owner.getTarget();
 					if (target != null)
 					{
 						tryToUseSkill(target, skill);
@@ -169,15 +169,15 @@ public class CubicInstance
 				final Skill skill = cubicSkill.getSkill();
 				if ((skill != null) && (Rnd.get(100) < cubicSkill.getSuccessRate()))
 				{
-					final L2Party party = _owner.getParty();
-					Stream<L2Character> stream;
+					final Party party = _owner.getParty();
+					Stream<Creature> stream;
 					if (party != null)
 					{
-						stream = L2World.getInstance().getVisibleObjectsInRange(_owner, L2Character.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
+						stream = World.getInstance().getVisibleObjectsInRange(_owner, Creature.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
 					}
 					else
 					{
-						stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(L2Character.class::cast);
+						stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
 						
 					}
 					
@@ -186,7 +186,7 @@ public class CubicInstance
 						stream = Stream.concat(stream, Stream.of(_owner));
 					}
 					
-					final L2Character target = stream.sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent)).findFirst().orElse(null);
+					final Creature target = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent)).findFirst().orElse(null);
 					if (target != null)
 					{
 						if (Rnd.nextDouble() > (target.getCurrentHp() / target.getMaxHp()))
@@ -209,7 +209,7 @@ public class CubicInstance
 		}
 	}
 	
-	private void tryToUseSkill(L2Object target, CubicSkill cubicSkill)
+	private void tryToUseSkill(WorldObject target, CubicSkill cubicSkill)
 	{
 		final Skill skill = cubicSkill.getSkill();
 		if ((_template.getTargetType() != CubicTargetType.MASTER) && !((_template.getTargetType() == CubicTargetType.BY_SKILL) && (cubicSkill.getTargetType() == CubicTargetType.MASTER)))
@@ -234,7 +234,7 @@ public class CubicInstance
 		}
 	}
 	
-	private void activateCubicSkill(Skill skill, L2Object target)
+	private void activateCubicSkill(Skill skill, WorldObject target)
 	{
 		if (!_owner.hasSkillReuse(skill.getReuseHashCode()))
 		{
@@ -246,17 +246,17 @@ public class CubicInstance
 	}
 	
 	/**
-	 * @return the {@link L2Character} that owns this cubic
+	 * @return the {@link Creature} that owns this cubic
 	 */
-	public L2Character getOwner()
+	public Creature getOwner()
 	{
 		return _owner;
 	}
 	
 	/**
-	 * @return the {@link L2Character} that casted this cubic
+	 * @return the {@link Creature} that casted this cubic
 	 */
-	public L2Character getCaster()
+	public Creature getCaster()
 	{
 		return _caster;
 	}
@@ -270,9 +270,9 @@ public class CubicInstance
 	}
 	
 	/**
-	 * @return the {@link L2CubicTemplate} of this cubic
+	 * @return the {@link CubicTemplate} of this cubic
 	 */
-	public L2CubicTemplate getTemplate()
+	public CubicTemplate getTemplate()
 	{
 		return _template;
 	}

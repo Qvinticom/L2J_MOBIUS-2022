@@ -22,11 +22,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
- * This class ...
  * @version $Revision: 1.11.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestRestart implements IClientIncomingPacket
@@ -43,22 +42,22 @@ public final class RequestRestart implements IClientIncomingPacket
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
 		if (player == null)
 		{
 			return;
 		}
 		
-		if ((player.getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (player.getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
+		if ((player.getActiveEnchantItemId() != PlayerInstance.ID_NONE) || (player.getActiveEnchantAttrItemId() != PlayerInstance.ID_NONE))
 		{
 			client.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -101,7 +100,7 @@ public final class RequestRestart implements IClientIncomingPacket
 				return;
 			}
 			
-			final L2Party playerParty = player.getParty();
+			final Party playerParty = player.getParty();
 			
 			if (playerParty != null)
 			{

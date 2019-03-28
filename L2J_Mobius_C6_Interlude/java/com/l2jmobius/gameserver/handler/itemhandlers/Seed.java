@@ -20,17 +20,17 @@ import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -300,13 +300,13 @@ public class Seed implements IItemHandler
 	};
 	
 	private int _seedId;
-	private L2MonsterInstance _target;
-	private L2PcInstance _activeChar;
+	private MonsterInstance _target;
+	private PlayerInstance _player;
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
@@ -316,56 +316,56 @@ public class Seed implements IItemHandler
 			return;
 		}
 		
-		_activeChar = (L2PcInstance) playable;
-		L2Object target = _activeChar.getTarget();
+		_player = (PlayerInstance) playable;
+		WorldObject target = _player.getTarget();
 		
-		if (!(target instanceof L2NpcInstance))
+		if (!(target instanceof NpcInstance))
 		{
-			_activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!(target instanceof L2MonsterInstance) || (target instanceof L2ChestInstance) || (target instanceof L2GrandBossInstance) || (target instanceof L2RaidBossInstance))
+		if (!(target instanceof MonsterInstance) || (target instanceof ChestInstance) || (target instanceof GrandBossInstance) || (target instanceof RaidBossInstance))
 		{
-			_activeChar.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		_target = (L2MonsterInstance) target;
+		_target = (MonsterInstance) target;
 		
 		if ((_target == null) || _target.isDead())
 		{
-			_activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(SystemMessageId.INCORRECT_TARGET);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (_target.isSeeded())
 		{
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		_seedId = item.getItemId();
 		
-		if (areaValid(MapRegionTable.getInstance().getAreaCastle(_activeChar)))
+		if (areaValid(MapRegionTable.getInstance().getAreaCastle(_player)))
 		{
 			// TODO: get right skill level
-			_target.setSeeded(_seedId, _activeChar);
-			L2Skill skill = SkillTable.getInstance().getInfo(2097, 3); // sowing skill
-			_activeChar.useMagic(skill, false, false);
+			_target.setSeeded(_seedId, _player);
+			Skill skill = SkillTable.getInstance().getInfo(2097, 3); // sowing skill
+			_player.useMagic(skill, false, false);
 		}
 		else
 		{
-			_activeChar.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
+			_player.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 		}
 	}
 	
 	private boolean areaValid(int castleId)
 	{
-		return L2Manor.getInstance().getCastleIdForSeed(_seedId) == castleId;
+		return Manor.getInstance().getCastleIdForSeed(_seedId) == castleId;
 	}
 	
 	@Override

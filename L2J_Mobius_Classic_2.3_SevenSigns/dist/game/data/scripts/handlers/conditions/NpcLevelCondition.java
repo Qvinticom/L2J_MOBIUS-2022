@@ -16,9 +16,9 @@
  */
 package handlers.conditions;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.ICondition;
 
 /**
@@ -36,9 +36,9 @@ public class NpcLevelCondition implements ICondition
 	}
 	
 	@Override
-	public boolean test(L2Character creature, L2Object object)
+	public boolean test(Creature creature, WorldObject object)
 	{
-		return object.isNpc() && (((L2Character) object).getLevel() >= _minLevel) && (((L2Character) object).getLevel() < _maxLevel);
+		return object.isNpc() && (((Creature) object).getLevel() >= _minLevel) && (((Creature) object).getLevel() < _maxLevel);
 	}
 	
 }

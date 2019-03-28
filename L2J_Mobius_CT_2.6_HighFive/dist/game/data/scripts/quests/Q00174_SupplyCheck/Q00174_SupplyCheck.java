@@ -16,8 +16,8 @@
  */
 package quests.Q00174_SupplyCheck;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -59,33 +59,33 @@ public class Q00174_SupplyCheck extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
 		
 		if (event.equalsIgnoreCase("32173-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case MARCELA:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -94,7 +94,7 @@ public class Q00174_SupplyCheck extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -103,7 +103,7 @@ public class Q00174_SupplyCheck extends Quest
 							}
 							case 2:
 							{
-								st.setCond(3, true);
+								qs.setCond(3, true);
 								takeItems(player, WAREHOUSE_MANIFEST, -1);
 								htmltext = "32173-05.html";
 								break;
@@ -121,7 +121,7 @@ public class Q00174_SupplyCheck extends Quest
 								}
 								giveAdena(player, 2466, true);
 								addExpAndSp(player, 5672, 446);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								// Newbie Guide
 								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 								htmltext = "32173-07.html";
@@ -140,13 +140,13 @@ public class Q00174_SupplyCheck extends Quest
 			}
 			case BENIS:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
-							st.setCond(2, true);
+							qs.setCond(2, true);
 							giveItems(player, WAREHOUSE_MANIFEST, 1);
 							htmltext = "32170-01.html";
 							break;
@@ -167,9 +167,9 @@ public class Q00174_SupplyCheck extends Quest
 			}
 			case NIKA:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						case 2:
@@ -179,7 +179,7 @@ public class Q00174_SupplyCheck extends Quest
 						}
 						case 3:
 						{
-							st.setCond(4, true);
+							qs.setCond(4, true);
 							giveItems(player, GROCERY_STORE_MANIFEST, 1);
 							htmltext = "32167-02.html";
 							break;

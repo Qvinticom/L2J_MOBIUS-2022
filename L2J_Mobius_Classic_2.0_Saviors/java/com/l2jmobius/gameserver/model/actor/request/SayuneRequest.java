@@ -25,7 +25,7 @@ import java.util.Objects;
 import com.l2jmobius.gameserver.data.xml.impl.SayuneData;
 import com.l2jmobius.gameserver.enums.SayuneType;
 import com.l2jmobius.gameserver.model.SayuneEntry;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
 import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -39,7 +39,7 @@ public class SayuneRequest extends AbstractRequest
 	private boolean _isSelecting;
 	private final Deque<SayuneEntry> _possibleEntries = new LinkedList<>();
 	
-	public SayuneRequest(L2PcInstance player, int mapId)
+	public SayuneRequest(PlayerInstance player, int mapId)
 	{
 		super(player);
 		_mapId = mapId;
@@ -69,19 +69,19 @@ public class SayuneRequest extends AbstractRequest
 		return _possibleEntries.removeFirst();
 	}
 	
-	public synchronized void move(L2PcInstance activeChar, int pos)
+	public synchronized void move(PlayerInstance player, int pos)
 	{
 		final SayuneEntry map = SayuneData.getInstance().getMap(_mapId);
 		if ((map == null) || map.getInnerEntries().isEmpty())
 		{
-			activeChar.sendMessage("MapId: " + _mapId + " was not found in the map!");
+			player.sendMessage("MapId: " + _mapId + " was not found in the map!");
 			return;
 		}
 		
 		final SayuneEntry nextEntry = findEntry(pos);
 		if (nextEntry == null)
 		{
-			activeChar.removeRequest(getClass());
+			player.removeRequest(getClass());
 			return;
 		}
 		
@@ -107,11 +107,11 @@ public class SayuneRequest extends AbstractRequest
 			_isSelecting = true;
 		}
 		
-		activeChar.sendPacket(new ExFlyMove(activeChar, type, _mapId, locations));
+		player.sendPacket(new ExFlyMove(player, type, _mapId, locations));
 		
 		final SayuneEntry activeEntry = locations.get(0);
-		Broadcast.toKnownPlayersInRadius(activeChar, new ExFlyMoveBroadcast(activeChar, type, map.getId(), activeEntry), 1000);
-		activeChar.setXYZ(activeEntry);
+		Broadcast.toKnownPlayersInRadius(player, new ExFlyMoveBroadcast(player, type, map.getId(), activeEntry), 1000);
+		player.setXYZ(activeEntry);
 	}
 	
 	public void onLogout()

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.stats.functions.formulas;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
@@ -39,7 +39,7 @@ public class FuncAtkAccuracy extends AbstractFunction
 	}
 	
 	@Override
-	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
+	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
 		final int level = effector.getLevel();
 		// [Square(DEX)] * 6 + lvl + weapon hitbonus;

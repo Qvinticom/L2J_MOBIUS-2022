@@ -21,9 +21,9 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -34,9 +34,9 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(ExPledgeBonusOpen.class.getName());
 	
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public ExPledgeBonusOpen(L2PcInstance player)
+	public ExPledgeBonusOpen(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -44,7 +44,7 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final L2Clan clan = _player.getClan();
+		final Clan clan = _player.getClan();
 		if (clan == null)
 		{
 			LOGGER.warning("Player: " + _player + " attempting to write to a null clan!");

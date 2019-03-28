@@ -18,12 +18,12 @@ package handlers.itemhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public final class Harvester implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!Config.ALLOW_MANOR)
 		{
@@ -52,18 +52,18 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		final L2Object target = activeChar.getTarget();
-		if ((target == null) || !target.isMonster() || !((L2Character) target).isDead())
+		final PlayerInstance player = playable.getActingPlayer();
+		final WorldObject target = player.getTarget();
+		if ((target == null) || !target.isMonster() || !((Creature) target).isDead())
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
 		for (SkillHolder sk : skills)
 		{
-			activeChar.useMagic(sk.getSkill(), false, false);
+			player.useMagic(sk.getSkill(), false, false);
 		}
 		return true;
 	}

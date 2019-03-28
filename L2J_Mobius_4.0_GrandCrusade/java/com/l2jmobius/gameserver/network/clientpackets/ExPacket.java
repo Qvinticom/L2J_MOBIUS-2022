@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.IIncomingPacket;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.network.ExIncomingPackets;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author Nos
@@ -29,10 +29,10 @@ public class ExPacket implements IClientIncomingPacket
 	// private static final Logger LOGGER = Logger.getLogger(ExPacket.class.getName());
 	
 	private ExIncomingPackets _exIncomingPacket;
-	private IIncomingPacket<L2GameClient> _exPacket;
+	private IIncomingPacket<GameClient> _exPacket;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int exPacketId = packet.readH() & 0xFFFF;
 		if ((exPacketId < 0) || (exPacketId >= ExIncomingPackets.PACKET_ARRAY.length))
@@ -52,7 +52,7 @@ public class ExPacket implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client) throws Exception
+	public void run(GameClient client) throws Exception
 	{
 		if (!_exIncomingPacket.getConnectionStates().contains(client.getConnectionState()))
 		{

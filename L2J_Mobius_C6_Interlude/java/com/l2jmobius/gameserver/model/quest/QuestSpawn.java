@@ -21,10 +21,10 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author programmos
@@ -46,9 +46,9 @@ public final class QuestSpawn
 	
 	public class DeSpawnScheduleTimerTask implements Runnable
 	{
-		L2NpcInstance _npc = null;
+		NpcInstance _npc = null;
 		
-		public DeSpawnScheduleTimerTask(L2NpcInstance npc)
+		public DeSpawnScheduleTimerTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -63,12 +63,12 @@ public final class QuestSpawn
 	/**
 	 * Add spawn for player instance Will despawn after the spawn length expires Uses player's coords and heading. Adds a little randomization in the x y coords Return object id of newly spawned npc
 	 * @param npcId
-	 * @param cha
+	 * @param creature
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId, L2Character cha)
+	public NpcInstance addSpawn(int npcId, Creature creature)
 	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), false, 0);
+		return addSpawn(npcId, creature.getX(), creature.getY(), creature.getZ(), creature.getHeading(), false, 0);
 	}
 	
 	/**
@@ -82,13 +82,13 @@ public final class QuestSpawn
 	 * @param despawnDelay
 	 * @return
 	 */
-	public L2NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
 	{
-		L2NpcInstance result = null;
+		NpcInstance result = null;
 		
 		try
 		{
-			final L2NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
 			
 			if (template != null)
 			{
@@ -126,7 +126,7 @@ public final class QuestSpawn
 					offset *= Rnd.get(50, 100);
 					y += offset;
 				}
-				L2Spawn spawn = new L2Spawn(template);
+				Spawn spawn = new Spawn(template);
 				spawn.setHeading(heading);
 				spawn.setX(x);
 				spawn.setY(y);

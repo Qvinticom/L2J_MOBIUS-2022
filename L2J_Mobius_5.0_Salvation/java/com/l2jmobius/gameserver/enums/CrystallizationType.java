@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.enums;
 
-import com.l2jmobius.gameserver.model.items.L2Armor;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.Armor;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.Weapon;
 
 /**
  * @author Nik
@@ -30,24 +30,24 @@ public enum CrystallizationType
 	ARMOR,
 	ACCESORY;
 	
-	public static CrystallizationType getByItem(L2Item item)
+	public static CrystallizationType getByItem(Item item)
 	{
-		if (item instanceof L2Weapon)
+		if (item instanceof Weapon)
 		{
 			return WEAPON;
 		}
-		if (item instanceof L2Armor)
+		if (item instanceof Armor)
 		{
 			return ARMOR;
 		}
-		if ((item.getBodyPart() == L2Item.SLOT_R_EAR) //
-			|| (item.getBodyPart() == L2Item.SLOT_L_EAR) //
-			|| (item.getBodyPart() == L2Item.SLOT_R_FINGER) //
-			|| (item.getBodyPart() == L2Item.SLOT_L_FINGER) //
-			|| (item.getBodyPart() == L2Item.SLOT_NECK) //
-			|| (item.getBodyPart() == L2Item.SLOT_HAIR) //
-			|| (item.getBodyPart() == L2Item.SLOT_HAIR2) //
-			|| (item.getBodyPart() == L2Item.SLOT_HAIRALL))
+		if ((item.getBodyPart() == Item.SLOT_R_EAR) //
+			|| (item.getBodyPart() == Item.SLOT_L_EAR) //
+			|| (item.getBodyPart() == Item.SLOT_R_FINGER) //
+			|| (item.getBodyPart() == Item.SLOT_L_FINGER) //
+			|| (item.getBodyPart() == Item.SLOT_NECK) //
+			|| (item.getBodyPart() == Item.SLOT_HAIR) //
+			|| (item.getBodyPart() == Item.SLOT_HAIR2) //
+			|| (item.getBodyPart() == Item.SLOT_HAIRALL))
 		{
 			return ACCESORY;
 		}

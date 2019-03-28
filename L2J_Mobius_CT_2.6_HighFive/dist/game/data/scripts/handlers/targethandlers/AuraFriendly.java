@@ -21,13 +21,13 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
@@ -37,14 +37,14 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 public class AuraFriendly implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		L2PcInstance player = activeChar.getActingPlayer();
+		List<Creature> targetList = new ArrayList<>();
+		PlayerInstance player = creature.getActingPlayer();
 		int maxTargets = skill.getAffectLimit();
-		L2World.getInstance().forEachVisibleObject(player, L2Character.class, obj ->
+		World.getInstance().forEachVisibleObject(player, Creature.class, obj ->
 		{
-			if ((obj == activeChar) || !checkTarget(player, obj))
+			if ((obj == creature) || !checkTarget(player, obj))
 			{
 				return;
 			}
@@ -62,31 +62,31 @@ public class AuraFriendly implements ITargetTypeHandler
 			return EMPTY_TARGET_LIST;
 		}
 		
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
-	private boolean checkTarget(L2PcInstance activeChar, L2Character target)
+	private boolean checkTarget(PlayerInstance player, Creature target)
 	{
-		if ((target == null) || !GeoEngine.getInstance().canSeeTarget(activeChar, target))
+		if ((target == null) || !GeoEngine.getInstance().canSeeTarget(player, target))
 		{
 			return false;
 		}
 		
-		if (target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
+		if (target.isAlikeDead() || target.isDoor() || (target instanceof SiegeFlagInstance) || target.isMonster())
 		{
 			return false;
 		}
 		
 		if (target.isPlayable())
 		{
-			L2PcInstance targetPlayer = target.getActingPlayer();
+			PlayerInstance targetPlayer = target.getActingPlayer();
 			
-			if (activeChar.isInDuelWith(target))
+			if (player.isInDuelWith(target))
 			{
 				return false;
 			}
 			
-			if (activeChar.isInPartyWith(target))
+			if (player.isInPartyWith(target))
 			{
 				return true;
 			}
@@ -96,7 +96,7 @@ public class AuraFriendly implements ITargetTypeHandler
 				return false;
 			}
 			
-			if (activeChar.isInClanWith(target) || activeChar.isInAllyWith(target) || activeChar.isInCommandChannelWith(target))
+			if (player.isInClanWith(target) || player.isInAllyWith(target) || player.isInCommandChannelWith(target))
 			{
 				return true;
 			}
@@ -111,8 +111,8 @@ public class AuraFriendly implements ITargetTypeHandler
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.AURA_FRIENDLY;
+		return TargetType.AURA_FRIENDLY;
 	}
 }

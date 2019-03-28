@@ -30,8 +30,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
 
 /**
  * Spawn data retriever.
@@ -40,14 +40,14 @@ import com.l2jmobius.gameserver.model.L2World;
 public final class SpawnTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
-	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
+	private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();
 	private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 	
 	/**
 	 * Gets the spawn data.
 	 * @return the spawn data
 	 */
-	public Map<Integer, Set<L2Spawn>> getSpawnTable()
+	public Map<Integer, Set<Spawn>> getSpawnTable()
 	{
 		return _spawnTable;
 	}
@@ -57,7 +57,7 @@ public final class SpawnTable
 	 * @param npcId the NPC Id
 	 * @return the spawn set for the given npcId
 	 */
-	public Set<L2Spawn> getSpawns(int npcId)
+	public Set<Spawn> getSpawns(int npcId)
 	{
 		return _spawnTable.getOrDefault(npcId, Collections.emptySet());
 	}
@@ -77,7 +77,7 @@ public final class SpawnTable
 	 * @param npcId the NPC Id
 	 * @return a spawn for the given NPC ID or {@code null}
 	 */
-	public L2Spawn getAnySpawn(int npcId)
+	public Spawn getAnySpawn(int npcId)
 	{
 		return getSpawns(npcId).stream().findFirst().orElse(null);
 	}
@@ -87,7 +87,7 @@ public final class SpawnTable
 	 * @param spawn the spawn to add
 	 * @param store if {@code true} it'll be saved in the spawn XML files
 	 */
-	public synchronized void addNewSpawn(L2Spawn spawn, boolean store)
+	public synchronized void addNewSpawn(Spawn spawn, boolean store)
 	{
 		addSpawn(spawn);
 		
@@ -114,8 +114,8 @@ public final class SpawnTable
 			}
 			
 			// XML file for spawn
-			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
-			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 			final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			
 			// Write info to XML
@@ -183,7 +183,7 @@ public final class SpawnTable
 	 * @param spawn the spawn to delete
 	 * @param update if {@code true} the spawn XML files will be updated
 	 */
-	public synchronized void deleteSpawn(L2Spawn spawn, boolean update)
+	public synchronized void deleteSpawn(Spawn spawn, boolean update)
 	{
 		if (!removeSpawn(spawn))
 		{
@@ -192,8 +192,8 @@ public final class SpawnTable
 		
 		if (update)
 		{
-			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
-			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 			final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 			try
@@ -266,7 +266,7 @@ public final class SpawnTable
 	 * Add a spawn to the spawn set if present, otherwise add a spawn set and add the spawn to the newly created spawn set.
 	 * @param spawn the NPC spawn to add
 	 */
-	private void addSpawn(L2Spawn spawn)
+	private void addSpawn(Spawn spawn)
 	{
 		_spawnTable.computeIfAbsent(spawn.getId(), k -> ConcurrentHashMap.newKeySet(1)).add(spawn);
 	}
@@ -276,9 +276,9 @@ public final class SpawnTable
 	 * @param spawn the NPC spawn to remove
 	 * @return {@code true} if the spawn was successfully removed, {@code false} otherwise
 	 */
-	private boolean removeSpawn(L2Spawn spawn)
+	private boolean removeSpawn(Spawn spawn)
 	{
-		final Set<L2Spawn> set = _spawnTable.get(spawn.getId());
+		final Set<Spawn> set = _spawnTable.get(spawn.getId());
 		if (set != null)
 		{
 			final boolean removed = set.remove(spawn);
@@ -293,7 +293,7 @@ public final class SpawnTable
 		return false;
 	}
 	
-	private void notifyRemoved(L2Spawn spawn)
+	private void notifyRemoved(Spawn spawn)
 	{
 		if ((spawn != null) && (spawn.getLastSpawn() != null) && (spawn.getNpcSpawnTemplate() != null))
 		{
@@ -307,11 +307,11 @@ public final class SpawnTable
 	 * @param function the function to execute
 	 * @return {@code true} if all procedures were executed, {@code false} otherwise
 	 */
-	public boolean forEachSpawn(Function<L2Spawn, Boolean> function)
+	public boolean forEachSpawn(Function<Spawn, Boolean> function)
 	{
-		for (Set<L2Spawn> set : _spawnTable.values())
+		for (Set<Spawn> set : _spawnTable.values())
 		{
-			for (L2Spawn spawn : set)
+			for (Spawn spawn : set)
 			{
 				if (!function.apply(spawn))
 				{

@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class WareHouseWithdrawalList extends AbstractItemPacket
@@ -28,7 +28,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
 	private long _playerAdena;
-	private L2ItemInstance[] _items;
+	private ItemInstance[] _items;
 	/**
 	 * <ul>
 	 * <li>0x01-Private Warehouse</li>
@@ -39,7 +39,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	 */
 	private int _whType;
 	
-	public WareHouseWithdrawalList(L2PcInstance player, int type)
+	public WareHouseWithdrawalList(PlayerInstance player, int type)
 	{
 		if (player.getActiveWarehouse() == null)
 		{
@@ -60,7 +60,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 		packet.writeQ(_playerAdena);
 		packet.writeH(_items.length);
 		
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			writeItem(packet, item);
 			packet.writeD(item.getObjectId());

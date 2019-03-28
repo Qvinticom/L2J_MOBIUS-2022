@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.model.conditions;
 
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Siege;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,7 +41,7 @@ public class ConditionPlayerCanResurrect extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		// Need skill rework for fix that properly
 		if (skill.getAffectRange() > 0)
@@ -56,7 +56,7 @@ public class ConditionPlayerCanResurrect extends Condition
 		
 		if (effected.isPlayer())
 		{
-			final L2PcInstance player = effected.getActingPlayer();
+			final PlayerInstance player = effected.getActingPlayer();
 			if (!player.isDead())
 			{
 				canResurrect = false;
@@ -88,7 +88,7 @@ public class ConditionPlayerCanResurrect extends Condition
 				final Siege siege = SiegeManager.getInstance().getSiege(player);
 				if ((siege != null) && siege.isInProgress())
 				{
-					final L2Clan clan = player.getClan();
+					final Clan clan = player.getClan();
 					if (clan == null)
 					{
 						canResurrect = false;
@@ -126,8 +126,8 @@ public class ConditionPlayerCanResurrect extends Condition
 		}
 		else if (effected.isSummon())
 		{
-			final L2Summon summon = (L2Summon) effected;
-			final L2PcInstance player = summon.getOwner();
+			final Summon summon = (Summon) effected;
+			final PlayerInstance player = summon.getOwner();
 			if (!summon.isDead())
 			{
 				canResurrect = false;

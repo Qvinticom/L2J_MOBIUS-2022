@@ -22,9 +22,9 @@ import java.util.Map;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.L2Seed;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.Seed;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -33,15 +33,15 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public final class ExShowSellCropList implements IClientOutgoingPacket
 {
 	private final int _manorId;
-	private final Map<Integer, L2ItemInstance> _cropsItems = new HashMap<>();
+	private final Map<Integer, ItemInstance> _cropsItems = new HashMap<>();
 	private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
 	
-	public ExShowSellCropList(PcInventory inventory, int manorId)
+	public ExShowSellCropList(PlayerInventory inventory, int manorId)
 	{
 		_manorId = manorId;
 		for (int cropId : CastleManorManager.getInstance().getCropIds())
 		{
-			final L2ItemInstance item = inventory.getItemByItemId(cropId);
+			final ItemInstance item = inventory.getItemByItemId(cropId);
 			if (item != null)
 			{
 				_cropsItems.put(cropId, item);
@@ -64,9 +64,9 @@ public final class ExShowSellCropList implements IClientOutgoingPacket
 		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_cropsItems.size()); // size
-		for (L2ItemInstance item : _cropsItems.values())
+		for (ItemInstance item : _cropsItems.values())
 		{
-			final L2Seed seed = CastleManorManager.getInstance().getSeedByCrop(item.getId());
+			final Seed seed = CastleManorManager.getInstance().getSeedByCrop(item.getId());
 			packet.writeD(item.getObjectId()); // Object id
 			packet.writeD(item.getId()); // crop id
 			packet.writeD(seed.getLevel()); // seed level

@@ -22,7 +22,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -36,40 +36,40 @@ public final class MagicSkillUse implements IClientOutgoingPacket
 	private final int _skillLevel;
 	private final int _hitTime;
 	private final int _reuseDelay;
-	private final L2Character _activeChar;
-	private final L2Character _target;
+	private final Creature _creature;
+	private final Creature _target;
 	private final List<Integer> _unknown = Collections.emptyList();
 	private final List<Location> _groundLocations;
 	
-	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(Creature creature, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		_activeChar = cha;
+		_creature = creature;
 		_target = target;
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_hitTime = hitTime;
 		_reuseDelay = reuseDelay;
-		_groundLocations = cha.isPlayer() && (cha.getActingPlayer().getCurrentSkillWorldPosition() != null) ? Arrays.asList(cha.getActingPlayer().getCurrentSkillWorldPosition()) : Collections.<Location> emptyList();
+		_groundLocations = creature.isPlayer() && (creature.getActingPlayer().getCurrentSkillWorldPosition() != null) ? Arrays.asList(creature.getActingPlayer().getCurrentSkillWorldPosition()) : Collections.<Location> emptyList();
 	}
 	
-	public MagicSkillUse(L2Character cha, int skillId, int skillLevel, int hitTime, int reuseDelay)
+	public MagicSkillUse(Creature creature, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
-		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay);
+		this(creature, creature, skillId, skillLevel, hitTime, reuseDelay);
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeD(_target.getObjectId());
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);
 		packet.writeD(_hitTime);
 		packet.writeD(_reuseDelay);
-		packet.writeD(_activeChar.getX());
-		packet.writeD(_activeChar.getY());
-		packet.writeD(_activeChar.getZ());
+		packet.writeD(_creature.getX());
+		packet.writeD(_creature.getY());
+		packet.writeD(_creature.getZ());
 		packet.writeH(_unknown.size()); // TODO: Implement me!
 		for (int unknown : _unknown)
 		{

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
 
-public final class RequestQuestList extends L2GameClientPacket
+public final class RequestQuestList extends GameClientPacket
 {
 	@Override
 	protected void readImpl()

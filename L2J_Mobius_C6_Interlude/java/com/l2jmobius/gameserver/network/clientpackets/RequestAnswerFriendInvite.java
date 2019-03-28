@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.FriendList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * sample 5F 01 00 00 00 format cdd
  */
-public final class RequestAnswerFriendInvite extends L2GameClientPacket
+public final class RequestAnswerFriendInvite extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestAnswerFriendInvite.class.getName());
 	
@@ -44,10 +44,10 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player != null)
 		{
-			final L2PcInstance requestor = player.getActiveRequester();
+			final PlayerInstance requestor = player.getActiveRequester();
 			if (requestor == null)
 			{
 				return;

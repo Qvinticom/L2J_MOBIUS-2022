@@ -17,10 +17,10 @@
 package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Target Summon handler.
@@ -29,21 +29,21 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 public class Summon implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		if (activeChar.hasSummon())
+		if (creature.hasSummon())
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
-				activeChar.getSummon()
+				creature.getSummon()
 			};
 		}
 		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.SUMMON;
+		return TargetType.SUMMON;
 	}
 }

@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.network.IOutgoingPacket;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
@@ -142,15 +142,15 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 	
 	/**
 	 * Sends this packet to the target player, useful for lambda operations like <br>
-	 * {@code L2World.getInstance().getPlayers().forEach(packet::sendTo)}
+	 * {@code World.getInstance().getPlayers().forEach(packet::sendTo)}
 	 * @param player
 	 */
-	default void sendTo(L2PcInstance player)
+	default void sendTo(PlayerInstance player)
 	{
 		player.sendPacket(this);
 	}
 	
-	default void runImpl(L2PcInstance player)
+	default void runImpl(PlayerInstance player)
 	{
 		
 	}

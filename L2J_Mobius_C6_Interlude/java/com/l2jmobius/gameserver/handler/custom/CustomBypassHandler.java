@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.ICustomByPassHandler;
 import com.l2jmobius.gameserver.idfactory.BitSetIDFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.L2Rebirth;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.entity.Rebirth;
 
 /**
  * This 'Bypass Handler' is a handy tool indeed!<br>
@@ -77,7 +77,7 @@ public class CustomBypassHandler
 	 * @param player
 	 * @param command
 	 */
-	public void handleBypass(L2PcInstance player, String command)
+	public void handleBypass(PlayerInstance player, String command)
 	{
 		// Rebirth Manager and Engine Caller
 		
@@ -107,7 +107,7 @@ public class CustomBypassHandler
 				return;
 			}
 			
-			L2Rebirth.getInstance().handleCommand(player, command);
+			Rebirth.getInstance().handleCommand(player, command);
 		}
 	}
 }

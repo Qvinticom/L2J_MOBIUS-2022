@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x12
  * @author -Wooden-
  */
-public final class RequestOlympiadObserverEnd extends L2GameClientPacket
+public final class RequestOlympiadObserverEnd extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -33,16 +33,16 @@ public final class RequestOlympiadObserverEnd extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			activeChar.leaveOlympiadObserverMode();
+			player.leaveOlympiadObserverMode();
 		}
 	}
 }

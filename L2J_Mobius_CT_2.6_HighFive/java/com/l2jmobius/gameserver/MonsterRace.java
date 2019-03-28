@@ -21,14 +21,14 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 public class MonsterRace
 {
 	protected static final Logger LOGGER = Logger.getLogger(MonsterRace.class.getName());
 	
-	private final L2Npc[] _monsters;
+	private final Npc[] _monsters;
 	private int[][] _speeds;
 	private final int[] _first;
 
@@ -36,7 +36,7 @@ public class MonsterRace
 	
 	protected MonsterRace()
 	{
-		_monsters = new L2Npc[8];
+		_monsters = new Npc[8];
 		_speeds = new int[8][20];
 		_first = new int[2];
 		_second = new int[2];
@@ -64,8 +64,8 @@ public class MonsterRace
 			}
 			try
 			{
-				final L2NpcTemplate template = NpcData.getInstance().getTemplate(id + random);
-				_monsters[i] = (L2Npc) Class.forName("com.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0].newInstance(template);
+				final NpcTemplate template = NpcData.getInstance().getTemplate(id + random);
+				_monsters[i] = (Npc) Class.forName("com.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0].newInstance(template);
 			}
 			catch (Exception e)
 			{
@@ -107,7 +107,7 @@ public class MonsterRace
 	/**
 	 * @return Returns the monsters.
 	 */
-	public L2Npc[] getMonsters()
+	public Npc[] getMonsters()
 	{
 		return _monsters;
 	}

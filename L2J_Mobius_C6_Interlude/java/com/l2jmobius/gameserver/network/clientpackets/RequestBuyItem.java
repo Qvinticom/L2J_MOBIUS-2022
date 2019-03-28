@@ -23,29 +23,28 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2CastleChamberlainInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ClanHallManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FishermanInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MercManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.StoreTradeList;
+import com.l2jmobius.gameserver.model.actor.instance.CastleChamberlainInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ClanHallManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MercManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class ...
  * @version $Revision: 1.12.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestBuyItem extends L2GameClientPacket
+public final class RequestBuyItem extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestBuyItem.class.getName());
 	
@@ -84,7 +83,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -102,10 +101,10 @@ public final class RequestBuyItem extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null // No target (ie GM Shop)
-		) || (!(target instanceof L2MerchantInstance) && !(target instanceof L2FishermanInstance) && !(target instanceof L2MercManagerInstance) && !(target instanceof L2ClanHallManagerInstance) && !(target instanceof L2CastleChamberlainInstance)) // Target not a merchant, fisherman or mercmanager
-			|| !player.isInsideRadius(target, L2NpcInstance.INTERACTION_DISTANCE, false, false) // Distance is too far
+		) || (!(target instanceof MerchantInstance) && !(target instanceof FishermanInstance) && !(target instanceof MercManagerInstance) && !(target instanceof ClanHallManagerInstance) && !(target instanceof CastleChamberlainInstance)) // Target not a merchant, fisherman or mercmanager
+			|| !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false) // Distance is too far
 		))
 		{
 			return;
@@ -116,23 +115,23 @@ public final class RequestBuyItem extends L2GameClientPacket
 		
 		if (target != null)
 		{
-			if (target instanceof L2MerchantInstance)
+			if (target instanceof MerchantInstance)
 			{
 				htmlFolder = "merchant";
 			}
-			else if (target instanceof L2FishermanInstance)
+			else if (target instanceof FishermanInstance)
 			{
 				htmlFolder = "fisherman";
 			}
-			else if (target instanceof L2MercManagerInstance)
+			else if (target instanceof MercManagerInstance)
 			{
 				ok = true;
 			}
-			else if (target instanceof L2ClanHallManagerInstance)
+			else if (target instanceof ClanHallManagerInstance)
 			{
 				ok = true;
 			}
-			else if (target instanceof L2CastleChamberlainInstance)
+			else if (target instanceof CastleChamberlainInstance)
 			{
 				ok = true;
 			}
@@ -146,11 +145,11 @@ public final class RequestBuyItem extends L2GameClientPacket
 			ok = false;
 		}
 		
-		L2NpcInstance merchant = null;
+		NpcInstance merchant = null;
 		
 		if (ok)
 		{
-			merchant = (L2NpcInstance) target;
+			merchant = (NpcInstance) target;
 		}
 		else if (!ok && !player.isGM())
 		{
@@ -158,11 +157,11 @@ public final class RequestBuyItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2TradeList list = null;
+		StoreTradeList list = null;
 		
 		if (merchant != null)
 		{
-			final List<L2TradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
+			final List<StoreTradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
 			
 			if (!player.isGM())
 			{
@@ -171,7 +170,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 					Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id.", Config.DEFAULT_PUNISH);
 					return;
 				}
-				for (L2TradeList tradeList : lists)
+				for (StoreTradeList tradeList : lists)
 				{
 					if (tradeList.getListId() == _listId)
 					{
@@ -237,7 +236,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 				return;
 			}
 			
-			final L2Item template = ItemTable.getInstance().getTemplate(itemId);
+			final Item template = ItemTable.getInstance().getTemplate(itemId);
 			
 			if (template == null)
 			{
@@ -264,7 +263,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 				}
 			}
 			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) } else { L2ItemInstance li = merchant.findLeaseItem(itemId, 0); if (li == null || li.getCount() < cnt) { cnt = li.getCount(); if (cnt <= 0) { items.remove(i); continue; } items.get(i).setCount((int)cnt); } price =
+			 * TODO: Disabled until Leaseholders are rewritten ;-) } else { ItemInstance li = merchant.findLeaseItem(itemId, 0); if (li == null || li.getCount() < cnt) { cnt = li.getCount(); if (cnt <= 0) { items.remove(i); continue; } items.get(i).setCount((int)cnt); } price =
 			 * li.getPriceToSell(); // lease holder sells the item weight = li.getItem().getWeight(); }
 			 */
 			if (price < 0)
@@ -357,8 +356,8 @@ public final class RequestBuyItem extends L2GameClientPacket
 			// Add item to Inventory and adjust update packet
 			player.getInventory().addItem("Buy", itemId, count, player, merchant);
 			/*
-			 * TODO: Disabled until Leaseholders are rewritten ;-) // Update Leaseholder list if (_listId >= 1000000) { L2ItemInstance li = merchant.findLeaseItem(item.getItemId(), 0); if (li == null) continue; if (li.getCount() < item.getCount()) item.setCount(li.getCount());
-			 * li.setCount(li.getCount() - item.getCount()); li.updateDatabase(); price = item.getCount() + li.getPriceToSell(); L2ItemInstance la = merchant.getLeaseAdena(); la.setCount(la.getCount() + price); la.updateDatabase(); player.getInventory().addItem(item); item.updateDatabase(); }
+			 * TODO: Disabled until Leaseholders are rewritten ;-) // Update Leaseholder list if (_listId >= 1000000) { ItemInstance li = merchant.findLeaseItem(item.getItemId(), 0); if (li == null) continue; if (li.getCount() < item.getCount()) item.setCount(li.getCount());
+			 * li.setCount(li.getCount() - item.getCount()); li.updateDatabase(); price = item.getCount() + li.getPriceToSell(); ItemInstance la = merchant.getLeaseAdena(); la.setCount(la.getCount() + price); la.updateDatabase(); player.getInventory().addItem(item); item.updateDatabase(); }
 			 */
 		}
 		

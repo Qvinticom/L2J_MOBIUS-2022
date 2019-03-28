@@ -20,9 +20,9 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class Multisell implements IBypassHandler
 {
@@ -33,7 +33,7 @@ public class Multisell implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -46,13 +46,13 @@ public class Multisell implements IBypassHandler
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // multisell
 			{
 				listId = Integer.parseInt(command.substring(9).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, (L2Npc) target, false);
+				MultisellData.getInstance().separateAndSend(listId, player, (Npc) target, false);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // exc_multisell
 			{
 				listId = Integer.parseInt(command.substring(13).trim());
-				MultisellData.getInstance().separateAndSend(listId, activeChar, (L2Npc) target, true);
+				MultisellData.getInstance().separateAndSend(listId, player, (Npc) target, true);
 				return true;
 			}
 			return false;

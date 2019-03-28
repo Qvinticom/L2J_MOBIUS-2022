@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21300" level="71" type="L2Monster" name="Eye of Guide">
+	<npc id="21300" level="71" type="Monster" name="Eye of Guide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -74,7 +74,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="21301" level="71" type="L2Monster" name="Gaze of Nightmares">
+	<npc id="21301" level="71" type="Monster" name="Gaze of Nightmares">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -154,7 +154,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21302" level="72" type="L2Monster" name="Eye of Watchman">
+	<npc id="21302" level="72" type="Monster" name="Eye of Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -233,7 +233,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="21303" level="74" type="L2Monster" name="Homunculus">
+	<npc id="21303" level="74" type="Monster" name="Homunculus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -304,7 +304,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="21304" level="75" type="L2Monster" name="Valley Grendel Slave">
+	<npc id="21304" level="75" type="Monster" name="Valley Grendel Slave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -382,7 +382,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="21305" level="73" type="L2Monster" name="Eye of Pilgrim">
+	<npc id="21305" level="73" type="Monster" name="Eye of Pilgrim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -457,7 +457,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="21306" level="76" type="L2Monster" name="Disciple of Protection">
+	<npc id="21306" level="76" type="Monster" name="Disciple of Protection">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -530,7 +530,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21307" level="74" type="L2Monster" name="Elder Homunculus">
+	<npc id="21307" level="74" type="Monster" name="Elder Homunculus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -604,7 +604,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="21308" level="77" type="L2Monster" name="Disciples of Punishment">
+	<npc id="21308" level="77" type="Monster" name="Disciples of Punishment">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -684,7 +684,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="21309" level="77" type="L2Monster" name="Disciples of Punishment">
+	<npc id="21309" level="77" type="Monster" name="Disciples of Punishment">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -763,7 +763,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="21310" level="78" type="L2Monster" name="Disciples of Authority">
+	<npc id="21310" level="78" type="Monster" name="Disciples of Authority">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -839,7 +839,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="21311" level="78" type="L2Monster" name="Disciples of Authority">
+	<npc id="21311" level="78" type="Monster" name="Disciples of Authority">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -912,7 +912,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="21312" level="74" type="L2Monster" name="Eye of Ruler">
+	<npc id="21312" level="74" type="Monster" name="Eye of Ruler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -994,7 +994,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="21313" level="72" type="L2Monster" name="Sly Hound Dog">
+	<npc id="21313" level="72" type="Monster" name="Sly Hound Dog">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -1064,7 +1064,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21314" level="73" type="L2Monster" name="Hot Springs Bandersnatchling">
+	<npc id="21314" level="73" type="Monster" name="Hot Springs Bandersnatchling">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -1154,7 +1154,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21315" level="73" type="L2Monster" name="Hot Springs Buffalo">
+	<npc id="21315" level="73" type="Monster" name="Hot Springs Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1240,7 +1240,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21316" level="74" type="L2Monster" name="Hot Springs Flava">
+	<npc id="21316" level="74" type="Monster" name="Hot Springs Flava">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1330,7 +1330,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21317" level="74" type="L2Monster" name="Hot Springs Atroxspawn">
+	<npc id="21317" level="74" type="Monster" name="Hot Springs Atroxspawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1420,7 +1420,7 @@
 			<height normal="39" grown="46" />
 		</collision>
 	</npc>
-	<npc id="21318" level="74" type="L2Monster" name="Hot Springs Antelope">
+	<npc id="21318" level="74" type="Monster" name="Hot Springs Antelope">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1506,7 +1506,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21319" level="75" type="L2Monster" name="Hot Springs Nepenthes">
+	<npc id="21319" level="75" type="Monster" name="Hot Springs Nepenthes">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1598,7 +1598,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="21320" level="75" type="L2Monster" name="Hot Springs Yeti">
+	<npc id="21320" level="75" type="Monster" name="Hot Springs Yeti">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1684,7 +1684,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="21321" level="76" type="L2Monster" name="Hot Springs Atrox">
+	<npc id="21321" level="76" type="Monster" name="Hot Springs Atrox">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1769,7 +1769,7 @@
 			<height normal="39" grown="46" />
 		</collision>
 	</npc>
-	<npc id="21322" level="76" type="L2Monster" name="Hot Springs Bandersnatch">
+	<npc id="21322" level="76" type="Monster" name="Hot Springs Bandersnatch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -1854,7 +1854,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21323" level="76" type="L2Monster" name="Hot Springs Grendel">
+	<npc id="21323" level="76" type="Monster" name="Hot Springs Grendel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -1935,7 +1935,7 @@
 			<height normal="39" grown="47.5" />
 		</collision>
 	</npc>
-	<npc id="21324" level="77" type="L2Monster" name="Ketra Orc Footman">
+	<npc id="21324" level="77" type="Monster" name="Ketra Orc Footman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2022,7 +2022,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="21325" level="77" type="L2Monster" name="Ketra's War Hound">
+	<npc id="21325" level="77" type="Monster" name="Ketra's War Hound">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -2102,7 +2102,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21326" level="77" type="L2Monster" name="Grazing Kookaburra">
+	<npc id="21326" level="77" type="Monster" name="Grazing Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -2181,7 +2181,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21327" level="78" type="L2Monster" name="Ketra Orc Raider">
+	<npc id="21327" level="78" type="Monster" name="Ketra Orc Raider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2276,7 +2276,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="21328" level="78" type="L2Monster" name="Ketra Orc Scout">
+	<npc id="21328" level="78" type="Monster" name="Ketra Orc Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2358,7 +2358,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21329" level="78" type="L2Monster" name="Ketra Orc Shaman">
+	<npc id="21329" level="78" type="Monster" name="Ketra Orc Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2456,7 +2456,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21330" level="78" type="L2Monster" name="Grazing Buffalo">
+	<npc id="21330" level="78" type="Monster" name="Grazing Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2535,7 +2535,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21331" level="78" type="L2Monster" name="Ketra Orc Warrior">
+	<npc id="21331" level="78" type="Monster" name="Ketra Orc Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2622,7 +2622,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="21332" level="78" type="L2Monster" name="Ketra Orc Lieutenant">
+	<npc id="21332" level="78" type="Monster" name="Ketra Orc Lieutenant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -2715,7 +2715,7 @@
 			<height normal="38.5" grown="46.2" />
 		</collision>
 	</npc>
-	<npc id="21333" level="78" type="L2Monster" name="Grazing Windsus">
+	<npc id="21333" level="78" type="Monster" name="Grazing Windsus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
@@ -2794,7 +2794,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21334" level="78" type="L2Monster" name="Ketra Orc Medium">
+	<npc id="21334" level="78" type="Monster" name="Ketra Orc Medium">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2889,7 +2889,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21335" level="78" type="L2Monster" name="Ketra Orc Elite Soldier">
+	<npc id="21335" level="78" type="Monster" name="Ketra Orc Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2978,7 +2978,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="21336" level="78" type="L2Monster" name="Ketra Orc Centurion">
+	<npc id="21336" level="78" type="Monster" name="Ketra Orc Centurion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3071,7 +3071,7 @@
 			<height normal="28.8" />
 		</collision>
 	</npc>
-	<npc id="21337" level="78" type="L2Monster" name="Grazing Elder Buffalo">
+	<npc id="21337" level="78" type="Monster" name="Grazing Elder Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3147,7 +3147,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21338" level="79" type="L2Monster" name="Ketra Orc Priest">
+	<npc id="21338" level="79" type="Monster" name="Ketra Orc Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3244,7 +3244,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21339" level="79" type="L2Monster" name="Ketra Orc Officer">
+	<npc id="21339" level="79" type="Monster" name="Ketra Orc Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -3335,7 +3335,7 @@
 			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="21340" level="79" type="L2Monster" name="Ketra Orc Battalion Commander">
+	<npc id="21340" level="79" type="Monster" name="Ketra Orc Battalion Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3429,7 +3429,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="21341" level="78" type="L2Monster" name="Grazing Elder Kookaburra">
+	<npc id="21341" level="78" type="Monster" name="Grazing Elder Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -3506,7 +3506,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21342" level="79" type="L2Monster" name="Ketra Orc Grand Priest">
+	<npc id="21342" level="79" type="Monster" name="Ketra Orc Grand Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3606,7 +3606,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21343" level="79" type="L2Monster" name="Ketra's Commander">
+	<npc id="21343" level="79" type="Monster" name="Ketra's Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3687,7 +3687,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21344" level="78" type="L2Monster" name="Ketra's Elite Royal Guard">
+	<npc id="21344" level="78" type="Monster" name="Ketra's Elite Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3760,7 +3760,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="21345" level="80" type="L2Monster" name="Ketra's Head Shaman">
+	<npc id="21345" level="80" type="Monster" name="Ketra's Head Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3841,7 +3841,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21346" level="79" type="L2Monster" name="Ketra's Head Royal Guard">
+	<npc id="21346" level="79" type="Monster" name="Ketra's Head Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -3913,7 +3913,7 @@
 			<height normal="38.5" grown="46.2" />
 		</collision>
 	</npc>
-	<npc id="21347" level="80" type="L2Monster" name="Ketra's Prophet">
+	<npc id="21347" level="80" type="Monster" name="Ketra's Prophet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4004,7 +4004,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21348" level="78" type="L2Monster" name="Prophet's Escort">
+	<npc id="21348" level="78" type="Monster" name="Prophet's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -4076,7 +4076,7 @@
 			<height normal="38.5" grown="46.2" />
 		</collision>
 	</npc>
-	<npc id="21349" level="78" type="L2Monster" name="Prophet's Aide">
+	<npc id="21349" level="78" type="Monster" name="Prophet's Aide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4157,7 +4157,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21350" level="77" type="L2Monster" name="Varka Silenos Recruit">
+	<npc id="21350" level="77" type="Monster" name="Varka Silenos Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -4240,7 +4240,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21351" level="77" type="L2Monster" name="Varka Silenos Footman">
+	<npc id="21351" level="77" type="Monster" name="Varka Silenos Footman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4322,7 +4322,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="21352" level="77" type="L2Monster" name="Grazing Antelope">
+	<npc id="21352" level="77" type="Monster" name="Grazing Antelope">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4398,7 +4398,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21353" level="78" type="L2Monster" name="Varka Silenos Scout">
+	<npc id="21353" level="78" type="Monster" name="Varka Silenos Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -4487,7 +4487,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21354" level="78" type="L2Monster" name="Varka Silenos Hunter">
+	<npc id="21354" level="78" type="Monster" name="Varka Silenos Hunter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -4571,7 +4571,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="21355" level="78" type="L2Monster" name="Varka Silenos Shaman">
+	<npc id="21355" level="78" type="Monster" name="Varka Silenos Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -4661,7 +4661,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21356" level="78" type="L2Monster" name="Grazing Nepenthes">
+	<npc id="21356" level="78" type="Monster" name="Grazing Nepenthes">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4744,7 +4744,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="21357" level="79" type="L2Monster" name="Varka Silenos Priest">
+	<npc id="21357" level="79" type="Monster" name="Varka Silenos Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -4842,7 +4842,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="21358" level="78" type="L2Monster" name="Varka Silenos Warrior">
+	<npc id="21358" level="78" type="Monster" name="Varka Silenos Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -4930,7 +4930,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="21359" level="78" type="L2Monster" name="Grazing Bandersnatch">
+	<npc id="21359" level="78" type="Monster" name="Grazing Bandersnatch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -5014,7 +5014,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21360" level="78" type="L2Monster" name="Varka Silenos Medium">
+	<npc id="21360" level="78" type="Monster" name="Varka Silenos Medium">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5103,7 +5103,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21361" level="78" type="L2Monster" name="Varka Silenos Magus">
+	<npc id="21361" level="78" type="Monster" name="Varka Silenos Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -5190,7 +5190,7 @@
 			<height normal="55.2" />
 		</collision>
 	</npc>
-	<npc id="21362" level="78" type="L2Monster" name="Varka Silenos Sergeant">
+	<npc id="21362" level="78" type="Monster" name="Varka Silenos Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5284,7 +5284,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="21363" level="78" type="L2Monster" name="Grazing Flava">
+	<npc id="21363" level="78" type="Monster" name="Grazing Flava">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -5373,7 +5373,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21364" level="79" type="L2Monster" name="Varka Silenos Chief Priest">
+	<npc id="21364" level="79" type="Monster" name="Varka Silenos Chief Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5469,7 +5469,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21365" level="79" type="L2Monster" name="Varka Silenos Great Magus">
+	<npc id="21365" level="79" type="Monster" name="Varka Silenos Great Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5563,7 +5563,7 @@
 			<height normal="49.2" />
 		</collision>
 	</npc>
-	<npc id="21366" level="79" type="L2Monster" name="Varka Silenos Officer">
+	<npc id="21366" level="79" type="Monster" name="Varka Silenos Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5654,7 +5654,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="21367" level="78" type="L2Monster" name="Grazing Elder Antelope">
+	<npc id="21367" level="78" type="Monster" name="Grazing Elder Antelope">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5734,7 +5734,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21368" level="79" type="L2Monster" name="Varka Silenos Grand Priest">
+	<npc id="21368" level="79" type="Monster" name="Varka Silenos Grand Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5829,7 +5829,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21369" level="72" type="L2Monster" name="Varka's Commander">
+	<npc id="21369" level="72" type="Monster" name="Varka's Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5898,7 +5898,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="21370" level="74" type="L2Monster" name="Varka's Elite Escort">
+	<npc id="21370" level="74" type="Monster" name="Varka's Elite Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5957,7 +5957,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="21371" level="74" type="L2Monster" name="Varka's Chief Magus">
+	<npc id="21371" level="74" type="Monster" name="Varka's Chief Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -6016,7 +6016,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21372" level="79" type="L2Monster" name="Varka's Chief Escort">
+	<npc id="21372" level="79" type="Monster" name="Varka's Chief Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -6086,7 +6086,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21373" level="74" type="L2Monster" name="Varka's Prophet">
+	<npc id="21373" level="74" type="Monster" name="Varka's Prophet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -6148,7 +6148,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="21374" level="78" type="L2Monster" name="Prophet's Royal Guard">
+	<npc id="21374" level="78" type="Monster" name="Prophet's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -6219,7 +6219,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="21375" level="78" type="L2Monster" name="Prophet's Disciple">
+	<npc id="21375" level="78" type="Monster" name="Prophet's Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -6289,7 +6289,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="21392" level="78" type="L2Monster" name="Blazing Ifrit">
+	<npc id="21392" level="78" type="Monster" name="Blazing Ifrit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -6364,7 +6364,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="21395" level="78" type="L2Monster" name="Elder Lavasaurus">
+	<npc id="21395" level="78" type="Monster" name="Elder Lavasaurus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />

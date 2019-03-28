@@ -20,12 +20,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 
@@ -39,7 +39,7 @@ public final class RequestJoinSiege implements IClientIncomingPacket
 	private int _isJoining;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_castleId = packet.readD();
 		_isAttacker = packet.readD();
@@ -48,21 +48,21 @@ public final class RequestJoinSiege implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
+		if (!player.hasClanPrivilege(ClanPrivilege.CS_MANAGE_SIEGE))
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;
@@ -75,23 +75,23 @@ public final class RequestJoinSiege implements IClientIncomingPacket
 			{
 				if (System.currentTimeMillis() < clan.getDissolvingExpiryTime())
 				{
-					activeChar.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
+					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;
 				}
 				if (_isAttacker == 1)
 				{
-					castle.getSiege().registerAttacker(activeChar);
+					castle.getSiege().registerAttacker(player);
 				}
 				else
 				{
-					castle.getSiege().registerDefender(activeChar);
+					castle.getSiege().registerDefender(player);
 				}
 			}
 			else
 			{
-				castle.getSiege().removeSiegeClan(activeChar);
+				castle.getSiege().removeSiegeClan(player);
 			}
-			castle.getSiege().listRegisterClan(activeChar);
+			castle.getSiege().listRegisterClan(player);
 		}
 		
 		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(_castleId);
@@ -101,16 +101,16 @@ public final class RequestJoinSiege implements IClientIncomingPacket
 			{
 				if (System.currentTimeMillis() < clan.getDissolvingExpiryTime())
 				{
-					activeChar.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
+					player.sendPacket(SystemMessageId.YOUR_CLAN_MAY_NOT_REGISTER_TO_PARTICIPATE_IN_A_SIEGE_WHILE_UNDER_A_GRACE_PERIOD_OF_THE_CLAN_S_DISSOLUTION);
 					return;
 				}
-				CHSiegeManager.getInstance().registerClan(clan, hall, activeChar);
+				CHSiegeManager.getInstance().registerClan(clan, hall, player);
 			}
 			else
 			{
 				CHSiegeManager.getInstance().unRegisterClan(clan, hall);
 			}
-			activeChar.sendPacket(new SiegeInfo(hall, activeChar));
+			player.sendPacket(new SiegeInfo(hall, player));
 		}
 	}
 }

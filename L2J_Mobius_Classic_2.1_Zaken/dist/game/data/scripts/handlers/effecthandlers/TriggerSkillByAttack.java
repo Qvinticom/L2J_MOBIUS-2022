@@ -21,15 +21,15 @@ import java.util.logging.Level;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageDealt;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageDealt;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -67,7 +67,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
-		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 		_isCritical = params.getObject("isCritical", Boolean.class);
 		_allowNormalAttack = params.getBoolean("allowNormalAttack", true);
 		_allowSkillAttack = params.getBoolean("allowSkillAttack", false);
@@ -140,7 +140,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
-		L2Object target = null;
+		WorldObject target = null;
 		try
 		{
 			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getAttacker(), event.getTarget(), triggerSkill, false, false, false);
@@ -150,24 +150,24 @@ public final class TriggerSkillByAttack extends AbstractEffect
 			LOGGER.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
-		if ((target != null) && target.isCharacter())
+		if ((target != null) && target.isCreature())
 		{
-			final BuffInfo info = ((L2Character) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
+			final BuffInfo info = ((Creature) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
 			if ((info == null) || (info.getSkill().getLevel() < triggerSkill.getLevel()))
 			{
-				SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
+				SkillCaster.triggerCast(event.getAttacker(), (Creature) target, triggerSkill);
 			}
 		}
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_DEALT, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		effected.addListener(new ConsumerEventListener(effected, EventType.ON_CREATURE_DAMAGE_DEALT, (OnCreatureDamageDealt event) -> onAttackEvent(event), this));
 	}

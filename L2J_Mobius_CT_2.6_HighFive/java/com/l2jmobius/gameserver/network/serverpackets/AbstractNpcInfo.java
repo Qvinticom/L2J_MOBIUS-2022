@@ -20,15 +20,15 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.zone.type.TownZone;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public abstract class AbstractNpcInfo implements IClientOutgoingPacket
@@ -60,22 +60,22 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	protected String _title = "";
 	protected final boolean _gmSeeInvis;
 	
-	public AbstractNpcInfo(L2Character cha, boolean gmSeeInvis)
+	public AbstractNpcInfo(Creature creature, boolean gmSeeInvis)
 	{
-		_isSummoned = cha.isShowSummonAnimation();
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
-		_heading = cha.getHeading();
-		_mAtkSpd = cha.getMAtkSpd();
-		_pAtkSpd = (int) cha.getPAtkSpd();
-		_moveMultiplier = cha.getMovementSpeedMultiplier();
-		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
-		_walkSpd = (int) Math.round(cha.getWalkSpeed() / _moveMultiplier);
-		_swimRunSpd = (int) Math.round(cha.getSwimRunSpeed() / _moveMultiplier);
-		_swimWalkSpd = (int) Math.round(cha.getSwimWalkSpeed() / _moveMultiplier);
-		_flyRunSpd = cha.isFlying() ? _runSpd : 0;
-		_flyWalkSpd = cha.isFlying() ? _walkSpd : 0;
+		_isSummoned = creature.isShowSummonAnimation();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
+		_heading = creature.getHeading();
+		_mAtkSpd = creature.getMAtkSpd();
+		_pAtkSpd = (int) creature.getPAtkSpd();
+		_moveMultiplier = creature.getMovementSpeedMultiplier();
+		_runSpd = (int) Math.round(creature.getRunSpeed() / _moveMultiplier);
+		_walkSpd = (int) Math.round(creature.getWalkSpeed() / _moveMultiplier);
+		_swimRunSpd = (int) Math.round(creature.getSwimRunSpeed() / _moveMultiplier);
+		_swimWalkSpd = (int) Math.round(creature.getSwimWalkSpeed() / _moveMultiplier);
+		_flyRunSpd = creature.isFlying() ? _runSpd : 0;
+		_flyWalkSpd = creature.isFlying() ? _walkSpd : 0;
 		_gmSeeInvis = gmSeeInvis;
 	}
 	
@@ -84,16 +84,16 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	 */
 	public static class NpcInfo extends AbstractNpcInfo
 	{
-		private final L2Npc _npc;
+		private final Npc _npc;
 		private int _clanCrest = 0;
 		private int _allyCrest = 0;
 		private int _allyId = 0;
 		private int _clanId = 0;
 		private int _displayEffect = 0;
 		
-		public NpcInfo(L2Npc cha, L2Character attacker)
+		public NpcInfo(Npc cha, Creature attacker)
 		{
-			super(cha, attacker.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS));
+			super(cha, attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			_npc = cha;
 			_idTemplate = cha.getTemplate().getDisplayId(); // On every subclass
 			_rhand = cha.getRightHandItem(); // On every subclass
@@ -138,13 +138,13 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			// npc crest of owning clan/ally of castle
 			if (cha.isNpc() && cha.isInsideZone(ZoneId.TOWN) && (Config.SHOW_CREST_WITHOUT_QUEST || cha.getCastle().getShowNpcCrest()) && (cha.getCastle().getOwnerId() != 0))
 			{
-				final L2TownZone town = TownManager.getTown(_x, _y, _z);
+				final TownZone town = TownManager.getTown(_x, _y, _z);
 				if (town != null)
 				{
 					final int townId = town.getTownId();
 					if ((townId != 33) && (townId != 22))
 					{
-						final L2Clan clan = ClanTable.getInstance().getClan(cha.getCastle().getOwnerId());
+						final Clan clan = ClanTable.getInstance().getClan(cha.getCastle().getOwnerId());
 						_clanCrest = clan.getCrestId();
 						_clanId = clan.getId();
 						_allyCrest = clan.getAllyCrestId();
@@ -224,11 +224,11 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	
 	public static class TrapInfo extends AbstractNpcInfo
 	{
-		private final L2TrapInstance _trap;
+		private final TrapInstance _trap;
 		
-		public TrapInfo(L2TrapInstance cha, L2Character attacker)
+		public TrapInfo(TrapInstance cha, Creature attacker)
 		{
-			super(cha, attacker == null ? false : attacker.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS));
+			super(cha, attacker == null ? false : attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			
 			_trap = cha;
 			_idTemplate = cha.getTemplate().getDisplayId();
@@ -315,13 +315,13 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	 */
 	public static class SummonInfo extends AbstractNpcInfo
 	{
-		private final L2Summon _summon;
+		private final Summon _summon;
 		private final int _form;
 		private final int _val;
 		
-		public SummonInfo(L2Summon cha, L2Character attacker, int val)
+		public SummonInfo(Summon cha, Creature attacker, int val)
 		{
-			super(cha, attacker.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS));
+			super(cha, attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			_summon = cha;
 			_val = val;
 			_form = cha.getFormId();

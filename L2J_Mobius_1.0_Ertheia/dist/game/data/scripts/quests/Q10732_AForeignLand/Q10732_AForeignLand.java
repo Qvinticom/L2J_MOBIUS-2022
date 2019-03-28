@@ -17,8 +17,8 @@
 package quests.Q10732_AForeignLand;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
@@ -46,7 +46,7 @@ public final class Q10732_AForeignLand extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -89,10 +89,10 @@ public final class Q10732_AForeignLand extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
-		if (st.isCompleted())
+		final QuestState qs = getQuestState(player, true);
+		if (qs.isCompleted())
 		{
 			return getAlreadyCompletedMsg(player);
 		}
@@ -102,11 +102,11 @@ public final class Q10732_AForeignLand extends Quest
 		{
 			case NAVARI:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					htmltext = "33931-01.htm";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					htmltext = "33931-04.html";
 				}
@@ -114,7 +114,7 @@ public final class Q10732_AForeignLand extends Quest
 			}
 			case GERETH:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = "33932-01.html";
 				}

@@ -17,9 +17,9 @@
 package handlers.voicedcommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.entity.GameEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -35,7 +35,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String params)
 	{
 		if (!command.equals("stats") || (params == null) || params.isEmpty())
 		{
@@ -43,7 +43,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final L2PcInstance pc = L2World.getInstance().getPlayer(params);
+		final PlayerInstance pc = World.getInstance().getPlayer(params);
 		if ((pc == null))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -58,7 +58,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (!L2Event.isParticipant(pc) || (pc.getEventStatus() == null))
+		if (!GameEvent.isParticipant(pc) || (pc.getEventStatus() == null))
 		{
 			activeChar.sendMessage("That player is not an event participant.");
 			return false;

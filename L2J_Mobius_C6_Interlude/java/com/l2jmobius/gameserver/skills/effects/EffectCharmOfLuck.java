@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Playable;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author kerberos_20
  */
-public class EffectCharmOfLuck extends L2Effect
+public class EffectCharmOfLuck extends Effect
 {
 	public EffectCharmOfLuck(Env env, EffectTemplate template)
 	{
@@ -39,18 +39,18 @@ public class EffectCharmOfLuck extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			((L2Playable) getEffected()).startCharmOfLuck(this);
+			((Playable) getEffected()).startCharmOfLuck(this);
 		}
 	}
 	
 	@Override
 	public void onExit()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			((L2Playable) getEffected()).stopCharmOfLuck(this);
+			((Playable) getEffected()).stopCharmOfLuck(this);
 		}
 	}
 	

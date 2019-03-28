@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * Format: c dddd
@@ -57,7 +57,7 @@ public class GameGuardReply implements IClientIncomingPacket
 	private final byte[] _reply = new byte[8];
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		packet.readB(_reply, 0, 4);
 		packet.readD();
@@ -66,7 +66,7 @@ public class GameGuardReply implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		try
 		{

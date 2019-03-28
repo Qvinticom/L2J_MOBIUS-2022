@@ -18,19 +18,19 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DecoyInstance;
+import com.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Summon Npc effect implementation.
@@ -56,9 +56,9 @@ public final class SummonNpc extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.SUMMON_NPC;
+		return EffectType.SUMMON_NPC;
 	}
 	
 	@Override
@@ -81,13 +81,13 @@ public final class SummonNpc extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final PlayerInstance player = info.getEffected().getActingPlayer();
 		if (player.isMounted())
 		{
 			return;
 		}
 		
-		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
+		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
 			LOGGER.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + info.getSkill().getId());
@@ -96,9 +96,9 @@ public final class SummonNpc extends AbstractEffect
 		
 		switch (npcTemplate.getType())
 		{
-			case "L2Decoy":
+			case "Decoy":
 			{
-				final L2DecoyInstance decoy = new L2DecoyInstance(npcTemplate, player, _despawnDelay);
+				final DecoyInstance decoy = new DecoyInstance(npcTemplate, player, _despawnDelay);
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
@@ -108,16 +108,16 @@ public final class SummonNpc extends AbstractEffect
 				player.setDecoy(decoy);
 				break;
 			}
-			case "L2EffectPoint": // TODO: Implement proper signet skills.
+			case "EffectPoint": // TODO: Implement proper signet skills.
 			{
-				final L2EffectPointInstance effectPoint = new L2EffectPointInstance(npcTemplate, player);
+				final EffectPointInstance effectPoint = new EffectPointInstance(npcTemplate, player);
 				effectPoint.setCurrentHp(effectPoint.getMaxHp());
 				effectPoint.setCurrentMp(effectPoint.getMaxMp());
 				int x = player.getX();
 				int y = player.getY();
 				int z = player.getZ();
 				
-				if (info.getSkill().getTargetType() == L2TargetType.GROUND)
+				if (info.getSkill().getTargetType() == TargetType.GROUND)
 				{
 					final Location wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();
 					if (wordPosition != null)
@@ -140,10 +140,10 @@ public final class SummonNpc extends AbstractEffect
 			}
 			default:
 			{
-				L2Spawn spawn;
+				Spawn spawn;
 				try
 				{
-					spawn = new L2Spawn(_npcId);
+					spawn = new Spawn(_npcId);
 				}
 				catch (Exception e)
 				{
@@ -163,7 +163,7 @@ public final class SummonNpc extends AbstractEffect
 				spawn.setHeading(player.getHeading());
 				spawn.stopRespawn();
 				
-				final L2Npc npc = spawn.doSpawn(_isSummonSpawn);
+				final Npc npc = spawn.doSpawn(_isSummonSpawn);
 				npc.setSummoner(player);
 				npc.setName(npcTemplate.getName());
 				npc.setTitle(npcTemplate.getName());

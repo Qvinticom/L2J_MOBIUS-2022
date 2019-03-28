@@ -18,30 +18,29 @@ package com.l2jmobius.gameserver.network.clientpackets.friend;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestFriendList implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -49,10 +48,10 @@ public final class RequestFriendList implements IClientIncomingPacket
 		SystemMessage sm;
 		
 		// ======<Friend List>======
-		activeChar.sendPacket(SystemMessageId.FRIENDS_LIST);
+		player.sendPacket(SystemMessageId.FRIENDS_LIST);
 		
-		L2PcInstance friend = null;
-		for (int id : activeChar.getFriendList())
+		PlayerInstance friend = null;
+		for (int id : player.getFriendList())
 		{
 			// int friendId = rset.getInt("friendId");
 			final String friendName = CharNameTable.getInstance().getNameById(id);
@@ -62,7 +61,7 @@ public final class RequestFriendList implements IClientIncomingPacket
 				continue;
 			}
 			
-			friend = L2World.getInstance().getPlayer(friendName);
+			friend = World.getInstance().getPlayer(friendName);
 			
 			if ((friend == null) || !friend.isOnline())
 			{
@@ -77,10 +76,10 @@ public final class RequestFriendList implements IClientIncomingPacket
 				sm.addString(friendName);
 			}
 			
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		
 		// =========================
-		activeChar.sendPacket(SystemMessageId.EMPTY_3);
+		player.sendPacket(SystemMessageId.EMPTY_3);
 	}
 }

@@ -21,11 +21,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.DoppelgangerAI;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
+import com.l2jmobius.gameserver.ai.CreatureAI;
 import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -37,13 +37,13 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Nik
  */
-public class DoppelgangerInstance extends L2Npc
+public class DoppelgangerInstance extends Npc
 {
 	protected static final Logger log = Logger.getLogger(DoppelgangerInstance.class.getName());
 	
 	private boolean _copySummonerEffects = true;
 	
-	public DoppelgangerInstance(L2NpcTemplate template, L2PcInstance owner)
+	public DoppelgangerInstance(NpcTemplate template, PlayerInstance owner)
 	{
 		super(template);
 		
@@ -57,7 +57,7 @@ public class DoppelgangerInstance extends L2Npc
 	}
 	
 	@Override
-	protected L2CharacterAI initAI()
+	protected CreatureAI initAI()
 	{
 		return new DoppelgangerAI(this);
 	}
@@ -115,20 +115,20 @@ public class DoppelgangerInstance extends L2Npc
 	}
 	
 	@Override
-	public boolean isAutoAttackable(L2Character attacker)
+	public boolean isAutoAttackable(Creature attacker)
 	{
 		return (getSummoner() != null) ? getSummoner().isAutoAttackable(attacker) : super.isAutoAttackable(attacker);
 	}
 	
 	@Override
-	public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
+	public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
 		super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
 		sendDamageMessage(target, skill, (int) damage, critical, false);
 	}
 	
 	@Override
-	public void sendDamageMessage(L2Character target, Skill skill, int damage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, boolean crit, boolean miss)
 	{
 		if (miss || (getSummoner() == null) || !getSummoner().isPlayer())
 		{
@@ -138,7 +138,7 @@ public class DoppelgangerInstance extends L2Npc
 		// Prevents the double spam of system messages, if the target is the owning player.
 		if (target.getObjectId() != getSummoner().getObjectId())
 		{
-			if (getActingPlayer().isInOlympiadMode() && (target.isPlayer()) && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == getActingPlayer().getOlympiadGameId()))
+			if (getActingPlayer().isInOlympiadMode() && (target.isPlayer()) && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == getActingPlayer().getOlympiadGameId()))
 			{
 				OlympiadGameManager.getInstance().notifyCompetitorDamage(getSummoner().getActingPlayer(), damage);
 			}
@@ -163,7 +163,7 @@ public class DoppelgangerInstance extends L2Npc
 	}
 	
 	@Override
-	public void reduceCurrentHp(double damage, L2Character attacker, Skill skill)
+	public void reduceCurrentHp(double damage, Creature attacker, Skill skill)
 	{
 		super.reduceCurrentHp(damage, attacker, skill);
 		
@@ -179,7 +179,7 @@ public class DoppelgangerInstance extends L2Npc
 	}
 	
 	@Override
-	public L2PcInstance getActingPlayer()
+	public PlayerInstance getActingPlayer()
 	{
 		return getSummoner() != null ? getSummoner().getActingPlayer() : super.getActingPlayer();
 	}

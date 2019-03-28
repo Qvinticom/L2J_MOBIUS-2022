@@ -4384,7 +4384,7 @@
 			<effect name="Fear" />
 			<effect name="TriggerSkillByDamage">
 				<!-- Cancel Fear -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
@@ -4493,7 +4493,7 @@
 			<effect name="Fear" />
 			<effect name="TriggerSkillByDamage">
 				<!-- Cancel Fear -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
@@ -4769,7 +4769,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Floating Blow -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<skillId>11063</skillId> <!-- Floating Blow -->
@@ -5587,7 +5587,7 @@
 			<effect name="Root" />
 			<effect name="TriggerSkillByDamage">
 				<!-- Cancel Fear -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>

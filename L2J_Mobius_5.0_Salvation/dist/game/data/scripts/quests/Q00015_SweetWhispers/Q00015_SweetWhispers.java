@@ -16,8 +16,8 @@
  */
 package quests.Q00015_SweetWhispers;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,11 +44,11 @@ public class Q00015_SweetWhispers extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -57,23 +57,23 @@ public class Q00015_SweetWhispers extends Quest
 		{
 			case "31302-01.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "31518-01.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 				}
 				break;
 			}
 			case "31517-01.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					addExpAndSp(player, 714215, 171);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}
@@ -82,13 +82,13 @@ public class Q00015_SweetWhispers extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -104,7 +104,7 @@ public class Q00015_SweetWhispers extends Quest
 				{
 					case VLADIMIR:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "31302-01a.html";
 						}
@@ -112,7 +112,7 @@ public class Q00015_SweetWhispers extends Quest
 					}
 					case M_NECROMANCER:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -129,7 +129,7 @@ public class Q00015_SweetWhispers extends Quest
 					}
 					case HIERARCH:
 					{
-						if (st.isCond(2))
+						if (qs.isCond(2))
 						{
 							htmltext = "31517-00.html";
 						}

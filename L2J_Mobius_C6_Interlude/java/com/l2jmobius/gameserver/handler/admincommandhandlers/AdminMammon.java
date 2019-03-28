@@ -22,8 +22,8 @@ import java.util.regex.Pattern;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.model.spawn.AutoSpawn;
 import com.l2jmobius.gameserver.model.spawn.AutoSpawn.AutoSpawnInstance;
@@ -48,7 +48,7 @@ public class AdminMammon implements IAdminCommandHandler
 	
 	@Override
 	@SuppressWarnings("deprecation")
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		int npcId = 0;
 		int teleportIndex = -1;
@@ -78,7 +78,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (blackSpawnInst != null)
 			{
-				L2NpcInstance[] blackInst = blackSpawnInst.getNPCInstanceList();
+				NpcInstance[] blackInst = blackSpawnInst.getNPCInstanceList();
 				if (blackInst.length > 0)
 				{
 					final int x1 = blackInst[0].getX();
@@ -99,7 +99,7 @@ public class AdminMammon implements IAdminCommandHandler
 			
 			if (merchSpawnInst != null)
 			{
-				L2NpcInstance[] merchInst = merchSpawnInst.getNPCInstanceList();
+				NpcInstance[] merchInst = merchSpawnInst.getNPCInstanceList();
 				
 				if (merchInst.length > 0)
 				{

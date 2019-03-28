@@ -36,8 +36,8 @@ import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.ClientNetworkManager;
@@ -261,17 +261,17 @@ public class Shutdown extends Thread
 	
 	/**
 	 * This functions starts a shutdown countdown.
-	 * @param activeChar GM who issued the shutdown command
+	 * @param player GM who issued the shutdown command
 	 * @param seconds seconds until shutdown
 	 * @param restart true if the server will restart after shutdown
 	 */
-	public void startShutdown(L2PcInstance activeChar, int seconds, boolean restart)
+	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
 	{
 		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 		
-		if (activeChar != null)
+		if (player != null)
 		{
-			LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
+			LOGGER.warning("GM: " + player.getName() + "(" + player.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		}
 		else
 		{
@@ -320,11 +320,11 @@ public class Shutdown extends Thread
 	
 	/**
 	 * This function aborts a running countdown.
-	 * @param activeChar GM who issued the abort command
+	 * @param player GM who issued the abort command
 	 */
-	public void abort(L2PcInstance activeChar)
+	public void abort(PlayerInstance player)
 	{
-		LOGGER.warning("GM: " + (activeChar != null ? activeChar.getName() + "(" + activeChar.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
+		LOGGER.warning("GM: " + (player != null ? player.getName() + "(" + player.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		if (_counterInstance != null)
 		{
 			_counterInstance._abort();
@@ -557,7 +557,7 @@ public class Shutdown extends Thread
 	 */
 	private void disconnectAllCharacters()
 	{
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			Disconnection.of(player).defaultSequence(true);
 		}

@@ -17,18 +17,18 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ValidateLocation implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final Location _loc;
 	
-	public ValidateLocation(L2Object obj)
+	public ValidateLocation(WorldObject obj)
 	{
-		_charObjId = obj.getObjectId();
+		_objectId = obj.getObjectId();
 		_loc = obj.getLocation();
 	}
 	
@@ -36,7 +36,7 @@ public class ValidateLocation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VALIDATE_LOCATION.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_loc.getX());
 		packet.writeD(_loc.getY());
 		packet.writeD(_loc.getZ());

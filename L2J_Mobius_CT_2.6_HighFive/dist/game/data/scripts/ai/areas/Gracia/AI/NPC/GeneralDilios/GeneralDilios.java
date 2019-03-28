@@ -21,9 +21,9 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -38,8 +38,8 @@ public final class GeneralDilios extends AbstractNpcAI
 	private static final int GENERAL_ID = 32549;
 	private static final int GUARD_ID = 32619;
 	
-	private L2Npc _general = null;
-	private final Set<L2Spawn> _guards = Collections.newSetFromMap(new ConcurrentHashMap<>());
+	private Npc _general = null;
+	private final Set<Spawn> _guards = Collections.newSetFromMap(new ConcurrentHashMap<>());
 	
 	private static final NpcStringId[] DILIOS_TEXT =
 	{
@@ -59,7 +59,7 @@ public final class GeneralDilios extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.startsWith("command_"))
 		{
@@ -79,7 +79,7 @@ public final class GeneralDilios extends AbstractNpcAI
 		else if (event.startsWith("guard_animation_"))
 		{
 			final int value = Integer.parseInt(event.substring(16));
-			for (L2Spawn guard : _guards)
+			for (Spawn guard : _guards)
 			{
 				guard.getLastSpawn().broadcastSocialAction(4);
 			}
@@ -92,7 +92,7 @@ public final class GeneralDilios extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == GENERAL_ID)
 		{

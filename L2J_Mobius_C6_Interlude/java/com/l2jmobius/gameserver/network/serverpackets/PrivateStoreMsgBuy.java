@@ -16,23 +16,22 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PrivateStoreMsgBuy extends L2GameServerPacket
+public class PrivateStoreMsgBuy extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private String _storeMsg;
 	
-	public PrivateStoreMsgBuy(L2PcInstance player)
+	public PrivateStoreMsgBuy(PlayerInstance player)
 	{
-		_activeChar = player;
-		if (_activeChar.getBuyList() != null)
+		_player = player;
+		if (_player.getBuyList() != null)
 		{
-			_storeMsg = _activeChar.getBuyList().getTitle();
+			_storeMsg = _player.getBuyList().getTitle();
 		}
 	}
 	
@@ -40,7 +39,7 @@ public class PrivateStoreMsgBuy extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xb9);
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeS(_storeMsg);
 	}
 }

@@ -19,19 +19,19 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewSkillInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final Collection<Skill> _skills;
 	
-	public GMViewSkillInfo(L2PcInstance cha)
+	public GMViewSkillInfo(PlayerInstance player)
 	{
-		_activeChar = cha;
-		_skills = _activeChar.getSkillList();
+		_player = player;
+		_skills = _player.getSkillList();
 	}
 	
 	@Override
@@ -39,10 +39,10 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.GM_VIEW_SKILL_INFO.writeId(packet);
 		
-		packet.writeS(_activeChar.getName());
+		packet.writeS(_player.getName());
 		packet.writeD(_skills.size());
 		
-		final boolean isDisabled = (_activeChar.getClan() != null) && (_activeChar.getClan().getReputationScore() < 0);
+		final boolean isDisabled = (_player.getClan() != null) && (_player.getClan().getReputationScore() < 0);
 		
 		for (Skill skill : _skills)
 		{

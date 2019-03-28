@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.RecipeController;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class RequestRecipeShopMakeItem extends L2GameClientPacket
+public final class RequestRecipeShopMakeItem extends GameClientPacket
 {
 	private int _id;
 	private int _recipeId;
@@ -40,8 +40,8 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -51,39 +51,39 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance manufacturer = (L2PcInstance) L2World.getInstance().findObject(_id);
+		final PlayerInstance manufacturer = (PlayerInstance) World.getInstance().findObject(_id);
 		if (manufacturer == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() != 0)
+		if (player.getPrivateStoreType() != 0)
 		{
-			activeChar.sendMessage("Cannot make items while trading");
+			player.sendMessage("Cannot make items while trading");
 			return;
 		}
 		
 		if (manufacturer.getPrivateStoreType() != 5)
 		{
-			// activeChar.sendMessage("Cannot make items while trading");
+			// player.sendMessage("Cannot make items while trading");
 			return;
 		}
 		
-		if (activeChar.isCrafting() || manufacturer.isCrafting())
+		if (player.isCrafting() || manufacturer.isCrafting())
 		{
-			activeChar.sendMessage("Currently in Craft Mode");
+			player.sendMessage("Currently in Craft Mode");
 			return;
 		}
 		
-		if (manufacturer.isInDuel() || activeChar.isInDuel())
+		if (manufacturer.isInDuel() || player.isInDuel())
 		{
-			activeChar.sendPacket(SystemMessageId.CANT_CRAFT_DURING_COMBAT);
+			player.sendPacket(SystemMessageId.CANT_CRAFT_DURING_COMBAT);
 			return;
 		}
 		
-		if (Util.checkIfInRange(150, activeChar, manufacturer, true))
+		if (Util.checkIfInRange(150, player, manufacturer, true))
 		{
-			RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, activeChar);
+			RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, player);
 		}
 	}
 }

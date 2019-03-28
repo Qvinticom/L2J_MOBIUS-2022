@@ -19,11 +19,11 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.BlockInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -43,10 +43,10 @@ public final class FlipBlock extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		final L2BlockInstance block = effected instanceof L2BlockInstance ? (L2BlockInstance) effected : null;
-		final L2PcInstance player = effector.isPlayer() ? (L2PcInstance) effector : null;
+		final BlockInstance block = effected instanceof BlockInstance ? (BlockInstance) effected : null;
+		final PlayerInstance player = effector.isPlayer() ? (PlayerInstance) effector : null;
 		if ((block == null) || (player == null))
 		{
 			return;

@@ -21,10 +21,10 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
@@ -56,7 +56,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return _knockDown || Formulas.calcProbability(100, effector, effected, skill);
 	}
@@ -68,13 +68,13 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.KNOCK;
+		return EffectType.KNOCK;
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!_knockDown)
 		{
@@ -83,7 +83,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (_knockDown)
 		{
@@ -92,7 +92,7 @@ public final class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (!effected.isPlayer())
 		{
@@ -100,7 +100,7 @@ public final class KnockBack extends AbstractEffect
 		}
 	}
 	
-	private void knockBack(L2Character effector, L2Character effected)
+	private void knockBack(Creature effector, Creature effected)
 	{
 		if ((effected == null) || effected.isRaid())
 		{

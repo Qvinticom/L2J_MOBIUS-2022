@@ -27,17 +27,17 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -53,9 +53,9 @@ public class HeartInfinityDefence extends AbstractNpcAI
 {
 	private class HIDWorld extends InstanceWorld
 	{
-		public List<L2Npc> npcList = new ArrayList<>();
-		public List<L2Npc> deadTumors = new ArrayList<>();
-		protected L2Npc deadTumor;
+		public List<Npc> npcList = new ArrayList<>();
+		public List<Npc> deadTumors = new ArrayList<>();
+		protected Npc deadTumor;
 		public long startTime = 0;
 		protected ScheduledFuture<?> finishTask = null;
 		protected ScheduledFuture<?> timerTask = null;
@@ -76,7 +76,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	private static final int REGENERATION_COFFIN = 18709;
 	private static final int maxCoffins = 20;
 	
-	L2Npc preawakenedEchmus = null;
+	Npc preawakenedEchmus = null;
 	protected int coffinsCreated = 0;
 	protected long tumorRespawnTime = 0;
 	protected long wagonRespawnTime = 0;
@@ -252,20 +252,20 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		addEnterZoneId(200032);
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(PlayerInstance player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	private boolean checkConditions(L2PcInstance player)
+	private boolean checkConditions(PlayerInstance player)
 	{
 		if (player.isGM())
 		{
 			return true;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -287,7 +287,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			party.getCommandChannel().broadcastPacket(sm);
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getCommandChannel().getMembers())
+		for (PlayerInstance partyMember : party.getCommandChannel().getMembers())
 		{
 			if ((partyMember.getLevel() < 75) || (partyMember.getLevel() > 85))
 			{
@@ -317,7 +317,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(L2PcInstance player, int[] coords)
+	protected void enterInstance(PlayerInstance player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		
@@ -352,7 +352,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance partyMember : player.getParty().getCommandChannel().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getCommandChannel().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
 					world.addAllowed(partyMember);
@@ -378,7 +378,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			{
 				for (int i1 = 0; i1 < spawn1[6]; i1++)
 				{
-					final L2Npc npc1 = addSpawn(spawn1[0], spawn1[1], spawn1[2], spawn1[3], spawn1[4], false, 0, false, world.getInstanceId());
+					final Npc npc1 = addSpawn(spawn1[0], spawn1[1], spawn1[2], spawn1[3], spawn1[4], false, 0, false, world.getInstanceId());
 					npc1.getSpawn().setRespawnDelay(spawn1[5]);
 					npc1.getSpawn().setAmount(1);
 					if (spawn1[5] > 0)
@@ -396,7 +396,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			{
 				for (int i2 = 0; i2 < spawn2[6]; i2++)
 				{
-					final L2Npc npc2 = addSpawn(spawn2[0], spawn2[1], spawn2[2], spawn2[3], spawn2[4], false, 0, false, world.getInstanceId());
+					final Npc npc2 = addSpawn(spawn2[0], spawn2[1], spawn2[2], spawn2[3], spawn2[4], false, 0, false, world.getInstanceId());
 					world.deadTumors.add(npc2);
 				}
 			}
@@ -410,7 +410,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				{
 					if (!world.deadTumors.isEmpty())
 					{
-						for (L2Npc npc : world.deadTumors)
+						for (Npc npc : world.deadTumors)
 						{
 							if (npc != null)
 							{
@@ -427,7 +427,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				{
 					if (!world.deadTumors.isEmpty())
 					{
-						for (L2Npc npc3 : world.deadTumors)
+						for (Npc npc3 : world.deadTumors)
 						{
 							if (npc3 != null)
 							{
@@ -441,7 +441,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 					{
 						for (int i = 0; i < spawn[6]; i++)
 						{
-							final L2Npc npc4 = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+							final Npc npc4 = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 							npc4.setCurrentHp(npc4.getMaxHp() * .5);
 							world.deadTumors.add(npc4);
 						}
@@ -454,13 +454,13 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		}, 20000);
 	}
 	
-	void spawnCoffin(L2Npc npc, HIDWorld world)
+	void spawnCoffin(Npc npc, HIDWorld world)
 	{
 		addSpawn(REGENERATION_COFFIN, npc.getLocation(), world.getInstanceId());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HIDWorld)
@@ -470,7 +470,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			if (event.startsWith("warpechmus"))
 			{
 				broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 800))
 					{
@@ -481,7 +481,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			else if (event.startsWith("reenterechmus"))
 			{
 				player.destroyItemByItemId("SOI", 13797, 3, player, true);
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
 					if (partyMember.isInsideRadius3D(player, 400))
 					{
@@ -491,7 +491,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			}
 			else if (event.startsWith("warp"))
 			{
-				L2Npc victim = null;
+				Npc victim = null;
 				victim = world.deadTumor;
 				if (victim != null)
 				{
@@ -503,7 +503,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
-					for (L2PcInstance partyMember : player.getParty().getMembers())
+					for (PlayerInstance partyMember : player.getParty().getMembers())
 					{
 						if (partyMember.isInsideRadius3D(player, 500))
 						{
@@ -517,13 +517,13 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
-		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		QuestState qs = player.getQuestState(qn);
+		if (qs == null)
 		{
-			st = newQuestState(player);
+			qs = newQuestState(player);
 		}
 		
 		if (npcId == ABYSSGAZE)
@@ -534,7 +534,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
@@ -554,7 +554,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
@@ -567,15 +567,15 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		{
 			if (npc.getId() == SOULWAGON)
 			{
-				// ((L2MonsterInstance) npc).setPassive(true);
-				((L2MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				// ((MonsterInstance) npc).setPassive(true);
+				((MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
@@ -594,7 +594,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				ThreadPool.schedule(() ->
 				{
 					world.deadTumor.deleteMe();
-					final L2Npc alivetumor = addSpawn(ALIVETUMOR, loc, world.getInstanceId());
+					final Npc alivetumor = addSpawn(ALIVETUMOR, loc, world.getInstanceId());
 					alivetumor.setCurrentHp(alivetumor.getMaxHp() * .25);
 					world.npcList.add(alivetumor);
 					wagonRespawnTime -= 10000;
@@ -610,7 +610,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		return "";
 	}
 	
-	protected void notifyWagonArrived(L2Npc npc, HIDWorld world)
+	protected void notifyWagonArrived(Npc npc, HIDWorld world)
 	{
 		coffinsCreated++;
 		if (coffinsCreated == 20)
@@ -678,12 +678,12 @@ public class HeartInfinityDefence extends AbstractNpcAI
 				final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 				if (inst != null)
 				{
-					for (L2PcInstance player : _world.getAllowed())
+					for (PlayerInstance player : _world.getAllowed())
 					{
-						final QuestState st = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
-						if ((st != null) && (st.getInt("cond") == 1))
+						final QuestState qs = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
+						if ((qs != null) && (qs.getInt("cond") == 1))
 						{
-							st.set("defenceDone", 1);
+							qs.set("defenceDone", 1);
 						}
 					}
 					broadCastPacket(_world, new ExShowScreenMessage(NpcStringId.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE, 2, 8000));
@@ -740,11 +740,11 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onEnterZone(L2Character character, L2ZoneType zone)
+	public final String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isAttackable())
+		if (creature.isAttackable())
 		{
-			final L2Attackable npc = (L2Attackable) character;
+			final Attackable npc = (Attackable) creature;
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof HIDWorld)
 			{
@@ -761,7 +761,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	
 	protected void broadCastPacket(HIDWorld world, IClientOutgoingPacket packet)
 	{
-		for (L2PcInstance player : world.getAllowed())
+		for (PlayerInstance player : world.getAllowed())
 		{
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{

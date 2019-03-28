@@ -17,9 +17,9 @@
 package handlers.skillconditionhandlers;
 
 import com.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -43,7 +43,7 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		switch (_affectType)
 		{
@@ -53,9 +53,9 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isCharacter())
+				if ((target != null) && target.isCreature())
 				{
-					return ((L2Character) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
+					return ((Creature) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
 				}
 			}
 		}

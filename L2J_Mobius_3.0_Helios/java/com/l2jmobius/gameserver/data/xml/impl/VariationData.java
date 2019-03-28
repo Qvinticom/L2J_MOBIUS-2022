@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.VariationInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.OptionDataCategory;
 import com.l2jmobius.gameserver.model.options.OptionDataGroup;
 import com.l2jmobius.gameserver.model.options.Options;
@@ -206,7 +206,7 @@ public class VariationData implements IGameXmlReader
 	 * @param targetItem The item on which the variation will be applied
 	 * @return VariationInstance
 	 */
-	public VariationInstance generateRandomVariation(Variation variation, L2ItemInstance targetItem)
+	public VariationInstance generateRandomVariation(Variation variation, ItemInstance targetItem)
 	{
 		final VariationWeaponType weaponType = ((targetItem.getWeaponItem() != null) && targetItem.getWeaponItem().isMagicWeapon()) ? VariationWeaponType.MAGE : VariationWeaponType.WARRIOR;
 		return generateRandomVariation(variation, weaponType);

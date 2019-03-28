@@ -33,8 +33,8 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.tasks.MessageDeletionTask;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 
@@ -97,7 +97,7 @@ public final class MailManager
 		return _messages.values();
 	}
 	
-	public final boolean hasUnreadPost(L2PcInstance player)
+	public final boolean hasUnreadPost(PlayerInstance player)
 	{
 		final int objectId = player.getObjectId();
 		for (Message msg : _messages.values())
@@ -175,7 +175,7 @@ public final class MailManager
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error saving message:" + e.getMessage(), e);
 		}
 		
-		final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
+		final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
 		{
 			receiver.sendPacket(ExNoticePostArrived.valueOf(true));

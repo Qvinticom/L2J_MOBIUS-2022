@@ -18,10 +18,10 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
@@ -47,9 +47,9 @@ public final class DeleteHateOfMe extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.HATE;
+		return EffectType.HATE;
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public final class DeleteHateOfMe extends AbstractEffect
 			return;
 		}
 		
-		final L2Attackable target = (L2Attackable) info.getEffected();
+		final Attackable target = (Attackable) info.getEffected();
 		target.stopHating(info.getEffector());
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

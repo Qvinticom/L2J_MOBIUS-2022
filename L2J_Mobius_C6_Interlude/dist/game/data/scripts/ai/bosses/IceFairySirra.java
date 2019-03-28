@@ -26,17 +26,17 @@ import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * Ice Fairy Sirra AI
@@ -46,9 +46,9 @@ public class IceFairySirra extends Quest
 {
 	private static final int STEWARD = 32029;
 	private static final int SILVER_HEMOCYTE = 8057;
-	private static L2BossZone _freyasZone;
-	private static L2PcInstance _player = null;
-	protected List<L2NpcInstance> _allMobs = new CopyOnWriteArrayList<>();
+	private static BossZone _freyasZone;
+	private static PlayerInstance _player = null;
+	protected List<NpcInstance> _allMobs = new CopyOnWriteArrayList<>();
 	protected Future<?> _onDeadEventTask = null;
 	
 	public IceFairySirra(int id, String name, String descr)
@@ -74,7 +74,7 @@ public class IceFairySirra extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		if (player.getQuestState("IceFairySirra") == null)
 		{
@@ -95,7 +95,7 @@ public class IceFairySirra extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		if (event.equals("check_condition"))
 		{
@@ -179,7 +179,7 @@ public class IceFairySirra extends Quest
 			return;
 		}
 		_freyasZone.setZoneEnabled(false);
-		final L2NpcInstance steward = findTemplate(STEWARD);
+		final NpcInstance steward = findTemplate(STEWARD);
 		if (steward != null)
 		{
 			steward.setBusy(false);
@@ -194,7 +194,7 @@ public class IceFairySirra extends Quest
 		cancelQuestTimer("20MinutesRemaining", null, _player);
 		cancelQuestTimer("10MinutesRemaining", null, _player);
 		cancelQuestTimer("End", null, _player);
-		for (L2NpcInstance mob : _allMobs)
+		for (NpcInstance mob : _allMobs)
 		{
 			try
 			{
@@ -209,10 +209,10 @@ public class IceFairySirra extends Quest
 		_allMobs.clear();
 	}
 	
-	public L2NpcInstance findTemplate(int npcId)
+	public NpcInstance findTemplate(int npcId)
 	{
-		L2NpcInstance npc = null;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
+		NpcInstance npc = null;
+		for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
 		{
 			if ((spawn != null) && (spawn.getNpcId() == npcId))
 			{
@@ -229,7 +229,7 @@ public class IceFairySirra extends Quest
 		{
 			try
 			{
-				final L2DoorInstance door = DoorTable.getInstance().getDoor(i);
+				final DoorInstance door = DoorTable.getInstance().getDoor(i);
 				if (door != null)
 				{
 					door.openMe();
@@ -252,7 +252,7 @@ public class IceFairySirra extends Quest
 		{
 			try
 			{
-				final L2DoorInstance door = DoorTable.getInstance().getDoor(i);
+				final DoorInstance door = DoorTable.getInstance().getDoor(i);
 				if (door != null)
 				{
 					door.closeMe();
@@ -269,13 +269,13 @@ public class IceFairySirra extends Quest
 		}
 	}
 	
-	public boolean checkItems(L2PcInstance player)
+	public boolean checkItems(PlayerInstance player)
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance pc : player.getParty().getPartyMembers())
+			for (PlayerInstance pc : player.getParty().getPartyMembers())
 			{
-				final L2ItemInstance i = pc.getInventory().getItemByItemId(SILVER_HEMOCYTE);
+				final ItemInstance i = pc.getInventory().getItemByItemId(SILVER_HEMOCYTE);
 				if ((i == null) || (i.getCount() < 10))
 				{
 					return false;
@@ -289,13 +289,13 @@ public class IceFairySirra extends Quest
 		return true;
 	}
 	
-	public void destroyItems(L2PcInstance player)
+	public void destroyItems(PlayerInstance player)
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance pc : player.getParty().getPartyMembers())
+			for (PlayerInstance pc : player.getParty().getPartyMembers())
 			{
-				final L2ItemInstance i = pc.getInventory().getItemByItemId(SILVER_HEMOCYTE);
+				final ItemInstance i = pc.getInventory().getItemByItemId(SILVER_HEMOCYTE);
 				pc.destroyItem("Hemocytes", i.getObjectId(), 10, null, false);
 			}
 		}
@@ -305,11 +305,11 @@ public class IceFairySirra extends Quest
 		}
 	}
 	
-	public void teleportInside(L2PcInstance player)
+	public void teleportInside(PlayerInstance player)
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance pc : player.getParty().getPartyMembers())
+			for (PlayerInstance pc : player.getParty().getPartyMembers())
 			{
 				pc.teleToLocation(113533, -126159, -3488, false);
 				if (_freyasZone == null)
@@ -327,11 +327,11 @@ public class IceFairySirra extends Quest
 		}
 	}
 	
-	public void screenMessage(L2PcInstance player, String text, int time)
+	public void screenMessage(PlayerInstance player, String text, int time)
 	{
 		if (player.getParty() != null)
 		{
-			for (L2PcInstance pc : player.getParty().getPartyMembers())
+			for (PlayerInstance pc : player.getParty().getPartyMembers())
 			{
 				pc.sendPacket(new ExShowScreenMessage(text, time));
 			}
@@ -377,8 +377,8 @@ public class IceFairySirra extends Quest
 				-3136
 			}
 		};
-		L2Spawn spawnDat;
-		L2NpcTemplate template;
+		Spawn spawnDat;
+		NpcTemplate template;
 		try
 		{
 			for (int i = 0; i < 5; i++)
@@ -386,7 +386,7 @@ public class IceFairySirra extends Quest
 				template = NpcTable.getInstance().getTemplate(mobs[i][0]);
 				if (template != null)
 				{
-					spawnDat = new L2Spawn(template);
+					spawnDat = new Spawn(template);
 					spawnDat.setAmount(1);
 					spawnDat.setX(mobs[i][1]);
 					spawnDat.setY(mobs[i][2]);
@@ -438,7 +438,7 @@ public class IceFairySirra extends Quest
 		return "data/html/npcdefault.htm";
 	}
 	
-	public void sendHtml(L2NpcInstance npc, L2PcInstance player, String filename)
+	public void sendHtml(NpcInstance npc, PlayerInstance player, String filename)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile(filename);

@@ -19,26 +19,26 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 
 /**
  * @author zabbix
  */
-public class PartyMemberPosition extends L2GameServerPacket
+public class PartyMemberPosition extends GameServerPacket
 {
 	Map<Integer, Location> locations = new HashMap<>();
 	
-	public PartyMemberPosition(L2Party party)
+	public PartyMemberPosition(Party party)
 	{
 		reuse(party);
 	}
 	
-	public void reuse(L2Party party)
+	public void reuse(Party party)
 	{
 		locations.clear();
-		for (L2PcInstance member : party.getPartyMembers())
+		for (PlayerInstance member : party.getPartyMembers())
 		{
 			if (member == null)
 			{

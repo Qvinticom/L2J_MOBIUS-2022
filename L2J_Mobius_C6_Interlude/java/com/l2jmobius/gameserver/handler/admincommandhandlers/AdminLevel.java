@@ -21,9 +21,9 @@ import java.util.StringTokenizer;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -36,9 +36,9 @@ public class AdminLevel implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
-		final L2Object targetChar = activeChar.getTarget();
+		final WorldObject targetChar = activeChar.getTarget();
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
 		
@@ -52,9 +52,9 @@ public class AdminLevel implements IAdminCommandHandler
 		{
 			try
 			{
-				if (targetChar instanceof L2Playable)
+				if (targetChar instanceof Playable)
 				{
-					((L2Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
+					((Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
 				}
 			}
 			catch (NumberFormatException e)
@@ -66,18 +66,18 @@ public class AdminLevel implements IAdminCommandHandler
 		{
 			try
 			{
-				if ((targetChar == null) || !(targetChar instanceof L2Playable))
+				if ((targetChar == null) || !(targetChar instanceof Playable))
 				{
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT); // incorrect
 					return false;
 				}
 				
-				final L2Playable targetPlayer = (L2Playable) targetChar;
+				final Playable targetPlayer = (Playable) targetChar;
 				
 				final byte lvl = Byte.parseByte(val);
 				int max_level = ExperienceData.getInstance().getMaxLevel();
 				
-				if ((targetChar instanceof L2PcInstance) && ((L2PcInstance) targetPlayer).isSubClassActive())
+				if ((targetChar instanceof PlayerInstance) && ((PlayerInstance) targetPlayer).isSubClassActive())
 				{
 					max_level = Config.MAX_SUBCLASS_LEVEL;
 				}

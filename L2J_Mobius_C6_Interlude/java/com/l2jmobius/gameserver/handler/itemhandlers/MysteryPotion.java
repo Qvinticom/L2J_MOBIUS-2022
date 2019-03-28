@@ -18,15 +18,14 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
  * @version $Revision: 1.1.6.4 $ $Date: 2005/04/06 18:25:18 $
  */
 
@@ -41,26 +40,26 @@ public class MysteryPotion implements IItemHandler
 	private static final int EFFECT_DURATION = 1200000; // 20 mins
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		
 		// Use a summon skill effect for fun ;)
 		MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);
-		activeChar.sendPacket(MSU);
-		activeChar.broadcastPacket(MSU);
+		player.sendPacket(MSU);
+		player.broadcastPacket(MSU);
 		
-		activeChar.startAbnormalEffect(BIGHEAD_EFFECT);
-		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
+		player.startAbnormalEffect(BIGHEAD_EFFECT);
+		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.USE_S1);
 		sm.addSkillName(MYSTERY_POTION_SKILL);
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		
 		MysteryPotionStop mp = new MysteryPotionStop(playable);
 		ThreadPool.schedule(mp, EFFECT_DURATION);
@@ -68,9 +67,9 @@ public class MysteryPotion implements IItemHandler
 	
 	public class MysteryPotionStop implements Runnable
 	{
-		private final L2Playable _playable;
+		private final Playable _playable;
 		
-		public MysteryPotionStop(L2Playable playable)
+		public MysteryPotionStop(Playable playable)
 		{
 			_playable = playable;
 		}
@@ -80,12 +79,12 @@ public class MysteryPotion implements IItemHandler
 		{
 			try
 			{
-				if (!(_playable instanceof L2PcInstance))
+				if (!(_playable instanceof PlayerInstance))
 				{
 					return;
 				}
 				
-				((L2PcInstance) _playable).stopAbnormalEffect(BIGHEAD_EFFECT);
+				((PlayerInstance) _playable).stopAbnormalEffect(BIGHEAD_EFFECT);
 			}
 			catch (Throwable t)
 			{

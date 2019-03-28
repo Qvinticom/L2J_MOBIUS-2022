@@ -25,10 +25,10 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.CrestCache;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
-public final class RequestSetAllyCrest extends L2GameClientPacket
+public final class RequestSetAllyCrest extends GameClientPacket
 {
 	static Logger LOGGER = Logger.getLogger(RequestSetAllyCrest.class.getName());
 	
@@ -51,29 +51,29 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (_length < 0)
 		{
-			activeChar.sendMessage("File transfer error.");
+			player.sendMessage("File transfer error.");
 			return;
 		}
 		
 		if (_length > 192)
 		{
-			activeChar.sendMessage("The crest file size was too big (max 192 bytes).");
+			player.sendMessage("The crest file size was too big (max 192 bytes).");
 			return;
 		}
 		
-		if (activeChar.getAllyId() != 0)
+		if (player.getAllyId() != 0)
 		{
-			final L2Clan leaderclan = ClanTable.getInstance().getClan(activeChar.getAllyId());
+			final Clan leaderclan = ClanTable.getInstance().getClan(player.getAllyId());
 			
-			if ((activeChar.getClanId() != leaderclan.getClanId()) || !activeChar.isClanLeader())
+			if ((player.getClanId() != leaderclan.getClanId()) || !player.isClanLeader())
 			{
 				return;
 			}
@@ -106,12 +106,12 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 				LOGGER.warning("could not update the ally crest id:" + e.getMessage());
 			}
 			
-			for (L2Clan clan : ClanTable.getInstance().getClans())
+			for (Clan clan : ClanTable.getInstance().getClans())
 			{
-				if (clan.getAllyId() == activeChar.getAllyId())
+				if (clan.getAllyId() == player.getAllyId())
 				{
 					clan.setAllyCrestId(newId);
-					for (L2PcInstance member : clan.getOnlineMembers(""))
+					for (PlayerInstance member : clan.getOnlineMembers(""))
 					{
 						member.broadcastUserInfo();
 					}

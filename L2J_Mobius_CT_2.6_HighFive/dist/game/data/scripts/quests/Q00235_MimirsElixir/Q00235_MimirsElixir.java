@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.QuestItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -70,17 +70,17 @@ public final class Q00235_MimirsElixir extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
+	public boolean checkPartyMember(PlayerInstance member, Npc npc)
 	{
-		final QuestState st = getQuestState(member, false);
-		return ((st != null) && (st.isMemoState(3) || st.isMemoState(6)));
+		final QuestState qs = getQuestState(member, false);
+		return ((qs != null) && (qs.isMemoState(3) || qs.isMemoState(6)));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -98,35 +98,35 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "30721-06.htm":
 			{
-				st.setMemoState(1);
-				st.startQuest();
+				qs.setMemoState(1);
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30721-12.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
-					st.setMemoState(2);
-					st.setCond(2);
+					qs.setMemoState(2);
+					qs.setCond(2);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30721-15.html":
 			{
-				if (st.isMemoState(5))
+				if (qs.isMemoState(5))
 				{
 					giveItems(player, MAGISTERS_MIXING_STONE, 1);
-					st.setMemoState(6);
-					st.setCond(6);
+					qs.setMemoState(6);
+					qs.setCond(6);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30721-18.html":
 			{
-				if (st.isMemoState(8))
+				if (qs.isMemoState(8))
 				{
 					htmltext = event;
 				}
@@ -134,13 +134,13 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "30721-19.html":
 			{
-				if (st.isMemoState(8) && hasQuestItems(player, MAGISTERS_MIXING_STONE, MIMIRS_ELIXIR))
+				if (qs.isMemoState(8) && hasQuestItems(player, MAGISTERS_MIXING_STONE, MIMIRS_ELIXIR))
 				{
 					npc.setTarget(player);
 					npc.doCast(QUEST_MIMIRS_ELIXIR.getSkill());
 					takeItems(player, STAR_OF_DESTINY, -1);
 					rewardItems(player, ENCHANT_WEAPON_A, 1);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
 					htmltext = event;
 				}
@@ -148,7 +148,7 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "30718-02.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					htmltext = event;
 				}
@@ -156,22 +156,22 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "30718-03.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
-					st.setMemoState(3);
-					st.setCond(3, true);
+					qs.setMemoState(3);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30718-06.html":
 			{
-				if (st.isMemoState(4) && hasQuestItems(player, SAGES_STONE))
+				if (qs.isMemoState(4) && hasQuestItems(player, SAGES_STONE))
 				{
 					giveItems(player, TRUE_GOLD, 1);
 					takeItems(player, SAGES_STONE, -1);
-					st.setMemoState(5);
-					st.setCond(5, true);
+					qs.setMemoState(5);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
@@ -182,7 +182,7 @@ public final class Q00235_MimirsElixir extends Quest
 			case "31149-09.html":
 			case "31149-10.html":
 			{
-				if (st.isMemoState(7))
+				if (qs.isMemoState(7))
 				{
 					htmltext = event;
 				}
@@ -190,7 +190,7 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "PURE_SILVER":
 			{
-				if (st.isMemoState(7))
+				if (qs.isMemoState(7))
 				{
 					htmltext = ((hasQuestItems(player, PURE_SILVER)) ? "31149-04.html" : "31149-03.html");
 				}
@@ -198,7 +198,7 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "TRUE_GOLD":
 			{
-				if (st.isMemoState(7))
+				if (qs.isMemoState(7))
 				{
 					htmltext = ((hasQuestItems(player, TRUE_GOLD)) ? "31149-06.html" : "31149-03.html");
 				}
@@ -206,7 +206,7 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "BLOOD_FIRE":
 			{
-				if (st.isMemoState(7))
+				if (qs.isMemoState(7))
 				{
 					htmltext = ((hasQuestItems(player, BLOOD_FIRE)) ? "31149-08.html" : "31149-03.html");
 				}
@@ -214,12 +214,12 @@ public final class Q00235_MimirsElixir extends Quest
 			}
 			case "31149-11.html":
 			{
-				if (st.isMemoState(7) && hasQuestItems(player, BLOOD_FIRE, PURE_SILVER, TRUE_GOLD))
+				if (qs.isMemoState(7) && hasQuestItems(player, BLOOD_FIRE, PURE_SILVER, TRUE_GOLD))
 				{
 					giveItems(player, MIMIRS_ELIXIR, 1);
 					takeItems(player, -1, BLOOD_FIRE, PURE_SILVER, TRUE_GOLD);
-					st.setMemoState(8);
-					st.setCond(8, true);
+					qs.setMemoState(8);
+					qs.setCond(8, true);
 					htmltext = event;
 				}
 				break;
@@ -229,19 +229,19 @@ public final class Q00235_MimirsElixir extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		if (getRandom(5) == 0)
 		{
-			final L2PcInstance luckyPlayer = getRandomPartyMember(player, npc);
+			final PlayerInstance luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
 				final QuestItemHolder item = MOBS.get(npc.getId());
 				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), item.getCount(), 1.0, true))
 				{
-					final QuestState st = luckyPlayer.getQuestState(getName());
-					st.setMemoState(item.getChance());
-					st.setCond(item.getChance());
+					final QuestState qs = luckyPlayer.getQuestState(getName());
+					qs.setMemoState(item.getChance());
+					qs.setCond(item.getChance());
 				}
 			}
 		}
@@ -249,11 +249,11 @@ public final class Q00235_MimirsElixir extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == LADD)
 			{
@@ -271,13 +271,13 @@ public final class Q00235_MimirsElixir extends Quest
 				}
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case LADD:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 1:
 						{
@@ -312,7 +312,7 @@ public final class Q00235_MimirsElixir extends Quest
 				}
 				case JOAN:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 2:
 						{
@@ -334,7 +334,7 @@ public final class Q00235_MimirsElixir extends Quest
 				}
 				case ALCHEMISTS_MIXING_URN:
 				{
-					if (st.isMemoState(7) && hasQuestItems(player, MAGISTERS_MIXING_STONE))
+					if (qs.isMemoState(7) && hasQuestItems(player, MAGISTERS_MIXING_STONE))
 					{
 						htmltext = "31149-01.html";
 					}
@@ -342,7 +342,7 @@ public final class Q00235_MimirsElixir extends Quest
 				}
 			}
 		}
-		else if (st.isCompleted())
+		else if (qs.isCompleted())
 		{
 			if (npc.getId() == LADD)
 			{

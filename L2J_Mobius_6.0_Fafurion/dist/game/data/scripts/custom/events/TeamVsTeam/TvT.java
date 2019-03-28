@@ -27,17 +27,17 @@ import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.CommandChannel;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -50,8 +50,8 @@ import com.l2jmobius.gameserver.model.quest.QuestTimer;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ExPVPMatchCCRecord;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -90,8 +90,8 @@ public class TvT extends Event
 	private static final Location RED_BUFFER_SPAWN_LOC = new Location(151545, 46528, -3400, 16000);
 	private static final Location BLUE_SPAWN_LOC = new Location(147447, 46722, -3416);
 	private static final Location RED_SPAWN_LOC = new Location(151536, 46722, -3416);
-	private static final L2ZoneType BLUE_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace1");
-	private static final L2ZoneType RED_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace2");
+	private static final ZoneType BLUE_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace1");
+	private static final ZoneType RED_PEACE_ZONE = ZoneManager.getInstance().getZoneByName("colosseum_peace2");
 	// Settings
 	private static final int REGISTRATION_TIME = 10; // Minutes
 	private static final int WAIT_TIME = 1; // Minutes
@@ -104,14 +104,14 @@ public class TvT extends Event
 	private static final int PARTY_MEMBER_COUNT = 7;
 	private static final ItemHolder REWARD = new ItemHolder(57, 1000000); // Adena
 	// Misc
-	private static final Map<L2PcInstance, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
-	private static final List<L2PcInstance> PLAYER_LIST = new ArrayList<>();
-	private static final List<L2PcInstance> BLUE_TEAM = new ArrayList<>();
-	private static final List<L2PcInstance> RED_TEAM = new ArrayList<>();
+	private static final Map<PlayerInstance, Integer> PLAYER_SCORES = new ConcurrentHashMap<>();
+	private static final List<PlayerInstance> PLAYER_LIST = new ArrayList<>();
+	private static final List<PlayerInstance> BLUE_TEAM = new ArrayList<>();
+	private static final List<PlayerInstance> RED_TEAM = new ArrayList<>();
 	private static volatile int BLUE_SCORE;
 	private static volatile int RED_SCORE;
 	private static Instance PVP_WORLD = null;
-	private static L2Npc MANAGER_NPC_INSTANCE = null;
+	private static Npc MANAGER_NPC_INSTANCE = null;
 	private static boolean EVENT_ACTIVE = false;
 	
 	private TvT()
@@ -123,7 +123,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (!EVENT_ACTIVE)
 		{
@@ -194,7 +194,7 @@ public class TvT extends Event
 			case "TeleportToArena":
 			{
 				// Remove offline players.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (PlayerInstance participant : PLAYER_LIST)
 				{
 					if ((participant == null) || (participant.isOnlineInt() != 1))
 					{
@@ -206,7 +206,7 @@ public class TvT extends Event
 				if (PLAYER_LIST.size() < MINIMUM_PARTICIPANT_COUNT)
 				{
 					Broadcast.toAllOnlinePlayers("TvT Event: Event was canceled, not enough participants.");
-					for (L2PcInstance participant : PLAYER_LIST)
+					for (PlayerInstance participant : PLAYER_LIST)
 					{
 						removeListeners(participant);
 						participant.setOnCustomEvent(false);
@@ -221,7 +221,7 @@ public class TvT extends Event
 				// Randomize player list and separate teams.
 				Collections.shuffle(PLAYER_LIST);
 				boolean team = getRandomBoolean(); // If teams are not even, randomize where extra player goes.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (PlayerInstance participant : PLAYER_LIST)
 				{
 					if (team)
 					{
@@ -246,21 +246,21 @@ public class TvT extends Event
 				// Make Blue CC.
 				if (BLUE_TEAM.size() > 1)
 				{
-					L2CommandChannel blueCC = null;
-					L2Party lastBlueParty = null;
+					CommandChannel blueCC = null;
+					Party lastBlueParty = null;
 					int blueParticipantCounter = 0;
-					for (L2PcInstance participant : BLUE_TEAM)
+					for (PlayerInstance participant : BLUE_TEAM)
 					{
 						blueParticipantCounter++;
 						if (blueParticipantCounter == 1)
 						{
-							lastBlueParty = new L2Party(participant, PartyDistributionType.FINDERS_KEEPERS);
+							lastBlueParty = new Party(participant, PartyDistributionType.FINDERS_KEEPERS);
 							participant.joinParty(lastBlueParty);
 							if (BLUE_TEAM.size() > PARTY_MEMBER_COUNT)
 							{
 								if (blueCC == null)
 								{
-									blueCC = new L2CommandChannel(participant);
+									blueCC = new CommandChannel(participant);
 								}
 								else
 								{
@@ -281,21 +281,21 @@ public class TvT extends Event
 				// Make Red CC.
 				if (RED_TEAM.size() > 1)
 				{
-					L2CommandChannel redCC = null;
-					L2Party lastRedParty = null;
+					CommandChannel redCC = null;
+					Party lastRedParty = null;
 					int redParticipantCounter = 0;
-					for (L2PcInstance participant : RED_TEAM)
+					for (PlayerInstance participant : RED_TEAM)
 					{
 						redParticipantCounter++;
 						if (redParticipantCounter == 1)
 						{
-							lastRedParty = new L2Party(participant, PartyDistributionType.FINDERS_KEEPERS);
+							lastRedParty = new Party(participant, PartyDistributionType.FINDERS_KEEPERS);
 							participant.joinParty(lastRedParty);
 							if (RED_TEAM.size() > PARTY_MEMBER_COUNT)
 							{
 								if (redCC == null)
 								{
-									redCC = new L2CommandChannel(participant);
+									redCC = new CommandChannel(participant);
 								}
 								else
 								{
@@ -357,12 +357,12 @@ public class TvT extends Event
 				closeDoor(BLUE_DOOR_ID, PVP_WORLD.getId());
 				closeDoor(RED_DOOR_ID, PVP_WORLD.getId());
 				// Disable players.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (PlayerInstance participant : PLAYER_LIST)
 				{
 					participant.setIsInvul(true);
 					participant.setIsImmobilized(true);
 					participant.disableAllSkills();
-					for (L2Summon summon : participant.getServitors().values())
+					for (Summon summon : participant.getServitors().values())
 					{
 						summon.setIsInvul(true);
 						summon.setIsImmobilized(true);
@@ -370,7 +370,7 @@ public class TvT extends Event
 					}
 				}
 				// Make sure noone is dead.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (PlayerInstance participant : PLAYER_LIST)
 				{
 					if (participant.isDead())
 					{
@@ -382,7 +382,7 @@ public class TvT extends Event
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Blue won the event!", 7);
-					for (L2PcInstance participant : BLUE_TEAM)
+					for (PlayerInstance participant : BLUE_TEAM)
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
@@ -397,7 +397,7 @@ public class TvT extends Event
 				{
 					final Skill skill = CommonSkill.FIREWORK.getSkill();
 					broadcastScreenMessageWithEffect("Team Red won the event!", 7);
-					for (L2PcInstance participant : RED_TEAM)
+					for (PlayerInstance participant : RED_TEAM)
 					{
 						if ((participant != null) && (participant.getInstanceWorld() == PVP_WORLD))
 						{
@@ -411,7 +411,7 @@ public class TvT extends Event
 				else
 				{
 					broadcastScreenMessageWithEffect("The event ended with a tie!", 7);
-					for (L2PcInstance participant : PLAYER_LIST)
+					for (PlayerInstance participant : PLAYER_LIST)
 					{
 						participant.broadcastSocialAction(13);
 					}
@@ -428,7 +428,7 @@ public class TvT extends Event
 			case "TeleportOut":
 			{
 				// Remove event listeners.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (PlayerInstance participant : PLAYER_LIST)
 				{
 					removeListeners(participant);
 					participant.setTeam(Team.NONE);
@@ -442,12 +442,12 @@ public class TvT extends Event
 					PVP_WORLD = null;
 				}
 				// Enable players.
-				for (L2PcInstance participant : PLAYER_LIST)
+				for (PlayerInstance participant : PLAYER_LIST)
 				{
 					participant.setIsInvul(false);
 					participant.setIsImmobilized(false);
 					participant.enableAllSkills();
-					for (L2Summon summon : participant.getServitors().values())
+					for (Summon summon : participant.getServitors().values())
 					{
 						summon.setIsInvul(true);
 						summon.setIsImmobilized(true);
@@ -534,7 +534,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		// Event not active.
 		if (!EVENT_ACTIVE)
@@ -557,50 +557,50 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayable() && character.getActingPlayer().isOnCustomEvent())
+		if (creature.isPlayable() && creature.getActingPlayer().isOnCustomEvent())
 		{
 			// Kick enemy players.
-			if ((zone == BLUE_PEACE_ZONE) && (character.getTeam() == Team.RED))
+			if ((zone == BLUE_PEACE_ZONE) && (creature.getTeam() == Team.RED))
 			{
-				character.teleToLocation(RED_SPAWN_LOC, PVP_WORLD);
-				sendScreenMessage(character.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
+				creature.teleToLocation(RED_SPAWN_LOC, PVP_WORLD);
+				sendScreenMessage(creature.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
 			}
-			if ((zone == RED_PEACE_ZONE) && (character.getTeam() == Team.BLUE))
+			if ((zone == RED_PEACE_ZONE) && (creature.getTeam() == Team.BLUE))
 			{
-				character.teleToLocation(BLUE_SPAWN_LOC, PVP_WORLD);
-				sendScreenMessage(character.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
+				creature.teleToLocation(BLUE_SPAWN_LOC, PVP_WORLD);
+				sendScreenMessage(creature.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
 			}
 			// Start inactivity check.
-			if (character.isPlayer() && //
-				((((zone == BLUE_PEACE_ZONE) && (character.getTeam() == Team.BLUE)) || //
-					((zone == RED_PEACE_ZONE) && (character.getTeam() == Team.RED)))))
+			if (creature.isPlayer() && //
+				((((zone == BLUE_PEACE_ZONE) && (creature.getTeam() == Team.BLUE)) || //
+					((zone == RED_PEACE_ZONE) && (creature.getTeam() == Team.RED)))))
 			{
-				resetActivityTimers(character.getActingPlayer());
+				resetActivityTimers(creature.getActingPlayer());
 			}
 		}
 		return null;
 	}
 	
 	@Override
-	public String onExitZone(L2Character character, L2ZoneType zone)
+	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
+		if (creature.isPlayer() && creature.getActingPlayer().isOnCustomEvent())
 		{
-			final L2PcInstance player = character.getActingPlayer();
-			cancelQuestTimer("KickPlayer" + character.getObjectId(), null, player);
-			cancelQuestTimer("KickPlayerWarning" + character.getObjectId(), null, player);
+			final PlayerInstance player = creature.getActingPlayer();
+			cancelQuestTimer("KickPlayer" + creature.getObjectId(), null, player);
+			cancelQuestTimer("KickPlayerWarning" + creature.getObjectId(), null, player);
 			// Removed invulnerability shield.
 			if (player.isAffectedBySkill(GHOST_WALKING))
 			{
 				player.getEffectList().stopSkillEffects(true, GHOST_WALKING.getSkill());
 			}
 		}
-		return super.onExitZone(character, zone);
+		return super.onExitZone(creature, zone);
 	}
 	
-	private boolean canRegister(L2PcInstance player)
+	private boolean canRegister(PlayerInstance player)
 	{
 		if (PLAYER_LIST.contains(player))
 		{
@@ -682,7 +682,7 @@ public class TvT extends Event
 		return true;
 	}
 	
-	private void sendScreenMessage(L2PcInstance player, String message, int duration)
+	private void sendScreenMessage(PlayerInstance player, String message, int duration)
 	{
 		player.sendPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
 	}
@@ -702,17 +702,17 @@ public class TvT extends Event
 		PVP_WORLD.broadcastPacket(new ExShowScreenMessage("Blue: " + BLUE_SCORE + " - Red: " + RED_SCORE, ExShowScreenMessage.BOTTOM_RIGHT, 15000, 0, true, false));
 	}
 	
-	private void addLogoutListener(L2PcInstance player)
+	private void addLogoutListener(PlayerInstance player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> OnPlayerLogout(event), this));
 	}
 	
-	private void addDeathListener(L2PcInstance player)
+	private void addDeathListener(PlayerInstance player)
 	{
 		player.addListener(new ConsumerEventListener(player, EventType.ON_CREATURE_DEATH, (OnCreatureDeath event) -> onPlayerDeath(event), this));
 	}
 	
-	private void removeListeners(L2PcInstance player)
+	private void removeListeners(PlayerInstance player)
 	{
 		for (AbstractEventListener listener : player.getListeners(EventType.ON_PLAYER_LOGOUT))
 		{
@@ -730,7 +730,7 @@ public class TvT extends Event
 		}
 	}
 	
-	private void resetActivityTimers(L2PcInstance player)
+	private void resetActivityTimers(PlayerInstance player)
 	{
 		cancelQuestTimer("KickPlayer" + player.getObjectId(), null, player);
 		cancelQuestTimer("KickPlayerWarning" + player.getObjectId(), null, player);
@@ -758,7 +758,7 @@ public class TvT extends Event
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	private void OnPlayerLogout(OnPlayerLogout event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		// Remove player from lists.
 		PLAYER_LIST.remove(player);
 		PLAYER_SCORES.remove(player);
@@ -777,8 +777,8 @@ public class TvT extends Event
 	{
 		if (event.getTarget().isPlayer())
 		{
-			final L2PcInstance killedPlayer = event.getTarget().getActingPlayer();
-			final L2PcInstance killer = event.getAttacker().getActingPlayer();
+			final PlayerInstance killedPlayer = event.getTarget().getActingPlayer();
+			final PlayerInstance killer = event.getAttacker().getActingPlayer();
 			// Confirm Blue team kill.
 			if ((killer.getTeam() == Team.BLUE) && (killedPlayer.getTeam() == Team.RED))
 			{
@@ -801,7 +801,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public boolean eventStart(L2PcInstance eventMaker)
+	public boolean eventStart(PlayerInstance eventMaker)
 	{
 		if (EVENT_ACTIVE)
 		{
@@ -851,7 +851,7 @@ public class TvT extends Event
 			}
 		}
 		// Remove participants.
-		for (L2PcInstance participant : PLAYER_LIST)
+		for (PlayerInstance participant : PLAYER_LIST)
 		{
 			removeListeners(participant);
 			participant.setTeam(Team.NONE);
@@ -868,7 +868,7 @@ public class TvT extends Event
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
+	public boolean eventBypass(PlayerInstance player, String bypass)
 	{
 		return false;
 	}

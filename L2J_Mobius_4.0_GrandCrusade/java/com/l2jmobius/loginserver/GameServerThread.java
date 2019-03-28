@@ -31,8 +31,8 @@ import com.l2jmobius.commons.network.BaseSendablePacket;
 import com.l2jmobius.commons.util.crypt.NewCrypt;
 import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
-import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler;
-import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
+import com.l2jmobius.loginserver.network.GameServerPacketHandler;
+import com.l2jmobius.loginserver.network.GameServerPacketHandler.GameServerState;
 import com.l2jmobius.loginserver.network.loginserverpackets.ChangePasswordResponse;
 import com.l2jmobius.loginserver.network.loginserverpackets.InitLS;
 import com.l2jmobius.loginserver.network.loginserverpackets.KickPlayer;
@@ -123,7 +123,7 @@ public class GameServerThread extends Thread
 					return;
 				}
 				
-				L2JGameServerPacketHandler.handlePacket(data, this);
+				GameServerPacketHandler.handlePacket(data, this);
 			}
 		}
 		catch (IOException e)

@@ -17,17 +17,17 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.PetNameTable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestChangePetName extends L2GameClientPacket
+public final class RequestChangePetName extends GameClientPacket
 {
 	private String _name;
 	
@@ -40,13 +40,13 @@ public final class RequestChangePetName extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2Character activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Summon pet = activeChar.getPet();
+		final Summon pet = player.getPet();
 		if (pet == null)
 		{
 			return;
@@ -54,12 +54,12 @@ public final class RequestChangePetName extends L2GameClientPacket
 		
 		if (pet.getName() != null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.NAMING_YOU_CANNOT_SET_NAME_OF_THE_PET));
+			player.sendPacket(new SystemMessage(SystemMessageId.NAMING_YOU_CANNOT_SET_NAME_OF_THE_PET));
 			return;
 		}
 		else if (PetNameTable.getInstance().doesPetNameExist(_name, pet.getTemplate().npcId))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.NAMING_ALREADY_IN_USE_BY_ANOTHER_PET));
+			player.sendPacket(new SystemMessage(SystemMessageId.NAMING_ALREADY_IN_USE_BY_ANOTHER_PET));
 			return;
 		}
 		else if ((_name.length() < 3) || (_name.length() > 16))
@@ -67,26 +67,26 @@ public final class RequestChangePetName extends L2GameClientPacket
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			sm.addString("Your pet's name can be up to 16 characters.");
 			// SystemMessage sm = new SystemMessage(SystemMessage.NAMING_PETNAME_UP_TO_8CHARS);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			
 			return;
 		}
 		else if (!PetNameTable.getInstance().isValidPetName(_name))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.NAMING_PETNAME_CONTAINS_INVALID_CHARS));
+			player.sendPacket(new SystemMessage(SystemMessageId.NAMING_PETNAME_CONTAINS_INVALID_CHARS));
 			return;
 		}
 		
 		pet.setName(_name);
-		pet.broadcastPacket(new NpcInfo(pet, activeChar));
-		activeChar.sendPacket(new PetInfo(pet));
+		pet.broadcastPacket(new NpcInfo(pet, player));
+		player.sendPacket(new PetInfo(pet));
 		// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 		pet.updateEffectIcons(true);
 		
 		// set the flag on the control item to say that the pet has a name
-		if (pet instanceof L2PetInstance)
+		if (pet instanceof PetInstance)
 		{
-			final L2ItemInstance controlItem = pet.getOwner().getInventory().getItemByObjectId(pet.getControlItemId());
+			final ItemInstance controlItem = pet.getOwner().getInventory().getItemByObjectId(pet.getControlItemId());
 			
 			if (controlItem != null)
 			{
@@ -94,7 +94,7 @@ public final class RequestChangePetName extends L2GameClientPacket
 				controlItem.updateDatabase();
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(controlItem);
-				activeChar.sendPacket(iu);
+				player.sendPacket(iu);
 			}
 		}
 	}

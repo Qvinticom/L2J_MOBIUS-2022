@@ -20,15 +20,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.engines.DocumentEngine;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 
 public class SkillTable
 {
 	// private static Logger LOGGER = Logger.getLogger(SkillTable.class);
 	private static SkillTable _instance;
 	
-	private final Map<Integer, L2Skill> _skills;
+	private final Map<Integer, Skill> _skills;
 	private final boolean _initialized = true;
 	
 	public static SkillTable getInstance()
@@ -59,10 +59,10 @@ public class SkillTable
 	
 	/**
 	 * Provides the skill hash
-	 * @param skill The L2Skill to be hashed
+	 * @param skill The Skill to be hashed
 	 * @return SkillTable.getSkillHashCode(skill.getId(), skill.getLevel())
 	 */
-	public static int getSkillHashCode(L2Skill skill)
+	public static int getSkillHashCode(Skill skill)
 	{
 		return getSkillHashCode(skill.getId(), skill.getLevel());
 	}
@@ -78,14 +78,14 @@ public class SkillTable
 		return (skillId * 256) + skillLevel;
 	}
 	
-	public L2Skill getInfo(int skillId, int level)
+	public Skill getInfo(int skillId, int level)
 	{
 		return _skills.get(getSkillHashCode(skillId, level));
 	}
 	
 	public int getMaxLevel(int magicId, int level)
 	{
-		L2Skill temp;
+		Skill temp;
 		
 		while (level < 100)
 		{
@@ -101,19 +101,19 @@ public class SkillTable
 		return level;
 	}
 	
-	private static final L2WeaponType[] weaponDbMasks =
+	private static final WeaponType[] weaponDbMasks =
 	{
-		L2WeaponType.ETC,
-		L2WeaponType.BOW,
-		L2WeaponType.POLE,
-		L2WeaponType.DUALFIST,
-		L2WeaponType.DUAL,
-		L2WeaponType.BLUNT,
-		L2WeaponType.SWORD,
-		L2WeaponType.DAGGER,
-		L2WeaponType.BIGSWORD,
-		L2WeaponType.ROD,
-		L2WeaponType.BIGBLUNT
+		WeaponType.ETC,
+		WeaponType.BOW,
+		WeaponType.POLE,
+		WeaponType.DUALFIST,
+		WeaponType.DUAL,
+		WeaponType.BLUNT,
+		WeaponType.SWORD,
+		WeaponType.DAGGER,
+		WeaponType.BIGSWORD,
+		WeaponType.ROD,
+		WeaponType.BIGBLUNT
 	};
 	
 	public int calcWeaponsAllowed(int mask)

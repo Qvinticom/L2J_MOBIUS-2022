@@ -27,23 +27,23 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCallToChangeClass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCallToChangeClass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -208,7 +208,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -252,7 +252,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 						}
 						case "EVENT_C":
 						{
-							final L2Npc golem = addSpawn(npc, SIEGE_GOLEM, 116881, -180742, -1248, 1843, false, 0, false, instance.getId());
+							final Npc golem = addSpawn(npc, SIEGE_GOLEM, 116881, -180742, -1248, 1843, false, 0, false, instance.getId());
 							golem.setIsInvul(true);
 							break;
 						}
@@ -315,7 +315,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 					npc.initSeenCreatures();
 					for (Location loc : TEREDOR_SPAWN_LOC)
 					{
-						final L2Npc teredor = addSpawn(TEREDOR, loc, false, 0, false, instance.getId());
+						final Npc teredor = addSpawn(TEREDOR, loc, false, 0, false, instance.getId());
 						addAttackDesire(teredor, npc);
 						teredor.setScriptValue(1);
 					}
@@ -363,8 +363,8 @@ public final class MemoryOfDisaster extends AbstractInstance
 	
 	private void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
 		if (isInInstance(world))
@@ -376,7 +376,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 					case SOLDIER:
 					case SOLDIER2:
 					{
-						if ((creature.getId() == TENTACLE) || ((creature.getId() == TEREDOR) && !((L2Npc) creature).isScriptValue(2)))
+						if ((creature.getId() == TENTACLE) || ((creature.getId() == TEREDOR) && !((Npc) creature).isScriptValue(2)))
 						{
 							addAttackDesire(npc, creature);
 						}
@@ -411,7 +411,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 					{
 						if (npc.getParameters().getString("type", "").equals("EVENT_C"))
 						{
-							final L2Npc siegeGolem = npc.getInstanceWorld().getNpc(SIEGE_GOLEM);
+							final Npc siegeGolem = npc.getInstanceWorld().getNpc(SIEGE_GOLEM);
 							if (siegeGolem.isScriptValue(0))
 							{
 								siegeGolem.setScriptValue(1);
@@ -448,7 +448,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -568,14 +568,14 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "REINFORCE_SPAWN":
 			{
-				final L2Npc soldier = addSpawn(SOLDIER, npc.getLocation(), false, 0, false, npc.getInstanceId());
+				final Npc soldier = addSpawn(SOLDIER, npc.getLocation(), false, 0, false, npc.getInstanceId());
 				soldier.getVariables().set("type", "AWAKENING_GUIDE");
 				getTimers().addTimer("REINFORCE_SPAWN", 40000, npc, null);
 				break;
 			}
 			case "ATTACK_TIME":
 			{
-				final List<L2Npc> tentacles = npc.getInstanceWorld().getAliveNpcs(TENTACLE).stream().filter(n -> n.getVariables().getBoolean("isLeaderKiller", false)).collect(Collectors.toList());
+				final List<Npc> tentacles = npc.getInstanceWorld().getAliveNpcs(TENTACLE).stream().filter(n -> n.getVariables().getBoolean("isLeaderKiller", false)).collect(Collectors.toList());
 				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> addAttackDesire(n, tentacles.get(Rnd.get(tentacles.size()))));
 				break;
 			}
@@ -596,7 +596,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "WARNING_TIME":
 			{
-				final L2Npc invisibleNpc = addSpawn(INVISIBLE_NPC, 117100, -181088, -1272, 19956, false, 0, false, npc.getInstanceId());
+				final Npc invisibleNpc = addSpawn(INVISIBLE_NPC, 117100, -181088, -1272, 19956, false, 0, false, npc.getInstanceId());
 				invisibleNpc.getVariables().set("type", "PULLER");
 				break;
 			}
@@ -613,7 +613,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "CHASING_TRAJAN_TIME":
 			{
-				final L2Npc teredor = addSpawn(npc, TEREDOR, 116016, -179503, -1040, 58208, false, 0, false, npc.getInstanceId());
+				final Npc teredor = addSpawn(npc, TEREDOR, 116016, -179503, -1040, 58208, false, 0, false, npc.getInstanceId());
 				teredor.setScriptValue(2);
 				break;
 			}
@@ -672,7 +672,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		getTimers().addTimer("OPENING_SCENE", 1000, e ->
 		{
@@ -687,7 +687,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public void onMoveFinished(L2Npc npc)
+	public void onMoveFinished(Npc npc)
 	{
 		if (CommonUtil.contains(DWARVES, npc.getId()))
 		{
@@ -766,8 +766,8 @@ public final class MemoryOfDisaster extends AbstractInstance
 		{
 			if (!event.getAttacker().isPlayable())
 			{
-				final L2Npc npc = (L2Npc) event.getTarget();
-				final L2Npc attacker = (L2Npc) event.getAttacker();
+				final Npc npc = (Npc) event.getTarget();
+				final Npc attacker = (Npc) event.getAttacker();
 				if (CommonUtil.contains(DWARVES, npc.getId()))
 				{
 					final int attackCount = npc.getVariables().getInt("attackCount", 0) + 1;
@@ -794,7 +794,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 						if (attackCount == 10)
 						{
 							npc.doDie(attacker);
-							addSpawn((L2Npc) npc.getSummoner(), SOLDIER, npc.getLocation(), true, world.getId());
+							addSpawn((Npc) npc.getSummoner(), SOLDIER, npc.getLocation(), true, world.getId());
 						}
 						else
 						{
@@ -812,7 +812,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 							npc.doDie(attacker);
 							if (!isBronKiller)
 							{
-								addSpawn((L2Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
+								addSpawn((Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
 							}
 						}
 						else
@@ -830,7 +830,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 							if (attackCount == 20)
 							{
 								npc.doDie(attacker);
-								addSpawn((L2Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
+								addSpawn((Npc) npc.getSummoner(), npc.getId(), npc.getLocation(), true, world.getId());
 							}
 							else
 							{
@@ -844,7 +844,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 							if ((attackCount == 80) || (attacker.getId() == SIEGE_GOLEM))
 							{
 								npc.doDie(attacker);
-								final L2Npc golem = world.getNpc(SIEGE_GOLEM);
+								final Npc golem = world.getNpc(SIEGE_GOLEM);
 								golem.abortAttack();
 								golem.abortCast();
 								world.getNpc(SIEGE_GOLEM).getAI().moveTo(GOLEM_MOVE);
@@ -882,10 +882,10 @@ public final class MemoryOfDisaster extends AbstractInstance
 	
 	private void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = ((L2Npc) event.getTarget());
+		final Npc npc = ((Npc) event.getTarget());
 		if (npc.getId() == BRONK)
 		{
-			for (L2Npc dwarf : npc.getInstanceWorld().getNpcs(DWARVES))
+			for (Npc dwarf : npc.getInstanceWorld().getNpcs(DWARVES))
 			{
 				if (dwarf.getId() == ROGIN)
 				{
@@ -907,7 +907,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		switch (npc.getId())
 		{
@@ -938,7 +938,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			{
 				if (skill.getId() == TEREDOR_TRANSPARENT_SKILL.getSkillId())
 				{
-					final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
+					final Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
 					invisibleNpc.getVariables().set("type", "BOUNCER");
 					addSpawn(npc, EARTH_WYRM_TRASKEN, npc.getLocation(), false, npc.getInstanceId());
 					npc.deleteMe();
@@ -959,7 +959,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 					if (npc.isScriptValue(0))
 					{
 						npc.getInstanceWorld().getNpc(SIEGE_GOLEM).doDie(npc);
-						final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
+						final Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
 						invisibleNpc.getVariables().set("type", "BOUNCER");
 					}
 					npc.setTarget(npc);
@@ -971,7 +971,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 					npc.doCast(TRASKEN_SKILL_3.getSkill());
 					if (npc.isScriptValue(0))
 					{
-						final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
+						final Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
 						invisibleNpc.getVariables().set("type", "BOUNCER");
 						npc.setScriptValue(1);
 					}
@@ -994,7 +994,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	}
 	
 	@Override
-	public String onEventReceived(String event, L2Npc sender, L2Npc receiver, L2Object reference)
+	public String onEventReceived(String event, Npc sender, Npc receiver, WorldObject reference)
 	{
 		final Instance instance = receiver.getInstanceWorld();
 		if (isInInstance(instance))
@@ -1011,7 +1011,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerCallToChangeClass(OnPlayerCallToChangeClass event)
 	{
-		enterInstance(event.getActiveChar(), null, TEMPLATE_ID);
+		enterInstance(event.getPlayer(), null, TEMPLATE_ID);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
@@ -1023,7 +1023,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR) && (player.getRace() != Race.ERTHEIA))
 		{
 			for (ClassId newClass : player.getClassId().getNextClassIds())
@@ -1043,7 +1043,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			return;
 		}
 		
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR) && (player.getRace() != Race.ERTHEIA))
 		{
 			for (ClassId newClass : player.getClassId().getNextClassIds())

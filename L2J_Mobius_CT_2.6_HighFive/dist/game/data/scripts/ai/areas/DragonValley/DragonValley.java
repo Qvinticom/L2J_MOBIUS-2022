@@ -19,10 +19,10 @@ package ai.areas.DragonValley;
 import java.util.EnumMap;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -137,11 +137,11 @@ public final class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("SELF_DESTRUCTION") && (npc != null) && !npc.isDead())
 		{
-			final L2Playable playable = npc.getVariables().getObject("playable", L2Playable.class);
+			final Playable playable = npc.getVariables().getObject("playable", Playable.class);
 			
 			if ((playable != null) && (npc.calculateDistance3D(playable) < 250))
 			{
@@ -157,7 +157,7 @@ public final class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.getId() == NECROMANCER_OF_THE_VALLEY)
 		{
@@ -171,8 +171,8 @@ public final class DragonValley extends AbstractNpcAI
 				final int rnd = getRandom(3, 5);
 				for (int i = 0; i < rnd; i++)
 				{
-					final L2Playable playable = isSummon ? attacker.getSummon() : attacker;
-					final L2Npc minion = addSpawn(DRAKOS_ASSASSIN, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), true, 0, true);
+					final Playable playable = isSummon ? attacker.getSummon() : attacker;
+					final Npc minion = addSpawn(DRAKOS_ASSASSIN, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), true, 0, true);
 					addAttackDesire(minion, playable);
 				}
 			}
@@ -181,13 +181,13 @@ public final class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getId() == NECROMANCER_OF_THE_VALLEY)
 		{
 			spawnGhost(npc, killer, isSummon, 20);
 		}
-		else if (((L2Attackable) npc).isSpoiled())
+		else if (((Attackable) npc).isSpoiled())
 		{
 			npc.dropItem(killer, getRandom(GREATER_HERB_OF_MANA, SUPERIOR_HERB_OF_MANA), 1);
 			manageMoraleBoost(killer, npc);
@@ -196,9 +196,9 @@ public final class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
-		((L2Attackable) npc).setOnKillDelay(0);
+		((Attackable) npc).setOnKillDelay(0);
 		if (npc.getId() == EXPLODING_ORC_GHOST)
 		{
 			startQuestTimer("SELF_DESTRUCTION", 3000, npc, null);
@@ -211,7 +211,7 @@ public final class DragonValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if (skill == SELF_DESTRUCTION.getSkill())
 		{
@@ -220,14 +220,14 @@ public final class DragonValley extends AbstractNpcAI
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	private void manageMoraleBoost(L2PcInstance player, L2Npc npc)
+	private void manageMoraleBoost(PlayerInstance player, Npc npc)
 	{
 		double points = 0;
 		int moraleBoostLv = 0;
 		
 		if (player.isInParty() && (player.getParty().getMemberCount() >= MIN_MEMBERS) && (npc != null))
 		{
-			for (L2PcInstance member : player.getParty().getMembers())
+			for (PlayerInstance member : player.getParty().getMembers())
 			{
 				if ((member.getLevel() >= MIN_LVL) && (member.getClassId().level() >= CLASS_LVL) && (npc.calculateDistance3D(member) < MIN_DISTANCE))
 				{
@@ -248,7 +248,7 @@ public final class DragonValley extends AbstractNpcAI
 				moraleBoostLv = 1;
 			}
 			
-			for (L2PcInstance member : player.getParty().getMembers())
+			for (PlayerInstance member : player.getParty().getMembers())
 			{
 				if (npc.calculateDistance3D(member) < MIN_DISTANCE)
 				{
@@ -275,19 +275,19 @@ public final class DragonValley extends AbstractNpcAI
 		}
 	}
 	
-	private void spawnGhost(L2Npc npc, L2PcInstance player, boolean isSummon, int chance)
+	private void spawnGhost(Npc npc, PlayerInstance player, boolean isSummon, int chance)
 	{
 		if ((npc.getScriptValue() < 2) && (getRandom(100) < chance))
 		{
 			int val = npc.getScriptValue();
-			final L2Playable attacker = isSummon ? player.getSummon() : player;
-			final L2Npc ghost1 = addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+			final Playable attacker = isSummon ? player.getSummon() : player;
+			final Npc ghost1 = addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			ghost1.getVariables().set("playable", attacker);
 			addAttackDesire(ghost1, attacker);
 			val++;
 			if ((val < 2) && (getRandomBoolean()))
 			{
-				final L2Npc ghost2 = addSpawn(WRATHFUL_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 20, npc.getHeading(), false, 0, false);
+				final Npc ghost2 = addSpawn(WRATHFUL_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 20, npc.getHeading(), false, 0, false);
 				addAttackDesire(ghost2, attacker);
 				val++;
 			}

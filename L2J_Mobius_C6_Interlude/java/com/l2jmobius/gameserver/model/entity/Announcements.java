@@ -29,8 +29,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.Say2;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -80,12 +80,12 @@ public class Announcements
 		}
 	}
 	
-	public void showAnnouncements(L2PcInstance activeChar)
+	public void showAnnouncements(PlayerInstance player)
 	{
 		for (String _announcement : _announcements)
 		{
-			CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, activeChar.getName(), _announcement.replace("%name%", activeChar.getName()));
-			activeChar.sendPacket(cs);
+			CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, player.getName(), _announcement.replace("%name%", player.getName()));
+			player.sendPacket(cs);
 		}
 		
 		for (List<Object> entry : _eventAnnouncements)
@@ -103,7 +103,7 @@ public class Announcements
 					sm.addString(element);
 				}
 				
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
 	}
@@ -116,7 +116,7 @@ public class Announcements
 		_eventAnnouncements.add(entry);
 	}
 	
-	public void listAnnouncements(L2PcInstance activeChar)
+	public void listAnnouncements(PlayerInstance player)
 	{
 		String content = HtmCache.getInstance().getHtmForce("data/html/admin/announce.htm");
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -130,7 +130,7 @@ public class Announcements
 		}
 		
 		adminReply.replace("%announces%", replyMSG.toString());
-		activeChar.sendPacket(adminReply);
+		player.sendPacket(adminReply);
 	}
 	
 	public void addAnnouncement(String text)
@@ -241,7 +241,7 @@ public class Announcements
 	{
 		CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, "", text);
 		
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);
 		}
@@ -253,7 +253,7 @@ public class Announcements
 	{
 		CreatureSay cs = new CreatureSay(0, 18, null, text);
 		
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if (player != null)
 			{
@@ -267,7 +267,7 @@ public class Announcements
 	
 	public void announceToAll(SystemMessage sm)
 	{
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(sm);
 		}

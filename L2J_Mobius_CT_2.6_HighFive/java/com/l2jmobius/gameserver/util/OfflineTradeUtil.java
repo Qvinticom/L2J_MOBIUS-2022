@@ -21,11 +21,11 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author lord_rex
@@ -44,7 +44,7 @@ public final class OfflineTradeUtil
 	 * @param player the player to be check.
 	 * @return {@code true} if the player is allowed to remain as off-line shop.
 	 */
-	private static boolean offlineMode(L2PcInstance player)
+	private static boolean offlineMode(PlayerInstance player)
 	{
 		if ((player == null) || player.isInOlympiadMode() || player.isBlockedFromExit() || player.isJailed() || (player.getVehicle() != null))
 		{
@@ -79,7 +79,7 @@ public final class OfflineTradeUtil
 		}
 		
 		// Check whether client is null or player is already in offline mode.
-		final L2GameClient client = player.getClient();
+		final GameClient client = player.getClient();
 		if ((client == null) || client.isDetached())
 		{
 			return false;
@@ -93,7 +93,7 @@ public final class OfflineTradeUtil
 	 * @param player
 	 * @return {@code true} when player entered offline mode, otherwise {@code false}
 	 */
-	public static boolean enteredOfflineMode(L2PcInstance player)
+	public static boolean enteredOfflineMode(PlayerInstance player)
 	{
 		if (!offlineMode(player))
 		{
@@ -102,15 +102,15 @@ public final class OfflineTradeUtil
 		
 		PlayerCountManager.getInstance().incOfflineTradeCount();
 		
-		final L2GameClient client = player.getClient();
+		final GameClient client = player.getClient();
 		client.close(true);
 		client.setDetached(true);
 		
 		player.leaveParty();
 		OlympiadManager.getInstance().unRegisterNoble(player);
 		
-		// If the L2PcInstance has Pet, unsummon it
-		L2Summon pet = player.getSummon();
+		// If the PlayerInstance has Pet, unsummon it
+		Summon pet = player.getSummon();
 		if (pet != null)
 		{
 			pet.setRestoreSummon(true);

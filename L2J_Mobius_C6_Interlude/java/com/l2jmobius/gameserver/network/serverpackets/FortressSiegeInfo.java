@@ -20,8 +20,8 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 
 /**
@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.model.entity.siege.Fort;
  * d = (UNKNOW) Siege Time Select Related?
  * @author programmos
  */
-public class FortressSiegeInfo extends L2GameServerPacket
+public class FortressSiegeInfo extends GameServerPacket
 {
 	private static Logger LOGGER = Logger.getLogger(FortressSiegeInfo.class.getName());
 	private final Fort _fort;
@@ -56,19 +56,19 @@ public class FortressSiegeInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		writeC(0xc9);
 		writeD(_fort.getFortId());
-		writeD((_fort.getOwnerId() == activeChar.getClanId()) && activeChar.isClanLeader() ? 0x01 : 0x00);
+		writeD((_fort.getOwnerId() == player.getClanId()) && player.isClanLeader() ? 0x01 : 0x00);
 		writeD(_fort.getOwnerId());
 		if (_fort.getOwnerId() > 0)
 		{
-			final L2Clan owner = ClanTable.getInstance().getClan(_fort.getOwnerId());
+			final Clan owner = ClanTable.getInstance().getClan(_fort.getOwnerId());
 			if (owner != null)
 			{
 				writeS(owner.getName()); // Clan Name

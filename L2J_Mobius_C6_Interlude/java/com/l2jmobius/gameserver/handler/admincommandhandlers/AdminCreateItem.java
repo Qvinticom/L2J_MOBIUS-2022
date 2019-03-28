@@ -21,14 +21,14 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -56,7 +56,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		
@@ -201,11 +201,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void createItem(L2PcInstance activeChar, int id, int num)
+	private void createItem(PlayerInstance activeChar, int id, int num)
 	{
 		if (num > 20)
 		{
-			L2Item template = ItemTable.getInstance().getTemplate(id);
+			Item template = ItemTable.getInstance().getTemplate(id);
 			
 			if ((template != null) && !template.isStackable())
 			{
@@ -214,15 +214,15 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 		}
 		
-		L2PcInstance Player = null;
+		PlayerInstance Player = null;
 		
 		if (activeChar.getTarget() != null)
 		{
-			if (activeChar.getTarget() instanceof L2PcInstance)
+			if (activeChar.getTarget() instanceof PlayerInstance)
 			{
 				if ((activeChar.getAccessLevel().getLevel() > 0) && (activeChar.getAccessLevel().getLevel() < 3))
 				{
-					Player = (L2PcInstance) activeChar.getTarget();
+					Player = (PlayerInstance) activeChar.getTarget();
 				}
 				else
 				{
@@ -257,11 +257,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 	}
 	
-	private void massCreateItem(L2PcInstance activeChar, int id, int num)
+	private void massCreateItem(PlayerInstance activeChar, int id, int num)
 	{
 		if (num > 20)
 		{
-			final L2Item template = ItemTable.getInstance().getTemplate(id);
+			final Item template = ItemTable.getInstance().getTemplate(id);
 			if ((template != null) && !template.isStackable())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
@@ -270,8 +270,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 		
 		int i = 0;
-		L2ItemInstance item = null;
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		ItemInstance item = null;
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendMessage("Admin is rewarding all online players.");
 			item = player.getInventory().addItem("Admin", id, num, null, null);
@@ -288,11 +288,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		LOGGER.info("GM " + activeChar.getName() + " mass_created item Id: " + id + " (" + num + ")");
 	}
 	
-	private void removeAllItems(L2PcInstance activeChar)
+	private void removeAllItems(PlayerInstance activeChar)
 	{
-		for (L2ItemInstance item : activeChar.getInventory().getItems())
+		for (ItemInstance item : activeChar.getInventory().getItems())
 		{
-			if (item.getLocation() == L2ItemInstance.ItemLocation.INVENTORY)
+			if (item.getLocation() == ItemInstance.ItemLocation.INVENTORY)
 			{
 				activeChar.getInventory().destroyItem("Destroy", item.getObjectId(), item.getCount(), activeChar, null);
 			}

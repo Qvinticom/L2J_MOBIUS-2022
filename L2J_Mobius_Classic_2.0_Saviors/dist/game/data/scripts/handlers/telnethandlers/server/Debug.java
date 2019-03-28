@@ -40,12 +40,12 @@ import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -90,7 +90,7 @@ public class Debug implements ITelnetCommand
 				{
 					return "Usage: debug packetsend <charName> <packetData>";
 				}
-				final L2PcInstance player = L2World.getInstance().getPlayer(args[1]);
+				final PlayerInstance player = World.getInstance().getPlayer(args[1]);
 				if (player == null)
 				{
 					return "Couldn't find player with such name.";
@@ -257,8 +257,8 @@ public class Debug implements ITelnetCommand
 		int objectCount = 0;
 		final int max = LoginServerThread.getInstance().getMaxPlayer();
 		
-		playerCount = L2World.getInstance().getPlayers().size();
-		objectCount = L2World.getInstance().getVisibleObjectsCount();
+		playerCount = World.getInstance().getPlayers().size();
+		objectCount = World.getInstance().getVisibleObjectsCount();
 		
 		int itemCount = 0;
 		int itemVoidCount = 0;
@@ -273,22 +273,22 @@ public class Debug implements ITelnetCommand
 		int summonCount = 0;
 		int AICount = 0;
 		
-		for (L2Object obj : L2World.getInstance().getVisibleObjects())
+		for (WorldObject obj : World.getInstance().getVisibleObjects())
 		{
 			if (obj == null)
 			{
 				continue;
 			}
-			if (obj.isCharacter())
+			if (obj.isCreature())
 			{
-				if (((L2Character) obj).hasAI())
+				if (((Creature) obj).hasAI())
 				{
 					AICount++;
 				}
 			}
 			if (obj.isItem())
 			{
-				if (((L2ItemInstance) obj).getItemLocation() == ItemLocation.VOID)
+				if (((ItemInstance) obj).getItemLocation() == ItemLocation.VOID)
 				{
 					itemVoidCount++;
 				}
@@ -300,10 +300,10 @@ public class Debug implements ITelnetCommand
 			else if (obj.isMonster())
 			{
 				monsterCount++;
-				if (((L2MonsterInstance) obj).hasMinions())
+				if (((MonsterInstance) obj).hasMinions())
 				{
-					minionCount += ((L2MonsterInstance) obj).getMinionList().countSpawnedMinions();
-					minionsGroupCount += ((L2MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
+					minionCount += ((MonsterInstance) obj).getMinionList().countSpawnedMinions();
+					minionsGroupCount += ((MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
 				}
 			}
 			else if (obj.isNpc())
@@ -313,7 +313,7 @@ public class Debug implements ITelnetCommand
 			else if (obj.isPlayer())
 			{
 				pcCount++;
-				if ((((L2PcInstance) obj).getClient() != null) && ((L2PcInstance) obj).getClient().isDetached())
+				if ((((PlayerInstance) obj).getClient() != null) && ((PlayerInstance) obj).getClient().isDetached())
 				{
 					detachedCount++;
 				}
@@ -326,7 +326,7 @@ public class Debug implements ITelnetCommand
 			{
 				doorCount++;
 			}
-			else if (obj.isCharacter())
+			else if (obj.isCreature())
 			{
 				charCount++;
 			}
@@ -337,16 +337,16 @@ public class Debug implements ITelnetCommand
 		sb.append("\r\n  ---> Offline Count: " + detachedCount + "/" + playerCount);
 		sb.append("\r\n  +-->  Object Count: " + objectCount);
 		sb.append("\r\n  +-->      AI Count: " + AICount);
-		sb.append("\r\n  +.... L2Item(Void): " + itemVoidCount);
-		sb.append("\r\n  +.......... L2Item: " + itemCount);
-		sb.append("\r\n  +....... L2Monster: " + monsterCount);
+		sb.append("\r\n  +.... Item(Void): " + itemVoidCount);
+		sb.append("\r\n  +.......... Item: " + itemCount);
+		sb.append("\r\n  +....... Monster: " + monsterCount);
 		sb.append("\r\n  +......... Minions: " + minionCount);
 		sb.append("\r\n  +.. Minions Groups: " + minionsGroupCount);
-		sb.append("\r\n  +........... L2Npc: " + npcCount);
-		sb.append("\r\n  +............ L2Pc: " + pcCount);
-		sb.append("\r\n  +........ L2Summon: " + summonCount);
-		sb.append("\r\n  +.......... L2Door: " + doorCount);
-		sb.append("\r\n  +.......... L2Char: " + charCount);
+		sb.append("\r\n  +........... Npc: " + npcCount);
+		sb.append("\r\n  +............ Player: " + pcCount);
+		sb.append("\r\n  +........ Summon: " + summonCount);
+		sb.append("\r\n  +.......... Door: " + doorCount);
+		sb.append("\r\n  +.......... Creature: " + charCount);
 		sb.append("\r\n  --->   Ingame Time: " + gameTime());
 		sb.append("\r\n  ---> Server Uptime: " + GameServer.getInstance().getUptime());
 		sb.append("\r\n  --->      GM Count: " + getOnlineGMS());

@@ -22,9 +22,9 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -66,7 +66,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param player player who wants get instance world
 	 * @return instance world if found, otherwise null
 	 */
-	public Instance getPlayerInstance(L2PcInstance player)
+	public Instance getPlayerInstance(PlayerInstance player)
 	{
 		return InstanceManager.getInstance().getPlayerInstance(player, false);
 	}
@@ -105,7 +105,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param npc NPC which allows to enter into instance
 	 * @param templateId template ID of instance where player wants to enter
 	 */
-	protected final void enterInstance(L2PcInstance player, L2Npc npc, int templateId)
+	protected final void enterInstance(PlayerInstance player, Npc npc, int templateId)
 	{
 		Instance instance = getPlayerInstance(player);
 		if (instance != null) // Player has already any instance active
@@ -129,7 +129,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			
 			// Get instance enter scope
-			final List<L2PcInstance> enterGroup = template.getEnterGroup(player);
+			final List<PlayerInstance> enterGroup = template.getEnterGroup(player);
 			// When nobody can enter
 			if (enterGroup == null)
 			{
@@ -138,7 +138,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			
 			// Validate conditions for group
-			if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS) && (!template.validateConditions(enterGroup, npc, this::showHtmlFile) || !validateConditions(enterGroup, npc, template)))
+			if (!player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS) && (!template.validateConditions(enterGroup, npc, this::showHtmlFile) || !validateConditions(enterGroup, npc, template)))
 			{
 				return;
 			}
@@ -151,7 +151,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			}
 			
 			// Check if any player from enter group has active instance
-			for (L2PcInstance member : enterGroup)
+			for (PlayerInstance member : enterGroup)
 			{
 				if (getPlayerInstance(member) != null)
 				{
@@ -171,7 +171,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			instance = manager.createInstance(template, player);
 			
 			// Move each player from enter group to instance
-			for (L2PcInstance member : enterGroup)
+			for (PlayerInstance member : enterGroup)
 			{
 				instance.addAllowed(member);
 				onEnter(member, instance, true);
@@ -194,7 +194,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param instance instance world where player enter
 	 * @param firstEnter when {@code true} player enter first time, otherwise player entered multiple times
 	 */
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		teleportPlayerIn(player, instance);
 	}
@@ -205,7 +205,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param player player which should be teleported
 	 * @param instance instance where player should be teleported
 	 */
-	protected void teleportPlayerIn(L2PcInstance player, Instance instance)
+	protected void teleportPlayerIn(PlayerInstance player, Instance instance)
 	{
 		final Location loc = instance.getEnterLocation();
 		if (loc != null)
@@ -223,7 +223,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param player player which should be ejected
 	 * @param instance instance from player should be removed
 	 */
-	protected void teleportPlayerOut(L2PcInstance player, Instance instance)
+	protected void teleportPlayerOut(PlayerInstance player, Instance instance)
 	{
 		instance.ejectPlayer(player);
 	}
@@ -233,7 +233,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * See {@link Instance#finishInstance()} for more details.
 	 * @param player player used for determine current instance world
 	 */
-	protected void finishInstance(L2PcInstance player)
+	protected void finishInstance(PlayerInstance player)
 	{
 		final Instance inst = player.getInstanceWorld();
 		if (inst != null)
@@ -248,7 +248,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param player player used for determine current instance world
 	 * @param delay finish delay in minutes
 	 */
-	protected void finishInstance(L2PcInstance player, int delay)
+	protected void finishInstance(PlayerInstance player, int delay)
 	{
 		final Instance inst = player.getInstanceWorld();
 		if (inst != null)
@@ -265,7 +265,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param template template of instance world which should be created
 	 * @return {@code true} when conditions are valid, otherwise {@code false}
 	 */
-	protected boolean validateConditions(List<L2PcInstance> group, L2Npc npc, InstanceTemplate template)
+	protected boolean validateConditions(List<PlayerInstance> group, Npc npc, InstanceTemplate template)
 	{
 		return true;
 	}

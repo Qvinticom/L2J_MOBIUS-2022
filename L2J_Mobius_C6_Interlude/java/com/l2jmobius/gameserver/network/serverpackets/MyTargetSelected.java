@@ -40,7 +40,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * usually the color equals the level difference to the selected target.
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class MyTargetSelected extends L2GameServerPacket
+public class MyTargetSelected extends GameServerPacket
 {
 	/** The _object id. */
 	private final int _objectId;

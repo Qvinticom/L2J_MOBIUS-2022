@@ -16,8 +16,8 @@
  */
 package quests.Q00001_LettersOfLove;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -51,10 +51,10 @@ public class Q00001_LettersOfLove extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -73,7 +73,7 @@ public class Q00001_LettersOfLove extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, DARINS_LETTER, 1);
 					htmltext = event;
 				}
@@ -84,11 +84,11 @@ public class Q00001_LettersOfLove extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -97,7 +97,7 @@ public class Q00001_LettersOfLove extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -114,7 +114,7 @@ public class Q00001_LettersOfLove extends Quest
 								{
 									takeItems(player, DARINS_LETTER, -1);
 									giveItems(player, ROXXYS_KERCHIEF, 1);
-									st.setCond(2, true);
+									qs.setCond(2, true);
 									htmltext = "30006-01.html";
 								}
 								break;
@@ -132,7 +132,7 @@ public class Q00001_LettersOfLove extends Quest
 								{
 									takeItems(player, ROXXYS_KERCHIEF, -1);
 									giveItems(player, DARINS_RECEIPT, 1);
-									st.setCond(3, true);
+									qs.setCond(3, true);
 									htmltext = "30048-08.html";
 								}
 								break;
@@ -174,7 +174,7 @@ public class Q00001_LettersOfLove extends Quest
 								{
 									takeItems(player, DARINS_RECEIPT, -1);
 									giveItems(player, BAULROS_POTION, 1);
-									st.setCond(4, true);
+									qs.setCond(4, true);
 									htmltext = "30033-01.html";
 								}
 								else if (hasQuestItems(player, BAULROS_POTION))
@@ -197,7 +197,7 @@ public class Q00001_LettersOfLove extends Quest
 								giveItems(player, NECKLACE_OF_KNOWLEDGE, 1);
 								addExpAndSp(player, 5672, 446);
 								giveAdena(player, 2466, false);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								htmltext = "30048-10.html";
 								break;
 							}

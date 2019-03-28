@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -55,10 +55,10 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -74,15 +74,15 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 			}
 			case "33867-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33867-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -97,12 +97,12 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -111,7 +111,7 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.isCond(1) ? "33867-05.html" : "33867-06.html";
+				htmltext = qs.isCond(1) ? "33867-05.html" : "33867-06.html";
 				break;
 			}
 			case State.COMPLETED:
@@ -124,39 +124,39 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
-			int killCount = st.getInt("KILLED_COUNT");
+			int killCount = qs.getInt("KILLED_COUNT");
 			
 			if (killCount < 10)
 			{
 				killCount++;
-				st.set("KILLED_COUNT", killCount);
+				qs.set("KILLED_COUNT", killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			
 			if (killCount == 10)
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-			npcLogList.add(new NpcLogListHolder(KARTIAS_FLOWER, false, st.getInt("KILLED_COUNT")));
+			npcLogList.add(new NpcLogListHolder(KARTIAS_FLOWER, false, qs.getInt("KILLED_COUNT")));
 			return npcLogList;
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

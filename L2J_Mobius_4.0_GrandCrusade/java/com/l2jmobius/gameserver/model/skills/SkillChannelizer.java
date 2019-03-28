@@ -26,9 +26,9 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.util.Util;
@@ -41,23 +41,23 @@ public class SkillChannelizer implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillChannelizer.class.getName());
 	
-	private final L2Character _channelizer;
-	private List<L2Character> _channelized;
+	private final Creature _channelizer;
+	private List<Creature> _channelized;
 	
 	private Skill _skill;
 	private volatile ScheduledFuture<?> _task = null;
 	
-	public SkillChannelizer(L2Character channelizer)
+	public SkillChannelizer(Creature channelizer)
 	{
 		_channelizer = channelizer;
 	}
 	
-	public L2Character getChannelizer()
+	public Creature getChannelizer()
 	{
 		return _channelizer;
 	}
 	
-	public List<L2Character> getChannelized()
+	public List<Creature> getChannelized()
 	{
 		return _channelized;
 	}
@@ -97,9 +97,9 @@ public class SkillChannelizer implements Runnable
 		// Cancel target channelization and unset it.
 		if (_channelized != null)
 		{
-			for (L2Character chars : _channelized)
+			for (Creature creature : _channelized)
 			{
-				chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
+				creature.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
 			}
 			_channelized = null;
 		}
@@ -127,7 +127,7 @@ public class SkillChannelizer implements Runnable
 		}
 		
 		final Skill skill = _skill;
-		List<L2Character> channelized = _channelized;
+		List<Creature> channelized = _channelized;
 		
 		try
 		{
@@ -149,16 +149,16 @@ public class SkillChannelizer implements Runnable
 			}
 			
 			// Apply channeling skills on the targets.
-			final List<L2Character> targetList = new ArrayList<>();
-			final L2Object target = skill.getTarget(_channelizer, false, false, false);
+			final List<Creature> targetList = new ArrayList<>();
+			final WorldObject target = skill.getTarget(_channelizer, false, false, false);
 			if (target != null)
 			{
 				skill.forEachTargetAffected(_channelizer, target, o ->
 				{
-					if (o.isCharacter())
+					if (o.isCreature())
 					{
-						targetList.add((L2Character) o);
-						((L2Character) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
+						targetList.add((Creature) o);
+						((Creature) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
 					}
 				});
 			}
@@ -169,13 +169,13 @@ public class SkillChannelizer implements Runnable
 			}
 			channelized = targetList;
 			
-			for (L2Character character : channelized)
+			for (Creature creature : channelized)
 			{
-				if (!Util.checkIfInRange(skill.getEffectRange(), _channelizer, character, true))
+				if (!Util.checkIfInRange(skill.getEffectRange(), _channelizer, creature, true))
 				{
 					continue;
 				}
-				else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character))
+				else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, creature))
 				{
 					continue;
 				}
@@ -183,8 +183,8 @@ public class SkillChannelizer implements Runnable
 				if (skill.getChannelingSkillId() > 0)
 				{
 					final int maxSkillLevel = SkillData.getInstance().getMaxLevel(skill.getChannelingSkillId());
-					final int skillLevel = Math.min(character.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
-					final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
+					final int skillLevel = Math.min(creature.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
+					final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
 					
 					if ((info == null) || (info.getSkill().getLevel() < skillLevel))
 					{
@@ -197,22 +197,22 @@ public class SkillChannelizer implements Runnable
 						}
 						
 						// Update PvP status
-						if (character.isPlayable() && _channelizer.isPlayer())
+						if (creature.isPlayable() && _channelizer.isPlayer())
 						{
-							((L2PcInstance) _channelizer).updatePvPStatus(character);
+							((PlayerInstance) _channelizer).updatePvPStatus(creature);
 						}
 						
 						// Be warned, this method has the possibility to call doDie->abortCast->stopChanneling method. Variable cache above try{} is used in this case to avoid NPEs.
-						channeledSkill.applyEffects(_channelizer, character);
+						channeledSkill.applyEffects(_channelizer, creature);
 					}
 					if (!skill.isToggle())
 					{
-						_channelizer.broadcastPacket(new MagicSkillLaunched(_channelizer, skill.getId(), skill.getLevel(), SkillCastingType.NORMAL, character));
+						_channelizer.broadcastPacket(new MagicSkillLaunched(_channelizer, skill.getId(), skill.getLevel(), SkillCastingType.NORMAL, creature));
 					}
 				}
 				else
 				{
-					skill.applyChannelingEffects(_channelizer, character);
+					skill.applyChannelingEffects(_channelizer, creature);
 				}
 				
 				// Reduce shots.

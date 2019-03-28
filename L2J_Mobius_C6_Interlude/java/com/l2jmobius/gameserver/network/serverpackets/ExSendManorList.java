@@ -22,7 +22,7 @@ import java.util.List;
  * Format : (h) d [dS] h sub id d: number of manors [ d: id S: manor name ]
  * @author l3x
  */
-public class ExSendManorList extends L2GameServerPacket
+public class ExSendManorList extends GameServerPacket
 {
 	private final List<String> _manors;
 	

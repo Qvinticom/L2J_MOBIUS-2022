@@ -24,9 +24,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 
 /**
  * @author godson
@@ -35,9 +35,9 @@ public final class DayNightSpawnManager
 {
 	private static Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	
-	private final List<L2Spawn> _dayCreatures = new ArrayList<>();
-	private final List<L2Spawn> _nightCreatures = new ArrayList<>();
-	private final Map<L2Spawn, L2RaidBossInstance> _bosses = new ConcurrentHashMap<>();
+	private final List<Spawn> _dayCreatures = new ArrayList<>();
+	private final List<Spawn> _nightCreatures = new ArrayList<>();
+	private final Map<Spawn, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
 	
 	// private static int _currentState; // 0 = Day, 1 = Night
 	
@@ -51,12 +51,12 @@ public final class DayNightSpawnManager
 		// Prevent external initialization.
 	}
 	
-	public void addDayCreature(L2Spawn spawnDat)
+	public void addDayCreature(Spawn spawnDat)
 	{
 		_dayCreatures.add(spawnDat);
 	}
 	
-	public void addNightCreature(L2Spawn spawnDat)
+	public void addNightCreature(Spawn spawnDat)
 	{
 		_nightCreatures.add(spawnDat);
 	}
@@ -81,17 +81,17 @@ public final class DayNightSpawnManager
 	 * Manage Spawn/Respawn
 	 * @param unSpawnCreatures List with spawns must be unspawned
 	 * @param spawnCreatures List with spawns must be spawned
-	 * @param UnspawnLogInfo String for log info for unspawned L2NpcInstance
-	 * @param SpawnLogInfo String for log info for spawned L2NpcInstance
+	 * @param UnspawnLogInfo String for log info for unspawned NpcInstance
+	 * @param SpawnLogInfo String for log info for spawned NpcInstance
 	 */
-	private void spawnCreatures(List<L2Spawn> unSpawnCreatures, List<L2Spawn> spawnCreatures, String UnspawnLogInfo, String SpawnLogInfo)
+	private void spawnCreatures(List<Spawn> unSpawnCreatures, List<Spawn> spawnCreatures, String UnspawnLogInfo, String SpawnLogInfo)
 	{
 		try
 		{
 			if (!unSpawnCreatures.isEmpty())
 			{
 				int i = 0;
-				for (L2Spawn spawn : unSpawnCreatures)
+				for (Spawn spawn : unSpawnCreatures)
 				{
 					if (spawn == null)
 					{
@@ -99,7 +99,7 @@ public final class DayNightSpawnManager
 					}
 					
 					spawn.stopRespawn();
-					final L2Npc last = spawn.getLastSpawn();
+					final Npc last = spawn.getLastSpawn();
 					if (last != null)
 					{
 						last.deleteMe();
@@ -110,7 +110,7 @@ public final class DayNightSpawnManager
 			}
 			
 			int i = 0;
-			for (L2Spawn spawnDat : spawnCreatures)
+			for (Spawn spawnDat : spawnCreatures)
 			{
 				if (spawnDat == null)
 				{
@@ -188,13 +188,13 @@ public final class DayNightSpawnManager
 	{
 		try
 		{
-			L2RaidBossInstance boss;
-			for (L2Spawn spawn : _bosses.keySet())
+			RaidBossInstance boss;
+			for (Spawn spawn : _bosses.keySet())
 			{
 				boss = _bosses.get(spawn);
 				if ((boss == null) && (mode == 1))
 				{
-					boss = (L2RaidBossInstance) spawn.doSpawn();
+					boss = (RaidBossInstance) spawn.doSpawn();
 					RaidBossSpawnManager.getInstance().notifySpawnNightBoss(boss);
 					_bosses.put(spawn, boss);
 					continue;
@@ -218,7 +218,7 @@ public final class DayNightSpawnManager
 		}
 	}
 	
-	private void handleHellmans(L2RaidBossInstance boss, int mode)
+	private void handleHellmans(RaidBossInstance boss, int mode)
 	{
 		switch (mode)
 		{
@@ -240,7 +240,7 @@ public final class DayNightSpawnManager
 		}
 	}
 	
-	public L2RaidBossInstance handleBoss(L2Spawn spawnDat)
+	public RaidBossInstance handleBoss(Spawn spawnDat)
 	{
 		if (_bosses.containsKey(spawnDat))
 		{
@@ -249,7 +249,7 @@ public final class DayNightSpawnManager
 		
 		if (GameTimeController.getInstance().isNight())
 		{
-			final L2RaidBossInstance raidboss = (L2RaidBossInstance) spawnDat.doSpawn();
+			final RaidBossInstance raidboss = (RaidBossInstance) spawnDat.doSpawn();
 			_bosses.put(spawnDat, raidboss);
 			
 			return raidboss;

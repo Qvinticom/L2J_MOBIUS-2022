@@ -16,18 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: ch ddcdc.
  * @author KenM
  * @author ProGramMoS
  */
-
-public class ExPCCafePointInfo extends L2GameServerPacket
+public class ExPCCafePointInfo extends GameServerPacket
 {
 	/** The _character. */
-	private final L2PcInstance _character;
+	private final PlayerInstance _player;
 	
 	/** The m_ add point. */
 	private final int m_AddPoint;
@@ -49,9 +48,9 @@ public class ExPCCafePointInfo extends L2GameServerPacket
 	 * @param hour the hour
 	 * @param _double the _double
 	 */
-	public ExPCCafePointInfo(L2PcInstance user, int modify, boolean add, int hour, boolean _double)
+	public ExPCCafePointInfo(PlayerInstance user, int modify, boolean add, int hour, boolean _double)
 	{
-		_character = user;
+		_player = user;
 		m_AddPoint = modify;
 		
 		if (add)
@@ -78,7 +77,7 @@ public class ExPCCafePointInfo extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x31);
-		writeD(_character.getPcBangScore());
+		writeD(_player.getPcBangScore());
 		writeD(m_AddPoint);
 		writeC(m_PeriodType);
 		writeD(RemainTime);

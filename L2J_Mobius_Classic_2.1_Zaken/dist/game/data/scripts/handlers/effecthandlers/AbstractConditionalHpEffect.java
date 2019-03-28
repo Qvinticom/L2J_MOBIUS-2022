@@ -21,12 +21,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureHpChange;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureHpChange;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 {
 	private final int _hpPercent;
-	private final Map<L2Character, AtomicBoolean> _updates = new ConcurrentHashMap<>();
+	private final Map<Creature, AtomicBoolean> _updates = new ConcurrentHashMap<>();
 	
 	protected AbstractConditionalHpEffect(StatsSet params, Stats stat)
 	{
@@ -45,7 +45,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		// Augmentation option
 		if (skill == null)
@@ -63,7 +63,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		// Augmentation option
 		if (skill == null)
@@ -76,27 +76,27 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	}
 	
 	@Override
-	public boolean canPump(L2Character effector, L2Character effected, Skill skill)
+	public boolean canPump(Creature effector, Creature effected, Skill skill)
 	{
 		return (_hpPercent <= 0) || (effected.getCurrentHpPercent() <= _hpPercent);
 	}
 	
 	private void onHpChange(OnCreatureHpChange event)
 	{
-		final L2Character activeChar = event.getCreature();
-		final AtomicBoolean update = _updates.get(activeChar);
-		if (canPump(null, activeChar, null))
+		final Creature creature = event.getCreature();
+		final AtomicBoolean update = _updates.get(creature);
+		if (canPump(null, creature, null))
 		{
 			if (update.get())
 			{
 				update.set(false);
-				activeChar.getStat().recalculateStats(true);
+				creature.getStat().recalculateStats(true);
 			}
 		}
 		else if (!update.get())
 		{
 			update.set(true);
-			activeChar.getStat().recalculateStats(true);
+			creature.getStat().recalculateStats(true);
 		}
 	}
 }

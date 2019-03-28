@@ -23,20 +23,20 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ManorManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.Util;
 
 @SuppressWarnings("unused")
-public class RequestBuyProcure extends L2GameClientPacket
+public class RequestBuyProcure extends GameClientPacket
 {
 	private int _listId;
 	private int _count;
@@ -82,7 +82,7 @@ public class RequestBuyProcure extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -112,12 +112,12 @@ public class RequestBuyProcure extends L2GameClientPacket
 		int slots = 0;
 		int weight = 0;
 		
-		if (!(player.getTarget() instanceof L2ManorManagerInstance))
+		if (!(player.getTarget() instanceof ManorManagerInstance))
 		{
 			return;
 		}
 		
-		final L2ManorManagerInstance manor = (L2ManorManagerInstance) player.getTarget();
+		final ManorManagerInstance manor = (ManorManagerInstance) player.getTarget();
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = _items[(i * 2) + 0];
@@ -132,7 +132,7 @@ public class RequestBuyProcure extends L2GameClientPacket
 				return;
 			}
 			
-			final L2Item template = ItemTable.getInstance().getTemplate(L2Manor.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward()));
+			final Item template = ItemTable.getInstance().getTemplate(Manor.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward()));
 			weight += count * template.getWeight();
 			
 			if (!template.isStackable())
@@ -171,15 +171,15 @@ public class RequestBuyProcure extends L2GameClientPacket
 				count = 0;
 			}
 			
-			final int rewradItemId = L2Manor.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
+			final int rewradItemId = Manor.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
 			
-			int rewradItemCount = 1; // L2Manor.getInstance().getRewardAmount(itemId, manor.getCastle().getCropReward(itemId));
+			int rewradItemCount = 1; // Manor.getInstance().getRewardAmount(itemId, manor.getCastle().getCropReward(itemId));
 			
 			rewradItemCount = count / rewradItemCount;
 			
 			// Add item to Inventory and adjust update packet
-			final L2ItemInstance item = player.getInventory().addItem("Manor", rewradItemId, rewradItemCount, player, manor);
-			final L2ItemInstance iteme = player.getInventory().destroyItemByItemId("Manor", itemId, count, player, manor);
+			final ItemInstance item = player.getInventory().addItem("Manor", rewradItemId, rewradItemCount, player, manor);
+			final ItemInstance iteme = player.getInventory().destroyItemByItemId("Manor", itemId, count, player, manor);
 			
 			if ((item == null) || (iteme == null))
 			{

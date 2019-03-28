@@ -16,9 +16,9 @@
  */
 package ai.areas.LairOfAntharas;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -38,12 +38,12 @@ public final class Pytan extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (getRandom(100) < 5)
 		{
-			final L2Npc spawnBanshee = addSpawn(KNORIKS, npc, false, 300000);
-			final L2Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
+			final Npc spawnBanshee = addSpawn(KNORIKS, npc, false, 300000);
+			final Playable attacker = isSummon ? killer.getServitors().values().stream().findFirst().orElse(killer.getPet()) : killer;
 			addAttackPlayerDesire(spawnBanshee, attacker);
 			npc.deleteMe();
 		}

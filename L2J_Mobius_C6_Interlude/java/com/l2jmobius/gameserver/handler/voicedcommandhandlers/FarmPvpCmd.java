@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.handler.voicedcommandhandlers;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 
@@ -34,7 +34,7 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		int placex;
 		int placey;
@@ -131,15 +131,15 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 	
 	class teleportTask implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		private final int _x;
 		private final int _y;
 		private final int _z;
 		private final String _message;
 		
-		teleportTask(L2PcInstance activeChar, int x, int y, int z, String message)
+		teleportTask(PlayerInstance activeChar, int x, int y, int z, String message)
 		{
-			_activeChar = activeChar;
+			_player = activeChar;
 			_x = x;
 			_y = y;
 			_z = z;
@@ -149,14 +149,14 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 		@Override
 		public void run()
 		{
-			if (_activeChar == null)
+			if (_player == null)
 			{
 				return;
 			}
 			
-			_activeChar.teleToLocation(_x, _y, _z);
-			_activeChar.sendMessage(_message);
-			_activeChar.setIsImobilised(false);
+			_player.teleToLocation(_x, _y, _z);
+			_player.sendMessage(_message);
+			_player.setIsImobilised(false);
 		}
 	}
 }

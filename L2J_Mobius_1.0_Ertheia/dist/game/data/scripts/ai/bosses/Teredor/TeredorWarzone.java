@@ -21,15 +21,15 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -99,7 +99,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -111,7 +111,7 @@ public final class TeredorWarzone extends AbstractInstance
 			{
 				case "EGG_SPAWN_TIMER":
 				{
-					final L2Npc minion = addSpawn(AWAKENED_MILLIPADE, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+					final Npc minion = addSpawn(AWAKENED_MILLIPADE, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 					WalkingManager.getInstance().startMoving(minion, getRandomEntry(WALKING_DATA.get(npcParams.getInt("Spot", 0))));
 					npc.deleteMe();
 					break;
@@ -179,7 +179,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -193,7 +193,7 @@ public final class TeredorWarzone extends AbstractInstance
 			case "checkConditions":
 			{
 				final Instance playerInstance = getPlayerInstance(player);
-				final L2Party playerParty = player.getParty();
+				final Party playerParty = player.getParty();
 				
 				if ((playerInstance != null) && (playerInstance.getTemplateId() == TEMPLATE_ID))
 				{
@@ -225,7 +225,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -238,7 +238,7 @@ public final class TeredorWarzone extends AbstractInstance
 				{
 					WalkingManager.getInstance().startMoving(npc, "trajan5");
 					getTimers().addRepeatingTimer("TEREDOR_LAIR_CHECK", 5000, npc, null);
-					((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+					((Attackable) npc).setCanReturnToSpawnPoint(false);
 					npc.initSeenCreatures();
 					break;
 				}
@@ -280,8 +280,8 @@ public final class TeredorWarzone extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
 		
 		if (isInInstance(instance))
@@ -306,7 +306,7 @@ public final class TeredorWarzone extends AbstractInstance
 						npc.setScriptValue(1);
 						addSkillCastDesire(npc, npc, FAKE_TEREDOR_JUMP_SKILL, 23);
 						getTimers().addTimer("FAKE_TEREDOR_ELITE_REUSE", 30000, n -> npc.setScriptValue(0));
-						final L2Npc minion = addSpawn(ELITE_MILLIPADE, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+						final Npc minion = addSpawn(ELITE_MILLIPADE, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 						addAttackPlayerDesire(minion, creature.getActingPlayer());
 					}
 					break;
@@ -372,7 +372,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onEventReceived(String eventName, L2Npc sender, L2Npc npc, L2Object reference)
+	public String onEventReceived(String eventName, Npc sender, Npc npc, WorldObject reference)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -386,10 +386,10 @@ public final class TeredorWarzone extends AbstractInstance
 						case "SCE_EGG_DIE":
 						{
 							npc.setDisplayEffect(2);
-							final L2PcInstance player = instance.getPlayerById(npc.getVariables().getInt("SEE_CREATURE_ID", 0));
+							final PlayerInstance player = instance.getPlayerById(npc.getVariables().getInt("SEE_CREATURE_ID", 0));
 							if (player != null)
 							{
-								final L2Npc minion = addSpawn(getRandomBoolean() ? HATCHET_MILLIPADE : HATCHET_UNDERBUG, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+								final Npc minion = addSpawn(getRandomBoolean() ? HATCHET_MILLIPADE : HATCHET_UNDERBUG, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 								addAttackPlayerDesire(minion, player, 23);
 								npc.deleteMe();
 							}
@@ -402,7 +402,7 @@ public final class TeredorWarzone extends AbstractInstance
 						}
 						case "SCE_BREAK_AN_EGG2":
 						{
-							final L2PcInstance player = reference == null ? instance.getPlayerById(npc.getVariables().getInt("SEE_CREATURE_ID", 0)) : reference.getActingPlayer();
+							final PlayerInstance player = reference == null ? instance.getPlayerById(npc.getVariables().getInt("SEE_CREATURE_ID", 0)) : reference.getActingPlayer();
 							int npcId = 0;
 							
 							switch (npc.getParameters().getInt("Spot", 0))
@@ -434,7 +434,7 @@ public final class TeredorWarzone extends AbstractInstance
 							
 							if (npcId > 0)
 							{
-								final L2Npc minion = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+								final Npc minion = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 								if ((player != null) && (minion.calculateDistance3D(player) < 2000))
 								{
 									addAttackPlayerDesire(minion, player, 23);
@@ -457,7 +457,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -487,7 +487,7 @@ public final class TeredorWarzone extends AbstractInstance
 							npc.breakAttack();
 							npc.breakCast();
 							npc.setWalking();
-							((L2Attackable) npc).clearAggroList();
+							((Attackable) npc).clearAggroList();
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
@@ -512,7 +512,7 @@ public final class TeredorWarzone extends AbstractInstance
 							npc.breakAttack();
 							npc.breakCast();
 							npc.setWalking();
-							((L2Attackable) npc).clearAggroList();
+							((Attackable) npc).clearAggroList();
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
@@ -550,7 +550,7 @@ public final class TeredorWarzone extends AbstractInstance
 							npc.breakAttack();
 							npc.breakCast();
 							npc.setWalking();
-							((L2Attackable) npc).clearAggroList();
+							((Attackable) npc).clearAggroList();
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
@@ -589,7 +589,7 @@ public final class TeredorWarzone extends AbstractInstance
 							npc.breakAttack();
 							npc.breakCast();
 							npc.setWalking();
-							((L2Attackable) npc).clearAggroList();
+							((Attackable) npc).clearAggroList();
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 							npc.broadcastSocialAction(4);
 							WalkingManager.getInstance().resumeMoving(npc);
@@ -624,7 +624,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))
@@ -640,7 +640,7 @@ public final class TeredorWarzone extends AbstractInstance
 				{
 					if (getRandom(4) < 3)
 					{
-						final L2Npc minion = addSpawn(getRandomBoolean() ? MUTANTED_MILLIPADE : TEREDOR_LARVA, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
+						final Npc minion = addSpawn(getRandomBoolean() ? MUTANTED_MILLIPADE : TEREDOR_LARVA, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 						addAttackPlayerDesire(minion, killer, 23);
 						npc.deleteMe();
 					}
@@ -652,7 +652,7 @@ public final class TeredorWarzone extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (isInInstance(instance))

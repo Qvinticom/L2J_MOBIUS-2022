@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ClanEntryStatus;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 
 /**
@@ -29,27 +29,27 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 public class RequestPledgeRecruitApplyInfo implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		final ClanEntryStatus status;
 		
-		if ((activeChar.getClan() != null) && activeChar.isClanLeader() && ClanEntryManager.getInstance().isClanRegistred(activeChar.getClanId()))
+		if ((player.getClan() != null) && player.isClanLeader() && ClanEntryManager.getInstance().isClanRegistred(player.getClanId()))
 		{
 			status = ClanEntryStatus.ORDERED;
 		}
-		else if ((activeChar.getClan() == null) && (ClanEntryManager.getInstance().isPlayerRegistred(activeChar.getObjectId())))
+		else if ((player.getClan() == null) && (ClanEntryManager.getInstance().isPlayerRegistred(player.getObjectId())))
 		{
 			status = ClanEntryStatus.WAITING;
 		}
@@ -58,6 +58,6 @@ public class RequestPledgeRecruitApplyInfo implements IClientIncomingPacket
 			status = ClanEntryStatus.DEFAULT;
 		}
 		
-		activeChar.sendPacket(new ExPledgeRecruitApplyInfo(status));
+		player.sendPacket(new ExPledgeRecruitApplyInfo(status));
 	}
 }

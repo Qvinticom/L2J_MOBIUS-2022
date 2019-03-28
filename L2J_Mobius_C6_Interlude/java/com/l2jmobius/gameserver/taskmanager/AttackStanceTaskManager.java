@@ -21,14 +21,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 
 /**
- * This class ...
  * @version $Revision: $ $Date: $
  * @author Luca Baldi
  */
@@ -36,7 +35,7 @@ public class AttackStanceTaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
-	protected Map<L2Character, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+	protected Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 	
 	private AttackStanceTaskManager()
 	{
@@ -48,19 +47,19 @@ public class AttackStanceTaskManager
 		return SingletonHolder._instance;
 	}
 	
-	public void addAttackStanceTask(L2Character actor)
+	public void addAttackStanceTask(Creature actor)
 	{
-		if (actor instanceof L2Summon)
+		if (actor instanceof Summon)
 		{
-			final L2Summon summon = (L2Summon) actor;
+			final Summon summon = (Summon) actor;
 			actor = summon.getOwner();
 		}
-		if (actor instanceof L2PcInstance)
+		if (actor instanceof PlayerInstance)
 		{
-			final L2PcInstance player = (L2PcInstance) actor;
-			for (L2CubicInstance cubic : player.getCubics().values())
+			final PlayerInstance player = (PlayerInstance) actor;
+			for (CubicInstance cubic : player.getCubics().values())
 			{
-				if (cubic.getId() != L2CubicInstance.LIFE_CUBIC)
+				if (cubic.getId() != CubicInstance.LIFE_CUBIC)
 				{
 					cubic.doAction();
 				}
@@ -69,21 +68,21 @@ public class AttackStanceTaskManager
 		_attackStanceTasks.put(actor, System.currentTimeMillis());
 	}
 	
-	public void removeAttackStanceTask(L2Character actor)
+	public void removeAttackStanceTask(Creature actor)
 	{
-		if (actor instanceof L2Summon)
+		if (actor instanceof Summon)
 		{
-			final L2Summon summon = (L2Summon) actor;
+			final Summon summon = (Summon) actor;
 			actor = summon.getOwner();
 		}
 		_attackStanceTasks.remove(actor);
 	}
 	
-	public boolean getAttackStanceTask(L2Character actor)
+	public boolean getAttackStanceTask(Creature actor)
 	{
-		if (actor instanceof L2Summon)
+		if (actor instanceof Summon)
 		{
-			final L2Summon summon = (L2Summon) actor;
+			final Summon summon = (Summon) actor;
 			actor = summon.getOwner();
 		}
 		return _attackStanceTasks.containsKey(actor);
@@ -105,14 +104,14 @@ public class AttackStanceTaskManager
 				{
 					synchronized (this)
 					{
-						for (L2Character actor : _attackStanceTasks.keySet())
+						for (Creature actor : _attackStanceTasks.keySet())
 						{
 							if ((current - _attackStanceTasks.get(actor)) > 15000)
 							{
 								actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
-								if ((actor instanceof L2PcInstance) && (((L2PcInstance) actor).getPet() != null))
+								if ((actor instanceof PlayerInstance) && (((PlayerInstance) actor).getPet() != null))
 								{
-									((L2PcInstance) actor).getPet().broadcastPacket(new AutoAttackStop(((L2PcInstance) actor).getPet().getObjectId()));
+									((PlayerInstance) actor).getPet().broadcastPacket(new AutoAttackStop(((PlayerInstance) actor).getPet().getObjectId()));
 								}
 								actor.getAI().setAutoAttacking(false);
 								_attackStanceTasks.remove(actor);

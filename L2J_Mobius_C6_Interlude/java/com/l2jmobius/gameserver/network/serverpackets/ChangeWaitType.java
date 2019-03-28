@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * sample 0000: 3f 2a 89 00 4c 01 00 00 00 0a 15 00 00 66 fe 00 ?*..L........f.. 0010: 00 7c f1 ff ff .|... format dd ddd
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ChangeWaitType extends L2GameServerPacket
+public class ChangeWaitType extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _moveType;
 	private final int _x;
 	private final int _y;
@@ -35,21 +35,21 @@ public class ChangeWaitType extends L2GameServerPacket
 	public static final int WT_START_FAKEDEATH = 2;
 	public static final int WT_STOP_FAKEDEATH = 3;
 	
-	public ChangeWaitType(L2Character character, int newMoveType)
+	public ChangeWaitType(Creature creature, int newMoveType)
 	{
-		_charObjId = character.getObjectId();
+		_objectId = creature.getObjectId();
 		_moveType = newMoveType;
 		
-		_x = character.getX();
-		_y = character.getY();
-		_z = character.getZ();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x2f);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_moveType);
 		writeD(_x);
 		writeD(_y);

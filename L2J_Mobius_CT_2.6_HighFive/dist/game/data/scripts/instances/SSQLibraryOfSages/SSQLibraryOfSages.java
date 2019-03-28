@@ -19,8 +19,8 @@ package instances.SSQLibraryOfSages;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -65,7 +65,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -75,14 +75,14 @@ public final class SSQLibraryOfSages extends AbstractInstance
 				case "TELEPORT2":
 				{
 					teleportPlayer(player, LIBRARY_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(LIBRARY_LOC.getX(), LIBRARY_LOC.getY(), LIBRARY_LOC.getZ(), 0, world.getInstanceId());
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(LIBRARY_LOC.getX(), LIBRARY_LOC.getY(), LIBRARY_LOC.getZ(), 0, world.getInstanceId());
 					break;
 				}
 				case "exit":
 				{
 					cancelQuestTimer("FOLLOW", npc, player);
 					player.teleToLocation(EXIT_LOC);
-					world.getParameters().getObject("elcadia", L2Npc.class).deleteMe();
+					world.getParameters().getObject("elcadia", Npc.class).deleteMe();
 					break;
 				}
 				case "FOLLOW":
@@ -97,7 +97,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 				{
 					cancelQuestTimer("FOLLOW", npc, player);
 					teleportPlayer(player, START_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(START_LOC.getX(), START_LOC.getY(), START_LOC.getZ(), 0, world.getInstanceId());
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(START_LOC.getX(), START_LOC.getY(), START_LOC.getZ(), 0, world.getInstanceId());
 					break;
 				}
 			}
@@ -106,14 +106,14 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		enterInstance(talker, TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
 	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -123,9 +123,9 @@ public final class SSQLibraryOfSages extends AbstractInstance
 		spawnElcadia(player, world);
 	}
 	
-	private void spawnElcadia(L2PcInstance player, InstanceWorld world)
+	private void spawnElcadia(PlayerInstance player, InstanceWorld world)
 	{
-		final L2Npc elcadia = world.getParameters().getObject("elcadia", L2Npc.class);
+		final Npc elcadia = world.getParameters().getObject("elcadia", Npc.class);
 		if (elcadia != null)
 		{
 			elcadia.deleteMe();

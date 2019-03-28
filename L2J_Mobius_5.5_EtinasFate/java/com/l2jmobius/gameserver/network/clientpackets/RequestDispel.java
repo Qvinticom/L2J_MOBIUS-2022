@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author KenM
@@ -36,7 +36,7 @@ public class RequestDispel implements IClientIncomingPacket
 	private int _skillSubLevel;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_skillId = packet.readD();
@@ -46,14 +46,14 @@ public class RequestDispel implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLevel <= 0))
 		{
 			return;
 		}
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -74,19 +74,19 @@ public class RequestDispel implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (activeChar.getObjectId() == _objectId)
+		if (player.getObjectId() == _objectId)
 		{
-			activeChar.stopSkillEffects(true, _skillId);
+			player.stopSkillEffects(true, _skillId);
 		}
 		else
 		{
-			final L2Summon pet = activeChar.getPet();
+			final Summon pet = player.getPet();
 			if ((pet != null) && (pet.getObjectId() == _objectId))
 			{
 				pet.stopSkillEffects(true, _skillId);
 			}
 			
-			final L2Summon servitor = activeChar.getServitor(_objectId);
+			final Summon servitor = player.getServitor(_objectId);
 			if (servitor != null)
 			{
 				servitor.stopSkillEffects(true, _skillId);

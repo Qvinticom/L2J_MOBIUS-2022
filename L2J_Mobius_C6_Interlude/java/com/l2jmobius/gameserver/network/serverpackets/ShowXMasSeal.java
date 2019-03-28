@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * @author devScarlet & mrTJO
  */
-public class ShowXMasSeal extends L2GameServerPacket
+public class ShowXMasSeal extends GameServerPacket
 {
 	private final int _item;
 	

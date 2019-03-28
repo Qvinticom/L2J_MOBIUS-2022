@@ -17,8 +17,8 @@
 package ai.others.LaVieEnRose;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -48,7 +48,7 @@ public final class LaVieEnRose extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -120,7 +120,7 @@ public final class LaVieEnRose extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private boolean canUseBeautyShop(L2PcInstance player)
+	private boolean canUseBeautyShop(PlayerInstance player)
 	{
 		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
 		{
@@ -147,7 +147,7 @@ public final class LaVieEnRose extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("SPAM_TEXT", (5 * 60 * 1000), npc, null, true);
 		return super.onSpawn(npc);

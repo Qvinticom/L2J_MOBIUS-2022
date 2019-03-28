@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
@@ -37,41 +37,41 @@ public class Mdam implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		final boolean bss = activeChar.checkBss();
-		final boolean sps = activeChar.checkSps();
+		final boolean bss = creature.checkBss();
+		final boolean sps = creature.checkSps();
 		
-		for (L2Object target2 : targets)
+		for (WorldObject target2 : targets)
 		{
 			if (target2 == null)
 			{
 				continue;
 			}
 			
-			L2Character target = (L2Character) target2;
+			Creature target = (Creature) target2;
 			
-			if ((activeChar instanceof L2PcInstance) && (target instanceof L2PcInstance) && target.isAlikeDead() && target.isFakeDeath())
+			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);
 			}
 			else if (target.isAlikeDead())
 			{
-				if ((skill.getTargetType() == L2Skill.SkillTargetType.TARGET_AREA_CORPSE_MOB) && (target instanceof L2NpcInstance))
+				if ((skill.getTargetType() == Skill.SkillTargetType.TARGET_AREA_CORPSE_MOB) && (target instanceof NpcInstance))
 				{
-					((L2NpcInstance) target).endDecayTask();
+					((NpcInstance) target).endDecayTask();
 				}
 				continue;
 			}
 			
-			final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill));
+			final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, skill));
 			
-			final int damage = (int) Formulas.calcMagicDam(activeChar, target, skill, sps, bss, mcrit);
+			final int damage = (int) Formulas.calcMagicDam(creature, target, skill, sps, bss, mcrit);
 			
 			// Why are we trying to reduce the current target HP here?
 			// Why not inside the below "if" condition, after the effects processing as it should be?
@@ -88,59 +88,59 @@ public class Mdam implements ISkillHandler
 					target.breakCast();
 				}
 				
-				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
+				creature.sendDamageMessage(target, damage, mcrit, false, false);
 				
 				if (skill.hasEffects())
 				{
 					if (target.reflectSkill(skill))
 					{
-						activeChar.stopSkillEffects(skill.getId());
-						skill.getEffects(null, activeChar, false, sps, bss);
+						creature.stopSkillEffects(skill.getId());
+						skill.getEffects(null, creature, false, sps, bss);
 						SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 						sm.addSkillName(skill.getId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
-					else if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, false, sps, bss)) // activate attacked effects, if any
+					else if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, false, sps, bss)) // activate attacked effects, if any
 					{
 						// Like L2OFF must remove the first effect only if the second effect is successful
 						target.stopSkillEffects(skill.getId());
-						skill.getEffects(activeChar, target, false, sps, bss);
+						skill.getEffects(creature, target, false, sps, bss);
 					}
 					else
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 						sm.addString(target.getName());
 						sm.addSkillName(skill.getDisplayId());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 					}
 				}
 				
-				target.reduceCurrentHp(damage, activeChar);
+				target.reduceCurrentHp(damage, creature);
 			}
 		}
 		
 		if (bss)
 		{
-			activeChar.removeBss();
+			creature.removeBss();
 		}
 		else if (sps)
 		{
-			activeChar.removeSps();
+			creature.removeSps();
 		}
 		
 		// self Effect :]
-		L2Effect effect = activeChar.getFirstEffect(skill.getId());
+		Effect effect = creature.getFirstEffect(skill.getId());
 		if ((effect != null) && effect.isSelfEffect())
 		{
 			// Replace old effect with new one.
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(activeChar);
+		skill.getEffectsSelf(creature);
 		
 		if (skill.isSuicideAttack())
 		{
-			activeChar.doDie(null);
-			activeChar.setCurrentHp(0);
+			creature.doDie(null);
+			creature.setCurrentHp(0);
 		}
 	}
 	

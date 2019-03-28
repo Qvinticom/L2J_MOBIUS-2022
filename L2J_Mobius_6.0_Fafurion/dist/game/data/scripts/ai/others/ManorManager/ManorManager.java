@@ -18,16 +18,16 @@ package ai.others.ManorManager;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.BuyListSeed;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowCropInfo;
@@ -71,7 +71,7 @@ public final class ManorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -88,12 +88,12 @@ public final class ManorManager extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (Config.ALLOW_MANOR)
 		{
 			final int castleId = npc.getParameters().getInt("manor_id", -1);
-			if (!player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) && player.isClanLeader() && (castleId == player.getClan().getCastleId()))
+			if (!player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) && player.isClanLeader() && (castleId == player.getClan().getCastleId()))
 			{
 				return "manager-lord.htm";
 			}
@@ -109,14 +109,14 @@ public final class ManorManager extends AbstractNpcAI
 	// @formatter:on
 	public final void onNpcManorBypass(OnNpcManorBypass evt)
 	{
-		final L2PcInstance player = evt.getActiveChar();
+		final PlayerInstance player = evt.getActiveChar();
 		if (CastleManorManager.getInstance().isUnderMaintenance())
 		{
 			player.sendPacket(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
 			return;
 		}
 		
-		final L2Npc npc = evt.getTarget();
+		final Npc npc = evt.getTarget();
 		final int templateId = npc.getParameters().getInt("manor_id", -1);
 		final int castleId = (evt.getManorId() == -1) ? templateId : evt.getManorId();
 		switch (evt.getRequest())
@@ -153,7 +153,7 @@ public final class ManorManager extends AbstractNpcAI
 			}
 			case 6: // Buy harvester
 			{
-				((L2MerchantInstance) npc).showBuyWindow(player, 300000 + npc.getId());
+				((MerchantInstance) npc).showBuyWindow(player, 300000 + npc.getId());
 				break;
 			}
 			case 9: // Edit sales (Crop sales)

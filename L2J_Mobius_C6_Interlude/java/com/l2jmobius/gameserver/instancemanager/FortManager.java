@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 
 /**
@@ -44,7 +44,7 @@ public class FortManager
 		load();
 	}
 	
-	public final int findNearestFortIndex(L2Object obj)
+	public final int findNearestFortIndex(WorldObject obj)
 	{
 		int index = getFortIndex(obj);
 		if (index < 0)
@@ -109,7 +109,7 @@ public class FortManager
 		return null;
 	}
 	
-	public final Fort getFortByOwner(L2Clan clan)
+	public final Fort getFortByOwner(Clan clan)
 	{
 		for (Fort f : _forts)
 		{
@@ -145,7 +145,7 @@ public class FortManager
 		return null;
 	}
 	
-	public final Fort getFort(L2Object activeObject)
+	public final Fort getFort(WorldObject activeObject)
 	{
 		return getFort(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
@@ -164,7 +164,7 @@ public class FortManager
 		return -1;
 	}
 	
-	public final int getFortIndex(L2Object activeObject)
+	public final int getFortIndex(WorldObject activeObject)
 	{
 		return getFortIndex(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}

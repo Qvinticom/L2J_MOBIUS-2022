@@ -36,10 +36,10 @@ import com.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
 import com.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.util.MathUtil;
 
@@ -80,9 +80,9 @@ public class GeoEngine
 		
 		// load geo files according to geoengine config setup
 		int loaded = 0;
-		for (int rx = L2World.TILE_X_MIN; rx <= L2World.TILE_X_MAX; rx++)
+		for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++)
 		{
-			for (int ry = L2World.TILE_Y_MIN; ry <= L2World.TILE_Y_MAX; ry++)
+			for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++)
 			{
 				final File f = new File(Config.GEODATA_PATH + String.format(GeoFormat.L2D.getFilename(), rx, ry));
 				if (f.exists() && !f.isDirectory())
@@ -141,8 +141,8 @@ public class GeoEngine
 			buffer.order(ByteOrder.LITTLE_ENDIAN);
 			
 			// get block indexes
-			final int blockX = (regionX - L2World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
-			final int blockY = (regionY - L2World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
+			final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
+			final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
 			
 			// loop over region blocks
 			for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++)
@@ -210,8 +210,8 @@ public class GeoEngine
 	private final void loadNullBlocks(int regionX, int regionY)
 	{
 		// get block indexes
-		final int blockX = (regionX - L2World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
-		final int blockY = (regionY - L2World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
+		final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
+		final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
 		
 		// load all null blocks
 		for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++)
@@ -232,7 +232,7 @@ public class GeoEngine
 	 */
 	public static int getGeoX(int worldX)
 	{
-		return (MathUtil.limit(worldX, L2World.MAP_MIN_X, L2World.MAP_MAX_X) - L2World.MAP_MIN_X) >> 4;
+		return (MathUtil.limit(worldX, World.MAP_MIN_X, World.MAP_MAX_X) - World.MAP_MIN_X) >> 4;
 	}
 	
 	/**
@@ -242,7 +242,7 @@ public class GeoEngine
 	 */
 	public static int getGeoY(int worldY)
 	{
-		return (MathUtil.limit(worldY, L2World.MAP_MIN_Y, L2World.MAP_MAX_Y) - L2World.MAP_MIN_Y) >> 4;
+		return (MathUtil.limit(worldY, World.MAP_MIN_Y, World.MAP_MAX_Y) - World.MAP_MIN_Y) >> 4;
 	}
 	
 	/**
@@ -252,7 +252,7 @@ public class GeoEngine
 	 */
 	public static int getWorldX(int geoX)
 	{
-		return (MathUtil.limit(geoX, 0, GeoStructure.GEO_CELLS_X) << 4) + L2World.MAP_MIN_X + 8;
+		return (MathUtil.limit(geoX, 0, GeoStructure.GEO_CELLS_X) << 4) + World.MAP_MIN_X + 8;
 	}
 	
 	/**
@@ -262,7 +262,7 @@ public class GeoEngine
 	 */
 	public static int getWorldY(int geoY)
 	{
-		return (MathUtil.limit(geoY, 0, GeoStructure.GEO_CELLS_Y) << 4) + L2World.MAP_MIN_Y + 8;
+		return (MathUtil.limit(geoY, 0, GeoStructure.GEO_CELLS_Y) << 4) + World.MAP_MIN_Y + 8;
 	}
 	
 	/**
@@ -295,7 +295,7 @@ public class GeoEngine
 		final ABlock block = getBlock(geoX, geoY);
 		if (block == null) // null block check
 		{
-			// TODO: Find when this can be null. (Bad geodata? Check L2World getRegion method.)
+			// TODO: Find when this can be null. (Bad geodata? Check World getRegion method.)
 			// LOGGER.warning("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
 			return false;
 		}
@@ -354,14 +354,14 @@ public class GeoEngine
 	// PATHFINDING
 	
 	/**
-	 * Check line of sight from {@link L2Object} to {@link L2Object}.
+	 * Check line of sight from {@link WorldObject} to {@link WorldObject}.
 	 * @param origin : The origin object.
 	 * @param target : The target object.
 	 * @return {@code boolean} : True if origin can see target
 	 */
-	public final boolean canSeeTarget(L2Object origin, L2Object target)
+	public final boolean canSeeTarget(WorldObject origin, WorldObject target)
 	{
-		if (target.isDoor() || (target.isCharacter() && ((L2Character) target).isFlying()))
+		if (target.isDoor() || (target.isCreature() && ((Creature) target).isFlying()))
 		{
 			return true;
 		}
@@ -415,15 +415,15 @@ public class GeoEngine
 		
 		// get origin and target height, real height = collision height * 2
 		double oheight = 0;
-		if (origin.isCharacter())
+		if (origin.isCreature())
 		{
-			oheight = ((L2Character) origin).getCollisionHeight() * 2;
+			oheight = ((Creature) origin).getCollisionHeight() * 2;
 		}
 		
 		double theight = 0;
-		if (target.isCharacter())
+		if (target.isCreature())
 		{
-			theight = ((L2Character) target).getCollisionHeight() * 2;
+			theight = ((Creature) target).getCollisionHeight() * 2;
 		}
 		
 		// perform geodata check
@@ -431,12 +431,12 @@ public class GeoEngine
 	}
 	
 	/**
-	 * Check line of sight from {@link L2Object} to {@link Location}.
+	 * Check line of sight from {@link WorldObject} to {@link Location}.
 	 * @param origin : The origin object.
 	 * @param position : The target position.
 	 * @return {@code boolean} : True if object can see position
 	 */
-	public final boolean canSeeTarget(L2Object origin, Location position)
+	public final boolean canSeeTarget(WorldObject origin, Location position)
 	{
 		// get origin and target world coordinates
 		final int ox = origin.getX();
@@ -487,9 +487,9 @@ public class GeoEngine
 		
 		// get origin and target height, real height = collision height * 2
 		double oheight = 0;
-		if (origin.isCharacter())
+		if (origin.isCreature())
 		{
-			oheight = ((L2Character) origin).getTemplate().getCollisionHeight();
+			oheight = ((Creature) origin).getTemplate().getCollisionHeight();
 		}
 		
 		// perform geodata check

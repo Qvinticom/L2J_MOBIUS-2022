@@ -18,7 +18,7 @@ package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Run/Walk player action handler.
@@ -27,15 +27,15 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public final class RunWalk implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (activeChar.isRunning())
+		if (player.isRunning())
 		{
-			activeChar.setWalking();
+			player.setWalking();
 		}
 		else
 		{
-			activeChar.setRunning();
+			player.setRunning();
 		}
 	}
 }

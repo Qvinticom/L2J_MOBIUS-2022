@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * format (c) dd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:40 $
  */
-public class SetSummonRemainTime extends L2GameServerPacket
+public class SetSummonRemainTime extends GameServerPacket
 {
 	private final int _maxTime;
 	private final int _remainingTime;

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,9 +25,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class VehicleCheckLocation implements IClientOutgoingPacket
 {
-	private final L2Character _boat;
+	private final Creature _boat;
 	
-	public VehicleCheckLocation(L2Character boat)
+	public VehicleCheckLocation(Creature boat)
 	{
 		_boat = boat;
 	}

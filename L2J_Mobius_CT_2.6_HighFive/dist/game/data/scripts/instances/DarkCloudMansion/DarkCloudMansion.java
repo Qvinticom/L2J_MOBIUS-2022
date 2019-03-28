@@ -21,10 +21,10 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -210,9 +210,9 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected static class DMCNpc
 	{
-		public L2Npc npc;
+		public Npc npc;
 		public boolean isDead = false;
-		public L2Npc golem = null;
+		public Npc golem = null;
 		public int status = 0;
 		public int order = 0;
 		public int count = 0;
@@ -228,9 +228,9 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean checkConditions(L2PcInstance player)
+	protected boolean checkConditions(PlayerInstance player)
 	{
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -246,7 +246,7 @@ public final class DarkCloudMansion extends AbstractInstance
 			player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
 			return false;
 		}
-		for (L2PcInstance partyMember : party.getMembers())
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			if (partyMember.getLevel() < 78)
 			{
@@ -268,15 +268,15 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
 			runStartRoom(world);
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			if (party != null)
 			{
-				for (L2PcInstance partyMember : party.getMembers())
+				for (PlayerInstance partyMember : party.getMembers())
 				{
 					if (partyMember.getQuestState(getName()) == null)
 					{
@@ -684,7 +684,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.setParameter("FifthRoom", FifthRoom);
 	}
 	
-	protected boolean checkKillProgress(L2Npc npc, DMCRoom room)
+	protected boolean checkKillProgress(Npc npc, DMCRoom room)
 	{
 		boolean cont = true;
 		for (DMCNpc npcobj : room.npcList)
@@ -721,7 +721,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		}
 	}
 	
-	protected void checkStone(L2Npc npc, int order[], DMCNpc npcObj, InstanceWorld world)
+	protected void checkStone(Npc npc, int order[], DMCNpc npcObj, InstanceWorld world)
 	{
 		for (int i = 1; i < 7; i++)
 		{
@@ -755,7 +755,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.getParameters().remove("FifthRoom");
 	}
 	
-	protected void checkBelethSample(InstanceWorld world, L2Npc npc, L2PcInstance player)
+	protected void checkBelethSample(InstanceWorld world, Npc npc, PlayerInstance player)
 	{
 		final DMCRoom FifthRoom = world.getParameters().getObject("FifthRoom", DMCRoom.class);
 		
@@ -788,7 +788,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		}
 	}
 	
-	protected void killedBelethSample(InstanceWorld world, L2Npc npc)
+	protected void killedBelethSample(InstanceWorld world, Npc npc)
 	{
 		int decayedSamples = 0;
 		final DMCRoom FifthRoom = world.getParameters().getObject("FifthRoom", DMCRoom.class);
@@ -864,7 +864,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		}
 	}
 	
-	protected void chkShadowColumn(InstanceWorld world, L2Npc npc)
+	protected void chkShadowColumn(InstanceWorld world, Npc npc)
 	{
 		final DMCRoom ForthRoom = world.getParameters().getObject("ForthRoom", DMCRoom.class);
 		
@@ -889,7 +889,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc == null)
 		{
@@ -951,7 +951,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1029,7 +1029,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1058,7 +1058,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -1096,7 +1096,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		if (npcId == YIYEN)

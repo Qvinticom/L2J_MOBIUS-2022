@@ -3849,7 +3849,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Oblivion -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -3908,7 +3908,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Weak Constitution -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -3979,7 +3979,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Thin Skin -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4038,7 +4038,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Enervation -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4092,7 +4092,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Spite -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4145,7 +4145,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Mental Impoverish -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4317,7 +4317,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Healer Ability - Heal -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>2</chance>
@@ -4338,7 +4338,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Summoner Ability - Spirit -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>2</chance>
@@ -4370,7 +4370,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Flame Armor -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
@@ -4406,7 +4406,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Frost Armor -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
@@ -4442,7 +4442,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Hurricane Armor -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
@@ -4548,7 +4548,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Excessive Royalty -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
@@ -4568,7 +4568,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Mutual Response -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>

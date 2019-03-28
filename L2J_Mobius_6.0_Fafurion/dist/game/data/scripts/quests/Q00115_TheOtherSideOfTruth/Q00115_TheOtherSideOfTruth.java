@@ -17,8 +17,8 @@
 package quests.Q00115_TheOtherSideOfTruth;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -55,10 +55,10 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -68,53 +68,53 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			case "32020-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "32020-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					takeItems(player, MISAS_LETTER, -1);
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32020-05.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					takeItems(player, MISAS_LETTER, -1);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32020-10.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32020-11.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32020-12.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -129,9 +129,9 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32020-15.html":
 			{
-				if (st.isCond(4))
+				if (qs.isCond(4))
 				{
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					playSound(player, QuestSound.AMBSOUND_WINGFLAP);
 					htmltext = event;
 				}
@@ -139,16 +139,16 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32020-23.html":
 			{
-				if (st.isCond(9))
+				if (qs.isCond(9))
 				{
-					st.setCond(10, true);
+					qs.setCond(10, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "finish":
 			{
-				if (st.isCond(10))
+				if (qs.isCond(10))
 				{
 					if (hasQuestItems(player, PIECE_OF_TABLET))
 					{
@@ -156,7 +156,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 						{
 							giveAdena(player, 193350, true);
 							addExpAndSp(player, 956590, 229);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "32020-25.html";
 						}
 						else
@@ -166,7 +166,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					else
 					{
-						st.setCond(11, true);
+						qs.setCond(11, true);
 						htmltext = "32020-26.html";
 						playSound(player, QuestSound.AMBSOUND_THUNDER);
 					}
@@ -175,7 +175,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "finish2":
 			{
-				if (st.isCond(10))
+				if (qs.isCond(10))
 				{
 					if (hasQuestItems(player, PIECE_OF_TABLET))
 					{
@@ -183,7 +183,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 						{
 							giveAdena(player, 193350, true);
 							addExpAndSp(player, 956590, 229);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "32020-27.html";
 						}
 						else
@@ -193,7 +193,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					else
 					{
-						st.setCond(11, true);
+						qs.setCond(11, true);
 						htmltext = "32020-28.html";
 						playSound(player, QuestSound.AMBSOUND_THUNDER);
 					}
@@ -202,20 +202,20 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32018-05.html":
 			{
-				if (st.isCond(6) && (hasQuestItems(player, RAFFORTYS_LETTER)))
+				if (qs.isCond(6) && (hasQuestItems(player, RAFFORTYS_LETTER)))
 				{
 					takeItems(player, RAFFORTYS_LETTER, -1);
-					st.setCond(7, true);
+					qs.setCond(7, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32022-02.html":
 			{
-				if (st.isCond(8))
+				if (qs.isCond(8))
 				{
 					giveItems(player, REPORT_PIECE, 1);
-					st.setCond(9, true);
+					qs.setCond(9, true);
 					htmltext = event;
 				}
 				break;
@@ -226,13 +226,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 				{
 					case ICE_SCULPTURE1:
 					{
-						if (st.isCond(7) && ((st.getInt("ex") % 2) <= 1))
+						if (qs.isCond(7) && ((qs.getInt("ex") % 2) <= 1))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 6) || (ex == 10) || (ex == 12))
 							{
 								ex++;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								giveItems(player, PIECE_OF_TABLET, 1);
 								htmltext = event;
 							}
@@ -241,13 +241,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE2:
 					{
-						if (st.isCond(7) && ((st.getInt("ex") % 4) <= 1))
+						if (qs.isCond(7) && ((qs.getInt("ex") % 4) <= 1))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 5) || (ex == 9) || (ex == 12))
 							{
 								ex += 2;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								giveItems(player, PIECE_OF_TABLET, 1);
 								htmltext = event;
 							}
@@ -256,13 +256,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE3:
 					{
-						if (st.isCond(7) && ((st.getInt("ex") % 8) <= 3))
+						if (qs.isCond(7) && ((qs.getInt("ex") % 8) <= 3))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 3) || (ex == 9) || (ex == 10))
 							{
 								ex += 4;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								giveItems(player, PIECE_OF_TABLET, 1);
 								htmltext = event;
 							}
@@ -271,13 +271,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE4:
 					{
-						if (st.isCond(7) && (st.getInt("ex") <= 7))
+						if (qs.isCond(7) && (qs.getInt("ex") <= 7))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 3) || (ex == 5) || (ex == 6))
 							{
 								ex += 8;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								giveItems(player, PIECE_OF_TABLET, 1);
 								htmltext = event;
 							}
@@ -293,13 +293,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 				{
 					case ICE_SCULPTURE1:
 					{
-						if (st.isCond(7) && ((st.getInt("ex") % 2) <= 1))
+						if (qs.isCond(7) && ((qs.getInt("ex") % 2) <= 1))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 6) || (ex == 10) || (ex == 12))
 							{
 								ex++;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								htmltext = event;
 							}
 						}
@@ -307,13 +307,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE2:
 					{
-						if (st.isCond(7) && ((st.getInt("ex") % 4) <= 1))
+						if (qs.isCond(7) && ((qs.getInt("ex") % 4) <= 1))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 5) || (ex == 9) || (ex == 12))
 							{
 								ex += 2;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								htmltext = event;
 							}
 						}
@@ -321,13 +321,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE3:
 					{
-						if (st.isCond(7) && ((st.getInt("ex") % 8) <= 3))
+						if (qs.isCond(7) && ((qs.getInt("ex") % 8) <= 3))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 3) || (ex == 9) || (ex == 12))
 							{
 								ex += 4;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								htmltext = event;
 							}
 						}
@@ -335,13 +335,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE4:
 					{
-						if (st.isCond(7) && (st.getInt("ex") <= 7))
+						if (qs.isCond(7) && (qs.getInt("ex") <= 7))
 						{
-							int ex = st.getInt("ex");
+							int ex = qs.getInt("ex");
 							if ((ex == 3) || (ex == 5) || (ex == 6))
 							{
 								ex += 8;
-								st.set("ex", ex);
+								qs.set("ex", ex);
 								htmltext = event;
 							}
 						}
@@ -356,36 +356,36 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 				{
 					case ICE_SCULPTURE1:
 					{
-						if (st.isCond(7) && (st.getInt("ex") == 14))
+						if (qs.isCond(7) && (qs.getInt("ex") == 14))
 						{
-							st.setCond(8);
+							qs.setCond(8);
 							htmltext = event;
 						}
 						break;
 					}
 					case ICE_SCULPTURE2:
 					{
-						if (st.isCond(7) && (st.getInt("ex") == 13))
+						if (qs.isCond(7) && (qs.getInt("ex") == 13))
 						{
-							st.setCond(8);
+							qs.setCond(8);
 							htmltext = event;
 						}
 						break;
 					}
 					case ICE_SCULPTURE3:
 					{
-						if (st.isCond(7) && (st.getInt("ex") == 11))
+						if (qs.isCond(7) && (qs.getInt("ex") == 11))
 						{
-							st.setCond(8);
+							qs.setCond(8);
 							htmltext = event;
 						}
 						break;
 					}
 					case ICE_SCULPTURE4:
 					{
-						if (st.isCond(7) && (st.getInt("ex") == 7))
+						if (qs.isCond(7) && (qs.getInt("ex") == 7))
 						{
-							st.setCond(8);
+							qs.setCond(8);
 							htmltext = event;
 						}
 						break;
@@ -398,16 +398,16 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -428,7 +428,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 				{
 					case RAFFORTY:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -453,7 +453,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 							case 5:
 							{
 								giveItems(player, RAFFORTYS_LETTER, 1);
-								st.setCond(6, true);
+								qs.setCond(6, true);
 								htmltext = "32020-18.html";
 								break;
 							}
@@ -501,7 +501,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 									{
 										giveAdena(player, 193350, true);
 										addExpAndSp(player, 956590, 229);
-										st.exitQuest(false, true);
+										qs.exitQuest(false, true);
 										htmltext = "32020-30.html";
 									}
 									else
@@ -518,12 +518,12 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case MISA:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
 								giveItems(player, MISAS_LETTER, 1);
-								st.setCond(2, true);
+								qs.setCond(2, true);
 								htmltext = "32018-01.html";
 								break;
 							}
@@ -560,7 +560,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case KIER:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 8:
 							{
@@ -593,13 +593,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE1:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 7:
 							{
-								if ((st.getInt("ex") % 2) <= 1)
+								if ((qs.getInt("ex") % 2) <= 1)
 								{
-									int ex = st.getInt("ex");
+									int ex = qs.getInt("ex");
 									if ((ex == 6) || (ex == 10) || (ex == 12))
 									{
 										htmltext = "32021-01.html";
@@ -611,7 +611,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 									else
 									{
 										ex++;
-										st.set("ex", ex);
+										qs.set("ex", ex);
 										htmltext = "32021-07.html";
 									}
 								}
@@ -644,13 +644,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE2:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 7:
 							{
-								if ((st.getInt("ex") % 4) <= 1)
+								if ((qs.getInt("ex") % 4) <= 1)
 								{
-									int ex = st.getInt("ex");
+									int ex = qs.getInt("ex");
 									if ((ex == 5) || (ex == 9) || (ex == 12))
 									{
 										htmltext = "32021-01.html";
@@ -662,7 +662,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 									else
 									{
 										ex += 2;
-										st.set("ex", ex);
+										qs.set("ex", ex);
 										htmltext = "32021-07.html";
 									}
 								}
@@ -695,13 +695,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE3:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 7:
 							{
-								if ((st.getInt("ex") % 8) <= 3)
+								if ((qs.getInt("ex") % 8) <= 3)
 								{
-									int ex = st.getInt("ex");
+									int ex = qs.getInt("ex");
 									if ((ex == 3) || (ex == 9) || (ex == 10))
 									{
 										htmltext = "32021-01.html";
@@ -713,7 +713,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 									else
 									{
 										ex += 4;
-										st.set("ex", ex);
+										qs.set("ex", ex);
 										htmltext = "32021-07.html";
 									}
 								}
@@ -746,13 +746,13 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					}
 					case ICE_SCULPTURE4:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 7:
 							{
-								if (st.getInt("ex") <= 7)
+								if (qs.getInt("ex") <= 7)
 								{
-									int ex = st.getInt("ex");
+									int ex = qs.getInt("ex");
 									if ((ex == 3) || (ex == 5) || (ex == 6))
 									{
 										htmltext = "32021-01.html";
@@ -764,7 +764,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 									else
 									{
 										ex += 8;
-										st.set("ex", ex);
+										qs.set("ex", ex);
 										htmltext = "32021-07.html";
 									}
 								}

@@ -32,8 +32,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.multisell.Entry;
 import com.l2jmobius.gameserver.model.multisell.Ingredient;
 import com.l2jmobius.gameserver.model.multisell.ListContainer;
@@ -232,7 +232,7 @@ public final class MultisellData implements IGameXmlReader
 	 * @param productMultiplier
 	 * @param ingredientMultiplier
 	 */
-	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
+	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
 	{
 		final ListContainer template = _entries.get(listId);
 		if (template == null)
@@ -273,12 +273,12 @@ public final class MultisellData implements IGameXmlReader
 		player.setMultiSell(list);
 	}
 	
-	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly)
+	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}
 	
-	public static boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
+	public static boolean hasSpecialIngredient(int id, long amount, PlayerInstance player)
 	{
 		switch (id)
 		{
@@ -314,7 +314,7 @@ public final class MultisellData implements IGameXmlReader
 		return false;
 	}
 	
-	public static boolean takeSpecialIngredient(int id, long amount, L2PcInstance player)
+	public static boolean takeSpecialIngredient(int id, long amount, PlayerInstance player)
 	{
 		switch (id)
 		{
@@ -337,7 +337,7 @@ public final class MultisellData implements IGameXmlReader
 		return false;
 	}
 	
-	public static void giveSpecialProduct(int id, long amount, L2PcInstance player)
+	public static void giveSpecialProduct(int id, long amount, PlayerInstance player)
 	{
 		switch (id)
 		{

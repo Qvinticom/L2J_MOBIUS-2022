@@ -21,8 +21,8 @@ import java.util.Set;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.NpcInfoType;
 import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -32,8 +32,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 {
-	private final L2Summon _summon;
-	private final L2PcInstance _attacker;
+	private final Summon _summon;
+	private final PlayerInstance _attacker;
 	private final int _val;
 	private final byte[] _masks = new byte[]
 	{
@@ -56,7 +56,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 	private final String _title;
 	private final Set<AbnormalVisualEffect> _abnormalVisualEffects;
 	
-	public ExPetInfo(L2Summon summon, L2PcInstance attacker, int val)
+	public ExPetInfo(Summon summon, PlayerInstance attacker, int val)
 	{
 		_summon = summon;
 		_attacker = attacker;
@@ -199,7 +199,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		calcBlockSize(_summon, component);
 	}
 	
-	private void calcBlockSize(L2Summon summon, NpcInfoType type)
+	private void calcBlockSize(Summon summon, NpcInfoType type)
 	{
 		switch (type)
 		{

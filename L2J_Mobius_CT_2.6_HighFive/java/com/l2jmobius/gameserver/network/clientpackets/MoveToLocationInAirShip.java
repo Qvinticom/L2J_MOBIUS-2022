@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExMoveToLocationInAirShip;
 import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
@@ -41,7 +41,7 @@ public class MoveToLocationInAirShip implements IClientIncomingPacket
 	private int _originZ;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_shipId = packet.readD();
 		_targetX = packet.readD();
@@ -54,46 +54,46 @@ public class MoveToLocationInAirShip implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ))
 		{
-			activeChar.sendPacket(new StopMoveInVehicle(activeChar, _shipId));
+			player.sendPacket(new StopMoveInVehicle(player, _shipId));
 			return;
 		}
 		
-		if (activeChar.isAttackingNow() && (activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getItemType() == WeaponType.BOW))
+		if (player.isAttackingNow() && (player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getItemType() == WeaponType.BOW))
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (activeChar.isSitting() || activeChar.isMovementDisabled())
+		if (player.isSitting() || player.isMovementDisabled())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!activeChar.isInAirShip())
+		if (!player.isInAirShip())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2AirShipInstance airShip = activeChar.getAirShip();
+		final AirShipInstance airShip = player.getAirShip();
 		if (airShip.getObjectId() != _shipId)
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		activeChar.setInVehiclePosition(new Location(_targetX, _targetY, _targetZ));
-		activeChar.broadcastPacket(new ExMoveToLocationInAirShip(activeChar));
+		player.setInVehiclePosition(new Location(_targetX, _targetY, _targetZ));
+		player.broadcastPacket(new ExMoveToLocationInAirShip(player));
 	}
 }

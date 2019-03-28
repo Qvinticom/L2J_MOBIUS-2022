@@ -883,7 +883,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="15" />
 				<param skillId="5551" skillLevel="#triggeredLvl" /> <!-- Stun -->
@@ -1064,7 +1064,7 @@
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="#activationChance" />
 				<param skillId="5561" skillLevel="#triggeredLevel" /> <!-- Seed of Revenge -->
@@ -1093,7 +1093,7 @@
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="#activationChance" />
 				<param skillId="5562" skillLevel="#triggeredLevel" /> <!-- Spirit of Phoenix -->
@@ -1123,7 +1123,7 @@
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="#activationChance" />
 				<param skillId="5563" skillLevel="#triggeredLevel" /> <!-- Eva's Will -->
@@ -1152,7 +1152,7 @@
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="#activationChance" />
 				<param skillId="5564" skillLevel="#triggeredLevel" /> <!-- Pain of Shillien -->

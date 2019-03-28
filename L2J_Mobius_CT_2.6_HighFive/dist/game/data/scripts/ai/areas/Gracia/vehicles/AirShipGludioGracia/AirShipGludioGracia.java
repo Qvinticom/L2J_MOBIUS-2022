@@ -19,12 +19,12 @@ package ai.areas.Gracia.vehicles.AirShipGludioGracia;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -99,13 +99,13 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 		new VehiclePathPoint(-149378, 252552, 198)
 	};
 	
-	private final L2AirShipInstance _ship;
+	private final AirShipInstance _ship;
 	private int _cycle = 0;
 	
 	private boolean _foundAtcGludio = false;
-	private L2Npc _atcGludio = null;
+	private Npc _atcGludio = null;
 	private boolean _foundAtcGracia = false;
-	private L2Npc _atcGracia = null;
+	private Npc _atcGracia = null;
 	
 	public AirShipGludioGracia()
 	{
@@ -145,10 +145,10 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 		}
 	}
 	
-	private final L2Npc findController()
+	private final Npc findController()
 	{
 		// check objects around the ship
-		for (L2Npc obj : L2World.getInstance().getVisibleObjectsInRange(_ship, L2Npc.class, 600))
+		for (Npc obj : World.getInstance().getVisibleObjectsInRange(_ship, Npc.class, 600))
 		{
 			for (int id : CONTROLLERS)
 			{
@@ -162,7 +162,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player.isTransformed())
 		{
@@ -228,7 +228,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".htm";
 	}

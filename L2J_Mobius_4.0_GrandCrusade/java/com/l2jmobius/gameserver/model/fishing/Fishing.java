@@ -28,18 +28,18 @@ import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerFishing;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
-import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
+import com.l2jmobius.gameserver.model.zone.type.FishingZone;
+import com.l2jmobius.gameserver.model.zone.type.WaterZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -59,12 +59,12 @@ public class Fishing
 	protected static final Logger LOGGER = Logger.getLogger(Fishing.class.getName());
 	private volatile ILocational _baitLocation = new Location(0, 0, 0);
 	
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private ScheduledFuture<?> _reelInTask;
 	private ScheduledFuture<?> _startFishingTask;
 	private boolean _isFishing = false;
 	
-	public Fishing(L2PcInstance player)
+	public Fishing(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -91,7 +91,7 @@ public class Fishing
 	
 	private FishingBait getCurrentBaitData()
 	{
-		final L2ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		return bait != null ? FishingData.getInstance().getBaitData(bait.getId()) : null;
 	}
 	
@@ -122,7 +122,7 @@ public class Fishing
 	
 	private void castLine()
 	{
-		if (!Config.ALLOW_FISHING && !_player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
+		if (!Config.ALLOW_FISHING && !_player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS))
 		{
 			_player.sendMessage("Fishing is disabled.");
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -180,7 +180,7 @@ public class Fishing
 			return;
 		}
 		
-		final L2ItemInstance rod = _player.getActiveWeaponInstance();
+		final ItemInstance rod = _player.getActiveWeaponInstance();
 		if ((rod == null) || (rod.getItemType() != WeaponType.FISHINGROD))
 		{
 			_player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
@@ -298,7 +298,7 @@ public class Fishing
 		
 		try
 		{
-			final L2ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+			final ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 			if (consumeBait)
 			{
 				if ((bait == null) || !_player.getInventory().updateItemCount(null, bait, -1, _player, null))
@@ -394,22 +394,22 @@ public class Fishing
 		int baitY = (int) (_player.getY() + (sin * distance));
 		
 		// search for fishing zone
-		L2FishingZone fishingZone = null;
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(_player))
+		FishingZone fishingZone = null;
+		for (ZoneType zone : ZoneManager.getInstance().getZones(_player))
 		{
-			if (zone instanceof L2FishingZone)
+			if (zone instanceof FishingZone)
 			{
-				fishingZone = (L2FishingZone) zone;
+				fishingZone = (FishingZone) zone;
 				break;
 			}
 		}
 		// search for water zone
-		L2WaterZone waterZone = null;
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+		WaterZone waterZone = null;
+		for (ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 		{
-			if (zone instanceof L2WaterZone)
+			if (zone instanceof WaterZone)
 			{
-				waterZone = (L2WaterZone) zone;
+				waterZone = (WaterZone) zone;
 				break;
 			}
 		}
@@ -433,7 +433,7 @@ public class Fishing
 	 * @param waterZone the water zone
 	 * @return the bait z or {@link Integer#MIN_VALUE} when you cannot fish here
 	 */
-	private static int computeBaitZ(L2PcInstance player, int baitX, int baitY, L2FishingZone fishingZone, L2WaterZone waterZone)
+	private static int computeBaitZ(PlayerInstance player, int baitX, int baitY, FishingZone fishingZone, WaterZone waterZone)
 	{
 		if ((fishingZone == null))
 		{

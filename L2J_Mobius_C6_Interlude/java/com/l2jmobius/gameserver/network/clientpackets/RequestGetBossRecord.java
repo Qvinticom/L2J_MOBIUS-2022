@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetBossRecord;
 
@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExGetBossRecord;
  * Format: (ch) d
  * @author -Wooden-
  */
-public class RequestGetBossRecord extends L2GameClientPacket
+public class RequestGetBossRecord extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _bossId;
@@ -39,17 +39,17 @@ public class RequestGetBossRecord extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final int points = RaidBossPointsManager.getPointsByOwnerId(activeChar.getObjectId());
-		final int ranking = RaidBossPointsManager.calculateRanking(activeChar.getObjectId());
+		final int points = RaidBossPointsManager.getPointsByOwnerId(player.getObjectId());
+		final int ranking = RaidBossPointsManager.calculateRanking(player.getObjectId());
 		
 		// trigger packet
-		activeChar.sendPacket(new ExGetBossRecord(ranking, points, RaidBossPointsManager.getList(activeChar)));
+		player.sendPacket(new ExGetBossRecord(ranking, points, RaidBossPointsManager.getList(player)));
 		sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

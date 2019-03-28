@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -24,16 +24,16 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class SummonRequestHolder
 {
-	private final L2PcInstance _target;
+	private final PlayerInstance _target;
 	private final Skill _skill;
 	
-	public SummonRequestHolder(L2PcInstance destination, Skill skill)
+	public SummonRequestHolder(PlayerInstance destination, Skill skill)
 	{
 		_target = destination;
 		_skill = skill;
 	}
 	
-	public L2PcInstance getTarget()
+	public PlayerInstance getTarget()
 	{
 		return _target;
 	}

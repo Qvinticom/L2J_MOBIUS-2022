@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.model.conditions;
 
 import java.util.ArrayList;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -49,9 +49,9 @@ public class ConditionPlayerHasPet extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final L2Summon pet = effector.getActingPlayer().getPet();
+		final Summon pet = effector.getActingPlayer().getPet();
 		if ((effector.getActingPlayer() == null) || (pet == null))
 		{
 			return false;
@@ -62,7 +62,7 @@ public class ConditionPlayerHasPet extends Condition
 			return true;
 		}
 		
-		final L2ItemInstance controlItem = ((L2PetInstance) pet).getControlItem();
+		final ItemInstance controlItem = ((PetInstance) pet).getControlItem();
 		return (controlItem != null) && _controlItemIds.contains(controlItem.getId());
 	}
 }

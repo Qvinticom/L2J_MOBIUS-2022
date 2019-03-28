@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets.shuttle;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ShuttleInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 
 /**
@@ -33,7 +33,7 @@ public class RequestShuttleGetOn implements IClientIncomingPacket
 	private int _z;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		packet.readD(); // charId
 		_x = packet.readD();
@@ -43,24 +43,24 @@ public class RequestShuttleGetOn implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// TODO: better way?
-		for (L2ShuttleInstance shuttle : L2World.getInstance().getVisibleObjects(activeChar, L2ShuttleInstance.class))
+		for (ShuttleInstance shuttle : World.getInstance().getVisibleObjects(player, ShuttleInstance.class))
 		{
-			if (shuttle.calculateDistance3D(activeChar) < 1000)
+			if (shuttle.calculateDistance3D(player) < 1000)
 			{
-				shuttle.addPassenger(activeChar);
-				activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);
+				shuttle.addPassenger(player);
+				player.getInVehiclePosition().setXYZ(_x, _y, _z);
 				break;
 			}
-			LOGGER.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance3D(activeChar));
+			LOGGER.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance3D(player));
 		}
 	}
 }

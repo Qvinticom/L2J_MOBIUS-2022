@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class ShortBuffStatusUpdate extends L2GameServerPacket
+public class ShortBuffStatusUpdate extends GameServerPacket
 {
 	private final int _skillId;
 	private final int _skillLvl;

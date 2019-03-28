@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets.monsterbook;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBook;
 import com.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookOpenResult;
@@ -28,15 +28,15 @@ import com.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookO
 public class RequestMonsterBookOpen implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		client.sendPacket(new ExMonsterBookOpenResult(true));
-		client.sendPacket(new ExMonsterBook(client.getActiveChar()));
+		client.sendPacket(new ExMonsterBook(client.getPlayer()));
 	}
 }

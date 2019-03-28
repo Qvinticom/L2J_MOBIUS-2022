@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -91,10 +91,10 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -131,8 +131,8 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 			}
 			case "30585-07.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				giveItems(player, FIRE_CHARM, 1);
 				htmltext = event;
 				break;
@@ -151,7 +151,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				{
 					takeItems(player, TOTEM_SPIRIT_CLAW, -1);
 					giveItems(player, TATARUS_LETTER, 1);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 					htmltext = event;
 				}
 				break;
@@ -161,8 +161,8 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				if (hasQuestItems(player, TOTEM_SPIRIT_CLAW))
 				{
 					takeItems(player, TOTEM_SPIRIT_CLAW, -1);
-					st.setCond(12, true);
-					st.setMemoState(100);
+					qs.setCond(12, true);
+					qs.setMemoState(100);
 					htmltext = event;
 				}
 				break;
@@ -187,7 +187,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 						addExpAndSp(player, 591724, 36388);
 					}
 					giveAdena(player, 163800, true);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
 					htmltext = event;
 				}
@@ -195,7 +195,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 			}
 			case "32090-05.html":
 			{
-				if (st.isMemoState(106))
+				if (qs.isMemoState(106))
 				{
 					htmltext = event;
 				}
@@ -203,10 +203,10 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 			}
 			case "32090-06.html":
 			{
-				if (st.isMemoState(106))
+				if (qs.isMemoState(106))
 				{
-					st.setMemoState(107);
-					st.setCond(18, true);
+					qs.setMemoState(107);
+					qs.setCond(18, true);
 					htmltext = event;
 				}
 				break;
@@ -225,7 +225,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				{
 					takeItems(player, BLOOD_CAULDRON, -1);
 					giveItems(player, SPIRIT_NET, 1);
-					st.setCond(9, true);
+					qs.setCond(9, true);
 					htmltext = event;
 				}
 				break;
@@ -244,27 +244,27 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				{
 					takeItems(player, -1, HESTUI_MASK, SECOND_FIERY_EGG);
 					giveItems(player, TOTEM_SPIRIT_CLAW, 1);
-					st.setCond(4, true);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32057-02.html":
 			{
-				if (st.isMemoState(101))
+				if (qs.isMemoState(101))
 				{
-					st.setMemoState(102);
-					st.setCond(14, true);
+					qs.setMemoState(102);
+					qs.setCond(14, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32057-05.html":
 			{
-				if (st.isMemoState(109))
+				if (qs.isMemoState(109))
 				{
-					st.setMemoState(110);
-					st.setCond(21, true);
+					qs.setMemoState(110);
+					qs.setCond(21, true);
 					htmltext = event;
 				}
 				break;
@@ -274,47 +274,47 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st == null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if (qs == null)
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
 		if (npc.getId() == BLACK_LEOPARD)
 		{
-			switch (st.getMemoState())
+			switch (qs.getMemoState())
 			{
 				case 102:
 				{
-					st.setMemoState(103);
+					qs.setMemoState(103);
 					break;
 				}
 				case 103:
 				{
-					st.setMemoState(104);
-					st.setCond(15, true);
+					qs.setMemoState(104);
+					qs.setCond(15, true);
 					if (getRandom(100) < 66)
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.MY_DEAR_FRIEND_OF_S1_WHO_HAS_GONE_ON_AHEAD_OF_ME).addStringParameter(st.getPlayer().getName()));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.MY_DEAR_FRIEND_OF_S1_WHO_HAS_GONE_ON_AHEAD_OF_ME).addStringParameter(qs.getPlayer().getName()));
 					}
 					break;
 				}
 				case 105:
 				{
-					st.setMemoState(106);
-					st.setCond(17, true);
+					qs.setMemoState(106);
+					qs.setCond(17, true);
 					if (getRandom(100) < 66)
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LISTEN_TO_TEJAKAR_GANDI_YOUNG_OROKA_THE_SPIRIT_OF_THE_SLAIN_LEOPARD_IS_CALLING_YOU_S1).addStringParameter(st.getPlayer().getName()));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LISTEN_TO_TEJAKAR_GANDI_YOUNG_OROKA_THE_SPIRIT_OF_THE_SLAIN_LEOPARD_IS_CALLING_YOU_S1).addStringParameter(qs.getPlayer().getName()));
 					}
 					break;
 				}
 				case 107:
 				{
-					st.setMemoState(108);
-					st.setCond(19, true);
+					qs.setMemoState(108);
+					qs.setCond(19, true);
 					break;
 				}
 			}
@@ -322,31 +322,31 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 		}
 		
 		final ItemChanceHolder item = MOBS.get(npc.getId());
-		if (item.getCount() == st.getCond())
+		if (item.getCount() == qs.getCond())
 		{
-			if (st.isCond(1) && hasQuestItems(st.getPlayer(), FIRE_CHARM))
+			if (qs.isCond(1) && hasQuestItems(qs.getPlayer(), FIRE_CHARM))
 			{
-				if (giveItemRandomly(st.getPlayer(), npc, item.getId(), 1, 1, item.getChance(), true) //
-					&& hasQuestItems(st.getPlayer(), FIRST_FIERY_EGG, KASHA_BLADE_SPIDER_HUSK, KASHA_BEAR_PELT))
+				if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 1, item.getChance(), true) //
+					&& hasQuestItems(qs.getPlayer(), FIRST_FIERY_EGG, KASHA_BLADE_SPIDER_HUSK, KASHA_BEAR_PELT))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
-			else if (st.isCond(6) && hasQuestItems(st.getPlayer(), FLAME_CHARM))
+			else if (qs.isCond(6) && hasQuestItems(qs.getPlayer(), FLAME_CHARM))
 			{
-				if (giveItemRandomly(st.getPlayer(), npc, item.getId(), 1, 3, item.getChance(), true))
+				if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 3, item.getChance(), true))
 				{
-					st.setCond(7);
+					qs.setCond(7);
 				}
 			}
-			else if (st.isCond(9) && hasQuestItems(st.getPlayer(), SPIRIT_NET) //
-				&& !hasQuestItems(st.getPlayer(), BOUND_DURKA_SPIRIT) //
-				&& (getQuestItemsCount(st.getPlayer(), DURKA_PARASITE) <= 8))
+			else if (qs.isCond(9) && hasQuestItems(qs.getPlayer(), SPIRIT_NET) //
+				&& !hasQuestItems(qs.getPlayer(), BOUND_DURKA_SPIRIT) //
+				&& (getQuestItemsCount(qs.getPlayer(), DURKA_PARASITE) <= 8))
 			{
 				if ((npc.getId() == 20038) || (npc.getId() == 20043))
 				{
 					final int random = getRandom(10);
-					final long itemCount = getQuestItemsCount(st.getPlayer(), DURKA_PARASITE);
+					final long itemCount = getQuestItemsCount(qs.getPlayer(), DURKA_PARASITE);
 					if ((((itemCount == 5) && (random < 1))) //
 						|| ((itemCount == 6) && (random < 2)) //
 						|| ((itemCount == 7) && (random < 2)) //
@@ -354,18 +354,18 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 					{
 						takeItems(player, DURKA_PARASITE, -1);
 						addSpawn(DURKA_SPIRIT, npc.getX(), npc.getY(), npc.getZ(), 0, true, 0, false);
-						playSound(st.getPlayer(), QuestSound.ITEMSOUND_QUEST_BEFORE_BATTLE);
+						playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_BEFORE_BATTLE);
 					}
 					else
 					{
-						giveItems(st.getPlayer(), DURKA_PARASITE, 1);
-						playSound(st.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						giveItems(qs.getPlayer(), DURKA_PARASITE, 1);
+						playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				else
 				{
-					giveItems(st.getPlayer(), BOUND_DURKA_SPIRIT, 1);
-					takeItems(st.getPlayer(), -1, DURKA_PARASITE, SPIRIT_NET);
+					giveItems(qs.getPlayer(), BOUND_DURKA_SPIRIT, 1);
+					takeItems(qs.getPlayer(), -1, DURKA_PARASITE, SPIRIT_NET);
 				}
 			}
 		}
@@ -373,24 +373,24 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == TATARU_ZU_HESTUI)
 			{
 				htmltext = "30585-01.htm";
 			}
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case TATARU_ZU_HESTUI:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						if (hasQuestItems(player, FIRE_CHARM))
 						{
@@ -403,7 +403,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 								takeItems(player, -1, FIRE_CHARM, KASHA_BEAR_PELT, KASHA_BLADE_SPIDER_HUSK, FIRST_FIERY_EGG);
 								giveItems(player, HESTUI_MASK, 1);
 								giveItems(player, SECOND_FIERY_EGG, 1);
-								st.setCond(3, true);
+								qs.setCond(3, true);
 								htmltext = "30585-09.html";
 							}
 						}
@@ -424,7 +424,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 							htmltext = "30585-16.html";
 						}
 					}
-					else if (st.isMemoState(100))
+					else if (qs.isMemoState(100))
 					{
 						htmltext = "30585-14.html";
 					}
@@ -432,13 +432,13 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				}
 				case UMOS:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						if (hasQuestItems(player, TATARUS_LETTER))
 						{
 							giveItems(player, FLAME_CHARM, 1);
 							takeItems(player, TATARUS_LETTER, -1);
-							st.setCond(6, true);
+							qs.setCond(6, true);
 							htmltext = "30502-01.html";
 						}
 						else if (hasQuestItems(player, FLAME_CHARM))
@@ -451,7 +451,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 							{
 								takeItems(player, -1, FLAME_CHARM, GRIZZLY_BLOOD);
 								giveItems(player, BLOOD_CAULDRON, 1);
-								st.setCond(8, true);
+								qs.setCond(8, true);
 								htmltext = "30502-03.html";
 							}
 						}
@@ -472,11 +472,11 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				}
 				case MOIRA:
 				{
-					final int memoState = st.getMemoState();
+					final int memoState = qs.getMemoState();
 					if (memoState == 100)
 					{
-						st.setMemoState(101);
-						st.setCond(13, true);
+						qs.setMemoState(101);
+						qs.setCond(13, true);
 						htmltext = "31979-01.html";
 					}
 					else if ((memoState >= 101) && (memoState < 108))
@@ -500,7 +500,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 							addExpAndSp(player, 295862, 18194);
 						}
 						giveAdena(player, 81900, true);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
 						htmltext = "31979-03.html";
 					}
@@ -508,7 +508,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				}
 				case DEAD_LEOPARDS_CARCASS:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 102:
 						case 103:
@@ -518,8 +518,8 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 						}
 						case 104:
 						{
-							st.setMemoState(105);
-							st.setCond(16, true);
+							qs.setMemoState(105);
+							qs.setCond(16, true);
 							htmltext = "32090-03.html";
 							break;
 						}
@@ -540,8 +540,8 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 						}
 						case 108:
 						{
-							st.setMemoState(109);
-							st.setCond(20, true);
+							qs.setMemoState(109);
+							qs.setCond(20, true);
 							htmltext = "32090-08.html";
 							break;
 						}
@@ -550,7 +550,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				}
 				case DUDA_MARA_TOTEM_SPIRIT:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						if (hasQuestItems(player, BLOOD_CAULDRON))
 						{
@@ -564,7 +564,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 						{
 							takeItems(player, BOUND_DURKA_SPIRIT, -1);
 							giveItems(player, TOTEM_SPIRIT_BLOOD, 1);
-							st.setCond(11, true);
+							qs.setCond(11, true);
 							htmltext = "30593-05.html";
 						}
 						else if (hasQuestItems(player, TOTEM_SPIRIT_BLOOD))
@@ -576,7 +576,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				}
 				case HESTUI_TOTEM_SPIRIT:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						if (hasQuestItems(player, HESTUI_MASK, SECOND_FIERY_EGG))
 						{
@@ -595,7 +595,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 				}
 				case TOTEM_SPIRIT_OF_GANDI:
 				{
-					switch (st.getMemoState())
+					switch (qs.getMemoState())
 					{
 						case 101:
 						{

@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SSQStatus;
 
 /**
@@ -35,25 +35,25 @@ public class SevenSignsRecord implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		L2PcInstance activeChar;
+		PlayerInstance player;
 		
-		if (playable instanceof L2PcInstance)
+		if (playable instanceof PlayerInstance)
 		{
-			activeChar = (L2PcInstance) playable;
+			player = (PlayerInstance) playable;
 		}
-		else if (playable instanceof L2PetInstance)
+		else if (playable instanceof PetInstance)
 		{
-			activeChar = ((L2PetInstance) playable).getOwner();
+			player = ((PetInstance) playable).getOwner();
 		}
 		else
 		{
 			return;
 		}
 		
-		SSQStatus ssqs = new SSQStatus(activeChar, 1);
-		activeChar.sendPacket(ssqs);
+		SSQStatus ssqs = new SSQStatus(player, 1);
+		player.sendPacket(ssqs);
 	}
 	
 	@Override

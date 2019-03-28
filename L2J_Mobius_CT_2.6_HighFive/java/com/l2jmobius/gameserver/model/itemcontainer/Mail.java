@@ -24,9 +24,9 @@ import java.util.logging.Level;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author DS
@@ -49,7 +49,7 @@ public class Mail extends ItemContainer
 	}
 	
 	@Override
-	public L2PcInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return null;
 	}
@@ -68,7 +68,7 @@ public class Mail extends ItemContainer
 	public void setNewMessageId(int messageId)
 	{
 		_messageId = messageId;
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item == null)
 			{
@@ -83,7 +83,7 @@ public class Mail extends ItemContainer
 	
 	public void returnToWh(ItemContainer wh)
 	{
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item == null)
 			{
@@ -101,7 +101,7 @@ public class Mail extends ItemContainer
 	}
 	
 	@Override
-	protected void addItem(L2ItemInstance item)
+	protected void addItem(ItemInstance item)
 	{
 		super.addItem(item);
 		item.setItemLocation(getBaseLocation(), _messageId);
@@ -124,16 +124,16 @@ public class Mail extends ItemContainer
 			ps.setInt(3, _messageId);
 			try (ResultSet inv = ps.executeQuery())
 			{
-				L2ItemInstance item;
+				ItemInstance item;
 				while (inv.next())
 				{
-					item = L2ItemInstance.restoreFromDb(_ownerId, inv);
+					item = ItemInstance.restoreFromDb(_ownerId, inv);
 					if (item == null)
 					{
 						continue;
 					}
 					
-					L2World.getInstance().addObject(item);
+					World.getInstance().addObject(item);
 					
 					// If stackable item is found just add to current quantity
 					if (item.isStackable() && (getItemByItemId(item.getId()) != null))
@@ -166,7 +166,7 @@ public class Mail extends ItemContainer
 		{
 			i.updateDatabase(true);
 			i.deleteMe();
-			L2World.getInstance().removeObject(i);
+			World.getInstance().removeObject(i);
 			IdFactory.getInstance().releaseId(i.getObjectId());
 		});
 		_items.clear();

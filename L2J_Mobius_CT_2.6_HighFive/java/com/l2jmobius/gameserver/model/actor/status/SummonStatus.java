@@ -16,41 +16,41 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Duel;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.util.Util;
 
 public class SummonStatus extends PlayableStatus
 {
-	public SummonStatus(L2Summon activeChar)
+	public SummonStatus(Summon activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public void reduceHp(double value, L2Character attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true, false, false);
 	}
 	
 	@Override
-	public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
 	{
 		if ((attacker == null) || getActiveChar().isDead())
 		{
 			return;
 		}
 		
-		final L2PcInstance attackerPlayer = attacker.getActingPlayer();
+		final PlayerInstance attackerPlayer = attacker.getActingPlayer();
 		if ((attackerPlayer != null) && ((getActiveChar().getOwner() == null) || (getActiveChar().getOwner().getDuelId() != attackerPlayer.getDuelId())))
 		{
 			attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
 		}
 		
-		final L2PcInstance caster = getActiveChar().getTransferingDamageTo();
+		final PlayerInstance caster = getActiveChar().getTransferingDamageTo();
 		if (getActiveChar().getOwner().getParty() != null)
 		{
 			if ((caster != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster))
@@ -60,7 +60,7 @@ public class SummonStatus extends PlayableStatus
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
-					for (L2PcInstance member : caster.getParty().getMembers())
+					for (PlayerInstance member : caster.getParty().getMembers())
 					{
 						if (Util.checkIfInRange(1000, member, caster, false) && (member != caster))
 						{
@@ -114,8 +114,8 @@ public class SummonStatus extends PlayableStatus
 	}
 	
 	@Override
-	public L2Summon getActiveChar()
+	public Summon getActiveChar()
 	{
-		return (L2Summon) super.getActiveChar();
+		return (Summon) super.getActiveChar();
 	}
 }

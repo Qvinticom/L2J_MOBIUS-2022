@@ -25,8 +25,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -51,7 +51,7 @@ public class AdminAio implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		
@@ -70,7 +70,7 @@ public class AdminAio implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{ // char_name not specified
 					final String char_name = st.nextToken();
-					final L2PcInstance player = L2World.getInstance().getPlayer(char_name);
+					final PlayerInstance player = World.getInstance().getPlayer(char_name);
 					if (player != null)
 					{
 						if (st.hasMoreTokens()) // time
@@ -126,7 +126,7 @@ public class AdminAio implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{ // char_name
 					final String char_name = st.nextToken();
-					final L2PcInstance player = L2World.getInstance().getPlayer(char_name);
+					final PlayerInstance player = World.getInstance().getPlayer(char_name);
 					if (player != null)
 					{
 						removeAio(activeChar, player, char_name);
@@ -156,7 +156,7 @@ public class AdminAio implements IAdminCommandHandler
 		return true;
 	}
 	
-	public void doAio(L2PcInstance activeChar, L2PcInstance _player, String _playername, String _time)
+	public void doAio(PlayerInstance activeChar, PlayerInstance _player, String _playername, String _time)
 	{
 		final int days = Integer.parseInt(_time);
 		if (_player == null)
@@ -208,7 +208,7 @@ public class AdminAio implements IAdminCommandHandler
 		}
 	}
 	
-	public void removeAio(L2PcInstance activeChar, L2PcInstance _player, String _playername)
+	public void removeAio(PlayerInstance activeChar, PlayerInstance _player, String _playername)
 	{
 		_player.setAio(false);
 		_player.setAioEndTime(0);

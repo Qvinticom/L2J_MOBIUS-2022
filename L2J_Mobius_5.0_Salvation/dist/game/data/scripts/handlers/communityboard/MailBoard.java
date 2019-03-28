@@ -19,7 +19,7 @@ package handlers.communityboard;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IWriteBoardHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Mail board.
@@ -39,17 +39,17 @@ public class MailBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
 	{
-		CommunityBoardHandler.getInstance().addBypass(activeChar, "Mail Command", command);
+		CommunityBoardHandler.getInstance().addBypass(player, "Mail Command", command);
 		
-		final String html = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/mail.html");
-		CommunityBoardHandler.separateAndSend(html, activeChar);
+		final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/mail.html");
+		CommunityBoardHandler.separateAndSend(html, player);
 		return true;
 	}
 	
 	@Override
-	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
+	public boolean writeCommunityBoardCommand(PlayerInstance player, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		// TODO: Implement.
 		return false;

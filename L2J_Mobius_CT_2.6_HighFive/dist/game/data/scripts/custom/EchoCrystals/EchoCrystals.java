@@ -19,8 +19,8 @@ package custom.EchoCrystals;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -99,12 +99,12 @@ public final class EchoCrystals extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = player.getQuestState(EchoCrystals.class.getSimpleName());
+		final QuestState qs = player.getQuestState(EchoCrystals.class.getSimpleName());
 		
-		if ((st != null) && Util.isDigit(event))
+		if ((qs != null) && Util.isDigit(event))
 		{
 			final int score = Integer.parseInt(event);
 			if (SCORES.containsKey(score))
@@ -139,7 +139,7 @@ public final class EchoCrystals extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		return "1.htm";
 	}

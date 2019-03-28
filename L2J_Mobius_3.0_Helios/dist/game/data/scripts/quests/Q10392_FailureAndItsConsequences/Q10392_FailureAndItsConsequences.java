@@ -17,8 +17,8 @@
 package quests.Q10392_FailureAndItsConsequences;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -60,10 +60,10 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -81,24 +81,24 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 			}
 			case "33859-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33859-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33858-04.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EAC, 5);
 					giveStoryQuestReward(player, 17);
 					addExpAndSp(player, 2329740, 559);
@@ -111,12 +111,12 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -130,7 +130,7 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 			{
 				if (npc.getId() == IASON)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -151,7 +151,7 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 				}
 				else if (npc.getId() == ELI)
 				{
-					if (st.isCond(3))
+					if (qs.isCond(3))
 					{
 						htmltext = "33858-01.html";
 					}
@@ -171,15 +171,15 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			if (giveItemRandomly(killer, npc, FRAGMENT, 1, 4, 30, 0.8, true))
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

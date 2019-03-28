@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,10 +29,10 @@ public class ExTeleportToLocationActivate implements IClientOutgoingPacket
 	private final int _objectId;
 	private final Location _loc;
 	
-	public ExTeleportToLocationActivate(L2Character character)
+	public ExTeleportToLocationActivate(Creature creature)
 	{
-		_objectId = character.getObjectId();
-		_loc = character.getLocation();
+		_objectId = creature.getObjectId();
+		_loc = creature.getLocation();
 	}
 	
 	@Override

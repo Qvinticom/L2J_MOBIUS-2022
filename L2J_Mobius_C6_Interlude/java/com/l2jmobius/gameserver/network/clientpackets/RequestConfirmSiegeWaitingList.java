@@ -18,12 +18,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 
-public final class RequestConfirmSiegeWaitingList extends L2GameClientPacket
+public final class RequestConfirmSiegeWaitingList extends GameClientPacket
 {
 	private int _approved;
 	private int _castleId;
@@ -40,14 +40,14 @@ public final class RequestConfirmSiegeWaitingList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		// Check if the player has a clan
-		if (activeChar.getClan() == null)
+		if (player.getClan() == null)
 		{
 			return;
 		}
@@ -59,12 +59,12 @@ public final class RequestConfirmSiegeWaitingList extends L2GameClientPacket
 		}
 		
 		// Check if leader of the clan who owns the castle?
-		if ((castle.getOwnerId() != activeChar.getClanId()) || !activeChar.isClanLeader())
+		if ((castle.getOwnerId() != player.getClanId()) || !player.isClanLeader())
 		{
 			return;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
+		final Clan clan = ClanTable.getInstance().getClan(_clanId);
 		if (clan == null)
 		{
 			return;
@@ -90,6 +90,6 @@ public final class RequestConfirmSiegeWaitingList extends L2GameClientPacket
 		}
 		
 		// Update the defender list
-		activeChar.sendPacket(new SiegeDefenderList(castle));
+		player.sendPacket(new SiegeDefenderList(castle));
 	}
 }

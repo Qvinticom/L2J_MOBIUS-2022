@@ -333,7 +333,7 @@
 				<minDamage>1</minDamage>
 				<skillId>11556</skillId> <!-- Cancel Transform -->
 				<skillLevel>1</skillLevel>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -1330,7 +1330,7 @@
 				<minDamage>1</minDamage>
 				<skillId>11556</skillId> <!-- Cancel Transform -->
 				<skillLevel>1</skillLevel>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -1689,7 +1689,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Critical Damage Increase -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>300</minDamage>

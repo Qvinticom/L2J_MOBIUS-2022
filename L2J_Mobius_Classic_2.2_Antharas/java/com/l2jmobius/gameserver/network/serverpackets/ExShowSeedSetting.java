@@ -22,7 +22,7 @@ import java.util.Set;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.model.SeedProduction;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExShowSeedSetting implements IClientOutgoingPacket
 {
 	private final int _manorId;
-	private final Set<L2Seed> _seeds;
+	private final Set<Seed> _seeds;
 	private final Map<Integer, SeedProduction> _current = new HashMap<>();
 	private final Map<Integer, SeedProduction> _next = new HashMap<>();
 	
@@ -41,7 +41,7 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		_manorId = manorId;
 		_seeds = manor.getSeedsForCastle(_manorId);
-		for (L2Seed s : _seeds)
+		for (Seed s : _seeds)
 		{
 			// Current period
 			SeedProduction sp = manor.getSeedProduct(manorId, s.getSeedId(), false);
@@ -66,7 +66,7 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_seeds.size()); // size
 		
-		for (L2Seed s : _seeds)
+		for (Seed s : _seeds)
 		{
 			packet.writeD(s.getSeedId()); // seed id
 			packet.writeD(s.getLevel()); // level

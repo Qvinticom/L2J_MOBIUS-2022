@@ -367,7 +367,7 @@
 		<magicLvl>89</magicLvl>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
@@ -3683,7 +3683,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
@@ -3839,7 +3839,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
@@ -3977,7 +3977,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Vampirism -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<allowSkillAttack>true</allowSkillAttack>
@@ -4033,7 +4033,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
@@ -4229,7 +4229,7 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>

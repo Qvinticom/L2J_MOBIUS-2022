@@ -20,10 +20,10 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
@@ -40,7 +40,7 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 	private int _clanId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_clanId = packet.readD();
 		packet.readD();
@@ -48,10 +48,10 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -59,42 +59,42 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 		final PledgeRecruitInfo pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(_clanId);
 		if (pledgeRecruitInfo != null)
 		{
-			final L2Clan clan = pledgeRecruitInfo.getClan();
-			if ((clan != null) && (activeChar.getClan() == null))
+			final Clan clan = pledgeRecruitInfo.getClan();
+			if ((clan != null) && (player.getClan() == null))
 			{
-				activeChar.sendPacket(new JoinPledge(clan.getId()));
+				player.sendPacket(new JoinPledge(clan.getId()));
 				
-				// activeChar.setPowerGrade(9); // academy
-				activeChar.setPowerGrade(5); // New member starts at 5, not confirmed.
+				// player.setPowerGrade(9); // academy
+				player.setPowerGrade(5); // New member starts at 5, not confirmed.
 				
-				clan.addClanMember(activeChar);
-				activeChar.setClanPrivileges(activeChar.getClan().getRankPrivs(activeChar.getPowerGrade()));
-				activeChar.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
+				clan.addClanMember(player);
+				player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
+				player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
-				sm.addString(activeChar.getName());
+				sm.addString(player.getName());
 				clan.broadcastToOnlineMembers(sm);
 				
 				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
+					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
 				}
 				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
+					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
 				}
-				activeChar.sendSkillList();
+				player.sendSkillList();
 				
-				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(activeChar), activeChar);
+				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(player), player);
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 				
 				// This activates the clan tab on the new member.
-				PledgeShowMemberListAll.sendAllTo(activeChar);
-				activeChar.setClanJoinExpiryTime(0);
-				activeChar.broadcastUserInfo();
+				PledgeShowMemberListAll.sendAllTo(player);
+				player.setClanJoinExpiryTime(0);
+				player.broadcastUserInfo();
 				
-				ClanEntryManager.getInstance().removePlayerApplication(_clanId, activeChar.getObjectId());
+				ClanEntryManager.getInstance().removePlayerApplication(_clanId, player.getObjectId());
 			}
 		}
 	}

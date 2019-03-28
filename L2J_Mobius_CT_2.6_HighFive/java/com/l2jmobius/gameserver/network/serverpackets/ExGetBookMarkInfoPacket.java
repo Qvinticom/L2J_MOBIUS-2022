@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TeleportBookmark;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,11 +26,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExGetBookMarkInfoPacket implements IClientOutgoingPacket
 {
-	private final L2PcInstance player;
+	private final PlayerInstance _player;
 	
-	public ExGetBookMarkInfoPacket(L2PcInstance cha)
+	public ExGetBookMarkInfoPacket(PlayerInstance player)
 	{
-		player = cha;
+		_player = player;
 	}
 	
 	@Override
@@ -38,10 +38,10 @@ public class ExGetBookMarkInfoPacket implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_GET_BOOKMARK_INFO.writeId(packet);
 		packet.writeD(0x00); // Dummy
-		packet.writeD(player.getBookmarkslot());
-		packet.writeD(player.getTeleportBookmarks().size());
+		packet.writeD(_player.getBookmarkslot());
+		packet.writeD(_player.getTeleportBookmarks().size());
 		
-		for (TeleportBookmark tpbm : player.getTeleportBookmarks())
+		for (TeleportBookmark tpbm : _player.getTeleportBookmarks())
 		{
 			packet.writeD(tpbm.getId());
 			packet.writeD(tpbm.getX());

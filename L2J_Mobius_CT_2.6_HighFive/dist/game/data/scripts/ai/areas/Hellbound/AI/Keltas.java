@@ -21,11 +21,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -99,8 +99,8 @@ public final class Keltas extends AbstractNpcAI
 		new Location(-28492, 250704, -3523)
 	};
 	// Misc
-	private L2MonsterInstance _spawnedKeltas = null;
-	private final Set<L2Spawn> _spawnedMonsters = Collections.newSetFromMap(new ConcurrentHashMap<>());
+	private MonsterInstance _spawnedKeltas = null;
+	private final Set<Spawn> _spawnedMonsters = Collections.newSetFromMap(new ConcurrentHashMap<>());
 	
 	public Keltas()
 	{
@@ -112,8 +112,8 @@ public final class Keltas extends AbstractNpcAI
 	{
 		for (Location loc : ENFORCER_SPAWN_POINTS)
 		{
-			final L2MonsterInstance minion = (L2MonsterInstance) addSpawn(ENFORCER, loc, false, 0, false);
-			final L2Spawn spawn = minion.getSpawn();
+			final MonsterInstance minion = (MonsterInstance) addSpawn(ENFORCER, loc, false, 0, false);
+			final Spawn spawn = minion.getSpawn();
 			spawn.setRespawnDelay(60);
 			spawn.setAmount(1);
 			spawn.startRespawn();
@@ -122,8 +122,8 @@ public final class Keltas extends AbstractNpcAI
 		
 		for (Location loc : EXECUTIONER_SPAWN_POINTS)
 		{
-			final L2MonsterInstance minion = (L2MonsterInstance) addSpawn(EXECUTIONER, loc, false, 0, false);
-			final L2Spawn spawn = minion.getSpawn();
+			final MonsterInstance minion = (MonsterInstance) addSpawn(EXECUTIONER, loc, false, 0, false);
+			final Spawn spawn = minion.getSpawn();
 			spawn.setRespawnDelay(80);
 			spawn.setAmount(1);
 			spawn.startRespawn();
@@ -138,10 +138,10 @@ public final class Keltas extends AbstractNpcAI
 			return;
 		}
 		
-		for (L2Spawn spawn : _spawnedMonsters)
+		for (Spawn spawn : _spawnedMonsters)
 		{
 			spawn.stopRespawn();
-			final L2Npc minion = spawn.getLastSpawn();
+			final Npc minion = spawn.getLastSpawn();
 			if ((minion != null) && !minion.isDead())
 			{
 				minion.deleteMe();
@@ -151,11 +151,11 @@ public final class Keltas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("despawn"))
 		{
-			final L2Npc keltas = _spawnedKeltas;
+			final Npc keltas = _spawnedKeltas;
 			if ((keltas != null) && !keltas.isDead())
 			{
 				keltas.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAY_LET_S_RETREAT_EVERYONE_PULL_BACK);
@@ -168,7 +168,7 @@ public final class Keltas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		cancelQuestTimers("despawn");
 		despawnMinions();
@@ -176,9 +176,9 @@ public final class Keltas extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
-		_spawnedKeltas = (L2MonsterInstance) npc;
+		_spawnedKeltas = (MonsterInstance) npc;
 		_spawnedKeltas.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.GUYS_SHOW_THEM_OUR_POWER);
 		spawnMinions();
 		startQuestTimer("despawn", 1800000, null, null);

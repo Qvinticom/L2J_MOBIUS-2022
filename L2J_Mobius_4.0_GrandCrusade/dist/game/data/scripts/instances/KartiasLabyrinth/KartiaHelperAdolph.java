@@ -21,15 +21,15 @@ import java.util.List;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -96,13 +96,13 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
 			final StatsSet npcVars = npc.getVariables();
-			player = npcVars.getObject("PLAYER_OBJECT", L2PcInstance.class);
+			player = npcVars.getObject("PLAYER_OBJECT", PlayerInstance.class);
 			if (player != null)
 			{
 				final double distance = npc.calculateDistance2D(player);
@@ -122,10 +122,10 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 				}
 				else if (!npc.isInCombat() || (npc.getTarget() == null))
 				{
-					final List<L2MonsterInstance> monsterList = L2World.getInstance().getVisibleObjectsInRange(npc, L2MonsterInstance.class, 500);
+					final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 500);
 					if (!monsterList.isEmpty())
 					{
-						final L2MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
+						final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
 						
 						if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 						{
@@ -147,10 +147,10 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 		}
 	}
 	
-	public void useRandomSkill(L2Npc npc)
+	public void useRandomSkill(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		final L2Npc target = (L2Npc) npc.getTarget();
+		final Npc target = (Npc) npc.getTarget();
 		if ((instance != null) && !npc.isCastingNow() && (target != null) && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatsSet instParams = instance.getTemplateParameters();
@@ -183,10 +183,10 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
 							npc.doCast(skill_01.getSkill(), null, true, false);
-							final List<L2MonsterInstance> monsterList = L2World.getInstance().getVisibleObjectsInRange(npc, L2MonsterInstance.class, 300);
+							final List<MonsterInstance> monsterList = World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 300);
 							if (!monsterList.isEmpty())
 							{
-								for (L2MonsterInstance monster : monsterList)
+								for (MonsterInstance monster : monsterList)
 								{
 									if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 									{
@@ -240,7 +240,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		if (npc != null)
 		{
 			final Instance instance = npc.getInstanceWorld();
@@ -249,7 +249,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 				if (!npc.isInCombat())
 				{
 					npc.setTarget(event.getAttacker());
-					addAttackDesire(npc, (L2Character) npc.getTarget());
+					addAttackDesire(npc, (Creature) npc.getTarget());
 					final StatsSet instParams = instance.getTemplateParameters();
 					final SkillHolder hateSkill = instParams.getSkillHolder("adolphHate");
 					if ((hateSkill != null) && SkillCaster.checkUseConditions(npc, hateSkill.getSkill()))
@@ -263,7 +263,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
@@ -284,7 +284,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{

@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -64,18 +64,18 @@ public class Q00461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
 		if (event.equalsIgnoreCase("30200-05.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			htmltext = event;
 		}
 		else if (event.equalsIgnoreCase("30200-04.htm"))
@@ -86,9 +86,9 @@ public class Q00461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		QuestState st = null;
+		QuestState qs = null;
 		if (getRandom(1000) >= MONSTERS.get(npc.getId()))
 		{
 			return super.onKill(npc, player, isSummon);
@@ -96,33 +96,33 @@ public class Q00461_RumbleInTheBase extends Quest
 		
 		if (npc.getId() == 18908)
 		{
-			st = getQuestState(player, false);
-			if ((st != null) && st.isCond(1) && (getQuestItemsCount(player, SHINY_SALMON) < 5))
+			qs = getQuestState(player, false);
+			if ((qs != null) && qs.isCond(1) && (getQuestItemsCount(player, SHINY_SALMON) < 5))
 			{
 				giveItems(player, SHINY_SALMON, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				if ((getQuestItemsCount(player, SHINY_SALMON) >= 5) && (getQuestItemsCount(player, SHOES_STRING_OF_SEL_MAHUM) >= 10))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
 		else
 		{
-			final L2PcInstance member = getRandomPartyMember(player, 1);
+			final PlayerInstance member = getRandomPartyMember(player, 1);
 			if (member == null)
 			{
 				return super.onKill(npc, player, isSummon);
 			}
 			
-			st = getQuestState(member, false);
+			qs = getQuestState(member, false);
 			if (getQuestItemsCount(player, SHOES_STRING_OF_SEL_MAHUM) < 10)
 			{
 				giveItems(player, SHOES_STRING_OF_SEL_MAHUM, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				if ((getQuestItemsCount(player, SHINY_SALMON) >= 5) && (getQuestItemsCount(player, SHOES_STRING_OF_SEL_MAHUM) >= 10))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 			}
 		}
@@ -130,13 +130,13 @@ public class Q00461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		final QuestState prev = player.getQuestState(Q00252_ItSmellsDelicious.class.getSimpleName());
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -145,27 +145,27 @@ public class Q00461_RumbleInTheBase extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "30200-06.html";
 				}
 				else
 				{
 					addExpAndSp(player, 224784, 342528);
-					st.exitQuest(QuestType.DAILY, true);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "30200-07.html";
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "30200-03.htm";
 				}
 				else
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = ((player.getLevel() >= 82) && (prev != null) && (prev.getState() == State.COMPLETED)) ? "30200-01.htm" : "30200-02.htm";
 				}
 				break;

@@ -34,12 +34,12 @@ import com.l2jmobius.gameserver.enums.InstanceTeleportType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.AbstractPlayerGroup;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
 import com.l2jmobius.gameserver.model.instancezone.conditions.Condition;
@@ -72,7 +72,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	private float _expPartyRate = Config.RATE_INSTANCE_PARTY_XP;
 	private float _spPartyRate = Config.RATE_INSTANCE_PARTY_SP;
 	private StatsSet _parameters = StatsSet.EMPTY_STATSET;
-	private final Map<Integer, L2DoorTemplate> _doors = new HashMap<>();
+	private final Map<Integer, DoorTemplate> _doors = new HashMap<>();
 	private final List<SpawnTemplate> _spawns = new ArrayList<>();
 	// Locations
 	private InstanceTeleportType _enterLocationType = InstanceTeleportType.NONE;
@@ -187,7 +187,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * @param templateId template id of door
 	 * @param template door template
 	 */
-	public void addDoor(int templateId, L2DoorTemplate template)
+	public void addDoor(int templateId, DoorTemplate template)
 	{
 		_doors.put(templateId, template);
 	}
@@ -363,7 +363,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * @param player player who wants to leave instance
 	 * @return exit location if instance has any, otherwise {@code null}
 	 */
-	public Location getExitLocation(L2PcInstance player)
+	public Location getExitLocation(PlayerInstance player)
 	{
 		Location location = null;
 		
@@ -443,7 +443,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * Get doors data for instance world.
 	 * @return map in form <i>doorId, door template</i>
 	 */
-	public Map<Integer, L2DoorTemplate> getDoors()
+	public Map<Integer, DoorTemplate> getDoors()
 	{
 		return _doors;
 	}
@@ -487,10 +487,10 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * Remove buffs from player according to remove buff data
 	 * @param player player which loose buffs
 	 */
-	public void removePlayerBuff(L2PcInstance player)
+	public void removePlayerBuff(PlayerInstance player)
 	{
 		// Make list of affected playable objects
-		final List<L2Playable> affected = new ArrayList<>();
+		final List<Playable> affected = new ArrayList<>();
 		affected.add(player);
 		player.getServitors().values().forEach(affected::add);
 		if (player.hasPet())
@@ -501,14 +501,14 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		// Now remove buffs by type
 		if (_removeBuffType == InstanceRemoveBuffType.ALL)
 		{
-			for (L2Playable playable : affected)
+			for (Playable playable : affected)
 			{
 				playable.stopAllEffectsExceptThoseThatLastThroughDeath();
 			}
 		}
 		else
 		{
-			for (L2Playable playable : affected)
+			for (Playable playable : affected)
 			{
 				// Stop all buffs.
 				playable.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && info.getSkill().getBuffType().isBuff() && hasRemoveBuffException(info.getSkill()), true, true);
@@ -604,7 +604,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * @param player player who wants to enter
 	 * @return group type which can enter if any can enter, otherwise {@code null}
 	 */
-	private final GroupType getEnterGroupType(L2PcInstance player)
+	private final GroupType getEnterGroupType(PlayerInstance player)
 	{
 		// If mask doesn't contain any group
 		if (_groupMask == 0)
@@ -613,7 +613,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		}
 		
 		// If player can override instance conditions then he can enter alone
-		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+		if (player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
 			return GroupType.NONE;
 		}
@@ -646,11 +646,11 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	}
 	
 	/**
-	 * Get player's group based on result of {@link InstanceTemplate#getEnterGroupType(L2PcInstance)}.
+	 * Get player's group based on result of {@link InstanceTemplate#getEnterGroupType(PlayerInstance)}.
 	 * @param player player who wants to enter into instance
 	 * @return list of players (first player in list is player who make enter request)
 	 */
-	public List<L2PcInstance> getEnterGroup(L2PcInstance player)
+	public List<PlayerInstance> getEnterGroup(PlayerInstance player)
 	{
 		final GroupType type = getEnterGroupType(player);
 		if (type == null)
@@ -659,7 +659,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		}
 		
 		// Make list of players which can enter into instance world
-		final List<L2PcInstance> group = new ArrayList<>();
+		final List<PlayerInstance> group = new ArrayList<>();
 		group.add(player); // Put player who made request at first position inside list
 		
 		// Check if player has group in which he can enter
@@ -688,7 +688,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * @param htmlCallback callback function used to display fail HTML when condition validate failed
 	 * @return {@code true} when all condition are met, otherwise {@code false}
 	 */
-	public boolean validateConditions(List<L2PcInstance> group, L2Npc npc, BiConsumer<L2PcInstance, String> htmlCallback)
+	public boolean validateConditions(List<PlayerInstance> group, Npc npc, BiConsumer<PlayerInstance, String> htmlCallback)
 	{
 		for (Condition cond : _conditions)
 		{
@@ -704,7 +704,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	 * Apply condition effects for each player from enter group.
 	 * @param group players from enter group
 	 */
-	public void applyConditionEffects(List<L2PcInstance> group)
+	public void applyConditionEffects(List<PlayerInstance> group)
 	{
 		_conditions.forEach(c -> c.applyEffect(group));
 	}

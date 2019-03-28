@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch
  * @author devScarlet & mrTJO
  */
-public class ExShowSlideshowKamael extends L2GameServerPacket
+public class ExShowSlideshowKamael extends GameServerPacket
 {
 	public static final ExShowSlideshowKamael STATIC_PACKET = new ExShowSlideshowKamael();
 	

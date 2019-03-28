@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.TradeList.TradeItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 3 section to this packet 1)playerinfo which is always sent dd 2)list of items which can be added to sell d(hhddddhhhd) 3)list of items which have already been setup for sell in previous sell private store sell manageent d(hhddddhhhdd) *
@@ -28,31 +28,31 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 /*
  * In memory of our friend Vadim 03/11/2014
  */
-public class PrivateStoreManageListSell extends L2GameServerPacket
+public class PrivateStoreManageListSell extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private int _playerAdena;
 	private final boolean _packageSale;
 	private final TradeItem[] _itemList;
 	private final TradeItem[] _sellList;
 	
-	public PrivateStoreManageListSell(L2PcInstance player)
+	public PrivateStoreManageListSell(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		
 		if (Config.SELL_BY_ITEM)
 		{
-			_playerAdena = _activeChar.getItemCount(Config.SELL_ITEM, -1);
+			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);
 		}
 		else
 		{
-			_playerAdena = _activeChar.getAdena();
+			_playerAdena = _player.getAdena();
 		}
 		
-		_activeChar.getSellList().updateItems();
-		_packageSale = _activeChar.getSellList().isPackaged();
-		_itemList = _activeChar.getInventory().getAvailableItems(_activeChar.getSellList());
-		_sellList = _activeChar.getSellList().getItems();
+		_player.getSellList().updateItems();
+		_packageSale = _player.getSellList().isPackaged();
+		_itemList = _player.getInventory().getAvailableItems(_player.getSellList());
+		_sellList = _player.getSellList().getItems();
 	}
 	
 	/**
@@ -63,7 +63,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 	{
 		writeC(0x9a);
 		// section 1
-		writeD(_activeChar.getObjectId());
+		writeD(_player.getObjectId());
 		writeD(_packageSale ? 1 : 0); // Package sell
 		writeD(_playerAdena);
 		

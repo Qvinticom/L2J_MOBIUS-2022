@@ -22,11 +22,11 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.L2Seed;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.Seed;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author l3x
@@ -39,7 +39,7 @@ public final class RequestSetCrop implements IClientIncomingPacket
 	private List<CropProcure> _items;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_manorId = packet.readD();
 		final int count = packet.readD();
@@ -70,7 +70,7 @@ public final class RequestSetCrop implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_items.isEmpty())
 		{
@@ -85,7 +85,7 @@ public final class RequestSetCrop implements IClientIncomingPacket
 		}
 		
 		// Check player privileges
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player))
 		{
 			client.sendActionFailed();
@@ -96,7 +96,7 @@ public final class RequestSetCrop implements IClientIncomingPacket
 		final List<CropProcure> list = new ArrayList<>(_items.size());
 		for (CropProcure cp : _items)
 		{
-			final L2Seed s = manor.getSeedByCrop(cp.getId(), _manorId);
+			final Seed s = manor.getSeedByCrop(cp.getId(), _manorId);
 			if ((s != null) && (cp.getStartAmount() <= s.getCropLimit()) && (cp.getPrice() >= s.getCropMinPrice()) && (cp.getPrice() <= s.getCropMaxPrice()))
 			{
 				list.add(cp);

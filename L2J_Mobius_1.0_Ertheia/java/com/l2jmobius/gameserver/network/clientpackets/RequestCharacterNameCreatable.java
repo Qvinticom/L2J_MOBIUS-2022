@@ -20,7 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -39,14 +39,14 @@ public class RequestCharacterNameCreatable implements IClientIncomingPacket
 	public static int CANNOT_CREATE_SERVER = 5;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(_name);
 		

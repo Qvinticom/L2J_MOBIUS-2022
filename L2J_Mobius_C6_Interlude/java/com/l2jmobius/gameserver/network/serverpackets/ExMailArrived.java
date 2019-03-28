@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Fromat: (ch) (just a trigger)
  * @author -Wooden-
  */
-public class ExMailArrived extends L2GameServerPacket
+public class ExMailArrived extends GameServerPacket
 {
 	public static final ExMailArrived STATIC_PACKET = new ExMailArrived();
 	

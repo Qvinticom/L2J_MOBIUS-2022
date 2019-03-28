@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (c) d
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetitionCancel extends L2GameClientPacket
+public final class RequestPetitionCancel extends GameClientPacket
 {
 	// private int _unknown;
 	
@@ -41,45 +41,45 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
+		if (PetitionManager.getInstance().isPlayerInConsultation(player))
 		{
-			if (activeChar.isGM())
+			if (player.isGM())
 			{
-				PetitionManager.getInstance().endActivePetition(activeChar);
+				PetitionManager.getInstance().endActivePetition(player);
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
+				player.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
 			}
 		}
-		else if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar))
+		else if (PetitionManager.getInstance().isPlayerPetitionPending(player))
 		{
-			if (PetitionManager.getInstance().cancelActivePetition(activeChar))
+			if (PetitionManager.getInstance().cancelActivePetition(player))
 			{
-				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
+				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(player);
 				
 				SystemMessage sm = new SystemMessage(SystemMessageId.PETITION_CANCELED_SUBMIT_S1_MORE_TODAY);
 				sm.addString(String.valueOf(numRemaining));
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 				
 				// Notify all GMs that the player's pending petition has been cancelled.
-				final String msgContent = activeChar.getName() + " has canceled a pending petition.";
-				GmListTable.broadcastToGMs(new CreatureSay(activeChar.getObjectId(), 17, "Petition System", msgContent));
+				final String msgContent = player.getName() + " has canceled a pending petition.";
+				GmListTable.broadcastToGMs(new CreatureSay(player.getObjectId(), 17, "Petition System", msgContent));
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
+				player.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.PETITION_NOT_SUBMITTED);
+			player.sendPacket(SystemMessageId.PETITION_NOT_SUBMITTED);
 		}
 	}
 }

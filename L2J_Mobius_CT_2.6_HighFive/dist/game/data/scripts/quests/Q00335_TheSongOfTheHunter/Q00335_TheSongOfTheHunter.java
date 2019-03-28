@@ -22,9 +22,9 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -428,7 +428,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -600,7 +600,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -1252,7 +1252,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
 		if (qs != null)
@@ -1547,7 +1547,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 		return super.onKill(npc, player, isSummon);
 	}
 	
-	private String reward(L2PcInstance player, QuestState qs, int[][] rewards)
+	private String reward(PlayerInstance player, QuestState qs, int[][] rewards)
 	{
 		for (int i = rewards.length - 1; i >= 0; i--)
 		{
@@ -1577,7 +1577,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 		return null;
 	}
 	
-	private String getHtml(L2PcInstance player, String htmlName, int i0, int i1, int i2, int i3, int i4)
+	private String getHtml(PlayerInstance player, String htmlName, int i0, int i1, int i2, int i3, int i4)
 	{
 		String html = getHtm(player, htmlName);
 		html = html.replace("<?reply1?>", LINKS.get(i0));
@@ -1588,9 +1588,9 @@ public class Q00335_TheSongOfTheHunter extends Quest
 		return html;
 	}
 	
-	private void evolveBloodCrystal(L2PcInstance player)
+	private void evolveBloodCrystal(PlayerInstance player)
 	{
-		final L2Weapon weapon = player.getActiveWeaponItem();
+		final Weapon weapon = player.getActiveWeaponItem();
 		if ((weapon != null) && (weapon.getId() == CYBELLINS_DAGGER) && (hasQuestItems(player, FIRST_CIRCLE_HUNTER_LICENSE) || hasQuestItems(player, SECOND_CIRCLE_HUNTER_LICENSE)))
 		{
 			if (getRandom(100) < 60)

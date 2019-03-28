@@ -29,10 +29,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.item.L2Henna;
+import com.l2jmobius.gameserver.templates.item.Henna;
 
 /**
- * This class ...
  * @version $Revision$ $Date$
  */
 public class HennaTable
@@ -41,7 +40,7 @@ public class HennaTable
 	
 	private static HennaTable _instance;
 	
-	private final Map<Integer, L2Henna> _henna;
+	private final Map<Integer, Henna> _henna;
 	private final boolean _initialized = true;
 	
 	public static HennaTable getInstance()
@@ -100,7 +99,7 @@ public class HennaTable
 				hennaDat.set("stat_DEX", Integer.parseInt(st.nextToken()));
 				hennaDat.set("stat_WIT", Integer.parseInt(st.nextToken()));
 				
-				L2Henna template = new L2Henna(hennaDat);
+				Henna template = new Henna(hennaDat);
 				_henna.put(id, template);
 			}
 			
@@ -159,7 +158,7 @@ public class HennaTable
 		return _initialized;
 	}
 	
-	public L2Henna getTemplate(int id)
+	public Henna getTemplate(int id)
 	{
 		return _henna.get(id);
 	}

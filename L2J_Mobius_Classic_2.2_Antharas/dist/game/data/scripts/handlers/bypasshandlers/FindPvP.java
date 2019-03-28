@@ -24,9 +24,9 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
@@ -41,30 +41,30 @@ public class FindPvP implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!Config.ENABLE_FIND_PVP || !target.isNpc())
 		{
 			return false;
 		}
 		
-		L2PcInstance mostPvP = null;
+		PlayerInstance mostPvP = null;
 		int max = -1;
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance plr : World.getInstance().getPlayers())
 		{
-			if ((player == null) //
-				|| (player.getPvpFlag() == 0) //
-				|| (player.getInstanceId() != 0) //
-				|| player.isGM() //
-				|| player.isInsideZone(ZoneId.PEACE) //
-				|| player.isInsideZone(ZoneId.SIEGE) //
-				|| player.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
+			if ((plr == null) //
+				|| (plr.getPvpFlag() == 0) //
+				|| (plr.getInstanceId() != 0) //
+				|| plr.isGM() //
+				|| plr.isInsideZone(ZoneId.PEACE) //
+				|| plr.isInsideZone(ZoneId.SIEGE) //
+				|| plr.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
 			{
 				continue;
 			}
 			
 			int count = 0;
-			for (L2PcInstance pl : L2World.getInstance().getVisibleObjects(player, L2PcInstance.class))
+			for (PlayerInstance pl : World.getInstance().getVisibleObjects(plr, PlayerInstance.class))
 			{
 				if ((pl.getPvpFlag() > 0) && !pl.isInsideZone(ZoneId.PEACE))
 				{
@@ -75,23 +75,23 @@ public class FindPvP implements IBypassHandler
 			if (count > max)
 			{
 				max = count;
-				mostPvP = player;
+				mostPvP = plr;
 			}
 		}
 		
 		if (mostPvP != null)
 		{
 			// Check if the player's clan is already outnumbering the PvP
-			if (activeChar.getClan() != null)
+			if (player.getClan() != null)
 			{
 				Map<Integer, Integer> clanNumbers = new HashMap<>();
-				int allyId = activeChar.getAllyId();
+				int allyId = player.getAllyId();
 				if (allyId == 0)
 				{
-					allyId = activeChar.getClanId();
+					allyId = player.getClanId();
 				}
 				clanNumbers.put(allyId, 1);
-				for (L2PcInstance known : L2World.getInstance().getVisibleObjects(mostPvP, L2PcInstance.class))
+				for (PlayerInstance known : World.getInstance().getVisibleObjects(mostPvP, PlayerInstance.class))
 				{
 					int knownAllyId = known.getAllyId();
 					if (knownAllyId == 0)
@@ -124,22 +124,22 @@ public class FindPvP implements IBypassHandler
 				
 				if (biggestAllyId == allyId)
 				{
-					activeChar.sendPacket(new CreatureSay(0, ChatType.WHISPER, target.getName(), "Sorry, your clan/ally is outnumbering the place already so you can't move there."));
+					player.sendPacket(new CreatureSay(0, ChatType.WHISPER, target.getName(), "Sorry, your clan/ally is outnumbering the place already so you can't move there."));
 					return true;
 				}
 			}
 			
-			activeChar.teleToLocation((mostPvP.getX() + Rnd.get(300)) - 150, (mostPvP.getY() + Rnd.get(300)) - 150, mostPvP.getZ());
-			activeChar.setSpawnProtection(true);
-			if (!activeChar.isGM())
+			player.teleToLocation((mostPvP.getX() + Rnd.get(300)) - 150, (mostPvP.getY() + Rnd.get(300)) - 150, mostPvP.getZ());
+			player.setSpawnProtection(true);
+			if (!player.isGM())
 			{
-				activeChar.setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
-				activeChar.startPvPFlag();
+				player.setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
+				player.startPvPFlag();
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(new CreatureSay(0, ChatType.WHISPER, target.getName(), "Sorry, I can't find anyone in flag status right now."));
+			player.sendPacket(new CreatureSay(0, ChatType.WHISPER, target.getName(), "Sorry, I can't find anyone in flag status right now."));
 		}
 		return false;
 	}

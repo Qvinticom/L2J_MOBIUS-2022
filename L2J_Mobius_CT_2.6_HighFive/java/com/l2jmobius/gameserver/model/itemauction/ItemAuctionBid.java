@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.itemauction;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Forsaiken
@@ -58,8 +58,8 @@ public final class ItemAuctionBid
 		return _lastBid <= 0;
 	}
 	
-	final L2PcInstance getPlayer()
+	final PlayerInstance getPlayer()
 	{
-		return L2World.getInstance().getPlayer(_playerObjId);
+		return World.getInstance().getPlayer(_playerObjId);
 	}
 }

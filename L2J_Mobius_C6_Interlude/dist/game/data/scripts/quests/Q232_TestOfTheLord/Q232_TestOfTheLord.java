@@ -16,8 +16,8 @@
  */
 package quests.Q232_TestOfTheLord;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.Race;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -76,7 +76,7 @@ public class Q232_TestOfTheLord extends Quest
 	private static final int MARK_LORD = 3390;
 	private static final int DIMENSIONAL_DIAMOND = 7562;
 	
-	private static L2NpcInstance _firstOrc; // Used to avoid to spawn multiple instances.
+	private static NpcInstance _firstOrc; // Used to avoid to spawn multiple instances.
 	
 	public Q232_TestOfTheLord()
 	{
@@ -91,7 +91,7 @@ public class Q232_TestOfTheLord extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -190,7 +190,7 @@ public class Q232_TestOfTheLord extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		String htmltext = getNoQuestMsg();
@@ -573,7 +573,7 @@ public class Q232_TestOfTheLord extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

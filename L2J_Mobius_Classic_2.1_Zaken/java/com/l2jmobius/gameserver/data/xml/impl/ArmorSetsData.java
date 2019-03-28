@@ -31,9 +31,9 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
+import com.l2jmobius.gameserver.model.ArmorSet;
 import com.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 
 /**
@@ -44,8 +44,8 @@ public final class ArmorSetsData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetsData.class.getName());
 	
-	private final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
-	private final Map<Integer, List<L2ArmorSet>> _armorSetItems = new HashMap<>();
+	private final Map<Integer, ArmorSet> _armorSets = new HashMap<>();
+	private final Map<Integer, List<ArmorSet>> _armorSetItems = new HashMap<>();
 	
 	protected ArmorSetsData()
 	{
@@ -74,7 +74,7 @@ public final class ArmorSetsData implements IGameXmlReader
 						final int id = parseInteger(setNode.getAttributes(), "id");
 						final int minimumPieces = parseInteger(setNode.getAttributes(), "minimumPieces", 0);
 						final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
-						final L2ArmorSet set = new L2ArmorSet(id, minimumPieces, isVisual);
+						final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual);
 						if (_armorSets.putIfAbsent(id, set) != null)
 						{
 							LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
@@ -89,7 +89,7 @@ public final class ArmorSetsData implements IGameXmlReader
 									{
 										final NamedNodeMap attrs = node.getAttributes();
 										final int itemId = parseInteger(attrs, "id");
-										final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+										final Item item = ItemTable.getInstance().getTemplate(itemId);
 										if (item == null)
 										{
 											LOGGER.warning("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
@@ -107,7 +107,7 @@ public final class ArmorSetsData implements IGameXmlReader
 									{
 										final NamedNodeMap attrs = node.getAttributes();
 										final int itemId = parseInteger(attrs, "id");
-										final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+										final Item item = ItemTable.getInstance().getTemplate(itemId);
 										if (item == null)
 										{
 											LOGGER.warning("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
@@ -156,7 +156,7 @@ public final class ArmorSetsData implements IGameXmlReader
 	 * @param setId the set id that is attached to a set
 	 * @return the armor set associated to the given item id
 	 */
-	public L2ArmorSet getSet(int setId)
+	public ArmorSet getSet(int setId)
 	{
 		return _armorSets.get(setId);
 	}
@@ -165,7 +165,7 @@ public final class ArmorSetsData implements IGameXmlReader
 	 * @param itemId the item id that is attached to a set
 	 * @return the armor set associated to the given item id
 	 */
-	public List<L2ArmorSet> getSets(int itemId)
+	public List<ArmorSet> getSets(int itemId)
 	{
 		return _armorSetItems.getOrDefault(itemId, Collections.emptyList());
 	}

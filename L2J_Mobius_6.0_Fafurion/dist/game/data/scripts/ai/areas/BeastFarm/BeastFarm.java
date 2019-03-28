@@ -25,11 +25,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2TamedBeastInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -226,7 +226,7 @@ public final class BeastFarm extends AbstractNpcAI
 		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Vigor", new SkillHolder(6431, 1), new SkillHolder(6666, 1)));
 	}
 	
-	public void spawnNext(L2Npc npc, L2PcInstance player, int nextNpcId, int food)
+	public void spawnNext(Npc npc, PlayerInstance player, int nextNpcId, int food)
 	{
 		// remove the feedinfo of the mob that got despawned, if any
 		if (_feedInfo.containsKey(npc.getObjectId()))
@@ -248,7 +248,7 @@ public final class BeastFarm extends AbstractNpcAI
 		// player might have and initialize the Tamed Beast.
 		if (CommonUtil.contains(TAMED_BEASTS, nextNpcId))
 		{
-			final L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
+			final TamedBeastInstance nextNpc = new TamedBeastInstance(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
 			
 			final TamedBeast beast = TAMED_BEAST_DATA.get(getRandom(TAMED_BEAST_DATA.size()));
 			String name = beast.getName();
@@ -292,7 +292,7 @@ public final class BeastFarm extends AbstractNpcAI
 		{
 			// if not trained, the newly spawned mob will automatically be agro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
-			final L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
+			final Attackable nextNpc = (Attackable) addSpawn(nextNpcId, npc);
 			
 			// register the player in the feedinfo for the mob that just spawned
 			_feedInfo.put(nextNpc.getObjectId(), player.getObjectId());
@@ -305,7 +305,7 @@ public final class BeastFarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
@@ -363,7 +363,7 @@ public final class BeastFarm extends AbstractNpcAI
 				{
 					_feedInfo.remove(objectId);
 					npc.setRunning();
-					((L2Attackable) npc).addDamageHate(caster, 0, 1);
+					((Attackable) npc).addDamageHate(caster, 0, 1);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
 				}
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -385,7 +385,7 @@ public final class BeastFarm extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		// remove the feedinfo of the mob that got killed, if any
 		if (_feedInfo.containsKey(npc.getObjectId()))

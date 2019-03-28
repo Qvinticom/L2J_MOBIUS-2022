@@ -20,9 +20,9 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class Rift implements IBypassHandler
 {
@@ -34,7 +34,7 @@ public class Rift implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		if (!target.isNpc())
 		{
@@ -46,7 +46,7 @@ public class Rift implements IBypassHandler
 			try
 			{
 				final Byte b1 = Byte.parseByte(command.substring(10)); // Selected Area: Recruit, Soldier etc
-				DimensionalRiftManager.getInstance().start(activeChar, b1, (L2Npc) target);
+				DimensionalRiftManager.getInstance().start(player, b1, (Npc) target);
 				return true;
 			}
 			catch (Exception e)
@@ -56,17 +56,17 @@ public class Rift implements IBypassHandler
 		}
 		else
 		{
-			final boolean inRift = activeChar.isInParty() && activeChar.getParty().isInDimensionalRift();
+			final boolean inRift = player.isInParty() && player.getParty().isInDimensionalRift();
 			
 			if (command.toLowerCase().startsWith(COMMANDS[1])) // ChangeRiftRoom
 			{
 				if (inRift)
 				{
-					activeChar.getParty().getDimensionalRift().manualTeleport(activeChar, (L2Npc) target);
+					player.getParty().getDimensionalRift().manualTeleport(player, (Npc) target);
 				}
 				else
 				{
-					DimensionalRiftManager.getInstance().handleCheat(activeChar, (L2Npc) target);
+					DimensionalRiftManager.getInstance().handleCheat(player, (Npc) target);
 				}
 				
 				return true;
@@ -75,11 +75,11 @@ public class Rift implements IBypassHandler
 			{
 				if (inRift)
 				{
-					activeChar.getParty().getDimensionalRift().manualExitRift(activeChar, (L2Npc) target);
+					player.getParty().getDimensionalRift().manualExitRift(player, (Npc) target);
 				}
 				else
 				{
-					DimensionalRiftManager.getInstance().handleCheat(activeChar, (L2Npc) target);
+					DimensionalRiftManager.getInstance().handleCheat(player, (Npc) target);
 				}
 				
 			}

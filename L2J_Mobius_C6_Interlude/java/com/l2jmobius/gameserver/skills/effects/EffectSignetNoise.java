@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
-public final class EffectSignetNoise extends L2Effect
+public final class EffectSignetNoise extends Effect
 {
-	private L2EffectPointInstance _actor;
+	private EffectPointInstance _actor;
 	
 	public EffectSignetNoise(Env env, EffectTemplate template)
 	{
@@ -39,7 +39,7 @@ public final class EffectSignetNoise extends L2Effect
 	@Override
 	public void onStart()
 	{
-		_actor = (L2EffectPointInstance) getEffected();
+		_actor = (EffectPointInstance) getEffected();
 	}
 	
 	@Override
@@ -50,17 +50,17 @@ public final class EffectSignetNoise extends L2Effect
 			return true; // do nothing first time
 		}
 		
-		for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (Creature target : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (target == null)
 			{
 				continue;
 			}
 			
-			final L2Effect[] effects = target.getAllEffects();
+			final Effect[] effects = target.getAllEffects();
 			if (effects != null)
 			{
-				for (L2Effect effect : effects)
+				for (Effect effect : effects)
 				{
 					if (effect.getSkill().isDance())
 					{

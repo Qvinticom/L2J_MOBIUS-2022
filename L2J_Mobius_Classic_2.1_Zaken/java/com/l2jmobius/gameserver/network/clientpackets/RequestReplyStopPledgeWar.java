@@ -18,12 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestReplyStopPledgeWar implements IClientIncomingPacket
@@ -31,7 +30,7 @@ public final class RequestReplyStopPledgeWar implements IClientIncomingPacket
 	private int _answer;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		packet.readS();
 		_answer = packet.readD();
@@ -39,14 +38,14 @@ public final class RequestReplyStopPledgeWar implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		final L2PcInstance requestor = activeChar.getActiveRequester();
+		final PlayerInstance requestor = player.getActiveRequester();
 		if (requestor == null)
 		{
 			return;
@@ -54,14 +53,14 @@ public final class RequestReplyStopPledgeWar implements IClientIncomingPacket
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), player.getClanId());
 		}
 		else
 		{
 			requestor.sendPacket(SystemMessageId.REQUEST_TO_END_WAR_HAS_BEEN_DENIED);
 		}
 		
-		activeChar.setActiveRequester(null);
+		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
 	}
 }

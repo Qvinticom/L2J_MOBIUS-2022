@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Vector;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 01 // Packet Identifier <BR>
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  * format d d(dd)
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:39 $
  */
-public class StatusUpdate extends L2GameServerPacket
+public class StatusUpdate extends GameServerPacket
 {
 	public static final int LEVEL = 0x01;
 	public static final int EXP = 0x02;
@@ -66,7 +66,7 @@ public class StatusUpdate extends L2GameServerPacket
 	public static final int CUR_CP = 0x21;
 	public static final int MAX_CP = 0x22;
 	
-	private L2PcInstance _actor;
+	private PlayerInstance _actor;
 	
 	private Vector<Attribute> _attributes;
 	public int _objectId;
@@ -84,7 +84,7 @@ public class StatusUpdate extends L2GameServerPacket
 		}
 	}
 	
-	public StatusUpdate(L2PcInstance actor)
+	public StatusUpdate(PlayerInstance actor)
 	{
 		_actor = actor;
 	}

@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -41,27 +41,27 @@ public class ScrollOfResurrection implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		PlayerInstance player = (PlayerInstance) playable;
 		
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
+			player.sendPacket(SystemMessageId.CANT_MOVE_SITTING);
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendMessage("This Item Cannot Be Used On Olympiad Games.");
+			player.sendMessage("This Item Cannot Be Used On Olympiad Games.");
 		}
 		
-		if (activeChar.isMovementDisabled())
+		if (player.isMovementDisabled())
 		{
 			return;
 		}
@@ -71,20 +71,20 @@ public class ScrollOfResurrection implements IItemHandler
 		final boolean petScroll = (itemId == 6387) || (itemId == 737);
 		
 		// SoR Animation section
-		L2Character target = (L2Character) activeChar.getTarget();
+		Creature target = (Creature) player.getTarget();
 		
 		if ((target != null) && target.isDead())
 		{
-			L2PcInstance targetPlayer = null;
-			if (target instanceof L2PcInstance)
+			PlayerInstance targetPlayer = null;
+			if (target instanceof PlayerInstance)
 			{
-				targetPlayer = (L2PcInstance) target;
+				targetPlayer = (PlayerInstance) target;
 			}
 			
-			L2PetInstance targetPet = null;
-			if (target instanceof L2PetInstance)
+			PetInstance targetPet = null;
+			if (target instanceof PetInstance)
 			{
-				targetPet = (L2PetInstance) target;
+				targetPet = (PetInstance) target;
 			}
 			
 			if ((targetPlayer != null) || (targetPet != null))
@@ -106,22 +106,22 @@ public class ScrollOfResurrection implements IItemHandler
 				if ((castle != null) && castle.getSiege().getIsInProgress())
 				{
 					condGood = false;
-					activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
+					player.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
 				}
 				
 				if (targetPet != null)
 				{
-					if (targetPet.getOwner() != activeChar)
+					if (targetPet.getOwner() != player)
 					{
 						if (targetPet.getOwner().isReviveRequested())
 						{
 							if (targetPet.getOwner().isRevivingPet())
 							{
-								activeChar.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+								player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 							}
 							else
 							{
-								activeChar.sendPacket(SystemMessageId.PET_CANNOT_RES); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+								player.sendPacket(SystemMessageId.PET_CANNOT_RES); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
 							}
 							condGood = false;
 						}
@@ -129,7 +129,7 @@ public class ScrollOfResurrection implements IItemHandler
 					else if (!petScroll)
 					{
 						condGood = false;
-						activeChar.sendMessage("You do not have the correct scroll");
+						player.sendMessage("You do not have the correct scroll");
 					}
 				}
 				else if (targetPlayer != null)
@@ -137,24 +137,24 @@ public class ScrollOfResurrection implements IItemHandler
 					if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
 					{
 						condGood = false;
-						activeChar.sendPacket(SystemMessage.sendString("You may not resurrect participants in a festival."));
+						player.sendPacket(SystemMessage.sendString("You may not resurrect participants in a festival."));
 					}
 					if (targetPlayer.isReviveRequested())
 					{
 						if (targetPlayer.isRevivingPet())
 						{
-							activeChar.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+							player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 						}
 						else
 						{
-							activeChar.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+							player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 						}
 						condGood = false;
 					}
 					else if (!humanScroll)
 					{
 						condGood = false;
-						activeChar.sendMessage("You do not have the correct scroll");
+						player.sendMessage("You do not have the correct scroll");
 					}
 				}
 				
@@ -189,25 +189,25 @@ public class ScrollOfResurrection implements IItemHandler
 					
 					if (skillId != 0)
 					{
-						final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-						activeChar.useMagic(skill, true, true);
+						final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+						player.useMagic(skill, true, true);
 						
 						// Consume the scroll
-						if (!activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false))
+						if (!player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 						{
 							return;
 						}
 						
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(itemId);
-						activeChar.sendPacket(sm);
+						player.sendPacket(sm);
 					}
 				}
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 		}
 	}
 	

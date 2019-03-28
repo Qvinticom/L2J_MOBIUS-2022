@@ -17,10 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -45,7 +45,7 @@ public final class AddHate extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (_affectSummoner && (effector.getSummoner() != null))
 		{
@@ -60,11 +60,11 @@ public final class AddHate extends AbstractEffect
 		final double val = _power;
 		if (val > 0)
 		{
-			((L2Attackable) effected).addDamageHate(effector, 0, (int) val);
+			((Attackable) effected).addDamageHate(effector, 0, (int) val);
 		}
 		else if (val < 0)
 		{
-			((L2Attackable) effected).reduceHate(effector, (int) -val);
+			((Attackable) effected).reduceHate(effector, (int) -val);
 		}
 	}
 }

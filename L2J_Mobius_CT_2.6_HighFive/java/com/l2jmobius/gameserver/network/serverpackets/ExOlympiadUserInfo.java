@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -26,14 +26,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExOlympiadUserInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private Participant _par = null;
 	private int _curHp;
 	private int _maxHp;
 	private int _curCp;
 	private int _maxCp;
 	
-	public ExOlympiadUserInfo(L2PcInstance player)
+	public ExOlympiadUserInfo(PlayerInstance player)
 	{
 		_player = player;
 		if (_player != null)

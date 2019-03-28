@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class NpcInfoAbnormalVisualEffect implements IClientOutgoingPacket
 {
-	private final L2Npc _npc;
+	private final Npc _npc;
 	
-	public NpcInfoAbnormalVisualEffect(L2Npc npc)
+	public NpcInfoAbnormalVisualEffect(Npc npc)
 	{
 		_npc = npc;
 	}

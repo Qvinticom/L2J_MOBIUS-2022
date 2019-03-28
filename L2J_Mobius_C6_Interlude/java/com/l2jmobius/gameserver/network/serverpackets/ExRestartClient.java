@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: (ch).
  * @author -Wooden-
  */
-public class ExRestartClient extends L2GameServerPacket
+public class ExRestartClient extends GameServerPacket
 {
 	@Override
 	protected void writeImpl()

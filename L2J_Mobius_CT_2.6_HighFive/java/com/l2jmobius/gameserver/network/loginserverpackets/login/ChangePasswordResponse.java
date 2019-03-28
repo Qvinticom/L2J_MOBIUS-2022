@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
 import com.l2jmobius.commons.network.BaseRecievePacket;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ChangePasswordResponse extends BaseRecievePacket
 {
@@ -29,7 +29,7 @@ public class ChangePasswordResponse extends BaseRecievePacket
 		final String character = readS();
 		final String msgToSend = readS();
 		
-		final L2PcInstance player = L2World.getInstance().getPlayer(character);
+		final PlayerInstance player = World.getInstance().getPlayer(character);
 		
 		if (player != null)
 		{

@@ -19,7 +19,7 @@ package handlers.communityboard;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Friends board.
@@ -40,23 +40,23 @@ public class FriendsBoard implements IParseBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
 	{
 		if (command.equals("_friendlist"))
 		{
-			CommunityBoardHandler.getInstance().addBypass(activeChar, "Friends List", command);
+			CommunityBoardHandler.getInstance().addBypass(player, "Friends List", command);
 			
-			final String html = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/friends_list.html");
+			final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/friends_list.html");
 			
-			CommunityBoardHandler.separateAndSend(html, activeChar);
+			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		else if (command.equals("_friendblocklist"))
 		{
-			CommunityBoardHandler.getInstance().addBypass(activeChar, "Ignore list", command);
+			CommunityBoardHandler.getInstance().addBypass(player, "Ignore list", command);
 			
-			final String html = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/friends_block_list.html");
+			final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/friends_block_list.html");
 			
-			CommunityBoardHandler.separateAndSend(html, activeChar);
+			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		else
 		{

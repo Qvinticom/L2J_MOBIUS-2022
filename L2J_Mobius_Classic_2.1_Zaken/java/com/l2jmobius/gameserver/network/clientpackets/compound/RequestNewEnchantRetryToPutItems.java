@@ -20,11 +20,11 @@ package com.l2jmobius.gameserver.network.clientpackets.compound;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import com.l2jmobius.gameserver.model.items.combination.CombinationItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantRetryToPutItemFail;
@@ -39,7 +39,7 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 	private int _secondItemObjectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_firstItemObjectId = packet.readD();
 		_secondItemObjectId = packet.readD();
@@ -47,28 +47,28 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
-		else if (activeChar.isInStoreMode())
+		else if (player.isInStoreMode())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
 			return;
 		}
-		else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest())
+		else if (player.isProcessingTransaction() || player.isProcessingRequest())
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
 			return;
 		}
 		
-		final CompoundRequest request = new CompoundRequest(activeChar);
-		if (!activeChar.addRequest(request))
+		final CompoundRequest request = new CompoundRequest(player);
+		if (!player.addRequest(request))
 		{
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
 			return;
@@ -76,21 +76,21 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 		
 		// Make sure player owns first item.
 		request.setItemOne(_firstItemObjectId);
-		final L2ItemInstance itemOne = request.getItemOne();
+		final ItemInstance itemOne = request.getItemOne();
 		if (itemOne == null)
 		{
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
 		// Make sure player owns second item.
 		request.setItemTwo(_secondItemObjectId);
-		final L2ItemInstance itemTwo = request.getItemTwo();
+		final ItemInstance itemTwo = request.getItemTwo();
 		if (itemTwo == null)
 		{
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		
@@ -100,7 +100,7 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 		if (combinationItem == null)
 		{
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
-			activeChar.removeRequest(request.getClass());
+			player.removeRequest(request.getClass());
 			return;
 		}
 		client.sendPacket(ExEnchantRetryToPutItemOk.STATIC_PACKET);

@@ -18,18 +18,18 @@ package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class CombatFlag
 {
-	private L2PcInstance _player = null;
+	private PlayerInstance _player = null;
 	private int _playerId = 0;
-	private L2ItemInstance _item = null;
-	private L2ItemInstance _itemInstance;
+	private ItemInstance _item = null;
+	private ItemInstance _itemInstance;
 	private final Location _location;
 	private final int _itemId;
 	@SuppressWarnings("unused")
@@ -44,7 +44,7 @@ public class CombatFlag
 	
 	public synchronized void spawnMe()
 	{
-		// Init the dropped L2ItemInstance and add it in the world as a visible object at the position where mob was last
+		// Init the dropped ItemInstance and add it in the world as a visible object at the position where mob was last
 		_itemInstance = ItemTable.getInstance().createItem("Combat", _itemId, 1, null, null);
 		_itemInstance.dropMe(null, _location.getX(), _location.getY(), _location.getZ());
 	}
@@ -61,7 +61,7 @@ public class CombatFlag
 		}
 	}
 	
-	public boolean activate(L2PcInstance player, L2ItemInstance item)
+	public boolean activate(PlayerInstance player, ItemInstance item)
 	{
 		if (player.isMounted())
 		{
@@ -116,7 +116,7 @@ public class CombatFlag
 		return _playerId;
 	}
 	
-	public L2ItemInstance getCombatFlagInstance()
+	public ItemInstance getCombatFlagInstance()
 	{
 		return _itemInstance;
 	}

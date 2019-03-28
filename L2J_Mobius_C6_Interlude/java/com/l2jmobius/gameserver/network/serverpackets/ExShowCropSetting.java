@@ -21,7 +21,7 @@ import java.util.List;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import com.l2jmobius.gameserver.model.L2Manor;
+import com.l2jmobius.gameserver.model.Manor;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.entity.siege.Castle;
  * reward ]
  * @author l3x
  */
-public class ExShowCropSetting extends L2GameServerPacket
+public class ExShowCropSetting extends GameServerPacket
 {
 	private final int _manorId;
 	private final int _count;
@@ -44,20 +44,20 @@ public class ExShowCropSetting extends L2GameServerPacket
 	{
 		_manorId = manorId;
 		final Castle c = CastleManager.getInstance().getCastleById(_manorId);
-		final List<Integer> crops = L2Manor.getInstance().getCropsForCastle(_manorId);
+		final List<Integer> crops = Manor.getInstance().getCropsForCastle(_manorId);
 		_count = crops.size();
 		_cropData = new int[_count * 14];
 		int i = 0;
 		for (int cr : crops)
 		{
 			_cropData[(i * 14) + 0] = cr;
-			_cropData[(i * 14) + 1] = L2Manor.getInstance().getSeedLevelByCrop(cr);
-			_cropData[(i * 14) + 2] = L2Manor.getInstance().getRewardItem(cr, 1);
-			_cropData[(i * 14) + 3] = L2Manor.getInstance().getRewardItem(cr, 2);
-			_cropData[(i * 14) + 4] = L2Manor.getInstance().getCropPuchaseLimit(cr);
+			_cropData[(i * 14) + 1] = Manor.getInstance().getSeedLevelByCrop(cr);
+			_cropData[(i * 14) + 2] = Manor.getInstance().getRewardItem(cr, 1);
+			_cropData[(i * 14) + 3] = Manor.getInstance().getRewardItem(cr, 2);
+			_cropData[(i * 14) + 4] = Manor.getInstance().getCropPuchaseLimit(cr);
 			_cropData[(i * 14) + 5] = 0; // Looks like not used
-			_cropData[(i * 14) + 6] = (L2Manor.getInstance().getCropBasicPrice(cr) * 60) / 100;
-			_cropData[(i * 14) + 7] = L2Manor.getInstance().getCropBasicPrice(cr) * 10;
+			_cropData[(i * 14) + 6] = (Manor.getInstance().getCropBasicPrice(cr) * 60) / 100;
+			_cropData[(i * 14) + 7] = Manor.getInstance().getCropBasicPrice(cr) * 10;
 			CropProcure cropPr = c.getCrop(cr, CastleManorManager.PERIOD_CURRENT);
 			if (cropPr != null)
 			{

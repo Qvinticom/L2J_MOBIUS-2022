@@ -20,12 +20,12 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
@@ -92,10 +92,10 @@ public class DrChaos extends AbstractNpcAI
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
 			
-			final L2GrandBossInstance golem = (L2GrandBossInstance) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
+			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
-			final L2Npc _golem = golem;
+			final Npc _golem = golem;
 			
 			_golem.setCurrentHpMp(hp, mp);
 			_golem.setRunning();
@@ -112,7 +112,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("reset_drchaos"))
 		{
@@ -157,7 +157,7 @@ public class DrChaos extends AbstractNpcAI
 		{
 			// Delete Dr. Chaos && spawn the war golem.
 			npc.deleteMe();
-			final L2GrandBossInstance golem = (L2GrandBossInstance) addSpawn(CHAOS_GOLEM, 96080, -110822, -3343, 0, false, 0, false);
+			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, 96080, -110822, -3343, 0, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
 			// The "npc" variable attribution is now for the golem.
@@ -175,7 +175,7 @@ public class DrChaos extends AbstractNpcAI
 		{
 			if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
 			{
-				for (L2PcInstance obj : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 500))
+				for (PlayerInstance obj : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 500))
 				{
 					if (obj.isDead())
 					{
@@ -203,7 +203,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
 		
@@ -233,7 +233,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		// 30 seconds timer at initialization.
 		_pissedOffTimer = 30;
@@ -245,7 +245,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		cancelQuestTimer("golem_despawn", npc, null);
 		npc.broadcastSay(ChatType.NPC_GENERAL, "Urggh! You will pay dearly for this insult.");
@@ -265,7 +265,7 @@ public class DrChaos extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance victim, int damage, boolean isPet)
+	public String onAttack(Npc npc, PlayerInstance victim, int damage, boolean isPet)
 	{
 		final int chance = Rnd.get(300);
 		
@@ -302,7 +302,7 @@ public class DrChaos extends AbstractNpcAI
 	 * Launches the complete animation.
 	 * @param npc the midget.
 	 */
-	private void crazyMidgetBecomesAngry(L2Npc npc)
+	private void crazyMidgetBecomesAngry(Npc npc)
 	{
 		if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
 		{

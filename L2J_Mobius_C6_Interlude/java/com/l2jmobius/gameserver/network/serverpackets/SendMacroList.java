@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Macro;
+import com.l2jmobius.gameserver.model.Macro;
 
 /**
  * packet type id 0xe7 sample e7 d // unknown change of Macro edit,add,delete c // unknown c //count of Macros c // unknown d // id S // macro name S // desc S // acronym c // icon c // count c // entry c // type d // skill id c // shortcut id S // command name format: cdhcdSSScc (ccdcS)
  */
-public class SendMacroList extends L2GameServerPacket
+public class SendMacroList extends GameServerPacket
 {
 	private final int _rev;
 	private final int _count;
-	private final L2Macro _macro;
+	private final Macro _macro;
 	
-	public SendMacroList(int rev, int count, L2Macro macro)
+	public SendMacroList(int rev, int count, Macro macro)
 	{
 		_rev = rev;
 		_count = count;
@@ -56,7 +56,7 @@ public class SendMacroList extends L2GameServerPacket
 			
 			for (int i = 0; i < _macro.commands.length; i++)
 			{
-				final L2Macro.L2MacroCmd cmd = _macro.commands[i];
+				final Macro.MacroCmd cmd = _macro.commands[i];
 				writeC(i + 1); // i of count
 				writeC(cmd.type); // type 1 = skill, 3 = action, 4 = shortcut
 				writeD(cmd.d1); // skill id

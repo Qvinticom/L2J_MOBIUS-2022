@@ -18,7 +18,7 @@ package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExInzoneWaiting;
 
 /**
@@ -28,8 +28,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ExInzoneWaiting;
 public final class InstanceZoneInfo implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		activeChar.sendPacket(new ExInzoneWaiting(activeChar, false));
+		player.sendPacket(new ExInzoneWaiting(player, false));
 	}
 }

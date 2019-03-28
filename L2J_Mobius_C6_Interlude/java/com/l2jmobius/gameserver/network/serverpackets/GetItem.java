@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * sample 0000: 17 1a 95 20 48 9b da 12 40 44 17 02 00 03 f0 fc ff 98 f1 ff ff ..... format ddddd
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class GetItem extends L2GameServerPacket
+public class GetItem extends GameServerPacket
 {
-	private final L2ItemInstance _item;
+	private final ItemInstance _item;
 	private final int _playerId;
 	
-	public GetItem(L2ItemInstance item, int playerId)
+	public GetItem(ItemInstance item, int playerId)
 	{
 		_item = item;
 		_playerId = playerId;

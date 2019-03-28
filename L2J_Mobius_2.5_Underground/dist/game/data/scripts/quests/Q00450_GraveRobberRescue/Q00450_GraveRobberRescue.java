@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,11 +54,11 @@ public class Q00450_GraveRobberRescue extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -74,7 +74,7 @@ public class Q00450_GraveRobberRescue extends Quest
 			}
 			case "32650-07.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "despawn":
@@ -94,23 +94,23 @@ public class Q00450_GraveRobberRescue extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (npc.getId() == KANEMIKA)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.COMPLETED:
 				{
-					if (!st.isNowAvailable())
+					if (!qs.isNowAvailable())
 					{
 						htmltext = "32650-03.html";
 						break;
 					}
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 				}
 				case State.CREATED:
 				{
@@ -119,21 +119,21 @@ public class Q00450_GraveRobberRescue extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = (!hasQuestItems(player, EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
 					}
 					else
 					{
 						giveAdena(player, 65000, true); // Glory days reward: 6 886 980 exp, 8 116 410 sp, 371 400 Adena
-						st.exitQuest(QuestType.DAILY, true);
+						qs.exitQuest(QuestType.DAILY, true);
 						htmltext = "32650-10.html";
 					}
 					break;
 				}
 			}
 		}
-		else if (st.isCond(1))
+		else if (qs.isCond(1))
 		{
 			if (npc.isBusy())
 			{
@@ -151,7 +151,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				
 				if (getQuestItemsCount(player, EVIDENCE_OF_MIGRATION) == 10)
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				htmltext = "32651-01.html";
 			}
@@ -168,7 +168,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				npc.deleteMe();
 				htmltext = null;
 				
-				final L2Attackable monster = (L2Attackable) addSpawn(WARRIOR_MON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000);
+				final Attackable monster = (Attackable) addSpawn(WARRIOR_MON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 600000);
 				monster.setRunning();
 				monster.addDamageHate(player, 0, 999);
 				monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);

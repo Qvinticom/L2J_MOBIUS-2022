@@ -4523,7 +4523,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Patience -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
@@ -5067,7 +5067,7 @@
 					<value level="8">8</value>
 				</skillLevel>
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -5092,7 +5092,7 @@
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
@@ -5141,7 +5141,7 @@
 					<value level="8">8</value>
 				</skillLevel>
 				<allowWeapons>DUALFIST</allowWeapons>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
@@ -5166,7 +5166,7 @@
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>

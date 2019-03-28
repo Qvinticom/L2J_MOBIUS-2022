@@ -36,14 +36,14 @@ import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.SpecialItemType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import com.l2jmobius.gameserver.model.holders.MultisellListHolder;
 import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
 public final class MultisellData implements IGameXmlReader
@@ -205,7 +205,7 @@ public final class MultisellData implements IGameXmlReader
 	 * @param ingredientMultiplier
 	 * @param productMultiplier
 	 */
-	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier)
+	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier)
 	{
 		final MultisellListHolder template = _multisells.get(listId);
 		if (template == null)
@@ -244,7 +244,7 @@ public final class MultisellData implements IGameXmlReader
 		player.setMultiSell(list);
 	}
 	
-	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly)
+	public final void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly)
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, Double.NaN, Double.NaN);
 	}
@@ -257,7 +257,7 @@ public final class MultisellData implements IGameXmlReader
 			return true;
 		}
 		
-		final L2Item template = ItemTable.getInstance().getTemplate(holder.getId());
+		final Item template = ItemTable.getInstance().getTemplate(holder.getId());
 		return (template != null) && (template.isStackable() ? (holder.getCount() >= 1) : (holder.getCount() == 1));
 	}
 	

@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * 15 ee cc 11 43 object id 39 00 00 00 item id 8f 14 00 00 x b7 f1 00 00 y 60 f2 ff ff z 01 00 00 00 show item count 7a 00 00 00 count . format dddddddd
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SpawnItem extends L2GameServerPacket
+public class SpawnItem extends GameServerPacket
 {
 	private final int _objectId;
 	private final int _itemId;
@@ -32,7 +32,7 @@ public class SpawnItem extends L2GameServerPacket
 	private final int _stackable;
 	private final int _count;
 	
-	public SpawnItem(L2ItemInstance item)
+	public SpawnItem(ItemInstance item)
 	{
 		_objectId = item.getObjectId();
 		_itemId = item.getItemId();

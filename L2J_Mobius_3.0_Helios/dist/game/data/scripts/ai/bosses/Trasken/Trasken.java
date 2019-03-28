@@ -27,19 +27,19 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2NoSummonFriendZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -103,10 +103,10 @@ public class Trasken extends AbstractNpcAI
 	// Others
 	protected double hp_tail;
 	protected double hp_trasken;
-	private static L2Npc tie_trasken;
-	private static L2Npc trasken;
-	private static L2NoSummonFriendZone _zoneLair;
-	private static L2NoSummonFriendZone _zoneLair2;
+	private static Npc tie_trasken;
+	private static Npc trasken;
+	private static NoSummonFriendZone _zoneLair;
+	private static NoSummonFriendZone _zoneLair2;
 	private int playersToEnter;
 	protected int _statusZone = 0;
 	protected ScheduledFuture<?> _collapseTask;
@@ -294,8 +294,8 @@ public class Trasken extends AbstractNpcAI
 	public Trasken()
 	{
 		super();
-		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, L2NoSummonFriendZone.class);
-		_zoneLair2 = ZoneManager.getInstance().getZoneById(ZONE_ID_HEART, L2NoSummonFriendZone.class);
+		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
+		_zoneLair2 = ZoneManager.getInstance().getZoneById(ZONE_ID_HEART, NoSummonFriendZone.class);
 		int[] creature = new int[]
 		{
 			TRASKEN,
@@ -401,7 +401,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -416,7 +416,7 @@ public class Trasken extends AbstractNpcAI
 				{
 					return super.onAttack(npc, attacker, damage, isSummon);
 				}
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 250, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 250, cha ->
 				{
 					if (cha != null)
 					{
@@ -425,7 +425,7 @@ public class Trasken extends AbstractNpcAI
 				});
 				if (getRandom(100) < 30)
 				{
-					final L2Npc doom = addSpawn(18998, attacker.getX() + 25, attacker.getY() + 25, attacker.getZ(), 0, false, 30, false);
+					final Npc doom = addSpawn(18998, attacker.getX() + 25, attacker.getY() + 25, attacker.getZ(), 0, false, 30, false);
 					doom.setTarget(doom);
 					doom.isCastingNow();
 					doom.doCast(SKILL_1.getSkill());
@@ -469,7 +469,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(final L2Npc npc)
+	public String onSpawn(final Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -490,7 +490,7 @@ public class Trasken extends AbstractNpcAI
 			case TIE:
 			case BIG_TIE:
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 600, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 600, cha ->
 				{
 					npc.setTarget(cha);
 				});
@@ -502,7 +502,7 @@ public class Trasken extends AbstractNpcAI
 			case TRADJAN:
 			{
 				npc.getSpawn().setRespawnDelay(120);
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 3500, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, cha ->
 				{
 					npc.setTarget(cha);
 				});
@@ -513,7 +513,7 @@ public class Trasken extends AbstractNpcAI
 			case LAVRA_3:
 			{
 				npc.getSpawn().setRespawnDelay(200);
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 3500, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3500, cha ->
 				{
 					npc.setTarget(cha);
 				});
@@ -524,7 +524,7 @@ public class Trasken extends AbstractNpcAI
 			case VICTIM_EARTWORMS_3:
 			{
 				npc.getSpawn().setRespawnDelay(30);
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 1000, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, cha ->
 				{
 					npc.setTarget(cha);
 				});
@@ -535,7 +535,7 @@ public class Trasken extends AbstractNpcAI
 				npc.setIsOverloaded(true);
 				npc.setRandomWalking(true);
 				npc.getSpawn().setRespawnDelay(60);
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 1000, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, cha ->
 				{
 					npc.setTarget(cha);
 				});
@@ -552,9 +552,9 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character player, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		if (npc.isDead() || (player == null))
+		if (npc.isDead() || (creature == null))
 		{
 			return null;
 		}
@@ -566,22 +566,22 @@ public class Trasken extends AbstractNpcAI
 		{
 			if (getRandom(100) < 60)
 			{
-				npc.setTarget(player);
+				npc.setTarget(creature);
 				npc.doCast(SKILL_TIE_ROOT.getSkill());
-				addAttackPlayerDesire(npc, (L2Playable) player);
+				addAttackPlayerDesire(npc, (Playable) creature);
 			}
 			else
 			{
-				npc.setTarget(player);
+				npc.setTarget(creature);
 				npc.doCast(SKILL_TIE_CHAIN.getSkill());
-				addAttackPlayerDesire(npc, (L2Playable) player);
+				addAttackPlayerDesire(npc, (Playable) creature);
 			}
 		}
-		return super.onSeeCreature(npc, player, isSummon);
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
-	public String onAdvEvent(final String event, final L2Npc npc, final L2PcInstance player)
+	public String onAdvEvent(final String event, final Npc npc, final PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -612,10 +612,10 @@ public class Trasken extends AbstractNpcAI
 					_collapseTask.cancel(true);
 					_collapseTask = null;
 				}
-				_zoneLair.getCharactersInside().stream().filter(L2Character::isNpc).forEach(mob -> mob.deleteMe());
-				_zoneLair.getCharactersInside().stream().filter(L2Object::isMonster).forEach(cha -> ((L2MonsterInstance) cha).getSpawn().stopRespawn());
-				_zoneLair2.getCharactersInside().stream().filter(L2Character::isNpc).forEach(mob -> mob.deleteMe());
-				_zoneLair2.getCharactersInside().stream().filter(L2Object::isMonster).forEach(cha -> ((L2MonsterInstance) cha).getSpawn().stopRespawn());
+				_zoneLair.getCharactersInside().stream().filter(Creature::isNpc).forEach(mob -> mob.deleteMe());
+				_zoneLair.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((MonsterInstance) cha).getSpawn().stopRespawn());
+				_zoneLair2.getCharactersInside().stream().filter(Creature::isNpc).forEach(mob -> mob.deleteMe());
+				_zoneLair2.getCharactersInside().stream().filter(WorldObject::isMonster).forEach(cha -> ((MonsterInstance) cha).getSpawn().stopRespawn());
 				ThreadPool.schedule(() -> npc.decayMe(), 10000);
 				cancelQuestTimer("finish", npc, null);
 				
@@ -682,7 +682,7 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -746,13 +746,13 @@ public class Trasken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(final L2Character character, final L2ZoneType zone)
+	public String onEnterZone(final Creature creature, final ZoneType zone)
 	{
-		if ((zone.getId() == ZONE_ID) && character.isPlayer())
+		if ((zone.getId() == ZONE_ID) && creature.isPlayer())
 		{
 			for (int info : eventTriggers)
 			{
-				character.broadcastPacket(new OnEventTrigger(info, true));
+				creature.broadcastPacket(new OnEventTrigger(info, true));
 			}
 			
 			if (_collapseTask != null)
@@ -764,7 +764,7 @@ public class Trasken extends AbstractNpcAI
 			nextStage(_statusZone);
 		}
 		
-		if ((zone.getId() == ZONE_ID_HEART) && character.isPlayer())
+		if ((zone.getId() == ZONE_ID_HEART) && creature.isPlayer())
 		{
 			_zoneLair2.movePlayersTo(HEART_LOCATION);
 			if (_collapseTask != null)
@@ -776,11 +776,11 @@ public class Trasken extends AbstractNpcAI
 			zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 540, 0, NpcStringId.REMAINING_TIME)));
 			_collapseTask = ThreadPool.schedule(() -> Fail(true), time);
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	@Override
-	public String onExitZone(final L2Character character, final L2ZoneType zone)
+	public String onExitZone(final Creature creature, final ZoneType zone)
 	{
 		if ((zone.getId() == ZONE_ID_HEART) && zone.getPlayersInside().isEmpty())
 		{
@@ -789,11 +789,11 @@ public class Trasken extends AbstractNpcAI
 				Fail(true);
 				for (int info : eventTriggers)
 				{
-					character.broadcastPacket(new OnEventTrigger(info, false));
+					creature.broadcastPacket(new OnEventTrigger(info, false));
 				}
 			}, 900000);
 		}
-		return super.onExitZone(character, zone);
+		return super.onExitZone(creature, zone);
 	}
 	
 	private void nextStage(int taskId)
@@ -878,22 +878,22 @@ public class Trasken extends AbstractNpcAI
 		}
 	}
 	
-	private void TraskenStay(L2Character character)
+	private void TraskenStay(Creature creature)
 	{
-		character.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_EARTH_WYRM_HAS_LOST_CONSCIOUSNESS, 5, 4600, true));
-		character.doCast(SKILL_TRASKEN_BUFF.getSkill()); // 12 sec combo
+		creature.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_EARTH_WYRM_HAS_LOST_CONSCIOUSNESS, 5, 4600, true));
+		creature.doCast(SKILL_TRASKEN_BUFF.getSkill()); // 12 sec combo
 		if (playersToEnter == _zoneLair2.getPlayersInside().size())
 		{
-			final BuffInfo traskenBuff = character.getEffectList().getBuffInfoBySkillId(SKILL_TRASKEN_BUFF.getSkillId());
+			final BuffInfo traskenBuff = creature.getEffectList().getBuffInfoBySkillId(SKILL_TRASKEN_BUFF.getSkillId());
 			if (traskenBuff != null)
 			{
-				character.getEffectList().stopSkillEffects(true, traskenBuff.getSkill());
+				creature.getEffectList().stopSkillEffects(true, traskenBuff.getSkill());
 			}
 		}
 		ThreadPool.schedule(() ->
 		{
-			character.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_EXCEEDED_THE_MAXIMUM_NUMBER_OF_PERSONNEL, 5, 24000, true));
-			character.doCast(SKILL_TRASKEN_SLEEP.getSkill());
+			creature.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_EXCEEDED_THE_MAXIMUM_NUMBER_OF_PERSONNEL, 5, 24000, true));
+			creature.doCast(SKILL_TRASKEN_SLEEP.getSkill());
 		}, 4050);
 	}
 	

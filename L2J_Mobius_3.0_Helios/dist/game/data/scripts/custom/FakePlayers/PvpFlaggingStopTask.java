@@ -17,14 +17,14 @@
 package custom.FakePlayers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
 /**
- * TODO: Move it to L2Character.
+ * TODO: Move it to Creature.
  * @author Mobius
  */
 public class PvpFlaggingStopTask extends AbstractNpcAI
@@ -34,7 +34,7 @@ public class PvpFlaggingStopTask extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc == null) || npc.isDead())
 		{
@@ -43,7 +43,7 @@ public class PvpFlaggingStopTask extends AbstractNpcAI
 		
 		if (event.startsWith("FLAG_CHECK"))
 		{
-			final L2Object target = npc.getTarget();
+			final WorldObject target = npc.getTarget();
 			if ((target != null) && (target.isPlayable() || target.isFakePlayer()))
 			{
 				npc.setScriptValue(1); // in combat

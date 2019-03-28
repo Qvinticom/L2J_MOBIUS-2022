@@ -16,26 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class RecipeShopMsg extends L2GameServerPacket
+public class RecipeShopMsg extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public RecipeShopMsg(L2PcInstance player)
+	public RecipeShopMsg(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xdb);
-		writeD(_activeChar.getObjectId());
-		writeS(_activeChar.getCreateList().getStoreName());// _activeChar.getTradeList().getSellStoreName());
+		writeD(_player.getObjectId());
+		writeS(_player.getCreateList().getStoreName());// _activeChar.getTradeList().getSellStoreName());
 	}
 }

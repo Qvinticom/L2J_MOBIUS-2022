@@ -16,25 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
-public final class RequestRecipeItemMakeInfo extends L2GameClientPacket
+public final class RequestRecipeItemMakeInfo extends GameClientPacket
 {
 	private int _id;
-	private L2PcInstance _activeChar;
+	private PlayerInstance _player;
 	
 	@Override
 	protected void readImpl()
 	{
 		_id = readD();
-		_activeChar = getClient().getActiveChar();
+		_player = getClient().getPlayer();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final RecipeItemMakeInfo response = new RecipeItemMakeInfo(_id, _activeChar);
+		final RecipeItemMakeInfo response = new RecipeItemMakeInfo(_id, _player);
 		sendPacket(response);
 	}
 }

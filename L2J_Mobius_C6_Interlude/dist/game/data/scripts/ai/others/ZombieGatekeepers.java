@@ -22,11 +22,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 
 public class ZombieGatekeepers extends Quest
@@ -38,18 +38,18 @@ public class ZombieGatekeepers extends Quest
 		addAggroRangeEnterId(22136);
 	}
 	
-	private final Map<Integer, List<L2Character>> _attackersList = new ConcurrentHashMap<>();
+	private final Map<Integer, List<Creature>> _attackersList = new ConcurrentHashMap<>();
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
 		
-		final L2Character target = isPet ? attacker.getPet() : attacker;
+		final Creature target = isPet ? attacker.getPet() : attacker;
 		
 		if (_attackersList.get(npcObjId) == null)
 		{
-			final List<L2Character> player = new ArrayList<>();
+			final List<Creature> player = new ArrayList<>();
 			player.add(target);
 			_attackersList.put(npcObjId, player);
 		}
@@ -62,15 +62,15 @@ public class ZombieGatekeepers extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
 		
-		final L2Character target = isPet ? player.getPet() : player;
+		final Creature target = isPet ? player.getPet() : player;
 		
-		final L2ItemInstance VisitorsMark = player.getInventory().getItemByItemId(8064);
-		final L2ItemInstance FadedVisitorsMark = player.getInventory().getItemByItemId(8065);
-		final L2ItemInstance PagansMark = player.getInventory().getItemByItemId(8067);
+		final ItemInstance VisitorsMark = player.getInventory().getItemByItemId(8064);
+		final ItemInstance FadedVisitorsMark = player.getInventory().getItemByItemId(8065);
+		final ItemInstance PagansMark = player.getInventory().getItemByItemId(8067);
 		
 		final long mark1 = VisitorsMark == null ? 0 : VisitorsMark.getCount();
 		final long mark2 = FadedVisitorsMark == null ? 0 : FadedVisitorsMark.getCount();
@@ -78,16 +78,16 @@ public class ZombieGatekeepers extends Quest
 		
 		if ((mark1 == 0) && (mark2 == 0) && (mark3 == 0))
 		{
-			((L2Attackable) npc).addDamageHate(target, 0, 999);
+			((Attackable) npc).addDamageHate(target, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
 		else if ((_attackersList.get(npcObjId) == null) || !_attackersList.get(npcObjId).contains(target))
 		{
-			((L2Attackable) npc).getAggroList().remove(target);
+			((Attackable) npc).getAggroList().remove(target);
 		}
 		else
 		{
-			((L2Attackable) npc).addDamageHate(target, 0, 999);
+			((Attackable) npc).addDamageHate(target, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
 		
@@ -95,7 +95,7 @@ public class ZombieGatekeepers extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
 		if (_attackersList.get(npcObjId) != null)

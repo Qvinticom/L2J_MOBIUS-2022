@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.events.impl.instance;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -27,9 +27,9 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
 public final class OnInstanceCreated implements IBaseEvent
 {
 	private final Instance _instance;
-	private final L2PcInstance _creator;
+	private final PlayerInstance _creator;
 	
-	public OnInstanceCreated(Instance instance, L2PcInstance creator)
+	public OnInstanceCreated(Instance instance, PlayerInstance creator)
 	{
 		_instance = instance;
 		_creator = creator;
@@ -40,7 +40,7 @@ public final class OnInstanceCreated implements IBaseEvent
 		return _instance;
 	}
 	
-	public L2PcInstance getCreator()
+	public PlayerInstance getCreator()
 	{
 		return _creator;
 	}

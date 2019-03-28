@@ -30,9 +30,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Mentee;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Mentee;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -44,8 +44,8 @@ public class MentorManager
 {
 	private static final Logger LOGGER = Logger.getLogger(MentorManager.class.getName());
 	
-	private final Map<Integer, Map<Integer, L2Mentee>> _menteeData = new ConcurrentHashMap<>();
-	private final Map<Integer, L2Mentee> _mentors = new ConcurrentHashMap<>();
+	private final Map<Integer, Map<Integer, Mentee>> _menteeData = new ConcurrentHashMap<>();
+	private final Map<Integer, Mentee> _mentors = new ConcurrentHashMap<>();
 	
 	protected MentorManager()
 	{
@@ -70,7 +70,7 @@ public class MentorManager
 	}
 	
 	/**
-	 * Removes mentee for current L2PcInstance
+	 * Removes mentee for current PlayerInstance
 	 * @param mentorId
 	 * @param menteeId
 	 */
@@ -122,12 +122,12 @@ public class MentorManager
 		return _menteeData.values().stream().anyMatch(map -> map.containsKey(objectId));
 	}
 	
-	public Map<Integer, Map<Integer, L2Mentee>> getMentorData()
+	public Map<Integer, Map<Integer, Mentee>> getMentorData()
 	{
 		return _menteeData;
 	}
 	
-	public void cancelAllMentoringBuffs(L2PcInstance player)
+	public void cancelAllMentoringBuffs(PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -145,14 +145,14 @@ public class MentorManager
 	
 	public void setPenalty(int mentorId, long penalty)
 	{
-		final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
+		final PlayerInstance player = World.getInstance().getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
 		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
 	}
 	
 	public long getMentorPenalty(int mentorId)
 	{
-		final L2PcInstance player = L2World.getInstance().getPlayer(mentorId);
+		final PlayerInstance player = World.getInstance().getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
 		return vars.getLong("Mentor-Penalty-" + mentorId, 0);
 	}
@@ -163,14 +163,14 @@ public class MentorManager
 	 */
 	public void addMentor(int mentorId, int menteeId)
 	{
-		final Map<Integer, L2Mentee> mentees = _menteeData.computeIfAbsent(mentorId, map -> new ConcurrentHashMap<>());
+		final Map<Integer, Mentee> mentees = _menteeData.computeIfAbsent(mentorId, map -> new ConcurrentHashMap<>());
 		if (mentees.containsKey(menteeId))
 		{
 			mentees.get(menteeId).load(); // Just reloading data if is already there
 		}
 		else
 		{
-			mentees.put(menteeId, new L2Mentee(menteeId));
+			mentees.put(menteeId, new Mentee(menteeId));
 		}
 	}
 	
@@ -195,15 +195,15 @@ public class MentorManager
 	 * @param menteeId
 	 * @return
 	 */
-	public L2Mentee getMentor(int menteeId)
+	public Mentee getMentor(int menteeId)
 	{
-		for (Entry<Integer, Map<Integer, L2Mentee>> map : _menteeData.entrySet())
+		for (Entry<Integer, Map<Integer, Mentee>> map : _menteeData.entrySet())
 		{
 			if (map.getValue().containsKey(menteeId))
 			{
 				if (!_mentors.containsKey(map.getKey()))
 				{
-					_mentors.put(map.getKey(), new L2Mentee(map.getKey()));
+					_mentors.put(map.getKey(), new Mentee(map.getKey()));
 				}
 				return _mentors.get(map.getKey());
 			}
@@ -211,7 +211,7 @@ public class MentorManager
 		return null;
 	}
 	
-	public Collection<L2Mentee> getMentees(int mentorId)
+	public Collection<Mentee> getMentees(int mentorId)
 	{
 		if (_menteeData.containsKey(mentorId))
 		{
@@ -225,7 +225,7 @@ public class MentorManager
 	 * @param menteeId
 	 * @return
 	 */
-	public L2Mentee getMentee(int mentorId, int menteeId)
+	public Mentee getMentee(int mentorId, int menteeId)
 	{
 		if (_menteeData.containsKey(mentorId))
 		{
@@ -237,7 +237,7 @@ public class MentorManager
 	public boolean isAllMenteesOffline(int menteorId, int menteeId)
 	{
 		boolean isAllMenteesOffline = true;
-		for (L2Mentee men : getMentees(menteorId))
+		for (Mentee men : getMentees(menteorId))
 		{
 			if (men.isOnline() && (men.getObjectId() != menteeId))
 			{
@@ -253,7 +253,7 @@ public class MentorManager
 	
 	public boolean hasOnlineMentees(int menteorId)
 	{
-		return getMentees(menteorId).stream().filter(Objects::nonNull).filter(L2Mentee::isOnline).count() > 0;
+		return getMentees(menteorId).stream().filter(Objects::nonNull).filter(Mentee::isOnline).count() > 0;
 	}
 	
 	public static MentorManager getInstance()

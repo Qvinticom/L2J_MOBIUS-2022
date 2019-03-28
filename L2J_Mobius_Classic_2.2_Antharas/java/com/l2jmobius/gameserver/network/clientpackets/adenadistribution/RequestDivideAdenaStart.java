@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.network.clientpackets.adenadistribution;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.AdenaDistributionRequest;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivideAdenaStart;
@@ -34,21 +34,21 @@ import com.l2jmobius.gameserver.network.serverpackets.adenadistribution.ExDivide
 public class RequestDivideAdenaStart implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		
 		if (party == null)
 		{
@@ -56,7 +56,7 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2CommandChannel commandChannel = party.getCommandChannel();
+		final CommandChannel commandChannel = party.getCommandChannel();
 		
 		if ((commandChannel != null) && !commandChannel.isLeader(player))
 		{
@@ -69,7 +69,7 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 			return;
 		}
 		
-		final List<L2PcInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
+		final List<PlayerInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
 		
 		if (player.getAdena() < targets.size())
 		{

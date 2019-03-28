@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,9 +26,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class HennaRemoveList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public HennaRemoveList(L2PcInstance player)
+	public HennaRemoveList(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -42,7 +42,7 @@ public class HennaRemoveList implements IClientOutgoingPacket
 		packet.writeD(0x03); // seems to be max size
 		packet.writeD(3 - _player.getHennaEmptySlots());
 		
-		for (L2Henna henna : _player.getHennaList())
+		for (Henna henna : _player.getHennaList())
 		{
 			if (henna != null)
 			{

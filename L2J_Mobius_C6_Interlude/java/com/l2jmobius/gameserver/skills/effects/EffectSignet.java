@@ -17,21 +17,21 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2EffectPointInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Env;
-import com.l2jmobius.gameserver.skills.l2skills.L2SkillSignet;
-import com.l2jmobius.gameserver.skills.l2skills.L2SkillSignetCasttime;
+import com.l2jmobius.gameserver.skills.handlers.SkillSignet;
+import com.l2jmobius.gameserver.skills.handlers.SkillSignetCasttime;
 
-public final class EffectSignet extends L2Effect
+public final class EffectSignet extends Effect
 {
-	private L2Skill _skill;
-	private L2EffectPointInstance _actor;
+	private Skill _skill;
+	private EffectPointInstance _actor;
 	
 	public EffectSignet(Env env, EffectTemplate template)
 	{
@@ -47,15 +47,15 @@ public final class EffectSignet extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if (getSkill() instanceof L2SkillSignet)
+		if (getSkill() instanceof SkillSignet)
 		{
-			_skill = SkillTable.getInstance().getInfo(((L2SkillSignet) getSkill()).effectId, getLevel());
+			_skill = SkillTable.getInstance().getInfo(((SkillSignet) getSkill()).effectId, getLevel());
 		}
-		else if (getSkill() instanceof L2SkillSignetCasttime)
+		else if (getSkill() instanceof SkillSignetCasttime)
 		{
-			_skill = SkillTable.getInstance().getInfo(((L2SkillSignetCasttime) getSkill()).effectId, getLevel());
+			_skill = SkillTable.getInstance().getInfo(((SkillSignetCasttime) getSkill()).effectId, getLevel());
 		}
-		_actor = (L2EffectPointInstance) getEffected();
+		_actor = (EffectPointInstance) getEffected();
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public final class EffectSignet extends L2Effect
 			return true;
 		}
 		final int mpConsume = _skill.getMpConsume();
-		final L2PcInstance caster = (L2PcInstance) getEffector();
+		final PlayerInstance caster = (PlayerInstance) getEffector();
 		
 		if (mpConsume > getEffector().getStatus().getCurrentMp())
 		{
@@ -76,30 +76,30 @@ public final class EffectSignet extends L2Effect
 		
 		getEffector().reduceCurrentMp(mpConsume);
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
-			if ((cha == null) || (cha == caster) || cha.isDead())
+			if ((creature == null) || (creature == caster) || creature.isDead())
 			{
 				continue;
 			}
 			
 			if (_skill.isOffensive())
 			{
-				if (cha instanceof L2PcInstance)
+				if (creature instanceof PlayerInstance)
 				{
 					
-					if (((((L2PcInstance) cha).getClanId() > 0) && (caster.getClanId() > 0) && (((L2PcInstance) cha).getClanId() != caster.getClanId())) || ((((L2PcInstance) cha).getAllyId() > 0) && (caster.getAllyId() > 0) && (((L2PcInstance) cha).getAllyId() != caster.getAllyId())) || ((cha.getParty() != null) && (caster.getParty() != null) && !cha.getParty().equals(caster.getParty())))
+					if (((((PlayerInstance) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((PlayerInstance) creature).getClanId() != caster.getClanId())) || ((((PlayerInstance) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((PlayerInstance) creature).getAllyId() != caster.getAllyId())) || ((creature.getParty() != null) && (caster.getParty() != null) && !creature.getParty().equals(caster.getParty())))
 					{
-						_skill.getEffects(_actor, cha, false, false, false);
+						_skill.getEffects(_actor, creature, false, false, false);
 						continue;
 					}
 				}
 			}
-			else if (cha instanceof L2PcInstance)
+			else if (creature instanceof PlayerInstance)
 			{
-				if (((cha.getParty() != null) && (caster.getParty() != null) && cha.getParty().equals(caster.getParty())) || ((((L2PcInstance) cha).getClanId() > 0) && (caster.getClanId() > 0) && (((L2PcInstance) cha).getClanId() == caster.getClanId())) || ((((L2PcInstance) cha).getAllyId() > 0) && (caster.getAllyId() > 0) && (((L2PcInstance) cha).getAllyId() == caster.getAllyId())))
+				if (((creature.getParty() != null) && (caster.getParty() != null) && creature.getParty().equals(caster.getParty())) || ((((PlayerInstance) creature).getClanId() > 0) && (caster.getClanId() > 0) && (((PlayerInstance) creature).getClanId() == caster.getClanId())) || ((((PlayerInstance) creature).getAllyId() > 0) && (caster.getAllyId() > 0) && (((PlayerInstance) creature).getAllyId() == caster.getAllyId())))
 				{
-					_skill.getEffects(_actor, cha, false, false, false);
+					_skill.getEffects(_actor, creature, false, false, false);
 					_skill.getEffects(_actor, caster, false, false, false); // Affect caster too.
 					continue;
 				}

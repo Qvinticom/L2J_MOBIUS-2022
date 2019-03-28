@@ -18,9 +18,9 @@ package custom.FactionSystem;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
@@ -54,13 +54,13 @@ public final class FactionSystem extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
 			case "selectGoodFaction":
 			{
-				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (World.getInstance().getAllGoodPlayers().size() >= (World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 				{
 					final String htmltext = null;
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
@@ -82,12 +82,12 @@ public final class FactionSystem extends AbstractNpcAI
 				player.sendMessage("You are now fighting for the " + Config.FACTION_GOOD_TEAM_NAME + " faction.");
 				player.teleToLocation(Config.FACTION_GOOD_BASE_LOCATION);
 				broadcastMessageToFaction(Config.FACTION_GOOD_TEAM_NAME, Config.FACTION_GOOD_TEAM_NAME + " faction grows stronger with the arrival of " + player.getName() + ".");
-				L2World.addFactionPlayerToWorld(player);
+				World.addFactionPlayerToWorld(player);
 				break;
 			}
 			case "selectEvilFaction":
 			{
-				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (World.getInstance().getAllEvilPlayers().size() >= (World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 				{
 					final String htmltext = null;
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
@@ -109,7 +109,7 @@ public final class FactionSystem extends AbstractNpcAI
 				player.sendMessage("You are now fighting for the " + Config.FACTION_EVIL_TEAM_NAME + " faction.");
 				player.teleToLocation(Config.FACTION_EVIL_BASE_LOCATION);
 				broadcastMessageToFaction(Config.FACTION_EVIL_TEAM_NAME, Config.FACTION_EVIL_TEAM_NAME + " faction grows stronger with the arrival of " + player.getName() + ".");
-				L2World.addFactionPlayerToWorld(player);
+				World.addFactionPlayerToWorld(player);
 				break;
 			}
 			case "SPEAK":
@@ -125,7 +125,7 @@ public final class FactionSystem extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final String htmltext = null;
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
@@ -138,7 +138,7 @@ public final class FactionSystem extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if (npc.getId() == MANAGER)
 		{
@@ -151,14 +151,14 @@ public final class FactionSystem extends AbstractNpcAI
 	{
 		if (factionName.equals(Config.FACTION_GOOD_TEAM_NAME))
 		{
-			for (L2PcInstance player : L2World.getInstance().getAllGoodPlayers())
+			for (PlayerInstance player : World.getInstance().getAllGoodPlayers())
 			{
 				player.sendMessage(message);
 			}
 		}
 		else
 		{
-			for (L2PcInstance player : L2World.getInstance().getAllEvilPlayers())
+			for (PlayerInstance player : World.getInstance().getAllEvilPlayers())
 			{
 				player.sendMessage(message);
 			}

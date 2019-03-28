@@ -23,12 +23,12 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
@@ -61,19 +61,19 @@ public class MysticTavern extends AbstractNpcAI
 	// private static final int INSTANCE_KELBIM = 262;
 	private static final int INSTANCE_FREYA = 263;
 	// Zones
-	private static final L2ScriptZone GLOBE_1_ZONE = ZoneManager.getInstance().getZoneById(80019, L2ScriptZone.class);
-	private static final L2ScriptZone GLOBE_2_ZONE = ZoneManager.getInstance().getZoneById(80020, L2ScriptZone.class);
-	private static final L2ScriptZone GLOBE_3_ZONE = ZoneManager.getInstance().getZoneById(80021, L2ScriptZone.class);
-	private static final L2ScriptZone GLOBE_4_ZONE = ZoneManager.getInstance().getZoneById(80022, L2ScriptZone.class);
-	private static final L2ScriptZone GLOBE_5_ZONE = ZoneManager.getInstance().getZoneById(80023, L2ScriptZone.class);
+	private static final ScriptZone GLOBE_1_ZONE = ZoneManager.getInstance().getZoneById(80019, ScriptZone.class);
+	private static final ScriptZone GLOBE_2_ZONE = ZoneManager.getInstance().getZoneById(80020, ScriptZone.class);
+	private static final ScriptZone GLOBE_3_ZONE = ZoneManager.getInstance().getZoneById(80021, ScriptZone.class);
+	private static final ScriptZone GLOBE_4_ZONE = ZoneManager.getInstance().getZoneById(80022, ScriptZone.class);
+	private static final ScriptZone GLOBE_5_ZONE = ZoneManager.getInstance().getZoneById(80023, ScriptZone.class);
 	// Misc
 	private static final int MINIMUM_PLAYER_LEVEL = 99;
 	private static final int MINIMUM_PARTY_MEMBERS = 5;
-	private static L2Npc _lollia;
-	private static L2Npc _hanna;
-	private static L2Npc _brodien;
-	private static L2Npc _lupia;
-	private static L2Npc _mey;
+	private static Npc _lollia;
+	private static Npc _hanna;
+	private static Npc _brodien;
+	private static Npc _lupia;
+	private static Npc _mey;
 	
 	public MysticTavern()
 	{
@@ -82,7 +82,7 @@ public class MysticTavern extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final List<Integer> availableInstances = new ArrayList<>();
 		availableInstances.add(INSTANCE_FREYA);
@@ -94,7 +94,7 @@ public class MysticTavern extends AbstractNpcAI
 			{
 				if (!player.isGM())
 				{
-					final L2Party party = player.getParty();
+					final Party party = player.getParty();
 					if (party == null)
 					{
 						return "34200-no-party.html";
@@ -107,7 +107,7 @@ public class MysticTavern extends AbstractNpcAI
 					{
 						return "34200-not-enough-members.html";
 					}
-					for (L2PcInstance member : party.getMembers())
+					for (PlayerInstance member : party.getMembers())
 					{
 						if ((member == null) || !member.isSitting() || (member.calculateDistance3D(player) > 500))
 						{
@@ -333,7 +333,7 @@ public class MysticTavern extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -367,7 +367,7 @@ public class MysticTavern extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "34200.html";
 	}

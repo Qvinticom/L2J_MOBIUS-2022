@@ -17,12 +17,11 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:29:40 $
  */
-public class Dice extends L2GameServerPacket
+public class Dice extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _itemId;
 	private final int _number;
 	private final int _x;
@@ -40,7 +39,7 @@ public class Dice extends L2GameServerPacket
 	 */
 	public Dice(int charObjId, int itemId, int number, int x, int y, int z)
 	{
-		_charObjId = charObjId;
+		_objectId = charObjId;
 		_itemId = itemId;
 		_number = number;
 		_x = x;
@@ -52,7 +51,7 @@ public class Dice extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xD4);
-		writeD(_charObjId); // object id of player
+		writeD(_objectId); // object id of player
 		writeD(_itemId); // item id of dice (spade) 4625,4626,4627,4628
 		writeD(_number); // number rolled
 		writeD(_x); // x

@@ -21,15 +21,15 @@ import java.util.Optional;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2PetLevelData;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.PetLevelData;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
+import com.l2jmobius.gameserver.model.zone.type.SwampZone;
 
 /**
  * @author UnAfraid
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
 public class SpeedFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -45,7 +45,7 @@ public class SpeedFinalizer implements IStatsFunction
 		if (creature.isPlayer())
 		{
 			// Enchanted feet bonus
-			baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_FEET);
+			baseValue += calcEnchantBodyPart(creature, Item.SLOT_FEET);
 		}
 		
 		final byte speedStat = (byte) creature.getStat().getAdd(Stats.STAT_BONUS_SPEED, -1);
@@ -70,15 +70,15 @@ public class SpeedFinalizer implements IStatsFunction
 		return (0.6 * Math.max(enchantLevel - 3, 0)) + (0.6 * Math.max(enchantLevel - 6, 0));
 	}
 	
-	private double getBaseSpeed(L2Character creature, Stats stat)
+	private double getBaseSpeed(Creature creature, Stats stat)
 	{
 		double baseValue = calcWeaponPlusBaseValue(creature, stat);
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			if (player.isMounted())
 			{
-				final L2PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());
+				final PetLevelData data = PetDataTable.getInstance().getPetLevelData(player.getMountNpcId(), player.getMountLevel());
 				if (data != null)
 				{
 					baseValue = data.getSpeedOnRide(stat);
@@ -99,7 +99,7 @@ public class SpeedFinalizer implements IStatsFunction
 		}
 		if (creature.isPlayable() && creature.isInsideZone(ZoneId.SWAMP))
 		{
-			final L2SwampZone zone = ZoneManager.getInstance().getZone(creature, L2SwampZone.class);
+			final SwampZone zone = ZoneManager.getInstance().getZone(creature, SwampZone.class);
 			if (zone != null)
 			{
 				baseValue *= zone.getMoveBonus();

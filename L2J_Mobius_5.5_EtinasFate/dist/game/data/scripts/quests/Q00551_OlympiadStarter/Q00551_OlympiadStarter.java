@@ -17,8 +17,8 @@
 package quests.Q00551_OlympiadStarter;
 
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -50,7 +50,7 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -84,7 +84,7 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
+	public void onOlympiadLose(PlayerInstance loser, CompetitionType type)
 	{
 		if (loser == null)
 		{
@@ -131,7 +131,7 @@ public class Q00551_OlympiadStarter extends Quest
 	{
 		if (winner != null)
 		{
-			final L2PcInstance player = winner.getPlayer();
+			final PlayerInstance player = winner.getPlayer();
 			if (player == null)
 			{
 				return;
@@ -175,7 +175,7 @@ public class Q00551_OlympiadStarter extends Quest
 		{
 			return;
 		}
-		final L2PcInstance player = looser.getPlayer();
+		final PlayerInstance player = looser.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -217,7 +217,7 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

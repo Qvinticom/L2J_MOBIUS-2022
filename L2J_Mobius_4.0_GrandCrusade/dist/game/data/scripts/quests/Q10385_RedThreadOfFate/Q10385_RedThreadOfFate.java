@@ -21,16 +21,16 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSocialAction;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -120,7 +120,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -408,13 +408,13 @@ public final class Q10385_RedThreadOfFate extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerSocialAction(OnPlayerSocialAction event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		
 		if ((target != null) && target.isNpc() && (target.getId() == LANYA))
 		{
-			final L2Npc npc = (L2Npc) player.getTarget();
+			final Npc npc = (Npc) player.getTarget();
 			
 			if (((qs != null) && (qs.isCond(3))) && (event.getSocialActionId() == SOCIAL_BOW) && (player.isInsideRadius3D(npc, 120)))
 			{
@@ -424,7 +424,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -683,7 +683,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
@@ -695,11 +695,11 @@ public final class Q10385_RedThreadOfFate extends Quest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			
 			if ((npc.getId() == INVISIBLE_ANGHEL_WATERFALL_NPC) && (qs != null) && qs.isCond(7))
@@ -711,7 +711,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
 		
@@ -740,7 +740,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 					if ((skill == BRIGHTEST_LIGHT_SKILL.getSkill()) && qs.isCond(16))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_MUST_DEFEAT_SHILEN_S_MESSENGER, ExShowScreenMessage.TOP_CENTER, 5000);
-						final L2Npc monster = addSpawn(SHILEN_MESSENGER, 28767, 11030, -4232, 0, false, 0, false);
+						final Npc monster = addSpawn(SHILEN_MESSENGER, 28767, 11030, -4232, 0, false, 0, false);
 						monster.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BRIGHTEST_LIGHT_HOW_DARE_YOU_DESECRATE_THE_ALTAR_OF_SHILEN);
 						addAttackPlayerDesire(monster, player, 23);
 					}
@@ -773,7 +773,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);

@@ -16,8 +16,8 @@
  */
 package quests.Q00130_PathToHellbound;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -47,10 +47,10 @@ public class Q00130_PathToHellbound extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -65,7 +65,7 @@ public class Q00130_PathToHellbound extends Quest
 			}
 			case "32292-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
 				}
@@ -73,7 +73,7 @@ public class Q00130_PathToHellbound extends Quest
 			}
 			case "32292-06.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					htmltext = event;
 				}
@@ -81,34 +81,34 @@ public class Q00130_PathToHellbound extends Quest
 			}
 			case "30612-05.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30612-08.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					giveItems(player, CASIANS_BLUE_CRYSTAL, 1);
-					st.setCond(3, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32292-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32292-07.html":
 			{
-				if (st.isCond(3) && hasQuestItems(player, CASIANS_BLUE_CRYSTAL))
+				if (qs.isCond(3) && hasQuestItems(player, CASIANS_BLUE_CRYSTAL))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -118,12 +118,12 @@ public class Q00130_PathToHellbound extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -149,7 +149,7 @@ public class Q00130_PathToHellbound extends Quest
 			{
 				if (npc.getId() == CASIAN)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -170,7 +170,7 @@ public class Q00130_PathToHellbound extends Quest
 				}
 				else if (npc.getId() == GALATE)
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{

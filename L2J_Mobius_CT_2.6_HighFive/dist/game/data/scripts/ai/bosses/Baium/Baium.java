@@ -23,19 +23,19 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
-import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
+import com.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -71,7 +71,7 @@ public final class Baium extends AbstractNpcAI
 	// Items
 	private static final int FABRIC = 4295; // Blooded Fabric
 	// Zone
-	private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, L2NoRestartZone.class); // Baium zone
+	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70051, NoRestartZone.class); // Baium zone
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;
@@ -97,7 +97,7 @@ public final class Baium extends AbstractNpcAI
 		new Location(114239, 17168, 10136, -1992)
 	};
 	// Misc
-	private L2GrandBossInstance _baium = null;
+	private GrandBossInstance _baium = null;
 	private static long _lastAttack = 0;
 	
 	private Baium()
@@ -132,14 +132,14 @@ public final class Baium extends AbstractNpcAI
 			}
 			case IN_FIGHT:
 			{
-				_baium = (L2GrandBossInstance) addSpawn(BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
+				_baium = (GrandBossInstance) addSpawn(BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 				_baium.setCurrentHpMp(curr_hp, curr_mp);
 				_lastAttack = System.currentTimeMillis();
 				addBoss(_baium);
 				
 				for (Location loc : ARCHANGEL_LOC)
 				{
-					final L2Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
+					final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
 					startQuestTimer("SELECT_TARGET", 5000, archangel, null);
 				}
 				startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
@@ -162,7 +162,7 @@ public final class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -204,7 +204,7 @@ public final class Baium extends AbstractNpcAI
 				{
 					npc.deleteMe();
 					setStatus(IN_FIGHT);
-					_baium = (L2GrandBossInstance) addSpawn(BAIUM, BAIUM_LOC, false, 0);
+					_baium = (GrandBossInstance) addSpawn(BAIUM, BAIUM_LOC, false, 0);
 					_baium.disableCoreAI(true);
 					addBoss(_baium);
 					_lastAttack = System.currentTimeMillis();
@@ -252,7 +252,7 @@ public final class Baium extends AbstractNpcAI
 					}
 					else
 					{
-						final L2PcInstance randomPlayer = getRandomPlayer(npc);
+						final PlayerInstance randomPlayer = getRandomPlayer(npc);
 						if (randomPlayer != null)
 						{
 							randomPlayer.teleToLocation(BAIUM_GIFT_LOC);
@@ -276,7 +276,7 @@ public final class Baium extends AbstractNpcAI
 					npc.doCast(BAIUM_PRESENT.getSkill());
 				}
 				
-				for (L2PcInstance insidePlayer : zone.getPlayersInside())
+				for (PlayerInstance insidePlayer : zone.getPlayersInside())
 				{
 					if (insidePlayer.isHero())
 					{
@@ -293,7 +293,7 @@ public final class Baium extends AbstractNpcAI
 				
 				for (Location loc : ARCHANGEL_LOC)
 				{
-					final L2Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
+					final Npc archangel = addSpawn(ARCHANGEL, loc, false, 0, true);
 					startQuestTimer("SELECT_TARGET", 5000, archangel, null);
 				}
 				
@@ -303,7 +303,7 @@ public final class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					final L2PcInstance randomPlayer = getRandomPlayer(npc);
+					final PlayerInstance randomPlayer = getRandomPlayer(npc);
 					if (randomPlayer != null)
 					{
 						addAttackDesire(npc, randomPlayer);
@@ -315,8 +315,8 @@ public final class Baium extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					final L2Attackable mob = (L2Attackable) npc;
-					final L2Character mostHated = mob.getMostHated();
+					final Attackable mob = (Attackable) npc;
+					final Creature mostHated = mob.getMostHated();
 					
 					if ((_baium == null) || _baium.isDead())
 					{
@@ -335,7 +335,7 @@ public final class Baium extends AbstractNpcAI
 					else
 					{
 						boolean found = false;
-						for (L2Playable creature : L2World.getInstance().getVisibleObjectsInRange(mob, L2Playable.class, 1000))
+						for (Playable creature : World.getInstance().getVisibleObjectsInRange(mob, Playable.class, 1000))
 						{
 							if (zone.isInsideZone(creature) && !creature.isDead())
 							{
@@ -397,17 +397,17 @@ public final class Baium extends AbstractNpcAI
 			}
 			case "CLEAR_ZONE":
 			{
-				for (L2Character charInside : zone.getCharactersInside())
+				for (Creature creature : zone.getCharactersInside())
 				{
-					if (charInside != null)
+					if (creature != null)
 					{
-						if (charInside.isNpc())
+						if (creature.isNpc())
 						{
-							charInside.deleteMe();
+							creature.deleteMe();
 						}
-						else if (charInside.isPlayer())
+						else if (creature.isPlayer())
 						{
-							notifyEvent("teleportOut", null, (L2PcInstance) charInside);
+							notifyEvent("teleportOut", null, (PlayerInstance) creature);
 						}
 					}
 				}
@@ -448,11 +448,11 @@ public final class Baium extends AbstractNpcAI
 			{
 				if (getStatus() == IN_FIGHT)
 				{
-					for (L2Character charInside : zone.getCharactersInside())
+					for (Creature creature : zone.getCharactersInside())
 					{
-						if ((charInside != null) && charInside.isNpc() && (charInside.getId() == ARCHANGEL))
+						if ((creature != null) && creature.isNpc() && (creature.getId() == ARCHANGEL))
 						{
-							charInside.deleteMe();
+							creature.deleteMe();
 						}
 					}
 					if (player != null)
@@ -479,7 +479,7 @@ public final class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
 		
@@ -515,8 +515,8 @@ public final class Baium extends AbstractNpcAI
 		}
 		else
 		{
-			final L2Attackable mob = (L2Attackable) npc;
-			final L2Character mostHated = mob.getMostHated();
+			final Attackable mob = (Attackable) npc;
+			final Creature mostHated = mob.getMostHated();
 			
 			if ((getRandom(100) < 10) && mob.checkDoCastConditions(SPEAR_ATTACK.getSkill()))
 			{
@@ -542,7 +542,7 @@ public final class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{
@@ -560,7 +560,7 @@ public final class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (!zone.isInsideZone(creature) || (creature.isNpc() && (creature.getId() == BAIUM_STONE)))
 		{
@@ -595,7 +595,7 @@ public final class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
 		
@@ -616,19 +616,19 @@ public final class Baium extends AbstractNpcAI
 		return super.unload(removeFromList);
 	}
 	
-	private final void refreshAiParams(L2Character attacker, L2Npc npc, int damage)
+	private final void refreshAiParams(Creature attacker, Npc npc, int damage)
 	{
 		refreshAiParams(attacker, npc, damage, damage);
 	}
 	
-	private final void refreshAiParams(L2Character attacker, L2Npc npc, int damage, int aggro)
+	private final void refreshAiParams(Creature attacker, Npc npc, int damage, int aggro)
 	{
 		final int newAggroVal = damage + getRandom(3000);
 		final int aggroVal = aggro + 1000;
 		final NpcVariables vars = npc.getVariables();
 		for (int i = 0; i < 3; i++)
 		{
-			if (attacker == vars.getObject("c_quest" + i, L2Character.class))
+			if (attacker == vars.getObject("c_quest" + i, Creature.class))
 			{
 				if (vars.getInt("i_quest" + i) < aggroVal)
 				{
@@ -647,7 +647,7 @@ public final class Baium extends AbstractNpcAI
 		return GrandBossManager.getInstance().getBossStatus(BAIUM);
 	}
 	
-	private void addBoss(L2GrandBossInstance grandboss)
+	private void addBoss(GrandBossInstance grandboss)
 	{
 		GrandBossManager.getInstance().addBoss(grandboss);
 	}
@@ -662,7 +662,7 @@ public final class Baium extends AbstractNpcAI
 		GrandBossManager.getInstance().getStatsSet(BAIUM).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
-	private void manageSkills(L2Npc npc)
+	private void manageSkills(Npc npc)
 	{
 		if (npc.isCastingNow() || npc.isCoreAIDisabled() || !npc.isInCombat())
 		{
@@ -672,14 +672,14 @@ public final class Baium extends AbstractNpcAI
 		final NpcVariables vars = npc.getVariables();
 		for (int i = 0; i < 3; i++)
 		{
-			final L2Character attacker = vars.getObject("c_quest" + i, L2Character.class);
+			final Creature attacker = vars.getObject("c_quest" + i, Creature.class);
 			if ((attacker == null) || (npc.calculateDistance3D(attacker) > 9000) || attacker.isDead())
 			{
 				vars.set("i_quest" + i, 0);
 			}
 		}
 		final int index = Util.getIndexOfMaxValue(vars.getInt("i_quest0"), vars.getInt("i_quest1"), vars.getInt("i_quest2"));
-		final L2Character player = vars.getObject("c_quest" + index, L2Character.class);
+		final Creature creature = vars.getObject("c_quest" + index, Creature.class);
 		final int i2 = vars.getInt("i_quest" + index);
 		if ((i2 > 0) && (getRandom(100) < 70))
 		{
@@ -687,7 +687,7 @@ public final class Baium extends AbstractNpcAI
 		}
 		
 		SkillHolder skillToCast = null;
-		if ((player != null) && !player.isDead())
+		if ((creature != null) && !creature.isDead())
 		{
 			if (npc.getCurrentHp() > (npc.getMaxHp() * 0.75))
 			{
@@ -770,18 +770,18 @@ public final class Baium extends AbstractNpcAI
 		
 		if ((skillToCast != null) && npc.checkDoCastConditions(skillToCast.getSkill()))
 		{
-			npc.setTarget(player);
+			npc.setTarget(creature);
 			npc.doCast(skillToCast.getSkill());
 		}
 	}
 	
-	private L2PcInstance getRandomPlayer(L2Npc npc)
+	private PlayerInstance getRandomPlayer(Npc npc)
 	{
-		for (L2Character creature : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 2000))
+		for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
 		{
 			if ((creature != null) && zone.isInsideZone(creature) && !creature.isDead())
 			{
-				return (L2PcInstance) creature;
+				return (PlayerInstance) creature;
 			}
 		}
 		return null;

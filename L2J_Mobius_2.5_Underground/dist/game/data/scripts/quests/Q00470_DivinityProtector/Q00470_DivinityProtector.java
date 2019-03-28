@@ -17,8 +17,8 @@
 package quests.Q00470_DivinityProtector;
 
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -72,11 +72,11 @@ public final class Q00470_DivinityProtector extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -92,7 +92,7 @@ public final class Q00470_DivinityProtector extends Quest
 			}
 			case "32327-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -101,12 +101,12 @@ public final class Q00470_DivinityProtector extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -118,11 +118,11 @@ public final class Q00470_DivinityProtector extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = npc.getId() == ADVENTURER ? "32327-05.html" : "31348-01.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
 					if (npc.getId() == ADVENTURER)
 					{
@@ -130,7 +130,7 @@ public final class Q00470_DivinityProtector extends Quest
 					}
 					else if (npc.getId() == AGRIPEL)
 					{
-						st.exitQuest(QuestType.DAILY, true);
+						qs.exitQuest(QuestType.DAILY, true);
 						giveAdena(player, 194_000, true);
 						if (player.getLevel() >= MIN_LEVEL)
 						{
@@ -143,9 +143,9 @@ public final class Q00470_DivinityProtector extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
+				if ((npc.getId() == ADVENTURER) && qs.isNowAvailable())
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = "32327-01.htm";
 				}
 				break;
@@ -155,15 +155,15 @@ public final class Q00470_DivinityProtector extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(1))
+		if ((qs != null) && qs.isCond(1))
 		{
 			if (giveItemRandomly(killer, ASH, 1, 20, 0.20, true))
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

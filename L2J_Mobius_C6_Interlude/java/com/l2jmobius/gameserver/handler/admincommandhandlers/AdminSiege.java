@@ -24,12 +24,12 @@ import com.l2jmobius.gameserver.instancemanager.AuctionManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -64,7 +64,7 @@ public class AdminSiege implements IAdminCommandHandler
 	
 	@SuppressWarnings("null")
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
@@ -97,12 +97,12 @@ public class AdminSiege implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Object target = activeChar.getTarget();
-			L2PcInstance player = null;
+			WorldObject target = activeChar.getTarget();
+			PlayerInstance player = null;
 			
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
-				player = (L2PcInstance) target;
+				player = (PlayerInstance) target;
 			}
 			
 			if (command.equalsIgnoreCase("admin_add_attacker"))
@@ -174,7 +174,7 @@ public class AdminSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_removecastle"))
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+				Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 				
 				if (clan != null)
 				{
@@ -231,7 +231,7 @@ public class AdminSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_clanhallteleportself"))
 			{
-				L2ClanHallZone zone = clanhall.getZone();
+				ClanHallZone zone = clanhall.getZone();
 				
 				if (zone != null)
 				{
@@ -260,7 +260,7 @@ public class AdminSiege implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void showCastleSelectPage(L2PcInstance activeChar)
+	private void showCastleSelectPage(PlayerInstance activeChar)
 	{
 		int i = 0;
 		
@@ -327,7 +327,7 @@ public class AdminSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showSiegePage(L2PcInstance activeChar, String castleName)
+	private void showSiegePage(PlayerInstance activeChar, String castleName)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/castle.htm");
@@ -335,13 +335,13 @@ public class AdminSiege implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void showClanHallPage(L2PcInstance activeChar, ClanHall clanhall)
+	private void showClanHallPage(PlayerInstance activeChar, ClanHall clanhall)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/clanhall.htm");
 		adminReply.replace("%clanhallName%", clanhall.getName());
 		adminReply.replace("%clanhallId%", String.valueOf(clanhall.getId()));
-		L2Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
+		Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
 		
 		if (owner == null)
 		{

@@ -21,10 +21,10 @@ import java.util.Optional;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.ArmorSet;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class BaseStatsFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -45,15 +45,15 @@ public class BaseStatsFinalizer implements IStatsFunction
 		// Should not apply armor set and henna bonus to summons.
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
-			final Set<L2ArmorSet> appliedSets = new HashSet<>(2);
+			final PlayerInstance player = creature.getActingPlayer();
+			final Set<ArmorSet> appliedSets = new HashSet<>(2);
 			
 			// Armor sets calculation
-			for (L2ItemInstance item : player.getInventory().getPaperdollItems())
+			for (ItemInstance item : player.getInventory().getPaperdollItems())
 			{
-				for (L2ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId()))
+				for (ArmorSet set : ArmorSetsData.getInstance().getSets(item.getId()))
 				{
-					if ((set.getPiecesCount(player, L2ItemInstance::getId) >= set.getMinimumPieces()) && appliedSets.add(set))
+					if ((set.getPiecesCount(player, ItemInstance::getId) >= set.getMinimumPieces()) && appliedSets.add(set))
 					{
 						baseValue += set.getStatsBonus(BaseStats.valueOf(stat));
 					}

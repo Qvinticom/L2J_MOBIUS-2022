@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35100" level="75" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35100" level="75" type="Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -60,7 +60,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35101" level="75" type="L2Npc" name="Grad" title="Wyvern Manager">
+	<npc id="35101" level="75" type="Npc" name="Grad" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -101,7 +101,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35102" level="75" type="L2Merchant" name="Greenspan" title="Mercenary Manager">
+	<npc id="35102" level="75" type="Merchant" name="Greenspan" title="Mercenary Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -143,7 +143,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35103" level="75" type="L2Merchant" name="Manor Manager" title="Gludio">
+	<npc id="35103" level="75" type="Merchant" name="Manor Manager" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -185,7 +185,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35104" level="75" type="L2Npc" name="Tyron" title="Herald from Gludio">
+	<npc id="35104" level="75" type="Npc" name="Tyron" title="Herald from Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -229,7 +229,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35105" level="20" type="L2Artefact" name="Dion Holy Artifact">
+	<npc id="35105" level="20" type="Artefact" name="Dion Holy Artifact">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -268,7 +268,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35106" level="97" type="L2Defender" name="Duke Byron Ashton">
+	<npc id="35106" level="97" type="Defender" name="Duke Byron Ashton">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
@@ -317,7 +317,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35107" level="95" type="L2Defender" name="Ivano" title="Royal Guard Captain">
+	<npc id="35107" level="95" type="Defender" name="Ivano" title="Royal Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -366,7 +366,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35108" level="93" type="L2Defender" name="Royal Knight" title="Dion">
+	<npc id="35108" level="93" type="Defender" name="Royal Knight" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -415,7 +415,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35109" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
+	<npc id="35109" level="91" type="Defender" name="Royal Wizard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
@@ -466,7 +466,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35110" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
+	<npc id="35110" level="91" type="Defender" name="Royal Wizard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
@@ -517,7 +517,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35111" level="91" type="L2Defender" name="Royal Guard" title="Dion">
+	<npc id="35111" level="91" type="Defender" name="Royal Guard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
@@ -566,7 +566,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35112" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35112" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -615,7 +615,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35113" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35113" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -664,7 +664,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35114" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35114" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -713,7 +713,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35115" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35115" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -762,7 +762,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35116" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35116" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -811,7 +811,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35117" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35117" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -860,7 +860,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35118" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35118" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -909,7 +909,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35119" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35119" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -958,7 +958,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35120" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35120" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1007,7 +1007,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35121" level="93" type="L2Defender" name="Royal Knight" title="Dion">
+	<npc id="35121" level="93" type="Defender" name="Royal Knight" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -1056,7 +1056,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35122" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
+	<npc id="35122" level="91" type="Defender" name="Royal Wizard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
@@ -1107,7 +1107,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35123" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
+	<npc id="35123" level="91" type="Defender" name="Royal Wizard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
@@ -1158,7 +1158,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35124" level="91" type="L2Defender" name="Royal Guard" title="Dion">
+	<npc id="35124" level="91" type="Defender" name="Royal Guard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
@@ -1207,7 +1207,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35125" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35125" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1256,7 +1256,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35126" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35126" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1305,7 +1305,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35127" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35127" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1354,7 +1354,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35128" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35128" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1403,7 +1403,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35129" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35129" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1452,7 +1452,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35130" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35130" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1501,7 +1501,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35131" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35131" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1550,7 +1550,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35132" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35132" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1599,7 +1599,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35133" level="89" type="L2Defender" name="Escort" title="Dion">
+	<npc id="35133" level="89" type="Defender" name="Escort" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -1648,7 +1648,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35134" level="75" type="L2Monster" name="Gatekeeper" title="Dion">
+	<npc id="35134" level="75" type="Monster" name="Gatekeeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1713,7 +1713,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35135" level="75" type="L2Monster" name="Gatekeeper" title="Dion">
+	<npc id="35135" level="75" type="Monster" name="Gatekeeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1778,7 +1778,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35136" level="75" type="L2Monster" name="Gatekeeper" title="Dion">
+	<npc id="35136" level="75" type="Monster" name="Gatekeeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1843,7 +1843,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35137" level="75" type="L2Npc" name="Mass Gatekeeper" title="Dion">
+	<npc id="35137" level="75" type="Npc" name="Mass Gatekeeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1888,7 +1888,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35138" level="75" type="L2Npc" name="Outer Castle Gatekeeper" title="Dion">
+	<npc id="35138" level="75" type="Npc" name="Outer Castle Gatekeeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1939,7 +1939,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35139" level="75" type="L2Npc" name="Inner Castle Gatekeeper" title="Dion">
+	<npc id="35139" level="75" type="Npc" name="Inner Castle Gatekeeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1990,7 +1990,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35140" level="75" type="L2Npc" name="Blacksmith" title="Dion">
+	<npc id="35140" level="75" type="Npc" name="Blacksmith" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2032,7 +2032,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35141" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Dion">
+	<npc id="35141" level="75" type="Warehouse" name="Warehouse Keeper" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2073,7 +2073,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35142" level="75" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35142" level="75" type="Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -2133,7 +2133,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35143" level="75" type="L2Npc" name="Hodler" title="Wyvern Manager">
+	<npc id="35143" level="75" type="Npc" name="Hodler" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2174,7 +2174,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35144" level="75" type="L2Merchant" name="Mercenary Manager Sanford" title="Mercenary Manager">
+	<npc id="35144" level="75" type="Merchant" name="Mercenary Manager Sanford" title="Mercenary Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2216,7 +2216,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35145" level="75" type="L2Merchant" name="Manor Manager" title="Dion">
+	<npc id="35145" level="75" type="Merchant" name="Manor Manager" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2258,7 +2258,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35146" level="75" type="L2Npc" name="Gibbson" title="Herald from Dion">
+	<npc id="35146" level="75" type="Npc" name="Gibbson" title="Herald from Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2302,7 +2302,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35147" level="20" type="L2Artefact" name="Giran Holy Artifact">
+	<npc id="35147" level="20" type="Artefact" name="Giran Holy Artifact">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2341,7 +2341,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35148" level="97" type="L2Defender" name="Baron Carmon Esthus">
+	<npc id="35148" level="97" type="Defender" name="Baron Carmon Esthus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
@@ -2390,7 +2390,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35149" level="95" type="L2Defender" name="Ulric" title="Royal Guard Captain">
+	<npc id="35149" level="95" type="Defender" name="Ulric" title="Royal Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -2439,7 +2439,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35150" level="93" type="L2Defender" name="Royal Knight" title="Giran">
+	<npc id="35150" level="93" type="Defender" name="Royal Knight" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -2488,7 +2488,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35151" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
+	<npc id="35151" level="91" type="Defender" name="Royal Wizard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
@@ -2539,7 +2539,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35152" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
+	<npc id="35152" level="91" type="Defender" name="Royal Wizard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
@@ -2590,7 +2590,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35153" level="91" type="L2Defender" name="Royal Guard" title="Giran">
+	<npc id="35153" level="91" type="Defender" name="Royal Guard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
@@ -2639,7 +2639,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35154" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35154" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2688,7 +2688,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35155" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35155" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2737,7 +2737,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35156" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35156" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2786,7 +2786,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35157" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35157" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2835,7 +2835,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35158" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35158" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2884,7 +2884,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35159" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35159" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2933,7 +2933,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35160" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35160" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -2982,7 +2982,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35161" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35161" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3031,7 +3031,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35162" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35162" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3080,7 +3080,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35163" level="93" type="L2Defender" name="Royal Knight" title="Giran">
+	<npc id="35163" level="93" type="Defender" name="Royal Knight" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -3129,7 +3129,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35164" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
+	<npc id="35164" level="91" type="Defender" name="Royal Wizard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
@@ -3180,7 +3180,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35165" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
+	<npc id="35165" level="91" type="Defender" name="Royal Wizard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
@@ -3231,7 +3231,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35166" level="91" type="L2Defender" name="Royal Guard" title="Giran">
+	<npc id="35166" level="91" type="Defender" name="Royal Guard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
@@ -3280,7 +3280,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35167" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35167" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3329,7 +3329,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35168" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35168" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3378,7 +3378,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35169" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35169" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3427,7 +3427,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35170" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35170" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3476,7 +3476,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35171" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35171" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3525,7 +3525,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35172" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35172" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3574,7 +3574,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35173" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35173" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3623,7 +3623,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35174" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35174" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3672,7 +3672,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35175" level="89" type="L2Defender" name="Escort" title="Giran">
+	<npc id="35175" level="89" type="Defender" name="Escort" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -3721,7 +3721,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35176" level="75" type="L2Monster" name="Gatekeeper" title="Giran">
+	<npc id="35176" level="75" type="Monster" name="Gatekeeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3786,7 +3786,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35177" level="75" type="L2Monster" name="Gatekeeper" title="Giran">
+	<npc id="35177" level="75" type="Monster" name="Gatekeeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3851,7 +3851,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35178" level="75" type="L2Monster" name="Gatekeeper" title="Giran">
+	<npc id="35178" level="75" type="Monster" name="Gatekeeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3916,7 +3916,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35179" level="75" type="L2Npc" name="Mass Gatekeeper" title="Giran">
+	<npc id="35179" level="75" type="Npc" name="Mass Gatekeeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3961,7 +3961,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35180" level="75" type="L2Npc" name="Outer Castle Gatekeeper" title="Giran">
+	<npc id="35180" level="75" type="Npc" name="Outer Castle Gatekeeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4012,7 +4012,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35181" level="75" type="L2Npc" name="Inner Castle Gatekeeper" title="Giran">
+	<npc id="35181" level="75" type="Npc" name="Inner Castle Gatekeeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4063,7 +4063,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35182" level="75" type="L2Npc" name="Blacksmith" title="Giran">
+	<npc id="35182" level="75" type="Npc" name="Blacksmith" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4105,7 +4105,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35183" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Giran">
+	<npc id="35183" level="75" type="Warehouse" name="Warehouse Keeper" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4146,7 +4146,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35184" level="75" type="L2Merchant" name="Chamberlain of Light">
+	<npc id="35184" level="75" type="Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -4207,7 +4207,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35185" level="75" type="L2Npc" name="Bryce" title="Wyvern Manager">
+	<npc id="35185" level="75" type="Npc" name="Bryce" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4248,7 +4248,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35186" level="75" type="L2Merchant" name="Arvid" title="Mercenary Manager">
+	<npc id="35186" level="75" type="Merchant" name="Arvid" title="Mercenary Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4290,7 +4290,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35187" level="75" type="L2Merchant" name="Manor Manager" title="Giran">
+	<npc id="35187" level="75" type="Merchant" name="Manor Manager" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4332,7 +4332,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35188" level="75" type="L2Npc" name="Holmes" title="Herald from Giran">
+	<npc id="35188" level="75" type="Npc" name="Holmes" title="Herald from Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4376,7 +4376,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35189" level="20" type="L2Artefact" name="Oren Holy Artifact">
+	<npc id="35189" level="20" type="Artefact" name="Oren Holy Artifact">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -4415,7 +4415,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35190" level="97" type="L2Defender" name="Balthus Van Dyke" title="Duke">
+	<npc id="35190" level="97" type="Defender" name="Balthus Van Dyke" title="Duke">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
@@ -4464,7 +4464,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35191" level="95" type="L2Defender" name="Quant" title="Royal Guard Captain">
+	<npc id="35191" level="95" type="Defender" name="Quant" title="Royal Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
@@ -4513,7 +4513,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35192" level="93" type="L2Defender" name="Royal Knight" title="Oren">
+	<npc id="35192" level="93" type="Defender" name="Royal Knight" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
@@ -4562,7 +4562,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35193" level="91" type="L2Defender" name="Royal Wizard" title="Oren">
+	<npc id="35193" level="91" type="Defender" name="Royal Wizard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
@@ -4613,7 +4613,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35194" level="91" type="L2Defender" name="Royal Wizard" title="Oren">
+	<npc id="35194" level="91" type="Defender" name="Royal Wizard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
@@ -4664,7 +4664,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35195" level="91" type="L2Defender" name="Royal Guard" title="Oren">
+	<npc id="35195" level="91" type="Defender" name="Royal Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
@@ -4713,7 +4713,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35196" level="89" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35196" level="89" type="Defender" name="Escort" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -4762,7 +4762,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35197" level="89" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35197" level="89" type="Defender" name="Escort" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -4811,7 +4811,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35198" level="89" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35198" level="89" type="Defender" name="Escort" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
@@ -4860,7 +4860,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35199" level="89" type="L2Defender" name="Escort" title="Oren">
+	<npc id="35199" level="89" type="Defender" name="Escort" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />

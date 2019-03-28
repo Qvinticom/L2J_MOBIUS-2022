@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.network;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Nick
  */
 public class Disconnection implements Runnable
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public Disconnection(L2PcInstance activeChar)
+	public Disconnection(PlayerInstance player)
 	{
-		_activeChar = activeChar;
+		_player = player;
 	}
 	
 	@Override
 	public void run()
 	{
-		_activeChar.closeNetConnection();
+		_player.closeNetConnection();
 	}
 }

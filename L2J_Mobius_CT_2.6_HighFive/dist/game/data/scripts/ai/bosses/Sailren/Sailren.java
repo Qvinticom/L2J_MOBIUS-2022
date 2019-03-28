@@ -19,12 +19,12 @@ package ai.bosses.Sailren;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
+import com.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 
 import ai.AbstractNpcAI;
@@ -48,7 +48,7 @@ public final class Sailren extends AbstractNpcAI
 	// Skill
 	private static final SkillHolder ANIMATION = new SkillHolder(5090, 1);
 	// Zone
-	private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70049, L2NoRestartZone.class);
+	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(70049, NoRestartZone.class);
 	// Misc
 	private static final int RESPAWN = 1; // Respawn time (in hours)
 	private static final int MAX_TIME = 3200; // Max time for Sailren fight (in minutes)
@@ -80,7 +80,7 @@ public final class Sailren extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -119,7 +119,7 @@ public final class Sailren extends AbstractNpcAI
 					takeItems(player, GAZKH, 1);
 					STATUS = Status.IN_FIGHT;
 					_lastAttack = System.currentTimeMillis();
-					for (L2PcInstance member : player.getParty().getMembers())
+					for (PlayerInstance member : player.getParty().getMembers())
 					{
 						if (member.isInsideRadius3D(npc, 1000))
 						{
@@ -147,8 +147,8 @@ public final class Sailren extends AbstractNpcAI
 			}
 			case "SPAWN_SAILREN":
 			{
-				final L2RaidBossInstance sailren = (L2RaidBossInstance) addSpawn(SAILREN, 27549, -6638, -2008, 0, false, 0);
-				final L2Npc movieNpc = addSpawn(MOVIE_NPC, sailren.getX(), sailren.getY(), sailren.getZ() + 30, 0, false, 26000);
+				final RaidBossInstance sailren = (RaidBossInstance) addSpawn(SAILREN, 27549, -6638, -2008, 0, false, 0);
+				final Npc movieNpc = addSpawn(MOVIE_NPC, sailren.getX(), sailren.getY(), sailren.getZ() + 30, 0, false, 26000);
 				sailren.setIsInvul(true);
 				sailren.setIsImmobilized(true);
 				zone.broadcastPacket(new SpecialCamera(movieNpc, 60, 110, 30, 4000, 1500, 20000, 0, 65, 1, 0, 0));
@@ -220,17 +220,17 @@ public final class Sailren extends AbstractNpcAI
 				{
 					STATUS = Status.ALIVE;
 				}
-				for (L2Character charInside : zone.getCharactersInside())
+				for (Creature creature : zone.getCharactersInside())
 				{
-					if (charInside != null)
+					if (creature != null)
 					{
-						if (charInside.isPlayer())
+						if (creature.isPlayer())
 						{
-							charInside.teleToLocation(TeleportWhereType.TOWN);
+							creature.teleToLocation(TeleportWhereType.TOWN);
 						}
-						else if (charInside.isNpc())
+						else if (creature.isNpc())
 						{
-							charInside.deleteMe();
+							creature.deleteMe();
 						}
 					}
 				}
@@ -254,7 +254,7 @@ public final class Sailren extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(attacker))
 		{
@@ -264,7 +264,7 @@ public final class Sailren extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (zone.isCharacterInZone(killer))
 		{
@@ -287,7 +287,7 @@ public final class Sailren extends AbstractNpcAI
 					_killCount++;
 					if (_killCount == 3)
 					{
-						final L2Npc pterosaur = addSpawn(PTEROSAUR, 27313, -6766, -1975, 0, false, 0);
+						final Npc pterosaur = addSpawn(PTEROSAUR, 27313, -6766, -1975, 0, false, 0);
 						addAttackDesire(pterosaur, killer);
 						_killCount = 0;
 					}
@@ -295,7 +295,7 @@ public final class Sailren extends AbstractNpcAI
 				}
 				case PTEROSAUR:
 				{
-					final L2Npc trex = addSpawn(TREX, 27313, -6766, -1975, 0, false, 0);
+					final Npc trex = addSpawn(TREX, 27313, -6766, -1975, 0, false, 0);
 					addAttackDesire(trex, killer);
 					break;
 				}

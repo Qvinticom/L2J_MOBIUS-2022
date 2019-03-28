@@ -24,7 +24,7 @@ import java.text.SimpleDateFormat;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.communitybbs.CommunityBoard;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -48,7 +48,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, L2PcInstance activeChar)
+	public void parseCmd(String command, PlayerInstance player)
 	{
 		// None of this commands can be added to favorites.
 		if (command.startsWith("_bbsgetfav"))
@@ -59,7 +59,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_FAVORITES))
 			{
-				ps.setInt(1, activeChar.getObjectId());
+				ps.setInt(1, player.getObjectId());
 				try (ResultSet rs = ps.executeQuery())
 				{
 					while (rs.next())
@@ -74,16 +74,16 @@ public class FavoriteBBSManager extends BaseBBSManager
 				}
 				String html = HtmCache.getInstance().getHtm(CB_PATH + "favorite.html");
 				html = html.replaceAll("%fav_list%", sb.toString());
-				separateAndSend(html, activeChar);
+				separateAndSend(html, player);
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't load favorite links for player " + activeChar.getName());
+				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't load favorite links for player " + player.getName());
 			}
 		}
 		else if (command.startsWith("bbs_add_fav"))
 		{
-			final String bypass = CommunityBoard.getInstance().removeBypass(activeChar);
+			final String bypass = CommunityBoard.getInstance().removeBypass(player);
 			if (bypass != null)
 			{
 				final String[] parts = bypass.split("&", 2);
@@ -96,16 +96,16 @@ public class FavoriteBBSManager extends BaseBBSManager
 				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement ps = con.prepareStatement(ADD_FAVORITE))
 				{
-					ps.setInt(1, activeChar.getObjectId());
+					ps.setInt(1, player.getObjectId());
 					ps.setString(2, parts[0].trim());
 					ps.setString(3, parts[1].trim());
 					ps.execute();
 					// Callback
-					parseCmd("_bbsgetfav", activeChar);
+					parseCmd("_bbsgetfav", player);
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't add favorite link " + command + " for player " + activeChar.getName());
+					LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't add favorite link " + command + " for player " + player.getName());
 				}
 			}
 		}
@@ -121,15 +121,15 @@ public class FavoriteBBSManager extends BaseBBSManager
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_FAVORITE))
 			{
-				ps.setInt(1, activeChar.getObjectId());
+				ps.setInt(1, player.getObjectId());
 				ps.setInt(2, Integer.parseInt(favId));
 				ps.execute();
 				// Callback
-				parseCmd("_bbsgetfav", activeChar);
+				parseCmd("_bbsgetfav", player);
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + activeChar.getName());
+				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + player.getName());
 			}
 		}
 	}

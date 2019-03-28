@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -81,7 +81,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		
 		final QuestState qs = getQuestState(player, false);
@@ -285,7 +285,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 						if (brokenDeskOwner == 0)
 						{
 							npc.getVariables().set("Q00025", player.getObjectId());
-							final L2Npc triyol = addSpawn(TRIOL_PAWN, TRIOL_PAWN_LOC.get(npc.getId()), true, 0);
+							final Npc triyol = addSpawn(TRIOL_PAWN, TRIOL_PAWN_LOC.get(npc.getId()), true, 0);
 							triyol.getVariables().set("Q00025", npc);
 							triyol.setScriptValue(player.getObjectId());
 							startQuestTimer("SAY_TRIYOL", 500, triyol, player);
@@ -330,7 +330,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 			}
 			case "DESPAWN_TRIYOL":
 			{
-				final L2Npc brokenDesk = npc.getVariables().getObject("Q00025", L2Npc.class);
+				final Npc brokenDesk = npc.getVariables().getObject("Q00025", Npc.class);
 				if (brokenDesk != null)
 				{
 					brokenDesk.getVariables().set("Q00025", 0);
@@ -414,7 +414,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 			{
 				if (qs.isMemoState(11))
 				{
-					final L2Npc box = addSpawn(COFFIN, COFFIN_LOC, true, 0);
+					final Npc box = addSpawn(COFFIN, COFFIN_LOC, true, 0);
 					startQuestTimer("DESPAWN_BOX", 20000, box, player);
 					qs.setCond(12, true);
 					htmltext = event;
@@ -431,7 +431,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.getCurrentHp() <= (0.30 * npc.getMaxHp()))
 		{
@@ -442,7 +442,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 				qs.setCond(8, true);
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), NpcStringId.YOU_VE_ENDED_MY_IMMORTAL_LIFE_YOU_RE_PROTECTED_BY_THE_FEUDAL_LORD_AREN_T_YOU));
 				
-				final L2Npc brokenDesk = npc.getVariables().getObject("Q00025", L2Npc.class);
+				final Npc brokenDesk = npc.getVariables().getObject("Q00025", Npc.class);
 				if (brokenDesk != null)
 				{
 					brokenDesk.getVariables().set("Q00025", 0);
@@ -454,7 +454,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);

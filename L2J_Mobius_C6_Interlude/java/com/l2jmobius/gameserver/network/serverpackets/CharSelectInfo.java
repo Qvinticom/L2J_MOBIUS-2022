@@ -26,15 +26,14 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
- * This class ...
  * @version $Revision: 1.8.2.4.2.6 $ $Date: 2005/04/06 16:13:46 $
  */
-public class CharSelectInfo extends L2GameServerPacket
+public class CharSelectInfo extends GameServerPacket
 {
 	private static Logger LOGGER = Logger.getLogger(CharSelectInfo.class.getName());
 	
@@ -283,14 +282,14 @@ public class CharSelectInfo extends L2GameServerPacket
 		{
 			if (System.currentTimeMillis() > deletetime)
 			{
-				final L2PcInstance cha = L2PcInstance.load(objectId);
-				final L2Clan clan = cha.getClan();
+				final PlayerInstance cha = PlayerInstance.load(objectId);
+				final Clan clan = cha.getClan();
 				if (clan != null)
 				{
 					clan.removeClanMember(cha.getName(), 0);
 				}
 				
-				L2GameClient.deleteCharByObjId(objectId);
+				GameClient.deleteCharByObjId(objectId);
 				return null;
 			}
 		}

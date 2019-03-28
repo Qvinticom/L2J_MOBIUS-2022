@@ -23,7 +23,7 @@ import java.util.Set;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
-import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.model.Seed;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExShowCropSetting implements IClientOutgoingPacket
 {
 	private final int _manorId;
-	private final Set<L2Seed> _seeds;
+	private final Set<Seed> _seeds;
 	private final Map<Integer, CropProcure> _current = new HashMap<>();
 	private final Map<Integer, CropProcure> _next = new HashMap<>();
 	
@@ -41,7 +41,7 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		_manorId = manorId;
 		_seeds = manor.getSeedsForCastle(_manorId);
-		for (L2Seed s : _seeds)
+		for (Seed s : _seeds)
 		{
 			// Current period
 			CropProcure cp = manor.getCropProcure(manorId, s.getCropId(), false);
@@ -67,7 +67,7 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 		packet.writeD(_seeds.size()); // size
 		
 		CropProcure cp;
-		for (L2Seed s : _seeds)
+		for (Seed s : _seeds)
 		{
 			packet.writeD(s.getCropId()); // crop id
 			packet.writeD(s.getLevel()); // seed level

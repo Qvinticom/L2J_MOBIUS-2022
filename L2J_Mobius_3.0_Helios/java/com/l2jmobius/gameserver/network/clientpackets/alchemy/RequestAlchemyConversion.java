@@ -22,13 +22,13 @@ import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.alchemy.AlchemyCraftData;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -46,7 +46,7 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 	// private final Set<ItemHolder> _ingredients = new HashSet<>();
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_craftTimes = packet.readD();
 		packet.readH();
@@ -61,9 +61,9 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if ((player == null) || (player.getRace() != Race.ERTHEIA))
 		{
 			return;
@@ -135,8 +135,8 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		}
 		
 		// Calculate success and failure count.
-		final L2Item successItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionSuccess().getId());
-		final L2Item failureItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionFailure().getId());
+		final Item successItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionSuccess().getId());
+		final Item failureItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionFailure().getId());
 		int totalWeight = 0;
 		int totalslots = (successItemTemplate.isStackable() ? 1 : 0) + (failureItemTemplate.isStackable() ? 1 : 0);
 		int successCount = 0;
@@ -169,7 +169,7 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		}
 		
 		// Weight and capacity check.
-		final PcInventory inventory = player.getInventory();
+		final PlayerInventory inventory = player.getInventory();
 		if (!inventory.validateWeight(totalWeight) || ((totalslots > 0) && !inventory.validateCapacity(totalslots)))
 		{
 			player.sendPacket(new ExAlchemyConversion(0, 0));
@@ -182,20 +182,20 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		// Destroy ingredients.
 		for (ItemHolder ingredient : data.getIngredients())
 		{
-			final L2ItemInstance item = player.getInventory().getItemByItemId(ingredient.getId());
+			final ItemInstance item = player.getInventory().getItemByItemId(ingredient.getId());
 			ui.addItem(item);
 			player.getInventory().destroyItem("Alchemy", item, ingredient.getCount() * _craftTimes, player, null);
 		}
 		// Add success items.
 		if (successCount > 0)
 		{
-			final L2ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionSuccess().getId(), data.getProductionSuccess().getCount() * successCount, player, null);
+			final ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionSuccess().getId(), data.getProductionSuccess().getCount() * successCount, player, null);
 			ui.addItem(item);
 		}
 		// Add failed items.
 		if (failureCount > 0)
 		{
-			final L2ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionFailure().getId(), data.getProductionFailure().getCount() * failureCount, player, null);
+			final ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionFailure().getId(), data.getProductionFailure().getCount() * failureCount, player, null);
 			ui.addItem(item);
 		}
 		

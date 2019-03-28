@@ -17,8 +17,8 @@
 package quests.Q10294_SevenSignsToTheMonasteryOfSilence;
 
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -92,7 +92,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -235,7 +235,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			{
 				qs.set("good3", "1");
 				npc.setDisplayEffect(1);
-				final L2Npc jude = addSpawn(JUDE_VAN_ETINA, 85783, -253471, -8320, 65, false, 0, false, player.getInstanceId());
+				final Npc jude = addSpawn(JUDE_VAN_ETINA, 85783, -253471, -8320, 65, false, 0, false, player.getInstanceId());
 				jude.setTarget(player);
 				jude.doCast(RESIST_HOLY.getSkill());
 				htmltext = "32821-02.html";
@@ -249,7 +249,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 			{
 				qs.set("good4", "1");
 				npc.setDisplayEffect(1);
-				final L2Npc solina = addSpawn(SOLINAS_EVIL_THOUGHTS, 85793, -247581, -8320, 0, false, 0, false, player.getInstanceId());
+				final Npc solina = addSpawn(SOLINAS_EVIL_THOUGHTS, 85793, -247581, -8320, 0, false, 0, false, player.getInstanceId());
 				solina.setTarget(player);
 				solina.doCast(RESIST_HOLY.getSkill());
 				htmltext = "32821-02.html";
@@ -292,13 +292,13 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "32787.html";
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

@@ -34,7 +34,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import com.l2jmobius.gameserver.model.interfaces.IStorable;
 
 /**
@@ -49,7 +49,7 @@ public final class GrandBossManager implements IStorable
 	
 	protected static Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
 	
-	protected static Map<Integer, L2GrandBossInstance> _bosses = new ConcurrentHashMap<>();
+	protected static Map<Integer, GrandBossInstance> _bosses = new ConcurrentHashMap<>();
 	
 	protected static Map<Integer, StatsSet> _storedInfo = new HashMap<>();
 	
@@ -120,10 +120,10 @@ public final class GrandBossManager implements IStorable
 	}
 	
 	/**
-	 * Adds a L2GrandBossInstance to the list of bosses.
+	 * Adds a GrandBossInstance to the list of bosses.
 	 * @param boss
 	 */
-	public void addBoss(L2GrandBossInstance boss)
+	public void addBoss(GrandBossInstance boss)
 	{
 		if (boss != null)
 		{
@@ -131,7 +131,7 @@ public final class GrandBossManager implements IStorable
 		}
 	}
 	
-	public L2GrandBossInstance getBoss(int bossId)
+	public GrandBossInstance getBoss(int bossId)
 	{
 		return _bosses.get(bossId);
 	}
@@ -154,7 +154,7 @@ public final class GrandBossManager implements IStorable
 		{
 			for (Entry<Integer, StatsSet> e : _storedInfo.entrySet())
 			{
-				final L2GrandBossInstance boss = _bosses.get(e.getKey());
+				final GrandBossInstance boss = _bosses.get(e.getKey());
 				final StatsSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
@@ -204,7 +204,7 @@ public final class GrandBossManager implements IStorable
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final L2GrandBossInstance boss = _bosses.get(bossId);
+			final GrandBossInstance boss = _bosses.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))

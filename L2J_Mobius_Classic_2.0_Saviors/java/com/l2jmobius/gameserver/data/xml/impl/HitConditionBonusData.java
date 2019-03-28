@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.enums.Position;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * This class load, holds and calculates the hit condition bonuses.
@@ -113,7 +113,7 @@ public final class HitConditionBonusData implements IGameXmlReader
 	 * @param target the attacked character.
 	 * @return the bonus of the attacker against the target.
 	 */
-	public double getConditionBonus(L2Character attacker, L2Character target)
+	public double getConditionBonus(Creature attacker, Creature target)
 	{
 		double mod = 100;
 		// Get high or low bonus

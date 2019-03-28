@@ -16,8 +16,8 @@
  */
 package ai.others.AdventurersGuide;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -65,7 +65,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -116,7 +116,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String applyBuffs(L2Npc npc, L2PcInstance player, Skill skill)
+	private String applyBuffs(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if (player.getLevel() > MAX_LEVEL_BUFFS)
 		{

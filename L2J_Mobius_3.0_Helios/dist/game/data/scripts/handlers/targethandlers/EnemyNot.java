@@ -18,8 +18,8 @@ package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -37,57 +37,57 @@ public class EnemyNot implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		if (selectedTarget == null)
 		{
 			return null;
 		}
 		
-		if (!selectedTarget.isCharacter())
+		if (!selectedTarget.isCreature())
 		{
 			return null;
 		}
 		
-		final L2Character target = (L2Character) selectedTarget;
+		final Creature target = (Creature) selectedTarget;
 		
 		// You can always target yourself.
-		if (activeChar == target)
+		if (creature == target)
 		{
 			return target;
 		}
 		
-		if (!target.isAutoAttackable(activeChar))
+		if (!target.isAutoAttackable(creature))
 		{
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (activeChar.calculateDistance2D(target) > skill.getCastRange())
+				if (creature.calculateDistance2D(target) > skill.getCastRange())
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 					}
 					
 					return null;
 				}
 			}
 			
-			if ((skill.isFlyType()) && !GeoEngine.getInstance().canMoveToTarget(activeChar.getX(), activeChar.getY(), activeChar.getZ(), target.getX(), target.getY(), target.getZ(), activeChar.getInstanceWorld()))
+			if ((skill.isFlyType()) && !GeoEngine.getInstance().canMoveToTarget(creature.getX(), creature.getY(), creature.getZ(), target.getX(), target.getY(), target.getZ(), creature.getInstanceWorld()))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.THE_TARGET_IS_LOCATED_WHERE_YOU_CANNOT_CHARGE);
+					creature.sendPacket(SystemMessageId.THE_TARGET_IS_LOCATED_WHERE_YOU_CANNOT_CHARGE);
 				}
 				return null;
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoEngine.getInstance().canSeeTarget(creature, target))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
 				
 				return null;
@@ -98,7 +98,7 @@ public class EnemyNot implements ITargetTypeHandler
 		
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+			creature.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;

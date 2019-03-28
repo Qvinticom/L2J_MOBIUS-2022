@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class Revive implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	
-	public Revive(L2Object obj)
+	public Revive(WorldObject obj)
 	{
 		_objectId = obj.getObjectId();
 	}

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.spawn;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 
 /**
  * @author luisantonioa
@@ -24,5 +24,5 @@ import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
  */
 public interface SpawnListener
 {
-	void npcSpawned(L2NpcInstance npc);
+	void npcSpawned(NpcInstance npc);
 }

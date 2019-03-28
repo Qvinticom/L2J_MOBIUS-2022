@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExMonsterBook implements IClientOutgoingPacket
 {
-	final L2PcInstance _player;
+	final PlayerInstance _player;
 	final List<Integer> _cardIds = new ArrayList<>();
 	
-	public ExMonsterBook(L2PcInstance player)
+	public ExMonsterBook(PlayerInstance player)
 	{
 		_player = player;
 		

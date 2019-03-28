@@ -3,7 +3,7 @@ from com.l2jmobius.gameserver.model.entity.sevensigns import SevenSigns
 from com.l2jmobius.gameserver.model.quest        import State
 from com.l2jmobius.gameserver.model.quest        import QuestState
 from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.gameserver.model.actor.instance import L2PcInstance
+from com.l2jmobius.gameserver.model.actor.instance import PlayerInstance
 
 qn = "505_BloodOffering"
 

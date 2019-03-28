@@ -23,8 +23,8 @@ import java.util.Map;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -120,7 +120,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		addTalkId(PROMISE_OF_MAMMON, SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
 	}
 	
-	private void checkDoors(L2Npc npc, Instance world, int count)
+	private void checkDoors(Npc npc, Instance world, int count)
 	{
 		switch (count)
 		{
@@ -152,7 +152,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		}
 	}
 	
-	private void makeCast(L2Npc npc, List<L2Npc> targets)
+	private void makeCast(Npc npc, List<Npc> targets)
 	{
 		npc.setTarget(targets.get(getRandom(targets.size())));
 		if (SKILLS.containsKey(npc.getId()))
@@ -162,7 +162,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -185,10 +185,10 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 				}
 				case "FIGHT":
 				{
-					final List<L2Npc> anakimGroup = world.getNpcs(ANAKIM_GROUP);
-					final List<L2Npc> lilithGroup = world.getNpcs(LILITH_GROUP);
+					final List<Npc> anakimGroup = world.getNpcs(ANAKIM_GROUP);
+					final List<Npc> lilithGroup = world.getNpcs(LILITH_GROUP);
 					
-					for (L2Npc caster : anakimGroup)
+					for (Npc caster : anakimGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow(SkillCaster::isAnyNormalType))
 						{
@@ -207,7 +207,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 							}
 						}
 					}
-					for (L2Npc caster : lilithGroup)
+					for (Npc caster : lilithGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow(SkillCaster::isAnyNormalType))
 						{
@@ -268,7 +268,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -316,7 +316,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -341,13 +341,13 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".htm";
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
@@ -385,14 +385,14 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setUndying(true);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		final QuestState qs = talker.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName());
 		String htmltext = getNoQuestMsg(talker);

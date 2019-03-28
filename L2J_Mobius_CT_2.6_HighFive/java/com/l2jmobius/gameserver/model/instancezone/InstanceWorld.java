@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Basic instance zone data transfer object.
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public class InstanceWorld
 {
 	private Instance _instance;
-	private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet();
+	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet();
 	private final StatsSet _parameters = new StatsSet();
 	
 	/**
@@ -65,17 +65,17 @@ public class InstanceWorld
 		return _instance.getTemplateId();
 	}
 	
-	public Set<L2PcInstance> getAllowed()
+	public Set<PlayerInstance> getAllowed()
 	{
 		return _players;
 	}
 	
-	public void removeAllowed(L2PcInstance player)
+	public void removeAllowed(PlayerInstance player)
 	{
 		_players.remove(player);
 	}
 	
-	public void addAllowed(L2PcInstance player)
+	public void addAllowed(PlayerInstance player)
 	{
 		if (!_players.contains(player))
 		{
@@ -83,7 +83,7 @@ public class InstanceWorld
 		}
 	}
 	
-	public boolean isAllowed(L2PcInstance player)
+	public boolean isAllowed(PlayerInstance player)
 	{
 		return _players.contains(player);
 	}
@@ -157,7 +157,7 @@ public class InstanceWorld
 	 * Get spawned NPCs from instance.
 	 * @return set of NPCs from instance
 	 */
-	public List<L2Npc> getNpcs()
+	public List<Npc> getNpcs()
 	{
 		return _instance.getNpcs();
 	}
@@ -166,7 +166,7 @@ public class InstanceWorld
 	 * Get alive NPCs from instance.
 	 * @return set of NPCs from instance
 	 */
-	public List<L2Npc> getAliveNpcs()
+	public List<Npc> getAliveNpcs()
 	{
 		return _instance.getNpcs().stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toList());
 	}
@@ -176,7 +176,7 @@ public class InstanceWorld
 	 * @param id IDs of NPCs which should be found
 	 * @return list of filtered NPCs from instance
 	 */
-	public List<L2Npc> getNpcs(int... id)
+	public List<Npc> getNpcs(int... id)
 	{
 		return _instance.getNpcs().stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
@@ -189,7 +189,7 @@ public class InstanceWorld
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
-	public final <T extends L2Character> List<T> getNpcs(Class<T> clazz, int... ids)
+	public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
 		return _instance.getNpcs().stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
@@ -202,7 +202,7 @@ public class InstanceWorld
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
-	public final <T extends L2Character> List<T> getAliveNpcs(Class<T> clazz, int... ids)
+	public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
 		return _instance.getNpcs().stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
@@ -212,7 +212,7 @@ public class InstanceWorld
 	 * @param id IDs of NPCs which should be found
 	 * @return list of filtered NPCs from instance
 	 */
-	public List<L2Npc> getAliveNpcs(int... id)
+	public List<Npc> getAliveNpcs(int... id)
 	{
 		return _instance.getNpcs().stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
@@ -222,7 +222,7 @@ public class InstanceWorld
 	 * @param id ID of NPC to be found
 	 * @return first found NPC with specified ID, otherwise {@code null}
 	 */
-	public L2Npc getNpc(int id)
+	public Npc getNpc(int id)
 	{
 		return _instance.getNpcs().stream().filter(n -> n.getId() == id).findFirst().orElse(null);
 	}
@@ -232,7 +232,7 @@ public class InstanceWorld
 	 * @param groupName the name of group from XML definition to spawn
 	 * @return list of spawned NPCs
 	 */
-	public List<L2Npc> spawnGroup(String groupName)
+	public List<Npc> spawnGroup(String groupName)
 	{
 		return _instance.spawnGroup(groupName);
 	}
@@ -243,7 +243,7 @@ public class InstanceWorld
 	 */
 	public void openDoor(int doorId)
 	{
-		final L2DoorInstance door = _instance.getDoor(doorId);
+		final DoorInstance door = _instance.getDoor(doorId);
 		if ((door != null) && !door.isOpen())
 		{
 			door.openMe();
@@ -256,7 +256,7 @@ public class InstanceWorld
 	 */
 	public void closeDoor(int doorId)
 	{
-		final L2DoorInstance door = _instance.getDoor(doorId);
+		final DoorInstance door = _instance.getDoor(doorId);
 		if ((door != null) && door.isOpen())
 		{
 			door.closeMe();

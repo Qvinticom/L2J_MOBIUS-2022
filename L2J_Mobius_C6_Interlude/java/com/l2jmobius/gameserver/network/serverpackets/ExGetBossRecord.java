@@ -22,7 +22,7 @@ import java.util.Map;
  * Format: ch ddd [ddd].
  * @author KenM
  */
-public class ExGetBossRecord extends L2GameServerPacket
+public class ExGetBossRecord extends GameServerPacket
 {
 	/** The _boss record info. */
 	private final Map<Integer, Integer> _bossRecordInfo;

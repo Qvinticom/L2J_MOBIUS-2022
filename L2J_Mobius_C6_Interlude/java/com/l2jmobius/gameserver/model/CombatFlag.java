@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.model;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -32,12 +32,12 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class CombatFlag
 {
-	protected L2PcInstance _player = null;
+	protected PlayerInstance _player = null;
 	public int playerId = 0;
-	private L2ItemInstance _item = null;
+	private ItemInstance _item = null;
 	
 	private final Location _location;
-	public L2ItemInstance itemInstance;
+	public ItemInstance itemInstance;
 	
 	private final int _itemId;
 	
@@ -49,9 +49,9 @@ public class CombatFlag
 	
 	public synchronized void spawnMe()
 	{
-		L2ItemInstance i;
+		ItemInstance i;
 		
-		// Init the dropped L2ItemInstance and add it in the world as a visible object at the position where mob was last
+		// Init the dropped ItemInstance and add it in the world as a visible object at the position where mob was last
 		i = ItemTable.getInstance().createItem("Combat", _itemId, 1, null, null);
 		i.spawnMe(_location.getX(), _location.getY(), _location.getZ());
 		itemInstance = i;
@@ -70,7 +70,7 @@ public class CombatFlag
 		}
 	}
 	
-	public void activate(L2PcInstance player, L2ItemInstance item)
+	public void activate(PlayerInstance player, ItemInstance item)
 	{
 		// if the player is mounted, attempt to unmount first. Only allow picking up the comabt flag if unmounting is successful.
 		if (player.isMounted())

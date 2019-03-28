@@ -20,11 +20,11 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -49,38 +49,38 @@ public class Crystals implements IItemHandler
 	};
 	
 	@Override
-	public synchronized void useItem(L2Playable playable, L2ItemInstance item)
+	public synchronized void useItem(Playable playable, ItemInstance item)
 	{
-		L2PcInstance activeChar;
+		PlayerInstance player;
 		// boolean res = false;
 		
-		if (playable instanceof L2PcInstance)
+		if (playable instanceof PlayerInstance)
 		{
-			activeChar = (L2PcInstance) playable;
+			player = (PlayerInstance) playable;
 		}
-		else if (playable instanceof L2PetInstance)
+		else if (playable instanceof PetInstance)
 		{
-			activeChar = ((L2PetInstance) playable).getOwner();
+			player = ((PetInstance) playable).getOwner();
 		}
 		else
 		{
 			return;
 		}
 		
-		if (activeChar.isInOlympiadMode())
+		if (player.isInOlympiadMode())
 		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return;
 		}
 		
-		if (activeChar.isAllSkillsDisabled())
+		if (player.isAllSkillsDisabled())
 		{
-			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final int itemId = item.getItemId();
-		L2Skill skill = null;
+		Skill skill = null;
 		
 		switch (itemId)
 		{
@@ -150,7 +150,7 @@ public class Crystals implements IItemHandler
 		}
 		if (skill != null)
 		{
-			activeChar.doCast(skill);
+			player.doCast(skill);
 		}
 	}
 	

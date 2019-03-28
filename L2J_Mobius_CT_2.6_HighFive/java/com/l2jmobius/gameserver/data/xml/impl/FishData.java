@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.fishing.L2Fish;
+import com.l2jmobius.gameserver.model.fishing.Fish;
 
 /**
  * This class holds the Fish information.
@@ -36,9 +36,9 @@ import com.l2jmobius.gameserver.model.fishing.L2Fish;
  */
 public final class FishData implements IGameXmlReader
 {
-	private final Map<Integer, L2Fish> _fishNormal = new HashMap<>();
-	private final Map<Integer, L2Fish> _fishEasy = new HashMap<>();
-	private final Map<Integer, L2Fish> _fishHard = new HashMap<>();
+	private final Map<Integer, Fish> _fishNormal = new HashMap<>();
+	private final Map<Integer, Fish> _fishEasy = new HashMap<>();
+	private final Map<Integer, Fish> _fishHard = new HashMap<>();
 	
 	/**
 	 * Instantiates a new fish data.
@@ -78,7 +78,7 @@ public final class FishData implements IGameXmlReader
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						
-						final L2Fish fish = new L2Fish(set);
+						final Fish fish = new Fish(set);
 						switch (fish.getFishGrade())
 						{
 							case 0:
@@ -110,10 +110,10 @@ public final class FishData implements IGameXmlReader
 	 * @param grade the fish Grade
 	 * @return List of Fish that can be fished
 	 */
-	public List<L2Fish> getFish(int level, int group, int grade)
+	public List<Fish> getFish(int level, int group, int grade)
 	{
-		final ArrayList<L2Fish> result = new ArrayList<>();
-		Map<Integer, L2Fish> fish = null;
+		final ArrayList<Fish> result = new ArrayList<>();
+		Map<Integer, Fish> fish = null;
 		switch (grade)
 		{
 			case 0:
@@ -138,7 +138,7 @@ public final class FishData implements IGameXmlReader
 			}
 		}
 		
-		for (L2Fish f : fish.values())
+		for (Fish f : fish.values())
 		{
 			if ((f.getFishLevel() != level) || (f.getFishGroup() != group))
 			{

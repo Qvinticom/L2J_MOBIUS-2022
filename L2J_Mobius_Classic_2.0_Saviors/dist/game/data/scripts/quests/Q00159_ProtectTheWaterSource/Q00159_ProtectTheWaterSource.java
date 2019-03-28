@@ -18,8 +18,8 @@ package quests.Q00159_ProtectTheWaterSource;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,12 +54,12 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equals("30154-04.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equals("30154-04.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, HYACINTH_CHARM, 1);
 			return event;
 		}
@@ -67,19 +67,19 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null))
 		{
-			switch (st.getCond())
+			switch (qs.getCond())
 			{
 				case 1:
 				{
 					if ((getRandom(100) < 40) && hasQuestItems(killer, HYACINTH_CHARM) && !hasQuestItems(killer, PLAGUE_DUST))
 					{
 						giveItems(killer, PLAGUE_DUST, 1);
-						st.setCond(2, true);
+						qs.setCond(2, true);
 					}
 					break;
 				}
@@ -91,7 +91,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 						giveItems(killer, PLAGUE_DUST, 1);
 						if ((++dust) >= 5)
 						{
-							st.setCond(4, true);
+							qs.setCond(4, true);
 						}
 						else
 						{
@@ -106,12 +106,12 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -120,7 +120,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -137,7 +137,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 							takeItems(player, HYACINTH_CHARM, -1);
 							takeItems(player, PLAGUE_DUST, -1);
 							giveItems(player, HYACINTH_CHARM2, 1);
-							st.setCond(3, true);
+							qs.setCond(3, true);
 							htmltext = "30154-06.html";
 						}
 						break;
@@ -156,7 +156,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 						{
 							rewardItems(player, SCROLL_OF_ESCAPSE, 1);
 							rewardItems(player, RING_NOVICE, 1);
-							st.exitQuest(false, true);
+							qs.exitQuest(false, true);
 							htmltext = "30154-08.html";
 						}
 						break;

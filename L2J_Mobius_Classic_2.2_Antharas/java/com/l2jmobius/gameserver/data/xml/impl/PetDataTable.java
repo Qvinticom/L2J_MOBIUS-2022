@@ -27,8 +27,8 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.MountType;
-import com.l2jmobius.gameserver.model.L2PetData;
-import com.l2jmobius.gameserver.model.L2PetLevelData;
+import com.l2jmobius.gameserver.model.PetData;
+import com.l2jmobius.gameserver.model.PetLevelData;
 import com.l2jmobius.gameserver.model.StatsSet;
 
 /**
@@ -40,7 +40,7 @@ public final class PetDataTable implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PetDataTable.class.getName());
 	
-	private final Map<Integer, L2PetData> _pets = new HashMap<>();
+	private final Map<Integer, PetData> _pets = new HashMap<>();
 	
 	/**
 	 * Instantiates a new pet data table.
@@ -70,7 +70,7 @@ public final class PetDataTable implements IGameXmlReader
 				final int npcId = parseInteger(d.getAttributes(), "id");
 				final int itemId = parseInteger(d.getAttributes(), "itemId");
 				// index ignored for now
-				final L2PetData data = new L2PetData(npcId, itemId);
+				final PetData data = new PetData(npcId, itemId);
 				for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling())
 				{
 					if (p.getNodeName().equals("set"))
@@ -143,7 +143,7 @@ public final class PetDataTable implements IGameXmlReader
 										}
 									}
 								}
-								data.addNewStat(level, new L2PetLevelData(set));
+								data.addNewStat(level, new PetLevelData(set));
 							}
 						}
 					}
@@ -157,9 +157,9 @@ public final class PetDataTable implements IGameXmlReader
 	 * @param itemId
 	 * @return
 	 */
-	public L2PetData getPetDataByItemId(int itemId)
+	public PetData getPetDataByItemId(int itemId)
 	{
-		for (L2PetData data : _pets.values())
+		for (PetData data : _pets.values())
 		{
 			if (data.getItemId() == itemId)
 			{
@@ -175,9 +175,9 @@ public final class PetDataTable implements IGameXmlReader
 	 * @param petLevel the pet level.
 	 * @return the pet's parameters for the given Id and level.
 	 */
-	public L2PetLevelData getPetLevelData(int petId, int petLevel)
+	public PetLevelData getPetLevelData(int petId, int petLevel)
 	{
-		final L2PetData pd = getPetData(petId);
+		final PetData pd = getPetData(petId);
 		if (pd != null)
 		{
 			if (petLevel > pd.getMaxLevel())
@@ -194,7 +194,7 @@ public final class PetDataTable implements IGameXmlReader
 	 * @param petId the pet Id.
 	 * @return the pet data
 	 */
-	public L2PetData getPetData(int petId)
+	public PetData getPetData(int petId)
 	{
 		if (!_pets.containsKey(petId))
 		{

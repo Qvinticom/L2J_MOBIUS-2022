@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.clientpackets.*;
 /**
  * @author UnAfraid
  */
-public enum IncomingPackets implements IIncomingPackets<L2GameClient>
+public enum IncomingPackets implements IIncomingPackets<GameClient>
 {
 	LOGOUT(0x00, Logout::new, ConnectionState.AUTHENTICATED, ConnectionState.IN_GAME),
 	ATTACK(0x01, Attack::new, ConnectionState.IN_GAME),
@@ -214,10 +214,10 @@ public enum IncomingPackets implements IIncomingPackets<L2GameClient>
 	}
 	
 	private short _packetId;
-	private Supplier<IIncomingPacket<L2GameClient>> _incomingPacketFactory;
+	private Supplier<IIncomingPacket<GameClient>> _incomingPacketFactory;
 	private Set<IConnectionState> _connectionStates;
 	
-	IncomingPackets(int packetId, Supplier<IIncomingPacket<L2GameClient>> incomingPacketFactory, IConnectionState... connectionStates)
+	IncomingPackets(int packetId, Supplier<IIncomingPacket<GameClient>> incomingPacketFactory, IConnectionState... connectionStates)
 	{
 		// packetId is an unsigned byte
 		if (packetId > 0xFF)
@@ -237,7 +237,7 @@ public enum IncomingPackets implements IIncomingPackets<L2GameClient>
 	}
 	
 	@Override
-	public IIncomingPacket<L2GameClient> newIncomingPacket()
+	public IIncomingPacket<GameClient> newIncomingPacket()
 	{
 		return _incomingPacketFactory.get();
 	}

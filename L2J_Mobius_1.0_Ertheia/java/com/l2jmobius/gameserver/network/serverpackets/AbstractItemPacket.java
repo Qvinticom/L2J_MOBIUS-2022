@@ -22,9 +22,9 @@ import com.l2jmobius.gameserver.enums.ItemListType;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.WarehouseItem;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author UnAfraid
@@ -47,12 +47,12 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(PacketWriter packet, L2WarehouseItem item)
+	protected void writeItem(PacketWriter packet, WarehouseItem item)
 	{
 		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeItem(PacketWriter packet, L2ItemInstance item)
+	protected void writeItem(PacketWriter packet, ItemInstance item)
 	{
 		writeItem(packet, new ItemInfo(item));
 	}
@@ -184,7 +184,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 	}
 	
-	protected void writeInventoryBlock(PacketWriter packet, PcInventory inventory)
+	protected void writeInventoryBlock(PacketWriter packet, PlayerInventory inventory)
 	{
 		if (inventory.hasInventoryBlock())
 		{

@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,16 +29,16 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	// private final int _page;
 	private final int _minlvl;
 	private final int _maxlvl;
 	private final int _mode;
-	private final List<L2PcInstance> _members;
+	private final List<PlayerInstance> _members;
 	
-	public ExListPartyMatchingWaitingRoom(L2PcInstance player, int page, int minlvl, int maxlvl, int mode)
+	public ExListPartyMatchingWaitingRoom(PlayerInstance player, int page, int minlvl, int maxlvl, int mode)
 	{
-		_activeChar = player;
+		_player = player;
 		// _page = page;
 		_minlvl = minlvl;
 		_maxlvl = maxlvl;
@@ -57,9 +57,9 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			return true;
 		}
 		
-		for (L2PcInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
+		for (PlayerInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
 		{
-			if ((cha == null) || (cha == _activeChar))
+			if ((cha == null) || (cha == _player))
 			{
 				continue;
 			}
@@ -80,7 +80,7 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 		
 		packet.writeD(0x01); // Page?
 		packet.writeD(_members.size());
-		for (L2PcInstance member : _members)
+		for (PlayerInstance member : _members)
 		{
 			packet.writeS(member.getName());
 			packet.writeD(member.getActiveClass());

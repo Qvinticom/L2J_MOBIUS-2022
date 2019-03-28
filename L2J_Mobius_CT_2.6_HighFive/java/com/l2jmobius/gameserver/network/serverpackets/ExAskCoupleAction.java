@@ -24,12 +24,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExAskCoupleAction implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _actionId;
 	
 	public ExAskCoupleAction(int charObjId, int social)
 	{
-		_charObjId = charObjId;
+		_objectId = charObjId;
 		_actionId = social;
 	}
 	
@@ -38,7 +38,7 @@ public class ExAskCoupleAction implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ASK_COUPLE_ACTION.writeId(packet);
 		packet.writeD(_actionId);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		return true;
 	}
 }

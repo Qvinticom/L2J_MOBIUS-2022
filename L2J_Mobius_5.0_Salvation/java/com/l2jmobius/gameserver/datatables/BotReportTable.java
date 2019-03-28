@@ -39,11 +39,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -206,20 +206,20 @@ public final class BotReportTable
 	
 	/**
 	 * Attempts to perform a bot report. R/W to ip and char id registry is synchronized. Triggers bot punish management<br>
-	 * @param reporter (L2PcInstance who issued the report)
+	 * @param reporter (PlayerInstance who issued the report)
 	 * @return True, if the report was registered, False otherwise
 	 */
-	public boolean reportBot(L2PcInstance reporter)
+	public boolean reportBot(PlayerInstance reporter)
 	{
-		final L2Object target = reporter.getTarget();
+		final WorldObject target = reporter.getTarget();
 		if (target == null)
 		{
 			return false;
 		}
 		
-		final L2Character bot = ((L2Character) target);
+		final Creature bot = ((Creature) target);
 		
-		if ((!bot.isPlayer() && !bot.isFakePlayer()) || (bot.isFakePlayer() && !((L2Npc) bot).getTemplate().isFakePlayerTalkable()) || (target.getObjectId() == reporter.getObjectId()))
+		if ((!bot.isPlayer() && !bot.isFakePlayer()) || (bot.isFakePlayer() && !((Npc) bot).getTemplate().isFakePlayerTalkable()) || (target.getObjectId() == reporter.getObjectId()))
 		{
 			return false;
 		}
@@ -339,10 +339,10 @@ public final class BotReportTable
 	
 	/**
 	 * Find the punishs to apply to the given bot and triggers the punish method.
-	 * @param bot (L2PcInstance to be punished)
+	 * @param bot (PlayerInstance to be punished)
 	 * @param rcd (RepotedCharData linked to this bot)
 	 */
-	private void handleReport(L2PcInstance bot, ReportedCharData rcd)
+	private void handleReport(PlayerInstance bot, ReportedCharData rcd)
 	{
 		// Report count punishment
 		punishBot(bot, _punishments.get(rcd.getReportCount()));
@@ -359,10 +359,10 @@ public final class BotReportTable
 	
 	/**
 	 * Applies the given punish to the bot if the action is secure
-	 * @param bot (L2PcInstance to punish)
+	 * @param bot (PlayerInstance to punish)
 	 * @param ph (PunishHolder containing the debuff and a possible system message to send)
 	 */
-	private void punishBot(L2PcInstance bot, PunishHolder ph)
+	private void punishBot(PlayerInstance bot, PunishHolder ph)
 	{
 		if (ph != null)
 		{
@@ -441,10 +441,10 @@ public final class BotReportTable
 	
 	/**
 	 * Returns a integer representative number from a connection
-	 * @param player (The L2PcInstance owner of the connection)
+	 * @param player (The PlayerInstance owner of the connection)
 	 * @return int (hashed ip)
 	 */
-	private static int hashIp(L2PcInstance player)
+	private static int hashIp(PlayerInstance player)
 	{
 		final String con = player.getClient().getConnectionAddress().getHostAddress();
 		final String[] rawByte = con.split("\\.");
@@ -535,7 +535,7 @@ public final class BotReportTable
 			_reporters.put(objectId, reportTime);
 		}
 		
-		boolean reportedBySameClan(L2Clan clan)
+		boolean reportedBySameClan(Clan clan)
 		{
 			if (clan == null)
 			{

@@ -16,8 +16,8 @@
  */
 package quests.Q00011_SecretMeetingWithKetraOrcs;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -45,11 +45,11 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -58,24 +58,24 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 		{
 			case "31296-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "31256-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					giveItems(player, BOX, 1);
 				}
 				break;
 			}
 			case "31371-02.html":
 			{
-				if (st.isCond(2) && hasQuestItems(player, BOX))
+				if (qs.isCond(2) && hasQuestItems(player, BOX))
 				{
 					addExpAndSp(player, 233125, 18142);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				else
 				{
@@ -88,13 +88,13 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		final int npcId = npc.getId();
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.COMPLETED:
 			{
@@ -111,23 +111,23 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 			}
 			case State.STARTED:
 			{
-				if ((npcId == CADMON) && st.isCond(1))
+				if ((npcId == CADMON) && qs.isCond(1))
 				{
 					htmltext = "31296-04.html";
 				}
 				else if (npcId == LEON)
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "31256-01.html";
 						
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						htmltext = "31256-03.html";
 					}
 				}
-				else if ((npcId == WAHKAN) && st.isCond(2))
+				else if ((npcId == WAHKAN) && qs.isCond(2))
 				{
 					htmltext = "31371-01.html";
 				}

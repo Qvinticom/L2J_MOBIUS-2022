@@ -18,32 +18,32 @@ package com.l2jmobius.gameserver.model.actor.request;
 
 import java.util.Objects;
 
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author UnAfraid
  */
 public class PartyRequest extends AbstractRequest
 {
-	private final L2PcInstance _targetPlayer;
-	private final L2Party _party;
+	private final PlayerInstance _targetPlayer;
+	private final Party _party;
 	
-	public PartyRequest(L2PcInstance activeChar, L2PcInstance targetPlayer, L2Party party)
+	public PartyRequest(PlayerInstance player, PlayerInstance targetPlayer, Party party)
 	{
-		super(activeChar);
+		super(player);
 		Objects.requireNonNull(targetPlayer);
 		Objects.requireNonNull(party);
 		_targetPlayer = targetPlayer;
 		_party = party;
 	}
 	
-	public L2PcInstance getTargetPlayer()
+	public PlayerInstance getTargetPlayer()
 	{
 		return _targetPlayer;
 	}
 	
-	public L2Party getParty()
+	public Party getParty()
 	{
 		return _party;
 	}

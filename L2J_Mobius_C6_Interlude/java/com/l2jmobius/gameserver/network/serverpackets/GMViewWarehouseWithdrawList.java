@@ -16,28 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.templates.item.L2Item;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.templates.item.Item;
+import com.l2jmobius.gameserver.templates.item.Weapon;
 
 /**
  * Sdh(h dddhh [dhhh] d) Sdh ddddd ddddd ddddd ddddd
  * @version $Revision: 1.1.2.1.2.5 $ $Date: 2007/11/26 16:10:05 $
  */
-public class GMViewWarehouseWithdrawList extends L2GameServerPacket
+public class GMViewWarehouseWithdrawList extends GameServerPacket
 {
-	private final L2ItemInstance[] _items;
+	private final ItemInstance[] _items;
 	private final String _playerName;
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _money;
 	
-	public GMViewWarehouseWithdrawList(L2PcInstance cha)
+	public GMViewWarehouseWithdrawList(PlayerInstance player)
 	{
-		_activeChar = cha;
-		_items = _activeChar.getWarehouse().getItems();
-		_playerName = _activeChar.getName();
-		_money = _activeChar.getAdena();
+		_player = player;
+		_items = _player.getWarehouse().getItems();
+		_playerName = _player.getName();
+		_money = _player.getAdena();
 	}
 	
 	@Override
@@ -48,7 +48,7 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 		writeD(_money);
 		writeH(_items.length);
 		
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			writeH(item.getItem().getType1());
 			
@@ -60,20 +60,20 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 			
 			switch (item.getItem().getType2())
 			{
-				case L2Item.TYPE2_WEAPON:
+				case Item.TYPE2_WEAPON:
 				{
 					writeD(item.getItem().getBodyPart());
 					writeH(item.getEnchantLevel());
-					writeH(((L2Weapon) item.getItem()).getSoulShotCount());
-					writeH(((L2Weapon) item.getItem()).getSpiritShotCount());
+					writeH(((Weapon) item.getItem()).getSoulShotCount());
+					writeH(((Weapon) item.getItem()).getSpiritShotCount());
 					break;
 				}
-				case L2Item.TYPE2_SHIELD_ARMOR:
-				case L2Item.TYPE2_ACCESSORY:
-				case L2Item.TYPE2_PET_WOLF:
-				case L2Item.TYPE2_PET_HATCHLING:
-				case L2Item.TYPE2_PET_STRIDER:
-				case L2Item.TYPE2_PET_BABY:
+				case Item.TYPE2_SHIELD_ARMOR:
+				case Item.TYPE2_ACCESSORY:
+				case Item.TYPE2_PET_WOLF:
+				case Item.TYPE2_PET_HATCHLING:
+				case Item.TYPE2_PET_STRIDER:
+				case Item.TYPE2_PET_BABY:
 				{
 					writeD(item.getItem().getBodyPart());
 					writeH(item.getEnchantLevel());
@@ -87,7 +87,7 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 			
 			switch (item.getItem().getType2())
 			{
-				case L2Item.TYPE2_WEAPON:
+				case Item.TYPE2_WEAPON:
 				{
 					if (item.isAugmented())
 					{
@@ -101,12 +101,12 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 					}
 					break;
 				}
-				case L2Item.TYPE2_SHIELD_ARMOR:
-				case L2Item.TYPE2_ACCESSORY:
-				case L2Item.TYPE2_PET_WOLF:
-				case L2Item.TYPE2_PET_HATCHLING:
-				case L2Item.TYPE2_PET_STRIDER:
-				case L2Item.TYPE2_PET_BABY:
+				case Item.TYPE2_SHIELD_ARMOR:
+				case Item.TYPE2_ACCESSORY:
+				case Item.TYPE2_PET_WOLF:
+				case Item.TYPE2_PET_HATCHLING:
+				case Item.TYPE2_PET_STRIDER:
+				case Item.TYPE2_PET_BABY:
 				{
 					writeD(0);
 					writeD(0);

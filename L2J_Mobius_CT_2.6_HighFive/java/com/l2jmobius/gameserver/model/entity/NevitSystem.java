@@ -22,11 +22,11 @@ import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.interfaces.IUniqueId;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
@@ -41,12 +41,12 @@ import com.l2jmobius.gameserver.network.serverpackets.ExNevitAdventTimeChange;
  */
 public class NevitSystem implements IUniqueId
 {
-	public final L2PcInstance _player;
+	public final PlayerInstance _player;
 	
 	private volatile ScheduledFuture<?> _adventTask;
 	private volatile ScheduledFuture<?> _nevitEffectTask;
 	
-	public NevitSystem(L2PcInstance player)
+	public NevitSystem(PlayerInstance player)
 	{
 		_player = player;
 		
@@ -249,7 +249,7 @@ public class NevitSystem implements IUniqueId
 		}
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}

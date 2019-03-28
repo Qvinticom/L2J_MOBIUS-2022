@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Premium implements IVoicedCommandHandler
@@ -32,7 +32,7 @@ public class Premium implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
 		if (command.startsWith("premium") && Config.PREMIUM_SYSTEM_ENABLED)
 		{

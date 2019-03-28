@@ -25,12 +25,12 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -410,9 +410,9 @@ public final class Kamaloka extends AbstractInstance
 	 * @param index (0-18) index of the kamaloka in arrays
 	 * @return true if party allowed to enter
 	 */
-	private static final boolean checkPartyConditions(L2PcInstance player, int index)
+	private static final boolean checkPartyConditions(PlayerInstance player, int index)
 	{
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		// player must be in party
 		if (party == null)
 		{
@@ -439,7 +439,7 @@ public final class Kamaloka extends AbstractInstance
 		
 		Map<Integer, Long> instanceTimes;
 		// for each party member
-		for (L2PcInstance partyMember : party.getMembers())
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
@@ -487,7 +487,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Removing all buffs from player and pet except BUFFS_WHITELIST
 	 * @param ch player
 	 */
-	private static final void removeBuffs(L2Character ch)
+	private static final void removeBuffs(Creature ch)
 	{
 		// Stop all buffs.
 		ch.getEffectList().stopEffects(info -> (info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0), true, true);
@@ -498,7 +498,7 @@ public final class Kamaloka extends AbstractInstance
 	 * @param player party leader
 	 * @param index (0-18) kamaloka index in arrays
 	 */
-	private final synchronized void enterInstance(L2PcInstance player, int index)
+	private final synchronized void enterInstance(PlayerInstance player, int index)
 	{
 		int templateId;
 		try
@@ -555,8 +555,8 @@ public final class Kamaloka extends AbstractInstance
 		spawnKama(world);
 		
 		// and finally teleport party into instance
-		final L2Party party = player.getParty();
-		for (L2PcInstance partyMember : party.getMembers())
+		final Party party = player.getParty();
+		for (PlayerInstance partyMember : party.getMembers())
 		{
 			world.addAllowed(partyMember);
 			removeBuffs(partyMember);
@@ -573,7 +573,7 @@ public final class Kamaloka extends AbstractInstance
 	{
 		int[] npcs;
 		int[][] spawns;
-		L2Npc npc;
+		Npc npc;
 		final int index = world.getParameters().getInt("index");
 		
 		// first room
@@ -581,7 +581,7 @@ public final class Kamaloka extends AbstractInstance
 		spawns = FIRST_ROOM_SPAWNS[index];
 		if (npcs != null)
 		{
-			final List<L2Spawn> firstRoom = new ArrayList<>(spawns.length - 1);
+			final List<Spawn> firstRoom = new ArrayList<>(spawns.length - 1);
 			final int shaman = getRandom(spawns.length); // random position for shaman
 			
 			for (int i = 0; i < spawns.length; i++)
@@ -595,7 +595,7 @@ public final class Kamaloka extends AbstractInstance
 				else
 				{
 					npc = addSpawn(npcs[1], spawns[i][0], spawns[i][1], spawns[i][2], 0, false, 0, false, world.getId());
-					final L2Spawn spawn = npc.getSpawn();
+					final Spawn spawn = npc.getSpawn();
 					spawn.setRespawnDelay(FIRST_ROOM_RESPAWN_DELAY);
 					spawn.setAmount(1);
 					spawn.startRespawn();
@@ -644,7 +644,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Handles only player's enter, single parameter - integer kamaloka index
 	 */
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc != null)
 		{
@@ -664,7 +664,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Talk with captains and using of the escape teleporter
 	 */
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		
@@ -673,7 +673,7 @@ public final class Kamaloka extends AbstractInstance
 			final Instance world = npc.getInstanceWorld();
 			if (world != null)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				// only party leader can talk with escape teleporter
 				if ((party != null) && party.isLeader(player))
 				{
@@ -681,7 +681,7 @@ public final class Kamaloka extends AbstractInstance
 					if (world.isAllowed(player))
 					{
 						// teleports entire party away
-						for (L2PcInstance partyMember : party.getMembers())
+						for (PlayerInstance partyMember : party.getMembers())
 						{
 							if ((partyMember != null) && (partyMember.getInstanceId() == world.getId()))
 							{
@@ -704,7 +704,7 @@ public final class Kamaloka extends AbstractInstance
 	 * Only escape teleporters first talk handled
 	 */
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == TELEPORTER)
 		{
@@ -718,7 +718,7 @@ public final class Kamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -726,14 +726,14 @@ public final class Kamaloka extends AbstractInstance
 			final int objectId = npc.getObjectId();
 			
 			// first room was spawned ?
-			if (world.getParameters().getList("firstRoom", L2Spawn.class) != null)
+			if (world.getParameters().getList("firstRoom", Spawn.class) != null)
 			{
 				// is shaman killed ?
 				if ((world.getParameters().getInt("shaman", 0) != 0) && (world.getParameters().getInt("shaman", 0) == objectId))
 				{
 					world.setParameter("shaman", 0);
 					// stop respawn of the minions
-					for (L2Spawn spawn : world.getParameters().getList("firstRoom", L2Spawn.class))
+					for (Spawn spawn : world.getParameters().getList("firstRoom", Spawn.class))
 					{
 						if (spawn != null)
 						{
@@ -742,7 +742,7 @@ public final class Kamaloka extends AbstractInstance
 					}
 					world.getParameters().remove("firstRoom");
 					
-					if (world.getParameters().getObject("boss", L2Npc.class) != null)
+					if (world.getParameters().getObject("boss", Npc.class) != null)
 					{
 						final int skillId = FIRST_ROOM[world.getParameters().getInt("index")][2];
 						final int skillLvl = FIRST_ROOM[world.getParameters().getInt("index")][3];
@@ -751,7 +751,7 @@ public final class Kamaloka extends AbstractInstance
 							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 							if (skill != null)
 							{
-								skill.applyEffects(world.getParameters().getObject("boss", L2Npc.class), world.getParameters().getObject("boss", L2Npc.class));
+								skill.applyEffects(world.getParameters().getObject("boss", Npc.class), world.getParameters().getObject("boss", Npc.class));
 							}
 						}
 					}
@@ -782,7 +782,7 @@ public final class Kamaloka extends AbstractInstance
 				{
 					world.getParameters().remove("secondRoom");
 					
-					if (world.getParameters().getObject("boss", L2Npc.class) != null)
+					if (world.getParameters().getObject("boss", Npc.class) != null)
 					{
 						final int skillId = SECOND_ROOM[world.getParameters().getInt("index")][1];
 						final int skillLvl = SECOND_ROOM[world.getParameters().getInt("index")][2];
@@ -791,7 +791,7 @@ public final class Kamaloka extends AbstractInstance
 							final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 							if (skill != null)
 							{
-								skill.applyEffects(world.getParameters().getObject("boss", L2Npc.class), world.getParameters().getObject("boss", L2Npc.class));
+								skill.applyEffects(world.getParameters().getObject("boss", Npc.class), world.getParameters().getObject("boss", Npc.class));
 							}
 						}
 					}
@@ -805,7 +805,7 @@ public final class Kamaloka extends AbstractInstance
 			{
 				world.setParameter("miniBoss", 0);
 				
-				if (world.getParameters().getObject("boss", L2Npc.class) != null)
+				if (world.getParameters().getObject("boss", Npc.class) != null)
 				{
 					final int skillId = MINIBOSS[world.getParameters().getInt("index")][4];
 					final int skillLvl = MINIBOSS[world.getParameters().getInt("index")][5];
@@ -814,7 +814,7 @@ public final class Kamaloka extends AbstractInstance
 						final Skill skill = SkillData.getInstance().getSkill(skillId, skillLvl);
 						if (skill != null)
 						{
-							skill.applyEffects(world.getParameters().getObject("boss", L2Npc.class), world.getParameters().getObject("boss", L2Npc.class));
+							skill.applyEffects(world.getParameters().getObject("boss", Npc.class), world.getParameters().getObject("boss", Npc.class));
 						}
 					}
 				}
@@ -823,7 +823,7 @@ public final class Kamaloka extends AbstractInstance
 			}
 			
 			// boss was killed, finish instance
-			if ((world.getParameters().getObject("boss", L2Npc.class) != null) && (world.getParameters().getObject("boss", L2Npc.class) == npc))
+			if ((world.getParameters().getObject("boss", Npc.class) != null) && (world.getParameters().getObject("boss", Npc.class) == npc))
 			{
 				world.getParameters().remove("boss");
 				
@@ -840,7 +840,7 @@ public final class Kamaloka extends AbstractInstance
 				sm.addInstanceName(world.getTemplateId());
 				
 				// set instance reenter time for all allowed players
-				for (L2PcInstance plr : world.getAllowed())
+				for (PlayerInstance plr : world.getAllowed())
 				{
 					if (plr != null)
 					{

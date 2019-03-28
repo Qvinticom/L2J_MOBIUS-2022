@@ -20,10 +20,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import com.l2jmobius.gameserver.model.BlockList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestBlock extends L2GameClientPacket
+public final class RequestBlock extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestBlock.class.getName());
 	
@@ -50,9 +50,9 @@ public final class RequestBlock extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
@@ -64,42 +64,42 @@ public final class RequestBlock extends L2GameClientPacket
 			{
 				// Can't block/unblock inexisting or self.
 				final int targetId = CharNameTable.getInstance().getPlayerObjectId(_name);
-				if ((targetId <= 0) || (activeChar.getObjectId() == targetId))
+				if ((targetId <= 0) || (player.getObjectId() == targetId))
 				{
-					activeChar.sendPacket(SystemMessageId.FAILED_TO_REGISTER_TO_IGNORE_LIST);
+					player.sendPacket(SystemMessageId.FAILED_TO_REGISTER_TO_IGNORE_LIST);
 					return;
 				}
 				// Can't block a GM character.
 				if (CharNameTable.getInstance().getPlayerAccessLevel(targetId) > 0)
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_AN_A_GM);
+					player.sendPacket(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_AN_A_GM);
 					return;
 				}
 				if (_type == BLOCK)
 				{
-					BlockList.addToBlockList(activeChar, targetId);
+					BlockList.addToBlockList(player, targetId);
 				}
 				else
 				{
-					BlockList.removeFromBlockList(activeChar, targetId);
+					BlockList.removeFromBlockList(player, targetId);
 				}
 				break;
 			}
 			case BLOCKLIST:
 			{
-				BlockList.sendListToOwner(activeChar);
+				BlockList.sendListToOwner(player);
 				break;
 			}
 			case ALLBLOCK:
 			{
-				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);// Update by rocknow
-				BlockList.setBlockAll(activeChar, true);
+				player.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);// Update by rocknow
+				BlockList.setBlockAll(player, true);
 				break;
 			}
 			case ALLUNBLOCK:
 			{
-				activeChar.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);// Update by rocknow
-				BlockList.setBlockAll(activeChar, false);
+				player.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);// Update by rocknow
+				BlockList.setBlockAll(player, false);
 				break;
 			}
 			default:

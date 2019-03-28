@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class TeleportToLocation implements IClientOutgoingPacket
@@ -28,7 +28,7 @@ public final class TeleportToLocation implements IClientOutgoingPacket
 	private final int _z;
 	private final int _heading;
 	
-	public TeleportToLocation(L2Object obj, int x, int y, int z, int heading)
+	public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading)
 	{
 		_targetObjId = obj.getObjectId();
 		_x = x;

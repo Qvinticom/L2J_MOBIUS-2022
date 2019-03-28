@@ -23,9 +23,9 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -47,18 +47,18 @@ public class Die implements IClientOutgoingPacket
 	private List<Integer> _items = null;
 	private boolean _itemsEnabled;
 	
-	public Die(L2Character activeChar)
+	public Die(Creature creature)
 	{
-		_objectId = activeChar.getObjectId();
-		if (activeChar.isPlayer())
+		_objectId = creature.getObjectId();
+		if (creature.isPlayer())
 		{
-			final L2Clan clan = activeChar.getActingPlayer().getClan();
+			final Clan clan = creature.getActingPlayer().getClan();
 			boolean isInCastleDefense = false;
 			boolean isInFortDefense = false;
 			
-			L2SiegeClan siegeClan = null;
-			final Castle castle = CastleManager.getInstance().getCastle(activeChar);
-			final Fort fort = FortManager.getInstance().getFort(activeChar);
+			SiegeClan siegeClan = null;
+			final Castle castle = CastleManager.getInstance().getCastle(creature);
+			final Fort fort = FortManager.getInstance().getFort(creature);
 			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				siegeClan = castle.getSiege().getAttackerClan(clan);
@@ -70,15 +70,15 @@ public class Die implements IClientOutgoingPacket
 				isInFortDefense = (siegeClan == null) && fort.getSiege().checkIsDefender(clan);
 			}
 			
-			_toVillage = activeChar.canRevive() && !activeChar.isPendingRevive();
+			_toVillage = creature.canRevive() && !creature.isPendingRevive();
 			_toClanHall = (clan != null) && (clan.getHideoutId() > 0);
 			_toCastle = ((clan != null) && (clan.getCastleId() > 0)) || isInCastleDefense;
 			_toOutpost = ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty());
-			_useFeather = activeChar.getAccessLevel().allowFixedRes() || activeChar.getInventory().haveItemForSelfResurrection();
+			_useFeather = creature.getAccessLevel().allowFixedRes() || creature.getInventory().haveItemForSelfResurrection();
 			_toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
 		}
 		
-		_isSweepable = activeChar.isAttackable() && activeChar.isSweepActive();
+		_isSweepable = creature.isAttackable() && creature.isSweepActive();
 	}
 	
 	public void setHideAnimation(boolean val)

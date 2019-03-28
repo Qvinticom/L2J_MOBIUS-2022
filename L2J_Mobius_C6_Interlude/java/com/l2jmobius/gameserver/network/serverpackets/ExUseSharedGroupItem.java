@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Format: ch dddd.
  * @author KenM
  */
-public class ExUseSharedGroupItem extends L2GameServerPacket
+public class ExUseSharedGroupItem extends GameServerPacket
 {
 	/** The _unk4. */
 	private final int _unk1;

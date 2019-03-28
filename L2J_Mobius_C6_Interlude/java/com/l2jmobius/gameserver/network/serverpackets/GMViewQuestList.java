@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -24,22 +24,22 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
  * Sh (dd) h (dddd)
  * @author Tempy
  */
-public class GMViewQuestList extends L2GameServerPacket
+public class GMViewQuestList extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public GMViewQuestList(L2PcInstance cha)
+	public GMViewQuestList(PlayerInstance player)
 	{
-		_activeChar = cha;
+		_player = player;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x93);
-		writeS(_activeChar.getName());
+		writeS(_player.getName());
 		
-		final Quest[] questList = _activeChar.getAllActiveQuests();
+		final Quest[] questList = _player.getAllActiveQuests();
 		
 		if (questList.length == 0)
 		{
@@ -55,7 +55,7 @@ public class GMViewQuestList extends L2GameServerPacket
 		{
 			writeD(q.getQuestIntId());
 			
-			final QuestState qs = _activeChar.getQuestState(q.getName());
+			final QuestState qs = _player.getQuestState(q.getName());
 			
 			if (qs == null)
 			{

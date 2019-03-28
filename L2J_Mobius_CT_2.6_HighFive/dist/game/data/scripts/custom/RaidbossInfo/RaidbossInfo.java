@@ -21,11 +21,11 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -62,14 +62,14 @@ public final class RaidbossInfo extends AbstractNpcAI
 		addTalkId(NPC);
 		
 		// Add all Raid Bosses to RAIDS list
-		for (L2NpcTemplate raid : NpcData.getInstance().getAllNpcOfClassType("L2RaidBoss"))
+		for (NpcTemplate raid : NpcData.getInstance().getAllNpcOfClassType("RaidBoss"))
 		{
 			RAIDS.add(raid.getId());
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		if (Util.isDigit(event))
@@ -79,7 +79,7 @@ public final class RaidbossInfo extends AbstractNpcAI
 			
 			if (RAIDS.contains(bossId))
 			{
-				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(bossId);
+				final Spawn spawn = SpawnTable.getInstance().getAnySpawn(bossId);
 				if (spawn != null)
 				{
 					final Location loc = spawn;
@@ -91,7 +91,7 @@ public final class RaidbossInfo extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		return "info.htm";
 	}

@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class SunRise extends L2GameServerPacket
+public class SunRise extends GameServerPacket
 {
 	@Override
 	protected final void writeImpl()

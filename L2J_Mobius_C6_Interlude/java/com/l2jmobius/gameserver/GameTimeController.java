@@ -26,10 +26,9 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.8 $ $Date: 2005/04/06 16:13:24 $
  */
 public class GameTimeController
@@ -45,7 +44,7 @@ public class GameTimeController
 	protected static long _gameStartTime;
 	protected static boolean _isNight = false;
 	
-	private static List<L2Character> _movingObjects = new ArrayList<>();
+	private static List<Creature> _movingObjects = new ArrayList<>();
 	
 	protected static TimerThread _timer;
 	private final ScheduledFuture<?> _timerWatcher;
@@ -87,69 +86,69 @@ public class GameTimeController
 	}
 	
 	/**
-	 * Add a L2Character to movingObjects of GameTimeController.<BR>
+	 * Add a Creature to movingObjects of GameTimeController.<BR>
 	 * <BR>
 	 * <B><U> Concept</U> :</B><BR>
 	 * <BR>
-	 * All L2Character in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
+	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
 	 * <BR>
-	 * @param cha The L2Character to add to movingObjects of GameTimeController
+	 * @param creature The Creature to add to movingObjects of GameTimeController
 	 */
-	public synchronized void registerMovingObject(L2Character cha)
+	public synchronized void registerMovingObject(Creature creature)
 	{
-		if (cha == null)
+		if (creature == null)
 		{
 			return;
 		}
 		
-		if (!_movingObjects.contains(cha))
+		if (!_movingObjects.contains(creature))
 		{
-			_movingObjects.add(cha);
+			_movingObjects.add(creature);
 		}
 	}
 	
 	/**
-	 * Move all L2Characters contained in movingObjects of GameTimeController.<BR>
+	 * Move all Creatures contained in movingObjects of GameTimeController.<BR>
 	 * <BR>
 	 * <B><U> Concept</U> :</B><BR>
 	 * <BR>
-	 * All L2Character in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
+	 * All Creature in movement are identified in <B>movingObjects</B> of GameTimeController.<BR>
 	 * <BR>
 	 * <B><U> Actions</U> :</B><BR>
 	 * <BR>
-	 * <li>Update the position of each L2Character</li>
-	 * <li>If movement is finished, the L2Character is removed from movingObjects</li>
-	 * <li>Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li><BR>
+	 * <li>Update the position of each Creature</li>
+	 * <li>If movement is finished, the Creature is removed from movingObjects</li>
+	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li><BR>
 	 * <BR>
 	 */
 	protected synchronized void moveObjects()
 	{
-		// Get all L2Character from the ArrayList movingObjects and put them into a table
-		final L2Character[] chars = _movingObjects.toArray(new L2Character[_movingObjects.size()]);
+		// Get all Creature from the ArrayList movingObjects and put them into a table
+		final Creature[] chars = _movingObjects.toArray(new Creature[_movingObjects.size()]);
 		
-		// Create an ArrayList to contain all L2Character that are arrived to destination
-		List<L2Character> ended = null;
+		// Create an ArrayList to contain all Creature that are arrived to destination
+		List<Creature> ended = null;
 		
-		// Go throw the table containing L2Character in movement
-		for (L2Character cha : chars)
+		// Go throw the table containing Creature in movement
+		for (Creature creature : chars)
 		{
-			// Update the position of the L2Character and return True if the movement is finished
-			final boolean end = cha.updatePosition(_gameTicks);
+			// Update the position of the Creature and return True if the movement is finished
+			final boolean end = creature.updatePosition(_gameTicks);
 			
-			// If movement is finished, the L2Character is removed from movingObjects and added to the ArrayList ended
+			// If movement is finished, the Creature is removed from movingObjects and added to the ArrayList ended
 			if (end)
 			{
-				_movingObjects.remove(cha);
+				_movingObjects.remove(creature);
 				if (ended == null)
 				{
 					ended = new ArrayList<>();
 				}
 				
-				ended.add(cha);
+				ended.add(creature);
 			}
 		}
 		
-		// Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object
+		// Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject
 		// then notify AI with EVT_ARRIVED
 		// TODO: maybe a general TP is needed for that kinda stuff (all knownlist updates should be done in a TP anyway).
 		if (ended != null)
@@ -234,14 +233,14 @@ public class GameTimeController
 	}
 	
 	/**
-	 * Update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED.<BR>
+	 * Update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED.<BR>
 	 * <BR>
 	 */
 	class MovingObjectArrived implements Runnable
 	{
-		private final List<L2Character> _ended;
+		private final List<Creature> _ended;
 		
-		MovingObjectArrived(List<L2Character> ended)
+		MovingObjectArrived(List<Creature> ended)
 		{
 			_ended = ended;
 		}
@@ -249,12 +248,12 @@ public class GameTimeController
 		@Override
 		public void run()
 		{
-			for (L2Character cha : _ended)
+			for (Creature creature : _ended)
 			{
 				try
 				{
-					cha.getKnownList().updateKnownObjects();
-					cha.getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
+					creature.getKnownList().updateKnownObjects();
+					creature.getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
 				}
 				catch (NullPointerException e)
 				{

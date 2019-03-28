@@ -29,18 +29,17 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2DropCategory;
-import com.l2jmobius.gameserver.model.L2DropData;
-import com.l2jmobius.gameserver.model.L2MinionData;
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.DropCategory;
+import com.l2jmobius.gameserver.model.DropData;
+import com.l2jmobius.gameserver.model.MinionData;
+import com.l2jmobius.gameserver.model.Skill;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.skills.BaseStats;
 import com.l2jmobius.gameserver.skills.Stats;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * This class ...
  * @version $Revision: 1.8.2.6.2.9 $ $Date: 2005/04/06 16:13:25 $
  */
 public class NpcTable
@@ -49,7 +48,7 @@ public class NpcTable
 	
 	private static NpcTable _instance;
 	
-	private final Map<Integer, L2NpcTemplate> npcs;
+	private final Map<Integer, NpcTemplate> npcs;
 	private boolean _initialized = false;
 	
 	public static NpcTable getInstance()
@@ -104,8 +103,8 @@ public class NpcTable
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills");
 			final ResultSet npcskills = statement.executeQuery();
-			L2NpcTemplate npcDat = null;
-			L2Skill npcSkill = null;
+			NpcTemplate npcDat = null;
+			Skill npcSkill = null;
 			
 			while (npcskills.next())
 			{
@@ -157,7 +156,7 @@ public class NpcTable
 				{
 					final int mobId = dropData.getInt("mobId");
 					
-					final L2NpcTemplate npcDat = npcs.get(mobId);
+					final NpcTemplate npcDat = npcs.get(mobId);
 					
 					if (npcDat == null)
 					{
@@ -165,7 +164,7 @@ public class NpcTable
 						continue;
 					}
 					
-					final L2DropData dropDat = new L2DropData();
+					final DropData dropDat = new DropData();
 					dropDat.setItemId(dropData.getInt("itemId"));
 					dropDat.setMinDrop(dropData.getInt("min"));
 					dropDat.setMaxDrop(dropData.getInt("max"));
@@ -190,8 +189,8 @@ public class NpcTable
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM droplist ORDER BY mobId, chance DESC");
 			final ResultSet dropData = statement.executeQuery();
-			L2DropData dropDat = null;
-			L2NpcTemplate npcDat = null;
+			DropData dropDat = null;
+			NpcTemplate npcDat = null;
 			
 			while (dropData.next())
 			{
@@ -205,7 +204,7 @@ public class NpcTable
 					continue;
 				}
 				
-				dropDat = new L2DropData();
+				dropDat = new DropData();
 				
 				dropDat.setItemId(dropData.getInt("itemId"));
 				dropDat.setMinDrop(dropData.getInt("min"));
@@ -235,7 +234,7 @@ public class NpcTable
 				final int npcId = learndata.getInt("npc_id");
 				final int classId = learndata.getInt("class_id");
 				
-				final L2NpcTemplate npc = getTemplate(npcId);
+				final NpcTemplate npc = getTemplate(npcId);
 				if (npc == null)
 				{
 					LOGGER.warning("NPCTable: Error getting NPC template ID " + npcId + " while trying to load skill trainer data.");
@@ -263,8 +262,8 @@ public class NpcTable
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM minions");
 			final ResultSet minionData = statement.executeQuery();
-			L2MinionData minionDat = null;
-			L2NpcTemplate npcDat = null;
+			MinionData minionDat = null;
+			NpcTemplate npcDat = null;
 			int cnt = 0;
 			
 			while (minionData.next())
@@ -272,7 +271,7 @@ public class NpcTable
 				final int raidId = minionData.getInt("boss_id");
 				
 				npcDat = npcs.get(raidId);
-				minionDat = new L2MinionData();
+				minionDat = new MinionData();
 				minionDat.setMinionId(minionData.getInt("minion_id"));
 				minionDat.setAmountMin(minionData.getInt("amount_min"));
 				minionDat.setAmountMax(minionData.getInt("amount_max"));
@@ -531,7 +530,7 @@ public class NpcTable
 			npcDat.set("absorb_level", NpcData.getString("absorb_level"));
 			npcDat.set("absorb_type", NpcData.getString("absorb_type"));
 			
-			final L2NpcTemplate template = new L2NpcTemplate(npcDat, custom);
+			final NpcTemplate template = new NpcTemplate(npcDat, custom);
 			template.addVulnerability(Stats.BOW_WPN_VULN, 1);
 			template.addVulnerability(Stats.BLUNT_WPN_VULN, 1);
 			template.addVulnerability(Stats.DAGGER_WPN_VULN, 1);
@@ -547,12 +546,12 @@ public class NpcTable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// save a copy of the old data
-			final L2NpcTemplate old = getTemplate(id);
-			final Map<Integer, L2Skill> skills = new HashMap<>();
+			final NpcTemplate old = getTemplate(id);
+			final Map<Integer, Skill> skills = new HashMap<>();
 			
 			skills.putAll(old.getSkills());
 			
-			final List<L2DropCategory> categories = new ArrayList<>();
+			final List<DropCategory> categories = new ArrayList<>();
 			
 			if (old.getDropData() != null)
 			{
@@ -560,7 +559,7 @@ public class NpcTable
 			}
 			final ClassId[] classIds = old.getTeachInfo().clone();
 			
-			final List<L2MinionData> minions = new ArrayList<>();
+			final List<MinionData> minions = new ArrayList<>();
 			
 			if (old.getMinionData() != null)
 			{
@@ -587,9 +586,9 @@ public class NpcTable
 			}
 			
 			// restore additional data from saved copy
-			final L2NpcTemplate created = getTemplate(id);
+			final NpcTemplate created = getTemplate(id);
 			
-			for (L2Skill skill : skills.values())
+			for (Skill skill : skills.values())
 			{
 				created.addSkill(skill);
 			}
@@ -599,7 +598,7 @@ public class NpcTable
 				created.addTeachInfo(classId);
 			}
 			
-			for (L2MinionData minion : minions)
+			for (MinionData minion : minions)
 			{
 				created.addRaidData(minion);
 			}
@@ -624,7 +623,7 @@ public class NpcTable
 			String name = "";
 			String values = "";
 			
-			final L2NpcTemplate old = getTemplate(npc.getInteger("npcId"));
+			final NpcTemplate old = getTemplate(npc.getInteger("npcId"));
 			
 			for (Object obj : set.keySet())
 			{
@@ -665,19 +664,19 @@ public class NpcTable
 		return _initialized;
 	}
 	
-	public void replaceTemplate(L2NpcTemplate npc)
+	public void replaceTemplate(NpcTemplate npc)
 	{
 		npcs.put(npc.npcId, npc);
 	}
 	
-	public L2NpcTemplate getTemplate(int id)
+	public NpcTemplate getTemplate(int id)
 	{
 		return npcs.get(id);
 	}
 	
-	public L2NpcTemplate getTemplateByName(String name)
+	public NpcTemplate getTemplateByName(String name)
 	{
-		for (L2NpcTemplate npcTemplate : npcs.values())
+		for (NpcTemplate npcTemplate : npcs.values())
 		{
 			if (npcTemplate.name.equalsIgnoreCase(name))
 			{
@@ -688,11 +687,11 @@ public class NpcTable
 		return null;
 	}
 	
-	public L2NpcTemplate[] getAllOfLevel(int lvl)
+	public NpcTemplate[] getAllOfLevel(int lvl)
 	{
-		final List<L2NpcTemplate> list = new ArrayList<>();
+		final List<NpcTemplate> list = new ArrayList<>();
 		
-		for (L2NpcTemplate t : npcs.values())
+		for (NpcTemplate t : npcs.values())
 		{
 			if (t.level == lvl)
 			{
@@ -700,37 +699,37 @@ public class NpcTable
 			}
 		}
 		
-		return list.toArray(new L2NpcTemplate[list.size()]);
+		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	
-	public L2NpcTemplate[] getAllMonstersOfLevel(int lvl)
+	public NpcTemplate[] getAllMonstersOfLevel(int lvl)
 	{
-		final List<L2NpcTemplate> list = new ArrayList<>();
+		final List<NpcTemplate> list = new ArrayList<>();
 		
-		for (L2NpcTemplate t : npcs.values())
+		for (NpcTemplate t : npcs.values())
 		{
-			if ((t.level == lvl) && "L2Monster".equals(t.type))
+			if ((t.level == lvl) && "Monster".equals(t.type))
 			{
 				list.add(t);
 			}
 		}
 		
-		return list.toArray(new L2NpcTemplate[list.size()]);
+		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	
-	public L2NpcTemplate[] getAllNpcStartingWith(String letter)
+	public NpcTemplate[] getAllNpcStartingWith(String letter)
 	{
-		final List<L2NpcTemplate> list = new ArrayList<>();
+		final List<NpcTemplate> list = new ArrayList<>();
 		
-		for (L2NpcTemplate t : npcs.values())
+		for (NpcTemplate t : npcs.values())
 		{
-			if (t.name.startsWith(letter) && "L2Npc".equals(t.type))
+			if (t.name.startsWith(letter) && "Npc".equals(t.type))
 			{
 				list.add(t);
 			}
 		}
 		
-		return list.toArray(new L2NpcTemplate[list.size()]);
+		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	
 	/**
@@ -760,7 +759,7 @@ public class NpcTable
 		return null;
 	}
 	
-	public Map<Integer, L2NpcTemplate> getAllTemplates()
+	public Map<Integer, NpcTemplate> getAllTemplates()
 	{
 		return npcs;
 	}

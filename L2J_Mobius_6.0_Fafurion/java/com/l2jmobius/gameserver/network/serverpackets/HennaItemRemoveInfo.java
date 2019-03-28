@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -27,13 +27,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class HennaItemRemoveInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
-	private final L2Henna _henna;
+	private final PlayerInstance _player;
+	private final Henna _henna;
 	
-	public HennaItemRemoveInfo(L2Henna henna, L2PcInstance player)
+	public HennaItemRemoveInfo(Henna henna, PlayerInstance player)
 	{
 		_henna = henna;
-		_activeChar = player;
+		_player = player;
 	}
 	
 	@Override
@@ -45,24 +45,24 @@ public final class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.getDyeItemId()); // item id of dye
 		packet.writeQ(_henna.getCancelCount()); // total amount of dye require
 		packet.writeQ(_henna.getCancelFee()); // total amount of Adena require to remove symbol
-		packet.writeD(_henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00); // able to remove or not
-		packet.writeQ(_activeChar.getAdena());
-		packet.writeD(_activeChar.getINT()); // current INT
-		packet.writeH(_activeChar.getINT() - _activeChar.getHennaValue(BaseStats.INT)); // equip INT
-		packet.writeD(_activeChar.getSTR()); // current STR
-		packet.writeH(_activeChar.getSTR() - _activeChar.getHennaValue(BaseStats.STR)); // equip STR
-		packet.writeD(_activeChar.getCON()); // current CON
-		packet.writeH(_activeChar.getCON() - _activeChar.getHennaValue(BaseStats.CON)); // equip CON
-		packet.writeD(_activeChar.getMEN()); // current MEN
-		packet.writeH(_activeChar.getMEN() - _activeChar.getHennaValue(BaseStats.MEN)); // equip MEN
-		packet.writeD(_activeChar.getDEX()); // current DEX
-		packet.writeH(_activeChar.getDEX() - _activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
-		packet.writeD(_activeChar.getWIT()); // current WIT
-		packet.writeH(_activeChar.getWIT() - _activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
-		packet.writeD(_activeChar.getLUC()); // current LUC
-		packet.writeH(_activeChar.getLUC() - _activeChar.getHennaValue(BaseStats.LUC)); // equip LUC
-		packet.writeD(_activeChar.getCHA()); // current CHA
-		packet.writeH(_activeChar.getCHA() - _activeChar.getHennaValue(BaseStats.CHA)); // equip CHA
+		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // able to remove or not
+		packet.writeQ(_player.getAdena());
+		packet.writeD(_player.getINT()); // current INT
+		packet.writeH(_player.getINT() - _player.getHennaValue(BaseStats.INT)); // equip INT
+		packet.writeD(_player.getSTR()); // current STR
+		packet.writeH(_player.getSTR() - _player.getHennaValue(BaseStats.STR)); // equip STR
+		packet.writeD(_player.getCON()); // current CON
+		packet.writeH(_player.getCON() - _player.getHennaValue(BaseStats.CON)); // equip CON
+		packet.writeD(_player.getMEN()); // current MEN
+		packet.writeH(_player.getMEN() - _player.getHennaValue(BaseStats.MEN)); // equip MEN
+		packet.writeD(_player.getDEX()); // current DEX
+		packet.writeH(_player.getDEX() - _player.getHennaValue(BaseStats.DEX)); // equip DEX
+		packet.writeD(_player.getWIT()); // current WIT
+		packet.writeH(_player.getWIT() - _player.getHennaValue(BaseStats.WIT)); // equip WIT
+		packet.writeD(_player.getLUC()); // current LUC
+		packet.writeH(_player.getLUC() - _player.getHennaValue(BaseStats.LUC)); // equip LUC
+		packet.writeD(_player.getCHA()); // current CHA
+		packet.writeH(_player.getCHA() - _player.getHennaValue(BaseStats.CHA)); // equip CHA
 		packet.writeD(0x00);
 		return true;
 	}

@@ -21,9 +21,9 @@ import java.util.Collection;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -61,7 +61,7 @@ public final class HealerTrainer extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		switch (event)
@@ -93,7 +93,7 @@ public final class HealerTrainer extends AbstractNpcAI
 				
 				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
 				int count = 0;
-				for (L2SkillLearn skillLearn : SkillTreesData.getInstance().getAvailableTransferSkills(player))
+				for (SkillLearn skillLearn : SkillTreesData.getInstance().getAvailableTransferSkills(player))
 				{
 					if (SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel()) != null)
 					{
@@ -140,8 +140,8 @@ public final class HealerTrainer extends AbstractNpcAI
 				else
 				{
 					boolean hasSkills = false;
-					final Collection<L2SkillLearn> skills = SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values();
-					for (L2SkillLearn skillLearn : skills)
+					final Collection<SkillLearn> skills = SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values();
+					for (SkillLearn skillLearn : skills)
 					{
 						final Skill skill = player.getKnownSkill(skillLearn.getSkillId());
 						if (skill != null)
@@ -172,7 +172,7 @@ public final class HealerTrainer extends AbstractNpcAI
 	 * @param player the player to verify
 	 * @return {@code true} if the player has the item for the current class, {@code false} otherwise
 	 */
-	private static boolean hasTransferSkillItems(L2PcInstance player)
+	private static boolean hasTransferSkillItems(PlayerInstance player)
 	{
 		int itemId;
 		switch (player.getClassId())

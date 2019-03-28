@@ -21,8 +21,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class QuestTimer
 {
@@ -56,12 +56,12 @@ public class QuestTimer
 	boolean _isActive = true;
 	final String _name;
 	final Quest _quest;
-	final L2Npc _npc;
-	final L2PcInstance _player;
+	final Npc _npc;
+	final PlayerInstance _player;
 	final boolean _isRepeating;
 	private final ScheduledFuture<?> _scheduler;
 	
-	public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player, boolean repeating)
+	public QuestTimer(Quest quest, String name, long time, Npc npc, PlayerInstance player, boolean repeating)
 	{
 		_name = name;
 		_quest = quest;
@@ -71,7 +71,7 @@ public class QuestTimer
 		_scheduler = repeating ? ThreadPool.scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPool.schedule(new ScheduleTimerTask(), time);
 	}
 	
-	public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player)
+	public QuestTimer(Quest quest, String name, long time, Npc npc, PlayerInstance player)
 	{
 		this(quest, name, time, npc, player, false);
 	}
@@ -110,7 +110,7 @@ public class QuestTimer
 	 * @param player the player attached to the desired timer (null if no player attached)
 	 * @return
 	 */
-	public boolean isMatch(Quest quest, String name, L2Npc npc, L2PcInstance player)
+	public boolean isMatch(Quest quest, String name, Npc npc, PlayerInstance player)
 	{
 		if ((quest == null) || (name == null))
 		{
@@ -143,12 +143,12 @@ public class QuestTimer
 		return _name;
 	}
 	
-	public final L2Npc getNpc()
+	public final Npc getNpc()
 	{
 		return _npc;
 	}
 	
-	public final L2PcInstance getPlayer()
+	public final PlayerInstance getPlayer()
 	{
 		return _player;
 	}

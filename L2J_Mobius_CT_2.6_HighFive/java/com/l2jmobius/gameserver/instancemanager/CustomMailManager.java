@@ -29,8 +29,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
@@ -58,7 +58,7 @@ public class CustomMailManager
 				while (rs.next())
 				{
 					final int playerId = rs.getInt("receiver");
-					final L2PcInstance player = L2World.getInstance().getPlayer(playerId);
+					final PlayerInstance player = World.getInstance().getPlayer(playerId);
 					if ((player != null) && player.isOnline())
 					{
 						// Create message.

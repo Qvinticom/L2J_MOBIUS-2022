@@ -28,10 +28,10 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -71,8 +71,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		}
 		int playerOneObjectId = 0;
 		int playerTwoObjectId = 0;
-		L2PcInstance playerOne = null;
-		L2PcInstance playerTwo = null;
+		PlayerInstance playerOne = null;
+		PlayerInstance playerTwo = null;
 		
 		while (set.size() > 1)
 		{
@@ -88,7 +88,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				}
 			}
 			
-			playerOne = L2World.getInstance().getPlayer(playerOneObjectId);
+			playerOne = World.getInstance().getPlayer(playerOneObjectId);
 			if ((playerOne == null) || !playerOne.isOnline())
 			{
 				continue;
@@ -106,7 +106,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				}
 			}
 			
-			playerTwo = L2World.getInstance().getPlayer(playerTwoObjectId);
+			playerTwo = World.getInstance().getPlayer(playerTwoObjectId);
 			if ((playerTwo == null) || !playerTwo.isOnline())
 			{
 				set.add(playerOneObjectId);
@@ -129,10 +129,10 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	public final void sendOlympiadInfo(L2Character player)
+	public final void sendOlympiadInfo(Creature creature)
 	{
-		player.sendPacket(new ExOlympiadUserInfo(_playerOne));
-		player.sendPacket(new ExOlympiadUserInfo(_playerTwo));
+		creature.sendPacket(new ExOlympiadUserInfo(_playerOne));
+		creature.sendPacket(new ExOlympiadUserInfo(_playerTwo));
 	}
 	
 	@Override
@@ -262,7 +262,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void handleDisconnect(L2PcInstance player)
+	protected final void handleDisconnect(PlayerInstance player)
 	{
 		if (player.getObjectId() == _playerOne.getObjectId())
 		{
@@ -678,7 +678,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void addDamage(L2PcInstance player, int damage)
+	protected final void addDamage(PlayerInstance player, int damage)
 	{
 		if ((_playerOne.getPlayer() == null) || (_playerTwo.getPlayer() == null))
 		{
@@ -765,7 +765,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected void healPlayers()
 	{
-		final L2PcInstance player1 = _playerOne.getPlayer();
+		final PlayerInstance player1 = _playerOne.getPlayer();
 		if (player1 != null)
 		{
 			player1.setCurrentCp(player1.getMaxCp());
@@ -773,7 +773,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			player1.setCurrentMp(player1.getMaxMp());
 		}
 		
-		final L2PcInstance player2 = _playerTwo.getPlayer();
+		final PlayerInstance player2 = _playerTwo.getPlayer();
 		if (player2 != null)
 		{
 			player2.setCurrentCp(player2.getMaxCp());
@@ -785,13 +785,13 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected void untransformPlayers()
 	{
-		final L2PcInstance player1 = _playerOne.getPlayer();
+		final PlayerInstance player1 = _playerOne.getPlayer();
 		if ((player1 != null) && player1.isTransformed())
 		{
 			player1.stopTransformation(true);
 		}
 		
-		final L2PcInstance player2 = _playerTwo.getPlayer();
+		final PlayerInstance player2 = _playerTwo.getPlayer();
 		if ((player2 != null) && player2.isTransformed())
 		{
 			player2.stopTransformation(true);

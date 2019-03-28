@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 
 /**
  * Format: (ch) Sd
  * @author -Wooden-
  */
-public final class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
+public final class RequestPledgeSetMemberPowerGrade extends GameClientPacket
 {
 	private int _powerGrade;
 	private String _member;
@@ -39,28 +39,28 @@ public final class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Clan clan = activeChar.getClan();
+		final Clan clan = player.getClan();
 		if (clan == null)
 		{
 			return;
 		}
 		
-		final L2ClanMember member = clan.getClanMember(_member);
+		final ClanMember member = clan.getClanMember(_member);
 		if (member == null)
 		{
 			return;
 		}
 		
-		if (member.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
+		if (member.getPledgeType() == Clan.SUBUNIT_ACADEMY)
 		{
 			// also checked from client side
-			activeChar.sendMessage("You cannot change academy member grade");
+			player.sendMessage("You cannot change academy member grade");
 			return;
 		}
 		

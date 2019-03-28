@@ -1008,7 +1008,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Bleed -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>

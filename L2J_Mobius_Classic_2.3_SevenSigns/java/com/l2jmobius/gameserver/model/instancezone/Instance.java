@@ -44,16 +44,16 @@ import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.enums.InstanceTeleportType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceCreated;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceDestroy;
@@ -83,10 +83,10 @@ public final class Instance implements IIdentifiable, INamable
 	private final long _startTime;
 	private long _endTime;
 	// Advanced instance parameters
-	private final Set<L2PcInstance> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
-	private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
-	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
-	private final Map<Integer, L2DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
+	private final Set<PlayerInstance> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
+	private final Set<PlayerInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
+	private final Set<Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
+	private final Map<Integer, DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
 	private final StatsSet _parameters = new StatsSet();
 	// Timers
 	private final Map<Integer, ScheduledFuture<?>> _ejectDeadTasks = new ConcurrentHashMap<>();
@@ -100,7 +100,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param template template of instance world
 	 * @param player player who create instance world.
 	 */
-	public Instance(int id, InstanceTemplate template, L2PcInstance player)
+	public Instance(int id, InstanceTemplate template, PlayerInstance player)
 	{
 		// Set basic instance info
 		_id = id;
@@ -220,7 +220,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Add player who can enter to instance.
 	 * @param player player instance
 	 */
-	public void addAllowed(L2PcInstance player)
+	public void addAllowed(PlayerInstance player)
 	{
 		if (!_allowed.contains(player))
 		{
@@ -233,7 +233,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param player player itself
 	 * @return {@code true} when can enter, otherwise {@code false}
 	 */
-	public boolean isAllowed(L2PcInstance player)
+	public boolean isAllowed(PlayerInstance player)
 	{
 		return _allowed.contains(player);
 	}
@@ -242,7 +242,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Returns all players who can enter to instance.
 	 * @return allowed players list
 	 */
-	public Set<L2PcInstance> getAllowed()
+	public Set<PlayerInstance> getAllowed()
 	{
 		return _allowed;
 	}
@@ -251,7 +251,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Remove player from allowed so he can't enter anymore.
 	 * @param player to remove
 	 */
-	public void removeAllowed(L2PcInstance player)
+	public void removeAllowed(PlayerInstance player)
 	{
 		_allowed.remove(player);
 	}
@@ -260,7 +260,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Add player to instance
 	 * @param player player instance
 	 */
-	public void addPlayer(L2PcInstance player)
+	public void addPlayer(PlayerInstance player)
 	{
 		_players.add(player);
 		if (_emptyDestroyTask != null)
@@ -274,7 +274,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Remove player from instance.
 	 * @param player player instance
 	 */
-	public void removePlayer(L2PcInstance player)
+	public void removePlayer(PlayerInstance player)
 	{
 		_players.remove(player);
 		if (_players.isEmpty())
@@ -296,7 +296,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param player player to be checked
 	 * @return {@code true} if player is inside, otherwise {@code false}
 	 */
-	public boolean containsPlayer(L2PcInstance player)
+	public boolean containsPlayer(PlayerInstance player)
 	{
 		return _players.contains(player);
 	}
@@ -305,7 +305,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Get all players inside instance.
 	 * @return players within instance
 	 */
-	public Set<L2PcInstance> getPlayers()
+	public Set<PlayerInstance> getPlayers()
 	{
 		return _players;
 	}
@@ -324,7 +324,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * <i>This method is useful for instances with one player inside.</i>
 	 * @return first found player, otherwise {@code null}
 	 */
-	public L2PcInstance getFirstPlayer()
+	public PlayerInstance getFirstPlayer()
 	{
 		return _players.stream().findFirst().orElse(null);
 	}
@@ -334,7 +334,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param id objectId of player
 	 * @return first player by ID, otherwise {@code null}
 	 */
-	public L2PcInstance getPlayerById(int id)
+	public PlayerInstance getPlayerById(int id)
 	{
 		return _players.stream().filter(p -> p.getObjectId() == id).findFirst().orElse(null);
 	}
@@ -345,7 +345,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param radius radius around target
 	 * @return players within radius
 	 */
-	public Set<L2PcInstance> getPlayersInsideRadius(ILocational object, int radius)
+	public Set<PlayerInstance> getPlayersInsideRadius(ILocational object, int radius)
 	{
 		return _players.stream().filter(p -> p.isInsideRadius3D(object, radius)).collect(Collectors.toSet());
 	}
@@ -355,7 +355,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	private void spawnDoors()
 	{
-		for (L2DoorTemplate template : _template.getDoors().values())
+		for (DoorTemplate template : _template.getDoors().values())
 		{
 			// Create new door instance
 			_doors.put(template.getId(), DoorData.getInstance().spawnDoor(template, this));
@@ -366,7 +366,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Get all doors spawned inside instance world.
 	 * @return collection of spawned doors
 	 */
-	public Collection<L2DoorInstance> getDoors()
+	public Collection<DoorInstance> getDoors()
 	{
 		return _doors.values();
 	}
@@ -376,7 +376,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param id template ID of door
 	 * @return instance of door if found, otherwise {@code null}
 	 */
-	public L2DoorInstance getDoor(int id)
+	public DoorInstance getDoor(int id)
 	{
 		return _doors.get(id);
 	}
@@ -388,7 +388,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public void openCloseDoor(int id, boolean open)
 	{
-		final L2DoorInstance door = _doors.get(id);
+		final DoorInstance door = _doors.get(id);
 		if (door != null)
 		{
 			if (open)
@@ -431,7 +431,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param name
 	 * @return {@code List} of NPCs that are part of specified group
 	 */
-	public List<L2Npc> getNpcsOfGroup(String name)
+	public List<Npc> getNpcsOfGroup(String name)
 	{
 		return getNpcsOfGroup(name, null);
 	}
@@ -441,7 +441,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param filter
 	 * @return {@code List} of NPCs that are part of specified group and matches filter specified
 	 */
-	public List<L2Npc> getNpcsOfGroup(String groupName, Predicate<L2Npc> filter)
+	public List<Npc> getNpcsOfGroup(String groupName, Predicate<Npc> filter)
 	{
 		return getStreamOfGroup(groupName, filter).collect(Collectors.toList());
 	}
@@ -451,7 +451,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param filter
 	 * @return {@code Npc} instance of an NPC that is part of a group and matches filter specified
 	 */
-	public L2Npc getNpcOfGroup(String groupName, Predicate<L2Npc> filter)
+	public Npc getNpcOfGroup(String groupName, Predicate<Npc> filter)
 	{
 		return getStreamOfGroup(groupName, filter).findFirst().orElse(null);
 	}
@@ -461,7 +461,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param filter
 	 * @return {@code Stream<Npc>} of NPCs that is part of a group and matches filter specified
 	 */
-	public Stream<L2Npc> getStreamOfGroup(String groupName, Predicate<L2Npc> filter)
+	public Stream<Npc> getStreamOfGroup(String groupName, Predicate<Npc> filter)
 	{
 		if (filter == null)
 		{
@@ -482,7 +482,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param name name of group which should be spawned
 	 * @return list that contains NPCs spawned by this method
 	 */
-	public List<L2Npc> spawnGroup(String name)
+	public List<Npc> spawnGroup(String name)
 	{
 		final List<SpawnGroup> spawns = getSpawnGroup(name);
 		if (spawns == null)
@@ -491,7 +491,7 @@ public final class Instance implements IIdentifiable, INamable
 			return Collections.emptyList();
 		}
 		
-		final List<L2Npc> npcs = new LinkedList<>();
+		final List<Npc> npcs = new LinkedList<>();
 		try
 		{
 			for (SpawnGroup holder : spawns)
@@ -534,7 +534,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Get spawned NPCs from instance.
 	 * @return set of NPCs from instance
 	 */
-	public Set<L2Npc> getNpcs()
+	public Set<Npc> getNpcs()
 	{
 		return _npcs;
 	}
@@ -543,7 +543,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Get alive NPCs from instance.
 	 * @return set of NPCs from instance
 	 */
-	public Set<L2Npc> getAliveNpcs()
+	public Set<Npc> getAliveNpcs()
 	{
 		return _npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
 	}
@@ -553,7 +553,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param id IDs of NPCs which should be found
 	 * @return list of filtered NPCs from instance
 	 */
-	public List<L2Npc> getNpcs(int... id)
+	public List<Npc> getNpcs(int... id)
 	{
 		return _npcs.stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
@@ -566,7 +566,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
-	public final <T extends L2Character> List<T> getNpcs(Class<T> clazz, int... ids)
+	public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
 		return _npcs.stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
@@ -579,7 +579,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
-	public final <T extends L2Character> List<T> getAliveNpcs(Class<T> clazz, int... ids)
+	public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
 		return _npcs.stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
@@ -589,7 +589,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param id IDs of NPCs which should be found
 	 * @return list of filtered NPCs from instance
 	 */
-	public List<L2Npc> getAliveNpcs(int... id)
+	public List<Npc> getAliveNpcs(int... id)
 	{
 		return _npcs.stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
@@ -599,17 +599,17 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param id ID of NPC to be found
 	 * @return first found NPC with specified ID, otherwise {@code null}
 	 */
-	public L2Npc getNpc(int id)
+	public Npc getNpc(int id)
 	{
 		return _npcs.stream().filter(n -> n.getId() == id).findFirst().orElse(null);
 	}
 	
-	public void addNpc(L2Npc npc)
+	public void addNpc(Npc npc)
 	{
 		_npcs.add(npc);
 	}
 	
-	public void removeNpc(L2Npc npc)
+	public void removeNpc(Npc npc)
 	{
 		_npcs.remove(npc);
 	}
@@ -628,7 +628,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	private void removeDoors()
 	{
-		_doors.values().stream().filter(Objects::nonNull).forEach(L2DoorInstance::decayMe);
+		_doors.values().stream().filter(Objects::nonNull).forEach(DoorInstance::decayMe);
 		_doors.clear();
 	}
 	
@@ -638,7 +638,7 @@ public final class Instance implements IIdentifiable, INamable
 	public void removeNpcs()
 	{
 		_spawns.forEach(SpawnTemplate::despawnAll);
-		_npcs.forEach(L2Npc::deleteMe);
+		_npcs.forEach(Npc::deleteMe);
 		_npcs.clear();
 	}
 	
@@ -727,7 +727,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * Teleport player out of instance.
 	 * @param player player that should be moved out
 	 */
-	public void ejectPlayer(L2PcInstance player)
+	public void ejectPlayer(PlayerInstance player)
 	{
 		if (player.getInstanceWorld().equals(this))
 		{
@@ -749,7 +749,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public void broadcastPacket(IClientOutgoingPacket... packets)
 	{
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			for (IClientOutgoingPacket packet : packets)
 			{
@@ -819,7 +819,7 @@ public final class Instance implements IIdentifiable, INamable
 			PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)"))
 		{
 			// Save to database
-			for (L2PcInstance player : _allowed)
+			for (PlayerInstance player : _allowed)
 			{
 				if (player != null)
 				{
@@ -893,7 +893,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * This method is called when player dies inside instance.
 	 * @param player
 	 */
-	public void onDeath(L2PcInstance player)
+	public void onDeath(PlayerInstance player)
 	{
 		if (!player.isOnCustomEvent() && (_template.getEjectTime() > 0))
 		{
@@ -917,7 +917,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * This method is called when player was resurrected inside instance.
 	 * @param player resurrected player
 	 */
-	public void doRevive(L2PcInstance player)
+	public void doRevive(PlayerInstance player)
 	{
 		final ScheduledFuture<?> task = _ejectDeadTasks.remove(player.getObjectId());
 		if (task != null)
@@ -931,11 +931,11 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param object instance of object which enters/leaves instance
 	 * @param enter {@code true} when object enter, {@code false} when object leave
 	 */
-	public void onInstanceChange(L2Object object, boolean enter)
+	public void onInstanceChange(WorldObject object, boolean enter)
 	{
 		if (object.isPlayer())
 		{
-			final L2PcInstance player = object.getActingPlayer();
+			final PlayerInstance player = object.getActingPlayer();
 			if (enter)
 			{
 				addPlayer(player);
@@ -970,7 +970,7 @@ public final class Instance implements IIdentifiable, INamable
 		}
 		else if (object.isNpc())
 		{
-			final L2Npc npc = (L2Npc) object;
+			final Npc npc = (Npc) object;
 			if (enter)
 			{
 				addNpc(npc);
@@ -990,7 +990,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * This method is called when player logout inside instance world.
 	 * @param player player who logout
 	 */
-	public void onPlayerLogout(L2PcInstance player)
+	public void onPlayerLogout(PlayerInstance player)
 	{
 		removePlayer(player);
 		if (Config.RESTORE_PLAYER_INSTANCE)
@@ -1004,7 +1004,7 @@ public final class Instance implements IIdentifiable, INamable
 			{
 				player.setLocationInvisible(loc);
 				// If player has death pet, put him out of instance world
-				final L2Summon pet = player.getPet();
+				final Summon pet = player.getPet();
 				if (pet != null)
 				{
 					pet.teleToLocation(loc, true);
@@ -1084,7 +1084,7 @@ public final class Instance implements IIdentifiable, INamable
 	 * @param player instance of player who wants to leave instance world
 	 * @return {@link Location} object if instance has exit location defined, otherwise {@code null}
 	 */
-	public Location getExitLocation(L2PcInstance player)
+	public Location getExitLocation(PlayerInstance player)
 	{
 		return _template.getExitLocation(player);
 	}

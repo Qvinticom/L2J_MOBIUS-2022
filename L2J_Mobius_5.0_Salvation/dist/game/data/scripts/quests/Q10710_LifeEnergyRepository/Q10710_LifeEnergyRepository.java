@@ -18,8 +18,8 @@ package quests.Q10710_LifeEnergyRepository;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -63,20 +63,20 @@ public final class Q10710_LifeEnergyRepository extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
 		if (event.equals("action"))
 		{
-			if ((st != null) && st.isCond(1))
+			if ((qs != null) && qs.isCond(1))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				giveItems(player, FRAGMENT, 1);
 				
 				for (Location loc : EMBRYO_LOC)
 				{
-					final L2Npc embryo = addSpawn(EMBRYO, loc, false, 120000);
+					final Npc embryo = addSpawn(EMBRYO, loc, false, 120000);
 					embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_REPOSITORY_IS_ATTACKED_FIGHT_FIGHT);
 					addAttackPlayerDesire(embryo, player);
 				}
@@ -87,7 +87,7 @@ public final class Q10710_LifeEnergyRepository extends Quest
 			}
 		}
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return null;
 		}
@@ -103,15 +103,15 @@ public final class Q10710_LifeEnergyRepository extends Quest
 			}
 			case "33867-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33867-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -126,12 +126,12 @@ public final class Q10710_LifeEnergyRepository extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -145,7 +145,7 @@ public final class Q10710_LifeEnergyRepository extends Quest
 			{
 				if (npc.getId() == SHUVANN)
 				{
-					htmltext = st.isCond(1) ? "33867-05.html" : "33867-06.html";
+					htmltext = qs.isCond(1) ? "33867-05.html" : "33867-06.html";
 				}
 				break;
 			}

@@ -30,16 +30,16 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Elementals;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 
@@ -192,7 +192,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
-	public final T addPcName(L2PcInstance pc)
+	public final T addPcName(PlayerInstance pc)
 	{
 		append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
 		return (T) this;
@@ -209,17 +209,17 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
-	public final T addNpcName(L2Npc npc)
+	public final T addNpcName(Npc npc)
 	{
 		return addNpcName(npc.getTemplate());
 	}
 	
-	public final T addNpcName(L2Summon npc)
+	public final T addNpcName(Summon npc)
 	{
 		return addNpcName(npc.getId());
 	}
 	
-	public final T addNpcName(L2NpcTemplate template)
+	public final T addNpcName(NpcTemplate template)
 	{
 		if (template.isUsingServerSideName())
 		{
@@ -234,19 +234,19 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
-	public T addItemName(L2ItemInstance item)
+	public T addItemName(ItemInstance item)
 	{
 		return addItemName(item.getId());
 	}
 	
-	public T addItemName(L2Item item)
+	public T addItemName(Item item)
 	{
 		return addItemName(item.getId());
 	}
 	
 	public final T addItemName(int id)
 	{
-		final L2Item item = ItemTable.getInstance().getTemplate(id);
+		final Item item = ItemTable.getInstance().getTemplate(id);
 		if (item.getDisplayId() != id)
 		{
 			return addString(item.getName());
@@ -475,7 +475,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				
 				case TYPE_ITEM_NAME:
 				{
-					final L2Item item = ItemTable.getInstance().getTemplate(param.getIntValue());
+					final Item item = ItemTable.getInstance().getTemplate(param.getIntValue());
 					params[i] = item == null ? "Unknown" : item.getName();
 					break;
 				}
@@ -495,7 +495,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				
 				case TYPE_NPC_NAME:
 				{
-					final L2NpcTemplate template = NpcData.getInstance().getTemplate(param.getIntValue());
+					final NpcTemplate template = NpcData.getInstance().getTemplate(param.getIntValue());
 					params[i] = template == null ? "Unknown" : template.getName();
 					break;
 				}
@@ -521,7 +521,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				
 				case TYPE_DOOR_NAME:
 				{
-					final L2DoorInstance door = DoorData.getInstance().getDoor(param.getIntValue());
+					final DoorInstance door = DoorData.getInstance().getDoor(param.getIntValue());
 					params[i] = door == null ? "Unknown" : door.getName();
 					break;
 				}
@@ -537,7 +537,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				case TYPE_ZONE_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					final L2ZoneType zone = ZoneManager.getInstance().getZone(array[0], array[1], array[2], L2ZoneType.class);
+					final ZoneType zone = ZoneManager.getInstance().getZone(array[0], array[1], array[2], ZoneType.class);
 					params[i] = zone == null ? "Unknown ZONE-N-" + Arrays.toString(array) : zone.getName();
 					break;
 				}

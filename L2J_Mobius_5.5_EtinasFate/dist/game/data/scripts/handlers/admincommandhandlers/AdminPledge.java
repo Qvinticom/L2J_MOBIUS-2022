@@ -21,9 +21,9 @@ import java.util.StringTokenizer;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -47,13 +47,13 @@ public class AdminPledge implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
-		final L2Object target = activeChar.getTarget();
-		final L2PcInstance targetPlayer = (target != null) && target.isPlayer() ? (L2PcInstance) target : null;
-		L2Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
+		final WorldObject target = activeChar.getTarget();
+		final PlayerInstance targetPlayer = (target != null) && target.isPlayer() ? (PlayerInstance) target : null;
+		Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
 		if (targetPlayer == null)
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -158,7 +158,7 @@ public class AdminPledge implements IAdminCommandHandler
 						if ((level >= 0) && (level < 16))
 						{
 							clan.changeLevel(level);
-							for (L2PcInstance member : clan.getOnlineMembers(0))
+							for (PlayerInstance member : clan.getOnlineMembers(0))
 							{
 								member.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
 							}
@@ -210,7 +210,7 @@ public class AdminPledge implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(PlayerInstance activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "game_menu.htm");
 	}

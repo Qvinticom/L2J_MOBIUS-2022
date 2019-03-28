@@ -17,8 +17,8 @@
 package quests.Q00044_HelpTheSon;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -55,10 +55,10 @@ public final class Q00044_HelpTheSon extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -68,7 +68,7 @@ public final class Q00044_HelpTheSon extends Quest
 		{
 			case "30827-01.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "30827-03.html":
@@ -76,7 +76,7 @@ public final class Q00044_HelpTheSon extends Quest
 				if (hasQuestItems(player, WORK_HAMMER))
 				{
 					takeItems(player, WORK_HAMMER, 1);
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				else
 				{
@@ -90,7 +90,7 @@ public final class Q00044_HelpTheSon extends Quest
 				{
 					takeItems(player, GEMSTONE_FRAGMENT, -1);
 					giveItems(player, GEMSTONE, 1);
-					st.setCond(4, true);
+					qs.setCond(4, true);
 				}
 				else
 				{
@@ -103,7 +103,7 @@ public final class Q00044_HelpTheSon extends Quest
 				if (hasQuestItems(player, GEMSTONE))
 				{
 					takeItems(player, GEMSTONE, -1);
-					st.setCond(5, true);
+					qs.setCond(5, true);
 				}
 				else
 				{
@@ -114,7 +114,7 @@ public final class Q00044_HelpTheSon extends Quest
 			case "30827-09.html":
 			{
 				giveItems(player, PET_TICKET, 1);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
 			}
 		}
@@ -122,15 +122,15 @@ public final class Q00044_HelpTheSon extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(2))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
 		{
 			giveItems(player, GEMSTONE_FRAGMENT, 1);
 			if (getQuestItemsCount(player, GEMSTONE_FRAGMENT) == 30)
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 			else
 			{
@@ -141,16 +141,16 @@ public final class Q00044_HelpTheSon extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
 			case LUNDY:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -159,7 +159,7 @@ public final class Q00044_HelpTheSon extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -199,13 +199,13 @@ public final class Q00044_HelpTheSon extends Quest
 			}
 			case DRIKUS:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(4))
+					if (qs.isCond(4))
 					{
 						htmltext = "30505-01.html";
 					}
-					else if (st.isCond(5))
+					else if (qs.isCond(5))
 					{
 						htmltext = "30505-03.html";
 					}

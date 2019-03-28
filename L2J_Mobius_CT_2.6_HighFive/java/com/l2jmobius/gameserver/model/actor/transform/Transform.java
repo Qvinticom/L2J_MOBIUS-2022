@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.AdditionalItemHolder;
 import com.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -110,7 +110,7 @@ public final class Transform implements IIdentifiable
 		return _title;
 	}
 	
-	public TransformTemplate getTemplate(L2PcInstance player)
+	public TransformTemplate getTemplate(PlayerInstance player)
 	{
 		return player != null ? (player.getAppearance().getSex() ? _femaleTemplate : _maleTemplate) : null;
 	}
@@ -183,25 +183,25 @@ public final class Transform implements IIdentifiable
 		return _type == TransformType.PURE_STAT;
 	}
 	
-	public double getCollisionHeight(L2PcInstance player)
+	public double getCollisionHeight(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getCollisionHeight() : player.getCollisionHeight();
 	}
 	
-	public double getCollisionRadius(L2PcInstance player)
+	public double getCollisionRadius(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getCollisionRadius() : player.getCollisionRadius();
 	}
 	
-	public int getBaseAttackRange(L2PcInstance player)
+	public int getBaseAttackRange(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getBaseAttackRange() : player.getTemplate().getBaseAttackRange();
 	}
 	
-	public void onTransform(L2PcInstance player)
+	public void onTransform(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		if (template == null)
@@ -269,7 +269,7 @@ public final class Transform implements IIdentifiable
 		}
 	}
 	
-	public void onUntransform(L2PcInstance player)
+	public void onUntransform(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		if (template == null)
@@ -330,7 +330,7 @@ public final class Transform implements IIdentifiable
 		player.sendPacket(ExBasicActionList.STATIC_PACKET);
 	}
 	
-	public void onLevelUp(L2PcInstance player)
+	public void onLevelUp(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		// Add skills depending on level.
@@ -347,7 +347,7 @@ public final class Transform implements IIdentifiable
 		}
 	}
 	
-	public double getStat(L2PcInstance player, Stats stats)
+	public double getStat(PlayerInstance player, Stats stats)
 	{
 		double val = 0;
 		final TransformTemplate template = getTemplate(player);
@@ -368,7 +368,7 @@ public final class Transform implements IIdentifiable
 	 * @param slot
 	 * @return
 	 */
-	public int getBaseDefBySlot(L2PcInstance player, int slot)
+	public int getBaseDefBySlot(PlayerInstance player, int slot)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getDefense(slot) : player.getTemplate().getBaseDefBySlot(slot);
@@ -378,7 +378,7 @@ public final class Transform implements IIdentifiable
 	 * @param player
 	 * @return
 	 */
-	public double getLevelMod(L2PcInstance player)
+	public double getLevelMod(PlayerInstance player)
 	{
 		double val = -1;
 		final TransformTemplate template = getTemplate(player);

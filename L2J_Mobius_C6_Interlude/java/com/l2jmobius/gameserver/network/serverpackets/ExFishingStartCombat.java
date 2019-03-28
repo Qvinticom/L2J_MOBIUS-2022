@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * Format (ch)dddcc
  * @author -Wooden-
  */
-public class ExFishingStartCombat extends L2GameServerPacket
+public class ExFishingStartCombat extends GameServerPacket
 {
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	private final int _time;
 	private final int _hp;
 	private final int _lureType;
 	private final int _deceptiveMode;
 	private final int _mode;
 	
-	public ExFishingStartCombat(L2Character character, int time, int hp, int mode, int lureType, int deceptiveMode)
+	public ExFishingStartCombat(Creature creature, int time, int hp, int mode, int lureType, int deceptiveMode)
 	{
-		_activeChar = character;
+		_creature = creature;
 		_time = time;
 		_hp = hp;
 		_mode = mode;
@@ -51,7 +51,7 @@ public class ExFishingStartCombat extends L2GameServerPacket
 		writeC(0xfe);
 		writeH(0x15);
 		
-		writeD(_activeChar.getObjectId());
+		writeD(_creature.getObjectId());
 		writeD(_time);
 		writeD(_hp);
 		writeC(_mode); // mode: 0 = resting, 1 = fighting

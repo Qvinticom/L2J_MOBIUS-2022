@@ -20,8 +20,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 /**
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 public final class OlympiadAnnouncer implements Runnable
 {
 	private static final int OLY_MANAGER = 31688;
-	private final Set<L2Spawn> _managers;
+	private final Set<Spawn> _managers;
 	private int _currentStadium = 0;
 	
 	public OlympiadAnnouncer()
@@ -72,9 +72,9 @@ public final class OlympiadAnnouncer implements Runnable
 					}
 				}
 				
-				for (L2Spawn spawn : _managers)
+				for (Spawn spawn : _managers)
 				{
-					final L2Npc manager = spawn.getLastSpawn();
+					final Npc manager = spawn.getLastSpawn();
 					if (manager != null)
 					{
 						manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);

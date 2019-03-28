@@ -16,8 +16,8 @@
  */
 package quests.Q00153_DeliverGoods;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,14 +54,14 @@ public class Q00153_DeliverGoods extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && (npc.getId() == ARNOLD_ID))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (npc.getId() == ARNOLD_ID))
 		{
 			if (event.equalsIgnoreCase("30041-02.html"))
 			{
-				st.startQuest();
+				qs.startQuest();
 				giveItems(player, DELIVERY_LIST_ID, 1);
 				giveItems(player, HEAVY_WOOD_BOX_ID, 1);
 				giveItems(player, CLOTH_BUNDLE_ID, 1);
@@ -72,14 +72,14 @@ public class Q00153_DeliverGoods extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (npc.getId() == ARNOLD_ID)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -88,18 +88,18 @@ public class Q00153_DeliverGoods extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(1))
+					if (qs.isCond(1))
 					{
 						htmltext = "30041-03.html";
 					}
-					else if (st.isCond(2))
+					else if (qs.isCond(2))
 					{
 						takeItems(player, DELIVERY_LIST_ID, -1);
 						takeItems(player, JACKSONS_RECEIPT_ID, -1);
 						takeItems(player, SILVIAS_RECEIPT_ID, -1);
 						takeItems(player, RANTS_RECEIPT_ID, -1);
 						giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = "30041-04.html";
 					}
 					break;
@@ -153,9 +153,9 @@ public class Q00153_DeliverGoods extends Quest
 				}
 			}
 			
-			if (st.isCond(1) && hasQuestItems(player, JACKSONS_RECEIPT_ID) && hasQuestItems(player, SILVIAS_RECEIPT_ID) && hasQuestItems(player, RANTS_RECEIPT_ID))
+			if (qs.isCond(1) && hasQuestItems(player, JACKSONS_RECEIPT_ID) && hasQuestItems(player, SILVIAS_RECEIPT_ID) && hasQuestItems(player, RANTS_RECEIPT_ID))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 		}
 		return htmltext;

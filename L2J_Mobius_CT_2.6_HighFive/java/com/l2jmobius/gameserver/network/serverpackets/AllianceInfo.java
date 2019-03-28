@@ -20,8 +20,8 @@ import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.ClanInfo;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanInfo;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.clientpackets.RequestAllyInfo;
 
@@ -40,17 +40,17 @@ public class AllianceInfo implements IClientOutgoingPacket
 	
 	public AllianceInfo(int allianceId)
 	{
-		final L2Clan leader = ClanTable.getInstance().getClan(allianceId);
+		final Clan leader = ClanTable.getInstance().getClan(allianceId);
 		_name = leader.getAllyName();
 		_leaderC = leader.getName();
 		_leaderP = leader.getLeaderName();
 		
-		final Collection<L2Clan> allies = ClanTable.getInstance().getClanAllies(allianceId);
+		final Collection<Clan> allies = ClanTable.getInstance().getClanAllies(allianceId);
 		_allies = new ClanInfo[allies.size()];
 		int idx = 0;
 		int total = 0;
 		int online = 0;
-		for (L2Clan clan : allies)
+		for (Clan clan : allies)
 		{
 			final ClanInfo ci = new ClanInfo(clan);
 			_allies[idx++] = ci;

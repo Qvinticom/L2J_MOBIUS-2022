@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class Ride implements IClientOutgoingPacket
@@ -29,7 +29,7 @@ public final class Ride implements IClientOutgoingPacket
 	private final int _rideNpcId;
 	private final Location _loc;
 	
-	public Ride(L2PcInstance player)
+	public Ride(PlayerInstance player)
 	{
 		_objectId = player.getObjectId();
 		_mounted = player.isMounted() ? 1 : 0;

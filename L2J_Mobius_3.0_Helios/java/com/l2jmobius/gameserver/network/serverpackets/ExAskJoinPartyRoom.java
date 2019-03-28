@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ public class ExAskJoinPartyRoom implements IClientOutgoingPacket
 	private final String _charName;
 	private final String _roomName;
 	
-	public ExAskJoinPartyRoom(L2PcInstance player)
+	public ExAskJoinPartyRoom(PlayerInstance player)
 	{
 		_charName = player.getName();
 		_roomName = player.getMatchingRoom().getTitle();

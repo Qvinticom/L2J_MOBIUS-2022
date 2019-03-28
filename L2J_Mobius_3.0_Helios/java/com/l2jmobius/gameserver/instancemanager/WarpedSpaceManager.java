@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.instancemanager;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.holders.WarpedSpaceHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.util.Util;
@@ -29,9 +29,9 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class WarpedSpaceManager
 {
-	private volatile ConcurrentHashMap<L2Character, WarpedSpaceHolder> _warpedSpace = null;
+	private volatile ConcurrentHashMap<Creature, WarpedSpaceHolder> _warpedSpace = null;
 	
-	public void addWarpedSpace(L2Character creature, int radius)
+	public void addWarpedSpace(Creature creature, int radius)
 	{
 		if (_warpedSpace == null)
 		{
@@ -46,7 +46,7 @@ public class WarpedSpaceManager
 		_warpedSpace.put(creature, new WarpedSpaceHolder(creature, radius));
 	}
 	
-	public void removeWarpedSpace(L2Character creature)
+	public void removeWarpedSpace(Creature creature)
 	{
 		_warpedSpace.remove(creature);
 	}
@@ -57,7 +57,7 @@ public class WarpedSpaceManager
 		{
 			for (WarpedSpaceHolder holder : _warpedSpace.values())
 			{
-				final L2Character creature = holder.getCreature();
+				final Creature creature = holder.getCreature();
 				if (creature.getInstanceWorld() != instance)
 				{
 					continue;

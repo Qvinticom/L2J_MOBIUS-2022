@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="16013" level="67" type="L2TamedBeast" name="Trained Buffalo">
+	<npc id="16013" level="67" type="TamedBeast" name="Trained Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
@@ -61,7 +61,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="16014" level="67" type="L2TamedBeast" name="Trained Buffalo">
+	<npc id="16014" level="67" type="TamedBeast" name="Trained Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
@@ -122,7 +122,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="16015" level="69" type="L2TamedBeast" name="Trained Cougar">
+	<npc id="16015" level="69" type="TamedBeast" name="Trained Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
@@ -183,7 +183,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="16016" level="69" type="L2TamedBeast" name="Trained Cougar">
+	<npc id="16016" level="69" type="TamedBeast" name="Trained Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
@@ -244,7 +244,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="16017" level="65" type="L2TamedBeast" name="Trained Kookaburra">
+	<npc id="16017" level="65" type="TamedBeast" name="Trained Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
@@ -305,7 +305,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="16018" level="65" type="L2TamedBeast" name="Trained Kookaburra">
+	<npc id="16018" level="65" type="TamedBeast" name="Trained Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
@@ -366,7 +366,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="16019" level="67" type="L2Monster" name="Tiny Baby Buffalo">
+	<npc id="16019" level="67" type="Monster" name="Tiny Baby Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -433,7 +433,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16020" level="67" type="L2Monster" name="Trained Tiny Baby Buffalo">
+	<npc id="16020" level="67" type="Monster" name="Trained Tiny Baby Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
@@ -496,7 +496,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16021" level="69" type="L2Monster" name="Tiny Baby Cougar">
+	<npc id="16021" level="69" type="Monster" name="Tiny Baby Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -563,7 +563,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="16022" level="69" type="L2Monster" name="Trained Tiny Baby Cougar">
+	<npc id="16022" level="69" type="Monster" name="Trained Tiny Baby Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
@@ -626,7 +626,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="16023" level="65" type="L2Monster" name="Tiny Baby Kookaburra">
+	<npc id="16023" level="65" type="Monster" name="Tiny Baby Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
@@ -695,7 +695,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16024" level="65" type="L2Monster" name="Trained Tiny Baby Kookaburra">
+	<npc id="16024" level="65" type="Monster" name="Trained Tiny Baby Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
@@ -758,7 +758,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16025" level="55" type="L2Pet" name="Great Wolf">
+	<npc id="16025" level="55" type="Pet" name="Great Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
@@ -806,7 +806,7 @@
 			<height normal="21.412" />
 		</collision>
 	</npc>
-	<npc id="16026" level="55" type="L2Npc" name="Beastly Agathion">
+	<npc id="16026" level="55" type="Npc" name="Beastly Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -841,7 +841,7 @@
 			<height normal="11.3" />
 		</collision>
 	</npc>
-	<npc id="16027" level="55" type="L2Npc" name="Rainbow Agathion">
+	<npc id="16027" level="55" type="Npc" name="Rainbow Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -876,7 +876,7 @@
 			<height normal="6.7" />
 		</collision>
 	</npc>
-	<npc id="16028" level="55" type="L2Npc" name="Lord Agathion">
+	<npc id="16028" level="55" type="Npc" name="Lord Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -911,7 +911,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="16029" level="55" type="L2Npc" name="Fortress Agasion">
+	<npc id="16029" level="55" type="Npc" name="Fortress Agasion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -946,7 +946,7 @@
 			<height normal="3.5" />
 		</collision>
 	</npc>
-	<npc id="16030" level="55" type="L2Pet" name="Great Wolf">
+	<npc id="16030" level="55" type="Pet" name="Great Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
@@ -995,7 +995,7 @@
 			<height normal="21.412" />
 		</collision>
 	</npc>
-	<npc id="16031" level="55" type="L2Npc" name="Little Angel Agathion">
+	<npc id="16031" level="55" type="Npc" name="Little Angel Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1030,7 +1030,7 @@
 			<height normal="4.5475" />
 		</collision>
 	</npc>
-	<npc id="16032" level="55" type="L2Npc" name="Little Devil Agathion">
+	<npc id="16032" level="55" type="Npc" name="Little Devil Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1065,7 +1065,7 @@
 			<height normal="5.5" />
 		</collision>
 	</npc>
-	<npc id="16033" level="55" type="L2Npc" name="Rudolph Agathion">
+	<npc id="16033" level="55" type="Npc" name="Rudolph Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1100,7 +1100,7 @@
 			<height normal="5.271" />
 		</collision>
 	</npc>
-	<npc id="16034" level="55" type="L2BabyPet" name="Improved Baby Buffalo">
+	<npc id="16034" level="55" type="BabyPet" name="Improved Baby Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5189" level="6" /> <!-- Pet Blessed Body -->
@@ -1228,7 +1228,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16035" level="55" type="L2BabyPet" name="Improved Baby Kookaburra">
+	<npc id="16035" level="55" type="BabyPet" name="Improved Baby Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5194" level="3" /> <!-- Pet Empower -->
@@ -1357,7 +1357,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16036" level="55" type="L2BabyPet" name="Improved Baby Cougar">
+	<npc id="16036" level="55" type="BabyPet" name="Improved Baby Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5194" level="3" /> <!-- Pet Empower -->
@@ -1485,7 +1485,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="16037" level="55" type="L2Pet" name="Great Snow Wolf">
+	<npc id="16037" level="55" type="Pet" name="Great Snow Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -1606,7 +1606,7 @@
 			<height normal="21.412" />
 		</collision>
 	</npc>
-	<npc id="16038" level="55" type="L2Pet" name="Red Wind Strider">
+	<npc id="16038" level="55" type="Pet" name="Red Wind Strider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -1706,7 +1706,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="16039" level="55" type="L2Pet" name="Red Star Strider">
+	<npc id="16039" level="55" type="Pet" name="Red Star Strider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -1806,7 +1806,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="16040" level="55" type="L2Pet" name="Red Twilight Strider">
+	<npc id="16040" level="55" type="Pet" name="Red Twilight Strider">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -1845,7 +1845,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="16041" level="55" type="L2Pet" name="Fenrir">
+	<npc id="16041" level="55" type="Pet" name="Fenrir">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
@@ -1897,7 +1897,7 @@
 			<height normal="21.412" />
 		</collision>
 	</npc>
-	<npc id="16042" level="55" type="L2Pet" name="Snow Fenrir">
+	<npc id="16042" level="55" type="Pet" name="Snow Fenrir">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -2018,7 +2018,7 @@
 			<height normal="21.412" />
 		</collision>
 	</npc>
-	<npc id="16043" level="55" type="L2Pet" name="Fox Shaman">
+	<npc id="16043" level="55" type="Pet" name="Fox Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
@@ -2124,7 +2124,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="16044" level="55" type="L2Pet" name="Wild Beast Fighter">
+	<npc id="16044" level="55" type="Pet" name="Wild Beast Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
@@ -2230,7 +2230,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="16045" level="55" type="L2BabyPet" name="White Weasel">
+	<npc id="16045" level="55" type="BabyPet" name="White Weasel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="133" />
@@ -2323,7 +2323,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="16046" level="55" type="L2BabyPet" name="Fairy Princess">
+	<npc id="16046" level="55" type="BabyPet" name="Fairy Princess">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -2410,7 +2410,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16049" level="55" type="L2Npc" name="Love Agathion">
+	<npc id="16049" level="55" type="Npc" name="Love Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2445,7 +2445,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="16050" level="55" type="L2Pet" name="Owl Monk">
+	<npc id="16050" level="55" type="Pet" name="Owl Monk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -2486,7 +2486,7 @@
 			<height normal="19.5" />
 		</collision>
 	</npc>
-	<npc id="16051" level="55" type="L2BabyPet" name="Spirit Shaman">
+	<npc id="16051" level="55" type="BabyPet" name="Spirit Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2631,7 +2631,7 @@
 			<height normal="15.6" />
 		</collision>
 	</npc>
-	<npc id="16052" level="55" type="L2BabyPet" name="Toy Knight">
+	<npc id="16052" level="55" type="BabyPet" name="Toy Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
@@ -2806,7 +2806,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16053" level="55" type="L2BabyPet" name="Turtle Ascetic">
+	<npc id="16053" level="55" type="BabyPet" name="Turtle Ascetic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2978,7 +2978,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="16054" level="55" type="L2Npc" name="Monkey">
+	<npc id="16054" level="55" type="Npc" name="Monkey">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -3013,7 +3013,7 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="16055" level="55" type="L2Npc" name="Griffon">
+	<npc id="16055" level="55" type="Npc" name="Griffon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -3048,7 +3048,7 @@
 			<height normal="5.5" />
 		</collision>
 	</npc>
-	<npc id="16056" level="55" type="L2Npc" name="Joy">
+	<npc id="16056" level="55" type="Npc" name="Joy">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3083,7 +3083,7 @@
 			<height normal="6.5" />
 		</collision>
 	</npc>
-	<npc id="16057" level="55" type="L2Npc" name="Sorrow">
+	<npc id="16057" level="55" type="Npc" name="Sorrow">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3118,7 +3118,7 @@
 			<height normal="5" />
 		</collision>
 	</npc>
-	<npc id="16058" level="55" type="L2Npc" name="Anger">
+	<npc id="16058" level="55" type="Npc" name="Anger">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -3153,7 +3153,7 @@
 			<height normal="3" />
 		</collision>
 	</npc>
-	<npc id="16059" level="55" type="L2Npc" name="Boy Bear">
+	<npc id="16059" level="55" type="Npc" name="Boy Bear">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3188,7 +3188,7 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="16060" level="55" type="L2Npc" name="Girl Bear">
+	<npc id="16060" level="55" type="Npc" name="Girl Bear">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3223,7 +3223,7 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="16061" level="55" type="L2Npc" name="Collection Device">
+	<npc id="16061" level="55" type="Npc" name="Collection Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3258,7 +3258,7 @@
 			<height normal="6.25" />
 		</collision>
 	</npc>
-	<npc id="16062" level="55" type="L2Npc" name="Knight">
+	<npc id="16062" level="55" type="Npc" name="Knight">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3293,7 +3293,7 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="16063" level="55" type="L2Npc" name="Neolithica">
+	<npc id="16063" level="55" type="Npc" name="Neolithica">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3328,7 +3328,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="16064" level="55" type="L2Npc" name="Juju">
+	<npc id="16064" level="55" type="Npc" name="Juju">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3363,7 +3363,7 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="16065" level="55" type="L2Npc" name="Oink Oink">
+	<npc id="16065" level="55" type="Npc" name="Oink Oink">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -3398,7 +3398,7 @@
 			<height normal="5.75" />
 		</collision>
 	</npc>
-	<npc id="16066" level="55" type="L2Npc" name="Light of Dawn">
+	<npc id="16066" level="55" type="Npc" name="Light of Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -3433,7 +3433,7 @@
 			<height normal="5.75" />
 		</collision>
 	</npc>
-	<npc id="16067" level="55" type="L2Pet" name="Deinonychus">
+	<npc id="16067" level="55" type="Pet" name="Deinonychus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -3493,7 +3493,7 @@
 			<height normal="14.3" />
 		</collision>
 	</npc>
-	<npc id="16068" level="55" type="L2Pet" name="Guardian's Strider">
+	<npc id="16068" level="55" type="Pet" name="Guardian's Strider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -3594,7 +3594,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="16069" level="55" type="L2Npc" name="Pona">
+	<npc id="16069" level="55" type="Npc" name="Pona">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3629,7 +3629,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="16070" level="55" type="L2Npc" name="Towbat">
+	<npc id="16070" level="55" type="Npc" name="Towbat">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -3663,7 +3663,7 @@
 			<height normal="5.87" />
 		</collision>
 	</npc>
-	<npc id="16071" level="55" type="L2Pet" name="Maguen">
+	<npc id="16071" level="55" type="Pet" name="Maguen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -3758,7 +3758,7 @@
 			<height normal="13.25" />
 		</collision>
 	</npc>
-	<npc id="16072" level="55" type="L2Pet" name="Elite Maguen">
+	<npc id="16072" level="55" type="Pet" name="Elite Maguen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
@@ -3853,7 +3853,7 @@
 			<height normal="13.25" />
 		</collision>
 	</npc>
-	<npc id="16073" level="55" type="L2Npc" name="Rudolph Agathion">
+	<npc id="16073" level="55" type="Npc" name="Rudolph Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -3888,7 +3888,7 @@
 			<height normal="5.271" />
 		</collision>
 	</npc>
-	<npc id="16074" level="80" type="L2Npc" name="Ball Trapping Gnosian">
+	<npc id="16074" level="80" type="Npc" name="Ball Trapping Gnosian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3908,7 +3908,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="16075" level="80" type="L2Npc" name="Ball Trapping Orodriel">
+	<npc id="16075" level="80" type="Npc" name="Ball Trapping Orodriel">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3928,7 +3928,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="16076" level="80" type="L2Npc" name="Penalty Kick">
+	<npc id="16076" level="80" type="Npc" name="Penalty Kick">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3948,7 +3948,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="16077" level="80" type="L2Npc" name="Antharas">
+	<npc id="16077" level="80" type="Npc" name="Antharas">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3968,7 +3968,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="16078" level="80" type="L2Npc" name="Nevit's Messenger Kanna">
+	<npc id="16078" level="80" type="Npc" name="Nevit's Messenger Kanna">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3988,7 +3988,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="16079" level="80" type="L2Npc" name="Guardian of Dawn Kallesin">
+	<npc id="16079" level="80" type="Npc" name="Guardian of Dawn Kallesin">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.skills.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
@@ -35,10 +35,10 @@ public class ConditionTargetPvp extends Condition
 	@Override
 	public boolean testImpl(Env env)
 	{
-		final L2Character target = env.target;
-		if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getPvpFlag() != 0))
+		final Creature target = env.target;
+		if ((target instanceof PlayerInstance) && (((PlayerInstance) target).getPvpFlag() != 0))
 		{
-			return ((L2PcInstance) target).getPvpFlag() == _pvp;
+			return ((PlayerInstance) target).getPvpFlag() == _pvp;
 		}
 		return false;
 	}

@@ -18,8 +18,8 @@ package handlers.bypasshandlers;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Link implements IBypassHandler
@@ -30,25 +30,25 @@ public class Link implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
 		final String htmlPath = command.substring(4).trim();
 		if (htmlPath.isEmpty())
 		{
-			LOGGER.warning("Player " + activeChar.getName() + " sent empty link html!");
+			LOGGER.warning("Player " + player.getName() + " sent empty link html!");
 			return false;
 		}
 		
 		if (htmlPath.contains(".."))
 		{
-			LOGGER.warning("Player " + activeChar.getName() + " sent invalid link html: " + htmlPath);
+			LOGGER.warning("Player " + player.getName() + " sent invalid link html: " + htmlPath);
 			return false;
 		}
 		
-		final String content = HtmCache.getInstance().getHtm(activeChar, "data/html/" + htmlPath);
+		final String content = HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath);
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
 		html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
-		activeChar.sendPacket(html);
+		player.sendPacket(html);
 		return true;
 	}
 	

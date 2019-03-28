@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExRemoveEnchantSupportItemResult;
 
 /**
@@ -29,33 +29,33 @@ import com.l2jmobius.gameserver.network.serverpackets.ExRemoveEnchantSupportItem
 public class RequestExRemoveEnchantSupportItem implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		final EnchantItemRequest request = player.getRequest(EnchantItemRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			return;
 		}
 		
-		final L2ItemInstance supportItem = request.getSupportItem();
+		final ItemInstance supportItem = request.getSupportItem();
 		if ((supportItem == null) || (supportItem.getCount() < 1))
 		{
-			request.setSupportItem(L2PcInstance.ID_NONE);
+			request.setSupportItem(PlayerInstance.ID_NONE);
 		}
 		
 		request.setTimestamp(System.currentTimeMillis());
-		activeChar.sendPacket(ExRemoveEnchantSupportItemResult.STATIC_PACKET);
+		player.sendPacket(ExRemoveEnchantSupportItemResult.STATIC_PACKET);
 	}
 }

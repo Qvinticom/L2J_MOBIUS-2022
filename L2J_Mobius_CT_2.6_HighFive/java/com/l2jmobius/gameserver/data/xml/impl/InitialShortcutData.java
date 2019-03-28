@@ -32,9 +32,9 @@ import com.l2jmobius.gameserver.enums.ShortcutType;
 import com.l2jmobius.gameserver.model.Macro;
 import com.l2jmobius.gameserver.model.MacroCmd;
 import com.l2jmobius.gameserver.model.Shortcut;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 /**
@@ -258,7 +258,7 @@ public final class InitialShortcutData implements IGameXmlReader
 	 * Register all the available shortcuts for the given player.
 	 * @param player the player
 	 */
-	public void registerAllShortcuts(L2PcInstance player)
+	public void registerAllShortcuts(PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -273,7 +273,7 @@ public final class InitialShortcutData implements IGameXmlReader
 			{
 				case ITEM:
 				{
-					final L2ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
+					final ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
 					if (item == null)
 					{
 						continue;
@@ -317,7 +317,7 @@ public final class InitialShortcutData implements IGameXmlReader
 				{
 					case ITEM:
 					{
-						final L2ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
+						final ItemInstance item = player.getInventory().getItemByItemId(shortcutId);
 						if (item == null)
 						{
 							continue;

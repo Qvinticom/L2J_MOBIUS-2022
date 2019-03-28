@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class TargetUnselected implements IClientOutgoingPacket
@@ -28,14 +28,14 @@ public class TargetUnselected implements IClientOutgoingPacket
 	private final int _z;
 	
 	/**
-	 * @param character
+	 * @param creature
 	 */
-	public TargetUnselected(L2Character character)
+	public TargetUnselected(Creature creature)
 	{
-		_targetObjId = character.getObjectId();
-		_x = character.getX();
-		_y = character.getY();
-		_z = character.getZ();
+		_targetObjId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override

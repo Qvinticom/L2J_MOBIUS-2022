@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 
-public final class SetPrivateStoreMsgBuy extends L2GameClientPacket
+public final class SetPrivateStoreMsgBuy extends GameClientPacket
 {
 	private String _storeMsg;
 	
@@ -32,7 +32,7 @@ public final class SetPrivateStoreMsgBuy extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if ((player == null) || (player.getBuyList() == null))
 		{
 			return;

@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.XMLFilter;
 import com.l2jmobius.gameserver.engines.items.DocumentItem;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 
 /**
  * @author mkizub
@@ -66,11 +66,11 @@ public class DocumentEngine
 	
 	/**
 	 * Return created items
-	 * @return List of {@link L2Item}
+	 * @return List of {@link Item}
 	 */
-	public List<L2Item> loadItems()
+	public List<Item> loadItems()
 	{
-		final List<L2Item> list = new LinkedList<>();
+		final List<Item> list = new LinkedList<>();
 		for (File f : _itemFiles)
 		{
 			final DocumentItem document = new DocumentItem(f);

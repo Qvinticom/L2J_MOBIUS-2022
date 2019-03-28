@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopMsg implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public RecipeShopMsg(L2PcInstance player)
+	public RecipeShopMsg(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 	}
 	
 	@Override
@@ -34,8 +34,8 @@ public class RecipeShopMsg implements IClientOutgoingPacket
 	{
 		OutgoingPackets.RECIPE_SHOP_MSG.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeS(_activeChar.getStoreName());
+		packet.writeD(_player.getObjectId());
+		packet.writeS(_player.getStoreName());
 		return true;
 	}
 }

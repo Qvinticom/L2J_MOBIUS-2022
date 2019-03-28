@@ -22,12 +22,12 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
+import com.l2jmobius.gameserver.network.GameClient;
+import com.l2jmobius.gameserver.network.GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-public final class RequestRestart extends L2GameClientPacket
+public final class RequestRestart extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestRestart.class.getName());
 	
@@ -48,7 +48,7 @@ public final class RequestRestart extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		// Check if player is == null
 		if (player == null)
@@ -119,7 +119,7 @@ public final class RequestRestart extends L2GameClientPacket
 				return;
 			}
 			
-			final L2Party playerParty = player.getParty();
+			final Party playerParty = player.getParty();
 			if (playerParty != null)
 			{
 				player.getParty().broadcastToPartyMembers(SystemMessage.sendString(player.getName() + " has been removed from the upcoming festival."));
@@ -172,7 +172,7 @@ public final class RequestRestart extends L2GameClientPacket
 			player.decreaseBoxes();
 		}
 		
-		final L2GameClient client = getClient();
+		final GameClient client = getClient();
 		
 		// detach the client from the char so that the connection isnt closed in the deleteMe
 		player.setClient(null);
@@ -181,7 +181,7 @@ public final class RequestRestart extends L2GameClientPacket
 		player.deleteMe();
 		player.store();
 		
-		getClient().setActiveChar(null);
+		getClient().setPlayer(null);
 		
 		// return the client to the authed status
 		client.setState(GameClientState.AUTHED);

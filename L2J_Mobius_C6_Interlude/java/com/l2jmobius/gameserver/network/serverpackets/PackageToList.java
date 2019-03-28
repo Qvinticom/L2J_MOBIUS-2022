@@ -22,7 +22,7 @@ import java.util.Map;
  * Format: (c) d[dS] d: list size [ d: char ID S: char Name ]
  * @author -Wooden-
  */
-public class PackageToList extends L2GameServerPacket
+public class PackageToList extends GameServerPacket
 {
 	private final Map<Integer, String> _players;
 	

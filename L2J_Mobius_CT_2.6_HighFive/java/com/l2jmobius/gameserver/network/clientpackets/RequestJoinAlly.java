@@ -17,16 +17,15 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinAlly;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestJoinAlly implements IClientIncomingPacket
@@ -34,50 +33,50 @@ public final class RequestJoinAlly implements IClientIncomingPacket
 	private int _id;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_id = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance ob = L2World.getInstance().getPlayer(_id);
+		final PlayerInstance ob = World.getInstance().getPlayer(_id);
 		
 		if (ob == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
 			return;
 		}
 		
-		if (activeChar.getClan() == null)
+		if (player.getClan() == null)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
+			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);
 			return;
 		}
 		
-		final L2PcInstance target = ob;
-		final L2Clan clan = activeChar.getClan();
-		if (!clan.checkAllyJoinCondition(activeChar, target))
+		final PlayerInstance target = ob;
+		final Clan clan = player.getClan();
+		if (!clan.checkAllyJoinCondition(player, target))
 		{
 			return;
 		}
-		if (!activeChar.getRequest().setRequest(target, this))
+		if (!player.getRequest().setRequest(target, this))
 		{
 			return;
 		}
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_LEADER_S2_HAS_REQUESTED_AN_ALLIANCE);
-		sm.addString(activeChar.getClan().getAllyName());
-		sm.addString(activeChar.getName());
+		sm.addString(player.getClan().getAllyName());
+		sm.addString(player.getName());
 		target.sendPacket(sm);
-		target.sendPacket(new AskJoinAlly(activeChar.getObjectId(), activeChar.getClan().getAllyName()));
+		target.sendPacket(new AskJoinAlly(player.getObjectId(), player.getClan().getAllyName()));
 	}
 }

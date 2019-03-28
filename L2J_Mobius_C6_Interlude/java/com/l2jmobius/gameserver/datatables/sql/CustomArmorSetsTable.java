@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2ArmorSet;
+import com.l2jmobius.gameserver.model.ArmorSet;
 
 /**
  * @author ProGramMoS
@@ -59,7 +59,7 @@ public final class CustomArmorSetsTable
 				final int shield = rset.getInt("shield");
 				final int shield_skill_id = rset.getInt("shield_skill_id");
 				final int enchant6skill = rset.getInt("enchant6skill");
-				ArmorSetsTable.getInstance().addObj(chest, new L2ArmorSet(chest, legs, head, gloves, feet, skill_id, shield, shield_skill_id, enchant6skill));
+				ArmorSetsTable.getInstance().addObj(chest, new ArmorSet(chest, legs, head, gloves, feet, skill_id, shield, shield_skill_id, enchant6skill));
 			}
 			LOGGER.info("ArmorSetsTable: Loaded custom armor sets.");
 			

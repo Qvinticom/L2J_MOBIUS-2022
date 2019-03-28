@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
+import static com.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,11 +26,11 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.ItemRequest;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -42,7 +42,7 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 	private Set<ItemRequest> _items = null;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_storePlayerId = packet.readD();
 		final int count = packet.readD();
@@ -70,9 +70,9 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -90,7 +90,7 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2Object object = L2World.getInstance().getPlayer(_storePlayerId);
+		final WorldObject object = World.getInstance().getPlayer(_storePlayerId);
 		if (object == null)
 		{
 			return;
@@ -101,7 +101,7 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance storePlayer = (L2PcInstance) object;
+		final PlayerInstance storePlayer = (PlayerInstance) object;
 		if (!player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
 		{
 			return;
@@ -134,8 +134,8 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 		{
 			if (storeList.getItemCount() > _items.size())
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + client.getActiveChar().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
-				Util.handleIllegalPlayerAction(client.getActiveChar(), msgErr, Config.DEFAULT_PUNISH);
+				final String msgErr = "[RequestPrivateStoreBuy] player " + client.getPlayer().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
+				Util.handleIllegalPlayerAction(client.getPlayer(), msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
 		}

@@ -18,8 +18,8 @@ package quests.Q00242_PossessorOfAPreciousSoul2;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -64,7 +64,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
@@ -126,11 +126,11 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 			case "PURE_UNICORN":
 				npc.getSpawn().stopRespawn();
 				npc.deleteMe();
-				final L2Npc npc_pure = addSpawn(PURE_UNICORN, 85884, -76588, -3470, 30000);
+				final Npc npc_pure = addSpawn(PURE_UNICORN, 85884, -76588, -3470, 30000);
 				startQuestTimer("FALLEN_UNICORN", 30000, npc_pure, player);
 				return null;
 			case "FALLEN_UNICORN":
-				final L2Npc npc_fallen = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0);
+				final Npc npc_fallen = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0);
 				npc_fallen.getSpawn().startRespawn();
 				return null;
 		}
@@ -138,9 +138,9 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "awaitsDrops", "1");
+		final PlayerInstance partyMember = getRandomPartyMember(player, "awaitsDrops", "1");
 		if (partyMember == null)
 		{
 			return super.onKill(npc, player, isSummon);
@@ -160,7 +160,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

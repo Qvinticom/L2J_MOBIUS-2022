@@ -798,7 +798,7 @@
 	</zone>
 	<!-- Swamp of Screams (Monsters Buffs) -->
 	<zone name="godad_swamp_monster1" type="EffectZone" shape="NPoly" minZ="-3375" maxZ="-2975"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -814,7 +814,7 @@
 		<node X="70566" Y="-60601" />
 	</zone>
 	<zone name="godad_swamp_monster2" type="EffectZone" shape="NPoly" minZ="-3191" maxZ="-2991"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -832,7 +832,7 @@
 		<node X="72986" Y="-60085" />
 	</zone>
 	<zone name="godad_swamp_monster3" type="EffectZone" shape="NPoly" minZ="-3335" maxZ="-2935"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -850,7 +850,7 @@
 		<node X="72132" Y="-56258" />
 	</zone>
 	<zone name="godad_swamp_monster4" type="EffectZone" shape="NPoly" minZ="-3179" maxZ="-2979"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -867,7 +867,7 @@
 		<node X="76339" Y="-54281" />
 	</zone>
 	<zone name="godad_swamp_monster5" type="EffectZone" shape="NPoly" minZ="-3255" maxZ="-2955"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -884,7 +884,7 @@
 		<node X="73995" Y="-52025" />
 	</zone>
 	<zone name="godad_swamp_monster6" type="EffectZone" shape="NPoly" minZ="-3458" maxZ="-3158"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -902,7 +902,7 @@
 		<node X="73034" Y="-45800" />
 	</zone>
 	<zone name="godad_swamp_monster7" type="EffectZone" shape="NPoly" minZ="-3418" maxZ="-3118"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -919,7 +919,7 @@
 		<node X="73641" Y="-42942" />
 	</zone>
 	<zone name="godad_swamp_monster8" type="EffectZone" shape="NPoly" minZ="-3410" maxZ="-3110"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -937,7 +937,7 @@
 		<node X="77641" Y="-43006" />
 	</zone>
 	<zone name="godad_swamp_monster9" type="EffectZone" shape="NPoly" minZ="-3422" maxZ="-3122"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -955,7 +955,7 @@
 		<node X="79930" Y="-42834" />
 	</zone>
 	<zone name="godad_swamp_monster10" type="EffectZone" shape="NPoly" minZ="-3370" maxZ="-3070"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -974,7 +974,7 @@
 		<node X="83086" Y="-41823" />
 	</zone>
 	<zone name="godad_swamp_monster11" type="EffectZone" shape="NPoly" minZ="-3366" maxZ="-3066"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -992,7 +992,7 @@
 		<node X="81094" Y="-45271" />
 	</zone>
 	<zone name="godad_swamp_monster12" type="EffectZone" shape="NPoly" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1008,7 +1008,7 @@
 		<node X="79214" Y="-51898" />
 	</zone>
 	<zone name="godad_swamp_monster13" type="EffectZone" shape="NPoly" minZ="-2470" maxZ="-2170"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1025,7 +1025,7 @@
 		<node X="83535" Y="-51204" />
 	</zone>
 	<zone name="godad_swamp_monster14" type="EffectZone" shape="NPoly" minZ="-2458" maxZ="-2158"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1044,7 +1044,7 @@
 		<node X="82738" Y="-54227" />
 	</zone>
 	<zone name="godad_swamp_monster15" type="EffectZone" shape="NPoly" minZ="-2542" maxZ="-2242"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1060,7 +1060,7 @@
 		<node X="77966" Y="-58870" />
 	</zone>
 	<zone name="godad_swamp_monster16" type="EffectZone" shape="NPoly" minZ="-2558" maxZ="-2258"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1076,7 +1076,7 @@
 		<node X="77368" Y="-62213" />
 	</zone>
 	<zone name="godad_swamp_monster17" type="EffectZone" shape="NPoly" minZ="-2414" maxZ="-2114"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1092,7 +1092,7 @@
 		<node X="81552" Y="-60955" />
 	</zone>
 	<zone name="godad_swamp_monster18" type="EffectZone" shape="NPoly" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1107,7 +1107,7 @@
 		<node X="85101" Y="-63443" />
 	</zone>
 	<zone name="godad_swamp_monster19" type="EffectZone" shape="NPoly" minZ="-2462" maxZ="-2162"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1123,7 +1123,7 @@
 		<node X="88544" Y="-61437" />
 	</zone>
 	<zone name="godad_swamp_monster20" type="EffectZone" shape="NPoly" minZ="-2574" maxZ="-2274"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1139,7 +1139,7 @@
 		<node X="85950" Y="-55020" />
 	</zone>
 	<zone name="godad_swamp_monster21" type="EffectZone" shape="NPoly" minZ="-2727" maxZ="-2427"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1155,7 +1155,7 @@
 		<node X="89688" Y="-52723" />
 	</zone>
 	<zone name="godad_swamp_monster22" type="EffectZone" shape="NPoly" minZ="-2767" maxZ="-2467"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1171,7 +1171,7 @@
 		<node X="93025" Y="-53439" />
 	</zone>
 	<zone name="godad_swamp_monster23" type="EffectZone" shape="NPoly" minZ="-2763" maxZ="-2463"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1188,7 +1188,7 @@
 		<node X="95211" Y="-52546" />
 	</zone>
 	<zone name="godad_swamp_monster24" type="EffectZone" shape="NPoly" minZ="-2550" maxZ="-2150"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1204,7 +1204,7 @@
 		<node X="85229" Y="-59869" />
 	</zone>
 	<zone name="godad_swamp_monster25" type="EffectZone" shape="NPoly" minZ="-2486" maxZ="-2286"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -1220,7 +1220,7 @@
 		<node X="80946" Y="-63769" />
 	</zone>
 	<zone name="godad_swamp_monster26" type="EffectZone" shape="NPoly" minZ="-2819" maxZ="-2619"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
 		<stat name="chance" val="70" />
 		<!-- stat name="unitTick" val="9" / -->
@@ -2050,7 +2050,7 @@
 		<stat name="skillIdLvl" val="6170-1;" /> <!-- s_area_stakato_nest_fury -->
 		<stat name="chance" val="100" />
 		<!-- stat name="unitTick" val="90" / -->
-		<stat name="targetClass" val="L2Npc" />
+		<stat name="targetClass" val="Npc" />
 		<stat name="default_enabled" val="false" />
 		<stat name="reuse" val="3000" /> <!-- Guess -->
 		<stat name="showDangerIcon" val="false" /> <!-- Guess -->

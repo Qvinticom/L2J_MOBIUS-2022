@@ -33,11 +33,10 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.L2TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.StoreTradeList;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.5.4.13 $ $Date: 2005/04/06 16:13:38 $
  */
 public class TradeController
@@ -46,8 +45,8 @@ public class TradeController
 	private static TradeController _instance;
 	
 	private int _nextListId;
-	private final Map<Integer, L2TradeList> _lists;
-	private final Map<Integer, L2TradeList> _listsTaskItem;
+	private final Map<Integer, StoreTradeList> _lists;
+	private final Map<Integer, StoreTradeList> _listsTaskItem;
 	
 	/** Task launching the function for restore count of Item (Clan Hall) */
 	public class RestoreCount implements Runnable
@@ -180,7 +179,7 @@ public class TradeController
 					if (rset.next())
 					{
 						LimitedItem = false;
-						L2TradeList buy1 = new L2TradeList(rset1.getInt("shop_id"));
+						StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
 						
 						int itemId = rset.getInt("item_id");
 						int price = rset.getInt("price");
@@ -188,7 +187,7 @@ public class TradeController
 						int currentCount = rset.getInt("currentCount");
 						int time = rset.getInt("time");
 						
-						L2ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+						ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
 						
 						if (item == null)
 						{
@@ -205,7 +204,7 @@ public class TradeController
 						
 						if (!rset1.getString("npc_id").equals("gm") && (price < (item.getReferencePrice() / 2)))
 						{
-							LOGGER.warning("L2TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
+							LOGGER.warning("TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
 							price = item.getReferencePrice();
 						}
 						
@@ -234,7 +233,7 @@ public class TradeController
 								count = rset.getInt("count");
 								time = rset.getInt("time");
 								currentCount = rset.getInt("currentCount");
-								final L2ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
+								final ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
 								
 								if (item2 == null)
 								{
@@ -249,7 +248,7 @@ public class TradeController
 								
 								if (!rset1.getString("npc_id").equals("gm") && (price < (item2.getReferencePrice() / 2)))
 								{
-									LOGGER.warning("L2TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
+									LOGGER.warning("TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
 									price = item2.getReferencePrice();
 								}
 								
@@ -357,13 +356,13 @@ public class TradeController
 						if (rset.next())
 						{
 							LimitedItem = false;
-							L2TradeList buy1 = new L2TradeList(rset1.getInt("shop_id"));
+							StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
 							int itemId = rset.getInt("item_id");
 							int price = rset.getInt("price");
 							int count = rset.getInt("count");
 							int currentCount = rset.getInt("currentCount");
 							int time = rset.getInt("time");
-							L2ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+							ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
 							if (item == null)
 							{
 								rset.close();
@@ -379,7 +378,7 @@ public class TradeController
 							
 							if (!rset1.getString("npc_id").equals("gm") && (price < (item.getReferencePrice() / 2)))
 							{
-								LOGGER.warning("L2TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
+								LOGGER.warning("TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
 								price = item.getReferencePrice();
 							}
 							
@@ -408,7 +407,7 @@ public class TradeController
 									count = rset.getInt("count");
 									time = rset.getInt("time");
 									currentCount = rset.getInt("currentCount");
-									L2ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
+									ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
 									if (item2 == null)
 									{
 										continue;
@@ -421,7 +420,7 @@ public class TradeController
 									
 									if (!rset1.getString("npc_id").equals("gm") && (price < (item2.getReferencePrice() / 2)))
 									{
-										LOGGER.warning("L2TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
+										LOGGER.warning("TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
 										price = item2.getReferencePrice();
 									}
 									
@@ -506,7 +505,7 @@ public class TradeController
 		}
 	}
 	
-	public L2TradeList getBuyList(int listId)
+	public StoreTradeList getBuyList(int listId)
 	{
 		if (_lists.get(listId) != null)
 		{
@@ -516,11 +515,11 @@ public class TradeController
 		return _listsTaskItem.get(listId);
 	}
 	
-	public List<L2TradeList> getBuyListByNpcId(int npcId)
+	public List<StoreTradeList> getBuyListByNpcId(int npcId)
 	{
-		final List<L2TradeList> lists = new ArrayList<>();
+		final List<StoreTradeList> lists = new ArrayList<>();
 		
-		for (L2TradeList list : _lists.values())
+		for (StoreTradeList list : _lists.values())
 		{
 			if (list.getNpcId().startsWith("gm"))
 			{
@@ -532,7 +531,7 @@ public class TradeController
 				lists.add(list);
 			}
 		}
-		for (L2TradeList list : _listsTaskItem.values())
+		for (StoreTradeList list : _listsTaskItem.values())
 		{
 			if (list.getNpcId().startsWith("gm"))
 			{
@@ -554,7 +553,7 @@ public class TradeController
 			return;
 		}
 		
-		for (L2TradeList list : _listsTaskItem.values())
+		for (StoreTradeList list : _listsTaskItem.values())
 		{
 			list.restoreCount(time);
 		}
@@ -589,7 +588,7 @@ public class TradeController
 		PreparedStatement statement;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			for (L2TradeList list : _listsTaskItem.values())
+			for (StoreTradeList list : _listsTaskItem.values())
 			{
 				if (list == null)
 				{
@@ -598,7 +597,7 @@ public class TradeController
 				
 				listId = list.getListId();
 				
-				for (L2ItemInstance Item : list.getItems())
+				for (ItemInstance Item : list.getItems())
 				{
 					if (Item.getCount() < Item.getInitCount()) // needed?
 					{

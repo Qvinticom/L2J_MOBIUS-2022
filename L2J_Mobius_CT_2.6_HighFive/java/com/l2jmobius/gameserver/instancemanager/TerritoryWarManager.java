@@ -38,17 +38,17 @@ import com.l2jmobius.commons.util.PropertiesParser;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.Spawn;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TerritoryWard;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.Siegable;
@@ -85,12 +85,12 @@ public final class TerritoryWarManager implements Siegable
 	public static boolean RETURN_WARDS_WHEN_TW_STARTS;
 	
 	// Territory War settings
-	private final Map<Integer, List<L2Clan>> _registeredClans = new ConcurrentHashMap<>();
+	private final Map<Integer, List<Clan>> _registeredClans = new ConcurrentHashMap<>();
 	private final Map<Integer, List<Integer>> _registeredMercenaries = new ConcurrentHashMap<>();
 	private final Map<Integer, Territory> _territoryList = new ConcurrentHashMap<>();
 	protected List<Integer> _disguisedPlayers = new CopyOnWriteArrayList<>();
 	private final List<TerritoryWard> _territoryWards = new CopyOnWriteArrayList<>();
-	private final Map<L2Clan, L2SiegeFlagInstance> _clanFlags = new ConcurrentHashMap<>();
+	private final Map<Clan, SiegeFlagInstance> _clanFlags = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer[]> _participantPoints = new ConcurrentHashMap<>();
 	protected Calendar _startTWDate = Calendar.getInstance();
 	protected boolean _isRegistrationOver = true;
@@ -118,7 +118,7 @@ public final class TerritoryWarManager implements Siegable
 		load();
 	}
 	
-	public int getRegisteredTerritoryId(L2PcInstance player)
+	public int getRegisteredTerritoryId(PlayerInstance player)
 	{
 		if ((player == null) || !_isTWChannelOpen || (player.getLevel() < PLAYERMINLEVEL))
 		{
@@ -148,7 +148,7 @@ public final class TerritoryWarManager implements Siegable
 		return 0;
 	}
 	
-	public boolean isAllyField(L2PcInstance player, int fieldId)
+	public boolean isAllyField(PlayerInstance player, int fieldId)
 	{
 		if ((player == null) || (player.getSiegeSide() == 0))
 		{
@@ -168,10 +168,10 @@ public final class TerritoryWarManager implements Siegable
 	
 	/**
 	 * @param castleId
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @return true if the clan is registered
 	 */
-	public final boolean checkIsRegistered(int castleId, L2Clan clan)
+	public final boolean checkIsRegistered(int castleId, Clan clan)
 	{
 		if (clan == null)
 		{
@@ -236,7 +236,7 @@ public final class TerritoryWarManager implements Siegable
 		return ret;
 	}
 	
-	public List<L2Clan> getRegisteredClans(int castleId)
+	public List<Clan> getRegisteredClans(int castleId)
 	{
 		return _registeredClans.get(castleId);
 	}
@@ -292,7 +292,7 @@ public final class TerritoryWarManager implements Siegable
 		return _isTWChannelOpen;
 	}
 	
-	public void registerClan(int castleId, L2Clan clan)
+	public void registerClan(int castleId, Clan clan)
 	{
 		if ((clan == null) || ((_registeredClans.get(castleId) != null) && _registeredClans.get(castleId).contains(clan)))
 		{
@@ -304,7 +304,7 @@ public final class TerritoryWarManager implements Siegable
 		changeRegistration(castleId, clan.getId(), false);
 	}
 	
-	public void registerMerc(int castleId, L2PcInstance player)
+	public void registerMerc(int castleId, PlayerInstance player)
 	{
 		if ((player == null) || (player.getLevel() < PLAYERMINLEVEL) || ((_registeredMercenaries.get(castleId) != null) && _registeredMercenaries.get(castleId).contains(player.getObjectId())))
 		{
@@ -316,7 +316,7 @@ public final class TerritoryWarManager implements Siegable
 		changeRegistration(castleId, player.getObjectId(), false);
 	}
 	
-	public void removeClan(int castleId, L2Clan clan)
+	public void removeClan(int castleId, Clan clan)
 	{
 		if (clan == null)
 		{
@@ -329,7 +329,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void removeMerc(int castleId, L2PcInstance player)
+	public void removeMerc(int castleId, PlayerInstance player)
 	{
 		if (player == null)
 		{
@@ -358,15 +358,15 @@ public final class TerritoryWarManager implements Siegable
 		{
 			_territoryList.get(castleId).changeNPCsSpawn(2, false);
 		}
-		for (L2DoorInstance door : CastleManager.getInstance().getCastleById(castleId).getDoors())
+		for (DoorInstance door : CastleManager.getInstance().getCastleById(castleId).getDoors())
 		{
 			door.openMe();
 		}
 	}
 	
-	public L2Npc addTerritoryWard(int territoryId, int newOwnerId, int oldOwnerId, boolean broadcastMessage)
+	public Npc addTerritoryWard(int territoryId, int newOwnerId, int oldOwnerId, boolean broadcastMessage)
 	{
-		L2Npc ret = null;
+		Npc ret = null;
 		final Territory terNew = _territoryList.get(newOwnerId);
 		if (terNew != null)
 		{
@@ -384,13 +384,13 @@ public final class TerritoryWarManager implements Siegable
 				{
 					for (int wardId : terNew.getOwnedWardIds())
 					{
-						final List<L2SkillLearn> residentialSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
-						for (L2SkillLearn s : residentialSkills)
+						final List<SkillLearn> residentialSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
+						for (SkillLearn s : residentialSkills)
 						{
 							final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 							if (sk != null)
 							{
-								for (L2PcInstance member : terNew.getOwnerClan().getOnlineMembers(0))
+								for (PlayerInstance member : terNew.getOwnerClan().getOnlineMembers(0))
 								{
 									if (!member.isInOlympiadMode())
 									{
@@ -417,13 +417,13 @@ public final class TerritoryWarManager implements Siegable
 				}
 				if (terOld.getOwnerClan() != null)
 				{
-					final List<L2SkillLearn> territorySkills = SkillTreesData.getInstance().getAvailableResidentialSkills(territoryId);
-					for (L2SkillLearn s : territorySkills)
+					final List<SkillLearn> territorySkills = SkillTreesData.getInstance().getAvailableResidentialSkills(territoryId);
+					for (SkillLearn s : territorySkills)
 					{
 						final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 						if (sk != null)
 						{
-							for (L2PcInstance member : terOld.getOwnerClan().getOnlineMembers(0))
+							for (PlayerInstance member : terOld.getOwnerClan().getOnlineMembers(0))
 							{
 								member.removeSkill(sk, false);
 							}
@@ -434,13 +434,13 @@ public final class TerritoryWarManager implements Siegable
 					{
 						for (int wardId : terOld.getOwnedWardIds())
 						{
-							final List<L2SkillLearn> wardSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
-							for (L2SkillLearn s : wardSkills)
+							final List<SkillLearn> wardSkills = SkillTreesData.getInstance().getAvailableResidentialSkills(wardId);
+							for (SkillLearn s : wardSkills)
 							{
 								final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 								if (sk != null)
 								{
-									for (L2PcInstance member : terOld.getOwnerClan().getOnlineMembers(0))
+									for (PlayerInstance member : terOld.getOwnerClan().getOnlineMembers(0))
 									{
 										member.removeSkill(sk, false);
 									}
@@ -458,7 +458,7 @@ public final class TerritoryWarManager implements Siegable
 		return ret;
 	}
 	
-	public L2SiegeFlagInstance getHQForClan(L2Clan clan)
+	public SiegeFlagInstance getHQForClan(Clan clan)
 	{
 		if (clan.getCastleId() > 0)
 		{
@@ -467,12 +467,12 @@ public final class TerritoryWarManager implements Siegable
 		return null;
 	}
 	
-	public L2SiegeFlagInstance getHQForTerritory(int territoryId)
+	public SiegeFlagInstance getHQForTerritory(int territoryId)
 	{
 		return _territoryList.get(territoryId - 80).getHQ();
 	}
 	
-	public void setHQForClan(L2Clan clan, L2SiegeFlagInstance hq)
+	public void setHQForClan(Clan clan, SiegeFlagInstance hq)
 	{
 		if (clan.getCastleId() > 0)
 		{
@@ -480,22 +480,22 @@ public final class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void addClanFlag(L2Clan clan, L2SiegeFlagInstance flag)
+	public void addClanFlag(Clan clan, SiegeFlagInstance flag)
 	{
 		_clanFlags.put(clan, flag);
 	}
 	
-	public boolean isClanHasFlag(L2Clan clan)
+	public boolean isClanHasFlag(Clan clan)
 	{
 		return _clanFlags.containsKey(clan);
 	}
 	
-	public L2SiegeFlagInstance getFlagForClan(L2Clan clan)
+	public SiegeFlagInstance getFlagForClan(Clan clan)
 	{
 		return _clanFlags.get(clan);
 	}
 	
-	public void removeClanFlag(L2Clan clan)
+	public void removeClanFlag(Clan clan)
 	{
 		_clanFlags.remove(clan);
 	}
@@ -529,7 +529,7 @@ public final class TerritoryWarManager implements Siegable
 		return null;
 	}
 	
-	public TerritoryWard getTerritoryWard(L2PcInstance player)
+	public TerritoryWard getTerritoryWard(PlayerInstance player)
 	{
 		for (TerritoryWard twWard : _territoryWards)
 		{
@@ -541,7 +541,7 @@ public final class TerritoryWarManager implements Siegable
 		return null;
 	}
 	
-	public void dropCombatFlag(L2PcInstance player, boolean isKilled, boolean isSpawnBack)
+	public void dropCombatFlag(PlayerInstance player, boolean isKilled, boolean isSpawnBack)
 	{
 		for (TerritoryWard twWard : _territoryWards)
 		{
@@ -581,7 +581,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void giveTWQuestPoint(L2PcInstance player)
+	public void giveTWQuestPoint(PlayerInstance player)
 	{
 		_participantPoints.putIfAbsent(player.getObjectId(), new Integer[]
 		{
@@ -596,7 +596,7 @@ public final class TerritoryWarManager implements Siegable
 		_participantPoints.get(player.getObjectId())[2]++;
 	}
 	
-	public void giveTWPoint(L2PcInstance killer, int victimSide, int type)
+	public void giveTWPoint(PlayerInstance killer, int victimSide, int type)
 	{
 		if (victimSide == 0)
 		{
@@ -604,7 +604,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		if ((killer.getParty() != null) && (type < 5))
 		{
-			for (L2PcInstance pl : killer.getParty().getMembers())
+			for (PlayerInstance pl : killer.getParty().getMembers())
 			{
 				if ((pl.getSiegeSide() == victimSide) || (pl.getSiegeSide() == 0) || !Util.checkIfInRange(2000, killer, pl, false))
 				{
@@ -645,7 +645,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public int[] calcReward(L2PcInstance player)
+	public int[] calcReward(PlayerInstance player)
 	{
 		if (_participantPoints.containsKey(player.getObjectId()))
 		{
@@ -694,7 +694,7 @@ public final class TerritoryWarManager implements Siegable
 		};
 	}
 	
-	public void debugReward(L2PcInstance player)
+	public void debugReward(PlayerInstance player)
 	{
 		player.sendMessage("Registred TerrId: " + player.getSiegeSide());
 		if (_participantPoints.containsKey(player.getObjectId()))
@@ -720,7 +720,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public void resetReward(L2PcInstance player)
+	public void resetReward(PlayerInstance player)
 	{
 		if (_participantPoints.containsKey(player.getObjectId()))
 		{
@@ -728,11 +728,11 @@ public final class TerritoryWarManager implements Siegable
 		}
 	}
 	
-	public L2Npc spawnNPC(int npcId, Location loc)
+	public Npc spawnNPC(int npcId, Location loc)
 	{
 		try
 		{
-			final L2Spawn spawnDat = new L2Spawn(npcId);
+			final Spawn spawnDat = new Spawn(npcId);
 			spawnDat.setAmount(1);
 			spawnDat.setXYZ(loc);
 			spawnDat.setHeading(loc.getHeading());
@@ -1093,7 +1093,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 		}
 		
-		for (L2SiegeFlagInstance flag : _clanFlags.values())
+		for (SiegeFlagInstance flag : _clanFlags.values())
 		{
 			flag.deleteMe();
 		}
@@ -1101,7 +1101,7 @@ public final class TerritoryWarManager implements Siegable
 		
 		for (Integer castleId : _registeredClans.keySet())
 		{
-			for (L2Clan clan : _registeredClans.get(castleId))
+			for (Clan clan : _registeredClans.get(castleId))
 			{
 				changeRegistration(castleId, clan.getId(), true);
 			}
@@ -1130,9 +1130,9 @@ public final class TerritoryWarManager implements Siegable
 		
 		for (int castleId : _registeredClans.keySet())
 		{
-			for (L2Clan clan : _registeredClans.get(castleId))
+			for (Clan clan : _registeredClans.get(castleId))
 			{
-				for (L2PcInstance player : clan.getOnlineMembers(0))
+				for (PlayerInstance player : clan.getOnlineMembers(0))
 				{
 					if (clear)
 					{
@@ -1162,7 +1162,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			for (int objId : _registeredMercenaries.get(castleId))
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+				final PlayerInstance player = World.getInstance().getPlayer(objId);
 				if (player == null)
 				{
 					continue;
@@ -1190,7 +1190,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			if (terr.getOwnerClan() != null)
 			{
-				for (L2PcInstance player : terr.getOwnerClan().getOnlineMembers(0))
+				for (PlayerInstance player : terr.getOwnerClan().getOnlineMembers(0))
 				{
 					if (player == null)
 					{
@@ -1229,7 +1229,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			if (_isTWInProgress)
 			{
-				for (L2PcInstance player : L2World.getInstance().getPlayers())
+				for (PlayerInstance player : World.getInstance().getPlayers())
 				{
 					if ((player != null) && (player.getSiegeSide() > 0))
 					{
@@ -1405,7 +1405,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			if (ter.getOwnerClan() != null)
 			{
-				for (L2PcInstance member : ter.getOwnerClan().getOnlineMembers(0))
+				for (PlayerInstance member : ter.getOwnerClan().getOnlineMembers(0))
 				{
 					member.sendPacket(sm);
 					if ((exp > 0) || (sp > 0))
@@ -1415,11 +1415,11 @@ public final class TerritoryWarManager implements Siegable
 				}
 			}
 		}
-		for (List<L2Clan> list : _registeredClans.values())
+		for (List<Clan> list : _registeredClans.values())
 		{
-			for (L2Clan c : list)
+			for (Clan c : list)
 			{
-				for (L2PcInstance member : c.getOnlineMembers(0))
+				for (PlayerInstance member : c.getOnlineMembers(0))
 				{
 					member.sendPacket(sm);
 					if ((exp > 0) || (sp > 0))
@@ -1434,7 +1434,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			for (int objId : list)
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+				final PlayerInstance player = World.getInstance().getPlayer(objId);
 				if ((player != null) && ((player.getClan() == null) || !checkIsRegistered(-1, player.getClan())))
 				{
 					player.sendPacket(sm);
@@ -1453,9 +1453,9 @@ public final class TerritoryWarManager implements Siegable
 		protected int _npcId;
 		private final int _castleId;
 		private final int _type;
-		private L2Npc _npc;
+		private Npc _npc;
 		
-		public TerritoryNPCSpawn(int castle_id, Location loc, int npc_id, int type, L2Npc npc)
+		public TerritoryNPCSpawn(int castle_id, Location loc, int npc_id, int type, Npc npc)
 		{
 			_castleId = castle_id;
 			_location = loc;
@@ -1484,7 +1484,7 @@ public final class TerritoryWarManager implements Siegable
 			return _type;
 		}
 		
-		public void setNPC(L2Npc npc)
+		public void setNPC(Npc npc)
 		{
 			if (_npc != null)
 			{
@@ -1493,7 +1493,7 @@ public final class TerritoryWarManager implements Siegable
 			_npc = npc;
 		}
 		
-		public L2Npc getNpc()
+		public Npc getNpc()
 		{
 			return _npc;
 		}
@@ -1511,11 +1511,11 @@ public final class TerritoryWarManager implements Siegable
 		private final int _territoryId;
 		private final int _castleId; // territory Castle
 		protected int _fortId; // territory Fortress
-		private L2Clan _ownerClan;
+		private Clan _ownerClan;
 		private final List<TerritoryNPCSpawn> _spawnList = new LinkedList<>();
 		private final TerritoryNPCSpawn[] _territoryWardSpawnPlaces;
 		private boolean _isInProgress = false;
-		private L2SiegeFlagInstance _territoryHQ = null;
+		private SiegeFlagInstance _territoryHQ = null;
 		private final int[] _questDone;
 		
 		public Territory(int castleId)
@@ -1590,7 +1590,7 @@ public final class TerritoryWarManager implements Siegable
 				}
 				else
 				{
-					final L2Npc npc = twSpawn.getNpc();
+					final Npc npc = twSpawn.getNpc();
 					if ((npc != null) && !npc.isDead())
 					{
 						npc.deleteMe();
@@ -1630,22 +1630,22 @@ public final class TerritoryWarManager implements Siegable
 			return _fortId;
 		}
 		
-		public L2Clan getOwnerClan()
+		public Clan getOwnerClan()
 		{
 			return _ownerClan;
 		}
 		
-		public void setOwnerClan(L2Clan newOwner)
+		public void setOwnerClan(Clan newOwner)
 		{
 			_ownerClan = newOwner;
 		}
 		
-		public void setHQ(L2SiegeFlagInstance hq)
+		public void setHQ(SiegeFlagInstance hq)
 		{
 			_territoryHQ = hq;
 		}
 		
-		public L2SiegeFlagInstance getHQ()
+		public SiegeFlagInstance getHQ()
 		{
 			return _territoryHQ;
 		}
@@ -1697,61 +1697,61 @@ public final class TerritoryWarManager implements Siegable
 	}
 	
 	@Override
-	public L2SiegeClan getAttackerClan(int clanId)
+	public SiegeClan getAttackerClan(int clanId)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public L2SiegeClan getAttackerClan(L2Clan clan)
+	public SiegeClan getAttackerClan(Clan clan)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public List<L2SiegeClan> getAttackerClans()
+	public List<SiegeClan> getAttackerClans()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public List<L2PcInstance> getAttackersInZone()
+	public List<PlayerInstance> getAttackersInZone()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public boolean checkIsAttacker(L2Clan clan)
+	public boolean checkIsAttacker(Clan clan)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public L2SiegeClan getDefenderClan(int clanId)
+	public SiegeClan getDefenderClan(int clanId)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public L2SiegeClan getDefenderClan(L2Clan clan)
+	public SiegeClan getDefenderClan(Clan clan)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public List<L2SiegeClan> getDefenderClans()
+	public List<SiegeClan> getDefenderClans()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public boolean checkIsDefender(L2Clan clan)
+	public boolean checkIsDefender(Clan clan)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
 	@Override
-	public List<L2Npc> getFlag(L2Clan clan)
+	public List<Npc> getFlag(Clan clan)
 	{
 		throw new UnsupportedOperationException();
 	}

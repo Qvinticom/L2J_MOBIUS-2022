@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 
 public class OlympiadStadiaManager
 {
@@ -39,13 +39,13 @@ public class OlympiadStadiaManager
 		return _instance;
 	}
 	
-	private List<L2OlympiadStadiumZone> _olympiadStadias;
+	private List<OlympiadStadiumZone> _olympiadStadias;
 	
 	public OlympiadStadiaManager()
 	{
 	}
 	
-	public void addStadium(L2OlympiadStadiumZone arena)
+	public void addStadium(OlympiadStadiumZone arena)
 	{
 		if (_olympiadStadias == null)
 		{
@@ -55,11 +55,11 @@ public class OlympiadStadiaManager
 		_olympiadStadias.add(arena);
 	}
 	
-	public final L2OlympiadStadiumZone getStadium(L2Character character)
+	public final OlympiadStadiumZone getStadium(Creature creature)
 	{
-		for (L2OlympiadStadiumZone temp : _olympiadStadias)
+		for (OlympiadStadiumZone temp : _olympiadStadias)
 		{
-			if (temp.isCharacterInZone(character))
+			if (temp.isCharacterInZone(creature))
 			{
 				return temp;
 			}
@@ -68,11 +68,11 @@ public class OlympiadStadiaManager
 		return null;
 	}
 	
-	public final L2OlympiadStadiumZone getStadiumByLoc(int x, int y, int z)
+	public final OlympiadStadiumZone getStadiumByLoc(int x, int y, int z)
 	{
 		if (_olympiadStadias != null)
 		{
-			for (L2OlympiadStadiumZone temp : _olympiadStadias)
+			for (OlympiadStadiumZone temp : _olympiadStadias)
 			{
 				if (temp.isInsideZone(x, y, z))
 				{

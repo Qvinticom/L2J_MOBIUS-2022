@@ -17,8 +17,8 @@
 package quests.Q00928_100DaySubjugationOperation;
 
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -65,7 +65,7 @@ public class Q00928_100DaySubjugationOperation extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -118,7 +118,7 @@ public class Q00928_100DaySubjugationOperation extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -148,7 +148,7 @@ public class Q00928_100DaySubjugationOperation extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && (qs.isCond(1)))
@@ -157,31 +157,31 @@ public class Q00928_100DaySubjugationOperation extends Quest
 			{
 				case LILLIM_ROYAL_KNIGHT:
 				{
-					final L2Npc mob1 = addSpawn(WANDERING_OF_DIMENSION, npc, false, 180000, false);
+					final Npc mob1 = addSpawn(WANDERING_OF_DIMENSION, npc, false, 180000, false);
 					addAttackPlayerDesire(mob1, killer);
 					break;
 				}
 				case LILLIM_SLAYER:
 				{
-					final L2Npc mob2 = addSpawn(ROAMING_VENGEANCE, npc, false, 180000, false);
+					final Npc mob2 = addSpawn(ROAMING_VENGEANCE, npc, false, 180000, false);
 					addAttackPlayerDesire(mob2, killer);
 					break;
 				}
 				case GIGANTIC_HEALER:
 				{
-					final L2Npc mob3 = addSpawn(LOST_SOUL_DIMENSION, npc, false, 180000, false);
+					final Npc mob3 = addSpawn(LOST_SOUL_DIMENSION, npc, false, 180000, false);
 					addAttackPlayerDesire(mob3, killer);
 					break;
 				}
 				case LILLIM_GRAT_MAGUS:
 				{
-					final L2Npc mob4 = addSpawn(LOST_DIMENSION_EVIL, npc, false, 180000, false);
+					final Npc mob4 = addSpawn(LOST_DIMENSION_EVIL, npc, false, 180000, false);
 					addAttackPlayerDesire(mob4, killer);
 					break;
 				}
 				case NEPHILM_ROYAL_GUARD:
 				{
-					final L2Npc mob5 = addSpawn(WANDERING_SPIRIT, npc, false, 180000, false);
+					final Npc mob5 = addSpawn(WANDERING_SPIRIT, npc, false, 180000, false);
 					addAttackPlayerDesire(mob5, killer);
 					break;
 				}

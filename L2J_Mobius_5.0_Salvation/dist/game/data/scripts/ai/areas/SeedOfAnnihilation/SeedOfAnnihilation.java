@@ -25,14 +25,14 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2EffectZone;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.EffectZone;
 
 import ai.AbstractNpcAI;
 
@@ -270,12 +270,12 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 				a_regionsData.af_npcs[j] = addSpawn(ANNIHILATION_FURNACE, a_regionsData.af_spawns[j][0], a_regionsData.af_spawns[j][1], a_regionsData.af_spawns[j][2], a_regionsData.af_spawns[j][3], false, 0);
 				a_regionsData.af_npcs[j].setDisplayEffect(a_regionsData.activeBuff);
 			}
-			ZoneManager.getInstance().getZoneById(a_regionsData.buff_zone, L2EffectZone.class).addSkill(ZONE_BUFFS[a_regionsData.activeBuff], 1);
+			ZoneManager.getInstance().getZoneById(a_regionsData.buff_zone, EffectZone.class).addSkill(ZONE_BUFFS[a_regionsData.activeBuff], 1);
 		}
 		startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - System.currentTimeMillis(), null, null);
 	}
 	
-	private void spawnGroupOfMinion(L2MonsterInstance npc, int[] mobIds)
+	private void spawnGroupOfMinion(MonsterInstance npc, int[] mobIds)
 	{
 		for (int mobId : mobIds)
 		{
@@ -284,20 +284,20 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		for (SeedRegion element : _regionsData)
 		{
 			if (CommonUtil.contains(element.elite_mob_ids, npc.getId()))
 			{
-				spawnGroupOfMinion((L2MonsterInstance) npc, element.minion_lists[getRandom(element.minion_lists.length)]);
+				spawnGroupOfMinion((MonsterInstance) npc, element.minion_lists[getRandom(element.minion_lists.length)]);
 			}
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{
@@ -309,12 +309,12 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 			{
 				_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];
 				
-				for (L2Npc af : _regionsData[i].af_npcs)
+				for (Npc af : _regionsData[i].af_npcs)
 				{
 					af.setDisplayEffect(_regionsData[i].activeBuff);
 				}
 				
-				final L2EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class);
+				final EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, EffectZone.class);
 				zone.clearSkills();
 				zone.addSkill(ZONE_BUFFS[_regionsData[i].activeBuff], 1);
 			}
@@ -338,26 +338,26 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (TELEPORT_ZONES.containsKey(zone.getId()))
 		{
 			final Location teleLoc = TELEPORT_ZONES.get(zone.getId());
 			// Conditions for Quest 454
-			L2World.getInstance().forEachVisibleObjectInRange(character, L2Npc.class, 500, npc ->
+			World.getInstance().forEachVisibleObjectInRange(creature, Npc.class, 500, npc ->
 			{
 				if ((npc.getId() == 32738) && (npc.getTarget() != null))
 				{
-					if (npc.getTarget().getObjectId() == character.getObjectId())
+					if (npc.getTarget().getObjectId() == creature.getObjectId())
 					{
 						npc.teleToLocation(teleLoc, false);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, character, 150);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, creature, 150);
 					}
 				}
 			});
-			character.teleToLocation(teleLoc, false);
+			creature.teleToLocation(teleLoc, false);
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	private static class SeedRegion
@@ -366,7 +366,7 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		public int[][] minion_lists;
 		public int buff_zone;
 		public int[][] af_spawns;
-		public L2Npc[] af_npcs = new L2Npc[2];
+		public Npc[] af_npcs = new Npc[2];
 		public int activeBuff = 0;
 		
 		public SeedRegion(int[] emi, int[][] ml, int bz, int[][] as)

@@ -31,7 +31,7 @@ import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.LoginController.AuthLoginResult;
 import com.l2jmobius.loginserver.model.data.AccountInfo;
 import com.l2jmobius.loginserver.network.ConnectionState;
-import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked.AccountKickedReason;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
@@ -44,7 +44,7 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
  * 
  * <pre>
  */
-public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
+public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 {
 	private static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	
@@ -56,7 +56,7 @@ public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 	private String _password;
 	
 	@Override
-	public boolean read(L2LoginClient client, PacketReader packet)
+	public boolean read(LoginClient client, PacketReader packet)
 	{
 		if (packet.getReadableBytes() >= 256)
 		{
@@ -74,7 +74,7 @@ public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 	}
 	
 	@Override
-	public void run(L2LoginClient client)
+	public void run(LoginClient client)
 	{
 		byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
 		try
@@ -156,7 +156,7 @@ public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 			}
 			case ALREADY_ON_LS:
 			{
-				final L2LoginClient oldClient = lc.getAuthedClient(info.getLogin());
+				final LoginClient oldClient = lc.getAuthedClient(info.getLogin());
 				if (oldClient != null)
 				{
 					// kick the other client

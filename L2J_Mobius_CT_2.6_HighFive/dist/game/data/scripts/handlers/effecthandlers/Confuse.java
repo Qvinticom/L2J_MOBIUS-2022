@@ -22,9 +22,9 @@ import java.util.List;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -78,16 +78,16 @@ public final class Confuse extends AbstractEffect
 	{
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		// Getting the possible targets
 		
-		L2World.getInstance().forEachVisibleObject(info.getEffected(), L2Character.class, targetList::add);
+		World.getInstance().forEachVisibleObject(info.getEffected(), Creature.class, targetList::add);
 		
 		// if there is no target, exit function
 		if (!targetList.isEmpty())
 		{
 			// Choosing randomly a new target
-			final L2Character target = targetList.get(Rnd.get(targetList.size()));
+			final Creature target = targetList.get(Rnd.get(targetList.size()));
 			// Attacking the target
 			info.getEffected().setTarget(target);
 			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);

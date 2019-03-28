@@ -18,11 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
@@ -35,10 +35,10 @@ public final class ServitorShare extends AbstractEffect
 {
 	private static final class ScheduledEffectExitTask implements Runnable
 	{
-		private final L2Character _effected;
+		private final Creature _effected;
 		private final int _skillId;
 		
-		public ScheduledEffectExitTask(L2Character effected, int skillId)
+		public ScheduledEffectExitTask(Creature effected, int skillId)
 		{
 			_effected = effected;
 			_skillId = skillId;
@@ -63,15 +63,15 @@ public final class ServitorShare extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.BUFF;
+		return EffectType.BUFF;
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		final L2Character effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
+		final Creature effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
 		if (effected != null)
 		{
 			ThreadPool.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);

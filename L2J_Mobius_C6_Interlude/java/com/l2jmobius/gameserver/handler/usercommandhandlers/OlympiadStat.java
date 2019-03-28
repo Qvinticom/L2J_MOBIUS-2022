@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -33,7 +33,7 @@ public class OlympiadStat implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
@@ -41,11 +41,11 @@ public class OlympiadStat implements IUserCommandHandler
 		}
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CURRENT_RECORD_FOR_THIS_OLYMPIAD_SESSION_IS_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_HAVE_EARNED_S4_OLYMPIAD_POINTS);
-		sm.addNumber(Olympiad.getInstance().getCompetitionDone(activeChar.getObjectId()));
-		sm.addNumber(Olympiad.getInstance().getCompetitionWon(activeChar.getObjectId()));
-		sm.addNumber(Olympiad.getInstance().getCompetitionLost(activeChar.getObjectId()));
-		sm.addNumber(Olympiad.getInstance().getNoblePoints(activeChar.getObjectId()));
-		activeChar.sendPacket(sm);
+		sm.addNumber(Olympiad.getInstance().getCompetitionDone(player.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getCompetitionWon(player.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getCompetitionLost(player.getObjectId()));
+		sm.addNumber(Olympiad.getInstance().getNoblePoints(player.getObjectId()));
+		player.sendPacket(sm);
 		return true;
 	}
 	

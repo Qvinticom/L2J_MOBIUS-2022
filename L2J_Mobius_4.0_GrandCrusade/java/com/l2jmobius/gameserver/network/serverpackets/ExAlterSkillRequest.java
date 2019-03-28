@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,9 +30,9 @@ public class ExAlterSkillRequest implements IClientOutgoingPacket
 	private final int _currentSkillId;
 	private final int _nextSkillId;
 	private final int _alterTime;
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public ExAlterSkillRequest(L2PcInstance player, int currentSkill, int nextSkill, int alterTime)
+	public ExAlterSkillRequest(PlayerInstance player, int currentSkill, int nextSkill, int alterTime)
 	{
 		_player = player;
 		_currentSkillId = currentSkill;

@@ -21,12 +21,12 @@ import java.util.Calendar;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
@@ -44,7 +44,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 	private int _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_brId = packet.readD();
 		_count = packet.readD();
@@ -52,64 +52,64 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.hasItemRequest() || activeChar.hasRequest(PrimeShopRequest.class))
+		if (player.hasItemRequest() || player.hasRequest(PrimeShopRequest.class))
 		{
-			activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
 			return;
 		}
 		
-		activeChar.addRequest(new PrimeShopRequest(activeChar));
+		player.addRequest(new PrimeShopRequest(player));
 		
 		final PrimeShopGroup item = PrimeShopData.getInstance().getItem(_brId);
-		if (validatePlayer(item, _count, activeChar))
+		if (validatePlayer(item, _count, player))
 		{
 			final int price = (item.getPrice() * _count);
-			final int paymentId = validatePaymentId(activeChar, item, price);
+			final int paymentId = validatePaymentId(player, item, price);
 			
 			if (paymentId < 0)
 			{
-				activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-				activeChar.removeRequest(PrimeShopRequest.class);
+				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+				player.removeRequest(PrimeShopRequest.class);
 				return;
 			}
 			else if (paymentId > 0)
 			{
-				if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true))
+				if (!player.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, player, true))
 				{
-					activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-					activeChar.removeRequest(PrimeShopRequest.class);
+					player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+					player.removeRequest(PrimeShopRequest.class);
 					return;
 				}
 			}
 			else if (paymentId == 0)
 			{
-				if (activeChar.getPrimePoints() < price)
+				if (player.getPrimePoints() < price)
 				{
-					activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
-					activeChar.removeRequest(PrimeShopRequest.class);
+					player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+					player.removeRequest(PrimeShopRequest.class);
 					return;
 				}
-				activeChar.setPrimePoints(activeChar.getPrimePoints() - price);
+				player.setPrimePoints(player.getPrimePoints() - price);
 			}
 			
 			for (PrimeShopItem subItem : item.getItems())
 			{
-				activeChar.addItem("PrimeShop", subItem.getId(), subItem.getCount() * _count, activeChar, true);
+				player.addItem("PrimeShop", subItem.getId(), subItem.getCount() * _count, player, true);
 			}
 			
-			activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
-			activeChar.sendPacket(new ExBRGamePoint(activeChar));
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.SUCCESS));
+			player.sendPacket(new ExBRGamePoint(player));
 		}
 		
-		activeChar.removeRequest(PrimeShopRequest.class);
+		player.removeRequest(PrimeShopRequest.class);
 	}
 	
 	/**
@@ -118,7 +118,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 	 * @param player
 	 * @return
 	 */
-	private static boolean validatePlayer(PrimeShopGroup item, int count, L2PcInstance player)
+	private static boolean validatePlayer(PrimeShopGroup item, int count, PlayerInstance player)
 	{
 		final long currentTime = System.currentTimeMillis() / 1000;
 		if (item == null)
@@ -189,7 +189,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 		return true;
 	}
 	
-	private static int validatePaymentId(L2PcInstance player, PrimeShopGroup item, long amount)
+	private static int validatePaymentId(PlayerInstance player, PrimeShopGroup item, long amount)
 	{
 		switch (item.getPaymentType())
 		{

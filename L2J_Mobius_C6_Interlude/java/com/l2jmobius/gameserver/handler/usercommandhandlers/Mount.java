@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.handler.usercommandhandlers;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -38,84 +38,84 @@ public class Mount implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, L2PcInstance activeChar)
+	public synchronized boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		L2Summon pet = activeChar.getPet();
+		Summon pet = player.getPet();
 		
-		if ((pet != null) && pet.isMountable() && !activeChar.isMounted())
+		if ((pet != null) && pet.isMountable() && !player.isMounted())
 		{
-			if (activeChar.isDead())
+			if (player.isDead())
 			{
 				// A strider cannot be ridden when player is dead.
 				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_DEAD);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
 				SystemMessage msg = new SystemMessage(SystemMessageId.DEAD_STRIDER_CANT_BE_RIDDEN);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 			}
 			else if (pet.isInCombat())
 			{
 				// A strider in battle cannot be ridden.
 				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_IN_BATLLE_CANT_BE_RIDDEN);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 			}
-			else if (activeChar.isInCombat())
+			else if (player.isInCombat())
 			{
 				// A pet cannot be ridden while player is in battle.
 				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 			}
-			else if (!activeChar.isInsideRadius(pet, 60, true, false))
+			else if (!player.isInsideRadius(pet, 60, true, false))
 			{
-				activeChar.sendMessage("Too far away from strider to mount.");
+				player.sendMessage("Too far away from strider to mount.");
 				return false;
 			}
-			else if (!GeoEngine.getInstance().canSeeTarget(activeChar, pet))
+			else if (!GeoEngine.getInstance().canSeeTarget(player, pet))
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.CANT_SEE_TARGET);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 				return false;
 			}
-			else if (activeChar.isSitting() || activeChar.isMoving())
+			else if (player.isSitting() || player.isMoving())
 			{
 				// A strider can be ridden only when player is standing.
 				SystemMessage msg = new SystemMessage(SystemMessageId.STRIDER_CAN_BE_RIDDEN_ONLY_WHILE_STANDING);
-				activeChar.sendPacket(msg);
+				player.sendPacket(msg);
 			}
-			else if (!pet.isDead() && !activeChar.isMounted())
+			else if (!pet.isDead() && !player.isMounted())
 			{
-				if (!activeChar.disarmWeapons())
+				if (!player.disarmWeapons())
 				{
 					return false;
 				}
 				
-				Ride mount = new Ride(activeChar.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
-				Broadcast.toSelfAndKnownPlayersInRadius(activeChar, mount, 810000/* 900 */);
-				activeChar.setMountType(mount.getMountType());
-				activeChar.setMountObjectID(pet.getControlItemId());
-				pet.unSummon(activeChar);
+				Ride mount = new Ride(player.getObjectId(), Ride.ACTION_MOUNT, pet.getTemplate().npcId);
+				Broadcast.toSelfAndKnownPlayersInRadius(player, mount, 810000/* 900 */);
+				player.setMountType(mount.getMountType());
+				player.setMountObjectID(pet.getControlItemId());
+				pet.unSummon(player);
 				
-				if ((activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) || (activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND) != null))
+				if ((player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) || (player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND) != null))
 				{
-					activeChar.dismount();
+					player.dismount();
 				}
 			}
 		}
-		else if (activeChar.isRentedPet())
+		else if (player.isRentedPet())
 		{
-			activeChar.stopRentPet();
+			player.stopRentPet();
 		}
-		else if (activeChar.isMounted())
+		else if (player.isMounted())
 		{
-			activeChar.dismount();
+			player.dismount();
 		}
 		
 		return true;

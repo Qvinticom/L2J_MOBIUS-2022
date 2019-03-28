@@ -36,20 +36,20 @@ import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
-import com.l2jmobius.gameserver.model.L2Territory;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.Territory;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -88,7 +88,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	// Spawn data
-	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
+	private final Map<Integer, Territory> _spawnZoneList = new HashMap<>();
 	private final Map<Integer, List<SODSpawn>> _spawnList = new HashMap<>();
 	// Locations
 	private static final Location ENTER_TELEPORT_2 = new Location(-245800, 220488, -12112);
@@ -293,7 +293,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 								final int id = parseInteger(attrs, "id");
 								final int minz = parseInteger(attrs, "minZ");
 								final int maxz = parseInteger(attrs, "maxZ");
-								final L2Territory ter = new L2Territory(id);
+								final Territory ter = new Territory(id);
 								for (Node f = e.getFirstChild(); f != null; f = f.getNextSibling())
 								{
 									if (f.getNodeName().equals("point"))
@@ -315,10 +315,10 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		spawnState(instance);
-		for (L2DoorInstance door : instance.getDoors())
+		for (DoorInstance door : instance.getDoors())
 		{
 			if (CommonUtil.contains(ATTACKABLE_DOORS, door.getId()))
 			{
@@ -341,7 +341,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 			{
 				if (_spawnZoneList.containsKey(spw.zone))
 				{
-					final L2Territory terr = _spawnZoneList.get(spw.zone);
+					final Territory terr = _spawnZoneList.get(spw.zone);
 					for (int i = 0; i < spw.count; i++)
 					{
 						final Location location = terr.getRandomPoint();
@@ -447,7 +447,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 			addTrap(npcId, x, y, z, h, skill, world.getId());
 			return;
 		}
-		final L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getId());
+		final Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getId());
 		if (addToKillTable)
 		{
 			npc.setScriptValue(1);
@@ -455,7 +455,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 		
 		if (npc.isAttackable())
 		{
-			((L2Attackable) npc).setSeeThroughSilentMove(true);
+			((Attackable) npc).setSeeThroughSilentMove(true);
 		}
 		
 		if (npcId == TIAT_VIDEO_NPC)
@@ -471,31 +471,31 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 		{
 			for (int i = 0; i < TIAT_GUARD_NUMBER; i++)
 			{
-				addMinion((L2MonsterInstance) npc, TIAT_GUARD);
+				addMinion((MonsterInstance) npc, TIAT_GUARD);
 			}
 		}
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.disableCoreAI(true);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (character.isPlayer())
+		if (creature.isPlayer())
 		{
-			final Instance world = character.getInstanceWorld();
+			final Instance world = creature.getInstanceWorld();
 			if ((world != null) && world.isStatus(7))
 			{
 				spawnState(world);
-				final L2Npc videoNpc = world.getNpc(TIAT_VIDEO_NPC);
+				final Npc videoNpc = world.getNpc(TIAT_VIDEO_NPC);
 				if (videoNpc != null)
 				{
-					playMovie(L2World.getInstance().getVisibleObjectsInRange(videoNpc, L2PcInstance.class, 8000), Movie.SC_BOSS_TIAT_OPENING);
+					playMovie(World.getInstance().getVisibleObjectsInRange(videoNpc, PlayerInstance.class, 8000), Movie.SC_BOSS_TIAT_OPENING);
 					videoNpc.deleteMe();
 				}
 			}
@@ -504,7 +504,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -533,7 +533,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -542,14 +542,14 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 			{
 				case "Spawn":
 				{
-					final List<L2PcInstance> players = new ArrayList<>(world.getPlayers());
-					final L2PcInstance target = players.get(getRandom(players.size()));
+					final List<PlayerInstance> players = new ArrayList<>(world.getPlayers());
+					final PlayerInstance target = players.get(getRandom(players.size()));
 					final int deviceCount = world.getParameters().getInt("deviceCount", 0);
 					if ((deviceCount < MAX_DEVICESPAWNEDMOBCOUNT) && !target.isDead())
 					{
 						world.setParameter("deviceCount", deviceCount + 1);
 						
-						final L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocation(), false, 0, false, world.getId());
+						final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocation(), false, 0, false, world.getId());
 						mob.setSeeThroughSilentMove(true);
 						mob.setRunning();
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, (world.getStatus() >= 7) ? MOVE_TO_TIAT : MOVE_TO_DOOR);
@@ -558,7 +558,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 				}
 				case "DoorCheck":
 				{
-					final L2DoorInstance tmp = world.getDoor(FORTRESS_DOOR);
+					final DoorInstance tmp = world.getDoor(FORTRESS_DOOR);
 					if (tmp.getCurrentHp() < tmp.getMaxHp())
 					{
 						world.setParameter("deviceCount", 0);
@@ -585,7 +585,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -639,14 +639,14 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 						if (npc.getId() == TIAT)
 						{
 							world.incStatus();
-							playMovie(L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 8000), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
+							playMovie(World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 8000), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
 							world.removeNpcs();
 							world.finishInstance();
 							GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
 						}
 						else if (npc.getId() == TIAT_GUARD)
 						{
-							addMinion(((L2MonsterInstance) npc).getLeader(), TIAT_GUARD);
+							addMinion(((MonsterInstance) npc).getLeader(), TIAT_GUARD);
 						}
 					}
 				}
@@ -656,13 +656,13 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	@Override
-	public void onNpcDespawn(L2Npc npc)
+	public void onNpcDespawn(Npc npc)
 	{
 		cancelQuestTimer("Spawn", npc, null);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		if (npcId == ALENOS)
@@ -685,7 +685,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	}
 	
 	@Override
-	public String onTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action)
+	public String onTrapAction(TrapInstance trap, Creature trigger, TrapAction action)
 	{
 		final Instance world = trap.getInstanceWorld();
 		if ((world != null) && (action == TrapAction.TRAP_TRIGGERED))

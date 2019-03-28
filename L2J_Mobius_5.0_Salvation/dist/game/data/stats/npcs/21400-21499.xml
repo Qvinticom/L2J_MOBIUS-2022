@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21438" level="65" type="L2Monster" name="Heathen Warrior">
+	<npc id="21438" level="65" type="Monster" name="Heathen Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -68,7 +68,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21439" level="66" type="L2Monster" name="Heathen Inmate">
+	<npc id="21439" level="66" type="Monster" name="Heathen Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -133,7 +133,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="21440" level="67" type="L2Monster" name="Heathen Archer">
+	<npc id="21440" level="67" type="Monster" name="Heathen Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -202,7 +202,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21441" level="68" type="L2Monster" name="Heathen Soldier">
+	<npc id="21441" level="68" type="Monster" name="Heathen Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -270,7 +270,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="21442" level="69" type="L2Monster" name="Heathen Knight">
+	<npc id="21442" level="69" type="Monster" name="Heathen Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />

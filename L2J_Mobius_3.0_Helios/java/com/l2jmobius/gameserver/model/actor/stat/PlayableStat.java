@@ -22,22 +22,22 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
+import com.l2jmobius.gameserver.model.items.Weapon;
 import com.l2jmobius.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 
-public class PlayableStat extends CharStat
+public class PlayableStat extends CreatureStat
 {
 	protected static final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
 	
-	public PlayableStat(L2Playable activeChar)
+	public PlayableStat(Playable player)
 	{
-		super(activeChar);
+		super(player);
 	}
 	
 	public boolean addExp(long value)
@@ -64,8 +64,8 @@ public class PlayableStat extends CharStat
 		byte minimumLevel = 1;
 		if (getActiveChar().isPet())
 		{
-			// get minimum level from L2NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
+			// get minimum level from NpcTemplate
+			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
 		}
 		
 		byte level = minimumLevel; // minimum level
@@ -87,8 +87,8 @@ public class PlayableStat extends CharStat
 		
 		if ((getLevel() > oldLevel) && getActiveChar().isPlayer())
 		{
-			final L2PcInstance activeChar = getActiveChar().getActingPlayer();
-			if (SkillTreesData.getInstance().hasAvailableSkills(activeChar, activeChar.getClassId()))
+			final PlayerInstance player = getActiveChar().getActingPlayer();
+			if (SkillTreesData.getInstance().hasAvailableSkills(player, player.getClassId()))
 			{
 				getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
 			}
@@ -114,8 +114,8 @@ public class PlayableStat extends CharStat
 		byte minimumLevel = 1;
 		if (getActiveChar().isPet())
 		{
-			// get minimum level from L2NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((L2PetInstance) getActiveChar()).getTemplate().getId());
+			// get minimum level from NpcTemplate
+			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
 		}
 		byte level = minimumLevel;
 		
@@ -177,7 +177,7 @@ public class PlayableStat extends CharStat
 		
 		if (!levelIncreased && getActiveChar().isPlayer() && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL)
 		{
-			((L2PcInstance) getActiveChar()).checkPlayerSkills();
+			((PlayerInstance) getActiveChar()).checkPlayerSkills();
 		}
 		
 		if (!levelIncreased)
@@ -230,9 +230,9 @@ public class PlayableStat extends CharStat
 	}
 	
 	@Override
-	public L2Playable getActiveChar()
+	public Playable getActiveChar()
 	{
-		return (L2Playable) super.getActiveChar();
+		return (Playable) super.getActiveChar();
 	}
 	
 	public int getMaxLevel()
@@ -243,14 +243,14 @@ public class PlayableStat extends CharStat
 	@Override
 	public int getPhysicalAttackRadius()
 	{
-		final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+		final Weapon weapon = getActiveChar().getActiveWeaponItem();
 		return weapon != null ? weapon.getBaseAttackRadius() : super.getPhysicalAttackRadius();
 	}
 	
 	@Override
 	public int getPhysicalAttackAngle()
 	{
-		final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+		final Weapon weapon = getActiveChar().getActiveWeaponItem();
 		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
 	}
 }

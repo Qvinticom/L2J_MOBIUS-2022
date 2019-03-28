@@ -34,23 +34,23 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
-import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
-import com.l2jmobius.gameserver.model.zone.L2ZoneRespawn;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneForm;
 import com.l2jmobius.gameserver.model.zone.ZoneRegion;
+import com.l2jmobius.gameserver.model.zone.ZoneRespawn;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
-import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
-import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
-import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
+import com.l2jmobius.gameserver.model.zone.type.ArenaZone;
 import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.zone.type.RespawnZone;
 
 /**
  * This class manages the zones
@@ -63,15 +63,15 @@ public final class ZoneManager implements IGameXmlReader
 	private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
 	
 	public static final int SHIFT_BY = 15;
-	public static final int OFFSET_X = Math.abs(L2World.MAP_MIN_X >> SHIFT_BY);
-	public static final int OFFSET_Y = Math.abs(L2World.MAP_MIN_Y >> SHIFT_BY);
+	public static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
+	public static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
 	
-	private final Map<Class<? extends L2ZoneType>, Map<Integer, ? extends L2ZoneType>> _classZones = new HashMap<>();
+	private final Map<Class<? extends ZoneType>, Map<Integer, ? extends ZoneType>> _classZones = new HashMap<>();
 	private final Map<String, NpcSpawnTerritory> _spawnTerritories = new HashMap<>();
 	private int _lastDynamicId = 300000;
-	private List<L2ItemInstance> _debugItems;
+	private List<ItemInstance> _debugItems;
 	
-	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(L2World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(L2World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
+	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
 	
 	/**
 	 * Instantiates a new zone manager.
@@ -99,9 +99,9 @@ public final class ZoneManager implements IGameXmlReader
 		int count = 0;
 		
 		// Backup old zone settings
-		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
+		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
-			for (L2ZoneType zone : map.values())
+			for (ZoneType zone : map.values())
 			{
 				if (zone.getSettings() != null)
 				{
@@ -126,11 +126,11 @@ public final class ZoneManager implements IGameXmlReader
 		load();
 		
 		// Re-validate all characters in zones
-		for (L2Object obj : L2World.getInstance().getVisibleObjects())
+		for (WorldObject obj : World.getInstance().getVisibleObjects())
 		{
-			if (obj.isCharacter())
+			if (obj.isCreature())
 			{
-				((L2Character) obj).revalidateZone(true);
+				((Creature) obj).revalidateZone(true);
 			}
 		}
 		
@@ -221,7 +221,7 @@ public final class ZoneManager implements IGameXmlReader
 						zoneShape = parseString(attrs, "shape");
 						
 						// Get the zone shape from xml
-						L2ZoneForm zoneForm = null;
+						ZoneForm zoneForm = null;
 						try
 						{
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
@@ -316,12 +316,12 @@ public final class ZoneManager implements IGameXmlReader
 						// Create the zone
 						Class<?> newZone = null;
 						Constructor<?> zoneConstructor = null;
-						L2ZoneType temp;
+						ZoneType temp;
 						try
 						{
-							newZone = Class.forName("com.l2jmobius.gameserver.model.zone.type.L2" + zoneType);
+							newZone = Class.forName("com.l2jmobius.gameserver.model.zone.type." + zoneType);
 							zoneConstructor = newZone.getConstructor(int.class);
-							temp = (L2ZoneType) zoneConstructor.newInstance(zoneId);
+							temp = (ZoneType) zoneConstructor.newInstance(zoneId);
 							temp.setZone(zoneForm);
 						}
 						catch (Exception e)
@@ -341,22 +341,22 @@ public final class ZoneManager implements IGameXmlReader
 								
 								temp.setParameter(name, val);
 							}
-							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof L2ZoneRespawn))
+							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof ZoneRespawn))
 							{
 								attrs = cd.getAttributes();
 								final int spawnX = Integer.parseInt(attrs.getNamedItem("X").getNodeValue());
 								final int spawnY = Integer.parseInt(attrs.getNamedItem("Y").getNodeValue());
 								final int spawnZ = Integer.parseInt(attrs.getNamedItem("Z").getNodeValue());
 								final Node val = attrs.getNamedItem("type");
-								((L2ZoneRespawn) temp).parseLoc(spawnX, spawnY, spawnZ, val == null ? null : val.getNodeValue());
+								((ZoneRespawn) temp).parseLoc(spawnX, spawnY, spawnZ, val == null ? null : val.getNodeValue());
 							}
-							else if ("race".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof L2RespawnZone))
+							else if ("race".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof RespawnZone))
 							{
 								attrs = cd.getAttributes();
 								final String race = attrs.getNamedItem("name").getNodeValue();
 								final String point = attrs.getNamedItem("point").getNodeValue();
 								
-								((L2RespawnZone) temp).addRaceRespawnPoint(race, point);
+								((RespawnZone) temp).addRaceRespawnPoint(race, point);
 							}
 						}
 						if (checkId(zoneId))
@@ -416,7 +416,7 @@ public final class ZoneManager implements IGameXmlReader
 	public int getSize()
 	{
 		int i = 0;
-		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
+		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
 			i += map.size();
 		}
@@ -430,7 +430,7 @@ public final class ZoneManager implements IGameXmlReader
 	 */
 	public boolean checkId(int id)
 	{
-		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
+		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
 			if (map.containsKey(id))
 			{
@@ -447,7 +447,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param zone the zone
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> void addZone(Integer id, T zone)
+	public <T extends ZoneType> void addZone(Integer id, T zone)
 	{
 		Map<Integer, T> map = (Map<Integer, T>) _classZones.get(zone.getClass());
 		if (map == null)
@@ -469,7 +469,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return Collection of zones
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> Collection<T> getAllZones(Class<T> zoneType)
+	public <T extends ZoneType> Collection<T> getAllZones(Class<T> zoneType)
 	{
 		return (Collection<T>) _classZones.get(zoneType).values();
 	}
@@ -480,9 +480,9 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return the zone by id
 	 * @see #getZoneById(int, Class)
 	 */
-	public L2ZoneType getZoneById(int id)
+	public ZoneType getZoneById(int id)
 	{
-		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
+		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
 			if (map.containsKey(id))
 			{
@@ -497,11 +497,11 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param name the zone name
 	 * @return the zone by name
 	 */
-	public L2ZoneType getZoneByName(String name)
+	public ZoneType getZoneByName(String name)
 	{
-		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
+		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
-			final Optional<? extends L2ZoneType> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
+			final Optional<? extends ZoneType> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
 			if (zoneType.isPresent())
 			{
 				return zoneType.get();
@@ -518,7 +518,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return zone
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> T getZoneById(int id, Class<T> zoneType)
+	public <T extends ZoneType> T getZoneById(int id, Class<T> zoneType)
 	{
 		return (T) _classZones.get(zoneType).get(id);
 	}
@@ -531,9 +531,9 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> T getZoneByName(String name, Class<T> zoneType)
+	public <T extends ZoneType> T getZoneByName(String name, Class<T> zoneType)
 	{
-		final Optional<? extends L2ZoneType> zone = _classZones.get(zoneType).values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
+		final Optional<? extends ZoneType> zone = _classZones.get(zoneType).values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
 		if (zone.isPresent())
 		{
 			return (T) zone.get();
@@ -546,7 +546,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param locational the locational
 	 * @return zones
 	 */
-	public List<L2ZoneType> getZones(ILocational locational)
+	public List<ZoneType> getZones(ILocational locational)
 	{
 		return getZones(locational.getX(), locational.getY(), locational.getZ());
 	}
@@ -558,7 +558,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param type the type
 	 * @return zone from where the object is located by type
 	 */
-	public <T extends L2ZoneType> T getZone(ILocational locational, Class<T> type)
+	public <T extends ZoneType> T getZone(ILocational locational, Class<T> type)
 	{
 		if (locational == null)
 		{
@@ -573,10 +573,10 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param y the y
 	 * @return zones
 	 */
-	public List<L2ZoneType> getZones(int x, int y)
+	public List<ZoneType> getZones(int x, int y)
 	{
-		final List<L2ZoneType> temp = new ArrayList<>();
-		for (L2ZoneType zone : getRegion(x, y).getZones().values())
+		final List<ZoneType> temp = new ArrayList<>();
+		for (ZoneType zone : getRegion(x, y).getZones().values())
 		{
 			if (zone.isInsideZone(x, y))
 			{
@@ -593,10 +593,10 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param z the z
 	 * @return zones
 	 */
-	public List<L2ZoneType> getZones(int x, int y, int z)
+	public List<ZoneType> getZones(int x, int y, int z)
 	{
-		final List<L2ZoneType> temp = new ArrayList<>();
-		for (L2ZoneType zone : getRegion(x, y).getZones().values())
+		final List<ZoneType> temp = new ArrayList<>();
+		for (ZoneType zone : getRegion(x, y).getZones().values())
 		{
 			if (zone.isInsideZone(x, y, z))
 			{
@@ -616,9 +616,9 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return zone from given coordinates
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> T getZone(int x, int y, int z, Class<T> type)
+	public <T extends ZoneType> T getZone(int x, int y, int z, Class<T> type)
 	{
-		for (L2ZoneType zone : getRegion(x, y).getZones().values())
+		for (ZoneType zone : getRegion(x, y).getZones().values())
 		{
 			if (zone.isInsideZone(x, y, z) && type.isInstance(zone))
 			{
@@ -643,7 +643,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param object
 	 * @return zones
 	 */
-	public List<NpcSpawnTerritory> getSpawnTerritories(L2Object object)
+	public List<NpcSpawnTerritory> getSpawnTerritories(WorldObject object)
 	{
 		final List<NpcSpawnTerritory> temp = new ArrayList<>();
 		for (NpcSpawnTerritory territory : _spawnTerritories.values())
@@ -659,21 +659,21 @@ public final class ZoneManager implements IGameXmlReader
 	
 	/**
 	 * Gets the arena.
-	 * @param character the character
+	 * @param creature the creature
 	 * @return the arena
 	 */
-	public final L2ArenaZone getArena(L2Character character)
+	public final ArenaZone getArena(Creature creature)
 	{
-		if (character == null)
+		if (creature == null)
 		{
 			return null;
 		}
 		
-		for (L2ZoneType temp : getInstance().getZones(character.getX(), character.getY(), character.getZ()))
+		for (ZoneType temp : getInstance().getZones(creature.getX(), creature.getY(), creature.getZ()))
 		{
-			if ((temp instanceof L2ArenaZone) && temp.isCharacterInZone(character))
+			if ((temp instanceof ArenaZone) && temp.isCharacterInZone(creature))
 			{
-				return (L2ArenaZone) temp;
+				return (ArenaZone) temp;
 			}
 		}
 		
@@ -682,21 +682,21 @@ public final class ZoneManager implements IGameXmlReader
 	
 	/**
 	 * Gets the olympiad stadium.
-	 * @param character the character
+	 * @param creature the creature
 	 * @return the olympiad stadium
 	 */
-	public final L2OlympiadStadiumZone getOlympiadStadium(L2Character character)
+	public final OlympiadStadiumZone getOlympiadStadium(Creature creature)
 	{
-		if (character == null)
+		if (creature == null)
 		{
 			return null;
 		}
 		
-		for (L2ZoneType temp : getInstance().getZones(character.getX(), character.getY(), character.getZ()))
+		for (ZoneType temp : getInstance().getZones(creature.getX(), creature.getY(), creature.getZ()))
 		{
-			if ((temp instanceof L2OlympiadStadiumZone) && temp.isCharacterInZone(character))
+			if ((temp instanceof OlympiadStadiumZone) && temp.isCharacterInZone(creature))
 			{
-				return (L2OlympiadStadiumZone) temp;
+				return (OlympiadStadiumZone) temp;
 			}
 		}
 		return null;
@@ -710,7 +710,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return the closest zone
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> T getClosestZone(L2Object obj, Class<T> type)
+	public <T extends ZoneType> T getClosestZone(WorldObject obj, Class<T> type)
 	{
 		T zone = getZone(obj, type);
 		if (zone == null)
@@ -733,7 +733,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * General storage for debug items used for visualizing zones.
 	 * @return list of items
 	 */
-	public List<L2ItemInstance> getDebugItems()
+	public List<ItemInstance> getDebugItems()
 	{
 		if (_debugItems == null)
 		{
@@ -749,10 +749,10 @@ public final class ZoneManager implements IGameXmlReader
 	{
 		if (_debugItems != null)
 		{
-			final Iterator<L2ItemInstance> it = _debugItems.iterator();
+			final Iterator<ItemInstance> it = _debugItems.iterator();
 			while (it.hasNext())
 			{
-				final L2ItemInstance item = it.next();
+				final ItemInstance item = it.next();
 				if (item != null)
 				{
 					item.decayMe();

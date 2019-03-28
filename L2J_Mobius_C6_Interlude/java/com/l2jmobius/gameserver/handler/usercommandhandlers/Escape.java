@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -42,82 +42,82 @@ public class Escape implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
-		final int unstuckTimer = activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
+		final int unstuckTimer = player.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000;
 		
 		// Check to see if the current player is in Festival.
-		if (activeChar.isFestivalParticipant())
+		if (player.isFestivalParticipant())
 		{
-			activeChar.sendMessage("You may not use an escape command in a festival.");
+			player.sendMessage("You may not use an escape command in a festival.");
 			return false;
 		}
 		
 		// Check to see if the current player is in TVT Event.
-		if (activeChar._inEventTvT && TvT.is_started())
+		if (player._inEventTvT && TvT.is_started())
 		{
-			activeChar.sendMessage("You may not use an escape skill in TvT.");
+			player.sendMessage("You may not use an escape skill in TvT.");
 			return false;
 		}
 		
 		// Check to see if the current player is in CTF Event.
-		if (activeChar._inEventCTF && CTF.is_started())
+		if (player._inEventCTF && CTF.is_started())
 		{
-			activeChar.sendMessage("You may not use an escape skill in CTF.");
+			player.sendMessage("You may not use an escape skill in CTF.");
 			return false;
 		}
 		
 		// Check to see if the current player is in DM Event.
-		if (activeChar._inEventDM && DM.is_started())
+		if (player._inEventDM && DM.is_started())
 		{
-			activeChar.sendMessage("You may not use an escape skill in DM.");
+			player.sendMessage("You may not use an escape skill in DM.");
 			return false;
 		}
 		
 		// Check to see if the current player is in Vip Event.
-		if (activeChar._inEventVIP && VIP._started)
+		if (player._inEventVIP && VIP._started)
 		{
-			activeChar.sendMessage("You may not use an escape skill in VIP.");
+			player.sendMessage("You may not use an escape skill in VIP.");
 			return false;
 		}
 		
 		// Check to see if the current player is in Grandboss zone.
-		if ((GrandBossManager.getInstance().getZone(activeChar) != null) && !activeChar.isGM())
+		if ((GrandBossManager.getInstance().getZone(player) != null) && !player.isGM())
 		{
-			activeChar.sendMessage("You may not use an escape command in Grand boss zone.");
+			player.sendMessage("You may not use an escape command in Grand boss zone.");
 			return false;
 		}
 		
 		// Check to see if the current player is in jail.
-		if (activeChar.isInJail())
+		if (player.isInJail())
 		{
-			activeChar.sendMessage("You can not escape from jail.");
+			player.sendMessage("You can not escape from jail.");
 			return false;
 		}
 		
 		// Check to see if the current player is in fun event.
-		if (activeChar.isInFunEvent())
+		if (player.isInFunEvent())
 		{
-			activeChar.sendMessage("You may not escape from an Event.");
+			player.sendMessage("You may not escape from an Event.");
 			return false;
 		}
 		
 		// Check to see if the current player is in Observer Mode.
-		if (activeChar.inObserverMode())
+		if (player.inObserverMode())
 		{
-			activeChar.sendMessage("You may not escape during Observer mode.");
+			player.sendMessage("You may not escape during Observer mode.");
 			return false;
 		}
 		
 		// Check to see if the current player is sitting.
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendMessage("You may not escape when you sitting.");
+			player.sendMessage("You may not escape when you sitting.");
 			return false;
 		}
 		
 		// Check player status.
-		if (activeChar.isCastingNow() || activeChar.isMovementDisabled() || activeChar.isMuted() || activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.isAwaying())
+		if (player.isCastingNow() || player.isMovementDisabled() || player.isMuted() || player.isAlikeDead() || player.isInOlympiadMode() || player.isAwaying())
 		{
 			return false;
 		}
@@ -133,56 +133,56 @@ public class Escape implements IUserCommandHandler
 			sm.addString("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
 		}
 		
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		
-		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section
-		activeChar.setTarget(activeChar);
-		activeChar.disableAllSkills();
+		player.setTarget(player);
+		player.disableAllSkills();
 		
-		MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
-		activeChar.setTarget(null); // Like retail we haven't self target
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 810000);
+		MagicSkillUse msk = new MagicSkillUse(player, 1050, 1, unstuckTimer, 0);
+		player.setTarget(null); // Like retail we haven't self target
+		Broadcast.toSelfAndKnownPlayersInRadius(player, msk, 810000);
 		SetupGauge sg = new SetupGauge(0, unstuckTimer);
-		activeChar.sendPacket(sg);
+		player.sendPacket(sg);
 		// End SoE Animation section
-		EscapeFinalizer ef = new EscapeFinalizer(activeChar);
+		EscapeFinalizer ef = new EscapeFinalizer(player);
 		// continue execution later
-		activeChar.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
-		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
+		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		return true;
 	}
 	
 	static class EscapeFinalizer implements Runnable
 	{
-		private final L2PcInstance _activeChar;
+		private final PlayerInstance _player;
 		
-		EscapeFinalizer(L2PcInstance activeChar)
+		EscapeFinalizer(PlayerInstance player)
 		{
-			_activeChar = activeChar;
+			_player = player;
 		}
 		
 		@Override
 		public void run()
 		{
-			if (_activeChar.isDead())
+			if (_player.isDead())
 			{
 				return;
 			}
 			
-			_activeChar.setIsIn7sDungeon(false);
-			_activeChar.enableAllSkills();
+			_player.setIsIn7sDungeon(false);
+			_player.enableAllSkills();
 			
 			try
 			{
-				if ((_activeChar.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
+				if ((_player.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
 				{
-					_activeChar.teleToLocation(17836, 170178, -3507, true); // Floran
+					_player.teleToLocation(17836, 170178, -3507, true); // Floran
 					return;
 				}
 				
-				_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				_player.teleToLocation(MapRegionTable.TeleportWhereType.Town);
 			}
 			catch (Throwable e)
 			{

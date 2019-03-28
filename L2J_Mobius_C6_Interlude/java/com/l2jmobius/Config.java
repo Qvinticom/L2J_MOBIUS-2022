@@ -1011,7 +1011,7 @@ public final class Config
 	
 	public static boolean CHECK_SKILLS_ON_ENTER;
 	public static boolean CHECK_NAME_ON_LOGIN;
-	public static boolean L2WALKER_PROTEC;
+	public static boolean L2WALKER_PROTECTION;
 	public static boolean PROTECTED_ENCHANT;
 	public static boolean ONLY_GM_ITEMS_FREE;
 	public static boolean ONLY_GM_TELEPORT_FREE;
@@ -1450,8 +1450,8 @@ public final class Config
 			idSettings.load(is);
 			is.close();
 			
-			MAP_TYPE = ObjectMapType.valueOf(idSettings.getProperty("L2Map", "WorldObjectMap"));
-			SET_TYPE = ObjectSetType.valueOf(idSettings.getProperty("L2Set", "WorldObjectSet"));
+			MAP_TYPE = ObjectMapType.valueOf(idSettings.getProperty("Map", "WorldObjectMap"));
+			SET_TYPE = ObjectSetType.valueOf(idSettings.getProperty("Set", "WorldObjectSet"));
 			IDFACTORY_TYPE = IdFactoryType.valueOf(idSettings.getProperty("IDFactory", "Compaction"));
 			BAD_ID_CHECKING = Boolean.valueOf(idSettings.getProperty("BadIdChecking", "true"));
 		}
@@ -3233,7 +3233,7 @@ public final class Config
 			CHECK_SKILLS_ON_ENTER = Boolean.parseBoolean(POtherSetting.getProperty("CheckSkillsOnEnter", "true"));
 			
 			/** l2walker protection **/
-			L2WALKER_PROTEC = Boolean.parseBoolean(POtherSetting.getProperty("L2WalkerProtection", "false"));
+			L2WALKER_PROTECTION = Boolean.parseBoolean(POtherSetting.getProperty("L2WalkerProtection", "false"));
 			
 			/** enchant protected **/
 			PROTECTED_ENCHANT = Boolean.parseBoolean(POtherSetting.getProperty("ProtectorEnchant", "false"));

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestDeleteMacro extends L2GameClientPacket
+public final class RequestDeleteMacro extends GameClientPacket
 {
 	private int _id;
 	
@@ -32,7 +32,7 @@ public final class RequestDeleteMacro extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (getClient().getActiveChar() == null)
+		if (getClient().getPlayer() == null)
 		{
 			return;
 		}
@@ -43,7 +43,7 @@ public final class RequestDeleteMacro extends L2GameClientPacket
 			return;
 		}
 		
-		getClient().getActiveChar().deleteMacro(_id);
+		getClient().getPlayer().deleteMacro(_id);
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 		sm.addString("Delete macro id=" + _id);
 		sendPacket(sm);

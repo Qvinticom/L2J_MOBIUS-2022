@@ -34,8 +34,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
@@ -91,7 +91,7 @@ public final class CharEffectList
 	/** Effect flags. */
 	private long _effectFlags;
 	/** The owner of this effect list. */
-	private final L2Character _owner;
+	private final Creature _owner;
 	/** Hidden buffs count, prevents iterations. */
 	private final AtomicInteger _hiddenBuffs = new AtomicInteger();
 	
@@ -99,7 +99,7 @@ public final class CharEffectList
 	 * Constructor for effect list.
 	 * @param owner the creature that owns this effect list
 	 */
-	public CharEffectList(L2Character owner)
+	public CharEffectList(Creature owner)
 	{
 		_owner = owner;
 	}
@@ -951,10 +951,10 @@ public final class CharEffectList
 	 */
 	public void updateEffectIcons(boolean partyOnly)
 	{
-		final L2PcInstance player = _owner.getActingPlayer();
+		final PlayerInstance player = _owner.getActingPlayer();
 		if (player != null)
 		{
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
 			final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
 			final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
@@ -1011,8 +1011,8 @@ public final class CharEffectList
 		// @formatter:off
 		_owner.getStatus().getStatusListener().stream()
 			.filter(Objects::nonNull)
-			.filter(L2Object::isPlayer)
-			.map(L2Character::getActingPlayer)
+			.filter(WorldObject::isPlayer)
+			.map(Creature::getActingPlayer)
 			.forEach(upd::sendTo);
 		// @formatter:on
 		

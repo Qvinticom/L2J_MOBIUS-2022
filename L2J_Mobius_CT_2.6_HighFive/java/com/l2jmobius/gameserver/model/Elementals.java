@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.FuncAdd;
 
@@ -247,7 +247,7 @@ public final class Elementals
 			_active = false;
 		}
 		
-		public void applyBonus(L2PcInstance player, boolean isArmor)
+		public void applyBonus(PlayerInstance player, boolean isArmor)
 		{
 			// make sure the bonuses are not applied twice..
 			if (_active)
@@ -292,7 +292,7 @@ public final class Elementals
 			_active = true;
 		}
 		
-		public void removeBonus(L2PcInstance player)
+		public void removeBonus(PlayerInstance player)
 		{
 			// make sure the bonuses are not removed twice
 			if (!_active)
@@ -356,17 +356,17 @@ public final class Elementals
 		_bonus = new ElementalStatBonus(_element, _value);
 	}
 	
-	public void applyBonus(L2PcInstance player, boolean isArmor)
+	public void applyBonus(PlayerInstance player, boolean isArmor)
 	{
 		_bonus.applyBonus(player, isArmor);
 	}
 	
-	public void removeBonus(L2PcInstance player)
+	public void removeBonus(PlayerInstance player)
 	{
 		_bonus.removeBonus(player);
 	}
 	
-	public void updateBonus(L2PcInstance player, boolean isArmor)
+	public void updateBonus(PlayerInstance player, boolean isArmor)
 	{
 		_bonus.removeBonus(player);
 		_bonus.applyBonus(player, isArmor);

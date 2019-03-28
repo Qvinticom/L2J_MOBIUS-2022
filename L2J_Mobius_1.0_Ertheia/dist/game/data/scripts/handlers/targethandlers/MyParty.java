@@ -17,9 +17,9 @@
 package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -36,18 +36,18 @@ public class MyParty implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if ((selectedTarget != null) && selectedTarget.isPlayer() && (selectedTarget != activeChar))
+		if ((selectedTarget != null) && selectedTarget.isPlayer() && (selectedTarget != creature))
 		{
-			final L2Party party = activeChar.getParty();
-			final L2Party targetParty = selectedTarget.getActingPlayer().getParty();
+			final Party party = creature.getParty();
+			final Party targetParty = selectedTarget.getActingPlayer().getParty();
 			if ((party != null) && (targetParty != null) && (party.getLeaderObjectId() == targetParty.getLeaderObjectId()))
 			{
 				return selectedTarget;
 			}
 		}
 		
-		return activeChar;
+		return creature;
 	}
 }

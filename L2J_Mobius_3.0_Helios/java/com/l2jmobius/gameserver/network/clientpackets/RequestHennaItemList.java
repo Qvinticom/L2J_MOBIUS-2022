@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
 
 /**
@@ -30,19 +30,19 @@ public final class RequestHennaItemList implements IClientIncomingPacket
 	private int _unknown;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_unknown = packet.readD(); // TODO: Identify.
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar != null)
+		final PlayerInstance player = client.getPlayer();
+		if (player != null)
 		{
-			activeChar.sendPacket(new HennaEquipList(activeChar));
+			player.sendPacket(new HennaEquipList(player));
 		}
 	}
 }

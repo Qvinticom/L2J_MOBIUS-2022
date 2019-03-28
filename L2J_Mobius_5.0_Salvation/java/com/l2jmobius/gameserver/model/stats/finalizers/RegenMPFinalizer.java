@@ -23,9 +23,9 @@ import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
 import com.l2jmobius.gameserver.model.entity.Fort;
@@ -37,10 +37,10 @@ import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
-import com.l2jmobius.gameserver.model.zone.type.L2FortZone;
-import com.l2jmobius.gameserver.model.zone.type.L2MotherTreeZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.FortZone;
+import com.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
 
 /**
  * @author UnAfraid
@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2MotherTreeZone;
 public class RegenMPFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -57,11 +57,11 @@ public class RegenMPFinalizer implements IStatsFunction
 		
 		if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0))
 			{
-				final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
+				final ClanHallZone zone = ZoneManager.getInstance().getZone(player, ClanHallZone.class);
 				final int posChIndex = zone == null ? -1 : zone.getResidenceId();
 				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
@@ -80,7 +80,7 @@ public class RegenMPFinalizer implements IStatsFunction
 			
 			if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0))
 			{
-				final L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
+				final CastleZone zone = ZoneManager.getInstance().getZone(player, CastleZone.class);
 				final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
 				final int castleIndex = player.getClan().getCastleId();
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
@@ -99,7 +99,7 @@ public class RegenMPFinalizer implements IStatsFunction
 			
 			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
 			{
-				final L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
+				final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
 				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
 				final int fortIndex = player.getClan().getFortId();
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
@@ -119,7 +119,7 @@ public class RegenMPFinalizer implements IStatsFunction
 			// Mother Tree effect is calculated at last'
 			if (player.isInsideZone(ZoneId.MOTHER_TREE))
 			{
-				final L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
+				final MotherTreeZone zone = ZoneManager.getInstance().getZone(player, MotherTreeZone.class);
 				final int mpBonus = zone == null ? 0 : zone.getMpRegenBonus();
 				baseValue += mpBonus;
 			}
@@ -143,7 +143,7 @@ public class RegenMPFinalizer implements IStatsFunction
 		}
 		else if (creature.isPet())
 		{
-			baseValue = ((L2PetInstance) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
+			baseValue = ((PetInstance) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
 		}
 		
 		return Stats.defaultValue(creature, stat, baseValue);

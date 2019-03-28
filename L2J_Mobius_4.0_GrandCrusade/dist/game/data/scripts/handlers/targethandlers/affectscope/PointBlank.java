@@ -24,10 +24,10 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectObject;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 public class PointBlank implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -48,7 +48,7 @@ public class PointBlank implements IAffectScopeHandler
 		
 		// Target checks.
 		final AtomicInteger affected = new AtomicInteger(0);
-		final Predicate<L2Character> filter = c ->
+		final Predicate<Creature> filter = c ->
 		{
 			if ((affectLimit > 0) && (affected.get() >= affectLimit))
 			{
@@ -60,7 +60,7 @@ public class PointBlank implements IAffectScopeHandler
 				{
 					return false;
 				}
-				if (!affectObject.checkAffectedObject(activeChar, c))
+				if (!affectObject.checkAffectedObject(creature, c))
 				{
 					return false;
 				}
@@ -77,12 +77,12 @@ public class PointBlank implements IAffectScopeHandler
 		// Check and add targets.
 		if (skill.getTargetType() == TargetType.GROUND)
 		{
-			if (activeChar.isPlayable())
+			if (creature.isPlayable())
 			{
-				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
+				final Location worldPosition = creature.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, (int) (affectRange + activeChar.calculateDistance2D(worldPosition)), c ->
+					World.getInstance().forEachVisibleObjectInRange(creature, Creature.class, (int) (affectRange + creature.calculateDistance2D(worldPosition)), c ->
 					{
 						if (!c.isInsideRadius3D(worldPosition, affectRange))
 						{
@@ -98,7 +98,7 @@ public class PointBlank implements IAffectScopeHandler
 		}
 		else
 		{
-			L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, affectRange, c ->
+			World.getInstance().forEachVisibleObjectInRange(target, Creature.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{

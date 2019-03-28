@@ -17,8 +17,8 @@
 package ai.areas.SeedOfHellfire;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 
 import ai.AbstractNpcAI;
 
@@ -57,7 +57,7 @@ public final class Zofan extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		if ((npc.getInstanceWorld() == null) && (npc.getSpawn() != null))
 		{
@@ -68,7 +68,7 @@ public final class Zofan extends AbstractNpcAI
 				{
 					if (params.getInt(param, -1) != -1)
 					{
-						addMinion((L2MonsterInstance) npc, params.getInt(param));
+						addMinion((MonsterInstance) npc, params.getInt(param));
 					}
 				}
 			}

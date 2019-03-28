@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.events.impl.instance;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -26,16 +26,16 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
  */
 public final class OnInstanceEnter implements IBaseEvent
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private final Instance _instance;
 	
-	public OnInstanceEnter(L2PcInstance player, Instance instance)
+	public OnInstanceEnter(PlayerInstance player, Instance instance)
 	{
 		_player = player;
 		_instance = instance;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
 		return _player;
 	}

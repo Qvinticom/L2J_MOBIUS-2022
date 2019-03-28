@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,16 +25,16 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExFishingStartCombat implements IClientOutgoingPacket
 {
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	private final int _time;
 	private final int _hp;
 	private final int _lureType;
 	private final int _deceptiveMode;
 	private final int _mode;
 	
-	public ExFishingStartCombat(L2Character character, int time, int hp, int mode, int lureType, int deceptiveMode)
+	public ExFishingStartCombat(Creature creature, int time, int hp, int mode, int lureType, int deceptiveMode)
 	{
-		_activeChar = character;
+		_creature = creature;
 		_time = time;
 		_hp = hp;
 		_mode = mode;
@@ -46,7 +46,7 @@ public class ExFishingStartCombat implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FISHING_START_COMBAT.writeId(packet);
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeD(_time);
 		packet.writeD(_hp);
 		packet.writeC(_mode); // mode: 0 = resting, 1 = fighting

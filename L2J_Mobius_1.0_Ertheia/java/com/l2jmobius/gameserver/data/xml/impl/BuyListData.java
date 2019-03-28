@@ -36,7 +36,7 @@ import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.buylist.ProductList;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 
 /**
  * Loads buy lists for NPCs.
@@ -120,7 +120,7 @@ public final class BuyListData implements IGameXmlReader
 							final NamedNodeMap attrs = node.getAttributes();
 							
 							final int itemId = parseInteger(attrs, "id");
-							final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+							final Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
 								final long price = parseLong(attrs, "price", -1L);

@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class AllyDismiss extends L2GameClientPacket
+public final class AllyDismiss extends GameClientPacket
 {
 	private String _clanName;
 	
@@ -40,7 +40,7 @@ public final class AllyDismiss extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -53,7 +53,7 @@ public final class AllyDismiss extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Clan leaderClan = player.getClan();
+		final Clan leaderClan = player.getClan();
 		
 		if (leaderClan.getAllyId() == 0)
 		{
@@ -67,7 +67,7 @@ public final class AllyDismiss extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClanByName(_clanName);
+		final Clan clan = ClanTable.getInstance().getClanByName(_clanName);
 		
 		if (clan == null)
 		{
@@ -89,13 +89,13 @@ public final class AllyDismiss extends L2GameClientPacket
 		
 		final long currentTime = System.currentTimeMillis();
 		
-		leaderClan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED * 86400000), L2Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
+		leaderClan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED * 86400000), Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
 		
 		leaderClan.updateClanInDB();
 		
 		clan.setAllyId(0);
 		clan.setAllyName(null);
-		clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED * 86400000), L2Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
+		clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED * 86400000), Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
 		clan.setAllyCrest(0);
 		clan.updateClanInDB();
 		

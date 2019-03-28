@@ -24,8 +24,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
 import com.l2jmobius.gameserver.skills.conditions.Condition;
 import com.l2jmobius.gameserver.templates.StatsSet;
 
@@ -34,27 +34,15 @@ import com.l2jmobius.gameserver.templates.StatsSet;
  */
 final class DocumentSkill extends DocumentBase
 {
-	public class Skill
-	{
-		public int id;
-		public String name;
-		public StatsSet[] sets;
-		public StatsSet[] enchsets1;
-		public StatsSet[] enchsets2;
-		public int currentLevel;
-		public List<L2Skill> skills = new ArrayList<>();
-		public List<L2Skill> currentSkills = new ArrayList<>();
-	}
-	
-	private Skill _currentSkill;
-	private final List<L2Skill> _skillsInFile = new ArrayList<>();
+	private SkillDataHolder _currentSkill;
+	private final List<Skill> _skillsInFile = new ArrayList<>();
 	
 	DocumentSkill(File file)
 	{
 		super(file);
 	}
 	
-	private void setCurrentSkill(Skill skill)
+	private void setCurrentSkill(SkillDataHolder skill)
 	{
 		_currentSkill = skill;
 	}
@@ -65,7 +53,7 @@ final class DocumentSkill extends DocumentBase
 		return _currentSkill.sets[_currentSkill.currentLevel];
 	}
 	
-	protected List<L2Skill> getSkills()
+	protected List<Skill> getSkills()
 	{
 		return _skillsInFile;
 	}
@@ -109,7 +97,7 @@ final class DocumentSkill extends DocumentBase
 				{
 					if ("skill".equalsIgnoreCase(d.getNodeName()))
 					{
-						setCurrentSkill(new Skill());
+						setCurrentSkill(new SkillDataHolder());
 						parseSkill(d);
 						_skillsInFile.addAll(_currentSkill.skills);
 						resetTable();
@@ -118,7 +106,7 @@ final class DocumentSkill extends DocumentBase
 			}
 			else if ("skill".equalsIgnoreCase(n.getNodeName()))
 			{
-				setCurrentSkill(new Skill());
+				setCurrentSkill(new SkillDataHolder());
 				parseSkill(n);
 				_skillsInFile.addAll(_currentSkill.skills);
 			}

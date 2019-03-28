@@ -19,12 +19,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,7 +39,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 	private int _type;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_itemId = packet.readD();
 		_type = packet.readD();
@@ -48,17 +48,17 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if ((activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null) && !activeChar.isDead())
+		if ((player.getPrivateStoreType() == PrivateStoreType.NONE) && (player.getActiveRequester() == null) && !player.isDead())
 		{
-			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
+			final ItemInstance item = player.getInventory().getItemByItemId(_itemId);
 			if (item == null)
 			{
 				return;
@@ -66,27 +66,27 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 			
 			if (_enable)
 			{
-				if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
+				if (!player.getInventory().canManipulateWithItemId(item.getId()))
 				{
-					activeChar.sendMessage("Cannot use this item.");
+					player.sendMessage("Cannot use this item.");
 					return;
 				}
 				
 				if (isSummonShot(item.getItem()))
 				{
-					if (activeChar.hasSummon())
+					if (player.hasSummon())
 					{
 						final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT;
 						final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT;
 						if (isSoulshot)
 						{
 							int soulshotCount = 0;
-							final L2Summon pet = activeChar.getPet();
+							final Summon pet = player.getPet();
 							if (pet != null)
 							{
 								soulshotCount += pet.getSoulShotsPerHit();
 							}
-							for (L2Summon servitor : activeChar.getServitors().values())
+							for (Summon servitor : player.getServitors().values())
 							{
 								soulshotCount += servitor.getSoulShotsPerHit();
 							}
@@ -99,12 +99,12 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 						else if (isSpiritshot)
 						{
 							int spiritshotCount = 0;
-							final L2Summon pet = activeChar.getPet();
+							final Summon pet = player.getPet();
 							if (pet != null)
 							{
 								spiritshotCount += pet.getSpiritShotsPerHit();
 							}
-							for (L2Summon servitor : activeChar.getServitors().values())
+							for (Summon servitor : player.getServitors().values())
 							{
 								spiritshotCount += servitor.getSpiritShotsPerHit();
 							}
@@ -116,11 +116,11 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 						}
 						
 						// Activate shots
-						activeChar.addAutoSoulShot(_itemId);
+						player.addAutoSoulShot(_itemId);
 						client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 						
 						// Recharge summon's shots
-						final L2Summon pet = activeChar.getPet();
+						final Summon pet = player.getPet();
 						if (pet != null)
 						{
 							// Send message
@@ -133,7 +133,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 							// Charge
 							pet.rechargeShots(isSoulshot, isSpiritshot, false);
 						}
-						for (L2Summon summon : activeChar.getServitors().values())
+						for (Summon summon : player.getServitors().values())
 						{
 							// Send message
 							if (!summon.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
@@ -156,14 +156,14 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT;
 					final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
 					final boolean isFishingshot = item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT;
-					if ((activeChar.getActiveWeaponItem() == activeChar.getFistsWeaponItem()) || (item.getItem().getCrystalType() != activeChar.getActiveWeaponItem().getCrystalTypePlus()))
+					if ((player.getActiveWeaponItem() == player.getFistsWeaponItem()) || (item.getItem().getCrystalType() != player.getActiveWeaponItem().getCrystalTypePlus()))
 					{
 						client.sendPacket(isSoulshot ? SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON : SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
 						return;
 					}
 					
 					// Activate shots
-					activeChar.addAutoSoulShot(_itemId);
+					player.addAutoSoulShot(_itemId);
 					client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 					
 					// Send message
@@ -172,13 +172,13 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					client.sendPacket(sm);
 					
 					// Recharge player's shots
-					activeChar.rechargeShots(isSoulshot, isSpiritshot, isFishingshot);
+					player.rechargeShots(isSoulshot, isSpiritshot, isFishingshot);
 				}
 			}
 			else
 			{
 				// Cancel auto shots
-				activeChar.removeAutoSoulShot(_itemId);
+				player.removeAutoSoulShot(_itemId);
 				client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 				
 				// Send message
@@ -189,7 +189,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 		}
 	}
 	
-	public static boolean isPlayerShot(L2Item item)
+	public static boolean isPlayerShot(Item item)
 	{
 		switch (item.getDefaultAction())
 		{
@@ -206,7 +206,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 		}
 	}
 	
-	public static boolean isSummonShot(L2Item item)
+	public static boolean isSummonShot(Item item)
 	{
 		switch (item.getDefaultAction())
 		{

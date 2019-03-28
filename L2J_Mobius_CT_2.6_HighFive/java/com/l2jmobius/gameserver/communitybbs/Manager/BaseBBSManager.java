@@ -19,20 +19,20 @@ package com.l2jmobius.gameserver.communitybbs.Manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 
 public abstract class BaseBBSManager
 {
-	public abstract void parsecmd(String command, L2PcInstance activeChar);
+	public abstract void parsecmd(String command, PlayerInstance player);
 	
-	public abstract void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, L2PcInstance activeChar);
+	public abstract void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player);
 	
 	/**
 	 * @param html
 	 * @param acha
 	 */
-	protected void send1001(String html, L2PcInstance acha)
+	protected void send1001(String html, PlayerInstance acha)
 	{
 		if (html.length() < 8192)
 		{
@@ -43,18 +43,18 @@ public abstract class BaseBBSManager
 	/**
 	 * @param acha
 	 */
-	protected void send1002(L2PcInstance acha)
+	protected void send1002(PlayerInstance acha)
 	{
 		send1002(acha, " ", " ", "0");
 	}
 	
 	/**
-	 * @param activeChar
+	 * @param player
 	 * @param string
 	 * @param string2
 	 * @param string3
 	 */
-	protected void send1002(L2PcInstance activeChar, String string, String string2, String string3)
+	protected void send1002(PlayerInstance player, String string, String string2, String string3)
 	{
 		final List<String> _arg = new ArrayList<>(20);
 		_arg.add("0");
@@ -63,9 +63,9 @@ public abstract class BaseBBSManager
 		_arg.add("0");
 		_arg.add("0");
 		_arg.add("0");
-		_arg.add(activeChar.getName());
-		_arg.add(Integer.toString(activeChar.getObjectId()));
-		_arg.add(activeChar.getAccountName());
+		_arg.add(player.getName());
+		_arg.add(Integer.toString(player.getObjectId()));
+		_arg.add(player.getAccountName());
 		_arg.add("9");
 		_arg.add(string2); // subject?
 		_arg.add(string2); // subject?
@@ -74,6 +74,6 @@ public abstract class BaseBBSManager
 		_arg.add(string3); // date?
 		_arg.add("0");
 		_arg.add("0");
-		activeChar.sendPacket(new ShowBoard(_arg));
+		player.sendPacket(new ShowBoard(_arg));
 	}
 }

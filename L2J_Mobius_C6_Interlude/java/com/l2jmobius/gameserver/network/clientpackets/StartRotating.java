@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 
-public final class StartRotating extends L2GameClientPacket
+public final class StartRotating extends GameClientPacket
 {
 	private int _degree;
 	private int _side;
@@ -39,12 +39,12 @@ public final class StartRotating extends L2GameClientPacket
 			return;
 		}
 		
-		if (getClient().getActiveChar() == null)
+		if (getClient().getPlayer() == null)
 		{
 			return;
 		}
 		
-		final BeginRotation br = new BeginRotation(getClient().getActiveChar(), _degree, _side, 0);
-		getClient().getActiveChar().broadcastPacket(br);
+		final BeginRotation br = new BeginRotation(getClient().getPlayer(), _degree, _side, 0);
+		getClient().getPlayer().broadcastPacket(br);
 	}
 }

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.multisell;
 
 import com.l2jmobius.gameserver.model.Elementals;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author DS
@@ -30,7 +30,7 @@ public class ItemInfo
 	private final int _elementPower;
 	private final int[] _elementals = new int[6];
 	
-	public ItemInfo(L2ItemInstance item)
+	public ItemInfo(ItemInstance item)
 	{
 		_enchantLevel = item.getEnchantLevel();
 		_augmentId = item.getAugmentation() != null ? item.getAugmentation().getAugmentationId() : 0;

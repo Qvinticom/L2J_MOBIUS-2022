@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20738" level="13" type="L2Monster" name="Kobold Looter Bepook">
+	<npc id="20738" level="13" type="Monster" name="Kobold Looter Bepook">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -57,7 +57,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="20739" level="10" type="L2Monster" name="Bepook's Pet">
+	<npc id="20739" level="10" type="Monster" name="Bepook's Pet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -104,7 +104,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="20742" level="22" type="L2Monster" name="Mystical Weaver">
+	<npc id="20742" level="22" type="Monster" name="Mystical Weaver">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -154,7 +154,7 @@
 			<height normal="20" grown="24" />
 		</collision>
 	</npc>
-	<npc id="20743" level="25" type="L2Monster" name="Howler">
+	<npc id="20743" level="25" type="Monster" name="Howler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -204,7 +204,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="20744" level="22" type="L2Monster" name="Red Eye Vampire Bat">
+	<npc id="20744" level="22" type="Monster" name="Red Eye Vampire Bat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -256,7 +256,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="20745" level="39" type="L2Monster" name="Gigantiops">
+	<npc id="20745" level="39" type="Monster" name="Gigantiops">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -334,7 +334,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="20746" level="35" type="L2Monster" name="Young Gigantiops">
+	<npc id="20746" level="35" type="Monster" name="Young Gigantiops">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -409,7 +409,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="20747" level="32" type="L2Monster" name="Roxide">
+	<npc id="20747" level="32" type="Monster" name="Roxide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -479,7 +479,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="20748" level="29" type="L2Monster" name="Roxide's Follower">
+	<npc id="20748" level="29" type="Monster" name="Roxide's Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -551,7 +551,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="20749" level="32" type="L2Monster" name="Death Fire">
+	<npc id="20749" level="32" type="Monster" name="Death Fire">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -621,7 +621,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="20750" level="29" type="L2Monster" name="Fire Archer">
+	<npc id="20750" level="29" type="Monster" name="Fire Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -690,7 +690,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20751" level="44" type="L2Monster" name="Snipe">
+	<npc id="20751" level="44" type="Monster" name="Snipe">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -782,7 +782,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="20752" level="42" type="L2Monster" name="Snipe's Subordinate">
+	<npc id="20752" level="42" type="Monster" name="Snipe's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -854,7 +854,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="20753" level="50" type="L2Monster" name="Dark Lord">
+	<npc id="20753" level="50" type="Monster" name="Dark Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -952,7 +952,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="20754" level="48" type="L2Monster" name="Dark Knight">
+	<npc id="20754" level="48" type="Monster" name="Dark Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -1036,7 +1036,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="20755" level="30" type="L2Monster" name="Talakin Commander">
+	<npc id="20755" level="30" type="Monster" name="Talakin Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1107,7 +1107,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="20756" level="28" type="L2Monster" name="Talakin Archer">
+	<npc id="20756" level="28" type="Monster" name="Talakin Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1173,7 +1173,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20757" level="27" type="L2Monster" name="Talakin Raider">
+	<npc id="20757" level="27" type="Monster" name="Talakin Raider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1239,7 +1239,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20758" level="49" type="L2Monster" name="Dragon Bearer Captain">
+	<npc id="20758" level="49" type="Monster" name="Dragon Bearer Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1323,7 +1323,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="20759" level="48" type="L2Monster" name="Dragon Bearer Warrior">
+	<npc id="20759" level="48" type="Monster" name="Dragon Bearer Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
@@ -1410,7 +1410,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="20760" level="47" type="L2Monster" name="Dragon Bearer Archer">
+	<npc id="20760" level="47" type="Monster" name="Dragon Bearer Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -1497,7 +1497,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20761" level="69" type="L2Monster" name="Pytan">
+	<npc id="20761" level="69" type="Monster" name="Pytan">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1577,7 +1577,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20762" level="68" type="L2Monster" name="Pytan Knight">
+	<npc id="20762" level="68" type="Monster" name="Pytan Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1633,7 +1633,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="20767" level="45" type="L2Monster" name="Timak Orc Troop Captain">
+	<npc id="20767" level="45" type="Monster" name="Timak Orc Troop Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1705,7 +1705,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="20768" level="44" type="L2Monster" name="Timak Orc Troop Shaman">
+	<npc id="20768" level="44" type="Monster" name="Timak Orc Troop Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1774,7 +1774,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="20769" level="43" type="L2Monster" name="Timak Orc Troop Warrior">
+	<npc id="20769" level="43" type="Monster" name="Timak Orc Troop Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1841,7 +1841,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="20770" level="41" type="L2Monster" name="Timak Orc Troop Archer">
+	<npc id="20770" level="41" type="Monster" name="Timak Orc Troop Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1908,7 +1908,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="20771" level="64" type="L2Monster" name="Barif">
+	<npc id="20771" level="64" type="Monster" name="Barif">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1993,7 +1993,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="20772" level="61" type="L2Monster" name="Barif's Pet">
+	<npc id="20772" level="61" type="Monster" name="Barif's Pet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2072,7 +2072,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20775" level="17" type="L2Monster" name="Bugbear Raider">
+	<npc id="20775" level="17" type="Monster" name="Bugbear Raider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -2135,7 +2135,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20776" level="20" type="L2Monster" name="Dark Succubus">
+	<npc id="20776" level="20" type="Monster" name="Dark Succubus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2227,7 +2227,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="20777" level="14" type="L2Monster" name="Hunter Bear">
+	<npc id="20777" level="14" type="Monster" name="Hunter Bear">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2293,7 +2293,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20778" level="39" type="L2Monster" name="Ragna Orc Prefect">
+	<npc id="20778" level="39" type="Monster" name="Ragna Orc Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2346,7 +2346,7 @@
 			<height normal="23" grown="27.6" />
 		</collision>
 	</npc>
-	<npc id="20779" level="39" type="L2Monster" name="Ragna Orc Priest">
+	<npc id="20779" level="39" type="Monster" name="Ragna Orc Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2397,7 +2397,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20780" level="35" type="L2Monster" name="Bloody Axe's Escort">
+	<npc id="20780" level="35" type="Monster" name="Bloody Axe's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2457,7 +2457,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="20781" level="35" type="L2Monster" name="Delu Lizardman Shaman">
+	<npc id="20781" level="35" type="Monster" name="Delu Lizardman Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2536,7 +2536,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="20782" level="17" type="L2Monster" name="Ol Mahum Novice">
+	<npc id="20782" level="17" type="Monster" name="Ol Mahum Novice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -2604,7 +2604,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20783" level="35" type="L2Monster" name="Dread Wolf">
+	<npc id="20783" level="35" type="Monster" name="Dread Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2697,7 +2697,7 @@
 			<height normal="11" />
 		</collision>
 	</npc>
-	<npc id="20784" level="36" type="L2Monster" name="Tasaba Lizardman">
+	<npc id="20784" level="36" type="Monster" name="Tasaba Lizardman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -2772,7 +2772,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="20785" level="37" type="L2Monster" name="Tasaba Lizardman Shaman">
+	<npc id="20785" level="37" type="Monster" name="Tasaba Lizardman Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2848,7 +2848,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="20786" level="39" type="L2Monster" name="Lienrik">
+	<npc id="20786" level="39" type="Monster" name="Lienrik">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2923,7 +2923,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="20787" level="40" type="L2Monster" name="Lienrik Lad">
+	<npc id="20787" level="40" type="Monster" name="Lienrik Lad">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2999,7 +2999,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="20788" level="35" type="L2Monster" name="Rakul">
+	<npc id="20788" level="35" type="Monster" name="Rakul">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3095,7 +3095,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="20789" level="36" type="L2Monster" name="Crokian">
+	<npc id="20789" level="36" type="Monster" name="Crokian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -3171,7 +3171,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="20790" level="37" type="L2Monster" name="Dailaon">
+	<npc id="20790" level="37" type="Monster" name="Dailaon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3247,7 +3247,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="20791" level="38" type="L2Monster" name="Crokian Warrior">
+	<npc id="20791" level="38" type="Monster" name="Crokian Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -3325,7 +3325,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="20792" level="39" type="L2Monster" name="Farhite">
+	<npc id="20792" level="39" type="Monster" name="Farhite">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3407,7 +3407,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="20793" level="40" type="L2Monster" name="Nos">
+	<npc id="20793" level="40" type="Monster" name="Nos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3486,7 +3486,7 @@
 			<height normal="42" grown="50.8" />
 		</collision>
 	</npc>
-	<npc id="20794" level="41" type="L2Monster" name="Blade Stakato">
+	<npc id="20794" level="41" type="Monster" name="Blade Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3562,7 +3562,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="20795" level="42" type="L2Monster" name="Blade Stakato Worker">
+	<npc id="20795" level="42" type="Monster" name="Blade Stakato Worker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3638,7 +3638,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20796" level="43" type="L2Monster" name="Blade Stakato Warrior">
+	<npc id="20796" level="43" type="Monster" name="Blade Stakato Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3715,7 +3715,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="20797" level="44" type="L2Monster" name="Blade Stakato Drone">
+	<npc id="20797" level="44" type="Monster" name="Blade Stakato Drone">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
@@ -3803,7 +3803,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="20798" level="45" type="L2Monster" name="Water Giant">
+	<npc id="20798" level="45" type="Monster" name="Water Giant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3881,7 +3881,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="20799" level="46" type="L2Monster" name="Queen Undine Lad">
+	<npc id="20799" level="46" type="Monster" name="Queen Undine Lad">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

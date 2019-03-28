@@ -16,8 +16,8 @@
  */
 package quests.Q10271_TheEnvelopingDarkness;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -44,10 +44,10 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
@@ -56,12 +56,12 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 		{
 			case "32560-05.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "32556-06.html":
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				break;
 			}
 			case "32556-09.html":
@@ -69,7 +69,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				if (hasQuestItems(player, MEDIBAL_DOCUMENT))
 				{
 					takeItems(player, MEDIBAL_DOCUMENT, -1);
-					st.setCond(4, true);
+					qs.setCond(4, true);
 				}
 				break;
 			}
@@ -82,26 +82,26 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
 			case ORBYU:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
-						st = player.getQuestState(Q10269_ToTheSeedOfDestruction.class.getSimpleName());
-						htmltext = ((player.getLevel() >= 75) && (st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
+						qs = player.getQuestState(Q10269_ToTheSeedOfDestruction.class.getSimpleName());
+						htmltext = ((player.getLevel() >= 75) && (qs != null) && qs.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						break;
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -123,7 +123,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 								htmltext = "32560-08.html";
 								giveAdena(player, 62516, true);
 								addExpAndSp(player, 377403, 37867);
-								st.exitQuest(false, true);
+								qs.exitQuest(false, true);
 								break;
 							}
 						}
@@ -139,13 +139,13 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 			}
 			case EL:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
 					htmltext = "32556-02.html";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -173,18 +173,18 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 			}
 			case MEDIBAL_CORPSE:
 			{
-				if (st.isCompleted())
+				if (qs.isCompleted())
 				{
 					htmltext = "32528-02.html";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 2:
 						{
 							htmltext = "32528-01.html";
-							st.setCond(3, true);
+							qs.setCond(3, true);
 							giveItems(player, MEDIBAL_DOCUMENT, 1);
 							break;
 						}

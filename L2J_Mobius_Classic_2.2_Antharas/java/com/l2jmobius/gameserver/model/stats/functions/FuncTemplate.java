@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.stats.functions;
 
 import com.l2jmobius.gameserver.enums.StatFunction;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -94,7 +94,7 @@ public final class FuncTemplate
 		return _value;
 	}
 	
-	public boolean meetCondition(L2Character effected, Skill skill)
+	public boolean meetCondition(Creature effected, Skill skill)
 	{
 		if ((_attachCond != null) && !_attachCond.test(effected, effected, skill))
 		{

@@ -28,8 +28,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.model.L2TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.StoreTradeList;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * This class manages buylists from database
@@ -41,7 +41,7 @@ public class TradeListTable
 	private static TradeListTable _instance;
 	
 	private int _nextListId;
-	private final Map<Integer, L2TradeList> _lists;
+	private final Map<Integer, StoreTradeList> _lists;
 	
 	/** Task launching the function for restore count of Item (Clan Hall) */
 	private class RestoreCount implements Runnable
@@ -91,7 +91,7 @@ public class TradeListTable
 				statement.setString(1, String.valueOf(rset1.getInt("shop_id")));
 				final ResultSet rset = statement.executeQuery();
 				
-				final L2TradeList buylist = new L2TradeList(rset1.getInt("shop_id"));
+				final StoreTradeList buylist = new StoreTradeList(rset1.getInt("shop_id"));
 				
 				buylist.setNpcId(rset1.getString("npc_id"));
 				int _itemId = 0;
@@ -113,7 +113,7 @@ public class TradeListTable
 						final int currentCount = rset.getInt("currentCount");
 						final int time = rset.getInt("time");
 						
-						final L2ItemInstance buyItem = ItemTable.getInstance().createDummyItem(_itemId);
+						final ItemInstance buyItem = ItemTable.getInstance().createDummyItem(_itemId);
 						
 						if (buyItem == null)
 						{
@@ -220,7 +220,7 @@ public class TradeListTable
 		load();
 	}
 	
-	public L2TradeList getBuyList(int listId)
+	public StoreTradeList getBuyList(int listId)
 	{
 		if (_lists.containsKey(listId))
 		{
@@ -230,11 +230,11 @@ public class TradeListTable
 		return null;
 	}
 	
-	public List<L2TradeList> getBuyListByNpcId(int npcId)
+	public List<StoreTradeList> getBuyListByNpcId(int npcId)
 	{
-		final List<L2TradeList> lists = new ArrayList<>();
+		final List<StoreTradeList> lists = new ArrayList<>();
 		
-		for (L2TradeList list : _lists.values())
+		for (StoreTradeList list : _lists.values())
 		{
 			if (list.isGm())
 			{
@@ -254,7 +254,7 @@ public class TradeListTable
 			return;
 		}
 		
-		for (L2TradeList list : _lists.values())
+		for (StoreTradeList list : _lists.values())
 		{
 			list.restoreCount(time);
 		}
@@ -290,7 +290,7 @@ public class TradeListTable
 		{
 			PreparedStatement statement;
 			
-			for (L2TradeList list : _lists.values())
+			for (StoreTradeList list : _lists.values())
 			{
 				if (list == null)
 				{
@@ -299,7 +299,7 @@ public class TradeListTable
 				
 				listId = list.getListId();
 				
-				for (L2ItemInstance Item : list.getItems())
+				for (ItemInstance Item : list.getItems())
 				{
 					if (Item.getCount() < Item.getInitCount()) // needed?
 					{

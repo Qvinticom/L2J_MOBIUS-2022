@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public class TradeItem
 {
 	private int _objectId;
-	private final L2Item _item;
+	private final Item _item;
 	private final int _location;
 	private int _enchant;
 	private final int _type1;
@@ -43,7 +43,7 @@ public class TradeItem
 	};
 	private final int[] _enchantOptions;
 	
-	public TradeItem(L2ItemInstance item, long count, long price)
+	public TradeItem(ItemInstance item, long count, long price)
 	{
 		_objectId = item.getObjectId();
 		_item = item.getItem();
@@ -62,7 +62,7 @@ public class TradeItem
 		_enchantOptions = item.getEnchantOptions();
 	}
 	
-	public TradeItem(L2Item item, long count, long price)
+	public TradeItem(Item item, long count, long price)
 	{
 		_objectId = 0;
 		_item = item;
@@ -75,7 +75,7 @@ public class TradeItem
 		_price = price;
 		_elemAtkType = Elementals.NONE;
 		_elemAtkPower = 0;
-		_enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
+		_enchantOptions = ItemInstance.DEFAULT_ENCHANT_OPTIONS;
 	}
 	
 	public TradeItem(TradeItem item, long count, long price)
@@ -108,7 +108,7 @@ public class TradeItem
 		return _objectId;
 	}
 	
-	public L2Item getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

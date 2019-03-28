@@ -31,19 +31,19 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestTimer;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -65,8 +65,8 @@ public class Baium extends Quest
 {
 	protected static final Logger LOGGER = Logger.getLogger(Baium.class.getName());
 	
-	private L2Character _target;
-	private L2Skill _skill;
+	private Creature _target;
+	private Skill _skill;
 	private static final int STONE_BAIUM = 29025;
 	private static final int ANGELIC_VORTEX = 31862;
 	private static final int LIVE_BAIUM = 29020;
@@ -113,8 +113,8 @@ public class Baium extends Quest
 	};
 	
 	private long _LastAttackVsBaiumTime = 0;
-	private final List<L2NpcInstance> _Minions = new CopyOnWriteArrayList<>();
-	protected L2BossZone _Zone;
+	private final List<NpcInstance> _Minions = new CopyOnWriteArrayList<>();
+	protected BossZone _Zone;
 	
 	public Baium(int questId, String name, String descr)
 	{
@@ -168,13 +168,13 @@ public class Baium extends Quest
 			final int heading = info.getInteger("heading");
 			final int hp = info.getInteger("currentHP");
 			final int mp = info.getInteger("currentMP");
-			final L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
+			final GrandBossInstance baium = (GrandBossInstance) addSpawn(LIVE_BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
 				Announcements.getInstance().announceToAll("Raid boss " + baium.getName() + " spawned in world.");
 			}
 			GrandBossManager.getInstance().addBoss(baium);
-			final L2NpcInstance _baium = baium;
+			final NpcInstance _baium = baium;
 			ThreadPool.schedule(() ->
 			{
 				try
@@ -202,7 +202,7 @@ public class Baium extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		if (event.equals("baium_unlock"))
 		{
@@ -243,14 +243,14 @@ public class Baium extends Quest
 				npc.setRunning();
 				
 				startQuestTimer("skill_range", 500, npc, null, true);
-				final L2NpcInstance baium = npc;
+				final NpcInstance baium = npc;
 				ThreadPool.schedule(() ->
 				{
 					try
 					{
 						baium.setIsInvul(false);
 						// baium.setIsImobilised(false);
-						// for (L2NpcInstance minion : _Minions)
+						// for (NpcInstance minion : _Minions)
 						// minion.setShowSummonAnimation(false);
 						baium.getAttackByList().addAll(_Zone.getCharactersInside().values());
 					}
@@ -263,7 +263,7 @@ public class Baium extends Quest
 				// lose massive amounts of HP.
 				for (int[] element : ANGEL_LOCATION)
 				{
-					final L2MonsterInstance angel = (L2MonsterInstance) addSpawn(ARCHANGEL, element[0], element[1], element[2], element[3], false, 0);
+					final MonsterInstance angel = (MonsterInstance) addSpawn(ARCHANGEL, element[0], element[1], element[2], element[3], false, 0);
 					angel.setIsInvul(true);
 					_Minions.add(angel);
 					angel.getAttackByList().addAll(_Zone.getCharactersInside().values());
@@ -285,7 +285,7 @@ public class Baium extends Quest
 				if ((_LastAttackVsBaiumTime + (Config.BAIUM_SLEEP * 1000)) < System.currentTimeMillis())
 				{
 					npc.deleteMe(); // despawn the live-baium
-					for (L2NpcInstance minion : _Minions)
+					for (NpcInstance minion : _Minions)
 					{
 						if (minion != null)
 						{
@@ -312,7 +312,7 @@ public class Baium extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		final int npcId = npc.getNpcId();
 		String htmltext = "";
@@ -335,9 +335,9 @@ public class Baium extends Quest
 				// 30 minutes pass with no attacks made against Baium.
 				GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, AWAKE);
 				npc.deleteMe();
-				final L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM, npc);
+				final GrandBossInstance baium = (GrandBossInstance) addSpawn(LIVE_BAIUM, npc);
 				GrandBossManager.getInstance().addBoss(baium);
-				final L2NpcInstance _baium = baium;
+				final NpcInstance _baium = baium;
 				ThreadPool.schedule(() ->
 				{
 					try
@@ -384,7 +384,7 @@ public class Baium extends Quest
 	}
 	
 	@Override
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(NpcInstance npc, PlayerInstance player, Skill skill)
 	{
 		if (npc.isInvul())
 		{
@@ -399,7 +399,7 @@ public class Baium extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (!_Zone.isInsideZone(attacker))
 		{
@@ -416,10 +416,10 @@ public class Baium extends Quest
 			if (attacker.getMountType() == 1)
 			{
 				int sk_4258 = 0;
-				final L2Effect[] effects = attacker.getAllEffects();
+				final Effect[] effects = attacker.getAllEffects();
 				if ((effects != null) && (effects.length != 0))
 				{
-					for (L2Effect e : effects)
+					for (Effect e : effects)
 					{
 						if (e.getSkill().getId() == 4258)
 						{
@@ -441,7 +441,7 @@ public class Baium extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		
@@ -460,7 +460,7 @@ public class Baium extends Quest
 			GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM, info);
 		}
 		
-		for (L2NpcInstance minion : _Minions)
+		for (NpcInstance minion : _Minions)
 		{
 			if (minion != null)
 			{
@@ -478,39 +478,39 @@ public class Baium extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public L2Character getRandomTarget(L2NpcInstance npc)
+	public Creature getRandomTarget(NpcInstance npc)
 	{
-		final List<L2Character> result = new ArrayList<>();
-		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		final List<Creature> result = new ArrayList<>();
+		final Collection<WorldObject> objs = npc.getKnownList().getKnownObjects().values();
 		{
-			for (L2Object obj : objs)
+			for (WorldObject obj : objs)
 			{
-				if (obj instanceof L2Character)
+				if (obj instanceof Creature)
 				{
-					if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+					if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 					{
 						continue;
 					}
 				}
-				if (obj instanceof L2PcInstance)
+				if (obj instanceof PlayerInstance)
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((Creature) obj).isDead())
 					{
-						result.add((L2PcInstance) obj);
+						result.add((PlayerInstance) obj);
 					}
 				}
-				if (obj instanceof L2Summon)
+				if (obj instanceof Summon)
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((Creature) obj).isDead())
 					{
-						result.add((L2Summon) obj);
+						result.add((Summon) obj);
 					}
 				}
 			}
 		}
 		if (result.isEmpty())
 		{
-			for (L2NpcInstance minion : _Minions)
+			for (NpcInstance minion : _Minions)
 			{
 				if (minion != null)
 				{
@@ -531,11 +531,11 @@ public class Baium extends Quest
 			timer.cancel();
 		}
 		startQuestTimer("clean_player", 20000, npc, null);
-		final L2Character target = (L2Character) characters[Rnd.get(characters.length)];
+		final Creature target = (Creature) characters[Rnd.get(characters.length)];
 		return target;
 	}
 	
-	public synchronized void callSkillAI(L2NpcInstance npc)
+	public synchronized void callSkillAI(NpcInstance npc)
 	{
 		if (npc.isInvul() || npc.isCastingNow())
 		{
@@ -551,8 +551,8 @@ public class Baium extends Quest
 			}
 		}
 		
-		final L2Character target = _target;
-		L2Skill skill = _skill;
+		final Creature target = _target;
+		Skill skill = _skill;
 		if (skill == null)
 		{
 			skill = SkillTable.getInstance().getInfo(getRandomSkill(npc), 1);
@@ -590,7 +590,7 @@ public class Baium extends Quest
 		}
 	}
 	
-	public int getRandomSkill(L2NpcInstance npc)
+	public int getRandomSkill(NpcInstance npc)
 	{
 		int skill;
 		if (npc.getCurrentHp() > ((npc.getMaxHp() * 3) / 4.0))
@@ -674,7 +674,7 @@ public class Baium extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(L2NpcInstance npc, L2PcInstance caster, L2Skill skill)
+	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		if (npc.isInvul())
 		{

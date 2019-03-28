@@ -47,10 +47,10 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.BaseSendablePacket;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.crypt.NewCrypt;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.ConnectionState;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.loginserverpackets.game.AuthRequest;
 import com.l2jmobius.gameserver.network.loginserverpackets.game.BlowFishKey;
@@ -106,7 +106,7 @@ public class LoginServerThread extends Thread
 	private final boolean _reserveHost;
 	private int _maxPlayer;
 	private final Set<WaitingClient> _waitingClients = ConcurrentHashMap.newKeySet();
-	private final Map<String, L2GameClient> _accountsInGameServer = new ConcurrentHashMap<>();
+	private final Map<String, GameClient> _accountsInGameServer = new ConcurrentHashMap<>();
 	private int _status;
 	private String _serverName;
 	private final List<String> _subnets;
@@ -286,7 +286,7 @@ public class LoginServerThread extends Thread
 								st.addAttribute(ServerStatus.SERVER_AGE, ServerStatus.SERVER_AGE_ALL);
 							}
 							sendPacket(st);
-							final List<String> playerList = L2World.getInstance().getPlayers().stream().filter(player -> !player.isInOfflineMode()).map(L2PcInstance::getAccountName).collect(Collectors.toList());
+							final List<String> playerList = World.getInstance().getPlayers().stream().filter(player -> !player.isInOfflineMode()).map(PlayerInstance::getAccountName).collect(Collectors.toList());
 							if (!playerList.isEmpty())
 							{
 								sendPacket(new PlayerInGame(playerList));
@@ -395,7 +395,7 @@ public class LoginServerThread extends Thread
 	 * @param client the game client
 	 * @param key the session key
 	 */
-	public void addWaitingClientAndSendRequest(String acc, L2GameClient client, SessionKey key)
+	public void addWaitingClientAndSendRequest(String acc, GameClient client, SessionKey key)
 	{
 		final WaitingClient wc = new WaitingClient(acc, client, key);
 		synchronized (_waitingClients)
@@ -417,7 +417,7 @@ public class LoginServerThread extends Thread
 	 * Removes the waiting client.
 	 * @param client the client
 	 */
-	public void removeWaitingClient(L2GameClient client)
+	public void removeWaitingClient(GameClient client)
 	{
 		WaitingClient toRemove = null;
 		synchronized (_waitingClients)
@@ -467,7 +467,7 @@ public class LoginServerThread extends Thread
 	 * @param client the client
 	 * @return {@code true} if account was not already logged in, {@code false} otherwise
 	 */
-	public boolean addGameServerLogin(String account, L2GameClient client)
+	public boolean addGameServerLogin(String account, GameClient client)
 	{
 		return _accountsInGameServer.putIfAbsent(account, client) == null;
 	}
@@ -558,14 +558,14 @@ public class LoginServerThread extends Thread
 	 */
 	private void doKickPlayer(String account)
 	{
-		final L2GameClient client = _accountsInGameServer.get(account);
+		final GameClient client = _accountsInGameServer.get(account);
 		if (client != null)
 		{
 			if (client.isDetached())
 			{
-				if (client.getActiveChar() != null)
+				if (client.getPlayer() != null)
 				{
-					client.getActiveChar().deleteMe();
+					client.getPlayer().deleteMe();
 				}
 			}
 			else
@@ -780,7 +780,7 @@ public class LoginServerThread extends Thread
 		}
 	}
 	
-	public L2GameClient getClient(String name)
+	public GameClient getClient(String name)
 	{
 		return name != null ? _accountsInGameServer.get(name) : null;
 	}
@@ -817,7 +817,7 @@ public class LoginServerThread extends Thread
 	private static class WaitingClient
 	{
 		public String account;
-		public L2GameClient gameClient;
+		public GameClient gameClient;
 		public SessionKey session;
 		
 		/**
@@ -826,7 +826,7 @@ public class LoginServerThread extends Thread
 		 * @param client the client
 		 * @param key the key
 		 */
-		public WaitingClient(String acc, L2GameClient client, SessionKey key)
+		public WaitingClient(String acc, GameClient client, SessionKey key)
 		{
 			account = acc;
 			gameClient = client;

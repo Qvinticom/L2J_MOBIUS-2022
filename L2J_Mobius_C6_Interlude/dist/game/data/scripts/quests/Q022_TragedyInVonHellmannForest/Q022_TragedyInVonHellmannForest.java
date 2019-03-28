@@ -17,9 +17,9 @@
 package quests.Q022_TragedyInVonHellmannForest;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -47,8 +47,8 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	// Monsters
 	private static final int SOUL_OF_WELL = 27217;
 	
-	private L2NpcInstance _ghostOfPriestInstance = null;
-	private L2NpcInstance _soulOfWellInstance = null;
+	private NpcInstance _ghostOfPriestInstance = null;
+	private NpcInstance _soulOfWellInstance = null;
 	
 	public Q022_TragedyInVonHellmannForest()
 	{
@@ -64,7 +64,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -163,7 +163,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 				_soulOfWellInstance = addSpawn(SOUL_OF_WELL, 34860, -54542, -2048, 0, false, 0);
 				
 				// Attack player.
-				((L2Attackable) _soulOfWellInstance).addDamageHate(player, 0, 99999);
+				((Attackable) _soulOfWellInstance).addDamageHate(player, 0, 99999);
 				_soulOfWellInstance.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			}
 		}
@@ -195,7 +195,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -419,7 +419,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		QuestState st = attacker.getQuestState(qn);
 		if ((st == null) || !st.isStarted() || isPet)
@@ -441,7 +441,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

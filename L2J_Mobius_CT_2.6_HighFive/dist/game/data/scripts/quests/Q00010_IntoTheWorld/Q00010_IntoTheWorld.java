@@ -17,8 +17,8 @@
 package quests.Q00010_IntoTheWorld;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -49,10 +49,10 @@ public class Q00010_IntoTheWorld extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -62,25 +62,25 @@ public class Q00010_IntoTheWorld extends Quest
 		{
 			case "30533-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				break;
 			}
 			case "30533-06.html":
 			{
 				giveItems(player, MARK_OF_TRAVELER, 1);
 				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 				break;
 			}
 			case "30520-02.html":
 			{
 				giveItems(player, VERY_EXPENSIVE_NECKLACE, 1);
-				st.setCond(2, true);
+				qs.setCond(2, true);
 				break;
 			}
 			case "30520-05.html":
 			{
-				st.setCond(4, true);
+				qs.setCond(4, true);
 				break;
 			}
 			case "30650-02.html":
@@ -90,7 +90,7 @@ public class Q00010_IntoTheWorld extends Quest
 					return "30650-03.html";
 				}
 				takeItems(player, VERY_EXPENSIVE_NECKLACE, -1);
-				st.setCond(3, true);
+				qs.setCond(3, true);
 				break;
 			}
 			default:
@@ -103,16 +103,16 @@ public class Q00010_IntoTheWorld extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case BALANKI:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -121,11 +121,11 @@ public class Q00010_IntoTheWorld extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "30533-04.html";
 						}
-						else if (st.isCond(4))
+						else if (qs.isCond(4))
 						{
 							htmltext = "30533-05.html";
 						}
@@ -141,9 +141,9 @@ public class Q00010_IntoTheWorld extends Quest
 			}
 			case REED:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					switch (st.getCond())
+					switch (qs.getCond())
 					{
 						case 1:
 						{
@@ -171,13 +171,13 @@ public class Q00010_IntoTheWorld extends Quest
 			}
 			case GERALD:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					if (st.isCond(2))
+					if (qs.isCond(2))
 					{
 						htmltext = "30650-01.html";
 					}
-					else if (st.isCond(3))
+					else if (qs.isCond(3))
 					{
 						htmltext = "30650-04.html";
 					}

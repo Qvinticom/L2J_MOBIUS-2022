@@ -19,33 +19,33 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * 0x53 WareHouseDepositList dh (h dddhh dhhh d)
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class WareHouseDepositList extends L2GameServerPacket
+public class WareHouseDepositList extends GameServerPacket
 {
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 4; // not sure
 	
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _playerAdena;
-	private final List<L2ItemInstance> _items;
+	private final List<ItemInstance> _items;
 	private final int _whType;
 	
-	public WareHouseDepositList(L2PcInstance player, int type)
+	public WareHouseDepositList(PlayerInstance player, int type)
 	{
-		_activeChar = player;
+		_player = player;
 		_whType = type;
-		_playerAdena = _activeChar.getAdena();
+		_playerAdena = _player.getAdena();
 		_items = new ArrayList<>();
 		
-		for (L2ItemInstance temp : _activeChar.getInventory().getAvailableItems(true))
+		for (ItemInstance temp : _player.getInventory().getAvailableItems(true))
 		{
 			_items.add(temp);
 		}
@@ -53,7 +53,7 @@ public class WareHouseDepositList extends L2GameServerPacket
 		// augmented and shadow items can be stored in private wh
 		if (_whType == PRIVATE)
 		{
-			for (L2ItemInstance temp : player.getInventory().getItems())
+			for (ItemInstance temp : player.getInventory().getItems())
 			{
 				if ((temp != null) && !temp.isEquipped() && (temp.isShadowItem() || temp.isAugmented()))
 				{
@@ -74,7 +74,7 @@ public class WareHouseDepositList extends L2GameServerPacket
 		writeD(_playerAdena);
 		writeH(_items.size());
 		
-		for (L2ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
 			writeD(item.getObjectId()); // unconfirmed, works

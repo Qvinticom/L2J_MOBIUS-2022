@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.HennaTreeTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
 
 /**
  * RequestHennaList - 0xba
  * @author Tempy
  */
-public final class RequestHennaList extends L2GameClientPacket
+public final class RequestHennaList extends GameClientPacket
 {
 	// This is just a trigger packet...
 	@SuppressWarnings("unused")
@@ -40,15 +40,15 @@ public final class RequestHennaList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2HennaInstance[] henna = HennaTreeTable.getInstance().getAvailableHenna(activeChar.getClassId());
-		final HennaEquipList he = new HennaEquipList(activeChar, henna);
-		activeChar.sendPacket(he);
+		final HennaInstance[] henna = HennaTreeTable.getInstance().getAvailableHenna(player.getClassId());
+		final HennaEquipList he = new HennaEquipList(player, henna);
+		player.sendPacket(he);
 	}
 }

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 
@@ -49,18 +49,18 @@ public final class FlowerBud extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("spawn") && npc.isDead())
 		{
-			final L2Npc elegant = addSpawn(FLOWER_SPAWNS.get(Rnd.get(FLOWER_SPAWNS.size())), npc, false, 120000, false);
+			final Npc elegant = addSpawn(FLOWER_SPAWNS.get(Rnd.get(FLOWER_SPAWNS.size())), npc, false, 120000, false);
 			addAttackPlayerDesire(elegant, player);
 		}
 		return event;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		
 		startQuestTimer("spawn", 3000, npc, killer);

@@ -16,31 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * sample 0000: 3e 2a 89 00 4c 01 00 00 00 .|... format dd
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ChangeMoveType extends L2GameServerPacket
+public class ChangeMoveType extends GameServerPacket
 {
 	public static final int WALK = 0;
 	public static final int RUN = 1;
 	
-	private final int _charObjId;
+	private final int _objectId;
 	private final boolean _running;
 	
-	public ChangeMoveType(L2Character character)
+	public ChangeMoveType(Creature creature)
 	{
-		_charObjId = character.getObjectId();
-		_running = character.isRunning();
+		_objectId = creature.getObjectId();
+		_running = creature.isRunning();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x2e);
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_running ? RUN : WALK);
 		writeD(0); // c2
 	}

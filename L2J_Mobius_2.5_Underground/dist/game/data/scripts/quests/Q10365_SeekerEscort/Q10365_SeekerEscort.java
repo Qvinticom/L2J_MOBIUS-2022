@@ -18,8 +18,8 @@ package quests.Q10365_SeekerEscort;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -99,7 +99,7 @@ public final class Q10365_SeekerEscort extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -119,7 +119,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				qs.startQuest();
 				qs.setMemoState(1);
-				final L2Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_SPAWN_1, false, 300000);
+				final Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_SPAWN_1, false, 300000);
 				bloodhound.setSummoner(player);
 				bloodhound.setTitle(player.getName());
 				startQuestTimer("MOVE_DELAY", 500, bloodhound, player);
@@ -139,7 +139,7 @@ public final class Q10365_SeekerEscort extends Quest
 			}
 			case "CHECK_PLAYER":
 			{
-				final L2PcInstance owner = npc.getSummoner().getActingPlayer();
+				final PlayerInstance owner = npc.getSummoner().getActingPlayer();
 				if (owner != null)
 				{
 					if (npc.calculateDistance2D(owner) < 180)
@@ -228,7 +228,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				qs.setMemoState(2);
 				player.teleToLocation(BLOODHOUND_SPAWN_2);
-				final L2Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_SPAWN_2, false, 300000);
+				final Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_SPAWN_2, false, 300000);
 				bloodhound.setTitle(player.getName());
 				bloodhound.setSummoner(player);
 				bloodhound.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.RUFF_RUFF_RRRRRR);
@@ -238,7 +238,7 @@ public final class Q10365_SeekerEscort extends Quest
 			case "SPAWN_KING":
 			{
 				qs.setMemoState(1);
-				final L2Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_SPAWN_1, false, 300000);
+				final Npc bloodhound = addSpawn(BLOODHOUND, BLOODHOUND_SPAWN_1, false, 300000);
 				bloodhound.setTitle(player.getName());
 				bloodhound.setSummoner(player);
 				startQuestTimer("MOVE_DELAY", 500, bloodhound, player);
@@ -249,9 +249,9 @@ public final class Q10365_SeekerEscort extends Quest
 	}
 	
 	@Override
-	public void onMoveFinished(L2Npc npc)
+	public void onMoveFinished(Npc npc)
 	{
-		final L2PcInstance owner = npc.getSummoner().getActingPlayer();
+		final PlayerInstance owner = npc.getSummoner().getActingPlayer();
 		
 		if (owner != null)
 		{
@@ -263,7 +263,7 @@ public final class Q10365_SeekerEscort extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

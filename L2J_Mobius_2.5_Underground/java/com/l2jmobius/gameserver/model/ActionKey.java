@@ -38,7 +38,7 @@ public class ActionKey
 	}
 	
 	/**
-	 * L2ActionKey Initialization
+	 * ActionKey Initialization
 	 * @param cat Category ID
 	 * @param cmd Command ID
 	 * @param key User Defined Primary Key

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="13400" level="1" type="L2Monster" name="Snowy Ripe Squash">
+	<npc id="13400" level="1" type="Monster" name="Snowy Ripe Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -34,7 +34,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13401" level="1" type="L2Monster" name="Snowy Rotten Squash">
+	<npc id="13401" level="1" type="Monster" name="Snowy Rotten Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -68,7 +68,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="13402" level="1" type="L2Monster" name="Snowy Royal Ripe Squash">
+	<npc id="13402" level="1" type="Monster" name="Snowy Royal Ripe Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -102,7 +102,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13403" level="1" type="L2Monster" name="Snowy Large Young Squash">
+	<npc id="13403" level="1" type="Monster" name="Snowy Large Young Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -136,7 +136,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="13404" level="1" type="L2Monster" name="Snowy Large Ripe Squash">
+	<npc id="13404" level="1" type="Monster" name="Snowy Large Ripe Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -170,7 +170,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="13405" level="80" type="L2Monster" name="Snowy Large Rotten Squash">
+	<npc id="13405" level="80" type="Monster" name="Snowy Large Rotten Squash">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -204,7 +204,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13406" level="81" type="L2Monster" name="Snowy Royal Large Ripe Squash">
+	<npc id="13406" level="81" type="Monster" name="Snowy Royal Large Ripe Squash">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -238,7 +238,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="13407" level="99" type="L2Npc" name="Pierce">
+	<npc id="13407" level="99" type="Npc" name="Pierce">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -257,7 +257,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13409" level="99" type="L2Npc" name="Cat">
+	<npc id="13409" level="99" type="Npc" name="Cat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -276,7 +276,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13411" level="99" type="L2Npc" name="Aries">
+	<npc id="13411" level="99" type="Npc" name="Aries">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -295,7 +295,7 @@
 			<height normal="5.15" />
 		</collision>
 	</npc>
-	<npc id="13419" level="1" type="L2Monster" name="High Quality Squash">
+	<npc id="13419" level="1" type="Monster" name="High Quality Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -317,7 +317,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13420" level="1" type="L2Monster" name="Defective Squash">
+	<npc id="13420" level="1" type="Monster" name="Defective Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -339,7 +339,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="13421" level="1" type="L2Monster" name="High Quality Large Squash">
+	<npc id="13421" level="1" type="Monster" name="High Quality Large Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -361,7 +361,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="13422" level="1" type="L2Monster" name="Defective Large Squash">
+	<npc id="13422" level="1" type="Monster" name="Defective Large Squash">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -383,7 +383,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="13479" level="1" type="L2Monster" name="Rosy Rose">
+	<npc id="13479" level="1" type="Monster" name="Rosy Rose">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -405,7 +405,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="13480" level="1" type="L2Monster" name="Purple Rose">
+	<npc id="13480" level="1" type="Monster" name="Purple Rose">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -427,7 +427,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="13481" level="1" type="L2Monster" name="Blue Rose">
+	<npc id="13481" level="1" type="Monster" name="Blue Rose">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

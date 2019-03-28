@@ -16,8 +16,8 @@
  */
 package quests.Q00155_FindSirWindawood;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -46,12 +46,12 @@ public class Q00155_FindSirWindawood extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equalsIgnoreCase("30042-03.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equalsIgnoreCase("30042-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, OFFICIAL_LETTER, 1);
 			return event;
 		}
@@ -59,16 +59,16 @@ public class Q00155_FindSirWindawood extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ABELLOS:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -90,10 +90,10 @@ public class Q00155_FindSirWindawood extends Quest
 			}
 			case SIR_COLLIN_WINDAWOOD:
 			{
-				if (st.isStarted() && hasQuestItems(player, OFFICIAL_LETTER))
+				if (qs.isStarted() && hasQuestItems(player, OFFICIAL_LETTER))
 				{
 					giveItems(player, HASTE_POTION, 2);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = "30311-01.html";
 				}
 				break;

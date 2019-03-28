@@ -26,17 +26,17 @@ import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestTimer;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -99,13 +99,13 @@ public class Kelbim extends AbstractNpcAI
 		FLAME_THROWER
 	};
 	// Misc
-	private static final L2ZoneType ZONE = ZoneManager.getInstance().getZoneById(60023);
+	private static final ZoneType ZONE = ZoneManager.getInstance().getZoneById(60023);
 	private static final Location KELBIM_LOCATION = new Location(-55386, 58939, -274);
 	// Vars
-	private static L2Npc _kelbimBoss;
+	private static Npc _kelbimBoss;
 	private static long _lastAction;
 	private static int _bossStage;
-	private static ArrayList<L2Npc> _minions = new ArrayList<>();
+	private static ArrayList<Npc> _minions = new ArrayList<>();
 	
 	public Kelbim()
 	{
@@ -141,7 +141,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -158,17 +158,17 @@ public class Kelbim extends AbstractNpcAI
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
 					GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
-					for (L2Character charInside : ZONE.getCharactersInside())
+					for (Creature creature : ZONE.getCharactersInside())
 					{
-						if (charInside != null)
+						if (creature != null)
 						{
-							if (charInside.isNpc())
+							if (creature.isNpc())
 							{
-								charInside.deleteMe();
+								creature.deleteMe();
 							}
-							else if (charInside.isPlayer())
+							else if (creature.isPlayer())
 							{
-								charInside.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(charInside, TeleportWhereType.TOWN));
+								creature.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(creature, TeleportWhereType.TOWN));
 							}
 						}
 					}
@@ -200,16 +200,16 @@ public class Kelbim extends AbstractNpcAI
 			{
 				for (int i = 0; i < Rnd.get((_bossStage * 5) / 2, _bossStage * 5); i++)
 				{
-					L2Npc minion = addSpawn(KELBIM_GUARD, _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
+					Npc minion = addSpawn(KELBIM_GUARD, _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
-					((L2Attackable) minion).setIsRaidMinion(true);
+					((Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
 				}
 				for (int i = 0; i < Rnd.get((_bossStage * 2) / 2, _bossStage * 2); i++)
 				{
-					L2Npc minion = addSpawn(KELBIM_GUARDIANS[Rnd.get(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
+					Npc minion = addSpawn(KELBIM_GUARDIANS[Rnd.get(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
-					((L2Attackable) minion).setIsRaidMinion(true);
+					((Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
 				}
 				break;
@@ -221,8 +221,8 @@ public class Kelbim extends AbstractNpcAI
 					if (_kelbimBoss.isInCombat())
 					{
 						Skill randomAttackSkill = AREA_SKILLS[Rnd.get(AREA_SKILLS.length)];
-						ArrayList<L2Npc> _skillNpcs = new ArrayList<>();
-						for (L2PcInstance pl : ZONE.getPlayersInside())
+						ArrayList<Npc> _skillNpcs = new ArrayList<>();
+						for (PlayerInstance pl : ZONE.getPlayersInside())
 						{
 							if (pl == null)
 							{
@@ -230,12 +230,12 @@ public class Kelbim extends AbstractNpcAI
 							}
 							if (Rnd.get(100) > 40)
 							{
-								L2Npc skillMob = addSpawn(KELBIM_SHOUT, pl.getX(), pl.getY(), pl.getZ() + 10, 0, true, 60000, false, 0);
+								Npc skillMob = addSpawn(KELBIM_SHOUT, pl.getX(), pl.getY(), pl.getZ() + 10, 0, true, 60000, false, 0);
 								_skillNpcs.add(skillMob);
 								_minions.add(skillMob);
 							}
 						}
-						for (L2Npc skillNpc : _skillNpcs)
+						for (Npc skillNpc : _skillNpcs)
 						{
 							if (skillNpc == null)
 							{
@@ -267,7 +267,7 @@ public class Kelbim extends AbstractNpcAI
 				}
 				if (!_minions.isEmpty())
 				{
-					for (L2Npc minion : _minions)
+					for (Npc minion : _minions)
 					{
 						if (minion == null)
 						{
@@ -284,7 +284,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		switch (npc.getId())
 		{
@@ -302,7 +302,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == ENTER_DEVICE)
 		{
@@ -321,9 +321,9 @@ public class Kelbim extends AbstractNpcAI
 				return null;
 			}
 			
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			final boolean isInCC = party.isInCommandChannel();
-			final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 			if (!isPartyLeader)
 			{
@@ -338,7 +338,7 @@ public class Kelbim extends AbstractNpcAI
 			}
 			else
 			{
-				for (L2PcInstance member : members)
+				for (PlayerInstance member : members)
 				{
 					if (member.isInsideRadius3D(npc, 1000))
 					{
@@ -357,7 +357,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (npc.getId() == KELBIM)
 		{
@@ -416,7 +416,7 @@ public class Kelbim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		_bossStage = 7;
 		

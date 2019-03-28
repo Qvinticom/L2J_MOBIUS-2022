@@ -17,50 +17,50 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestRecordInfo implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		activeChar.sendPacket(new UserInfo(activeChar));
-		activeChar.sendPacket(new ExBrExtraUserInfo(activeChar));
+		player.sendPacket(new UserInfo(player));
+		player.sendPacket(new ExBrExtraUserInfo(player));
 		
-		L2World.getInstance().forEachVisibleObject(activeChar, L2Object.class, object ->
+		World.getInstance().forEachVisibleObject(player, WorldObject.class, object ->
 		{
-			if (!object.isVisibleFor(activeChar))
+			if (!object.isVisibleFor(player))
 			{
-				object.sendInfo(activeChar);
+				object.sendInfo(player);
 				
-				if (object.isCharacter())
+				if (object.isCreature())
 				{
-					// Update the state of the L2Character object client
+					// Update the state of the Creature object client
 					// side by sending Server->Client packet
 					// MoveToPawn/CharMoveToLocation and AutoAttackStart to
-					// the L2PcInstance
-					final L2Character obj = (L2Character) object;
+					// the PlayerInstance
+					final Creature obj = (Creature) object;
 					if (obj.getAI() != null)
 					{
-						obj.getAI().describeStateToPlayer(activeChar);
+						obj.getAI().describeStateToPlayer(player);
 					}
 				}
 			}

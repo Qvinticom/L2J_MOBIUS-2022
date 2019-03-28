@@ -16,21 +16,21 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class GMViewSkillInfo extends L2GameServerPacket
+public class GMViewSkillInfo extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
-	private L2Skill[] _skills;
+	private final PlayerInstance _player;
+	private Skill[] _skills;
 	
-	public GMViewSkillInfo(L2PcInstance cha)
+	public GMViewSkillInfo(PlayerInstance player)
 	{
-		_activeChar = cha;
-		_skills = _activeChar.getAllSkills();
+		_player = player;
+		_skills = _player.getAllSkills();
 		if (_skills.length == 0)
 		{
-			_skills = new L2Skill[0];
+			_skills = new Skill[0];
 		}
 	}
 	
@@ -38,10 +38,10 @@ public class GMViewSkillInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x91);
-		writeS(_activeChar.getName());
+		writeS(_player.getName());
 		writeD(_skills.length);
 		
-		for (L2Skill skill : _skills)
+		for (Skill skill : _skills)
 		{
 			writeD(skill.isPassive() ? 1 : 0);
 			writeD(skill.getLevel());

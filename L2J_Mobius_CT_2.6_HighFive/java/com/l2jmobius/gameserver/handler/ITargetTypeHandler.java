@@ -16,19 +16,19 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
  */
 public interface ITargetTypeHandler
 {
-	L2Object[] EMPTY_TARGET_LIST = new L2Object[0];
+	WorldObject[] EMPTY_TARGET_LIST = new WorldObject[0];
 	
-	L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target);
+	WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target);
 	
-	Enum<L2TargetType> getTargetType();
+	Enum<TargetType> getTargetType();
 }

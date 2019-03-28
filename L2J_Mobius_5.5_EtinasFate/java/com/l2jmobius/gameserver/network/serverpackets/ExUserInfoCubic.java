@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,11 +25,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExUserInfoCubic implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public ExUserInfoCubic(L2PcInstance cha)
+	public ExUserInfoCubic(PlayerInstance player)
 	{
-		_activeChar = cha;
+		_player = player;
 	}
 	
 	@Override
@@ -37,12 +37,12 @@ public class ExUserInfoCubic implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_USER_INFO_CUBIC.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeH(_activeChar.getCubics().size());
+		packet.writeD(_player.getObjectId());
+		packet.writeH(_player.getCubics().size());
 		
-		_activeChar.getCubics().keySet().forEach(packet::writeH);
+		_player.getCubics().keySet().forEach(packet::writeH);
 		
-		packet.writeD(_activeChar.getAgathionId());
+		packet.writeD(_player.getAgathionId());
 		return true;
 	}
 }

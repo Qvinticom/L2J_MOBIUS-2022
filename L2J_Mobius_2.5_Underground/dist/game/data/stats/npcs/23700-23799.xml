@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23700" level="100" type="L2Monster" name="Altar Guardian">
+	<npc id="23700" level="100" type="Monster" name="Altar Guardian">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -19,7 +19,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23701" level="100" type="L2Monster" name="Knight Guard" title="Dragonclaw Clan">
+	<npc id="23701" level="100" type="Monster" name="Knight Guard" title="Dragonclaw Clan">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -38,7 +38,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23702" level="101" type="L2Npc" name="L2Monster" title="Dragonclaw Royal Guard">
+	<npc id="23702" level="101" type="Npc" name="L2Monster" title="Dragonclaw Royal Guard">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="946520799" sp="1893101" />
@@ -69,7 +69,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23703" level="101" type="L2Npc" name="Ice Knight" title="Winter Omen">
+	<npc id="23703" level="101" type="Npc" name="Ice Knight" title="Winter Omen">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="3117951155" sp="6235973" />
@@ -94,7 +94,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23704" level="101" type="L2Monster" name="Ifrit" title="Master of Flames">
+	<npc id="23704" level="101" type="Monster" name="Ifrit" title="Master of Flames">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="1019330130" sp="2038669" />
@@ -130,7 +130,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23705" level="101" type="L2Npc" name="L2Monster" title="Master of Flames">
+	<npc id="23705" level="101" type="Npc" name="L2Monster" title="Master of Flames">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1019330130" sp="2038669" />
@@ -166,7 +166,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23706" level="100" type="L2Monster" name="Kelbim's Follower">
+	<npc id="23706" level="100" type="Monster" name="Kelbim's Follower">
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -185,7 +185,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23707" level="100" type="L2Monster" name="Kelbim's Follower">
+	<npc id="23707" level="100" type="Monster" name="Kelbim's Follower">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -204,7 +204,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23708" level="100" type="L2Monster" name="Kelbim's Follower">
+	<npc id="23708" level="100" type="Monster" name="Kelbim's Follower">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -223,7 +223,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23709" level="100" type="L2Monster" name="Flame Scarab">
+	<npc id="23709" level="100" type="Monster" name="Flame Scarab">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="499622600" sp="999300" />
@@ -247,7 +247,7 @@
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="23710" level="100" type="L2Monster" name="Knight Guardian">
+	<npc id="23710" level="100" type="Monster" name="Knight Guardian">
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
 		<acquire exp="463935300" sp="927900" />
@@ -266,7 +266,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23711" level="100" type="L2Monster" name="Altar Guardian Soldier">
+	<npc id="23711" level="100" type="Monster" name="Altar Guardian Soldier">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -285,7 +285,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23712" level="100" type="L2Monster" name="Altar Guardian Archer">
+	<npc id="23712" level="100" type="Monster" name="Altar Guardian Archer">
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" /> 
@@ -305,7 +305,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23713" level="100" type="L2Monster" name="Altar Guardian Wizard">
+	<npc id="23713" level="100" type="Monster" name="Altar Guardian Wizard">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
@@ -324,7 +324,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23714" level="85" type="L2Npc" name="Cyclone" title="Typhoon's Guardian">
+	<npc id="23714" level="85" type="Npc" name="Cyclone" title="Typhoon's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -341,7 +341,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23715" level="85" type="L2Npc" name="Hurricane" title="Typhoon's Guardian">
+	<npc id="23715" level="85" type="Npc" name="Hurricane" title="Typhoon's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -358,7 +358,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23716" level="100" type="L2Monster" name="Wild Hog Cannon">
+	<npc id="23716" level="100" type="Monster" name="Wild Hog Cannon">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -377,7 +377,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="23717" level="100" type="L2Monster" name="Siege Golem">
+	<npc id="23717" level="100" type="Monster" name="Siege Golem">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -396,7 +396,7 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="23718" level="100" type="L2Monster" name="Glacier Golem">
+	<npc id="23718" level="100" type="Monster" name="Glacier Golem">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="191032200" sp="382100" />
@@ -419,7 +419,7 @@
 			<height normal="37.4" />
 		</collision>
 	</npc>
-	<npc id="23719" level="100" type="L2Monster" name="Frozen Knight">
+	<npc id="23719" level="100" type="Monster" name="Frozen Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
@@ -447,7 +447,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23720" level="100" type="L2Monster" name="Panthera">
+	<npc id="23720" level="100" type="Monster" name="Panthera">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -485,7 +485,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
+	<npc id="23721" level="100" type="Npc" name="Maze Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -521,7 +521,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="23722" level="100" type="L2Monster" name="Frost Buffalo">
+	<npc id="23722" level="100" type="Monster" name="Frost Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -554,7 +554,7 @@
 			<height normal="34.7" />
 		</collision>
 	</npc>
-	<npc id="23723" level="100" type="L2Npc" name="Frost Ursus">
+	<npc id="23723" level="100" type="Npc" name="Frost Ursus">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -591,7 +591,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23724" level="100" type="L2Monster" name="Buffalo">
+	<npc id="23724" level="100" type="Monster" name="Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -629,7 +629,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="23725" level="100" type="L2Monster" name="Ursus">
+	<npc id="23725" level="100" type="Monster" name="Ursus">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -667,7 +667,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23726" level="100" type="L2Monster" name="Frost Glacier Golem">
+	<npc id="23726" level="100" type="Monster" name="Frost Glacier Golem">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="1528257600" sp="3056600" />

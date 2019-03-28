@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
  * Format: (ch) dd [dddc] d - manor id d - size [ d - crop id d - sales d - price c - reward type ]
  * @author l3x
  */
-public class RequestSetCrop extends L2GameClientPacket
+public class RequestSetCrop extends GameClientPacket
 {
 	private int _size;
 	private int _manorId;

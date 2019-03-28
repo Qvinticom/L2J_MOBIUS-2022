@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -41,26 +41,26 @@ public class Sweep implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (!(activeChar instanceof L2PcInstance))
+		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final PlayerInstance player = (PlayerInstance) creature;
 		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		boolean send = false;
 		
-		for (L2Object target1 : targets)
+		for (WorldObject target1 : targets)
 		{
-			if (!(target1 instanceof L2Attackable))
+			if (!(target1 instanceof Attackable))
 			{
 				continue;
 			}
 			
-			final L2Attackable target = (L2Attackable) target1;
-			L2Attackable.RewardItem[] items = null;
+			final Attackable target = (Attackable) target1;
+			Attackable.RewardItem[] items = null;
 			boolean isSweeping = false;
 			synchronized (target)
 			{
@@ -77,7 +77,7 @@ public class Sweep implements ISkillHandler
 				{
 					continue;
 				}
-				for (L2Attackable.RewardItem ritem : items)
+				for (Attackable.RewardItem ritem : items)
 				{
 					if (player.isInParty())
 					{
@@ -85,7 +85,7 @@ public class Sweep implements ISkillHandler
 					}
 					else
 					{
-						L2ItemInstance item = player.getInventory().addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, target);
+						ItemInstance item = player.getInventory().addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, target);
 						if (iu != null)
 						{
 							iu.addItem(item);

@@ -24,11 +24,11 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -194,13 +194,13 @@ public final class AdminPForge implements IAdminCommandHandler
 		return false;
 	}
 	
-	private void showValuesUsage(L2PcInstance activeChar)
+	private void showValuesUsage(PlayerInstance activeChar)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Usage: //forge_values opcode1[ opcode2[ opcode3]] ;[ format]");
 		showMainPage(activeChar);
 	}
 	
-	private void showSendUsage(L2PcInstance activeChar, String[] opCodes, String format)
+	private void showSendUsage(PlayerInstance activeChar, String[] opCodes, String format)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Usage: //forge_send sc|sb|cs opcode1[;opcode2[;opcode3]][ format value1 ... valueN] ");
 		if (opCodes == null)
@@ -213,12 +213,12 @@ public final class AdminPForge implements IAdminCommandHandler
 		}
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(PlayerInstance activeChar)
 	{
 		AdminHtml.showAdminHtml(activeChar, "pforge/main.htm");
 	}
 	
-	private void showValuesPage(L2PcInstance activeChar, String[] opCodes, String format)
+	private void showValuesPage(PlayerInstance activeChar, String[] opCodes, String format)
 	{
 		String sendBypass = null;
 		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar, "data/html/admin/pforge/values.htm");
@@ -279,7 +279,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_forge"))
 		{
@@ -414,8 +414,8 @@ public final class AdminPForge implements IAdminCommandHandler
 							return false;
 						}
 						
-						L2Object target = null;
-						L2BoatInstance boat = null;
+						WorldObject target = null;
+						BoatInstance boat = null;
 						String value = st.nextToken();
 						switch (value)
 						{
@@ -477,7 +477,7 @@ public final class AdminPForge implements IAdminCommandHandler
 								target = activeChar.getTarget();
 								if ((target != null) && target.isPlayable())
 								{
-									boat = ((L2Playable) target).getActingPlayer().getBoat();
+									boat = ((Playable) target).getActingPlayer().getBoat();
 									if (boat != null)
 									{
 										value = String.valueOf(boat.getObjectId());
@@ -492,9 +492,9 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$ttitle":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && target.isCharacter())
+								if ((target != null) && target.isCreature())
 								{
-									value = ((L2Character) target).getTitle();
+									value = ((Creature) target).getTitle();
 								}
 								else
 								{

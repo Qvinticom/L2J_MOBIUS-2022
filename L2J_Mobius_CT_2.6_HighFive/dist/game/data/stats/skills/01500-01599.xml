@@ -198,7 +198,7 @@
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<not>
-				<target npcType="L2Attackable" />
+				<target npcType="Attackable" />
 			</not>
 		</cond>
 		<for>
@@ -365,7 +365,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="30" />
 				<param skillId="5591" skillLevel="#triggeredLevel" /> <!-- Light Flow -->
@@ -539,7 +539,7 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="20" />
 				<param skillId="5592" skillLevel="1" /> <!-- Lightning Barrier -->
@@ -548,7 +548,7 @@
 		</for>
 		<enchant1for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="#ench1Chance" />
 				<param skillId="5592" skillLevel="1" /> <!-- Lightning Barrier -->
@@ -557,7 +557,7 @@
 		</enchant1for>
 		<enchant2for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="#ench2Chance" />
 				<param skillId="5592" skillLevel="#ench2Trigger" /> <!-- Lightning Barrier -->
@@ -566,7 +566,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="100" />
 				<param chance="20" />
 				<param skillId="5592" skillLevel="#ench3Trigger" /> <!-- Lightning Barrier -->
@@ -865,7 +865,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param isCritical="true" />
 				<param minDamage="#minDamage" chance="10" />
 				<param skillId="#triggeredId" skillLevel="1" /> <!-- Steal Mana -->
@@ -1030,7 +1030,7 @@
 		<enchant2 name="mpConsume" val="54" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="60" />
 				<param chance="60" />
 				<param skillId="5698" skillLevel="#triggeredLevel" /> <!-- Bless the Blood -->
@@ -1039,7 +1039,7 @@
 		</for>
 		<enchant1for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="60" />
 				<param chance="60" />
 				<param skillId="5698" skillLevel="#ench1triggeredLevel" /> <!-- Bless the Blood -->
@@ -1348,7 +1348,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="300" />
 				<param chance="80" />
 				<param skillId="6059" skillLevel="1" /> <!-- Counter Critical -->
@@ -1929,7 +1929,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="50" />
 				<param skillId="6921" skillLevel="1" /> <!-- Penetration Attack -->

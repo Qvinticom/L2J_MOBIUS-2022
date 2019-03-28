@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class DoorStatusUpdate implements IClientOutgoingPacket
 {
-	private final L2DoorInstance _door;
+	private final DoorInstance _door;
 	
-	public DoorStatusUpdate(L2DoorInstance door)
+	public DoorStatusUpdate(DoorInstance door)
 	{
 		_door = door;
 	}

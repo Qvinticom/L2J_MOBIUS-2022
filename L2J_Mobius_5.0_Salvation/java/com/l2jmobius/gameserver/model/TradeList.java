@@ -27,10 +27,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
 import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
@@ -45,8 +45,8 @@ public class TradeList
 {
 	private static final Logger LOGGER = Logger.getLogger(TradeList.class.getName());
 	
-	private final L2PcInstance _owner;
-	private L2PcInstance _partner;
+	private final PlayerInstance _owner;
+	private PlayerInstance _partner;
 	private final Set<TradeItem> _items = ConcurrentHashMap.newKeySet();
 	private String _title;
 	private boolean _packaged;
@@ -54,22 +54,22 @@ public class TradeList
 	private boolean _confirmed = false;
 	private boolean _locked = false;
 	
-	public TradeList(L2PcInstance owner)
+	public TradeList(PlayerInstance owner)
 	{
 		_owner = owner;
 	}
 	
-	public L2PcInstance getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _owner;
 	}
 	
-	public void setPartner(L2PcInstance partner)
+	public void setPartner(PlayerInstance partner)
 	{
 		_partner = partner;
 	}
 	
-	public L2PcInstance getPartner()
+	public PlayerInstance getPartner()
 	{
 		return _partner;
 	}
@@ -115,9 +115,9 @@ public class TradeList
 	/**
 	 * Returns the list of items in inventory available for transaction
 	 * @param inventory
-	 * @return L2ItemInstance : items in inventory
+	 * @return ItemInstance : items in inventory
 	 */
-	public Collection<TradeItem> getAvailableItems(PcInventory inventory)
+	public Collection<TradeItem> getAvailableItems(PlayerInventory inventory)
 	{
 		final List<TradeItem> list = new LinkedList<>();
 		for (TradeItem item : _items)
@@ -139,10 +139,10 @@ public class TradeList
 	
 	/**
 	 * Adjust available item from Inventory by the one in this list
-	 * @param item : L2ItemInstance to be adjusted
+	 * @param item : ItemInstance to be adjusted
 	 * @return TradeItem representing adjusted item
 	 */
-	public TradeItem adjustAvailableItem(L2ItemInstance item)
+	public TradeItem adjustAvailableItem(ItemInstance item)
 	{
 		if (item.isStackable())
 		{
@@ -183,14 +183,14 @@ public class TradeList
 			return null;
 		}
 		
-		final L2Object o = L2World.getInstance().findObject(objectId);
+		final WorldObject o = World.getInstance().findObject(objectId);
 		if (!o.isItem())
 		{
 			LOGGER.warning(_owner.getName() + ": Trying to add something other than an item!");
 			return null;
 		}
 		
-		final L2ItemInstance item = (L2ItemInstance) o;
+		final ItemInstance item = (ItemInstance) o;
 		if (!(item.isTradeable() || (_owner.isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem())
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to add a restricted item!");
@@ -253,7 +253,7 @@ public class TradeList
 			return null;
 		}
 		
-		final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+		final Item item = ItemTable.getInstance().getTemplate(itemId);
 		if (item == null)
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to add invalid item to TradeList!");
@@ -345,7 +345,7 @@ public class TradeList
 	{
 		for (TradeItem titem : _items)
 		{
-			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
+			final ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
 			if ((item == null) || (titem.getCount() < 1))
 			{
 				removeItem(titem.getObjectId(), -1, -1);
@@ -455,7 +455,7 @@ public class TradeList
 	private boolean validate()
 	{
 		// Check for Owner validity
-		if ((_owner == null) || (L2World.getInstance().getPlayer(_owner.getObjectId()) == null))
+		if ((_owner == null) || (World.getInstance().getPlayer(_owner.getObjectId()) == null))
 		{
 			LOGGER.warning("Invalid owner of TradeList");
 			return false;
@@ -464,7 +464,7 @@ public class TradeList
 		// Check for Item validity
 		for (TradeItem titem : _items)
 		{
-			final L2ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
+			final ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
 			if ((item == null) || (item.getCount() < 1))
 			{
 				LOGGER.warning(_owner.getName() + ": Invalid Item in TradeList");
@@ -482,16 +482,16 @@ public class TradeList
 	 * @param partnerIU
 	 * @return
 	 */
-	private boolean TransferItems(L2PcInstance partner, InventoryUpdate ownerIU, InventoryUpdate partnerIU)
+	private boolean TransferItems(PlayerInstance partner, InventoryUpdate ownerIU, InventoryUpdate partnerIU)
 	{
 		for (TradeItem titem : _items)
 		{
-			final L2ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
+			final ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
 			if (oldItem == null)
 			{
 				return false;
 			}
-			final L2ItemInstance newItem = _owner.getInventory().transferItem("Trade", titem.getObjectId(), titem.getCount(), partner.getInventory(), _owner, _partner);
+			final ItemInstance newItem = _owner.getInventory().transferItem("Trade", titem.getObjectId(), titem.getCount(), partner.getInventory(), _owner, _partner);
 			if (newItem == null)
 			{
 				return false;
@@ -529,7 +529,7 @@ public class TradeList
 	 * @param partner
 	 * @return items slots count
 	 */
-	private int countItemsSlots(L2PcInstance partner)
+	private int countItemsSlots(PlayerInstance partner)
 	{
 		int slots = 0;
 		
@@ -539,7 +539,7 @@ public class TradeList
 			{
 				continue;
 			}
-			final L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+			final Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
 			if (template == null)
 			{
 				continue;
@@ -570,7 +570,7 @@ public class TradeList
 			{
 				continue;
 			}
-			final L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+			final Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
 			if (template == null)
 			{
 				continue;
@@ -641,7 +641,7 @@ public class TradeList
 	 * @param items
 	 * @return int: result of trading. 0 - ok, 1 - canceled (no adena), 2 - failed (item error)
 	 */
-	public synchronized int privateStoreBuy(L2PcInstance player, Set<ItemRequest> items)
+	public synchronized int privateStoreBuy(PlayerInstance player, Set<ItemRequest> items)
 	{
 		if (_locked)
 		{
@@ -663,8 +663,8 @@ public class TradeList
 		int weight = 0;
 		long totalPrice = 0;
 		
-		final PcInventory ownerInventory = _owner.getInventory();
-		final PcInventory playerInventory = player.getInventory();
+		final PlayerInventory ownerInventory = _owner.getInventory();
+		final PlayerInventory playerInventory = player.getInventory();
 		
 		for (ItemRequest item : items)
 		{
@@ -716,7 +716,7 @@ public class TradeList
 			}
 			
 			// Check if requested item is available for manipulation
-			final L2ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if ((oldItem == null) || !oldItem.isTradeable())
 			{
 				// private store sell invalid item - disable it
@@ -724,7 +724,7 @@ public class TradeList
 				return 2;
 			}
 			
-			final L2Item template = ItemTable.getInstance().getTemplate(item.getItemId());
+			final Item template = ItemTable.getInstance().getTemplate(item.getItemId());
 			if (template == null)
 			{
 				continue;
@@ -762,7 +762,7 @@ public class TradeList
 		final InventoryUpdate ownerIU = new InventoryUpdate();
 		final InventoryUpdate playerIU = new InventoryUpdate();
 		
-		final L2ItemInstance adenaItem = playerInventory.getAdenaInstance();
+		final ItemInstance adenaItem = playerInventory.getAdenaInstance();
 		if (!playerInventory.reduceAdena("PrivateStore", totalPrice, player, _owner))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -783,7 +783,7 @@ public class TradeList
 			}
 			
 			// Check if requested item is available for manipulation
-			final L2ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if (oldItem == null)
 			{
 				// should not happens - validation already done
@@ -793,7 +793,7 @@ public class TradeList
 			}
 			
 			// Proceed with item transfer
-			final L2ItemInstance newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, _owner, player);
+			final ItemInstance newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, _owner, player);
 			if (newItem == null)
 			{
 				ok = false;
@@ -862,7 +862,7 @@ public class TradeList
 	 * @param requestedItems
 	 * @return : boolean true if success
 	 */
-	public synchronized boolean privateStoreSell(L2PcInstance player, ItemRequest[] requestedItems)
+	public synchronized boolean privateStoreSell(PlayerInstance player, ItemRequest[] requestedItems)
 	{
 		if (_locked || !_owner.isOnline() || !player.isOnline())
 		{
@@ -871,8 +871,8 @@ public class TradeList
 		
 		boolean ok = false;
 		
-		final PcInventory ownerInventory = _owner.getInventory();
-		final PcInventory playerInventory = player.getInventory();
+		final PlayerInventory ownerInventory = _owner.getInventory();
+		final PlayerInventory playerInventory = player.getInventory();
 		
 		// Prepare inventory update packet
 		final InventoryUpdate ownerIU = new InventoryUpdate();
@@ -944,7 +944,7 @@ public class TradeList
 			
 			// Check if requested item is available for manipulation
 			int objectId = tradeItem.getObjectId();
-			L2ItemInstance oldItem = player.checkItemManipulation(objectId, item.getCount(), "sell");
+			ItemInstance oldItem = player.checkItemManipulation(objectId, item.getCount(), "sell");
 			// private store - buy use same objectId for buying several non-stackable items
 			if (oldItem == null)
 			{
@@ -973,7 +973,7 @@ public class TradeList
 			}
 			
 			// Proceed with item transfer
-			final L2ItemInstance newItem = playerInventory.transferItem("PrivateStore", objectId, item.getCount(), ownerInventory, player, _owner);
+			final ItemInstance newItem = playerInventory.transferItem("PrivateStore", objectId, item.getCount(), ownerInventory, player, _owner);
 			if (newItem == null)
 			{
 				continue;
@@ -1042,7 +1042,7 @@ public class TradeList
 				// should not happens, just a precaution
 				return false;
 			}
-			final L2ItemInstance adenaItem = ownerInventory.getAdenaInstance();
+			final ItemInstance adenaItem = ownerInventory.getAdenaInstance();
 			ownerInventory.reduceAdena("PrivateStore", totalPrice, _owner, player);
 			ownerIU.addItem(adenaItem);
 			playerInventory.addAdena("PrivateStore", totalPrice, player, _owner);

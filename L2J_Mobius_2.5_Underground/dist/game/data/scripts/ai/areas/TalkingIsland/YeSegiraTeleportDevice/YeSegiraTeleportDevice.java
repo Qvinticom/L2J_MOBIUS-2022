@@ -23,13 +23,13 @@ import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -88,7 +88,7 @@ public final class YeSegiraTeleportDevice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (LOCATIONS.containsKey(event))
 		{
@@ -101,8 +101,8 @@ public final class YeSegiraTeleportDevice extends AbstractNpcAI
 			}
 			else if (event.equals("5_exploration_zone"))
 			{
-				final QuestState st = player.getQuestState(Q10365_SeekerEscort.class.getSimpleName());
-				if ((st != null) && st.isStarted() && st.isCond(1))
+				final QuestState qs = player.getQuestState(Q10365_SeekerEscort.class.getSimpleName());
+				if ((qs != null) && qs.isStarted() && qs.isCond(1))
 				{
 					final Quest quest_10365 = QuestManager.getInstance().getQuest(Q10365_SeekerEscort.class.getSimpleName());
 					if (quest_10365 != null)
@@ -119,7 +119,7 @@ public final class YeSegiraTeleportDevice extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerCreate(OnPlayerCreate event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if (player.getRace() != Race.ERTHEIA)
 		{
 			player.getVariables().set(MOVIE_VAR, true);

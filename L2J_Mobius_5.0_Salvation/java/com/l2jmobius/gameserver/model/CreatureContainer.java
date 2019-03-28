@@ -23,9 +23,9 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 
 /**
  * @author UnAfraid
@@ -33,12 +33,12 @@ import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
 public class CreatureContainer
 {
 	private final Set<Integer> _seen = ConcurrentHashMap.newKeySet();
-	private final L2Character _owner;
+	private final Creature _owner;
 	private final int _range;
 	private ScheduledFuture<?> _task;
-	private Predicate<L2Character> _condition = null;
+	private Predicate<Creature> _condition = null;
 	
-	public CreatureContainer(L2Character owner, int range, Predicate<L2Character> condition)
+	public CreatureContainer(Creature owner, int range, Predicate<Creature> condition)
 	{
 		_owner = owner;
 		_range = range;
@@ -46,7 +46,7 @@ public class CreatureContainer
 		start();
 	}
 	
-	public L2Character getOwner()
+	public Creature getOwner()
 	{
 		return _owner;
 	}
@@ -89,7 +89,7 @@ public class CreatureContainer
 	private void update()
 	{
 		final Set<Integer> verified = new HashSet<>();
-		L2World.getInstance().forEachVisibleObjectInRange(_owner, L2Character.class, _range, creature ->
+		World.getInstance().forEachVisibleObjectInRange(_owner, Creature.class, _range, creature ->
 		{
 			if ((_condition == null) || _condition.test(creature))
 			{

@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class MoveToLocation implements IClientOutgoingPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -30,15 +30,15 @@ public final class MoveToLocation implements IClientOutgoingPacket
 	private final int _yDst;
 	private final int _zDst;
 	
-	public MoveToLocation(L2Character cha)
+	public MoveToLocation(Creature creature)
 	{
-		_charObjId = cha.getObjectId();
-		_x = cha.getX();
-		_y = cha.getY();
-		_z = cha.getZ();
-		_xDst = cha.getXdestination();
-		_yDst = cha.getYdestination();
-		_zDst = cha.getZdestination();
+		_objectId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
+		_xDst = creature.getXdestination();
+		_yDst = creature.getYdestination();
+		_zDst = creature.getZdestination();
 	}
 	
 	@Override
@@ -46,7 +46,7 @@ public final class MoveToLocation implements IClientOutgoingPacket
 	{
 		OutgoingPackets.MOVE_TO_LOCATION.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		
 		packet.writeD(_xDst);
 		packet.writeD(_yDst);

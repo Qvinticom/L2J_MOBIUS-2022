@@ -17,8 +17,8 @@
 package quests.Q00364_JovialAccordion;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -54,10 +54,10 @@ public final class Q00364_JovialAccordion extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -69,8 +69,8 @@ public final class Q00364_JovialAccordion extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.startQuest();
-					st.setMemoState(1);
+					qs.startQuest();
+					qs.setMemoState(1);
 					htmltext = "30959-02.htm";
 				}
 				else
@@ -125,8 +125,8 @@ public final class Q00364_JovialAccordion extends Quest
 			{
 				giveItems(player, CLOTHES_CHEST_KEY, 1);
 				giveItems(player, BEER_CHEST_KEY, 1);
-				st.setMemoState(2);
-				st.setCond(2, true);
+				qs.setMemoState(2);
+				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
@@ -135,11 +135,11 @@ public final class Q00364_JovialAccordion extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -155,7 +155,7 @@ public final class Q00364_JovialAccordion extends Quest
 				{
 					case BARBADO:
 					{
-						switch (st.getMemoState())
+						switch (qs.getMemoState())
 						{
 							case 1:
 							case 2:
@@ -168,7 +168,7 @@ public final class Q00364_JovialAccordion extends Quest
 							case 5:
 							{
 								rewardItems(player, THEME_OF_THE_FEAST, 1);
-								st.exitQuest(true, true);
+								qs.exitQuest(true, true);
 								htmltext = "30959-05.html";
 								break;
 							}
@@ -191,13 +191,13 @@ public final class Q00364_JovialAccordion extends Quest
 						{
 							takeItems(player, STOLEN_BLACK_BEER, -1);
 							htmltext = "30060-01.html";
-							if (st.isMemoState(2))
+							if (qs.isMemoState(2))
 							{
-								st.setMemoState(3);
+								qs.setMemoState(3);
 							}
-							else if (st.isMemoState(3))
+							else if (qs.isMemoState(3))
 							{
-								st.setMemoState(4);
+								qs.setMemoState(4);
 							}
 						}
 						else
@@ -212,13 +212,13 @@ public final class Q00364_JovialAccordion extends Quest
 						{
 							takeItems(player, STOLEN_EVENT_CLOTHES, -1);
 							htmltext = "30075-01.html";
-							if (st.isMemoState(2))
+							if (qs.isMemoState(2))
 							{
-								st.setMemoState(3);
+								qs.setMemoState(3);
 							}
-							else if (st.isMemoState(3))
+							else if (qs.isMemoState(3))
 							{
-								st.setMemoState(4);
+								qs.setMemoState(4);
 							}
 						}
 						else
@@ -229,7 +229,7 @@ public final class Q00364_JovialAccordion extends Quest
 					}
 					case SWAN:
 					{
-						switch (st.getMemoState())
+						switch (qs.getMemoState())
 						{
 							case 1:
 							{
@@ -245,16 +245,16 @@ public final class Q00364_JovialAccordion extends Quest
 								}
 								else if (!hasQuestItems(player, BEER_CHEST_KEY, CLOTHES_CHEST_KEY, STOLEN_BLACK_BEER, STOLEN_EVENT_CLOTHES))
 								{
-									if (st.isMemoState(2))
+									if (qs.isMemoState(2))
 									{
 										playSound(player, QuestSound.ITEMSOUND_QUEST_GIVEUP);
-										st.exitQuest(true, true);
+										qs.exitQuest(true, true);
 										htmltext = "30957-06.html";
 									}
 									else
 									{
-										st.setMemoState(5);
-										st.setCond(3, true);
+										qs.setMemoState(5);
+										qs.setCond(3, true);
 										htmltext = "30957-04.html";
 									}
 								}
@@ -264,8 +264,8 @@ public final class Q00364_JovialAccordion extends Quest
 							{
 								if (!hasQuestItems(player, BEER_CHEST_KEY, CLOTHES_CHEST_KEY, STOLEN_BLACK_BEER, STOLEN_EVENT_CLOTHES))
 								{
-									st.setMemoState(5);
-									st.setCond(3, true);
+									qs.setMemoState(5);
+									qs.setCond(3, true);
 									giveAdena(player, 100, true);
 									htmltext = "30957-05.html";
 								}

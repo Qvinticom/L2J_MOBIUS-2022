@@ -20,12 +20,12 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -92,7 +92,7 @@ public final class KartiaHelperHayuk extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
@@ -117,7 +117,7 @@ public final class KartiaHelperHayuk extends AbstractNpcAI
 				}
 				else if (!npc.isInCombat() || (npc.getTarget() == null))
 				{
-					final L2Character monster = (L2Character) adolph.getTarget();
+					final Creature monster = (Creature) adolph.getTarget();
 					if ((monster != null) && adolph.isInCombat() && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 					{
 						addAttackDesire(npc, monster);
@@ -149,7 +149,7 @@ public final class KartiaHelperHayuk extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
@@ -162,10 +162,10 @@ public final class KartiaHelperHayuk extends AbstractNpcAI
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
-	public void useRandomSkill(L2Npc npc)
+	public void useRandomSkill(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		final L2Npc target = (L2Npc) npc.getTarget();
+		final Npc target = (Npc) npc.getTarget();
 		if ((instance != null) && !npc.isCastingNow() && (target != null) && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatsSet instParams = instance.getTemplateParameters();
@@ -211,21 +211,21 @@ public final class KartiaHelperHayuk extends AbstractNpcAI
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		if (npc != null)
 		{
 			final Instance instance = npc.getInstanceWorld();
 			if ((instance != null) && !npc.isInCombat() && !event.getAttacker().isPlayable() && !CommonUtil.contains(KARTIA_FRIENDS, event.getAttacker().getId()))
 			{
 				npc.setTarget(event.getAttacker());
-				addAttackDesire(npc, (L2Character) npc.getTarget());
+				addAttackDesire(npc, (Creature) npc.getTarget());
 			}
 		}
 	}
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{

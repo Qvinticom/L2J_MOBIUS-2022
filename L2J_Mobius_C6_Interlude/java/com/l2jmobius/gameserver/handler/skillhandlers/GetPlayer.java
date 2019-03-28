@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 public class GetPlayer implements ISkillHandler
@@ -33,24 +33,24 @@ public class GetPlayer implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if (activeChar.isAlikeDead())
+		if (creature.isAlikeDead())
 		{
 			return;
 		}
 		
-		for (L2Object target : targets)
+		for (WorldObject target : targets)
 		{
-			if (target instanceof L2PcInstance)
+			if (target instanceof PlayerInstance)
 			{
-				L2PcInstance trg = (L2PcInstance) target;
+				PlayerInstance trg = (PlayerInstance) target;
 				if (trg.isAlikeDead())
 				{
 					continue;
 				}
 				
-				trg.setXYZ(activeChar.getX() + Rnd.get(-10, 10), activeChar.getY() + Rnd.get(-10, 10), activeChar.getZ());
+				trg.setXYZ(creature.getX() + Rnd.get(-10, 10), creature.getY() + Rnd.get(-10, 10), creature.getZ());
 				trg.sendPacket(new ValidateLocation(trg));
 			}
 		}

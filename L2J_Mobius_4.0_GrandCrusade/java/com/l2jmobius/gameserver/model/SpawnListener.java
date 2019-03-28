@@ -16,13 +16,12 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 /**
- * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public interface SpawnListener
 {
-	void npcSpawned(L2Npc npc);
+	void npcSpawned(Npc npc);
 }

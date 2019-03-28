@@ -19,12 +19,12 @@ package ai.others.SteelCitadelTeleport;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.zone.type.BossZone;
 
 import ai.AbstractNpcAI;
 
@@ -47,7 +47,7 @@ public final class SteelCitadelTeleport extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int belethStatus = GrandBossManager.getInstance().getBossStatus(BELETH);
 		if (belethStatus == 3)
@@ -60,25 +60,25 @@ public final class SteelCitadelTeleport extends AbstractNpcAI
 			return "32376-03.htm";
 		}
 		
-		final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
+		final CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
 		if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
 		{
 			return "32376-02a.htm";
 		}
 		
-		final L2BossZone zone = (L2BossZone) ZoneManager.getInstance().getZoneById(12018);
+		final BossZone zone = (BossZone) ZoneManager.getInstance().getZoneById(12018);
 		if (zone != null)
 		{
 			GrandBossManager.getInstance().setBossStatus(BELETH, 1);
 			
-			for (L2Party party : channel.getPartys())
+			for (Party party : channel.getPartys())
 			{
 				if (party == null)
 				{
 					continue;
 				}
 				
-				for (L2PcInstance pl : party.getMembers())
+				for (PlayerInstance pl : party.getMembers())
 				{
 					if (pl.isInsideRadius3D(npc.getX(), npc.getY(), npc.getZ(), 3000))
 					{

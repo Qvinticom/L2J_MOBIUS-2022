@@ -16,8 +16,8 @@
  */
 package ai.others.Asamah;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
@@ -39,7 +39,7 @@ public final class Asamah extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (event.equals("32115-03.htm") || event.equals("32115-04.htm"))
@@ -51,10 +51,10 @@ public final class Asamah extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = player.getQuestState(Q00111_ElrokianHuntersProof.class.getSimpleName());
-		return ((st != null) && (st.isCompleted())) ? "32115-01.htm" : "32115-02.htm";
+		final QuestState qs = player.getQuestState(Q00111_ElrokianHuntersProof.class.getSimpleName());
+		return ((qs != null) && (qs.isCompleted())) ? "32115-01.htm" : "32115-02.htm";
 	}
 	
 	public static void main(String[] args)

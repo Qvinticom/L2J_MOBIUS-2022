@@ -21,25 +21,25 @@ import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ManorManagerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Format: (ch) d [dddd] d: size [ d obj id d item id d manor id d count ]
  * @author l3x
  */
-public class RequestProcureCropList extends L2GameClientPacket
+public class RequestProcureCropList extends GameClientPacket
 {
 	private int _size;
 	
@@ -77,20 +77,20 @@ public class RequestProcureCropList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2Object target = player.getTarget();
+		WorldObject target = player.getTarget();
 		
-		if (!(target instanceof L2ManorManagerInstance))
+		if (!(target instanceof ManorManagerInstance))
 		{
 			target = player.getLastFolkNPC();
 		}
 		
-		if (!player.isGM() && ((target == null) || !(target instanceof L2ManorManagerInstance) || !player.isInsideRadius(target, L2NpcInstance.INTERACTION_DISTANCE, false, false)))
+		if (!player.isGM() && ((target == null) || !(target instanceof ManorManagerInstance) || !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false)))
 		{
 			return;
 		}
@@ -101,7 +101,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 			return;
 		}
 		
-		final L2ManorManagerInstance manorManager = (L2ManorManagerInstance) target;
+		final ManorManagerInstance manorManager = (ManorManagerInstance) target;
 		
 		final int currentManorId = manorManager.getCastle().getCastleId();
 		
@@ -136,8 +136,8 @@ public class RequestProcureCropList extends L2GameClientPacket
 			try
 			{
 				final CropProcure crop = CastleManager.getInstance().getCastleById(manorId).getCrop(itemId, CastleManorManager.PERIOD_CURRENT);
-				final int rewardItemId = L2Manor.getInstance().getRewardItem(itemId, crop.getReward());
-				final L2Item template = ItemTable.getInstance().getTemplate(rewardItemId);
+				final int rewardItemId = Manor.getInstance().getRewardItem(itemId, crop.getReward());
+				final Item template = ItemTable.getInstance().getTemplate(rewardItemId);
 				weight += count * template.getWeight();
 				
 				if (!template.isStackable())
@@ -204,14 +204,14 @@ public class RequestProcureCropList extends L2GameClientPacket
 			
 			int fee = 0; // fee for selling to other manors
 			
-			final int rewardItem = L2Manor.getInstance().getRewardItem(cropId, crop.getReward());
+			final int rewardItem = Manor.getInstance().getRewardItem(cropId, crop.getReward());
 			
 			if (count > crop.getAmount())
 			{
 				continue;
 			}
 			
-			final int sellPrice = count * L2Manor.getInstance().getCropBasicPrice(cropId);
+			final int sellPrice = count * Manor.getInstance().getCropBasicPrice(cropId);
 			final int rewardPrice = ItemTable.getInstance().getTemplate(rewardItem).getReferencePrice();
 			
 			if (rewardPrice == 0)
@@ -246,12 +246,12 @@ public class RequestProcureCropList extends L2GameClientPacket
 			}
 			
 			// Add item to Inventory and adjust update packet
-			L2ItemInstance itemDel = null;
-			L2ItemInstance itemAdd = null;
+			ItemInstance itemDel = null;
+			ItemInstance itemAdd = null;
 			if (player.getInventory().getItemByObjectId(objId) != null)
 			{
 				// check if player have correct items count
-				final L2ItemInstance item = player.getInventory().getItemByObjectId(objId);
+				final ItemInstance item = player.getInventory().getItemByObjectId(objId);
 				if (item.getCount() < count)
 				{
 					continue;

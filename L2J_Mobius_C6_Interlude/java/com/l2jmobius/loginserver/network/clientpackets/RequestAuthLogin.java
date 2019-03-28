@@ -24,8 +24,8 @@ import javax.crypto.Cipher;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
-import com.l2jmobius.loginserver.L2LoginClient;
-import com.l2jmobius.loginserver.L2LoginClient.LoginClientState;
+import com.l2jmobius.loginserver.LoginClient;
+import com.l2jmobius.loginserver.LoginClient.LoginClientState;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.LoginController.AuthLoginResult;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked;
@@ -37,7 +37,7 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
 /**
  * Format: x 0 (a leading null) x: the rsa encrypted block with the login an password
  */
-public class RequestAuthLogin extends L2LoginClientPacket
+public class RequestAuthLogin extends LoginClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	
@@ -104,7 +104,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		_ncotp |= decrypted[0x7f] << 24;
 		
 		LoginController lc = LoginController.getInstance();
-		L2LoginClient client = getClient();
+		LoginClient client = getClient();
 		final InetAddress address = getClient().getConnection().getInetAddress();
 		if (address == null)
 		{
@@ -143,7 +143,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			}
 			case ALREADY_ON_LS:
 			{
-				L2LoginClient oldClient = lc.getAuthedClient(_user);
+				LoginClient oldClient = lc.getAuthedClient(_user);
 				if (oldClient != null)
 				{
 					// kick the other client

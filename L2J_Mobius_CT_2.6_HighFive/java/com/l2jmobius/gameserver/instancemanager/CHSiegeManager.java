@@ -25,13 +25,13 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -94,14 +94,14 @@ public final class CHSiegeManager
 		return _siegableHalls.get(clanHall);
 	}
 	
-	public final SiegableHall getNearbyClanHall(L2Character activeChar)
+	public final SiegableHall getNearbyClanHall(Creature creature)
 	{
-		return getNearbyClanHall(activeChar.getX(), activeChar.getY(), 10000);
+		return getNearbyClanHall(creature.getX(), creature.getY(), 10000);
 	}
 	
 	public final SiegableHall getNearbyClanHall(int x, int y, int maxDist)
 	{
-		L2ClanHallZone zone = null;
+		ClanHallZone zone = null;
 		
 		for (Map.Entry<Integer, SiegableHall> ch : _siegableHalls.entrySet())
 		{
@@ -114,13 +114,13 @@ public final class CHSiegeManager
 		return null;
 	}
 	
-	public final ClanHallSiegeEngine getSiege(L2Character character)
+	public final ClanHallSiegeEngine getSiege(Creature creature)
 	{
-		final SiegableHall hall = getNearbyClanHall(character);
+		final SiegableHall hall = getNearbyClanHall(creature);
 		return hall == null ? null : hall.getSiege();
 	}
 	
-	public final void registerClan(L2Clan clan, SiegableHall hall, L2PcInstance player)
+	public final void registerClan(Clan clan, SiegableHall hall, PlayerInstance player)
 	{
 		if (clan.getLevel() < Config.CHS_CLAN_MINLEVEL)
 		{
@@ -162,7 +162,7 @@ public final class CHSiegeManager
 		}
 	}
 	
-	public final void unRegisterClan(L2Clan clan, SiegableHall hall)
+	public final void unRegisterClan(Clan clan, SiegableHall hall)
 	{
 		if (!hall.isRegistering())
 		{
@@ -171,7 +171,7 @@ public final class CHSiegeManager
 		hall.removeAttacker(clan);
 	}
 	
-	public final boolean isClanParticipating(L2Clan clan)
+	public final boolean isClanParticipating(Clan clan)
 	{
 		for (SiegableHall hall : _siegableHalls.values())
 		{

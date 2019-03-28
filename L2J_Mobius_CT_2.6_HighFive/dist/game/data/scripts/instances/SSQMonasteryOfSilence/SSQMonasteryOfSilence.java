@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -186,7 +186,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
+	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		if (firstEntrance)
 		{
@@ -197,7 +197,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -207,7 +207,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				case "TELE2":
 				{
 					teleportPlayer(player, CENTRAL_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(CENTRAL_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(CENTRAL_ROOM_LOC, world.getInstanceId(), 0);
 					startQuestTimer("START_MOVIE", 2000, npc, player);
 					break;
 				}
@@ -216,7 +216,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					cancelQuestTimer("FOLLOW", npc, player);
 					cancelQuestTimer("DIALOG", npc, player);
 					teleportPlayer(player, EXIT_LOC, 0);
-					world.getParameters().getObject("elcadia", L2Npc.class).deleteMe();
+					world.getParameters().getObject("elcadia", Npc.class).deleteMe();
 					break;
 				}
 				case "START_MOVIE":
@@ -227,37 +227,37 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				case "BACK":
 				{
 					teleportPlayer(player, BACK_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(BACK_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(BACK_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "EAST":
 				{
 					teleportPlayer(player, EAST_WATCHERS_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(EAST_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(EAST_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "WEST":
 				{
 					teleportPlayer(player, WEST_WATCHERS_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(WEST_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(WEST_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "NORTH":
 				{
 					teleportPlayer(player, NORTH_WATCHERS_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(NORTH_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(NORTH_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "SOUTH":
 				{
 					teleportPlayer(player, SOUTH_WATCHERS_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(SOUTH_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(SOUTH_WATCHERS_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "CENTER":
 				{
 					teleportPlayer(player, CENTRAL_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(CENTRAL_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(CENTRAL_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "FOLLOW":
@@ -289,7 +289,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				case "ENTER_Q10295":
 				{
 					teleportPlayer(player, START_LOC_Q10295, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(START_LOC_Q10295, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(START_LOC_Q10295, world.getInstanceId(), 0);
 					startQuestTimer("START_MOVIE_Q10295", 2000, npc, player);
 					break;
 				}
@@ -301,19 +301,19 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				case "CASKET_ROOM":
 				{
 					teleportPlayer(player, CASKET_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(CASKET_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(CASKET_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "SOLINAS_RESTING_PLACE":
 				{
 					teleportPlayer(player, SOLINAS_RESTING_PLACE_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(SOLINAS_RESTING_PLACE_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(SOLINAS_RESTING_PLACE_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "ERIS_OFFICE":
 				{
 					teleportPlayer(player, START_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(START_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(START_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "OPEN_DOORS":
@@ -327,7 +327,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				case "DIRECTORS_ROOM":
 				{
 					teleportPlayer(player, DIRECTORS_ROOM_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(DIRECTORS_ROOM_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(DIRECTORS_ROOM_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "USE_SCROLL":
@@ -389,7 +389,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_1_LOC)
 					{
-						L2Attackable mob = (L2Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						Attackable mob = (Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -399,7 +399,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_2_LOC)
 					{
-						L2Attackable mob = (L2Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						Attackable mob = (Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -409,7 +409,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_3_LOC)
 					{
-						L2Attackable mob = (L2Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						Attackable mob = (Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -419,7 +419,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					
 					for (Location LOC : SLAVE_SPAWN_4_LOC)
 					{
-						L2Attackable mob = (L2Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
+						Attackable mob = (Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
 						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -430,19 +430,19 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				{
 					playMovie(player, Movie.SSQ2_BOSS_OPENING);
 					startQuestTimer("TELEPORT_SPACE", 60000, npc, player);
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
 					break;
 				}
 				case "TELEPORT_SPACE":
 				{
 					teleportPlayer(player, SPACE_LOC, world.getInstanceId());
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(SPACE_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(SPACE_LOC, world.getInstanceId(), 0);
 					addSpawn(ETIS_VAN_ETINA, ETIS_VAN_ETINA_LOC, false, 0, false, world.getInstanceId());
 					break;
 				}
 				case "TELEPORT_TO_PLAYER":
 				{
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(player.getX(), player.getY(), player.getZ(), 0, world.getInstanceId());
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(player.getX(), player.getY(), player.getZ(), 0, world.getInstanceId());
 					break;
 				}
 			}
@@ -451,7 +451,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
@@ -468,10 +468,10 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					if (deadTombGuardianCount == 4)
 					{
 						world.openDoor(TOMB_DOOR);
-						final QuestState st = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
-						if ((st != null) && st.isMemoState(2))
+						final QuestState qs = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
+						if ((qs != null) && qs.isMemoState(2))
 						{
-							st.setMemoState(3);
+							qs.setMemoState(3);
 						}
 					}
 					break;
@@ -486,10 +486,10 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					if (deadSolinaGuardianCount == 4)
 					{
 						playMovie(player, Movie.SSQ2_SOLINA_TOMB_CLOSING);
-						final QuestState st = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
-						if ((st != null) && st.isMemoState(1))
+						final QuestState qs = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
+						if ((qs != null) && qs.isMemoState(1))
 						{
-							st.setMemoState(2);
+							qs.setMemoState(2);
 						}
 					}
 					break;
@@ -497,12 +497,12 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				case ETIS_VAN_ETINA:
 				{
 					playMovie(player, Movie.SSQ2_BOSS_CLOSING);
-					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
+					world.getParameters().getObject("elcadia", Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
 					startQuestTimer("TELEPORT_TO_PLAYER", 63000, npc, player);
-					final QuestState st = player.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());
-					if ((st != null) && st.isMemoState(2))
+					final QuestState qs = player.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());
+					if ((qs != null) && qs.isMemoState(2))
 					{
-						st.setMemoState(3);
+						qs.setMemoState(3);
 					}
 					break;
 				}
@@ -513,7 +513,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -532,7 +532,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{
@@ -541,13 +541,13 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 		return super.onTalk(npc, talker);
 	}
 	
-	protected void spawnElcadia(L2PcInstance player, InstanceWorld world)
+	protected void spawnElcadia(PlayerInstance player, InstanceWorld world)
 	{
-		if (world.getParameters().getObject("elcadia", L2Npc.class) != null)
+		if (world.getParameters().getObject("elcadia", Npc.class) != null)
 		{
-			world.getParameters().getObject("elcadia", L2Npc.class).deleteMe();
+			world.getParameters().getObject("elcadia", Npc.class).deleteMe();
 		}
-		final L2Npc elcadia = addSpawn(ELCADIA_INSTANCE, player.getX(), player.getY(), player.getZ(), 0, false, 0, false, world.getInstanceId());
+		final Npc elcadia = addSpawn(ELCADIA_INSTANCE, player.getX(), player.getY(), player.getZ(), 0, false, 0, false, world.getInstanceId());
 		world.setParameter("elcadia", elcadia);
 		startQuestTimer("FOLLOW", 5000, elcadia, player);
 		startQuestTimer("DIALOG", 10000, elcadia, player);

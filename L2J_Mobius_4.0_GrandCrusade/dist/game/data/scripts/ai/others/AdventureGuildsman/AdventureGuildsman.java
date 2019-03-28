@@ -22,8 +22,8 @@ import java.util.Map;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -138,7 +138,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		
@@ -438,7 +438,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String applyBuffs(L2Npc npc, L2PcInstance player, Skill skill)
+	private String applyBuffs(Npc npc, PlayerInstance player, Skill skill)
 	{
 		for (SkillHolder holder : GROUP_MELODY)
 		{
@@ -453,7 +453,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return null;
 	}
 	
-	private String applyBuffsGroup(L2Npc npc, L2PcInstance player, int length)
+	private String applyBuffsGroup(Npc npc, PlayerInstance player, int length)
 	{
 		for (SkillHolder holder : GROUP_MELODY)
 		{
@@ -463,7 +463,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		return null;
 	}
 	
-	private String tradeItem(L2PcInstance player, int itemId, int points)
+	private String tradeItem(PlayerInstance player, int itemId, int points)
 	{
 		if (player.getPcCafePoints() >= 200000)
 		{
@@ -479,7 +479,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return player.getLevel() < 40 ? "adventurer_agent_town_77001.htm" : "adventurer_agent_town_77001e.htm";
 	}

@@ -27,15 +27,15 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.HennaTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
+import com.l2jmobius.gameserver.model.actor.instance.HennaInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.templates.item.L2Henna;
+import com.l2jmobius.gameserver.templates.item.Henna;
 
 public class HennaTreeTable
 {
 	private static Logger LOGGER = Logger.getLogger(HennaTreeTable.class.getName());
 	private static final HennaTreeTable _instance = new HennaTreeTable();
-	private final Map<ClassId, List<L2HennaInstance>> _hennaTrees;
+	private final Map<ClassId, List<HennaInstance>> _hennaTrees;
 	private final boolean _initialized = true;
 	
 	public static HennaTreeTable getInstance()
@@ -53,7 +53,7 @@ public class HennaTreeTable
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT class_name, id, parent_id FROM class_list ORDER BY id");
 			final ResultSet classlist = statement.executeQuery();
-			List<L2HennaInstance> list;
+			List<HennaInstance> list;
 			
 			classlist: while (classlist.next())
 			{
@@ -67,7 +67,7 @@ public class HennaTreeTable
 				{
 					final int id = hennatree.getInt("symbol_id");
 					// String name = hennatree.getString("name");
-					final L2Henna template = HennaTable.getInstance().getTemplate(id);
+					final Henna template = HennaTable.getInstance().getTemplate(id);
 					
 					if (template == null)
 					{
@@ -78,7 +78,7 @@ public class HennaTreeTable
 						continue classlist;
 					}
 					
-					final L2HennaInstance temp = new L2HennaInstance(template);
+					final HennaInstance temp = new HennaInstance(template);
 					temp.setSymbolId(id);
 					temp.setItemIdDye(template.getDyeId());
 					temp.setAmountDyeRequire(template.getAmountDyeRequire());
@@ -111,17 +111,17 @@ public class HennaTreeTable
 		LOGGER.info("HennaTreeTable: Loaded " + count + " Henna Tree Templates.");
 	}
 	
-	public L2HennaInstance[] getAvailableHenna(ClassId classId)
+	public HennaInstance[] getAvailableHenna(ClassId classId)
 	{
-		final List<L2HennaInstance> henna = _hennaTrees.get(classId);
+		final List<HennaInstance> henna = _hennaTrees.get(classId);
 		if (henna == null)
 		{
 			// the hennatree for this class is undefined, so we give an empty list
 			LOGGER.warning("Hennatree for class " + classId + " is not defined!");
-			return new L2HennaInstance[0];
+			return new HennaInstance[0];
 		}
 		
-		return henna.toArray(new L2HennaInstance[henna.size()]);
+		return henna.toArray(new HennaInstance[henna.size()]);
 	}
 	
 	public boolean isInitialized()

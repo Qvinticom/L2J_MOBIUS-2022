@@ -16,10 +16,10 @@
  */
 package handlers.skillconditionhandlers;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -35,8 +35,8 @@ public class OpCheckCrtEffectSkillCondition implements ISkillCondition
 	}
 	
 	@Override
-	public boolean canUse(L2Character caster, Skill skill, L2Object target)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return (target != null) && target.isNpc() && ((L2Npc) target).getTemplate().canBeCrt();
+		return (target != null) && target.isNpc() && ((Npc) target).getTemplate().canBeCrt();
 	}
 }

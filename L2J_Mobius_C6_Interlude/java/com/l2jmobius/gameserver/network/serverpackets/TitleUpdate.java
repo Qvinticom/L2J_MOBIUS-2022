@@ -16,21 +16,21 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class TitleUpdate extends L2GameServerPacket
+public class TitleUpdate extends GameServerPacket
 {
 	private final String _title;
 	private final int _objectId;
 	
-	public TitleUpdate(L2PcInstance cha)
+	public TitleUpdate(PlayerInstance player)
 	{
-		_objectId = cha.getObjectId();
-		_title = cha.getTitle();
+		_objectId = player.getObjectId();
+		_title = player.getTitle();
 	}
 	
 	/**
-	 * @see com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 * @see com.l2jmobius.gameserver.network.serverpackets.GameServerPacket#writeImpl()
 	 */
 	@Override
 	protected void writeImpl()

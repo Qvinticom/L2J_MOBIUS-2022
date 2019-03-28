@@ -23,7 +23,7 @@ import java.util.List;
 
 import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
-import com.l2jmobius.loginserver.L2LoginClient;
+import com.l2jmobius.loginserver.LoginClient;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 
 /**
@@ -31,7 +31,7 @@ import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * server is down d: 2nd bit: clock 3rd bit: wont dsiplay server name 4th bit: test server (used by client?) c: 0 if you dont want to display brackets in front of sever name ] Server will be considered as Good when the number of online players is less than half the maximum. as Normal between half
  * and 4/5 and Full when there's more than 4/5 of the maximum number of players
  */
-public final class ServerList extends L2LoginServerPacket
+public final class ServerList extends LoginServerPacket
 {
 	private final List<ServerData> _servers;
 	private final int _lastServer;
@@ -64,7 +64,7 @@ public final class ServerList extends L2LoginServerPacket
 		}
 	}
 	
-	public ServerList(L2LoginClient client)
+	public ServerList(LoginClient client)
 	{
 		_servers = new ArrayList<>();
 		_lastServer = client.getLastServer();

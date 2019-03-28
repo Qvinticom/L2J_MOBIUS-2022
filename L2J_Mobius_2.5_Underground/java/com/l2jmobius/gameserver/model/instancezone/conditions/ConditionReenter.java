@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.instancezone.conditions;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -37,7 +37,7 @@ public final class ConditionReenter extends Condition
 	}
 	
 	@Override
-	protected boolean test(L2PcInstance player, L2Npc npc)
+	protected boolean test(PlayerInstance player, Npc npc)
 	{
 		final int instanceId = getParameters().getInt("instanceId", getInstanceTemplate().getId());
 		return System.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, instanceId);

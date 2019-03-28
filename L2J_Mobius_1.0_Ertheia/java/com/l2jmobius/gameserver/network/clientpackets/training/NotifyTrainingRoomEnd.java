@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets.training;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.TrainingHolder;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.training.ExTrainingZone_Leaving;
 
@@ -29,22 +29,22 @@ import com.l2jmobius.gameserver.network.serverpackets.training.ExTrainingZone_Le
 public class NotifyTrainingRoomEnd implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		// Nothing to read
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final TrainingHolder holder = activeChar.getTraingCampInfo();
+		final TrainingHolder holder = player.getTraingCampInfo();
 		if (holder == null)
 		{
 			return;
@@ -53,15 +53,15 @@ public class NotifyTrainingRoomEnd implements IClientIncomingPacket
 		if (holder.isTraining())
 		{
 			holder.setEndTime(System.currentTimeMillis());
-			activeChar.setTraingCampInfo(holder);
-			activeChar.enableAllSkills();
-			activeChar.setIsInvul(false);
-			activeChar.setInvisible(false);
-			activeChar.setIsImmobilized(false);
-			activeChar.teleToLocation(activeChar.getLastLocation());
-			activeChar.sendPacket(ExTrainingZone_Leaving.STATIC_PACKET);
+			player.setTraingCampInfo(holder);
+			player.enableAllSkills();
+			player.setIsInvul(false);
+			player.setInvisible(false);
+			player.setIsImmobilized(false);
+			player.teleToLocation(player.getLastLocation());
+			player.sendPacket(ExTrainingZone_Leaving.STATIC_PACKET);
 			holder.setEndTime(System.currentTimeMillis());
-			activeChar.setTraingCampInfo(holder);
+			player.setTraingCampInfo(holder);
 		}
 	}
 }

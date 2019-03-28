@@ -18,12 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.StartRotation;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class StartRotating implements IClientIncomingPacket
@@ -32,7 +31,7 @@ public final class StartRotating implements IClientIncomingPacket
 	private int _side;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_degree = packet.readD();
 		_side = packet.readD();
@@ -40,29 +39,29 @@ public final class StartRotating implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		final StartRotation br;
-		if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar))
+		if (player.isInAirShip() && player.getAirShip().isCaptain(player))
 		{
-			br = new StartRotation(activeChar.getAirShip().getObjectId(), _degree, _side, 0);
-			activeChar.getAirShip().broadcastPacket(br);
+			br = new StartRotation(player.getAirShip().getObjectId(), _degree, _side, 0);
+			player.getAirShip().broadcastPacket(br);
 		}
 		else
 		{
-			br = new StartRotation(activeChar.getObjectId(), _degree, _side, 0);
-			activeChar.broadcastPacket(br);
+			br = new StartRotation(player.getObjectId(), _degree, _side, 0);
+			player.broadcastPacket(br);
 		}
 	}
 }

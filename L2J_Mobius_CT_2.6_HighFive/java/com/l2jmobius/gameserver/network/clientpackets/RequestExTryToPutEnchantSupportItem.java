@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
 
@@ -35,7 +35,7 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 	private int _enchantObjectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_supportObjectId = packet.readD();
 		_enchantObjectId = packet.readD();
@@ -43,25 +43,25 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (player.isEnchanting())
 		{
-			final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_enchantObjectId);
-			final L2ItemInstance scroll = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantItemId());
-			final L2ItemInstance support = activeChar.getInventory().getItemByObjectId(_supportObjectId);
+			final ItemInstance item = player.getInventory().getItemByObjectId(_enchantObjectId);
+			final ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
+			final ItemInstance support = player.getInventory().getItemByObjectId(_supportObjectId);
 			
 			if ((item == null) || (scroll == null) || (support == null))
 			{
 				// message may be custom
-				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.setActiveEnchantSupportItemId(L2PcInstance.ID_NONE);
+				player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+				player.setActiveEnchantSupportItemId(PlayerInstance.ID_NONE);
 				return;
 			}
 			
@@ -71,13 +71,13 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 			if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate))
 			{
 				// message may be custom
-				activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-				activeChar.setActiveEnchantSupportItemId(L2PcInstance.ID_NONE);
-				activeChar.sendPacket(new ExPutEnchantSupportItemResult(0));
+				player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+				player.setActiveEnchantSupportItemId(PlayerInstance.ID_NONE);
+				player.sendPacket(new ExPutEnchantSupportItemResult(0));
 				return;
 			}
-			activeChar.setActiveEnchantSupportItemId(support.getObjectId());
-			activeChar.sendPacket(new ExPutEnchantSupportItemResult(_supportObjectId));
+			player.setActiveEnchantSupportItemId(support.getObjectId());
+			player.sendPacket(new ExPutEnchantSupportItemResult(_supportObjectId));
 		}
 	}
 }

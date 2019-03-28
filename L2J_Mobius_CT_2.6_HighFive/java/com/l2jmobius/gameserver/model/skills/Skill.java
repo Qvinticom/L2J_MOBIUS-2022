@@ -37,22 +37,22 @@ import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
-import com.l2jmobius.gameserver.model.L2ExtractableSkill;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.ExtractableProductItem;
+import com.l2jmobius.gameserver.model.ExtractableSkill;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.BlockInstance;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.TraitType;
@@ -68,7 +68,7 @@ public final class Skill implements IIdentifiable
 {
 	private static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
 	
-	private static final L2Object[] EMPTY_TARGET_LIST = new L2Object[0];
+	private static final WorldObject[] EMPTY_TARGET_LIST = new WorldObject[0];
 	
 	/** Skill ID. */
 	private final int _id;
@@ -131,7 +131,7 @@ public final class Skill implements IIdentifiable
 	private final int _reuseDelay;
 	
 	/** Target type of the skill : SELF, PARTY, CLAN, PET... */
-	private final L2TargetType _targetType;
+	private final TargetType _targetType;
 	private final int _feed;
 	// base success chance
 	private final double _power;
@@ -202,7 +202,7 @@ public final class Skill implements IIdentifiable
 	private final boolean _excludedFromCheck;
 	private final boolean _simultaneousCast;
 	
-	private L2ExtractableSkill _extractableItems = null;
+	private ExtractableSkill _extractableItems = null;
 	
 	private final String _icon;
 	
@@ -293,7 +293,7 @@ public final class Skill implements IIdentifiable
 			}
 		}
 		
-		_targetType = set.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
+		_targetType = set.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_power = set.getFloat("power", 0.f);
 		_pvpPower = set.getFloat("pvpPower", (float) _power);
 		_pvePower = set.getFloat("pvePower", (float) _power);
@@ -383,7 +383,7 @@ public final class Skill implements IIdentifiable
 	 * Return the target type of the skill : SELF, PARTY, CLAN, PET...
 	 * @return
 	 */
-	public L2TargetType getTargetType()
+	public TargetType getTargetType()
 	{
 		return _targetType;
 	}
@@ -407,7 +407,7 @@ public final class Skill implements IIdentifiable
 	
 	public boolean isDamage()
 	{
-		return hasEffectType(L2EffectType.MAGICAL_ATTACK, L2EffectType.HP_DRAIN, L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK);
+		return hasEffectType(EffectType.MAGICAL_ATTACK, EffectType.HP_DRAIN, EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK);
 	}
 	
 	public boolean isOverhit()
@@ -422,25 +422,25 @@ public final class Skill implements IIdentifiable
 	
 	/**
 	 * Return the power of the skill.
-	 * @param activeChar
+	 * @param creature
 	 * @param target
 	 * @param isPvP
 	 * @param isPvE
 	 * @return
 	 */
-	public double getPower(L2Character activeChar, L2Character target, boolean isPvP, boolean isPvE)
+	public double getPower(Creature creature, Creature target, boolean isPvP, boolean isPvE)
 	{
-		if (activeChar == null)
+		if (creature == null)
 		{
 			return getPower(isPvP, isPvE);
 		}
 		
-		if (hasEffectType(L2EffectType.DEATH_LINK))
+		if (hasEffectType(EffectType.DEATH_LINK))
 		{
-			return getPower(isPvP, isPvE) * (-((activeChar.getCurrentHp() * 2) / activeChar.getMaxHp()) + 2);
+			return getPower(isPvP, isPvE) * (-((creature.getCurrentHp() * 2) / creature.getMaxHp()) + 2);
 		}
 		
-		if (hasEffectType(L2EffectType.PHYSICAL_ATTACK_HP_LINK))
+		if (hasEffectType(EffectType.PHYSICAL_ATTACK_HP_LINK))
 		{
 			return getPower(isPvP, isPvE) * (-((target.getCurrentHp() * 2) / target.getMaxHp()) + 2);
 		}
@@ -883,7 +883,7 @@ public final class Skill implements IIdentifiable
 	
 	public boolean useSoulShot()
 	{
-		return hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK);
+		return hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK);
 	}
 	
 	public boolean useSpiritShot()
@@ -893,7 +893,7 @@ public final class Skill implements IIdentifiable
 	
 	public boolean useFishShot()
 	{
-		return hasEffectType(L2EffectType.FISHING);
+		return hasEffectType(EffectType.FISHING);
 	}
 	
 	public int getMinPledgeClass()
@@ -972,21 +972,21 @@ public final class Skill implements IIdentifiable
 	
 	public boolean isBad()
 	{
-		return (_effectPoint < 0) && (_targetType != L2TargetType.SELF);
+		return (_effectPoint < 0) && (_targetType != TargetType.SELF);
 	}
 	
-	public boolean checkCondition(L2Character activeChar, L2Object object, boolean itemOrWeapon)
+	public boolean checkCondition(Creature creature, WorldObject object, boolean itemOrWeapon)
 	{
-		if (activeChar.isFakePlayer() || (activeChar.canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION))
+		if (creature.isFakePlayer() || (creature.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION))
 		{
 			return true;
 		}
 		
-		if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id))
+		if (creature.isPlayer() && creature.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(_id);
-			activeChar.sendPacket(sm);
+			creature.sendPacket(sm);
 			return false;
 		}
 		
@@ -996,10 +996,10 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		final L2Character target = object instanceof L2Character ? (L2Character) object : null;
+		final Creature target = object instanceof Creature ? (Creature) object : null;
 		for (Condition cond : preCondition)
 		{
-			if (!cond.test(activeChar, target, this))
+			if (!cond.test(creature, target, this))
 			{
 				final String msg = cond.getMessage();
 				final int msgId = cond.getMessageId();
@@ -1010,11 +1010,11 @@ public final class Skill implements IIdentifiable
 					{
 						sm.addSkillName(_id);
 					}
-					activeChar.sendPacket(sm);
+					creature.sendPacket(sm);
 				}
 				else if (msg != null)
 				{
-					activeChar.sendMessage(msg);
+					creature.sendMessage(msg);
 				}
 				return false;
 			}
@@ -1022,27 +1022,27 @@ public final class Skill implements IIdentifiable
 		return true;
 	}
 	
-	public L2Object[] getTargetList(L2Character activeChar, boolean onlyFirst)
+	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst)
 	{
 		// Init to null the target of the skill
-		L2Character target = null;
+		Creature target = null;
 		
 		// Get the L2Objcet targeted by the user of the skill at this moment
-		final L2Object objTarget = activeChar.getTarget();
-		// If the L2Object targeted is a L2Character, it becomes the L2Character target
-		if ((objTarget != null) && objTarget.isCharacter())
+		final WorldObject objTarget = creature.getTarget();
+		// If the WorldObject targeted is a Creature, it becomes the Creature target
+		if ((objTarget != null) && objTarget.isCreature())
 		{
-			target = (L2Character) objTarget;
+			target = (Creature) objTarget;
 		}
 		
-		return getTargetList(activeChar, onlyFirst, target);
+		return getTargetList(creature, onlyFirst, target);
 	}
 	
 	/**
 	 * Return all targets of the skill in a table in function a the skill type.<br>
 	 * <B><U>Values of skill type</U>:</B>
 	 * <ul>
-	 * <li>ONE : The skill can only be used on the L2PcInstance targeted, or on the caster if it's a L2PcInstance and no L2PcInstance targeted</li>
+	 * <li>ONE : The skill can only be used on the PlayerInstance targeted, or on the caster if it's a PlayerInstance and no PlayerInstance targeted</li>
 	 * <li>SELF</li>
 	 * <li>HOLY, UNDEAD</li>
 	 * <li>PET</li>
@@ -1054,37 +1054,37 @@ public final class Skill implements IIdentifiable
 	 * <li>UNLOCKABLE</li>
 	 * <li>ITEM</li>
 	 * <ul>
-	 * @param activeChar The L2Character who use the skill
+	 * @param creature The Creature who use the skill
 	 * @param onlyFirst
 	 * @param target
 	 * @return
 	 */
-	public L2Object[] getTargetList(L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst, Creature target)
 	{
 		final ITargetTypeHandler handler = TargetHandler.getInstance().getHandler(getTargetType());
 		if (handler != null)
 		{
 			try
 			{
-				return handler.getTargetList(this, activeChar, onlyFirst, target);
+				return handler.getTargetList(this, creature, onlyFirst, target);
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "Exception in L2Skill.getTargetList(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception in Skill.getTargetList(): " + e.getMessage(), e);
 			}
 		}
-		activeChar.sendMessage("Target type of skill is not currently handled.");
+		creature.sendMessage("Target type of skill is not currently handled.");
 		return EMPTY_TARGET_LIST;
 	}
 	
-	public L2Object[] getTargetList(L2Character activeChar)
+	public WorldObject[] getTargetList(Creature creature)
 	{
-		return getTargetList(activeChar, false);
+		return getTargetList(creature, false);
 	}
 	
-	public L2Object getFirstOfTargetList(L2Character activeChar)
+	public WorldObject getFirstOfTargetList(Creature creature)
 	{
-		final L2Object[] targets = getTargetList(activeChar, true);
+		final WorldObject[] targets = getTargetList(creature, true);
 		if (targets.length == 0)
 		{
 			return null;
@@ -1102,15 +1102,15 @@ public final class Skill implements IIdentifiable
 	 * @param sourceInArena
 	 * @return
 	 */
-	public static boolean checkForAreaOffensiveSkills(L2Character caster, L2Character target, Skill skill, boolean sourceInArena)
+	public static boolean checkForAreaOffensiveSkills(Creature caster, Creature target, Skill skill, boolean sourceInArena)
 	{
 		if ((target == null) || target.isDead() || (target == caster))
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = caster.getActingPlayer();
-		final L2PcInstance targetPlayer = target.getActingPlayer();
+		final PlayerInstance player = caster.getActingPlayer();
+		final PlayerInstance targetPlayer = target.getActingPlayer();
 		if (player != null)
 		{
 			if (targetPlayer != null)
@@ -1190,7 +1190,7 @@ public final class Skill implements IIdentifiable
 		return true;
 	}
 	
-	public static boolean addSummon(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
+	public static boolean addSummon(Creature caster, PlayerInstance owner, int radius, boolean isDead)
 	{
 		if (!owner.hasSummon())
 		{
@@ -1199,7 +1199,7 @@ public final class Skill implements IIdentifiable
 		return addCharacter(caster, owner.getSummon(), radius, isDead);
 	}
 	
-	public static boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
+	public static boolean addCharacter(Creature caster, Creature target, int radius, boolean isDead)
 	{
 		if (isDead != target.isDead())
 		{
@@ -1213,14 +1213,14 @@ public final class Skill implements IIdentifiable
 		return true;
 	}
 	
-	public List<AbstractFunction> getStatFuncs(AbstractEffect effect, L2Character player)
+	public List<AbstractFunction> getStatFuncs(AbstractEffect effect, Creature creature)
 	{
-		if ((_funcTemplates == null) || (player == null))
+		if ((_funcTemplates == null) || (creature == null))
 		{
 			return Collections.<AbstractFunction> emptyList();
 		}
 		
-		if (!player.isPlayable() && !player.isAttackable())
+		if (!creature.isPlayable() && !creature.isAttackable())
 		{
 			return Collections.<AbstractFunction> emptyList();
 		}
@@ -1228,7 +1228,7 @@ public final class Skill implements IIdentifiable
 		final List<AbstractFunction> funcs = new ArrayList<>(_funcTemplates.size());
 		for (FuncTemplate t : _funcTemplates)
 		{
-			final AbstractFunction f = t.getFunc(player, null, this, this); // skill is owner
+			final AbstractFunction f = t.getFunc(creature, null, this, this); // skill is owner
 			if (f != null)
 			{
 				funcs.add(f);
@@ -1293,25 +1293,25 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int)}.<br>
+	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int)}.<br>
 	 * Simplify the calls.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
 	 */
-	public void applyEffects(L2Character effector, L2Character effected)
+	public void applyEffects(Creature effector, Creature effected)
 	{
 		applyEffects(effector, effected, false, false, true, 0);
 	}
 	
 	/**
-	 * Method overload for {@link Skill#applyEffects(L2Character, L2Character, boolean, boolean, boolean, int)}.<br>
+	 * Method overload for {@link Skill#applyEffects(Creature, Creature, boolean, boolean, boolean, int)}.<br>
 	 * Simplify the calls, allowing abnormal time time customization.
 	 * @param effector the caster of the skill
 	 * @param effected the target of the effect
 	 * @param instant if {@code true} instant effects will be applied to the effected
 	 * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
 	 */
-	public void applyEffects(L2Character effector, L2Character effected, boolean instant, int abnormalTime)
+	public void applyEffects(Creature effector, Creature effected, boolean instant, int abnormalTime)
 	{
 		applyEffects(effector, effected, false, false, instant, abnormalTime);
 	}
@@ -1325,7 +1325,7 @@ public final class Skill implements IIdentifiable
 	 * @param instant if {@code true} instant effects will be applied to the effected
 	 * @param abnormalTime custom abnormal time, if equal or lesser than zero will be ignored
 	 */
-	public void applyEffects(L2Character effector, L2Character effected, boolean self, boolean passive, boolean instant, int abnormalTime)
+	public void applyEffects(Creature effector, Creature effected, boolean self, boolean passive, boolean instant, int abnormalTime)
 	{
 		// null targets cannot receive any effects.
 		if (effected == null)
@@ -1388,7 +1388,7 @@ public final class Skill implements IIdentifiable
 			applyEffectScope(EffectScope.SELF, info, instant, addContinuousEffects);
 			
 			// TODO : Need to be done better after skill rework
-			if (addContinuousEffects && hasEffectType(L2EffectType.BUFF))
+			if (addContinuousEffects && hasEffectType(EffectType.BUFF))
 			{
 				info.getEffector().getEffectList().add(info);
 			}
@@ -1414,7 +1414,7 @@ public final class Skill implements IIdentifiable
 	 * @param caster the caster
 	 * @param targets the targets
 	 */
-	public void activateSkill(L2Character caster, L2Object... targets)
+	public void activateSkill(Creature caster, WorldObject... targets)
 	{
 		activateSkill(caster, null, targets);
 	}
@@ -1424,7 +1424,7 @@ public final class Skill implements IIdentifiable
 	 * @param cubic the cubic
 	 * @param targets the targets
 	 */
-	public void activateSkill(L2CubicInstance cubic, L2Object... targets)
+	public void activateSkill(CubicInstance cubic, WorldObject... targets)
 	{
 		activateSkill(cubic.getOwner(), cubic, targets);
 	}
@@ -1435,7 +1435,7 @@ public final class Skill implements IIdentifiable
 	 * @param cubic the cubic, can be {@code null}
 	 * @param targets the targets
 	 */
-	private void activateSkill(L2Character caster, L2CubicInstance cubic, L2Object... targets)
+	private void activateSkill(Creature caster, CubicInstance cubic, WorldObject... targets)
 	{
 		switch (_id)
 		{
@@ -1443,8 +1443,8 @@ public final class Skill implements IIdentifiable
 			case 5852:
 			case 5853:
 			{
-				final L2BlockInstance block = targets[0] instanceof L2BlockInstance ? (L2BlockInstance) targets[0] : null;
-				final L2PcInstance player = caster.isPlayer() ? (L2PcInstance) caster : null;
+				final BlockInstance block = targets[0] instanceof BlockInstance ? (BlockInstance) targets[0] : null;
+				final PlayerInstance player = caster.isPlayer() ? (PlayerInstance) caster : null;
 				if ((block == null) || (player == null))
 				{
 					return;
@@ -1474,9 +1474,9 @@ public final class Skill implements IIdentifiable
 			}
 			default:
 			{
-				for (L2Object obj : targets)
+				for (WorldObject obj : targets)
 				{
-					final L2Character target = (L2Character) obj;
+					final Creature target = (Creature) obj;
 					if (Formulas.calcBuffDebuffReflection(target, this))
 					{
 						// if skill is reflected instant effects should be casted on target
@@ -1656,10 +1656,10 @@ public final class Skill implements IIdentifiable
 	 * @return the parsed extractable skill
 	 * @author Zoey76
 	 */
-	private L2ExtractableSkill parseExtractableSkill(int skillId, int skillLvl, String values)
+	private ExtractableSkill parseExtractableSkill(int skillId, int skillLvl, String values)
 	{
 		final String[] prodLists = values.split(";");
-		final List<L2ExtractableProductItem> products = new ArrayList<>();
+		final List<ExtractableProductItem> products = new ArrayList<>();
 		String[] prodData;
 		for (String prodList : prodLists)
 		{
@@ -1690,14 +1690,14 @@ public final class Skill implements IIdentifiable
 			{
 				LOGGER.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> incomplete/invalid production data or wrong seperator!");
 			}
-			products.add(new L2ExtractableProductItem(items, chance));
+			products.add(new ExtractableProductItem(items, chance));
 		}
 		
 		if (products.isEmpty())
 		{
 			LOGGER.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> There are no production items!");
 		}
-		return new L2ExtractableSkill(SkillData.getSkillHashCode(skillId, skillLvl), products);
+		return new ExtractableSkill(SkillData.getSkillHashCode(skillId, skillLvl), products);
 	}
 	
 	/**
@@ -1762,7 +1762,7 @@ public final class Skill implements IIdentifiable
 		}
 	}
 	
-	public L2ExtractableSkill getExtractableSkill()
+	public ExtractableSkill getExtractableSkill()
 	{
 		return _extractableItems;
 	}
@@ -1770,9 +1770,9 @@ public final class Skill implements IIdentifiable
 	/**
 	 * @param effectType Effect type to check if its present on this skill effects.
 	 * @param effectTypes Effect types to check if are present on this skill effects.
-	 * @return {@code true} if at least one of specified {@link L2EffectType} types is present on this skill effects, {@code false} otherwise.
+	 * @return {@code true} if at least one of specified {@link EffectType} types is present on this skill effects, {@code false} otherwise.
 	 */
-	public boolean hasEffectType(L2EffectType effectType, L2EffectType... effectTypes)
+	public boolean hasEffectType(EffectType effectType, EffectType... effectTypes)
 	{
 		if (_effectTypes == null)
 		{
@@ -1808,7 +1808,7 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		for (L2EffectType type : effectTypes)
+		for (EffectType type : effectTypes)
 		{
 			if (Arrays.binarySearch(_effectTypes, (byte) type.ordinal()) >= 0)
 			{

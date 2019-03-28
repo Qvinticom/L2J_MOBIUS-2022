@@ -20,8 +20,8 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -65,7 +65,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_tvt"))
 		{
@@ -347,7 +347,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String plyr = st.nextToken();
-				final L2PcInstance playerToKick = L2World.getInstance().getPlayer(plyr);
+				final PlayerInstance playerToKick = World.getInstance().getPlayer(plyr);
 				if (playerToKick != null)
 				{
 					TvT.kickPlayerFromTvt(playerToKick);
@@ -368,7 +368,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public void showMainPage(L2PcInstance activeChar)
+	public void showMainPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><title>Team vs Team</title><body>");

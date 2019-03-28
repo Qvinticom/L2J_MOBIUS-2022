@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.clientpackets.RequestBypassToServer;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -125,7 +125,7 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  * .
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class NpcHtmlMessage extends L2GameServerPacket
+public class NpcHtmlMessage extends GameServerPacket
 {
 	/** The LOGGER. */
 	private static Logger LOGGER = Logger.getLogger(RequestBypassToServer.class.getName());
@@ -171,8 +171,8 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	{
 		if (Config.BYPASS_VALIDATION && _validate)
 		{
-			buildBypassCache(getClient().getActiveChar());
-			buildLinksCache(getClient().getActiveChar());
+			buildBypassCache(getClient().getPlayer());
+			buildLinksCache(getClient().getPlayer());
 		}
 	}
 	
@@ -252,16 +252,16 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	
 	/**
 	 * Builds the bypass cache.
-	 * @param activeChar the active char
+	 * @param player the player
 	 */
-	private final void buildBypassCache(L2PcInstance activeChar)
+	private final void buildBypassCache(PlayerInstance player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		activeChar.clearBypass();
+		player.clearBypass();
 		final int len = _html.length();
 		for (int i = 0; i < len; i++)
 		{
@@ -278,11 +278,11 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			final int finish2 = _html.indexOf("$", start);
 			if ((finish2 < finish) && (finish2 > 0))
 			{
-				activeChar.addBypass2(_html.substring(start, finish2));
+				player.addBypass2(_html.substring(start, finish2));
 			}
 			else
 			{
-				activeChar.addBypass(_html.substring(start, finish));
+				player.addBypass(_html.substring(start, finish));
 				// LOGGER.warning("["+_html.substring(start, finish)+"]");
 			}
 		}
@@ -290,16 +290,16 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	
 	/**
 	 * Builds the links cache.
-	 * @param activeChar the active char
+	 * @param player the player
 	 */
-	private final void buildLinksCache(L2PcInstance activeChar)
+	private final void buildLinksCache(PlayerInstance player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		activeChar.clearLinks();
+		player.clearLinks();
 		final int len = _html.length();
 		for (int i = 0; i < len; i++)
 		{
@@ -312,7 +312,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			}
 			
 			i = start;
-			activeChar.addLink(_html.substring(start + 5, finish).trim());
+			player.addLink(_html.substring(start + 5, finish).trim());
 		}
 	}
 	
@@ -323,7 +323,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if ((_file != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
 		{
 			BuilderUtil.sendHtmlMessage(player, _file.substring(10));

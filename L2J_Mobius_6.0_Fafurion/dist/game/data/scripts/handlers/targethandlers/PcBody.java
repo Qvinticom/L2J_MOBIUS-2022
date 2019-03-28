@@ -18,10 +18,10 @@ package handlers.targethandlers;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -41,14 +41,14 @@ public class PcBody implements ITargetTypeHandler
 	}
 	
 	@Override
-	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
+	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		if (selectedTarget == null)
 		{
 			return null;
 		}
 		
-		if (!selectedTarget.isCharacter())
+		if (!selectedTarget.isCreature())
 		{
 			return null;
 		}
@@ -57,23 +57,23 @@ public class PcBody implements ITargetTypeHandler
 		{
 			if (sendMessage)
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 			
 			return null;
 		}
 		
-		final L2Playable target = (L2Playable) selectedTarget;
+		final Playable target = (Playable) selectedTarget;
 		
 		if (target.isDead())
 		{
-			if (skill.hasEffectType(L2EffectType.RESURRECTION))
+			if (skill.hasEffectType(EffectType.RESURRECTION))
 			{
-				if (activeChar.isResurrectionBlocked() || target.isResurrectionBlocked())
+				if (creature.isResurrectionBlocked() || target.isResurrectionBlocked())
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
+						creature.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
 						target.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
 					}
 					
@@ -85,7 +85,7 @@ public class PcBody implements ITargetTypeHandler
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+						creature.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 					}
 					
 					return null;
@@ -95,11 +95,11 @@ public class PcBody implements ITargetTypeHandler
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (activeChar.calculateDistance2D(target) > skill.getCastRange())
+				if (creature.calculateDistance2D(target) > skill.getCastRange())
 				{
 					if (sendMessage)
 					{
-						activeChar.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 					}
 					
 					return null;
@@ -107,11 +107,11 @@ public class PcBody implements ITargetTypeHandler
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoEngine.getInstance().canSeeTarget(creature, target))
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
 				
 				return null;
@@ -123,7 +123,7 @@ public class PcBody implements ITargetTypeHandler
 		// If target is not dead or not player/pet it will not even bother to walk within range, unlike Enemy target type.
 		if (sendMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+			creature.sendPacket(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;

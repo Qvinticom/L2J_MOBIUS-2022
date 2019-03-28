@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.taskmanager;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldRegion;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Playable;
 
 public class KnownListUpdateTaskManager
 {
@@ -60,9 +60,9 @@ public class KnownListUpdateTaskManager
 		{
 			try
 			{
-				for (L2WorldRegion regions[] : L2World.getInstance().getAllWorldRegions())
+				for (WorldRegion regions[] : World.getInstance().getAllWorldRegions())
 				{
-					for (L2WorldRegion r : regions) // go through all world regions
+					for (WorldRegion r : regions) // go through all world regions
 					{
 						if (r.isActive()) // and check only if the region is active
 						{
@@ -91,9 +91,9 @@ public class KnownListUpdateTaskManager
 		}
 	}
 	
-	public void updateRegion(L2WorldRegion region, boolean fullUpdate, boolean forgetObjects)
+	public void updateRegion(WorldRegion region, boolean fullUpdate, boolean forgetObjects)
 	{
-		for (L2Object object : region.getVisibleObjects()) // and for all members in region
+		for (WorldObject object : region.getVisibleObjects()) // and for all members in region
 		{
 			if (!object.isVisible())
 			{
@@ -104,11 +104,11 @@ public class KnownListUpdateTaskManager
 				object.getKnownList().forgetObjects(); // TODO
 				continue;
 			}
-			if ((object instanceof L2Playable) || fullUpdate)
+			if ((object instanceof Playable) || fullUpdate)
 			{
-				for (L2WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
+				for (WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
 				{
-					for (L2Object _object : regi.getVisibleObjects())
+					for (WorldObject _object : regi.getVisibleObjects())
 					{
 						if (_object != object)
 						{
@@ -117,13 +117,13 @@ public class KnownListUpdateTaskManager
 					}
 				}
 			}
-			else if (object instanceof L2Character)
+			else if (object instanceof Creature)
 			{
-				for (L2WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
+				for (WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
 				{
 					if (regi.isActive())
 					{
-						for (L2Object _object : regi.getVisibleObjects())
+						for (WorldObject _object : regi.getVisibleObjects())
 						{
 							if (_object != object)
 							{

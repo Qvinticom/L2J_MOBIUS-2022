@@ -23,8 +23,8 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
@@ -96,7 +96,7 @@ public final class Q00386_StolenDignity extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
@@ -121,7 +121,7 @@ public final class Q00386_StolenDignity extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (npc.getId() == WAREHOUSE_KEEPER_ROMP))
@@ -259,7 +259,7 @@ public final class Q00386_StolenDignity extends Quest
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private String takeHtml(L2PcInstance player, QuestState qs, int num)
+	private String takeHtml(PlayerInstance player, QuestState qs, int num)
 	{
 		String html = null;
 		int i3;
@@ -306,7 +306,7 @@ public final class Q00386_StolenDignity extends Quest
 		return fillBoard(player, qs, html);
 	}
 	
-	private String fillBoard(L2PcInstance player, QuestState qs, String html)
+	private String fillBoard(PlayerInstance player, QuestState qs, String html)
 	{
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
@@ -323,7 +323,7 @@ public final class Q00386_StolenDignity extends Quest
 		return html;
 	}
 	
-	private String colorBoard(L2PcInstance player, QuestState qs, String html)
+	private String colorBoard(PlayerInstance player, QuestState qs, String html)
 	{
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
@@ -334,7 +334,7 @@ public final class Q00386_StolenDignity extends Quest
 		return html;
 	}
 	
-	private String beforeReward(L2PcInstance player, QuestState qs, int num)
+	private String beforeReward(PlayerInstance player, QuestState qs, int num)
 	{
 		if (!isSelectedBingoNumber(qs, num))
 		{
@@ -360,7 +360,7 @@ public final class Q00386_StolenDignity extends Quest
 		return fillBoard(player, qs, getHtm(player, "30843-25.html"));
 	}
 	
-	private void reward(L2PcInstance player, QuestState qs, int count)
+	private void reward(PlayerInstance player, QuestState qs, int count)
 	{
 		switch (getRandom(33))
 		{
@@ -654,7 +654,7 @@ public final class Q00386_StolenDignity extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPlayerFromParty(killer, npc);
 		if (qs != null)
@@ -754,7 +754,7 @@ public final class Q00386_StolenDignity extends Quest
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	private QuestState getRandomPlayerFromParty(L2PcInstance player, L2Npc npc)
+	private QuestState getRandomPlayerFromParty(PlayerInstance player, Npc npc)
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();

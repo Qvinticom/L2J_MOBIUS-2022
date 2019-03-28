@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ManufactureItem;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopSellList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _buyer;
-	private final L2PcInstance _manufacturer;
+	private final PlayerInstance _buyer;
+	private final PlayerInstance _manufacturer;
 	
-	public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer)
+	public RecipeShopSellList(PlayerInstance buyer, PlayerInstance manufacturer)
 	{
 		_buyer = buyer;
 		_manufacturer = manufacturer;
@@ -47,7 +47,7 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(_manufacturer.getManufactureItems().size());
-			for (L2ManufactureItem temp : _manufacturer.getManufactureItems().values())
+			for (ManufactureItem temp : _manufacturer.getManufactureItems().values())
 			{
 				packet.writeD(temp.getRecipeId());
 				packet.writeD(0x00); // unknown

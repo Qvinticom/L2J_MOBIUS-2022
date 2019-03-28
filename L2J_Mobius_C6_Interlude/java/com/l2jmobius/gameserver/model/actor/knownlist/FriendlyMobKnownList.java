@@ -18,33 +18,33 @@ package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2FriendlyMobInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyMobInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class FriendlyMobKnownList extends AttackableKnownList
 {
-	public FriendlyMobKnownList(L2FriendlyMobInstance activeChar)
+	public FriendlyMobKnownList(FriendlyMobInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object)
+	public boolean addKnownObject(WorldObject object)
 	{
 		return addKnownObject(object, null);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object, L2Character dropper)
+	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
 		if (!super.addKnownObject(object, dropper))
 		{
 			return false;
 		}
 		
-		if ((object instanceof L2PcInstance) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		if ((object instanceof PlayerInstance) && (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
 			getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 		}
@@ -53,21 +53,21 @@ public class FriendlyMobKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public boolean removeKnownObject(L2Object object)
+	public boolean removeKnownObject(WorldObject object)
 	{
 		if (!super.removeKnownObject(object))
 		{
 			return false;
 		}
 		
-		if (!(object instanceof L2Character))
+		if (!(object instanceof Creature))
 		{
 			return true;
 		}
 		
 		if (getActiveChar().hasAI())
 		{
-			L2Character temp = (L2Character) object;
+			Creature temp = (Creature) object;
 			getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
 			
 			if (getActiveChar().getTarget() == temp)
@@ -89,8 +89,8 @@ public class FriendlyMobKnownList extends AttackableKnownList
 	}
 	
 	@Override
-	public final L2FriendlyMobInstance getActiveChar()
+	public final FriendlyMobInstance getActiveChar()
 	{
-		return (L2FriendlyMobInstance) super.getActiveChar();
+		return (FriendlyMobInstance) super.getActiveChar();
 	}
 }

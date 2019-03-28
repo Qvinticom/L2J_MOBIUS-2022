@@ -193,7 +193,7 @@
 				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="10" />
 				<param skillId="5605" skillLevel="#triggeredLevel" /> <!-- Power of Apella -->
@@ -221,7 +221,7 @@
 				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="10" />
 				<param skillId="5607" skillLevel="#triggeredLevel" /> <!-- Power of Apella -->
@@ -249,7 +249,7 @@
 				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="10" />
 				<param skillId="5608" skillLevel="#triggeredLevel" /> <!-- Power of Apella -->
@@ -999,7 +999,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="20" />
 				<param skillId="5681" skillLevel="1" /> <!-- PvP Weapon - CP Drain -->
@@ -1015,7 +1015,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="10" />
 				<param skillId="5682" skillLevel="1" /> <!-- PvP Weapon - Cancel -->
@@ -1031,7 +1031,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="20" />
 				<param skillId="5683" skillLevel="1" /> <!-- PvP Weapon - Ignore Shield Defense -->
@@ -1047,7 +1047,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="10" />
 				<param skillId="5684" skillLevel="1" /> <!-- PvP Weapon - Attack Chance -->
@@ -1063,7 +1063,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="5" />
 				<param skillId="5685" skillLevel="1" /> <!-- PvP Weapon - Casting -->
@@ -1078,7 +1078,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="10" />
 				<param skillId="5686" skillLevel="1" /> <!-- PvP Weapon - Rapid Fire -->
@@ -1094,7 +1094,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="10" />
 				<param skillId="5687" skillLevel="1" /> <!-- PvP Weapon - Decrease Range -->
@@ -1110,7 +1110,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="50" chance="10" />
 				<param skillId="5688" skillLevel="1" /> <!-- PvP Weapon - Decrease Resist -->
@@ -1126,7 +1126,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="40" />
 				<param chance="10" />
 				<param skillId="5689" skillLevel="1" /> <!-- PvP Shield - Reflect Damage -->
@@ -1141,7 +1141,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="20" />
 				<param skillId="5690" skillLevel="1" /> <!-- PvP Armor - Damage Down -->
@@ -1156,7 +1156,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="20" />
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
@@ -1185,7 +1185,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="10" />
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
@@ -1200,7 +1200,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="25" />
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
@@ -1257,7 +1257,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="20" />
 				<param chance="2" />
 				<param skillId="5695" skillLevel="1" /> <!-- Talisman - Increase Force -->

@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author mkizub
  */
-final class EffectImobileBuff extends L2Effect
+final class EffectImobileBuff extends Effect
 {
 	public EffectImobileBuff(Env env, EffectTemplate template)
 	{

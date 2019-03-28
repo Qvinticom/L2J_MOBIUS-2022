@@ -18,18 +18,18 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestStartPledgeWar extends L2GameClientPacket
+public final class RequestStartPledgeWar extends GameClientPacket
 {
 	private String _pledgeName;
-	private L2Clan _clan;
-	private L2PcInstance player;
+	private Clan _clan;
+	private PlayerInstance player;
 	
 	@Override
 	protected void readImpl()
@@ -40,13 +40,13 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		player = getClient().getActiveChar();
+		player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		
-		_clan = getClient().getActiveChar().getClan();
+		_clan = getClient().getPlayer().getClan();
 		if (_clan == null)
 		{
 			return;
@@ -66,7 +66,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 			return;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
+		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		if (clan == null)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_WAR_CANNOT_DECLARED_CLAN_NOT_EXIST);
@@ -99,7 +99,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 		
 		// LOGGER.warning("RequestStartPledgeWar, leader: " + clan.getLeaderName() + " clan: "+ _clan.getName());
 		
-		// L2PcInstance leader = L2World.getInstance().getPlayer(clan.getLeaderName());
+		// PlayerInstance leader = World.getInstance().getPlayer(clan.getLeaderName());
 		
 		// if(leader == null)
 		// return;
@@ -132,7 +132,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 		// leader.sendPacket(new StartPledgeWar(_clan.getName(),player.getName()));
 		
 		ClanTable.getInstance().storeClanWars(player.getClanId(), clan.getClanId());
-		for (L2PcInstance cha : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance cha : World.getInstance().getAllPlayers())
 		{
 			if ((cha.getClan() == player.getClan()) || (cha.getClan() == clan))
 			{

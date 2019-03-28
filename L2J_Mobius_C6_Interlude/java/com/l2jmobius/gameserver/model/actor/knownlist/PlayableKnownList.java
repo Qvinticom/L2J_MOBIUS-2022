@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.Playable;
 
-public class PlayableKnownList extends CharKnownList
+public class PlayableKnownList extends CreatureKnownList
 {
-	public PlayableKnownList(L2Playable activeChar)
+	public PlayableKnownList(Playable activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public L2Playable getActiveChar()
+	public Playable getActiveChar()
 	{
-		return (L2Playable) super.getActiveChar();
+		return (Playable) super.getActiveChar();
 	}
 }

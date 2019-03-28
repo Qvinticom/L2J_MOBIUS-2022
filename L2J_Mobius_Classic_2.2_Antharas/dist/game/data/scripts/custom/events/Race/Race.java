@@ -25,8 +25,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -41,11 +41,11 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public final class Race extends Event
 {
 	// Event NPCs list
-	private List<L2Npc> _npclist;
+	private List<Npc> _npclist;
 	// Npc
-	private L2Npc _npc;
+	private Npc _npc;
 	// Player list
-	private List<L2PcInstance> _players;
+	private List<PlayerInstance> _players;
 	// Event Task
 	ScheduledFuture<?> _eventTask = null;
 	// Event state
@@ -111,7 +111,7 @@ public final class Race extends Event
 	}
 	
 	@Override
-	public boolean eventStart(L2PcInstance eventMaker)
+	public boolean eventStart(PlayerInstance eventMaker)
 	{
 		// Don't start event if its active
 		if (_isactive)
@@ -163,7 +163,7 @@ public final class Race extends Event
 		// And spawn NPC
 		recordSpawn(_stop_npc, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
 		// Transform players and send message
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -205,7 +205,7 @@ public final class Race extends Event
 		}
 		// Untransform players
 		// Teleport to event start point
-		for (L2PcInstance player : _players)
+		for (PlayerInstance player : _players)
 		{
 			if ((player != null) && player.isOnline())
 			{
@@ -214,7 +214,7 @@ public final class Race extends Event
 			}
 		}
 		// Despawn NPCs
-		for (L2Npc _npc : _npclist)
+		for (Npc _npc : _npclist)
 		{
 			if (_npc != null)
 			{
@@ -230,13 +230,13 @@ public final class Race extends Event
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
+	public boolean eventBypass(PlayerInstance player, String bypass)
 	{
 		if (bypass.startsWith("skill"))
 		{
 			if (_isRaceStarted)
 			{
-				activeChar.sendMessage("Race already started, you cannot change transform skill now");
+				player.sendMessage("Race already started, you cannot change transform skill now");
 			}
 			else
 			{
@@ -245,12 +245,12 @@ public final class Race extends Event
 				if (_sk != null)
 				{
 					_skill = _number;
-					activeChar.sendMessage("Transform skill set to:");
-					activeChar.sendMessage(_sk.getName());
+					player.sendMessage("Transform skill set to:");
+					player.sendMessage(_sk.getName());
 				}
 				else
 				{
-					activeChar.sendMessage("Error while changing transform skill");
+					player.sendMessage("Error while changing transform skill");
 				}
 			}
 			
@@ -259,23 +259,23 @@ public final class Race extends Event
 		{
 			if ((Integer.valueOf(bypass.substring(4)) > 0) && (_randspawn != null))
 			{
-				activeChar.teleToLocation(_randspawn[0], _randspawn[1], _randspawn[2]);
+				player.teleToLocation(_randspawn[0], _randspawn[1], _randspawn[2]);
 			}
 			else
 			{
-				activeChar.teleToLocation(18429, 145861, -3090);
+				player.teleToLocation(18429, 145861, -3090);
 			}
 		}
-		showMenu(activeChar);
+		showMenu(player);
 		return true;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -326,7 +326,7 @@ public final class Race extends Event
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		getQuestState(player, true);
 		
@@ -345,14 +345,14 @@ public final class Race extends Event
 		return npc.getId() + ".htm";
 	}
 	
-	private int isRacing(L2PcInstance player)
+	private int isRacing(PlayerInstance player)
 	{
 		return _players.contains(player) ? 1 : 0;
 	}
 	
-	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
-		final L2Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
+		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc != null)
 		{
 			_npclist.add(npc);
@@ -360,7 +360,7 @@ public final class Race extends Event
 		return npc;
 	}
 	
-	private void transformPlayer(L2PcInstance player)
+	private void transformPlayer(PlayerInstance player)
 	{
 		if (player.isTransformed())
 		{
@@ -377,17 +377,17 @@ public final class Race extends Event
 		SkillData.getInstance().getSkill(_skill, 1).applyEffects(player, player);
 	}
 	
-	private void sendMessage(L2PcInstance player, String text)
+	private void sendMessage(PlayerInstance player, String text)
 	{
 		player.sendPacket(new CreatureSay(_npc.getObjectId(), ChatType.MPCC_ROOM, _npc.getName(), text));
 	}
 	
-	private void showMenu(L2PcInstance activeChar)
+	private void showMenu(PlayerInstance player)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		final String content = getHtm(activeChar, "admin_menu.htm");
+		final String content = getHtm(player, "admin_menu.htm");
 		html.setHtml(content);
-		activeChar.sendPacket(html);
+		player.sendPacket(html);
 	}
 	
 	protected void timeUp()
@@ -396,7 +396,7 @@ public final class Race extends Event
 		eventStop();
 	}
 	
-	private void winRace(L2PcInstance player)
+	private void winRace(PlayerInstance player)
 	{
 		final int[] _reward = _rewards[getRandom(_rewards.length - 1)];
 		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);

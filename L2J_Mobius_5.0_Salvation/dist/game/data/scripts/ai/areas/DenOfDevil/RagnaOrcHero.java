@@ -16,7 +16,7 @@
  */
 package ai.areas.DenOfDevil;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 
@@ -34,7 +34,7 @@ public final class RagnaOrcHero extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		spawnMinions(npc, getRandom(100) < 70 ? "Privates1" : "Privates2");
 		return super.onSpawn(npc);

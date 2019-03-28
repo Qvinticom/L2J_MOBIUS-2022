@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.RecipeList;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -40,79 +40,79 @@ public class Recipes implements IItemHandler
 	}
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2RecipeList rp = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
-		if (activeChar.hasRecipeList(rp.getId()))
+		PlayerInstance player = (PlayerInstance) playable;
+		RecipeList rp = RecipeTable.getInstance().getRecipeByItemId(item.getItemId());
+		if (player.hasRecipeList(rp.getId()))
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.RECIPE_ALREADY_REGISTERED);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		else if (rp.isDwarvenRecipe())
 		{
-			if (activeChar.hasDwarvenCraft())
+			if (player.hasDwarvenCraft())
 			{
-				if (rp.getLevel() > activeChar.getDwarvenCraft())
+				if (rp.getLevel() > player.getDwarvenCraft())
 				{
 					// can't add recipe, becouse create item level too low
 					SystemMessage sm = new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 				}
-				else if (activeChar.getDwarvenRecipeBook().length >= activeChar.GetDwarfRecipeLimit())
+				else if (player.getDwarvenRecipeBook().length >= player.GetDwarfRecipeLimit())
 				{
 					// Up to $s1 recipes can be registered.
 					SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
-					sm.addNumber(activeChar.GetDwarfRecipeLimit());
-					activeChar.sendPacket(sm);
+					sm.addNumber(player.GetDwarfRecipeLimit());
+					player.sendPacket(sm);
 				}
 				else
 				{
-					activeChar.registerDwarvenRecipeList(rp);
-					activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
+					player.registerDwarvenRecipeList(rp);
+					player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 					sm.addString(item.getItemName());
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 				}
 			}
 			else
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
-		else if (activeChar.hasCommonCraft())
+		else if (player.hasCommonCraft())
 		{
-			if (rp.getLevel() > activeChar.getCommonCraft())
+			if (rp.getLevel() > player.getCommonCraft())
 			{
 				// can't add recipe, becouse create item level too low
 				SystemMessage sm = new SystemMessage(SystemMessageId.CREATE_LVL_TOO_LOW_TO_REGISTER);
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
-			else if (activeChar.getCommonRecipeBook().length >= activeChar.GetCommonRecipeLimit())
+			else if (player.getCommonRecipeBook().length >= player.GetCommonRecipeLimit())
 			{
 				// Up to $s1 recipes can be registered.
 				SystemMessage sm = new SystemMessage(SystemMessageId.UP_TO_S1_RECIPES_CAN_REGISTER);
-				sm.addNumber(activeChar.GetCommonRecipeLimit());
-				activeChar.sendPacket(sm);
+				sm.addNumber(player.GetCommonRecipeLimit());
+				player.sendPacket(sm);
 			}
 			else
 			{
-				activeChar.registerCommonRecipeList(rp);
-				activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
+				player.registerCommonRecipeList(rp);
+				player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 				sm.addString(item.getItemName());
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 		}
 		else
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 	}
 	

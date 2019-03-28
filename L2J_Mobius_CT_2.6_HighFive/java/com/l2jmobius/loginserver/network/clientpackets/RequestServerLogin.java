@@ -22,7 +22,7 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.LoginServer;
 import com.l2jmobius.loginserver.SessionKey;
-import com.l2jmobius.loginserver.network.L2LoginClient;
+import com.l2jmobius.loginserver.network.LoginClient;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
@@ -36,14 +36,14 @@ import com.l2jmobius.loginserver.network.serverpackets.PlayOk;
  * c: server ID
  * </pre>
  */
-public class RequestServerLogin implements IIncomingPacket<L2LoginClient>
+public class RequestServerLogin implements IIncomingPacket<LoginClient>
 {
 	private int _skey1;
 	private int _skey2;
 	private int _serverId;
 	
 	@Override
-	public boolean read(L2LoginClient client, PacketReader packet)
+	public boolean read(LoginClient client, PacketReader packet)
 	{
 		if (packet.getReadableBytes() >= 9)
 		{
@@ -56,7 +56,7 @@ public class RequestServerLogin implements IIncomingPacket<L2LoginClient>
 	}
 	
 	@Override
-	public void run(L2LoginClient client)
+	public void run(LoginClient client)
 	{
 		final SessionKey sk = client.getSessionKey();
 		

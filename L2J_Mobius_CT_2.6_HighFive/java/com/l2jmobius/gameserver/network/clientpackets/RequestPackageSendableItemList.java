@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
 /**
@@ -30,16 +30,16 @@ public class RequestPackageSendableItemList implements IClientIncomingPacket
 	private int _objectID;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectID = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2ItemInstance[] items = client.getActiveChar().getInventory().getAvailableItems(true, true, true);
-		client.sendPacket(new PackageSendableList(items, _objectID, client.getActiveChar().getAdena()));
+		final ItemInstance[] items = client.getPlayer().getInventory().getAvailableItems(true, true, true);
+		client.sendPacket(new PackageSendableList(items, _objectID, client.getPlayer().getAdena()));
 	}
 }

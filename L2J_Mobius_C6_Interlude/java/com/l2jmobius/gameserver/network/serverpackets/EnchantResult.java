@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class EnchantResult extends L2GameServerPacket
+public class EnchantResult extends GameServerPacket
 {
 	private final int _unknown;
 	

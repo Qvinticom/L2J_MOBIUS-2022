@@ -18,19 +18,19 @@ package com.l2jmobius.gameserver.model.interfaces;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.zone.type.L2BannedSpawnTerritory;
-import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.BannedSpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 
 /**
  * @author UnAfraid
  */
 public interface ITerritorized
 {
-	void addTerritory(L2SpawnTerritory territory);
+	void addTerritory(SpawnTerritory territory);
 	
-	List<L2SpawnTerritory> getTerritories();
+	List<SpawnTerritory> getTerritories();
 	
-	void addBannedTerritory(L2BannedSpawnTerritory territory);
+	void addBannedTerritory(BannedSpawnTerritory territory);
 	
-	List<L2BannedSpawnTerritory> getBannedTerritories();
+	List<BannedSpawnTerritory> getBannedTerritories();
 }

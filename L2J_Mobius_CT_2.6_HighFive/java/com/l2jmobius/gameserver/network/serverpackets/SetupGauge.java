@@ -25,14 +25,14 @@ public final class SetupGauge implements IClientOutgoingPacket
 	public static final int RED = 1;
 	public static final int CYAN = 2;
 	
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _dat1;
 	private final int _time;
 	private final int _time2;
 	
 	public SetupGauge(int charObjId, int dat1, int time)
 	{
-		_charObjId = charObjId;
+		_objectId = charObjId;
 		_dat1 = dat1; // color 0-blue 1-red 2-cyan 3-green
 		_time = time;
 		_time2 = time;
@@ -40,7 +40,7 @@ public final class SetupGauge implements IClientOutgoingPacket
 	
 	public SetupGauge(int charObjId, int color, int currentTime, int maxTime)
 	{
-		_charObjId = charObjId;
+		_objectId = charObjId;
 		_dat1 = color; // color 0-blue 1-red 2-cyan 3-green
 		_time = currentTime;
 		_time2 = maxTime;
@@ -50,7 +50,7 @@ public final class SetupGauge implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SETUP_GAUGE.writeId(packet);
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_dat1);
 		packet.writeD(_time);
 		packet.writeD(_time2);

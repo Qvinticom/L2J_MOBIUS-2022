@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -73,7 +73,7 @@ public final class TerritoryManagers extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if ((player.getClassId().level() < 2) || (player.getLevel() < 40))
 		{
@@ -84,7 +84,7 @@ public final class TerritoryManagers extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final int npcId = npc.getId();
@@ -262,7 +262,7 @@ public final class TerritoryManagers extends AbstractNpcAI
 	 * @param questId the quest Id of the quest that will be processed
 	 * @param itemIds the item Ids should be deleted
 	 */
-	private static void processNoblesseQuest(L2PcInstance player, int questId, int[] itemIds)
+	private static void processNoblesseQuest(PlayerInstance player, int questId, int[] itemIds)
 	{
 		final Quest q = QuestManager.getInstance().getQuest(questId);
 		if (q == null)
@@ -299,9 +299,9 @@ public final class TerritoryManagers extends AbstractNpcAI
 	 * @param event the event leading to this deletion
 	 * @param npc the npc referencing this deletion
 	 */
-	private static void deleteIfExist(L2PcInstance player, int itemId, String event, L2Npc npc)
+	private static void deleteIfExist(PlayerInstance player, int itemId, String event, Npc npc)
 	{
-		final L2ItemInstance item = player.getInventory().getItemByItemId(itemId);
+		final ItemInstance item = player.getInventory().getItemByItemId(itemId);
 		if (item != null)
 		{
 			player.destroyItem(event, item, npc, true);

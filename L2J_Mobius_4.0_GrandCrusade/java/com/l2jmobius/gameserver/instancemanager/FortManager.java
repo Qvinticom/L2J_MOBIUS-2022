@@ -27,8 +27,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.InstanceListManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Fort;
 
 public final class FortManager implements InstanceListManager
@@ -37,12 +37,12 @@ public final class FortManager implements InstanceListManager
 	
 	private static final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 	
-	public final Fort findNearestFort(L2Object obj)
+	public final Fort findNearestFort(WorldObject obj)
 	{
 		return findNearestFort(obj, Long.MAX_VALUE);
 	}
 	
-	public final Fort findNearestFort(L2Object obj, long maxDistance)
+	public final Fort findNearestFort(WorldObject obj, long maxDistance)
 	{
 		Fort nearestFort = getFort(obj);
 		if (nearestFort == null)
@@ -72,7 +72,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFortByOwner(L2Clan clan)
+	public final Fort getFortByOwner(Clan clan)
 	{
 		for (Fort f : _forts.values())
 		{
@@ -108,7 +108,7 @@ public final class FortManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Fort getFort(L2Object activeObject)
+	public final Fort getFort(WorldObject activeObject)
 	{
 		return getFort(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}

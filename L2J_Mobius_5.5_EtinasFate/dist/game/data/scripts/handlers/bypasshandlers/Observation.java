@@ -21,10 +21,10 @@ import java.util.logging.Level;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2ObservationInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.ObservationInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -87,21 +87,21 @@ public class Observation implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!(target instanceof L2ObservationInstance))
+		if (!(target instanceof ObservationInstance))
 		{
 			return false;
 		}
 		
-		if (activeChar.hasSummon())
+		if (player.hasSummon())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_PET_OR_SERVITOR_SUMMONED);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_PET_OR_SERVITOR_SUMMONED);
 			return false;
 		}
-		if (activeChar.isOnEvent())
+		if (player.isOnEvent())
 		{
-			activeChar.sendMessage("Cannot use while current Event");
+			player.sendMessage("Cannot use while current Event");
 			return false;
 		}
 		
@@ -132,29 +132,29 @@ public class Observation implements IBypassHandler
 			{
 				if (SiegeManager.getInstance().getSiege(loc) != null)
 				{
-					doObserve(activeChar, (L2Npc) target, loc, cost);
+					doObserve(player, (Npc) target, loc, cost);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
+					player.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
 				}
 				return true;
 			}
 			case "observeoracle": // Oracle Dusk/Dawn
 			{
-				doObserve(activeChar, (L2Npc) target, loc, cost);
+				doObserve(player, (Npc) target, loc, cost);
 				return true;
 			}
 			case "observe": // Observe
 			{
-				doObserve(activeChar, (L2Npc) target, loc, cost);
+				doObserve(player, (Npc) target, loc, cost);
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	private static void doObserve(L2PcInstance player, L2Npc npc, Location pos, long cost)
+	private static void doObserve(PlayerInstance player, Npc npc, Location pos, long cost)
 	{
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{

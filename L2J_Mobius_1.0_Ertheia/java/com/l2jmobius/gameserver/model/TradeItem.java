@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.model;
 import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public class TradeItem
 {
 	private int _objectId;
-	private final L2Item _item;
+	private final Item _item;
 	private final int _location;
 	private int _enchant;
 	private final int _type1;
@@ -49,7 +49,7 @@ public class TradeItem
 	private int _augmentationOption1 = -1;
 	private int _augmentationOption2 = -1;
 	
-	public TradeItem(L2ItemInstance item, long count, long price)
+	public TradeItem(ItemInstance item, long count, long price)
 	{
 		Objects.requireNonNull(item);
 		_objectId = item.getObjectId();
@@ -76,7 +76,7 @@ public class TradeItem
 		}
 	}
 	
-	public TradeItem(L2Item item, long count, long price)
+	public TradeItem(Item item, long count, long price)
 	{
 		Objects.requireNonNull(item);
 		_objectId = 0;
@@ -90,7 +90,7 @@ public class TradeItem
 		_price = price;
 		_elemAtkType = AttributeType.NONE.getClientId();
 		_elemAtkPower = 0;
-		_enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
+		_enchantOptions = ItemInstance.DEFAULT_ENCHANT_OPTIONS;
 	}
 	
 	public TradeItem(TradeItem item, long count, long price)
@@ -125,7 +125,7 @@ public class TradeItem
 		return _objectId;
 	}
 	
-	public L2Item getItem()
+	public Item getItem()
 	{
 		return _item;
 	}

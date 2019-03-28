@@ -16,15 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * Format (ch)dddcccd d: cahacter oid d: time left d: fish hp c: c: c: 00 if fish gets damage 02 if fish regens d:
  * @author -Wooden-
  */
-public class ExFishingHpRegen extends L2GameServerPacket
+public class ExFishingHpRegen extends GameServerPacket
 {
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	private final int _time;
 	private final int _fishHP;
 	private final int _hpMode;
@@ -33,9 +33,9 @@ public class ExFishingHpRegen extends L2GameServerPacket
 	private final int _penalty;
 	private final int _hpBarColor;
 	
-	public ExFishingHpRegen(L2Character character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
+	public ExFishingHpRegen(Creature creature, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
 	{
-		_activeChar = character;
+		_creature = creature;
 		_time = time;
 		_fishHP = fishHP;
 		_hpMode = HPmode;
@@ -55,7 +55,7 @@ public class ExFishingHpRegen extends L2GameServerPacket
 		writeC(0xfe);
 		writeH(0x16);
 		
-		writeD(_activeChar.getObjectId());
+		writeD(_creature.getObjectId());
 		writeD(_time);
 		writeD(_fishHP);
 		writeC(_hpMode); // 0 = HP stop, 1 = HP raise

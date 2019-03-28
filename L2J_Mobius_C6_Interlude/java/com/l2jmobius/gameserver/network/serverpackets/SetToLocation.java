@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * 0000: 76 7a 07 80 49 ea 01 00 00 c1 37 fe uz..Ic'.J.....7.
@@ -28,21 +28,21 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
  * <p>
  * @version $Revision: 1.3.4.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class SetToLocation extends L2GameServerPacket
+public class SetToLocation extends GameServerPacket
 {
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
 	private final int _heading;
 	
-	public SetToLocation(L2Character character)
+	public SetToLocation(Creature creature)
 	{
-		_charObjId = character.getObjectId();
-		_x = character.getX();
-		_y = character.getY();
-		_z = character.getZ();
-		_heading = character.getHeading();
+		_objectId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
+		_heading = creature.getHeading();
 	}
 	
 	@Override
@@ -50,7 +50,7 @@ public class SetToLocation extends L2GameServerPacket
 	{
 		writeC(0x76);
 		
-		writeD(_charObjId);
+		writeD(_objectId);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);

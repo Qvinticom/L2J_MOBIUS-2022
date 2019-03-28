@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35300" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35300" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -44,7 +44,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35301" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35301" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -88,7 +88,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35302" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35302" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -132,7 +132,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35303" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35303" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -176,7 +176,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35304" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35304" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -220,7 +220,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35305" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35305" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -264,7 +264,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35306" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35306" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -308,7 +308,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35307" level="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35307" level="75" type="Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -352,7 +352,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35308" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Innadril">
+	<npc id="35308" level="75" type="CastleDoorman" name="Gatekeeper" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -416,7 +416,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35309" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Innadril">
+	<npc id="35309" level="75" type="CastleDoorman" name="Gatekeeper" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -480,7 +480,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35310" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Innadril">
+	<npc id="35310" level="75" type="CastleDoorman" name="Gatekeeper" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -544,7 +544,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35311" level="75" type="L2Npc" name="Mass Gatekeeper" title="Innadril">
+	<npc id="35311" level="75" type="Npc" name="Mass Gatekeeper" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -588,7 +588,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35312" level="75" type="L2CastleDoormen" name="Outer Doorman" title="Innadril">
+	<npc id="35312" level="75" type="CastleDoorman" name="Outer Doorman" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -638,7 +638,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35313" level="75" type="L2CastleDoormen" name="Inner Doorman" title="Innadril">
+	<npc id="35313" level="75" type="CastleDoorman" name="Inner Doorman" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -688,7 +688,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35314" level="75" type="L2Npc" name="Blacksmith" title="Innadril">
+	<npc id="35314" level="75" type="Npc" name="Blacksmith" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -729,7 +729,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35315" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Innadril">
+	<npc id="35315" level="75" type="Warehouse" name="Warehouse Keeper" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -769,7 +769,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35316" level="75" type="L2Merchant" name="Neurath" title="Chamberlain">
+	<npc id="35316" level="75" type="Merchant" name="Neurath" title="Chamberlain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -823,7 +823,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35317" level="75" type="L2Npc" name="Tate" title="Wyvern Manager">
+	<npc id="35317" level="75" type="Npc" name="Tate" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -863,7 +863,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35318" level="75" type="L2Merchant" name="Solinus" title="Mercenary Manager">
+	<npc id="35318" level="75" type="Merchant" name="Solinus" title="Mercenary Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -904,7 +904,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35319" level="75" type="L2Merchant" name="Manor Manager" title="Innadril">
+	<npc id="35319" level="75" type="Merchant" name="Manor Manager" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -945,7 +945,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35320" level="75" type="L2Npc" name="Raybell" title="Sir">
+	<npc id="35320" level="75" type="Npc" name="Raybell" title="Sir">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -987,7 +987,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35322" level="20" type="L2Artefact" name="Altar of Fire">
+	<npc id="35322" level="20" type="Artefact" name="Altar of Fire">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1024,7 +1024,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="35323" level="20" type="L2Artefact" name="Altar of Water">
+	<npc id="35323" level="20" type="Artefact" name="Altar of Water">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1061,7 +1061,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="35324" level="81" type="L2Defender" name="Heinz" title="Royal Guard Captain">
+	<npc id="35324" level="81" type="Defender" name="Heinz" title="Royal Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1105,7 +1105,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35325" level="83" type="L2Defender" name="Duke Mora Ken Abygail">
+	<npc id="35325" level="83" type="Defender" name="Duke Mora Ken Abygail">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1149,7 +1149,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35326" level="79" type="L2Defender" name="Royal Knight" title="Goddard">
+	<npc id="35326" level="79" type="Defender" name="Royal Knight" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1193,7 +1193,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35327" level="77" type="L2Defender" name="Court Sorcerer" title="Goddard">
+	<npc id="35327" level="77" type="Defender" name="Court Sorcerer" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
@@ -1241,7 +1241,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35328" level="77" type="L2Defender" name="Court Sorcerer" title="Goddard">
+	<npc id="35328" level="77" type="Defender" name="Court Sorcerer" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
@@ -1289,7 +1289,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35329" level="77" type="L2Defender" name="Court Guard" title="Goddard">
+	<npc id="35329" level="77" type="Defender" name="Court Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1333,7 +1333,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35330" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35330" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1377,7 +1377,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35331" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35331" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1421,7 +1421,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35332" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35332" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1465,7 +1465,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35333" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35333" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -1509,7 +1509,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35334" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35334" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -1553,7 +1553,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35335" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35335" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -1597,7 +1597,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35336" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35336" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1641,7 +1641,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35337" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35337" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1685,7 +1685,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35338" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35338" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1729,7 +1729,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35339" level="79" type="L2Defender" name="Royal Knight" title="Goddard">
+	<npc id="35339" level="79" type="Defender" name="Royal Knight" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1773,7 +1773,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35340" level="77" type="L2Defender" name="Court Sorcerer" title="Goddard">
+	<npc id="35340" level="77" type="Defender" name="Court Sorcerer" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
@@ -1821,7 +1821,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35341" level="77" type="L2Defender" name="Court Sorcerer" title="Goddard">
+	<npc id="35341" level="77" type="Defender" name="Court Sorcerer" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
@@ -1869,7 +1869,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35342" level="77" type="L2Defender" name="Court Guard" title="Goddard">
+	<npc id="35342" level="77" type="Defender" name="Court Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1913,7 +1913,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35343" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35343" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1957,7 +1957,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35344" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35344" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2001,7 +2001,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="35345" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35345" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2045,7 +2045,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35346" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35346" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2089,7 +2089,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35347" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35347" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2133,7 +2133,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35348" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35348" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2177,7 +2177,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35349" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35349" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2221,7 +2221,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="35350" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35350" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2265,7 +2265,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35351" level="75" type="L2Defender" name="Guard" title="Goddard">
+	<npc id="35351" level="75" type="Defender" name="Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2309,7 +2309,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35352" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
+	<npc id="35352" level="75" type="CastleDoorman" name="Gatekeeper" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2372,7 +2372,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35353" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
+	<npc id="35353" level="75" type="CastleDoorman" name="Gatekeeper" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2435,7 +2435,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35354" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Goddard">
+	<npc id="35354" level="75" type="CastleDoorman" name="Gatekeeper" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2498,7 +2498,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35355" level="75" type="L2Npc" name="Mass Gatekeeper" title="Goddard">
+	<npc id="35355" level="75" type="Npc" name="Mass Gatekeeper" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2541,7 +2541,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35356" level="75" type="L2CastleDoormen" name="Outer Doorman" title="Goddard">
+	<npc id="35356" level="75" type="CastleDoorman" name="Outer Doorman" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2590,7 +2590,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35357" level="75" type="L2CastleDoormen" name="Inner Doorman" title="Goddard">
+	<npc id="35357" level="75" type="CastleDoorman" name="Inner Doorman" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2638,7 +2638,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35358" level="75" type="L2CastleDoormen" name="Inner Doorman" title="Goddard">
+	<npc id="35358" level="75" type="CastleDoorman" name="Inner Doorman" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2686,7 +2686,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35359" level="75" type="L2CastleDoormen" name="Doorman" title="Goddard">
+	<npc id="35359" level="75" type="CastleDoorman" name="Doorman" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2734,7 +2734,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35360" level="75" type="L2CastleDoormen" name="Doorman" title="Goddard">
+	<npc id="35360" level="75" type="CastleDoorman" name="Doorman" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2782,7 +2782,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35361" level="75" type="L2Npc" name="Blacksmith" title="Goddard">
+	<npc id="35361" level="75" type="Npc" name="Blacksmith" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2823,7 +2823,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35362" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Goddard">
+	<npc id="35362" level="75" type="Warehouse" name="Warehouse Keeper" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2863,7 +2863,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35363" level="75" type="L2Merchant" name="Alfred" title="Chamberlain">
+	<npc id="35363" level="75" type="Merchant" name="Alfred" title="Chamberlain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -2920,7 +2920,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35364" level="75" type="L2Npc" name="Hadley" title="Wyvern Manager">
+	<npc id="35364" level="75" type="Npc" name="Hadley" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2960,7 +2960,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35365" level="75" type="L2Merchant" name="Rowell" title="Manager of Mercenary">
+	<npc id="35365" level="75" type="Merchant" name="Rowell" title="Manager of Mercenary">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3000,7 +3000,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35366" level="75" type="L2Merchant" name="Manor Manager" title="Goddard">
+	<npc id="35366" level="75" type="Merchant" name="Manor Manager" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3041,7 +3041,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35367" level="75" type="L2Npc" name="Daven" title="Messenger">
+	<npc id="35367" level="75" type="Npc" name="Daven" title="Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3082,7 +3082,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35368" level="73" type="L2Monster" name="Bloody Lord Nurka">
+	<npc id="35368" level="73" type="Monster" name="Bloody Lord Nurka">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3126,7 +3126,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35369" level="70" type="L2Monster" name="Partisan Healer">
+	<npc id="35369" level="70" type="Monster" name="Partisan Healer">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3169,7 +3169,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35370" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35370" level="70" type="Monster" name="Partisan Court Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3212,7 +3212,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35371" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35371" level="70" type="Monster" name="Partisan Court Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3255,7 +3255,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35372" level="68" type="L2Monster" name="Partisan Soldier">
+	<npc id="35372" level="68" type="Monster" name="Partisan Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3298,7 +3298,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35373" level="68" type="L2Monster" name="Partisan Sorcerer">
+	<npc id="35373" level="68" type="Monster" name="Partisan Sorcerer">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3341,7 +3341,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35374" level="68" type="L2Monster" name="Partisan Archer">
+	<npc id="35374" level="68" type="Monster" name="Partisan Archer">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3384,7 +3384,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35375" level="73" type="L2Monster" name="Bloody Lord Nurka">
+	<npc id="35375" level="73" type="Monster" name="Bloody Lord Nurka">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3438,7 +3438,7 @@
 			<height normal="37" grown="44.5" />
 		</collision>
 	</npc>
-	<npc id="35376" level="70" type="L2Monster" name="Partisan Healer">
+	<npc id="35376" level="70" type="Monster" name="Partisan Healer">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3481,7 +3481,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35377" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35377" level="70" type="Monster" name="Partisan Court Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3524,7 +3524,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35378" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35378" level="70" type="Monster" name="Partisan Court Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3567,7 +3567,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35379" level="68" type="L2Monster" name="Partisan Soldier">
+	<npc id="35379" level="68" type="Monster" name="Partisan Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3610,7 +3610,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35380" level="68" type="L2Monster" name="Partisan Sorcerer">
+	<npc id="35380" level="68" type="Monster" name="Partisan Sorcerer">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3653,7 +3653,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35381" level="68" type="L2Monster" name="Partisan Archer">
+	<npc id="35381" level="68" type="Monster" name="Partisan Archer">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3696,7 +3696,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35382" level="70" type="L2Npc" name="Brakel" title="Partisan Herald">
+	<npc id="35382" level="70" type="Npc" name="Brakel" title="Partisan Herald">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3737,7 +3737,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35383" level="70" type="L2ClanHallManager" name="Tamutak" title="Ol Mahum Steward">
+	<npc id="35383" level="70" type="ClanHallManager" name="Tamutak" title="Ol Mahum Steward">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3778,7 +3778,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35384" level="70" type="L2ClanHallManager" name="Black" title="Clan Hall Manager">
+	<npc id="35384" level="70" type="ClanHallManager" name="Black" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3827,7 +3827,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35385" level="70" type="L2ClanHallDoormen" name="Renny" title="Clan Hall Gatekeeper">
+	<npc id="35385" level="70" type="ClanHallDoorman" name="Renny" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3867,7 +3867,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35386" level="70" type="L2ClanHallManager" name="Boyer" title="Clan Hall Manager">
+	<npc id="35386" level="70" type="ClanHallManager" name="Boyer" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3916,7 +3916,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35387" level="70" type="L2ClanHallDoormen" name="Baback" title="Clan Hall Gatekeeper">
+	<npc id="35387" level="70" type="ClanHallDoorman" name="Baback" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3956,7 +3956,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35388" level="70" type="L2ClanHallManager" name="Tim" title="Clan Hall Manager">
+	<npc id="35388" level="70" type="ClanHallManager" name="Tim" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4005,7 +4005,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35389" level="70" type="L2ClanHallDoormen" name="Loring" title="Clan Hall Gatekeeper">
+	<npc id="35389" level="70" type="ClanHallDoorman" name="Loring" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4045,7 +4045,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35390" level="70" type="L2ClanHallManager" name="Dillon" title="Clan Hall Manager">
+	<npc id="35390" level="70" type="ClanHallManager" name="Dillon" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4094,7 +4094,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35391" level="70" type="L2ClanHallDoormen" name="Latif" title="Clan Hall Gatekeeper">
+	<npc id="35391" level="70" type="ClanHallDoorman" name="Latif" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4134,7 +4134,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35392" level="70" type="L2ClanHallManager" name="Bremmer" title="Clan Hall Manager">
+	<npc id="35392" level="70" type="ClanHallManager" name="Bremmer" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4183,7 +4183,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35393" level="70" type="L2ClanHallDoormen" name="Faolan" title="Clan Hall Gatekeeper">
+	<npc id="35393" level="70" type="ClanHallDoorman" name="Faolan" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4223,7 +4223,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35394" level="70" type="L2ClanHallManager" name="Kalis" title="Clan Hall Manager">
+	<npc id="35394" level="70" type="ClanHallManager" name="Kalis" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4272,7 +4272,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35395" level="70" type="L2ClanHallDoormen" name="Kogan" title="Clan Hall Gatekeeper">
+	<npc id="35395" level="70" type="ClanHallDoorman" name="Kogan" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4312,7 +4312,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35396" level="70" type="L2ClanHallManager" name="Winker" title="Clan Hall Manager">
+	<npc id="35396" level="70" type="ClanHallManager" name="Winker" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4361,7 +4361,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35397" level="70" type="L2ClanHallDoormen" name="Merton" title="Clan Hall Gatekeeper">
+	<npc id="35397" level="70" type="ClanHallDoorman" name="Merton" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4401,7 +4401,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35398" level="70" type="L2ClanHallManager" name="Ruben" title="Clan Hall Manager">
+	<npc id="35398" level="70" type="ClanHallManager" name="Ruben" title="Clan Hall Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4450,7 +4450,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35399" level="70" type="L2ClanHallDoormen" name="Luce" title="Clan Hall Gatekeeper">
+	<npc id="35399" level="70" type="ClanHallDoorman" name="Luce" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * Send Private (Friend) Message Format: c dSSS d: Unknown S: Sending Player S: Receiving Player S: Message
  * @author Tempy
  */
-public class FriendRecvMsg extends L2GameServerPacket
+public class FriendRecvMsg extends GameServerPacket
 {
 	private final String _sender;
 	private final String _receiver;

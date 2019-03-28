@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -33,23 +33,23 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class TargetParty implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		
 		// Check for null target or any other invalid target
-		if ((target == null) || target.isDead() || (target == activeChar))
+		if ((target == null) || target.isDead() || (target == creature))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			creature.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
 		}
 		
 		final int radius = skill.getAffectRange();
-		final L2PcInstance player = (L2PcInstance) activeChar.getTarget();
+		final PlayerInstance player = (PlayerInstance) creature.getTarget();
 		
 		if (player.isInParty())
 		{
-			for (L2PcInstance partyMember : player.getParty().getMembers())
+			for (PlayerInstance partyMember : player.getParty().getMembers())
 			{
 				if ((partyMember == null))
 				{
@@ -71,12 +71,12 @@ public class TargetParty implements ITargetTypeHandler
 		{
 			targetList.add(target);
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.TARGET_PARTY;
+		return TargetType.TARGET_PARTY;
 	}
 }

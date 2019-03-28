@@ -17,8 +17,8 @@
 package quests.Q00760_BlockTheExit;
 
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -47,10 +47,10 @@ public final class Q00760_BlockTheExit extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -66,17 +66,17 @@ public final class Q00760_BlockTheExit extends Quest
 			}
 			case "30870-04.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "30870-06.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						st.exitQuest(QuestType.DAILY, true);
+						qs.exitQuest(QuestType.DAILY, true);
 						giveItems(player, REWARD_BOX, 1);
 						htmltext = event;
 					}
@@ -92,12 +92,12 @@ public final class Q00760_BlockTheExit extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -106,14 +106,14 @@ public final class Q00760_BlockTheExit extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.isCond(2) ? "30870-05.html" : "30870-04.html";
+				htmltext = qs.isCond(2) ? "30870-05.html" : "30870-04.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				if (st.isNowAvailable())
+				if (qs.isNowAvailable())
 				{
-					st.setState(State.CREATED);
+					qs.setState(State.CREATED);
 					htmltext = "30870-01.htm";
 				}
 				else
@@ -127,19 +127,19 @@ public final class Q00760_BlockTheExit extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
 		{
-			st.setCond(2, true);
+			qs.setCond(2, true);
 		}
 		super.actionForEachPlayer(player, npc, isSummon);
 	}

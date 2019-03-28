@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 
-public final class CharacterRestore extends L2GameClientPacket
+public final class CharacterRestore extends GameClientPacket
 {
 	private int _charSlot;
 	

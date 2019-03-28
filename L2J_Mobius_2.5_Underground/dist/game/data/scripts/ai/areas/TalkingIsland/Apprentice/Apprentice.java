@@ -18,8 +18,8 @@ package ai.areas.TalkingIsland.Apprentice;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -48,15 +48,15 @@ public final class Apprentice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("rideKukuru"))
 		{
 			if (!player.isTransformed())
 			{
 				KUKURU.getSkill().applyEffects(npc, player);
-				final QuestState st = player.getQuestState(Q10329_BackupSeekers.class.getSimpleName());
-				if ((st != null) && st.isStarted())
+				final QuestState qs = player.getQuestState(Q10329_BackupSeekers.class.getSimpleName());
+				if ((qs != null) && qs.isStarted())
 				{
 					final Quest quest_10329 = QuestManager.getInstance().getQuest(Q10329_BackupSeekers.class.getSimpleName());
 					if (quest_10329 != null)
@@ -78,7 +78,7 @@ public final class Apprentice extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
 		return super.onSpawn(npc);

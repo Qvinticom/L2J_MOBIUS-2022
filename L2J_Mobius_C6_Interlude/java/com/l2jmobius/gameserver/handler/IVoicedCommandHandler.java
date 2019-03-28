@@ -16,18 +16,18 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public interface IVoicedCommandHandler
 {
 	/**
 	 * this is the worker method that is called when someone uses an admin command.
-	 * @param activeChar
+	 * @param player
 	 * @param command
 	 * @param target
 	 * @return command success
 	 */
-	boolean useVoicedCommand(String command, L2PcInstance activeChar, String target);
+	boolean useVoicedCommand(String command, PlayerInstance player, String target);
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

@@ -22,7 +22,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * 00 d6 00 00 00 01 00 00 00 01 00 00 ................ 0090: 00 f4 00 00 00 format d (ddd)
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SkillList extends L2GameServerPacket
+public class SkillList extends GameServerPacket
 {
 	private Skill[] _skills;
 	

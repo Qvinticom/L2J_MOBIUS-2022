@@ -23,12 +23,12 @@ import java.util.function.Predicate;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
 public class Party implements IAffectScopeHandler
 {
 	@Override
-	public void forEachAffected(L2Character activeChar, L2Object target, Skill skill, Consumer<? super L2Object> action)
+	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
@@ -46,15 +46,15 @@ public class Party implements IAffectScopeHandler
 		
 		if (target.isPlayable())
 		{
-			final L2PcInstance player = target.getActingPlayer();
-			final com.l2jmobius.gameserver.model.L2Party party = player.getParty();
+			final PlayerInstance player = target.getActingPlayer();
+			final com.l2jmobius.gameserver.model.Party party = player.getParty();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<L2Playable> filter = plbl ->
+			final Predicate<Playable> filter = plbl ->
 			{
 				// Range skills appear to not affect you unless you are the main target.
-				if ((plbl == activeChar) && (target != activeChar))
+				if ((plbl == creature) && (target != creature))
 				{
 					return false;
 				}
@@ -64,7 +64,7 @@ public class Party implements IAffectScopeHandler
 					return false;
 				}
 				
-				final L2PcInstance p = plbl.getActingPlayer();
+				final PlayerInstance p = plbl.getActingPlayer();
 				if ((p == null) || p.isDead())
 				{
 					return false;
@@ -72,14 +72,14 @@ public class Party implements IAffectScopeHandler
 				
 				if (p != player)
 				{
-					final com.l2jmobius.gameserver.model.L2Party targetParty = p.getParty();
+					final com.l2jmobius.gameserver.model.Party targetParty = p.getParty();
 					if ((party == null) || (targetParty == null) || (party.getLeaderObjectId() != targetParty.getLeaderObjectId()))
 					{
 						return false;
 					}
 				}
 				
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, p))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))
 				{
 					return false;
 				}
@@ -89,13 +89,13 @@ public class Party implements IAffectScopeHandler
 			};
 			
 			// Affect object of origin since its skipped in the forEachVisibleObjectInRange method.
-			if (filter.test((L2Playable) target))
+			if (filter.test((Playable) target))
 			{
 				action.accept(target);
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(target, L2Playable.class, affectRange, c ->
+			World.getInstance().forEachVisibleObjectInRange(target, Playable.class, affectRange, c ->
 			{
 				if (filter.test(c))
 				{
@@ -105,11 +105,11 @@ public class Party implements IAffectScopeHandler
 		}
 		else if (target.isNpc())
 		{
-			final L2Npc npc = (L2Npc) target;
+			final Npc npc = (Npc) target;
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<L2Npc> filter = n ->
+			final Predicate<Npc> filter = n ->
 			{
 				if ((affectLimit > 0) && (affected.get() >= affectLimit))
 				{
@@ -123,7 +123,7 @@ public class Party implements IAffectScopeHandler
 				{
 					return false;
 				}
-				if ((affectObject != null) && !affectObject.checkAffectedObject(activeChar, n))
+				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, n))
 				{
 					return false;
 				}
@@ -139,9 +139,9 @@ public class Party implements IAffectScopeHandler
 			}
 			
 			// Check and add targets.
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, affectRange, n ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, affectRange, n ->
 			{
-				if (n == activeChar)
+				if (n == creature)
 				{
 					return;
 				}

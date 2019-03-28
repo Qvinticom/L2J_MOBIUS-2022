@@ -17,9 +17,9 @@
 package handlers.telnethandlers.player;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -49,7 +49,7 @@ public class Give implements ITelnetCommand
 		{
 			return null;
 		}
-		final L2PcInstance player = L2World.getInstance().getPlayer(args[0]);
+		final PlayerInstance player = World.getInstance().getPlayer(args[0]);
 		if (player != null)
 		{
 			final int itemId = Integer.parseInt(args[1]);
@@ -72,7 +72,7 @@ public class Give implements ITelnetCommand
 				}
 			}
 			
-			final L2ItemInstance item = ItemTable.getInstance().createItem("Telnet-Admin", itemId, amount, player, null);
+			final ItemInstance item = ItemTable.getInstance().createItem("Telnet-Admin", itemId, amount, player, null);
 			if (enchanted > 0)
 			{
 				item.setEnchantLevel(enchanted);

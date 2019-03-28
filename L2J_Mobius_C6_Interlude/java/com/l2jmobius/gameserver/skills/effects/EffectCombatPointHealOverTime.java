@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.skills.Env;
 
-class EffectCombatPointHealOverTime extends L2Effect
+class EffectCombatPointHealOverTime extends Effect
 {
 	public EffectCombatPointHealOverTime(Env env, EffectTemplate template)
 	{

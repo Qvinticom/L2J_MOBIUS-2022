@@ -17,9 +17,9 @@
 package ai.others;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -46,18 +46,18 @@ public final class TimakOrcTroopLeader extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.isMonster())
 		{
-			final L2MonsterInstance monster = (L2MonsterInstance) npc;
+			final MonsterInstance monster = (MonsterInstance) npc;
 			if (!monster.isTeleporting())
 			{
 				if (getRandom(1, 100) <= npc.getParameters().getInt("SummonPrivateRate", 0))
 				{
 					for (MinionHolder is : npc.getParameters().getMinionList("Privates"))
 					{
-						addMinion((L2MonsterInstance) npc, is.getId());
+						addMinion((MonsterInstance) npc, is.getId());
 					}
 					npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG[getRandom(ON_ATTACK_MSG.length)]);
 				}

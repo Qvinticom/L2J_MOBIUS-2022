@@ -27,22 +27,22 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.CeremonyOfChaosState;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
 import com.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
@@ -114,7 +114,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		
 		// Update data for online players.
-		L2World.getInstance().getPlayers().stream().forEach(player ->
+		World.getInstance().getPlayers().stream().forEach(player ->
 		{
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
@@ -147,7 +147,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		
 		setState(CeremonyOfChaosState.REGISTRATION);
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			if (player.isOnline())
 			{
@@ -169,7 +169,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		
 		setState(CeremonyOfChaosState.PREPARING_FOR_TELEPORT);
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			if (player.isOnline())
 			{
@@ -196,11 +196,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		int eventId = 0;
 		int position = 1;
 		CeremonyOfChaosEvent event = null;
-		final List<L2PcInstance> players = getRegisteredPlayers().stream().sorted(Comparator.comparingInt(L2PcInstance::getLevel)).collect(Collectors.toList());
+		final List<PlayerInstance> players = getRegisteredPlayers().stream().sorted(Comparator.comparingInt(PlayerInstance::getLevel)).collect(Collectors.toList());
 		final int maxPlayers = getMaxPlayersInArena();
 		final List<Integer> templates = getVariables().getList(INSTANCE_TEMPLATES_KEY, Integer.class);
 		
-		for (L2PcInstance player : players)
+		for (PlayerInstance player : players)
 		{
 			if (player.isOnline() && canRegister(player, true))
 			{
@@ -254,7 +254,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -289,11 +289,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	}
 	
 	@Override
-	public boolean canRegister(L2PcInstance player, boolean sendMessage)
+	public boolean canRegister(PlayerInstance player, boolean sendMessage)
 	{
 		boolean canRegister = true;
 		
-		final L2Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		SystemMessageId sm = null;
 		
@@ -391,7 +391,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public TerminateReturn OnPlayerBypass(OnPlayerBypass event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		if (player == null)
 		{
 			return null;
@@ -416,7 +416,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	{
 		if (getState() == CeremonyOfChaosState.REGISTRATION)
 		{
-			final L2PcInstance player = event.getActiveChar();
+			final PlayerInstance player = event.getPlayer();
 			if (canRegister(player, false))
 			{
 				player.sendPacket(ExCuriousHouseState.REGISTRATION_PACKET);
@@ -431,7 +431,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	{
 		if (getState() == CeremonyOfChaosState.REGISTRATION)
 		{
-			final L2PcInstance player = event.getActiveChar();
+			final PlayerInstance player = event.getPlayer();
 			if (getRegisteredPlayers().contains(player))
 			{
 				getRegisteredPlayers().remove(player);

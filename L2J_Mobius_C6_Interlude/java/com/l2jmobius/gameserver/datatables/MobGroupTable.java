@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.model.MobGroup;
-import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
 
 /**
  * @author littlecrow
@@ -63,7 +63,7 @@ public class MobGroupTable
 		return _groupMap.size();
 	}
 	
-	public MobGroup getGroupForMob(L2ControllableMobInstance mobInst)
+	public MobGroup getGroupForMob(ControllableMobInstance mobInst)
 	{
 		for (MobGroup mobGroup : _groupMap.values())
 		{

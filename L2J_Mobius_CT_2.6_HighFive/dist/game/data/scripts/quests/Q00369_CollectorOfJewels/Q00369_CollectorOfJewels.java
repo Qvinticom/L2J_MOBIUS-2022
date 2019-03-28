@@ -19,8 +19,8 @@ package quests.Q00369_CollectorOfJewels;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.QuestItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -60,17 +60,17 @@ public final class Q00369_CollectorOfJewels extends Quest
 	}
 	
 	@Override
-	public boolean checkPartyMember(L2PcInstance member, L2Npc npc)
+	public boolean checkPartyMember(PlayerInstance member, Npc npc)
 	{
-		final QuestState st = getQuestState(member, false);
-		return ((st != null) && (st.isMemoState(1) || st.isMemoState(3)));
+		final QuestState qs = getQuestState(member, false);
+		return ((qs != null) && (qs.isMemoState(1) || qs.isMemoState(3)));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -80,8 +80,8 @@ public final class Q00369_CollectorOfJewels extends Quest
 		{
 			case "30376-02.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
@@ -92,17 +92,17 @@ public final class Q00369_CollectorOfJewels extends Quest
 			}
 			case "30376-06.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
-					st.setMemoState(3);
-					st.setCond(3, true);
+					qs.setMemoState(3);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30376-07.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -111,21 +111,21 @@ public final class Q00369_CollectorOfJewels extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 		if (getRandom(100) < item.getChance())
 		{
-			final L2PcInstance luckyPlayer = getRandomPartyMember(player, npc);
+			final PlayerInstance luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
-				final QuestState st = getQuestState(luckyPlayer, false);
-				final int itemCount = (st.isMemoState(1) ? 50 : 200);
-				final int cond = (st.isMemoState(1) ? 2 : 4);
+				final QuestState qs = getQuestState(luckyPlayer, false);
+				final int itemCount = (qs.isMemoState(1) ? 50 : 200);
+				final int cond = (qs.isMemoState(1) ? 2 : 4);
 				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), itemCount, 1.0, true) //
 					&& (getQuestItemsCount(luckyPlayer, FLARE_SHARD, FREEZING_SHARD) >= (itemCount * 2)))
 				{
-					st.setCond(cond);
+					qs.setCond(cond);
 				}
 			}
 		}
@@ -133,17 +133,17 @@ public final class Q00369_CollectorOfJewels extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= MIN_LEVEL) ? "30376-01.htm" : "30376-03.html";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			switch (st.getMemoState())
+			switch (qs.getMemoState())
 			{
 				case 1:
 				{
@@ -151,7 +151,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 					{
 						giveAdena(player, 31810, true);
 						takeItems(player, -1, FLARE_SHARD, FREEZING_SHARD);
-						st.setMemoState(2);
+						qs.setMemoState(2);
 						htmltext = "30376-04.html";
 					}
 					else
@@ -171,7 +171,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 					{
 						giveAdena(player, 84415, true);
 						takeItems(player, -1, FLARE_SHARD, FREEZING_SHARD);
-						st.exitQuest(true, true);
+						qs.exitQuest(true, true);
 						htmltext = "30376-10.html";
 					}
 					else

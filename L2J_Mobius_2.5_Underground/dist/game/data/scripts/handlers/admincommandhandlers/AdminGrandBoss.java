@@ -26,9 +26,9 @@ import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
+import com.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -59,7 +59,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -201,12 +201,12 @@ public class AdminGrandBoss implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void manageHtml(L2PcInstance activeChar, int grandBossId)
+	private void manageHtml(PlayerInstance activeChar, int grandBossId)
 	{
 		if (Arrays.asList(ANTHARAS, VALAKAS, BAIUM, QUEENANT, ORFEN, CORE).contains(grandBossId))
 		{
 			final int bossStatus = GrandBossManager.getInstance().getBossStatus(grandBossId);
-			L2NoRestartZone bossZone = null;
+			NoRestartZone bossZone = null;
 			String textColor = null;
 			String text = null;
 			String htmlPatch = null;
@@ -216,7 +216,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			{
 				case ANTHARAS:
 				{
-					bossZone = ZoneManager.getInstance().getZoneById(ANTHARAS_ZONE, L2NoRestartZone.class);
+					bossZone = ZoneManager.getInstance().getZoneById(ANTHARAS_ZONE, NoRestartZone.class);
 					htmlPatch = "data/html/admin/grandboss_antharas.htm";
 					break;
 				}
@@ -227,7 +227,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				}
 				case BAIUM:
 				{
-					bossZone = ZoneManager.getInstance().getZoneById(BAIUM_ZONE, L2NoRestartZone.class);
+					bossZone = ZoneManager.getInstance().getZoneById(BAIUM_ZONE, NoRestartZone.class);
 					htmlPatch = "data/html/admin/grandboss_baium.htm";
 					break;
 				}

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -62,7 +62,7 @@ public class TimeStamp
 	 * @param reuse the reuse time for this item.
 	 * @param systime overrides the system time with a customized one.
 	 */
-	public TimeStamp(L2ItemInstance item, long reuse, long systime)
+	public TimeStamp(ItemInstance item, long reuse, long systime)
 	{
 		_id1 = item.getId();
 		_id2 = item.getObjectId();

@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
 
@@ -35,7 +35,7 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 	private int _enchantObjectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_scrollObjectId = packet.readD();
 		_enchantObjectId = packet.readD();
@@ -43,15 +43,15 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final EnchantItemRequest request = activeChar.getRequest(EnchantItemRequest.class);
+		final EnchantItemRequest request = player.getRequest(EnchantItemRequest.class);
 		if ((request == null) || request.isProcessing())
 		{
 			return;
@@ -60,15 +60,15 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 		request.setEnchantingItem(_enchantObjectId);
 		request.setEnchantingScroll(_scrollObjectId);
 		
-		final L2ItemInstance item = request.getEnchantingItem();
-		final L2ItemInstance scroll = request.getEnchantingScroll();
+		final ItemInstance item = request.getEnchantingItem();
+		final ItemInstance scroll = request.getEnchantingScroll();
 		if ((item == null) || (scroll == null))
 		{
 			// message may be custom
-			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
-			request.setEnchantingItem(L2PcInstance.ID_NONE);
-			request.setEnchantingScroll(L2PcInstance.ID_NONE);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(new ExPutEnchantScrollItemResult(0));
+			request.setEnchantingItem(PlayerInstance.ID_NONE);
+			request.setEnchantingScroll(PlayerInstance.ID_NONE);
 			return;
 		}
 		
@@ -76,13 +76,13 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 		if ((scrollTemplate == null))
 		{
 			// message may be custom
-			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
-			activeChar.sendPacket(new ExPutEnchantScrollItemResult(0));
-			request.setEnchantingScroll(L2PcInstance.ID_NONE);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(new ExPutEnchantScrollItemResult(0));
+			request.setEnchantingScroll(PlayerInstance.ID_NONE);
 			return;
 		}
 		
 		request.setTimestamp(System.currentTimeMillis());
-		activeChar.sendPacket(new ExPutEnchantScrollItemResult(_scrollObjectId));
+		player.sendPacket(new ExPutEnchantScrollItemResult(_scrollObjectId));
 	}
 }

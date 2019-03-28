@@ -19,10 +19,10 @@
 package quests.Q00417_PathOfTheScavenger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -86,7 +86,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -332,7 +332,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && qs.isStarted())
@@ -371,7 +371,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 						npc.getVariables().set(FIRST_ATTACKER, attacker.getObjectId());
 					}
 					
-					if (((L2MonsterInstance) npc).getSpoilerObjectId() == attacker.getObjectId())
+					if (((MonsterInstance) npc).getSpoilerObjectId() == attacker.getObjectId())
 					{
 						npc.setScriptValue(2);
 					}
@@ -383,7 +383,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && npc.isAttackable())
@@ -410,7 +410,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 				}
 				case HONEY_BEAR:
 				{
-					if (firstAttacker && ((L2Attackable) npc).isSpoiled() && hasQuestItems(killer, BEAR_PICTURE))
+					if (firstAttacker && ((Attackable) npc).isSpoiled() && hasQuestItems(killer, BEAR_PICTURE))
 					{
 						if (giveItemRandomly(killer, npc, HONEY_JAR, 1, 5, 50.0, true))
 						{
@@ -422,7 +422,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 				case HUNTER_TARANTULA:
 				case PLUNDER_TARANTULA:
 				{
-					if (firstAttacker && ((L2Attackable) npc).isSpoiled() && hasQuestItems(killer, TARANTULA_PICTURE))
+					if (firstAttacker && ((Attackable) npc).isSpoiled() && hasQuestItems(killer, TARANTULA_PICTURE))
 					{
 						if (giveItemRandomly(killer, npc, BEAD, 1, 20, 50.0, true))
 						{
@@ -437,7 +437,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

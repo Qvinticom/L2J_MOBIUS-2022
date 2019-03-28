@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.Optional;
 
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -34,30 +34,30 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class MaxHpFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 		if (creature.isPet())
 		{
-			final L2PetInstance pet = (L2PetInstance) creature;
+			final PetInstance pet = (PetInstance) creature;
 			baseValue = pet.getPetLevelData().getPetMaxHP();
 		}
 		else if (creature.isPlayer())
 		{
-			final L2PcInstance player = creature.getActingPlayer();
+			final PlayerInstance player = creature.getActingPlayer();
 			if (player != null)
 			{
 				baseValue = player.getTemplate().getBaseHpMax(player.getLevel());
 				
 				// Apply enchanted item's bonus HP
-				for (L2ItemInstance item : player.getInventory().getPaperdollItems(L2ItemInstance::isEnchanted))
+				for (ItemInstance item : player.getInventory().getPaperdollItems(ItemInstance::isEnchanted))
 				{
 					if (item.isArmor())
 					{
 						final long bodyPart = item.getItem().getBodyPart();
-						if ((bodyPart != L2Item.SLOT_NECK) && (bodyPart != L2Item.SLOT_LR_EAR) && (bodyPart != L2Item.SLOT_LR_FINGER))
+						if ((bodyPart != Item.SLOT_NECK) && (bodyPart != Item.SLOT_LR_EAR) && (bodyPart != Item.SLOT_LR_FINGER))
 						{
 							baseValue += EnchantItemHPBonusData.getInstance().getHPBonus(item);
 						}

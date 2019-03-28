@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.cache.CrestCache;
  * </code> format dd x...x
  * @version $Revision: 1.3.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class AllyCrest extends L2GameServerPacket
+public class AllyCrest extends GameServerPacket
 {
 	private final int _crestId;
 	private final byte[] _data;

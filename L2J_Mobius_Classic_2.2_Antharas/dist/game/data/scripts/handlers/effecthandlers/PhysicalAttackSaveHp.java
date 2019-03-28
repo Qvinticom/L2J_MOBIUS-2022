@@ -18,11 +18,11 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.effects.EffectType;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -50,15 +50,15 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 	}
 	
 	@Override
-	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	public boolean calcSuccess(Creature effector, Creature effected, Skill skill)
 	{
 		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.PHYSICAL_ATTACK;
+		return EffectType.PHYSICAL_ATTACK;
 	}
 	
 	@Override
@@ -68,7 +68,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (effector.isAlikeDead())
 		{
@@ -82,7 +82,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 		
 		if (_overHit && effected.isAttackable())
 		{
-			((L2Attackable) effected).overhitEnabled(true);
+			((Attackable) effected).overhitEnabled(true);
 		}
 		
 		final double attack = effector.getPAtk();

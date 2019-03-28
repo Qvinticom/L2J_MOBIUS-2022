@@ -17,8 +17,8 @@
 package quests.Q348_AnArrogantSearch;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -72,9 +72,9 @@ public class Q348_AnArrogantSearch extends Quest
 	private static final int ARK_GUARDIAN_SHADOW_FANG = 27183;
 	
 	// NPCs instances, in order to avoid infinite instances creation speaking to chests.
-	private L2NpcInstance _elberoth;
-	private L2NpcInstance _shadowFang;
-	private L2NpcInstance _angelKiller;
+	private NpcInstance _elberoth;
+	private NpcInstance _shadowFang;
+	private NpcInstance _angelKiller;
 	
 	public Q348_AnArrogantSearch()
 	{
@@ -92,7 +92,7 @@ public class Q348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -163,7 +163,7 @@ public class Q348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -622,7 +622,7 @@ public class Q348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2NpcInstance npc)
+	public String onSpawn(NpcInstance npc)
 	{
 		switch (npc.getNpcId())
 		{
@@ -643,7 +643,7 @@ public class Q348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		QuestState st = checkPlayerState(attacker, npc, State.STARTED);
 		if (st == null)
@@ -715,7 +715,7 @@ public class Q348_AnArrogantSearch extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerState(player, npc, State.STARTED);
 		if (st == null)

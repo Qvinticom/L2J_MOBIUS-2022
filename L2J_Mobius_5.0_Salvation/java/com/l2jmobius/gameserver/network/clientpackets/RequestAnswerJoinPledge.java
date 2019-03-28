@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class RequestAnswerJoinPledge implements IClientIncomingPacket
@@ -39,22 +38,22 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 	private int _answer;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_answer = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance requestor = activeChar.getRequest().getPartner();
+		final PlayerInstance requestor = player.getRequest().getPartner();
 		if (requestor == null)
 		{
 			return;
@@ -64,9 +63,9 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DIDN_T_RESPOND_TO_S1_S_INVITATION_JOINING_HAS_BEEN_CANCELLED);
 			sm.addString(requestor.getName());
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
-			sm.addString(activeChar.getName());
+			sm.addString(player.getName());
 			requestor.sendPacket(sm);
 		}
 		else
@@ -86,57 +85,57 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 				pledgeType = ((RequestClanAskJoinByName) requestor.getRequest().getRequestPacket()).getPledgeType();
 			}
 			
-			final L2Clan clan = requestor.getClan();
+			final Clan clan = requestor.getClan();
 			// we must double check this cause during response time conditions can be changed, i.e. another player could join clan
-			if (clan.checkClanJoinCondition(requestor, activeChar, pledgeType))
+			if (clan.checkClanJoinCondition(requestor, player, pledgeType))
 			{
-				if (activeChar.getClan() != null)
+				if (player.getClan() != null)
 				{
 					return;
 				}
 				
-				activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
+				player.sendPacket(new JoinPledge(requestor.getClanId()));
 				
-				activeChar.setPledgeType(pledgeType);
+				player.setPledgeType(pledgeType);
 				if (pledgeType == -1) // Academy - Removed.
 				{
-					activeChar.setPowerGrade(9); // academy
-					activeChar.setLvlJoinedAcademy(activeChar.getLevel());
+					player.setPowerGrade(9); // academy
+					player.setLvlJoinedAcademy(player.getLevel());
 				}
 				else
 				{
-					activeChar.setPowerGrade(5); // new member starts at 5, not confirmed
+					player.setPowerGrade(5); // new member starts at 5, not confirmed
 				}
 				
-				clan.addClanMember(activeChar);
-				activeChar.setClanPrivileges(activeChar.getClan().getRankPrivs(activeChar.getPowerGrade()));
-				activeChar.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
+				clan.addClanMember(player);
+				player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
+				player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
-				sm.addString(activeChar.getName());
+				sm.addString(player.getName());
 				clan.broadcastToOnlineMembers(sm);
 				
 				if (clan.getCastleId() > 0)
 				{
-					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
+					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
 				}
 				if (clan.getFortId() > 0)
 				{
-					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
+					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
 				}
-				activeChar.sendSkillList();
+				player.sendSkillList();
 				
-				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(activeChar), activeChar);
+				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(player), player);
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 				
 				// this activates the clan tab on the new member
-				PledgeShowMemberListAll.sendAllTo(activeChar);
-				activeChar.setClanJoinExpiryTime(0);
-				activeChar.broadcastUserInfo();
+				PledgeShowMemberListAll.sendAllTo(player);
+				player.setClanJoinExpiryTime(0);
+				player.broadcastUserInfo();
 			}
 		}
 		
-		activeChar.getRequest().onRequestResponse();
+		player.getRequest().onRequestResponse();
 	}
 }

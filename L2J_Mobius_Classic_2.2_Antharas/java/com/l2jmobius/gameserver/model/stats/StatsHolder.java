@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.stats;
 
 import java.util.function.BiPredicate;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * @author UnAfraid
@@ -27,9 +27,9 @@ public class StatsHolder
 {
 	private final Stats _stat;
 	private final double _value;
-	private final BiPredicate<L2Character, StatsHolder> _condition;
+	private final BiPredicate<Creature, StatsHolder> _condition;
 	
-	public StatsHolder(Stats stat, double value, BiPredicate<L2Character, StatsHolder> condition)
+	public StatsHolder(Stats stat, double value, BiPredicate<Creature, StatsHolder> condition)
 	{
 		_stat = stat;
 		_value = value;
@@ -51,7 +51,7 @@ public class StatsHolder
 		return _value;
 	}
 	
-	public boolean verifyCondition(L2Character creature)
+	public boolean verifyCondition(Creature creature)
 	{
 		return (_condition == null) || _condition.test(creature, this);
 	}

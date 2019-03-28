@@ -19,10 +19,10 @@ package quests.Q00275_DarkWingedSpies;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -58,23 +58,23 @@ public final class Q00275_DarkWingedSpies extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equals("30567-03.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equals("30567-03.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			return event;
 		}
 		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			final long count = getQuestItemsCount(killer, DARKWING_BAT_FANG);
 			
@@ -84,7 +84,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 				{
 					if (giveItemRandomly(killer, DARKWING_BAT_FANG, 1, MAX_BAT_FANG_COUNT, 1, true))
 					{
-						st.setCond(2);
+						qs.setCond(2);
 					}
 					else if ((count > 10) && (count < 66) && (getRandom(100) < 10))
 					{
@@ -99,7 +99,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 					{
 						if (giveItemRandomly(killer, DARKWING_BAT_FANG, 5, MAX_BAT_FANG_COUNT, 1, true))
 						{
-							st.setCond(2);
+							qs.setCond(2);
 						}
 						takeItems(killer, VARANGKAS_PARASITE, -1);
 					}
@@ -112,24 +112,24 @@ public final class Q00275_DarkWingedSpies extends Quest
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{
 			npc.setRunning();
-			((L2Attackable) npc).addDamageHate(creature, 0, 1);
+			((Attackable) npc).addDamageHate(creature, 0, 1);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
-		final QuestState st = getQuestState(talker, true);
+		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -138,7 +138,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -151,7 +151,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 						if (count >= MAX_BAT_FANG_COUNT)
 						{
 							giveAdena(talker, count * FANG_PRICE, true);
-							st.exitQuest(true, true);
+							qs.exitQuest(true, true);
 							htmltext = "30567-05.html";
 						}
 						break;

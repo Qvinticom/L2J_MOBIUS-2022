@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.enums.MatchingRoomType;
 import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
 
@@ -35,13 +35,13 @@ import com.l2jmobius.gameserver.model.matching.MatchingRoom;
  */
 public class MatchingRoomManager
 {
-	private volatile Set<L2PcInstance> _waitingList;
+	private volatile Set<PlayerInstance> _waitingList;
 	
 	private static final Map<MatchingRoomType, Map<Integer, MatchingRoom>> _rooms = new ConcurrentHashMap<>(2);
 	
 	private final AtomicInteger _id = new AtomicInteger(0);
 	
-	public void addToWaitingList(L2PcInstance player)
+	public void addToWaitingList(PlayerInstance player)
 	{
 		if (_waitingList == null)
 		{
@@ -56,17 +56,17 @@ public class MatchingRoomManager
 		_waitingList.add(player);
 	}
 	
-	public void removeFromWaitingList(L2PcInstance player)
+	public void removeFromWaitingList(PlayerInstance player)
 	{
 		getPlayerInWaitingList().remove(player);
 	}
 	
-	public Set<L2PcInstance> getPlayerInWaitingList()
+	public Set<PlayerInstance> getPlayerInWaitingList()
 	{
 		return _waitingList == null ? Collections.emptySet() : _waitingList;
 	}
 	
-	public List<L2PcInstance> getPlayerInWaitingList(int minLevel, int maxLevel, List<ClassId> classIds, String query)
+	public List<PlayerInstance> getPlayerInWaitingList(int minLevel, int maxLevel, List<ClassId> classIds, String query)
 	{
 		if (_waitingList == null)
 		{

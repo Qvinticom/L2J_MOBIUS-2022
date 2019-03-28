@@ -25,9 +25,9 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.html.PageBuilder;
 import com.l2jmobius.gameserver.model.html.PageResult;
@@ -51,7 +51,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
@@ -63,7 +63,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		return true;
 	}
 	
-	private void doAction(L2PcInstance player, int clanHallId, String action, String actionVal)
+	private void doAction(PlayerInstance player, int clanHallId, String action, String actionVal)
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
@@ -108,7 +108,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 				{
 					if ((player.getTarget() != null) && (player.getTarget().getActingPlayer() != null))
 					{
-						final L2Clan targetClan = player.getTarget().getActingPlayer().getClan();
+						final Clan targetClan = player.getTarget().getActingPlayer().getClan();
 						if ((targetClan == null) || (targetClan.getHideoutId() != 0))
 						{
 							player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -124,7 +124,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 				}
 				case "take":
 				{
-					final L2Clan clan = clanHall.getOwner();
+					final Clan clan = clanHall.getOwner();
 					if (clan != null)
 					{
 						clanHall.setOwner(null);
@@ -154,7 +154,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		useAdminCommand("admin_clanhall id=" + clanHallId, player);
 	}
 	
-	private void sendClanHallList(L2PcInstance player, int page, BypassParser parser)
+	private void sendClanHallList(PlayerInstance player, int page, BypassParser parser)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(player, "data/html/admin/clanhall_list.htm");
@@ -202,7 +202,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		player.sendPacket(html);
 	}
 	
-	private void sendClanHallDetails(L2PcInstance player, int clanHallId)
+	private void sendClanHallDetails(PlayerInstance player, int clanHallId)
 	{
 		final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallId);
 		if (clanHall != null)
@@ -254,7 +254,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		}
 	}
 	
-	private void processBypass(L2PcInstance player, BypassParser parser)
+	private void processBypass(PlayerInstance player, BypassParser parser)
 	{
 		final int page = parser.getInt("page", 0);
 		final int clanHallId = parser.getInt("id", 0);

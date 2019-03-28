@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author demonia
  */
-final class EffectImobilePetBuff extends L2Effect
+final class EffectImobilePetBuff extends Effect
 {
-	private L2Summon _pet;
+	private Summon _pet;
 	
 	public EffectImobilePetBuff(Env env, EffectTemplate template)
 	{
@@ -44,9 +44,9 @@ final class EffectImobilePetBuff extends L2Effect
 	{
 		_pet = null;
 		
-		if ((getEffected() instanceof L2Summon) && (getEffector() instanceof L2PcInstance) && (((L2Summon) getEffected()).getOwner() == getEffector()))
+		if ((getEffected() instanceof Summon) && (getEffector() instanceof PlayerInstance) && (((Summon) getEffected()).getOwner() == getEffector()))
 		{
-			_pet = (L2Summon) getEffected();
+			_pet = (Summon) getEffected();
 			_pet.setIsImobilised(true);
 		}
 	}

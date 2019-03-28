@@ -18,14 +18,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 
-public final class SetPrivateStoreListBuy extends L2GameClientPacket
+public final class SetPrivateStoreListBuy extends GameClientPacket
 {
 	private int _count;
 	private int[] _items; // count * 3
@@ -67,7 +67,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -128,7 +128,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		
 		if (_count <= 0)
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
 			return;
 		}
@@ -166,7 +166,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		}
 		
 		player.sitDown();
-		player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_BUY);
+		player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_BUY);
 		player.broadcastUserInfo();
 		player.broadcastPacket(new PrivateStoreMsgBuy(player));
 	}

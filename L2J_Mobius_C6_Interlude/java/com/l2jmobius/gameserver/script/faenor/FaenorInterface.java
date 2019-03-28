@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.script.faenor;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.L2DropCategory;
-import com.l2jmobius.gameserver.model.L2DropData;
+import com.l2jmobius.gameserver.model.DropCategory;
+import com.l2jmobius.gameserver.model.DropData;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.script.EngineInterface;
 import com.l2jmobius.gameserver.script.EventDroplist;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
  * @author Luis Arias
@@ -50,12 +50,12 @@ public class FaenorInterface implements EngineInterface
 	@Override
 	public void addQuestDrop(int npcID, int itemID, int min, int max, int chance, String questID, String[] states)
 	{
-		final L2NpcTemplate npc = npcTable.getTemplate(npcID);
+		final NpcTemplate npc = npcTable.getTemplate(npcID);
 		if (npc == null)
 		{
 			throw new NullPointerException();
 		}
-		final L2DropData drop = new L2DropData();
+		final DropData drop = new DropData();
 		drop.setItemId(itemID);
 		drop.setMinDrop(min);
 		drop.setMaxDrop(max);
@@ -77,12 +77,12 @@ public class FaenorInterface implements EngineInterface
 	 */
 	public void addDrop(int npcID, int itemID, int min, int max, boolean sweep, int chance) throws NullPointerException
 	{
-		final L2NpcTemplate npc = npcTable.getTemplate(npcID);
+		final NpcTemplate npc = npcTable.getTemplate(npcID);
 		if (npc == null)
 		{
 			throw new NullPointerException();
 		}
-		final L2DropData drop = new L2DropData();
+		final DropData drop = new DropData();
 		drop.setItemId(itemID);
 		drop.setMinDrop(min);
 		drop.setMaxDrop(max);
@@ -97,7 +97,7 @@ public class FaenorInterface implements EngineInterface
 	 * @param drop
 	 * @param sweep
 	 */
-	public void addDrop(L2NpcTemplate npc, L2DropData drop, boolean sweep)
+	public void addDrop(NpcTemplate npc, DropData drop, boolean sweep)
 	{
 		if (sweep)
 		{
@@ -109,7 +109,7 @@ public class FaenorInterface implements EngineInterface
 			
 			if (npc.getDropData() != null)
 			{
-				for (final L2DropCategory cat : npc.getDropData())
+				for (final DropCategory cat : npc.getDropData())
 				{
 					if (maxCategory < cat.getCategoryType())
 					{
@@ -128,7 +128,7 @@ public class FaenorInterface implements EngineInterface
 	 * @param drop
 	 * @param category
 	 */
-	public void addDrop(L2NpcTemplate npc, L2DropData drop, int category)
+	public void addDrop(NpcTemplate npc, DropData drop, int category)
 	{
 		npc.addDropData(drop, category);
 	}

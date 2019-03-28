@@ -24,8 +24,8 @@ import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SiegeClan;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author programmos
  */
-public final class RequestRestartPoint extends L2GameClientPacket
+public final class RequestRestartPoint extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestRestartPoint.class.getName());
 	
@@ -55,19 +55,19 @@ public final class RequestRestartPoint extends L2GameClientPacket
 	
 	class DeathTask implements Runnable
 	{
-		L2PcInstance activeChar;
+		PlayerInstance player;
 		
-		DeathTask(L2PcInstance _activeChar)
+		DeathTask(PlayerInstance _player)
 		{
-			activeChar = _activeChar;
+			player = _player;
 		}
 		
 		@Override
 		public void run()
 		{
-			if ((activeChar._inEventTvT && TvT.is_started()) || (activeChar._inEventDM && DM.is_started()) || (activeChar._inEventCTF && CTF.is_started()))
+			if ((player._inEventTvT && TvT.is_started()) || (player._inEventDM && DM.is_started()) || (player._inEventCTF && CTF.is_started()))
 			{
-				activeChar.sendMessage("You can't restart in Event!");
+				player.sendMessage("You can't restart in Event!");
 				return;
 			}
 			try
@@ -76,53 +76,53 @@ public final class RequestRestartPoint extends L2GameClientPacket
 				Castle castle = null;
 				Fort fort = null;
 				
-				if (activeChar.isInJail())
+				if (player.isInJail())
 				{
 					_requestedPointType = 27;
 				}
-				else if (activeChar.isFestivalParticipant())
+				else if (player.isFestivalParticipant())
 				{
 					_requestedPointType = 4;
 				}
 				
-				if (activeChar.isPhoenixBlessed())
+				if (player.isPhoenixBlessed())
 				{
-					activeChar.stopPhoenixBlessing(null);
+					player.stopPhoenixBlessing(null);
 				}
 				
 				switch (_requestedPointType)
 				{
 					case 1: // to clanhall
 					{
-						if (activeChar.getClan() != null)
+						if (player.getClan() != null)
 						{
-							if (activeChar.getClan().getHasHideout() == 0)
+							if (player.getClan().getHasHideout() == 0)
 							{
 								// cheater
-								activeChar.sendMessage("You may not use this respawn point!");
-								Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
+								player.sendMessage("You may not use this respawn point!");
+								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 								return;
 							}
-							loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.ClanHall);
-							if ((ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()) != null) && (ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
+							loc = MapRegionTable.getInstance().getTeleToLocation(player, MapRegionTable.TeleportWhereType.ClanHall);
+							if ((ClanHallManager.getInstance().getClanHallByOwner(player.getClan()) != null) && (ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null))
 							{
-								activeChar.restoreExp(ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
+								player.restoreExp(ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
 							}
 							break;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.Town);
+						loc = MapRegionTable.getInstance().getTeleToLocation(player, MapRegionTable.TeleportWhereType.Town);
 						break;
 					}
 					case 2: // to castle
 					{
 						Boolean isInDefense = false;
-						castle = CastleManager.getInstance().getCastle(activeChar);
-						fort = FortManager.getInstance().getFort(activeChar);
+						castle = CastleManager.getInstance().getCastle(player);
+						fort = FortManager.getInstance().getFort(player);
 						MapRegionTable.TeleportWhereType teleportWhere = MapRegionTable.TeleportWhereType.Town;
 						if ((castle != null) && castle.getSiege().getIsInProgress())
 						{
 							// siege in progress
-							if (castle.getSiege().checkIsDefender(activeChar.getClan()))
+							if (castle.getSiege().checkIsDefender(player.getClan()))
 							{
 								isInDefense = true;
 							}
@@ -130,67 +130,67 @@ public final class RequestRestartPoint extends L2GameClientPacket
 						if ((fort != null) && fort.getSiege().getIsInProgress())
 						{
 							// siege in progress
-							if (fort.getSiege().checkIsDefender(activeChar.getClan()))
+							if (fort.getSiege().checkIsDefender(player.getClan()))
 							{
 								isInDefense = true;
 							}
 						}
-						if ((activeChar.getClan().getHasCastle() == 0) && (activeChar.getClan().getHasFort() == 0) && !isInDefense)
+						if ((player.getClan().getHasCastle() == 0) && (player.getClan().getHasFort() == 0) && !isInDefense)
 						{
 							// cheater
-							activeChar.sendMessage("You may not use this respawn point!");
-							Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
+							player.sendMessage("You may not use this respawn point!");
+							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 							return;
 						}
-						if (CastleManager.getInstance().getCastleByOwner(activeChar.getClan()) != null)
+						if (CastleManager.getInstance().getCastleByOwner(player.getClan()) != null)
 						{
 							teleportWhere = MapRegionTable.TeleportWhereType.Castle;
 						}
-						else if (FortManager.getInstance().getFortByOwner(activeChar.getClan()) != null)
+						else if (FortManager.getInstance().getFortByOwner(player.getClan()) != null)
 						{
 							teleportWhere = MapRegionTable.TeleportWhereType.Fortress;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, teleportWhere);
+						loc = MapRegionTable.getInstance().getTeleToLocation(player, teleportWhere);
 						break;
 					}
 					case 3: // to siege HQ
 					{
-						L2SiegeClan siegeClan = null;
-						castle = CastleManager.getInstance().getCastle(activeChar);
-						fort = FortManager.getInstance().getFort(activeChar);
+						SiegeClan siegeClan = null;
+						castle = CastleManager.getInstance().getCastle(player);
+						fort = FortManager.getInstance().getFort(player);
 						if ((castle != null) && castle.getSiege().getIsInProgress())
 						{
-							siegeClan = castle.getSiege().getAttackerClan(activeChar.getClan());
+							siegeClan = castle.getSiege().getAttackerClan(player.getClan());
 						}
 						else if ((fort != null) && fort.getSiege().getIsInProgress())
 						{
-							siegeClan = fort.getSiege().getAttackerClan(activeChar.getClan());
+							siegeClan = fort.getSiege().getAttackerClan(player.getClan());
 						}
 						if ((siegeClan == null) || (siegeClan.getFlag().size() == 0))
 						{
 							// cheater
-							activeChar.sendMessage("You may not use this respawn point!");
-							Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
+							player.sendMessage("You may not use this respawn point!");
+							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 							return;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.SiegeFlag);
+						loc = MapRegionTable.getInstance().getTeleToLocation(player, MapRegionTable.TeleportWhereType.SiegeFlag);
 						break;
 					}
 					case 4: // Fixed or Player is a festival participant
 					{
-						if (!activeChar.isGM() && !activeChar.isFestivalParticipant())
+						if (!player.isGM() && !player.isFestivalParticipant())
 						{
 							// cheater
-							activeChar.sendMessage("You may not use this respawn point!");
-							Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
+							player.sendMessage("You may not use this respawn point!");
+							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " used respawn cheat.", IllegalPlayerAction.PUNISH_KICK);
 							return;
 						}
-						loc = new Location(activeChar.getX(), activeChar.getY(), activeChar.getZ()); // spawn them where they died
+						loc = new Location(player.getX(), player.getY(), player.getZ()); // spawn them where they died
 						break;
 					}
 					case 27: // to jail
 					{
-						if (!activeChar.isInJail())
+						if (!player.isInJail())
 						{
 							return;
 						}
@@ -199,20 +199,20 @@ public final class RequestRestartPoint extends L2GameClientPacket
 					}
 					default:
 					{
-						if ((activeChar.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
+						if ((player.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
 						{
 							loc = new Location(17836, 170178, -3507);// Floran Village
 							break;
 						}
-						loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.Town);
+						loc = MapRegionTable.getInstance().getTeleToLocation(player, MapRegionTable.TeleportWhereType.Town);
 						break;
 					}
 				}
 				
 				// Stand up and teleport, proof dvp video.
-				activeChar.setIsIn7sDungeon(false);
-				activeChar.setIsPendingRevive(true);
-				activeChar.teleToLocation(loc, true);
+				player.setIsIn7sDungeon(false);
+				player.setIsPendingRevive(true);
+				player.teleToLocation(loc, true);
 			}
 			catch (Throwable e)
 			{
@@ -225,37 +225,37 @@ public final class RequestRestartPoint extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.isFakeDeath())
+		if (player.isFakeDeath())
 		{
-			activeChar.stopFakeDeath(null);
-			activeChar.broadcastPacket(new Revive(activeChar));
+			player.stopFakeDeath(null);
+			player.broadcastPacket(new Revive(player));
 			return;
 		}
-		else if (!activeChar.isAlikeDead())
+		else if (!player.isAlikeDead())
 		{
-			LOGGER.warning("Living player [" + activeChar.getName() + "] called RestartPointPacket! Ban this player!");
+			LOGGER.warning("Living player [" + player.getName() + "] called RestartPointPacket! Ban this player!");
 			return;
 		}
 		
-		final Castle castle = CastleManager.getInstance().getCastle(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		final Castle castle = CastleManager.getInstance().getCastle(player.getX(), player.getY(), player.getZ());
 		if ((castle != null) && castle.getSiege().getIsInProgress())
 		{
-			if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan()))
+			if ((player.getClan() != null) && castle.getSiege().checkIsAttacker(player.getClan()))
 			{
 				// Schedule respawn delay for attacker
-				ThreadPool.schedule(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
-				activeChar.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
+				ThreadPool.schedule(new DeathTask(player), castle.getSiege().getAttackerRespawnDelay());
+				player.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
 				return;
 			}
 		}
 		// run immediately (no need to schedule)
-		new DeathTask(activeChar).run();
+		new DeathTask(player).run();
 	}
 }

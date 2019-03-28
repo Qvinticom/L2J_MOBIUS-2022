@@ -21,8 +21,8 @@ import java.util.Calendar;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -45,9 +45,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class SiegeInfo implements IClientOutgoingPacket
 {
 	private final Castle _castle;
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public SiegeInfo(Castle castle, L2PcInstance player)
+	public SiegeInfo(Castle castle, PlayerInstance player)
 	{
 		_castle = castle;
 		_player = player;
@@ -68,7 +68,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 			packet.writeD(ownerId);
 			if (ownerId > 0)
 			{
-				final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
+				final Clan owner = ClanTable.getInstance().getClan(ownerId);
 				if (owner != null)
 				{
 					packet.writeS(owner.getName()); // Clan Name

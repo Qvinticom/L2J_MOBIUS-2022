@@ -17,17 +17,17 @@
 package ai.others;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttack;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSkillFinishCast;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSpawn;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureAttack;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSkillFinishCast;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSpawn;
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 
 import ai.AbstractNpcAI;
@@ -52,7 +52,7 @@ public final class Incarnation extends AbstractNpcAI
 	@Id(13457)
 	public void onNpcSpawn(OnNpcSpawn event)
 	{
-		final L2Npc npc = event.getNpc();
+		final Npc npc = event.getNpc();
 		if (npc.getSummoner() != null)
 		{
 			npc.getSummoner().addListener(new ConsumerEventListener(npc, EventType.ON_CREATURE_ATTACK, (OnCreatureAttack e) -> onOffense(npc, e.getAttacker(), e.getTarget()), this));
@@ -60,7 +60,7 @@ public final class Incarnation extends AbstractNpcAI
 		}
 	}
 	
-	public void onOffense(L2Npc npc, L2Character attacker, L2Object target)
+	public void onOffense(Npc npc, Creature attacker, WorldObject target)
 	{
 		if ((attacker == target) || (npc.getSummoner() == null))
 		{

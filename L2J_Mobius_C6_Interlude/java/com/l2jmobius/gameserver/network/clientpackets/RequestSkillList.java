@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class RequestSkillList extends L2GameClientPacket
+public final class RequestSkillList extends GameClientPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;
@@ -38,7 +38,7 @@ public final class RequestSkillList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance cha = getClient().getActiveChar();
+		final PlayerInstance cha = getClient().getPlayer();
 		
 		if (cha == null)
 		{

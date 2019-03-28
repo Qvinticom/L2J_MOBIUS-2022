@@ -32,11 +32,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.PropertiesParser;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TowerSpawn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Siege;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -62,7 +62,7 @@ public final class SiegeManager
 		load();
 	}
 	
-	public final void addSiegeSkills(L2PcInstance character)
+	public final void addSiegeSkills(PlayerInstance character)
 	{
 		for (Skill sk : SkillData.getInstance().getSiegeSkills(character.getNobleLevel() > 0, character.getClan().getCastleId() > 0))
 		{
@@ -71,11 +71,11 @@ public final class SiegeManager
 	}
 	
 	/**
-	 * @param clan The L2Clan of the player
+	 * @param clan The Clan of the player
 	 * @param castleid
 	 * @return true if the clan is registered or owner of a castle
 	 */
-	public final boolean checkIsRegistered(L2Clan clan, int castleid)
+	public final boolean checkIsRegistered(Clan clan, int castleid)
 	{
 		if (clan == null)
 		{
@@ -108,7 +108,7 @@ public final class SiegeManager
 		return register;
 	}
 	
-	public final void removeSiegeSkills(L2PcInstance character)
+	public final void removeSiegeSkills(PlayerInstance character)
 	{
 		for (Skill sk : SkillData.getInstance().getSiegeSkills(character.getNobleLevel() > 0, character.getClan().getCastleId() > 0))
 		{
@@ -231,7 +231,7 @@ public final class SiegeManager
 		return getSiege(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
-	public final Siege getSiege(L2Object activeObject)
+	public final Siege getSiege(WorldObject activeObject)
 	{
 		return getSiege(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}

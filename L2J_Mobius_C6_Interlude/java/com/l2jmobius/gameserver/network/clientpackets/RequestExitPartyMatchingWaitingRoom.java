@@ -17,13 +17,13 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: (ch) this is just a trigger : no data
  * @author -Wooden-
  */
-public final class RequestExitPartyMatchingWaitingRoom extends L2GameClientPacket
+public final class RequestExitPartyMatchingWaitingRoom extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -34,12 +34,12 @@ public final class RequestExitPartyMatchingWaitingRoom extends L2GameClientPacke
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		if (_activeChar == null)
+		final PlayerInstance _player = getClient().getPlayer();
+		if (_player == null)
 		{
 			return;
 		}
 		
-		PartyMatchWaitingList.getInstance().removePlayer(_activeChar);
+		PartyMatchWaitingList.getInstance().removePlayer(_player);
 	}
 }

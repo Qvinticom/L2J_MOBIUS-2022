@@ -22,9 +22,9 @@ import java.util.StringTokenizer;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -41,7 +41,7 @@ public class AdminTest implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_stats"))
 		{
@@ -83,17 +83,17 @@ public class AdminTest implements IAdminCommandHandler
 	 * @param id
 	 * @param msu
 	 */
-	private void adminTestSkill(L2PcInstance activeChar, int id, boolean msu)
+	private void adminTestSkill(PlayerInstance activeChar, int id, boolean msu)
 	{
-		L2Character caster;
-		final L2Object target = activeChar.getTarget();
-		if (!target.isCharacter())
+		Creature caster;
+		final WorldObject target = activeChar.getTarget();
+		if (!target.isCreature())
 		{
 			caster = activeChar;
 		}
 		else
 		{
-			caster = (L2Character) target;
+			caster = (Creature) target;
 		}
 		
 		final Skill _skill = SkillData.getInstance().getSkill(id, 1);

@@ -24,10 +24,10 @@ import java.util.StringTokenizer;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -57,7 +57,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	private static final String FONT_RED2 = "</font>";
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.startsWith("admin_getbuffs"))
 		{
@@ -66,7 +66,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
-				final L2PcInstance player = L2World.getInstance().getPlayer(playername);
+				final PlayerInstance player = World.getInstance().getPlayer(playername);
 				if (player != null)
 				{
 					int page = 1;
@@ -80,9 +80,9 @@ public class AdminBuffs implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online.");
 				return false;
 			}
-			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
+			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isCreature())
 			{
-				showBuffs(activeChar, (L2Character) activeChar.getTarget(), 1, command.endsWith("_ps"));
+				showBuffs(activeChar, (Creature) activeChar.getTarget(), 1, command.endsWith("_ps"));
 				return true;
 			}
 			else
@@ -137,7 +137,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				final int radius = Integer.parseInt(val);
 				
-				L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, radius, L2Character::stopAllEffects);
+				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, Creature::stopAllEffects);
 				
 				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
@@ -153,10 +153,10 @@ public class AdminBuffs implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
 			
-			L2Character creature = null;
+			Creature creature = null;
 			if (st.hasMoreTokens())
 			{
-				creature = L2World.getInstance().getPlayer(st.nextToken());
+				creature = World.getInstance().getPlayer(st.nextToken());
 				if (creature == null)
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
@@ -165,10 +165,10 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			else
 			{
-				final L2Object target = activeChar.getTarget();
-				if ((target != null) && target.isCharacter())
+				final WorldObject target = activeChar.getTarget();
+				if ((target != null) && target.isCreature())
 				{
-					creature = (L2Character) target;
+					creature = (Creature) target;
 				}
 				
 				if (creature == null)
@@ -207,7 +207,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	 * @param gmchar the player to switch the Game Master skills.
 	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
 	 */
-	public static void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
+	public static void switchSkills(PlayerInstance gmchar, boolean toAuraSkills)
 	{
 		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
 		for (Skill skill : skills)
@@ -223,7 +223,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public static void showBuffs(L2PcInstance activeChar, L2Character target, int page, boolean passive)
+	public static void showBuffs(PlayerInstance activeChar, Creature target, int page, boolean passive)
 	{
 		final List<BuffInfo> effects = new ArrayList<>();
 		if (!passive)
@@ -351,12 +351,12 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void removeBuff(L2PcInstance activeChar, int objId, int skillId)
+	private static void removeBuff(PlayerInstance activeChar, int objId, int skillId)
 	{
-		L2Character target = null;
+		Creature target = null;
 		try
 		{
-			target = (L2Character) L2World.getInstance().findObject(objId);
+			target = (Creature) World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
@@ -378,12 +378,12 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private static void removeAllBuffs(L2PcInstance activeChar, int objId)
+	private static void removeAllBuffs(PlayerInstance activeChar, int objId)
 	{
-		L2Character target = null;
+		Creature target = null;
 		try
 		{
-			target = (L2Character) L2World.getInstance().findObject(objId);
+			target = (Creature) World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{

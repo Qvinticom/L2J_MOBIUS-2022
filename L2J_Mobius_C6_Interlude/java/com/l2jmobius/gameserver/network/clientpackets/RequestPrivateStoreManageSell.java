@@ -19,13 +19,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class RequestPrivateStoreManageSell extends L2GameClientPacket
+public final class RequestPrivateStoreManageSell extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(EnterWorld.class.getName());
 	
@@ -37,7 +37,7 @@ public final class RequestPrivateStoreManageSell extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;
@@ -103,12 +103,12 @@ public final class RequestPrivateStoreManageSell extends L2GameClientPacket
 			return;
 		}
 		
-		if ((player.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_SELL) || (player.getPrivateStoreType() == (L2PcInstance.STORE_PRIVATE_SELL + 1)) || (player.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_PACKAGE_SELL))
+		if ((player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_SELL) || (player.getPrivateStoreType() == (PlayerInstance.STORE_PRIVATE_SELL + 1)) || (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_PACKAGE_SELL))
 		{
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_NONE);
 		}
 		
-		if (player.getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_NONE)
+		if (player.getPrivateStoreType() == PlayerInstance.STORE_PRIVATE_NONE)
 		{
 			if (player.isSitting())
 			{
@@ -121,7 +121,7 @@ public final class RequestPrivateStoreManageSell extends L2GameClientPacket
 				player.sendPacket(cs11);
 			}
 			
-			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_SELL + 1);
+			player.setPrivateStoreType(PlayerInstance.STORE_PRIVATE_SELL + 1);
 			player.sendPacket(new PrivateStoreManageListSell(player));
 		}
 	}

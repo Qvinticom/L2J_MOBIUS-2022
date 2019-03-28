@@ -19,7 +19,7 @@ package handlers.playeractions;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Airship Action player action handler.
@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public final class AirshipAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if (!activeChar.isInAirShip())
+		if (!player.isInAirShip())
 		{
 			return;
 		}
@@ -39,40 +39,40 @@ public final class AirshipAction implements IPlayerActionHandler
 		{
 			case 1: // Steer
 			{
-				if (activeChar.getAirShip().setCaptain(activeChar))
+				if (player.getAirShip().setCaptain(player))
 				{
-					activeChar.broadcastUserInfo();
+					player.broadcastUserInfo();
 				}
 				break;
 			}
 			case 2: // Cancel Control
 			{
-				if (activeChar.getAirShip().isCaptain(activeChar))
+				if (player.getAirShip().isCaptain(player))
 				{
-					if (activeChar.getAirShip().setCaptain(null))
+					if (player.getAirShip().setCaptain(null))
 					{
-						activeChar.broadcastUserInfo();
+						player.broadcastUserInfo();
 					}
 				}
 				break;
 			}
 			case 3: // Destination Map
 			{
-				AirShipManager.getInstance().sendAirShipTeleportList(activeChar);
+				AirShipManager.getInstance().sendAirShipTeleportList(player);
 				break;
 			}
 			case 4: // Exit Airship
 			{
-				if (activeChar.getAirShip().isCaptain(activeChar))
+				if (player.getAirShip().isCaptain(player))
 				{
-					if (activeChar.getAirShip().setCaptain(null))
+					if (player.getAirShip().setCaptain(null))
 					{
-						activeChar.broadcastUserInfo();
+						player.broadcastUserInfo();
 					}
 				}
-				else if (activeChar.getAirShip().isInDock())
+				else if (player.getAirShip().isInDock())
 				{
-					activeChar.getAirShip().oustPlayer(activeChar);
+					player.getAirShip().oustPlayer(player);
 				}
 			}
 		}

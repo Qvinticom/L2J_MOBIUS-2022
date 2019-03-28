@@ -17,15 +17,15 @@
 package custom.KetraOrcSupport;
 
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.PcInventory;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.PlayerInventory;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -117,7 +117,7 @@ public class KetraOrcSupport extends Quest
 		// Haste: Requires 6 Buffalo Horns
 	};
 	
-	private static final L2Skill VARKA_KETRA_PETRIFICATION = SkillTable.getInstance().getInfo(4578, 1);
+	private static final Skill VARKA_KETRA_PETRIFICATION = SkillTable.getInstance().getInfo(4578, 1);
 	
 	/**
 	 * Names of missions which will be automatically dropped if the alliance is broken.
@@ -148,7 +148,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(getName());
@@ -199,7 +199,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
@@ -346,12 +346,12 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final L2Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party != null)
 		{
-			for (L2PcInstance partyMember : party.getPartyMembers())
+			for (PlayerInstance partyMember : party.getPartyMembers())
 			{
 				testKetraDemote(partyMember);
 			}
@@ -365,7 +365,7 @@ public class KetraOrcSupport extends Quest
 	}
 	
 	@Override
-	public String onSkillUse(L2NpcInstance npc, L2PcInstance caster, L2Skill skill)
+	public String onSkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		// Caster is an allied.
 		if (caster.isAlliedWithKetra())
@@ -379,7 +379,7 @@ public class KetraOrcSupport extends Quest
 				case HEAL_STATIC:
 				case BALANCE_LIFE:
 				case HOT:
-					for (L2Object target : skill.getTargetList(caster))
+					for (WorldObject target : skill.getTargetList(caster))
 					{
 						// Character isn't existing, or is current caster, we drop check.
 						if ((target == null) || (target == caster))
@@ -388,13 +388,13 @@ public class KetraOrcSupport extends Quest
 						}
 						
 						// Target isn't a summon nor a player, we drop check.
-						if (!(target instanceof L2Playable))
+						if (!(target instanceof Playable))
 						{
 							continue;
 						}
 						
 						// Retrieve the player behind that target.
-						final L2PcInstance player = target.getActingPlayer();
+						final PlayerInstance player = target.getActingPlayer();
 						
 						// Character is dead.
 						if (player.isDead())
@@ -406,10 +406,10 @@ public class KetraOrcSupport extends Quest
 						if (!(player.isAlliedWithKetra()))
 						{
 							// If the NPC got that player registered in aggro list, go further.
-							if (((L2Attackable) npc).getAggroList().containsKey(player))
+							if (((Attackable) npc).getAggroList().containsKey(player))
 							{
 								// Save current target for future use.
-								final L2Object oldTarget = npc.getTarget();
+								final WorldObject oldTarget = npc.getTarget();
 								
 								// Curse the heretic or his pet.
 								npc.setTarget((player.isPet() && (player.getPet() != null)) ? caster.getPet() : caster);
@@ -434,19 +434,19 @@ public class KetraOrcSupport extends Quest
 	 * If any Varka quest is in progress, it stops the quest (and drop all related qItems) :
 	 * @param player The player to check.
 	 */
-	private static void testKetraDemote(L2PcInstance player)
+	private static void testKetraDemote(PlayerInstance player)
 	{
 		if (player.isAlliedWithKetra())
 		{
 			// Drop the alliance (old friends become aggro).
 			player.setAllianceWithVarkaKetra(0);
 			
-			final PcInventory inventory = player.getInventory();
+			final PlayerInventory inventory = player.getInventory();
 			
 			// Drop by 1 the level of that alliance (symbolized by a quest item).
 			for (int i = 7215; i >= 7211; i--)
 			{
-				L2ItemInstance item = inventory.getItemByItemId(i);
+				ItemInstance item = inventory.getItemByItemId(i);
 				if (item != null)
 				{
 					// Destroy the badge.

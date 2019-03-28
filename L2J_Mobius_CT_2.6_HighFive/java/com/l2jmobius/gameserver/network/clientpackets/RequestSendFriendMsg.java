@@ -20,9 +20,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
 
@@ -38,7 +38,7 @@ public final class RequestSendFriendMsg implements IClientIncomingPacket
 	private String _reciever;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_message = packet.readS();
 		_reciever = packet.readS();
@@ -46,10 +46,10 @@ public final class RequestSendFriendMsg implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -59,18 +59,18 @@ public final class RequestSendFriendMsg implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(_reciever);
-		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(activeChar.getObjectId()))
+		final PlayerInstance targetPlayer = World.getInstance().getPlayer(_reciever);
+		if ((targetPlayer == null) || !targetPlayer.getFriendList().contains(player.getObjectId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
+			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			return;
 		}
 		
 		if (Config.LOG_CHAT)
 		{
-			LOGGER_CHAT.info("PRIV_MSG [" + activeChar + " to " + targetPlayer + "] " + _message);
+			LOGGER_CHAT.info("PRIV_MSG [" + player + " to " + targetPlayer + "] " + _message);
 		}
 		
-		targetPlayer.sendPacket(new L2FriendSay(activeChar.getName(), _reciever, _message));
+		targetPlayer.sendPacket(new L2FriendSay(player.getName(), _reciever, _message));
 	}
 }

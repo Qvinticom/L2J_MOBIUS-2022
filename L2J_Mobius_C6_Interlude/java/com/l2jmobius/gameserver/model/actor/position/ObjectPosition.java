@@ -20,34 +20,34 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Point3D;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldRegion;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ObjectPosition
 {
 	private static final Logger LOGGER = Logger.getLogger(ObjectPosition.class.getName());
 	
-	private final L2Object _activeObject;
+	private final WorldObject _activeObject;
 	private int _heading = 0;
 	private Point3D _worldPosition;
-	private L2WorldRegion _worldRegion; // Object localization : Used for items/chars that are seen in the world
+	private WorldRegion _worldRegion; // Object localization : Used for items/chars that are seen in the world
 	private Boolean _changingRegion = false;
 	
 	/**
 	 * Instantiates a new object position.
 	 * @param activeObject the active object
 	 */
-	public ObjectPosition(L2Object activeObject)
+	public ObjectPosition(WorldObject activeObject)
 	{
 		_activeObject = activeObject;
-		setWorldRegion(L2World.getInstance().getRegion(getWorldPosition()));
+		setWorldRegion(World.getInstance().getRegion(getWorldPosition()));
 	}
 	
 	/**
-	 * Set the x,y,z position of the L2Object and if necessary modify its _worldRegion.<BR>
+	 * Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.<BR>
 	 * <BR>
 	 * <B><U> Assert </U> :</B><BR>
 	 * <BR>
@@ -71,7 +71,7 @@ public class ObjectPosition
 		
 		try
 		{
-			if (L2World.getInstance().getRegion(getWorldPosition()) != getWorldRegion())
+			if (World.getInstance().getRegion(getWorldPosition()) != getWorldRegion())
 			{
 				updateWorldRegion();
 			}
@@ -80,13 +80,13 @@ public class ObjectPosition
 		{
 			LOGGER.warning("Object Id at bad coords: (x: " + getWorldPosition().getX() + ", y: " + getWorldPosition().getY() + ", z: " + getWorldPosition().getZ() + ").");
 			
-			if (_activeObject instanceof L2PcInstance)
+			if (_activeObject instanceof PlayerInstance)
 			{
-				((L2PcInstance) _activeObject).teleToLocation(0, 0, 0, false);
-				((L2PcInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
+				((PlayerInstance) _activeObject).teleToLocation(0, 0, 0, false);
+				((PlayerInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
 				
 			}
-			else if (_activeObject instanceof L2Character)
+			else if (_activeObject instanceof Creature)
 			{
 				_activeObject.decayMe();
 			}
@@ -94,20 +94,20 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Set the x,y,z position of the L2Object and make it invisible.<BR>
+	 * Set the x,y,z position of the WorldObject and make it invisible.<BR>
 	 * <BR>
 	 * <B><U> Concept</U> :</B><BR>
 	 * <BR>
-	 * A L2Object is invisble if <B>_hidden</B>=true or <B>_worldregion</B>==null <BR>
+	 * A WorldObject is invisble if <B>_hidden</B>=true or <B>_worldregion</B>==null <BR>
 	 * <BR>
 	 * <B><U> Assert </U> :</B><BR>
 	 * <BR>
-	 * <li>_worldregion==null <I>(L2Object is invisible)</I></li><BR>
+	 * <li>_worldregion==null <I>(WorldObject is invisible)</I></li><BR>
 	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>
 	 * <BR>
 	 * <li>Create a Door</li>
-	 * <li>Restore L2PcInstance</li><BR>
+	 * <li>Restore PlayerInstance</li><BR>
 	 * @param x the x
 	 * @param y the y
 	 * @param z the z
@@ -118,24 +118,24 @@ public class ObjectPosition
 		{
 			assert getWorldRegion() == null;
 		}
-		if (x > L2World.MAP_MAX_X)
+		if (x > World.MAP_MAX_X)
 		{
-			x = L2World.MAP_MAX_X - 5000;
+			x = World.MAP_MAX_X - 5000;
 		}
 		
-		if (x < L2World.MAP_MIN_X)
+		if (x < World.MAP_MIN_X)
 		{
-			x = L2World.MAP_MIN_X + 5000;
+			x = World.MAP_MIN_X + 5000;
 		}
 		
-		if (y > L2World.MAP_MAX_Y)
+		if (y > World.MAP_MAX_Y)
 		{
-			y = L2World.MAP_MAX_Y - 5000;
+			y = World.MAP_MAX_Y - 5000;
 		}
 		
-		if (y < L2World.MAP_MIN_Y)
+		if (y < World.MAP_MIN_Y)
 		{
-			y = L2World.MAP_MIN_Y + 5000;
+			y = World.MAP_MIN_Y + 5000;
 		}
 		
 		setWorldPosition(x, y, z);
@@ -152,14 +152,14 @@ public class ObjectPosition
 			return;
 		}
 		
-		L2WorldRegion newRegion = L2World.getInstance().getRegion(getWorldPosition());
+		WorldRegion newRegion = World.getInstance().getRegion(getWorldPosition());
 		if (newRegion != getWorldRegion())
 		{
 			getWorldRegion().removeVisibleObject(_activeObject);
 			
 			setWorldRegion(newRegion);
 			
-			// Add the L2Oject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
+			// Add the L2Oject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion
 			getWorldRegion().addVisibleObject(_activeObject);
 		}
 	}
@@ -168,7 +168,7 @@ public class ObjectPosition
 	 * Gets the active object.
 	 * @return the active object
 	 */
-	public final L2Object getActiveObject()
+	public final WorldObject getActiveObject()
 	{
 		return _activeObject;
 	}
@@ -192,7 +192,7 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Return the x position of the L2Object.
+	 * Return the x position of the WorldObject.
 	 * @return the x
 	 */
 	public final int getX()
@@ -210,7 +210,7 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Return the y position of the L2Object.
+	 * Return the y position of the WorldObject.
 	 * @return the y
 	 */
 	public final int getY()
@@ -228,7 +228,7 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Return the z position of the L2Object.
+	 * Return the z position of the WorldObject.
 	 * @return the z
 	 */
 	public final int getZ()
@@ -283,7 +283,7 @@ public class ObjectPosition
 	 * Gets the world region.
 	 * @return the world region
 	 */
-	public final L2WorldRegion getWorldRegion()
+	public final WorldRegion getWorldRegion()
 	{
 		synchronized (_changingRegion)
 		{
@@ -296,7 +296,7 @@ public class ObjectPosition
 	 * Sets the world region.
 	 * @param value the new world region
 	 */
-	public final void setWorldRegion(L2WorldRegion value)
+	public final void setWorldRegion(WorldRegion value)
 	{
 		synchronized (_changingRegion)
 		{

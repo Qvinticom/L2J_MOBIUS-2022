@@ -28,10 +28,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.templates.item.Item;
 
 /**
  * @author godson
@@ -161,7 +161,7 @@ public class Hero
 					int allyCrest = 0;
 					if (clanId > 0)
 					{
-						final L2Clan clan = ClanTable.getInstance().getClan(clanId);
+						final Clan clan = ClanTable.getInstance().getClan(clanId);
 						if (clan != null)
 						{
 							clanName = clan.getName();
@@ -195,7 +195,7 @@ public class Hero
 		LOGGER.info("Hero System: Loaded " + _completeHeroes.size() + " all time Heroes.");
 	}
 	
-	public void putHero(L2PcInstance player, boolean isComplete)
+	public void putHero(PlayerInstance player, boolean isComplete)
 	{
 		try
 		{
@@ -215,7 +215,7 @@ public class Hero
 		}
 	}
 	
-	public void deleteHero(L2PcInstance player, boolean isComplete)
+	public void deleteHero(PlayerInstance player, boolean isComplete)
 	{
 		final int objId = player.getObjectId();
 		if (_heroes.containsKey(objId))
@@ -239,14 +239,14 @@ public class Hero
 	public synchronized void computeNewHeroes(List<StatsSet> newHeroes)
 	{
 		updateHeroes(true);
-		L2ItemInstance[] items;
+		ItemInstance[] items;
 		InventoryUpdate iu;
 		if (_heroes.size() != 0)
 		{
 			for (StatsSet hero : _heroes.values())
 			{
 				final String name = hero.getString(Olympiad.CHAR_NAME);
-				final L2PcInstance player = L2World.getInstance().getPlayer(name);
+				final PlayerInstance player = World.getInstance().getPlayer(name);
 				if (player == null)
 				{
 					continue;
@@ -254,42 +254,42 @@ public class Hero
 				try
 				{
 					player.setHero(false);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_LR_HAND);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_LR_HAND);
 					iu = new InventoryUpdate();
-					for (L2ItemInstance item : items)
+					for (ItemInstance item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_R_HAND);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_R_HAND);
 					iu = new InventoryUpdate();
-					for (L2ItemInstance item : items)
+					for (ItemInstance item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_HAIR);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_HAIR);
 					iu = new InventoryUpdate();
-					for (L2ItemInstance item : items)
+					for (ItemInstance item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_FACE);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_FACE);
 					iu = new InventoryUpdate();
-					for (L2ItemInstance item : items)
+					for (ItemInstance item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					items = player.getInventory().unEquipItemInBodySlotAndRecord(L2Item.SLOT_DHAIR);
+					items = player.getInventory().unEquipItemInBodySlotAndRecord(Item.SLOT_DHAIR);
 					iu = new InventoryUpdate();
-					for (L2ItemInstance item : items)
+					for (ItemInstance item : items)
 					{
 						iu.addModifiedItem(item);
 					}
 					player.sendPacket(iu);
-					for (L2ItemInstance item : player.getInventory().getAvailableItems(false))
+					for (ItemInstance item : player.getInventory().getAvailableItems(false))
 					{
 						if (item == null)
 						{
@@ -347,11 +347,11 @@ public class Hero
 		for (StatsSet hero : _heroes.values())
 		{
 			final String name = hero.getString(Olympiad.CHAR_NAME);
-			final L2PcInstance player = L2World.getInstance().getPlayer(name);
+			final PlayerInstance player = World.getInstance().getPlayer(name);
 			if (player != null)
 			{
 				player.setHero(true);
-				final L2Clan clan = player.getClan();
+				final Clan clan = player.getClan();
 				if (clan != null)
 				{
 					clan.setReputationScore(clan.getReputationScore() + 1000, true);
@@ -378,7 +378,7 @@ public class Hero
 						final String clanName = rset.getString("clan_name");
 						if (clanName != null)
 						{
-							final L2Clan clan = ClanTable.getInstance().getClanByName(clanName);
+							final Clan clan = ClanTable.getInstance().getClanByName(clanName);
 							if (clan != null)
 							{
 								clan.setReputationScore(clan.getReputationScore() + 1000, true);

@@ -29,26 +29,26 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageReceived;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2NoSummonFriendZone;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -112,16 +112,16 @@ public class Lindvior extends AbstractNpcAI
 	protected ScheduledFuture<?> _LynDracoTask;
 	protected ScheduledFuture<?> _smallVortexesTask;
 	protected ScheduledFuture<?> _bigVortexesTask;
-	protected L2NoSummonFriendZone _zoneLair;
-	protected L2GrandBossInstance _lindvior = null;
-	protected L2Npc _lindvior2 = null;
-	protected L2Npc _dummyLindvior;
-	protected L2Npc _vortex = null;
-	protected L2Npc _lionel = null;
-	protected List<L2Npc> _guardSpawn = new ArrayList<>();
+	protected NoSummonFriendZone _zoneLair;
+	protected GrandBossInstance _lindvior = null;
+	protected Npc _lindvior2 = null;
+	protected Npc _dummyLindvior;
+	protected Npc _vortex = null;
+	protected Npc _lionel = null;
+	protected List<Npc> _guardSpawn = new ArrayList<>();
 	protected List<FriendlyNpcInstance> _generatorSpawn = new ArrayList<>();
-	protected List<L2Npc> _monsterSpawn = new ArrayList<>();
-	protected List<L2Npc> _LinDracoSpawn = new ArrayList<>();
+	protected List<Npc> _monsterSpawn = new ArrayList<>();
+	protected List<Npc> _LinDracoSpawn = new ArrayList<>();
 	protected int _activeMask = 0;
 	protected int _chargedMask = 0;
 	protected int _status = 0;
@@ -242,7 +242,7 @@ public class Lindvior extends AbstractNpcAI
 		addSpawnId(NPC_ATTACKER_GENERATORS, NPC_ATTACKER_GENERATORS_1, LYN_DRACO_ATTACKER_GENERATORS, GENERATOR_GUARD, NPC_GENERATOR);
 		addFirstTalkId(NPC_GENERATOR);
 		addSeeCreatureId(INVISIBLE);
-		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, L2NoSummonFriendZone.class);
+		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(LINDVIOR_RAID);
 		final int status = GrandBossManager.getInstance().getBossStatus(LINDVIOR_RAID);
@@ -265,7 +265,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		// Anti BUGGERS
 		if (!_zoneLair.isInsideZone(attacker))
@@ -292,7 +292,7 @@ public class Lindvior extends AbstractNpcAI
 			_lindvior.setIsDead(true);
 			_lindvior.deleteMe();
 			
-			_lindvior = (L2GrandBossInstance) addSpawn(LINDVIOR_FLY, _lindvior.getLocation(), false, 0, false);
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, _lindvior.getLocation(), false, 0, false);
 			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.8);
 			for (Location loc : ATTACKER_SMALL_VORTEX_SPAWNS)
 			{
@@ -317,7 +317,7 @@ public class Lindvior extends AbstractNpcAI
 			_lindvior.setIsDead(true);
 			_lindvior.deleteMe();
 			
-			_lindvior = (L2GrandBossInstance) addSpawn(LINDVIOR_GROUND, _lindvior.getLocation(), false, 0, false);
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_GROUND, _lindvior.getLocation(), false, 0, false);
 			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.6);
 			spawnServitor(10, 2000, _lindvior.getLocation(), LINDVIOR_SERVITOR);
 			for (Location loc : ATTACKER_SMALL_VORTEX_SPAWNS)
@@ -333,7 +333,7 @@ public class Lindvior extends AbstractNpcAI
 			_lindvior.setIsDead(true);
 			_lindvior.deleteMe();
 			
-			_lindvior = (L2GrandBossInstance) addSpawn(LINDVIOR_FLY, _lindvior.getLocation(), false, 0, false);
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, _lindvior.getLocation(), false, 0, false);
 			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.4);
 			
 			if (SpawnTable.getInstance().getSpawns(NPC_ATTACKER_BIG_VORTEX) != null)
@@ -370,7 +370,7 @@ public class Lindvior extends AbstractNpcAI
 			_lindvior.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
 			_lindvior.setIsDead(true);
 			_lindvior.deleteMe();
-			_lindvior = (L2GrandBossInstance) addSpawn(LINDVIOR_RAID, _lindvior.getLocation(), false, 0, false);
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_RAID, _lindvior.getLocation(), false, 0, false);
 			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.2);
 			_bigVortexesTask = ThreadPool.schedule(() -> spawnServitor(1, 300, _lindvior.getLocation(), NPC_ATTACKER_BIG_VORTEX), 1000);
 			for (Location loc : ATTACKER_SMALL_VORTEX_SPAWNS)
@@ -463,7 +463,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public synchronized String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	public synchronized String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if ((skill.getId() == 15606) && (npc.getId() == NPC_GENERATOR))
 		{
@@ -475,7 +475,7 @@ public class Lindvior extends AbstractNpcAI
 					_chargedValues[index] += caster.isGM() ? (30 / 4) + 2 : (1 / 4) + 2;
 					_chargedValues[index] = Math.min(_chargedValues[index], 120);
 					
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 3000, player ->
+					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 3000, player ->
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.S1_HAS_CHARGED_THE_CANNON, ExShowScreenMessage.TOP_CENTER, 10000, true, caster.getName()));
 						player.sendPacket(new ExSendUIEvent(player, ExSendUIEvent.TYPE_NORNIL, _chargedValues[index], 120, NpcStringId.CHARGING));
@@ -497,14 +497,14 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
 			case NPC_ATTACKER_GENERATORS:
 			case NPC_ATTACKER_GENERATORS_1:
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 800, cha ->
+				World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 800, cha ->
 				{
 					
 					if (cha.getId() == GENERATOR_GUARD)
@@ -514,14 +514,14 @@ public class Lindvior extends AbstractNpcAI
 					}
 					if (cha.getId() == NPC_GENERATOR)
 					{
-						((L2Attackable) npc).addDamageHate(cha, 500, 98);
+						((Attackable) npc).addDamageHate(cha, 500, 98);
 					}
 				});
 				break;
 			}
 			case LYN_DRACO_ATTACKER_GENERATORS:
 			{
-				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+				((Attackable) npc).setCanReturnToSpawnPoint(false);
 				startQuestTimer("attack_generator", 10000, npc, null, true);
 				break;
 			}
@@ -546,12 +546,12 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character player, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		setLindviorSpawnTask();
 		npc.getSpawn().stopRespawn();
 		npc.deleteMe();
-		return super.onSeeCreature(npc, player, isSummon);
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	private void nextStage(int _taskId)
@@ -571,7 +571,7 @@ public class Lindvior extends AbstractNpcAI
 					_generatorSpawn.add(guard);
 				}
 				
-				L2Npc npc;
+				Npc npc;
 				for (Location loc : SCHEME_GENERATOR_SPAWNS)
 				{
 					npc = addSpawn(GENERATOR_GUARD, loc, true);
@@ -691,7 +691,7 @@ public class Lindvior extends AbstractNpcAI
 				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, FIGHTING);
 				_lionel = addSpawn(LIONEL_HUNTER, 42630, -48231, -792, 855, false, 0, false);
 				
-				_lindvior = (L2GrandBossInstance) addSpawn(LINDVIOR_GROUND, CENTER_LOCATION, false, 0, true);
+				_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_GROUND, CENTER_LOCATION, false, 0, true);
 				_zoneLair.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
 				_zoneLair.getPlayersInside().forEach(_lindvior::sendInfo);
 				_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.LINDVIOR_HAS_FALLEN_FROM_THE_SKY, ExShowScreenMessage.TOP_CENTER, 7000));
@@ -702,7 +702,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -761,7 +761,7 @@ public class Lindvior extends AbstractNpcAI
 						// TODO Need core implemented combo skill packet.
 						// On this moment player automatic charge generator if distance generator and player <= 900
 						generators.doCast(SKILL_RECHARGE_POSIBLE.getSkill());
-						L2World.getInstance().forEachVisibleObjectInRange(generators, L2PcInstance.class, 900, p ->
+						World.getInstance().forEachVisibleObjectInRange(generators, PlayerInstance.class, 900, p ->
 						{
 							p.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 							p.setTarget(generators);
@@ -797,7 +797,7 @@ public class Lindvior extends AbstractNpcAI
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 3000, generator ->
+					World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 3000, generator ->
 					{
 						if (generator.getId() == NPC_GENERATOR)
 						{
@@ -818,7 +818,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getId() == LINDVIOR_RAID)
 		{
@@ -828,7 +828,7 @@ public class Lindvior extends AbstractNpcAI
 				_mobsSpawnTask.cancel(true);
 				_mobsSpawnTask = null;
 			}
-			_zoneLair.getCharactersInside().stream().filter(L2Character::isNpc).forEach(mob -> mob.deleteMe());
+			_zoneLair.getCharactersInside().stream().filter(Creature::isNpc).forEach(mob -> mob.deleteMe());
 			ThreadPool.schedule(() -> npc.decayMe(), 10000);
 			_zoneLair.broadcastPacket(new OnEventTrigger(SECOND_STAGE_EVENT_TRIGGER, false));
 			_zoneLair.broadcastPacket(new OnEventTrigger(FIRST_STAGE_EVENT_TRIGGER, true));
@@ -851,7 +851,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == NPC_GENERATOR)
 		{
@@ -861,7 +861,7 @@ public class Lindvior extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		if (zone.getId() == ZONE_ID)
 		{
@@ -871,11 +871,11 @@ public class Lindvior extends AbstractNpcAI
 				_collapseTask = null;
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	@Override
-	public String onExitZone(L2Character character, L2ZoneType zone)
+	public String onExitZone(Creature creature, ZoneType zone)
 	{
 		if (zone.getId() == ZONE_ID)
 		{
@@ -884,11 +884,11 @@ public class Lindvior extends AbstractNpcAI
 				_collapseTask = ThreadPool.schedule(() -> Fail(true), 900000);
 			}
 		}
-		return super.onExitZone(character, zone);
+		return super.onExitZone(creature, zone);
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("NPC_SHOUT"))
 		{

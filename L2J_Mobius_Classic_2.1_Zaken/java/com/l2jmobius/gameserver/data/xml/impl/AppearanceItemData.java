@@ -55,7 +55,7 @@ public class AppearanceItemData implements IGameXmlReader
 		
 		//@formatter:off
 		/*
-		for (L2Item item : ItemTable.getInstance().getAllItems())
+		for (Item item : ItemTable.getInstance().getAllItems())
 		{
 			if ((item == null) || !item.getName().contains("Appearance Stone"))
 			{

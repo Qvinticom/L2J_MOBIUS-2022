@@ -26,8 +26,8 @@ import com.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
@@ -43,25 +43,25 @@ public class RegionBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parseCmd(String command, L2PcInstance activeChar)
+	public void parseCmd(String command, PlayerInstance player)
 	{
 		if (command.equals("_bbsloc"))
 		{
-			CommunityBoard.getInstance().addBypass(activeChar, "Region>", command);
-			showRegionsList(activeChar);
+			CommunityBoard.getInstance().addBypass(player, "Region>", command);
+			showRegionsList(player);
 		}
 		else if (command.startsWith("_bbsloc"))
 		{
-			CommunityBoard.getInstance().addBypass(activeChar, "Region>", command);
+			CommunityBoard.getInstance().addBypass(player, "Region>", command);
 			
 			StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			
-			showRegion(activeChar, Integer.parseInt(st.nextToken()));
+			showRegion(player, Integer.parseInt(st.nextToken()));
 		}
 		else
 		{
-			super.parseCmd(command, activeChar);
+			super.parseCmd(command, player);
 		}
 	}
 	
@@ -71,24 +71,24 @@ public class RegionBBSManager extends BaseBBSManager
 		return "region/";
 	}
 	
-	private static void showRegionsList(L2PcInstance activeChar)
+	private static void showRegionsList(PlayerInstance player)
 	{
 		final String content = HtmCache.getInstance().getHtm(CB_PATH + "region/castlelist.htm");
 		
 		final StringBuilder sb = new StringBuilder(500);
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
-			final L2Clan owner = ClanTable.getInstance().getClan(castle.getOwnerId());
+			final Clan owner = ClanTable.getInstance().getClan(castle.getOwnerId());
 			
 			StringUtil.append(sb, "<table><tr><td width=5></td><td width=160><a action=\"bypass _bbsloc;", castle.getCastleId(), "\">", castle.getName(), "</a></td><td width=160>", ((owner != null) ? "<a action=\"bypass _bbsclan;home;" + owner.getClanId() + "\">" + owner.getName() + "</a>" : "None"), "</td><td width=160>", (((owner != null) && (owner.getAllyId() > 0)) ? owner.getAllyName() : "None"), "</td><td width=120>", ((owner != null) ? castle.getTaxPercent() : "0"), "</td><td width=5></td></tr></table><br1><img src=\"L2UI.Squaregray\" width=605 height=1><br1>");
 		}
-		separateAndSend(content.replace("%castleList%", sb.toString()), activeChar);
+		separateAndSend(content.replace("%castleList%", sb.toString()), player);
 	}
 	
-	private static void showRegion(L2PcInstance activeChar, int castleId)
+	private static void showRegion(PlayerInstance player, int castleId)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
-		final L2Clan owner = ClanTable.getInstance().getClan(castle.getOwnerId());
+		final Clan owner = ClanTable.getInstance().getClan(castle.getOwnerId());
 		
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "region/castle.htm");
 		
@@ -108,12 +108,12 @@ public class RegionBBSManager extends BaseBBSManager
 			
 			for (ClanHall ch : clanHalls)
 			{
-				final L2Clan chOwner = ClanTable.getInstance().getClan(ch.getOwnerId());
+				final Clan chOwner = ClanTable.getInstance().getClan(ch.getOwnerId());
 				
 				StringUtil.append(sb, "<table><tr><td width=5></td><td width=200>", ch.getName(), "</td><td width=200>", ((chOwner != null) ? "<a action=\"bypass _bbsclan;home;" + chOwner.getClanId() + "\">" + chOwner.getName() + "</a>" : "None"), "</td><td width=200>", ((chOwner != null) ? chOwner.getLeaderName() : "None"), "</td><td width=5></td></tr></table><br1><img src=\"L2UI.Squaregray\" width=605 height=1><br1>");
 			}
 		}
-		separateAndSend(content.replace("%hallsList%", sb.toString()), activeChar);
+		separateAndSend(content.replace("%hallsList%", sb.toString()), player);
 	}
 	
 	private static class SingletonHolder

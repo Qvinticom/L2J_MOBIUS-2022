@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,11 +26,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private L2ItemInstance[] _sellList = null;
-	private L2ItemInstance[] _refundList = null;
+	private ItemInstance[] _sellList = null;
+	private ItemInstance[] _refundList = null;
 	private final boolean _done;
 	
-	public ExBuySellList(L2PcInstance player, boolean done)
+	public ExBuySellList(PlayerInstance player, boolean done)
 	{
 		_sellList = player.getInventory().getAvailableItems(false, false, false);
 		if (player.hasRefund())
@@ -49,7 +49,7 @@ public class ExBuySellList extends AbstractItemPacket
 		if ((_sellList != null))
 		{
 			packet.writeH(_sellList.length);
-			for (L2ItemInstance item : _sellList)
+			for (ItemInstance item : _sellList)
 			{
 				writeItem(packet, item);
 				packet.writeQ(item.getItem().getReferencePrice() / 2);
@@ -64,7 +64,7 @@ public class ExBuySellList extends AbstractItemPacket
 		{
 			packet.writeH(_refundList.length);
 			int i = 0;
-			for (L2ItemInstance item : _refundList)
+			for (ItemInstance item : _refundList)
 			{
 				writeItem(packet, item);
 				packet.writeD(i++);

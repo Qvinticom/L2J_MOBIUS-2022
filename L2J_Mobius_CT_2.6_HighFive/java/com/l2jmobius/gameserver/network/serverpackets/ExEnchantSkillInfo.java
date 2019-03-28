@@ -21,8 +21,8 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
-import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
+import com.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
+import com.l2jmobius.gameserver.model.EnchantSkillLearn;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class ExEnchantSkillInfo implements IClientOutgoingPacket
@@ -38,7 +38,7 @@ public final class ExEnchantSkillInfo implements IClientOutgoingPacket
 		_id = id;
 		_lvl = lvl;
 		
-		final L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
+		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
 		// do we have this skill?
 		if (enchantLearn != null)
 		{

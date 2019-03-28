@@ -24,7 +24,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * format cd.
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public final class JoinParty extends L2GameServerPacket
+public final class JoinParty extends GameServerPacket
 {
 	/** The _response. */
 	private final int _response;

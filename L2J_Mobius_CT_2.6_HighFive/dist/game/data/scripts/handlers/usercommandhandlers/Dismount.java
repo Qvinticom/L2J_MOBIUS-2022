@@ -17,7 +17,7 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Dismount user command.
@@ -31,20 +31,20 @@ public class Dismount implements IUserCommandHandler
 	};
 	
 	@Override
-	public synchronized boolean useUserCommand(int id, L2PcInstance activeChar)
+	public synchronized boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		if (activeChar.isRentedPet())
+		if (player.isRentedPet())
 		{
-			activeChar.stopRentPet();
+			player.stopRentPet();
 		}
-		else if (activeChar.isMounted())
+		else if (player.isMounted())
 		{
-			activeChar.dismount();
+			player.dismount();
 		}
 		return true;
 	}

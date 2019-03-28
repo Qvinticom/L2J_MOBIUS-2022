@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 
 public abstract class BaseBBSManager
@@ -30,17 +30,17 @@ public abstract class BaseBBSManager
 	
 	protected static final String CB_PATH = "data/html/CommunityBoard/";
 	
-	public void parseCmd(String command, L2PcInstance activeChar)
+	public void parseCmd(String command, PlayerInstance player)
 	{
-		separateAndSend("<html><body><br><br><center>The command: " + command + " isn't implemented.</center></body></html>", activeChar);
+		separateAndSend("<html><body><br><br><center>The command: " + command + " isn't implemented.</center></body></html>", player);
 	}
 	
-	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, L2PcInstance activeChar)
+	public void parseWrite(String ar1, String ar2, String ar3, String ar4, String ar5, PlayerInstance player)
 	{
-		separateAndSend("<html><body><br><br><center>The command: " + ar1 + " isn't implemented.</center></body></html>", activeChar);
+		separateAndSend("<html><body><br><br><center>The command: " + ar1 + " isn't implemented.</center></body></html>", player);
 	}
 	
-	public static void separateAndSend(String html, L2PcInstance acha)
+	public static void separateAndSend(String html, PlayerInstance acha)
 	{
 		if ((html == null) || (acha == null))
 		{
@@ -67,7 +67,7 @@ public abstract class BaseBBSManager
 		}
 	}
 	
-	protected static void send1001(String html, L2PcInstance acha)
+	protected static void send1001(String html, PlayerInstance acha)
 	{
 		if (html.length() < 8180)
 		{
@@ -75,12 +75,12 @@ public abstract class BaseBBSManager
 		}
 	}
 	
-	protected static void send1002(L2PcInstance acha)
+	protected static void send1002(PlayerInstance acha)
 	{
 		send1002(acha, " ", " ", "0");
 	}
 	
-	protected static void send1002(L2PcInstance activeChar, String string, String string2, String string3)
+	protected static void send1002(PlayerInstance player, String string, String string2, String string3)
 	{
 		List<String> _arg = new ArrayList<>();
 		_arg.add("0");
@@ -89,9 +89,9 @@ public abstract class BaseBBSManager
 		_arg.add("0");
 		_arg.add("0");
 		_arg.add("0");
-		_arg.add(activeChar.getName());
-		_arg.add(Integer.toString(activeChar.getObjectId()));
-		_arg.add(activeChar.getAccountName());
+		_arg.add(player.getName());
+		_arg.add(Integer.toString(player.getObjectId()));
+		_arg.add(player.getAccountName());
 		_arg.add("9");
 		_arg.add(string2);
 		_arg.add(string2);
@@ -100,17 +100,17 @@ public abstract class BaseBBSManager
 		_arg.add(string3);
 		_arg.add("0");
 		_arg.add("0");
-		activeChar.sendPacket(new ShowBoard(_arg));
+		player.sendPacket(new ShowBoard(_arg));
 	}
 	
 	/**
 	 * Loads an HTM located in the default CB path.
 	 * @param file : the file to load.
-	 * @param activeChar : the requester.
+	 * @param player : the requester.
 	 */
-	protected void loadStaticHtm(String file, L2PcInstance activeChar)
+	protected void loadStaticHtm(String file, PlayerInstance player)
 	{
-		separateAndSend(HtmCache.getInstance().getHtm(CB_PATH + getFolder() + file), activeChar);
+		separateAndSend(HtmCache.getInstance().getHtm(CB_PATH + getFolder() + file), player);
 	}
 	
 	/**

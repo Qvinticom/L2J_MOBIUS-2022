@@ -17,10 +17,10 @@
 package ai.others;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -58,7 +58,7 @@ public class ShadowSummoner extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		if (Util.calculateDistance(npc, npc.getSpawn(), false, false) > MAX_CHASE_DIST)
 		{
@@ -76,13 +76,13 @@ public class ShadowSummoner extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (!creature.isPlayer())
 		{
 			if (creature.getId() == DEMONS_BANQUET_2)
 			{
-				((L2Attackable) npc).clearAggroList();
+				((Attackable) npc).clearAggroList();
 				addAttackDesire(npc, creature, 99999);
 			}
 		}
@@ -90,7 +90,7 @@ public class ShadowSummoner extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (npc.isDead())
 		{
@@ -120,7 +120,7 @@ public class ShadowSummoner extends AbstractNpcAI
 		else if (DELAY_TIMER.equals(event))
 		{
 			addSkillCastDesire(npc, npc, SUMMON_SKELETON, 99999);
-			final L2Npc demonsBanquet = addSpawn(getRandom(2) < 1 ? DEMONS_BANQUET_1 : DEMONS_BANQUET_2, npc.getX() + 150, npc.getY() + 150, npc.getZ(), npc.getHeading(), false, 0);
+			final Npc demonsBanquet = addSpawn(getRandom(2) < 1 ? DEMONS_BANQUET_1 : DEMONS_BANQUET_2, npc.getX() + 150, npc.getY() + 150, npc.getZ(), npc.getHeading(), false, 0);
 			addAttackDesire(demonsBanquet, player, 10000);
 		}
 		return super.onAdvEvent(event, npc, player);

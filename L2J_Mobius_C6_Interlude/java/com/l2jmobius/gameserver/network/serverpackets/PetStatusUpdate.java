@@ -16,36 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.5.2.3.2.5 $ $Date: 2005/03/29 23:15:10 $
  */
-public class PetStatusUpdate extends L2GameServerPacket
+public class PetStatusUpdate extends GameServerPacket
 {
-	private final L2Summon _summon;
+	private final Summon _summon;
 	private final int _maxHp;
 	private final int _maxMp;
 	private int _maxFed;
 	private int _curFed;
 	
-	public PetStatusUpdate(L2Summon summon)
+	public PetStatusUpdate(Summon summon)
 	{
 		_summon = summon;
 		_maxHp = _summon.getMaxHp();
 		_maxMp = _summon.getMaxMp();
-		if (_summon instanceof L2PetInstance)
+		if (_summon instanceof PetInstance)
 		{
-			final L2PetInstance pet = (L2PetInstance) _summon;
+			final PetInstance pet = (PetInstance) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
-		else if (_summon instanceof L2SummonInstance)
+		else if (_summon instanceof SummonInstance)
 		{
-			final L2SummonInstance sum = (L2SummonInstance) _summon;
+			final SummonInstance sum = (SummonInstance) _summon;
 			_curFed = sum.getTimeRemaining();
 			_maxFed = sum.getTotalLifeTime();
 		}

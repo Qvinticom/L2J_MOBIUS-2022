@@ -22,9 +22,9 @@ import java.util.List;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -75,7 +75,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -194,7 +194,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 		return htmltext;
 	}
 	
-	private String generateItemListHtml(L2PcInstance player, L2Npc npc)
+	private String generateItemListHtml(PlayerInstance player, Npc npc)
 	{
 		String html = null;
 		final QuestState qs = getQuestState(player, false);
@@ -241,7 +241,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 				for (int i = 1; i < 5; i++)
 				{
 					final int itemId = qs.getMemoStateEx(i);
-					final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+					final Item item = ItemTable.getInstance().getTemplate(itemId);
 					if (item != null)
 					{
 						htmlFile.replace("%slot" + i + "%", item.getName());
@@ -254,7 +254,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 				{
 					if (!itemList.contains(itemId))
 					{
-						final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+						final Item item = ItemTable.getInstance().getTemplate(itemId);
 						if (item != null)
 						{
 							sb.append("<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h Quest Q10814_BefittingOfTheStatus insertItem_" + itemId + "\">" + item.getName() + "</Button>");
@@ -268,7 +268,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 		return html;
 	}
 	
-	private NpcHtmlMessage getNpcHtmlMessage(L2PcInstance player, L2Npc npc, String fileName)
+	private NpcHtmlMessage getNpcHtmlMessage(PlayerInstance player, Npc npc, String fileName)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		final String text = getHtm(player, fileName);
@@ -282,7 +282,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

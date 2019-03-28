@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * @author KenM, Gnacik
@@ -45,7 +45,7 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 	private String _title;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_colorNum = packet.readD();
 		_title = packet.readS();
@@ -54,10 +54,10 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -67,17 +67,17 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjectId);
+		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
 		if ((item == null) || (item.getEtcItem() == null) || (item.getEtcItem().getHandlerName() == null) || !item.getEtcItem().getHandlerName().equalsIgnoreCase("NicknameColor"))
 		{
 			return;
 		}
 		
-		if (activeChar.destroyItem("Consume", item, 1, null, true))
+		if (player.destroyItem("Consume", item, 1, null, true))
 		{
-			activeChar.setTitle(_title);
-			activeChar.getAppearance().setTitleColor(COLORS[_colorNum]);
-			activeChar.broadcastUserInfo();
+			player.setTitle(_title);
+			player.getAppearance().setTitleColor(COLORS[_colorNum]);
+			player.broadcastUserInfo();
 		}
 	}
 }

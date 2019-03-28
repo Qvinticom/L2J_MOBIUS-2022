@@ -27,8 +27,8 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
@@ -115,7 +115,7 @@ public final class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
 		if (NPCS.containsKey(npcId))
@@ -126,7 +126,7 @@ public final class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -134,8 +134,8 @@ public final class FortressDungeon extends AbstractInstance
 			if (CommonUtil.contains(RAIDS3, npc.getId()))
 			{
 				// Get players with active quest
-				final List<L2PcInstance> members = new ArrayList<>();
-				for (L2PcInstance member : world.getPlayers())
+				final List<PlayerInstance> members = new ArrayList<>();
+				for (PlayerInstance member : world.getPlayers())
 				{
 					final QuestState qs = member.getQuestState(Q00511_AwlUnderFoot.class.getSimpleName());
 					if ((qs != null) && qs.isCond(1))
@@ -148,7 +148,7 @@ public final class FortressDungeon extends AbstractInstance
 				if (!members.isEmpty())
 				{
 					final long itemCount = MARK_COUNT / members.size();
-					for (L2PcInstance member : members)
+					for (PlayerInstance member : members)
 					{
 						giveItems(member, MARK, itemCount);
 						playSound(member, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -166,7 +166,7 @@ public final class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		// Put re-enter for instance
 		REENETER_HOLDER.put(instance.getTemplateId(), System.currentTimeMillis() + REENTER);
@@ -175,9 +175,9 @@ public final class FortressDungeon extends AbstractInstance
 	}
 	
 	@Override
-	protected boolean validateConditions(List<L2PcInstance> group, L2Npc npc, InstanceTemplate template)
+	protected boolean validateConditions(List<PlayerInstance> group, Npc npc, InstanceTemplate template)
 	{
-		final L2PcInstance groupLeader = group.get(0);
+		final PlayerInstance groupLeader = group.get(0);
 		final Fort fort = npc.getFort();
 		if (fort == null)
 		{

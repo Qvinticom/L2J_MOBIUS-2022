@@ -17,8 +17,8 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -40,22 +40,22 @@ public class AddSkillBySkill extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canPump(L2Character effector, L2Character effected, Skill skill)
+	public boolean canPump(Creature effector, Creature effected, Skill skill)
 	{
 		return effector.isPlayer() && (effector.getSkillLevel(_existingSkillId) == _existingSkillLevel);
 	}
 	
 	@Override
-	public void pump(L2Character effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
 		if (effected.isPlayer())
 		{
-			((L2PcInstance) effected).addSkill(_addedSkill.getSkill(), false);
+			((PlayerInstance) effected).addSkill(_addedSkill.getSkill(), false);
 		}
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		effected.removeSkill(_addedSkill.getSkill(), false);
 	}

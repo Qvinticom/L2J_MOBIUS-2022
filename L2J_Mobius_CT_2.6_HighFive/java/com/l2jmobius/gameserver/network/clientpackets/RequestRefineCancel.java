@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExVariationCancelResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -35,37 +35,37 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 	private int _targetItemObjId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_targetItemObjId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
-			activeChar.sendPacket(new ExVariationCancelResult(0));
+			player.sendPacket(new ExVariationCancelResult(0));
 			return;
 		}
-		if (targetItem.getOwnerId() != activeChar.getObjectId())
+		if (targetItem.getOwnerId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(client.getPlayer(), "Warning!! Character " + client.getPlayer().getName() + " of account " + client.getPlayer().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		// cannot remove augmentation from a not augmented item
 		if (!targetItem.isAugmented())
 		{
-			activeChar.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
-			activeChar.sendPacket(new ExVariationCancelResult(0));
+			player.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
+			player.sendPacket(new ExVariationCancelResult(0));
 			return;
 		}
 		
@@ -131,34 +131,34 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 			// any other item type is not augmentable
 			default:
 			{
-				activeChar.sendPacket(new ExVariationCancelResult(0));
+				player.sendPacket(new ExVariationCancelResult(0));
 				return;
 			}
 		}
 		
 		// try to reduce the players adena
-		if (!activeChar.reduceAdena("RequestRefineCancel", price, null, true))
+		if (!player.reduceAdena("RequestRefineCancel", price, null, true))
 		{
-			activeChar.sendPacket(new ExVariationCancelResult(0));
-			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new ExVariationCancelResult(0));
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
 		// unequip item
 		if (targetItem.isEquipped())
 		{
-			activeChar.disarmWeapons();
+			player.disarmWeapons();
 		}
 		
 		// remove the augmentation
 		targetItem.removeAugmentation();
 		
 		// send ExVariationCancelResult
-		activeChar.sendPacket(new ExVariationCancelResult(1));
+		player.sendPacket(new ExVariationCancelResult(1));
 		
 		// send inventory update
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
-		activeChar.sendPacket(iu);
+		player.sendPacket(iu);
 	}
 }

@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Summon;
 
 public class SummonKnownList extends PlayableKnownList
 {
-	public SummonKnownList(L2Summon activeChar)
+	public SummonKnownList(Summon activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public final L2Summon getActiveChar()
+	public final Summon getActiveChar()
 	{
-		return (L2Summon) super.getActiveChar();
+		return (Summon) super.getActiveChar();
 	}
 	
 	@Override
-	public int getDistanceToForgetObject(L2Object object)
+	public int getDistanceToForgetObject(WorldObject object)
 	{
 		if ((object == getActiveChar().getOwner()) || (object == getActiveChar().getTarget()))
 		{
@@ -44,7 +44,7 @@ public class SummonKnownList extends PlayableKnownList
 	}
 	
 	@Override
-	public int getDistanceToWatchObject(L2Object object)
+	public int getDistanceToWatchObject(WorldObject object)
 	{
 		return 1500;
 	}

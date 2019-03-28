@@ -16,20 +16,20 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2ClanMember;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 
 /**
  * Format : (ch) dSd
  * @author -Wooden-
  */
-public class PledgeReceivePowerInfo extends L2GameServerPacket
+public class PledgeReceivePowerInfo extends GameServerPacket
 {
-	private final L2ClanMember _member;
+	private final ClanMember _member;
 	
 	/**
 	 * @param member
 	 */
-	public PledgeReceivePowerInfo(L2ClanMember member)
+	public PledgeReceivePowerInfo(ClanMember member)
 	{
 		_member = member;
 	}

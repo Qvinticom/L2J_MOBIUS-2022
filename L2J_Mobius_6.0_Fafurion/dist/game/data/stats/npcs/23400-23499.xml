@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23403" level="97" type="L2Monster" name="Suffering Fanatic">
+	<npc id="23403" level="97" type="Monster" name="Suffering Fanatic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -28,7 +28,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="23404" level="97" type="L2Monster" name="Suffering Herald">
+	<npc id="23404" level="97" type="Monster" name="Suffering Herald">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -57,7 +57,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23405" level="97" type="L2Monster" name="Suffering Zealot">
+	<npc id="23405" level="97" type="Monster" name="Suffering Zealot">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -86,7 +86,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="23406" level="97" type="L2Monster" name="Suffering Mutant">
+	<npc id="23406" level="97" type="Monster" name="Suffering Mutant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -114,7 +114,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="23407" level="97" type="L2Monster" name="Suffering Hacker">
+	<npc id="23407" level="97" type="Monster" name="Suffering Hacker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -142,7 +142,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="23408" level="99" type="L2Monster" name="Emergency Caller" title="Dexterous">
+	<npc id="23408" level="99" type="Monster" name="Emergency Caller" title="Dexterous">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -169,7 +169,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="23409" level="99" type="L2Monster" name="Erosion Herald">
+	<npc id="23409" level="99" type="Monster" name="Erosion Herald">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -196,7 +196,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23410" level="99" type="L2Monster" name="Hiding Tracker" title="Swift">
+	<npc id="23410" level="99" type="Monster" name="Hiding Tracker" title="Swift">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -223,7 +223,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="23411" level="99" type="L2Monster" name="Erosion Mutant">
+	<npc id="23411" level="99" type="Monster" name="Erosion Mutant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -250,7 +250,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="23412" level="99" type="L2Monster" name="Erosion Hacker">
+	<npc id="23412" level="99" type="Monster" name="Erosion Hacker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -277,7 +277,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="23413" level="99" type="L2Monster" name="Erosion Ark">
+	<npc id="23413" level="99" type="Monster" name="Erosion Ark">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -304,7 +304,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="23414" level="21" type="L2Monster" name="Windima">
+	<npc id="23414" level="21" type="Monster" name="Windima">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -346,7 +346,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23415" level="23" type="L2Monster" name="Windima Feri">
+	<npc id="23415" level="23" type="Monster" name="Windima Feri">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -390,7 +390,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23416" level="25" type="L2Monster" name="Windima Resh">
+	<npc id="23416" level="25" type="Monster" name="Windima Resh">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -435,7 +435,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23417" level="26" type="L2Monster" name="Wind Vortex" title="Cyclone">
+	<npc id="23417" level="26" type="Monster" name="Wind Vortex" title="Cyclone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -457,7 +457,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23418" level="35" type="L2Monster" name="Marionette Spirit">
+	<npc id="23418" level="35" type="Monster" name="Marionette Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
@@ -493,7 +493,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23419" level="25" type="L2Monster" name="Giant Windima">
+	<npc id="23419" level="25" type="Monster" name="Giant Windima">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
@@ -537,7 +537,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23420" level="25" type="L2Monster" name="Immense Windima">
+	<npc id="23420" level="25" type="Monster" name="Immense Windima">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
@@ -581,7 +581,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23421" level="35" type="L2Monster" name="Chertuba Mirage">
+	<npc id="23421" level="35" type="Monster" name="Chertuba Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -609,7 +609,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="23422" level="35" type="L2Monster" name="Chertuba Illusion">
+	<npc id="23422" level="35" type="Monster" name="Chertuba Illusion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -637,7 +637,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="23423" level="80" type="L2Monster" name="Mesmer Dragon">
+	<npc id="23423" level="80" type="Monster" name="Mesmer Dragon">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="269969" sp="64" />
@@ -685,7 +685,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23424" level="81" type="L2Monster" name="Gargoyle Dragon">
+	<npc id="23424" level="81" type="Monster" name="Gargoyle Dragon">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -736,7 +736,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23425" level="81" type="L2Monster" name="Black Dragon">
+	<npc id="23425" level="81" type="Monster" name="Black Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -787,7 +787,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23426" level="82" type="L2Monster" name="Emerald Dragon">
+	<npc id="23426" level="82" type="Monster" name="Emerald Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="420002" sp="100" />
@@ -838,7 +838,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23427" level="83" type="L2Monster" name="Sand Dragon">
+	<npc id="23427" level="83" type="Monster" name="Sand Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
@@ -890,7 +890,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23428" level="83" type="L2Monster" name="Dragonblood Captain">
+	<npc id="23428" level="83" type="Monster" name="Dragonblood Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
@@ -942,7 +942,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23429" level="82" type="L2Monster" name="Dragonblood Minion">
+	<npc id="23429" level="82" type="Monster" name="Dragonblood Minion">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="420002" sp="100" />
@@ -990,7 +990,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23430" level="81" type="L2Monster" name="Prey Drake">
+	<npc id="23430" level="81" type="Monster" name="Prey Drake">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -1038,7 +1038,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23431" level="82" type="L2Monster" name="Beast Drake">
+	<npc id="23431" level="82" type="Monster" name="Beast Drake">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="420002" sp="100" />
@@ -1089,7 +1089,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23432" level="82" type="L2Monster" name="Dust Drake">
+	<npc id="23432" level="82" type="Monster" name="Dust Drake">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="387585" sp="93" />
@@ -1140,7 +1140,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23433" level="83" type="L2Monster" name="Vampiric Drake">
+	<npc id="23433" level="83" type="Monster" name="Vampiric Drake">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
@@ -1192,7 +1192,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23434" level="81" type="L2Monster" name="Dragon Hatchling">
+	<npc id="23434" level="81" type="Monster" name="Dragon Hatchling">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="168151" sp="40" />
@@ -1231,7 +1231,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23435" level="83" type="L2Monster" name="Leopard Dragon">
+	<npc id="23435" level="83" type="Monster" name="Leopard Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="328322" sp="78" />
@@ -1275,7 +1275,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23436" level="80" type="L2Monster" name="Cave Servant Archer">
+	<npc id="23436" level="80" type="Monster" name="Cave Servant Archer">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="269969" sp="64" />
@@ -1324,7 +1324,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23437" level="81" type="L2Monster" name="Cave Servant Warrior">
+	<npc id="23437" level="81" type="Monster" name="Cave Servant Warrior">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -1374,7 +1374,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23438" level="81" type="L2Monster" name="Metallic Cave Servant">
+	<npc id="23438" level="81" type="Monster" name="Metallic Cave Servant">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -1426,7 +1426,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23439" level="82" type="L2Monster" name="Iron Cave Servant">
+	<npc id="23439" level="82" type="Monster" name="Iron Cave Servant">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="420002" sp="100" />
@@ -1477,7 +1477,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23440" level="83" type="L2Monster" name="Headless Knight">
+	<npc id="23440" level="83" type="Monster" name="Headless Knight">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
@@ -1526,7 +1526,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23441" level="81" type="L2Monster" name="Bloody Grave Warrior">
+	<npc id="23441" level="81" type="Monster" name="Bloody Grave Warrior">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="427882" sp="102" />
@@ -1577,7 +1577,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23442" level="82" type="L2Monster" name="Dark Grave Warrior">
+	<npc id="23442" level="82" type="Monster" name="Dark Grave Warrior">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="449407" sp="107" />
@@ -1629,7 +1629,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23443" level="82" type="L2Monster" name="Dark Grave Wizard">
+	<npc id="23443" level="82" type="Monster" name="Dark Grave Wizard">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="415573" sp="99" />
@@ -1680,7 +1680,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23444" level="83" type="L2Monster" name="Dark Grave Knight">
+	<npc id="23444" level="83" type="Monster" name="Dark Grave Knight">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="471734" sp="113" />
@@ -1731,7 +1731,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23445" level="81" type="L2Monster" name="Chaos Dragon">
+	<npc id="23445" level="81" type="Monster" name="Chaos Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -1770,7 +1770,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23446" level="81" type="L2Monster" name="Crag Dragon">
+	<npc id="23446" level="81" type="Monster" name="Crag Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
@@ -1809,7 +1809,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23448" level="2" type="L2Monster" name="Floato">
+	<npc id="23448" level="2" type="Monster" name="Floato">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -1845,7 +1845,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23449" level="5" type="L2Monster" name="Keen Floato">
+	<npc id="23449" level="5" type="Monster" name="Keen Floato">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -1883,7 +1883,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23450" level="7" type="L2Monster" name="Ratel">
+	<npc id="23450" level="7" type="Monster" name="Ratel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1920,7 +1920,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23451" level="9" type="L2Monster" name="Robust Ratel">
+	<npc id="23451" level="9" type="Monster" name="Robust Ratel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1960,7 +1960,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23452" level="10" type="L2Monster" name="Honeybee">
+	<npc id="23452" level="10" type="Monster" name="Honeybee">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1998,7 +1998,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23453" level="12" type="L2Monster" name="Kiku">
+	<npc id="23453" level="12" type="Monster" name="Kiku">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -2036,7 +2036,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23454" level="13" type="L2Monster" name="Robust Kiku">
+	<npc id="23454" level="13" type="Monster" name="Robust Kiku">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -2073,7 +2073,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23455" level="15" type="L2Monster" name="Growler">
+	<npc id="23455" level="15" type="Monster" name="Growler">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -2112,7 +2112,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23456" level="17" type="L2Monster" name="Evolved Growler" title="Quest Monster">
+	<npc id="23456" level="17" type="Monster" name="Evolved Growler" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -2145,7 +2145,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23457" level="19" type="L2Monster" name="Treant">
+	<npc id="23457" level="19" type="Monster" name="Treant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -2186,7 +2186,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23458" level="18" type="L2Monster" name="Leafie">
+	<npc id="23458" level="18" type="Monster" name="Leafie">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
@@ -2226,7 +2226,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23459" level="19" type="L2Monster" name="Karaphon" title="Earth Spirit">
+	<npc id="23459" level="19" type="Monster" name="Karaphon" title="Earth Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -2266,7 +2266,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23460" level="18" type="L2Monster" name="Keen Honeybee">
+	<npc id="23460" level="18" type="Monster" name="Keen Honeybee">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -2294,7 +2294,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23461" level="19" type="L2Monster" name="Keen Growler">
+	<npc id="23461" level="19" type="Monster" name="Keen Growler">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -2322,7 +2322,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23462" level="102" type="L2Monster" name="Dimensional Orc Butcher">
+	<npc id="23462" level="102" type="Monster" name="Dimensional Orc Butcher">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2369,7 +2369,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23463" level="102" type="L2Monster" name="Dimensional Orc Hunter" title="Scout">
+	<npc id="23463" level="102" type="Monster" name="Dimensional Orc Hunter" title="Scout">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2415,7 +2415,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23464" level="102" type="L2Monster" name="Dimensional Shaman" title="Watcher">
+	<npc id="23464" level="102" type="Monster" name="Dimensional Shaman" title="Watcher">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2464,7 +2464,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23465" level="102" type="L2Monster" name="Dimensional Bugbear">
+	<npc id="23465" level="102" type="Monster" name="Dimensional Bugbear">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2512,7 +2512,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23466" level="102" type="L2Monster" name="Dimensional Salamander" title="Hunter">
+	<npc id="23466" level="102" type="Monster" name="Dimensional Salamander" title="Hunter">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2546,7 +2546,7 @@
 			<height normal="6.8" />
 		</collision>
 	</npc>
-	<npc id="23467" level="102" type="L2Monster" name="Dimensional Binder">
+	<npc id="23467" level="102" type="Monster" name="Dimensional Binder">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2594,7 +2594,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23468" level="102" type="L2Monster" name="Dimensional Demon">
+	<npc id="23468" level="102" type="Monster" name="Dimensional Demon">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2643,7 +2643,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23469" level="102" type="L2Monster" name="Dimensional Archon" title="Slaughterer">
+	<npc id="23469" level="102" type="Monster" name="Dimensional Archon" title="Slaughterer">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2694,7 +2694,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23470" level="103" type="L2Monster" name="Unworldly Demon">
+	<npc id="23470" level="103" type="Monster" name="Unworldly Demon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -2734,7 +2734,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23471" level="103" type="L2Monster" name="Unworldly Etin">
+	<npc id="23471" level="103" type="Monster" name="Unworldly Etin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -2775,7 +2775,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23472" level="103" type="L2Monster" name="Unworldly Shaman" title="Watcher">
+	<npc id="23472" level="103" type="Monster" name="Unworldly Shaman" title="Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -2817,7 +2817,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23473" level="103" type="L2Monster" name="Unworldly Salamander" title="Hunter">
+	<npc id="23473" level="103" type="Monster" name="Unworldly Salamander" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -2849,7 +2849,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23474" level="103" type="L2Monster" name="Unworldly Golem">
+	<npc id="23474" level="103" type="Monster" name="Unworldly Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -2891,7 +2891,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23475" level="103" type="L2Monster" name="Unworldly Archon" title="Slaughterer">
+	<npc id="23475" level="103" type="Monster" name="Unworldly Archon" title="Slaughterer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -2935,7 +2935,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23476" level="103" type="L2Monster" name="Unworldly Harpy" title="Avenger">
+	<npc id="23476" level="103" type="Monster" name="Unworldly Harpy" title="Avenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -2975,7 +2975,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23477" level="104" type="L2Monster" name="Abyssal Shaman" title="Watcher">
+	<npc id="23477" level="104" type="Monster" name="Abyssal Shaman" title="Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3019,7 +3019,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23478" level="104" type="L2Monster" name="Abyssal Berserker">
+	<npc id="23478" level="104" type="Monster" name="Abyssal Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3059,7 +3059,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23479" level="104" type="L2Monster" name="Abyssal Salamander" title="Hunter">
+	<npc id="23479" level="104" type="Monster" name="Abyssal Salamander" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -3091,7 +3091,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23480" level="104" type="L2Monster" name="Abyssal Harpy" title="Avenger">
+	<npc id="23480" level="104" type="Monster" name="Abyssal Harpy" title="Avenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -3133,7 +3133,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23481" level="104" type="L2Monster" name="Abyssal Binder">
+	<npc id="23481" level="104" type="Monster" name="Abyssal Binder">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -3174,7 +3174,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23482" level="104" type="L2Monster" name="Abyssal Archon" title="Slaughterer">
+	<npc id="23482" level="104" type="Monster" name="Abyssal Archon" title="Slaughterer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -3219,7 +3219,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23483" level="104" type="L2Monster" name="Abyssal Golem">
+	<npc id="23483" level="104" type="Monster" name="Abyssal Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3260,7 +3260,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23484" level="11" type="L2Monster" name="Robust Honeybee">
+	<npc id="23484" level="11" type="Monster" name="Robust Honeybee">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3299,7 +3299,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23485" level="14" type="L2Monster" name="Evolved Kiku">
+	<npc id="23485" level="14" type="Monster" name="Evolved Kiku">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -3335,7 +3335,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23486" level="17" type="L2Monster" name="Robust Growler">
+	<npc id="23486" level="17" type="Monster" name="Robust Growler">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -3374,7 +3374,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23487" level="98" type="L2Monster" name="Magma Ailith">
+	<npc id="23487" level="98" type="Monster" name="Magma Ailith">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="20387947" sp="18343" />
@@ -3427,7 +3427,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23488" level="98" type="L2Monster" name="Magma Apophis">
+	<npc id="23488" level="98" type="Monster" name="Magma Apophis">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="37861753" sp="33998" />
@@ -3481,7 +3481,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23489" level="70" type="L2Monster" name="Lava Wyrm">
+	<npc id="23489" level="70" type="Monster" name="Lava Wyrm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3540,7 +3540,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23490" level="98" type="L2Monster" name="Lava Drake">
+	<npc id="23490" level="98" type="Monster" name="Lava Drake">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18422873" sp="16518" />
@@ -3591,7 +3591,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23491" level="98" type="L2Monster" name="Lava Wendigo">
+	<npc id="23491" level="98" type="Monster" name="Lava Wendigo">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18422873" sp="16518" />
@@ -3642,7 +3642,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23492" level="78" type="L2Monster" name="Lava Stone Golem">
+	<npc id="23492" level="78" type="Monster" name="Lava Stone Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3694,7 +3694,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23493" level="98" type="L2Monster" name="Lava Leviah">
+	<npc id="23493" level="98" type="Monster" name="Lava Leviah">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18422873" sp="16518" />
@@ -3744,7 +3744,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23494" level="99" type="L2Monster" name="Magma Salamander">
+	<npc id="23494" level="99" type="Monster" name="Magma Salamander">
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="20807523" sp="18719" />
@@ -3796,7 +3796,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23495" level="99" type="L2Monster" name="Magma Dre Vanul">
+	<npc id="23495" level="99" type="Monster" name="Magma Dre Vanul">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="19266119" sp="17249" />
@@ -3847,7 +3847,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23496" level="99" type="L2Monster" name="Magma Ifrit">
+	<npc id="23496" level="99" type="Monster" name="Magma Ifrit">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="38640638" sp="34695" />
@@ -3902,7 +3902,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23497" level="99" type="L2Monster" name="Blazing Saurus" title="Fire Stigma">
+	<npc id="23497" level="99" type="Monster" name="Blazing Saurus" title="Fire Stigma">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="44585435" sp="40086" />
@@ -3958,7 +3958,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23498" level="99" type="L2Monster" name="Blazing Wizard" title="Fire Stigma">
+	<npc id="23498" level="99" type="Monster" name="Blazing Wizard" title="Fire Stigma">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="44585435" sp="40086" />
@@ -4014,7 +4014,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23499" level="99" type="L2Monster" name="Flame Preta">
+	<npc id="23499" level="99" type="Monster" name="Flame Preta">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18801846" sp="16857" />

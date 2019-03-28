@@ -22,11 +22,11 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -49,7 +49,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_itemcreate"))
 		{
@@ -124,7 +124,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			try
 			{
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target == null) || !target.isPlayer())
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Invalid target.");
@@ -139,13 +139,13 @@ public class AdminCreateItem implements IAdminCommandHandler
 					final int idval = Integer.parseInt(id);
 					final String num = st.nextToken();
 					final long numval = Long.parseLong(num);
-					createItem(activeChar, (L2PcInstance) target, idval, numval);
+					createItem(activeChar, (PlayerInstance) target, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
 					final String id = st.nextToken();
 					final int idval = Integer.parseInt(id);
-					createItem(activeChar, (L2PcInstance) target, idval, 1);
+					createItem(activeChar, (PlayerInstance) target, idval, 1);
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -178,7 +178,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				numval = 1;
 			}
 			int counter = 0;
-			final L2Item template = ItemTable.getInstance().getTemplate(idval);
+			final Item template = ItemTable.getInstance().getTemplate(idval);
 			if (template == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");
@@ -189,7 +189,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 				return false;
 			}
-			for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
+			for (PlayerInstance onlinePlayer : World.getInstance().getPlayers())
 			{
 				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{
@@ -219,11 +219,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 				idval = Integer.parseInt(id);
 				numval = 1;
 			}
-			final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(idval);
+			final ItemInstance item = (ItemInstance) World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
+				final PlayerInstance player = World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
@@ -249,11 +249,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			final String val = command.substring(15);
 			final int idval = Integer.parseInt(val);
-			final L2ItemInstance item = (L2ItemInstance) L2World.getInstance().findObject(idval);
+			final ItemInstance item = (ItemInstance) World.getInstance().findObject(idval);
 			final int ownerId = item.getOwnerId();
 			if (ownerId > 0)
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
+				final PlayerInstance player = World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
@@ -290,9 +290,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void createItem(L2PcInstance activeChar, L2PcInstance target, int id, long num)
+	private void createItem(PlayerInstance activeChar, PlayerInstance target, int id, long num)
 	{
-		final L2Item template = ItemTable.getInstance().getTemplate(id);
+		final Item template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");

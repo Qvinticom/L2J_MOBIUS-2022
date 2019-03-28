@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.interfaces;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author UnAfraid
@@ -43,5 +43,5 @@ public interface IEventListener
 	 */
 	boolean canRevive();
 	
-	L2PcInstance getPlayer();
+	PlayerInstance getPlayer();
 }

@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * @author -Wooden-
  */
-public class PackageSendableList extends L2GameServerPacket
+public class PackageSendableList extends GameServerPacket
 {
-	private final L2ItemInstance[] _items;
+	private final ItemInstance[] _items;
 	private final int _playerObjId;
 	
-	public PackageSendableList(L2ItemInstance[] items, int playerObjId)
+	public PackageSendableList(ItemInstance[] items, int playerObjId)
 	{
 		_items = items;
 		_playerObjId = playerObjId;
@@ -38,9 +38,9 @@ public class PackageSendableList extends L2GameServerPacket
 		writeC(0xC3);
 		
 		writeD(_playerObjId);
-		writeD(getClient().getActiveChar().getAdena());
+		writeD(getClient().getPlayer().getAdena());
 		writeD(_items.length);
-		for (L2ItemInstance item : _items) // format inside the for taken from SellList part use should be about the same
+		for (ItemInstance item : _items) // format inside the for taken from SellList part use should be about the same
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());

@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * ddddd
  * @version $Revision: 1.1.2.3.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class RecipeShopItemInfo extends L2GameServerPacket
+public class RecipeShopItemInfo extends GameServerPacket
 {
 	private final int _shopId;
 	private final int _recipeId;
@@ -37,12 +37,12 @@ public class RecipeShopItemInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		if (!(L2World.getInstance().findObject(_shopId) instanceof L2PcInstance))
+		if (!(World.getInstance().findObject(_shopId) instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance manufacturer = (L2PcInstance) L2World.getInstance().findObject(_shopId);
+		final PlayerInstance manufacturer = (PlayerInstance) World.getInstance().findObject(_shopId);
 		writeC(0xda);
 		writeD(_shopId);
 		writeD(_recipeId);

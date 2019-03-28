@@ -28,12 +28,12 @@ import io.netty.buffer.ByteBuf;
  */
 public class Crypt implements ICrypt
 {
-	private final L2GameClient _client;
+	private final GameClient _client;
 	private final byte[] _inKey = new byte[16];
 	private final byte[] _outKey = new byte[16];
 	private boolean _isEnabled;
 	
-	public Crypt(L2GameClient client)
+	public Crypt(GameClient client)
 	{
 		_client = client;
 	}

@@ -16,10 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public class ValidateLocationInVehicle extends L2GameServerPacket
+public class ValidateLocationInVehicle extends GameServerPacket
 {
 	private int _boat = 1343225858;
 	private final int _x;
@@ -28,14 +28,14 @@ public class ValidateLocationInVehicle extends L2GameServerPacket
 	private final int _heading;
 	private final int _playerObj;
 	
-	public ValidateLocationInVehicle(L2Character player)
+	public ValidateLocationInVehicle(Creature creature)
 	{
-		_playerObj = player.getObjectId();
-		_x = player.getX();
-		_y = player.getY();
-		_z = player.getZ();
-		_heading = player.getHeading();
-		_boat = ((L2PcInstance) player).getBoat().getObjectId();
+		_playerObj = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
+		_heading = creature.getHeading();
+		_boat = ((PlayerInstance) creature).getBoat().getObjectId();
 	}
 	
 	@Override

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
@@ -71,7 +71,7 @@ public class CharSelectInfoPackage
 	{
 		setObjectId(objectId);
 		_name = name;
-		_paperdoll = PcInventory.restoreVisibleInventory(objectId);
+		_paperdoll = PlayerInventory.restoreVisibleInventory(objectId);
 		_vars = new PlayerVariables(_objectId);
 	}
 	

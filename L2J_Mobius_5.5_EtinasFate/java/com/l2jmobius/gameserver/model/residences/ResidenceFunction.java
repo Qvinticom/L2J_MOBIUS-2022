@@ -22,9 +22,9 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 
 /**
@@ -136,7 +136,7 @@ public class ResidenceFunction
 		{
 			_residense.removeFunction(this);
 			
-			final L2Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
+			final Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
 			if (clan != null)
 			{
 				clan.broadcastToOnlineMembers(new AgitDecoInfo(_residense));
@@ -155,14 +155,14 @@ public class ResidenceFunction
 			return false;
 		}
 		
-		final L2Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
+		final Clan clan = ClanTable.getInstance().getClan(_residense.getOwnerId());
 		if (clan == null)
 		{
 			return false;
 		}
 		
 		final ItemContainer wh = clan.getWarehouse();
-		final L2ItemInstance item = wh.getItemByItemId(template.getCost().getId());
+		final ItemInstance item = wh.getItemByItemId(template.getCost().getId());
 		if ((item == null) || (item.getCount() < template.getCost().getCount()))
 		{
 			return false;

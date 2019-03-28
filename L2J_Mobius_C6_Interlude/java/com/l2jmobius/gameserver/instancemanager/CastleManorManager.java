@@ -31,10 +31,10 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.model.ClanWarehouse;
 import com.l2jmobius.gameserver.model.ItemContainer;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Manor;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Manor;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -307,7 +307,7 @@ public class CastleManorManager
 				continue;
 			}
 			
-			final L2Clan clan = ClanTable.getInstance().getClan(c.getOwnerId());
+			final Clan clan = ClanTable.getInstance().getClan(c.getOwnerId());
 			if (clan == null)
 			{
 				continue;
@@ -340,7 +340,7 @@ public class CastleManorManager
 					
 					if (count >= 1)
 					{
-						cwh.addItem("Manor", L2Manor.getInstance().getMatureCrop(crop.getId()), count, null, null);
+						cwh.addItem("Manor", Manor.getInstance().getMatureCrop(crop.getId()), count, null, null);
 					}
 				}
 				
@@ -390,10 +390,10 @@ public class CastleManorManager
 			}
 			
 			// Sending notification to a clan leader
-			L2PcInstance clanLeader = null;
+			PlayerInstance clanLeader = null;
 			if ((clan.getLeader() != null) && (clan.getLeader().getName() != null))
 			{
-				clanLeader = L2World.getInstance().getPlayer(clan.getLeader().getName());
+				clanLeader = World.getInstance().getPlayer(clan.getLeader().getName());
 			}
 			
 			if (clanLeader != null)
@@ -423,11 +423,11 @@ public class CastleManorManager
 					{
 						LOGGER.info(c.getName() + "|" + -manor_cost + "|ManorManager Error@approveNextPeriod");
 					}
-					final L2Clan clan = ClanTable.getInstance().getClan(c.getOwnerId());
-					L2PcInstance clanLeader = null;
+					final Clan clan = ClanTable.getInstance().getClan(c.getOwnerId());
+					PlayerInstance clanLeader = null;
 					if (clan != null)
 					{
-						clanLeader = L2World.getInstance().getPlayer(clan.getLeader().getName());
+						clanLeader = World.getInstance().getPlayer(clan.getLeader().getName());
 					}
 					if (clanLeader != null)
 					{
@@ -447,7 +447,7 @@ public class CastleManorManager
 	private List<SeedProduction> getNewSeedsList(int castleId)
 	{
 		final List<SeedProduction> seeds = new ArrayList<>();
-		final List<Integer> seedsIds = L2Manor.getInstance().getSeedsForCastle(castleId);
+		final List<Integer> seedsIds = Manor.getInstance().getSeedsForCastle(castleId);
 		for (int sd : seedsIds)
 		{
 			seeds.add(new SeedProduction(sd));
@@ -458,7 +458,7 @@ public class CastleManorManager
 	private List<CropProcure> getNewCropsList(int castleId)
 	{
 		final List<CropProcure> crops = new ArrayList<>();
-		final List<Integer> cropsIds = L2Manor.getInstance().getCropsForCastle(castleId);
+		final List<Integer> cropsIds = Manor.getInstance().getCropsForCastle(castleId);
 		for (int cr : cropsIds)
 		{
 			crops.add(new CropProcure(cr));

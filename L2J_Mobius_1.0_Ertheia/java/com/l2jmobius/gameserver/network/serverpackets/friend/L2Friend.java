@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.friend;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -43,7 +43,7 @@ public class L2Friend implements IClientOutgoingPacket
 		_action = action;
 		_objid = objId;
 		_name = CharNameTable.getInstance().getNameById(objId);
-		_online = L2World.getInstance().getPlayer(objId) != null;
+		_online = World.getInstance().getPlayer(objId) != null;
 	}
 	
 	@Override

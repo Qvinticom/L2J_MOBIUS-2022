@@ -17,11 +17,11 @@
 package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.model.L2PetData;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PetData;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.PetItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class SummonItems extends ItemSkillsTemplate
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -38,37 +38,37 @@ public class SummonItems extends ItemSkillsTemplate
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (!activeChar.getFloodProtectors().getItemPetSummon().tryPerformAction("summon items") || (activeChar.getBlockCheckerArena() != -1) || activeChar.inObserverMode() || activeChar.isAllSkillsDisabled() || activeChar.isCastingNow())
+		final PlayerInstance player = playable.getActingPlayer();
+		if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("summon items") || (player.getBlockCheckerArena() != -1) || player.inObserverMode() || player.isAllSkillsDisabled() || player.isCastingNow())
 		{
 			return false;
 		}
 		
-		if (activeChar.isSitting())
+		if (player.isSitting())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return false;
 		}
 		
-		if (activeChar.hasPet() || activeChar.isMounted())
+		if (player.hasPet() || player.isMounted())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return false;
 		}
 		
-		if (activeChar.isAttackingNow())
+		if (player.isAttackingNow())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			return false;
 		}
 		
-		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
+		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
 			return false;
 		}
 		
-		activeChar.addScript(new PetItemHolder(item));
+		player.addScript(new PetItemHolder(item));
 		return super.useItem(playable, item, forceUse);
 	}
 }

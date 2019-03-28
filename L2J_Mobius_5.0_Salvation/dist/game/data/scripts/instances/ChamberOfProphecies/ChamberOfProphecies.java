@@ -18,13 +18,13 @@ package instances.ChamberOfProphecies;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -70,7 +70,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (event.equals("enterInstance"))
@@ -160,9 +160,9 @@ public final class ChamberOfProphecies extends AbstractInstance
 					{
 						case 0:
 						{
-							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
-								final L2PcInstance pl = world.getFirstPlayer();
+								final PlayerInstance pl = world.getFirstPlayer();
 								startQuestTimer("SEY2", 14000, world.getNpc(FERIN), pl);
 								startQuestTimer("SEY_KAIN", 24000, world.getNpc(VAN_HALTER), pl);
 								startQuestTimer("OPEN_DOOR1", 5000, npc, pl);
@@ -172,7 +172,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 						}
 						case 1:
 						{
-							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
 								world.spawnGroup("wof_room2_1");
 								world.setStatus(2);
@@ -182,9 +182,9 @@ public final class ChamberOfProphecies extends AbstractInstance
 						}
 						case 2:
 						{
-							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
-								final L2PcInstance pl = world.getFirstPlayer();
+								final PlayerInstance pl = world.getFirstPlayer();
 								startQuestTimer("SEY3", 8000, world.getNpc(FERIN), pl);
 								startQuestTimer("OPEN_DOOR2", 5000, npc, pl);
 							}
@@ -193,7 +193,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 						}
 						case 3:
 						{
-							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
 								world.setStatus(4);
 								world.spawnGroup("wof_room3_2");
@@ -205,11 +205,11 @@ public final class ChamberOfProphecies extends AbstractInstance
 						}
 						case 4:
 						{
-							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+							if (world.getAliveNpcs(MonsterInstance.class).isEmpty())
 							{
 								world.setStatus(5);
 								world.spawnGroup("wof_room4");
-								final L2PcInstance pl = world.getFirstPlayer();
+								final PlayerInstance pl = world.getFirstPlayer();
 								startQuestTimer("SEY_KAIN_2", 3000, world.getNpc(VAN_HALTER), pl);
 								startQuestTimer("SEY4", 7000, world.getNpc(FERIN), pl);
 							}
@@ -227,15 +227,15 @@ public final class ChamberOfProphecies extends AbstractInstance
 				case "ATTACK2":
 				{
 					npc.setRunning();
-					((L2Attackable) npc).setCanReturnToSpawnPoint(false);
-					if (npc.isScriptValue(0) && world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
+					((Attackable) npc).setCanReturnToSpawnPoint(false);
+					if (npc.isScriptValue(0) && world.getAliveNpcs(MonsterInstance.class).isEmpty())
 					{
 						npc.setTarget(player);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					}
 					else if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 					{
-						L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 3000, monster ->
+						World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 3000, monster ->
 						{
 							addAttackDesire(npc, monster);
 							return;
@@ -396,7 +396,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q10753_WindsOfFateChoices.class.getSimpleName());
 		String htmltext = null;
@@ -428,7 +428,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -439,7 +439,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 				{
 					if (creature.isPlayer() && !creature.isDead() && npc.isScriptValue(0))
 					{
-						startQuestTimer("BROADCAST_TEXT", 12000, npc, (L2PcInstance) creature);
+						startQuestTimer("BROADCAST_TEXT", 12000, npc, (PlayerInstance) creature);
 					}
 					break;
 				}
@@ -447,7 +447,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 				{
 					if (creature.isPlayer() && !creature.isDead() && world.isStatus(0))
 					{
-						startQuestTimer("ATTACK", 2000, npc, (L2PcInstance) creature, true);
+						startQuestTimer("ATTACK", 2000, npc, (PlayerInstance) creature, true);
 					}
 					break;
 				}

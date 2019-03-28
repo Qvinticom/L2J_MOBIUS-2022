@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
@@ -40,30 +40,30 @@ public class Recall implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
 		try
 		{
-			if (activeChar instanceof L2PcInstance)
+			if (creature instanceof PlayerInstance)
 			{
-				final L2PcInstance instance = (L2PcInstance) activeChar;
+				final PlayerInstance instance = (PlayerInstance) creature;
 				
 				if (instance.isInOlympiadMode())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 					return;
 				}
 				
 				// Checks summoner not in siege zone
-				if (activeChar.isInsideZone(ZoneId.SIEGE))
+				if (creature.isInsideZone(ZoneId.SIEGE))
 				{
-					((L2PcInstance) activeChar).sendMessage("You cannot summon in siege zone.");
+					((PlayerInstance) creature).sendMessage("You cannot summon in siege zone.");
 					return;
 				}
 				
-				if (activeChar.isInsideZone(ZoneId.PVP))
+				if (creature.isInsideZone(ZoneId.PVP))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT));
+					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT));
 					return;
 				}
 				
@@ -74,18 +74,18 @@ public class Recall implements ISkillHandler
 				}
 			}
 			
-			for (L2Object target1 : targets)
+			for (WorldObject target1 : targets)
 			{
-				if (!(target1 instanceof L2Character))
+				if (!(target1 instanceof Creature))
 				{
 					continue;
 				}
 				
-				L2Character target = (L2Character) target1;
+				Creature target = (Creature) target1;
 				
-				if (target instanceof L2PcInstance)
+				if (target instanceof PlayerInstance)
 				{
-					final L2PcInstance targetChar = (L2PcInstance) target;
+					final PlayerInstance targetChar = (PlayerInstance) target;
 					
 					if (targetChar.isFestivalParticipant())
 					{
@@ -115,7 +115,7 @@ public class Recall implements ISkillHandler
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 						continue;
 					}
 					
@@ -123,25 +123,25 @@ public class Recall implements ISkillHandler
 					{
 						SystemMessage sm = new SystemMessage(SystemMessageId.S1_CURRENTLY_TRADING_OR_OPERATING_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
 						sm.addString(targetChar.getName());
-						activeChar.sendPacket(sm);
+						creature.sendPacket(sm);
 						continue;
 					}
 					
 					if ((GrandBossManager.getInstance().getZone(targetChar) != null) && !targetChar.isGM())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
 					if (targetChar.isInOlympiadMode())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_IN_OLYMPIAD));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_IN_OLYMPIAD));
 						continue;
 					}
 					
 					if (targetChar.isInsideZone(ZoneId.PVP))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 				}
@@ -151,20 +151,20 @@ public class Recall implements ISkillHandler
 			
 			if (skill.isMagic() && skill.useSpiritShot())
 			{
-				if (activeChar.checkBss())
+				if (creature.checkBss())
 				{
-					activeChar.removeBss();
+					creature.removeBss();
 				}
-				if (activeChar.checkSps())
+				if (creature.checkSps())
 				{
-					activeChar.removeSps();
+					creature.removeSps();
 				}
 			}
 			else if (skill.useSoulShot())
 			{
-				if (activeChar.checkSs())
+				if (creature.checkSs())
 				{
-					activeChar.removeSs();
+					creature.removeSs();
 				}
 			}
 		}

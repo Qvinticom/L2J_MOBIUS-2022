@@ -22,20 +22,20 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.L2Skill.SkillType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
-import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
-import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
+import com.l2jmobius.gameserver.model.zone.type.FishingZone;
+import com.l2jmobius.gameserver.model.zone.type.WaterZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
-import com.l2jmobius.gameserver.templates.item.L2WeaponType;
+import com.l2jmobius.gameserver.templates.item.Weapon;
+import com.l2jmobius.gameserver.templates.item.WeaponType;
 import com.l2jmobius.gameserver.util.Util;
 
 public class Fishing implements ISkillHandler
@@ -46,14 +46,14 @@ public class Fishing implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((creature == null) || !(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = (L2PcInstance) activeChar;
+		final PlayerInstance player = (PlayerInstance) creature;
 		
 		// If fishing is disabled, there isn't much point in doing anything else, unless you are GM. so this got moved up here, before anything else.
 		if (!Config.ALLOWFISHING && !player.isGM())
@@ -77,13 +77,13 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		L2Weapon weaponItem = player.getActiveWeaponItem();
-		if (((weaponItem == null) || (weaponItem.getItemType() != L2WeaponType.ROD)))
+		Weapon weaponItem = player.getActiveWeaponItem();
+		if (((weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD)))
 		{
 			return;
 		}
 		
-		L2ItemInstance lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		ItemInstance lure = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if (lure == null)
 		{
 			// Bait not equiped.
@@ -95,7 +95,7 @@ public class Fishing implements ISkillHandler
 		}
 		
 		player.SetLure(lure);
-		L2ItemInstance lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		ItemInstance lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		
 		if ((lure2 == null) || (lure2.getCount() < 1)) // Not enough bait.
 		{
@@ -117,7 +117,7 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		// If fishing is enabled, here is the code that was striped from startFishing() in L2PcInstance. Decide now where will the hook be cast...
+		// If fishing is enabled, here is the code that was striped from startFishing() in PlayerInstance. Decide now where will the hook be cast...
 		final int rnd = Rnd.get(200) + 200;
 		final double angle = Util.convertHeadingToDegree(player.getHeading());
 		final double radian = Math.toRadians(angle);
@@ -129,8 +129,8 @@ public class Fishing implements ISkillHandler
 		final int y = player.getY() + y1;
 		int z = player.getZ() - 30;
 		// ...and if the spot is in a fishing zone. If it is, it will then position the hook on the water surface. If not, you have to be GM to proceed past here... in that case, the hook will be positioned using the old Z lookup method.
-		L2FishingZone aimingTo = FishingZoneManager.getInstance().isInsideFishingZone(x, y, z);
-		L2WaterZone water = FishingZoneManager.getInstance().isInsideWaterZone(x, y, z);
+		FishingZone aimingTo = FishingZoneManager.getInstance().isInsideFishingZone(x, y, z);
+		WaterZone water = FishingZoneManager.getInstance().isInsideWaterZone(x, y, z);
 		if ((water != null))
 		{
 			final Location waterLocation = new Location(x, y, water.getWaterZ() - 50);

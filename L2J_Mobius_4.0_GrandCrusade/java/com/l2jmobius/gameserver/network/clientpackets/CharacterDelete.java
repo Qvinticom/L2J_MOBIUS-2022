@@ -23,14 +23,13 @@ import com.l2jmobius.gameserver.enums.CharacterDeleteFailType;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDelete;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDelete;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharDeleteSuccess;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 
 /**
- * This class ...
  * @version $Revision: 1.8.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class CharacterDelete implements IClientIncomingPacket
@@ -39,14 +38,14 @@ public final class CharacterDelete implements IClientIncomingPacket
 	private int _charSlot;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_charSlot = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		// if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
 		// {

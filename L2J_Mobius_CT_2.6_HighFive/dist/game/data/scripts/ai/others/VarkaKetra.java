@@ -17,9 +17,9 @@
 package ai.others;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -146,7 +146,7 @@ public class VarkaKetra extends AbstractNpcAI
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
 		if (Util.checkIfInRange(1500, player, npc, false))
 		{
@@ -163,7 +163,7 @@ public class VarkaKetra extends AbstractNpcAI
 		}
 	}
 	
-	private final void decreaseAlliance(L2PcInstance player, int[] marks)
+	private final void decreaseAlliance(PlayerInstance player, int[] marks)
 	{
 		for (int i = 0; i < marks.length; i++)
 		{
@@ -179,7 +179,7 @@ public class VarkaKetra extends AbstractNpcAI
 		}
 	}
 	
-	private final void exitQuests(L2PcInstance player, String[] quests)
+	private final void exitQuests(PlayerInstance player, String[] quests)
 	{
 		for (String quest : quests)
 		{
@@ -192,14 +192,14 @@ public class VarkaKetra extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public boolean onNpcHate(L2Attackable mob, L2PcInstance player, boolean isSummon)
+	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
 	{
 		if (CommonUtil.contains(KETRA, mob.getId()))
 		{

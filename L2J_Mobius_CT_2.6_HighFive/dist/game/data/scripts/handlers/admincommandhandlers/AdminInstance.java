@@ -20,8 +20,8 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -43,7 +43,7 @@ public class AdminInstance implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
@@ -106,7 +106,7 @@ public class AdminInstance implements IAdminCommandHandler
 					return false;
 				}
 				
-				final L2Object target = activeChar.getTarget();
+				final WorldObject target = activeChar.getTarget();
 				if ((target == null) || target.isSummon()) // Don't separate summons from masters
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
@@ -115,7 +115,7 @@ public class AdminInstance implements IAdminCommandHandler
 				target.setInstanceId(val);
 				if (target.isPlayer())
 				{
-					final L2PcInstance player = (L2PcInstance) target;
+					final PlayerInstance player = (PlayerInstance) target;
 					player.sendMessage("Admin set your instance to:" + val);
 					player.teleToLocation(player.getLocation());
 				}

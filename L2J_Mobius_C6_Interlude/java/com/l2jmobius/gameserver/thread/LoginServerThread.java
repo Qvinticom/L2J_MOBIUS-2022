@@ -38,10 +38,10 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.crypt.NewCrypt;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameServer;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
+import com.l2jmobius.gameserver.network.GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.gameserverpackets.AuthRequest;
 import com.l2jmobius.gameserver.network.gameserverpackets.BlowFishKey;
 import com.l2jmobius.gameserver.network.gameserverpackets.ChangeAccessLevel;
@@ -92,7 +92,7 @@ public class LoginServerThread extends Thread
 	private final boolean _reserveHost;
 	private int _maxPlayer;
 	private final List<WaitingClient> _waitingClients;
-	private final Map<String, L2GameClient> _accountsInGameServer;
+	private final Map<String, GameClient> _accountsInGameServer;
 	private int _status;
 	private String _serverName;
 	private final String _gameExternalHost;
@@ -288,10 +288,10 @@ public class LoginServerThread extends Thread
 								st.addAttribute(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_AUTO);
 							}
 							sendPacket(st);
-							if (L2World.getAllPlayersCount() > 0)
+							if (World.getAllPlayersCount() > 0)
 							{
 								final List<String> playerList = new ArrayList<>();
-								for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+								for (PlayerInstance player : World.getInstance().getAllPlayers())
 								{
 									playerList.add(player.getAccountName());
 								}
@@ -401,7 +401,7 @@ public class LoginServerThread extends Thread
 		}
 	}
 	
-	public void addWaitingClientAndSendRequest(String acc, L2GameClient client, SessionKey key)
+	public void addWaitingClientAndSendRequest(String acc, GameClient client, SessionKey key)
 	{
 		final WaitingClient wc = new WaitingClient(acc, client, key);
 		
@@ -422,7 +422,7 @@ public class LoginServerThread extends Thread
 		}
 	}
 	
-	public void removeWaitingClient(L2GameClient client)
+	public void removeWaitingClient(GameClient client)
 	{
 		WaitingClient toRemove = null;
 		
@@ -462,9 +462,9 @@ public class LoginServerThread extends Thread
 		}
 	}
 	
-	public boolean addGameServerLogin(String account, L2GameClient client)
+	public boolean addGameServerLogin(String account, GameClient client)
 	{
-		final L2GameClient savedClient = _accountsInGameServer.get(account);
+		final GameClient savedClient = _accountsInGameServer.get(account);
 		
 		if (savedClient != null)
 		{
@@ -684,10 +684,10 @@ public class LoginServerThread extends Thread
 	private class WaitingClient
 	{
 		public String account;
-		public L2GameClient gameClient;
+		public GameClient gameClient;
 		public SessionKey session;
 		
-		public WaitingClient(String acc, L2GameClient client, SessionKey key)
+		public WaitingClient(String acc, GameClient client, SessionKey key)
 		{
 			account = acc;
 			gameClient = client;

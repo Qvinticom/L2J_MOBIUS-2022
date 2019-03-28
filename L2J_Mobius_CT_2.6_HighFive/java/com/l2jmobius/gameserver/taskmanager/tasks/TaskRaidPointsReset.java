@@ -23,7 +23,7 @@ import java.util.Map.Entry;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.taskmanager.Task;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
@@ -47,7 +47,7 @@ public class TaskRaidPointsReset extends Task
 		{
 			// reward clan reputation points
 			final Map<Integer, Integer> rankList = RaidBossPointsManager.getInstance().getRankList();
-			for (L2Clan c : ClanTable.getInstance().getClans())
+			for (Clan c : ClanTable.getInstance().getClans())
 			{
 				for (Entry<Integer, Integer> entry : rankList.entrySet())
 				{

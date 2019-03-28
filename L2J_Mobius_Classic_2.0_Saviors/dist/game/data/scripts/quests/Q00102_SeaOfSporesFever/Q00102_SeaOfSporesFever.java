@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -80,12 +80,12 @@ public class Q00102_SeaOfSporesFever extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && event.equals("30284-02.htm"))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && event.equals("30284-02.htm"))
 		{
-			st.startQuest();
+			qs.startQuest();
 			giveItems(player, ALBERIUS_LETTER, 1);
 			return event;
 		}
@@ -93,10 +93,10 @@ public class Q00102_SeaOfSporesFever extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(2) && (getRandom(10) < 3))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(2) && (getRandom(10) < 3))
 		{
 			giveItems(killer, DRYADS_TEAR, 1);
 			if (getQuestItemsCount(killer, DRYADS_TEAR) < 10)
@@ -105,23 +105,23 @@ public class Q00102_SeaOfSporesFever extends Quest
 			}
 			else
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ALBERIUS:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -130,7 +130,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -154,7 +154,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 								{
 									takeItems(player, COBENDELLS_MEDICINE1, 1);
 									giveItems(player, ALBERIUS_LIST, 1);
-									st.setCond(5);
+									qs.setCond(5);
 									htmltext = "30284-04.html";
 								}
 								break;
@@ -179,7 +179,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 									{
 										giveItems(player, SWORD_OF_SENTINEL, 1);
 									}
-									st.exitQuest(false, true);
+									qs.exitQuest(false, true);
 									htmltext = "30284-06.html";
 								}
 								break;
@@ -197,7 +197,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 			}
 			case COBENDELL:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -205,7 +205,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 						{
 							takeItems(player, ALBERIUS_LETTER, 1);
 							giveItems(player, EVERGREEN_AMULET, 1);
-							st.setCond(2, true);
+							qs.setCond(2, true);
 							htmltext = "30156-03.html";
 						}
 						break;
@@ -229,7 +229,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 							giveItems(player, COBENDELLS_MEDICINE3, 1);
 							giveItems(player, COBENDELLS_MEDICINE4, 1);
 							giveItems(player, COBENDELLS_MEDICINE5, 1);
-							st.setCond(4, true);
+							qs.setCond(4, true);
 							htmltext = "30156-05.html";
 						}
 						break;
@@ -263,7 +263,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 					takeItems(player, SENTINELS.get(npc.getId()), -1);
 					if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 					{
-						st.setCond(6);
+						qs.setCond(6);
 					}
 					htmltext = npc.getId() + "-01.html";
 				}

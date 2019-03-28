@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets.fishing;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -27,20 +27,20 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExUserInfoFishing implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final boolean _isFishing;
 	private final ILocational _baitLocation;
 	
-	public ExUserInfoFishing(L2PcInstance activeChar, boolean isFishing, ILocational baitLocation)
+	public ExUserInfoFishing(PlayerInstance player, boolean isFishing, ILocational baitLocation)
 	{
-		_activeChar = activeChar;
+		_player = player;
 		_isFishing = isFishing;
 		_baitLocation = baitLocation;
 	}
 	
-	public ExUserInfoFishing(L2PcInstance activeChar, boolean isFishing)
+	public ExUserInfoFishing(PlayerInstance player, boolean isFishing)
 	{
-		_activeChar = activeChar;
+		_player = player;
 		_isFishing = isFishing;
 		_baitLocation = null;
 	}
@@ -50,7 +50,7 @@ public class ExUserInfoFishing implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_USER_INFO_FISHING.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_player.getObjectId());
 		packet.writeC(_isFishing ? 1 : 0);
 		if (_baitLocation == null)
 		{

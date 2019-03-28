@@ -16,17 +16,17 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public interface IItemHandler
 {
 	/**
 	 * Launch task associated to the item.
-	 * @param playable : L2PlayableInstance designating the player
-	 * @param item : L2ItemInstance designating the item to use
+	 * @param playable : PlayableInstance designating the player
+	 * @param item : ItemInstance designating the item to use
 	 */
-	void useItem(L2Playable playable, L2ItemInstance item);
+	void useItem(Playable playable, ItemInstance item);
 	
 	/**
 	 * Returns the list of item IDs corresponding to the type of item.<BR>

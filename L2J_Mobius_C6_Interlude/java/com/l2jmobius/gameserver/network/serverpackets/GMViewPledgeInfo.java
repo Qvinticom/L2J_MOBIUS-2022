@@ -17,23 +17,23 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 
 /**
  * format SdSS dddddddd d (Sddddd)
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class GMViewPledgeInfo extends L2GameServerPacket
+public class GMViewPledgeInfo extends GameServerPacket
 {
-	private final L2Clan _clan;
-	private final L2PcInstance _activeChar;
+	private final Clan _clan;
+	private final PlayerInstance _player;
 	
-	public GMViewPledgeInfo(L2Clan clan, L2PcInstance activeChar)
+	public GMViewPledgeInfo(Clan clan, PlayerInstance player)
 	{
 		_clan = clan;
-		_activeChar = activeChar;
+		_player = player;
 	}
 	
 	@Override
@@ -41,7 +41,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	{
 		final int TOP = ClanTable.getInstance().getTopRate(_clan.getClanId());
 		writeC(0x90);
-		writeS(_activeChar.getName());
+		writeS(_player.getName());
 		writeD(_clan.getClanId());
 		writeD(0x00);
 		writeS(_clan.getName());
@@ -60,10 +60,10 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		writeD(_clan.getAllyCrestId()); // c2
 		writeD(_clan.isAtWar()); // c3
 		
-		final L2ClanMember[] members = _clan.getMembers();
+		final ClanMember[] members = _clan.getMembers();
 		writeD(members.length);
 		
-		for (L2ClanMember member : members)
+		for (ClanMember member : members)
 		{
 			writeS(member.getName());
 			writeD(member.getLevel());

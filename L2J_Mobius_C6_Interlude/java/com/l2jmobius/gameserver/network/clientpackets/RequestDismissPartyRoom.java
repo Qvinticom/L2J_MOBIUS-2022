@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: (ch) dd
  * @author -Wooden-
  */
-public class RequestDismissPartyRoom extends L2GameClientPacket
+public class RequestDismissPartyRoom extends GameClientPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")
@@ -40,8 +40,8 @@ public class RequestDismissPartyRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
-		if (_activeChar == null)
+		final PlayerInstance _player = getClient().getPlayer();
+		if (_player == null)
 		{
 			return;
 		}

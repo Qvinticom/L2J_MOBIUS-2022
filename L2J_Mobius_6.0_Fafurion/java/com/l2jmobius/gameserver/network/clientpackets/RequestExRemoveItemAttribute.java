@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Weapon;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -39,7 +39,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	}
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_element = (byte) packet.readD();
@@ -47,15 +47,15 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_objectId);
 		if (targetItem == null)
 		{
 			return;
@@ -72,14 +72,14 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.reduceAdena("RemoveElement", getPrice(targetItem), activeChar, true))
+		if (player.reduceAdena("RemoveElement", getPrice(targetItem), player, true))
 		{
 			targetItem.clearAttribute(type);
-			client.sendPacket(new UserInfo(activeChar));
+			client.sendPacket(new UserInfo(player));
 			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
-			activeChar.sendInventoryUpdate(iu);
+			player.sendInventoryUpdate(iu);
 			SystemMessage sm;
 			final AttributeType realElement = targetItem.isArmor() ? type.getOpposite() : type;
 			if (targetItem.getEnchantLevel() > 0)
@@ -126,13 +126,13 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		}
 	}
 	
-	private long getPrice(L2ItemInstance item)
+	private long getPrice(ItemInstance item)
 	{
 		switch (item.getItem().getCrystalType())
 		{
 			case S:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 50000;
 				}
@@ -144,7 +144,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case S80:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 100000;
 				}
@@ -156,7 +156,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case S84:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 200000;
 				}
@@ -168,7 +168,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case R:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 400000;
 				}
@@ -180,7 +180,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case R95:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 800000;
 				}
@@ -192,7 +192,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case R99:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 3200000;
 				}
@@ -204,7 +204,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			}
 			case R110:
 			{
-				if (item.getItem() instanceof L2Weapon)
+				if (item.getItem() instanceof Weapon)
 				{
 					_price = 6400000;
 				}

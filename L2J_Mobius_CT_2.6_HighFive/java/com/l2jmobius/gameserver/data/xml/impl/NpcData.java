@@ -39,9 +39,9 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -53,7 +53,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class NpcData implements IGameXmlReader
 {
-	private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();
+	private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
 	private final Map<String, Integer> _clans = new HashMap<>();
 	private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
 	
@@ -507,10 +507,10 @@ public class NpcData implements IGameXmlReader
 							}
 						}
 						
-						L2NpcTemplate template = _npcs.get(npcId);
+						NpcTemplate template = _npcs.get(npcId);
 						if (template == null)
 						{
-							template = new L2NpcTemplate(set);
+							template = new NpcTemplate(set);
 							_npcs.put(template.getId(), template);
 						}
 						else
@@ -558,45 +558,45 @@ public class NpcData implements IGameXmlReader
 											aiSkillScopes.add(shortOrLongRangeScope);
 										}
 									}
-									else if (skill.hasEffectType(L2EffectType.DISPEL, L2EffectType.DISPEL_BY_SLOT))
+									else if (skill.hasEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT))
 									{
 										aiSkillScopes.add(AISkillScope.NEGATIVE);
 										aiSkillScopes.add(shortOrLongRangeScope);
 									}
-									else if (skill.hasEffectType(L2EffectType.HEAL))
+									else if (skill.hasEffectType(EffectType.HEAL))
 									{
 										aiSkillScopes.add(AISkillScope.HEAL);
 									}
-									else if (skill.hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK, L2EffectType.MAGICAL_ATTACK, L2EffectType.DEATH_LINK, L2EffectType.HP_DRAIN))
+									else if (skill.hasEffectType(EffectType.PHYSICAL_ATTACK, EffectType.PHYSICAL_ATTACK_HP_LINK, EffectType.MAGICAL_ATTACK, EffectType.DEATH_LINK, EffectType.HP_DRAIN))
 									{
 										aiSkillScopes.add(AISkillScope.ATTACK);
 										aiSkillScopes.add(AISkillScope.UNIVERSAL);
 										aiSkillScopes.add(shortOrLongRangeScope);
 									}
-									else if (skill.hasEffectType(L2EffectType.SLEEP))
+									else if (skill.hasEffectType(EffectType.SLEEP))
 									{
 										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
 									}
-									else if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT))
+									else if (skill.hasEffectType(EffectType.STUN, EffectType.ROOT))
 									{
 										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
 										aiSkillScopes.add(shortOrLongRangeScope);
 									}
-									else if (skill.hasEffectType(L2EffectType.MUTE, L2EffectType.FEAR))
+									else if (skill.hasEffectType(EffectType.MUTE, EffectType.FEAR))
 									{
 										aiSkillScopes.add(AISkillScope.COT);
 										aiSkillScopes.add(shortOrLongRangeScope);
 									}
-									else if (skill.hasEffectType(L2EffectType.PARALYZE))
+									else if (skill.hasEffectType(EffectType.PARALYZE))
 									{
 										aiSkillScopes.add(AISkillScope.IMMOBILIZE);
 										aiSkillScopes.add(shortOrLongRangeScope);
 									}
-									else if (skill.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
+									else if (skill.hasEffectType(EffectType.DMG_OVER_TIME, EffectType.DMG_OVER_TIME_PERCENT))
 									{
 										aiSkillScopes.add(shortOrLongRangeScope);
 									}
-									else if (skill.hasEffectType(L2EffectType.RESURRECTION))
+									else if (skill.hasEffectType(EffectType.RESURRECTION))
 									{
 										aiSkillScopes.add(AISkillScope.RES);
 									}
@@ -696,7 +696,7 @@ public class NpcData implements IGameXmlReader
 	 * @param id the template Id to get.
 	 * @return the template for the given id.
 	 */
-	public L2NpcTemplate getTemplate(int id)
+	public NpcTemplate getTemplate(int id)
 	{
 		return _npcs.get(id);
 	}
@@ -706,9 +706,9 @@ public class NpcData implements IGameXmlReader
 	 * @param name of the template to get.
 	 * @return the template for the given name.
 	 */
-	public L2NpcTemplate getTemplateByName(String name)
+	public NpcTemplate getTemplateByName(String name)
 	{
-		for (L2NpcTemplate npcTemplate : _npcs.values())
+		for (NpcTemplate npcTemplate : _npcs.values())
 		{
 			if (npcTemplate.getName().equalsIgnoreCase(name))
 			{
@@ -723,7 +723,7 @@ public class NpcData implements IGameXmlReader
 	 * @param filter
 	 * @return the template list for the given filter
 	 */
-	public List<L2NpcTemplate> getTemplates(Predicate<L2NpcTemplate> filter)
+	public List<NpcTemplate> getTemplates(Predicate<NpcTemplate> filter)
 	{
 		//@formatter:off
 			return _npcs.values().stream()
@@ -737,7 +737,7 @@ public class NpcData implements IGameXmlReader
 	 * @param lvls of all the templates to get.
 	 * @return the template list for the given level.
 	 */
-	public List<L2NpcTemplate> getAllOfLevel(int... lvls)
+	public List<NpcTemplate> getAllOfLevel(int... lvls)
 	{
 		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()));
 	}
@@ -747,9 +747,9 @@ public class NpcData implements IGameXmlReader
 	 * @param lvls of all the monster templates to get.
 	 * @return the template list for the given level.
 	 */
-	public List<L2NpcTemplate> getAllMonstersOfLevel(int... lvls)
+	public List<NpcTemplate> getAllMonstersOfLevel(int... lvls)
 	{
-		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
+		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("Monster"));
 	}
 	
 	/**
@@ -757,9 +757,9 @@ public class NpcData implements IGameXmlReader
 	 * @param text of all the NPC templates which its name start with.
 	 * @return the template list for the given letter.
 	 */
-	public List<L2NpcTemplate> getAllNpcStartingWith(String text)
+	public List<NpcTemplate> getAllNpcStartingWith(String text)
 	{
-		return getTemplates(template -> template.isType("L2Npc") && template.getName().startsWith(text));
+		return getTemplates(template -> template.isType("Npc") && template.getName().startsWith(text));
 	}
 	
 	/**
@@ -767,7 +767,7 @@ public class NpcData implements IGameXmlReader
 	 * @param classTypes of all the templates to get.
 	 * @return the template list for the given class type.
 	 */
-	public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes)
+	public List<NpcTemplate> getAllNpcOfClassType(String... classTypes)
 	{
 		return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
 	}

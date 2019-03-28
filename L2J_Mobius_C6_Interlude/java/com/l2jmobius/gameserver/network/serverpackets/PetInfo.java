@@ -16,17 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.6.2.5.2.12 $ $Date: 2005/03/31 09:19:16 $
  */
-public class PetInfo extends L2GameServerPacket
+public class PetInfo extends GameServerPacket
 {
-	private final L2Summon _summon;
+	private final Summon _summon;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -51,7 +50,7 @@ public class PetInfo extends L2GameServerPacket
 	 * rev 478 dddddddddddddddddddffffdddcccccSSdddddddddddddddddddddddddddhc
 	 * @param summon
 	 */
-	public PetInfo(L2Summon summon)
+	public PetInfo(Summon summon)
 	{
 		_summon = summon;
 		_isSummoned = _summon.isShowSummonAnimation();
@@ -67,15 +66,15 @@ public class PetInfo extends L2GameServerPacket
 		_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
 		_maxHp = _summon.getMaxHp();
 		_maxMp = _summon.getMaxMp();
-		if (_summon instanceof L2PetInstance)
+		if (_summon instanceof PetInstance)
 		{
-			final L2PetInstance pet = (L2PetInstance) _summon;
+			final PetInstance pet = (PetInstance) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
-		else if (_summon instanceof L2SummonInstance)
+		else if (_summon instanceof SummonInstance)
 		{
-			final L2SummonInstance sum = (L2SummonInstance) _summon;
+			final SummonInstance sum = (SummonInstance) _summon;
 			_curFed = sum.getTimeRemaining();
 			_maxFed = sum.getTotalLifeTime();
 		}
@@ -134,7 +133,7 @@ public class PetInfo extends L2GameServerPacket
 		writeQ(_summon.getStat().getExp());
 		writeQ(_summon.getExpForThisLevel());// 0% absolute value
 		writeQ(_summon.getExpForNextLevel());// 100% absoulte value
-		writeD(_summon instanceof L2PetInstance ? _summon.getInventory().getTotalWeight() : 0);// weight
+		writeD(_summon instanceof PetInstance ? _summon.getInventory().getTotalWeight() : 0);// weight
 		writeD(_summon.getMaxLoad());// max weight it can carry
 		writeD(_summon.getPAtk(null));// patk
 		writeD(_summon.getPDef(null));// pdef

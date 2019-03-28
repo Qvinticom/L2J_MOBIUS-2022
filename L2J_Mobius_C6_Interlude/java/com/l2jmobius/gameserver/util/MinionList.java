@@ -27,23 +27,22 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2MinionData;
-import com.l2jmobius.gameserver.model.actor.instance.L2MinionInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.MinionData;
+import com.l2jmobius.gameserver.model.actor.instance.MinionInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public class MinionList
 {
-	/** List containing the current spawned minions for this L2MonsterInstance */
-	private final List<L2MinionInstance> minionReferences;
+	/** List containing the current spawned minions for this MonsterInstance */
+	private final List<MinionInstance> minionReferences;
 	protected Map<Long, Integer> _respawnTasks = new ConcurrentHashMap<>();
-	private final L2MonsterInstance master;
+	private final MonsterInstance master;
 	
-	public MinionList(L2MonsterInstance pMaster)
+	public MinionList(MonsterInstance pMaster)
 	{
 		minionReferences = new ArrayList<>();
 		master = pMaster;
@@ -62,7 +61,7 @@ public class MinionList
 		int count = 0;
 		synchronized (minionReferences)
 		{
-			for (L2MinionInstance minion : minionReferences)
+			for (MinionInstance minion : minionReferences)
 			{
 				if (minion.getNpcId() == minionId)
 				{
@@ -78,12 +77,12 @@ public class MinionList
 		return minionReferences.size() > 0;
 	}
 	
-	public List<L2MinionInstance> getSpawnedMinions()
+	public List<MinionInstance> getSpawnedMinions()
 	{
 		return minionReferences;
 	}
 	
-	public void addSpawnedMinion(L2MinionInstance minion)
+	public void addSpawnedMinion(MinionInstance minion)
 	{
 		synchronized (minionReferences)
 		{
@@ -94,14 +93,14 @@ public class MinionList
 	public int lazyCountSpawnedMinionsGroups()
 	{
 		final Set<Integer> seenGroups = new HashSet<>();
-		for (L2MinionInstance minion : minionReferences)
+		for (MinionInstance minion : minionReferences)
 		{
 			seenGroups.add(minion.getNpcId());
 		}
 		return seenGroups.size();
 	}
 	
-	public void removeSpawnedMinion(L2MinionInstance minion)
+	public void removeSpawnedMinion(MinionInstance minion)
 	{
 		synchronized (minionReferences)
 		{
@@ -109,7 +108,7 @@ public class MinionList
 		}
 	}
 	
-	public void moveMinionToRespawnList(L2MinionInstance minion)
+	public void moveMinionToRespawnList(MinionInstance minion)
 	{
 		final Long current = System.currentTimeMillis();
 		synchronized (minionReferences)
@@ -182,7 +181,7 @@ public class MinionList
 			return;
 		}
 		
-		final List<L2MinionData> minions = master.getTemplate().getMinionData();
+		final List<MinionData> minions = master.getTemplate().getMinionData();
 		
 		synchronized (minionReferences)
 		{
@@ -190,7 +189,7 @@ public class MinionList
 			int minionId;
 			int minionsToSpawn;
 			
-			for (L2MinionData minion : minions)
+			for (MinionData minion : minions)
 			{
 				minionCount = minion.getAmount();
 				minionId = minion.getMinionId();
@@ -221,10 +220,10 @@ public class MinionList
 	public void spawnSingleMinion(int minionid)
 	{
 		// Get the template of the Minion to spawn
-		final L2NpcTemplate minionTemplate = NpcTable.getInstance().getTemplate(minionid);
+		final NpcTemplate minionTemplate = NpcTable.getInstance().getTemplate(minionid);
 		
 		// Create and Init the Minion and generate its Identifier
-		final L2MinionInstance monster = new L2MinionInstance(IdFactory.getInstance().getNextId(), minionTemplate);
+		final MinionInstance monster = new MinionInstance(IdFactory.getInstance().getNextId(), minionTemplate);
 		
 		// Set the Minion HP, MP and Heading
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());

@@ -30,7 +30,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordVerify;
@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.util.Util;
 public class SecondaryPasswordAuth
 {
 	private final Logger LOGGER = Logger.getLogger(SecondaryPasswordAuth.class.getName());
-	private final L2GameClient _activeClient;
+	private final GameClient _activeClient;
 	
 	private String _password;
 	private int _wrongAttempts;
@@ -60,7 +60,7 @@ public class SecondaryPasswordAuth
 	/**
 	 * @param activeClient
 	 */
-	public SecondaryPasswordAuth(L2GameClient activeClient)
+	public SecondaryPasswordAuth(GameClient activeClient)
 	{
 		_activeClient = activeClient;
 		_password = null;

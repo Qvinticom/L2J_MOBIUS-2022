@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -32,79 +32,79 @@ public final class RequestVoteNew implements IClientIncomingPacket
 	private int _targetId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_targetId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Object object = activeChar.getTarget();
+		final WorldObject object = player.getTarget();
 		
-		if (!(object instanceof L2PcInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			if (object == null)
 			{
-				activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
+				player.sendPacket(SystemMessageId.SELECT_TARGET);
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+				player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			}
 			return;
 		}
 		
-		final L2PcInstance target = (L2PcInstance) object;
+		final PlayerInstance target = (PlayerInstance) object;
 		
 		if (target.getObjectId() != _targetId)
 		{
 			return;
 		}
 		
-		if (target == activeChar)
+		if (target == player)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
 			return;
 		}
 		
-		if (activeChar.getRecomLeft() <= 0)
+		if (player.getRecomLeft() <= 0)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
+			player.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
 			return;
 		}
 		
 		if (target.getRecomHave() >= 255)
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
+			player.sendPacket(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);
 			return;
 		}
 		
-		activeChar.giveRecom(target);
+		player.giveRecom(target);
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
 		sm.addPcName(target);
-		sm.addInt(activeChar.getRecomLeft());
-		activeChar.sendPacket(sm);
+		sm.addInt(player.getRecomLeft());
+		player.sendPacket(sm);
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_RECOMMENDED_BY_C1);
-		sm.addPcName(activeChar);
+		sm.addPcName(player);
 		target.sendPacket(sm);
 		
-		activeChar.sendPacket(new UserInfo(activeChar));
-		client.sendPacket(new ExBrExtraUserInfo(activeChar));
+		player.sendPacket(new UserInfo(player));
+		client.sendPacket(new ExBrExtraUserInfo(player));
 		target.broadcastUserInfo();
 		
 		if (Config.NEVIT_ENABLED)
 		{
-			activeChar.sendPacket(new ExVoteSystemInfo(activeChar));
+			player.sendPacket(new ExVoteSystemInfo(player));
 			target.sendPacket(new ExVoteSystemInfo(target));
 		}
 	}

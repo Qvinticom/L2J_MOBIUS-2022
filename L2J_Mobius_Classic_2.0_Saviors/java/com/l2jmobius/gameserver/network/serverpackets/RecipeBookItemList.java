@@ -17,12 +17,12 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2RecipeList;
+import com.l2jmobius.gameserver.model.RecipeList;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeBookItemList implements IClientOutgoingPacket
 {
-	private L2RecipeList[] _recipes;
+	private RecipeList[] _recipes;
 	private final boolean _isDwarvenCraft;
 	private final int _maxMp;
 	
@@ -32,7 +32,7 @@ public class RecipeBookItemList implements IClientOutgoingPacket
 		_maxMp = maxMp;
 	}
 	
-	public void addRecipes(L2RecipeList[] recipeBook)
+	public void addRecipes(RecipeList[] recipeBook)
 	{
 		_recipes = recipeBook;
 	}

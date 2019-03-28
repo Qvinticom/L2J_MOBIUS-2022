@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.holders.RangeChanceHolder;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantRateItem;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScrollGroup;
@@ -138,7 +138,7 @@ public final class EnchantItemGroupsData implements IGameXmlReader
 		}
 	}
 	
-	public EnchantItemGroup getItemGroup(L2Item item, int scrollGroup)
+	public EnchantItemGroup getItemGroup(Item item, int scrollGroup)
 	{
 		final EnchantScrollGroup group = _scrollGroups.get(scrollGroup);
 		final EnchantRateItem rateGroup = group.getRateGroup(item);

@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class SpawnItem implements IClientOutgoingPacket
 {
-	private final L2ItemInstance _item;
+	private final ItemInstance _item;
 	
-	public SpawnItem(L2ItemInstance item)
+	public SpawnItem(ItemInstance item)
 	{
 		_item = item;
 	}

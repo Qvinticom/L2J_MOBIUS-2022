@@ -23,7 +23,7 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager.DBStatusType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
 
@@ -35,7 +35,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 	private final List<Integer> _bossIds = new ArrayList<>();
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		final int count = packet.readD();
 		for (int i = 0; i < count; i++)
@@ -50,7 +50,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 				_bossIds.add(bossId);
 			}
 			/*
-			 * else { String message = "Could not find spawn info for boss " + bossId; final L2NpcTemplate template = NpcData.getInstance().getTemplate(bossId); if (template != null) { message += " - " + template.getName() + "."; } else { message += " - NPC template not found."; }
+			 * else { String message = "Could not find spawn info for boss " + bossId; final NpcTemplate template = NpcData.getInstance().getTemplate(bossId); if (template != null) { message += " - " + template.getName() + "."; } else { message += " - NPC template not found."; }
 			 * System.out.println(message); }
 			 */
 		}
@@ -58,7 +58,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		client.sendPacket(new ExRaidBossSpawnInfo(_bossIds));
 	}

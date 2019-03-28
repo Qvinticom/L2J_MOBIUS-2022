@@ -22,23 +22,23 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.ItemContainer;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcFreight;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.PlayerFreight;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jmobius.gameserver.templates.item.L2EtcItemType;
+import com.l2jmobius.gameserver.templates.item.EtcItemType;
 
 /**
  * @author -Wooden-
  */
-public final class RequestPackageSend extends L2GameClientPacket
+public final class RequestPackageSend extends GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(RequestPackageSend.class.getName());
 	private final List<Item> _items = new ArrayList<>();
@@ -73,7 +73,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		
 		if (player == null)
 		{
@@ -85,7 +85,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance target = L2PcInstance.load(_objectID);
+		final PlayerInstance target = PlayerInstance.load(_objectID);
 		
 		if (player.getAccountChars().size() < 1)
 		{
@@ -96,7 +96,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 			return;
 		}
 		
-		if (L2World.getInstance().getPlayer(_objectID) != null)
+		if (World.getInstance().getPlayer(_objectID) != null)
 		{
 			return;
 		}
@@ -107,7 +107,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 			return;
 		}
 		
-		final PcFreight freight = target.getFreight();
+		final PlayerFreight freight = target.getFreight();
 		player.setActiveWarehouse(freight);
 		target.deleteMe();
 		final ItemContainer warehouse = player.getActiveWarehouse();
@@ -117,14 +117,14 @@ public final class RequestPackageSend extends L2GameClientPacket
 			return;
 		}
 		
-		final L2FolkInstance manager = player.getLastFolkNPC();
+		final FolkInstance manager = player.getLastFolkNPC();
 		
-		if (((manager == null) || !player.isInsideRadius(manager, L2NpcInstance.INTERACTION_DISTANCE, false, false)) && !player.isGM())
+		if (((manager == null) || !player.isInsideRadius(manager, NpcInstance.INTERACTION_DISTANCE, false, false)) && !player.isGM())
 		{
 			return;
 		}
 		
-		if ((warehouse instanceof PcFreight) && !player.getAccessLevel().allowTransaction())
+		if ((warehouse instanceof PlayerFreight) && !player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Unsufficient privileges.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -148,7 +148,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 			final int count = i.count;
 			
 			// Check validity of requested item
-			final L2ItemInstance item = player.checkItemManipulation(objectId, count, "deposit");
+			final ItemInstance item = player.checkItemManipulation(objectId, count, "deposit");
 			
 			// Check if item is null
 			if (item == null)
@@ -166,7 +166,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 				return;
 			}
 			
-			if (!item.isTradeable() || (item.getItemType() == L2EtcItemType.QUEST))
+			if (!item.isTradeable() || (item.getItemType() == EtcItemType.QUEST))
 			{
 				return;
 			}
@@ -214,7 +214,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 				continue;
 			}
 			
-			final L2ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
+			final ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
 			
 			if (oldItem == null)
 			{
@@ -229,7 +229,7 @@ public final class RequestPackageSend extends L2GameClientPacket
 				continue;
 			}
 			
-			final L2ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
+			final ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
 			
 			if (newItem == null)
 			{

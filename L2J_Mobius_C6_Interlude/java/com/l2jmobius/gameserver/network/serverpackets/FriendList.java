@@ -20,14 +20,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.datatables.sql.CharNameTable;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Support for "Chat with Friends" dialog.
  * @author Tempy
  */
-public class FriendList extends L2GameServerPacket
+public class FriendList extends GameServerPacket
 {
 	private final List<FriendInfo> _info;
 	
@@ -45,14 +45,14 @@ public class FriendList extends L2GameServerPacket
 		}
 	}
 	
-	public FriendList(L2PcInstance player)
+	public FriendList(PlayerInstance player)
 	{
 		_info = new ArrayList<>(player.getFriendList().size());
 		
 		for (int objId : player.getFriendList())
 		{
 			final String name = CharNameTable.getInstance().getPlayerName(objId);
-			final L2PcInstance player1 = L2World.getInstance().getPlayer(objId);
+			final PlayerInstance player1 = World.getInstance().getPlayer(objId);
 			
 			_info.add(new FriendInfo(objId, name, ((player1 != null) && (player1.isOnline() == 1))));
 		}

@@ -20,18 +20,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PartySpelled implements IClientOutgoingPacket
 {
 	private final List<BuffInfo> _effects = new ArrayList<>();
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	
-	public PartySpelled(L2Character cha)
+	public PartySpelled(Creature creature)
 	{
-		_activeChar = cha;
+		_creature = creature;
 	}
 	
 	public void addSkill(BuffInfo info)
@@ -43,8 +43,8 @@ public class PartySpelled implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SPELLED.writeId(packet);
-		packet.writeD(_activeChar.isServitor() ? 2 : _activeChar.isPet() ? 1 : 0);
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.isServitor() ? 2 : _creature.isPet() ? 1 : 0);
+		packet.writeD(_creature.getObjectId());
 		packet.writeD(_effects.size());
 		for (BuffInfo info : _effects)
 		{

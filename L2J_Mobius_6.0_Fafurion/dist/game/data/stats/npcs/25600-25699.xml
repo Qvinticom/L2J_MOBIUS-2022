@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="25600" level="82" type="L2Monster" name="Temenir" title="Darion's Challenger">
+	<npc id="25600" level="82" type="Monster" name="Temenir" title="Darion's Challenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
@@ -70,7 +70,7 @@
 			<height normal="37.5" grown="46.8" />
 		</collision>
 	</npc>
-	<npc id="25601" level="82" type="L2Monster" name="Draksius" title="Darion's Challenger">
+	<npc id="25601" level="82" type="Monster" name="Draksius" title="Darion's Challenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsHealer" value="2" />
@@ -141,7 +141,7 @@
 			<height normal="47.2" />
 		</collision>
 	</npc>
-	<npc id="25602" level="82" type="L2Monster" name="Kiretcenah" title="Darion's Challenger">
+	<npc id="25602" level="82" type="Monster" name="Kiretcenah" title="Darion's Challenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
@@ -213,7 +213,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25603" level="99" type="L2RaidBoss" name="Darion">
+	<npc id="25603" level="99" type="RaidBoss" name="Darion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -284,7 +284,7 @@
 			<height normal="81.2165" />
 		</collision>
 	</npc>
-	<npc id="25604" level="50" type="L2Monster" name="Mutated Elpy" title="Naia's Creature">
+	<npc id="25604" level="50" type="Monster" name="Mutated Elpy" title="Naia's Creature">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -321,7 +321,7 @@
 			<height normal="4.5" />
 		</collision>
 	</npc>
-	<npc id="25605" level="82" type="L2Monster" name="Naia Spore">
+	<npc id="25605" level="82" type="Monster" name="Naia Spore">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -378,7 +378,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="25606" level="82" type="L2Monster" name="Naia Spore">
+	<npc id="25606" level="82" type="Monster" name="Naia Spore">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -435,7 +435,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25607" level="82" type="L2Monster" name="Naia Spore">
+	<npc id="25607" level="82" type="Monster" name="Naia Spore">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -492,7 +492,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25608" level="82" type="L2Monster" name="Naia Spore">
+	<npc id="25608" level="82" type="Monster" name="Naia Spore">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -549,7 +549,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25609" level="82" type="L2RaidBoss" name="Epidos" title="Naia Shambler">
+	<npc id="25609" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -624,7 +624,7 @@
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="25610" level="82" type="L2RaidBoss" name="Epidos" title="Naia Shambler">
+	<npc id="25610" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -699,7 +699,7 @@
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="25611" level="82" type="L2RaidBoss" name="Epidos" title="Naia Shambler">
+	<npc id="25611" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -774,7 +774,7 @@
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="25612" level="82" type="L2RaidBoss" name="Epidos" title="Naia Shambler">
+	<npc id="25612" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -849,7 +849,7 @@
 			<height normal="99.5" />
 		</collision>
 	</npc>
-	<npc id="25613" level="83" type="L2Monster" name="Naia Spore">
+	<npc id="25613" level="83" type="Monster" name="Naia Spore">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -896,7 +896,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25614" level="82" type="L2Monster" name="Floating Ghost">
+	<npc id="25614" level="82" type="Monster" name="Floating Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="cursed_magic" id="5593" level="1" />
@@ -935,7 +935,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25615" level="82" type="L2Monster" name="Floating Ghost">
+	<npc id="25615" level="82" type="Monster" name="Floating Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="cursed_magic" id="5593" level="1" />
@@ -974,7 +974,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25616" level="29" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25616" level="29" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="2" />
@@ -1012,7 +1012,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25617" level="39" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25617" level="39" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="3" />
@@ -1051,7 +1051,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25618" level="49" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25618" level="49" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="4" />
@@ -1089,7 +1089,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="25619" level="59" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25619" level="59" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="5" />
@@ -1127,7 +1127,7 @@
 			<height normal="35.3" />
 		</collision>
 	</npc>
-	<npc id="25620" level="69" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25620" level="69" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="6" />
@@ -1164,7 +1164,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25621" level="78" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25621" level="78" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="7" />
@@ -1207,7 +1207,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="25622" level="81" type="L2RaidBoss" name="Lost Warden">
+	<npc id="25622" level="81" type="RaidBoss" name="Lost Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="8" />
@@ -1251,7 +1251,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25623" level="80" type="L2RaidBoss" name="Valdstone" title="Master Rider">
+	<npc id="25623" level="80" type="RaidBoss" name="Valdstone" title="Master Rider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
@@ -1321,7 +1321,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="25624" level="80" type="L2RaidBoss" name="Rok" title="King of Birds">
+	<npc id="25624" level="80" type="RaidBoss" name="Rok" title="King of Birds">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
@@ -1378,7 +1378,7 @@
 			<height normal="130.5" />
 		</collision>
 	</npc>
-	<npc id="25625" level="80" type="L2RaidBoss" name="Enira" title="Banshee Queen">
+	<npc id="25625" level="80" type="RaidBoss" name="Enira" title="Banshee Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Target" value="3" />
@@ -1453,7 +1453,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="25626" level="80" type="L2RaidBoss" name="Dius" title="Deadman of Destruction">
+	<npc id="25626" level="80" type="RaidBoss" name="Dius" title="Deadman of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
@@ -1513,7 +1513,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25627" level="75" type="L2Monster" name="Mutant Bird" title="King's Subordinate">
+	<npc id="25627" level="75" type="Monster" name="Mutant Bird" title="King's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_Target" value="3" />
@@ -1565,7 +1565,7 @@
 			<height normal="85" />
 		</collision>
 	</npc>
-	<npc id="25628" level="76" type="L2Monster" name="Dra Hawk" title="King's Subordinate">
+	<npc id="25628" level="76" type="Monster" name="Dra Hawk" title="King's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_AttackSplash" value="1" />
@@ -1616,7 +1616,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25629" level="78" type="L2Monster" name="Floating Skeleton" title="Enira's Evil Spirit">
+	<npc id="25629" level="78" type="Monster" name="Floating Skeleton" title="Enira's Evil Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5803" level="1" />
@@ -1666,7 +1666,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="25630" level="77" type="L2Monster" name="Floating Zombie" title="Enira's Evil Spirit">
+	<npc id="25630" level="77" type="Monster" name="Floating Zombie" title="Enira's Evil Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_Target" value="3" />
@@ -1717,7 +1717,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25631" level="77" type="L2Monster" name="Drake Wing" title="Underling of Destruction">
+	<npc id="25631" level="77" type="Monster" name="Drake Wing" title="Underling of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5805" level="1" />
@@ -1767,7 +1767,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="25632" level="78" type="L2Monster" name="Drak" title="Underling of Destruction">
+	<npc id="25632" level="78" type="Monster" name="Drak" title="Underling of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_AttackSplash" value="1" />
@@ -1818,7 +1818,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25633" level="76" type="L2Monster" name="Elite Rider" title="Valdstone's Escort">
+	<npc id="25633" level="76" type="Monster" name="Elite Rider" title="Valdstone's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill03_Target" value="4" />
@@ -1863,7 +1863,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="25634" level="81" type="L2Monster" name="Cohemenes" title="Soul Collector">
+	<npc id="25634" level="81" type="Monster" name="Cohemenes" title="Soul Collector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -1920,7 +1920,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="25635" level="81" type="L2Monster" name="Argekunte" title="Vacuous Soul">
+	<npc id="25635" level="81" type="Monster" name="Argekunte" title="Vacuous Soul">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -1978,7 +1978,7 @@
 			<height normal="40.8" />
 		</collision>
 	</npc>
-	<npc id="25636" level="81" type="L2Monster" name="Ravenous Soul Devourer">
+	<npc id="25636" level="81" type="Monster" name="Ravenous Soul Devourer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="3" />
@@ -2031,7 +2031,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25637" level="81" type="L2Monster" name="Karpencharr" title="Prophet of Lies">
+	<npc id="25637" level="81" type="Monster" name="Karpencharr" title="Prophet of Lies">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -2090,7 +2090,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25638" level="81" type="L2Monster" name="Romerohiv" title="Betrayer of Oblivion">
+	<npc id="25638" level="81" type="Monster" name="Romerohiv" title="Betrayer of Oblivion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -2153,7 +2153,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25639" level="81" type="L2Monster" name="Hitchkarshiek" title="Wise Retainer of Suffering">
+	<npc id="25639" level="81" type="Monster" name="Hitchkarshiek" title="Wise Retainer of Suffering">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -2216,7 +2216,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25640" level="81" type="L2Monster" name="Freedkyilla" title="Hand of Night">
+	<npc id="25640" level="81" type="Monster" name="Freedkyilla" title="Hand of Night">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -2272,7 +2272,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25641" level="81" type="L2Monster" name="Yehan Cravenizad" title="Bloodsucker">
+	<npc id="25641" level="81" type="Monster" name="Yehan Cravenizad" title="Bloodsucker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -2337,7 +2337,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25642" level="81" type="L2Monster" name="Yehan Jaxsibhan" title="Dark Guardian">
+	<npc id="25642" level="81" type="Monster" name="Yehan Jaxsibhan" title="Dark Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
@@ -2398,7 +2398,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25643" level="81" type="L2RaidBoss" name="Awakened Ancient Sentry" title="Raid Boss">
+	<npc id="25643" level="81" type="RaidBoss" name="Awakened Ancient Sentry" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5878" level="1" />
@@ -2455,7 +2455,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="25644" level="81" type="L2RaidBoss" name="Awakened Ancient Severer" title="Raid Boss">
+	<npc id="25644" level="81" type="RaidBoss" name="Awakened Ancient Severer" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5884" level="2" />
@@ -2511,7 +2511,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25645" level="81" type="L2RaidBoss" name="Awakened Ancient Soul Extractor" title="Raid Boss">
+	<npc id="25645" level="81" type="RaidBoss" name="Awakened Ancient Soul Extractor" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5892" level="2" />
@@ -2568,7 +2568,7 @@
 			<height normal="37.2" />
 		</collision>
 	</npc>
-	<npc id="25646" level="81" type="L2RaidBoss" name="Awakened Ancient Soul Devourer" title="Raid Boss">
+	<npc id="25646" level="81" type="RaidBoss" name="Awakened Ancient Soul Devourer" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5888" level="2" />
@@ -2624,7 +2624,7 @@
 			<height normal="44.2" />
 		</collision>
 	</npc>
-	<npc id="25647" level="81" type="L2RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
+	<npc id="25647" level="81" type="RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5884" level="2" />
@@ -2684,7 +2684,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="25648" level="81" type="L2RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
+	<npc id="25648" level="81" type="RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5855" level="1" />
@@ -2745,7 +2745,7 @@
 			<height normal="62.4" />
 		</collision>
 	</npc>
-	<npc id="25649" level="81" type="L2RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
+	<npc id="25649" level="81" type="RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5880" level="2" />
@@ -2809,7 +2809,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25650" level="81" type="L2RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
+	<npc id="25650" level="81" type="RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5881" level="2" />
@@ -2885,7 +2885,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25651" level="81" type="L2RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
+	<npc id="25651" level="81" type="RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5898" level="2" />
@@ -2943,7 +2943,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="25652" level="81" type="L2RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
+	<npc id="25652" level="81" type="RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5896" level="2" />
@@ -3001,7 +3001,7 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="25653" level="104" type="L2RaidBoss" name="Kanadis Guardian" title="Invading Forces">
+	<npc id="25653" level="104" type="RaidBoss" name="Kanadis Guardian" title="Invading Forces">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
@@ -3055,7 +3055,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="25654" level="105" type="L2RaidBoss" name="Kanadis Punisher" title="Invading Forces">
+	<npc id="25654" level="105" type="RaidBoss" name="Kanadis Punisher" title="Invading Forces">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
@@ -3108,7 +3108,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="25655" level="106" type="L2RaidBoss" name="Kanadis Herald" title="Invading Forces">
+	<npc id="25655" level="106" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300146" />
@@ -3202,7 +3202,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25656" level="93" type="L2Monster" name="Kanadis Follower">
+	<npc id="25656" level="93" type="Monster" name="Kanadis Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
@@ -3256,7 +3256,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25657" level="105" type="L2Monster" name="Kanadis Layperson">
+	<npc id="25657" level="105" type="Monster" name="Kanadis Layperson">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
@@ -3303,7 +3303,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25658" level="105" type="L2Monster" name="Kanadis Fanatic">
+	<npc id="25658" level="105" type="Monster" name="Kanadis Fanatic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
@@ -3345,7 +3345,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25659" level="104" type="L2RaidBoss" name="Kanadis Evangelist" title="Invading Forces">
+	<npc id="25659" level="104" type="RaidBoss" name="Kanadis Evangelist" title="Invading Forces">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
@@ -3399,7 +3399,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="25660" level="105" type="L2RaidBoss" name="Kanadis Guide" title="Invading Forces">
+	<npc id="25660" level="105" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
@@ -3452,7 +3452,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="25661" level="106" type="L2RaidBoss" name="Kanadis Guide" title="Invading Forces">
+	<npc id="25661" level="106" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300146" />
@@ -3546,7 +3546,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25662" level="104" type="L2Monster" name="Kanadis Follower">
+	<npc id="25662" level="104" type="Monster" name="Kanadis Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
@@ -3590,7 +3590,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25663" level="105" type="L2Monster" name="Kanadis Sniper">
+	<npc id="25663" level="105" type="Monster" name="Kanadis Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
@@ -3637,7 +3637,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25664" level="105" type="L2Monster" name="Kanadis Fighter">
+	<npc id="25664" level="105" type="Monster" name="Kanadis Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
@@ -3679,7 +3679,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="25667" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
+	<npc id="25667" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
@@ -3734,7 +3734,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25668" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
+	<npc id="25668" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
@@ -3798,7 +3798,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25669" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
+	<npc id="25669" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
@@ -3862,7 +3862,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25670" level="82" type="L2RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
+	<npc id="25670" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
@@ -3926,7 +3926,7 @@
 			<height normal="40" grown="59.4" />
 		</collision>
 	</npc>
-	<npc id="25671" level="84" type="L2RaidBoss" name="Queen Shyeed" title="Raid Boss">
+	<npc id="25671" level="84" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4022,7 +4022,7 @@
 			<height normal="50.8" />
 		</collision>
 	</npc>
-	<npc id="25672" level="82" type="L2Monster" name="Spiked Stakato" title="Raid Fighter">
+	<npc id="25672" level="82" type="Monster" name="Spiked Stakato" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="9" />
@@ -4084,7 +4084,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25673" level="82" type="L2Monster" name="Spiked Stakato" title="Raid Fighter">
+	<npc id="25673" level="82" type="Monster" name="Spiked Stakato" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="9" />
@@ -4143,7 +4143,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="25674" level="83" type="L2RaidBoss" name="Gwindorr" title="Raid Boss">
+	<npc id="25674" level="83" type="RaidBoss" name="Gwindorr" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4236,7 +4236,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="25675" level="82" type="L2Monster" name="Gwindorr's Escort" title="Raid Fighter">
+	<npc id="25675" level="82" type="Monster" name="Gwindorr's Escort" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4278,7 +4278,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25676" level="82" type="L2Monster" name="Gwindorr's Follower" title="Raid Fighter">
+	<npc id="25676" level="82" type="Monster" name="Gwindorr's Follower" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4320,7 +4320,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25677" level="84" type="L2RaidBoss" name="Water Spirit Lian" title="Raid Boss">
+	<npc id="25677" level="84" type="RaidBoss" name="Water Spirit Lian" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4416,7 +4416,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25678" level="83" type="L2Monster" name="Gildor's Spirit" title="Raid Fighter">
+	<npc id="25678" level="83" type="Monster" name="Gildor's Spirit" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="9" />
@@ -4462,7 +4462,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25679" level="83" type="L2Monster" name="Gildor's Guardian" title="Raid Fighter">
+	<npc id="25679" level="83" type="Monster" name="Gildor's Guardian" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="9" />
@@ -4506,7 +4506,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25690" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+	<npc id="25690" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4569,7 +4569,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="25691" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+	<npc id="25691" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4641,7 +4641,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25692" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+	<npc id="25692" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4713,7 +4713,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25693" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+	<npc id="25693" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4785,7 +4785,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25694" level="82" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+	<npc id="25694" level="82" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4851,7 +4851,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25695" level="84" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+	<npc id="25695" level="84" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4917,7 +4917,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25696" level="89" type="L2RaidBoss" name="Taklacan" title="Bistakon">
+	<npc id="25696" level="89" type="RaidBoss" name="Taklacan" title="Bistakon">
 		<parameters>
 			<skill name="Skill01_ID" id="6379" level="1" />
 			<skill name="Skill02_ID" id="6378" level="1" />
@@ -4997,7 +4997,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25697" level="89" type="L2RaidBoss" name="Torumba" title="Reptilikon">
+	<npc id="25697" level="89" type="RaidBoss" name="Torumba" title="Reptilikon">
 		<parameters>
 			<skill name="SpecialSkill01_ID" id="6403" level="1" />
 			<skill name="SpecialSkill02_ID" id="6404" level="1" />
@@ -5073,7 +5073,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25698" level="89" type="L2RaidBoss" name="Dopagen" title="Kokracon">
+	<npc id="25698" level="89" type="RaidBoss" name="Dopagen" title="Kokracon">
 		<parameters>
 			<skill name="Skill01_ID" id="6390" level="1" />
 			<skill name="Skill02_ID" id="6391" level="1" />
@@ -5152,7 +5152,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25699" level="85" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
+	<npc id="25699" level="85" type="RaidBoss" name="Glakias" title="Ice Knight Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" />

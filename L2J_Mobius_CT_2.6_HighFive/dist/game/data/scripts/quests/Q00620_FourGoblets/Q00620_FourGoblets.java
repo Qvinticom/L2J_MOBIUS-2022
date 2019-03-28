@@ -22,8 +22,8 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -231,10 +231,10 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
-		final QuestState st = getQuestState(player, false);
-		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			switch (npc.getId())
 			{
@@ -245,7 +245,7 @@ public class Q00620_FourGoblets extends Quest
 						giveItems(player, GOBLET_OF_ALECTIA, 1);
 					}
 					
-					st.setMemoStateEx(1, 2);
+					qs.setMemoStateEx(1, 2);
 					break;
 				}
 				case HALISHA_TISHAS:
@@ -255,7 +255,7 @@ public class Q00620_FourGoblets extends Quest
 						giveItems(player, GOBLET_OF_TISHAS, 1);
 					}
 					
-					st.setMemoStateEx(1, 2);
+					qs.setMemoStateEx(1, 2);
 					break;
 				}
 				case HALISHA_MEKARA:
@@ -265,7 +265,7 @@ public class Q00620_FourGoblets extends Quest
 						giveItems(player, GOBLET_OF_MEKARA, 1);
 					}
 					
-					st.setMemoStateEx(1, 2);
+					qs.setMemoStateEx(1, 2);
 					break;
 				}
 				case HALISHA_MORIGUL:
@@ -275,7 +275,7 @@ public class Q00620_FourGoblets extends Quest
 						giveItems(player, GOBLET_OF_MORIGUL, 1);
 					}
 					
-					st.setMemoStateEx(1, 2);
+					qs.setMemoStateEx(1, 2);
 					break;
 				}
 			}
@@ -283,10 +283,10 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -322,11 +322,11 @@ public class Q00620_FourGoblets extends Quest
 			}
 			case "31453-12.htm":
 			{
-				st.setMemoState(0);
-				st.startQuest();
+				qs.setMemoState(0);
+				qs.startQuest();
 				if (hasQuestItems(player, ANTIQUE_BROOCH))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 				}
 				htmltext = event;
 				break;
@@ -334,7 +334,7 @@ public class Q00620_FourGoblets extends Quest
 			case "31453-15.html":
 			{
 				takeItems(player, -1, CHAPEL_KEY, USED_GRAVE_PASS);
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -343,7 +343,7 @@ public class Q00620_FourGoblets extends Quest
 				if (hasQuestItems(player, GOBLET_OF_ALECTIA, GOBLET_OF_TISHAS, GOBLET_OF_MEKARA, GOBLET_OF_MORIGUL))
 				{
 					giveItems(player, ANTIQUE_BROOCH, 1);
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					takeItems(player, 1, GOBLET_OF_ALECTIA, GOBLET_OF_TISHAS, GOBLET_OF_MEKARA, GOBLET_OF_MORIGUL);
 					htmltext = event;
 				}
@@ -357,7 +357,7 @@ public class Q00620_FourGoblets extends Quest
 			}
 			case "31454-04.html":
 			{
-				final int memoStateEx = st.getMemoStateEx(1);
+				final int memoStateEx = qs.getMemoStateEx(1);
 				if (((memoStateEx == 2) || (memoStateEx == 3)) && (getQuestItemsCount(player, BROKEN_RELIC_PART) >= 1000))
 				{
 					htmltext = event;
@@ -375,7 +375,7 @@ public class Q00620_FourGoblets extends Quest
 			case "6899":
 			case "7580":
 			{
-				final int memoStateEx = st.getMemoStateEx(1);
+				final int memoStateEx = qs.getMemoStateEx(1);
 				if (((memoStateEx == 2) || (memoStateEx == 3)) && (getQuestItemsCount(player, BROKEN_RELIC_PART) >= 1000))
 				{
 					giveItems(player, Integer.valueOf(event), 1);
@@ -386,7 +386,7 @@ public class Q00620_FourGoblets extends Quest
 			}
 			case "31454-07.html":
 			{
-				final int memoStateEx = st.getMemoStateEx(1);
+				final int memoStateEx = qs.getMemoStateEx(1);
 				if (((memoStateEx == 2) || (memoStateEx == 3)) && hasQuestItems(player, SEALED_BOX))
 				{
 					if (getRandom(100) < 100) // TODO (Adry_85): Check random function.
@@ -442,7 +442,7 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		switch (npc.getId())
 		{
@@ -456,23 +456,23 @@ public class Q00620_FourGoblets extends Quest
 			}
 			default:
 			{
-				final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-				if (st != null)
+				final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+				if (qs != null)
 				{
 					int npcId = npc.getId();
 					if (MOB1.containsKey(npcId))
 					{
-						giveItemRandomly(st.getPlayer(), npc, SEALED_BOX, 1, 0, MOB1.get(npcId), true);
+						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, 1, 0, MOB1.get(npcId), true);
 					}
 					else if (MOB2.containsKey(npcId))
 					{
 						final int itemCount = ((getRandom(100) < MOB2.get(npc.getId())) ? 2 : 1);
-						giveItemRandomly(st.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1.0, true);
+						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1.0, true);
 					}
 					else
 					{
 						final int itemCount = ((getRandom(100) < MOB3.get(npc.getId())) ? 5 : 4);
-						giveItemRandomly(st.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1.0, true);
+						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1.0, true);
 					}
 				}
 				break;
@@ -482,15 +482,15 @@ public class Q00620_FourGoblets extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= MIN_LEVEL) ? "31453-01.htm" : "31453-13.html";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
@@ -541,7 +541,7 @@ public class Q00620_FourGoblets extends Quest
 				}
 				case GHOST_OF_WIGOTH_2:
 				{
-					final int memoStateEx = st.getMemoStateEx(1);
+					final int memoStateEx = qs.getMemoStateEx(1);
 					final long brokenRelicPartCount = getQuestItemsCount(player, BROKEN_RELIC_PART);
 					if (memoStateEx == 2)
 					{
@@ -556,7 +556,7 @@ public class Q00620_FourGoblets extends Quest
 								htmltext = ((brokenRelicPartCount < 1000) ? "31454-06.html" : "31454-10.html");
 							}
 							
-							st.setMemoStateEx(1, 3);
+							qs.setMemoStateEx(1, 3);
 						}
 						else
 						{
@@ -569,7 +569,7 @@ public class Q00620_FourGoblets extends Quest
 								htmltext = ((brokenRelicPartCount < 1000) ? "31454-13.html" : "31454-14.html");
 							}
 							
-							st.setMemoStateEx(1, 3);
+							qs.setMemoStateEx(1, 3);
 						}
 					}
 					else if (memoStateEx == 3)
@@ -583,7 +583,7 @@ public class Q00620_FourGoblets extends Quest
 							htmltext = ((brokenRelicPartCount < 1000) ? "31454-13.html" : "31454-14.html");
 						}
 						
-						st.setMemoStateEx(1, 3);
+						qs.setMemoStateEx(1, 3);
 					}
 					break;
 				}
@@ -617,7 +617,7 @@ public class Q00620_FourGoblets extends Quest
 		return htmltext;
 	}
 	
-	private boolean getReward(L2PcInstance player)
+	private boolean getReward(PlayerInstance player)
 	{
 		boolean i2 = false;
 		switch (getRandom(5))

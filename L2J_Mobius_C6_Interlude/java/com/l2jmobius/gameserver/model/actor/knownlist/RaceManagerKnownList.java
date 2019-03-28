@@ -16,28 +16,28 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaceManagerInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaceManagerInstance;
 import com.l2jmobius.gameserver.model.entity.MonsterRace;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
 public class RaceManagerKnownList extends NpcKnownList
 {
-	public RaceManagerKnownList(L2RaceManagerInstance activeChar)
+	public RaceManagerKnownList(RaceManagerInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object)
+	public boolean addKnownObject(WorldObject object)
 	{
 		return addKnownObject(object, null);
 	}
 	
 	@Override
-	public boolean addKnownObject(L2Object object, L2Character dropper)
+	public boolean addKnownObject(WorldObject object, Creature dropper)
 	{
 		if (!super.addKnownObject(object, dropper))
 		{
@@ -48,20 +48,20 @@ public class RaceManagerKnownList extends NpcKnownList
 	}
 	
 	@Override
-	public boolean removeKnownObject(L2Object object)
+	public boolean removeKnownObject(WorldObject object)
 	{
 		if (!super.removeKnownObject(object))
 		{
 			return false;
 		}
 		
-		if (object instanceof L2PcInstance)
+		if (object instanceof PlayerInstance)
 		{
 			DeleteObject obj = null;
 			for (int i = 0; i < 8; i++)
 			{
 				obj = new DeleteObject(MonsterRace.getInstance().getMonsters()[i]);
-				((L2PcInstance) object).sendPacket(obj);
+				((PlayerInstance) object).sendPacket(obj);
 			}
 		}
 		
@@ -69,8 +69,8 @@ public class RaceManagerKnownList extends NpcKnownList
 	}
 	
 	@Override
-	public L2RaceManagerInstance getActiveChar()
+	public RaceManagerInstance getActiveChar()
 	{
-		return (L2RaceManagerInstance) super.getActiveChar();
+		return (RaceManagerInstance) super.getActiveChar();
 	}
 }

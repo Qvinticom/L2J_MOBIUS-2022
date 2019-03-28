@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Henna;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,16 +29,16 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class HennaEquipList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _player;
-	private final List<L2Henna> _hennaEquipList;
+	private final PlayerInstance _player;
+	private final List<Henna> _hennaEquipList;
 	
-	public HennaEquipList(L2PcInstance player)
+	public HennaEquipList(PlayerInstance player)
 	{
 		_player = player;
 		_hennaEquipList = HennaData.getInstance().getHennaList(player.getClassId());
 	}
 	
-	public HennaEquipList(L2PcInstance player, List<L2Henna> list)
+	public HennaEquipList(PlayerInstance player, List<Henna> list)
 	{
 		_player = player;
 		_hennaEquipList = list;
@@ -52,7 +52,7 @@ public class HennaEquipList implements IClientOutgoingPacket
 		packet.writeD(3); // available equip slot
 		packet.writeD(_hennaEquipList.size());
 		
-		for (L2Henna henna : _hennaEquipList)
+		for (Henna henna : _hennaEquipList)
 		{
 			// Player must have at least one dye in inventory
 			// to be able to see the Henna that can be applied with it.

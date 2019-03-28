@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.HennaInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-public final class HennaInfo extends L2GameServerPacket
+public final class HennaInfo extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
-	private final L2HennaInstance[] _hennas = new L2HennaInstance[3];
+	private final PlayerInstance _player;
+	private final HennaInstance[] _hennas = new HennaInstance[3];
 	private final int _count;
 	
-	public HennaInfo(L2PcInstance player)
+	public HennaInfo(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		
 		int j = 0;
 		for (int i = 0; i < 3; i++)
 		{
-			final L2HennaInstance h = _activeChar.getHennas(i + 1);
+			final HennaInstance h = _player.getHennas(i + 1);
 			if (h != null)
 			{
 				_hennas[j++] = h;
@@ -46,12 +46,12 @@ public final class HennaInfo extends L2GameServerPacket
 	{
 		writeC(0xe4);
 		
-		writeC(_activeChar.getHennaStatINT()); // equip INT
-		writeC(_activeChar.getHennaStatSTR()); // equip STR
-		writeC(_activeChar.getHennaStatCON()); // equip CON
-		writeC(_activeChar.getHennaStatMEN()); // equip MEM
-		writeC(_activeChar.getHennaStatDEX()); // equip DEX
-		writeC(_activeChar.getHennaStatWIT()); // equip WIT
+		writeC(_player.getHennaStatINT()); // equip INT
+		writeC(_player.getHennaStatSTR()); // equip STR
+		writeC(_player.getHennaStatCON()); // equip CON
+		writeC(_player.getHennaStatMEN()); // equip MEM
+		writeC(_player.getHennaStatDEX()); // equip DEX
+		writeC(_player.getHennaStatWIT()); // equip WIT
 		
 		writeD(3); // slots?
 		

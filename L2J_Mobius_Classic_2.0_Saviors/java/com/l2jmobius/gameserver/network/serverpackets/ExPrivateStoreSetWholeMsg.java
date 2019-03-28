@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,13 +28,13 @@ public class ExPrivateStoreSetWholeMsg implements IClientOutgoingPacket
 	private final int _objectId;
 	private final String _msg;
 	
-	public ExPrivateStoreSetWholeMsg(L2PcInstance player, String msg)
+	public ExPrivateStoreSetWholeMsg(PlayerInstance player, String msg)
 	{
 		_objectId = player.getObjectId();
 		_msg = msg;
 	}
 	
-	public ExPrivateStoreSetWholeMsg(L2PcInstance player)
+	public ExPrivateStoreSetWholeMsg(PlayerInstance player)
 	{
 		this(player, player.getSellList().getTitle());
 	}

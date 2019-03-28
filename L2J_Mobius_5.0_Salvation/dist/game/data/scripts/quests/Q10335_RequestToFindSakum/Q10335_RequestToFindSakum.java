@@ -21,8 +21,8 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -58,10 +58,10 @@ public final class Q10335_RequestToFindSakum extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -77,25 +77,25 @@ public final class Q10335_RequestToFindSakum extends Quest
 			}
 			case "30332-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33177-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33509-04.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					addExpAndSp(player, 350000, 84);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -105,12 +105,12 @@ public final class Q10335_RequestToFindSakum extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -126,12 +126,12 @@ public final class Q10335_RequestToFindSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = st.isCond(1) ? "30332-04.html" : "30332-05.html";
+						htmltext = qs.isCond(1) ? "30332-04.html" : "30332-05.html";
 						break;
 					}
 					case KALLESIN:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -153,7 +153,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 					}
 					case ZENATH:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							case 2:
@@ -199,16 +199,16 @@ public final class Q10335_RequestToFindSakum extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
-			int killedTracker = st.getInt("killed_" + SKELETON_TRACKER);
-			int killedBowman = st.getInt("killed_" + SKELETON_BOWMAN);
-			int killedRuinSpartois = st.getInt("killed_" + RUIN_SPARTOI);
-			int killedZombie = st.getInt("killed_" + RUIN_ZOMBIE);
+			int killedTracker = qs.getInt("killed_" + SKELETON_TRACKER);
+			int killedBowman = qs.getInt("killed_" + SKELETON_BOWMAN);
+			int killedRuinSpartois = qs.getInt("killed_" + RUIN_SPARTOI);
+			int killedZombie = qs.getInt("killed_" + RUIN_ZOMBIE);
 			
 			switch (npc.getId())
 			{
@@ -217,7 +217,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 					if (killedTracker < 10)
 					{
 						killedTracker++;
-						st.set("killed_" + SKELETON_TRACKER, killedTracker);
+						qs.set("killed_" + SKELETON_TRACKER, killedTracker);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -227,7 +227,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 					if (killedBowman < 10)
 					{
 						killedBowman++;
-						st.set("killed_" + SKELETON_BOWMAN, killedBowman);
+						qs.set("killed_" + SKELETON_BOWMAN, killedBowman);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -237,7 +237,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 					if (killedRuinSpartois < 15)
 					{
 						killedRuinSpartois++;
-						st.set("killed_" + RUIN_SPARTOI, killedRuinSpartois);
+						qs.set("killed_" + RUIN_SPARTOI, killedRuinSpartois);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -248,7 +248,7 @@ public final class Q10335_RequestToFindSakum extends Quest
 					if (killedZombie < 15)
 					{
 						killedZombie++;
-						st.set("killed_" + RUIN_ZOMBIE, killedZombie);
+						qs.set("killed_" + RUIN_ZOMBIE, killedZombie);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -257,25 +257,25 @@ public final class Q10335_RequestToFindSakum extends Quest
 			
 			if ((killedTracker == 10) && (killedBowman == 10) && (killedRuinSpartois == 15) && (killedZombie == 15))
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(4);
-			npcLogList.add(new NpcLogListHolder(SKELETON_TRACKER, false, st.getInt("killed_" + SKELETON_TRACKER)));
-			npcLogList.add(new NpcLogListHolder(SKELETON_BOWMAN, false, st.getInt("killed_" + SKELETON_BOWMAN)));
-			npcLogList.add(new NpcLogListHolder(RUIN_SPARTOI, false, st.getInt("killed_" + RUIN_SPARTOI)));
-			npcLogList.add(new NpcLogListHolder(RUIN_ZOMBIE, false, st.getInt("killed_" + RUIN_ZOMBIE)));
+			npcLogList.add(new NpcLogListHolder(SKELETON_TRACKER, false, qs.getInt("killed_" + SKELETON_TRACKER)));
+			npcLogList.add(new NpcLogListHolder(SKELETON_BOWMAN, false, qs.getInt("killed_" + SKELETON_BOWMAN)));
+			npcLogList.add(new NpcLogListHolder(RUIN_SPARTOI, false, qs.getInt("killed_" + RUIN_SPARTOI)));
+			npcLogList.add(new NpcLogListHolder(RUIN_ZOMBIE, false, qs.getInt("killed_" + RUIN_ZOMBIE)));
 			return npcLogList;
 		}
-		return super.getNpcLogList(activeChar);
+		return super.getNpcLogList(player);
 	}
 }

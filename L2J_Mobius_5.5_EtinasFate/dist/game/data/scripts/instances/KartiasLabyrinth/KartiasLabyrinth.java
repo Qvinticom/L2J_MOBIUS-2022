@@ -25,18 +25,18 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -204,7 +204,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -311,7 +311,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		final Instance instance = (npc != null) ? npc.getInstanceWorld() : player.getInstanceWorld();
 		if (instance != null)
@@ -378,7 +378,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		instance.spawnGroup("PRISONERS").forEach(npc ->
 		{
@@ -396,7 +396,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
 		
 		if (instance != null)
@@ -432,14 +432,14 @@ public final class KartiasLabyrinth extends AbstractInstance
 	
 	public void onBossKill(OnCreatureDeath event)
 	{
-		final L2Npc npc = (L2Npc) event.getTarget();
+		final Npc npc = (Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
 		
 		if (instance != null)
 		{
 			if (isSoloKartia(instance))
 			{
-				final L2PcInstance player = instance.getFirstPlayer();
+				final PlayerInstance player = instance.getFirstPlayer();
 				if (player != null)
 				{
 					switch (instance.getTemplateId())
@@ -467,7 +467,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -500,10 +500,10 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
+	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		final Instance instance = character.getInstanceWorld();
-		if ((instance != null) && character.isPlayer())
+		final Instance instance = creature.getInstanceWorld();
+		if ((instance != null) && creature.isPlayer())
 		{
 			switch (zone.getId())
 			{
@@ -529,17 +529,17 @@ public final class KartiasLabyrinth extends AbstractInstance
 					if (instance.getParameters().getBoolean("LAST_ROOM_OPENED", true))
 					{
 						instance.getParameters().set("LAST_ROOM_OPENED", false);
-						getTimers().addTimer("START_3RD_ROOM", 10000, null, character.getActingPlayer());
+						getTimers().addTimer("START_3RD_ROOM", 10000, null, creature.getActingPlayer());
 					}
 					break;
 				}
 			}
 		}
-		return super.onEnterZone(character, zone);
+		return super.onEnterZone(creature, zone);
 	}
 	
 	@Override
-	public void onMoveFinished(L2Npc npc)
+	public void onMoveFinished(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && CommonUtil.contains(PRISONERS, npc.getId()))
@@ -559,7 +559,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public void onRouteFinished(L2Npc npc)
+	public void onRouteFinished(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -571,7 +571,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
 		if (instance != null)
@@ -584,7 +584,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			{
 				npc.setTarget(npc);
 				npc.doCast(BOSS_STONE.getSkill());
-				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+				((Attackable) npc).setCanReturnToSpawnPoint(false);
 				npc.setRandomWalking(false);
 				npc.setTargetable(false);
 				npc.setIsInvul(true);
@@ -900,10 +900,10 @@ public final class KartiasLabyrinth extends AbstractInstance
 		}
 	}
 	
-	private void moveMonsters(List<L2Npc> monsterList)
+	private void moveMonsters(List<Npc> monsterList)
 	{
 		int delay = 500;
-		for (L2Npc monster : monsterList)
+		for (Npc monster : monsterList)
 		{
 			final Instance world = monster.getInstanceWorld();
 			if (monster.isAttackable() && (world != null))
@@ -918,7 +918,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 				{
 					onTimerEvent("MOVE_TO_MIDDLE", null, monster, null);
 				}
-				((L2Attackable) monster).setCanReturnToSpawnPoint(false);
+				((Attackable) monster).setCanReturnToSpawnPoint(false);
 				monster.initSeenCreatures();
 			}
 		}
@@ -926,8 +926,8 @@ public final class KartiasLabyrinth extends AbstractInstance
 	
 	public void onCreatureSee(OnCreatureSee event)
 	{
-		final L2Character creature = event.getSeen();
-		final L2Npc npc = (L2Npc) event.getSeer();
+		final Creature creature = event.getSeen();
+		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
 		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(1))
@@ -939,7 +939,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 				npc.setIsInvul(false);
 				npc.setScriptValue(1);
 				WalkingManager.getInstance().cancelMoving(npc);
-				((L2MonsterInstance) npc).addDamageHate(creature, 0, 1000);
+				((MonsterInstance) npc).addDamageHate(creature, 0, 1000);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				addAttackDesire(npc, creature);
 			}
@@ -947,7 +947,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		if (npc.getId() == KARTIA_RESEARCHER)
 		{

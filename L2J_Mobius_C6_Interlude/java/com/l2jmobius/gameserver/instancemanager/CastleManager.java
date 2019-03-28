@@ -24,11 +24,11 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
@@ -63,7 +63,7 @@ public class CastleManager
 		load();
 	}
 	
-	public final int findNearestCastlesIndex(L2Object obj)
+	public final int findNearestCastlesIndex(WorldObject obj)
 	{
 		int index = getCastleIndex(obj);
 		if (index < 0)
@@ -129,7 +129,7 @@ public class CastleManager
 		return null;
 	}
 	
-	public final Castle getCastleByOwner(L2Clan clan)
+	public final Castle getCastleByOwner(Clan clan)
 	{
 		if (clan == null)
 		{
@@ -178,7 +178,7 @@ public class CastleManager
 		return null;
 	}
 	
-	public final Castle getCastle(L2Object activeObject)
+	public final Castle getCastle(WorldObject activeObject)
 	{
 		if (activeObject == null)
 		{
@@ -202,7 +202,7 @@ public class CastleManager
 		return -1;
 	}
 	
-	public final int getCastleIndex(L2Object activeObject)
+	public final int getCastleIndex(WorldObject activeObject)
 	{
 		return getCastleIndex(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
@@ -280,23 +280,23 @@ public class CastleManager
 	}
 	
 	// remove this castle's circlets from the clan
-	public void removeCirclet(L2Clan clan, int castleId)
+	public void removeCirclet(Clan clan, int castleId)
 	{
-		for (L2ClanMember member : clan.getMembers())
+		for (ClanMember member : clan.getMembers())
 		{
 			removeCirclet(member, castleId);
 		}
 	}
 	
 	// added: remove clan cirlet for clan leaders
-	public void removeCirclet(L2ClanMember member, int castleId)
+	public void removeCirclet(ClanMember member, int castleId)
 	{
 		if (member == null)
 		{
 			return;
 		}
 		
-		L2PcInstance player = member.getPlayerInstance();
+		PlayerInstance player = member.getPlayerInstance();
 		final int circletId = getCircletByCastleId(castleId);
 		
 		if (circletId != 0)
@@ -308,7 +308,7 @@ public class CastleManager
 				{
 					if (player.isClanLeader())
 					{
-						L2ItemInstance crown = player.getInventory().getItemByItemId(6841);
+						ItemInstance crown = player.getInventory().getItemByItemId(6841);
 						
 						if (crown != null)
 						{
@@ -320,7 +320,7 @@ public class CastleManager
 						}
 					}
 					
-					L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+					ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
 					if (circlet != null)
 					{
 						if (circlet.isEquipped())

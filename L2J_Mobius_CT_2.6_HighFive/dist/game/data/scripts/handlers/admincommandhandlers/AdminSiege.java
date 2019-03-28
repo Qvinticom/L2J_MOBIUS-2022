@@ -26,12 +26,12 @@ import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
@@ -69,7 +69,7 @@ public class AdminSiege implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
@@ -79,7 +79,7 @@ public class AdminSiege implements IAdminCommandHandler
 		ClanHall clanhall = null;
 		if (st.hasMoreTokens())
 		{
-			L2PcInstance player = null;
+			PlayerInstance player = null;
 			if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
 				player = activeChar.getTarget().getActingPlayer();
@@ -91,7 +91,7 @@ public class AdminSiege implements IAdminCommandHandler
 				if (Util.isDigit(val))
 				{
 					clanhall = ClanHallManager.getInstance().getClanHallById(Integer.parseInt(val));
-					L2Clan clan = null;
+					Clan clan = null;
 					switch (command)
 					{
 						case "admin_clanhallset":
@@ -169,7 +169,7 @@ public class AdminSiege implements IAdminCommandHandler
 						}
 						case "admin_clanhallteleportself":
 						{
-							final L2ClanHallZone zone = clanhall.getZone();
+							final ClanHallZone zone = clanhall.getZone();
 							if (zone != null)
 							{
 								activeChar.teleToLocation(zone.getSpawnLoc(), true);
@@ -269,7 +269,7 @@ public class AdminSiege implements IAdminCommandHandler
 					}
 					case "admin_removecastle":
 					{
-						final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+						final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 						if (clan != null)
 						{
 							castle.removeOwner(clan);
@@ -368,13 +368,13 @@ public class AdminSiege implements IAdminCommandHandler
 	
 	/**
 	 * Show castle select page.
-	 * @param activeChar the active char
+	 * @param player the player
 	 */
-	private void showCastleSelectPage(L2PcInstance activeChar)
+	private void showCastleSelectPage(PlayerInstance player)
 	{
 		int i = 0;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar, "data/html/admin/castles.htm");
+		adminReply.setFile(player, "data/html/admin/castles.htm");
 		final StringBuilder cList = new StringBuilder(500);
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
@@ -439,31 +439,31 @@ public class AdminSiege implements IAdminCommandHandler
 			}
 		}
 		adminReply.replace("%freeclanhalls%", cList.toString());
-		activeChar.sendPacket(adminReply);
+		player.sendPacket(adminReply);
 	}
 	
 	/**
 	 * Show the siege page.
-	 * @param activeChar the active char
+	 * @param player the player
 	 * @param castleName the castle name
 	 */
-	private void showSiegePage(L2PcInstance activeChar, String castleName)
+	private void showSiegePage(PlayerInstance player, String castleName)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar, "data/html/admin/castle.htm");
+		adminReply.setFile(player, "data/html/admin/castle.htm");
 		adminReply.replace("%castleName%", castleName);
-		activeChar.sendPacket(adminReply);
+		player.sendPacket(adminReply);
 	}
 	
 	/**
 	 * Show the siege time page.
-	 * @param activeChar the active char
+	 * @param player the player
 	 * @param castle the castle
 	 */
-	private void showSiegeTimePage(L2PcInstance activeChar, Castle castle)
+	private void showSiegeTimePage(PlayerInstance player, Castle castle)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar, "data/html/admin/castlesiegetime.htm");
+		adminReply.setFile(player, "data/html/admin/castlesiegetime.htm");
 		adminReply.replace("%castleName%", castle.getName());
 		adminReply.replace("%time%", castle.getSiegeDate().getTime().toString());
 		final Calendar newDay = Calendar.getInstance();
@@ -498,31 +498,31 @@ public class AdminSiege implements IAdminCommandHandler
 			adminReply.replace("%sundaylink%", String.valueOf(newDay.get(Calendar.DAY_OF_YEAR)));
 			adminReply.replace("%sunday%", newDay.get(Calendar.MONTH) + "/" + newDay.get(Calendar.DAY_OF_MONTH));
 		}
-		activeChar.sendPacket(adminReply);
+		player.sendPacket(adminReply);
 	}
 	
 	/**
 	 * Show the clan hall page.
-	 * @param activeChar the active char
+	 * @param player the player
 	 * @param clanhall the clan hall
 	 */
-	private void showClanHallPage(L2PcInstance activeChar, ClanHall clanhall)
+	private void showClanHallPage(PlayerInstance player, ClanHall clanhall)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar, "data/html/admin/clanhall.htm");
+		adminReply.setFile(player, "data/html/admin/clanhall.htm");
 		adminReply.replace("%clanhallName%", clanhall.getName());
 		adminReply.replace("%clanhallId%", String.valueOf(clanhall.getId()));
-		final L2Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
+		final Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
 		adminReply.replace("%clanhallOwner%", (owner == null) ? "None" : owner.getName());
-		activeChar.sendPacket(adminReply);
+		player.sendPacket(adminReply);
 	}
 	
 	/**
 	 * Show the siegable hall page.
-	 * @param activeChar the active char
+	 * @param player the player
 	 * @param hall the siegable hall
 	 */
-	private void showSiegableHallPage(L2PcInstance activeChar, SiegableHall hall)
+	private void showSiegableHallPage(PlayerInstance player, SiegableHall hall)
 	{
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		msg.setFile(null, "data/html/admin/siegablehall.htm");
@@ -530,14 +530,14 @@ public class AdminSiege implements IAdminCommandHandler
 		msg.replace("%clanhallName%", hall.getName());
 		if (hall.getOwnerId() > 0)
 		{
-			final L2Clan owner = ClanTable.getInstance().getClan(hall.getOwnerId());
+			final Clan owner = ClanTable.getInstance().getClan(hall.getOwnerId());
 			msg.replace("%clanhallOwner%", (owner != null) ? owner.getName() : "No Owner");
 		}
 		else
 		{
 			msg.replace("%clanhallOwner%", "No Owner");
 		}
-		activeChar.sendPacket(msg);
+		player.sendPacket(msg);
 	}
 	
 	@Override

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 /**
  * format dddddd
  */
-public class Earthquake extends L2GameServerPacket
+public class Earthquake extends GameServerPacket
 {
 	private final int _x;
 	private final int _y;

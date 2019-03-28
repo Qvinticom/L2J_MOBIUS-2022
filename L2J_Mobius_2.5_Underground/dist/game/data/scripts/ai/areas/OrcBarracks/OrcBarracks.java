@@ -17,9 +17,9 @@
 package ai.areas.OrcBarracks;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -59,21 +59,21 @@ public final class OrcBarracks extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final boolean hasMinions = npc.getParameters().getBoolean("hasMinions", false);
 		if (hasMinions)
 		{
 			for (int i = 0; i < MINION_COUNT; i++)
 			{
-				addMinion((L2MonsterInstance) npc, TUREK_WAR_HOUND);
+				addMinion((MonsterInstance) npc, TUREK_WAR_HOUND);
 			}
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (killer.getRace() == Race.ERTHEIA && (SPAWN_RATE > getRandom(100)))
 		{

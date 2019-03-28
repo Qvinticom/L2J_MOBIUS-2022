@@ -19,11 +19,11 @@ package handlers.itemhandlers;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.BlockInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class EventItem implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -41,19 +41,19 @@ public class EventItem implements IItemHandler
 		
 		boolean used = false;
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
+		final PlayerInstance player = playable.getActingPlayer();
 		
 		final int itemId = item.getId();
 		switch (itemId)
 		{
 			case 13787: // Handy's Block Checker Bond
 			{
-				used = useBlockCheckerItem(activeChar, item);
+				used = useBlockCheckerItem(player, item);
 				break;
 			}
 			case 13788: // Handy's Block Checker Land Mine
 			{
-				used = useBlockCheckerItem(activeChar, item);
+				used = useBlockCheckerItem(player, item);
 				break;
 			}
 			default:
@@ -64,7 +64,7 @@ public class EventItem implements IItemHandler
 		return used;
 	}
 	
-	private final boolean useBlockCheckerItem(L2PcInstance castor, L2ItemInstance item)
+	private final boolean useBlockCheckerItem(PlayerInstance castor, ItemInstance item)
 	{
 		final int blockCheckerArena = castor.getBlockCheckerArena();
 		if (blockCheckerArena == -1)
@@ -86,13 +86,13 @@ public class EventItem implements IItemHandler
 			return false;
 		}
 		
-		final L2BlockInstance block = (L2BlockInstance) castor.getTarget();
+		final BlockInstance block = (BlockInstance) castor.getTarget();
 		
 		final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(blockCheckerArena);
 		if (holder != null)
 		{
 			final int team = holder.getPlayerTeam(castor);
-			L2World.getInstance().forEachVisibleObjectInRange(block, L2PcInstance.class, sk.getEffectRange(), pc ->
+			World.getInstance().forEachVisibleObjectInRange(block, PlayerInstance.class, sk.getEffectRange(), pc ->
 			{
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))

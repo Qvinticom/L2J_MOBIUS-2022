@@ -28,8 +28,8 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
 import com.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExDuelEnd;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelReady;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelStart;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -54,8 +54,8 @@ public class Duel
 	public static final int DUELSTATE_INTERRUPTED = 4;
 	
 	private final int _duelId;
-	private L2PcInstance _playerA;
-	private L2PcInstance _playerB;
+	private PlayerInstance _playerA;
+	private PlayerInstance _playerB;
 	protected boolean _partyDuel;
 	private final Calendar _duelEndTime;
 	private int _surrenderRequest = 0;
@@ -81,7 +81,7 @@ public class Duel
 	 * @param partyDuel the party duel
 	 * @param duelId the duel id
 	 */
-	public Duel(L2PcInstance playerA, L2PcInstance playerB, int partyDuel, int duelId)
+	public Duel(PlayerInstance playerA, PlayerInstance playerB, int partyDuel, int duelId)
 	{
 		_duelId = duelId;
 		_playerA = playerA;
@@ -121,7 +121,7 @@ public class Duel
 	 */
 	public class PlayerCondition
 	{
-		private L2PcInstance _player;
+		private PlayerInstance _player;
 		private double _hp;
 		private double _mp;
 		private double _cp;
@@ -129,14 +129,14 @@ public class Duel
 		private int _x;
 		private int _y;
 		private int _z;
-		private List<L2Effect> _debuffs;
+		private List<Effect> _debuffs;
 		
 		/**
 		 * Instantiates a new player condition.
 		 * @param player the player
 		 * @param partyDuel the party duel
 		 */
-		public PlayerCondition(L2PcInstance player, boolean partyDuel)
+		public PlayerCondition(PlayerInstance player, boolean partyDuel)
 		{
 			if (player == null)
 			{
@@ -178,7 +178,7 @@ public class Duel
 			
 			if (_debuffs != null) // Debuff removal
 			{
-				for (L2Effect temp : _debuffs)
+				for (Effect temp : _debuffs)
 				{
 					if (temp != null)
 					{
@@ -192,7 +192,7 @@ public class Duel
 		 * Register debuff.
 		 * @param debuff the debuff
 		 */
-		public void registerDebuff(L2Effect debuff)
+		public void registerDebuff(Effect debuff)
 		{
 			if (_debuffs == null)
 			{
@@ -206,7 +206,7 @@ public class Duel
 		 * Remove debuff.
 		 * @param debuff the debuff
 		 */
-		public void removeDebuff(L2Effect debuff)
+		public void removeDebuff(Effect debuff)
 		{
 			if (_debuffs == null)
 			{
@@ -231,7 +231,7 @@ public class Duel
 		 * Gets the player.
 		 * @return the player
 		 */
-		public L2PcInstance getPlayer()
+		public PlayerInstance getPlayer()
 		{
 			return _player;
 		}
@@ -384,7 +384,7 @@ public class Duel
 		ActionFailed af = ActionFailed.STATIC_PACKET;
 		if (_partyDuel)
 		{
-			for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
 				temp.abortCast();
 				temp.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -392,7 +392,7 @@ public class Duel
 				temp.sendPacket(af);
 			}
 			
-			for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
 				temp.abortCast();
 				temp.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -455,7 +455,7 @@ public class Duel
 		{
 			// set isInDuel() state
 			// cancel all active trades, just in case? xD
-			for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
 				temp.cancelActiveTrade();
 				temp.setIsInDuel(_duelId);
@@ -464,7 +464,7 @@ public class Duel
 				temp.broadcastUserInfo();
 				broadcastToTeam2(new ExDuelUpdateUserInfo(temp));
 			}
-			for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
 				temp.cancelActiveTrade();
 				temp.setIsInDuel(_duelId);
@@ -532,12 +532,12 @@ public class Duel
 	{
 		if (_partyDuel)
 		{
-			for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
 				_playerConditions.put(temp.getObjectId(), new PlayerCondition(temp, _partyDuel));
 			}
 			
-			for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
 				_playerConditions.put(temp.getObjectId(), new PlayerCondition(temp, _partyDuel));
 			}
@@ -558,14 +558,14 @@ public class Duel
 		// update isInDuel() state for all players
 		if (_partyDuel)
 		{
-			for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
 				temp.setIsInDuel(0);
 				temp.setTeam(0);
 				temp.broadcastUserInfo();
 			}
 			
-			for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
 				temp.setIsInDuel(0);
 				temp.setTeam(0);
@@ -618,7 +618,7 @@ public class Duel
 	 * Get the player that requestet the duel.
 	 * @return duel requester
 	 */
-	public L2PcInstance getPlayerA()
+	public PlayerInstance getPlayerA()
 	{
 		return _playerA;
 	}
@@ -627,7 +627,7 @@ public class Duel
 	 * Get the player that was challenged.
 	 * @return challenged player
 	 */
-	public L2PcInstance getPlayerB()
+	public PlayerInstance getPlayerB()
 	{
 		return _playerB;
 	}
@@ -675,7 +675,7 @@ public class Duel
 		
 		int offset = 0;
 		
-		for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+		for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 		{
 			temp.teleToLocation((x + offset) - 180, y - 150, z);
 			offset += 40;
@@ -683,7 +683,7 @@ public class Duel
 		
 		offset = 0;
 		
-		for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+		for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 		{
 			temp.teleToLocation((x + offset) - 180, y + 150, z);
 			offset += 40;
@@ -694,7 +694,7 @@ public class Duel
 	 * Broadcast a packet to the challanger team.
 	 * @param packet the packet
 	 */
-	public void broadcastToTeam1(L2GameServerPacket packet)
+	public void broadcastToTeam1(GameServerPacket packet)
 	{
 		if (_playerA == null)
 		{
@@ -703,7 +703,7 @@ public class Duel
 		
 		if (_partyDuel && (_playerA.getParty() != null))
 		{
-			for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 			{
 				temp.sendPacket(packet);
 			}
@@ -718,7 +718,7 @@ public class Duel
 	 * Broadcast a packet to the challenged team.
 	 * @param packet the packet
 	 */
-	public void broadcastToTeam2(L2GameServerPacket packet)
+	public void broadcastToTeam2(GameServerPacket packet)
 	{
 		if (_playerB == null)
 		{
@@ -727,7 +727,7 @@ public class Duel
 		
 		if (_partyDuel && (_playerB.getParty() != null))
 		{
-			for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+			for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 			{
 				temp.sendPacket(packet);
 			}
@@ -742,7 +742,7 @@ public class Duel
 	 * Get the duel winner.
 	 * @return winner
 	 */
-	public L2PcInstance getWinner()
+	public PlayerInstance getWinner()
 	{
 		if (!_finished || (_playerA == null) || (_playerB == null))
 		{
@@ -766,7 +766,7 @@ public class Duel
 	 * Get the duel looser.
 	 * @return looser
 	 */
-	public L2PcInstance getLooser()
+	public PlayerInstance getLooser()
 	{
 		if (!_finished || (_playerA == null) || (_playerB == null))
 		{
@@ -790,7 +790,7 @@ public class Duel
 	 */
 	public void playKneelAnimation()
 	{
-		L2PcInstance looser = getLooser();
+		PlayerInstance looser = getLooser();
 		
 		if (looser == null)
 		{
@@ -799,7 +799,7 @@ public class Duel
 		
 		if (_partyDuel && (looser.getParty() != null))
 		{
-			for (L2PcInstance temp : looser.getParty().getPartyMembers())
+			for (PlayerInstance temp : looser.getParty().getPartyMembers())
 			{
 				temp.broadcastPacket(new SocialAction(temp.getObjectId(), 7));
 			}
@@ -1015,7 +1015,7 @@ public class Duel
 	 * Register a surrender request.
 	 * @param player the player
 	 */
-	public void doSurrender(L2PcInstance player)
+	public void doSurrender(PlayerInstance player)
 	{
 		// already recived a surrender request
 		if (_surrenderRequest != 0)
@@ -1033,12 +1033,12 @@ public class Duel
 			{
 				_surrenderRequest = 1;
 				
-				for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+				for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_DEAD);
 				}
 				
-				for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+				for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_WINNER);
 				}
@@ -1047,12 +1047,12 @@ public class Duel
 			{
 				_surrenderRequest = 2;
 				
-				for (L2PcInstance temp : _playerB.getParty().getPartyMembers())
+				for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_DEAD);
 				}
 				
-				for (L2PcInstance temp : _playerA.getParty().getPartyMembers())
+				for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_WINNER);
 				}
@@ -1076,7 +1076,7 @@ public class Duel
 	 * This function is called whenever a player was defeated in a duel.
 	 * @param player the player
 	 */
-	public void onPlayerDefeat(L2PcInstance player)
+	public void onPlayerDefeat(PlayerInstance player)
 	{
 		// Set player as defeated
 		player.setDuelState(DUELSTATE_DEAD);
@@ -1085,7 +1085,7 @@ public class Duel
 		{
 			boolean teamdefeated = true;
 			
-			for (L2PcInstance temp : player.getParty().getPartyMembers())
+			for (PlayerInstance temp : player.getParty().getPartyMembers())
 			{
 				if (temp.getDuelState() == DUELSTATE_DUELLING)
 				{
@@ -1096,14 +1096,14 @@ public class Duel
 			
 			if (teamdefeated)
 			{
-				L2PcInstance winner = _playerA;
+				PlayerInstance winner = _playerA;
 				
 				if (_playerA.getParty().getPartyMembers().contains(player))
 				{
 					winner = _playerB;
 				}
 				
-				for (L2PcInstance temp : winner.getParty().getPartyMembers())
+				for (PlayerInstance temp : winner.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_WINNER);
 				}
@@ -1131,7 +1131,7 @@ public class Duel
 	 * This function is called whenever a player leaves a party.
 	 * @param player the player
 	 */
-	public void onRemoveFromParty(L2PcInstance player)
+	public void onRemoveFromParty(PlayerInstance player)
 	{
 		// if it isnt a party duel ignore this
 		if (!_partyDuel)
@@ -1177,7 +1177,7 @@ public class Duel
 	 * @param player the player
 	 * @param debuff the debuff
 	 */
-	public void onBuff(L2PcInstance player, L2Effect debuff)
+	public void onBuff(PlayerInstance player, Effect debuff)
 	{
 		final PlayerCondition e = _playerConditions.get(player.getObjectId());
 		if (e != null)
@@ -1191,7 +1191,7 @@ public class Duel
 	 * @param player the player
 	 * @param debuff the debuff
 	 */
-	public void onBuffStop(L2PcInstance player, L2Effect debuff)
+	public void onBuffStop(PlayerInstance player, Effect debuff)
 	{
 		final PlayerCondition e = _playerConditions.get(player.getObjectId());
 		if (e != null)

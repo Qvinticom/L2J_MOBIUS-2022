@@ -29,15 +29,15 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2TeleportLocation;
-import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.TeleportLocation;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
 import com.l2jmobius.gameserver.model.SeedProduction;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
 import com.l2jmobius.gameserver.model.entity.Fort;
@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -136,14 +136,14 @@ public final class CastleChamberlain extends AbstractNpcAI
 		addFirstTalkId(NPC);
 	}
 	
-	private NpcHtmlMessage getHtmlPacket(L2PcInstance player, L2Npc npc, String htmlFile)
+	private NpcHtmlMessage getHtmlPacket(PlayerInstance player, Npc npc, String htmlFile)
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 		packet.setHtml(getHtm(player, htmlFile));
 		return packet;
 	}
 	
-	private final String funcConfirmHtml(L2PcInstance player, L2Npc npc, Castle castle, int func, int level)
+	private final String funcConfirmHtml(PlayerInstance player, Npc npc, Castle castle, int func, int level)
 	{
 		if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_SET_FUNCTIONS))
 		{
@@ -456,13 +456,13 @@ public final class CastleChamberlain extends AbstractNpcAI
 		return false;
 	}
 	
-	private final boolean isOwner(L2PcInstance player, L2Npc npc)
+	private final boolean isOwner(PlayerInstance player, Npc npc)
 	{
-		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
+		return player.canOverrideCond(PlayerCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Castle castle = npc.getCastle();
 		final StringTokenizer st = new StringTokenizer(event, " ");
@@ -611,7 +611,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						{
 							doors[i] = Integer.parseInt(st.nextToken());
 						}
-						final L2DoorInstance door = castle.getDoor(doors[0]);
+						final DoorInstance door = castle.getDoor(doors[0]);
 						if (door != null)
 						{
 							final int currentLevel = door.getStat().getUpgradeHpRatio();
@@ -738,7 +738,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+						final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-02.html");
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());
@@ -1131,7 +1131,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
 					final int locId = Integer.parseInt(st.nextToken());
-					final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(locId);
+					final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(locId);
 					if (list != null)
 					{
 						if (takeItems(player, list.getItemId(), list.getPrice()))
@@ -1257,7 +1257,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					((L2MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(st.nextToken()));
+					((MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(st.nextToken()));
 				}
 				else
 				{
@@ -1379,7 +1379,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return (isOwner(player, npc)) ? "chamberlain-01.html" : "chamberlain-04.html";
 	}
@@ -1391,8 +1391,8 @@ public final class CastleChamberlain extends AbstractNpcAI
 	// @formatter:on
 	public final void onNpcManorBypass(OnNpcManorBypass evt)
 	{
-		final L2PcInstance player = evt.getActiveChar();
-		final L2Npc npc = evt.getTarget();
+		final PlayerInstance player = evt.getActiveChar();
+		final Npc npc = evt.getTarget();
 		if (isOwner(player, npc))
 		{
 			final CastleManorManager manor = CastleManorManager.getInstance();

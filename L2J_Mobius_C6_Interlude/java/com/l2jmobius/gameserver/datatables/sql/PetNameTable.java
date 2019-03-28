@@ -53,7 +53,7 @@ public class PetNameTable
 			statement.setString(1, name);
 			
 			String cond = "";
-			for (int it : L2PetDataTable.getPetItemsAsNpc(petNpcId))
+			for (int it : PetDataTable.getPetItemsAsNpc(petNpcId))
 			{
 				if (cond != "")
 				{

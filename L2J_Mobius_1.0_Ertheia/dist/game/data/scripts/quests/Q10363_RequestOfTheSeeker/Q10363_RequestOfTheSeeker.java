@@ -17,14 +17,14 @@
 package quests.Q10363_RequestOfTheSeeker;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSocialAction;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSocialAction;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -70,7 +70,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -124,7 +124,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -190,14 +190,14 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerSocialAction(OnPlayerSocialAction event)
 	{
-		final L2PcInstance player = event.getActiveChar();
+		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		
-		final L2Object target = player.getTarget();
+		final WorldObject target = player.getTarget();
 		
 		if ((target != null) && target.isNpc() && CommonUtil.contains(CORPSES, target.getId()))
 		{
-			final L2Npc npc = (L2Npc) player.getTarget();
+			final Npc npc = (Npc) player.getTarget();
 			
 			if (!player.isInsideRadius3D(npc, 120))
 			{
@@ -268,7 +268,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomAnimation(false);
 		return super.onSpawn(npc);

@@ -31,12 +31,12 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharSelectionInfo implements IClientOutgoingPacket
@@ -105,7 +105,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getObjectId()); // Character ID
 			packet.writeS(_loginName); // Account name
 			packet.writeD(_sessionId); // Account ID
-			packet.writeD(charInfoPackage.getClanId()); // Pledge ID
+			packet.writeD(charInfoPackage.getClanId()); // Clan ID
 			packet.writeD(0x00); // Builder level
 			
 			packet.writeD(charInfoPackage.getSex()); // Sex
@@ -190,7 +190,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					{
 						characterList.add(charInfopackage);
 						
-						final L2PcInstance player = L2World.getInstance().getPlayer(charInfopackage.getObjectId());
+						final PlayerInstance player = World.getInstance().getPlayer(charInfopackage.getObjectId());
 						if (player != null)
 						{
 							IdFactory.getInstance().releaseId(player.getObjectId());
@@ -242,13 +242,13 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			if (System.currentTimeMillis() > deletetime)
 			{
-				final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
+				final Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
 				if (clan != null)
 				{
 					clan.removeClanMember(objectId, 0);
 				}
 				
-				L2GameClient.deleteCharByObjId(objectId);
+				GameClient.deleteCharByObjId(objectId);
 				return null;
 			}
 		}

@@ -38,18 +38,18 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Priority;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAnswer;
+import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMoveRequest;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.html.PageBuilder;
 import com.l2jmobius.gameserver.model.html.PageResult;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
@@ -78,7 +78,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
@@ -237,7 +237,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param minZ
 	 */
-	private void setMinZ(L2PcInstance activeChar, int minZ)
+	private void setMinZ(PlayerInstance activeChar, int minZ)
 	{
 		_zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder(activeChar)).setMinZ(minZ);
 	}
@@ -246,16 +246,16 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param maxZ
 	 */
-	private void setMaxZ(L2PcInstance activeChar, int maxZ)
+	private void setMaxZ(PlayerInstance activeChar, int maxZ)
 	{
 		_zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder(activeChar)).setMaxZ(maxZ);
 	}
 	
-	private void buildZonesEditorWindow(L2PcInstance activeChar)
+	private void buildZonesEditorWindow(PlayerInstance activeChar)
 	{
 		final StringBuilder sb = new StringBuilder();
-		final List<L2ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
-		for (L2ZoneType zone : zones)
+		final List<ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
+		for (ZoneType zone : zones)
 		{
 			if (zone.getZone() instanceof ZoneNPoly)
 			{
@@ -275,12 +275,12 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param zoneName
 	 */
-	private void loadZone(L2PcInstance activeChar, String zoneName)
+	private void loadZone(PlayerInstance activeChar, String zoneName)
 	{
 		BuilderUtil.sendSysMessage(activeChar, "Searching for zone: " + zoneName);
-		final List<L2ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
-		L2ZoneType zoneType = null;
-		for (L2ZoneType zone : zones)
+		final List<ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
+		ZoneType zoneType = null;
+		for (ZoneType zone : zones)
 		{
 			if (zone.getName().equalsIgnoreCase(zoneName))
 			{
@@ -312,7 +312,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param name
 	 */
-	private void setName(L2PcInstance activeChar, String name)
+	private void setName(PlayerInstance activeChar, String name)
 	{
 		if (name.contains("<") || name.contains(">") || name.contains("&") || name.contains("\\") || name.contains("\"") || name.contains("$"))
 		{
@@ -325,7 +325,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 */
-	private void enablePicking(L2PcInstance activeChar)
+	private void enablePicking(PlayerInstance activeChar)
 	{
 		if (!activeChar.hasAction(PlayerAction.ADMIN_POINT_PICKING))
 		{
@@ -341,7 +341,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 */
-	private void disablePicking(L2PcInstance activeChar)
+	private void disablePicking(PlayerInstance activeChar)
 	{
 		if (activeChar.removeAction(PlayerAction.ADMIN_POINT_PICKING))
 		{
@@ -356,7 +356,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 */
-	private void showPoints(L2PcInstance activeChar)
+	private void showPoints(PlayerInstance activeChar)
 	{
 		final ZoneNodeHolder holder = _zones.get(activeChar.getObjectId());
 		if (holder != null)
@@ -401,7 +401,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param index
 	 */
-	private void changePoint(L2PcInstance activeChar, int index)
+	private void changePoint(PlayerInstance activeChar, int index)
 	{
 		final ZoneNodeHolder holder = _zones.get(activeChar.getObjectId());
 		if (holder != null)
@@ -419,7 +419,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param index
 	 */
-	private void deletePoint(L2PcInstance activeChar, int index)
+	private void deletePoint(PlayerInstance activeChar, int index)
 	{
 		final ZoneNodeHolder holder = _zones.get(activeChar.getObjectId());
 		if (holder != null)
@@ -441,7 +441,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	/**
 	 * @param activeChar
 	 */
-	private void dumpPoints(L2PcInstance activeChar)
+	private void dumpPoints(PlayerInstance activeChar)
 	{
 		final ZoneNodeHolder holder = _zones.get(activeChar.getObjectId());
 		if ((holder != null) && !holder.getNodes().isEmpty())
@@ -495,30 +495,30 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	@Priority(Integer.MAX_VALUE)
 	public TerminateReturn onPlayerPointPicking(OnPlayerMoveRequest event)
 	{
-		final L2PcInstance activeChar = event.getActiveChar();
-		if (activeChar.hasAction(PlayerAction.ADMIN_POINT_PICKING))
+		final PlayerInstance player = event.getPlayer();
+		if (player.hasAction(PlayerAction.ADMIN_POINT_PICKING))
 		{
 			final Location newLocation = event.getLocation();
-			final ZoneNodeHolder holder = _zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder(activeChar));
+			final ZoneNodeHolder holder = _zones.computeIfAbsent(player.getObjectId(), key -> new ZoneNodeHolder(player));
 			final Location changeLog = holder.getChangingLoc();
 			if (changeLog != null)
 			{
 				changeLog.setXYZ(newLocation);
 				holder.setChangingLoc(null);
-				BuilderUtil.sendSysMessage(activeChar, "Location " + (holder.indexOf(changeLog) + 1) + " has been updated!");
-				disablePicking(activeChar);
+				BuilderUtil.sendSysMessage(player, "Location " + (holder.indexOf(changeLog) + 1) + " has been updated!");
+				disablePicking(player);
 			}
 			else
 			{
 				holder.addNode(newLocation);
-				BuilderUtil.sendSysMessage(activeChar, "Location " + (holder.indexOf(changeLog) + 1) + " has been added!");
+				BuilderUtil.sendSysMessage(player, "Location " + (holder.indexOf(changeLog) + 1) + " has been added!");
 			}
 			// Auto visualization when nodes >= 3
 			if (holder.getNodes().size() >= 3)
 			{
-				showPoints(activeChar);
+				showPoints(player);
 			}
-			buildHtmlWindow(activeChar, 0);
+			buildHtmlWindow(player, 0);
 			
 			return new TerminateReturn(true, true, false);
 		}
@@ -529,16 +529,16 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerDlgAnswer(OnPlayerDlgAnswer event)
 	{
-		final L2PcInstance activeChar = event.getActiveChar();
-		if (activeChar.removeAction(PlayerAction.ADMIN_SHOW_TERRITORY) && (event.getAnswer() == 1))
+		final PlayerInstance player = event.getPlayer();
+		if (player.removeAction(PlayerAction.ADMIN_SHOW_TERRITORY) && (event.getAnswer() == 1))
 		{
-			final ZoneNodeHolder holder = _zones.get(activeChar.getObjectId());
+			final ZoneNodeHolder holder = _zones.get(player.getObjectId());
 			if (holder != null)
 			{
 				final List<Location> list = holder.getNodes();
 				if (list.size() < 3)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "You must have at least 3 nodes to use this option!");
+					BuilderUtil.sendSysMessage(player, "You must have at least 3 nodes to use this option!");
 					return;
 				}
 				
@@ -547,8 +547,8 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 				final int maxZ = holder.getMaxZ() != 0 ? holder.getMaxZ() : firstLoc.getZ() + 100;
 				final ExShowTerritory exst = new ExShowTerritory(minZ, maxZ);
 				list.forEach(exst::addVertice);
-				activeChar.sendPacket(exst);
-				BuilderUtil.sendSysMessage(activeChar, "In order to remove the debug you must restart your game client!");
+				player.sendPacket(exst);
+				BuilderUtil.sendSysMessage(player, "In order to remove the debug you must restart your game client!");
 			}
 		}
 	}
@@ -559,7 +559,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		return COMMANDS;
 	}
 	
-	private void buildHtmlWindow(L2PcInstance activeChar, int page)
+	private void buildHtmlWindow(PlayerInstance activeChar, int page)
 	{
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 		msg.setFile(activeChar, "data/html/admin/zone_editor_create.htm");
@@ -597,7 +597,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		private int _maxZ;
 		private final List<Location> _nodes = new ArrayList<>();
 		
-		public ZoneNodeHolder(L2PcInstance player)
+		public ZoneNodeHolder(PlayerInstance player)
 		{
 			_minZ = player.getZ() - 200;
 			_maxZ = player.getZ() + 200;

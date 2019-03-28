@@ -19,12 +19,12 @@ package ai.bosses.Freya.IceQueensCastle;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -65,19 +65,19 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
 			case "ATTACK_KNIGHT":
 			{
-				L2World.getInstance().forEachVisibleObject(npc, L2Npc.class, mob ->
+				World.getInstance().forEachVisibleObject(npc, Npc.class, mob ->
 				{
 					if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())
 					{
 						npc.setRunning();
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob);
-						((L2Attackable) npc).addDamageHate(mob, 0, 999999);
+						((Attackable) npc).addDamageHate(mob, 0, 999999);
 					}
 				});
 				startQuestTimer("ATTACK_KNIGHT", 3000, npc, null);
@@ -125,14 +125,14 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		enterInstance(talker, npc, TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		startQuestTimer("TIMER_MOVING", 60000, npc, null);
 		startQuestTimer("TIMER_BLIZZARD", 180000, npc, null);
@@ -140,20 +140,20 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
 			
-			L2World.getInstance().forEachVisibleObject(npc, L2Npc.class, mob ->
+			World.getInstance().forEachVisibleObject(npc, Npc.class, mob ->
 			{
 				if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())
 				{
 					npc.setRunning();
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob);
-					((L2Attackable) npc).addDamageHate(mob, 0, 999999);
+					((Attackable) npc).addDamageHate(mob, 0, 999999);
 				}
 			});
 			startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
@@ -162,12 +162,12 @@ public final class IceQueensCastle extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && (skill == ETHERNAL_BLIZZARD.getSkill()))
 		{
-			final L2PcInstance playerInside = world.getFirstPlayer();
+			final PlayerInstance playerInside = world.getFirstPlayer();
 			if (playerInside != null)
 			{
 				startQuestTimer("TIMER_SCENE_21", 1000, npc, playerInside);

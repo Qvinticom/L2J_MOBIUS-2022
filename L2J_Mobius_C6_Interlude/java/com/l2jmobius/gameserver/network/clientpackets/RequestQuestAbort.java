@@ -18,14 +18,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestQuestAbort extends L2GameClientPacket
+public final class RequestQuestAbort extends GameClientPacket
 {
 	private int _questId;
 	
@@ -38,8 +38,8 @@ public final class RequestQuestAbort extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -52,15 +52,15 @@ public final class RequestQuestAbort extends L2GameClientPacket
 		
 		if (qe != null)
 		{
-			final QuestState qs = activeChar.getQuestState(qe.getName());
+			final QuestState qs = player.getQuestState(qe.getName());
 			if (qs != null)
 			{
 				qs.exitQuest(true);
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Quest aborted.");
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 				final QuestList ql = new QuestList();
-				activeChar.sendPacket(ql);
+				player.sendPacket(ql);
 			}
 		}
 	}

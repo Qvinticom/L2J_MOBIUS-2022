@@ -18,11 +18,11 @@ package handlers.punishmenthandlers;
 
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.handler.IPunishmentHandler;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
@@ -39,7 +39,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+				final PlayerInstance player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					applyToPlayer(task, player);
@@ -49,10 +49,10 @@ public class ChatBanHandler implements IPunishmentHandler
 			case ACCOUNT:
 			{
 				final String account = String.valueOf(task.getKey());
-				final L2GameClient client = LoginServerThread.getInstance().getClient(account);
+				final GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
-					final L2PcInstance player = client.getActiveChar();
+					final PlayerInstance player = client.getPlayer();
 					if (player != null)
 					{
 						applyToPlayer(task, player);
@@ -63,7 +63,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (L2PcInstance player : L2World.getInstance().getPlayers())
+				for (PlayerInstance player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -83,7 +83,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case CHARACTER:
 			{
 				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
-				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+				final PlayerInstance player = World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
 					removeFromPlayer(player);
@@ -93,10 +93,10 @@ public class ChatBanHandler implements IPunishmentHandler
 			case ACCOUNT:
 			{
 				final String account = String.valueOf(task.getKey());
-				final L2GameClient client = LoginServerThread.getInstance().getClient(account);
+				final GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
-					final L2PcInstance player = client.getActiveChar();
+					final PlayerInstance player = client.getPlayer();
 					if (player != null)
 					{
 						removeFromPlayer(player);
@@ -107,7 +107,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				final String ip = String.valueOf(task.getKey());
-				for (L2PcInstance player : L2World.getInstance().getPlayers())
+				for (PlayerInstance player : World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -124,7 +124,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 * @param task
 	 * @param player
 	 */
-	private static void applyToPlayer(PunishmentTask task, L2PcInstance player)
+	private static void applyToPlayer(PunishmentTask task, PlayerInstance player)
 	{
 		final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
 		if (delay > 0)
@@ -142,7 +142,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 * Removes any punishment effects from the player.
 	 * @param player
 	 */
-	private static void removeFromPlayer(L2PcInstance player)
+	private static void removeFromPlayer(PlayerInstance player)
 	{
 		player.sendMessage("Your Chat ban has been lifted");
 		player.sendPacket(new EtcStatusUpdate(player));

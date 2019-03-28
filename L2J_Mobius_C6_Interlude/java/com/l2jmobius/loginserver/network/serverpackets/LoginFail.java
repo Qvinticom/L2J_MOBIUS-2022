@@ -19,7 +19,7 @@ package com.l2jmobius.loginserver.network.serverpackets;
 /**
  * Fromat: d d: the failure reason
  */
-public final class LoginFail extends L2LoginServerPacket
+public final class LoginFail extends LoginServerPacket
 {
 	public enum LoginFailReason
 	{

@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
 @SuppressWarnings("unused")
-public final class FinishRotating extends L2GameClientPacket
+public final class FinishRotating extends GameClientPacket
 {
 	private int _degree;
 	private int _unknown;
@@ -41,7 +41,7 @@ public final class FinishRotating extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;

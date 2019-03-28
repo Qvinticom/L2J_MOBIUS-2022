@@ -16,8 +16,8 @@
  */
 package quests.Q00167_DwarvenKinship;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -47,20 +47,20 @@ public class Q00167_DwarvenKinship extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if(qs != null)
 		{
 			switch (event)
 			{
 				case "30210-02.html":
 				{
-					if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
+					if (qs.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
 					{
 						giveAdena(player, 3000, true);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = event;
 					}
 					break;
@@ -72,29 +72,29 @@ public class Q00167_DwarvenKinship extends Quest
 				}
 				case "30255-03.html":
 				{
-					if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
+					if (qs.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
 					{
 						takeItems(player, CARLONS_LETTER, -1);
 						giveItems(player, NORMANS_LETTER, 1);
 						giveAdena(player, 3000, true);
-						st.setCond(2);
+						qs.setCond(2);
 						htmltext = event;
 					}
 					break;
 				}
 				case "30255-04.html":
 				{
-					if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
+					if (qs.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
 					{
 						giveAdena(player, 3000, true);
-						st.exitQuest(false, true);
+						qs.exitQuest(false, true);
 						htmltext = event;
 					}
 					break;
 				}
 				case "30350-03.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, CARLONS_LETTER, 1);
 					htmltext = event;
 					break;
@@ -105,16 +105,16 @@ public class Q00167_DwarvenKinship extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case CARLON:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -123,7 +123,7 @@ public class Q00167_DwarvenKinship extends Quest
 					}
 					case State.STARTED:
 					{
-						if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
+						if (qs.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
 						{
 							htmltext = "30350-04.html";
 						}
@@ -139,11 +139,11 @@ public class Q00167_DwarvenKinship extends Quest
 			}
 			case HAPROCK:
 			{
-				if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
+				if (qs.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
 				{
 					htmltext = "30255-01.html";
 				}
-				else if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
+				else if (qs.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
 				{
 					htmltext = "30255-05.html";
 				}
@@ -151,7 +151,7 @@ public class Q00167_DwarvenKinship extends Quest
 			}
 			case NORMAN:
 			{
-				if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
+				if (qs.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
 				{
 					htmltext = "30210-01.html";
 				}

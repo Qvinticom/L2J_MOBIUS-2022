@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -44,13 +44,13 @@ public final class OpenChest extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!(info.getEffected() instanceof L2ChestInstance))
+		if (!(info.getEffected() instanceof ChestInstance))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffector().getActingPlayer();
-		final L2ChestInstance chest = (L2ChestInstance) info.getEffected();
+		final PlayerInstance player = info.getEffector().getActingPlayer();
+		final ChestInstance chest = (ChestInstance) info.getEffected();
 		if (chest.isDead() || (player.getInstanceId() != chest.getInstanceId()))
 		{
 			return;

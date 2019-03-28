@@ -20,15 +20,14 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.WorldObject;
 
 /**
- * This class ...
  * @author luisantonioa
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  * @param <T>
  */
-public class WorldObjectMap<T extends L2Object>extends L2ObjectMap<T>
+public class WorldObjectMap<T extends WorldObject>extends L2ObjectMap<T>
 {
 	Map<Integer, T> _objectMap = new ConcurrentHashMap<>();
 	

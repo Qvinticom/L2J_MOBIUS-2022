@@ -1352,7 +1352,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Cancel target -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>40</chance>
@@ -1992,7 +1992,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Crippling Poison -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
@@ -2138,7 +2138,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Block Magic -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<isCritical>false</isCritical>
@@ -2164,7 +2164,7 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Block Magic -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<isCritical>false</isCritical>
@@ -2181,7 +2181,7 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Weakness Critical -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<isCritical>false</isCritical>

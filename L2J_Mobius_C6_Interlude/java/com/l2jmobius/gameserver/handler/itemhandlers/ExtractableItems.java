@@ -23,11 +23,11 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.datatables.csv.ExtractableItemsData;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2ExtractableItem;
-import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ExtractableItem;
+import com.l2jmobius.gameserver.model.ExtractableProductItem;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,13 +39,13 @@ public class ExtractableItems implements IItemHandler
 {
 	private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	
-	public void doExtract(L2Playable playable, L2ItemInstance item, int count)
+	public void doExtract(Playable playable, ItemInstance item, int count)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
-		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemID = item.getItemId();
 		
 		if (count > item.getCount())
@@ -54,7 +54,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		while (count-- > 0)
 		{
-			L2ExtractableItem exitem = ExtractableItemsData.getInstance().getExtractableItem(itemID);
+			ExtractableItem exitem = ExtractableItemsData.getInstance().getExtractableItem(itemID);
 			if (exitem == null)
 			{
 				return;
@@ -63,7 +63,7 @@ public class ExtractableItems implements IItemHandler
 			int createAmount = 0;
 			final int rndNum = Rnd.get(100);
 			int chanceFrom = 0;
-			for (L2ExtractableProductItem expi : exitem.getProductItems())
+			for (ExtractableProductItem expi : exitem.getProductItems())
 			{
 				final int chance = expi.getChance();
 				
@@ -79,7 +79,7 @@ public class ExtractableItems implements IItemHandler
 			
 			if (createItemID == 0)
 			{
-				activeChar.sendMessage("Nothing happened.");
+				player.sendMessage("Nothing happened.");
 				return;
 			}
 			
@@ -88,19 +88,19 @@ public class ExtractableItems implements IItemHandler
 				if (ItemTable.getInstance().createDummyItem(createItemID) == null)
 				{
 					LOGGER.warning("createItemID " + createItemID + " doesn't have template!");
-					activeChar.sendMessage("Nothing happened.");
+					player.sendMessage("Nothing happened.");
 					return;
 				}
 				
 				if (ItemTable.getInstance().createDummyItem(createItemID).isStackable())
 				{
-					activeChar.addItem("Extract", createItemID, createAmount, item, false);
+					player.addItem("Extract", createItemID, createAmount, item, false);
 				}
 				else
 				{
 					for (int i = 0; i < createAmount; i++)
 					{
-						activeChar.addItem("Extract", createItemID, 1, item, false);
+						player.addItem("Extract", createItemID, 1, item, false);
 					}
 				}
 				SystemMessage sm;
@@ -116,21 +116,21 @@ public class ExtractableItems implements IItemHandler
 					sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
 					sm.addItemName(createItemID);
 				}
-				activeChar.sendPacket(sm);
+				player.sendPacket(sm);
 			}
 			else
 			{
-				activeChar.sendMessage("Item failed to open"); // TODO: Put a more proper message here.
+				player.sendMessage("Item failed to open"); // TODO: Put a more proper message here.
 			}
 			
-			activeChar.destroyItemByItemId("Extract", itemID, 1, activeChar.getTarget(), true);
+			player.destroyItemByItemId("Extract", itemID, 1, player.getTarget(), true);
 		}
 	}
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}

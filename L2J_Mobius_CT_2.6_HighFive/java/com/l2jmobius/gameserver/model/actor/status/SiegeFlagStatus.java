@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
 
 public class SiegeFlagStatus extends NpcStatus
 {
-	public SiegeFlagStatus(L2SiegeFlagInstance activeChar)
+	public SiegeFlagStatus(SiegeFlagInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public void reduceHp(double value, L2Character attacker)
+	public void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true, false, false);
 	}
 	
 	@Override
-	public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
+	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHpConsumption)
 	{
 		if (getActiveChar().isAdvancedHeadquarter())
 		{
@@ -44,8 +44,8 @@ public class SiegeFlagStatus extends NpcStatus
 	}
 	
 	@Override
-	public L2SiegeFlagInstance getActiveChar()
+	public SiegeFlagInstance getActiveChar()
 	{
-		return (L2SiegeFlagInstance) super.getActiveChar();
+		return (SiegeFlagInstance) super.getActiveChar();
 	}
 }

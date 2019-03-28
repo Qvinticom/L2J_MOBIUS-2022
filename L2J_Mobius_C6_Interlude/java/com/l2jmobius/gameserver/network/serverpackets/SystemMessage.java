@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Vector;
 
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class SystemMessage extends L2GameServerPacket
+public final class SystemMessage extends GameServerPacket
 {
 	// Packets d d (d S/d d/d dd) -> 0 - String 1-number 2-textref npcname (1000000-1002655) 3-textref itemname 4-textref skills 5-??
 	private static final int TYPE_ZONE_NAME = 7;
@@ -113,7 +113,7 @@ public final class SystemMessage extends L2GameServerPacket
 		return this;
 	}
 	
-	public void addSkillName(L2Skill skill)
+	public void addSkillName(Skill skill)
 	{
 	} // Check this
 	

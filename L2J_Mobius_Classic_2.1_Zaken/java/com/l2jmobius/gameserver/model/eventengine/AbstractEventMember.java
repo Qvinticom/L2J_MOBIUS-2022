@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.eventengine;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
@@ -32,7 +32,7 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>>
 	private final T _event;
 	private final AtomicInteger _score = new AtomicInteger();
 	
-	public AbstractEventMember(L2PcInstance player, T event)
+	public AbstractEventMember(PlayerInstance player, T event)
 	{
 		_objectId = player.getObjectId();
 		_event = event;
@@ -43,14 +43,14 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>>
 		return _objectId;
 	}
 	
-	public L2PcInstance getPlayer()
+	public PlayerInstance getPlayer()
 	{
-		return L2World.getInstance().getPlayer(_objectId);
+		return World.getInstance().getPlayer(_objectId);
 	}
 	
 	public void sendPacket(IClientOutgoingPacket... packets)
 	{
-		final L2PcInstance player = getPlayer();
+		final PlayerInstance player = getPlayer();
 		if (player != null)
 		{
 			for (IClientOutgoingPacket packet : packets)
@@ -62,7 +62,7 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>>
 	
 	public int getClassId()
 	{
-		final L2PcInstance player = getPlayer();
+		final PlayerInstance player = getPlayer();
 		if (player != null)
 		{
 			return player.getClassId().getId();

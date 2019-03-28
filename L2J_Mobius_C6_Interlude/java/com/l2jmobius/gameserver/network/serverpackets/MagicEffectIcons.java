@@ -23,7 +23,7 @@ import java.util.List;
  * MagicEffectIcons format h (dhd)
  * @version $Revision: 1.3.2.1.2.6 $ $Date: 2005/04/05 19:41:08 $
  */
-public class MagicEffectIcons extends L2GameServerPacket
+public class MagicEffectIcons extends GameServerPacket
 {
 	private final List<Effect> _effects;
 	private final List<Effect> _debuffs;

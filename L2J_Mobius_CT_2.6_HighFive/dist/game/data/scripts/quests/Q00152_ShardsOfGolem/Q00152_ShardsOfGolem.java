@@ -17,8 +17,8 @@
 package quests.Q00152_ShardsOfGolem;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -53,28 +53,28 @@ public class Q00152_ShardsOfGolem extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st != null)
+		if(qs != null)
 		{
 			switch (event)
 			{
 				case "30035-03.htm":
 				{
-					st.startQuest();
+					qs.startQuest();
 					giveItems(player, HARRYS_1ST_RECIEPT, 1);
 					htmltext = event;
 					break;
 				}
 				case "30283-02.html":
 				{
-					if (st.isCond(1) && hasQuestItems(player, HARRYS_1ST_RECIEPT))
+					if (qs.isCond(1) && hasQuestItems(player, HARRYS_1ST_RECIEPT))
 					{
 						takeItems(player, HARRYS_1ST_RECIEPT, -1);
 						giveItems(player, HARRYS_2ND_RECIEPT, 1);
-						st.setCond(2, true);
+						qs.setCond(2, true);
 						htmltext = event;
 					}
 					break;
@@ -85,15 +85,15 @@ public class Q00152_ShardsOfGolem extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(2) && (getRandom(100) < 30) && (getQuestItemsCount(killer, GOLEM_SHARD) < 5))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(2) && (getRandom(100) < 30) && (getQuestItemsCount(killer, GOLEM_SHARD) < 5))
 		{
 			giveItems(killer, GOLEM_SHARD, 1);
 			if (getQuestItemsCount(killer, GOLEM_SHARD) >= 5)
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 			else
 			{
@@ -104,16 +104,16 @@ public class Q00152_ShardsOfGolem extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case HARRYS:
 			{
-				switch (st.getState())
+				switch (qs.getState())
 				{
 					case State.CREATED:
 					{
@@ -122,7 +122,7 @@ public class Q00152_ShardsOfGolem extends Quest
 					}
 					case State.STARTED:
 					{
-						switch (st.getCond())
+						switch (qs.getCond())
 						{
 							case 1:
 							{
@@ -147,7 +147,7 @@ public class Q00152_ShardsOfGolem extends Quest
 								{
 									giveItems(player, WOODEN_BREASTPLATE, 1);
 									addExpAndSp(player, 5000, 0);
-									st.exitQuest(false, true);
+									qs.exitQuest(false, true);
 									htmltext = "30035-05.html";
 								}
 								break;
@@ -165,7 +165,7 @@ public class Q00152_ShardsOfGolem extends Quest
 			}
 			case ALTRAN:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
@@ -189,7 +189,7 @@ public class Q00152_ShardsOfGolem extends Quest
 						{
 							takeItems(player, GOLEM_SHARD, -1);
 							giveItems(player, TOOL_BOX, 1);
-							st.setCond(4, true);
+							qs.setCond(4, true);
 							htmltext = "30283-04.html";
 						}
 						break;

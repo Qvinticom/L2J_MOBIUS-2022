@@ -23,8 +23,8 @@ import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.StringUtil;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 public class EnchantFormatter extends Formatter
@@ -48,18 +48,18 @@ public class EnchantFormatter extends Formatter
 				
 				StringUtil.append(output, ", ");
 				
-				if (p instanceof L2PcInstance)
+				if (p instanceof PlayerInstance)
 				{
-					final L2PcInstance player = (L2PcInstance) p;
+					final PlayerInstance player = (PlayerInstance) p;
 					StringUtil.append(output, "Character:", player.getName(), " [" + player.getObjectId() + "] Account:", player.getAccountName());
 					if ((player.getClient() != null) && !player.getClient().isDetached())
 					{
 						StringUtil.append(output, " IP:", player.getClient().getConnectionAddress().getHostAddress());
 					}
 				}
-				else if (p instanceof L2ItemInstance)
+				else if (p instanceof ItemInstance)
 				{
-					final L2ItemInstance item = (L2ItemInstance) p;
+					final ItemInstance item = (ItemInstance) p;
 					if (item.getEnchantLevel() > 0)
 					{
 						StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");

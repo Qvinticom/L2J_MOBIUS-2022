@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceHallTeleportZone;
 
 import conquerablehalls.flagwar.FlagWar;
 
@@ -62,9 +62,9 @@ public final class WildBeastReserve extends FlagWar
 		INNER_DOORS_TO_OPEN[0] = 21150001;
 		INNER_DOORS_TO_OPEN[1] = 21150002;
 		
-		final Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
+		final Collection<ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(ResidenceHallTeleportZone.class);
 		
-		for (L2ResidenceHallTeleportZone teleZone : zoneList)
+		for (ResidenceHallTeleportZone teleZone : zoneList)
 		{
 			if (teleZone.getResidenceId() != BEAST_FARM)
 			{

@@ -22,11 +22,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2ExtractableProduct;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2EtcItem;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.ExtractableProduct;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.EtcItem;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public class ExtractableItems implements IItemHandler
 {
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
+	public boolean useItem(Playable playable, ItemInstance item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
@@ -44,9 +44,9 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
-		final List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
+		final PlayerInstance player = playable.getActingPlayer();
+		final EtcItem etcitem = (EtcItem) item.getItem();
+		final List<ExtractableProduct> exitem = etcitem.getExtractableItems();
 		if (exitem == null)
 		{
 			LOGGER.info("No extractable data defined for " + etcitem);
@@ -54,13 +54,13 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		// destroy item
-		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
+		if (!player.destroyItem("Extract", item.getObjectId(), 1, player, true))
 		{
 			return false;
 		}
 		
 		boolean created = false;
-		for (L2ExtractableProduct expi : exitem)
+		for (ExtractableProduct expi : exitem)
 		{
 			if (Rnd.get(100000) <= expi.getChance())
 			{
@@ -75,13 +75,13 @@ public class ExtractableItems implements IItemHandler
 				
 				if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 				{
-					activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, true);
+					player.addItem("Extract", expi.getId(), createItemAmount, player, true);
 				}
 				else
 				{
 					while (createItemAmount > 0)
 					{
-						activeChar.addItem("Extract", expi.getId(), 1, activeChar, true);
+						player.addItem("Extract", expi.getId(), 1, player, true);
 						createItemAmount--;
 					}
 				}
@@ -91,7 +91,7 @@ public class ExtractableItems implements IItemHandler
 		
 		if (!created)
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 		}
 		return true;
 	}

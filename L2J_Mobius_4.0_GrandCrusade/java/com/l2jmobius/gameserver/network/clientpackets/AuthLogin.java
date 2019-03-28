@@ -19,10 +19,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
- * This class ...
  * @version $Revision: 1.9.2.3.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class AuthLogin implements IClientIncomingPacket
@@ -39,7 +38,7 @@ public final class AuthLogin implements IClientIncomingPacket
 	private int _loginKey2;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_loginName = packet.readS().toLowerCase();
 		_playKey2 = packet.readD();
@@ -50,7 +49,7 @@ public final class AuthLogin implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (_loginName.isEmpty() || !client.isProtocolOk())
 		{

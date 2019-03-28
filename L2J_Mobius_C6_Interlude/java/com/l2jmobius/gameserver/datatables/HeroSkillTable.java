@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.datatables;
 
-import com.l2jmobius.gameserver.model.L2Skill;
+import com.l2jmobius.gameserver.model.Skill;
 
 /**
  * @author BiTi
@@ -24,11 +24,11 @@ import com.l2jmobius.gameserver.model.L2Skill;
 public class HeroSkillTable
 {
 	private static HeroSkillTable _instance;
-	private static L2Skill[] _heroSkills;
+	private static Skill[] _heroSkills;
 	
 	private HeroSkillTable()
 	{
-		_heroSkills = new L2Skill[5];
+		_heroSkills = new Skill[5];
 		_heroSkills[0] = SkillTable.getInstance().getInfo(395, 1);
 		_heroSkills[1] = SkillTable.getInstance().getInfo(396, 1);
 		_heroSkills[2] = SkillTable.getInstance().getInfo(1374, 1);
@@ -46,7 +46,7 @@ public class HeroSkillTable
 		return _instance;
 	}
 	
-	public static L2Skill[] getHeroSkills()
+	public static Skill[] getHeroSkills()
 	{
 		return _heroSkills;
 	}

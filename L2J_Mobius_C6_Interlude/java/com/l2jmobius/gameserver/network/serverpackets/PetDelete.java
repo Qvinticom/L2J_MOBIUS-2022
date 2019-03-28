@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class PetDelete extends L2GameServerPacket
+public class PetDelete extends GameServerPacket
 {
 	private final int _petId;
 	private final int _petObjId;

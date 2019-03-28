@@ -17,9 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -43,7 +43,7 @@ public class LimitSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		switch (skill.getId())
 		{
@@ -65,7 +65,7 @@ public class LimitSkill extends AbstractEffect
 		}
 	}
 	
-	private void decreaseAeoreBuffDuration(L2Character effector, L2Character effected, Skill skill)
+	private void decreaseAeoreBuffDuration(Creature effector, Creature effected, Skill skill)
 	{
 		switch (skill.getLevel())
 		{
@@ -79,7 +79,7 @@ public class LimitSkill extends AbstractEffect
 		}
 	}
 	
-	private void decreaseSigelBuffDuration(L2Character effector, L2Character effected, Skill skill)
+	private void decreaseSigelBuffDuration(Creature effector, Creature effected, Skill skill)
 	{
 		switch (skill.getLevel())
 		{
@@ -98,7 +98,7 @@ public class LimitSkill extends AbstractEffect
 		}
 	}
 	
-	private void decreaseIssBuffDuration(L2Character effector, L2Character effected, Skill skill)
+	private void decreaseIssBuffDuration(Creature effector, Creature effected, Skill skill)
 	{
 		switch (skill.getLevel())
 		{
@@ -117,7 +117,7 @@ public class LimitSkill extends AbstractEffect
 		}
 	}
 	
-	private void modifyDuration(int skillId, L2Character effected, int duration)
+	private void modifyDuration(int skillId, Creature effected, int duration)
 	{
 		for (BuffInfo buff : effected.getEffectList().getEffects())
 		{

@@ -19,18 +19,18 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.EnchantSkillLearn;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.FolkInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
  * Format chdd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo extends L2GameClientPacket
+public final class RequestExEnchantSkillInfo extends GameClientPacket
 {
 	private int _skillId;
 	private int _skillLvl;
@@ -50,44 +50,44 @@ public final class RequestExEnchantSkillInfo extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (activeChar.getLevel() < 76)
+		if (player.getLevel() < 76)
 		{
 			return;
 		}
 		
-		final L2FolkInstance trainer = activeChar.getLastFolkNPC();
+		final FolkInstance trainer = player.getLastFolkNPC();
 		if (trainer == null)
 		{
 			return;
 		}
 		
-		if (!activeChar.isInsideRadius(trainer, L2NpcInstance.INTERACTION_DISTANCE, false, false) && !activeChar.isGM())
+		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
 		{
 			return;
 		}
 		
 		boolean canteach = false;
 		
-		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		final Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
 		if ((skill == null) || (skill.getId() != _skillId))
 		{
 			return;
 		}
 		
-		if (!trainer.getTemplate().canTeach(activeChar.getClassId()))
+		if (!trainer.getTemplate().canTeach(player.getClassId()))
 		{
 			return; // cheater
 		}
 		
-		final L2EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(activeChar);
+		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		
-		for (L2EnchantSkillLearn s : skills)
+		for (EnchantSkillLearn s : skills)
 		{
 			if ((s.getId() == _skillId) && (s.getLevel() == _skillLvl))
 			{
@@ -101,9 +101,9 @@ public final class RequestExEnchantSkillInfo extends L2GameClientPacket
 			return; // cheater
 		}
 		
-		final int requiredSp = SkillTreeTable.getInstance().getSkillSpCost(activeChar, skill);
-		final int requiredExp = SkillTreeTable.getInstance().getSkillExpCost(activeChar, skill);
-		final byte rate = SkillTreeTable.getInstance().getSkillRate(activeChar, skill);
+		final int requiredSp = SkillTreeTable.getInstance().getSkillSpCost(player, skill);
+		final int requiredExp = SkillTreeTable.getInstance().getSkillExpCost(player, skill);
+		final byte rate = SkillTreeTable.getInstance().getSkillRate(player, skill);
 		final ExEnchantSkillInfo asi = new ExEnchantSkillInfo(skill.getId(), skill.getLevel(), requiredSp, requiredExp, rate);
 		
 		if (Config.ES_SP_BOOK_NEEDED && ((skill.getLevel() == 101) || (skill.getLevel() == 141))) // only first lvl requires book

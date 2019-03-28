@@ -30,9 +30,9 @@ import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.AuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 public class Auction
 {
@@ -180,7 +180,7 @@ public class Auction
 	 * @param bid the bid
 	 * @param name the name
 	 */
-	public Auction(int itemId, L2Clan Clan, long delay, int bid, String name)
+	public Auction(int itemId, Clan Clan, long delay, int bid, String name)
 	{
 		_id = itemId;
 		_endDate = System.currentTimeMillis() + delay;
@@ -322,7 +322,7 @@ public class Auction
 	 * @param bidder the bidder
 	 * @param bid the bid
 	 */
-	public synchronized void setBid(L2PcInstance bidder, int bid)
+	public synchronized void setBid(PlayerInstance bidder, int bid)
 	{
 		int requiredAdena = bid;
 		
@@ -372,7 +372,7 @@ public class Auction
 	 * @param quantity the quantity
 	 * @return true, if successful
 	 */
-	private boolean takeItem(L2PcInstance bidder, int quantity)
+	private boolean takeItem(PlayerInstance bidder, int quantity)
 	{
 		if ((bidder.getClan() != null) && (bidder.getClan().getWarehouse().getAdena() >= quantity))
 		{
@@ -388,7 +388,7 @@ public class Auction
 	 * @param bidder the bidder
 	 * @param bid the bid
 	 */
-	private void updateInDB(L2PcInstance bidder, int bid)
+	private void updateInDB(PlayerInstance bidder, int bid)
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -419,9 +419,9 @@ public class Auction
 				statement.execute();
 				statement.close();
 				
-				if (L2World.getInstance().getPlayer(_highestBidderName) != null)
+				if (World.getInstance().getPlayer(_highestBidderName) != null)
 				{
-					L2World.getInstance().getPlayer(_highestBidderName).sendMessage("You have been out bidded");
+					World.getInstance().getPlayer(_highestBidderName).sendMessage("You have been out bidded");
 				}
 			}
 			_highestBidderId = bidder.getClanId();
@@ -442,7 +442,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Exception: Auction.updateInDB(L2PcInstance bidder, int bid): " + e.getMessage());
+			LOGGER.warning("Exception: Auction.updateInDB(PlayerInstance bidder, int bid): " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -473,9 +473,9 @@ public class Auction
 			{
 				returnItem(b.getClanName(), b.getBid(), true); // 10 % tax
 			}
-			else if (L2World.getInstance().getPlayer(b.getName()) != null)
+			else if (World.getInstance().getPlayer(b.getName()) != null)
 			{
-				L2World.getInstance().getPlayer(b.getName()).sendMessage("Congratulation you have won ClanHall!");
+				World.getInstance().getPlayer(b.getName()).sendMessage("Congratulation you have won ClanHall!");
 			}
 			ClanTable.getInstance().getClanByName(b.getClanName()).setAuctionBiddedAt(0, true);
 		}
@@ -533,7 +533,7 @@ public class Auction
 			}
 			
 			deleteAuctionFromDB();
-			L2Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
+			Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
 			Clan.setAuctionBiddedAt(0, true);
 			removeBids();

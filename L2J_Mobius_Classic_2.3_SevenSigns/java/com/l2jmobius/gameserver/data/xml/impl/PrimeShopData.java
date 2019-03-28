@@ -30,8 +30,8 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRProductInfo;
@@ -100,7 +100,7 @@ public class PrimeShopData implements IGameXmlReader
 									final int itemId = parseInteger(attrs, "itemId");
 									final int count = parseInteger(attrs, "count");
 									
-									final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+									final Item item = ItemTable.getInstance().getTemplate(itemId);
 									if (item == null)
 									{
 										LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + itemId + " brId: " + set.getInt("id"));
@@ -119,7 +119,7 @@ public class PrimeShopData implements IGameXmlReader
 		}
 	}
 	
-	public void showProductInfo(L2PcInstance player, int brId)
+	public void showProductInfo(PlayerInstance player, int brId)
 	{
 		final PrimeShopGroup item = _primeItems.get(brId);
 		

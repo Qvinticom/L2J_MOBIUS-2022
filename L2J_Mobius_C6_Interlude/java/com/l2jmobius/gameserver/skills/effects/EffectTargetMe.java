@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
 import com.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author eX1steam
  */
-public class EffectTargetMe extends L2Effect
+public class EffectTargetMe extends Effect
 {
 	public EffectTargetMe(Env env, EffectTemplate template)
 	{
@@ -42,9 +42,9 @@ public class EffectTargetMe extends L2Effect
 	@Override
 	public void onStart()
 	{
-		if (getEffected() instanceof L2Playable)
+		if (getEffected() instanceof Playable)
 		{
-			if (getEffected() instanceof L2SiegeSummonInstance)
+			if (getEffected() instanceof SiegeSummonInstance)
 			{
 				return;
 			}

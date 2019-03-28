@@ -23,7 +23,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -89,7 +89,7 @@ public class BoatGiranTalking implements Runnable
 	
 	private static final VehiclePathPoint GIRAN_DOCK = TALKING_TO_GIRAN[TALKING_TO_GIRAN.length - 1];
 	
-	private final L2BoatInstance _boat;
+	private final BoatInstance _boat;
 	private int _cycle = 0;
 	private int _shoutCount = 0;
 	
@@ -120,7 +120,7 @@ public class BoatGiranTalking implements Runnable
 	private final PlaySound GIRAN_SOUND;
 	private final PlaySound TALKING_SOUND;
 	
-	public BoatGiranTalking(L2BoatInstance boat)
+	public BoatGiranTalking(BoatInstance boat)
 	{
 		_boat = boat;
 		
@@ -310,7 +310,7 @@ public class BoatGiranTalking implements Runnable
 	
 	public static void main(String[] args)
 	{
-		final L2BoatInstance boat = BoatManager.getInstance().getNewBoat(2, 48950, 190613, -3610, 60800);
+		final BoatInstance boat = BoatManager.getInstance().getNewBoat(2, 48950, 190613, -3610, 60800);
 		if (boat != null)
 		{
 			boat.registerEngine(new BoatGiranTalking(boat));

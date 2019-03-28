@@ -16,17 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PartySmallWindowDelete extends L2GameServerPacket
+public class PartySmallWindowDelete extends GameServerPacket
 {
-	private final L2PcInstance _member;
+	private final PlayerInstance _member;
 	
-	public PartySmallWindowDelete(L2PcInstance member)
+	public PartySmallWindowDelete(PlayerInstance member)
 	{
 		_member = member;
 	}

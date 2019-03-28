@@ -18,13 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: (ch) just a trigger
  * @author -Wooden-
  */
-public final class RequestExFishRanking extends L2GameClientPacket
+public final class RequestExFishRanking extends GameClientPacket
 {
 	@Override
 	protected void readImpl()
@@ -35,15 +35,15 @@ public final class RequestExFishRanking extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
 		{
-			FishingChampionshipManager.getInstance().showMidResult(activeChar);
+			FishingChampionshipManager.getInstance().showMidResult(player);
 		}
 	}
 }

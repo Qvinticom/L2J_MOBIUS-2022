@@ -22,9 +22,9 @@ import java.util.GregorianCalendar;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -49,9 +49,9 @@ public final class LindviorScene extends AbstractNpcAI
 	private static boolean ALT_MODE = false;
 	private static int ALT_MODE_MIN = 120; // schedule delay in minutes if ALT_MODE enabled
 	
-	private L2Npc _lindviorCamera = null;
-	private L2Npc _tomaris = null;
-	private L2Npc _artius = null;
+	private Npc _lindviorCamera = null;
+	private Npc _tomaris = null;
+	private Npc _artius = null;
 	
 	public LindviorScene()
 	{
@@ -59,7 +59,7 @@ public final class LindviorScene extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -82,7 +82,7 @@ public final class LindviorScene extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					playMovie(L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 4000), Movie.SC_LINDVIOR);
+					playMovie(World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 4000), Movie.SC_LINDVIOR);
 				}
 				break;
 			}

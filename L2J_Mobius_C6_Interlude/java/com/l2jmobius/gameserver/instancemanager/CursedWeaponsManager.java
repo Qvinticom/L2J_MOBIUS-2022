@@ -36,17 +36,17 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.CursedWeapon;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2CommanderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FestivalMonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FortSiegeGuardInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RiftInvaderInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeGuardInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.CommanderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -280,9 +280,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public synchronized void checkDrop(L2Attackable attackable, L2PcInstance player)
+	public synchronized void checkDrop(Attackable attackable, PlayerInstance player)
 	{
-		if ((attackable instanceof L2SiegeGuardInstance) || (attackable instanceof L2RiftInvaderInstance) || (attackable instanceof L2FestivalMonsterInstance) || (attackable instanceof L2GrandBossInstance) || (attackable instanceof L2FortSiegeGuardInstance) || (attackable instanceof L2CommanderInstance))
+		if ((attackable instanceof SiegeGuardInstance) || (attackable instanceof RiftInvaderInstance) || (attackable instanceof FestivalMonsterInstance) || (attackable instanceof GrandBossInstance) || (attackable instanceof FortSiegeGuardInstance) || (attackable instanceof CommanderInstance))
 		{
 			return;
 		}
@@ -306,7 +306,7 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public void activate(L2PcInstance player, L2ItemInstance item)
+	public void activate(PlayerInstance player, ItemInstance item)
 	{
 		CursedWeapon cw = _cursedWeapons.get(item.getItemId());
 		if (player.isCursedWeaponEquiped()) // cannot own 2 cursed swords
@@ -330,7 +330,7 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	public void drop(int itemId, L2Character killer)
+	public void drop(int itemId, Creature killer)
 	{
 		CursedWeapon cw = _cursedWeapons.get(itemId);
 		
@@ -353,7 +353,7 @@ public class CursedWeaponsManager
 	
 	public static void announce(SystemMessage sm)
 	{
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if (player == null)
 			{
@@ -365,7 +365,7 @@ public class CursedWeaponsManager
 		
 	}
 	
-	public void checkPlayer(L2PcInstance player)
+	public void checkPlayer(PlayerInstance player)
 	{
 		if (player == null)
 		{

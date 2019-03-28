@@ -16,14 +16,14 @@
  */
 package com.l2jmobius.loginserver.network.clientpackets;
 
-import com.l2jmobius.loginserver.L2LoginClient.LoginClientState;
+import com.l2jmobius.loginserver.LoginClient.LoginClientState;
 import com.l2jmobius.loginserver.network.serverpackets.GGAuth;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
 /**
  * @author -Wooden- Format: ddddd
  */
-public class AuthGameGuard extends L2LoginClientPacket
+public class AuthGameGuard extends LoginClientPacket
 {
 	private int _sessionId;
 	private int _data1;
@@ -57,7 +57,7 @@ public class AuthGameGuard extends L2LoginClientPacket
 	}
 	
 	/**
-	 * @see com.l2jmobius.loginserver.network.clientpackets.L2LoginClientPacket#readImpl()
+	 * @see com.l2jmobius.loginserver.network.clientpackets.LoginClientPacket#readImpl()
 	 */
 	@Override
 	protected boolean readImpl()

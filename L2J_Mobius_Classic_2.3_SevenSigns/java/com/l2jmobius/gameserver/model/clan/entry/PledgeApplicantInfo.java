@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.clan.entry;
 
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @author Sdw
@@ -89,9 +89,9 @@ public class PledgeApplicantInfo
 		return _karma;
 	}
 	
-	public L2PcInstance getPlayerInstance()
+	public PlayerInstance getPlayerInstance()
 	{
-		return L2World.getInstance().getPlayer(_playerId);
+		return World.getInstance().getPlayer(_playerId);
 	}
 	
 	public boolean isOnline()

@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 
-public final class CannotMoveAnymore extends L2GameClientPacket
+public final class CannotMoveAnymore extends GameClientPacket
 {
 	private int _x;
 	private int _y;
@@ -39,8 +39,7 @@ public final class CannotMoveAnymore extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2Character player = getClient().getActiveChar();
-		
+		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
 			return;

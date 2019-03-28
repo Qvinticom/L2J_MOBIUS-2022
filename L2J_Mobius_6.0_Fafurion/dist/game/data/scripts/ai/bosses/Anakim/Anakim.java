@@ -28,22 +28,22 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SpawnHolder;
 import com.l2jmobius.gameserver.model.quest.QuestTimer;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
@@ -296,13 +296,13 @@ public class Anakim extends AbstractNpcAI
 	// Misc
 	private static final Location ENTER_LOC = new Location(172420, -17602, -4906);
 	private static final Location ENTER_ANAKIM_LOC = new Location(184569, -12134, -5499);
-	private static final L2ZoneType BOSS_ZONE = ZoneManager.getInstance().getZoneById(12003);
-	private static final L2ZoneType PRE_ANAKIM_ZONE = ZoneManager.getInstance().getZoneById(12004);
+	private static final ZoneType BOSS_ZONE = ZoneManager.getInstance().getZoneById(12003);
+	private static final ZoneType PRE_ANAKIM_ZONE = ZoneManager.getInstance().getZoneById(12004);
 	// Vars
-	private static List<L2Npc> _spawns = new ArrayList<>();
-	private static List<L2Npc> _remnants = new ArrayList<>();
+	private static List<Npc> _spawns = new ArrayList<>();
+	private static List<Npc> _remnants = new ArrayList<>();
 	private static long _lastAction;
-	private static L2Npc _anakimBoss;
+	private static Npc _anakimBoss;
 	
 	public Anakim()
 	{
@@ -336,7 +336,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -350,17 +350,17 @@ public class Anakim extends AbstractNpcAI
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
 					GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
-					for (L2Character charInside : BOSS_ZONE.getCharactersInside())
+					for (Creature creature : BOSS_ZONE.getCharactersInside())
 					{
-						if (charInside != null)
+						if (creature != null)
 						{
-							if (charInside.isNpc())
+							if (creature.isNpc())
 							{
-								charInside.deleteMe();
+								creature.deleteMe();
 							}
-							else if (charInside.isPlayer())
+							else if (creature.isPlayer())
 							{
-								charInside.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(charInside, TeleportWhereType.TOWN));
+								creature.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(creature, TeleportWhereType.TOWN));
 							}
 						}
 					}
@@ -374,7 +374,7 @@ public class Anakim extends AbstractNpcAI
 			}
 			case "spawn_remant":
 			{
-				L2Npc randomSpawn = null;
+				Npc randomSpawn = null;
 				if (npc == null)
 				{
 					for (int i = 0; i < 2; i++)
@@ -382,7 +382,7 @@ public class Anakim extends AbstractNpcAI
 						randomSpawn = _spawns.get(Rnd.get(_spawns.size()));
 						if (randomSpawn != null)
 						{
-							L2Npc remnant = addSpawn(REMNANT, randomSpawn.getX(), randomSpawn.getY(), randomSpawn.getZ(), randomSpawn.getHeading(), true, 0, false, 0);
+							Npc remnant = addSpawn(REMNANT, randomSpawn.getX(), randomSpawn.getY(), randomSpawn.getZ(), randomSpawn.getHeading(), true, 0, false, 0);
 							_remnants.add(remnant);
 						}
 					}
@@ -422,7 +422,7 @@ public class Anakim extends AbstractNpcAI
 				}
 				BOSS_ZONE.oustAllPlayers();
 				PRE_ANAKIM_ZONE.oustAllPlayers();
-				for (L2Npc spawn : _spawns)
+				for (Npc spawn : _spawns)
 				{
 					if (spawn != null)
 					{
@@ -430,7 +430,7 @@ public class Anakim extends AbstractNpcAI
 					}
 				}
 				_spawns.clear();
-				for (L2Npc remnant : _remnants)
+				for (Npc remnant : _remnants)
 				{
 					if (remnant == null)
 					{
@@ -454,7 +454,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		if ((npc.getId() == ENTER_CUBIC) || (npc.getId() == ANAKIM_CUBIC))
 		{
@@ -471,9 +471,9 @@ public class Anakim extends AbstractNpcAI
 				player.sendPacket(packet);
 				return null;
 			}
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			final boolean isInCC = party.isInCommandChannel();
-			final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 			if (!isPartyLeader)
 			{
@@ -489,7 +489,7 @@ public class Anakim extends AbstractNpcAI
 				return null;
 			}
 			
-			for (L2PcInstance member : members)
+			for (PlayerInstance member : members)
 			{
 				if (member.getLevel() < Config.ANAKIM_MIN_PLAYER_LVL)
 				{
@@ -501,7 +501,7 @@ public class Anakim extends AbstractNpcAI
 				}
 			}
 			
-			for (L2PcInstance member : members)
+			for (PlayerInstance member : members)
 			{
 				if (member.isInsideRadius3D(npc, 1000) && (npc.getId() == ENTER_CUBIC))
 				{
@@ -531,7 +531,7 @@ public class Anakim extends AbstractNpcAI
 				GrandBossManager.getInstance().setBossStatus(ANAKIM, FIGHTING);
 				// Spawn the rb
 				_anakimBoss = addSpawn(ANAKIM, 185080, -12613, -5499, 16550, false, 0);
-				GrandBossManager.getInstance().addBoss((L2GrandBossInstance) _anakimBoss);
+				GrandBossManager.getInstance().addBoss((GrandBossInstance) _anakimBoss);
 				startQuestTimer("end_anakim", 60 * 60000, null, null); // 1h
 				if (!_remnants.isEmpty())
 				{
@@ -543,13 +543,13 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + ".html";
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		_lastAction = System.currentTimeMillis();
 		if (npc.isMinion() || npc.isRaid())// Anakim and minions
@@ -561,7 +561,7 @@ public class Anakim extends AbstractNpcAI
 			}
 			if (!BOSS_ZONE.isInsideZone(npc)) // Npc moved out of the zone
 			{
-				L2Spawn spawn = npc.getSpawn();
+				Spawn spawn = npc.getSpawn();
 				if (spawn != null)
 				{
 					npc.teleToLocation(spawn.getX(), spawn.getY(), spawn.getZ());
@@ -583,7 +583,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		if (npc.getId() == ANAKIM)
 		{
@@ -611,7 +611,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		if ((npc.getId() == REMNANT) && PRE_ANAKIM_ZONE.isInsideZone(npc))
 		{
@@ -624,7 +624,7 @@ public class Anakim extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
 		if (CommonUtil.contains(ANAKIM_MINIONS, npc.getId()) && Rnd.nextBoolean())
 		{
@@ -632,9 +632,9 @@ public class Anakim extends AbstractNpcAI
 			{
 				if (!npc.isCastingNow() && (npc.getTarget() != npc) && (npc.getTarget() != caster) && (npc.getTarget() != _anakimBoss)) // Don't call minions if are healing Anakim
 				{
-					((L2Attackable) npc).clearAggroList();
+					((Attackable) npc).clearAggroList();
 					npc.setTarget(caster);
-					((L2Attackable) npc).addDamageHate(caster, 500, 99999);
+					((Attackable) npc).addDamageHate(caster, 500, 99999);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
 				}
 			}

@@ -30,12 +30,12 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.InstanceListManager;
 import com.l2jmobius.gameserver.SevenSigns;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 public final class CastleManager implements InstanceListManager
 {
@@ -59,12 +59,12 @@ public final class CastleManager implements InstanceListManager
 		8183
 	};
 	
-	public final int findNearestCastleIndex(L2Object obj)
+	public final int findNearestCastleIndex(WorldObject obj)
 	{
 		return findNearestCastleIndex(obj, Long.MAX_VALUE);
 	}
 	
-	public final int findNearestCastleIndex(L2Object obj, long maxDistance)
+	public final int findNearestCastleIndex(WorldObject obj, long maxDistance)
 	{
 		int index = getCastleIndex(obj);
 		if (index < 0)
@@ -101,7 +101,7 @@ public final class CastleManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Castle getCastleByOwner(L2Clan clan)
+	public final Castle getCastleByOwner(Clan clan)
 	{
 		for (Castle temp : _castles)
 		{
@@ -137,7 +137,7 @@ public final class CastleManager implements InstanceListManager
 		return null;
 	}
 	
-	public final Castle getCastle(L2Object activeObject)
+	public final Castle getCastle(WorldObject activeObject)
 	{
 		return getCastle(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
@@ -156,7 +156,7 @@ public final class CastleManager implements InstanceListManager
 		return -1;
 	}
 	
-	public final int getCastleIndex(L2Object activeObject)
+	public final int getCastleIndex(WorldObject activeObject)
 	{
 		return getCastleIndex(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
@@ -240,22 +240,22 @@ public final class CastleManager implements InstanceListManager
 	}
 	
 	// remove this castle's circlets from the clan
-	public void removeCirclet(L2Clan clan, int castleId)
+	public void removeCirclet(Clan clan, int castleId)
 	{
-		for (L2ClanMember member : clan.getMembers())
+		for (ClanMember member : clan.getMembers())
 		{
 			removeCirclet(member, castleId);
 		}
 	}
 	
-	public void removeCirclet(L2ClanMember member, int castleId)
+	public void removeCirclet(ClanMember member, int castleId)
 	{
 		if (member == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = member.getPlayerInstance();
+		final PlayerInstance player = member.getPlayerInstance();
 		final int circletId = getCircletByCastleId(castleId);
 		
 		if (circletId != 0)
@@ -265,7 +265,7 @@ public final class CastleManager implements InstanceListManager
 			{
 				try
 				{
-					final L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+					final ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
 					if (circlet != null)
 					{
 						if (circlet.isEquipped())

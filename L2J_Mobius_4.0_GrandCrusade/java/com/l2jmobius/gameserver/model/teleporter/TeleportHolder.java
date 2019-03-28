@@ -27,13 +27,13 @@ import com.l2jmobius.gameserver.enums.SpecialItemType;
 import com.l2jmobius.gameserver.enums.TeleportType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcTeleportRequest;
+import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleportRequest;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -120,7 +120,7 @@ public final class TeleportHolder
 	 * @param player receiver of HTML message
 	 * @param npc teleporter
 	 */
-	public void showTeleportList(L2PcInstance player, L2Npc npc)
+	public void showTeleportList(PlayerInstance player, Npc npc)
 	{
 		showTeleportList(player, npc, "npc_" + npc.getObjectId() + "_teleport");
 	}
@@ -131,7 +131,7 @@ public final class TeleportHolder
 	 * @param npc teleporter
 	 * @param bypass bypass used while building message
 	 */
-	public void showTeleportList(L2PcInstance player, L2Npc npc, String bypass)
+	public void showTeleportList(PlayerInstance player, Npc npc, String bypass)
 	{
 		if (isNoblesse() && (player.getNobleLevel() < 1))
 		{
@@ -190,7 +190,7 @@ public final class TeleportHolder
 	 * @param npc teleporter
 	 * @param locId destination
 	 */
-	public void doTeleport(L2PcInstance player, L2Npc npc, int locId)
+	public void doTeleport(PlayerInstance player, Npc npc, int locId)
 	{
 		if (isNoblesse() && (player.getNobleLevel() < 1))
 		{
@@ -268,7 +268,7 @@ public final class TeleportHolder
 	 * @param loc location where player should be teleported
 	 * @return {@code true} when all requirements are met otherwise {@code false}
 	 */
-	private boolean shouldPayFee(L2PcInstance player, TeleportLocation loc)
+	private boolean shouldPayFee(PlayerInstance player, TeleportLocation loc)
 	{
 		return !isNormalTeleport() || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
 	}
@@ -281,7 +281,7 @@ public final class TeleportHolder
 	 * @param loc location where player should be teleported
 	 * @return fee amount
 	 */
-	private long calculateFee(L2PcInstance player, TeleportLocation loc)
+	private long calculateFee(PlayerInstance player, TeleportLocation loc)
 	{
 		if (isNormalTeleport())
 		{
@@ -325,7 +325,7 @@ public final class TeleportHolder
 				return "<fstring>1000309</fstring>";
 			}
 		}
-		final L2Item item = ItemTable.getInstance().getTemplate(itemId);
+		final Item item = ItemTable.getInstance().getTemplate(itemId);
 		if (item != null)
 		{
 			return item.getName();

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -26,9 +26,9 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class WaterTask implements Runnable
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	
-	public WaterTask(L2PcInstance player)
+	public WaterTask(PlayerInstance player)
 	{
 		_player = player;
 	}

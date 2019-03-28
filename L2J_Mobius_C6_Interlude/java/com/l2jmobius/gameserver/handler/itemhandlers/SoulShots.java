@@ -18,16 +18,16 @@ package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Playable;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Stats;
-import com.l2jmobius.gameserver.templates.item.L2Item;
-import com.l2jmobius.gameserver.templates.item.L2Weapon;
+import com.l2jmobius.gameserver.templates.item.Item;
+import com.l2jmobius.gameserver.templates.item.Weapon;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 public class SoulShots implements IItemHandler
@@ -54,84 +54,84 @@ public class SoulShots implements IItemHandler
 	};
 	
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(Playable playable, ItemInstance item)
 	{
-		if (!(playable instanceof L2PcInstance))
+		if (!(playable instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		PlayerInstance player = (PlayerInstance) playable;
+		ItemInstance weaponInst = player.getActiveWeaponInstance();
+		Weapon weaponItem = player.getActiveWeaponItem();
 		final int itemId = item.getItemId();
 		
 		// Check if Soulshot can be used
 		if ((weaponInst == null) || (weaponItem.getSoulShotCount() == 0))
 		{
-			if (!activeChar.getAutoSoulShot().containsKey(itemId))
+			if (!player.getAutoSoulShot().containsKey(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
+				player.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
 			}
 			return;
 		}
 		
 		// Check for correct grade
 		final int weaponGrade = weaponItem.getCrystalType();
-		if (((weaponGrade == L2Item.CRYSTAL_NONE) && (itemId != 5789) && (itemId != 1835)) || ((weaponGrade == L2Item.CRYSTAL_D) && (itemId != 1463)) || ((weaponGrade == L2Item.CRYSTAL_C) && (itemId != 1464)) || ((weaponGrade == L2Item.CRYSTAL_B) && (itemId != 1465)) || ((weaponGrade == L2Item.CRYSTAL_A) && (itemId != 1466)) || ((weaponGrade == L2Item.CRYSTAL_S) && (itemId != 1467)))
+		if (((weaponGrade == Item.CRYSTAL_NONE) && (itemId != 5789) && (itemId != 1835)) || ((weaponGrade == Item.CRYSTAL_D) && (itemId != 1463)) || ((weaponGrade == Item.CRYSTAL_C) && (itemId != 1464)) || ((weaponGrade == Item.CRYSTAL_B) && (itemId != 1465)) || ((weaponGrade == Item.CRYSTAL_A) && (itemId != 1466)) || ((weaponGrade == Item.CRYSTAL_S) && (itemId != 1467)))
 		{
-			if (!activeChar.getAutoSoulShot().containsKey(itemId))
+			if (!player.getAutoSoulShot().containsKey(itemId))
 			{
-				activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
+				player.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
 			}
 			return;
 		}
 		
-		activeChar.soulShotLock.lock();
+		player.soulShotLock.lock();
 		try
 		{
 			// Check if Soulshot is already active
-			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
+			if (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE)
 			{
 				return;
 			}
 			
 			// Consume Soulshots if player has enough of them
-			final int saSSCount = (int) activeChar.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
+			final int saSSCount = (int) player.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
 			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
 			
 			if (!Config.DONT_DESTROY_SS)
 			{
-				if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
+				if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 				{
-					if (activeChar.getAutoSoulShot().containsKey(itemId))
+					if (player.getAutoSoulShot().containsKey(itemId))
 					{
-						activeChar.removeAutoSoulShot(itemId);
-						activeChar.sendPacket(new ExAutoSoulShot(itemId, 0));
+						player.removeAutoSoulShot(itemId);
+						player.sendPacket(new ExAutoSoulShot(itemId, 0));
 						
 						SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
 						sm.addString(item.getItem().getName());
-						activeChar.sendPacket(sm);
+						player.sendPacket(sm);
 					}
 					else
 					{
-						activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
+						player.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS);
 					}
 					return;
 				}
 			}
 			
 			// Charge soulshot
-			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
+			weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
 		}
 		finally
 		{
-			activeChar.soulShotLock.unlock();
+			player.soulShotLock.unlock();
 		}
 		
 		// Send message to client
-		activeChar.sendPacket(SystemMessageId.ENABLED_SOULSHOT);
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, SKILL_IDS[weaponGrade], 1, 0, 0), 360000/* 600 */);
+		player.sendPacket(SystemMessageId.ENABLED_SOULSHOT);
+		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000/* 600 */);
 	}
 	
 	@Override

@@ -18,12 +18,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
 /**
- * This class ...
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
 public final class FinishRotating implements IClientIncomingPacket
@@ -33,7 +32,7 @@ public final class FinishRotating implements IClientIncomingPacket
 	private int _unknown;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_degree = packet.readD();
 		_unknown = packet.readD();
@@ -41,30 +40,30 @@ public final class FinishRotating implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
 		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		StopRotation sr;
-		if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar))
+		if (player.isInAirShip() && player.getAirShip().isCaptain(player))
 		{
-			activeChar.getAirShip().setHeading(_degree);
-			sr = new StopRotation(activeChar.getAirShip().getObjectId(), _degree, 0);
-			activeChar.getAirShip().broadcastPacket(sr);
+			player.getAirShip().setHeading(_degree);
+			sr = new StopRotation(player.getAirShip().getObjectId(), _degree, 0);
+			player.getAirShip().broadcastPacket(sr);
 		}
 		else
 		{
-			sr = new StopRotation(activeChar.getObjectId(), _degree, 0);
-			activeChar.broadcastPacket(sr);
+			sr = new StopRotation(player.getObjectId(), _degree, 0);
+			player.broadcastPacket(sr);
 		}
 	}
 }

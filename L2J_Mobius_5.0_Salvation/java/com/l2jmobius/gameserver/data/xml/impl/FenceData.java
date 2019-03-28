@@ -30,10 +30,10 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.FenceState;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldRegion;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2FenceInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FenceInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 
 /**
@@ -45,8 +45,8 @@ public final class FenceData implements IGameXmlReader
 	
 	private static final int MAX_Z_DIFF = 100;
 	
-	private final Map<L2WorldRegion, List<L2FenceInstance>> _regions = new ConcurrentHashMap<>();
-	private final Map<Integer, L2FenceInstance> _fences = new ConcurrentHashMap<>();
+	private final Map<WorldRegion, List<FenceInstance>> _regions = new ConcurrentHashMap<>();
+	private final Map<Integer, FenceInstance> _fences = new ConcurrentHashMap<>();
 	
 	protected FenceData()
 	{
@@ -83,14 +83,14 @@ public final class FenceData implements IGameXmlReader
 		spawnFence(set.getInt("x"), set.getInt("y"), set.getInt("z"), set.getString("name"), set.getInt("width"), set.getInt("length"), set.getInt("height"), 0, set.getEnum("state", FenceState.class, FenceState.CLOSED));
 	}
 	
-	public L2FenceInstance spawnFence(int x, int y, int z, int width, int length, int height, int instanceId, FenceState state)
+	public FenceInstance spawnFence(int x, int y, int z, int width, int length, int height, int instanceId, FenceState state)
 	{
 		return spawnFence(x, y, z, null, width, length, height, instanceId, state);
 	}
 	
-	public L2FenceInstance spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state)
+	public FenceInstance spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state)
 	{
-		final L2FenceInstance fence = new L2FenceInstance(x, y, name, width, length, height, state);
+		final FenceInstance fence = new FenceInstance(x, y, name, width, length, height, state);
 		if (instanceId > 0)
 		{
 			fence.setInstanceById(instanceId);
@@ -101,36 +101,36 @@ public final class FenceData implements IGameXmlReader
 		return fence;
 	}
 	
-	private void addFence(L2FenceInstance fence)
+	private void addFence(FenceInstance fence)
 	{
 		_fences.put(fence.getObjectId(), fence);
-		_regions.computeIfAbsent(L2World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
+		_regions.computeIfAbsent(World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
 	}
 	
-	public void removeFence(L2FenceInstance fence)
+	public void removeFence(FenceInstance fence)
 	{
 		_fences.remove(fence.getObjectId());
 		
-		final List<L2FenceInstance> fencesInRegion = _regions.get(L2World.getInstance().getRegion(fence));
+		final List<FenceInstance> fencesInRegion = _regions.get(World.getInstance().getRegion(fence));
 		if (fencesInRegion != null)
 		{
 			fencesInRegion.remove(fence);
 		}
 	}
 	
-	public Map<Integer, L2FenceInstance> getFences()
+	public Map<Integer, FenceInstance> getFences()
 	{
 		return _fences;
 	}
 	
-	public L2FenceInstance getFence(int objectId)
+	public FenceInstance getFence(int objectId)
 	{
 		return _fences.get(objectId);
 	}
 	
 	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance)
 	{
-		final Predicate<L2FenceInstance> filter = fence ->
+		final Predicate<FenceInstance> filter = fence ->
 		{
 			// Check if fence is geodata enabled.
 			if (!fence.getState().isGeodataEnabled())
@@ -184,7 +184,7 @@ public final class FenceData implements IGameXmlReader
 			return false;
 		};
 		
-		final L2WorldRegion region = L2World.getInstance().getRegion(x, y); // Should never be null.
+		final WorldRegion region = World.getInstance().getRegion(x, y); // Should never be null.
 		return region == null ? false : _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
 	}
 	

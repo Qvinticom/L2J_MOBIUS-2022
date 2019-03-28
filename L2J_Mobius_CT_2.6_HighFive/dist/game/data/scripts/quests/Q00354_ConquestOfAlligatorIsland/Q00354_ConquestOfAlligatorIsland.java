@@ -19,8 +19,8 @@ package quests.Q00354_ConquestOfAlligatorIsland;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -62,10 +62,10 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -82,7 +82,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "30895-02.html":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
@@ -109,7 +109,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "30895-10.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -133,10 +133,10 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if(qs != null)
 		{
 			final int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))
@@ -155,16 +155,16 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30895-01.htm" : "30895-03.html");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			htmltext = (hasQuestItems(player, MYSTERIOUS_MAP_PIECE) ? "30895-11.html" : "30895-04.html");
 		}

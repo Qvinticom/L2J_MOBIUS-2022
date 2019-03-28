@@ -16,13 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * format dddd sample 0000: 3a 69 08 10 48 02 c1 00 00 f7 56 00 00 89 ea ff :i..H.....V..... 0010: ff 0c b2 d8 61 ....a
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class TargetUnselected extends L2GameServerPacket
+public class TargetUnselected extends GameServerPacket
 {
 	private final int _targetObjId;
 	private final int _x;
@@ -30,14 +30,14 @@ public class TargetUnselected extends L2GameServerPacket
 	private final int _z;
 	
 	/**
-	 * @param character
+	 * @param creature
 	 */
-	public TargetUnselected(L2Character character)
+	public TargetUnselected(Creature creature)
 	{
-		_targetObjId = character.getObjectId();
-		_x = character.getX();
-		_y = character.getY();
-		_z = character.getZ();
+		_targetObjId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 	}
 	
 	@Override

@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Duel;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -47,7 +47,7 @@ public final class DuelManager
 		return _duels.get(duelId);
 	}
 	
-	public void addDuel(L2PcInstance playerA, L2PcInstance playerB, int partyDuel)
+	public void addDuel(PlayerInstance playerA, PlayerInstance playerB, int partyDuel)
 	{
 		if ((playerA == null) || (playerB == null))
 		{
@@ -59,7 +59,7 @@ public final class DuelManager
 		if (partyDuel == 1)
 		{
 			boolean playerInPvP = false;
-			for (L2PcInstance temp : playerA.getParty().getMembers())
+			for (PlayerInstance temp : playerA.getParty().getMembers())
 			{
 				if (temp.getPvpFlag() != 0)
 				{
@@ -69,7 +69,7 @@ public final class DuelManager
 			}
 			if (!playerInPvP)
 			{
-				for (L2PcInstance temp : playerB.getParty().getMembers())
+				for (PlayerInstance temp : playerB.getParty().getMembers())
 				{
 					if (temp.getPvpFlag() != 0)
 					{
@@ -81,11 +81,11 @@ public final class DuelManager
 			// A player has PvP flag
 			if (playerInPvP)
 			{
-				for (L2PcInstance temp : playerA.getParty().getMembers())
+				for (PlayerInstance temp : playerA.getParty().getMembers())
 				{
 					temp.sendMessage(engagedInPvP);
 				}
-				for (L2PcInstance temp : playerB.getParty().getMembers())
+				for (PlayerInstance temp : playerB.getParty().getMembers())
 				{
 					temp.sendMessage(engagedInPvP);
 				}
@@ -107,7 +107,7 @@ public final class DuelManager
 		_duels.remove(duel.getId());
 	}
 	
-	public void doSurrender(L2PcInstance player)
+	public void doSurrender(PlayerInstance player)
 	{
 		if ((player == null) || !player.isInDuel())
 		{
@@ -121,7 +121,7 @@ public final class DuelManager
 	 * Updates player states.
 	 * @param player - the dying player
 	 */
-	public void onPlayerDefeat(L2PcInstance player)
+	public void onPlayerDefeat(PlayerInstance player)
 	{
 		if ((player == null) || !player.isInDuel())
 		{
@@ -139,7 +139,7 @@ public final class DuelManager
 	 * @param player
 	 * @param buff
 	 */
-	public void onBuff(L2PcInstance player, Skill buff)
+	public void onBuff(PlayerInstance player, Skill buff)
 	{
 		if ((player == null) || !player.isInDuel() || (buff == null))
 		{
@@ -156,7 +156,7 @@ public final class DuelManager
 	 * Removes player from duel.
 	 * @param player - the removed player
 	 */
-	public void onRemoveFromParty(L2PcInstance player)
+	public void onRemoveFromParty(PlayerInstance player)
 	{
 		if ((player == null) || !player.isInDuel())
 		{
@@ -174,7 +174,7 @@ public final class DuelManager
 	 * @param player
 	 * @param packet
 	 */
-	public void broadcastToOppositTeam(L2PcInstance player, IClientOutgoingPacket packet)
+	public void broadcastToOppositTeam(PlayerInstance player, IClientOutgoingPacket packet)
 	{
 		if ((player == null) || !player.isInDuel())
 		{

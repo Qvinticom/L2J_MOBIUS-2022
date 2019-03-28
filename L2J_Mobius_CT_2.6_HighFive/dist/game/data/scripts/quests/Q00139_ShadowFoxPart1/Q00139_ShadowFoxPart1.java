@@ -17,8 +17,8 @@
 package quests.Q00139_ShadowFoxPart1;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -59,7 +59,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -137,15 +137,15 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final L2PcInstance member = getRandomPartyMember(player, 2);
+		final PlayerInstance member = getRandomPartyMember(player, 2);
 		if (member == null)
 		{
 			return super.onKill(npc, player, isSummon);
 		}
-		final QuestState st = getQuestState(member, false);
-		if (!st.isSet("talk") && (getRandom(100) < DROP_CHANCE))
+		final QuestState qs = getQuestState(member, false);
+		if (!qs.isSet("talk") && (getRandom(100) < DROP_CHANCE))
 		{
 			final int itemId = (getRandom(11) == 0) ? CHEST : FRAGMENT;
 			giveItems(player, itemId, 1);
@@ -155,7 +155,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);

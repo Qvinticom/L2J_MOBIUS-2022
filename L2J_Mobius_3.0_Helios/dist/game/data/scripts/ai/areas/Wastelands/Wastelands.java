@@ -18,20 +18,20 @@ package ai.areas.Wastelands;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -83,7 +83,7 @@ public final class Wastelands extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -92,7 +92,7 @@ public final class Wastelands extends AbstractNpcAI
 				npc.broadcastSocialAction(4);
 				npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_SHOUT[getRandom(2)], 1000);
 				
-				L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard ->
+				World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard ->
 				{
 					startQuestTimer("SOCIAL_ACTION", getRandom(2500, 3500), guard, null);
 				});
@@ -105,7 +105,7 @@ public final class Wastelands extends AbstractNpcAI
 			}
 			case "START_ATTACK":
 			{
-				final L2Attackable guard = (L2Attackable) npc;
+				final Attackable guard = (Attackable) npc;
 				final int attackId;
 				
 				switch (guard.getId())
@@ -136,7 +136,7 @@ public final class Wastelands extends AbstractNpcAI
 				if (attackId > 0)
 				{
 					//@formatter:off
-					final L2MonsterInstance monster = L2World.getInstance().getVisibleObjectsInRange(guard, L2MonsterInstance.class, 1000)
+					final MonsterInstance monster = World.getInstance().getVisibleObjectsInRange(guard, MonsterInstance.class, 1000)
 						.stream()
 						.filter(obj -> (obj.getId() == attackId))
 						.findFirst()
@@ -145,7 +145,7 @@ public final class Wastelands extends AbstractNpcAI
 					
 					if (monster != null)
 					{
-						L2World.getInstance().forEachVisibleObjectInRange(guard, L2Npc.class, 1000, chars ->
+						World.getInstance().forEachVisibleObjectInRange(guard, Npc.class, 1000, chars ->
 						{
 							if (chars.getId() == attackId)
 							{
@@ -162,7 +162,7 @@ public final class Wastelands extends AbstractNpcAI
 						if (guard.getId() == SCHUAZEN)
 						{
 							//@formatter:off
-							final FriendlyNpcInstance decoGuard = L2World.getInstance().getVisibleObjectsInRange(guard, FriendlyNpcInstance.class, 500)
+							final FriendlyNpcInstance decoGuard = World.getInstance().getVisibleObjectsInRange(guard, FriendlyNpcInstance.class, 500)
 								.stream()
 								.filter(obj -> (obj.getId() == DECO_GUARD2))
 								.findFirst()
@@ -187,7 +187,7 @@ public final class Wastelands extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK))
 		{
@@ -197,7 +197,7 @@ public final class Wastelands extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		switch (npc.getId())
 		{
@@ -212,7 +212,7 @@ public final class Wastelands extends AbstractNpcAI
 			{
 				final int guardId = npc.getId() == REGENERATED_KANILOV ? JOEL : SCHUAZEN;
 				//@formatter:off
-				final FriendlyNpcInstance guard =  L2World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 500)
+				final FriendlyNpcInstance guard =  World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 500)
 					.stream()
 					.filter(obj -> (obj.getId() == guardId))
 					.findFirst()
@@ -232,7 +232,7 @@ public final class Wastelands extends AbstractNpcAI
 			}
 			case SAKUM:
 			{
-				manageCommando((L2Attackable) npc);
+				manageCommando((Attackable) npc);
 				break;
 			}
 			case GUARD:
@@ -246,11 +246,11 @@ public final class Wastelands extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (npc.getId() == REGENERATED_POSLOF)
 		{
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 1000, guard ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 1000, guard ->
 			{
 				if ((guard.getId() == DECO_GUARD2))
 				{
@@ -260,7 +260,7 @@ public final class Wastelands extends AbstractNpcAI
 		}
 		else if (npc.getId() == SAKUM)
 		{
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 1000, guard ->
+			World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, 1000, guard ->
 			{
 				if ((guard.getId() == COMMANDO) || (guard.getId() == COMMANDO_CAPTAIN))
 				{
@@ -277,10 +277,10 @@ public final class Wastelands extends AbstractNpcAI
 	@Id(COMMANDO_CAPTAIN)
 	public void onCreatureKill(OnCreatureDeath event)
 	{
-		final L2Attackable guard = (L2Attackable) event.getTarget();
+		final Attackable guard = (Attackable) event.getTarget();
 		
 		//@formatter:off
-		final L2Attackable sakum = L2World.getInstance().getVisibleObjectsInRange(guard, L2Attackable.class, 1000)
+		final Attackable sakum = World.getInstance().getVisibleObjectsInRange(guard, Attackable.class, 1000)
 			.stream()
 			.filter(obj -> (obj.getId() == SAKUM))
 			.findFirst()
@@ -293,7 +293,7 @@ public final class Wastelands extends AbstractNpcAI
 		}
 	}
 	
-	private void manageCommando(L2Attackable sakum)
+	private void manageCommando(Attackable sakum)
 	{
 		int guardCount = sakum.getVariables().getInt("GUARD_COUNT", 0);
 		guardCount--;
@@ -307,7 +307,7 @@ public final class Wastelands extends AbstractNpcAI
 				
 				for (Location loc : COMMANDO_CAPTAIN_SAKUM_LOC)
 				{
-					final L2Attackable commander = (L2Attackable) addSpawn(COMMANDO_CAPTAIN, loc);
+					final Attackable commander = (Attackable) addSpawn(COMMANDO_CAPTAIN, loc);
 					commander.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_ATTACK);
 					
 					commander.reduceCurrentHp(1, sakum, null); // TODO: Find better way for attack
@@ -323,7 +323,7 @@ public final class Wastelands extends AbstractNpcAI
 				
 				for (Location loc : COMMANDO_SAKUM_LOC)
 				{
-					final L2Attackable commander = (L2Attackable) addSpawn(COMMANDO, loc);
+					final Attackable commander = (Attackable) addSpawn(COMMANDO, loc);
 					
 					commander.reduceCurrentHp(1, sakum, null); // TODO: Find better way for attack
 					sakum.reduceCurrentHp(1, commander, null);

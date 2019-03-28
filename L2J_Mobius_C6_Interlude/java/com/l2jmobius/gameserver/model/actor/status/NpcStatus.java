@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 
-public class NpcStatus extends CharStatus
+public class NpcStatus extends CreatureStatus
 {
-	public NpcStatus(L2NpcInstance activeChar)
+	public NpcStatus(NpcInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public final void reduceHp(double value, L2Character attacker)
+	public final void reduceHp(double value, Creature attacker)
 	{
 		reduceHp(value, attacker, true);
 	}
 	
 	@Override
-	public final void reduceHp(double value, L2Character attacker, boolean awake)
+	public final void reduceHp(double value, Creature attacker, boolean awake)
 	{
 		if (getActiveChar().isDead())
 		{
@@ -50,8 +50,8 @@ public class NpcStatus extends CharStatus
 	}
 	
 	@Override
-	public L2NpcInstance getActiveChar()
+	public NpcInstance getActiveChar()
 	{
-		return (L2NpcInstance) super.getActiveChar();
+		return (NpcInstance) super.getActiveChar();
 	}
 }

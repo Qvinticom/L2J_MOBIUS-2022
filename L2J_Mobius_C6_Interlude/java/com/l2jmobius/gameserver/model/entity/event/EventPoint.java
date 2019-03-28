@@ -21,22 +21,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class EventPoint
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private Integer _points = 0;
 	
-	public EventPoint(L2PcInstance player)
+	public EventPoint(PlayerInstance player)
 	{
-		_activeChar = player;
+		_player = player;
 		loadFromDB();
 	}
 	
-	public L2PcInstance getActiveChar()
+	public PlayerInstance getActiveChar()
 	{
-		return _activeChar;
+		return _player;
 	}
 	
 	public void savePoints()
@@ -49,7 +49,7 @@ public class EventPoint
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement st = con.prepareStatement("Select * From char_points where charId = ?");
-			st.setInt(1, _activeChar.getObjectId());
+			st.setInt(1, _player.getObjectId());
 			final ResultSet rst = st.executeQuery();
 			
 			while (rst.next())
@@ -71,7 +71,7 @@ public class EventPoint
 		{
 			final PreparedStatement st = con.prepareStatement("Update char_points Set points = ? Where charId = ?");
 			st.setInt(1, _points);
-			st.setInt(2, _activeChar.getObjectId());
+			st.setInt(2, _player.getObjectId());
 			st.execute();
 			st.close();
 		}

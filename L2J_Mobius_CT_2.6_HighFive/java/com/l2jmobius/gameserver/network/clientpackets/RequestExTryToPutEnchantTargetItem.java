@@ -20,10 +20,10 @@ import java.util.logging.Level;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 
@@ -35,28 +35,28 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 	private int _objectId;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((_objectId == 0) || (activeChar == null))
+		final PlayerInstance player = client.getPlayer();
+		if ((_objectId == 0) || (player == null))
 		{
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
+		if (player.isEnchanting())
 		{
 			return;
 		}
 		
-		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-		final L2ItemInstance scroll = activeChar.getInventory().getItemByObjectId(activeChar.getActiveEnchantItemId());
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
 		if ((item == null) || (scroll == null))
 		{
 			return;
@@ -65,17 +65,17 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 		final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 		if ((scrollTemplate == null) || !scrollTemplate.isValid(item, null))
 		{
-			activeChar.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
-			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
-			activeChar.sendPacket(new ExPutEnchantTargetItemResult(0));
+			player.sendPacket(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
+			player.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
 			}
 			return;
 		}
-		activeChar.setIsEnchanting(true);
-		activeChar.setActiveEnchantTimestamp(System.currentTimeMillis());
-		activeChar.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
+		player.setIsEnchanting(true);
+		player.setActiveEnchantTimestamp(System.currentTimeMillis());
+		player.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 	}
 }

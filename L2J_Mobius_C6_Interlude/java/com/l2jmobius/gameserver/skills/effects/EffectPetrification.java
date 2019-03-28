@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.skills.effects;
 
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.skills.Env;
 
-public class EffectPetrification extends L2Effect
+public class EffectPetrification extends Effect
 {
 	public EffectPetrification(Env env, EffectTemplate template)
 	{
@@ -30,20 +30,20 @@ public class EffectPetrification extends L2Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return L2Effect.EffectType.PETRIFICATION;
+		return Effect.EffectType.PETRIFICATION;
 	}
 	
 	@Override
 	public void onStart()
 	{
-		getEffected().startAbnormalEffect(L2Character.ABNORMAL_EFFECT_HOLD_2);
+		getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_HOLD_2);
 		getEffected().setPetrified(true);
 	}
 	
 	@Override
 	public void onExit()
 	{
-		getEffected().stopAbnormalEffect(L2Character.ABNORMAL_EFFECT_HOLD_2);
+		getEffected().stopAbnormalEffect(Creature.ABNORMAL_EFFECT_HOLD_2);
 		getEffected().setPetrified(false);
 	}
 	

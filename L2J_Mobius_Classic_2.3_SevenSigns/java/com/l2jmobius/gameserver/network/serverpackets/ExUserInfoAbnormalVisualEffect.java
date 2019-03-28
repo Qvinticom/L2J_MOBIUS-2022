@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -28,11 +28,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExUserInfoAbnormalVisualEffect implements IClientOutgoingPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
-	public ExUserInfoAbnormalVisualEffect(L2PcInstance cha)
+	public ExUserInfoAbnormalVisualEffect(PlayerInstance player)
 	{
-		_activeChar = cha;
+		_player = player;
 	}
 	
 	@Override
@@ -40,11 +40,11 @@ public class ExUserInfoAbnormalVisualEffect implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_USER_INFO_ABNORMAL_VISUAL_EFFECT.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
-		packet.writeD(_activeChar.getTransformationId());
+		packet.writeD(_player.getObjectId());
+		packet.writeD(_player.getTransformationId());
 		
-		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
-		final boolean isInvisible = _activeChar.isInvisible();
+		final Set<AbnormalVisualEffect> abnormalVisualEffects = _player.getEffectList().getCurrentAbnormalVisualEffects();
+		final boolean isInvisible = _player.isInvisible();
 		packet.writeD(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
 		{

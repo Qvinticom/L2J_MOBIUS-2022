@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopItemInfo implements IClientOutgoingPacket
 {
-	private final L2PcInstance _player;
+	private final PlayerInstance _player;
 	private final int _recipeId;
 	
-	public RecipeShopItemInfo(L2PcInstance player, int recipeId)
+	public RecipeShopItemInfo(PlayerInstance player, int recipeId)
 	{
 		_player = player;
 		_recipeId = recipeId;

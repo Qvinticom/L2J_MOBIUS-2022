@@ -20,7 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.AwayManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Siege;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 
@@ -36,7 +36,7 @@ public class AwayCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String text)
+	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String text)
 	{
 		if (command.startsWith("away"))
 		{
@@ -51,7 +51,7 @@ public class AwayCmd implements IVoicedCommandHandler
 	
 	public static final int ZONE_PEACE = 2;
 	
-	private boolean away(L2PcInstance activeChar, String text)
+	private boolean away(PlayerInstance activeChar, String text)
 	{
 		Siege siege = SiegeManager.getInstance().getSiege(activeChar);
 		
@@ -157,7 +157,7 @@ public class AwayCmd implements IVoicedCommandHandler
 		return true;
 	}
 	
-	private boolean back(L2PcInstance activeChar)
+	private boolean back(PlayerInstance activeChar)
 	{
 		if (!activeChar.isAway())
 		{

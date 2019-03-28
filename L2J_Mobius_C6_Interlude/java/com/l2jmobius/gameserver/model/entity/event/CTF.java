@@ -32,21 +32,21 @@ import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
+import com.l2jmobius.gameserver.model.Effect;
 import com.l2jmobius.gameserver.model.Inventory;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Radar;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Radar;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.event.manager.EventTask;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -56,7 +56,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 public class CTF implements EventTask
 {
@@ -65,7 +65,7 @@ public class CTF implements EventTask
 	protected static String _eventName = new String();
 	protected static String _eventDesc = new String();
 	protected static String _joiningLocationName = new String();
-	private static L2Spawn _npcSpawn;
+	private static Spawn _npcSpawn;
 	protected static boolean _joining = false;
 	protected static boolean _teleport = false;
 	protected static boolean _started = false;
@@ -88,9 +88,9 @@ public class CTF implements EventTask
 	protected static long _intervalBetweenMatches = 0;
 	private String startEventTime;
 	protected static boolean _teamEvent = true; // TODO to be integrated
-	public static Vector<L2PcInstance> _players = new Vector<>();
+	public static Vector<PlayerInstance> _players = new Vector<>();
 	private static String _topTeam = new String();
-	public static Vector<L2PcInstance> _playersShuffle = new Vector<>();
+	public static Vector<PlayerInstance> _playersShuffle = new Vector<>();
 	public static Vector<String> _teams = new Vector<>();
 	public static Vector<String> _savePlayers = new Vector<>();
 	public static Vector<String> _savePlayerTeams = new Vector<>();
@@ -111,8 +111,8 @@ public class CTF implements EventTask
 	public static Vector<Integer> _flagsX = new Vector<>();
 	public static Vector<Integer> _flagsY = new Vector<>();
 	public static Vector<Integer> _flagsZ = new Vector<>();
-	public static Vector<L2Spawn> _flagSpawns = new Vector<>();
-	public static Vector<L2Spawn> _throneSpawns = new Vector<>();
+	public static Vector<Spawn> _flagSpawns = new Vector<>();
+	public static Vector<Spawn> _throneSpawns = new Vector<>();
 	public static Vector<Boolean> _flagsTaken = new Vector<>();
 	
 	/**
@@ -701,14 +701,14 @@ public class CTF implements EventTask
 	
 	/**
 	 * Sets the npc pos.
-	 * @param activeChar the new npc pos
+	 * @param player the new npc pos
 	 */
-	public static void setNpcPos(L2PcInstance activeChar)
+	public static void setNpcPos(PlayerInstance player)
 	{
-		_npcX = activeChar.getX();
-		_npcY = activeChar.getY();
-		_npcZ = activeChar.getZ();
-		_npcHeading = activeChar.getHeading();
+		_npcX = player.getX();
+		_npcY = player.getY();
+		_npcZ = player.getZ();
+		_npcHeading = player.getHeading();
 	}
 	
 	/**
@@ -716,11 +716,11 @@ public class CTF implements EventTask
 	 */
 	private static void spawnEventNpc()
 	{
-		final L2NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_npcId);
+		final NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_npcId);
 		
 		try
 		{
-			_npcSpawn = new L2Spawn(tmpl);
+			_npcSpawn = new Spawn(tmpl);
 			
 			_npcSpawn.setX(_npcX);
 			_npcSpawn.setY(_npcY);
@@ -843,7 +843,7 @@ public class CTF implements EventTask
 			
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if (player != null)
 					{
@@ -852,8 +852,8 @@ public class CTF implements EventTask
 							// Remove Summon's buffs
 							if (player.getPet() != null)
 							{
-								final L2Summon summon = player.getPet();
-								for (L2Effect e1 : summon.getAllEffects())
+								final Summon summon = player.getPet();
+								for (Effect e1 : summon.getAllEffects())
 								{
 									if (e1 != null)
 									{
@@ -861,7 +861,7 @@ public class CTF implements EventTask
 									}
 								}
 								
-								if (summon instanceof L2PetInstance)
+								if (summon instanceof PetInstance)
 								{
 									summon.unSummon(player);
 								}
@@ -870,7 +870,7 @@ public class CTF implements EventTask
 						
 						if (Config.CTF_ON_START_REMOVE_ALL_EFFECTS)
 						{
-							for (L2Effect e2 : player.getAllEffects())
+							for (Effect e2 : player.getAllEffects())
 							{
 								if (e2 != null)
 								{
@@ -882,7 +882,7 @@ public class CTF implements EventTask
 						// Remove player from his party
 						if (player.getParty() != null)
 						{
-							final L2Party party = player.getParty();
+							final Party party = player.getParty();
 							party.removePartyMember(player);
 						}
 						
@@ -937,7 +937,7 @@ public class CTF implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -1118,7 +1118,7 @@ public class CTF implements EventTask
 		{
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if (player != null)
 					{
@@ -1366,7 +1366,7 @@ public class CTF implements EventTask
 		
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -1403,7 +1403,7 @@ public class CTF implements EventTask
 			}
 			else if (_playersShuffle.size() > 0)
 			{
-				for (L2PcInstance player : _playersShuffle)
+				for (PlayerInstance player : _playersShuffle)
 				{
 					if (player == null)
 					{
@@ -1447,7 +1447,7 @@ public class CTF implements EventTask
 		}
 		else if (Config.CTF_EVEN_TEAMS.equals("SHUFFLE"))
 		{
-			final Vector<L2PcInstance> playersShuffleTemp = new Vector<>();
+			final Vector<PlayerInstance> playersShuffleTemp = new Vector<>();
 			int loopCount = 0;
 			
 			loopCount = _playersShuffle.size();
@@ -1483,7 +1483,7 @@ public class CTF implements EventTask
 	 * @param eventPlayer the event player
 	 * @return true, if successful
 	 */
-	private static boolean addPlayerOk(String teamName, L2PcInstance eventPlayer)
+	private static boolean addPlayerOk(String teamName, PlayerInstance eventPlayer)
 	{
 		if (eventPlayer.isAio() && !Config.ALLOW_AIO_IN_EVENTS)
 		{
@@ -1515,7 +1515,7 @@ public class CTF implements EventTask
 			{
 				for (String character_name : players_in_boxes)
 				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(character_name);
+					final PlayerInstance player = World.getInstance().getPlayer(character_name);
 					
 					if ((player != null) && player._inEventCTF)
 					{
@@ -1528,7 +1528,7 @@ public class CTF implements EventTask
 		
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player.getObjectId() == eventPlayer.getObjectId())
 				{
@@ -1626,7 +1626,7 @@ public class CTF implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				player._originalNameColorCTF = player.getAppearance().getNameColor();
 				player._originalKarmaCTF = player.getKarma();
@@ -1712,10 +1712,10 @@ public class CTF implements EventTask
 		{
 			LOGGER.info("");
 			LOGGER.info("#########################################");
-			LOGGER.info("# _playersShuffle(Vector<L2PcInstance>) #");
+			LOGGER.info("# _playersShuffle(Vector<PlayerInstance>) #");
 			LOGGER.info("#########################################");
 			
-			for (L2PcInstance player : _playersShuffle)
+			for (PlayerInstance player : _playersShuffle)
 			{
 				if (player != null)
 				{
@@ -1726,12 +1726,12 @@ public class CTF implements EventTask
 		
 		LOGGER.info("");
 		LOGGER.info("##################################");
-		LOGGER.info("# _players(Vector<L2PcInstance>) #");
+		LOGGER.info("# _players(Vector<PlayerInstance>) #");
 		LOGGER.info("##################################");
 		
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -1981,7 +1981,7 @@ public class CTF implements EventTask
 	 * @param eventPlayer the event player
 	 * @param objectId the object id
 	 */
-	public static void showEventHtml(L2PcInstance eventPlayer, String objectId)
+	public static void showEventHtml(PlayerInstance eventPlayer, String objectId)
 	{
 		try
 		{
@@ -2083,7 +2083,7 @@ public class CTF implements EventTask
 			adminReply.setHtml(replyMSG.toString());
 			eventPlayer.sendPacket(adminReply);
 			
-			// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+			// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 			eventPlayer.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 		catch (Exception e)
@@ -2097,7 +2097,7 @@ public class CTF implements EventTask
 	 * @param player the player
 	 * @param teamName the team name
 	 */
-	public static void addPlayer(L2PcInstance player, String teamName)
+	public static void addPlayer(PlayerInstance player, String teamName)
 	{
 		if (!addPlayerOk(teamName, player))
 		{
@@ -2127,7 +2127,7 @@ public class CTF implements EventTask
 	 * Removes the player.
 	 * @param player the player
 	 */
-	public static void removePlayer(L2PcInstance player)
+	public static void removePlayer(PlayerInstance player)
 	{
 		if (player._inEventCTF)
 		{
@@ -2178,7 +2178,7 @@ public class CTF implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -2196,7 +2196,7 @@ public class CTF implements EventTask
 		
 		if ((_playersShuffle != null) && !_playersShuffle.isEmpty())
 		{
-			for (L2PcInstance player : _playersShuffle)
+			for (PlayerInstance player : _playersShuffle)
 			{
 				if (player != null)
 				{
@@ -2239,7 +2239,7 @@ public class CTF implements EventTask
 	 * Clean event player.
 	 * @param player the player
 	 */
-	private static void cleanEventPlayer(L2PcInstance player)
+	private static void cleanEventPlayer(PlayerInstance player)
 	{
 		if (player._haveFlagCTF)
 		{
@@ -2256,7 +2256,7 @@ public class CTF implements EventTask
 	 * Adds the disconnected player.
 	 * @param player the player
 	 */
-	public static synchronized void addDisconnectedPlayer(L2PcInstance player)
+	public static synchronized void addDisconnectedPlayer(PlayerInstance player)
 	{
 		if ((Config.CTF_EVEN_TEAMS.equals("SHUFFLE") && (_teleport || _started)) || (Config.CTF_EVEN_TEAMS.equals("NO") || (Config.CTF_EVEN_TEAMS.equals("BALANCE") && (_teleport || _started))))
 		{
@@ -2269,7 +2269,7 @@ public class CTF implements EventTask
 			
 			synchronized (_players)
 			{
-				for (L2PcInstance p : _players)
+				for (PlayerInstance p : _players)
 				{
 					if (p == null)
 					{
@@ -2312,7 +2312,7 @@ public class CTF implements EventTask
 	 * After add disconnected player operations.
 	 * @param player the player
 	 */
-	private static void afterAddDisconnectedPlayerOperations(L2PcInstance player)
+	private static void afterAddDisconnectedPlayerOperations(PlayerInstance player)
 	{
 		player._teamNameHaveFlagCTF = null;
 		player._haveFlagCTF = false;
@@ -2337,7 +2337,7 @@ public class CTF implements EventTask
 				}
 				
 				final int playerToAddIndex = Rnd.get(_playersShuffle.size());
-				L2PcInstance player = null;
+				PlayerInstance player = null;
 				player = _playersShuffle.get(playerToAddIndex);
 				
 				_players.add(player);
@@ -2368,7 +2368,7 @@ public class CTF implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if (player != null)
 				{
@@ -2393,7 +2393,7 @@ public class CTF implements EventTask
 	{
 		synchronized (_players)
 		{
-			for (L2PcInstance player : _players)
+			for (PlayerInstance player : _players)
 			{
 				if ((player != null) && (player.isOnline() != 0) && (player._inEventCTF))
 				{
@@ -2411,7 +2411,7 @@ public class CTF implements EventTask
 						nhm.setHtml(replyMSG.toString());
 						player.sendPacket(nhm);
 						
-						// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+						// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 					else if (teamName == null)
@@ -2440,7 +2440,7 @@ public class CTF implements EventTask
 						nhm.setHtml(replyMSG.toString());
 						player.sendPacket(nhm);
 						
-						// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
+						// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 				}
@@ -2566,9 +2566,9 @@ public class CTF implements EventTask
 	/**
 	 * Sets the team pos.
 	 * @param teamName the team name
-	 * @param activeChar the active char
+	 * @param player the player
 	 */
-	public static void setTeamPos(String teamName, L2PcInstance activeChar)
+	public static void setTeamPos(String teamName, PlayerInstance player)
 	{
 		final int index = _teams.indexOf(teamName);
 		
@@ -2577,9 +2577,9 @@ public class CTF implements EventTask
 			return;
 		}
 		
-		_teamsX.set(index, activeChar.getX());
-		_teamsY.set(index, activeChar.getY());
-		_teamsZ.set(index, activeChar.getZ());
+		_teamsX.set(index, player.getX());
+		_teamsY.set(index, player.getY());
+		_teamsZ.set(index, player.getZ());
 	}
 	
 	/**
@@ -2664,11 +2664,11 @@ public class CTF implements EventTask
 	 * @param eventPlayer the event player
 	 * @return true, if successful
 	 */
-	public static boolean checkShufflePlayers(L2PcInstance eventPlayer)
+	public static boolean checkShufflePlayers(PlayerInstance eventPlayer)
 	{
 		try
 		{
-			for (L2PcInstance player : _playersShuffle)
+			for (PlayerInstance player : _playersShuffle)
 			{
 				if ((player == null) || (player.isOnline() == 0))
 				{
@@ -2757,7 +2757,7 @@ public class CTF implements EventTask
 	 * On disconnect.
 	 * @param player the player
 	 */
-	public static void onDisconnect(L2PcInstance player)
+	public static void onDisconnect(PlayerInstance player)
 	{
 		if (player._inEventCTF)
 		{
@@ -2830,7 +2830,7 @@ public class CTF implements EventTask
 	 * @param objectId the object id
 	 * @param teamName the team name
 	 */
-	public static void showFlagHtml(L2PcInstance eventPlayer, String objectId, String teamName)
+	public static void showFlagHtml(PlayerInstance eventPlayer, String objectId, String teamName)
 	{
 		if (eventPlayer == null)
 		{
@@ -2880,7 +2880,7 @@ public class CTF implements EventTask
 		{
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if (player != null)
 					{
@@ -2930,7 +2930,7 @@ public class CTF implements EventTask
 			// Check if a player ran away from the event holding a flag:
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if ((player != null) && player._haveFlagCTF)
 					{
@@ -2968,11 +2968,11 @@ public class CTF implements EventTask
 	 * Adds the flag to player.
 	 * @param _player the _player
 	 */
-	public static void addFlagToPlayer(L2PcInstance _player)
+	public static void addFlagToPlayer(PlayerInstance _player)
 	{
 		// Remove items from the player hands (right, left, both)
 		// This is NOT a BUG, I don't want them to see the icon they have 8D
-		L2ItemInstance wpn = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		ItemInstance wpn = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (wpn == null)
 		{
 			wpn = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
@@ -3003,16 +3003,16 @@ public class CTF implements EventTask
 	 * Removes the flag from player.
 	 * @param player the player
 	 */
-	public static void removeFlagFromPlayer(L2PcInstance player)
+	public static void removeFlagFromPlayer(PlayerInstance player)
 	{
-		final L2ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
+		final ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
 		player._haveFlagCTF = false;
 		if (wpn != null)
 		{
-			final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+			final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
 			player.getInventory().destroyItemByItemId("", _FLAG_IN_HAND_ITEM_ID, 1, player, null);
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance element : unequiped)
+			for (ItemInstance element : unequiped)
 			{
 				iu.addModifiedItem(element);
 			}
@@ -3033,17 +3033,16 @@ public class CTF implements EventTask
 	/**
 	 * Sets the team flag.
 	 * @param teamName the team name
-	 * @param activeChar the active char
+	 * @param player the player
 	 */
-	public static void setTeamFlag(String teamName, L2PcInstance activeChar)
+	public static void setTeamFlag(String teamName, PlayerInstance player)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
 		}
-		addOrSet(_teams.indexOf(teamName), null, false, _FlagNPC, activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		addOrSet(_teams.indexOf(teamName), null, false, _FlagNPC, player.getX(), player.getY(), player.getZ());
 	}
 	
 	/**
@@ -3062,12 +3061,12 @@ public class CTF implements EventTask
 		for (String team : _teams)
 		{
 			final int index = _teams.indexOf(team);
-			final L2NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_flagIds.get(index));
-			final L2NpcTemplate throne = NpcTable.getInstance().getTemplate(32027);
+			final NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_flagIds.get(index));
+			final NpcTemplate throne = NpcTable.getInstance().getTemplate(32027);
 			try
 			{
 				// Spawn throne
-				_throneSpawns.set(index, new L2Spawn(throne));
+				_throneSpawns.set(index, new Spawn(throne));
 				_throneSpawns.get(index).setX(_flagsX.get(index));
 				_throneSpawns.get(index).setY(_flagsY.get(index));
 				_throneSpawns.get(index).setZ(_flagsZ.get(index) - 10);
@@ -3083,7 +3082,7 @@ public class CTF implements EventTask
 				_throneSpawns.get(index).getLastSpawn().broadcastPacket(new MagicSkillUse(_throneSpawns.get(index).getLastSpawn(), _throneSpawns.get(index).getLastSpawn(), 1036, 1, 5500, 1));
 				_throneSpawns.get(index).getLastSpawn()._isCTF_throneSpawn = true;
 				// Spawn flag
-				_flagSpawns.set(index, new L2Spawn(tmpl));
+				_flagSpawns.set(index, new Spawn(tmpl));
 				_flagSpawns.get(index).setX(_flagsX.get(index));
 				_flagSpawns.get(index).setY(_flagsY.get(index));
 				_flagSpawns.get(index).setZ(_flagsZ.get(index));
@@ -3164,11 +3163,11 @@ public class CTF implements EventTask
 	public static void spawnFlag(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		final L2NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_flagIds.get(index));
+		final NpcTemplate tmpl = NpcTable.getInstance().getTemplate(_flagIds.get(index));
 		
 		try
 		{
-			_flagSpawns.set(index, new L2Spawn(tmpl));
+			_flagSpawns.set(index, new Spawn(tmpl));
 			
 			_flagSpawns.get(index).setX(_flagsX.get(index));
 			_flagSpawns.get(index).setY(_flagsY.get(index));
@@ -3201,7 +3200,7 @@ public class CTF implements EventTask
 	 * @param offset the offset
 	 * @return true, if successful
 	 */
-	public static boolean InRangeOfFlag(L2PcInstance _player, int flagIndex, int offset)
+	public static boolean InRangeOfFlag(PlayerInstance _player, int flagIndex, int offset)
 	{
 		if ((_player.getX() > (_flagsX.get(flagIndex) - offset)) && (_player.getX() < (_flagsX.get(flagIndex) + offset)) && (_player.getY() > (_flagsY.get(flagIndex) - offset)) && (_player.getY() < (_flagsY.get(flagIndex) + offset)) && (_player.getZ() > (_flagsZ.get(flagIndex) - offset)) && (_player.getZ() < (_flagsZ.get(flagIndex) + offset)))
 		{
@@ -3214,7 +3213,7 @@ public class CTF implements EventTask
 	 * Process in flag range.
 	 * @param _player the _player
 	 */
-	public static void processInFlagRange(L2PcInstance _player)
+	public static void processInFlagRange(PlayerInstance _player)
 	{
 		try
 		{
@@ -3273,13 +3272,13 @@ public class CTF implements EventTask
 	 * @param hasFlag the has flag
 	 * @param ourFlag the our flag
 	 */
-	public static void pointTeamTo(L2PcInstance hasFlag, String ourFlag)
+	public static void pointTeamTo(PlayerInstance hasFlag, String ourFlag)
 	{
 		try
 		{
 			synchronized (_players)
 			{
-				for (L2PcInstance player : _players)
+				for (PlayerInstance player : _players)
 				{
 					if ((player != null) && (player.isOnline() != 0))
 					{
@@ -3294,8 +3293,8 @@ public class CTF implements EventTask
 							else
 							{
 								player.sendPacket(new RadarControl(0, 1, hasFlag.getX(), hasFlag.getY(), hasFlag.getZ()));
-								final L2Radar rdr = new L2Radar(player);
-								final L2Radar.RadarOnPlayer radar = rdr.new RadarOnPlayer(hasFlag, player);
+								final Radar rdr = new Radar(player);
+								final Radar.RadarOnPlayer radar = rdr.new RadarOnPlayer(hasFlag, player);
 								ThreadPool.schedule(radar, 10000 + Rnd.get(30000));
 							}
 						}
@@ -3320,7 +3319,7 @@ public class CTF implements EventTask
 	 * @param flagY the flag y
 	 * @param flagZ the flag z
 	 */
-	private static void addOrSet(int listSize, L2Spawn flagSpawn, boolean flagsTaken, int flagId, int flagX, int flagY, int flagZ)
+	private static void addOrSet(int listSize, Spawn flagSpawn, boolean flagsTaken, int flagId, int flagX, int flagY, int flagZ)
 	{
 		while (_flagsX.size() <= listSize)
 		{
@@ -3354,7 +3353,7 @@ public class CTF implements EventTask
 		final int[] locY = new int[division];
 		final int[] locZ = new int[division];
 		// Get all coordinates inorder to create a polygon:
-		for (L2Spawn flag : _flagSpawns)
+		for (Spawn flag : _flagSpawns)
 		{
 			if (flag == null)
 			{
@@ -3434,7 +3433,7 @@ public class CTF implements EventTask
 	 * @param _player the _player
 	 * @return true, if is outside ctf area
 	 */
-	public static boolean isOutsideCTFArea(L2PcInstance _player)
+	public static boolean isOutsideCTFArea(PlayerInstance _player)
 	{
 		if ((_player == null) || (_player.isOnline() == 0))
 		{

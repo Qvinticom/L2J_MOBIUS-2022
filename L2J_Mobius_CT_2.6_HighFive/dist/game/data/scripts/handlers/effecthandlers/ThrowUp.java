@@ -52,7 +52,7 @@ public final class ThrowUp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		// Get current position of the L2Character
+		// Get current position of the Creature
 		final int curX = info.getEffected().getX();
 		final int curY = info.getEffected().getY();
 		final int curZ = info.getEffected().getZ();

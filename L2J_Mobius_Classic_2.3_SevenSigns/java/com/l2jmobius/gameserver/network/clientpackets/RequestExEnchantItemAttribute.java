@@ -22,11 +22,11 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.Elementals;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -40,7 +40,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 	private long _count;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_count = packet.readQ();
@@ -48,9 +48,9 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -95,8 +95,8 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		final L2ItemInstance stone = request.getEnchantingStone();
+		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
+		final ItemInstance stone = request.getEnchantingStone();
 		if ((item == null) || (stone == null))
 		{
 			player.removeRequest(request.getClass());
@@ -280,7 +280,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		player.sendInventoryUpdate(iu);
 	}
 	
-	private int addElement(L2PcInstance player, L2ItemInstance stone, L2ItemInstance item, AttributeType elementToAdd)
+	private int addElement(PlayerInstance player, ItemInstance stone, ItemInstance item, AttributeType elementToAdd)
 	{
 		final AttributeHolder oldElement = item.getAttribute(elementToAdd);
 		final int elementValue = oldElement == null ? 0 : oldElement.getValue();
@@ -352,7 +352,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		return success ? 1 : 0;
 	}
 	
-	public int getLimit(L2ItemInstance item, int sotneId)
+	public int getLimit(ItemInstance item, int sotneId)
 	{
 		final Elementals.ElementalItems elementItem = Elementals.getItemElemental(sotneId);
 		if (elementItem == null)
@@ -367,7 +367,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
 	}
 	
-	public int getPowerToAdd(int stoneId, int oldValue, L2ItemInstance item)
+	public int getPowerToAdd(int stoneId, int oldValue, ItemInstance item)
 	{
 		if (Elementals.getItemElement(stoneId) != -1)
 		{

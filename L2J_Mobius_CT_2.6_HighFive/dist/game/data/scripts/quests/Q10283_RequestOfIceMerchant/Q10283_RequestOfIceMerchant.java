@@ -16,8 +16,8 @@
  */
 package quests.Q10283_RequestOfIceMerchant;
 
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -48,7 +48,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if ((npc.getId() == JINIA) && "DESPAWN".equals(event))
 		{
@@ -58,8 +58,8 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return super.onAdvEvent(event, npc, player);
 		}
 		
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -74,15 +74,15 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			}
 			case "32020-04.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "32020-05.html":
 			case "32020-06.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
 					htmltext = event;
 				}
@@ -90,23 +90,23 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			}
 			case "32020-07.html":
 			{
-				if (st.isMemoState(1))
+				if (qs.isMemoState(1))
 				{
-					st.setMemoState(2);
-					st.setCond(2);
+					qs.setMemoState(2);
+					qs.setCond(2);
 					htmltext = event;
 				}
 				break;
 			}
 			case "32022-02.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					if (!isBusy)
 					{
 						isBusy = true;
 						talker = player.getObjectId();
-						st.setCond(3);
+						qs.setCond(3);
 						addSpawn(JINIA, 104476, -107535, -3688, 44954, false, 0, false);
 					}
 					else
@@ -119,7 +119,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			case "32760-02.html":
 			case "32760-03.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					htmltext = event;
 				}
@@ -127,11 +127,11 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			}
 			case "32760-04.html":
 			{
-				if (st.isMemoState(2))
+				if (qs.isMemoState(2))
 				{
 					giveAdena(player, 190000, true);
 					addExpAndSp(player, 627000, 50300);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 					startQuestTimer("DESPAWN", 2000, npc, null);
 				}
@@ -142,11 +142,11 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st.isCompleted())
+		if (qs.isCompleted())
 		{
 			if (npc.getId() == RAFFORTY)
 			{
@@ -157,22 +157,22 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				htmltext = "32760-06.html";
 			}
 		}
-		else if (st.isCreated())
+		else if (qs.isCreated())
 		{
 			final QuestState st1 = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
 			htmltext = ((player.getLevel() >= MIN_LEVEL) && (st1 != null) && (st1.isCompleted())) ? "32020-01.htm" : "32020-08.htm";
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			switch (npc.getId())
 			{
 				case RAFFORTY:
 				{
-					if (st.isMemoState(1))
+					if (qs.isMemoState(1))
 					{
 						htmltext = "32020-09.html";
 					}
-					else if (st.isMemoState(2))
+					else if (qs.isMemoState(2))
 					{
 						htmltext = "32020-10.html";
 					}
@@ -180,7 +180,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				}
 				case KIER:
 				{
-					if (st.isMemoState(2))
+					if (qs.isMemoState(2))
 					{
 						htmltext = "32022-01.html";
 					}
@@ -188,7 +188,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				}
 				case JINIA:
 				{
-					if (st.isMemoState(2))
+					if (qs.isMemoState(2))
 					{
 						htmltext = (talker == player.getObjectId() ? "32760-01.html" : "32760-05.html");
 					}

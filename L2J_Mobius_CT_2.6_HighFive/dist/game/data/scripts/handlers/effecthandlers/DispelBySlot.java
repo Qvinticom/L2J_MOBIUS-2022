@@ -23,10 +23,10 @@ import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.effects.EffectType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
@@ -60,9 +60,9 @@ public final class DispelBySlot extends AbstractEffect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public EffectType getEffectType()
 	{
-		return L2EffectType.DISPEL_BY_SLOT;
+		return EffectType.DISPEL_BY_SLOT;
 	}
 	
 	@Override
@@ -79,7 +79,7 @@ public final class DispelBySlot extends AbstractEffect
 			return;
 		}
 		
-		final L2Character effected = info.getEffected();
+		final Creature effected = info.getEffected();
 		final CharEffectList effectList = effected.getEffectList();
 		// There is no need to iterate over all buffs,
 		// Just iterate once over all slots to dispel and get the buff with that abnormal if exists,

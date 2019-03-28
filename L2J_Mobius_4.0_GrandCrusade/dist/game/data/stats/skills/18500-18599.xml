@@ -545,7 +545,7 @@
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="6">
 				<!-- Greater Garnet - Cancel Stun -->
-				<attackerType>L2Character</attackerType>
+				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>100</minDamage>

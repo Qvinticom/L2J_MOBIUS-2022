@@ -17,27 +17,27 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewPledgeInfo implements IClientOutgoingPacket
 {
-	private final L2Clan _clan;
-	private final L2PcInstance _activeChar;
+	private final Clan _clan;
+	private final PlayerInstance _player;
 	
-	public GMViewPledgeInfo(L2Clan clan, L2PcInstance activeChar)
+	public GMViewPledgeInfo(Clan clan, PlayerInstance player)
 	{
 		_clan = clan;
-		_activeChar = activeChar;
+		_player = player;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_PLEDGE_INFO.writeId(packet);
-		packet.writeS(_activeChar.getName());
+		packet.writeS(_player.getName());
 		packet.writeD(_clan.getId());
 		packet.writeD(0x00);
 		packet.writeS(_clan.getName());
@@ -59,7 +59,7 @@ public class GMViewPledgeInfo implements IClientOutgoingPacket
 		packet.writeD(0x00); // T3 Unknown
 		packet.writeD(_clan.getMembers().length);
 		
-		for (L2ClanMember member : _clan.getMembers())
+		for (ClanMember member : _clan.getMembers())
 		{
 			if (member != null)
 			{

@@ -23,8 +23,8 @@ import java.util.Collections;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
-import com.l2jmobius.gameserver.model.L2Mentee;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.Mentee;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -34,21 +34,21 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExMentorList implements IClientOutgoingPacket
 {
 	private final int _type;
-	private final Collection<L2Mentee> _mentees;
+	private final Collection<Mentee> _mentees;
 	
-	public ExMentorList(L2PcInstance activeChar)
+	public ExMentorList(PlayerInstance player)
 	{
-		if (activeChar.isMentor())
+		if (player.isMentor())
 		{
 			_type = 0x01;
-			_mentees = MentorManager.getInstance().getMentees(activeChar.getObjectId());
+			_mentees = MentorManager.getInstance().getMentees(player.getObjectId());
 		}
-		else if (activeChar.isMentee())
+		else if (player.isMentee())
 		{
 			_type = 0x02;
-			_mentees = Arrays.asList(MentorManager.getInstance().getMentor(activeChar.getObjectId()));
+			_mentees = Arrays.asList(MentorManager.getInstance().getMentor(player.getObjectId()));
 		}
-		else if (activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
+		else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
 		{
 			_mentees = Collections.emptyList();
 			_type = 0x01;
@@ -68,7 +68,7 @@ public class ExMentorList implements IClientOutgoingPacket
 		packet.writeD(_type);
 		packet.writeD(0x00);
 		packet.writeD(_mentees.size());
-		for (L2Mentee mentee : _mentees)
+		for (Mentee mentee : _mentees)
 		{
 			packet.writeD(mentee.getObjectId());
 			packet.writeS(mentee.getName());

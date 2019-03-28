@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 
 /**
  * Trap unsummon task.
@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
  */
 public class TrapUnsummonTask implements Runnable
 {
-	private final L2TrapInstance _trap;
+	private final TrapInstance _trap;
 	
-	public TrapUnsummonTask(L2TrapInstance trap)
+	public TrapUnsummonTask(TrapInstance trap)
 	{
 		_trap = trap;
 	}

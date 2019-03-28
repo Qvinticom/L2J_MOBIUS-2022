@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class PartySmallWindowDelete implements IClientOutgoingPacket
 {
-	private final L2PcInstance _member;
+	private final PlayerInstance _member;
 	
-	public PartySmallWindowDelete(L2PcInstance member)
+	public PartySmallWindowDelete(PlayerInstance member)
 	{
 		_member = member;
 	}

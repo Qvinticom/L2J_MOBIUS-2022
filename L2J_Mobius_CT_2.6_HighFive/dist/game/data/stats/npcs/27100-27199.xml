@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="27100" level="39" type="L2Monster" name="Skeletal Mercenary" title="Quest Monster">
+	<npc id="27100" level="39" type="Monster" name="Skeletal Mercenary" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -47,7 +47,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27101" level="42" type="L2Monster" name="Drevanul Prince Zeruel" title="Quest Monster">
+	<npc id="27101" level="42" type="Monster" name="Drevanul Prince Zeruel" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -89,7 +89,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27102" level="38" type="L2Monster" name="Pako the Cat" title="Quest Monster">
+	<npc id="27102" level="38" type="Monster" name="Pako the Cat" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -130,7 +130,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="27103" level="38" type="L2Monster" name="Racer the Unicorn" title="Quest Monster">
+	<npc id="27103" level="38" type="Monster" name="Racer the Unicorn" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -171,7 +171,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="27104" level="39" type="L2Monster" name="Shadow Turen" title="Quest Monster">
+	<npc id="27104" level="39" type="Monster" name="Shadow Turen" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -212,7 +212,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="27105" level="39" type="L2Monster" name="Mimi the Cat" title="Quest Monster">
+	<npc id="27105" level="39" type="Monster" name="Mimi the Cat" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -253,7 +253,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="27106" level="40" type="L2Monster" name="Unicorn Phantasm" title="Quest Monster">
+	<npc id="27106" level="40" type="Monster" name="Unicorn Phantasm" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -294,7 +294,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="27107" level="40" type="L2Monster" name="Silhouette Tilfo" title="Quest Monster">
+	<npc id="27107" level="40" type="Monster" name="Silhouette Tilfo" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -336,7 +336,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27108" level="37" type="L2Monster" name="Stenoa Gorgon Queen" title="Quest Monster">
+	<npc id="27108" level="37" type="Monster" name="Stenoa Gorgon Queen" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -381,7 +381,7 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="27109" level="33" type="L2Monster" name="Handmaiden of Stenoa" title="Quest Monster">
+	<npc id="27109" level="33" type="Monster" name="Handmaiden of Stenoa" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -422,7 +422,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27110" level="36" type="L2Monster" name="Shyslassys" title="Quest Monster">
+	<npc id="27110" level="36" type="Monster" name="Shyslassys" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -470,7 +470,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27111" level="30" type="L2Monster" name="Cave Basilisk" title="Quest Monster">
+	<npc id="27111" level="30" type="Monster" name="Cave Basilisk" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -511,7 +511,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27112" level="36" type="L2Monster" name="Gorr" title="Quest Monster">
+	<npc id="27112" level="36" type="Monster" name="Gorr" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -559,7 +559,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27113" level="36" type="L2Monster" name="Baraham" title="Quest Monster">
+	<npc id="27113" level="36" type="Monster" name="Baraham" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -607,7 +607,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27114" level="34" type="L2Monster" name="Succubus Queen" title="Quest Monster">
+	<npc id="27114" level="34" type="Monster" name="Succubus Queen" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -656,7 +656,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27115" level="28" type="L2Monster" name="Claw Of Succubus" title="Quest Monster">
+	<npc id="27115" level="28" type="Monster" name="Claw Of Succubus" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -702,7 +702,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27116" level="35" type="L2Monster" name="Lava Salamander" title="Quest Monster">
+	<npc id="27116" level="35" type="Monster" name="Lava Salamander" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -747,7 +747,7 @@
 			<height normal="6.8" />
 		</collision>
 	</npc>
-	<npc id="27117" level="35" type="L2Monster" name="Nahir" title="Quest Monster">
+	<npc id="27117" level="35" type="Monster" name="Nahir" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -789,7 +789,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27118" level="30" type="L2Monster" name="Black Willow" title="Quest Monster">
+	<npc id="27118" level="30" type="Monster" name="Black Willow" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -837,7 +837,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 	</npc>
-	<npc id="27119" level="35" type="L2Monster" name="Spirit of Sir Herod" title="Quest Monster">
+	<npc id="27119" level="35" type="Monster" name="Spirit of Sir Herod" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -886,7 +886,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="27120" level="37" type="L2Monster" name="Luell Of Zephyr Winds" title="Quest Monster">
+	<npc id="27120" level="37" type="Monster" name="Luell Of Zephyr Winds" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -933,7 +933,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27121" level="37" type="L2Monster" name="Actea Of Verdant Wilds" title="Quest Monster">
+	<npc id="27121" level="37" type="Monster" name="Actea Of Verdant Wilds" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -978,7 +978,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="27122" level="35" type="L2Monster" name="Leto Lizardman Agent" title="Quest Monster">
+	<npc id="27122" level="35" type="Monster" name="Leto Lizardman Agent" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1024,7 +1024,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="27123" level="38" type="L2Monster" name="Leto Lizardman Leader" title="Quest Monster">
+	<npc id="27123" level="38" type="Monster" name="Leto Lizardman Leader" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1070,7 +1070,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27124" level="37" type="L2Monster" name="Leto Lizardman Assassin" title="Quest Monster">
+	<npc id="27124" level="37" type="Monster" name="Leto Lizardman Assassin" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1116,7 +1116,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="27125" level="36" type="L2Monster" name="Leto Lizardman Sniper" title="Quest Monster">
+	<npc id="27125" level="36" type="Monster" name="Leto Lizardman Sniper" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="125" />
@@ -1162,7 +1162,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="27126" level="39" type="L2Monster" name="Leto Lizardman Wizard" title="Quest Monster">
+	<npc id="27126" level="39" type="Monster" name="Leto Lizardman Wizard" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1210,7 +1210,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27127" level="40" type="L2Monster" name="Leto Lizardman Lord" title="Quest Monster">
+	<npc id="27127" level="40" type="Monster" name="Leto Lizardman Lord" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1256,7 +1256,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27128" level="40" type="L2Monster" name="Aruraune" title="Quest Monster">
+	<npc id="27128" level="40" type="Monster" name="Aruraune" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1297,7 +1297,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="27129" level="38" type="L2Monster" name="Ol Mahum Inspector" title="Quest Monster">
+	<npc id="27129" level="38" type="Monster" name="Ol Mahum Inspector" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1339,7 +1339,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27130" level="36" type="L2Monster" name="Ol Mahum Betrayer" title="Quest Monster">
+	<npc id="27130" level="36" type="Monster" name="Ol Mahum Betrayer" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1381,7 +1381,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27131" level="36" type="L2Monster" name="Crimson Werewolf" title="Quest Monster">
+	<npc id="27131" level="36" type="Monster" name="Crimson Werewolf" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -1426,7 +1426,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="27132" level="36" type="L2Monster" name="Krudel Lizardman" title="Quest Monster">
+	<npc id="27132" level="36" type="Monster" name="Krudel Lizardman" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
@@ -1472,7 +1472,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27133" level="37" type="L2Monster" name="Evil Eye Lord" title="Quest Monster">
+	<npc id="27133" level="37" type="Monster" name="Evil Eye Lord" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1517,7 +1517,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="27134" level="32" type="L2Monster" name="Tatoma" title="Quest Monster">
+	<npc id="27134" level="32" type="Monster" name="Tatoma" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -1563,7 +1563,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27135" level="50" type="L2Monster" name="Grima" title="Quest Monster">
+	<npc id="27135" level="50" type="Monster" name="Grima" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="82" />
@@ -1604,7 +1604,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27136" level="40" type="L2Monster" name="Succubus Of Seduction" title="Quest Monster">
+	<npc id="27136" level="40" type="Monster" name="Succubus Of Seduction" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1646,7 +1646,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27137" level="50" type="L2Monster" name="Demon King" title="Quest Monster">
+	<npc id="27137" level="50" type="Monster" name="Demon King" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1688,7 +1688,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27138" level="60" type="L2Monster" name="Great Demon King" title="Quest Monster">
+	<npc id="27138" level="60" type="Monster" name="Great Demon King" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -1731,7 +1731,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="27139" level="47" type="L2Monster" name="Secret Keeper Tree" title="Quest Monster">
+	<npc id="27139" level="47" type="Monster" name="Secret Keeper Tree" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1773,7 +1773,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="27140" level="36" type="L2Monster" name="Breka Overlord Haka" title="Quest Monster">
+	<npc id="27140" level="36" type="Monster" name="Breka Overlord Haka" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1817,7 +1817,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27141" level="36" type="L2Monster" name="Breka Overlord Jaka" title="Quest Monster">
+	<npc id="27141" level="36" type="Monster" name="Breka Overlord Jaka" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1861,7 +1861,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27142" level="36" type="L2Monster" name="Breka Overlord Marka" title="Quest Monster">
+	<npc id="27142" level="36" type="Monster" name="Breka Overlord Marka" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1905,7 +1905,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27143" level="42" type="L2Monster" name="Windsus Aleph" title="Quest Monster">
+	<npc id="27143" level="42" type="Monster" name="Windsus Aleph" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
@@ -1946,7 +1946,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27144" level="48" type="L2Monster" name="Tarlk Raider Athu" title="Quest Monster">
+	<npc id="27144" level="48" type="Monster" name="Tarlk Raider Athu" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -1988,7 +1988,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27145" level="48" type="L2Monster" name="Tarlk Raider Lanka" title="Quest Monster">
+	<npc id="27145" level="48" type="Monster" name="Tarlk Raider Lanka" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -2030,7 +2030,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27146" level="48" type="L2Monster" name="Tarlk Raider Triska" title="Quest Monster">
+	<npc id="27146" level="48" type="Monster" name="Tarlk Raider Triska" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -2072,7 +2072,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27147" level="48" type="L2Monster" name="Tarlk Raider Motura" title="Quest Monster">
+	<npc id="27147" level="48" type="Monster" name="Tarlk Raider Motura" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -2114,7 +2114,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27148" level="48" type="L2Monster" name="Tarlk Raider Kalath" title="Quest Monster">
+	<npc id="27148" level="48" type="Monster" name="Tarlk Raider Kalath" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -2156,7 +2156,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27149" level="12" type="L2Monster" name="Gremlin Filcher" title="Quest Monster">
+	<npc id="27149" level="12" type="Monster" name="Gremlin Filcher" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2197,7 +2197,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="27150" level="43" type="L2Monster" name="Black Legion Stormtrooper" title="Quest Monster">
+	<npc id="27150" level="43" type="Monster" name="Black Legion Stormtrooper" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2240,7 +2240,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="27151" level="28" type="L2Monster" name="Delu Lizardman Headhunter" title="Quest Monster">
+	<npc id="27151" level="28" type="Monster" name="Delu Lizardman Headhunter" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -2282,7 +2282,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="27152" level="35" type="L2Monster" name="Marsh Stakato Marquess" title="Quest Monster">
+	<npc id="27152" level="35" type="Monster" name="Marsh Stakato Marquess" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="20" />
@@ -2323,7 +2323,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="27153" level="3" type="L2Monster" name="Alexandro Sanches" title="Dark Lord">
+	<npc id="27153" level="3" type="Monster" name="Alexandro Sanches" title="Dark Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2366,7 +2366,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="27154" level="3" type="L2Monster" name="Bonaparterius" title="Abyss King">
+	<npc id="27154" level="3" type="Monster" name="Bonaparterius" title="Abyss King">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
@@ -2409,7 +2409,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="27155" level="3" type="L2Monster" name="Ramsebalius" title="Evil Overlord">
+	<npc id="27155" level="3" type="Monster" name="Ramsebalius" title="Evil Overlord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
@@ -2452,7 +2452,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27156" level="40" type="L2Monster" name="Leto Shaman Ketz" title="Quest Monster">
+	<npc id="27156" level="40" type="Monster" name="Leto Shaman Ketz" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2498,7 +2498,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27157" level="41" type="L2Monster" name="Leto Chief Narak" title="Quest Monster">
+	<npc id="27157" level="41" type="Monster" name="Leto Chief Narak" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2540,7 +2540,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27158" level="43" type="L2Monster" name="Timak Raider Kaikee" title="Quest Monster">
+	<npc id="27158" level="43" type="Monster" name="Timak Raider Kaikee" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
@@ -2582,7 +2582,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="27159" level="46" type="L2Monster" name="Timak Overlord Okun" title="Quest Monster">
+	<npc id="27159" level="46" type="Monster" name="Timak Overlord Okun" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2624,7 +2624,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27160" level="43" type="L2Monster" name="Gok Magok" title="Grandis Chief">
+	<npc id="27160" level="43" type="Monster" name="Gok Magok" title="Grandis Chief">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2665,7 +2665,7 @@
 			<height normal="39" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27161" level="45" type="L2Monster" name="Taik Overlord Kakran" title="Quest Monster">
+	<npc id="27161" level="45" type="Monster" name="Taik Overlord Kakran" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2707,7 +2707,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="27162" level="52" type="L2Monster" name="Hatar Chieftain Kubel" title="Quest Monster">
+	<npc id="27162" level="52" type="Monster" name="Hatar Chieftain Kubel" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2748,7 +2748,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27163" level="51" type="L2Monster" name="Vanor Elder Kerunos" title="Quest Monster">
+	<npc id="27163" level="51" type="Monster" name="Vanor Elder Kerunos" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2790,7 +2790,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="27164" level="43" type="L2Monster" name="Karul Chief Orooto" title="Quest Monster">
+	<npc id="27164" level="43" type="Monster" name="Karul Chief Orooto" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -2832,7 +2832,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27165" level="60" type="L2Monster" name="Abyssal Jewel 1" title="Quest Monster">
+	<npc id="27165" level="60" type="Monster" name="Abyssal Jewel 1" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2876,7 +2876,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="27166" level="60" type="L2Monster" name="Abyssal Jewel 2" title="Quest Monster">
+	<npc id="27166" level="60" type="Monster" name="Abyssal Jewel 2" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2920,7 +2920,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="27167" level="60" type="L2Monster" name="Abyssal Jewel 3" title="Quest Monster">
+	<npc id="27167" level="60" type="Monster" name="Abyssal Jewel 3" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2964,7 +2964,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="27168" level="53" type="L2Monster" name="Jewel Guardian Mara" title="Quest Monster">
+	<npc id="27168" level="53" type="Monster" name="Jewel Guardian Mara" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3009,7 +3009,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27169" level="53" type="L2Monster" name="Jewel Guardian Musfel" title="Quest Monster">
+	<npc id="27169" level="53" type="Monster" name="Jewel Guardian Musfel" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3054,7 +3054,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27170" level="58" type="L2Monster" name="Jewel Guardian Pyton" title="Quest Monster">
+	<npc id="27170" level="58" type="Monster" name="Jewel Guardian Pyton" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3100,7 +3100,7 @@
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="27171" level="20" type="L2Monster" name="Ghost of Offering" title="Quest Monster">
+	<npc id="27171" level="20" type="Monster" name="Ghost of Offering" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3143,7 +3143,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="27172" level="55" type="L2Monster" name="Harit Lizardman Zealot" title="Quest Monster">
+	<npc id="27172" level="55" type="Monster" name="Harit Lizardman Zealot" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -3185,7 +3185,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27173" level="50" type="L2Monster" name="Box Of Athrea 1" title="Quest Monster">
+	<npc id="27173" level="50" type="Monster" name="Box Of Athrea 1" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3224,7 +3224,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="27174" level="50" type="L2Monster" name="Box Of Athrea 2" title="Quest Monster">
+	<npc id="27174" level="50" type="Monster" name="Box Of Athrea 2" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3263,7 +3263,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="27175" level="50" type="L2Monster" name="Box Of Athrea 3" title="Quest Monster">
+	<npc id="27175" level="50" type="Monster" name="Box Of Athrea 3" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3302,7 +3302,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="27176" level="50" type="L2Monster" name="Box Of Athrea 4" title="Quest Monster">
+	<npc id="27176" level="50" type="Monster" name="Box Of Athrea 4" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3341,7 +3341,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="27177" level="50" type="L2Monster" name="Box Of Athrea 5" title="Quest Monster">
+	<npc id="27177" level="50" type="Monster" name="Box Of Athrea 5" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3380,7 +3380,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="27178" level="60" type="L2Monster" name="Blitz Wyrm" title="Quest Monster">
+	<npc id="27178" level="60" type="Monster" name="Blitz Wyrm" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -3425,7 +3425,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="27179" level="65" type="L2Monster" name="Grave Keymaster" title="Quest Monster">
+	<npc id="27179" level="65" type="Monster" name="Grave Keymaster" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3473,7 +3473,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="27180" level="56" type="L2Monster" name="Imperial Slave" title="Quest Monster">
+	<npc id="27180" level="56" type="Monster" name="Imperial Slave" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3519,7 +3519,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27181" level="60" type="L2Monster" name="Imperial Gravekeeper" title="Quest Monster">
+	<npc id="27181" level="60" type="Monster" name="Imperial Gravekeeper" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3561,7 +3561,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="27182" level="60" type="L2Monster" name="Ark Guardian Elberoth" title="Quest Monster">
+	<npc id="27182" level="60" type="Monster" name="Ark Guardian Elberoth" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3606,7 +3606,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27183" level="60" type="L2Monster" name="Ark Guardian Shadowfang" title="Quest Monster">
+	<npc id="27183" level="60" type="Monster" name="Ark Guardian Shadowfang" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3651,7 +3651,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27184" level="60" type="L2Monster" name="Angel Killer" title="Quest Monster">
+	<npc id="27184" level="60" type="Monster" name="Angel Killer" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3703,7 +3703,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27185" level="55" type="L2Monster" name="Fairy Tree of Wind" title="Quest Monster">
+	<npc id="27185" level="55" type="Monster" name="Fairy Tree of Wind" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3751,7 +3751,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="27186" level="55" type="L2Monster" name="Fairy Tree of Star" title="Quest Monster">
+	<npc id="27186" level="55" type="Monster" name="Fairy Tree of Star" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3799,7 +3799,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="27187" level="55" type="L2Monster" name="Fairy Tree of Twilight" title="Quest Monster">
+	<npc id="27187" level="55" type="Monster" name="Fairy Tree of Twilight" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3847,7 +3847,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="27188" level="55" type="L2Monster" name="Fairy Tree of Abyss" title="Quest Monster">
+	<npc id="27188" level="55" type="Monster" name="Fairy Tree of Abyss" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3895,7 +3895,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="27189" level="50" type="L2Monster" name="Soul of Tree Guardian" title="Quest Monster">
+	<npc id="27189" level="50" type="Monster" name="Soul of Tree Guardian" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3942,7 +3942,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27190" level="26" type="L2Monster" name="Ol Mahum Support Troop" title="Quest Monster">
+	<npc id="27190" level="26" type="Monster" name="Ol Mahum Support Troop" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3990,7 +3990,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="27191" level="25" type="L2Monster" name="Malcom" title="Quest Monster">
+	<npc id="27191" level="25" type="Monster" name="Malcom" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -4033,7 +4033,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27192" level="18" type="L2Monster" name="Succubus Handmaiden" title="Quest Monster">
+	<npc id="27192" level="18" type="Monster" name="Succubus Handmaiden" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -4080,7 +4080,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27193" level="12" type="L2Monster" name="Goblin Servant" title="Quest Monster">
+	<npc id="27193" level="12" type="Monster" name="Goblin Servant" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
@@ -4121,7 +4121,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="27194" level="40" type="L2Monster" name="Julie the Ripper" title="Quest Monster">
+	<npc id="27194" level="40" type="Monster" name="Julie the Ripper" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -4168,7 +4168,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="27195" level="32" type="L2Monster" name="Male Ant" title="Quest Monster">
+	<npc id="27195" level="32" type="Monster" name="Male Ant" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -4204,7 +4204,7 @@
 			<height normal="48" grown="57" />
 		</collision>
 	</npc>
-	<npc id="27196" level="40" type="L2Monster" name="Bluebacked Alligator" title="Quest Monster">
+	<npc id="27196" level="40" type="Monster" name="Bluebacked Alligator" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4253,7 +4253,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="27197" level="40" type="L2Monster" name="Bejewelled Alligator" title="Quest Monster">
+	<npc id="27197" level="40" type="Monster" name="Bejewelled Alligator" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4302,7 +4302,7 @@
 			<height normal="11.5" />
 		</collision>
 	</npc>
-	<npc id="27199" level="36" type="L2Monster" name="Crimson Werewolf" title="Quest Monster">
+	<npc id="27199" level="36" type="Monster" name="Crimson Werewolf" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />

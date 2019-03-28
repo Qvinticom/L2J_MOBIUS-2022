@@ -19,10 +19,10 @@ package handlers.bypasshandlers;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -78,25 +78,25 @@ public class SupportMagic implements IBypassHandler
 	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
+	public boolean useBypass(String command, PlayerInstance player, Creature target)
 	{
-		if (!target.isNpc() || activeChar.isCursedWeaponEquipped())
+		if (!target.isNpc() || player.isCursedWeaponEquipped())
 		{
 			return false;
 		}
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			makeSupportMagic(activeChar, (L2Npc) target, true);
+			makeSupportMagic(player, (Npc) target, true);
 		}
 		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			makeSupportMagic(activeChar, (L2Npc) target, false);
+			makeSupportMagic(player, (Npc) target, false);
 		}
 		return true;
 	}
 	
-	private static void makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
+	private static void makeSupportMagic(PlayerInstance player, Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
 		if (isSummon && !player.hasServitors())
@@ -122,7 +122,7 @@ public class SupportMagic implements IBypassHandler
 		
 		if (isSummon)
 		{
-			for (L2Summon s : player.getServitors().values())
+			for (Summon s : player.getServitors().values())
 			{
 				npc.setTarget(s);
 				for (SkillHolder skill : SUMMON_BUFFS)

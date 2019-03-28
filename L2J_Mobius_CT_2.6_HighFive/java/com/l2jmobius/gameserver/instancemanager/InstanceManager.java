@@ -30,8 +30,8 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 
@@ -256,7 +256,7 @@ public final class InstanceManager implements IGameXmlReader
 	 * @param object
 	 * @return the InstanceWorld of the object
 	 */
-	public InstanceWorld getWorld(L2Object object)
+	public InstanceWorld getWorld(WorldObject object)
 	{
 		return _instanceWorlds.get(object.getInstanceId());
 	}
@@ -266,7 +266,7 @@ public final class InstanceManager implements IGameXmlReader
 	 * @param player the player to check
 	 * @return the instance world
 	 */
-	public InstanceWorld getPlayerWorld(L2PcInstance player)
+	public InstanceWorld getPlayerWorld(PlayerInstance player)
 	{
 		for (InstanceWorld temp : _instanceWorlds.values())
 		{

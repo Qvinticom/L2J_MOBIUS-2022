@@ -24,7 +24,7 @@ import java.util.List;
  * This class is made to create packets with any format
  * @author Maktakien
  */
-public class AdminForgePacket extends L2GameServerPacket
+public class AdminForgePacket extends GameServerPacket
 {
 	private final List<Part> _parts = new ArrayList<>();
 	

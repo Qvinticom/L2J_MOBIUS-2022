@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.CubicInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -76,7 +76,7 @@ public final class SummonCubic extends AbstractEffect
 			return;
 		}
 		
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final PlayerInstance player = info.getEffected().getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
 			return;
@@ -94,7 +94,7 @@ public final class SummonCubic extends AbstractEffect
 		}
 		
 		// If cubic is already present, it's replaced.
-		final L2CubicInstance cubic = player.getCubicById(_cubicId);
+		final CubicInstance cubic = player.getCubicById(_cubicId);
 		if (cubic != null)
 		{
 			cubic.stopAction();
@@ -111,7 +111,7 @@ public final class SummonCubic extends AbstractEffect
 			for (int i = 0; i <= (currentCubicCount - allowedCubicCount); i++)
 			{
 				final int removedCubicId = (int) player.getCubics().keySet().toArray()[Rnd.get(currentCubicCount)];
-				final L2CubicInstance removedCubic = player.getCubicById(removedCubicId);
+				final CubicInstance removedCubic = player.getCubicById(removedCubicId);
 				removedCubic.stopAction();
 				removedCubic.cancelDisappear();
 				player.getCubics().remove(removedCubic.getId());

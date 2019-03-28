@@ -17,10 +17,10 @@
 package ai.areas.GardenOfGenesis;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
@@ -48,7 +48,7 @@ public class GardenWatchman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -57,7 +57,7 @@ public class GardenWatchman extends AbstractNpcAI
 				if (!npc.isInCombat())
 				{
 					npc.doCast(TRAP_SETUP.getSkill());
-					final L2Npc trap = addSpawn((getRandom(10) < 5) ? GENESIS_TRAP_1 : GENESIS_TRAP_2, npc, true, 90000, false);
+					final Npc trap = addSpawn((getRandom(10) < 5) ? GENESIS_TRAP_1 : GENESIS_TRAP_2, npc, true, 90000, false);
 					trap.setDisplayEffect(1);
 					startQuestTimer("SPAWN_TRAP", getRandom(50000, 100000), npc, null);
 				}
@@ -65,7 +65,7 @@ public class GardenWatchman extends AbstractNpcAI
 			}
 			case "DEBUFF":
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 100, nearby ->
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 100, nearby ->
 				{
 					if ((npc != null) && npc.isScriptValue(0) && nearby.isPlayer() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
 					{
@@ -82,14 +82,14 @@ public class GardenWatchman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		startQuestTimer("SPAWN_TRAP", 50000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if (creature.isPlayer())
 		{

@@ -17,9 +17,9 @@
 package quests.Q114_ResurrectionOfAnOldManager;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -59,7 +59,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
@@ -229,9 +229,9 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		{
 			if (st.getInt("golemSpawned") == 0)
 			{
-				final L2NpcInstance golem = addSpawn(GOLEM, 96977, -110625, -3322, 0, true, 0);
+				final NpcInstance golem = addSpawn(GOLEM, 96977, -110625, -3322, 0, true, 0);
 				golem.broadcastNpcSay("You, " + player.getName() + ", you attacked Wendy. Prepare to die!");
-				((L2Attackable) golem).addDamageHate(player, 0, 999);
+				((Attackable) golem).addDamageHate(player, 0, 999);
 				golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				
 				st.set("golemSpawned", "1");
@@ -332,7 +332,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2NpcInstance npc, L2PcInstance player)
+	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		String htmltext = getNoQuestMsg();
@@ -609,7 +609,7 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		QuestState st = checkPlayerCondition(player, npc, "cond", "10");
 		if (st == null)

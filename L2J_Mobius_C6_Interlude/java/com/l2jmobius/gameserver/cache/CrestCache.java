@@ -32,7 +32,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 /**
  * @author Layane
@@ -158,7 +158,7 @@ public class CrestCache
 			
 			final int newId = IdFactory.getInstance().getNextId();
 			
-			L2Clan clan = ClanTable.getInstance().getClan(clanId);
+			Clan clan = ClanTable.getInstance().getClan(clanId);
 			
 			if (clan != null)
 			{

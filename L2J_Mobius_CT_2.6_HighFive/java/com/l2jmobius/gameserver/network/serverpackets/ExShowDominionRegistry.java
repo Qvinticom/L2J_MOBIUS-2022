@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager.Territory;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -40,7 +40,7 @@ public class ExShowDominionRegistry implements IClientOutgoingPacket
 	private int _warTime = (int) (Calendar.getInstance().getTimeInMillis() / 1000);
 	private final int _currentTime = (int) (Calendar.getInstance().getTimeInMillis() / 1000);
 	
-	public ExShowDominionRegistry(int castleId, L2PcInstance player)
+	public ExShowDominionRegistry(int castleId, PlayerInstance player)
 	{
 		_castleId = castleId;
 		if (TerritoryWarManager.getInstance().getRegisteredClans(castleId) != null)
@@ -73,7 +73,7 @@ public class ExShowDominionRegistry implements IClientOutgoingPacket
 		}
 		else
 		{
-			final L2Clan clan = TerritoryWarManager.getInstance().getTerritory(_castleId).getOwnerClan();
+			final Clan clan = TerritoryWarManager.getInstance().getTerritory(_castleId).getOwnerClan();
 			if (clan == null)
 			{
 				// something is wrong

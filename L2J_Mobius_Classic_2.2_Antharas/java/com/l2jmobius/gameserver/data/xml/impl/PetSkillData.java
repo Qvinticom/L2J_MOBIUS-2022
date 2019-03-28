@@ -28,7 +28,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -90,7 +90,7 @@ public class PetSkillData implements IGameXmlReader
 		}
 	}
 	
-	public int getAvailableLevel(L2Summon pet, int skillId)
+	public int getAvailableLevel(Summon pet, int skillId)
 	{
 		int lvl = 0;
 		if (!_skillTrees.containsKey(pet.getId()))
@@ -140,7 +140,7 @@ public class PetSkillData implements IGameXmlReader
 		return lvl;
 	}
 	
-	public List<Integer> getAvailableSkills(L2Summon pet)
+	public List<Integer> getAvailableSkills(Summon pet)
 	{
 		final List<Integer> skillIds = new ArrayList<>();
 		if (!_skillTrees.containsKey(pet.getId()))

@@ -20,8 +20,8 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
@@ -39,7 +39,7 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 	private String _roomtitle;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_roomid = packet.readD();
 		_membersmax = packet.readD();
@@ -51,11 +51,11 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance _activeChar = client.getActiveChar();
+		final PlayerInstance _player = client.getPlayer();
 		
-		if (_activeChar == null)
+		if (_player == null)
 		{
 			return;
 		}
@@ -65,21 +65,21 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 			if (_room != null)
 			{
-				LOGGER.info("PartyMatchRoom #" + _room.getId() + " changed by " + _activeChar.getName());
+				LOGGER.info("PartyMatchRoom #" + _room.getId() + " changed by " + _player.getName());
 				_room.setMaxMembers(_membersmax);
 				_room.setMinLvl(_lvlmin);
 				_room.setMaxLvl(_lvlmax);
 				_room.setLootType(_loot);
 				_room.setTitle(_roomtitle);
 				
-				for (L2PcInstance _member : _room.getPartyMembers())
+				for (PlayerInstance _member : _room.getPartyMembers())
 				{
 					if (_member == null)
 					{
 						continue;
 					}
 					
-					_member.sendPacket(new PartyMatchDetail(_activeChar, _room));
+					_member.sendPacket(new PartyMatchDetail(_player, _room));
 					_member.sendPacket(SystemMessageId.THE_PARTY_ROOM_S_INFORMATION_HAS_BEEN_REVISED);
 				}
 			}
@@ -88,23 +88,23 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 		{
 			final int _maxid = PartyMatchRoomList.getInstance().getMaxId();
 			
-			final PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _activeChar);
+			final PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _player);
 			
-			LOGGER.info("PartyMatchRoom #" + _maxid + " created by " + _activeChar.getName());
+			LOGGER.info("PartyMatchRoom #" + _maxid + " created by " + _player.getName());
 			// Remove from waiting list
-			PartyMatchWaitingList.getInstance().removePlayer(_activeChar);
+			PartyMatchWaitingList.getInstance().removePlayer(_player);
 			
 			PartyMatchRoomList.getInstance().addPartyMatchRoom(_maxid, _room);
 			
-			if (_activeChar.isInParty())
+			if (_player.isInParty())
 			{
-				for (L2PcInstance ptmember : _activeChar.getParty().getMembers())
+				for (PlayerInstance ptmember : _player.getParty().getMembers())
 				{
 					if (ptmember == null)
 					{
 						continue;
 					}
-					if (ptmember == _activeChar)
+					if (ptmember == _player)
 					{
 						continue;
 					}
@@ -115,14 +115,14 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 					_room.addMember(ptmember);
 				}
 			}
-			_activeChar.sendPacket(new PartyMatchDetail(_activeChar, _room));
-			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 1));
+			_player.sendPacket(new PartyMatchDetail(_player, _room));
+			_player.sendPacket(new ExPartyRoomMember(_player, _room, 1));
 			
-			_activeChar.sendPacket(SystemMessageId.YOU_HAVE_CREATED_A_PARTY_ROOM);
+			_player.sendPacket(SystemMessageId.YOU_HAVE_CREATED_A_PARTY_ROOM);
 			
-			_activeChar.setPartyRoom(_maxid);
+			_player.setPartyRoom(_maxid);
 			// _activeChar.setPartyMatching(1);
-			_activeChar.broadcastUserInfo();
+			_player.broadcastUserInfo();
 		}
 	}
 }

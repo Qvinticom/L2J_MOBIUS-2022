@@ -16,9 +16,9 @@
  */
 package ai.areas.IsleOfPrayer;
 
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 
 import ai.AbstractNpcAI;
@@ -44,7 +44,7 @@ public final class EvasGiftBox extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		if (killer.isAffectedBySkill(BUFF))
 		{
@@ -62,10 +62,10 @@ public final class EvasGiftBox extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
-		((L2Attackable) npc).setOnKillDelay(0);
+		((Attackable) npc).setOnKillDelay(0);
 		return super.onSpawn(npc);
 	}
 	

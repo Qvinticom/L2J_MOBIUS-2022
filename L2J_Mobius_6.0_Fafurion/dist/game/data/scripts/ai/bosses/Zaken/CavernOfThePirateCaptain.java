@@ -22,8 +22,8 @@ import java.util.List;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
@@ -136,14 +136,14 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceCreated(Instance instance, L2PcInstance player)
+	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
-		final List<L2Npc> candles = new ArrayList<>();
+		final List<Npc> candles = new ArrayList<>();
 		final int zakenRoom = getRandom(1, 15);
 		
 		for (int i = 0; i < 36; i++)
 		{
-			final L2Npc candle = addSpawn(CANDLE, CANDLE_LOC[i], false, 0, false, instance.getId());
+			final Npc candle = addSpawn(CANDLE, CANDLE_LOC[i], false, 0, false, instance.getId());
 			candle.getVariables().set("candleId", i + 1);
 			candles.add(candle);
 		}
@@ -152,7 +152,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			candles.get(ROOM_DATA[zakenRoom - 1][i] - 1).getVariables().set("isBlue", 1);
 		}
-		final L2Npc zaken = spawnNpc(instance.getTemplateParameters().getInt("Zaken"), zakenRoom, null, instance);
+		final Npc zaken = spawnNpc(instance.getTemplateParameters().getInt("Zaken"), zakenRoom, null, instance);
 		zaken.setInvisible(true);
 		zaken.setBlockActions(true);
 		instance.setParameter("zakenRoom", zakenRoom);
@@ -160,7 +160,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceEnter(L2PcInstance player, Instance instance)
+	public void onInstanceEnter(PlayerInstance player, Instance instance)
 	{
 		final int startTime = (int) (instance.getElapsedTime() / 1000);
 		final int endTime = (int) (instance.getRemainingTime() / 1000);
@@ -168,13 +168,13 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public void onInstanceLeave(L2PcInstance player, Instance instance)
+	public void onInstanceLeave(PlayerInstance player, Instance instance)
 	{
 		player.sendPacket(new ExSendUIEvent(player, true, true, 0, 0, NpcStringId.ELAPSED_TIME));
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (event.equals("enter60"))
 		{
@@ -245,7 +245,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 						}
 						
 						final int zakenRoom = params.getInt("zakenRoom");
-						final L2Npc zaken = params.getObject("zaken", L2Npc.class);
+						final Npc zaken = params.getObject("zaken", Npc.class);
 						zaken.setInvisible(false);
 						zaken.setBlockActions(false);
 						spawnNpc(templParams.getInt("DollBlader"), zakenRoom, player, world);
@@ -260,7 +260,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
@@ -268,7 +268,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 			if (npc.getId() == ZAKEN_83)
 			{
 				final long time = world.getElapsedTime();
-				for (L2PcInstance playersInside : world.getPlayersInsideRadius(npc, Config.ALT_PARTY_RANGE))
+				for (PlayerInstance playersInside : world.getPlayersInsideRadius(npc, Config.ALT_PARTY_RANGE))
 				{
 					for (int[] reward : VORPAL_JEWELS)
 					{
@@ -289,7 +289,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && npc.isScriptValue(0))
@@ -309,7 +309,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		return null;
 	}
 	
-	private int getRoomByCandle(L2Npc npc)
+	private int getRoomByCandle(Npc npc)
 	{
 		final int candleId = npc.getVariables().getInt("candleId", 0);
 		for (int i = 0; i < 15; i++)
@@ -335,11 +335,11 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		return 0;
 	}
 	
-	private L2Npc spawnNpc(int npcId, int roomId, L2PcInstance player, Instance world)
+	private Npc spawnNpc(int npcId, int roomId, PlayerInstance player, Instance world)
 	{
 		if ((player != null) && (npcId != ZAKEN_60) && (npcId != ZAKEN_83))
 		{
-			final L2Npc mob = addSpawn(npcId, ROOM_DATA[roomId - 1][0] + getRandom(350), ROOM_DATA[roomId - 1][1] + getRandom(350), ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getId());
+			final Npc mob = addSpawn(npcId, ROOM_DATA[roomId - 1][0] + getRandom(350), ROOM_DATA[roomId - 1][1] + getRandom(350), ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getId());
 			addAttackPlayerDesire(mob, player);
 			return mob;
 		}

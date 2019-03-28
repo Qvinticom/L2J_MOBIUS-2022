@@ -3892,7 +3892,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Decrease Speed -->
-				<attackerType>L2Playable</attackerType>
+				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>

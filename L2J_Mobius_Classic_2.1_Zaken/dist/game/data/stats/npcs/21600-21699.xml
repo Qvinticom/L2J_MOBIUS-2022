@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21602" level="65" type="L2Monster" name="Ancient Holy Ground's Wing">
+	<npc id="21602" level="65" type="Monster" name="Ancient Holy Ground's Wing">
 	    <!-- Classic Monster -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -74,7 +74,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21603" level="66" type="L2Monster" name="Guardian Spirit of Ancient Holy Ground">
+	<npc id="21603" level="66" type="Monster" name="Guardian Spirit of Ancient Holy Ground">
 		<!-- Classic Monster -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -144,7 +144,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="21604" level="66" type="L2Monster" name="Zaken's Elite Pikeman">
+	<npc id="21604" level="66" type="Monster" name="Zaken's Elite Pikeman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -214,7 +214,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21605" level="67" type="L2Monster" name="Lilim Knight Captain">
+	<npc id="21605" level="67" type="Monster" name="Lilim Knight Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -301,7 +301,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="21606" level="67" type="L2Monster" name="Zaken's Archer">
+	<npc id="21606" level="67" type="Monster" name="Zaken's Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -382,7 +382,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21607" level="68" type="L2Monster" name="Nephilim Cardinal">
+	<npc id="21607" level="68" type="Monster" name="Nephilim Cardinal">
 		<!-- Classic Monster -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -460,7 +460,7 @@
 			<height normal="44" grown="56" />
 		</collision>
 	</npc>
-	<npc id="21608" level="68" type="L2Monster" name="Zaken's Watchman">
+	<npc id="21608" level="68" type="Monster" name="Zaken's Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -531,7 +531,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21609" level="69" type="L2Monster" name="Netherworld Royal Guard">
+	<npc id="21609" level="69" type="Monster" name="Netherworld Royal Guard">
 	    <!-- Classic Monster -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -603,7 +603,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21610" level="69" type="L2Monster" name="Zaken's Senior Watchman">
+	<npc id="21610" level="69" type="Monster" name="Zaken's Senior Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -671,7 +671,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21611" level="71" type="L2Monster" name="Dismal Humming">
+	<npc id="21611" level="71" type="Monster" name="Dismal Humming">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -753,7 +753,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21612" level="72" type="L2Monster" name="Dismal Humming">
+	<npc id="21612" level="72" type="Monster" name="Dismal Humming">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -826,7 +826,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21613" level="72" type="L2Monster" name="Dismal shout">
+	<npc id="21613" level="72" type="Monster" name="Dismal shout">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -902,7 +902,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21614" level="73" type="L2Monster" name="Death Flyer">
+	<npc id="21614" level="73" type="Monster" name="Death Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -980,7 +980,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21615" level="73" type="L2Monster" name="Death Flyer">
+	<npc id="21615" level="73" type="Monster" name="Death Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1054,7 +1054,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21616" level="74" type="L2Monster" name="Gigantic Flyer">
+	<npc id="21616" level="74" type="Monster" name="Gigantic Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1125,7 +1125,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21617" level="74" type="L2Monster" name="Fiend Archer">
+	<npc id="21617" level="74" type="Monster" name="Fiend Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1202,7 +1202,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21618" level="75" type="L2Monster" name="Fiend Archer">
+	<npc id="21618" level="75" type="Monster" name="Fiend Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1276,7 +1276,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21619" level="75" type="L2Monster" name="Pit Archer">
+	<npc id="21619" level="75" type="Monster" name="Pit Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1344,7 +1344,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21620" level="65" type="L2Monster" name="Musveren">
+	<npc id="21620" level="65" type="Monster" name="Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1424,7 +1424,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21621" level="66" type="L2Monster" name="Musveren">
+	<npc id="21621" level="66" type="Monster" name="Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1503,7 +1503,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21622" level="66" type="L2Monster" name="Greater Musveren">
+	<npc id="21622" level="66" type="Monster" name="Greater Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1578,7 +1578,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21623" level="67" type="L2Monster" name="Zaken's Royal Guard">
+	<npc id="21623" level="67" type="Monster" name="Zaken's Royal Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1660,7 +1660,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21624" level="67" type="L2Monster" name="Zaken's Royal Guard">
+	<npc id="21624" level="67" type="Monster" name="Zaken's Royal Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1739,7 +1739,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21625" level="68" type="L2Monster" name="Zaken's Elite Royal Guard">
+	<npc id="21625" level="68" type="Monster" name="Zaken's Elite Royal Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1817,7 +1817,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21626" level="68" type="L2Monster" name="Kaim Vanul">
+	<npc id="21626" level="68" type="Monster" name="Kaim Vanul">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1902,7 +1902,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21627" level="69" type="L2Monster" name="Kaim Vanul">
+	<npc id="21627" level="69" type="Monster" name="Kaim Vanul">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1978,7 +1978,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21628" level="69" type="L2Monster" name="Kaim Vanul Lad">
+	<npc id="21628" level="69" type="Monster" name="Kaim Vanul Lad">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2059,7 +2059,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21629" level="71" type="L2Monster" name="Pirate Zombie Captain">
+	<npc id="21629" level="71" type="Monster" name="Pirate Zombie Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2139,7 +2139,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21630" level="72" type="L2Monster" name="Pirate Zombie Captain">
+	<npc id="21630" level="72" type="Monster" name="Pirate Zombie Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2211,7 +2211,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21631" level="72" type="L2Monster" name="Zombie Captain's Spiritual Body">
+	<npc id="21631" level="72" type="Monster" name="Zombie Captain's Spiritual Body">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2282,7 +2282,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21632" level="73" type="L2Monster" name="Maiden Doll">
+	<npc id="21632" level="73" type="Monster" name="Maiden Doll">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2364,7 +2364,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21633" level="73" type="L2Monster" name="Maiden Doll">
+	<npc id="21633" level="73" type="Monster" name="Maiden Doll">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2445,7 +2445,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21634" level="74" type="L2Monster" name="Crimson Doll Blader">
+	<npc id="21634" level="74" type="Monster" name="Crimson Doll Blader">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2527,7 +2527,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21635" level="74" type="L2Monster" name="Veil Master">
+	<npc id="21635" level="74" type="Monster" name="Veil Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2607,7 +2607,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21636" level="75" type="L2Monster" name="Veil Master">
+	<npc id="21636" level="75" type="Monster" name="Veil Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2693,7 +2693,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21637" level="75" type="L2Monster" name="Crimson Veil Master">
+	<npc id="21637" level="75" type="Monster" name="Crimson Veil Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2771,7 +2771,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21638" level="42" type="L2Monster" name="Wandering Dead of the Dungeon">
+	<npc id="21638" level="42" type="Monster" name="Wandering Dead of the Dungeon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -2819,7 +2819,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21639" level="43" type="L2Monster" name="Wandering Spirit of the Dungeon">
+	<npc id="21639" level="43" type="Monster" name="Wandering Spirit of the Dungeon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -2867,7 +2867,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="21640" level="42" type="L2Monster" name="Wandering Ghost of the Dungeon">
+	<npc id="21640" level="42" type="Monster" name="Wandering Ghost of the Dungeon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2917,7 +2917,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="21641" level="43" type="L2Monster" name="Wandering Evil Thoughts of the Dungeon">
+	<npc id="21641" level="43" type="Monster" name="Wandering Evil Thoughts of the Dungeon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -2965,7 +2965,7 @@
 			<height normal="44" grown="52.5" />
 		</collision>
 	</npc>
-	<npc id="21642" level="44" type="L2Monster" name="Unworldly Overseer" title="Wandering">
+	<npc id="21642" level="44" type="Monster" name="Unworldly Overseer" title="Wandering">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -3013,7 +3013,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="21643" level="45" type="L2Monster" name="Condemned of Infinity" title="Captured">
+	<npc id="21643" level="45" type="Monster" name="Condemned of Infinity" title="Captured">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
@@ -3065,7 +3065,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="21644" level="46" type="L2Monster" name="Wandering Dead of Abyss">
+	<npc id="21644" level="46" type="Monster" name="Wandering Dead of Abyss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3112,7 +3112,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="21645" level="47" type="L2Monster" name="Wandering Spirit of Abyss">
+	<npc id="21645" level="47" type="Monster" name="Wandering Spirit of Abyss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3163,7 +3163,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="21646" level="46" type="L2Monster" name="Wandering Ghost of Abyss">
+	<npc id="21646" level="46" type="Monster" name="Wandering Ghost of Abyss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -3205,7 +3205,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="21647" level="47" type="L2Monster" name="Wandering Evil Thoughts of Abyss">
+	<npc id="21647" level="47" type="Monster" name="Wandering Evil Thoughts of Abyss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -3251,7 +3251,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="21648" level="48" type="L2Monster" name="Abyss Warder" title="Wandering">
+	<npc id="21648" level="48" type="Monster" name="Abyss Warder" title="Wandering">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3293,7 +3293,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="21649" level="49" type="L2Monster" name="Condemned of Abyss" title="Captured">
+	<npc id="21649" level="49" type="Monster" name="Condemned of Abyss" title="Captured">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3339,7 +3339,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="21650" level="74" type="L2Monster" name="Swampland Watchman">
+	<npc id="21650" level="74" type="Monster" name="Swampland Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -3409,7 +3409,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21651" level="74" type="L2Monster" name="Flame Drake">
+	<npc id="21651" level="74" type="Monster" name="Flame Drake">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3471,7 +3471,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21652" level="75" type="L2Monster" name="Fiery Ifrit">
+	<npc id="21652" level="75" type="Monster" name="Fiery Ifrit">
 		<!-- L2wiki: https://l2wiki.com/classic/Fiery_Ifrit -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
@@ -3522,7 +3522,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21653" level="75" type="L2Monster" name="Ikedit">
+	<npc id="21653" level="75" type="Monster" name="Ikedit">
 		<!-- L2wiki: https://l2wiki.com/classic/Ikedit -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
@@ -3574,7 +3574,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21654" level="81" type="L2Monster" name="Dreco" title="Earth Guardian">
+	<npc id="21654" level="81" type="Monster" name="Dreco" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3596,7 +3596,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="21655" level="82" type="L2Monster" name="Raido" title="Earth Guardian">
+	<npc id="21655" level="82" type="Monster" name="Raido" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3618,7 +3618,7 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="21656" level="84" type="L2Monster" name="Golem" title="Earth Guardian">
+	<npc id="21656" level="84" type="Monster" name="Golem" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3640,7 +3640,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21657" level="35" type="L2Monster" name="Wyrm" title="Earth Guardian">
+	<npc id="21657" level="35" type="Monster" name="Wyrm" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -3686,7 +3686,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21658" level="64" type="L2Npc" name="Harit" title="Earth Guardian">
+	<npc id="21658" level="64" type="Npc" name="Harit" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3709,7 +3709,7 @@
 			<height normal="28" grown="34" />
 		</collision>
 	</npc>
-	<npc id="21659" level="30" type="L2Npc" name="Trooper" title="Earth Guardian">
+	<npc id="21659" level="30" type="Npc" name="Trooper" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3731,7 +3731,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="21660" level="64" type="L2Monster" name="Palibati" title="Earth Guardian">
+	<npc id="21660" level="64" type="Monster" name="Palibati" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>MALE</sex>

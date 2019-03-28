@@ -20,13 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
@@ -34,18 +34,18 @@ import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 public class PartyClan implements ITargetTypeHandler
 {
 	@Override
-	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
+	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		final List<L2Character> targetList = new ArrayList<>();
+		final List<Creature> targetList = new ArrayList<>();
 		if (onlyFirst)
 		{
-			return new L2Character[]
+			return new Creature[]
 			{
-				activeChar
+				creature
 			};
 		}
 		
-		final L2PcInstance player = activeChar.getActingPlayer();
+		final PlayerInstance player = creature.getActingPlayer();
 		
 		if (player == null)
 		{
@@ -58,7 +58,7 @@ public class PartyClan implements ITargetTypeHandler
 		final boolean hasClan = player.getClan() != null;
 		final boolean hasParty = player.isInParty();
 		
-		if (Skill.addSummon(activeChar, player, radius, false))
+		if (Skill.addSummon(creature, player, radius, false))
 		{
 			targetList.add(player.getSummon());
 		}
@@ -66,12 +66,12 @@ public class PartyClan implements ITargetTypeHandler
 		// if player in clan and not in party
 		if (!(hasClan || hasParty))
 		{
-			return targetList.toArray(new L2Character[targetList.size()]);
+			return targetList.toArray(new Creature[targetList.size()]);
 		}
 		
-		// Get all visible objects in a spherical area near the L2Character
+		// Get all visible objects in a spherical area near the Creature
 		final int maxTargets = skill.getAffectLimit();
-		for (L2PcInstance obj : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2PcInstance.class, radius))
+		for (PlayerInstance obj : World.getInstance().getVisibleObjectsInRange(creature, PlayerInstance.class, radius))
 		{
 			if (obj == null)
 			{
@@ -125,19 +125,19 @@ public class PartyClan implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!onlyFirst && Skill.addSummon(activeChar, obj, radius, false))
+			if (!onlyFirst && Skill.addSummon(creature, obj, radius, false))
 			{
 				targetList.add(obj.getSummon());
 			}
 			
-			if (!Skill.addCharacter(activeChar, obj, radius, false))
+			if (!Skill.addCharacter(creature, obj, radius, false))
 			{
 				continue;
 			}
 			
 			if (onlyFirst)
 			{
-				return new L2Character[]
+				return new Creature[]
 				{
 					obj
 				};
@@ -150,12 +150,12 @@ public class PartyClan implements ITargetTypeHandler
 			
 			targetList.add(obj);
 		}
-		return targetList.toArray(new L2Character[targetList.size()]);
+		return targetList.toArray(new Creature[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
+	public Enum<TargetType> getTargetType()
 	{
-		return L2TargetType.PARTY_CLAN;
+		return TargetType.PARTY_CLAN;
 	}
 }

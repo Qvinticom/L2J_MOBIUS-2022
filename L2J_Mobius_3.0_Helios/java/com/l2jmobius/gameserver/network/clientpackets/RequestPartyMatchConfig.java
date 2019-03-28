@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.CommandChannel;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.matching.CommandChannelMatchingRoom;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ListPartyWaiting;
 
@@ -34,7 +34,7 @@ public final class RequestPartyMatchConfig implements IClientIncomingPacket
 	private PartyMatchingRoomLevelType _type;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_page = packet.readD();
 		_location = packet.readD();
@@ -43,37 +43,37 @@ public final class RequestPartyMatchConfig implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = client.getPlayer();
 		
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		final L2Party party = activeChar.getParty();
-		final L2CommandChannel cc = party == null ? null : party.getCommandChannel();
+		final Party party = player.getParty();
+		final CommandChannel cc = party == null ? null : party.getCommandChannel();
 		
-		if ((party != null) && (cc != null) && (cc.getLeader() == activeChar))
+		if ((party != null) && (cc != null) && (cc.getLeader() == player))
 		{
-			if (activeChar.getMatchingRoom() == null)
+			if (player.getMatchingRoom() == null)
 			{
-				activeChar.setMatchingRoom(new CommandChannelMatchingRoom(activeChar.getName(), party.getDistributionType().ordinal(), 1, activeChar.getLevel(), 50, activeChar));
+				player.setMatchingRoom(new CommandChannelMatchingRoom(player.getName(), party.getDistributionType().ordinal(), 1, player.getLevel(), 50, player));
 			}
 		}
-		else if ((cc != null) && (cc.getLeader() != activeChar))
+		else if ((cc != null) && (cc.getLeader() != player))
 		{
-			activeChar.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_AFFILIATED_PARTY_S_PARTY_MEMBER_CANNOT_USE_THE_MATCHING_SCREEN);
+			player.sendPacket(SystemMessageId.THE_COMMAND_CHANNEL_AFFILIATED_PARTY_S_PARTY_MEMBER_CANNOT_USE_THE_MATCHING_SCREEN);
 		}
-		else if ((party != null) && (party.getLeader() != activeChar))
+		else if ((party != null) && (party.getLeader() != player))
 		{
-			activeChar.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
+			player.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
 		}
 		else
 		{
-			MatchingRoomManager.getInstance().addToWaitingList(activeChar);
-			activeChar.sendPacket(new ListPartyWaiting(_type, _location, _page, activeChar.getLevel()));
+			MatchingRoomManager.getInstance().addToWaitingList(player);
+			player.sendPacket(new ListPartyWaiting(_type, _location, _page, player.getLevel()));
 		}
 	}
 }

@@ -19,8 +19,8 @@ package quests.Q00694_BreakThroughTheHallOfSuffering;
 import java.util.Calendar;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -46,7 +46,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
@@ -65,7 +65,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -106,7 +106,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 							}
 							else if ((player.getParty() != null) && (player.getParty().getLeaderObjectId() == player.getObjectId()))
 							{
-								for (L2PcInstance member : player.getParty().getMembers())
+								for (PlayerInstance member : player.getParty().getMembers())
 								{
 									final QuestState qs1 = member.getQuestState(getName());
 									if (qs1 != null)
@@ -276,7 +276,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		return htmltext;
 	}
 	
-	private static void finishInstance(L2PcInstance player)
+	private static void finishInstance(PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		
@@ -292,7 +292,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 		sm.addInstanceName(TEMPLATE_ID);
 		
-		for (L2PcInstance plr : world.getAllowed())
+		for (PlayerInstance plr : world.getAllowed())
 		{
 			if (plr != null)
 			{

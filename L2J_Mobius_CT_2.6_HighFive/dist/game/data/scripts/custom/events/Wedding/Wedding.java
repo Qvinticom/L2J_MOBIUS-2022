@@ -18,11 +18,11 @@ package custom.events.Wedding;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.CoupleManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Couple;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -50,14 +50,14 @@ public final class Wedding extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		if (player.getPartnerId() == 0)
 		{
 			return "NoPartner.html";
 		}
 		
-		final L2PcInstance partner = L2World.getInstance().getPlayer(player.getPartnerId());
+		final PlayerInstance partner = World.getInstance().getPlayer(player.getPartnerId());
 		if ((partner == null) || !partner.isOnline())
 		{
 			return "NotFound.html";
@@ -174,13 +174,13 @@ public final class Wedding extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final String htmltext = getHtm(player, "Start.html");
 		return htmltext.replaceAll("%fee%", String.valueOf(Config.WEDDING_PRICE));
 	}
 	
-	private String sendHtml(L2PcInstance player, String fileName, String regex, String replacement)
+	private String sendHtml(PlayerInstance player, String fileName, String regex, String replacement)
 	{
 		String html = getHtm(player, fileName);
 		if ((regex != null) && (replacement != null))
@@ -191,11 +191,11 @@ public final class Wedding extends AbstractNpcAI
 		return html;
 	}
 	
-	private static boolean isWearingFormalWear(L2PcInstance player)
+	private static boolean isWearingFormalWear(PlayerInstance player)
 	{
 		if (Config.WEDDING_FORMALWEAR)
 		{
-			final L2ItemInstance formalWear = player.getChestArmorInstance();
+			final ItemInstance formalWear = player.getChestArmorInstance();
 			return (formalWear != null) && (formalWear.getId() == FORMAL_WEAR);
 		}
 		return true;

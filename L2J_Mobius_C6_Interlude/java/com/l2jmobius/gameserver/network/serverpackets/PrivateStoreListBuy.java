@@ -18,38 +18,37 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.7.2.2.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class PrivateStoreListBuy extends L2GameServerPacket
+public class PrivateStoreListBuy extends GameServerPacket
 {
-	private final L2PcInstance _storePlayer;
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _storePlayer;
+	private final PlayerInstance _player;
 	private int _playerAdena;
 	private final TradeList.TradeItem[] _items;
 	
-	public PrivateStoreListBuy(L2PcInstance player, L2PcInstance storePlayer)
+	public PrivateStoreListBuy(PlayerInstance player, PlayerInstance storePlayer)
 	{
 		_storePlayer = storePlayer;
-		_activeChar = player;
+		_player = player;
 		
 		if (Config.SELL_BY_ITEM)
 		{
 			final CreatureSay cs11 = new CreatureSay(0, 15, "", "ATTENTION: Store System is not based on Adena, be careful!"); // 8D
-			_activeChar.sendPacket(cs11);
-			_playerAdena = _activeChar.getItemCount(Config.SELL_ITEM, -1);
+			_player.sendPacket(cs11);
+			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);
 		}
 		else
 		{
-			_playerAdena = _activeChar.getAdena();
+			_playerAdena = _player.getAdena();
 		}
 		
 		// _storePlayer.getSellList().updateItems(); // Update SellList for case inventory content has changed
 		// this items must be the items available into the _activeChar (seller) inventory
-		_items = _storePlayer.getBuyList().getAvailableItems(_activeChar.getInventory());
+		_items = _storePlayer.getBuyList().getAvailableItems(_player.getInventory());
 	}
 	
 	@Override

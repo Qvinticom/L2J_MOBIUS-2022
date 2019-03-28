@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
  * sample 0000: 85 00 00 00 00 f0 1a 00 00
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SetupGauge extends L2GameServerPacket
+public class SetupGauge extends GameServerPacket
 {
 	public static final int BLUE = 0;
 	public static final int RED = 1;

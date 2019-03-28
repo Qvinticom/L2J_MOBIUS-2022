@@ -18,11 +18,11 @@ package instances.NornilsGarden;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -93,7 +93,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -139,12 +139,12 @@ public class NornilsGarden extends AbstractInstance
 				{
 					if ((world != null) && !npc.isDead() && !npc.isInCombat())
 					{
-						L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 1500, knownChar ->
+						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1500, knownChar ->
 						{
 							if (CommonUtil.contains(ATTACABLE_MONSTERS, npc.getId()) && !npc.isInCombat())
 							{
 								npc.setRunning();
-								((L2Attackable) npc).addDamageHate(knownChar, 0, 99999);
+								((Attackable) npc).addDamageHate(knownChar, 0, 99999);
 								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, knownChar);
 							}
 						});
@@ -161,7 +161,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
@@ -200,7 +200,7 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
 		switch (world.getStatus())
@@ -277,13 +277,13 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return "33781.html";
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
 		if ((npc.getId() == BOZ_STAGE1) && creature.isPlayable() && npc.isScriptValue(0))
 		{
@@ -295,12 +295,12 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public String onSpawn(Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && (CommonUtil.contains(ATTACABLE_MONSTERS, npc.getId())))
 		{
-			((L2Attackable) npc).setCanReturnToSpawnPoint(false);
+			((Attackable) npc).setCanReturnToSpawnPoint(false);
 			startQuestTimer("check_agrro", 1000, npc, null, true);
 		}
 		return super.onSpawn(npc);

@@ -17,9 +17,9 @@
 package ai.areas.Hellbound.AI;
 
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 import ai.areas.Hellbound.HellboundEngine;
@@ -46,9 +46,9 @@ public final class OutpostCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public final String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
+		final DoorInstance door = DoorData.getInstance().getDoor(20250001);
 		if (door != null)
 		{
 			door.openMe();
@@ -61,7 +61,7 @@ public final class OutpostCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
 		
@@ -75,7 +75,7 @@ public final class OutpostCaptain extends AbstractNpcAI
 			}
 			else
 			{
-				final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
+				final DoorInstance door = DoorData.getInstance().getDoor(20250001);
 				if (door != null)
 				{
 					door.closeMe();

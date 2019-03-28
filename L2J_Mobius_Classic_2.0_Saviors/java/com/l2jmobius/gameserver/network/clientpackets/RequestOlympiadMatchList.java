@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x13
@@ -31,16 +31,16 @@ public final class RequestOlympiadMatchList implements IClientIncomingPacket
 	private static final String COMMAND = "arenalist";
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || !activeChar.inObserverMode())
+		final PlayerInstance player = client.getPlayer();
+		if ((player == null) || !player.inObserverMode())
 		{
 			return;
 		}
@@ -48,7 +48,7 @@ public final class RequestOlympiadMatchList implements IClientIncomingPacket
 		final IBypassHandler handler = BypassHandler.getInstance().getHandler(COMMAND);
 		if (handler != null)
 		{
-			handler.useBypass(COMMAND, activeChar, null);
+			handler.useBypass(COMMAND, player, null);
 		}
 	}
 }

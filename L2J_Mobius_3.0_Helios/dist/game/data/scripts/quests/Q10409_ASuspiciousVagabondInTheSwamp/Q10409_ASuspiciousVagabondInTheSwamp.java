@@ -18,8 +18,8 @@ package quests.Q10409_ASuspiciousVagabondInTheSwamp;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -50,10 +50,10 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -69,15 +69,15 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 			}
 			case "33847-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "33847-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EAA, 3);
 					giveStoryQuestReward(player, 3);
 					if (player.getLevel() >= MIN_LEVEL)
@@ -93,12 +93,12 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -112,11 +112,11 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 			{
 				if (npc.getId() == DOKARA)
 				{
-					htmltext = st.isCond(1) ? "33847-05.html" : "33847-06.html";
+					htmltext = qs.isCond(1) ? "33847-05.html" : "33847-06.html";
 				}
-				else if ((npc.getId() == VAGABOND) && st.isCond(1))
+				else if ((npc.getId() == VAGABOND) && qs.isCond(1))
 				{
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = "33848-01.html";
 				}
 				break;

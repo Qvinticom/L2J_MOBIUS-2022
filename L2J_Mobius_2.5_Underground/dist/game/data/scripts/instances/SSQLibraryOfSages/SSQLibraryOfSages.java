@@ -18,8 +18,8 @@ package instances.SSQLibraryOfSages;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -63,12 +63,12 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final Instance world = player.getInstanceWorld();
 		if (world != null)
 		{
-			final L2Npc elcadia = world.getParameters().getObject("elcadia", L2Npc.class);
+			final Npc elcadia = world.getParameters().getObject("elcadia", Npc.class);
 			switch (event)
 			{
 				case "TELEPORT2":
@@ -107,18 +107,18 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(Npc npc, PlayerInstance talker)
 	{
 		enterInstance(talker, npc, TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
 	@Override
-	protected void onEnter(L2PcInstance player, Instance instance, boolean firstEnter)
+	protected void onEnter(PlayerInstance player, Instance instance, boolean firstEnter)
 	{
 		super.onEnter(player, instance, firstEnter);
 		
-		final L2Npc npc = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, instance.getId());
+		final Npc npc = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, instance.getId());
 		startQuestTimer("FOLLOW", 3000, npc, player);
 		instance.setParameter("elcadia", npc);
 	}

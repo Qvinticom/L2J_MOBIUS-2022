@@ -22,7 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.ItemContainer;
-import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 
 /**
@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.model.entity.siege.Castle;
 public class CastleUpdater implements Runnable
 {
 	protected static Logger LOGGER = Logger.getLogger(CastleUpdater.class.getName());
-	private final L2Clan _clan;
+	private final Clan _clan;
 	private int _runCount = 0;
 	
-	public CastleUpdater(L2Clan clan, int runCount)
+	public CastleUpdater(Clan clan, int runCount)
 	{
 		_clan = clan;
 		_runCount = runCount;

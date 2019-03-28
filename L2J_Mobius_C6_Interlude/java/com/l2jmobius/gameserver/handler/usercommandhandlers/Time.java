@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -30,7 +30,7 @@ public class Time implements IUserCommandHandler
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (COMMAND_IDS[0] != id)
 		{
@@ -62,7 +62,7 @@ public class Time implements IUserCommandHandler
 			sm.addString(h);
 			sm.addString(m);
 		}
-		activeChar.sendPacket(sm);
+		player.sendPacket(sm);
 		
 		return true;
 	}

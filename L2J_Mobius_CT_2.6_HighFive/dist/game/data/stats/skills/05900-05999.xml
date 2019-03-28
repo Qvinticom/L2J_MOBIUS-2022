@@ -22,7 +22,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="90" />
 				<param skillId="5902" skillLevel="1" /> <!-- NPC Trigger Target Cancel -->
@@ -53,7 +53,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="90" />
 				<param skillId="5902" skillLevel="1" /> <!-- NPC Trigger Target Cancel -->
@@ -254,7 +254,7 @@
 		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Creature" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="100" />
 				<param skillId="5914" skillLevel="1" /> <!-- Putrefaction Cleanse -->
@@ -1403,7 +1403,7 @@
 		<for>
 			<effect name="MagicalAttack" />
 			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Attackable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param attackerType="Attackable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="90" />
 				<param skillId="5902" skillLevel="1" /> <!-- NPC Trigger Target Cancel -->

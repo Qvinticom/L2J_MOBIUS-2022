@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
-import com.l2jmobius.gameserver.model.L2ClanMember;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
+import com.l2jmobius.gameserver.model.clan.Clan.SubPledge;
+import com.l2jmobius.gameserver.model.clan.ClanMember;
 
 //
 /**
@@ -29,19 +29,19 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  * (Sddddd) dddSS dddddddddSdd d (Sdddddd)
  * @version $Revision: 1.6.2.2.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class PledgeShowMemberListAll extends L2GameServerPacket
+public class PledgeShowMemberListAll extends GameServerPacket
 {
-	private final L2Clan _clan;
-	private final L2PcInstance _activeChar;
-	private final L2ClanMember[] _members;
+	private final Clan _clan;
+	private final PlayerInstance _player;
+	private final ClanMember[] _members;
 	private int _pledgeType;
 	
 	// private static Logger LOGGER = Logger.getLogger(PledgeShowMemberListAll.class);
 	
-	public PledgeShowMemberListAll(L2Clan clan, L2PcInstance activeChar)
+	public PledgeShowMemberListAll(Clan clan, PlayerInstance player)
 	{
 		_clan = clan;
-		_activeChar = activeChar;
+		_player = player;
 		_members = _clan.getMembers();
 	}
 	
@@ -54,20 +54,20 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		final SubPledge[] subPledge = _clan.getAllSubPledges();
 		for (SubPledge element : subPledge)
 		{
-			_activeChar.sendPacket(new PledgeReceiveSubPledgeCreated(element));
+			_player.sendPacket(new PledgeReceiveSubPledgeCreated(element));
 		}
 		
-		for (L2ClanMember m : _members)
+		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() == 0)
 			{
 				continue;
 			}
-			_activeChar.sendPacket(new PledgeShowMemberListAdd(m));
+			_player.sendPacket(new PledgeShowMemberListAdd(m));
 		}
 		
 		// unless this is sent sometimes, the client doesn't recognise the player as the leader
-		_activeChar.sendPacket(new UserInfo(_activeChar));
+		_player.sendPacket(new UserInfo(_player));
 	}
 	
 	void writePledge(int mainOrSubpledge)
@@ -98,7 +98,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
 		int yellow;
-		for (L2ClanMember m : _members)
+		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() != _pledgeType)
 			{

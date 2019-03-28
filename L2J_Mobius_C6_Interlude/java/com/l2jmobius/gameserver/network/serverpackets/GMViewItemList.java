@@ -16,23 +16,23 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class GMViewItemList extends L2GameServerPacket
+public class GMViewItemList extends GameServerPacket
 {
-	private final L2ItemInstance[] _items;
-	private final L2PcInstance _cha;
+	private final ItemInstance[] _items;
+	private final PlayerInstance _player;
 	private final String _playerName;
 	
-	public GMViewItemList(L2PcInstance cha)
+	public GMViewItemList(PlayerInstance player)
 	{
-		_items = cha.getInventory().getItems();
-		_playerName = cha.getName();
-		_cha = cha;
+		_items = player.getInventory().getItems();
+		_playerName = player.getName();
+		_player = player;
 	}
 	
 	@Override
@@ -40,11 +40,11 @@ public class GMViewItemList extends L2GameServerPacket
 	{
 		writeC(0x94);
 		writeS(_playerName);
-		writeD(_cha.getInventoryLimit()); // inventory limit
+		writeD(_player.getInventoryLimit()); // inventory limit
 		writeH(0x01); // show window ??
 		writeH(_items.length);
 		
-		for (L2ItemInstance temp : _items)
+		for (ItemInstance temp : _items)
 		{
 			if ((temp == null) || (temp.getItem() == null))
 			{

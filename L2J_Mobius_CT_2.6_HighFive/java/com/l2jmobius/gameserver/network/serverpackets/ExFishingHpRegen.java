@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExFishingHpRegen implements IClientOutgoingPacket
 {
-	private final L2Character _activeChar;
+	private final Creature _creature;
 	private final int _time;
 	private final int _fishHP;
 	private final int _hpMode;
@@ -34,9 +34,9 @@ public class ExFishingHpRegen implements IClientOutgoingPacket
 	private final int _penalty;
 	private final int _hpBarColor;
 	
-	public ExFishingHpRegen(L2Character character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
+	public ExFishingHpRegen(Creature creature, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
 	{
-		_activeChar = character;
+		_creature = creature;
 		_time = time;
 		_fishHP = fishHP;
 		_hpMode = HPmode;
@@ -51,7 +51,7 @@ public class ExFishingHpRegen implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_FISHING_HP_REGEN.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_creature.getObjectId());
 		packet.writeD(_time);
 		packet.writeD(_fishHP);
 		packet.writeC(_hpMode); // 0 = HP stop, 1 = HP raise

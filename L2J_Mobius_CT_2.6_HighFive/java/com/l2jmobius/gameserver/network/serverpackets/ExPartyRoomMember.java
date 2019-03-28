@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -29,7 +29,7 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExPartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode)
+	public ExPartyRoomMember(PlayerInstance player, PartyMatchRoom room, int mode)
 	{
 		_room = room;
 		_mode = mode;
@@ -41,7 +41,7 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 		OutgoingPackets.EX_PARTY_ROOM_MEMBER.writeId(packet);
 		packet.writeD(_mode);
 		packet.writeD(_room.getMembers());
-		for (L2PcInstance member : _room.getPartyMembers())
+		for (PlayerInstance member : _room.getPartyMembers())
 		{
 			packet.writeD(member.getObjectId());
 			packet.writeS(member.getName());

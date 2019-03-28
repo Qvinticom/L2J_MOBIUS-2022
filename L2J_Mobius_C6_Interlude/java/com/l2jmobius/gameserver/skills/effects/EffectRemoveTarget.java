@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.skills.Env;
 
 /**
  * @author programmos
  */
-public class EffectRemoveTarget extends L2Effect
+public class EffectRemoveTarget extends Effect
 {
 	public EffectRemoveTarget(Env env, EffectTemplate template)
 	{
@@ -62,7 +62,7 @@ public class EffectRemoveTarget extends L2Effect
 	public void onStart()
 	{
 		// RaidBoss and GrandBoss are immune to RemoveTarget effect
-		if ((getEffected() instanceof L2RaidBossInstance) || (getEffected() instanceof L2GrandBossInstance))
+		if ((getEffected() instanceof RaidBossInstance) || (getEffected() instanceof GrandBossInstance))
 		{
 			return;
 		}

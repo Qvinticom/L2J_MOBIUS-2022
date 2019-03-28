@@ -17,12 +17,12 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -36,7 +36,7 @@ public final class Hide extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (effected.isPlayer())
 		{
@@ -47,7 +47,7 @@ public final class Hide extends AbstractEffect
 				effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			
-			L2World.getInstance().forEachVisibleObject(effected, L2Character.class, target ->
+			World.getInstance().forEachVisibleObject(effected, Creature.class, target ->
 			{
 				if ((target.getTarget() == effected))
 				{
@@ -61,14 +61,14 @@ public final class Hide extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		if (effected.isPlayer())
 		{
-			final L2PcInstance activeChar = effected.getActingPlayer();
-			if (!activeChar.inObserverMode())
+			final PlayerInstance player = effected.getActingPlayer();
+			if (!player.inObserverMode())
 			{
-				activeChar.setInvisible(false);
+				player.setInvisible(false);
 			}
 		}
 	}

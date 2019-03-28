@@ -38,22 +38,21 @@ import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.L2Effect;
-import com.l2jmobius.gameserver.model.L2Skill;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.Effect;
+import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.spawn.L2Spawn;
+import com.l2jmobius.gameserver.model.spawn.Spawn;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.templates.StatsSet;
-import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
- * This class ... control for sequence of fight against "High Priestess van Halter".
  * @version $Revision: $ $Date: $
  * @author L2J_JP SANDMAN
  **/
@@ -62,34 +61,34 @@ public class VanHalter extends Quest
 	private static final Logger LOGGER = Logger.getLogger(VanHalter.class.getName());
 	
 	// List of intruders.
-	protected Map<Integer, List<L2PcInstance>> _bleedingPlayers = new HashMap<>();
+	protected Map<Integer, List<PlayerInstance>> _bleedingPlayers = new HashMap<>();
 	
 	// Spawn data of monsters.
-	protected Map<Integer, L2Spawn> _monsterSpawn = new ConcurrentHashMap<>();
-	protected List<L2Spawn> _royalGuardSpawn = new CopyOnWriteArrayList<>();
-	protected List<L2Spawn> _royalGuardCaptainSpawn = new CopyOnWriteArrayList<>();
-	protected List<L2Spawn> _royalGuardHelperSpawn = new CopyOnWriteArrayList<>();
-	protected List<L2Spawn> _triolRevelationSpawn = new CopyOnWriteArrayList<>();
-	protected List<L2Spawn> _triolRevelationAlive = new CopyOnWriteArrayList<>();
-	protected List<L2Spawn> _guardOfAltarSpawn = new CopyOnWriteArrayList<>();
-	protected Map<Integer, L2Spawn> _cameraMarkerSpawn = new ConcurrentHashMap<>();
-	protected L2Spawn _ritualOfferingSpawn = null;
-	protected L2Spawn _ritualSacrificeSpawn = null;
-	protected L2Spawn _vanHalterSpawn = null;
+	protected Map<Integer, Spawn> _monsterSpawn = new ConcurrentHashMap<>();
+	protected List<Spawn> _royalGuardSpawn = new CopyOnWriteArrayList<>();
+	protected List<Spawn> _royalGuardCaptainSpawn = new CopyOnWriteArrayList<>();
+	protected List<Spawn> _royalGuardHelperSpawn = new CopyOnWriteArrayList<>();
+	protected List<Spawn> _triolRevelationSpawn = new CopyOnWriteArrayList<>();
+	protected List<Spawn> _triolRevelationAlive = new CopyOnWriteArrayList<>();
+	protected List<Spawn> _guardOfAltarSpawn = new CopyOnWriteArrayList<>();
+	protected Map<Integer, Spawn> _cameraMarkerSpawn = new ConcurrentHashMap<>();
+	protected Spawn _ritualOfferingSpawn = null;
+	protected Spawn _ritualSacrificeSpawn = null;
+	protected Spawn _vanHalterSpawn = null;
 	
 	// Instance of monsters.
-	protected List<L2NpcInstance> _monsters = new CopyOnWriteArrayList<>();
-	protected List<L2NpcInstance> _royalGuard = new CopyOnWriteArrayList<>();
-	protected List<L2NpcInstance> _royalGuardCaptain = new CopyOnWriteArrayList<>();
-	protected List<L2NpcInstance> _royalGuardHepler = new CopyOnWriteArrayList<>();
-	protected List<L2NpcInstance> _triolRevelation = new CopyOnWriteArrayList<>();
-	protected List<L2NpcInstance> _guardOfAltar = new CopyOnWriteArrayList<>();
-	protected Map<Integer, L2NpcInstance> _cameraMarker = new ConcurrentHashMap<>();
-	protected List<L2DoorInstance> _doorOfAltar = new CopyOnWriteArrayList<>();
-	protected List<L2DoorInstance> _doorOfSacrifice = new CopyOnWriteArrayList<>();
-	protected L2NpcInstance _ritualOffering = null;
-	protected L2NpcInstance _ritualSacrifice = null;
-	protected L2RaidBossInstance _vanHalter = null;
+	protected List<NpcInstance> _monsters = new CopyOnWriteArrayList<>();
+	protected List<NpcInstance> _royalGuard = new CopyOnWriteArrayList<>();
+	protected List<NpcInstance> _royalGuardCaptain = new CopyOnWriteArrayList<>();
+	protected List<NpcInstance> _royalGuardHepler = new CopyOnWriteArrayList<>();
+	protected List<NpcInstance> _triolRevelation = new CopyOnWriteArrayList<>();
+	protected List<NpcInstance> _guardOfAltar = new CopyOnWriteArrayList<>();
+	protected Map<Integer, NpcInstance> _cameraMarker = new ConcurrentHashMap<>();
+	protected List<DoorInstance> _doorOfAltar = new CopyOnWriteArrayList<>();
+	protected List<DoorInstance> _doorOfSacrifice = new CopyOnWriteArrayList<>();
+	protected NpcInstance _ritualOffering = null;
+	protected NpcInstance _ritualSacrifice = null;
+	protected RaidBossInstance _vanHalter = null;
 	
 	// Task
 	protected ScheduledFuture<?> _movieTask = null;
@@ -175,11 +174,11 @@ public class VanHalter extends Quest
 		_cameraMarkerSpawn.clear();
 		try
 		{
-			final L2NpcTemplate template1 = NpcTable.getInstance().getTemplate(13014); // Dummy npc
-			L2Spawn tempSpawn;
+			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(13014); // Dummy npc
+			Spawn tempSpawn;
 			
 			// Dummy camera marker.
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-10449);
@@ -189,7 +188,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(1, tempSpawn);
 			
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-10051);
@@ -199,7 +198,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(2, tempSpawn);
 			
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-9741);
@@ -209,7 +208,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(3, tempSpawn);
 			
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55200);
 			tempSpawn.setZ(-9394);
@@ -219,7 +218,7 @@ public class VanHalter extends Quest
 			SpawnTable.getInstance().addNewSpawn(tempSpawn, false);
 			_cameraMarkerSpawn.put(4, tempSpawn);
 			
-			tempSpawn = new L2Spawn(template1);
+			tempSpawn = new Spawn(template1);
 			tempSpawn.setX(-16397);
 			tempSpawn.setY(-55197);
 			tempSpawn.setZ(-8739);
@@ -260,7 +259,7 @@ public class VanHalter extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == 29062)
 		{
@@ -273,7 +272,7 @@ public class VanHalter extends Quest
 	}
 	
 	@Override
-	public String onKill(L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
 		if ((npcId == 32058) || (npcId == 32059) || (npcId == 32060) || (npcId == 32061) || (npcId == 32062) || (npcId == 32063) || (npcId == 32064) || (npcId == 32065) || (npcId == 32066))
@@ -304,15 +303,15 @@ public class VanHalter extends Quest
 			statement.setInt(2, 22176);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -345,7 +344,7 @@ public class VanHalter extends Quest
 			deleteRoyalGuard();
 		}
 		
-		for (L2Spawn rgs : _royalGuardSpawn)
+		for (Spawn rgs : _royalGuardSpawn)
 		{
 			rgs.startRespawn();
 			_royalGuard.add(rgs.doSpawn());
@@ -354,7 +353,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteRoyalGuard()
 	{
-		for (L2NpcInstance rg : _royalGuard)
+		for (NpcInstance rg : _royalGuard)
 		{
 			rg.getSpawn().stopRespawn();
 			rg.deleteMe();
@@ -375,15 +374,15 @@ public class VanHalter extends Quest
 			statement.setInt(2, 32068);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -416,7 +415,7 @@ public class VanHalter extends Quest
 			deleteTriolRevelation();
 		}
 		
-		for (L2Spawn trs : _triolRevelationSpawn)
+		for (Spawn trs : _triolRevelationSpawn)
 		{
 			trs.startRespawn();
 			_triolRevelation.add(trs.doSpawn());
@@ -429,7 +428,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteTriolRevelation()
 	{
-		for (L2NpcInstance tr : _triolRevelation)
+		for (NpcInstance tr : _triolRevelation)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -449,15 +448,15 @@ public class VanHalter extends Quest
 			statement.setInt(1, 22188);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -490,7 +489,7 @@ public class VanHalter extends Quest
 			deleteRoyalGuardCaptain();
 		}
 		
-		for (L2Spawn trs : _royalGuardCaptainSpawn)
+		for (Spawn trs : _royalGuardCaptainSpawn)
 		{
 			trs.startRespawn();
 			_royalGuardCaptain.add(trs.doSpawn());
@@ -500,7 +499,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteRoyalGuardCaptain()
 	{
-		for (L2NpcInstance tr : _royalGuardCaptain)
+		for (NpcInstance tr : _royalGuardCaptain)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -520,15 +519,15 @@ public class VanHalter extends Quest
 			statement.setInt(1, 22191);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -556,7 +555,7 @@ public class VanHalter extends Quest
 	
 	protected void spawnRoyalGuardHepler()
 	{
-		for (L2Spawn trs : _royalGuardHelperSpawn)
+		for (Spawn trs : _royalGuardHelperSpawn)
 		{
 			trs.startRespawn();
 			_royalGuardHepler.add(trs.doSpawn());
@@ -565,7 +564,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteRoyalGuardHepler()
 	{
-		for (L2NpcInstance tr : _royalGuardHepler)
+		for (NpcInstance tr : _royalGuardHepler)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -584,15 +583,15 @@ public class VanHalter extends Quest
 			statement.setInt(1, 32051);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -625,7 +624,7 @@ public class VanHalter extends Quest
 			deleteGuardOfAltar();
 		}
 		
-		for (L2Spawn trs : _guardOfAltarSpawn)
+		for (Spawn trs : _guardOfAltarSpawn)
 		{
 			trs.startRespawn();
 			_guardOfAltar.add(trs.doSpawn());
@@ -634,7 +633,7 @@ public class VanHalter extends Quest
 	
 	protected void deleteGuardOfAltar()
 	{
-		for (L2NpcInstance tr : _guardOfAltar)
+		for (NpcInstance tr : _guardOfAltar)
 		{
 			tr.getSpawn().stopRespawn();
 			tr.deleteMe();
@@ -654,15 +653,15 @@ public class VanHalter extends Quest
 			statement.setInt(1, 29062);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -690,7 +689,7 @@ public class VanHalter extends Quest
 	
 	protected void spawnVanHalter()
 	{
-		_vanHalter = (L2RaidBossInstance) _vanHalterSpawn.doSpawn();
+		_vanHalter = (RaidBossInstance) _vanHalterSpawn.doSpawn();
 		// _vanHalter.setIsImmobilized(true);
 		_vanHalter.setIsInvul(true);
 		_isHalterSpawned = true;
@@ -715,15 +714,15 @@ public class VanHalter extends Quest
 			statement.setInt(1, 32038);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -777,15 +776,15 @@ public class VanHalter extends Quest
 			statement.setInt(1, 22195);
 			final ResultSet rset = statement.executeQuery();
 			
-			L2Spawn spawnDat;
-			L2NpcTemplate template1;
+			Spawn spawnDat;
+			NpcTemplate template1;
 			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
 				if (template1 != null)
 				{
-					spawnDat = new L2Spawn(template1);
+					spawnDat = new Spawn(template1);
 					spawnDat.setAmount(rset.getInt("count"));
 					spawnDat.setX(rset.getInt("locx"));
 					spawnDat.setY(rset.getInt("locy"));
@@ -860,7 +859,7 @@ public class VanHalter extends Quest
 	/**
 	 * @param intruder
 	 */
-	public void intruderDetection(L2PcInstance intruder)
+	public void intruderDetection(PlayerInstance intruder)
 	{
 		if ((_lockUpDoorOfAltarTask == null) && !_isLocked && _isCaptainSpawned)
 		{
@@ -881,7 +880,7 @@ public class VanHalter extends Quest
 	
 	protected void openDoorOfAltar(boolean loop)
 	{
-		for (L2DoorInstance door : _doorOfAltar)
+		for (DoorInstance door : _doorOfAltar)
 		{
 			try
 			{
@@ -925,7 +924,7 @@ public class VanHalter extends Quest
 	
 	protected void closeDoorOfAltar(boolean loop)
 	{
-		for (L2DoorInstance door : _doorOfAltar)
+		for (DoorInstance door : _doorOfAltar)
 		{
 			door.closeMe();
 		}
@@ -960,7 +959,7 @@ public class VanHalter extends Quest
 	
 	protected void openDoorOfSacrifice()
 	{
-		for (L2DoorInstance door : _doorOfSacrifice)
+		for (DoorInstance door : _doorOfSacrifice)
 		{
 			try
 			{
@@ -975,7 +974,7 @@ public class VanHalter extends Quest
 	
 	protected void closeDoorOfSacrifice()
 	{
-		for (L2DoorInstance door : _doorOfSacrifice)
+		for (DoorInstance door : _doorOfSacrifice)
 		{
 			try
 			{
@@ -997,7 +996,7 @@ public class VanHalter extends Quest
 		}
 		
 		boolean isTriolRevelationDestroyed = true;
-		for (L2Spawn tra : _triolRevelationAlive)
+		for (Spawn tra : _triolRevelationAlive)
 		{
 			if (!tra.getLastSpawn().isDead())
 			{
@@ -1045,10 +1044,10 @@ public class VanHalter extends Quest
 		}
 		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_FIGHTTIMEOFHALTER);
 		
-		final Map<Integer, L2PcInstance> _targets = new HashMap<>();
+		final Map<Integer, PlayerInstance> _targets = new HashMap<>();
 		int i = 0;
 		
-		for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+		for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 		{
 			i++;
 			_targets.put(i, pc);
@@ -1103,7 +1102,7 @@ public class VanHalter extends Quest
 			{
 				if (_vanHalter.isAfraid())
 				{
-					_vanHalter.stopEffects(L2Effect.EffectType.FEAR);
+					_vanHalter.stopEffects(Effect.EffectType.FEAR);
 					_vanHalter.setIsAfraid(false);
 					_vanHalter.updateAbnormalEffect();
 				}
@@ -1115,7 +1114,7 @@ public class VanHalter extends Quest
 						final Location pos = new Location(-16397, -53308, -10448, 0);
 						if ((_vanHalter.getX() == pos.getX()) && (_vanHalter.getY() == pos.getY()))
 						{
-							_vanHalter.stopEffects(L2Effect.EffectType.FEAR);
+							_vanHalter.stopEffects(Effect.EffectType.FEAR);
 							_vanHalter.setIsAfraid(false);
 							_vanHalter.updateAbnormalEffect();
 						}
@@ -1143,7 +1142,7 @@ public class VanHalter extends Quest
 			}
 			else
 			{
-				_vanHalter.stopEffects(L2Effect.EffectType.FEAR);
+				_vanHalter.stopEffects(Effect.EffectType.FEAR);
 				_vanHalter.setIsAfraid(false);
 				_vanHalter.updateAbnormalEffect();
 				if (_halterEscapeTask != null)
@@ -1158,18 +1157,18 @@ public class VanHalter extends Quest
 	// Check bleeding player.
 	protected void addBleeding()
 	{
-		final L2Skill bleed = SkillTable.getInstance().getInfo(4615, 12);
+		final Skill bleed = SkillTable.getInstance().getInfo(4615, 12);
 		
-		for (L2NpcInstance tr : _triolRevelation)
+		for (NpcInstance tr : _triolRevelation)
 		{
 			if (!tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()).iterator().hasNext() || tr.isDead())
 			{
 				continue;
 			}
 			
-			final List<L2PcInstance> bpc = new ArrayList<>();
+			final List<PlayerInstance> bpc = new ArrayList<>();
 			
-			for (L2PcInstance pc : tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()))
+			for (PlayerInstance pc : tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()))
 			{
 				if (pc.getFirstEffect(bleed) == null)
 				{
@@ -1190,11 +1189,11 @@ public class VanHalter extends Quest
 		{
 			return;
 		}
-		for (L2PcInstance pc : _bleedingPlayers.get(npcId))
+		for (PlayerInstance pc : _bleedingPlayers.get(npcId))
 		{
-			if (pc.getFirstEffect(L2Effect.EffectType.DMG_OVER_TIME) != null)
+			if (pc.getFirstEffect(Effect.EffectType.DMG_OVER_TIME) != null)
 			{
-				pc.stopEffects(L2Effect.EffectType.DMG_OVER_TIME);
+				pc.stopEffects(Effect.EffectType.DMG_OVER_TIME);
 			}
 		}
 		_bleedingPlayers.remove(npcId);
@@ -1437,7 +1436,7 @@ public class VanHalter extends Quest
 				{
 					GrandBossManager.getInstance().setBossStatus(29062, ALIVE);
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_vanHalter) <= _distance)
 						{
@@ -1456,7 +1455,7 @@ public class VanHalter extends Quest
 				case 2:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(5)) <= _distance)
 						{
@@ -1475,7 +1474,7 @@ public class VanHalter extends Quest
 				case 3:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(5)) <= _distance)
 						{
@@ -1494,7 +1493,7 @@ public class VanHalter extends Quest
 				case 4:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(4)) <= _distance)
 						{
@@ -1513,7 +1512,7 @@ public class VanHalter extends Quest
 				case 5:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(4)) <= _distance)
 						{
@@ -1532,7 +1531,7 @@ public class VanHalter extends Quest
 				case 6:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(3)) <= _distance)
 						{
@@ -1551,7 +1550,7 @@ public class VanHalter extends Quest
 				case 7:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(3)) <= _distance)
 						{
@@ -1570,7 +1569,7 @@ public class VanHalter extends Quest
 				case 8:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(2)) <= _distance)
 						{
@@ -1589,7 +1588,7 @@ public class VanHalter extends Quest
 				case 9:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(2)) <= _distance)
 						{
@@ -1608,7 +1607,7 @@ public class VanHalter extends Quest
 				case 10:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(1)) <= _distance)
 						{
@@ -1627,7 +1626,7 @@ public class VanHalter extends Quest
 				case 11:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_cameraMarker.get(1)) <= _distance)
 						{
@@ -1646,7 +1645,7 @@ public class VanHalter extends Quest
 				case 12:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_vanHalter) <= _distance)
 						{
@@ -1665,7 +1664,7 @@ public class VanHalter extends Quest
 				case 13:
 				{
 					// High Priestess van Halter uses the skill to kill Ritual Offering.
-					final L2Skill skill = SkillTable.getInstance().getInfo(1168, 7);
+					final Skill skill = SkillTable.getInstance().getInfo(1168, 7);
 					_ritualOffering.setIsInvul(false);
 					_vanHalter.setTarget(_ritualOffering);
 					// _vanHalter.setIsImmobilized(false);
@@ -1698,7 +1697,7 @@ public class VanHalter extends Quest
 					spawnRitualSacrifice();
 					deleteRitualOffering();
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_vanHalter) <= _distance)
 						{
@@ -1717,7 +1716,7 @@ public class VanHalter extends Quest
 				case 16:
 				{
 					// Set camera.
-					for (L2PcInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
+					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
 						if (pc.getPlanDistanceSq(_vanHalter) <= _distance)
 						{

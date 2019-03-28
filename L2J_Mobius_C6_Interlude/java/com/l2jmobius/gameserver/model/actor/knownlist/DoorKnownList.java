@@ -16,34 +16,34 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2FortSiegeGuardInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2SiegeGuardInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
 
-public class DoorKnownList extends CharKnownList
+public class DoorKnownList extends CreatureKnownList
 {
-	public DoorKnownList(L2DoorInstance activeChar)
+	public DoorKnownList(DoorInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
 	@Override
-	public final L2DoorInstance getActiveChar()
+	public final DoorInstance getActiveChar()
 	{
-		return (L2DoorInstance) super.getActiveChar();
+		return (DoorInstance) super.getActiveChar();
 	}
 	
 	@Override
-	public int getDistanceToForgetObject(L2Object object)
+	public int getDistanceToForgetObject(WorldObject object)
 	{
-		if ((object instanceof L2SiegeGuardInstance) || (object instanceof L2FortSiegeGuardInstance))
+		if ((object instanceof SiegeGuardInstance) || (object instanceof FortSiegeGuardInstance))
 		{
 			return 800;
 		}
 		
-		if (!(object instanceof L2PcInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			return 0;
 		}
@@ -52,14 +52,14 @@ public class DoorKnownList extends CharKnownList
 	}
 	
 	@Override
-	public int getDistanceToWatchObject(L2Object object)
+	public int getDistanceToWatchObject(WorldObject object)
 	{
-		if ((object instanceof L2SiegeGuardInstance) || (object instanceof L2FortSiegeGuardInstance))
+		if ((object instanceof SiegeGuardInstance) || (object instanceof FortSiegeGuardInstance))
 		{
 			return 600;
 		}
 		
-		if (!(object instanceof L2PcInstance))
+		if (!(object instanceof PlayerInstance))
 		{
 			return 0;
 		}

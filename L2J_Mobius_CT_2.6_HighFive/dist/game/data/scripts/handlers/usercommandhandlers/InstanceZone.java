@@ -20,7 +20,7 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -43,22 +43,22 @@ public class InstanceZone implements IUserCommandHandler
 	}
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
+	public boolean useUserCommand(int id, PlayerInstance player)
 	{
 		if (id != COMMAND_IDS[0])
 		{
 			return false;
 		}
 		
-		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(activeChar);
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if ((world != null) && (world.getTemplateId() >= 0))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_IN_USE_S1);
 			sm.addInstanceName(world.getTemplateId());
-			activeChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
 		
-		final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar.getObjectId());
+		final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
 		boolean firstMessage = true;
 		if (instanceTimes != null)
 		{
@@ -70,7 +70,7 @@ public class InstanceZone implements IUserCommandHandler
 					if (firstMessage)
 					{
 						firstMessage = false;
-						activeChar.sendPacket(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT);
+						player.sendPacket(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT);
 					}
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
@@ -78,17 +78,17 @@ public class InstanceZone implements IUserCommandHandler
 					sm.addInstanceName(instanceId);
 					sm.addInt(hours);
 					sm.addInt(minutes);
-					activeChar.sendPacket(sm);
+					player.sendPacket(sm);
 				}
 				else
 				{
-					InstanceManager.getInstance().deleteInstanceTime(activeChar.getObjectId(), instanceId);
+					InstanceManager.getInstance().deleteInstanceTime(player.getObjectId(), instanceId);
 				}
 			}
 		}
 		if (firstMessage)
 		{
-			activeChar.sendPacket(SystemMessageId.THERE_IS_NO_INSTANCE_ZONE_UNDER_A_TIME_LIMIT);
+			player.sendPacket(SystemMessageId.THERE_IS_NO_INSTANCE_ZONE_UNDER_A_TIME_LIMIT);
 		}
 		return true;
 	}

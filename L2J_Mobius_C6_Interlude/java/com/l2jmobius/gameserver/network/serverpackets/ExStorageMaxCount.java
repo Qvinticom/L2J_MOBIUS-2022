@@ -16,16 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Format: (ch)ddddddd d: Number of Inventory Slots d: Number of Warehouse Slots d: Number of Freight Slots (unconfirmed) (200 for a low level dwarf) d: Private Sell Store Slots (unconfirmed) (4 for a low level dwarf) d: Private Buy Store Slots (unconfirmed) (5 for a low level dwarf) d: Dwarven
  * Recipe Book Slots d: Normal Recipe Book Slots
  * @author -Wooden- format from KenM
  */
-public class ExStorageMaxCount extends L2GameServerPacket
+public class ExStorageMaxCount extends GameServerPacket
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	private final int _inventory;
 	private final int _warehouse;
 	private final int _freight;
@@ -34,16 +34,16 @@ public class ExStorageMaxCount extends L2GameServerPacket
 	private final int _receipeD;
 	private final int _recipe;
 	
-	public ExStorageMaxCount(L2PcInstance character)
+	public ExStorageMaxCount(PlayerInstance character)
 	{
-		_activeChar = character;
-		_inventory = _activeChar.getInventoryLimit();
-		_warehouse = _activeChar.GetWareHouseLimit();
-		_privateSell = _activeChar.GetPrivateSellStoreLimit();
-		_privateBuy = _activeChar.GetPrivateBuyStoreLimit();
-		_freight = _activeChar.GetFreightLimit();
-		_receipeD = _activeChar.GetDwarfRecipeLimit();
-		_recipe = _activeChar.GetCommonRecipeLimit();
+		_player = character;
+		_inventory = _player.getInventoryLimit();
+		_warehouse = _player.GetWareHouseLimit();
+		_privateSell = _player.GetPrivateSellStoreLimit();
+		_privateBuy = _player.GetPrivateBuyStoreLimit();
+		_freight = _player.GetFreightLimit();
+		_receipeD = _player.GetDwarfRecipeLimit();
+		_recipe = _player.GetCommonRecipeLimit();
 	}
 	
 	/*

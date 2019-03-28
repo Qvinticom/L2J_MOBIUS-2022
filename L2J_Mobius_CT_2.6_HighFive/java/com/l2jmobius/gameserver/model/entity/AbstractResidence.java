@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.zone.type.L2ResidenceZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceZone;
 
 /**
  * @author xban1x
@@ -35,7 +35,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	private final int _residenceId;
 	private String _name;
 	
-	private L2ResidenceZone _zone = null;
+	private ResidenceZone _zone = null;
 	private final List<SkillHolder> _residentialSkills = new ArrayList<>();
 	
 	public AbstractResidence(int residenceId)
@@ -50,7 +50,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	
 	protected void initResidentialSkills()
 	{
-		for (L2SkillLearn s : SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId()))
+		for (SkillLearn s : SkillTreesData.getInstance().getAvailableResidentialSkills(getResidenceId()))
 		{
 			_residentialSkills.add(new SkillHolder(s.getSkillId(), s.getSkillLevel()));
 		}
@@ -73,12 +73,12 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		_name = name;
 	}
 	
-	public L2ResidenceZone getResidenceZone()
+	public ResidenceZone getResidenceZone()
 	{
 		return _zone;
 	}
 	
-	protected void setResidenceZone(L2ResidenceZone zone)
+	protected void setResidenceZone(ResidenceZone zone)
 	{
 		_zone = zone;
 	}
@@ -88,7 +88,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		return _residentialSkills;
 	}
 	
-	public void giveResidentialSkills(L2PcInstance player)
+	public void giveResidentialSkills(PlayerInstance player)
 	{
 		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
 		{
@@ -99,7 +99,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		}
 	}
 	
-	public void removeResidentialSkills(L2PcInstance player)
+	public void removeResidentialSkills(PlayerInstance player)
 	{
 		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
 		{

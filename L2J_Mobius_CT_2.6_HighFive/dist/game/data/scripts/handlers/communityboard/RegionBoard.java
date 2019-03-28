@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IWriteBoardHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -50,39 +50,39 @@ public class RegionBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
+	public boolean parseCommunityBoardCommand(String command, PlayerInstance player)
 	{
 		if (command.equals("_bbsloc"))
 		{
-			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region", command);
+			CommunityBoardHandler.getInstance().addBypass(player, "Region", command);
 			
-			final String list = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/region_list.html");
+			final String list = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/region_list.html");
 			final StringBuilder sb = new StringBuilder();
 			final List<Castle> castles = CastleManager.getInstance().getCastles();
 			for (int i = 0; i < REGIONS.length; i++)
 			{
 				final Castle castle = castles.get(i);
-				final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+				final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 				String link = list.replaceAll("%region_id%", String.valueOf(i));
 				link = link.replace("%region_name%", String.valueOf(REGIONS[i]));
 				link = link.replace("%region_owning_clan%", (clan != null ? clan.getName() : "NPC"));
 				link = link.replace("%region_owning_clan_alliance%", ((clan != null) && (clan.getAllyName() != null) ? clan.getAllyName() : ""));
-				link = link.replace("%region_tax_rate%", castle.getTaxRate() * 100 + "%");
+				link = link.replace("%region_tax_rate%", (castle.getTaxRate() * 100) + "%");
 				sb.append(link);
 			}
 			
-			String html = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/region.html");
+			String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/region.html");
 			html = html.replace("%region_list%", sb.toString());
-			CommunityBoardHandler.separateAndSend(html, activeChar);
+			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		else if (command.startsWith("_bbsloc;"))
 		{
-			CommunityBoardHandler.getInstance().addBypass(activeChar, "Region>", command);
+			CommunityBoardHandler.getInstance().addBypass(player, "Region>", command);
 			
 			final String id = command.replace("_bbsloc;", "");
 			if (!Util.isDigit(id))
 			{
-				LOG.warning(RegionBoard.class.getSimpleName() + ": Player " + activeChar + " sent and invalid region bypass " + command + "!");
+				LOG.warning(RegionBoard.class.getSimpleName() + ": Player " + player + " sent and invalid region bypass " + command + "!");
 				return false;
 			}
 			
@@ -92,7 +92,7 @@ public class RegionBoard implements IWriteBoardHandler
 	}
 	
 	@Override
-	public boolean writeCommunityBoardCommand(L2PcInstance activeChar, String arg1, String arg2, String arg3, String arg4, String arg5)
+	public boolean writeCommunityBoardCommand(PlayerInstance player, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		// TODO: Implement.
 		return false;

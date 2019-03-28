@@ -18,9 +18,9 @@ package ai.areas.Hellbound.AI.NPC.Natives;
 
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
@@ -60,7 +60,7 @@ public final class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		final int hellboundLevel = HellboundEngine.getInstance().getLevel();
@@ -97,7 +97,7 @@ public final class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
 		if (npc.getId() == TRAITOR)
@@ -112,7 +112,7 @@ public final class Natives extends AbstractNpcAI
 					
 					for (int doorId : DOORS)
 					{
-						final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+						final DoorInstance door = DoorData.getInstance().getDoor(doorId);
 						if (door != null)
 						{
 							door.openMe();
@@ -135,7 +135,7 @@ public final class Natives extends AbstractNpcAI
 			{
 				for (int doorId : DOORS)
 				{
-					final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+					final DoorInstance door = DoorData.getInstance().getDoor(doorId);
 					if (door != null)
 					{
 						door.closeMe();
@@ -176,7 +176,7 @@ public final class Natives extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
+	public final String onSpawn(Npc npc)
 	{
 		if ((npc.getId() == NATIVE) && (HellboundEngine.getInstance().getLevel() < 6))
 		{

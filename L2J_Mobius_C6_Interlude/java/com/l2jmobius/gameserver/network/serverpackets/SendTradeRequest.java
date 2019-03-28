@@ -17,10 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 /**
- * This class ...
  * @version $Revision: 1.2.2.1.2.3 $ $Date: 2005/03/27 15:29:40 $
  */
-public class SendTradeRequest extends L2GameServerPacket
+public class SendTradeRequest extends GameServerPacket
 {
 	private final int _senderID;
 	

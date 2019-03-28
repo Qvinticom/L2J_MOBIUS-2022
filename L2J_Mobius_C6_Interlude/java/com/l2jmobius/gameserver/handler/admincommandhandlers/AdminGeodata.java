@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.GeoUtils;
 
@@ -40,7 +40,7 @@ public class AdminGeodata implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		if (command.equals("admin_geo_pos"))
 		{
@@ -78,7 +78,7 @@ public class AdminGeodata implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_geo_can_move"))
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			if (target != null)
 			{
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
@@ -97,7 +97,7 @@ public class AdminGeodata implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_geo_can_see"))
 		{
-			final L2Object target = activeChar.getTarget();
+			final WorldObject target = activeChar.getTarget();
 			if (target != null)
 			{
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
@@ -120,8 +120,8 @@ public class AdminGeodata implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_geomap"))
 		{
-			final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
-			final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final int x = ((activeChar.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int y = ((activeChar.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
 			BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y);
 		}
 		else

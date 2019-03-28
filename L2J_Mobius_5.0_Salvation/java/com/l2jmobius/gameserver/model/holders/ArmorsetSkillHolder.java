@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.model.holders;
 
 import java.util.function.Function;
 
-import com.l2jmobius.gameserver.model.L2ArmorSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.ArmorSet;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
  * @author UnAfraid
@@ -54,7 +54,7 @@ public class ArmorsetSkillHolder extends SkillHolder
 		return _isOptional;
 	}
 	
-	public boolean validateConditions(L2PcInstance player, L2ArmorSet armorSet, Function<L2ItemInstance, Integer> idProvider)
+	public boolean validateConditions(PlayerInstance player, ArmorSet armorSet, Function<ItemInstance, Integer> idProvider)
 	{
 		// Player doesn't have enough items equipped to use this skill
 		if (_minimumPieces > armorSet.getPiecesCount(player, idProvider))

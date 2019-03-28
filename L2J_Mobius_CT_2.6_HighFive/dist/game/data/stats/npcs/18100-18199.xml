@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18100" level="76" type="L2FestivalMonster" name="Offering of Forbidden Path">
+	<npc id="18100" level="76" type="FestivalMonster" name="Offering of Forbidden Path">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -47,7 +47,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18101" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Archer">
+	<npc id="18101" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -92,7 +92,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18102" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Warrior">
+	<npc id="18102" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -147,7 +147,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="18103" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Follower">
+	<npc id="18103" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -205,7 +205,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18104" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Berserker">
+	<npc id="18104" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -261,7 +261,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18105" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Zealot">
+	<npc id="18105" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Zealot">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -318,7 +318,7 @@
 			<height normal="34.8" />
 		</collision>
 	</npc>
-	<npc id="18106" level="76" type="L2FestivalMonster" name="Offering of Forbidden Path, Marksman">
+	<npc id="18106" level="76" type="FestivalMonster" name="Offering of Forbidden Path, Marksman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -363,7 +363,7 @@
 			<height normal="32.4" />
 		</collision>
 	</npc>
-	<npc id="18107" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Disciple">
+	<npc id="18107" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -415,7 +415,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18108" level="78" type="L2FestivalMonster" name="Offering of Forbidden Path, Saint">
+	<npc id="18108" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Saint">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -470,7 +470,7 @@
 			<height normal="28.8" />
 		</collision>
 	</npc>
-	<npc id="18109" level="30" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18109" level="30" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -526,7 +526,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18110" level="41" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18110" level="41" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
@@ -583,7 +583,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18111" level="52" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18111" level="52" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -640,7 +640,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18112" level="63" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18112" level="63" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
@@ -697,7 +697,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18113" level="72" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18113" level="72" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -754,7 +754,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18114" level="30" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18114" level="30" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -810,7 +810,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18115" level="41" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18115" level="41" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
@@ -867,7 +867,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18116" level="52" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18116" level="52" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -924,7 +924,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18117" level="63" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18117" level="63" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
@@ -981,7 +981,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18118" level="72" type="L2FestivalMonster" name="Treasures of the Festival">
+	<npc id="18118" level="72" type="FestivalMonster" name="Treasures of the Festival">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -1038,7 +1038,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18119" level="63" type="L2Monster" name="Corpse of Deadman">
+	<npc id="18119" level="63" type="Monster" name="Corpse of Deadman">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1075,7 +1075,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18120" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18120" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1137,7 +1137,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18121" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18121" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1199,7 +1199,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18122" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18122" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1259,7 +1259,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18123" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18123" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1321,7 +1321,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18124" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18124" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1383,7 +1383,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18125" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18125" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1443,7 +1443,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18126" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18126" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1505,7 +1505,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18127" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18127" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1567,7 +1567,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18128" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18128" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1627,7 +1627,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18129" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18129" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1689,7 +1689,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18130" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18130" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1751,7 +1751,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18131" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+	<npc id="18131" level="78" type="SepulcherMonster" name="Halisha's Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1811,7 +1811,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18132" level="78" type="L2SepulcherMonster" name="Imperial Healer">
+	<npc id="18132" level="78" type="SepulcherMonster" name="Imperial Healer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1866,7 +1866,7 @@
 			<height normal="54.5" />
 		</collision>
 	</npc>
-	<npc id="18133" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18133" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1916,7 +1916,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="18134" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18134" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1966,7 +1966,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="18135" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18135" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -2017,7 +2017,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="18136" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18136" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -2068,7 +2068,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="18137" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18137" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2120,7 +2120,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18138" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18138" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2173,7 +2173,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18139" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18139" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2226,7 +2226,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18140" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+	<npc id="18140" level="78" type="SepulcherMonster" name="Imperial Mosaic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2277,7 +2277,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18141" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18141" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2333,7 +2333,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18142" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18142" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2389,7 +2389,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18143" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18143" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2445,7 +2445,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18144" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18144" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2501,7 +2501,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18145" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18145" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2555,7 +2555,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18146" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18146" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2607,7 +2607,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18147" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18147" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2659,7 +2659,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18148" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18148" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2711,7 +2711,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18149" level="78" type="L2SepulcherMonster" name="Beetle of Grave">
+	<npc id="18149" level="78" type="SepulcherMonster" name="Beetle of Grave">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2763,7 +2763,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18150" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18150" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -2809,7 +2809,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18151" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18151" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -2855,7 +2855,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18152" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18152" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -2901,7 +2901,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18153" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18153" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -2947,7 +2947,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18154" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18154" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -2993,7 +2993,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18155" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18155" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -3039,7 +3039,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18156" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18156" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -3085,7 +3085,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18157" level="78" type="L2SepulcherMonster" name="Victim">
+	<npc id="18157" level="78" type="SepulcherMonster" name="Victim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
@@ -3131,7 +3131,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18158" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18158" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3184,7 +3184,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18159" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18159" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3237,7 +3237,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18160" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18160" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3290,7 +3290,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18161" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18161" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3343,7 +3343,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18162" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18162" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3396,7 +3396,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18163" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18163" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3449,7 +3449,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18164" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18164" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3502,7 +3502,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18165" level="78" type="L2SepulcherMonster" name="Executioner of Halisha">
+	<npc id="18165" level="78" type="SepulcherMonster" name="Executioner of Halisha">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3555,7 +3555,7 @@
 			<height normal="50" grown="60" />
 		</collision>
 	</npc>
-	<npc id="18166" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18166" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -3608,7 +3608,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="18167" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18167" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -3661,7 +3661,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="18168" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18168" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -3715,7 +3715,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="18169" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18169" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
@@ -3769,7 +3769,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="18170" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18170" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3822,7 +3822,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18171" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18171" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3876,7 +3876,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18172" level="78" type="L2SepulcherMonster" name="Imperial Guard">
+	<npc id="18172" level="78" type="SepulcherMonster" name="Imperial Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3928,7 +3928,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18173" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18173" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -3985,7 +3985,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18174" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18174" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4046,7 +4046,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18175" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18175" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4105,7 +4105,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18176" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18176" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4162,7 +4162,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18177" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18177" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4223,7 +4223,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18178" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18178" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4282,7 +4282,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18179" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18179" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4339,7 +4339,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18180" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18180" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4400,7 +4400,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18181" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18181" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4459,7 +4459,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18182" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18182" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4516,7 +4516,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18183" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18183" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4577,7 +4577,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18184" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+	<npc id="18184" level="78" type="SepulcherMonster" name="Halisha's Foreman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
@@ -4636,7 +4636,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18185" level="78" type="L2SepulcherMonster" name="Evil Astrologer">
+	<npc id="18185" level="78" type="SepulcherMonster" name="Evil Astrologer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -4692,7 +4692,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="18186" level="78" type="L2SepulcherMonster" name="Evil Astrologer">
+	<npc id="18186" level="78" type="SepulcherMonster" name="Evil Astrologer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -4750,7 +4750,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="18187" level="78" type="L2SepulcherMonster" name="Knight of Darkness">
+	<npc id="18187" level="78" type="SepulcherMonster" name="Knight of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4802,7 +4802,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18188" level="78" type="L2SepulcherMonster" name="Knight of Darkness">
+	<npc id="18188" level="78" type="SepulcherMonster" name="Knight of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4853,7 +4853,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18189" level="78" type="L2SepulcherMonster" name="Knight of Darkness">
+	<npc id="18189" level="78" type="SepulcherMonster" name="Knight of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4906,7 +4906,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18190" level="78" type="L2SepulcherMonster" name="Knight of Darkness">
+	<npc id="18190" level="78" type="SepulcherMonster" name="Knight of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4959,7 +4959,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="18191" level="78" type="L2SepulcherMonster" name="Witch of dust">
+	<npc id="18191" level="78" type="SepulcherMonster" name="Witch of dust">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5012,7 +5012,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18192" level="78" type="L2SepulcherMonster" name="Witch of dust">
+	<npc id="18192" level="78" type="SepulcherMonster" name="Witch of dust">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5067,7 +5067,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18193" level="78" type="L2SepulcherMonster" name="Witch of dust">
+	<npc id="18193" level="78" type="SepulcherMonster" name="Witch of dust">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5122,7 +5122,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18194" level="78" type="L2SepulcherMonster" name="Witch of dust">
+	<npc id="18194" level="78" type="SepulcherMonster" name="Witch of dust">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5175,7 +5175,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18195" level="78" type="L2SepulcherMonster" name="Signet of Emperor">
+	<npc id="18195" level="78" type="SepulcherMonster" name="Signet of Emperor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -5227,7 +5227,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="18196" level="78" type="L2SepulcherMonster" name="Charm of Corner">
+	<npc id="18196" level="78" type="SepulcherMonster" name="Charm of Corner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_weakness" />
@@ -5277,7 +5277,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18197" level="78" type="L2SepulcherMonster" name="Charm of Corner">
+	<npc id="18197" level="78" type="SepulcherMonster" name="Charm of Corner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_pddown" />
@@ -5327,7 +5327,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18198" level="78" type="L2SepulcherMonster" name="Charm of Corner">
+	<npc id="18198" level="78" type="SepulcherMonster" name="Charm of Corner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_poison" />
@@ -5377,7 +5377,7 @@
 			<height normal="75" />
 		</collision>
 	</npc>
-	<npc id="18199" level="78" type="L2SepulcherMonster" name="Charm of Corner">
+	<npc id="18199" level="78" type="SepulcherMonster" name="Charm of Corner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_nonheal" />

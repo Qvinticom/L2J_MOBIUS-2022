@@ -24,14 +24,14 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.WorldObject;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Attackable;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -51,7 +51,7 @@ public abstract class AbstractSagaQuest extends Quest
 	protected int[] prevclass;
 	protected Location[] npcSpawnLocations;
 	protected String[] Text;
-	private static final Map<L2Npc, Integer> SPAWN_LIST = new HashMap<>();
+	private static final Map<Npc, Integer> SPAWN_LIST = new HashMap<>();
 	// @formatter:off
 	private static int[][] QuestClass =
 	{
@@ -68,7 +68,7 @@ public abstract class AbstractSagaQuest extends Quest
 		super(questId);
 	}
 	
-	private QuestState findQuest(L2PcInstance player)
+	private QuestState findQuest(PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, false);
 		if (st != null)
@@ -91,13 +91,13 @@ public abstract class AbstractSagaQuest extends Quest
 		return null;
 	}
 	
-	private QuestState findRightState(L2Npc npc)
+	private QuestState findRightState(Npc npc)
 	{
-		L2PcInstance player = null;
+		PlayerInstance player = null;
 		QuestState st = null;
 		if (SPAWN_LIST.containsKey(npc))
 		{
-			player = L2World.getInstance().getPlayer(SPAWN_LIST.get(npc));
+			player = World.getInstance().getPlayer(SPAWN_LIST.get(npc));
 			if (player != null)
 			{
 				st = player.getQuestState(getName());
@@ -106,7 +106,7 @@ public abstract class AbstractSagaQuest extends Quest
 		return st;
 	}
 	
-	private int getClassId(L2PcInstance player)
+	private int getClassId(PlayerInstance player)
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
@@ -115,7 +115,7 @@ public abstract class AbstractSagaQuest extends Quest
 		return classid[0];
 	}
 	
-	private int getPrevClass(L2PcInstance player)
+	private int getPrevClass(PlayerInstance player)
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
@@ -132,19 +132,19 @@ public abstract class AbstractSagaQuest extends Quest
 	{
 		if (st2.getInt("spawned") == 0)
 		{
-			final L2PcInstance player = st2.getPlayer();
+			final PlayerInstance player = st2.getPlayer();
 			if (getQuestItemsCount(player, Items[3]) >= 700)
 			{
 				takeItems(player, Items[3], 20);
 				final int xx = st2.getPlayer().getX();
 				final int yy = st2.getPlayer().getY();
 				final int zz = st2.getPlayer().getZ();
-				final L2Npc Archon = addSpawn(Mob[1], xx, yy, zz, -1);
+				final Npc Archon = addSpawn(Mob[1], xx, yy, zz, -1);
 				addSpawn(st2, Archon);
 				st2.set("spawned", "1");
 				startQuestTimer("Archon Hellisha has despawned", 600000, Archon, player);
 				autoChat(Archon, Text[13].replace("PLAYERNAME", st2.getPlayer().getName()));
-				((L2Attackable) Archon).addDamageHate(st2.getPlayer(), 0, 99999);
+				((Attackable) Archon).addDamageHate(st2.getPlayer(), 0, 99999);
 				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
 			}
 			else
@@ -155,7 +155,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
@@ -327,7 +327,7 @@ public abstract class AbstractSagaQuest extends Quest
 					}
 					else if (st.getInt("spawned") == 0)
 					{
-						final L2Npc Mob_1 = addSpawn(Mob[0], npcSpawnLocations[0], false, 0);
+						final Npc Mob_1 = addSpawn(Mob[0], npcSpawnLocations[0], false, 0);
 						st.set("spawned", "1");
 						startQuestTimer("Mob_1 Timer 1", 500, Mob_1, player);
 						startQuestTimer("Mob_1 has despawned", 300000, Mob_1, player);
@@ -370,8 +370,8 @@ public abstract class AbstractSagaQuest extends Quest
 				{
 					if (st.getInt("Quest0") == 0)
 					{
-						final L2Npc Mob_3 = addSpawn(Mob[2], npcSpawnLocations[1], false, 0);
-						final L2Npc Mob_2 = addSpawn(_npc[4], npcSpawnLocations[2], false, 0);
+						final Npc Mob_3 = addSpawn(Mob[2], npcSpawnLocations[1], false, 0);
+						final Npc Mob_2 = addSpawn(_npc[4], npcSpawnLocations[2], false, 0);
 						addSpawn(st, Mob_3);
 						addSpawn(st, Mob_2);
 						st.set("Mob_2", String.valueOf(Mob_2.getObjectId()));
@@ -428,10 +428,10 @@ public abstract class AbstractSagaQuest extends Quest
 				}
 				case "Mob_3 Timer 1":
 				{
-					final L2Npc Mob_2 = FindSpawn(player, (L2Npc) L2World.getInstance().findObject(st.getInt("Mob_2")));
-					if (L2World.getInstance().getVisibleObjects(npc, L2Npc.class).contains(Mob_2))
+					final Npc Mob_2 = FindSpawn(player, (Npc) World.getInstance().findObject(st.getInt("Mob_2")));
+					if (World.getInstance().getVisibleObjects(npc, Npc.class).contains(Mob_2))
 					{
-						((L2Attackable) npc).addDamageHate(Mob_2, 0, 99999);
+						((Attackable) npc).addDamageHate(Mob_2, 0, 99999);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, Mob_2, null);
 						Mob_2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc, null);
 						autoChat(npc, Text[14].replace("PLAYERNAME", player.getName()));
@@ -507,7 +507,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
 	{
 		final QuestState st2 = findRightState(npc);
 		if (st2 != null)
@@ -549,7 +549,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
 		final QuestState st = getQuestState(player, false);
@@ -621,7 +621,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final int npcId = npc.getId();
 		QuestState st = getQuestState(player, false);
@@ -629,11 +629,11 @@ public abstract class AbstractSagaQuest extends Quest
 		{
 			if (npcId == Archon_Minion)
 			{
-				final L2Party party = player.getParty();
+				final Party party = player.getParty();
 				if (party != null)
 				{
 					final List<QuestState> partyQuestMembers = new ArrayList<>();
-					for (L2PcInstance player1 : party.getMembers())
+					for (PlayerInstance player1 : party.getMembers())
 					{
 						final QuestState st1 = findQuest(player1);
 						if ((st1 != null) && player1.isInsideRadius2D(player, Config.ALT_PARTY_RANGE))
@@ -781,17 +781,17 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (SPAWN_LIST.containsKey(npc) && (SPAWN_LIST.get(npc) != player.getObjectId()))
 		{
-			final L2PcInstance quest_player = (L2PcInstance) L2World.getInstance().findObject(SPAWN_LIST.get(npc));
+			final PlayerInstance quest_player = (PlayerInstance) World.getInstance().findObject(SPAWN_LIST.get(npc));
 			if (quest_player == null)
 			{
 				return null;
 			}
 			
-			for (L2Object obj : targets)
+			for (WorldObject obj : targets)
 			{
 				if ((obj == quest_player) || (obj == npc))
 				{
@@ -811,7 +811,7 @@ public abstract class AbstractSagaQuest extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -1106,23 +1106,23 @@ public abstract class AbstractSagaQuest extends Quest
 		}
 	}
 	
-	private static void addSpawn(QuestState st, L2Npc mob)
+	private static void addSpawn(QuestState st, Npc mob)
 	{
 		SPAWN_LIST.put(mob, st.getPlayer().getObjectId());
 	}
 	
-	private static void autoChat(L2Npc npc, String text)
+	private static void autoChat(Npc npc, String text)
 	{
 		npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), text));
 	}
 	
-	private static void cast(L2Npc npc, L2Character target, int skillId, int level)
+	private static void cast(Npc npc, Creature target, int skillId, int level)
 	{
 		target.broadcastPacket(new MagicSkillUse(target, target, skillId, level, 6000, 1));
 		target.broadcastPacket(new MagicSkillUse(npc, npc, skillId, level, 6000, 1));
 	}
 	
-	private static void DeleteSpawn(QuestState st, L2Npc npc)
+	private static void DeleteSpawn(QuestState st, Npc npc)
 	{
 		if (SPAWN_LIST.containsKey(npc))
 		{
@@ -1131,7 +1131,7 @@ public abstract class AbstractSagaQuest extends Quest
 		}
 	}
 	
-	private static L2Npc FindSpawn(L2PcInstance player, L2Npc npc)
+	private static Npc FindSpawn(PlayerInstance player, Npc npc)
 	{
 		if (SPAWN_LIST.containsKey(npc) && (SPAWN_LIST.get(npc) == player.getObjectId()))
 		{

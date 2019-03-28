@@ -21,12 +21,12 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.RecipeHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 import com.l2jmobius.gameserver.util.Util;
@@ -40,7 +40,7 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 	private ItemHolder[] _offeredItems;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		_id = packet.readD();
 		
@@ -59,17 +59,17 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
 		if (!Config.IS_CRAFTING_ENABLED)
 		{
-			activeChar.sendMessage("Item creation is currently disabled.");
+			player.sendMessage("Item creation is currently disabled.");
 			return;
 		}
 		
@@ -78,48 +78,48 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.isCastingNow())
+		if (player.isCastingNow())
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_RECIPE_BOOK_MAY_NOT_BE_ACCESSED_WHILE_USING_A_SKILL);
+			player.sendPacket(SystemMessageId.YOUR_RECIPE_BOOK_MAY_NOT_BE_ACCESSED_WHILE_USING_A_SKILL);
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
+		if (player.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return;
 		}
 		
-		if (activeChar.isProcessingTransaction())
+		if (player.isProcessingTransaction())
 		{
-			activeChar.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
+			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
 			return;
 		}
 		
 		// TODO: Check if its a retail-like check.
-		if (activeChar.isAlikeDead())
+		if (player.isAlikeDead())
 		{
 			return;
 		}
 		
 		// On retail if player is requesting trade, it is instantly canceled.
-		activeChar.cancelActiveTrade();
+		player.cancelActiveTrade();
 		
 		final RecipeHolder recipe = RecipeData.getInstance().getRecipe(_id);
 		if (recipe == null)
 		{
-			activeChar.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
+			player.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
 			return;
 		}
 		
-		if (!activeChar.hasRecipeList(recipe.getId()))
+		if (!player.hasRecipeList(recipe.getId()))
 		{
-			Util.handleIllegalPlayerAction(activeChar, "Warning!! Character " + activeChar.getName() + " of account " + activeChar.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
 		// Check if stats or ingredients are met.
-		if (!recipe.checkNecessaryStats(activeChar, activeChar, true) || !recipe.checkNecessaryIngredients(activeChar, true))
+		if (!recipe.checkNecessaryStats(player, player, true) || !recipe.checkNecessaryIngredients(player, true))
 		{
 			return;
 		}
@@ -129,7 +129,7 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 		{
 			for (ItemHolder offer : _offeredItems)
 			{
-				final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(offer.getId());
+				final ItemInstance item = player.getInventory().getItemByObjectId(offer.getId());
 				if ((item == null) || (item.getCount() < offer.getCount()) || !item.isDestroyable())
 				{
 					return;
@@ -137,13 +137,13 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			}
 		}
 		
-		if (activeChar.isCrafting())
+		if (player.isCrafting())
 		{
-			activeChar.sendPacket(SystemMessageId.CURRENTLY_CRAFTING_AN_ITEM_PLEASE_WAIT);
+			player.sendPacket(SystemMessageId.CURRENTLY_CRAFTING_AN_ITEM_PLEASE_WAIT);
 			return;
 		}
 		
-		activeChar.setIsCrafting(true);
+		player.setIsCrafting(true);
 		
 		// Take offerings to increase chance
 		double offeringBonus = 0;
@@ -152,8 +152,8 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			long offeredAdenaWorth = 0;
 			for (ItemHolder offer : _offeredItems)
 			{
-				final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(offer.getId());
-				if (activeChar.destroyItem("CraftOffering", item, offer.getCount(), null, true))
+				final ItemInstance item = player.getInventory().getItemByObjectId(offer.getId());
+				if (player.destroyItem("CraftOffering", item, offer.getCount(), null, true))
 				{
 					offeredAdenaWorth += (item.getItem().getReferencePrice() * offer.getCount());
 				}
@@ -162,27 +162,27 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			offeringBonus = Math.min((offeredAdenaWorth / recipe.getMaxOffering()) * recipe.getMaxOfferingBonus(), recipe.getMaxOfferingBonus());
 		}
 		
-		final boolean success = activeChar.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
-		final boolean craftingCritical = success && (activeChar.getStat().getValue(Stats.CRAFTING_CRITICAL) > Rnd.get(100));
+		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
+		final boolean craftingCritical = success && (player.getStat().getValue(Stats.CRAFTING_CRITICAL) > Rnd.get(100));
 		
 		if (success) // Successful craft.
 		{
 			if (craftingCritical)
 			{
-				activeChar.sendPacket(SystemMessageId.CRAFTING_CRITICAL);
+				player.sendPacket(SystemMessageId.CRAFTING_CRITICAL);
 			}
 		}
 		else // Failed craft.
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_FAILED_AT_MIXING_THE_ITEM);
+			player.sendPacket(SystemMessageId.YOU_FAILED_AT_MIXING_THE_ITEM);
 		}
 		
 		// Perform the crafting: take the items and give reward if success.
-		recipe.doCraft(activeChar, activeChar, success, craftingCritical, true);
+		recipe.doCraft(player, player, success, craftingCritical, true);
 		
 		// Send craft window. Must be sent after crafting so it properly counts the items.
-		activeChar.sendPacket(new RecipeItemMakeInfo(recipe.getId(), activeChar, success, recipe.getMaxOffering()));
+		player.sendPacket(new RecipeItemMakeInfo(recipe.getId(), player, success, recipe.getMaxOffering()));
 		
-		activeChar.setIsCrafting(false);
+		player.setIsCrafting(false);
 	}
 }

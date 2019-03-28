@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -61,7 +61,7 @@ public final class Q00650_ABrokenDream extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
@@ -104,7 +104,7 @@ public final class Q00650_ABrokenDream extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -134,9 +134,9 @@ public final class Q00650_ABrokenDream extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final List<L2PcInstance> randomList = new ArrayList<>();
+		final List<PlayerInstance> randomList = new ArrayList<>();
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted())
 		{
@@ -147,7 +147,7 @@ public final class Q00650_ABrokenDream extends Quest
 		final int monsterChance = MONSTER_DROP_CHANCES.get(npc.getId());
 		if (killer.isInParty())
 		{
-			for (L2PcInstance member : killer.getParty().getMembers())
+			for (PlayerInstance member : killer.getParty().getMembers())
 			{
 				final QuestState qst = getQuestState(member, false);
 				if ((qst != null) && qst.isStarted())
@@ -159,7 +159,7 @@ public final class Q00650_ABrokenDream extends Quest
 		
 		if (!randomList.isEmpty())
 		{
-			final L2PcInstance player = randomList.get(getRandom(randomList.size()));
+			final PlayerInstance player = randomList.get(getRandom(randomList.size()));
 			if ((getRandom(1000) < monsterChance) && Util.checkIfInRange(1500, npc, player, true))
 			{
 				giveItems(player, REMNANTS_OF_OLD_DWARVES_DREAMS, 1);

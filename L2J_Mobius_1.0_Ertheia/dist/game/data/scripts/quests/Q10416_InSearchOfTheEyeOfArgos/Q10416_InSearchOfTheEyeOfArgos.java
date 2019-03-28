@@ -17,8 +17,8 @@
 package quests.Q10416_InSearchOfTheEyeOfArgos;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -48,10 +48,10 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -67,15 +67,15 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			case "33851-04.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
 				htmltext = event;
 				break;
 			}
 			case "31683-02.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EAA, 2);
 					giveStoryQuestReward(player, 2);
 					if (player.getLevel() > MIN_LEVEL)
@@ -91,12 +91,12 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -108,7 +108,7 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = npc.getId() == JANITT ? "33851-05.html" : "31683-01.html";
 				}

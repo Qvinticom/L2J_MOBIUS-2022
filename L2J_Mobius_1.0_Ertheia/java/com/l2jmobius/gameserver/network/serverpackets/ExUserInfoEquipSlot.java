@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.InventorySlot;
 import com.l2jmobius.gameserver.model.VariationInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 {
-	private final L2PcInstance _activeChar;
+	private final PlayerInstance _player;
 	
 	private final byte[] _masks = new byte[]
 	{
@@ -39,14 +39,14 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		(byte) 0x00
 	};
 	
-	public ExUserInfoEquipSlot(L2PcInstance cha)
+	public ExUserInfoEquipSlot(PlayerInstance player)
 	{
-		this(cha, true);
+		this(player, true);
 	}
 	
-	public ExUserInfoEquipSlot(L2PcInstance cha, boolean addAll)
+	public ExUserInfoEquipSlot(PlayerInstance player, boolean addAll)
 	{
-		_activeChar = cha;
+		_player = player;
 		
 		if (addAll)
 		{
@@ -65,11 +65,11 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 	{
 		OutgoingPackets.EX_USER_INFO_EQUIP_SLOT.writeId(packet);
 		
-		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_player.getObjectId());
 		packet.writeH(InventorySlot.values().length);
 		packet.writeB(_masks);
 		
-		final PcInventory inventory = _activeChar.getInventory();
+		final PlayerInventory inventory = _player.getInventory();
 		for (InventorySlot slot : InventorySlot.values())
 		{
 			if (containsMask(slot))

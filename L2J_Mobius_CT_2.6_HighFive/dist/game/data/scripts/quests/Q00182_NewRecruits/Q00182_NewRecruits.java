@@ -17,8 +17,8 @@
 package quests.Q00182_NewRecruits;
 
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -42,11 +42,11 @@ public class Q00182_NewRecruits extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -55,7 +55,7 @@ public class Q00182_NewRecruits extends Quest
 		{
 			if (event.equalsIgnoreCase("32138-03.html"))
 			{
-				st.startQuest();
+				qs.startQuest();
 			}
 		}
 		else if (npc.getId() == MENACING_MACHINE)
@@ -63,27 +63,27 @@ public class Q00182_NewRecruits extends Quest
 			if (event.equalsIgnoreCase("32258-04.html"))
 			{
 				giveItems(player, 847, 2);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 			}
 			else if (event.equalsIgnoreCase("32258-05.html"))
 			{
 				giveItems(player, 890, 2);
-				st.exitQuest(false, true);
+				qs.exitQuest(false, true);
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		final int npcId = npc.getId();
 		if (npcId == KEKROPUS)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case State.CREATED:
 				{
@@ -104,7 +104,7 @@ public class Q00182_NewRecruits extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.getInt("cond") == 1)
+					if (qs.getInt("cond") == 1)
 					{
 						htmltext = "32138-04.html";
 					}
@@ -117,7 +117,7 @@ public class Q00182_NewRecruits extends Quest
 				}
 			}
 		}
-		else if ((npcId == MENACING_MACHINE) && st.isStarted())
+		else if ((npcId == MENACING_MACHINE) && qs.isStarted())
 		{
 			htmltext = "32258-01.html";
 		}

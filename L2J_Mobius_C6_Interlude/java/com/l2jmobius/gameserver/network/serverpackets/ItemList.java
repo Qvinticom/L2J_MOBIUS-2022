@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * sample 27 00 00 01 00 // item count 04 00 // itemType1 0-weapon/ring/earring/necklace 1-armor/shield 4-item/questitem/adena c6 37 50 40 // objectId cd 09 00 00 // itemId 05 00 00 00 // count 05 00 // itemType2 0-weapon 1-shield/armor 2-ring/earring/necklace 3-questitem 4-adena 5-item 00 00 //
@@ -25,18 +25,18 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  * revision 415
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class ItemList extends L2GameServerPacket
+public class ItemList extends GameServerPacket
 {
-	private final L2ItemInstance[] _items;
+	private final ItemInstance[] _items;
 	private final boolean _showWindow;
 	
-	public ItemList(L2PcInstance cha, boolean showWindow)
+	public ItemList(PlayerInstance player, boolean showWindow)
 	{
-		_items = cha.getInventory().getItems();
+		_items = player.getInventory().getItems();
 		_showWindow = showWindow;
 	}
 	
-	public ItemList(L2ItemInstance[] items, boolean showWindow)
+	public ItemList(ItemInstance[] items, boolean showWindow)
 	{
 		_items = items;
 		_showWindow = showWindow;
@@ -49,7 +49,7 @@ public class ItemList extends L2GameServerPacket
 		writeH(_showWindow ? 0x01 : 0x00);
 		final int count = _items.length;
 		writeH(count);
-		for (L2ItemInstance temp : _items)
+		for (ItemInstance temp : _items)
 		{
 			if ((temp == null) || (temp.getItem() == null))
 			{

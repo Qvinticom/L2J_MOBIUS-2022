@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets.faction;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.faction.ExFactionInfo;
 
@@ -29,7 +29,7 @@ public class RequestUserFactionInfo implements IClientIncomingPacket
 	private boolean _openDialog;
 	
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		packet.readD();
 		_openDialog = packet.readC() != 0;
@@ -38,8 +38,8 @@ public class RequestUserFactionInfo implements IClientIncomingPacket
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		client.getActiveChar().sendPacket(new ExFactionInfo(client.getActiveChar(), _openDialog));
+		client.getPlayer().sendPacket(new ExFactionInfo(client.getPlayer(), _openDialog));
 	}
 }

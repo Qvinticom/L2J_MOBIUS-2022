@@ -24,12 +24,12 @@ public class SocialAction implements IClientOutgoingPacket
 	// TODO: Enum
 	public static final int LEVEL_UP = 2122;
 	
-	private final int _charObjId;
+	private final int _objectId;
 	private final int _actionId;
 	
 	public SocialAction(int objectId, int actionId)
 	{
-		_charObjId = objectId;
+		_objectId = objectId;
 		_actionId = actionId;
 	}
 	
@@ -38,7 +38,7 @@ public class SocialAction implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SOCIAL_ACTION.writeId(packet);
 		
-		packet.writeD(_charObjId);
+		packet.writeD(_objectId);
 		packet.writeD(_actionId);
 		packet.writeD(0x00); // TODO: Find me!
 		return true;

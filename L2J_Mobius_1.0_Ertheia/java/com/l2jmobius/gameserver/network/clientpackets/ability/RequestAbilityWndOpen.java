@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets.ability;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.network.GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
@@ -30,27 +30,27 @@ import com.l2jmobius.gameserver.network.serverpackets.ability.ExShowAPListWnd;
 public class RequestAbilityWndOpen implements IClientIncomingPacket
 {
 	@Override
-	public boolean read(L2GameClient client, PacketReader packet)
+	public boolean read(GameClient client, PacketReader packet)
 	{
 		return true;
 	}
 	
 	@Override
-	public void run(L2GameClient client)
+	public void run(GameClient client)
 	{
-		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if ((activeChar.getLevel() < 99) || !activeChar.isNoble())
+		if ((player.getLevel() < 99) || !player.isNoble())
 		{
-			activeChar.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
+			player.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;
 		}
 		
-		activeChar.sendPacket(ExShowAPListWnd.STATIC_PACKET);
-		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+		player.sendPacket(ExShowAPListWnd.STATIC_PACKET);
+		player.sendPacket(new ExAcquireAPSkillList(player));
 	}
 }

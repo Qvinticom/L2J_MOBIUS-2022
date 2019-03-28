@@ -22,10 +22,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.GmListTable;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public final class IllegalPlayerAction implements Runnable
@@ -34,14 +33,14 @@ public final class IllegalPlayerAction implements Runnable
 	
 	private final String _message;
 	private final int _punishment;
-	private final L2PcInstance _actor;
+	private final PlayerInstance _actor;
 	
 	public static final int PUNISH_BROADCAST = 1;
 	public static final int PUNISH_KICK = 2;
 	public static final int PUNISH_KICKBAN = 3;
 	public static final int PUNISH_JAIL = 4;
 	
-	public IllegalPlayerAction(L2PcInstance actor, String message, int punishment)
+	public IllegalPlayerAction(PlayerInstance actor, String message, int punishment)
 	{
 		_message = message;
 		_punishment = punishment;
@@ -102,7 +101,7 @@ public final class IllegalPlayerAction implements Runnable
 			}
 			case PUNISH_JAIL:
 			{
-				_actor.setPunishLevel(L2PcInstance.PunishLevel.JAIL, Config.DEFAULT_PUNISH_PARAM);
+				_actor.setPunishLevel(PlayerInstance.PunishLevel.JAIL, Config.DEFAULT_PUNISH_PARAM);
 				break;
 			}
 		}

@@ -19,8 +19,8 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.PcCondOverride;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.PlayerCondOverride;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
@@ -42,7 +42,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
+	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		if (st.hasMoreTokens())
@@ -55,7 +55,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 					final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 					msg.setFile(activeChar, "data/html/admin/cond_override.htm");
 					final StringBuilder sb = new StringBuilder();
-					for (PcCondOverride ex : PcCondOverride.values())
+					for (PlayerCondOverride ex : PlayerCondOverride.values())
 					{
 						sb.append("<tr><td fixwidth=\"180\">" + ex.getDescription() + ":</td><td><a action=\"bypass -h admin_set_exception " + ex.ordinal() + "\">" + (activeChar.canOverrideCond(ex) ? "Disable" : "Enable") + "</a></td></tr>");
 					}
@@ -70,7 +70,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 						final String token = st.nextToken();
 						if (Util.isDigit(token))
 						{
-							final PcCondOverride ex = PcCondOverride.getCondOverride(Integer.valueOf(token));
+							final PlayerCondOverride ex = PlayerCondOverride.getCondOverride(Integer.valueOf(token));
 							if (ex != null)
 							{
 								if (activeChar.canOverrideCond(ex))
@@ -91,7 +91,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 							{
 								case "enable_all":
 								{
-									for (PcCondOverride ex : PcCondOverride.values())
+									for (PlayerCondOverride ex : PlayerCondOverride.values())
 									{
 										if (!activeChar.canOverrideCond(ex))
 										{
@@ -103,7 +103,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 								}
 								case "disable_all":
 								{
-									for (PcCondOverride ex : PcCondOverride.values())
+									for (PlayerCondOverride ex : PlayerCondOverride.values())
 									{
 										if (activeChar.canOverrideCond(ex))
 										{

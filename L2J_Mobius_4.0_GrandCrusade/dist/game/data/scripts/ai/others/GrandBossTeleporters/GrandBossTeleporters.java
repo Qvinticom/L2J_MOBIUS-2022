@@ -21,9 +21,9 @@ import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -62,15 +62,15 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
 		if (hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			player.teleToLocation(ENTER_HALL_OF_FLAMES);
-			st.set("allowEnter", "1");
+			qs.set("allowEnter", "1");
 		}
 		else
 		{
@@ -80,10 +80,10 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		switch (npc.getId())
 		{
@@ -99,16 +99,16 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 						{
 							htmltext = "31385-03.htm";
 						}
-						else if (st.getInt("allowEnter") == 1)
+						else if (qs.getInt("allowEnter") == 1)
 						{
-							st.unset("allowEnter");
+							qs.unset("allowEnter");
 							player.teleToLocation(TELEPORT_INTO_VALAKAS_LAIR.getX() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getY() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getZ());
 							
 							playerCount++;
 							
 							if (status == 0)
 							{
-								final L2GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
+								final GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
 								valakasAI().startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME * 60000, valakas, null);
 								GrandBossManager.getInstance().setBossStatus(29028, 1);
 							}

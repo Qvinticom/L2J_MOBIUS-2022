@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="19501" level="99" type="L2Npc" name="Beleth">
+	<npc id="19501" level="99" type="Npc" name="Beleth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -19,7 +19,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19502" level="99" type="L2Npc" name="Darion">
+	<npc id="19502" level="99" type="Npc" name="Darion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -38,7 +38,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19518" level="99" type="L2Npc" name="Wormhole">
+	<npc id="19518" level="99" type="Npc" name="Wormhole">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -57,7 +57,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19519" level="99" type="L2Npc" name="">
+	<npc id="19519" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -76,7 +76,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19520" level="99" type="L2Monster" name="Doom Shrieker">
+	<npc id="19520" level="99" type="Monster" name="Doom Shrieker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -105,7 +105,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="19521" level="99" type="L2Monster" name="Jabberwok" title="Clone">
+	<npc id="19521" level="99" type="Monster" name="Jabberwok" title="Clone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -147,7 +147,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="19543" level="99" type="L2Npc" name="Invisible Kekropus NPC">
+	<npc id="19543" level="99" type="Npc" name="Invisible Kekropus NPC">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -166,7 +166,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19544" level="99" type="L2Npc" name="Invisible Anghel Waterfall NPC">
+	<npc id="19544" level="99" type="Npc" name="Invisible Anghel Waterfall NPC">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -188,7 +188,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19545" level="99" type="L2Npc" name="Warming Fire">
+	<npc id="19545" level="99" type="Npc" name="Warming Fire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -210,7 +210,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="19546" level="4" type="L2Monster" name="Dummy" title="Training">
+	<npc id="19546" level="4" type="Monster" name="Dummy" title="Training">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -234,7 +234,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="19547" level="4" type="L2Monster" name="Dummy" title="Magical">
+	<npc id="19547" level="4" type="Monster" name="Dummy" title="Magical">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -256,7 +256,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="19548" level="76" type="L2Npc" name="Dark Grave">
+	<npc id="19548" level="76" type="Npc" name="Dark Grave">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -275,7 +275,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19549" level="76" type="L2Npc" name="Whirling Vortex">
+	<npc id="19549" level="76" type="Npc" name="Whirling Vortex">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -294,7 +294,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="19550" level="76" type="L2Npc" name="Whirling Vortex">
+	<npc id="19550" level="76" type="Npc" name="Whirling Vortex">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -313,7 +313,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19551" level="76" type="L2Npc" name="Fire Bolt">
+	<npc id="19551" level="76" type="Npc" name="Fire Bolt">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -350,7 +350,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="19553" level="102" type="L2Monster" name="Dimensional Imp" title="Treasure Guard">
+	<npc id="19553" level="102" type="Monster" name="Dimensional Imp" title="Treasure Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -386,7 +386,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="19554" level="103" type="L2Monster" name="Unworldly Imp" title="Treasure Guard">
+	<npc id="19554" level="103" type="Monster" name="Unworldly Imp" title="Treasure Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -423,7 +423,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="19555" level="104" type="L2Monster" name="Abyssal Imp" title="Treasure Guard">
+	<npc id="19555" level="104" type="Monster" name="Abyssal Imp" title="Treasure Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -460,7 +460,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="19556" level="99" type="L2Npc" name="Dimensional Trap">
+	<npc id="19556" level="99" type="Npc" name="Dimensional Trap">
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="10806" level="2" />
@@ -487,7 +487,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19557" level="99" type="L2Npc" name="Dimensional Trap">
+	<npc id="19557" level="99" type="Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -506,7 +506,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19558" level="99" type="L2Npc" name="Dimensional Trap">
+	<npc id="19558" level="99" type="Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -525,7 +525,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19559" level="99" type="L2Npc" name="Dimensional Trap">
+	<npc id="19559" level="99" type="Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -544,7 +544,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19560" level="99" type="L2Npc" name="Dimensional Trap">
+	<npc id="19560" level="99" type="Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -563,7 +563,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19561" level="99" type="L2Npc" name="Dimensional Trap">
+	<npc id="19561" level="99" type="Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -582,7 +582,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19562" level="99" type="L2Npc" name="Dimensional Light">
+	<npc id="19562" level="99" type="Npc" name="Dimensional Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -601,7 +601,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19563" level="99" type="L2Npc" name="">
+	<npc id="19563" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -620,7 +620,7 @@
 			<height normal="1" />
 		</collision>
 	</npc>
-	<npc id="19564" level="99" type="L2Npc" name="Invisible Dimensional Fragment NPC">
+	<npc id="19564" level="99" type="Npc" name="Invisible Dimensional Fragment NPC">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -639,7 +639,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19565" level="99" type="L2Npc" name="Invisible Turek Orc Quest NPC">
+	<npc id="19565" level="99" type="Npc" name="Invisible Turek Orc Quest NPC">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -658,7 +658,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19566" level="76" type="L2Monster" name="Von Hellmann">
+	<npc id="19566" level="76" type="Monster" name="Von Hellmann">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -680,7 +680,7 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="19567" level="76" type="L2Monster" name="Vampiric Soldier">
+	<npc id="19567" level="76" type="Monster" name="Vampiric Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -702,7 +702,7 @@
 			<height normal="23.5" grown="29" />
 		</collision>
 	</npc>
-	<npc id="19568" level="85" type="L2Monster" name="Sacred Wizard">
+	<npc id="19568" level="85" type="Monster" name="Sacred Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -724,7 +724,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="19569" level="85" type="L2Monster" name="Sacred Soldier">
+	<npc id="19569" level="85" type="Monster" name="Sacred Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -746,7 +746,7 @@
 			<height normal="43" grown="51.6" />
 		</collision>
 	</npc>
-	<npc id="19570" level="85" type="L2Monster" name="Sacred Slayer">
+	<npc id="19570" level="85" type="Monster" name="Sacred Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -768,7 +768,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="19571" level="85" type="L2Npc" name="Makkum">
+	<npc id="19571" level="85" type="Npc" name="Makkum">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -790,7 +790,7 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="19572" level="85" type="L2Monster" name="Abyssal Shadow">
+	<npc id="19572" level="85" type="Monster" name="Abyssal Shadow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -812,7 +812,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="19573" level="85" type="L2Monster" name="Secluded Shadow">
+	<npc id="19573" level="85" type="Monster" name="Secluded Shadow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -834,7 +834,7 @@
 			<height normal="36.5" />
 		</collision>
 	</npc>
-	<npc id="19574" level="99" type="L2Monster" name="Cowing">
+	<npc id="19574" level="99" type="Monster" name="Cowing">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -863,7 +863,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="19575" level="99" type="L2Npc" name="">
+	<npc id="19575" level="99" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -882,7 +882,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="19576" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19576" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -901,7 +901,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19577" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19577" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -920,7 +920,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19578" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19578" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -939,7 +939,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19579" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19579" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -958,7 +958,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19580" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19580" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -977,7 +977,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19581" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19581" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -996,7 +996,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19582" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19582" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1015,7 +1015,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19583" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19583" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1034,7 +1034,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19584" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19584" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1053,7 +1053,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19585" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19585" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1072,7 +1072,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19586" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19586" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1091,7 +1091,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19587" level="98" type="L2Monster" name="Tainted Dimensional Treasure Chest">
+	<npc id="19587" level="98" type="Monster" name="Tainted Dimensional Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1110,7 +1110,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="19588" level="85" type="L2Npc" name="">
+	<npc id="19588" level="85" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1127,7 +1127,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19589" level="85" type="L2Npc" name="">
+	<npc id="19589" level="85" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1144,7 +1144,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19590" level="85" type="L2Npc" name="Guard">
+	<npc id="19590" level="85" type="Npc" name="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1165,7 +1165,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19591" level="85" type="L2Npc" name="Guard">
+	<npc id="19591" level="85" type="Npc" name="Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1186,7 +1186,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19592" level="85" type="L2Npc" name="Elite Guard">
+	<npc id="19592" level="85" type="Npc" name="Elite Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1207,7 +1207,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19593" level="85" type="L2Npc" name="Bomb">
+	<npc id="19593" level="85" type="Npc" name="Bomb">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1224,7 +1224,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19594" level="85" type="L2Npc" name="">
+	<npc id="19594" level="85" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1241,7 +1241,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="19596" level="85" type="L2Npc" name="Fake Kelbim">
+	<npc id="19596" level="85" type="Npc" name="Fake Kelbim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1258,7 +1258,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="19597" level="85" type="L2Npc" name="Kelbim's Shout">
+	<npc id="19597" level="85" type="Npc" name="Kelbim's Shout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1275,7 +1275,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19598" level="85" type="L2Npc" name="">
+	<npc id="19598" level="85" type="Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1292,7 +1292,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19599" level="85" type="L2Npc" name="Giant Atelia">
+	<npc id="19599" level="85" type="Npc" name="Giant Atelia">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

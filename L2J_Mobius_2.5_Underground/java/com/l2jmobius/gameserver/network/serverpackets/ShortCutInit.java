@@ -18,21 +18,21 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Shortcut;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class ShortCutInit implements IClientOutgoingPacket
 {
 	private Shortcut[] _shortCuts;
 	
-	public ShortCutInit(L2PcInstance activeChar)
+	public ShortCutInit(PlayerInstance player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return;
 		}
 		
-		_shortCuts = activeChar.getAllShortCuts();
+		_shortCuts = player.getAllShortCuts();
 	}
 	
 	@Override

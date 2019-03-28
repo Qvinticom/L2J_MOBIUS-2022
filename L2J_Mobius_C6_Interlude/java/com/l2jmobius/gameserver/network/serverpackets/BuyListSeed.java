@@ -19,20 +19,20 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.L2TradeList;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.StoreTradeList;
+import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 /**
  * Format: c ddh[hdddhhd] c - id (0xE8) d - money d - manor id h - size [ h - item type 1 d - object id d - item id d - count h - item type 2 h d - price ]
  * @author l3x
  */
-public final class BuyListSeed extends L2GameServerPacket
+public final class BuyListSeed extends GameServerPacket
 {
 	private final int _manorId;
-	private List<L2ItemInstance> _list = new ArrayList<>();
+	private List<ItemInstance> _list = new ArrayList<>();
 	private final int _money;
 	
-	public BuyListSeed(L2TradeList list, int manorId, int currentMoney)
+	public BuyListSeed(StoreTradeList list, int manorId, int currentMoney)
 	{
 		_money = currentMoney;
 		_manorId = manorId;
@@ -49,7 +49,7 @@ public final class BuyListSeed extends L2GameServerPacket
 		
 		writeH(_list.size()); // list length
 		
-		for (L2ItemInstance item : _list)
+		for (ItemInstance item : _list)
 		{
 			writeH(0x04); // item->type1
 			writeD(0x00); // objectId

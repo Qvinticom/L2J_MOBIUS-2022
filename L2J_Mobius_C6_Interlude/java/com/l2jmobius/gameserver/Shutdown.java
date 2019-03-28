@@ -32,8 +32,8 @@ import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
@@ -186,15 +186,15 @@ public class Shutdown extends Thread
 	
 	/**
 	 * This functions starts a shutdown countdown
-	 * @param activeChar GM who issued the shutdown command
+	 * @param player GM who issued the shutdown command
 	 * @param seconds seconds until shutdown
 	 * @param restart true if the server will restart after shutdown
 	 */
-	public void startShutdown(L2PcInstance activeChar, int seconds, boolean restart)
+	public void startShutdown(PlayerInstance player, int seconds, boolean restart)
 	{
 		Announcements _an = Announcements.getInstance();
 		
-		LOGGER.warning((activeChar != null ? "GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" : "Server") + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
+		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
 		if (restart)
 		{
@@ -228,13 +228,13 @@ public class Shutdown extends Thread
 	
 	/**
 	 * This function aborts a running countdown
-	 * @param activeChar GM who issued the abort command
+	 * @param player GM who issued the abort command
 	 */
-	public void abort(L2PcInstance activeChar)
+	public void abort(PlayerInstance player)
 	{
 		Announcements _an = Announcements.getInstance();
 		
-		LOGGER.warning((activeChar != null ? "GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" : "Server") + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
+		LOGGER.warning((player != null ? "GM: " + player.getName() + "(" + player.getObjectId() + ")" : "Server") + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		
 		_an.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
 		
@@ -537,7 +537,7 @@ public class Shutdown extends Thread
 	{
 		LOGGER.info("Saving all players data...");
 		
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if (player == null)
 			{
@@ -563,7 +563,7 @@ public class Shutdown extends Thread
 	{
 		LOGGER.info("Disconnecting all players from the Server...");
 		
-		for (L2PcInstance player : L2World.getInstance().getAllPlayers())
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if (player == null)
 			{
@@ -577,7 +577,7 @@ public class Shutdown extends Thread
 				{
 					player.getClient().sendPacket(ServerClose.STATIC_PACKET);
 					player.getClient().close(0);
-					player.getClient().setActiveChar(null);
+					player.getClient().setPlayer(null);
 					player.setClient(null);
 				}
 			}

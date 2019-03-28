@@ -31,14 +31,14 @@ import com.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import com.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.MessageType;
+import com.l2jmobius.gameserver.model.Party;
+import com.l2jmobius.gameserver.model.Party.MessageType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.appearance.PcAppearance;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.actor.Summon;
+import com.l2jmobius.gameserver.model.actor.appearance.PlayerAppearance;
+import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
+import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -76,7 +76,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	private final int _id;
 	private final Instance _instance;
-	private final Set<L2MonsterInstance> _monsters = ConcurrentHashMap.newKeySet();
+	private final Set<MonsterInstance> _monsters = ConcurrentHashMap.newKeySet();
 	private long _battleStartTime = 0;
 	
 	public CeremonyOfChaosEvent(int id, InstanceTemplate template)
@@ -104,7 +104,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		return _instance;
 	}
 	
-	public Set<L2MonsterInstance> getMonsters()
+	public Set<MonsterInstance> getMonsters()
 	{
 		return _monsters;
 	}
@@ -117,7 +117,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		int index = 0;
 		for (CeremonyOfChaosMember member : getMembers().values())
 		{
-			final L2PcInstance player = member.getPlayer();
+			final PlayerInstance player = member.getPlayer();
 			
 			if (player.inObserverMode())
 			{
@@ -133,7 +133,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			player.setLastLocation();
 			
 			// Hide player information
-			final PcAppearance app = player.getAppearance();
+			final PlayerAppearance app = player.getAppearance();
 			app.setVisibleName("Challenger" + member.getPosition());
 			app.setVisibleTitle("");
 			app.setVisibleClanData(0, 0, 0, 0, 0);
@@ -177,7 +177,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			}
 			
 			// If player in party, leave it
-			final L2Party party = player.getParty();
+			final Party party = player.getParty();
 			if (party != null)
 			{
 				party.removePartyMember(player, MessageType.EXPELLED);
@@ -190,7 +190,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			player.setTarget(null);
 			
 			// Unsummon pet
-			final L2Summon pet = player.getPet();
+			final Summon pet = player.getPet();
 			if (pet != null)
 			{
 				pet.unSummon(player);
@@ -255,7 +255,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	{
 		for (CeremonyOfChaosMember member : getMembers().values())
 		{
-			final L2PcInstance player = member.getPlayer();
+			final PlayerInstance player = member.getPlayer();
 			if (player != null)
 			{
 				player.sendPacket(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT);
@@ -289,7 +289,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		}
 		else
 		{
-			final L2PcInstance winner = winners.get(0).getPlayer();
+			final PlayerInstance winner = winners.get(0).getPlayer();
 			msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
 			msg.addString(winner.getName());
 			
@@ -381,7 +381,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		
 		for (CeremonyOfChaosMember member : getMembers().values())
 		{
-			final L2PcInstance player = member.getPlayer();
+			final PlayerInstance player = member.getPlayer();
 			if (player != null)
 			{
 				// Send winner message
@@ -403,7 +403,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	{
 		for (CeremonyOfChaosMember member : getMembers().values())
 		{
-			final L2PcInstance player = member.getPlayer();
+			final PlayerInstance player = member.getPlayer();
 			if (player != null)
 			{
 				// Leaves observer mode
@@ -438,7 +438,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				player.teleToLocation(player.getLastLocation(), null);
 				
 				// Restore player information
-				final PcAppearance app = player.getAppearance();
+				final PlayerAppearance app = player.getAppearance();
 				app.setVisibleName(null);
 				app.setVisibleTitle(null);
 				app.setVisibleClanData(-1, -1, -1, -1, -1);
@@ -487,7 +487,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public void onTimerEvent(String event, StatsSet params, Npc npc, PlayerInstance player)
 	{
 		switch (event)
 		{
@@ -577,8 +577,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	{
 		if (event.getAttacker().isPlayer() && event.getTarget().isPlayer())
 		{
-			final L2PcInstance attackerPlayer = event.getAttacker().getActingPlayer();
-			final L2PcInstance targetPlayer = event.getTarget().getActingPlayer();
+			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
+			final PlayerInstance targetPlayer = event.getTarget().getActingPlayer();
 			
 			final CeremonyOfChaosMember attackerMember = getMembers().get(attackerPlayer.getObjectId());
 			final CeremonyOfChaosMember targetMember = getMembers().get(targetPlayer.getObjectId());

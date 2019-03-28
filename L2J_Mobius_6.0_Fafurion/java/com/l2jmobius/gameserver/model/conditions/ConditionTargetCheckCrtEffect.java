@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Npc;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -34,11 +34,11 @@ public class ConditionTargetCheckCrtEffect extends Condition
 	}
 	
 	@Override
-	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
+	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (effected.isNpc())
 		{
-			return ((L2Npc) effected).getTemplate().canBeCrt() == _isCrtEffect;
+			return ((Npc) effected).getTemplate().canBeCrt() == _isCrtEffect;
 		}
 		
 		return true;

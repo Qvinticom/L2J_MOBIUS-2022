@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.model.L2SkillLearn;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.SkillLearn;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -33,14 +33,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class AcquireSkillList implements IClientOutgoingPacket
 {
-	final L2PcInstance _activeChar;
-	final List<L2SkillLearn> _learnable;
+	final PlayerInstance _player;
+	final List<SkillLearn> _learnable;
 	
-	public AcquireSkillList(L2PcInstance activeChar)
+	public AcquireSkillList(PlayerInstance player)
 	{
-		_activeChar = activeChar;
-		_learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
-		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, false));
+		_player = player;
+		_learnable = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
+		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 		OutgoingPackets.ACQUIRE_SKILL_LIST.writeId(packet);
 		
 		packet.writeH(_learnable.size());
-		for (L2SkillLearn skill : _learnable)
+		for (SkillLearn skill : _learnable)
 		{
 			packet.writeD(skill.getSkillId());
 			packet.writeH(skill.getSkillLevel());
@@ -63,7 +63,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 				packet.writeQ(item.getCount());
 			}
 			
-			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_activeChar::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
+			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
 			
 			packet.writeC(skillRem.size());
 			for (Skill skillRemove : skillRem)

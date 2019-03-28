@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.Optional;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class PAttackFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(L2Character creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, Optional<Double> base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -41,7 +41,7 @@ public class PAttackFinalizer implements IStatsFunction
 		if (creature.isPlayer())
 		{
 			// Enchanted chest bonus
-			baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_CHEST, L2Item.SLOT_FULL_ARMOR);
+			baseValue += calcEnchantBodyPart(creature, Item.SLOT_CHEST, Item.SLOT_FULL_ARMOR);
 		}
 		
 		if (Config.CHAMPION_ENABLE && creature.isChampion())

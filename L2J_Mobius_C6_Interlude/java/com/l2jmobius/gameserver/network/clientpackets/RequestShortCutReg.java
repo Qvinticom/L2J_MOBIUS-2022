@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2ShortCut;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ShortCut;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
-public final class RequestShortCutReg extends L2GameClientPacket
+public final class RequestShortCutReg extends GameClientPacket
 {
 	private int _type;
 	private int _id;
@@ -43,8 +43,8 @@ public final class RequestShortCutReg extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		final PlayerInstance player = getClient().getPlayer();
+		if (player == null)
 		{
 			return;
 		}
@@ -56,19 +56,19 @@ public final class RequestShortCutReg extends L2GameClientPacket
 			case 0x04: // macro
 			case 0x05: // recipe
 			{
-				final L2ShortCut sc = new L2ShortCut(_slot, _page, _type, _id, -1, _unk);
+				final ShortCut sc = new ShortCut(_slot, _page, _type, _id, -1, _unk);
 				sendPacket(new ShortCutRegister(sc));
-				activeChar.registerShortCut(sc);
+				player.registerShortCut(sc);
 				break;
 			}
 			case 0x02: // skill
 			{
-				final int level = activeChar.getSkillLevel(_id);
+				final int level = player.getSkillLevel(_id);
 				if (level > 0)
 				{
-					final L2ShortCut sc = new L2ShortCut(_slot, _page, _type, _id, level, _unk);
+					final ShortCut sc = new ShortCut(_slot, _page, _type, _id, level, _unk);
 					sendPacket(new ShortCutRegister(sc));
-					activeChar.registerShortCut(sc);
+					player.registerShortCut(sc);
 				}
 				break;
 			}
