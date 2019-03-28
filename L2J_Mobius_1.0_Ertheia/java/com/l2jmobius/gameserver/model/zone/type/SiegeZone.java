@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -218,6 +219,20 @@ public class SiegeZone extends ZoneType
 					player.getInventory().unEquipItemInBodySlot(slot);
 					player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
 				}
+			}
+			
+			if (player.hasServitors())
+			{
+				player.getServitors().values().forEach(servitor ->
+				{
+					if (servitor.getRace() == Race.SIEGE_WEAPON)
+					{
+						servitor.abortAttack();
+						servitor.abortCast();
+						servitor.stopAllEffects();
+						servitor.unSummon(player);
+					}
+				});
 			}
 		}
 	}

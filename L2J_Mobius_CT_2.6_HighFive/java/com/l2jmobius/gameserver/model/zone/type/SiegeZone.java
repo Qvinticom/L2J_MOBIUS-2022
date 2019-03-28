@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.Creature;
+import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.FortSiege;
@@ -237,6 +238,15 @@ public class SiegeZone extends ZoneType
 			final int slot = player.getInventory().getSlotFromItem(player.getInventory().getItemByItemId(9819));
 			player.getInventory().unEquipItemInBodySlot(slot);
 			player.destroyItem("CombatFlag", player.getInventory().getItemByItemId(9819), null, true);
+		}
+		
+		final Summon summon = player.getSummon();
+		if (summon != null)
+		{
+			summon.abortAttack();
+			summon.abortCast();
+			summon.stopAllEffects();
+			summon.unSummon(player);
 		}
 	}
 	
