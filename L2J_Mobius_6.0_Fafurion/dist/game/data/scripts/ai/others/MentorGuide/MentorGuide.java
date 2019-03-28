@@ -48,6 +48,7 @@ import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMentee
 import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMentorStatus;
 import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.itemcontainer.Mail;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -219,7 +220,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 		handleMentorSkills(event.getMentor());
 		
 		// Send mail with the headphone
-		sendMail(event.getMentee(), MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_HEADPHONE, 1);
+		sendMail(event.getMentee().getObjectId(), MENTEE_ADDED_TITLE, MENTEE_ADDED_BODY, MENTEE_HEADPHONE, 1);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_MENTEE_STATUS)
@@ -506,7 +507,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 			
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
 			
-			sendMail(player, MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
+			sendMail(player.getObjectId(), MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
 		}
 	}
 	
@@ -530,20 +531,15 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 		final int amount = MENTEE_COINS.get(player.getLevel());
 		if (amount > 0)
 		{
-			sendMail(mentor.getObjectId(), player, LEVEL_UP_TITLE, String.format(LEVEL_UP_BODY, player.getName(), player.getLevel()), MENTEE_MARK, amount);
+			sendMail(mentor.getObjectId(), LEVEL_UP_TITLE, String.format(LEVEL_UP_BODY, player.getName(), player.getLevel()), MENTEE_MARK, amount);
 		}
 	}
 	
-	private void sendMail(PlayerInstance player, String title, String body, int itemId, long amount)
-	{
-		sendMail(player.getObjectId(), player, title, body, itemId, amount);
-	}
-	
-	private void sendMail(int objectId, PlayerInstance player, String title, String body, int itemId, long amount)
+	private void sendMail(int objectId, String title, String body, int itemId, long amount)
 	{
 		final Message msg = new Message(MENTOR_GUIDE, objectId, title, body, MailType.MENTOR_NPC);
-		msg.createAttachments().addItem(getName(), itemId, amount, null, player);
-		
+		final Mail attachments = msg.createAttachments();
+		attachments.addItem(getName(), itemId, amount, null, null);
 		MailManager.getInstance().sendMessage(msg);
 	}
 	
