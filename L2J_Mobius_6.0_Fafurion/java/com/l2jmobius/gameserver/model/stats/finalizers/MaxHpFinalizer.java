@@ -16,12 +16,12 @@
  */
 package com.l2jmobius.gameserver.model.stats.finalizers;
 
-import java.util.Optional;
+import java.util.OptionalDouble;
 
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class MaxHpFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(Creature creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stats stat)
 	{
 		throwIfPresent(base);
 		

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.stats.finalizers;
 
-import java.util.Optional;
+import java.util.OptionalDouble;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.Creature;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class MAttackFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(Creature creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stats stat)
 	{
 		throwIfPresent(base);
 		
@@ -54,7 +54,7 @@ public class MAttackFinalizer implements IStatsFunction
 		
 		// Calculate modifiers Magic Attack
 		final double intBonus = BaseStats.INT.calcBonus(creature);
-		baseValue *= Math.pow(intBonus, 2) * Math.pow(creature.getLevelMod(), 2);
+		baseValue *= intBonus * creature.getLevelMod();
 		return Math.min(Stats.defaultValue(creature, stat, baseValue), Config.MAX_MATK);
 	}
 	

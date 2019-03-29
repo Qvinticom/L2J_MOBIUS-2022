@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.model.stats;
 
 import java.util.NoSuchElementException;
-import java.util.Optional;
-import java.util.function.BiFunction;
+import java.util.OptionalDouble;
+import java.util.function.DoubleBinaryOperator;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
@@ -120,8 +120,8 @@ public enum Stats
 	CRITICAL_DAMAGE_SKILL_ADD("cAtkSkillAdd"),
 	MAGIC_CRITICAL_DAMAGE_ADD("mCritPowerAdd"),
 	SHIELD_DEFENCE_RATE("rShld", new ShieldDefenceRateFinalizer()),
-	CRITICAL_RATE("rCrit", new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, null, 1d),
-	CRITICAL_RATE_SKILL("rCritSkill", Stats::defaultValue, MathUtil::add, MathUtil::add, null, 1d),
+	CRITICAL_RATE("rCrit", new PCriticalRateFinalizer(), MathUtil::add, MathUtil::add, 0, 1),
+	CRITICAL_RATE_SKILL("rCritSkill", Stats::defaultValue, MathUtil::add, MathUtil::add, 0, 1),
 	MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
 	BLOW_RATE("blowRate"),
 	DEFENCE_CRITICAL_RATE("defCritRate"),
@@ -284,10 +284,10 @@ public enum Stats
 	
 	private final String _value;
 	private final IStatsFunction _valueFinalizer;
-	private final BiFunction<Double, Double, Double> _addFunction;
-	private final BiFunction<Double, Double, Double> _mulFunction;
-	private final Double _resetAddValue;
-	private final Double _resetMulValue;
+	private final DoubleBinaryOperator _addFunction;
+	private final DoubleBinaryOperator _mulFunction;
+	private final double _resetAddValue;
+	private final double _resetMulValue;
 	
 	public String getValue()
 	{
@@ -296,16 +296,16 @@ public enum Stats
 	
 	Stats(String xmlString)
 	{
-		this(xmlString, Stats::defaultValue, MathUtil::add, MathUtil::mul, null, null);
+		this(xmlString, Stats::defaultValue, MathUtil::add, MathUtil::mul, 0, 1);
 	}
 	
 	Stats(String xmlString, IStatsFunction valueFinalizer)
 	{
-		this(xmlString, valueFinalizer, MathUtil::add, MathUtil::mul, null, null);
+		this(xmlString, valueFinalizer, MathUtil::add, MathUtil::mul, 0, 1);
 		
 	}
 	
-	Stats(String xmlString, IStatsFunction valueFinalizer, BiFunction<Double, Double, Double> addFunction, BiFunction<Double, Double, Double> mulFunction, Double resetAddValue, Double resetMulValue)
+	Stats(String xmlString, IStatsFunction valueFinalizer, DoubleBinaryOperator addFunction, DoubleBinaryOperator mulFunction, double resetAddValue, double resetMulValue)
 	{
 		_value = xmlString;
 		_valueFinalizer = valueFinalizer;
@@ -334,7 +334,7 @@ public enum Stats
 	 * @param baseValue
 	 * @return the final value
 	 */
-	public Double finalize(Creature creature, Optional<Double> baseValue)
+	public double finalize(Creature creature, OptionalDouble baseValue)
 	{
 		try
 		{
@@ -349,20 +349,20 @@ public enum Stats
 	
 	public double functionAdd(double oldValue, double value)
 	{
-		return _addFunction.apply(oldValue, value);
+		return _addFunction.applyAsDouble(oldValue, value);
 	}
 	
 	public double functionMul(double oldValue, double value)
 	{
-		return _mulFunction.apply(oldValue, value);
+		return _mulFunction.applyAsDouble(oldValue, value);
 	}
 	
-	public Double getResetAddValue()
+	public double getResetAddValue()
 	{
 		return _resetAddValue;
 	}
 	
-	public Double getResetMulValue()
+	public double getResetMulValue()
 	{
 		return _resetMulValue;
 	}
@@ -372,17 +372,17 @@ public enum Stats
 		return stat._valueFinalizer.calcWeaponBaseValue(creature, stat);
 	}
 	
-	public static double defaultValue(Creature creature, Optional<Double> base, Stats stat)
+	public static double defaultValue(Creature creature, OptionalDouble base, Stats stat)
 	{
 		final double mul = creature.getStat().getMul(stat);
 		final double add = creature.getStat().getAdd(stat);
-		return base.isPresent() ? defaultValue(creature, stat, base.get()) : mul * (add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
+		return base.isPresent() ? defaultValue(creature, stat, base.getAsDouble()) : mul * (add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
 	}
 	
 	public static double defaultValue(Creature creature, Stats stat, double baseValue)
 	{
 		final double mul = creature.getStat().getMul(stat);
 		final double add = creature.getStat().getAdd(stat);
-		return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
+		return mul * (baseValue + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
 	}
 }

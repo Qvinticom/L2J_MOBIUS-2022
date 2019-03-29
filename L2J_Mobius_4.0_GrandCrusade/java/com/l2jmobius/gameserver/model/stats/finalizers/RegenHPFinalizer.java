@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.stats.finalizers;
 
-import java.util.Optional;
+import java.util.OptionalDouble;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
@@ -52,7 +52,7 @@ import com.l2jmobius.gameserver.util.Util;
 public class RegenHPFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(Creature creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stats stat)
 	{
 		throwIfPresent(base);
 		

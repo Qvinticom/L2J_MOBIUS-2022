@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.stats;
 
-import java.util.Optional;
+import java.util.OptionalDouble;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.PlayerCondOverride;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.items.type.CrystalType;
 @FunctionalInterface
 public interface IStatsFunction
 {
-	default void throwIfPresent(Optional<Double> base)
+	default void throwIfPresent(OptionalDouble base)
 	{
 		if (base.isPresent())
 		{
@@ -312,5 +312,5 @@ public interface IStatsFunction
 		return Math.max(minValue, value);
 	}
 	
-	double calc(Creature creature, Optional<Double> base, Stats stat);
+	double calc(Creature creature, OptionalDouble base, Stats stat);
 }

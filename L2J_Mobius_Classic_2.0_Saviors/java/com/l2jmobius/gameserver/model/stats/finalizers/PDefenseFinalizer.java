@@ -16,12 +16,12 @@
  */
 package com.l2jmobius.gameserver.model.stats.finalizers;
 
-import java.util.Optional;
+import java.util.OptionalDouble;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -46,7 +46,7 @@ public class PDefenseFinalizer implements IStatsFunction
 	};
 	
 	@Override
-	public double calc(Creature creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stats stat)
 	{
 		throwIfPresent(base);
 		double baseValue = creature.getTemplate().getBaseValue(stat, 0);

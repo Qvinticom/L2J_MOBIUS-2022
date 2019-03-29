@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.stats.finalizers;
 
-import java.util.Optional;
+import java.util.OptionalDouble;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
@@ -24,8 +24,8 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
 import com.l2jmobius.gameserver.model.entity.Fort;
@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
 public class RegenMPFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(Creature creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stats stat)
 	{
 		throwIfPresent(base);
 		

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.HashSet;
-import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.Set;
 
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class BaseStatsFinalizer implements IStatsFunction
 {
 	@Override
-	public double calc(Creature creature, Optional<Double> base, Stats stat)
+	public double calc(Creature creature, OptionalDouble base, Stats stat)
 	{
 		throwIfPresent(base);
 		

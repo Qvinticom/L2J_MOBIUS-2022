@@ -24,7 +24,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
@@ -733,7 +733,7 @@ public class CreatureStat
 	public double getValue(Stats stat, double baseValue)
 	{
 		final Double fixedValue = _fixedValue.get(stat);
-		return fixedValue != null ? fixedValue : stat.finalize(_creature, Optional.of(baseValue));
+		return fixedValue != null ? fixedValue : stat.finalize(_creature, OptionalDouble.of(baseValue));
 	}
 	
 	/**
@@ -743,7 +743,7 @@ public class CreatureStat
 	public double getValue(Stats stat)
 	{
 		final Double fixedValue = _fixedValue.get(stat);
-		return fixedValue != null ? fixedValue : stat.finalize(_creature, Optional.empty());
+		return fixedValue != null ? fixedValue : stat.finalize(_creature, OptionalDouble.empty());
 	}
 	
 	protected void resetStats()
@@ -755,11 +755,11 @@ public class CreatureStat
 		// Initialize default values
 		for (Stats stat : Stats.values())
 		{
-			if (stat.getResetAddValue() != null)
+			if (stat.getResetAddValue() != 0)
 			{
 				_statsAdd.put(stat, stat.getResetAddValue());
 			}
-			if (stat.getResetMulValue() != null)
+			if (stat.getResetMulValue() != 0)
 			{
 				_statsMul.put(stat, stat.getResetMulValue());
 			}
