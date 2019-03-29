@@ -1503,7 +1503,7 @@ public final class Formulas
 	/**
 	 * @param creature
 	 * @param weapon
-	 * @return {@code (500_000 millis + 333 * WeaponItemReuseDelay) / PAttackSpeed}
+	 * @return {@code 900000 / PAttackSpeed}
 	 */
 	public static int calculateReuseTime(Creature creature, Weapon weapon)
 	{
@@ -1514,18 +1514,14 @@ public final class Formulas
 		
 		final WeaponType defaultAttackType = weapon.getItemType();
 		final WeaponType weaponType = creature.getTransformation().map(transform -> transform.getBaseAttackType(creature, defaultAttackType)).orElse(defaultAttackType);
-		int reuse = weapon.getReuseDelay();
 		
-		// only bows should continue for now
-		if ((reuse == 0) || !weaponType.isRanged())
+		// Only ranged weapons should continue for now.
+		if (!weaponType.isRanged())
 		{
 			return 0;
 		}
 		
-		reuse *= creature.getStat().getWeaponReuseModifier();
-		double atkSpd = creature.getStat().getPAtkSpd();
-		
-		return (int) ((500000 + (333 * reuse)) / atkSpd);
+		return 900000 / creature.getStat().getPAtkSpd();
 	}
 	
 	public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill, boolean crit)
