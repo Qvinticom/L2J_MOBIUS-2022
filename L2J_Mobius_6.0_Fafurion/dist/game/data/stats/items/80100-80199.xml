@@ -697,6 +697,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
 		</skills>
@@ -725,6 +726,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
 		</skills>
@@ -1123,6 +1125,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13793" level="1" /> <!-- Additional Ability Health -->
@@ -1153,6 +1156,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13794" level="1" /> <!-- Additional Ability Health -->
@@ -1565,6 +1569,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8826" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13779" level="1" /> <!-- Additional Ability Health -->
@@ -1595,6 +1600,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="8827" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13780" level="1" /> <!-- Additional Ability Health -->
@@ -1943,7 +1949,7 @@
 		<!-- PvP/ PvE enchant type item, When equipped, Damage to NPC and PC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and Atk. Spd. +2%. Enchantment effects: P. Skill Critical Damage +3%, Normal Attack Critical Damage +3%. -->
 		<set name="icon" val="icon.weapon_r110_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
@@ -1953,6 +1959,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="damage_range" val="0;0;10;0" />
 		<stats>
 			<stat type="pAtk">1902</stat>
 			<stat type="mAtk">421</stat>
@@ -1974,6 +1982,8 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="damage_range" val="0;0;40;120" />
 		<stats>
 			<stat type="pAtk">1713</stat>
 			<stat type="mAtk">421</stat>
