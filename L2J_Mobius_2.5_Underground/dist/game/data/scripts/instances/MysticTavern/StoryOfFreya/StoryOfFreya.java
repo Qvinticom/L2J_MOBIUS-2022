@@ -22,9 +22,9 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -126,16 +126,21 @@ public class StoryOfFreya extends AbstractInstance
 			{
 				player.standUp();
 				enterInstance(player, null, TEMPLATE_ID);
-				if (player.getParty() != null)
+				final Party party = player.getParty();
+				if (party != null)
 				{
-					for (PlayerInstance member : player.getParty().getMembers())
+					final Instance instance = player.getInstanceWorld();
+					for (PlayerInstance member : party.getMembers())
 					{
 						if (member != player)
 						{
 							member.standUp();
-							member.teleToLocation(player, player.getInstanceWorld());
+							member.teleToLocation(player, instance);
+							instance.addPlayer(member);
+							instance.addAllowed(member);
 						}
 					}
+					instance.setReenterTime();
 				}
 				break;
 			}
