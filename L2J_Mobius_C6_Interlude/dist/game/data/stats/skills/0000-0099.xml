@@ -952,7 +952,7 @@
 		<set name="num_charges" val="#val"/>
 		<set name="aggroPoints" val="150"/>
 		<for>
-			<effect count="1" name="Charge" time="0x7fffffff" val="1"/>
+			<effect count="1" name="Charge" time="600" val="1"/>
 		</for>
 	</skill>
 	<skill id="51" levels="1" name="Lure" enchantLevels1="30">
