@@ -215,7 +215,7 @@ public class CharInfo extends GameServerPacket
 			writeD(_x);
 			writeD(_y);
 			writeD(_z);
-			writeD(_heading);
+			writeD(0x00);
 			writeD(_player.getObjectId());
 			writeS(_player.getName());
 			writeD(_player.getRace().ordinal());
@@ -386,7 +386,7 @@ public class CharInfo extends GameServerPacket
 			
 			writeD(_player.getAppearance().getNameColor());
 			
-			writeD(0x00); // isRunning() as in UserInfo?
+			writeD(_heading);
 			
 			writeD(_player.getPledgeClass());
 			writeD(0x00); // ??
