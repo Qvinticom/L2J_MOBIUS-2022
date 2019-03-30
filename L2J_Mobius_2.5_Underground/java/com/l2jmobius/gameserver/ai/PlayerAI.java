@@ -24,8 +24,8 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_MOVE_TO;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
-import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;

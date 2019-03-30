@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.CreatureAI;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.GuardNoHTMLInstance;

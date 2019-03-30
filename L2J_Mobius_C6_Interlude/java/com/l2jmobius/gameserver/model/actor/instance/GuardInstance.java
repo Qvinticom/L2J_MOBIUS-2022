@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.AttackableAI;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.WorldRegion;
 import com.l2jmobius.gameserver.model.actor.Attackable;

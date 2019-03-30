@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
-import com.l2jmobius.gameserver.model.clan.Clan;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.clan.Clan;
 
 public final class ClanWarehouse extends Warehouse
 {

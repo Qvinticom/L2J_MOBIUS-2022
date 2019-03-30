@@ -17,8 +17,8 @@
 package handlers.skillconditionhandlers;
 
 import com.l2jmobius.gameserver.enums.SkillConditionAffectType;
-import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;

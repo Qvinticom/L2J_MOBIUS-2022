@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.ai;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.World;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;

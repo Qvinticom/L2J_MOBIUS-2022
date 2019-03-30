@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.ai.CreatureAI;
 import com.l2jmobius.gameserver.ai.ControllableMobAI;
+import com.l2jmobius.gameserver.ai.CreatureAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;

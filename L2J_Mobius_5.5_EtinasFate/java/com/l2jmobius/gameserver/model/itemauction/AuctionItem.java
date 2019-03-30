@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.itemauction;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
-import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**

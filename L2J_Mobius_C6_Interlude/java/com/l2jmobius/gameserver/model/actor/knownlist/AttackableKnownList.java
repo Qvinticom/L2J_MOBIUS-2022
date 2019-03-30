@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import java.util.Collection;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.CreatureAI;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.model.actor.Creature;

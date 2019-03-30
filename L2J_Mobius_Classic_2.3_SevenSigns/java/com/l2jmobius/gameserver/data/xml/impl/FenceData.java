@@ -30,9 +30,9 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.enums.FenceState;
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.WorldRegion;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.FenceInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 

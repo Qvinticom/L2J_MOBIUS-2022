@@ -27,9 +27,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.clan.Clan;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;

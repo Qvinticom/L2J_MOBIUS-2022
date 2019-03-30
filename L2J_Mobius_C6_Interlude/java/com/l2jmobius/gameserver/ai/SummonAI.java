@@ -23,8 +23,8 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_INTERACT;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
 
-import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Skill;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.Creature.AIAccessor;
 import com.l2jmobius.gameserver.model.actor.Summon;

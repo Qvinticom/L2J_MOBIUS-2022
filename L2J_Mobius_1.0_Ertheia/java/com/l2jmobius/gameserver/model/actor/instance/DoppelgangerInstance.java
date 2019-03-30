@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.ai.CreatureAI;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.DoppelgangerAI;
-import com.l2jmobius.gameserver.ai.CreatureAI;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.Npc;

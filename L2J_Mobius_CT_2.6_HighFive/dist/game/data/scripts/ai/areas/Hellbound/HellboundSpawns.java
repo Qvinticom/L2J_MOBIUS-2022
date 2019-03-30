@@ -28,8 +28,8 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.model.Spawn;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.Spawn;
 
 /**
  * Hellbound Spawns parser.

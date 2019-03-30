@@ -26,9 +26,9 @@ import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.Party;
 import com.l2jmobius.gameserver.model.Spawn;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;

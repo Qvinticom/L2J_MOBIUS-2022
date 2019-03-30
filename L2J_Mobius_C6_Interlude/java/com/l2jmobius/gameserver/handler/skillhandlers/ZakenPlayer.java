@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
-import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.Skill;
 import com.l2jmobius.gameserver.model.Skill.SkillType;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
 
 public class ZakenPlayer implements ISkillHandler

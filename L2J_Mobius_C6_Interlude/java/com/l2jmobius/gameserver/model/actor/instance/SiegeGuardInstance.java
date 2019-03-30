@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.CreatureAI;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.SiegeGuardAI;
 import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.model.actor.Creature;

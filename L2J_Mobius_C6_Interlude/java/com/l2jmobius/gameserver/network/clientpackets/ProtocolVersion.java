@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 import com.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SendStatus;
 
 public final class ProtocolVersion extends GameClientPacket

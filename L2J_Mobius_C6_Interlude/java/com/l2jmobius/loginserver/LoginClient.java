@@ -29,9 +29,9 @@ import com.l2jmobius.commons.mmocore.MMOClient;
 import com.l2jmobius.commons.mmocore.MMOConnection;
 import com.l2jmobius.commons.mmocore.SendablePacket;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.loginserver.network.serverpackets.LoginServerPacket;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
+import com.l2jmobius.loginserver.network.serverpackets.LoginServerPacket;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 
