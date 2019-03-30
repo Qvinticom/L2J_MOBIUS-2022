@@ -113,10 +113,10 @@ class Quest (JQuest) :
         DoorTable.getInstance().getDoor(24210004).openMe()
         return
     elif npcId == 31686 : #Gatekeeper of Fire Dragon
-        DoorTable.getInstance().getDoor(24210006).openMe()
+        DoorTable.getInstance().getDoor(24210005).openMe()
         return
     elif npcId == 31687 : #Gatekeeper of Fire Dragon
-        DoorTable.getInstance().getDoor(24210005).openMe()
+        DoorTable.getInstance().getDoor(24210006).openMe()
         return
     elif npcId == 31540 : #Watcher of Valakas Klein
         st = player.getQuestState(qn)
