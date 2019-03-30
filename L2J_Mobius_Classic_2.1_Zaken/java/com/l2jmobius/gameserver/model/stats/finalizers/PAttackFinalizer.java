@@ -52,8 +52,7 @@ public class PAttackFinalizer implements IStatsFunction
 		{
 			baseValue *= Config.RAID_PATTACK_MULTIPLIER;
 		}
-		final double strBonus = creature.getSTR() > 0 ? BaseStats.STR.calcBonus(creature) : 1.;
-		baseValue *= strBonus * creature.getLevelMod();
+		baseValue *= BaseStats.STR.calcBonus(creature) * creature.getLevelMod();
 		return Math.min(Stats.defaultValue(creature, stat, baseValue), Config.MAX_PATK);
 	}
 	
