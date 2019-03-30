@@ -14,11 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.areas.GainakUnderground;
+package ai.areas.GainakUnderground.Lailly;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
@@ -32,27 +34,68 @@ public final class Lailly extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LAILLY = 34181;
+	// Instances
+	private static final int INSTANCE_TAUTI = 261;
+	private static final int INSTANCE_KELBIM = 262;
+	private static final int INSTANCE_FREYA = 263;
 	
 	private Lailly()
 	{
 		addSpawnId(LAILLY);
+		addFirstTalkId(LAILLY);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equals("SPAM_TEXT") && (npc != null))
+		String htmltext = null;
+		switch (event)
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.READY_TO_LISTEN_TO_A_STORY_COME_NOW));
+			case "34181.html":
+			{
+				htmltext = event;
+				break;
+			}
+			case "spam_text":
+			{
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.READY_TO_LISTEN_TO_A_STORY_COME_NOW));
+				break;
+			}
+			case "okay":
+			{
+				final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
+				if ((instance != null) && (instance.getEndTime() > System.currentTimeMillis()))
+				{
+					switch (instance.getTemplateId())
+					{
+						case INSTANCE_TAUTI:
+						case INSTANCE_KELBIM:
+						case INSTANCE_FREYA:
+						{
+							player.teleToLocation(instance.getEnterLocation(), instance);
+							break;
+						}
+					}
+					break;
+				}
+				htmltext = "34181-1.html";
+				break;
+			}
 		}
-		return super.onAdvEvent(event, npc, player);
+		return htmltext;
 	}
 	
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		startQuestTimer("SPAM_TEXT", 180000, npc, null, true);
+		startQuestTimer("spam_text", 180000, npc, null, true);
 		return super.onSpawn(npc);
+	}
+	
+	@Override
+	public String onFirstTalk(Npc npc, PlayerInstance player)
+	{
+		return "34181.html";
 	}
 	
 	public static void main(String[] args)
