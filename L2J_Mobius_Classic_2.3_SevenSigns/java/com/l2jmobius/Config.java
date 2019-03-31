@@ -1223,8 +1223,16 @@ public final class Config
 			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 			
 			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
+			if (SCHEDULED_THREAD_POOL_COUNT == -1)
+			{
+				SCHEDULED_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
+			}
 			THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
 			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
+			if (INSTANT_THREAD_POOL_COUNT == -1)
+			{
+				INSTANT_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
+			}
 			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
 			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
 			

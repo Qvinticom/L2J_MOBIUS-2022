@@ -2330,8 +2330,16 @@ public final class Config
 			LOG_ITEMS = Boolean.valueOf(devSettings.getProperty("LogItems", "false"));
 			
 			SCHEDULED_THREAD_POOL_COUNT = Integer.parseInt(devSettings.getProperty("ScheduledThreadPoolCount", "-1"));
+			if (SCHEDULED_THREAD_POOL_COUNT == -1)
+			{
+				SCHEDULED_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
+			}
 			THREADS_PER_SCHEDULED_THREAD_POOL = Integer.parseInt(devSettings.getProperty("ThreadsPerScheduledThreadPool", "4"));
 			INSTANT_THREAD_POOL_COUNT = Integer.parseInt(devSettings.getProperty("InstantThreadPoolCount", "-1"));
+			if (INSTANT_THREAD_POOL_COUNT == -1)
+			{
+				INSTANT_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
+			}
 			THREADS_PER_INSTANT_THREAD_POOL = Integer.parseInt(devSettings.getProperty("ThreadsPerInstantThreadPool", "2"));
 			
 			LAZY_CACHE = Boolean.valueOf(devSettings.getProperty("LazyCache", "false"));

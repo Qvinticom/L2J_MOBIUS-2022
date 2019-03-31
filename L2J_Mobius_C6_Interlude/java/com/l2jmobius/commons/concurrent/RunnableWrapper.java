@@ -37,7 +37,7 @@ public final class RunnableWrapper implements Runnable
 		{
 			_runnable.run();
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			final Thread t = Thread.currentThread();
 			final UncaughtExceptionHandler h = t.getUncaughtExceptionHandler();
