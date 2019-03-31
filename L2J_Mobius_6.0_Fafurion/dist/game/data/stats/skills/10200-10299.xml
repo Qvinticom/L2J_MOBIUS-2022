@@ -1175,7 +1175,9 @@
 					<value level="9">17896</value>
 					<value level="10">18622</value>
 					<value level="11">19348</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">20438</value>
+					<value level="13">21528</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -1332,8 +1334,8 @@
 			<value level="11">62</value>
 		</mpConsume>
 		<castRange>
-			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">600</value>
+			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
 		</castRange>
 		<effectRange>800</effectRange>
 		<hitTime>500</hitTime>
@@ -1349,8 +1351,8 @@
 			<value level="7">-709</value>
 			<value level="8">-709</value>
 			<value level="9">-709</value>
-			<value level="9">-709</value>
-			<value level="9">-709</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
@@ -1481,8 +1483,8 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>
-			<value fromLevel="1" toLevel="10">600</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="12">600</value>
+			<value fromLevel="6" toLevel="12" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>890</hitTime>
 		<coolTime>500</coolTime>
@@ -2139,7 +2141,6 @@
 		<effectPoint>707</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

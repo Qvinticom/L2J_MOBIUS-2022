@@ -109,30 +109,30 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
-				<amount>100</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
-				<amount>100</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>100</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>100</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
-				<amount>500</amount>
+				<amount>100</amount>
 			</effect>
 			<effect name="MagicCriticalDamage">
-				<amount>50</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="SkillCriticalProbability">
-				<amount>50</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="AttackTrait">
@@ -149,9 +149,6 @@
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>30</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="AttackTrait">
-				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>

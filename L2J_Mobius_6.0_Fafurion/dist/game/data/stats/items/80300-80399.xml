@@ -182,6 +182,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+			<skill id="8890" level="1" /> <!-- Dignity -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1877</stat>
 			<stat type="mAtk">935</stat>
@@ -200,6 +204,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+			<skill id="8890" level="1" /> <!-- Dignity -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2177</stat>
 			<stat type="mAtk">1084</stat>
@@ -218,6 +226,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<skills>
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
+			<skill id="8890" level="1" /> <!-- Dignity -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2523</stat>
 			<stat type="mAtk">1257</stat>

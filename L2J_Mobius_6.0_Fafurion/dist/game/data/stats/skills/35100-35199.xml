@@ -280,6 +280,29 @@
 				</amount>
 				<stat>CHA</stat>
 			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">50</value>
+					<value level="3">50</value>
+				</amount>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35109" toLevel="5" name="Wizard's Circlet Enchant Effect">

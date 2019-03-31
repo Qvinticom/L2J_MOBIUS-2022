@@ -17,7 +17,27 @@
 	<skill id="28203" toLevel="1" name="Greater Garnet - Cancel Debuffs">
 		<!-- Cancels all debuffs on you and makes you immune to debuffs for $s1. -->
 		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalTime>1</abnormalTime>
+		<chance>100</chance>
+		<reuseDelay>15000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>7002</skillId> <!-- Dispel Debuff -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>15207</skillId> <!-- Debuff Immunity -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28204" toLevel="1" name="Box Containing War God's Soul">
 		<icon>icon.bm_strongbox</icon>

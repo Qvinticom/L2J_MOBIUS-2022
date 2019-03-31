@@ -469,8 +469,15 @@
 	<skill id="18715" toLevel="1" name="Greater Ruby">
 		<!-- Soulshot Damage +$s1. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
-		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18716" toLevel="1" name="Greater Ruby">
 		<!-- Beast Soulshot Damage +$s1. -->
@@ -508,8 +515,15 @@
 	<skill id="18718" toLevel="2" name="Greater Sapphire">
 		<!-- Spiritshot Damage +$s1. -->
 		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
-		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MAtk">
+				<amount>13</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18719" toLevel="6" name="Sapphire">
 		<!-- Increases Spiritshot/ Blessed Spiritshot damage by $s1. -->
@@ -571,13 +585,14 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">STUN,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9;</value>
+					<value level="1">STUN,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9;BODY_DESTRUCTION,9</value>
 				</dispel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="18722" toLevel="1" name="Greater Garnet - Cancel Debuffs">
 		<operateType>A2</operateType>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<abnormalTime>7</abnormalTime>
 		<chance>100</chance>
 		<reuseDelay>15000</reuseDelay>
@@ -585,7 +600,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DebuffBlock" fromLevel="1" toLevel="1"/>
+			<effect name="DebuffBlock" />
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>

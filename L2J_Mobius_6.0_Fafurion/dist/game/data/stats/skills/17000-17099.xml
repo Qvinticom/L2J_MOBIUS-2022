@@ -630,6 +630,7 @@
 	<skill id="17085" toLevel="1" name="Kisung's Power Up">
 		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<itemConsumeId>37554</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
@@ -646,6 +647,7 @@
 	<skill id="17087" toLevel="1" name="Kisung's Power Up (Event)">
 		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>1</effectPoint>

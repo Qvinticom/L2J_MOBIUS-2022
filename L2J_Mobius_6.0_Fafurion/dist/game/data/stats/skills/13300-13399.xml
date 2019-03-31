@@ -1399,22 +1399,30 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
-		<isMagic>2</isMagic>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<hitTime>3000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13572</npcId> <!-- Tersi's Light Agathion -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13346" toLevel="1" name="Seal Agathion - Tersi's Light">
 		<!-- Dismisses a summoned Agathion. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isMagic>2</isMagic>
-		<hitTime>3000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="UnsummonAgathion" />
+		</effects>
 	</skill>
 	<skill id="13347" toLevel="1" name="Tersi's Hand">
 		<!-- Pushes back a shard of light with Tersi's Hand. -->

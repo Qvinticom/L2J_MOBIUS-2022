@@ -13,6 +13,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="21388" level="1" /> <!-- Release Agathion's Seal - Anakim -->
+		</skills>
 	</item>
 	<item id="23901" name="Mysterious Dark Resistance Dye" additionalName="Dark Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 7-day magic symbol that boosts stats (Dark Resistance +120 when fighting normal monsters). All classes. -->

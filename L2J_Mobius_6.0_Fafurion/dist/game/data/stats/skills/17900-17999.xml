@@ -385,11 +385,30 @@
 	</skill>
 	<skill id="17918" toLevel="1" name="Cruel Love Potion">
 		<!-- A strange sensation envelopes you. Double-click for a random love effect. -->
+		<!-- TODO: ADD MORE OPTIONS - ADDED BIG HEAD ONLY -->
 		<icon>icon.love_potion</icon>
-		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>600000</reuseDelay>
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<activateRate>0</activateRate>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CannotUseInTransform">
+				<transformId>103</transformId>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="17919" toLevel="1" name="Super Elixir">
 		<!-- Restores HP/ CP/ MP. -->

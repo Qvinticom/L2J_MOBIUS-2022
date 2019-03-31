@@ -143,9 +143,22 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="15207" toLevel="1" name="Debuff Immunity">
-		<operateType>P</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<!-- Immune to debuffs for 9 sec. -->
+		<abnormalTime>9</abnormalTime>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<operateType>A2</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
 	<skill id="15208" toLevel="9" name="Weakened Chaos Shield">
 		<!-- Lethal Strike Resistance is weakened through the armor destruction skill. -->

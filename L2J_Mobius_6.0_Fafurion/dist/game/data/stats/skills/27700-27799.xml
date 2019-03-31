@@ -407,9 +407,12 @@
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>900000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>702</effectPoint>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<reuseDelayGroup>27724</reuseDelayGroup>
 		<effects>
 			<effect name="MAtk">
 				<amount>400</amount>
@@ -427,9 +430,13 @@
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>900000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>702</effectPoint>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<reuseDelayGroup>27724</reuseDelayGroup>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -451,9 +458,12 @@
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>900000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>702</effectPoint>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<reuseDelayGroup>27724</reuseDelayGroup>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -479,9 +489,12 @@
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>900000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>702</effectPoint>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<reuseDelayGroup>27724</reuseDelayGroup>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>

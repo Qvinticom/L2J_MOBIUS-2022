@@ -712,6 +712,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27440" level="6"/> <!-- Cat's Eye -->
+			<skill id="27441" level="1"/> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" additionalName="Lv. 1" type="Armor">
@@ -724,6 +725,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27442" level="6"/> <!-- Amethyst -->
+			<skill id="27443" level="1"/> <!-- Amethyst - Remove Invincibility/Immunity -->
 		</skills>
 	</item>
 	<item id="28378" name="Greater Vital Stone" additionalName="Lv. 1" type="Armor">
@@ -736,6 +738,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="18568" level="6"/> <!-- Vital Stone -->
+			<skill id="27439" level="3"/> <!-- Vital Wind -->
 		</skills>
 	</item>
 	<item id="28379" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
