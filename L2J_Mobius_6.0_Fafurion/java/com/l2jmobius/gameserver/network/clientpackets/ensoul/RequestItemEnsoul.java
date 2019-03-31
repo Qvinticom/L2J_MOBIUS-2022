@@ -81,36 +81,36 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
 			return;
 		}
-		else if (player.hasAbnormalType(AbnormalType.FREEZING))
+		if (player.hasAbnormalType(AbnormalType.FREEZING))
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_FROZEN);
 		}
-		else if (player.isDead())
+		if (player.isDead())
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_DEAD);
 			return;
 		}
-		else if ((player.getActiveTradeList() != null) || player.hasItemRequest())
+		if ((player.getActiveTradeList() != null) || player.hasItemRequest())
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_TRADING);
 			return;
 		}
-		else if (player.hasAbnormalType(AbnormalType.PARALYZE))
+		if (player.hasAbnormalType(AbnormalType.PARALYZE))
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_PETRIFIED);
 			return;
 		}
-		else if (player.isFishing())
+		if (player.isFishing())
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_FISHING);
 			return;
 		}
-		else if (player.isSitting())
+		if (player.isSitting())
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_SEATED);
 			return;
 		}
-		else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_THE_SOUL_CRYSTAL_SYSTEM_WHILE_IN_BATTLE);
 			return;
@@ -122,32 +122,31 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			LOGGER.warning("Player: " + player + " attempting to ensoul item without having it!");
 			return;
 		}
-		else if (!item.isEquipable())
+		if (!item.isEquipable())
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul non equippable item: " + item + "!");
 			return;
 		}
-		else if (!item.isWeapon())
+		if (!item.isWeapon())
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul item that's not a weapon: " + item + "!");
 			return;
 		}
-		else if (item.isCommonItem())
+		if (item.isCommonItem())
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul common item: " + item + "!");
 			return;
 		}
-		else if (item.isShadowItem())
+		if (item.isShadowItem())
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul shadow item: " + item + "!");
 			return;
 		}
-		else if (item.isHeroItem())
+		if (item.isHeroItem())
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul hero item: " + item + "!");
 			return;
 		}
-		
 		if ((_options == null) || (_options.length == 0))
 		{
 			LOGGER.warning("Player: " + player + " attempting to ensoul item without any special ability declared!");

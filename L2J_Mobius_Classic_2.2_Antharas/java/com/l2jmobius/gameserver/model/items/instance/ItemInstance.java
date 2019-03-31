@@ -25,11 +25,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -176,8 +174,8 @@ public final class ItemInstance extends WorldObject
 	private final DropProtection _dropProtection = new DropProtection();
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
-	private final Map<Integer, EnsoulOption> _ensoulOptions = new LinkedHashMap<>(3);
-	private final Map<Integer, EnsoulOption> _ensoulSpecialOptions = new LinkedHashMap<>(3);
+	private final EnsoulOption[] _ensoulOptions = new EnsoulOption[3];
+	private final EnsoulOption[] _ensoulSpecialOptions = new EnsoulOption[3];
 	
 	/**
 	 * Constructor of the ItemInstance from the objectId and the itemId.
@@ -1627,14 +1625,13 @@ public final class ItemInstance extends WorldObject
 			{
 				updateItemOptions(con);
 			}
+			
 			if (_elementals != null)
 			{
 				updateItemElements(con);
 			}
-			if ((_ensoulOptions != null) || (_ensoulSpecialOptions != null))
-			{
-				updateSpecialAbilities(con);
-			}
+			
+			updateSpecialAbilities(con);
 		}
 		catch (Exception e)
 		{
@@ -1675,14 +1672,13 @@ public final class ItemInstance extends WorldObject
 			{
 				updateItemOptions(con);
 			}
+			
 			if (_elementals != null)
 			{
 				updateItemElements(con);
 			}
-			if ((_ensoulOptions != null) || (_ensoulSpecialOptions != null))
-			{
-				updateSpecialAbilities(con);
-			}
+			
+			updateSpecialAbilities(con);
 		}
 		catch (Exception e)
 		{
@@ -2137,41 +2133,64 @@ public final class ItemInstance extends WorldObject
 	
 	public Collection<EnsoulOption> getSpecialAbilities()
 	{
-		return Collections.unmodifiableCollection(_ensoulOptions.values());
+		final List<EnsoulOption> result = new ArrayList<>();
+		for (EnsoulOption _ensoulOption : _ensoulOptions)
+		{
+			if (_ensoulOption != null)
+			{
+				result.add(_ensoulOption);
+			}
+		}
+		return result;
 	}
 	
 	public EnsoulOption getSpecialAbility(int index)
 	{
-		return _ensoulOptions.get(index);
+		return _ensoulOptions[index];
 	}
 	
 	public Collection<EnsoulOption> getAdditionalSpecialAbilities()
 	{
-		return Collections.unmodifiableCollection(_ensoulSpecialOptions.values());
+		final List<EnsoulOption> result = new ArrayList<>();
+		for (EnsoulOption _ensoulSpecialOption : _ensoulSpecialOptions)
+		{
+			if (_ensoulSpecialOption != null)
+			{
+				result.add(_ensoulSpecialOption);
+			}
+		}
+		return result;
 	}
 	
 	public EnsoulOption getAdditionalSpecialAbility(int index)
 	{
-		return _ensoulSpecialOptions.get(index);
+		return _ensoulSpecialOptions[index];
 	}
 	
 	public void addSpecialAbility(EnsoulOption option, int position, int type, boolean updateInDB)
 	{
+		if ((position < 0) || (position > 2))
+		{
+			return;
+		}
+		
 		if (type == 1) // Adding regular ability
 		{
-			final EnsoulOption oldOption = _ensoulOptions.put(position, option);
+			final EnsoulOption oldOption = _ensoulOptions[position];
 			if (oldOption != null)
 			{
 				removeSpecialAbility(oldOption);
 			}
+			_ensoulOptions[position] = option;
 		}
 		else if (type == 2) // Adding special ability
 		{
-			final EnsoulOption oldOption = _ensoulSpecialOptions.put(position, option);
+			final EnsoulOption oldOption = _ensoulSpecialOptions[position];
 			if (oldOption != null)
 			{
 				removeSpecialAbility(oldOption);
 			}
+			_ensoulSpecialOptions[position] = option;
 		}
 		
 		if (updateInDB)
@@ -2184,20 +2203,20 @@ public final class ItemInstance extends WorldObject
 	{
 		if (type == 1)
 		{
-			final EnsoulOption option = _ensoulOptions.get(position);
+			final EnsoulOption option = _ensoulOptions[position];
 			if (option != null)
 			{
 				removeSpecialAbility(option);
-				_ensoulOptions.remove(position);
+				_ensoulOptions[position] = null;
 				
 				// Rearrange.
 				if (position == 0)
 				{
-					final EnsoulOption secondEnsoul = _ensoulOptions.get(1);
+					final EnsoulOption secondEnsoul = _ensoulOptions[1];
 					if (secondEnsoul != null)
 					{
 						removeSpecialAbility(secondEnsoul);
-						_ensoulOptions.remove(1);
+						_ensoulOptions[1] = null;
 						addSpecialAbility(secondEnsoul, 0, 1, true);
 					}
 				}
@@ -2205,19 +2224,25 @@ public final class ItemInstance extends WorldObject
 		}
 		else if (type == 2)
 		{
-			final EnsoulOption option = _ensoulSpecialOptions.get(position);
+			final EnsoulOption option = _ensoulSpecialOptions[position];
 			if (option != null)
 			{
 				removeSpecialAbility(option);
-				_ensoulSpecialOptions.remove(position);
+				_ensoulSpecialOptions[position] = null;
 			}
 		}
 	}
 	
 	public void clearSpecialAbilities()
 	{
-		_ensoulOptions.values().forEach(this::clearSpecialAbility);
-		_ensoulSpecialOptions.values().forEach(this::clearSpecialAbility);
+		for (EnsoulOption _ensoulOption : _ensoulOptions)
+		{
+			clearSpecialAbility(_ensoulOption);
+		}
+		for (EnsoulOption _ensoulSpecialOption : _ensoulSpecialOptions)
+		{
+			clearSpecialAbility(_ensoulSpecialOption);
+		}
 	}
 	
 	public void applySpecialAbilities()
@@ -2227,8 +2252,14 @@ public final class ItemInstance extends WorldObject
 			return;
 		}
 		
-		_ensoulOptions.values().forEach(this::applySpecialAbility);
-		_ensoulSpecialOptions.values().forEach(this::applySpecialAbility);
+		for (EnsoulOption _ensoulOption : _ensoulOptions)
+		{
+			applySpecialAbility(_ensoulOption);
+		}
+		for (EnsoulOption _ensoulSpecialOption : _ensoulSpecialOptions)
+		{
+			applySpecialAbility(_ensoulSpecialOption);
+		}
 	}
 	
 	private void removeSpecialAbility(EnsoulOption option)
@@ -2258,6 +2289,11 @@ public final class ItemInstance extends WorldObject
 	
 	private void applySpecialAbility(EnsoulOption option)
 	{
+		if (option == null)
+		{
+			return;
+		}
+		
 		final Skill skill = option.getSkill();
 		if (skill != null)
 		{
@@ -2274,6 +2310,11 @@ public final class ItemInstance extends WorldObject
 	
 	private void clearSpecialAbility(EnsoulOption option)
 	{
+		if (option == null)
+		{
+			return;
+		}
+		
 		final Skill skill = option.getSkill();
 		if (skill != null)
 		{
@@ -2329,27 +2370,37 @@ public final class ItemInstance extends WorldObject
 		try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_special_abilities (`objectId`, `type`, `optionId`, `position`) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE type = ?, optionId = ?, position = ?"))
 		{
 			ps.setInt(1, getObjectId());
-			for (Entry<Integer, EnsoulOption> entry : _ensoulOptions.entrySet())
+			for (int i = 0; i < _ensoulOptions.length; i++)
 			{
+				if (_ensoulOptions[i] == null)
+				{
+					continue;
+				}
+				
 				ps.setInt(2, 1); // regular options
-				ps.setInt(3, entry.getValue().getId());
-				ps.setInt(4, entry.getKey());
+				ps.setInt(3, _ensoulOptions[i].getId());
+				ps.setInt(4, i);
 				
 				ps.setInt(5, 1); // regular options
-				ps.setInt(6, entry.getValue().getId());
-				ps.setInt(7, entry.getKey());
+				ps.setInt(6, _ensoulOptions[i].getId());
+				ps.setInt(7, i);
 				ps.execute();
 			}
 			
-			for (Entry<Integer, EnsoulOption> entry : _ensoulSpecialOptions.entrySet())
+			for (int i = 0; i < _ensoulSpecialOptions.length; i++)
 			{
+				if (_ensoulSpecialOptions[i] == null)
+				{
+					continue;
+				}
+				
 				ps.setInt(2, 2); // special options
-				ps.setInt(3, entry.getValue().getId());
-				ps.setInt(4, entry.getKey());
+				ps.setInt(3, _ensoulSpecialOptions[i].getId());
+				ps.setInt(4, i);
 				
 				ps.setInt(5, 2); // special options
-				ps.setInt(6, entry.getValue().getId());
-				ps.setInt(7, entry.getKey());
+				ps.setInt(6, _ensoulSpecialOptions[i].getId());
+				ps.setInt(7, i);
 				ps.execute();
 			}
 		}
