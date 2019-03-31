@@ -102,7 +102,8 @@ public final class KnockBack extends AbstractEffect
 	
 	private void knockBack(Creature effector, Creature effected)
 	{
-		if ((effected == null) || effected.isRaid())
+		// Prevent knocking back raids and town NPCs.
+		if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
 		{
 			return;
 		}
