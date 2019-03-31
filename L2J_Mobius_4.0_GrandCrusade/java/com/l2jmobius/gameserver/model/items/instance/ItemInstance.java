@@ -2136,11 +2136,11 @@ public final class ItemInstance extends WorldObject
 	public Collection<EnsoulOption> getSpecialAbilities()
 	{
 		final List<EnsoulOption> result = new ArrayList<>();
-		for (EnsoulOption _ensoulOption : _ensoulOptions)
+		for (EnsoulOption ensoulOption : _ensoulOptions)
 		{
-			if (_ensoulOption != null)
+			if (ensoulOption != null)
 			{
-				result.add(_ensoulOption);
+				result.add(ensoulOption);
 			}
 		}
 		return result;
@@ -2154,11 +2154,11 @@ public final class ItemInstance extends WorldObject
 	public Collection<EnsoulOption> getAdditionalSpecialAbilities()
 	{
 		final List<EnsoulOption> result = new ArrayList<>();
-		for (EnsoulOption _ensoulSpecialOption : _ensoulSpecialOptions)
+		for (EnsoulOption ensoulSpecialOption : _ensoulSpecialOptions)
 		{
-			if (_ensoulSpecialOption != null)
+			if (ensoulSpecialOption != null)
 			{
-				result.add(_ensoulSpecialOption);
+				result.add(ensoulSpecialOption);
 			}
 		}
 		return result;
@@ -2219,7 +2219,7 @@ public final class ItemInstance extends WorldObject
 					{
 						removeSpecialAbility(secondEnsoul);
 						_ensoulOptions[1] = null;
-						addSpecialAbility(secondEnsoul, 0, 1, true);
+						addSpecialAbility(secondEnsoul, 0, type, true);
 					}
 				}
 			}
@@ -2237,13 +2237,13 @@ public final class ItemInstance extends WorldObject
 	
 	public void clearSpecialAbilities()
 	{
-		for (EnsoulOption _ensoulOption : _ensoulOptions)
+		for (EnsoulOption ensoulOption : _ensoulOptions)
 		{
-			clearSpecialAbility(_ensoulOption);
+			clearSpecialAbility(ensoulOption);
 		}
-		for (EnsoulOption _ensoulSpecialOption : _ensoulSpecialOptions)
+		for (EnsoulOption ensoulSpecialOption : _ensoulSpecialOptions)
 		{
-			clearSpecialAbility(_ensoulSpecialOption);
+			clearSpecialAbility(ensoulSpecialOption);
 		}
 	}
 	
@@ -2254,13 +2254,13 @@ public final class ItemInstance extends WorldObject
 			return;
 		}
 		
-		for (EnsoulOption _ensoulOption : _ensoulOptions)
+		for (EnsoulOption ensoulOption : _ensoulOptions)
 		{
-			applySpecialAbility(_ensoulOption);
+			applySpecialAbility(ensoulOption);
 		}
-		for (EnsoulOption _ensoulSpecialOption : _ensoulSpecialOptions)
+		for (EnsoulOption ensoulSpecialOption : _ensoulSpecialOptions)
 		{
-			applySpecialAbility(_ensoulSpecialOption);
+			applySpecialAbility(ensoulSpecialOption);
 		}
 	}
 	
