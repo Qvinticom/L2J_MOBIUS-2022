@@ -265,7 +265,7 @@ public final class PlayerInstance extends Playable
 	private static final String DELETE_SKILL_FROM_CHAR = "DELETE FROM character_skills WHERE skill_id=? AND char_obj_id=? AND class_index=?";
 	private static final String DELETE_CHAR_SKILLS = "DELETE FROM character_skills WHERE char_obj_id=? AND class_index=?";
 	private static final String ADD_SKILL_SAVE = "INSERT INTO character_skills_save (char_obj_id,skill_id,skill_level,effect_count,effect_cur_time,reuse_delay,systime,restore_type,class_index,buff_index) VALUES (?,?,?,?,?,?,?,?,?,?)";
-	private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,effect_count,effect_cur_time, reuse_delay FROM character_skills_save WHERE char_obj_id=? AND class_index=? AND restore_type=? ORDER BY buff_index ASC";
+	private static final String RESTORE_SKILL_SAVE = "SELECT skill_id,skill_level,effect_count,effect_cur_time, reuse_delay, systime FROM character_skills_save WHERE char_obj_id=? AND class_index=? AND restore_type=? ORDER BY buff_index ASC";
 	private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE char_obj_id=? AND class_index=?";
 	
 	public boolean _isVIP = false;
@@ -10386,6 +10386,7 @@ public final class PlayerInstance extends Playable
 				final int effectCount = rset.getInt("effect_count");
 				final int effectCurTime = rset.getInt("effect_cur_time");
 				final long reuseDelay = rset.getLong("reuse_delay");
+				final long systime = rset.getLong("systime");
 				
 				// Just incase the admin minipulated this table incorrectly :x
 				if ((skillId == -1) || (effectCount == -1) || (effectCurTime == -1) || (reuseDelay < 0))
@@ -10395,7 +10396,6 @@ public final class PlayerInstance extends Playable
 				
 				if (activateEffects)
 				{
-					
 					Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 					
 					skill.getEffects(this, this, false, false, false);
@@ -10410,19 +10410,18 @@ public final class PlayerInstance extends Playable
 					}
 				}
 				
-				if (reuseDelay > 10)
+				final long remainingTime = systime - System.currentTimeMillis();
+				if (remainingTime > 10)
 				{
 					final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
-					
 					if (skill == null)
 					{
 						continue;
 					}
 					
-					disableSkill(skill, reuseDelay);
-					addTimeStamp(new TimeStamp(skill, reuseDelay));
+					disableSkill(skill, remainingTime);
+					addTimeStamp(new TimeStamp(skill, reuseDelay, systime));
 				}
-				
 			}
 			rset.close();
 			statement.close();
@@ -10439,21 +10438,20 @@ public final class PlayerInstance extends Playable
 				final int skillId = rset.getInt("skill_id");
 				final int skillLvl = rset.getInt("skill_level");
 				final long reuseDelay = rset.getLong("reuse_delay");
+				final long systime = rset.getLong("systime");
 				
-				if (reuseDelay <= 0)
+				final long remainingTime = systime - System.currentTimeMillis();
+				if (remainingTime > 0)
 				{
-					continue;
+					final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+					if (skill == null)
+					{
+						continue;
+					}
+					
+					disableSkill(skill, remainingTime);
+					addTimeStamp(new TimeStamp(skill, reuseDelay, systime));
 				}
-				
-				final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
-				
-				if (skill == null)
-				{
-					continue;
-				}
-				
-				disableSkill(skill, reuseDelay);
-				addTimeStamp(new TimeStamp(skill, reuseDelay));
 			}
 			rset.close();
 			statement.close();
@@ -16553,7 +16551,7 @@ public final class PlayerInstance extends Playable
 	 */
 	private void addTimeStamp(TimeStamp T)
 	{
-		ReuseTimeStamps.put(T.getSkill().getId(), T);
+		ReuseTimeStamps.put(T.getSkill().getReuseHashCode(), T);
 	}
 	
 	/**
