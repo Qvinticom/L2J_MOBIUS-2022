@@ -90,7 +90,14 @@ public class RequestRecordInfo extends GameClientPacket
 				}
 				else if (object instanceof DoorInstance)
 				{
-					_player.sendPacket(new DoorInfo((DoorInstance) object, false));
+					if (((DoorInstance) object).getCastle() != null)
+					{
+						_player.sendPacket(new DoorInfo((DoorInstance) object, true));
+					}
+					else
+					{
+						_player.sendPacket(new DoorInfo((DoorInstance) object, false));
+					}
 					_player.sendPacket(new DoorStatusUpdate((DoorInstance) object));
 				}
 				else if (object instanceof BoatInstance)

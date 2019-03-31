@@ -25,10 +25,12 @@ import com.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 public class DoorInfo extends GameServerPacket
 {
 	private final DoorInstance _door;
+	private final boolean _showHp;
 	
 	public DoorInfo(DoorInstance door, boolean showHp)
 	{
 		_door = door;
+		_showHp = showHp;
 	}
 	
 	@Override
@@ -37,5 +39,6 @@ public class DoorInfo extends GameServerPacket
 		writeC(0x4c);
 		writeD(_door.getObjectId());
 		writeD(_door.getDoorId());
+		writeD(_showHp ? 0x01 : 0x00);
 	}
 }

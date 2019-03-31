@@ -122,7 +122,14 @@ public class PlayerKnownList extends PlayableKnownList
 			}
 			else if (object instanceof DoorInstance)
 			{
-				active_char.sendPacket(new DoorInfo((DoorInstance) object, false));
+				if (((DoorInstance) object).getCastle() != null)
+				{
+					active_char.sendPacket(new DoorInfo((DoorInstance) object, true));
+				}
+				else
+				{
+					active_char.sendPacket(new DoorInfo((DoorInstance) object, false));
+				}
 				active_char.sendPacket(new DoorStatusUpdate((DoorInstance) object));
 			}
 			else if (object instanceof FenceInstance)
