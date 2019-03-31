@@ -1571,6 +1571,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
+		// Should not be able to charge yourself.
+		if ((skill.getSkillType() == SkillType.CHARGEDAM) && (_target != null) && (_target == this))
+		{
+			if (isPlayer())
+			{
+				getActingPlayer().sendPacket(SystemMessageId.INCORRECT_TARGET);
+			}
+			return;
+		}
+		
 		// Check if the skill is psychical and if the Creature is not psychical_muted
 		if (!skill.isMagic() && _isPsychicalMuted && !skill.isPotion())
 		{
