@@ -599,8 +599,8 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void clientStartAutoAttack()
 	{
-		// Non monster NPCs should not get in combat.
-		if (_actor.isNpc() && !_actor.isMonster())
+		// Non attackable NPCs should not get in combat.
+		if (_actor.isNpc() && !_actor.isAttackable())
 		{
 			return;
 		}
