@@ -68,22 +68,20 @@ public class PrivateStoreManageListSell extends GameServerPacket
 		writeD(_playerAdena);
 		
 		// section2
-		writeD(_itemList.length - _sellList.length); // for potential sells
+		writeD(_itemList.length); // for potential sells
 		for (TradeItem item : _itemList)
 		{
-			if (isItemInSelling(item) == false)
-			{
-				writeD(item.getItem().getType2());
-				writeD(item.getObjectId());
-				writeD(item.getItem().getItemId());
-				writeD(item.getCount());
-				writeH(0);
-				writeH(item.getEnchant());// enchant lvl
-				writeH(0);
-				writeD(item.getItem().getBodyPart());
-				writeD(item.getPrice()); // store price
-			}
+			writeD(item.getItem().getType2());
+			writeD(item.getObjectId());
+			writeD(item.getItem().getItemId());
+			writeD(item.getCount());
+			writeH(0);
+			writeH(item.getEnchant());// enchant lvl
+			writeH(0);
+			writeD(item.getItem().getBodyPart());
+			writeD(item.getPrice()); // store price
 		}
+		
 		// section 3
 		writeD(_sellList.length); // count for any items already added for sell
 		for (TradeItem item : _sellList)
@@ -99,17 +97,5 @@ public class PrivateStoreManageListSell extends GameServerPacket
 			writeD(item.getPrice());// your price
 			writeD(item.getItem().getReferencePrice()); // store price
 		}
-	}
-	
-	private boolean isItemInSelling(TradeItem item_)
-	{
-		for (TradeItem itemSell : _sellList)
-		{
-			if (itemSell.getObjectId() == item_.getObjectId())
-			{
-				return true;
-			}
-		}
-		return false;
 	}
 }
