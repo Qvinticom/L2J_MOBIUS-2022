@@ -599,6 +599,12 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void clientStartAutoAttack()
 	{
+		// Non monster NPCs should not get in combat.
+		if (_actor.isNpc() && !_actor.isMonster())
+		{
+			return;
+		}
+		
 		if (_actor.isSummon())
 		{
 			final Summon summon = (Summon) _actor;
@@ -608,6 +614,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			return;
 		}
+		
 		if (!_clientAutoAttacking)
 		{
 			if (_actor.isPlayer() && _actor.hasSummon())
@@ -623,6 +630,7 @@ public abstract class AbstractAI implements Ctrl
 			_actor.broadcastPacket(new AutoAttackStart(_actor.getObjectId()));
 			setAutoAttacking(true);
 		}
+		
 		AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor);
 	}
 	
