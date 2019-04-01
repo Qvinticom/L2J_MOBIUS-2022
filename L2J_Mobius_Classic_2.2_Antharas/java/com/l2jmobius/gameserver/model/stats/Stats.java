@@ -386,6 +386,6 @@ public enum Stats
 	{
 		final double mul = creature.getStat().getMul(stat);
 		final double add = creature.getStat().getAdd(stat);
-		return mul * (baseValue + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType()));
+		return (mul * baseValue) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
 	}
 }
