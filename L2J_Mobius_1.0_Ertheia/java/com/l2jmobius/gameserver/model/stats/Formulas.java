@@ -749,41 +749,51 @@ public final class Formulas
 	
 	public static boolean calcMagicSuccess(Creature attacker, Creature target, Skill skill)
 	{
-		final int mAccDiff = attacker.getMagicAccuracy() - target.getMagicEvasionRate();
-		int mAccModifier = 100;
-		if (mAccDiff > -20)
+		double lvlModifier = 1;
+		float targetModifier = 1;
+		int mAccModifier = 1;
+		if (attacker.isAttackable() || target.isAttackable())
 		{
-			mAccModifier = 2;
+			lvlModifier = Math.pow(1.3, target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
+			
+			if ((attacker.getActingPlayer() != null) && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
+			{
+				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
+				if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
+				{
+					targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
+				}
+				else
+				{
+					targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
+				}
+			}
 		}
-		else if (mAccDiff > -25)
+		else
 		{
-			mAccModifier = 30;
-		}
-		else if (mAccDiff > -30)
-		{
-			mAccModifier = 60;
-		}
-		else if (mAccDiff > -35)
-		{
-			mAccModifier = 90;
+			final int mAccDiff = attacker.getMagicAccuracy() - target.getMagicEvasionRate();
+			mAccModifier = 100;
+			if (mAccDiff > -20)
+			{
+				mAccModifier = 2;
+			}
+			else if (mAccDiff > -25)
+			{
+				mAccModifier = 30;
+			}
+			else if (mAccDiff > -30)
+			{
+				mAccModifier = 60;
+			}
+			else if (mAccDiff > -35)
+			{
+				mAccModifier = 90;
+			}
 		}
 		
-		float targetModifier = 1;
-		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
-		{
-			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
-			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
-			{
-				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
-			}
-			else
-			{
-				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
-			}
-		}
 		// general magic resist
 		final double resModifier = target.getStat().getValue(Stats.MAGIC_SUCCESS_RES, 1);
-		final int rate = 100 - Math.round((float) (mAccModifier * targetModifier * resModifier));
+		final int rate = 100 - Math.round((float) (mAccModifier * lvlModifier * targetModifier * resModifier));
 		
 		return (Rnd.get(100) < rate);
 	}
