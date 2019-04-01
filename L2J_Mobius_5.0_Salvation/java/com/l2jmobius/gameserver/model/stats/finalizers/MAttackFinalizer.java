@@ -54,7 +54,7 @@ public class MAttackFinalizer implements IStatsFunction
 		
 		// Calculate modifiers Magic Attack
 		final double chaBonus = creature.isPlayer() ? BaseStats.CHA.calcBonus(creature) : 1.;
-		baseValue *= Math.pow(BaseStats.INT.calcBonus(creature) * creature.getLevelMod(), 2) * chaBonus;
+		baseValue *= Math.pow(BaseStats.INT.calcBonus(creature) * creature.getLevelMod() * chaBonus, 2.2072);
 		return Math.min(Stats.defaultValue(creature, stat, baseValue), Config.MAX_MATK);
 	}
 	
