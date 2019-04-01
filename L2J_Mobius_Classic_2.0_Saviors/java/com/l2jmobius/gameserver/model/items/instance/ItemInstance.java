@@ -174,8 +174,8 @@ public final class ItemInstance extends WorldObject
 	private final DropProtection _dropProtection = new DropProtection();
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
-	private final EnsoulOption[] _ensoulOptions = new EnsoulOption[3];
-	private final EnsoulOption[] _ensoulSpecialOptions = new EnsoulOption[3];
+	private final EnsoulOption[] _ensoulOptions = new EnsoulOption[2];
+	private final EnsoulOption[] _ensoulSpecialOptions = new EnsoulOption[1];
 	
 	/**
 	 * Constructor of the ItemInstance from the objectId and the itemId.
@@ -2169,7 +2169,11 @@ public final class ItemInstance extends WorldObject
 	
 	public void addSpecialAbility(EnsoulOption option, int position, int type, boolean updateInDB)
 	{
-		if ((position < 0) || (position > 2))
+		if ((type == 1) && ((position < 0) || (position > 1))) // two first slots
+		{
+			return;
+		}
+		if ((type == 2) && (position != 0)) // third slot
 		{
 			return;
 		}
