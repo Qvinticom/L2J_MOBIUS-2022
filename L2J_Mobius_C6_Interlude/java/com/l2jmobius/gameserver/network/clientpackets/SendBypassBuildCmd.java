@@ -46,7 +46,7 @@ public final class SendBypassBuildCmd extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		if (player == null)
+		if ((player == null) || !player.isGM())
 		{
 			return;
 		}

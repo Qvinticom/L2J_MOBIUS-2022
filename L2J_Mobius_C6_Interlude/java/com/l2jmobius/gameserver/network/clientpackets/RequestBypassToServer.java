@@ -74,9 +74,12 @@ public final class RequestBypassToServer extends GameClientPacket
 		{
 			if (_command.startsWith("admin_"))
 			{
-				// DaDummy: this way we LOGGER _every_ admincommand with all related info
-				String command;
+				if (!player.isGM())
+				{
+					return;
+				}
 				
+				String command;
 				if (_command.contains(" "))
 				{
 					command = _command.substring(0, _command.indexOf(" "));
@@ -87,14 +90,9 @@ public final class RequestBypassToServer extends GameClientPacket
 				}
 				
 				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(command);
-				
 				if (ach == null)
 				{
-					if (player.isGM())
-					{
-						player.sendMessage("The command " + command + " does not exists!");
-					}
-					
+					player.sendMessage("The command " + command + " does not exists!");
 					LOGGER.warning("No handler registered for admin command '" + command + "'");
 					return;
 				}

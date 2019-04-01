@@ -79,16 +79,18 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 	
 	public void useAdminCommand(PlayerInstance player, String fullCommand, boolean useConfirm)
 	{
+		if (!player.isGM())
+		{
+			return;
+		}
+		
 		final String command = fullCommand.split(" ")[0];
 		final String commandNoPrefix = command.substring(6);
 		
 		final IAdminCommandHandler handler = getHandler(command);
 		if (handler == null)
 		{
-			if (player.isGM())
-			{
-				player.sendMessage("The command '" + commandNoPrefix + "' does not exist!");
-			}
+			player.sendMessage("The command '" + commandNoPrefix + "' does not exist!");
 			LOGGER.warning("No handler registered for admin command '" + command + "'");
 			return;
 		}
