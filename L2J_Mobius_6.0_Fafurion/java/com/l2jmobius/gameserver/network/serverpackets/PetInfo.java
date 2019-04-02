@@ -186,7 +186,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
 		
 		packet.writeD(0x00); // TODO: Find me
-		packet.writeD(_summon.getFormId()); // Transformation ID - Confirmed
+		packet.writeD(0x00); // "Transformation ID - Confirmed" - Used to bug Fenrir after 64 level.
 		
 		packet.writeC(_summon.getOwner().getSummonPoints()); // Used Summon Points
 		packet.writeC(_summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points

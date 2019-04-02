@@ -1122,43 +1122,6 @@ public abstract class Summon extends Playable
 		return (_owner != null) ? _owner.getAllyId() : 0;
 	}
 	
-	public int getFormId()
-	{
-		int formId = 0;
-		final int npcId = getId();
-		if ((npcId == 16041) || (npcId == 16042))
-		{
-			if (getLevel() > 69)
-			{
-				formId = 3;
-			}
-			else if (getLevel() > 64)
-			{
-				formId = 2;
-			}
-			else if (getLevel() > 59)
-			{
-				formId = 1;
-			}
-		}
-		else if ((npcId == 16025) || (npcId == 16037))
-		{
-			if (getLevel() > 69)
-			{
-				formId = 3;
-			}
-			else if (getLevel() > 64)
-			{
-				formId = 2;
-			}
-			else if (getLevel() > 59)
-			{
-				formId = 1;
-			}
-		}
-		return formId;
-	}
-	
 	public void setSummonPoints(int summonPoints)
 	{
 		_summonPoints = summonPoints;
