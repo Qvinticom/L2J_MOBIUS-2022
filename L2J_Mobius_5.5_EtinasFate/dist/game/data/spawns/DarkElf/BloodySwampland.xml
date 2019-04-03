@@ -2,9 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="BloodySwampland" ai="DayNightSpawns">
 		<group>
+			<npc id="33562" x="-16136" y="30952" z="-3629" heading="50686" respawnTime="60sec" /> <!-- Hermuncus' Minion -->
+			<npc id="32981" x="-15976" y="30856" z="-3629" heading="44466" respawnTime="60sec" /> <!-- Adventurers' Guide -->
+			<npc id="34414" x="-16056" y="30952" z="-3629" heading="49151" respawnTime="60sec" /> <!-- Lapathia -->
 			<npc id="30137" x="-15801" y="30787" z="-3624" heading="47722" respawnTime="60sec" /> <!-- Vollodos -->
 			<npc id="30350" x="-15900" y="30804" z="-3624" heading="51973" respawnTime="60sec" /> <!-- Carlon -->
-			<npc id="33562" x="-15975" y="30867" z="-3624" heading="44643" respawnTime="60sec" /> <!-- Hermuncus' Minion -->
 			<npc id="23162" x="-10109" y="36931" z="-3696" heading="28366" respawnTime="60sec" /> <!-- Corpse Devourer -->
 			<npc id="23162" x="-10175" y="36858" z="-3696" heading="28207" respawnTime="60sec" /> <!-- Corpse Devourer -->
 			<npc id="23162" x="-10396" y="35116" z="-3600" heading="47377" respawnTime="60sec" /> <!-- Corpse Devourer -->

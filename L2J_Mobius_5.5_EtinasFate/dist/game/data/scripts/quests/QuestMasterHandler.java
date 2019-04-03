@@ -115,6 +115,7 @@ import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
 import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
+import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -242,6 +243,7 @@ import quests.Q10391_ASuspiciousHelper.Q10391_ASuspiciousHelper;
 import quests.Q10392_FailureAndItsConsequences.Q10392_FailureAndItsConsequences;
 import quests.Q10393_KekropusLetterAClueCompleted.Q10393_KekropusLetterAClueCompleted;
 import quests.Q10394_MutualBenefit.Q10394_MutualBenefit;
+import quests.Q10395_NotATraitor.Q10395_NotATraitor;
 import quests.Q10401_KekropusLetterDecodingTheBadge.Q10401_KekropusLetterDecodingTheBadge;
 import quests.Q10402_NowhereToTurn.Q10402_NowhereToTurn;
 import quests.Q10403_TheGuardianGiant.Q10403_TheGuardianGiant;
@@ -294,6 +296,8 @@ import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
 import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
+import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
+import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -504,7 +508,7 @@ public class QuestMasterHandler
 		Q00561_BasicMissionHarnakUndergroundRuins.class, // TODO: Not done.
 		Q00562_BasicMissionAltarOfEvil.class, // TODO: Not done.
 		Q00563_BasicMissionBloodySwampland.class, // TODO: Not done.
-		Q00564_BasicMissionKartiasLabyrinthSolo.class, // TODO: Not done.
+		Q00564_BasicMissionKartiasLabyrinthSolo.class,
 		Q00565_BasicMissionFairySettlementWest.class, // TODO: Not done.
 		Q00566_BasicMissionFairySettlementEast.class, // TODO: Not done.
 		Q00567_BasicMissionIsleOfSouls.class, // TODO: Not done.
@@ -715,6 +719,7 @@ public class QuestMasterHandler
 		Q10392_FailureAndItsConsequences.class,
 		Q10393_KekropusLetterAClueCompleted.class,
 		Q10394_MutualBenefit.class,
+		Q10395_NotATraitor.class,
 		Q10401_KekropusLetterDecodingTheBadge.class,
 		Q10402_NowhereToTurn.class,
 		Q10403_TheGuardianGiant.class,
@@ -789,8 +794,8 @@ public class QuestMasterHandler
 		Q10557_NewPowerWindsOfFate.class, // TODO: Not done.
 		Q10558_HiddenInChaos.class, // TODO: Not done.
 		Q10559_BeforeTheGuide.class, // TODO: Not done.
-		Q10560_WayOfWanderingKnight.class, // TODO: Not done.
-		Q10561_AcrossTheDeathLine.class, // TODO: Not done.
+		Q10560_WayOfWanderingKnight.class,
+		Q10561_AcrossTheDeathLine.class,
 		Q10562_TakeUpArms.class, // TODO: Not done.
 		Q10563_ControlOfPower.class, // TODO: Not done.
 		Q10564_ProveProgress.class, // TODO: Not done.
