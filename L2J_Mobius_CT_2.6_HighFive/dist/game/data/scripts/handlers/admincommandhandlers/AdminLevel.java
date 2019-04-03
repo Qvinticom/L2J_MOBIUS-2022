@@ -86,11 +86,14 @@ public class AdminLevel implements IAdminCommandHandler
 					final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
 					if (pXp > tXp)
 					{
+						targetPlayer.getStat().setLevel(lvl);
 						targetPlayer.removeExpAndSp(pXp - tXp, 0);
+						BuilderUtil.sendSysMessage(activeChar, "Removed " + (pXp - tXp) + " exp.");
 					}
 					else if (pXp < tXp)
 					{
 						targetPlayer.addExpAndSp(tXp - pXp, 0);
+						BuilderUtil.sendSysMessage(activeChar, "Added " + (tXp - pXp) + " exp.");
 					}
 					targetPlayer.setCurrentHpMp(targetPlayer.getMaxHp(), targetPlayer.getMaxMp());
 					targetPlayer.setCurrentCp(targetPlayer.getMaxCp());
