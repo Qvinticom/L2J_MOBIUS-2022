@@ -182,6 +182,10 @@ import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
+import quests.not_done.Q00910_RequestFromTheRedLibraGuildBasic;
+import quests.not_done.Q00911_RequestFromTheRedLibraGuildIntermediate;
+import quests.not_done.Q00912_RequestFromTheRedLibraGuildAdvanced;
+import quests.not_done.Q00913_RequestFromTheRedLibraGuildSuperAdvanced;
 
 /**
  * @author NosBit
@@ -355,6 +359,11 @@ public class QuestMasterHandler
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
 		Q11000_MoonKnight.class,
+		// Not done.
+		Q00910_RequestFromTheRedLibraGuildBasic.class,
+		Q00911_RequestFromTheRedLibraGuildIntermediate.class,
+		Q00912_RequestFromTheRedLibraGuildAdvanced.class,
+		Q00913_RequestFromTheRedLibraGuildSuperAdvanced.class
 	};
 	
 	public static void main(String[] args)

@@ -491,6 +491,48 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.not_done.Q00480_AnotherLegacyOfCrumaTower;
+import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
+import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
+import quests.not_done.Q00750_SevenFlowers;
+import quests.not_done.Q00759_TheDwarvenNightmareContinues;
+import quests.not_done.Q00767_BanishingEvil;
+import quests.not_done.Q00768_TerrorOfTown;
+import quests.not_done.Q00769_TheTruthConcealedInBeauty;
+import quests.not_done.Q00770_MaintainingTheFieldBusiness;
+import quests.not_done.Q00771_PartakingInThePurificationCampaign;
+import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
+import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
+import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
+import quests.not_done.Q00789_WaitingForPaagrio;
+import quests.not_done.Q00816_PlansToRepairTheStronghold;
+import quests.not_done.Q00824_AttackTheCommandPost;
+import quests.not_done.Q10352_LegacyOfCrumaTower;
+import quests.not_done.Q10357_AltarOfBloodThatAwakensDestruction;
+import quests.not_done.Q10456_OperationRescue;
+import quests.not_done.Q10457_KefensisIllusion;
+import quests.not_done.Q10458_ToTheDesertQuarry;
+import quests.not_done.Q10506_DianasRequest;
+import quests.not_done.Q10713_TheHerosJourneyBloodySwampland;
+import quests.not_done.Q10714_TheHerosJourneySeedOfAnnihilation;
+import quests.not_done.Q10715_TheHerosJourneyHarnakUndergroundRuins;
+import quests.not_done.Q10716_TheHerosJourneyKartiasLabyrinth;
+import quests.not_done.Q10718_TheHerosJourneyFairySettlement;
+import quests.not_done.Q10721_TheHerosJourneyPrisonOfDarkness;
+import quests.not_done.Q10722_TheHerosJourneyFortuna;
+import quests.not_done.Q10724_TheHerosJourneyIsleOfSouls;
+import quests.not_done.Q10725_TheHerosJourneyNornilsCave;
+import quests.not_done.Q10727_TheHerosJourneySealOfShilen;
+import quests.not_done.Q10728_TheHerosJourneyCemetary;
+import quests.not_done.Q10729_TheHerosJourneyGuillotineFortress;
+import quests.not_done.Q10730_TheHerosJourneyOrbisTemple;
+import quests.not_done.Q10747_TheHerosJourneyPaganTemple;
+import quests.not_done.Q10748_MysteriousSuggestion1;
+import quests.not_done.Q10749_MysteriousSuggestion2;
+import quests.not_done.Q10809_TheHerosJourneyBlazingSwamp;
+import quests.not_done.Q10844_BloodyBattleSeizingSupplies;
+import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
+import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 
 /**
  * @author NosBit
@@ -972,7 +1014,50 @@ public class QuestMasterHandler
 		Q10839_BlackbirdsNameValue.class,
 		Q10840_TimeToRecover.class,
 		Q10841_DeepInsideAteliaFortress.class,
-		Q10843_AnomalyInTheEnchantedValley.class
+		Q10843_AnomalyInTheEnchantedValley.class,
+		// Not done.
+		Q00480_AnotherLegacyOfCrumaTower.class,
+		Q00504_CompetitionForTheBanditStronghold.class,
+		Q00655_AGrandPlanForTamingWildBeasts.class,
+		Q00750_SevenFlowers.class,
+		Q00759_TheDwarvenNightmareContinues.class,
+		Q00767_BanishingEvil.class,
+		Q00768_TerrorOfTown.class,
+		Q00769_TheTruthConcealedInBeauty.class,
+		Q00770_MaintainingTheFieldBusiness.class,
+		Q00771_PartakingInThePurificationCampaign.class,
+		Q00780_UtilizeTheDarknessSeedOfInfinity.class,
+		Q00781_UtilizeTheDarknessSeedOfAnnihilation.class,
+		Q00782_UtilizeTheDarknessSeedOfHellfire.class,
+		Q00789_WaitingForPaagrio.class,
+		Q00816_PlansToRepairTheStronghold.class,
+		Q00824_AttackTheCommandPost.class,
+		Q10352_LegacyOfCrumaTower.class,
+		Q10357_AltarOfBloodThatAwakensDestruction.class,
+		Q10456_OperationRescue.class,
+		Q10457_KefensisIllusion.class,
+		Q10458_ToTheDesertQuarry.class,
+		Q10506_DianasRequest.class,
+		Q10713_TheHerosJourneyBloodySwampland.class,
+		Q10714_TheHerosJourneySeedOfAnnihilation.class,
+		Q10715_TheHerosJourneyHarnakUndergroundRuins.class,
+		Q10716_TheHerosJourneyKartiasLabyrinth.class,
+		Q10718_TheHerosJourneyFairySettlement.class,
+		Q10721_TheHerosJourneyPrisonOfDarkness.class,
+		Q10722_TheHerosJourneyFortuna.class,
+		Q10724_TheHerosJourneyIsleOfSouls.class,
+		Q10725_TheHerosJourneyNornilsCave.class,
+		Q10727_TheHerosJourneySealOfShilen.class,
+		Q10728_TheHerosJourneyCemetary.class,
+		Q10729_TheHerosJourneyGuillotineFortress.class,
+		Q10730_TheHerosJourneyOrbisTemple.class,
+		Q10747_TheHerosJourneyPaganTemple.class,
+		Q10748_MysteriousSuggestion1.class,
+		Q10749_MysteriousSuggestion2.class,
+		Q10809_TheHerosJourneyBlazingSwamp.class,
+		Q10844_BloodyBattleSeizingSupplies.class,
+		Q10845_BloodyBattleRescueTheSmiths.class,
+		Q10846_BloodyBattleMeetingTheCommander.class
 	};
 	
 	public static void main(String[] args)

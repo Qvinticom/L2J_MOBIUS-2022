@@ -180,6 +180,24 @@ import quests.Q11020_BlacksmithsRequest.Q11020_BlacksmithsRequest;
 import quests.Q11021_RedGemNecklace1.Q11021_RedGemNecklace1;
 import quests.Q11022_RedGemNecklace2.Q11022_RedGemNecklace2;
 import quests.Q11023_RedGemNecklace3.Q11023_RedGemNecklace3;
+import quests.not_done.Q00630_PirateTreasureHunt;
+import quests.not_done.Q00657_MonsterArenaTrialForWarriors;
+import quests.not_done.Q00658_MonsterArenaTrialForEliteWarriors;
+import quests.not_done.Q00664_QuarrelsTime;
+import quests.not_done.Q00910_RequestFromTheRedLibraGuildLv1;
+import quests.not_done.Q00911_RequestFromTheRedLibraGuildLv2;
+import quests.not_done.Q00912_RequestFromTheRedLibraGuildLv3;
+import quests.not_done.Q00913_RequestFromTheRedLibraGuildLv4;
+import quests.not_done.Q00914_RequestFromTheRedLibraGuildLv5;
+import quests.not_done.Q10861_MonsterArenaTheBirthOfAWarrior;
+import quests.not_done.Q10862_MonsterArenaChallenge10Battles;
+import quests.not_done.Q10863_MonsterArenaNewChallenge15Battles;
+import quests.not_done.Q10864_MonsterArenaBraveWarrior25Battles;
+import quests.not_done.Q10865_MonsterArenaLastCall40Battles;
+import quests.not_done.Q10867_GoneMissing;
+import quests.not_done.Q10868_TheDarkSideOfPower;
+import quests.not_done.Q10870_UnfinishedDevice;
+import quests.not_done.Q10871_DeathToThePirateKing;
 
 /**
  * @author NosBit
@@ -351,6 +369,25 @@ public class QuestMasterHandler
 		Q11021_RedGemNecklace1.class,
 		Q11022_RedGemNecklace2.class,
 		Q11023_RedGemNecklace3.class,
+		// Not done.
+		Q00630_PirateTreasureHunt.class,
+		Q00657_MonsterArenaTrialForWarriors.class,
+		Q00658_MonsterArenaTrialForEliteWarriors.class,
+		Q00664_QuarrelsTime.class,
+		Q00910_RequestFromTheRedLibraGuildLv1.class,
+		Q00911_RequestFromTheRedLibraGuildLv2.class,
+		Q00912_RequestFromTheRedLibraGuildLv3.class,
+		Q00913_RequestFromTheRedLibraGuildLv4.class,
+		Q00914_RequestFromTheRedLibraGuildLv5.class,
+		Q10861_MonsterArenaTheBirthOfAWarrior.class,
+		Q10862_MonsterArenaChallenge10Battles.class,
+		Q10863_MonsterArenaNewChallenge15Battles.class,
+		Q10864_MonsterArenaBraveWarrior25Battles.class,
+		Q10865_MonsterArenaLastCall40Battles.class,
+		Q10867_GoneMissing.class,
+		Q10868_TheDarkSideOfPower.class,
+		Q10870_UnfinishedDevice.class,
+		Q10871_DeathToThePirateKing.class
 	};
 	
 	public static void main(String[] args)
