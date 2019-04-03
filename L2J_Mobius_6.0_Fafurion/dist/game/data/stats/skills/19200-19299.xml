@@ -2500,29 +2500,93 @@
 		</effects>
 	</skill>
 	<skill id="19291" toLevel="1" name="Subclass Certification - Attack">
-		<!-- Increases P. Atk. by $s1, M. Atk. by $s2. -->
+		<!-- Increases P. Atk. by 4, M. Atk. by 6. -->
 		<icon>icon.skill0816</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19292" toLevel="1" name="Subclass Certification - Defense">
-		<!-- Increases P. Def./ M. Def. by $s1. -->
+		<!-- Increases P. Def./ M. Def. by 4. -->
 		<icon>icon.skill0439</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhycicalDefence">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19293" toLevel="1" name="Subclass Certification - Speed">
-		<!-- Increases Atk. Spd./ Casting Spd. by $s1. -->
+		<!-- Increases Atk. Spd./ Casting Spd. by 4. -->
 		<icon>icon.skill0817</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19294" toLevel="1" name="Subclass Certification - Critical">
-		<!-- Increases P./ M. Critical Rate by $s1. -->
+		<!-- Increases P./ M. Critical Rate by 40. -->
 		<icon>icon.skill0814</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19295" toLevel="1" name="Subclass Certification - Condition">
-		<!-- Increases Max HP/ MP/ CP by $s1. -->
+		<!-- Increases Max HP/ MP/ CP by 6%. -->
 		<icon>icon.skill1397</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19296" toLevel="10" name="Counter Flip">
 		<!-- Knocks down the opponent who attacked you for $s1 and moves you behind opponent's back. Cancels Counter Stance. Requires dagger/ dual dagger. -->

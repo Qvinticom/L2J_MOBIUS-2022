@@ -84,77 +84,257 @@
 	<skill id="28323" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_helmet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28324" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t801_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28325" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t801_l_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28326" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t801_g_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28327" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t801_b_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28328" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28329" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t802_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28330" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t802_l_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28331" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t802_g_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28332" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t802_b_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28333" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_circlet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28334" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t803_u_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28335" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t803_l_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28336" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t803_g_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28337" toLevel="1" name="Additional Ability Might">
 		<!-- Increases P. Atk. by 2%, M. Atk. by 4%. -->
 		<icon>icon.armor_t803_b_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28338" toLevel="1" name="Energy-infused Ultimate Jewelry Box">
 		<operateType>A1</operateType>
@@ -206,6 +386,16 @@
 	<skill id="28353" toLevel="1" name="Expertise Rune - ALL">
 		<!-- When stored in the inventory, it enables you equip all grade items without any penalty. -->
 		<icon>icon.ev_charge_run</icon>
-		<operateType>A1</operateType>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="OpNotOlympiad" />
+		</passiveConditions>
+		<effects>
+			<effect name="CrystalGradeModify">
+				<amount>11</amount>
+			</effect>
+		</effects>
 	</skill>
 </list>

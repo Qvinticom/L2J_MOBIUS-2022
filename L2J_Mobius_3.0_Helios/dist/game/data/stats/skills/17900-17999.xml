@@ -226,6 +226,8 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -271,6 +273,8 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>
@@ -314,6 +318,8 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>
@@ -357,6 +363,8 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>

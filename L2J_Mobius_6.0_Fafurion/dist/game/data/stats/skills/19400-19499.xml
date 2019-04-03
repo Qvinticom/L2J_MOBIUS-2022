@@ -313,7 +313,7 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>90</activateRate> <!-- Guessed -->
+		<activateRate>100</activateRate> <!-- Guessed -->
 		<trait>KNOCKDOWN</trait> <!-- Guessed -->
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -378,14 +378,14 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="19413" toLevel="7" name="Elemental Burst: Water">
+	<skill id="19413" toLevel="9" name="Elemental Burst: Water">
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>60</activateRate> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -394,6 +394,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -404,13 +406,14 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
+	<skill id="19414" toLevel="9" name="Elemental Burst: Wind">
 		<!-- Elemental Burst inflicts Knock Back. -->
 		<icon>icon.skill11865</icon>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>90</activateRate> <!-- Guessed -->
+		<activateRate>100</activateRate> <!-- Guessed -->
 		<trait>KNOCKBACK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
@@ -420,6 +423,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -436,7 +441,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19415" toLevel="7" name="Elemental Burst: Earth">
+	<skill id="19415" toLevel="9" name="Elemental Burst: Earth">
 		<!-- Elemental Burst inflicts Hold for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>5</abnormalTime>
@@ -452,6 +457,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -465,7 +472,7 @@
 			<effect name="BlockMove" />
 		</effects>
 	</skill>
-	<skill id="19416" toLevel="7" name="Elemental Burst: Holy">
+	<skill id="19416" toLevel="9" name="Elemental Burst: Holy">
 		<!-- Elemental Burst inflicts Stun for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>5</abnormalTime>
@@ -481,6 +488,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -494,14 +503,14 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="19417" toLevel="7" name="Elemental Burst: Water">
+	<skill id="19417" toLevel="9" name="Elemental Burst: Water">
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>60</activateRate> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -510,6 +519,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -523,13 +534,14 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
+	<skill id="19418" toLevel="9" name="Elemental Burst: Wind">
 		<!-- Elemental Burst cancels target and inflicts Faint for $s1 -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>100</activateRate> <!-- Guessed -->
+		<trait>SHOCK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -538,6 +550,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -551,7 +565,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19419" toLevel="7" name="Elemental Burst: Earth">
+	<skill id="19419" toLevel="9" name="Elemental Burst: Earth">
 		<!-- Elemental Burst inflicts Knock Down for $s1. -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -568,6 +582,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
