@@ -392,6 +392,7 @@ import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q10516_UnveiledFafurionTemple.Q10516_UnveiledFafurionTemple;
+import quests.custom.Q10517_FafurionsMinions.Q10517_FafurionsMinions;
 import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
 import quests.not_done.*;
 
@@ -767,7 +768,7 @@ public class QuestMasterHandler
 		Q10504_JewelOfAntharas.class,
 		Q10505_JewelOfValakas.class,
 		Q10516_UnveiledFafurionTemple.class, // FIXME: Custom.
-		Q10517_FafurionsMinions.class, // TODO: Not done.
+		Q10517_FafurionsMinions.class, // FIXME: Custom.
 		Q10518_SucceedingThePriestess.class, // TODO: Not done.
 		Q10519_ControllingYourTemper.class, // TODO: Not done.
 		Q10520_TempleGuardians.class, // TODO: Not done.
