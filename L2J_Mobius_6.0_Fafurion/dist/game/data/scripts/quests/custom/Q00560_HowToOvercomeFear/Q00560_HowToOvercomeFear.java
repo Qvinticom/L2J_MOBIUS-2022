@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.custom.Q10517_FafurionsMinions;
+package quests.custom.Q00560_HowToOvercomeFear;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -29,14 +28,14 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
-import quests.custom.Q10516_UnveiledFafurionTemple.Q10516_UnveiledFafurionTemple;
+import quests.custom.Q10517_FafurionsMinions.Q10517_FafurionsMinions;
 
 /**
- * Fafurion's Minions (10517)
- * @URL https://l2wiki.com/Fafurion%27s_Minions
+ * How to Overcome Fear (560)
+ * @URL https://l2wiki.com/How_to_Overcome_Fear
  * @author Liamxroy
  */
-public class Q10517_FafurionsMinions extends Quest
+public class Q00560_HowToOvercomeFear extends Quest
 {
 	// NPCs
 	private static final int START_NPC = 34489;
@@ -56,28 +55,25 @@ public class Q10517_FafurionsMinions extends Quest
 		24329,
 	};
 	// Item
-	private static final int MONSTER_DROP = 80323;
+	private static final int MONSTER_DROP = 80324;
 	// Misc
-	private static final int REQUIRED_DROP_COUNT = 10;
-	private static final int REQUIRED_KILL_COUNT = 250;
-	private static final String KILL_COUNT_VAR = "KillCount";
-	private static final int KILLING_NPCSTRING_ID1 = NpcStringId.LV_110_FAFURION_S_MINIONS_IN_PROGRESS.getId();
-	private static final int KILLING_NPCSTRING_ID2 = NpcStringId.DEFEAT_FAFURION_S_KIN.getId();
-	private static final QuestType QUEST_TYPE = QuestType.ONE_TIME; // REPEATABLE, ONE_TIME, DAILY
-	private static final boolean PARTY_QUEST = false;
+	private static final int REQUIRED_DROP_COUNT = 30;
+	private static final int KILLING_NPCSTRING_ID = NpcStringId.LV_110_HOW_TO_OVERCOME_FEAR_IN_PROGRESS.getId();
+	private static final QuestType QUEST_TYPE = QuestType.DAILY; // REPEATABLE, ONE_TIME, DAILY
+	private static final boolean PARTY_QUEST = true;
 	private static final int KILLING_COND = 1;
 	private static final int FINISH_COND = 2;
 	private static final int MIN_LEVEL = 110;
 	
-	public Q10517_FafurionsMinions()
+	public Q00560_HowToOvercomeFear()
 	{
-		super(10517);
+		super(560);
 		addStartNpc(START_NPC);
 		addTalkId(START_NPC);
 		addKillId(MONSTERS);
 		registerQuestItems(MONSTER_DROP);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
-		addCondCompletedQuest(Q10516_UnveiledFafurionTemple.class.getSimpleName(), getNoQuestMsg(null));
+		addCondCompletedQuest(Q10517_FafurionsMinions.class.getSimpleName(), getNoQuestMsg(null));
 	}
 	
 	@Override
@@ -106,8 +102,8 @@ public class Q10517_FafurionsMinions extends Quest
 				{
 					takeItems(player, MONSTER_DROP, -1);
 					// Reward.
-					addExpAndSp(player, 333371214000L, 333371160);
-					rewardItems(player, 46150, 1);
+					addExpAndSp(player, 166685607000L, 166685580);
+					giveAdena(player, 4190158, false);
 					qs.exitQuest(QUEST_TYPE, true);
 				}
 				break;
@@ -168,26 +164,15 @@ public class Q10517_FafurionsMinions extends Quest
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
+		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
-			giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
-			
-			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < REQUIRED_KILL_COUNT)
-			{
-				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			
-			if ((killCount >= REQUIRED_KILL_COUNT) && (getQuestItemsCount(killer, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
+			if (giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true))
 			{
 				qs.setCond(FINISH_COND);
 			}
-			
 			sendNpcLogList(killer);
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -198,8 +183,7 @@ public class Q10517_FafurionsMinions extends Quest
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID1, true, (int) getQuestItemsCount(player, MONSTER_DROP)));
-			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID2, true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, false, (int) getQuestItemsCount(player, MONSTER_DROP)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

@@ -391,6 +391,7 @@ import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
+import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q10516_UnveiledFafurionTemple.Q10516_UnveiledFafurionTemple;
 import quests.custom.Q10517_FafurionsMinions.Q10517_FafurionsMinions;
 import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
@@ -502,7 +503,7 @@ public class QuestMasterHandler
 		Q00529_RegularBarrierMaintenance.class, // FIXME: Custom.
 		Q00551_OlympiadStarter.class,
 		Q00553_OlympiadUndefeated.class,
-		Q00560_HowToOvercomeFear.class, // TODO: Not done.
+		Q00560_HowToOvercomeFear.class, // FIXME: Custom.
 		Q00561_BasicMissionHarnakUndergroundRuins.class, // TODO: Not done.
 		Q00562_BasicMissionAltarOfEvil.class, // TODO: Not done.
 		Q00563_BasicMissionBloodySwampland.class, // TODO: Not done.
