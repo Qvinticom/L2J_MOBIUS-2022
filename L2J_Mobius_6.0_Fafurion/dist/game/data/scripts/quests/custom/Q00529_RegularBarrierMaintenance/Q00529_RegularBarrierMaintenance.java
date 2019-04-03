@@ -185,7 +185,7 @@ public class Q00529_RegularBarrierMaintenance extends Quest
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, false, (int) getQuestItemsCount(player, MONSTER_DROP)));
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, true, (int) getQuestItemsCount(player, MONSTER_DROP)));
 			return holder;
 		}
 		return super.getNpcLogList(player);
