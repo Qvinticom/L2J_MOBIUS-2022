@@ -349,6 +349,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48837" name="Dispersing Energy of the Sea of Spores" type="EtcItem">
 		<!-- Part of the Energy of the Sea of Spores obtained from Orfen's Handmaidens Arima and Arimus. It is dispersing as it is unstable. It will be stabilized once Orfen's Handmaidens absorb all the Energy of the Sea of Spores. Gather and take it to Paterson's Disciple Bacon at the entrance of the Sea of Spores. -->
@@ -371,6 +372,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48839" name="Ultimate Lv. 5 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one level 5 Gem. -->

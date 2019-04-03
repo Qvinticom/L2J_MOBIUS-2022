@@ -390,6 +390,8 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
+import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
 import quests.not_done.*;
 
 /**
@@ -495,7 +497,7 @@ public class QuestMasterHandler
 		Q00504_CompetitionForTheBanditStronghold.class, // TODO: Not done.
 		Q00511_AwlUnderFoot.class,
 		Q00512_BladeUnderFoot.class,
-		Q00529_RegularBarrierMaintenance.class, // TODO: Not done.
+		Q00529_RegularBarrierMaintenance.class, // FIXME: Custom.
 		Q00551_OlympiadStarter.class,
 		Q00553_OlympiadUndefeated.class,
 		Q00560_HowToOvercomeFear.class, // TODO: Not done.
@@ -776,7 +778,7 @@ public class QuestMasterHandler
 		Q10526_TheDarkSecretOfTheKetraOrcs.class,
 		Q10527_TheAssassinationOfTheKetraOrcCommander.class,
 		Q10528_TheAssassinationOfTheKetraOrcChief.class,
-		Q10529_IvoryTowersResearchFloatingSeaJournal.class, // TODO: Not done.
+		Q10529_IvoryTowersResearchFloatingSeaJournal.class, // FIXME: Custom.
 		Q10531_OddHappeningsAtDragonValley.class, // TODO: Not done.
 		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
 		Q10533_OrfensAmbition.class, // TODO: Not done.
