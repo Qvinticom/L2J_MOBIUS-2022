@@ -356,14 +356,13 @@ public class QuestMasterHandler
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
+		Q00910_RequestFromTheRedLibraGuildBasic.class, // TODO: Not done.
+		Q00911_RequestFromTheRedLibraGuildIntermediate.class, // TODO: Not done.
+		Q00912_RequestFromTheRedLibraGuildAdvanced.class, // TODO: Not done.
+		Q00913_RequestFromTheRedLibraGuildSuperAdvanced.class, // TODO: Not done.
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
 		Q11000_MoonKnight.class,
-		// Not done.
-		Q00910_RequestFromTheRedLibraGuildBasic.class,
-		Q00911_RequestFromTheRedLibraGuildIntermediate.class,
-		Q00912_RequestFromTheRedLibraGuildAdvanced.class,
-		Q00913_RequestFromTheRedLibraGuildSuperAdvanced.class
 	};
 	
 	public static void main(String[] args)

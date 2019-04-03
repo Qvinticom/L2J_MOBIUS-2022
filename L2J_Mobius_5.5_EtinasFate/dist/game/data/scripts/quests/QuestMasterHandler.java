@@ -483,8 +483,8 @@ public class QuestMasterHandler
 		Q00473_InTheCoralGarden.class,
 		Q00474_WaitingForTheSummer.class,
 		Q00476_PlainMission.class,
-		Q00483_IntendedTactic.class,
 		Q00482_RecertificationOfValue.class,
+		Q00483_IntendedTactic.class,
 		Q00485_HotSpringWater.class,
 		Q00492_TombRaiders.class,
 		Q00493_KickingOutUnwelcomeGuests.class,
@@ -495,10 +495,43 @@ public class QuestMasterHandler
 		Q00498_IncarnationOfJealousyPellineSolo.class,
 		Q00499_IncarnationOfGluttonyKaliosSolo.class,
 		Q00500_BrothersBoundInChains.class,
+		Q00504_CompetitionForTheBanditStronghold.class, // TODO: Not done.
 		Q00511_AwlUnderFoot.class,
 		Q00512_BladeUnderFoot.class,
+		Q00529_RegularBarrierMaintenance.class, // TODO: Not done.
 		Q00551_OlympiadStarter.class,
 		Q00553_OlympiadUndefeated.class,
+		Q00561_BasicMissionHarnakUndergroundRuins.class, // TODO: Not done.
+		Q00562_BasicMissionAltarOfEvil.class, // TODO: Not done.
+		Q00563_BasicMissionBloodySwampland.class, // TODO: Not done.
+		Q00564_BasicMissionKartiasLabyrinthSolo.class, // TODO: Not done.
+		Q00565_BasicMissionFairySettlementWest.class, // TODO: Not done.
+		Q00566_BasicMissionFairySettlementEast.class, // TODO: Not done.
+		Q00567_BasicMissionIsleOfSouls.class, // TODO: Not done.
+		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
+		Q00569_BasicMissionSealOfShilen.class, // TODO: Not done.
+		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
+		Q00571_SpecialMissionProofOfUnityFieldRaid.class, // TODO: Not done.
+		Q00572_SpecialMissionProofOfCourageFieldRaid.class, // TODO: Not done.
+		Q00573_SpecialMissionProofOfStrengthFieldRaid.class, // TODO: Not done.
+		Q00574_SpecialMissionNornilsGarden.class, // TODO: Not done.
+		Q00575_SpecialMissionFortuna.class, // TODO: Not done.
+		Q00576_SpecialMissionDefeatSpezion.class, // TODO: Not done.
+		Q00577_BasicMissionSilentValley.class, // TODO: Not done.
+		Q00580_BeyondTheMemories.class, // TODO: Not done.
+		Q00581_ThePurificationRitual.class, // TODO: Not done.
+		Q00582_WashBloodWithBlood.class, // TODO: Not done.
+		Q00583_MeaningOfSurvival.class, // TODO: Not done.
+		Q00584_NeverSayGoodBye.class, // TODO: Not done.
+		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
+		Q00586_MutatedCreatures.class, // TODO: Not done.
+		Q00587_MoreAggressiveOperation.class, // TODO: Not done.
+		Q00588_HeadOnCrash.class, // TODO: Not done.
+		Q00589_ASecretChange.class, // TODO: Not done.
+		Q00590_ToEachTheirOwn.class, // TODO: Not done.
+		Q00591_GreatAmbitions.class, // TODO: Not done.
+		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
+		Q00600_KeyToTheRefiningProcess.class, // TODO: Not done.
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
 		Q00620_FourGoblets.class,
@@ -507,11 +540,31 @@ public class QuestMasterHandler
 		Q00623_TheFinestFood.class,
 		Q00627_HeartInSearchOfPower.class,
 		Q00648_AnIceMerchantsDream.class,
+		Q00655_AGrandPlanForTamingWildBeasts.class, // TODO: Not done.
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
+		Q00665_BasicTrainingForHunterGuildMember.class, // TODO: Not done.
+		Q00666_HunterGuildMembersKnowledge.class, // TODO: Not done.
+		Q00667_CoveringShilensEyes.class, // TODO: Not done.
+		Q00668_ABattleWithTheGiants.class, // TODO: Not done.
+		Q00669_DesperateFightWithTheDragons.class, // TODO: Not done.
 		Q00670_DefeatingTheLordOfSeed.class,
+		Q00671_PathToFindingThePast.class, // TODO: Not done.
+		Q00672_ArchenemyEmbryo.class, // TODO: Not done.
+		Q00673_BelethAmbition.class, // TODO: Not done.
+		Q00674_ChangesInTheShadowOfTheMotherTree.class, // TODO: Not done.
+		Q00675_WhatTheThreadOfThePastShows.class, // TODO: Not done.
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
+		Q00737_ASwordHiddenInASmile.class, // TODO: Not done.
+		Q00738_DimensionalExplorationOfTheUnworldlyVisitors.class, // TODO: Not done.
+		Q00743_AtTheAltarOfOblivion.class, // TODO: Not done.
+		Q00744_TheAlligatorHunterReturns.class, // TODO: Not done.
+		Q00745_TheOutlawsAreIncoming.class, // TODO: Not done.
+		Q00747_DefendingTheForsakenPlains.class, // TODO: Not done.
+		Q00748_EndlessRevenge.class, // TODO: Not done.
+		Q00749_TiesWithTheGuardians.class, // TODO: Not done.
+		Q00750_SevenFlowers.class, // TODO: Not done.
 		Q00751_LiberatingTheSpirits.class,
 		Q00752_UncoverTheSecret.class,
 		Q00753_ReactingToACrisis.class,
@@ -520,22 +573,32 @@ public class QuestMasterHandler
 		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
 		Q00758_TheFallenKingsMen.class,
+		Q00759_TheDwarvenNightmareContinues.class, // TODO: Not done.
 		Q00760_BlockTheExit.class,
 		Q00761_AssistingTheGoldenRamArmy.class,
 		Q00762_AnOminousRequest.class,
 		Q00763_ADauntingTask.class,
 		Q00764_WeakeningTheVarkaSilenosForces.class,
 		Q00765_WeakeningTheKetraOrcForces.class,
+		Q00773_ToCalmTheFlood.class, // TODO: Not done.
+		Q00774_DreamingOfPeace.class, // TODO: Not done.
 		Q00775_RetrievingTheChaosFragment.class,
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,
 		Q00778_OperationRoaringFlame.class,
 		Q00779_UtilizeTheDarknessSeedOfDestruction.class,
+		Q00780_UtilizeTheDarknessSeedOfInfinity.class, // TODO: Not done.
+		Q00781_UtilizeTheDarknessSeedOfAnnihilation.class, // TODO: Not done.
+		Q00782_UtilizeTheDarknessSeedOfHellfire.class, // TODO: Not done.
 		Q00783_VestigeOfTheMagicPower.class,
 		Q00787_TheRoleOfAWatcher.class,
+		Q00789_WaitingForPaagrio.class, // TODO: Not done.
 		Q00790_ObtainingFerinsTrust.class,
+		Q00792_TheSuperionGiants.class, // TODO: Not done.
+		Q00816_PlansToRepairTheStronghold.class, // TODO: Not done.
 		Q00817_BlackAteliaResearch.class,
 		Q00823_DisappearedRaceNewFairy.class,
+		Q00824_AttackTheCommandPost.class, // TODO: Not done.
 		Q00826_InSearchOfTheSecretWeapon.class,
 		Q00827_EinhasadsOrder.class,
 		Q00828_EvasBlessing.class,
@@ -543,14 +606,36 @@ public class QuestMasterHandler
 		Q00830_TheWayOfTheGiantsPawn.class,
 		Q00831_SayhasScheme.class,
 		Q00835_PitiableMelisa.class,
+		Q00836_RequestFromTheBlackbirdClan.class, // TODO: Not done.
+		Q00837_RequestFromTheGiantTrackers.class, // TODO: Not done.
+		Q00838_RequestFromTheMotherTreeGuardians.class, // TODO: Not done.
+		Q00839_RequestFromTheUnworldlyVisitors.class, // TODO: Not done.
+		Q00840_RequestFromTheKingdomsRoyalGuard.class, // TODO: Not done.
+		Q00841_ContaminationContainment.class, // TODO: Not done.
+		Q00842_CaptiveDemons.class, // TODO: Not done.
+		Q00843_GiantEvolutionControl.class, // TODO: Not done.
+		Q00844_GiantsTreasure.class, // TODO: Not done.
+		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
+		Q00846_BuildingUpStrength.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
+		Q00923_ShinedustExtraction.class, // TODO: Not done.
+		Q00924_GiantOfTheRestorationRoom.class, // TODO: Not done.
 		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,
+		Q00929_SeekerRescue.class, // TODO: Not done.
+		Q00930_DisparagingThePhantoms.class, // TODO: Not done.
+		Q00931_MemoriesOfTheWind.class, // TODO: Not done.
+		Q00932_SayhasEnergy.class, // TODO: Not done.
 		Q00937_ToReviveTheFishingGuild.class,
+		Q00985_AdventureGuildsSpecialRequestLv1.class, // TODO: Not done.
+		Q00986_AdventureGuildsSpecialRequestLv2.class, // TODO: Not done.
+		Q00987_AdventureGuildsSpecialRequestLv3.class, // TODO: Not done.
+		Q00988_AdventureGuildsSpecialRequestLv4.class, // TODO: Not done.
+		Q00989_AdventureGuildsSpecialRequestLv5.class, // TODO: Not done.
 		Q10282_ToTheSeedOfAnnihilation.class,
 		Q10283_RequestOfIceMerchant.class,
 		Q10284_AcquisitionOfDivineSword.class,
@@ -565,6 +650,7 @@ public class QuestMasterHandler
 		Q10295_SevenSignsSolinasTomb.class,
 		Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class,
 		Q10297_GrandOpeningComeToOurPub.class,
+		Q10298_WastelandQueen.class, // TODO: Not done.
 		Q10301_ShadowOfTerrorBlackishRedFog.class,
 		Q10302_UnsettlingShadowAndRumors.class,
 		Q10303_CrossroadsBetweenLightAndDarkness.class,
@@ -599,6 +685,8 @@ public class QuestMasterHandler
 		Q10351_OwnerOfHall.class,
 		Q10353_CertificationOfValue.class,
 		Q10354_ResurrectedOwnerOfHall.class,
+		Q10355_BlacksmithsSoul1.class, // TODO: Not done.
+		Q10356_BlacksmithsSoul2.class, // TODO: Not done.
 		Q10358_DividedSakumPoslof.class,
 		Q10359_TracesOfEvil.class,
 		Q10360_CertificationOfFate.class,
@@ -608,6 +696,7 @@ public class QuestMasterHandler
 		Q10365_ForTheSearchdogKing.class,
 		Q10366_ReportOnTheSituationAtTheRuins.class,
 		Q10369_NoblesseSoulTesting.class,
+		Q10373_ExploringTheDimensionSealingTheDimension.class, // TODO: Not done.
 		Q10377_TheInvadedExecutionGrounds.class,
 		Q10378_WeedingWork.class,
 		Q10379_AnUninvitedGuest.class,
@@ -642,10 +731,12 @@ public class QuestMasterHandler
 		Q10415_KekropusLetterWithWisdom.class,
 		Q10416_InSearchOfTheEyeOfArgos.class,
 		Q10417_DaimonTheWhiteEyed.class,
+		Q10418_TheImmortalPirateKing.class, // TODO: Not done.
 		Q10419_KekropusLetterKampfsWhereabouts.class,
 		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
+		Q10423_EmbryoStrongholdRaid.class, // TODO: Not done.
 		Q10424_KekropusLetterBelosWhereabouts.class,
 		Q10425_TheKetraOrcSupporters.class,
 		Q10426_AssassinationOfTheKetraOrcCommander.class,
@@ -655,8 +746,10 @@ public class QuestMasterHandler
 		Q10447_TimingIsEverything.class,
 		Q10450_ADarkAmbition.class,
 		Q10453_StoppingTheWindDragon.class,
+		Q10454_FinalEmbryoApostle.class, // TODO: Not done.
 		Q10455_ElikiasLetter.class,
 		Q10456_OperationRescue.class,
+		Q10457_KefensisIllusion.class, // TODO: Not done.
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
 		Q10472_WindsOfFateEncroachingShadows.class,
@@ -665,6 +758,7 @@ public class QuestMasterHandler
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
 		Q10504_JewelOfAntharas.class,
 		Q10505_JewelOfValakas.class,
+		Q10506_DianasRequest.class, // TODO: Not done.
 		Q10521_QueenNavarisLetterVarkaSilenosBarracks.class,
 		Q10522_TheDarkSecretOfVarkaSilenos.class,
 		Q10523_TheAssassinationOfTheVarkaSilenosCommander.class,
@@ -673,11 +767,54 @@ public class QuestMasterHandler
 		Q10526_TheDarkSecretOfTheKetraOrcs.class,
 		Q10527_TheAssassinationOfTheKetraOrcCommander.class,
 		Q10528_TheAssassinationOfTheKetraOrcChief.class,
+		Q10529_IvoryTowersResearchSeaOfSporesJournal.class, // TODO: Not done.
+		Q10531_OddHappeningsAtDragonValley.class, // TODO: Not done.
+		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
+		Q10533_OrfensAmbition.class, // TODO: Not done.
 		Q10534_HatchlingResearch.class,
+		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
+		Q10537_KamaelDisarray.class, // TODO: Not done.
+		Q10538_GiantsEvolution.class, // TODO: Not done.
+		Q10539_EnergySupplyCutoffPlan.class, // TODO: Not done.
+		Q10540_ThwartingMimirsPlan.class, // TODO: Not done.
 		Q10541_TrainLikeTheRealThing.class,
 		Q10542_SearchingForNewPower.class,
 		Q10543_SheddingWeight.class,
 		Q10544_SeekerSupplies.class,
+		Q10552_ChallengeBalthusKnight.class, // TODO: Not done.
+		Q10553_WhatMattersMoreThanAbility.class, // TODO: Not done.
+		Q10554_GiftForYou.class, // TODO: Not done.
+		Q10555_ChargeAtAntharas.class, // TODO: Not done.
+		Q10556_ForgottenPowerStartOfFate.class, // TODO: Not done.
+		Q10557_NewPowerWindsOfFate.class, // TODO: Not done.
+		Q10558_HiddenInChaos.class, // TODO: Not done.
+		Q10559_BeforeTheGuide.class, // TODO: Not done.
+		Q10560_WayOfWanderingKnight.class, // TODO: Not done.
+		Q10561_AcrossTheDeathLine.class, // TODO: Not done.
+		Q10562_TakeUpArms.class, // TODO: Not done.
+		Q10563_ControlOfPower.class, // TODO: Not done.
+		Q10564_ProveProgress.class, // TODO: Not done.
+		Q10565_NothingIsImpossible.class, // TODO: Not done.
+		Q10566_BestChoice.class, // TODO: Not done.
+		Q10567_SpecialMissionNornilsGarden.class, // TODO: Not done.
+		Q10568_KamaelsTechnologicalAdvancement.class, // TODO: Not done.
+		Q10569_DeclarationOfWar.class, // TODO: Not done.
+		Q10570_HurrahForKamaelsIndependence.class, // TODO: Not done.
+		Q10571_StrategicReconciliation.class, // TODO: Not done.
+		Q10572_ToExpelTheEmbryosForces.class, // TODO: Not done.
+		Q10574_SpecialMissionFortuna.class, // TODO: Not done.
+		Q10575_LetsGoFishing.class, // TODO: Not done.
+		Q10576_GlitteringWeapons.class, // TODO: Not done.
+		Q10577_TemperARustingBlade.class, // TODO: Not done.
+		Q10578_TheSoulOfASword.class, // TODO: Not done.
+		Q10579_ContainingTheAttributePower.class, // TODO: Not done.
+		Q10580_SpecialMissionDefeatSpezion.class, // TODO: Not done.
+		Q10594_FergasonsScheme.class, // TODO: Not done.
+		Q10595_TheDimensionalWarpPart8.class, // TODO: Not done.
+		Q10596_TheDimensionalWarpPart9.class, // TODO: Not done.
+		Q10597_EscapeToTheShadowOfTheMotherTree.class, // TODO: Not done.
+		Q10598_WithAllYourMight.class, // TODO: Not done.
+		Q10599_ThreadOfFateHangingOnTheMotherTree.class, // TODO: Not done.
 		Q10658_MakkumInTheDimension.class,
 		Q10701_TheRoadToDestruction.class,
 		Q10702_TheRoadToInfinity.class,
@@ -702,6 +839,8 @@ public class QuestMasterHandler
 		Q10744_StrongerThanSteel.class,
 		Q10745_TheSecretIngredients.class,
 		Q10746_SeeTheWorld.class,
+		Q10748_MysteriousSuggestion1.class, // TODO: Not done.
+		Q10749_MysteriousSuggestion2.class, // TODO: Not done.
 		Q10751_WindsOfFateEncounters.class,
 		Q10752_WindsOfFateAPromise.class,
 		Q10753_WindsOfFateChoices.class,
@@ -776,177 +915,37 @@ public class QuestMasterHandler
 		Q10840_TimeToRecover.class,
 		Q10841_DeepInsideAteliaFortress.class,
 		Q10843_AnomalyInTheEnchantedValley.class,
-		// Not done.
-		Q00504_CompetitionForTheBanditStronghold.class,
-		Q00529_RegularBarrierMaintenance.class,
-		Q00561_BasicMissionHarnakUndergroundRuins.class,
-		Q00562_BasicMissionAltarOfEvil.class,
-		Q00563_BasicMissionBloodySwampland.class,
-		Q00564_BasicMissionKartiasLabyrinthSolo.class,
-		Q00565_BasicMissionFairySettlementWest.class,
-		Q00566_BasicMissionFairySettlementEast.class,
-		Q00567_BasicMissionIsleOfSouls.class,
-		Q00568_SpecialMissionNornilsCave.class,
-		Q00569_BasicMissionSealOfShilen.class,
-		Q00570_SpecialMissionKartiasLabyrinthParty.class,
-		Q00571_SpecialMissionProofOfUnityFieldRaid.class,
-		Q00572_SpecialMissionProofOfCourageFieldRaid.class,
-		Q00573_SpecialMissionProofOfStrengthFieldRaid.class,
-		Q00574_SpecialMissionNornilsGarden.class,
-		Q00575_SpecialMissionFortuna.class,
-		Q00576_SpecialMissionDefeatSpezion.class,
-		Q00577_BasicMissionSilentValley.class,
-		Q00580_BeyondTheMemories.class,
-		Q00581_ThePurificationRitual.class,
-		Q00582_WashBloodWithBlood.class,
-		Q00583_MeaningOfSurvival.class,
-		Q00584_NeverSayGoodBye.class,
-		Q00585_CantGoAgainstTheTime.class,
-		Q00586_MutatedCreatures.class,
-		Q00587_MoreAggressiveOperation.class,
-		Q00588_HeadOnCrash.class,
-		Q00589_ASecretChange.class,
-		Q00590_ToEachTheirOwn.class,
-		Q00591_GreatAmbitions.class,
-		Q00599_DemonsAndDimensionalEnergy.class,
-		Q00600_KeyToTheRefiningProcess.class,
-		Q00655_AGrandPlanForTamingWildBeasts.class,
-		Q00665_BasicTrainingForHunterGuildMember.class,
-		Q00666_HunterGuildMembersKnowledge.class,
-		Q00667_CoveringShilensEyes.class,
-		Q00668_ABattleWithTheGiants.class,
-		Q00669_DesperateFightWithTheDragons.class,
-		Q00671_PathToFindingThePast.class,
-		Q00672_ArchenemyEmbryo.class,
-		Q00673_BelethAmbition.class,
-		Q00674_ChangesInTheShadowOfTheMotherTree.class,
-		Q00675_WhatTheThreadOfThePastShows.class,
-		Q00737_ASwordHiddenInASmile.class,
-		Q00738_DimensionalExplorationOfTheUnworldlyVisitors.class,
-		Q00743_AtTheAltarOfOblivion.class,
-		Q00744_TheAlligatorHunterReturns.class,
-		Q00745_TheOutlawsAreIncoming.class,
-		Q00747_DefendingTheForsakenPlains.class,
-		Q00748_EndlessRevenge.class,
-		Q00749_TiesWithTheGuardians.class,
-		Q00750_SevenFlowers.class,
-		Q00759_TheDwarvenNightmareContinues.class,
-		Q00773_ToCalmTheFlood.class,
-		Q00774_DreamingOfPeace.class,
-		Q00780_UtilizeTheDarknessSeedOfInfinity.class,
-		Q00781_UtilizeTheDarknessSeedOfAnnihilation.class,
-		Q00782_UtilizeTheDarknessSeedOfHellfire.class,
-		Q00789_WaitingForPaagrio.class,
-		Q00792_TheSuperionGiants.class,
-		Q00816_PlansToRepairTheStronghold.class,
-		Q00824_AttackTheCommandPost.class,
-		Q00836_RequestFromTheBlackbirdClan.class,
-		Q00837_RequestFromTheGiantTrackers.class,
-		Q00838_RequestFromTheMotherTreeGuardians.class,
-		Q00839_RequestFromTheUnworldlyVisitors.class,
-		Q00840_RequestFromTheKingdomsRoyalGuard.class,
-		Q00841_ContaminationContainment.class,
-		Q00842_CaptiveDemons.class,
-		Q00843_GiantEvolutionControl.class,
-		Q00844_GiantsTreasure.class,
-		Q00845_SabotageTheEmbryoSupplies.class,
-		Q00846_BuildingUpStrength.class,
-		Q00923_ShinedustExtraction.class,
-		Q00924_GiantOfTheRestorationRoom.class,
-		Q00929_SeekerRescue.class,
-		Q00930_DisparagingThePhantoms.class,
-		Q00931_MemoriesOfTheWind.class,
-		Q00932_SayhasEnergy.class,
-		Q00985_AdventureGuildsSpecialRequestLv1.class,
-		Q00986_AdventureGuildsSpecialRequestLv2.class,
-		Q00987_AdventureGuildsSpecialRequestLv3.class,
-		Q00988_AdventureGuildsSpecialRequestLv4.class,
-		Q00989_AdventureGuildsSpecialRequestLv5.class,
-		Q10298_WastelandQueen.class,
-		Q10355_BlacksmithsSoul1.class,
-		Q10356_BlacksmithsSoul2.class,
-		Q10373_ExploringTheDimensionSealingTheDimension.class,
-		Q10418_TheImmortalPirateKing.class,
-		Q10423_EmbryoStrongholdRaid.class,
-		Q10454_FinalEmbryoApostle.class,
-		Q10457_KefensisIllusion.class,
-		Q10506_DianasRequest.class,
-		Q10529_IvoryTowersResearchSeaOfSporesJournal.class,
-		Q10531_OddHappeningsAtDragonValley.class,
-		Q10532_UncoveringTheConspiracy.class,
-		Q10533_OrfensAmbition.class,
-		Q10535_BlacksmithsSoul3.class,
-		Q10537_KamaelDisarray.class,
-		Q10538_GiantsEvolution.class,
-		Q10539_EnergySupplyCutoffPlan.class,
-		Q10540_ThwartingMimirsPlan.class,
-		Q10552_ChallengeBalthusKnight.class,
-		Q10553_WhatMattersMoreThanAbility.class,
-		Q10554_GiftForYou.class,
-		Q10555_ChargeAtAntharas.class,
-		Q10556_ForgottenPowerStartOfFate.class,
-		Q10557_NewPowerWindsOfFate.class,
-		Q10558_HiddenInChaos.class,
-		Q10559_BeforeTheGuide.class,
-		Q10560_WayOfWanderingKnight.class,
-		Q10561_AcrossTheDeathLine.class,
-		Q10562_TakeUpArms.class,
-		Q10563_ControlOfPower.class,
-		Q10564_ProveProgress.class,
-		Q10565_NothingIsImpossible.class,
-		Q10566_BestChoice.class,
-		Q10567_SpecialMissionNornilsGarden.class,
-		Q10568_KamaelsTechnologicalAdvancement.class,
-		Q10569_DeclarationOfWar.class,
-		Q10570_HurrahForKamaelsIndependence.class,
-		Q10571_StrategicReconciliation.class,
-		Q10572_ToExpelTheEmbryosForces.class,
-		Q10574_SpecialMissionFortuna.class,
-		Q10575_LetsGoFishing.class,
-		Q10576_GlitteringWeapons.class,
-		Q10577_TemperARustingBlade.class,
-		Q10578_TheSoulOfASword.class,
-		Q10579_ContainingTheAttributePower.class,
-		Q10580_SpecialMissionDefeatSpezion.class,
-		Q10594_FergasonsScheme.class,
-		Q10595_TheDimensionalWarpPart8.class,
-		Q10596_TheDimensionalWarpPart9.class,
-		Q10597_EscapeToTheShadowOfTheMotherTree.class,
-		Q10598_WithAllYourMight.class,
-		Q10599_ThreadOfFateHangingOnTheMotherTree.class,
-		Q10748_MysteriousSuggestion1.class,
-		Q10749_MysteriousSuggestion2.class,
-		Q10844_BloodyBattleSeizingSupplies.class,
-		Q10845_BloodyBattleRescueTheSmiths.class,
-		Q10846_BloodyBattleMeetingTheCommander.class,
-		Q10848_TrialsBeforeTheBattle.class,
-		Q10849_TrialsForAdaptation.class,
-		Q10851_ElvenBotany.class,
-		Q10852_TheMotherTreeRevivalProject.class,
-		Q10853_ToWeakenTheGiants.class,
-		Q10854_ToSeizeTheFortress.class,
-		Q10856_SuperionAppears.class,
-		Q10857_SecretTeleport.class,
-		Q10858_QueenRamonaControllerOfTheVessel.class,
-		Q10859_OwnTheEarthAndTheHeavens.class,
-		Q10873_ExaltedReachingAnotherLevel.class,
-		Q10874_AgainstTheNewEnemy.class,
-		Q10875_ForReputation.class,
-		Q10876_LeadersGrace.class,
-		Q10877_BreakThroughCrisis.class,
-		Q10879_ExaltedGuideToPower.class,
-		Q10880_TheLastOneStanding.class,
-		Q10881_ForThePride.class,
-		Q10882_VictoryCollection.class,
-		Q10883_ImmortalHonor.class,
-		Q10886_SaviorsPathSearchTheRefinery.class,
-		Q10887_SaviorsPathDemonsAndAtelia.class,
-		Q10888_SaviorsPathDefeatTheEmbryo.class,
-		Q10889_SaviorsPathFallenEmperorsThrone.class,
-		Q10890_SaviorsPathFallOfEtina.class,
-		Q10891_AtANewPlace.class,
-		Q10892_RevengeOneStepAtATime.class,
-		Q10893_EndOfTwistedFate.class
+		Q10844_BloodyBattleSeizingSupplies.class, // TODO: Not done.
+		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
+		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
+		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
+		Q10849_TrialsForAdaptation.class, // TODO: Not done.
+		Q10851_ElvenBotany.class, // TODO: Not done.
+		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
+		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
+		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
+		Q10856_SuperionAppears.class, // TODO: Not done.
+		Q10857_SecretTeleport.class, // TODO: Not done.
+		Q10858_QueenRamonaControllerOfTheVessel.class, // TODO: Not done.
+		Q10859_OwnTheEarthAndTheHeavens.class, // TODO: Not done.
+		Q10873_ExaltedReachingAnotherLevel.class, // TODO: Not done.
+		Q10874_AgainstTheNewEnemy.class, // TODO: Not done.
+		Q10875_ForReputation.class, // TODO: Not done.
+		Q10876_LeadersGrace.class, // TODO: Not done.
+		Q10877_BreakThroughCrisis.class, // TODO: Not done.
+		Q10879_ExaltedGuideToPower.class, // TODO: Not done.
+		Q10880_TheLastOneStanding.class, // TODO: Not done.
+		Q10881_ForThePride.class, // TODO: Not done.
+		Q10882_VictoryCollection.class, // TODO: Not done.
+		Q10883_ImmortalHonor.class, // TODO: Not done.
+		Q10886_SaviorsPathSearchTheRefinery.class, // TODO: Not done.
+		Q10887_SaviorsPathDemonsAndAtelia.class, // TODO: Not done.
+		Q10888_SaviorsPathDefeatTheEmbryo.class, // TODO: Not done.
+		Q10889_SaviorsPathFallenEmperorsThrone.class, // TODO: Not done.
+		Q10890_SaviorsPathFallOfEtina.class, // TODO: Not done.
+		Q10891_AtANewPlace.class, // TODO: Not done.
+		Q10892_RevengeOneStepAtATime.class, // TODO: Not done.
+		Q10893_EndOfTwistedFate.class, // TODO: Not done.
 	};
 	
 	public static void main(String[] args)

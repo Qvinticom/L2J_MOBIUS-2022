@@ -304,10 +304,8 @@ public class QuestMasterHandler
 		Q00329_CuriosityOfADwarf.class,
 		Q00331_ArrowOfVengeance.class,
 		Q00333_HuntOfTheBlackLion.class,
-		Q00348_AnArrogantSearch.class,
-		Q00374_WhisperOfDreamsPart1.class,
-		Q00375_WhisperOfDreamsPart2.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
+		Q00348_AnArrogantSearch.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
 		Q00356_DigUpTheSeaOfSpores.class,
@@ -315,6 +313,8 @@ public class QuestMasterHandler
 		Q00360_PlunderTheirSupplies.class,
 		Q00369_CollectorOfJewels.class,
 		Q00370_AnElderSowsSeeds.class,
+		Q00374_WhisperOfDreamsPart1.class,
+		Q00375_WhisperOfDreamsPart2.class,
 		Q00401_PathOfTheWarrior.class,
 		Q00402_PathOfTheHumanKnight.class,
 		Q00403_PathOfTheRogue.class,
@@ -334,10 +334,28 @@ public class QuestMasterHandler
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
 		Q00500_BrothersBoundInChains.class,
+		Q00630_PirateTreasureHunt.class, // TODO: Not done.
+		Q00657_MonsterArenaTrialForWarriors.class, // TODO: Not done.
+		Q00658_MonsterArenaTrialForEliteWarriors.class, // TODO: Not done.
 		Q00662_AGameOfCards.class,
+		Q00664_QuarrelsTime.class, // TODO: Not done.
+		Q00910_RequestFromTheRedLibraGuildBasic.class, // TODO: Not done.
+		Q00911_RequestFromTheRedLibraGuildIntermediate.class, // TODO: Not done.
+		Q00912_RequestFromTheRedLibraGuildAdvanced.class, // TODO: Not done.
+		Q00913_RequestFromTheRedLibraGuildSuperAdvanced.class, // TODO: Not done.
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
+		Q10506_DianasRequest.class, // TODO: Not done.
+		Q10861_MonsterArenaTheBirthOfAWarrior.class, // TODO: Not done.
+		Q10862_MonsterArenaChallenge10Battles.class, // TODO: Not done.
+		Q10863_MonsterArenaNewChallenge15Battles.class, // TODO: Not done.
+		Q10864_MonsterArenaBraveWarrior25Battles.class, // TODO: Not done.
+		Q10865_MonsterArenaLastCall40Battles.class, // TODO: Not done.
 		Q10866_PunitiveOperationOnTheDevilIsle.class,
+		Q10867_GoneMissing.class, // TODO: Not done.
+		Q10868_TheDarkSideOfPower.class, // TODO: Not done.
+		Q10870_UnfinishedDevice.class, // TODO: Not done.
+		Q10871_DeathToThePirateKing.class, // TODO: Not done.
 		Q10993_FutureDwarves.class,
 		Q10994_FutureOrcs.class,
 		Q10995_MutualBenefit.class,
@@ -369,25 +387,6 @@ public class QuestMasterHandler
 		Q11021_RedGemNecklace1.class,
 		Q11022_RedGemNecklace2.class,
 		Q11023_RedGemNecklace3.class,
-		// Not done.
-		Q00630_PirateTreasureHunt.class,
-		Q00657_MonsterArenaTrialForWarriors.class,
-		Q00658_MonsterArenaTrialForEliteWarriors.class,
-		Q00664_QuarrelsTime.class,
-		Q00910_RequestFromTheRedLibraGuildBasic.class,
-		Q00911_RequestFromTheRedLibraGuildIntermediate.class,
-		Q00912_RequestFromTheRedLibraGuildAdvanced.class,
-		Q00913_RequestFromTheRedLibraGuildSuperAdvanced.class,
-		Q10506_DianasRequest.class,
-		Q10861_MonsterArenaTheBirthOfAWarrior.class,
-		Q10862_MonsterArenaChallenge10Battles.class,
-		Q10863_MonsterArenaNewChallenge15Battles.class,
-		Q10864_MonsterArenaBraveWarrior25Battles.class,
-		Q10865_MonsterArenaLastCall40Battles.class,
-		Q10867_GoneMissing.class,
-		Q10868_TheDarkSideOfPower.class,
-		Q10870_UnfinishedDevice.class,
-		Q10871_DeathToThePirateKing.class
 	};
 	
 	public static void main(String[] args)

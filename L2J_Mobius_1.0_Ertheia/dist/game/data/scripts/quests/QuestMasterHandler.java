@@ -586,6 +586,7 @@ public class QuestMasterHandler
 		Q00337_AudienceWithTheLandDragon.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
 		Q00350_EnhanceYourWeapon.class,
+		Q00353_PowerOfDarkness.class, // TODO: Not done.
 		Q00357_WarehouseKeepersAmbition.class,
 		Q00359_ForASleeplessDeadman.class,
 		Q00371_ShrieksOfGhosts.class,
@@ -624,6 +625,7 @@ public class QuestMasterHandler
 		Q00473_InTheCoralGarden.class,
 		Q00474_WaitingForTheSummer.class,
 		Q00476_PlainMission.class,
+		Q00480_AnotherLegacyOfCrumaTower.class, // TODO: Not done.
 		Q00481_ShadowHelper.class,
 		Q00482_RecertificationOfValue.class,
 		Q00483_IntendedTactic.class,
@@ -643,6 +645,7 @@ public class QuestMasterHandler
 		Q00500_BrothersBoundInChains.class,
 		Q00501_ProofOfClanAlliance.class,
 		Q00503_PursuitOfClanAmbition.class,
+		Q00504_CompetitionForTheBanditStronghold.class, // TODO: Not done.
 		Q00508_AClansReputation.class,
 		Q00509_AClansFame.class,
 		Q00510_AClansPrestige.class,
@@ -669,6 +672,7 @@ public class QuestMasterHandler
 		Q00648_AnIceMerchantsDream.class,
 		Q00650_ABrokenDream.class,
 		Q00652_AnAgedExAdventurer.class,
+		Q00655_AGrandPlanForTamingWildBeasts.class, // TODO: Not done.
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
 		Q00688_DefeatTheElrokianRaiders.class,
@@ -678,6 +682,7 @@ public class QuestMasterHandler
 		Q00702_ATrapForRevenge.class,
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
+		Q00750_SevenFlowers.class, // TODO: Not done.
 		Q00751_LiberatingTheSpirits.class,
 		Q00752_UncoverTheSecret.class,
 		Q00753_ReactingToACrisis.class,
@@ -686,21 +691,31 @@ public class QuestMasterHandler
 		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
 		Q00758_TheFallenKingsMen.class,
+		Q00759_TheDwarvenNightmareContinues.class, // TODO: Not done.
 		Q00761_AssistingTheGoldenRamArmy.class,
 		Q00762_AnOminousRequest.class,
 		Q00763_ADauntingTask.class,
 		Q00764_WeakeningTheVarkaSilenosForces.class,
 		Q00765_WeakeningTheKetraOrcForces.class,
+		Q00767_BanishingEvil.class, // TODO: Not done.
+		Q00768_TerrorOfTown.class, // TODO: Not done.
+		Q00769_TheTruthConcealedInBeauty.class, // TODO: Not done.
+		Q00770_MaintainingTheFieldBusiness.class, // TODO: Not done.
+		Q00771_PartakingInThePurificationCampaign.class, // TODO: Not done.
 		Q00772_PurifyingSouls.class,
 		Q00775_RetrievingTheChaosFragment.class,
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,
 		Q00778_OperationRoaringFlame.class,
 		Q00779_UtilizeTheDarknessSeedOfDestruction.class,
+		Q00780_UtilizeTheDarknessSeedOfInfinity.class, // TODO: Not done.
+		Q00781_UtilizeTheDarknessSeedOfAnnihilation.class, // TODO: Not done.
+		Q00782_UtilizeTheDarknessSeedOfHellfire.class, // TODO: Not done.
 		Q00784_TheQuietKiller.class,
 		Q00785_ASuspiciousIngredient.class,
 		Q00786_AwaitingTheVoiceOfTheGods.class,
 		Q00787_TheRoleOfAWatcher.class,
+		Q00789_WaitingForPaagrio.class, // TODO: Not done.
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
@@ -768,8 +783,10 @@ public class QuestMasterHandler
 		Q10345_DayOfDestinyDwarfsFate.class,
 		Q10346_DayOfDestinyKamaelsFate.class,
 		Q10351_OwnerOfHall.class,
+		Q10352_LegacyOfCrumaTower.class, // TODO: Not done.
 		Q10353_CertificationOfValue.class,
 		Q10354_ResurrectedOwnerOfHall.class,
+		Q10357_AltarOfBloodThatAwakensDestruction.class, // TODO: Not done.
 		Q10358_DividedSakumPoslof.class,
 		Q10359_TracesOfEvil.class,
 		Q10360_CertificationOfFate.class,
@@ -855,10 +872,14 @@ public class QuestMasterHandler
 		Q10452_IsItEdible.class,
 		Q10453_StoppingTheWindDragon.class,
 		Q10455_ElikiasLetter.class,
+		Q10456_OperationRescue.class, // TODO: Not done.
+		Q10457_KefensisIllusion.class, // TODO: Not done.
+		Q10458_ToTheDesertQuarry.class, // TODO: Not done.
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
 		Q10461_TappingThePowerWithin.class,
 		Q10462_TemperARustingBlade.class,
+		Q10463_TheSoulOfASword.class, // TODO: Not done.
 		Q10464_BePreparedForAnything.class,
 		Q10472_WindsOfFateEncroachingShadows.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
@@ -866,6 +887,9 @@ public class QuestMasterHandler
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
 		Q10504_JewelOfAntharas.class,
 		Q10505_JewelOfValakas.class,
+		Q10506_PaddysRequest.class, // TODO: Not done.
+		Q10507_PaddysRequest.class, // TODO: Not done.
+		Q10508_PaddysRequest.class, // TODO: Not done.
 		Q10701_TheRoadToDestruction.class,
 		Q10702_TheRoadToInfinity.class,
 		Q10703_BottleOfIstinasSoul.class,
@@ -875,6 +899,19 @@ public class QuestMasterHandler
 		Q10708_StrengthenTheBarrier.class,
 		Q10709_TheStolenSeed.class,
 		Q10710_LifeEnergyRepository.class,
+		Q10713_TheHerosJourneyBloodySwampland.class, // TODO: Not done.
+		Q10714_TheHerosJourneySeedOfAnnihilation.class, // TODO: Not done.
+		Q10715_TheHerosJourneyHarnakUndergroundRuins.class, // TODO: Not done.
+		Q10716_TheHerosJourneyKartiasLabyrinth.class, // TODO: Not done.
+		Q10718_TheHerosJourneyFairySettlement.class, // TODO: Not done.
+		Q10721_TheHerosJourneyPrisonOfDarkness.class, // TODO: Not done.
+		Q10722_TheHerosJourneyFortuna.class, // TODO: Not done.
+		Q10724_TheHerosJourneyIsleOfSouls.class, // TODO: Not done.
+		Q10725_TheHerosJourneyNornilsCave.class, // TODO: Not done.
+		Q10727_TheHerosJourneySealOfShilen.class, // TODO: Not done.
+		Q10728_TheHerosJourneyCemetary.class, // TODO: Not done.
+		Q10729_TheHerosJourneyGuillotineFortress.class, // TODO: Not done.
+		Q10730_TheHerosJourneyOrbisTemple.class, // TODO: Not done.
 		Q10732_AForeignLand.class,
 		Q10733_TheTestForSurvival.class,
 		Q10734_DoOrDie.class,
@@ -890,6 +927,9 @@ public class QuestMasterHandler
 		Q10744_StrongerThanSteel.class,
 		Q10745_TheSecretIngredients.class,
 		Q10746_SeeTheWorld.class,
+		Q10747_TheHerosJourneyPaganTemple.class, // TODO: Not done.
+		Q10748_MysteriousSuggestion1.class, // TODO: Not done.
+		Q10749_MysteriousSuggestion2.class, // TODO: Not done.
 		Q10751_WindsOfFateEncounters.class,
 		Q10752_WindsOfFateAPromise.class,
 		Q10753_WindsOfFateChoices.class,
@@ -934,48 +974,7 @@ public class QuestMasterHandler
 		Q10799_StrangeThingsAfootInTheValley.class,
 		Q10800_ReconnaissanceAtDragonValley.class,
 		Q10801_TheDimensionalWarpPart1.class,
-		// Not done.
-		Q00353_PowerOfDarkness.class,
-		Q00480_AnotherLegacyOfCrumaTower.class,
-		Q00504_CompetitionForTheBanditStronghold.class,
-		Q00655_AGrandPlanForTamingWildBeasts.class,
-		Q00750_SevenFlowers.class,
-		Q00759_TheDwarvenNightmareContinues.class,
-		Q00767_BanishingEvil.class,
-		Q00768_TerrorOfTown.class,
-		Q00769_TheTruthConcealedInBeauty.class,
-		Q00770_MaintainingTheFieldBusiness.class,
-		Q00771_PartakingInThePurificationCampaign.class,
-		Q00780_UtilizeTheDarknessSeedOfInfinity.class,
-		Q00781_UtilizeTheDarknessSeedOfAnnihilation.class,
-		Q00782_UtilizeTheDarknessSeedOfHellfire.class,
-		Q00789_WaitingForPaagrio.class,
-		Q10352_LegacyOfCrumaTower.class,
-		Q10357_AltarOfBloodThatAwakensDestruction.class,
-		Q10456_OperationRescue.class,
-		Q10457_KefensisIllusion.class,
-		Q10458_ToTheDesertQuarry.class,
-		Q10463_TheSoulOfASword.class,
-		Q10506_PaddysRequest.class,
-		Q10507_PaddysRequest.class,
-		Q10508_PaddysRequest.class,
-		Q10713_TheHerosJourneyBloodySwampland.class,
-		Q10714_TheHerosJourneySeedOfAnnihilation.class,
-		Q10715_TheHerosJourneyHarnakUndergroundRuins.class,
-		Q10716_TheHerosJourneyKartiasLabyrinth.class,
-		Q10718_TheHerosJourneyFairySettlement.class,
-		Q10721_TheHerosJourneyPrisonOfDarkness.class,
-		Q10722_TheHerosJourneyFortuna.class,
-		Q10724_TheHerosJourneyIsleOfSouls.class,
-		Q10725_TheHerosJourneyNornilsCave.class,
-		Q10727_TheHerosJourneySealOfShilen.class,
-		Q10728_TheHerosJourneyCemetary.class,
-		Q10729_TheHerosJourneyGuillotineFortress.class,
-		Q10730_TheHerosJourneyOrbisTemple.class,
-		Q10747_TheHerosJourneyPaganTemple.class,
-		Q10748_MysteriousSuggestion1.class,
-		Q10749_MysteriousSuggestion2.class,
-		Q10809_TheHerosJourneyBlazingSwamp.class
+		Q10809_TheHerosJourneyBlazingSwamp.class, // TODO: Not done.
 	};
 	
 	public static void main(String[] args)
