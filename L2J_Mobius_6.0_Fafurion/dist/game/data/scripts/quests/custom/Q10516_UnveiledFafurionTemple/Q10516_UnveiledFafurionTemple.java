@@ -35,6 +35,9 @@ public class Q10516_UnveiledFafurionTemple extends Quest
 	private static final int TALK_NPC_2 = 34489;
 	private static final int FINISH_NPC = 34490;
 	// Misc
+	private static final int TALK_NPC_1_COND = 1;
+	private static final int TALK_NPC_2_COND = 2;
+	private static final int FINISH_NPC_COND = 3;
 	private static final int MIN_LEVEL = 110;
 	
 	public Q10516_UnveiledFafurionTemple()
@@ -61,28 +64,29 @@ public class Q10516_UnveiledFafurionTemple extends Quest
 				if (qs.isCreated())
 				{
 					qs.startQuest();
+					qs.setCond(TALK_NPC_1_COND);
 				}
 				break;
 			}
 			case "talk_1_2.html":
 			{
-				if ((npc.getId() == TALK_NPC_1) && qs.isCond(1))
+				if ((npc.getId() == TALK_NPC_1) && qs.isCond(TALK_NPC_1_COND))
 				{
-					qs.setCond(2, true);
+					qs.setCond(TALK_NPC_2_COND, true);
 				}
 				break;
 			}
 			case "talk_2_2.html":
 			{
-				if ((npc.getId() == TALK_NPC_2) && qs.isCond(2))
+				if ((npc.getId() == TALK_NPC_2) && qs.isCond(TALK_NPC_2_COND))
 				{
-					qs.setCond(3, true);
+					qs.setCond(FINISH_NPC_COND, true);
 				}
 				break;
 			}
 			case "reward.html":
 			{
-				if ((npc.getId() == FINISH_NPC) && qs.isCond(3))
+				if ((npc.getId() == FINISH_NPC) && qs.isCond(FINISH_NPC_COND))
 				{
 					// Reward.
 					addExpAndSp(player, 5556186900L, 5556186);
@@ -126,11 +130,11 @@ public class Q10516_UnveiledFafurionTemple extends Quest
 					}
 					case TALK_NPC_1:
 					{
-						if (qs.isCond(1))
+						if (qs.isCond(TALK_NPC_1_COND))
 						{
 							htmltext = "talk_1_1.html";
 						}
-						else if (qs.getCond() > 1)
+						else if (qs.getCond() > TALK_NPC_1_COND)
 						{
 							htmltext = "talk_1_2.html";
 						}
@@ -138,11 +142,11 @@ public class Q10516_UnveiledFafurionTemple extends Quest
 					}
 					case TALK_NPC_2:
 					{
-						if (qs.isCond(2))
+						if (qs.isCond(TALK_NPC_2_COND))
 						{
 							htmltext = "talk_2_1.html";
 						}
-						else if (qs.getCond() > 2)
+						else if (qs.getCond() > TALK_NPC_2_COND)
 						{
 							htmltext = "talk_2_2.html";
 						}
@@ -150,7 +154,7 @@ public class Q10516_UnveiledFafurionTemple extends Quest
 					}
 					case FINISH_NPC:
 					{
-						if (qs.isCond(3))
+						if (qs.isCond(FINISH_NPC_COND))
 						{
 							htmltext = "finish.html";
 						}

@@ -102,7 +102,7 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 				if (qs.isCreated())
 				{
 					qs.startQuest();
-					qs.setCond(KILLING_COND_1, true);
+					qs.setCond(KILLING_COND_1);
 				}
 				break;
 			}
@@ -198,7 +198,7 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 			{
 				if (giveItemRandomly(killer, npc, MONSTER_DROP_1, 1, REQUIRED_DROP_COUNT_1, 1, true))
 				{
-					qs.setCond(FINISH_COND_1);
+					qs.setCond(FINISH_COND_1, true);
 				}
 				sendNpcLogList(killer);
 			}
@@ -206,7 +206,7 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 			{
 				if (giveItemRandomly(killer, npc, MONSTER_DROP_2, 1, REQUIRED_DROP_COUNT_2, 1, true))
 				{
-					qs.setCond(FINISH_COND_2);
+					qs.setCond(FINISH_COND_2, true);
 				}
 			}
 		}

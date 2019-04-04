@@ -182,7 +182,7 @@ public class Q10517_FafurionsMinions extends Quest
 			
 			if ((killCount >= REQUIRED_KILL_COUNT) && (getQuestItemsCount(killer, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
 			{
-				qs.setCond(FINISH_COND);
+				qs.setCond(FINISH_COND, true);
 			}
 			
 			sendNpcLogList(killer);

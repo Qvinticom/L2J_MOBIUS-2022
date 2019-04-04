@@ -169,7 +169,7 @@ public class Q00560_HowToOvercomeFear extends Quest
 		{
 			if (giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true))
 			{
-				qs.setCond(FINISH_COND);
+				qs.setCond(FINISH_COND, true);
 			}
 			sendNpcLogList(killer);
 		}
