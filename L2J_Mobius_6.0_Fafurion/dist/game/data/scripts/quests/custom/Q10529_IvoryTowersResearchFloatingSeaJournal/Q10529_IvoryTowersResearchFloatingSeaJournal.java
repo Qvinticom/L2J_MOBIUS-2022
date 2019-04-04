@@ -204,7 +204,7 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 			}
 			else if (qs.isCond(KILLING_COND_2) && CommonUtil.contains(MONSTERS_2, npc.getId()))
 			{
-				if (giveItemRandomly(killer, npc, MONSTER_DROP_2, 1, REQUIRED_DROP_COUNT_2, 0.3, true))
+				if (giveItemRandomly(killer, npc, MONSTER_DROP_2, 1, REQUIRED_DROP_COUNT_2, 1, true))
 				{
 					qs.setCond(FINISH_COND_2);
 				}
