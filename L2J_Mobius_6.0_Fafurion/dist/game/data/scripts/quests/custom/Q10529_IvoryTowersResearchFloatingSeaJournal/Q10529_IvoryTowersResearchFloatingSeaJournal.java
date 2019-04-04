@@ -19,6 +19,7 @@ package quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -37,7 +38,7 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 {
 	// NPCs
 	private static final int START_NPC = 33846;
-	private static final int[] MONSTERS =
+	private static final int[] MONSTERS_1 =
 	{
 		24226,
 		24227,
@@ -54,15 +55,24 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 		24238,
 		24239,
 	};
+	private static final int[] MONSTERS_2 =
+	{
+		24232,
+		24239,
+	};
 	// Item
-	private static final int MONSTER_DROP = 48836;
+	private static final int MONSTER_DROP_1 = 48836;
+	private static final int MONSTER_DROP_2 = 48837;
 	// Misc
-	private static final int REQUIRED_DROP_COUNT = 100;
+	private static final int REQUIRED_DROP_COUNT_1 = 100;
+	private static final int REQUIRED_DROP_COUNT_2 = 1;
 	private static final int KILLING_NPCSTRING_ID = NpcStringId.LV_106_IVORY_TOWER_S_RESEARCH_SEA_OF_SPORES_JOURNAL_IN_PROGRESS.getId();
 	private static final QuestType QUEST_TYPE = QuestType.ONE_TIME; // REPEATABLE, ONE_TIME, DAILY
 	private static final boolean PARTY_QUEST = false;
-	private static final int KILLING_COND = 1;
-	private static final int FINISH_COND = 2;
+	private static final int KILLING_COND_1 = 1;
+	private static final int FINISH_COND_1 = 2;
+	private static final int KILLING_COND_2 = 3;
+	private static final int FINISH_COND_2 = 4;
 	private static final int MIN_LEVEL = 106;
 	
 	public Q10529_IvoryTowersResearchFloatingSeaJournal()
@@ -70,8 +80,9 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 		super(10529);
 		addStartNpc(START_NPC);
 		addTalkId(START_NPC);
-		addKillId(MONSTERS);
-		registerQuestItems(MONSTER_DROP);
+		addKillId(MONSTERS_1);
+		addKillId(MONSTERS_2);
+		registerQuestItems(MONSTER_DROP_1, MONSTER_DROP_2);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
 	}
 	
@@ -86,20 +97,29 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 		
 		switch (event)
 		{
-			case "accept.htm":
+			case "accept_1.htm":
 			{
 				if (qs.isCreated())
 				{
 					qs.startQuest();
-					qs.setCond(KILLING_COND);
+					qs.setCond(KILLING_COND_1, true);
+				}
+				break;
+			}
+			case "accept_2.html":
+			{
+				if (qs.isCond(FINISH_COND_1) && (getQuestItemsCount(player, MONSTER_DROP_1) >= REQUIRED_DROP_COUNT_1))
+				{
+					takeItems(player, MONSTER_DROP_1, -1);
+					qs.setCond(KILLING_COND_2, true);
 				}
 				break;
 			}
 			case "reward.html":
 			{
-				if (qs.isCond(FINISH_COND) && (getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
+				if (qs.isCond(FINISH_COND_2) && (getQuestItemsCount(player, MONSTER_DROP_2) >= REQUIRED_DROP_COUNT_2))
 				{
-					takeItems(player, MONSTER_DROP, -1);
+					takeItems(player, MONSTER_DROP_2, -1);
 					// Reward.
 					addExpAndSp(player, 99527685300L, 99527580);
 					rewardItems(player, 19448, 1);
@@ -132,13 +152,21 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 				}
 				case State.STARTED:
 				{
-					if (qs.isCond(KILLING_COND))
+					if (qs.isCond(KILLING_COND_1))
 					{
 						htmltext = "accept.htm";
 					}
-					else if (qs.isCond(FINISH_COND))
+					else if (qs.isCond(FINISH_COND_1))
 					{
-						htmltext = "finish.html";
+						htmltext = "finish_1.html";
+					}
+					else if (qs.isCond(KILLING_COND_2))
+					{
+						htmltext = "accept_2.html";
+					}
+					else if (qs.isCond(FINISH_COND_2))
+					{
+						htmltext = "finish_2.html";
 					}
 					break;
 				}
@@ -164,13 +192,23 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(KILLING_COND))
+		if (qs != null)
 		{
-			if (giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true))
+			if (qs.isCond(KILLING_COND_1) && CommonUtil.contains(MONSTERS_1, npc.getId()))
 			{
-				qs.setCond(FINISH_COND);
+				if (giveItemRandomly(killer, npc, MONSTER_DROP_1, 1, REQUIRED_DROP_COUNT_1, 1, true))
+				{
+					qs.setCond(FINISH_COND_1);
+				}
+				sendNpcLogList(killer);
 			}
-			sendNpcLogList(killer);
+			else if (qs.isCond(KILLING_COND_2) && CommonUtil.contains(MONSTERS_2, npc.getId()))
+			{
+				if (giveItemRandomly(killer, npc, MONSTER_DROP_2, 1, REQUIRED_DROP_COUNT_2, 0.3, true))
+				{
+					qs.setCond(FINISH_COND_2);
+				}
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -179,11 +217,14 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(KILLING_COND))
+		if (qs != null)
 		{
-			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, false, (int) getQuestItemsCount(player, MONSTER_DROP)));
-			return holder;
+			if (qs.isCond(KILLING_COND_1))
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>();
+				holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, false, (int) getQuestItemsCount(player, MONSTER_DROP_1)));
+				return holder;
+			}
 		}
 		return super.getNpcLogList(player);
 	}
