@@ -42,11 +42,26 @@ public class Herphah extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equals("34362-01.html"))
+		switch (event)
 		{
-			// TODO: return event;
+			case "34362-01.html":
+			case "34362-02.html":
+			case "34362-03.html":
+			case "34362-04.html":
+			case "34362-05.html":
+			case "34362-06.html":
+			case "34362-07.html":
+			case "34362-08.html":
+			case "34362-09.html":
+			case "34362-10.html":
+			{
+				return event;
+			}
+			default:
+			{
+				return null;
+			}
 		}
-		return null;
 	}
 	
 	@Override
