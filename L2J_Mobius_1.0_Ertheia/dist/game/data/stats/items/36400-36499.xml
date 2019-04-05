@@ -245,6 +245,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DAGGER" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -265,6 +266,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -286,6 +288,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="BOW" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -306,6 +309,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -325,6 +330,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -345,6 +351,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2010" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -368,6 +375,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1550" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -388,6 +396,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -408,6 +417,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -428,6 +438,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -447,6 +458,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DAGGER" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -467,6 +479,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -486,6 +499,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -507,6 +521,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="BOW" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -527,6 +542,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -546,6 +563,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1080" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -566,6 +585,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1080" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -587,6 +608,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DAGGER" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -609,6 +631,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="BOW" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -629,6 +652,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -648,6 +672,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -667,6 +693,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -686,6 +713,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
 		<set name="weight" val="1580" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<stats>
 			<stat type="pAtk">2106</stat>
 			<stat type="mAtk">517</stat>

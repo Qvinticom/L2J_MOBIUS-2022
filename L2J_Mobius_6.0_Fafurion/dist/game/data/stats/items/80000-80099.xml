@@ -318,7 +318,7 @@
 		<!-- Dimensional item. a Helios Fighter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_fist" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -330,6 +330,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
@@ -344,7 +345,7 @@
 		<!-- Dimensional item. a Helios Stormer whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_spear" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -356,6 +357,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="SPEAR" />
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">312</stat>
@@ -370,7 +372,7 @@
 		<!-- Dimensional item. a Helios Thrower whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_bow" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -383,6 +385,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
 		<stats>
 			<stat type="pAtk">1415</stat>
 			<stat type="mAtk">312</stat>
@@ -397,6 +400,7 @@
 		<!-- Dimensional item. a Helios Shooter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -407,6 +411,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="reuse_delay" val="1350" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<stats>
 			<stat type="pAtk">1274</stat>
 			<stat type="mAtk">312</stat>
@@ -421,7 +426,7 @@
 		<!-- Dimensional item. a Helios Buster whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -432,6 +437,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -444,7 +451,7 @@
 		<!-- Dimensional item. a Helios Caster whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -455,6 +462,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -469,7 +478,7 @@
 		<!-- Dimensional item. a Helios Retributer whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd./ Casting Spd. +15%, P. Critical Damage +10%, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -481,6 +490,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">700</stat>
 			<stat type="mAtk">458</stat>
@@ -495,7 +506,7 @@
 		<!-- Dimensional item. a Helios Dual Sword whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -507,6 +518,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
@@ -520,6 +532,7 @@
 		<!-- Dimensional item. a Helios Dual Dagger whose grade penalty condition has been eased by Paulina's Blessing Dual Dagger. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -529,6 +542,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">312</stat>
@@ -543,6 +557,7 @@
 		<!-- Dimensional item. a Helios Dual Blunt Weapon whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -552,6 +567,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
@@ -1053,6 +1069,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -1073,6 +1090,7 @@
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1094,6 +1112,7 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1119,6 +1138,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -1140,6 +1160,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1161,6 +1182,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1181,6 +1203,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1204,6 +1227,7 @@
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1228,6 +1252,7 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1254,6 +1279,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1278,6 +1304,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1302,6 +1329,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1325,6 +1353,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1348,6 +1377,7 @@
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1372,6 +1402,7 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1398,6 +1429,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1422,6 +1454,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1446,6 +1479,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1469,6 +1503,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 		</skills>
@@ -1492,6 +1527,7 @@
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 		</skills>
@@ -1516,6 +1552,7 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
@@ -1542,6 +1579,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8903" level="1" /> <!-- Dragon Wizard -->
 		</skills>
@@ -1566,6 +1604,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 		</skills>
@@ -1590,6 +1629,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 		</skills>
@@ -1648,6 +1688,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="crystal_count" val="34485" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
 		</skills>
@@ -1664,7 +1705,7 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +5% -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
@@ -1676,6 +1717,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="crystal_count" val="34485" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
 			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
 		</skills>
@@ -1692,7 +1734,7 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and P./ M. Skill Power +2%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="crystal_count" val="34485" />
@@ -1704,6 +1746,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1720,7 +1763,7 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and Normal Attack Critical Damage +2%. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
@@ -1732,6 +1775,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="crystal_count" val="34485" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
 		</skills>
@@ -1761,6 +1805,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
@@ -1792,6 +1837,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="commissionItemType" val="BOW" />
 		<skills>
 			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
 		</skills>
@@ -1822,6 +1868,7 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="1616590000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
 		</skills>
@@ -1853,6 +1900,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
 		</skills>
@@ -1882,6 +1930,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
 		</skills>
