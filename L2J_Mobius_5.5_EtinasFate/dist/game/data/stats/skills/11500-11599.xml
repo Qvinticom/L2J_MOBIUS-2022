@@ -2098,18 +2098,6 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="ReduceCancel">
 				<amount>-40</amount>
 				<mode>DIFF</mode>
@@ -2125,6 +2113,7 @@
 		</effects>
 	</skill>
 	<skill id="11530" toLevel="1" name="Daring Sonata">
+		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2177,9 +2166,20 @@
 				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11532" toLevel="1" name="Refreshing Sonata">
+		<!-- For $s1, party members' HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2237,23 +2237,10 @@
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
-			<effect name="Accuracy">
-				<amount>4</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="11533" toLevel="1" name="Blood Requiem">
+		<!-- Party members receives $s2 Vampiric Rage effect for $s1. -->
 		<icon>icon.skill11546</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2302,6 +2289,7 @@
 		</effects>
 	</skill>
 	<skill id="11534" toLevel="6" name="Angel's Touch">
+		<!-- For $s1, renders target immune to debuffs. -->
 		<icon>icon.skill11534</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>

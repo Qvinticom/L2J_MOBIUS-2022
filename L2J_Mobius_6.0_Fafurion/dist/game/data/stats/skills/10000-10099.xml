@@ -1468,13 +1468,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10018" toLevel="2" name="Noble Sacrifice">
+	<skill id="10018" toLevel="3" name="Noble Sacrifice">
 		<!-- For $s1, receives $s2 of the damage received by the ally and activates the Last Patience effect during that HP does not decrease below 1. -->
 		<icon>icon.skill10020</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="2">10</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="3">10</value>
+			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SACRIFICE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1482,11 +1482,13 @@
 		<magicLvl>
 			<value level="1">91</value>
 			<value level="2">96</value>
+			<value level="3">103</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">60</value>
 			<value level="2">65</value>
+			<value level="3">65</value>
 		</mpConsume>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -1495,6 +1497,7 @@
 		<effectPoint>
 			<value level="1">694</value>
 			<value level="2">704</value>
+			<value level="3">704</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -1509,13 +1512,14 @@
 		<effects>
 			<effect name="TransferDamageToPlayer">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">90</value>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
 				</amount>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="3" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="3" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
