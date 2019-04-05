@@ -436,6 +436,7 @@ public final class Config
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int THREADS_PER_INSTANT_THREAD_POOL;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
+	public static boolean THREADS_FOR_LOADING;
 	public static boolean DEADLOCK_DETECTOR;
 	public static int DEADLOCK_CHECK_INTERVAL;
 	public static boolean RESTART_ON_DEADLOCK;
@@ -1299,6 +1300,7 @@ public final class Config
 			}
 			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
 			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
+			THREADS_FOR_LOADING = serverSettings.getBoolean("ThreadsForLoading", false);
 			
 			DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
 			DEADLOCK_CHECK_INTERVAL = serverSettings.getInt("DeadLockCheckInterval", 20);

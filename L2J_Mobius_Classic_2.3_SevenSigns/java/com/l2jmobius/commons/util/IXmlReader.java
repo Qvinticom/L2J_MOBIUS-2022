@@ -165,29 +165,47 @@ public interface IXmlReader
 			return false;
 		}
 		
-		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
-		final File[] listOfFiles = dir.listFiles();
-		for (File f : listOfFiles)
+		if (Config.THREADS_FOR_LOADING)
 		{
-			if (recursive && f.isDirectory())
+			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			final File[] listOfFiles = dir.listFiles();
+			for (File file : listOfFiles)
 			{
-				parseDirectory(f, recursive);
-			}
-			else if (getCurrentFileFilter().accept(f))
-			{
-				jobs.add(ThreadPool.schedule(() ->
+				if (recursive && file.isDirectory())
 				{
-					parseFile(f);
-				}, 0));
+					parseDirectory(file, recursive);
+				}
+				else if (getCurrentFileFilter().accept(file))
+				{
+					jobs.add(ThreadPool.schedule(() ->
+					{
+						parseFile(file);
+					}, 0));
+				}
+			}
+			while (!jobs.isEmpty())
+			{
+				for (ScheduledFuture<?> job : jobs)
+				{
+					if ((job == null) || job.isDone() || job.isCancelled())
+					{
+						jobs.remove(job);
+					}
+				}
 			}
 		}
-		while (!jobs.isEmpty())
+		else
 		{
-			for (ScheduledFuture<?> job : jobs)
+			final File[] listOfFiles = dir.listFiles();
+			for (File file : listOfFiles)
 			{
-				if ((job == null) || job.isDone() || job.isCancelled())
+				if (recursive && file.isDirectory())
 				{
-					jobs.remove(job);
+					parseDirectory(file, recursive);
+				}
+				else if (getCurrentFileFilter().accept(file))
+				{
+					parseFile(file);
 				}
 			}
 		}

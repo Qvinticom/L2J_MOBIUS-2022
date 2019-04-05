@@ -95,28 +95,44 @@ public class SpawnsData implements IXmlReader
 		}
 		
 		LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
-		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
-		for (SpawnTemplate template : _spawns)
+		
+		if (Config.THREADS_FOR_LOADING)
 		{
-			if (template.isSpawningByDefault())
+			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			for (SpawnTemplate template : _spawns)
 			{
-				jobs.add(ThreadPool.schedule(() ->
+				if (template.isSpawningByDefault())
 				{
-					template.spawnAll(null);
-					template.notifyActivate();
-				}, 0));
+					jobs.add(ThreadPool.schedule(() ->
+					{
+						template.spawnAll(null);
+						template.notifyActivate();
+					}, 0));
+				}
 			}
-		}
-		while (!jobs.isEmpty())
-		{
-			for (ScheduledFuture<?> job : jobs)
+			while (!jobs.isEmpty())
 			{
-				if ((job == null) || job.isDone() || job.isCancelled())
+				for (ScheduledFuture<?> job : jobs)
 				{
-					jobs.remove(job);
+					if ((job == null) || job.isDone() || job.isCancelled())
+					{
+						jobs.remove(job);
+					}
 				}
 			}
 		}
+		else
+		{
+			for (SpawnTemplate template : _spawns)
+			{
+				if (template.isSpawningByDefault())
+				{
+					template.spawnAll(null);
+					template.notifyActivate();
+				}
+			}
+		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": All spawns has been initialized!");
 	}
 	

@@ -87,10 +87,39 @@ public class DocumentEngine
 	
 	public void loadAllSkills(Map<Integer, Skill> allSkills)
 	{
-		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
-		for (File file : _skillFiles)
+		if (Config.THREADS_FOR_LOADING)
 		{
-			jobs.add(ThreadPool.schedule(() ->
+			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			for (File file : _skillFiles)
+			{
+				jobs.add(ThreadPool.schedule(() ->
+				{
+					final List<Skill> skills = loadSkills(file);
+					if (skills == null)
+					{
+						return;
+					}
+					for (Skill skill : skills)
+					{
+						allSkills.put(SkillData.getSkillHashCode(skill), skill);
+						count++;
+					}
+				}, 0));
+			}
+			while (!jobs.isEmpty())
+			{
+				for (ScheduledFuture<?> job : jobs)
+				{
+					if ((job == null) || job.isDone() || job.isCancelled())
+					{
+						jobs.remove(job);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (File file : _skillFiles)
 			{
 				final List<Skill> skills = loadSkills(file);
 				if (skills == null)
@@ -102,18 +131,9 @@ public class DocumentEngine
 					allSkills.put(SkillData.getSkillHashCode(skill), skill);
 					count++;
 				}
-			}, 0));
-		}
-		while (!jobs.isEmpty())
-		{
-			for (ScheduledFuture<?> job : jobs)
-			{
-				if ((job == null) || job.isDone() || job.isCancelled())
-				{
-					jobs.remove(job);
-				}
 			}
 		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
 	}
 	
@@ -123,27 +143,41 @@ public class DocumentEngine
 	 */
 	public List<Item> loadItems()
 	{
-		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
 		final List<Item> list = new CopyOnWriteArrayList<>();
-		for (File file : _itemFiles)
+		
+		if (Config.THREADS_FOR_LOADING)
 		{
-			jobs.add(ThreadPool.schedule(() ->
+			final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+			for (File file : _itemFiles)
+			{
+				jobs.add(ThreadPool.schedule(() ->
+				{
+					final DocumentItem document = new DocumentItem(file);
+					document.parse();
+					list.addAll(document.getItemList());
+				}, 0));
+			}
+			while (!jobs.isEmpty())
+			{
+				for (ScheduledFuture<?> job : jobs)
+				{
+					if ((job == null) || job.isDone() || job.isCancelled())
+					{
+						jobs.remove(job);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (File file : _itemFiles)
 			{
 				final DocumentItem document = new DocumentItem(file);
 				document.parse();
 				list.addAll(document.getItemList());
-			}, 0));
-		}
-		while (!jobs.isEmpty())
-		{
-			for (ScheduledFuture<?> job : jobs)
-			{
-				if ((job == null) || job.isDone() || job.isCancelled())
-				{
-					jobs.remove(job);
-				}
 			}
 		}
+		
 		return list;
 	}
 	
