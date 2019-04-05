@@ -93,7 +93,11 @@ public class BossZone extends ZoneType
 	{
 		super(id);
 		_oustLoc = new int[3];
-		final AbstractZoneSettings settings = ZoneManager.getSettings(getName()) == null ? new Settings() : ZoneManager.getSettings(getName());
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new Settings();
+		}
 		setSettings(settings);
 		GrandBossManager.getInstance().addZone(this);
 	}

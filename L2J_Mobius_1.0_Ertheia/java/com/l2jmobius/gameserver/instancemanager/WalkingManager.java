@@ -28,7 +28,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -49,7 +49,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
  * This class manages walking monsters.
  * @author GKR
  */
-public final class WalkingManager implements IGameXmlReader
+public final class WalkingManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(WalkingManager.class.getName());
 	

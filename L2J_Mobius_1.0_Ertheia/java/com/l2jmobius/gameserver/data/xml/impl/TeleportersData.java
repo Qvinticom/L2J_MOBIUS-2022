@@ -20,12 +20,13 @@ import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.TeleportType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
@@ -33,12 +34,12 @@ import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 /**
  * @author UnAfraid
  */
-public class TeleportersData implements IGameXmlReader
+public class TeleportersData implements IXmlReader
 {
 	// Logger instance
 	private static final Logger LOGGER = Logger.getLogger(TeleportersData.class.getName());
 	// Teleporter data
-	private final Map<Integer, Map<String, TeleportHolder>> _teleporters = new HashMap<>();
+	private final Map<Integer, Map<String, TeleportHolder>> _teleporters = new ConcurrentHashMap<>();
 	
 	protected TeleportersData()
 	{

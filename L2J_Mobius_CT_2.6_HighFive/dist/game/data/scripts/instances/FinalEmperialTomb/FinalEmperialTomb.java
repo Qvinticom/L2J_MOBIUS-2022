@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -72,7 +72,7 @@ import instances.AbstractInstance;
  * Use proper zone spawn system.
  * @author Gigiikun
  */
-public final class FinalEmperialTomb extends AbstractInstance implements IGameXmlReader
+public final class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(FinalEmperialTomb.class.getName());
 	

@@ -17,14 +17,14 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ArmorSet;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
@@ -32,9 +32,9 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
  * Loads armor set bonuses.
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData implements IGameXmlReader
+public final class ArmorSetsData implements IXmlReader
 {
-	private final Map<Integer, ArmorSet> _armorSets = new HashMap<>();
+	private final Map<Integer, ArmorSet> _armorSets = new ConcurrentHashMap<>();
 	
 	/**
 	 * Instantiates a new armor sets data.

@@ -22,11 +22,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -40,12 +41,12 @@ import com.l2jmobius.gameserver.model.options.VariationWeaponType;
 /**
  * @author Pere
  */
-public class VariationData implements IGameXmlReader
+public class VariationData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(VariationData.class.getSimpleName());
 	
-	private final Map<Integer, Variation> _variations = new HashMap<>();
-	private final Map<Integer, Map<Integer, VariationFee>> _fees = new HashMap<>();
+	private final Map<Integer, Variation> _variations = new ConcurrentHashMap<>();
+	private final Map<Integer, Map<Integer, VariationFee>> _fees = new ConcurrentHashMap<>();
 	
 	protected VariationData()
 	{

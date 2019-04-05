@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 /**
  * @author Sdw
  */
-public class DailyMissionData implements IGameXmlReader
+public class DailyMissionData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(DailyMissionData.class.getName());
 	private final Map<Integer, List<DailyMissionDataHolder>> _dailyMissionRewards = new LinkedHashMap<>();

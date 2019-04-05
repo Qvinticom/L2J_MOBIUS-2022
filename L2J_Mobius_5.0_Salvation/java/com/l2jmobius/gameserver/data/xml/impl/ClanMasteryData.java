@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.ClanMasteryHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 /**
  * @author Mobius
  */
-public class ClanMasteryData implements IGameXmlReader
+public class ClanMasteryData implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(ClanMasteryData.class.getName());
 	

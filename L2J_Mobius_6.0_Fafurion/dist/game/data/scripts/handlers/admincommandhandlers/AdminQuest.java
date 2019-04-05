@@ -320,7 +320,7 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					sb.append("<a action=\"bypass -h admin_script_dir " + c + "\">" + c + "</a><br1>");
 				}
-				else if (c.endsWith(".java") || c.endsWith(".py"))
+				else if (c.endsWith(".java"))
 				{
 					sb.append("<a action=\"bypass -h admin_script_load " + c + "\"><font color=\"LEVEL\">" + c + "</font></a><br1>");
 				}
@@ -352,7 +352,7 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					sb.append("<a action=\"bypass -h admin_script_dir " + currentPath + "/" + c + "\">" + (questReducedNames ? getQuestName(c) : c) + "</a><br1>");
 				}
-				else if (c.endsWith(".java") || c.endsWith(".py"))
+				else if (c.endsWith(".java"))
 				{
 					sb.append("<a action=\"bypass -h admin_script_load " + currentPath + "/" + c + "\"><font color=\"LEVEL\">" + c + "</font></a><br1>");
 				}

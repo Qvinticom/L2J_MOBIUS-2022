@@ -26,12 +26,12 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 
 /**
  * @author UnAfraid
  */
-public class KarmaData implements IGameXmlReader
+public class KarmaData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(KarmaData.class.getName());
 	

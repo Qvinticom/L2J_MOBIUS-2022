@@ -26,6 +26,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -36,7 +38,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.DropType;
@@ -52,13 +54,13 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  * NPC data parser.
  * @author NosBit
  */
-public class NpcData implements IGameXmlReader
+public class NpcData implements IXmlReader
 {
 	protected static final Logger LOGGER = Logger.getLogger(NpcData.class.getName());
 	
-	private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
-	private final Map<String, Integer> _clans = new HashMap<>();
-	private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
+	private final Map<Integer, NpcTemplate> _npcs = new ConcurrentHashMap<>();
+	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
+	private static final List<Integer> _masterMonsterIDs = new CopyOnWriteArrayList<>();
 	
 	protected NpcData()
 	{

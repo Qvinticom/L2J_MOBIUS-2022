@@ -21,8 +21,8 @@ import java.io.FileFilter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,7 +31,7 @@ import org.w3c.dom.NamedNodeMap;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.buylist.Product;
@@ -42,11 +42,11 @@ import com.l2jmobius.gameserver.model.items.Item;
  * Loads buy lists for NPCs.
  * @author NosBit
  */
-public final class BuyListData implements IGameXmlReader
+public final class BuyListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
 	
-	private final Map<Integer, ProductList> _buyLists = new HashMap<>();
+	private final Map<Integer, ProductList> _buyLists = new ConcurrentHashMap<>();
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
 	protected BuyListData()

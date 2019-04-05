@@ -19,9 +19,10 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,7 +32,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ChanceLocation;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -49,11 +50,11 @@ import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
 /**
  * @author UnAfraid
  */
-public class SpawnsData implements IGameXmlReader
+public class SpawnsData implements IXmlReader
 {
 	protected static final Logger LOGGER = Logger.getLogger(SpawnsData.class.getName());
 	
-	private final List<SpawnTemplate> _spawns = new LinkedList<>();
+	private final List<SpawnTemplate> _spawns = new CopyOnWriteArrayList<>();
 	
 	protected SpawnsData()
 	{
@@ -94,11 +95,28 @@ public class SpawnsData implements IGameXmlReader
 		}
 		
 		LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
-		_spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(template ->
+		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+		for (SpawnTemplate template : _spawns)
 		{
-			template.spawnAll(null);
-			template.notifyActivate();
-		});
+			if (template.isSpawningByDefault())
+			{
+				jobs.add(ThreadPool.schedule(() ->
+				{
+					template.spawnAll(null);
+					template.notifyActivate();
+				}, 0));
+			}
+		}
+		while (!jobs.isEmpty())
+		{
+			for (ScheduledFuture<?> job : jobs)
+			{
+				if ((job == null) || job.isDone() || job.isCancelled())
+				{
+					jobs.remove(job);
+				}
+			}
+		}
 		LOGGER.info(getClass().getSimpleName() + ": All spawns has been initialized!");
 	}
 	

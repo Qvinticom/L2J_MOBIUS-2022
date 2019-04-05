@@ -25,13 +25,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.holders.RangeAbilityPointsHolder;
 
 /**
  * @author UnAfraid
  */
-public final class AbilityPointsData implements IGameXmlReader
+public final class AbilityPointsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AbilityPointsData.class.getName());
 	private final List<RangeAbilityPointsHolder> _points = new ArrayList<>();

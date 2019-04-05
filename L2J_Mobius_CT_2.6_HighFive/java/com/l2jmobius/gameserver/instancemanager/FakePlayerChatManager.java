@@ -25,7 +25,7 @@ import org.w3c.dom.Document;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 /**
  * @author Mobius
  */
-public final class FakePlayerChatManager implements IGameXmlReader
+public final class FakePlayerChatManager implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(FakePlayerChatManager.class.getName());
 	final List<FakePlayerChatHolder> MESSAGES = new ArrayList<>();

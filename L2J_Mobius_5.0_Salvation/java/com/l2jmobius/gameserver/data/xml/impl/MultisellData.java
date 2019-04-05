@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,7 +31,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.SpecialItemType;
@@ -46,14 +46,14 @@ import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
-public final class MultisellData implements IGameXmlReader
+public final class MultisellData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MultisellData.class.getName());
 	
 	public static final int PAGE_SIZE = 40;
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
-	private final Map<Integer, MultisellListHolder> _multisells = new HashMap<>();
+	private final Map<Integer, MultisellListHolder> _multisells = new ConcurrentHashMap<>();
 	
 	protected MultisellData()
 	{

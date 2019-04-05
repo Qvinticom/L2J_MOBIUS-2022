@@ -26,7 +26,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Sell Buffs Manager
  * @author St3eT
  */
-public final class SellBuffsManager implements IGameXmlReader
+public final class SellBuffsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SellBuffsManager.class.getName());
 	private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();

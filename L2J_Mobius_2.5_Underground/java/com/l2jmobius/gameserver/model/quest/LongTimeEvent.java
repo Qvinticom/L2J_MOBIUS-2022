@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
@@ -117,7 +117,7 @@ public class LongTimeEvent extends Quest
 	 */
 	private void loadConfig()
 	{
-		new IGameXmlReader()
+		new IXmlReader()
 		{
 			@Override
 			public void load()

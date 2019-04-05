@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.FenceState;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.World;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceData implements IGameXmlReader
+public final class FenceData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(FenceData.class.getSimpleName());
 	

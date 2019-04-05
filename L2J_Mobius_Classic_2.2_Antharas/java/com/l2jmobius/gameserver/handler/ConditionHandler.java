@@ -50,7 +50,7 @@ public final class ConditionHandler
 	{
 		try
 		{
-			ScriptEngineManager.getInstance().executeConditionMasterHandler();
+			ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.CONDITION_HANDLER_FILE);
 		}
 		catch (Exception e)
 		{

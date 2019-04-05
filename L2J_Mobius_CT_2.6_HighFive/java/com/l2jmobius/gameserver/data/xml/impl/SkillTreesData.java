@@ -27,13 +27,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.SkillLearn;
 import com.l2jmobius.gameserver.model.SkillLearn.SubClassData;
@@ -72,24 +73,24 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  * For XML schema please refer to skillTrees.xsd in datapack in xsd folder and for parameters documentation refer to documentation.txt in skillTrees folder.<br>
  * @author Zoey76
  */
-public final class SkillTreesData implements IGameXmlReader
+public final class SkillTreesData implements IXmlReader
 {
 	// ClassId, Map of Skill Hash Code, SkillLearn
-	private final Map<ClassId, Map<Integer, SkillLearn>> _classSkillTrees = new LinkedHashMap<>();
-	private final Map<ClassId, Map<Integer, SkillLearn>> _transferSkillTrees = new LinkedHashMap<>();
+	private final Map<ClassId, Map<Integer, SkillLearn>> _classSkillTrees = new ConcurrentHashMap<>();
+	private final Map<ClassId, Map<Integer, SkillLearn>> _transferSkillTrees = new ConcurrentHashMap<>();
 	// Skill Hash Code, SkillLearn
-	private final Map<Integer, SkillLearn> _collectSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _fishingSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _pledgeSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _subClassSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _subPledgeSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _transformSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _commonSkillTree = new LinkedHashMap<>();
+	private final Map<Integer, SkillLearn> _collectSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _fishingSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _pledgeSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _subClassSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _subPledgeSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _transformSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _commonSkillTree = new ConcurrentHashMap<>();
 	// Other skill trees
-	private final Map<Integer, SkillLearn> _nobleSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _heroSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _gameMasterSkillTree = new LinkedHashMap<>();
-	private final Map<Integer, SkillLearn> _gameMasterAuraSkillTree = new LinkedHashMap<>();
+	private final Map<Integer, SkillLearn> _nobleSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _heroSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _gameMasterSkillTree = new ConcurrentHashMap<>();
+	private final Map<Integer, SkillLearn> _gameMasterAuraSkillTree = new ConcurrentHashMap<>();
 	
 	// Checker, sorted arrays of hash codes
 	private Map<Integer, int[]> _skillsByClassIdHashCodes; // Occupation skills

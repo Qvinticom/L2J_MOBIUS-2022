@@ -54,7 +54,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.PropertiesParser;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -3691,7 +3691,7 @@ public final class Config
 		return result;
 	}
 	
-	private static class IPConfigData implements IGameXmlReader
+	private static class IPConfigData implements IXmlReader
 	{
 		private static final List<String> _subnets = new ArrayList<>(5);
 		private static final List<String> _hosts = new ArrayList<>(5);

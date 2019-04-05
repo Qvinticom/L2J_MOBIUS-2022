@@ -165,7 +165,7 @@ public class Reload implements ITelnetCommand
 			{
 				try
 				{
-					ScriptEngineManager.getInstance().executeEffectMasterHandler();
+					ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.EFFECT_MASTER_HANDLER_FILE);
 					return "Telnet Admin: Reloaded effect master handler.";
 				}
 				catch (Exception e)
@@ -178,7 +178,7 @@ public class Reload implements ITelnetCommand
 			{
 				try
 				{
-					ScriptEngineManager.getInstance().executeMasterHandler();
+					ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.MASTER_HANDLER_FILE);
 					return "Telnet Admin: Reloaded master handler.";
 				}
 				catch (Exception e)

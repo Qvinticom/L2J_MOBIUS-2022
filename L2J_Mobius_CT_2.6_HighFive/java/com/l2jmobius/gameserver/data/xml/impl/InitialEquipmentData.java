@@ -27,7 +27,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.items.PlayerItemTemplate;
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.items.PlayerItemTemplate;
  * What items get each newly created character and if this item is equipped upon creation (<b>Requires the item to be equippable</b>).
  * @author Zoey76
  */
-public final class InitialEquipmentData implements IGameXmlReader
+public final class InitialEquipmentData implements IXmlReader
 {
 	private final Map<ClassId, List<PlayerItemTemplate>> _initialEquipmentList = new HashMap<>();
 	private static final String NORMAL = "data/stats/initialEquipment.xml";

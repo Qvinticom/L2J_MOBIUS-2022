@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.ArmorSet;
 import com.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
@@ -40,12 +40,12 @@ import com.l2jmobius.gameserver.model.stats.BaseStats;
  * Loads armor set bonuses.
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData implements IGameXmlReader
+public final class ArmorSetsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetsData.class.getName());
 	
-	private final Map<Integer, ArmorSet> _armorSets = new HashMap<>();
-	private final Map<Integer, List<ArmorSet>> _armorSetItems = new HashMap<>();
+	private final Map<Integer, ArmorSet> _armorSets = new ConcurrentHashMap<>();
+	private final Map<Integer, List<ArmorSet>> _armorSetItems = new ConcurrentHashMap<>();
 	
 	protected ArmorSetsData()
 	{

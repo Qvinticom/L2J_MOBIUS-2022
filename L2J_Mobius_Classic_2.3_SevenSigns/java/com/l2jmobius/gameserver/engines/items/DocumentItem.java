@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.engines.items;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.engines.DocumentBase;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.model.ExtractableProduct;
@@ -41,12 +41,12 @@ import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 /**
  * @author mkizub, JIV
  */
-public final class DocumentItem extends DocumentBase implements IGameXmlReader
+public final class DocumentItem extends DocumentBase implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(DocumentItem.class.getName());
 	
 	private ItemDataHolder _currentItem = null;
-	private final List<Item> _itemsInFile = new LinkedList<>();
+	private final List<Item> _itemsInFile = new ArrayList<>();
 	
 	/**
 	 * @param file

@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.AccessLevel;
 import com.l2jmobius.gameserver.model.AdminCommandAccessRight;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Loads administrator access levels and commands.
  * @author UnAfraid
  */
-public final class AdminData implements IGameXmlReader
+public final class AdminData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AdminData.class.getName());
 	

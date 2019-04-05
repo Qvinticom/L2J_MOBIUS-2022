@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,7 +34,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.World;
 import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Creature;
@@ -55,7 +56,7 @@ import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
  * This class manages the zones
  * @author durgus
  */
-public final class ZoneManager implements IGameXmlReader
+public final class ZoneManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ZoneManager.class.getName());
 	
@@ -65,9 +66,9 @@ public final class ZoneManager implements IGameXmlReader
 	private static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
 	private static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
 	
-	private final Map<Class<? extends ZoneType>, Map<Integer, ? extends ZoneType>> _classZones = new HashMap<>();
-	private final Map<String, SpawnTerritory> _spawnTerritories = new HashMap<>();
-	private int _lastDynamicId = 300000;
+	private final Map<Class<? extends ZoneType>, ConcurrentHashMap<Integer, ? extends ZoneType>> _classZones = new ConcurrentHashMap<>();
+	private final Map<String, SpawnTerritory> _spawnTerritories = new ConcurrentHashMap<>();
+	private volatile int _lastDynamicId = 300000;
 	private List<ItemInstance> _debugItems;
 	
 	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
@@ -365,7 +366,7 @@ public final class ZoneManager implements IGameXmlReader
 						}
 						if (checkId(zoneId))
 						{
-							LOGGER.config(getClass().getSimpleName() + ": Caution: Zone (" + zoneId + ") from file: " + f.getName() + " overrides previos definition.");
+							LOGGER.config(getClass().getSimpleName() + ": Caution: Zone (" + zoneId + ") from file: " + f.getName() + " overrides previuos definition.");
 						}
 						
 						if ((zoneName != null) && !zoneName.isEmpty())
@@ -453,10 +454,10 @@ public final class ZoneManager implements IGameXmlReader
 	@SuppressWarnings("unchecked")
 	private <T extends ZoneType> void addZone(Integer id, T zone)
 	{
-		Map<Integer, T> map = (Map<Integer, T>) _classZones.get(zone.getClass());
+		ConcurrentHashMap<Integer, T> map = (ConcurrentHashMap<Integer, T>) _classZones.get(zone.getClass());
 		if (map == null)
 		{
-			map = new HashMap<>();
+			map = new ConcurrentHashMap<>();
 			map.put(id, zone);
 			_classZones.put(zone.getClass(), map);
 		}

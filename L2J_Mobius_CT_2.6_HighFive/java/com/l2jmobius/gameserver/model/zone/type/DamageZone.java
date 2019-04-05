@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import com.l2jmobius.gameserver.model.zone.ZoneType;
 
@@ -59,7 +60,12 @@ public class DamageZone extends ZoneType
 		_castle = null;
 		
 		setTargetType(InstanceType.Playable); // default only playabale
-		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new TaskZoneSettings();
+		}
+		setSettings(settings);
 	}
 	
 	@Override

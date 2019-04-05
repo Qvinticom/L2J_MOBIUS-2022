@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.EnchantOptions;
 import com.l2jmobius.gameserver.util.Util;
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class EnchantItemOptionsData implements IGameXmlReader
+public class EnchantItemOptionsData implements IXmlReader
 {
 	private final Map<Integer, Map<Integer, EnchantOptions>> _data = new HashMap<>();
 	

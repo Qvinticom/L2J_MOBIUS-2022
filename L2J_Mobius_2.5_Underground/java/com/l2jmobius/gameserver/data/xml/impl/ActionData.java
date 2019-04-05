@@ -23,14 +23,14 @@ import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * @author UnAfraid
  */
-public class ActionData implements IGameXmlReader
+public class ActionData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ActionData.class.getName());
 	

@@ -26,7 +26,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.fishing.FishingBait;
 import com.l2jmobius.gameserver.model.fishing.FishingCatch;
@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.model.fishing.FishingRod;
  * This class holds the Fishing information.
  * @author bit
  */
-public final class FishingData implements IGameXmlReader
+public final class FishingData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(FishingData.class.getName());
 	private final Map<Integer, FishingBait> _baitData = new HashMap<>();

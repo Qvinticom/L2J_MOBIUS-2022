@@ -28,8 +28,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -42,22 +40,21 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
  * @author KenM, HorridoJoho
  */
-public final class ScriptEngineManager implements IGameXmlReader
+public final class ScriptEngineManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
 	public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
 	public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
 	public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
 	
-	private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
-	private IExecutionContext _currentExecutionContext = null;
+	private IExecutionContext _javaExecutionContext = null;
 	static final List<String> _exclusions = new ArrayList<>();
 	
 	protected ScriptEngineManager()
@@ -163,12 +160,7 @@ public final class ScriptEngineManager implements IGameXmlReader
 	private void registerEngine(IScriptingEngine engine, Properties props)
 	{
 		maybeSetProperties("language." + engine.getLanguageName() + ".", props, engine);
-		final IExecutionContext context = engine.createExecutionContext();
-		for (String commonExtension : engine.getCommonFileExtensions())
-		{
-			_extEngines.put(commonExtension, context);
-		}
-		
+		_javaExecutionContext = engine.createExecutionContext();
 		LOGGER.info("ScriptEngine: " + engine.getEngineName() + " " + engine.getEngineVersion() + " (" + engine.getLanguageName() + " " + engine.getLanguageVersion() + ")");
 	}
 	
@@ -197,51 +189,6 @@ public final class ScriptEngineManager implements IGameXmlReader
 		}
 	}
 	
-	private IExecutionContext getEngineByExtension(String ext)
-	{
-		return _extEngines.get(ext);
-	}
-	
-	private String getFileExtension(Path p)
-	{
-		final String name = p.getFileName().toString();
-		final int lastDotIdx = name.lastIndexOf('.');
-		if (lastDotIdx == -1)
-		{
-			return null;
-		}
-		
-		final String extension = name.substring(lastDotIdx + 1);
-		if (extension.isEmpty())
-		{
-			return null;
-		}
-		
-		return extension;
-	}
-	
-	private void checkExistingFile(String messagePre, Path filePath) throws Exception
-	{
-		if (!Files.exists(filePath))
-		{
-			throw new Exception(messagePre + ": " + filePath + " does not exists!");
-		}
-		else if (!Files.isRegularFile(filePath))
-		{
-			throw new Exception(messagePre + ": " + filePath + " is not a file!");
-		}
-	}
-	
-	public void executeMasterHandler() throws Exception
-	{
-		executeScript(MASTER_HANDLER_FILE);
-	}
-	
-	public void executeEffectMasterHandler() throws Exception
-	{
-		executeScript(EFFECT_MASTER_HANDLER_FILE);
-	}
-	
 	public void executeScriptList() throws Exception
 	{
 		if (Config.ALT_DEV_NO_QUESTS)
@@ -249,75 +196,33 @@ public final class ScriptEngineManager implements IGameXmlReader
 			return;
 		}
 		
-		final Map<IExecutionContext, List<Path>> files = new LinkedHashMap<>();
+		final List<Path> files = new ArrayList<>();
 		processDirectory(SCRIPT_FOLDER.toFile(), files);
 		
-		for (Entry<IExecutionContext, List<Path>> entry : files.entrySet())
-		{
-			_currentExecutionContext = entry.getKey();
-			try
-			{
-				final Map<Path, Throwable> invokationErrors = entry.getKey().executeScripts(entry.getValue());
-				for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet())
+		final Map<Path, Throwable> invokationErrors = _javaExecutionContext.executeScripts(files);
+		for (Entry<Path, Throwable> entry : invokationErrors.entrySet())
 				{
-					LOGGER.log(Level.WARNING, "ScriptEngine: " + entry2.getKey() + " failed execution!", entry2.getValue());
-				}
-			}
-			finally
-			{
-				_currentExecutionContext = null;
-			}
+			LOGGER.log(Level.WARNING, "ScriptEngine: " + entry.getKey() + " failed execution!", entry.getValue());
 		}
 	}
 	
-	private void processDirectory(File dir, Map<IExecutionContext, List<Path>> files)
+	private void processDirectory(File dir, List<Path> files)
 	{
 		for (File file : dir.listFiles())
 		{
-			if (file.isDirectory())
+			if (file.isFile())
+			{
+				final String fileName = file.getName();
+				if (fileName.endsWith(".java") && !_exclusions.contains(fileName))
+				{
+					files.add(file.toPath().toAbsolutePath());
+				}
+			}
+			else if (file.isDirectory())
 			{
 				processDirectory(file, files);
 			}
-			else
-			{
-				processFile(file, files);
-			}
 		}
-	}
-	
-	private void processFile(File file, Map<IExecutionContext, List<Path>> files)
-	{
-		if (_exclusions.contains(file.getName()))
-		{
-			return;
-		}
-		
-		Path sourceFile = file.toPath();
-		try
-		{
-			checkExistingFile("ScriptFile", sourceFile);
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning(e.getMessage());
-			return;
-		}
-		
-		sourceFile = sourceFile.toAbsolutePath();
-		final String ext = getFileExtension(sourceFile);
-		if (ext == null)
-		{
-			LOGGER.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
-			return;
-		}
-		
-		final IExecutionContext engine = getEngineByExtension(ext);
-		if (engine == null)
-		{
-			return;
-		}
-		
-		files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
 	}
 	
 	public void executeScript(Path sourceFile) throws Exception
@@ -329,34 +234,19 @@ public final class ScriptEngineManager implements IGameXmlReader
 			sourceFile = SCRIPT_FOLDER.resolve(sourceFile);
 		}
 		
-		// throws exception if not exists or not file
-		checkExistingFile("ScriptFile", sourceFile);
-		
 		sourceFile = sourceFile.toAbsolutePath();
-		final String ext = getFileExtension(sourceFile);
 		Objects.requireNonNull(sourceFile, "ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
 		
-		final IExecutionContext engine = getEngineByExtension(ext);
-		Objects.requireNonNull(engine, "ScriptEngine: No engine registered for extension " + ext + "!");
-		
-		_currentExecutionContext = engine;
-		try
+		final Entry<Path, Throwable> error = _javaExecutionContext.executeScript(sourceFile);
+		if (error != null)
 		{
-			final Entry<Path, Throwable> error = engine.executeScript(sourceFile);
-			if (error != null)
-			{
-				throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());
-			}
-		}
-		finally
-		{
-			_currentExecutionContext = null;
+			throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());
 		}
 	}
 	
 	public Path getCurrentLoadingScript()
 	{
-		return _currentExecutionContext != null ? _currentExecutionContext.getCurrentExecutingScript() : null;
+		return _javaExecutionContext.getCurrentExecutingScript();
 	}
 	
 	public static ScriptEngineManager getInstance()

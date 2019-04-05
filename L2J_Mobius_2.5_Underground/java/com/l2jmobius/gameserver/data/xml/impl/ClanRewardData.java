@@ -28,7 +28,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
 import com.l2jmobius.gameserver.model.clan.ClanRewardBonus;
@@ -38,7 +37,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 /**
  * @author UnAfraid
  */
-public class ClanRewardData implements IGameXmlReader
+public class ClanRewardData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ClanRewardData.class.getName());
 	private final Map<ClanRewardType, List<ClanRewardBonus>> _clanRewards = new ConcurrentHashMap<>();

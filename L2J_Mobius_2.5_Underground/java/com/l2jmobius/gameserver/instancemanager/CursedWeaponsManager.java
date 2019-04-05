@@ -35,7 +35,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.CursedWeapon;
 import com.l2jmobius.gameserver.model.actor.Attackable;
 import com.l2jmobius.gameserver.model.actor.Creature;
@@ -54,7 +54,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  * UnAfraid: TODO: Rewrite with DocumentParser
  * @author Micht
  */
-public final class CursedWeaponsManager implements IGameXmlReader
+public final class CursedWeaponsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CursedWeaponsManager.class.getName());
 	

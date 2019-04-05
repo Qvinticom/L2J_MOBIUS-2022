@@ -49,7 +49,12 @@ public class SiegeZone extends ZoneType
 	public SiegeZone(int id)
 	{
 		super(id);
-		setSettings(ZoneManager.getSettings(getName()) == null ? new Settings() : ZoneManager.getSettings(getName()));
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new Settings();
+		}
+		setSettings(settings);
 	}
 	
 	public final class Settings extends AbstractZoneSettings

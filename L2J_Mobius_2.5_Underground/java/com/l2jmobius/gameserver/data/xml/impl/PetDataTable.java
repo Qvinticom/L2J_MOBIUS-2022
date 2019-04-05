@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.model.PetData;
 import com.l2jmobius.gameserver.model.PetLevelData;
@@ -36,11 +36,11 @@ import com.l2jmobius.gameserver.model.StatsSet;
  * TODO: load and use all pet parameters.
  * @author Zoey76 (rework)
  */
-public final class PetDataTable implements IGameXmlReader
+public final class PetDataTable implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PetDataTable.class.getName());
 	
-	private final Map<Integer, PetData> _pets = new HashMap<>();
+	private final Map<Integer, PetData> _pets = new ConcurrentHashMap<>();
 	
 	/**
 	 * Instantiates a new pet data table.

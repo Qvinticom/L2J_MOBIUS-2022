@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CrystallizationType;
 import com.l2jmobius.gameserver.model.holders.CrystallizationDataHolder;
@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.model.items.type.CrystalType;
 /**
  * @author UnAfraid
  */
-public final class ItemCrystallizationData implements IGameXmlReader
+public final class ItemCrystallizationData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ItemCrystallizationData.class.getName());
 	

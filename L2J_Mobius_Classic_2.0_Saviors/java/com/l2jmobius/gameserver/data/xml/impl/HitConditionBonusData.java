@@ -23,7 +23,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.model.actor.Creature;
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.actor.Creature;
  * This class load, holds and calculates the hit condition bonuses.
  * @author Nik
  */
-public final class HitConditionBonusData implements IGameXmlReader
+public final class HitConditionBonusData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(HitConditionBonusData.class.getName());
 	

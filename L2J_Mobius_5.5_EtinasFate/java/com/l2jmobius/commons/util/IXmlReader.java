@@ -18,8 +18,13 @@ package com.l2jmobius.commons.util;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.logging.Level;
@@ -35,7 +40,12 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.file.filter.XMLFilter;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.holders.MinionHolder;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
  * Interface for XML parsers.
@@ -55,6 +65,15 @@ public interface IXmlReader
 	 * It's highly recommended to clear the data storage, either the list or map.
 	 */
 	void load();
+	
+	/**
+	 * Wrapper for {@link #parseFile(File)} method.
+	 * @param path the relative path to the datapack root of the XML file to parse.
+	 */
+	default void parseDatapackFile(String path)
+	{
+		parseFile(new File(Config.DATAPACK_ROOT, path));
+	}
 	
 	/**
 	 * Parses a single XML file.<br>
@@ -122,6 +141,17 @@ public interface IXmlReader
 	}
 	
 	/**
+	 * Wrapper for {@link #parseDirectory(File, boolean)}.
+	 * @param path the path to the directory where the XML files are
+	 * @param recursive parses all sub folders if there is
+	 * @return {@code false} if it fails to find the directory, {@code true} otherwise
+	 */
+	default boolean parseDatapackDirectory(String path, boolean recursive)
+	{
+		return parseDirectory(new File(Config.DATAPACK_ROOT, path), recursive);
+	}
+	
+	/**
 	 * Loads all XML files from {@code path} and calls {@link #parseFile(File)} for each one of them.
 	 * @param dir the directory object to scan.
 	 * @param recursive parses all sub folders if there is.
@@ -135,6 +165,7 @@ public interface IXmlReader
 			return false;
 		}
 		
+		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
 		final File[] listOfFiles = dir.listFiles();
 		for (File f : listOfFiles)
 		{
@@ -144,9 +175,23 @@ public interface IXmlReader
 			}
 			else if (getCurrentFileFilter().accept(f))
 			{
-				parseFile(f);
+				jobs.add(ThreadPool.schedule(() ->
+				{
+					parseFile(f);
+				}, 0));
 			}
 		}
+		while (!jobs.isEmpty())
+		{
+			for (ScheduledFuture<?> job : jobs)
+			{
+				if ((job == null) || job.isDone() || job.isCancelled())
+				{
+					jobs.remove(job);
+				}
+			}
+		}
+		
 		return true;
 	}
 	
@@ -531,6 +576,16 @@ public interface IXmlReader
 		return parseString(attrs.getNamedItem(name), defaultValue);
 	}
 	
+	default Location parseLocation(Node n)
+	{
+		final NamedNodeMap attrs = n.getAttributes();
+		final int x = parseInteger(attrs, "x");
+		final int y = parseInteger(attrs, "y");
+		final int z = parseInteger(attrs, "z");
+		final int heading = parseInteger(attrs, "heading", 0);
+		return new Location(x, y, z, heading);
+	}
+	
 	/**
 	 * Parses an enumerated value.
 	 * @param <T> the enumerated type
@@ -610,6 +665,56 @@ public interface IXmlReader
 			map.put(att.getNodeName(), att.getNodeValue());
 		}
 		return map;
+	}
+	
+	/**
+	 * @param n
+	 * @return a map of parameters
+	 */
+	default Map<String, Object> parseParameters(Node n)
+	{
+		final Map<String, Object> parameters = new HashMap<>();
+		for (Node parameters_node = n.getFirstChild(); parameters_node != null; parameters_node = parameters_node.getNextSibling())
+		{
+			NamedNodeMap attrs = parameters_node.getAttributes();
+			switch (parameters_node.getNodeName().toLowerCase())
+			{
+				case "param":
+				{
+					parameters.put(parseString(attrs, "name"), parseString(attrs, "value"));
+					break;
+				}
+				case "skill":
+				{
+					parameters.put(parseString(attrs, "name"), new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
+					break;
+				}
+				case "location":
+				{
+					parameters.put(parseString(attrs, "name"), new Location(parseInteger(attrs, "x"), parseInteger(attrs, "y"), parseInteger(attrs, "z"), parseInteger(attrs, "heading", 0)));
+					break;
+				}
+				case "minions":
+				{
+					final List<MinionHolder> minions = new ArrayList<>(1);
+					for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling())
+					{
+						if (minions_node.getNodeName().equalsIgnoreCase("npc"))
+						{
+							attrs = minions_node.getAttributes();
+							minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), parseInteger(attrs, "weightPoint")));
+						}
+					}
+					
+					if (!minions.isEmpty())
+					{
+						parameters.put(parseString(parameters_node.getAttributes(), "name"), minions);
+					}
+					break;
+				}
+			}
+		}
+		return parameters;
 	}
 	
 	/**

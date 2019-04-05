@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -38,7 +39,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.SubclassType;
@@ -77,34 +78,34 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  * For XML schema please refer to skillTrees.xsd in datapack in xsd folder and for parameters documentation refer to documentation.txt in skillTrees folder.<br>
  * @author Zoey76
  */
-public final class SkillTreesData implements IGameXmlReader
+public final class SkillTreesData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillTreesData.class.getName());
 	
 	// ClassId, Map of Skill Hash Code, SkillLearn
-	private static final Map<ClassId, Map<Long, SkillLearn>> _classSkillTrees = new HashMap<>();
-	private static final Map<ClassId, Map<Long, SkillLearn>> _transferSkillTrees = new HashMap<>();
-	private static final Map<Race, Map<Long, SkillLearn>> _raceSkillTree = new HashMap<>();
-	private static final Map<SubclassType, Map<Long, SkillLearn>> _revelationSkillTree = new HashMap<>();
-	private static final Map<ClassId, Set<Integer>> _awakeningSaveSkillTree = new HashMap<>();
+	private static final Map<ClassId, Map<Long, SkillLearn>> _classSkillTrees = new ConcurrentHashMap<>();
+	private static final Map<ClassId, Map<Long, SkillLearn>> _transferSkillTrees = new ConcurrentHashMap<>();
+	private static final Map<Race, Map<Long, SkillLearn>> _raceSkillTree = new ConcurrentHashMap<>();
+	private static final Map<SubclassType, Map<Long, SkillLearn>> _revelationSkillTree = new ConcurrentHashMap<>();
+	private static final Map<ClassId, Set<Integer>> _awakeningSaveSkillTree = new ConcurrentHashMap<>();
 	// Skill Hash Code, SkillLearn
-	private static final Map<Long, SkillLearn> _collectSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _fishingSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _pledgeSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _subClassSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _subPledgeSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _transformSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _commonSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _abilitySkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _alchemySkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _dualClassSkillTree = new HashMap<>();
+	private static final Map<Long, SkillLearn> _collectSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _fishingSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _pledgeSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _subClassSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _subPledgeSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _transformSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _commonSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _abilitySkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _alchemySkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _dualClassSkillTree = new ConcurrentHashMap<>();
 	// Other skill trees
-	private static final Map<Long, SkillLearn> _nobleSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _heroSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _gameMasterSkillTree = new HashMap<>();
-	private static final Map<Long, SkillLearn> _gameMasterAuraSkillTree = new HashMap<>();
+	private static final Map<Long, SkillLearn> _nobleSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _heroSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _gameMasterSkillTree = new ConcurrentHashMap<>();
+	private static final Map<Long, SkillLearn> _gameMasterAuraSkillTree = new ConcurrentHashMap<>();
 	// Remove skill tree
-	private static final Map<ClassId, Set<Integer>> _removeSkillCache = new HashMap<>();
+	private static final Map<ClassId, Set<Integer>> _removeSkillCache = new ConcurrentHashMap<>();
 	
 	// Checker, sorted arrays of hash codes
 	private Map<Integer, long[]> _skillsByClassIdHashCodes; // Occupation skills
@@ -112,7 +113,7 @@ public final class SkillTreesData implements IGameXmlReader
 	private long[] _allSkillsHashCodes; // Fishing, Collection, Transformations, Common Skills.
 	
 	/** Parent class Ids are read from XML and stored in this map, to allow easy customization. */
-	private static final Map<ClassId, ClassId> _parentClassMap = new HashMap<>();
+	private static final Map<ClassId, ClassId> _parentClassMap = new ConcurrentHashMap<>();
 	
 	private final AtomicBoolean _isLoading = new AtomicBoolean();
 	

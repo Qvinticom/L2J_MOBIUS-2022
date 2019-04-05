@@ -24,13 +24,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 
 /**
  * This class holds the Player Xp Percent Lost Data for each level for players.
  * @author Zealar
  */
-public final class PlayerXpPercentLostData implements IGameXmlReader
+public final class PlayerXpPercentLostData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PlayerXpPercentLostData.class.getName());
 	

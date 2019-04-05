@@ -24,13 +24,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 
 /**
  * Point data parser.
  * @author Zoey76
  */
-public final class HellboundPointData implements IGameXmlReader
+public final class HellboundPointData implements IXmlReader
 {
 	private final Map<Integer, int[]> _pointsInfo = new HashMap<>();
 	

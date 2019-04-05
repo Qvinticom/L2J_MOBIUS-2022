@@ -27,14 +27,14 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 
 /**
  * @author Mobius
  */
-public class PrimeShopData implements IGameXmlReader
+public class PrimeShopData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PrimeShopData.class.getName());
 	private final Map<Integer, PrimeShopProductHolder> _products = new HashMap<>();

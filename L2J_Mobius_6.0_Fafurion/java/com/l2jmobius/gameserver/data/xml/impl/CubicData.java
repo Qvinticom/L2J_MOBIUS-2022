@@ -20,12 +20,12 @@ import java.io.File;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.CubicTemplate;
@@ -39,11 +39,11 @@ import com.l2jmobius.gameserver.model.cubic.conditions.RangeCondition;
 /**
  * @author UnAfraid
  */
-public class CubicData implements IGameXmlReader
+public class CubicData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CubicData.class.getName());
 	
-	private final Map<Integer, Map<Integer, CubicTemplate>> _cubics = new HashMap<>();
+	private final Map<Integer, Map<Integer, CubicTemplate>> _cubics = new ConcurrentHashMap<>();
 	
 	protected CubicData()
 	{

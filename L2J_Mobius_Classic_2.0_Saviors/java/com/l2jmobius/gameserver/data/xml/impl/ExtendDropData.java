@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.handler.ConditionHandler;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.ICondition;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 /**
  * @author Sdw
  */
-public class ExtendDropData implements IGameXmlReader
+public class ExtendDropData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ExtendDropData.class.getName());
 	private final Map<Integer, ExtendDropDataHolder> _extendDrop = new HashMap<>();

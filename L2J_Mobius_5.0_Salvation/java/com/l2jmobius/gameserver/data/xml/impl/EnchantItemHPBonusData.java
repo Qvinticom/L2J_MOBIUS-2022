@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.items.Item;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.items.type.CrystalType;
  * This class holds the Enchant HP Bonus Data.
  * @author MrPoke, Zoey76
  */
-public class EnchantItemHPBonusData implements IGameXmlReader
+public class EnchantItemHPBonusData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnchantItemHPBonusData.class.getName());
 	

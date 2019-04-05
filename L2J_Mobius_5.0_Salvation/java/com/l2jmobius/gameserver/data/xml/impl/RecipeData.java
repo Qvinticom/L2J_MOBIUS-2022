@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 /**
  * @author Nik
  */
-public class RecipeData implements IGameXmlReader
+public class RecipeData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(RecipeData.class.getName());
 	

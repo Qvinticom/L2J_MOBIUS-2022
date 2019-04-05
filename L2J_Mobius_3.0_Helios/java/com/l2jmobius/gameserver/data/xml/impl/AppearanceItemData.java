@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.model.items.type.CrystalType;
 /**
  * @author UnAfraid
  */
-public class AppearanceItemData implements IGameXmlReader
+public class AppearanceItemData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AppearanceItemData.class.getName());
 	

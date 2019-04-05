@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.holders.ItemPointHolder;
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
 /**
  * @author Sdw
  */
-public class LuckyGameData implements IGameXmlReader
+public class LuckyGameData implements IXmlReader
 {
 	private final Map<Integer, LuckyGameDataHolder> _luckyGame = new HashMap<>();
 	private final AtomicInteger _serverPlay = new AtomicInteger();

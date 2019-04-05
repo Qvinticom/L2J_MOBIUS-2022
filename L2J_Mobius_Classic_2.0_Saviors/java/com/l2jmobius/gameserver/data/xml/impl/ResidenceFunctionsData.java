@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
 
@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
  * The residence functions data
  * @author UnAfraid
  */
-public final class ResidenceFunctionsData implements IGameXmlReader
+public final class ResidenceFunctionsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ResidenceFunctionsData.class.getName());
 	private final Map<Integer, List<ResidenceFunctionTemplate>> _functions = new HashMap<>();

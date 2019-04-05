@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.actor.Creature;
 
@@ -105,7 +104,7 @@ public enum BaseStats
 	
 	static
 	{
-		new IGameXmlReader()
+		new IXmlReader()
 		{
 			final Logger LOGGER = Logger.getLogger(BaseStats.class.getName());
 			

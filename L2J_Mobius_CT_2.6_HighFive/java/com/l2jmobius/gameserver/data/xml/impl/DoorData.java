@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
  * Loads doors.
  * @author JIV, GodKratos, UnAfraid
  */
-public class DoorData implements IGameXmlReader
+public class DoorData implements IXmlReader
 {
 	private static final Map<String, Set<Integer>> _groups = new HashMap<>();
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>();

@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
@@ -39,9 +39,9 @@ import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 /**
  * @author UnAfraid
  */
-public final class TransformData implements IGameXmlReader
+public final class TransformData implements IXmlReader
 {
-	private final Map<Integer, Transform> _transformData = new HashMap<>();
+	private final Map<Integer, Transform> _transformData = new ConcurrentHashMap<>();
 	
 	protected TransformData()
 	{

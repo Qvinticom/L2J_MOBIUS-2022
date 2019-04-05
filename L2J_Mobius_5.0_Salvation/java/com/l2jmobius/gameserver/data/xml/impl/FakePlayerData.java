@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.holders.FakePlayerHolder;
 /**
  * @author Mobius
  */
-public class FakePlayerData implements IGameXmlReader
+public class FakePlayerData implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(FakePlayerData.class.getName());
 	

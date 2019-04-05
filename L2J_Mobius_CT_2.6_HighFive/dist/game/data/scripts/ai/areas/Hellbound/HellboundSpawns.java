@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.Spawn;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.Spawn;
  * Hellbound Spawns parser.
  * @author Zoey76
  */
-public final class HellboundSpawns implements IGameXmlReader
+public final class HellboundSpawns implements IXmlReader
 {
 	private final List<Spawn> _spawns = new ArrayList<>();
 	private final Map<Integer, int[]> _spawnLevels = new HashMap<>();

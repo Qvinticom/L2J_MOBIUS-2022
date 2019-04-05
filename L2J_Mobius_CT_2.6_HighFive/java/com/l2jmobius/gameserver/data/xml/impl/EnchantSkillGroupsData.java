@@ -26,7 +26,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.EnchantSkillGroup;
 import com.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 import com.l2jmobius.gameserver.model.EnchantSkillLearn;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  * This class holds the Enchant Groups information.
  * @author Micr0
  */
-public class EnchantSkillGroupsData implements IGameXmlReader
+public class EnchantSkillGroupsData implements IXmlReader
 {
 	public static final int NORMAL_ENCHANT_COST_MULTIPLIER = Config.NORMAL_ENCHANT_COST_MULTIPLIER;
 	public static final int SAFE_ENCHANT_COST_MULTIPLIER = Config.SAFE_ENCHANT_COST_MULTIPLIER;

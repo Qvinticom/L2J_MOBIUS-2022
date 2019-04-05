@@ -38,7 +38,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ManorMode;
 import com.l2jmobius.gameserver.model.CropProcure;
@@ -56,7 +56,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  * Castle manor system.
  * @author malyelfik
  */
-public final class CastleManorManager implements IGameXmlReader, IStorable
+public final class CastleManorManager implements IXmlReader, IStorable
 {
 	// SQL queries
 	private static final String INSERT_PRODUCT = "INSERT INTO castle_manor_production VALUES (?, ?, ?, ?, ?, ?)";

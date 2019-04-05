@@ -17,16 +17,16 @@
 package com.l2jmobius.gameserver.instancemanager;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.MapRegion;
@@ -48,9 +48,9 @@ import com.l2jmobius.gameserver.model.zone.type.RespawnZone;
  * Map Region Manager.
  * @author Nyaran
  */
-public final class MapRegionManager implements IGameXmlReader
+public final class MapRegionManager implements IXmlReader
 {
-	private static final Map<String, MapRegion> _regions = new HashMap<>();
+	private static final Map<String, MapRegion> _regions = new ConcurrentHashMap<>();
 	private static final String defaultRespawn = "talking_island_town";
 	
 	protected MapRegionManager()

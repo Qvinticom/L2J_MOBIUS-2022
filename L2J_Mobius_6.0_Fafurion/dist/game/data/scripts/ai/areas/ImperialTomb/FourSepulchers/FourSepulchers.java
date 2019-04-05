@@ -29,7 +29,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -56,7 +56,7 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
  * Four Selpuchers AI
  * @author Mobius
  */
-public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReader
+public final class FourSepulchers extends AbstractNpcAI implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(FourSepulchers.class.getName());
 	

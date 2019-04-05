@@ -354,7 +354,7 @@ public class GameServer
 		try
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Loading server scripts:");
-			ScriptEngineManager.getInstance().executeMasterHandler();
+			ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.MASTER_HANDLER_FILE);
 			ScriptEngineManager.getInstance().executeScriptList();
 		}
 		catch (Exception e)

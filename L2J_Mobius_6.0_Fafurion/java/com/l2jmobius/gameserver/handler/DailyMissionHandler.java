@@ -49,7 +49,7 @@ public class DailyMissionHandler
 	{
 		try
 		{
-			ScriptEngineManager.getInstance().executeDailyMissionMasterHandler();
+			ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.ONE_DAY_REWARD_MASTER_HANDLER);
 		}
 		catch (Exception e)
 		{

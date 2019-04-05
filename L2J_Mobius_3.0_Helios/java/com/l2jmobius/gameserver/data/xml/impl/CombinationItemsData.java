@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.items.combination.CombinationItem;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.items.combination.CombinationItemType;
 /**
  * @author UnAfraid
  */
-public class CombinationItemsData implements IGameXmlReader
+public class CombinationItemsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CombinationItemsData.class.getName());
 	private final List<CombinationItem> _items = new ArrayList<>();

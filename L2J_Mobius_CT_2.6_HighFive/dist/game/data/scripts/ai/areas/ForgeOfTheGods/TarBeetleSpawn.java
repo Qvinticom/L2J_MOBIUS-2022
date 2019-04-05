@@ -27,7 +27,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.actor.Npc;
  * Tar Beetle zone spawn
  * @author malyelfik
  */
-public class TarBeetleSpawn implements IGameXmlReader
+public class TarBeetleSpawn implements IXmlReader
 {
 	private final List<SpawnZone> zones = new ArrayList<>();
 	private ScheduledFuture<?> spawnTask;

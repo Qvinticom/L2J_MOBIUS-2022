@@ -27,7 +27,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.RecipeInstance;
 import com.l2jmobius.gameserver.model.RecipeList;
 import com.l2jmobius.gameserver.model.RecipeStatInstance;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  * The Class RecipeData.
  * @author Zoey76
  */
-public class RecipeData implements IGameXmlReader
+public class RecipeData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(RecipeData.class.getName());
 	

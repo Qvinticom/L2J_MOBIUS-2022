@@ -17,15 +17,15 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.ClassInfo;
 
@@ -33,11 +33,11 @@ import com.l2jmobius.gameserver.model.base.ClassInfo;
  * Loads the the list of classes and it's info.
  * @author Zoey76
  */
-public final class ClassListData implements IGameXmlReader
+public final class ClassListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ClassListData.class.getName());
 	
-	private final Map<ClassId, ClassInfo> _classData = new HashMap<>();
+	private final Map<ClassId, ClassInfo> _classData = new ConcurrentHashMap<>();
 	
 	/**
 	 * Instantiates a new class list data.

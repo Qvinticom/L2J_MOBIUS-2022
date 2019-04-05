@@ -18,13 +18,12 @@ package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.handler.EffectHandler;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -36,11 +35,11 @@ import com.l2jmobius.gameserver.model.options.OptionsSkillType;
 /**
  * @author UnAfraid
  */
-public class OptionData implements IGameXmlReader
+public class OptionData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(OptionData.class.getName());
 	
-	private final Map<Integer, Options> _optionData = new HashMap<>();
+	private final Map<Integer, Options> _optionData = new ConcurrentHashMap<>();
 	
 	protected OptionData()
 	{

@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.options.EnchantOptions;
 import com.l2jmobius.gameserver.util.Util;
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class EnchantItemOptionsData implements IGameXmlReader
+public class EnchantItemOptionsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnchantItemOptionsData.class.getName());
 	

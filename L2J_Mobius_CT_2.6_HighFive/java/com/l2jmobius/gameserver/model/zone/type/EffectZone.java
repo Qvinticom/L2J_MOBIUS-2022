@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
 import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.ZoneType;
@@ -54,7 +55,12 @@ public class EffectZone extends ZoneType
 		setTargetType(InstanceType.Playable); // default only playable
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
-		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
+		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
+		if (settings == null)
+		{
+			settings = new TaskZoneSettings();
+		}
+		setSettings(settings);
 	}
 	
 	@Override

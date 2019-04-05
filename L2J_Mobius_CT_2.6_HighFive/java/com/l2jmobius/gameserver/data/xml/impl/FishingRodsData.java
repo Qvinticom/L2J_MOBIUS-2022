@@ -24,7 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.fishing.FishingRod;
 
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.fishing.FishingRod;
  * This class holds the Fishing Rods information.
  * @author nonom
  */
-public final class FishingRodsData implements IGameXmlReader
+public final class FishingRodsData implements IXmlReader
 {
 	private final Map<Integer, FishingRod> _fishingRods = new HashMap<>();
 	

@@ -19,16 +19,16 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.CastleSide;
 import com.l2jmobius.gameserver.enums.SiegeGuardType;
 import com.l2jmobius.gameserver.model.holders.CastleSpawnHolder;
@@ -37,10 +37,10 @@ import com.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
 /**
  * @author St3eT
  */
-public final class CastleData implements IGameXmlReader
+public final class CastleData implements IXmlReader
 {
-	private final Map<Integer, List<CastleSpawnHolder>> _spawns = new HashMap<>();
-	private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new HashMap<>();
+	private final Map<Integer, List<CastleSpawnHolder>> _spawns = new ConcurrentHashMap<>();
+	private static final Map<Integer, List<SiegeGuardHolder>> _siegeGuards = new ConcurrentHashMap<>();
 	
 	protected CastleData()
 	{

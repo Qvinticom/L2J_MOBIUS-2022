@@ -17,12 +17,15 @@
 package com.l2jmobius.gameserver.engines;
 
 import java.io.File;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.file.filter.XMLFilter;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.engines.items.DocumentItem;
@@ -37,40 +40,36 @@ public class DocumentEngine
 {
 	private static final Logger LOGGER = Logger.getLogger(DocumentEngine.class.getName());
 	
-	private final List<File> _itemFiles = new LinkedList<>();
-	private final List<File> _skillFiles = new LinkedList<>();
-	
-	public static DocumentEngine getInstance()
-	{
-		return SingletonHolder._instance;
-	}
+	private final List<File> _itemFiles = new ArrayList<>();
+	private final List<File> _skillFiles = new ArrayList<>();
+	private static int count = 0;
 	
 	protected DocumentEngine()
 	{
-		hashFiles("data/stats/items", _itemFiles);
+		processDirectory("data/stats/items", _itemFiles);
 		if (Config.CUSTOM_ITEMS_LOAD)
 		{
-			hashFiles("data/stats/items/custom", _itemFiles);
+			processDirectory("data/stats/items/custom", _itemFiles);
 		}
-		hashFiles("data/stats/skills", _skillFiles);
+		processDirectory("data/stats/skills", _skillFiles);
 		if (Config.CUSTOM_SKILLS_LOAD)
 		{
-			hashFiles("data/stats/skills/custom", _skillFiles);
+			processDirectory("data/stats/skills/custom", _skillFiles);
 		}
 	}
 	
-	private void hashFiles(String dirname, List<File> hash)
+	private void processDirectory(String dirName, List<File> list)
 	{
-		final File dir = new File(Config.DATAPACK_ROOT, dirname);
+		final File dir = new File(Config.DATAPACK_ROOT, dirName);
 		if (!dir.exists())
 		{
-			LOGGER.warning("Dir " + dir.getAbsolutePath() + " not exists");
+			LOGGER.warning("Dir " + dir.getAbsolutePath() + " does not exist.");
 			return;
 		}
 		final File[] files = dir.listFiles(new XMLFilter());
-		for (File f : files)
+		for (File file : files)
 		{
-			hash.add(f);
+			list.add(file);
 		}
 	}
 	
@@ -88,18 +87,31 @@ public class DocumentEngine
 	
 	public void loadAllSkills(Map<Integer, Skill> allSkills)
 	{
-		int count = 0;
+		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
 		for (File file : _skillFiles)
 		{
-			final List<Skill> s = loadSkills(file);
-			if (s == null)
+			jobs.add(ThreadPool.schedule(() ->
 			{
-				continue;
-			}
-			for (Skill skill : s)
+				final List<Skill> skills = loadSkills(file);
+				if (skills == null)
+				{
+					return;
+				}
+				for (Skill skill : skills)
+				{
+					allSkills.put(SkillData.getSkillHashCode(skill), skill);
+					count++;
+				}
+			}, 0));
+		}
+		while (!jobs.isEmpty())
+		{
+			for (ScheduledFuture<?> job : jobs)
 			{
-				allSkills.put(SkillData.getSkillHashCode(skill), skill);
-				count++;
+				if ((job == null) || job.isDone() || job.isCancelled())
+				{
+					jobs.remove(job);
+				}
 			}
 		}
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
@@ -111,12 +123,26 @@ public class DocumentEngine
 	 */
 	public List<Item> loadItems()
 	{
-		final List<Item> list = new LinkedList<>();
-		for (File f : _itemFiles)
+		final List<ScheduledFuture<?>> jobs = new CopyOnWriteArrayList<>();
+		final List<Item> list = new CopyOnWriteArrayList<>();
+		for (File file : _itemFiles)
 		{
-			final DocumentItem document = new DocumentItem(f);
-			document.parse();
-			list.addAll(document.getItemList());
+			jobs.add(ThreadPool.schedule(() ->
+			{
+				final DocumentItem document = new DocumentItem(file);
+				document.parse();
+				list.addAll(document.getItemList());
+			}, 0));
+		}
+		while (!jobs.isEmpty())
+		{
+			for (ScheduledFuture<?> job : jobs)
+			{
+				if ((job == null) || job.isDone() || job.isCancelled())
+				{
+					jobs.remove(job);
+				}
+			}
 		}
 		return list;
 	}
@@ -124,5 +150,10 @@ public class DocumentEngine
 	private static class SingletonHolder
 	{
 		protected static final DocumentEngine _instance = new DocumentEngine();
+	}
+	
+	public static DocumentEngine getInstance()
+	{
+		return SingletonHolder._instance;
 	}
 }

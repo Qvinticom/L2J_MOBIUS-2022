@@ -2,8 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/Scripts.xsd">
 	<!-- Skip these filenames from script loading, because they are already loaded using a different way. -->
 	<exclude file="package-info.java" />
-	<exclude file="MasterHandler.java" />
-	<exclude file="EffectMasterHandler.java" />
+	<exclude file="handlers" />
 	
 	<!--
 	With this file you can exclude/include specific folders/files from within the scripts directory.

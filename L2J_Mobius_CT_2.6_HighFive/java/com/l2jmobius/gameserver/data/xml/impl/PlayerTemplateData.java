@@ -18,16 +18,16 @@ package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
@@ -37,11 +37,11 @@ import com.l2jmobius.gameserver.model.base.ClassId;
  * Loads player's base stats.
  * @author Forsaiken, Zoey76, GKR
  */
-public final class PlayerTemplateData implements IGameXmlReader
+public final class PlayerTemplateData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(PlayerTemplateData.class.getName());
 	
-	private final Map<ClassId, PlayerTemplate> _playerTemplates = new HashMap<>();
+	private final Map<ClassId, PlayerTemplate> _playerTemplates = new ConcurrentHashMap<>();
 	
 	private int _dataCount = 0;
 	

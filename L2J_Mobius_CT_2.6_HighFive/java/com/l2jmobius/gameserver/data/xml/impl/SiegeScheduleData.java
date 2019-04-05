@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.SiegeScheduleDate;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.util.Util;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class SiegeScheduleData implements IGameXmlReader
+public class SiegeScheduleData implements IXmlReader
 {
 	private final List<SiegeScheduleDate> _scheduleData = new ArrayList<>();
 	

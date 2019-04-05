@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 /**
  * @author Mobius
  */
-public class AttendanceRewardData implements IGameXmlReader
+public class AttendanceRewardData implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(AttendanceRewardData.class.getName());
 	private final List<ItemHolder> _rewards = new ArrayList<>();

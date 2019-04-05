@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import org.w3c.dom.DOMException;
@@ -29,7 +29,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.Npc;
@@ -45,9 +45,9 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class MultisellData implements IGameXmlReader
+public final class MultisellData implements IXmlReader
 {
-	private final Map<Integer, ListContainer> _entries = new HashMap<>();
+	private final Map<Integer, ListContainer> _entries = new ConcurrentHashMap<>();
 	
 	public static final int PAGE_SIZE = 40;
 	// Special IDs.

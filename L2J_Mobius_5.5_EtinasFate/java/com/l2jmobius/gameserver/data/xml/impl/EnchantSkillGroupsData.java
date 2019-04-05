@@ -18,16 +18,15 @@ package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.SkillEnchantType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
@@ -39,12 +38,12 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  * This class holds the Enchant Groups information.
  * @author Micr0
  */
-public class EnchantSkillGroupsData implements IGameXmlReader
+public class EnchantSkillGroupsData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnchantSkillGroupsData.class.getName());
 	
-	private final Map<Integer, EnchantSkillHolder> _enchantSkillHolders = new LinkedHashMap<>();
-	private final Map<SkillHolder, Set<Integer>> _enchantSkillTrees = new HashMap<>();
+	private final Map<Integer, EnchantSkillHolder> _enchantSkillHolders = new ConcurrentHashMap<>();
+	private final Map<SkillHolder, Set<Integer>> _enchantSkillTrees = new ConcurrentHashMap<>();
 	
 	public static int MAX_ENCHANT_LEVEL;
 	

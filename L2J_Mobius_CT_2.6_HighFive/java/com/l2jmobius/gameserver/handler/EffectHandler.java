@@ -62,7 +62,7 @@ public final class EffectHandler implements IHandler<Class<? extends AbstractEff
 	{
 		try
 		{
-			ScriptEngineManager.getInstance().executeEffectMasterHandler();
+			ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.EFFECT_MASTER_HANDLER_FILE);
 		}
 		catch (Exception e)
 		{

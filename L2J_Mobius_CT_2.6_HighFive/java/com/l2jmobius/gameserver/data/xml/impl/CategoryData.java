@@ -28,14 +28,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.CategoryType;
 
 /**
  * Loads the category data with Class or NPC IDs.
  * @author NosBit, xban1x
  */
-public final class CategoryData implements IGameXmlReader
+public final class CategoryData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(CategoryData.class.getName());
 	

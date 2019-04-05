@@ -30,7 +30,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -63,7 +63,7 @@ import ai.AbstractNpcAI;
  * Class Master AI.
  * @author Nik
  */
-public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
+public final class ClassMaster extends AbstractNpcAI implements IXmlReader
 {
 	// NPCs
 	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();

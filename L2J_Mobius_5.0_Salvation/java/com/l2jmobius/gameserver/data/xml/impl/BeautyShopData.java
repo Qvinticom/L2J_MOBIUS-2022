@@ -24,7 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
 /**
  * @author Sdw
  */
-public final class BeautyShopData implements IGameXmlReader
+public final class BeautyShopData implements IXmlReader
 {
 	private final Map<Race, Map<Sex, BeautyData>> _beautyList = new HashMap<>();
 	private final Map<Sex, BeautyData> _beautyData = new HashMap<>();

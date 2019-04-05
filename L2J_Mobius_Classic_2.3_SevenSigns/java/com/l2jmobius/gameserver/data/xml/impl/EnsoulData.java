@@ -19,16 +19,14 @@ package com.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.EnumMap;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulFee;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
@@ -39,12 +37,12 @@ import com.l2jmobius.gameserver.model.items.type.CrystalType;
 /**
  * @author UnAfraid
  */
-public class EnsoulData implements IGameXmlReader
+public class EnsoulData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(EnsoulData.class.getName());
-	private final Map<CrystalType, EnsoulFee> _ensoulFees = new EnumMap<>(CrystalType.class);
-	private final Map<Integer, EnsoulOption> _ensoulOptions = new HashMap<>();
-	private final Map<Integer, EnsoulStone> _ensoulStones = new HashMap<>();
+	private final Map<CrystalType, EnsoulFee> _ensoulFees = new ConcurrentHashMap<>();
+	private final Map<Integer, EnsoulOption> _ensoulOptions = new ConcurrentHashMap<>();
+	private final Map<Integer, EnsoulStone> _ensoulStones = new ConcurrentHashMap<>();
 	
 	protected EnsoulData()
 	{

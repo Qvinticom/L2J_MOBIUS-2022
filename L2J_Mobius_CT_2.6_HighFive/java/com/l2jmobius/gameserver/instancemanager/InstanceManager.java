@@ -29,7 +29,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 /**
  * @author evill33t, GodKratos
  */
-public final class InstanceManager implements IGameXmlReader
+public final class InstanceManager implements IXmlReader
 {
 	private static final Map<Integer, Instance> INSTANCES = new ConcurrentHashMap<>();
 	private final Map<Integer, InstanceWorld> _instanceWorlds = new ConcurrentHashMap<>();
@@ -46,7 +46,7 @@ public final class InstanceManager implements IGameXmlReader
 	// InstanceId Names
 	private static final Map<Integer, String> _instanceIdNames = new HashMap<>();
 	// Instance templates
-	private final Map<Integer, String> _instanceTemplates = new HashMap<>();
+	private final Map<Integer, String> _instanceTemplates = new ConcurrentHashMap<>();
 	private final Map<Integer, Map<Integer, Long>> _playerInstanceTimes = new ConcurrentHashMap<>();
 	// SQL Queries
 	private static final String ADD_INSTANCE_TIME = "INSERT INTO character_instance_time (charId,instanceId,time) values (?,?,?) ON DUPLICATE KEY UPDATE time=?";

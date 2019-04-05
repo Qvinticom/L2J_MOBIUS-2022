@@ -26,7 +26,7 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.StatFunction;
 import com.l2jmobius.gameserver.model.items.Item;
@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
  * This class holds the Enchant HP Bonus Data.
  * @author MrPoke, Zoey76
  */
-public class EnchantItemHPBonusData implements IGameXmlReader
+public class EnchantItemHPBonusData implements IXmlReader
 {
 	private final Map<CrystalType, List<Integer>> _armorHPBonuses = new EnumMap<>(CrystalType.class);
 	

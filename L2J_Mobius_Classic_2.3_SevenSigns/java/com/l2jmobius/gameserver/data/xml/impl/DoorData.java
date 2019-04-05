@@ -32,7 +32,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -45,7 +44,7 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
  * This class loads and hold info about doors.
  * @author JIV, GodKratos, UnAfraid
  */
-public final class DoorData implements IGameXmlReader
+public final class DoorData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(DoorData.class.getName());
 	

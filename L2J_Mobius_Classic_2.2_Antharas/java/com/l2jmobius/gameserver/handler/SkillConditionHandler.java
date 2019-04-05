@@ -50,7 +50,7 @@ public final class SkillConditionHandler
 	{
 		try
 		{
-			ScriptEngineManager.getInstance().executeSkillConditionMasterHandler();
+			ScriptEngineManager.getInstance().executeScript(ScriptEngineManager.SKILL_CONDITION_HANDLER_FILE);
 		}
 		catch (Exception e)
 		{

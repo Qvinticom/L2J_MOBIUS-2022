@@ -40,7 +40,6 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
@@ -61,7 +60,7 @@ import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
  * Instance manager.
  * @author evill33t, GodKratos, malyelfik
  */
-public final class InstanceManager implements IGameXmlReader
+public final class InstanceManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(InstanceManager.class.getName());
 	// Database query

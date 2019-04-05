@@ -16,10 +16,9 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.engines.DocumentEngine;
@@ -32,9 +31,9 @@ public final class SkillData
 {
 	private static Logger LOGGER = Logger.getLogger(SkillData.class.getName());
 	
-	private final Map<Integer, Skill> _skills = new HashMap<>();
-	private final Map<Integer, Integer> _skillMaxLevel = new HashMap<>();
-	private final Set<Integer> _enchantable = new HashSet<>();
+	private final Map<Integer, Skill> _skills = new ConcurrentHashMap<>();
+	private final Map<Integer, Integer> _skillMaxLevel = new ConcurrentHashMap<>();
+	private final Set<Integer> _enchantable = ConcurrentHashMap.newKeySet();
 	
 	protected SkillData()
 	{
@@ -50,11 +49,11 @@ public final class SkillData
 	
 	private void load()
 	{
-		final Map<Integer, Skill> _temp = new HashMap<>();
-		DocumentEngine.getInstance().loadAllSkills(_temp);
+		final Map<Integer, Skill> temp = new ConcurrentHashMap<>();
+		DocumentEngine.getInstance().loadAllSkills(temp);
 		
 		_skills.clear();
-		_skills.putAll(_temp);
+		_skills.putAll(temp);
 		
 		_skillMaxLevel.clear();
 		_enchantable.clear();

@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
@@ -61,7 +61,7 @@ import ai.AbstractNpcAI;
  * Mentor Guide AI.
  * @author Gnacik, UnAfraid
  */
-public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
+public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MentorGuide.class.getName());
 	

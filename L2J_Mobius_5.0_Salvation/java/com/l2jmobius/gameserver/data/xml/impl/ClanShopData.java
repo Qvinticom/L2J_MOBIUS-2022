@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.ClanShopProductHolder;
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.items.Item;
 /**
  * @author Mobius
  */
-public class ClanShopData implements IGameXmlReader
+public class ClanShopData implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(ClanShopData.class.getName());
 	

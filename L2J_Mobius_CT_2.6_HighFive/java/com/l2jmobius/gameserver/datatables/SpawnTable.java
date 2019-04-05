@@ -36,7 +36,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -49,12 +49,12 @@ import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  * Spawn data retriever.
  * @author Zoey76, Mobius
  */
-public final class SpawnTable implements IGameXmlReader
+public final class SpawnTable implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 	private static final Map<Integer, Set<Spawn>> _spawnTable = new ConcurrentHashMap<>();
-	private static final Map<Integer, String> _spawnTemplates = new HashMap<>();
+	private static final Map<Integer, String> _spawnTemplates = new ConcurrentHashMap<>();
 	private int _spanwCount = 0;
 	
 	@Override

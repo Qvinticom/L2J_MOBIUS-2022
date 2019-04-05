@@ -24,7 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.ClassInfo;
 
@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.base.ClassInfo;
  * Loads the the list of classes and it's info.
  * @author Zoey76
  */
-public final class ClassListData implements IGameXmlReader
+public final class ClassListData implements IXmlReader
 {
 	private final Map<ClassId, ClassInfo> _classData = new HashMap<>();
 	

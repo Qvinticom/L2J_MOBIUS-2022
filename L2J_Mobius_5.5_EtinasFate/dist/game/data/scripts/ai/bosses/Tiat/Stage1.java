@@ -30,7 +30,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.TrapAction;
@@ -66,7 +66,7 @@ import instances.AbstractInstance;
  * Please maintain consistency between the Seed scripts.
  * @author Gigiikun
  */
-public final class Stage1 extends AbstractInstance implements IGameXmlReader
+public final class Stage1 extends AbstractInstance implements IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(Stage1.class.getName());
 	

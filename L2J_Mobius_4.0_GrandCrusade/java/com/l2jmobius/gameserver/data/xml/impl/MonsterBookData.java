@@ -25,7 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.enums.Faction;
 import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import com.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
 /**
  * @author Mobius
  */
-public class MonsterBookData implements IGameXmlReader
+public class MonsterBookData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(MonsterBookData.class.getName());
 	private final List<MonsterBookCardHolder> _monsterBook = new ArrayList<>();

@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.logging.Level;
@@ -35,7 +36,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.handler.EffectHandler;
 import com.l2jmobius.gameserver.handler.SkillConditionHandler;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -51,12 +52,12 @@ import com.l2jmobius.gameserver.util.exp4j.ExpressionBuilder;
  * Skill data parser.
  * @author NosBit
  */
-public class SkillData implements IGameXmlReader
+public class SkillData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillData.class.getName());
 	
-	private final Map<Long, Skill> _skills = new HashMap<>();
-	private final Map<Integer, Integer> _skillsMaxLevel = new HashMap<>();
+	private final Map<Long, Skill> _skills = new ConcurrentHashMap<>();
+	private final Map<Integer, Integer> _skillsMaxLevel = new ConcurrentHashMap<>();
 	
 	private class NamedParamInfo
 	{
