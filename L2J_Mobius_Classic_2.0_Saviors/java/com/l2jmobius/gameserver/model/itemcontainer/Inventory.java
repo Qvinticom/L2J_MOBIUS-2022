@@ -870,6 +870,23 @@ public abstract class Inventory extends ItemContainer
 		return _paperdoll[slot] == null;
 	}
 	
+	public boolean isPaperdollSlotNotEmpty(int slot)
+	{
+		return _paperdoll[slot] != null;
+	}
+	
+	public boolean isItemEquipped(int itemId)
+	{
+		for (ItemInstance item : getItemsByItemId(itemId))
+		{
+			if (item.isEquipped())
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public static int getPaperdollIndex(int slot)
 	{
 		switch (slot)

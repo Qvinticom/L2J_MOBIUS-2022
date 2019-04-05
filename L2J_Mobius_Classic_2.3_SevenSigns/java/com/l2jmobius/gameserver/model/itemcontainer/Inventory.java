@@ -978,6 +978,18 @@ public abstract class Inventory extends ItemContainer
 		return _paperdoll[slot] != null;
 	}
 	
+	public boolean isItemEquipped(int itemId)
+	{
+		for (ItemInstance item : getItemsByItemId(itemId))
+		{
+			if (item.isEquipped())
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public static int getPaperdollIndex(long slot)
 	{
 		if (slot == Item.SLOT_UNDERWEAR)

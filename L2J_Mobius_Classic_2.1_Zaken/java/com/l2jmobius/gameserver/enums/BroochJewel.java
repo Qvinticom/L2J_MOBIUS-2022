@@ -21,26 +21,28 @@ package com.l2jmobius.gameserver.enums;
  */
 public enum BroochJewel
 {
-	RUBY_LV1(38855, 17814, 0.01),
-	RUBY_LV2(38856, 17814, 0.035),
-	RUBY_LV3(38857, 17815, 0.075),
-	RUBY_LV4(38858, 17816, 0.125),
-	RUBY_LV5(38859, 17817, 0.2),
-	SHAPPHIRE_LV1(38927, 17818, 0.01),
-	SHAPPHIRE_LV2(38928, 17818, 0.035),
-	SHAPPHIRE_LV3(38929, 17819, 0.075),
-	SHAPPHIRE_LV4(38930, 17820, 0.125),
-	SHAPPHIRE_LV5(38931, 17821, 0.2);
+	RUBY_LV1(38855, 17814, 0.01, true),
+	RUBY_LV2(38856, 17814, 0.035, true),
+	RUBY_LV3(38857, 17815, 0.075, true),
+	RUBY_LV4(38858, 17816, 0.125, true),
+	RUBY_LV5(38859, 17817, 0.2, true),
+	SHAPPHIRE_LV1(38927, 17818, 0.01, false),
+	SHAPPHIRE_LV2(38928, 17818, 0.035, false),
+	SHAPPHIRE_LV3(38929, 17819, 0.075, false),
+	SHAPPHIRE_LV4(38930, 17820, 0.125, false),
+	SHAPPHIRE_LV5(38931, 17821, 0.2, false);
 	
 	private int _itemId;
 	private int _effectId;
 	private double _bonus;
+	private boolean _isRuby; // If not, it is sapphire.
 	
-	private BroochJewel(int itemId, int effectId, double bonus)
+	private BroochJewel(int itemId, int effectId, double bonus, boolean isRuby)
 	{
 		_itemId = itemId;
 		_effectId = effectId;
 		_bonus = bonus;
+		_isRuby = isRuby;
 	}
 	
 	public int getItemId()
@@ -56,5 +58,10 @@ public enum BroochJewel
 	public double getBonus()
 	{
 		return _bonus;
+	}
+	
+	public boolean isRuby()
+	{
+		return _isRuby;
 	}
 }
