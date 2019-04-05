@@ -14245,12 +14245,12 @@ public final class PlayerInstance extends Playable
 	{
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
-			getAccountVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis());
+			getAccountVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis() + 86400000); // Now + 24 hours.
 			getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
 		else
 		{
-			getVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis());
+			getVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis() + 86400000); // Now + 24 hours.
 			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
 	}
