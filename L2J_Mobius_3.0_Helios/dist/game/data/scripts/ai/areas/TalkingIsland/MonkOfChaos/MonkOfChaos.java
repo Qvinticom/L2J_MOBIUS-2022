@@ -18,7 +18,6 @@ package ai.areas.TalkingIsland.MonkOfChaos;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.SubclassType;
@@ -26,7 +25,6 @@ import com.l2jmobius.gameserver.model.SkillLearn;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
@@ -154,10 +152,9 @@ public final class MonkOfChaos extends AbstractNpcAI
 				for (String varName : varNames)
 				{
 					final int skillId = player.getVariables().getInt(varName, 0);
-					final Skill sk = SkillData.getInstance().getSkill(skillId, 1);
-					if (sk != null)
+					if (skillId > 0)
 					{
-						player.removeSkill(sk);
+						player.removeSkill(skillId);
 						player.getVariables().remove(varName);
 					}
 				}
