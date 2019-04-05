@@ -27,6 +27,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -69,7 +70,7 @@ public final class ZoneManager implements IXmlReader
 	
 	private final Map<Class<? extends ZoneType>, ConcurrentHashMap<Integer, ? extends ZoneType>> _classZones = new ConcurrentHashMap<>();
 	private final Map<String, NpcSpawnTerritory> _spawnTerritories = new ConcurrentHashMap<>();
-	private volatile int _lastDynamicId = 300000;
+	private final AtomicInteger _lastDynamicId = new AtomicInteger(300000);
 	private List<ItemInstance> _debugItems;
 	
 	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
@@ -187,7 +188,7 @@ public final class ZoneManager implements IXmlReader
 						}
 						else
 						{
-							zoneId = zoneType.equalsIgnoreCase("NpcSpawnTerritory") ? 0 : _lastDynamicId++;
+							zoneId = zoneType.equalsIgnoreCase("NpcSpawnTerritory") ? 0 : _lastDynamicId.incrementAndGet();
 						}
 						
 						attribute = attrs.getNamedItem("name");

@@ -363,7 +363,7 @@ public final class InstanceManager implements IXmlReader
 	 * @param templateId the instance template id
 	 * @return
 	 */
-	public Instance createDynamicInstance(int templateId)
+	public synchronized Instance createDynamicInstance(int templateId)
 	{
 		while (getInstance(_dynamic) != null)
 		{

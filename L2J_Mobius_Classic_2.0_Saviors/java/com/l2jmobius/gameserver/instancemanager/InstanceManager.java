@@ -69,7 +69,7 @@ public final class InstanceManager implements IXmlReader
 	// Client instance names
 	private final Map<Integer, String> _instanceNames = new HashMap<>();
 	// Instance templates holder
-	private final Map<Integer, InstanceTemplate> _instanceTemplates = new HashMap<>();
+	private final Map<Integer, InstanceTemplate> _instanceTemplates = new ConcurrentHashMap<>();
 	// Created instance worlds
 	private int _currentInstanceId = 0;
 	private final Map<Integer, Instance> _instanceWorlds = new ConcurrentHashMap<>();
