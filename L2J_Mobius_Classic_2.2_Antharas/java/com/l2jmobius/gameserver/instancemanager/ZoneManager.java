@@ -49,9 +49,39 @@ import com.l2jmobius.gameserver.model.zone.ZoneType;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
+import com.l2jmobius.gameserver.model.zone.type.ArenaZone;
+import com.l2jmobius.gameserver.model.zone.type.CastleZone;
+import com.l2jmobius.gameserver.model.zone.type.ClanHallZone;
+import com.l2jmobius.gameserver.model.zone.type.ConditionZone;
+import com.l2jmobius.gameserver.model.zone.type.DamageZone;
+import com.l2jmobius.gameserver.model.zone.type.DerbyTrackZone;
+import com.l2jmobius.gameserver.model.zone.type.EffectZone;
+import com.l2jmobius.gameserver.model.zone.type.FishingZone;
+import com.l2jmobius.gameserver.model.zone.type.FortZone;
+import com.l2jmobius.gameserver.model.zone.type.HqZone;
+import com.l2jmobius.gameserver.model.zone.type.JailZone;
+import com.l2jmobius.gameserver.model.zone.type.LandingZone;
+import com.l2jmobius.gameserver.model.zone.type.MotherTreeZone;
+import com.l2jmobius.gameserver.model.zone.type.NoLandingZone;
+import com.l2jmobius.gameserver.model.zone.type.NoRestartZone;
+import com.l2jmobius.gameserver.model.zone.type.NoStoreZone;
+import com.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
 import com.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
+import com.l2jmobius.gameserver.model.zone.type.PeaceZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceHallTeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceTeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.ResidenceZone;
 import com.l2jmobius.gameserver.model.zone.type.RespawnZone;
+import com.l2jmobius.gameserver.model.zone.type.SayuneZone;
+import com.l2jmobius.gameserver.model.zone.type.ScriptZone;
+import com.l2jmobius.gameserver.model.zone.type.SiegableHallZone;
+import com.l2jmobius.gameserver.model.zone.type.SiegeZone;
 import com.l2jmobius.gameserver.model.zone.type.SpawnTerritory;
+import com.l2jmobius.gameserver.model.zone.type.SwampZone;
+import com.l2jmobius.gameserver.model.zone.type.TaxZone;
+import com.l2jmobius.gameserver.model.zone.type.TeleportZone;
+import com.l2jmobius.gameserver.model.zone.type.UndyingZone;
+import com.l2jmobius.gameserver.model.zone.type.WaterZone;
 
 /**
  * This class manages the zones
@@ -406,6 +436,38 @@ public final class ZoneManager implements IXmlReader
 	public final void load()
 	{
 		_classZones.clear();
+		_classZones.put(ArenaZone.class, new ConcurrentHashMap<>());
+		_classZones.put(CastleZone.class, new ConcurrentHashMap<>());
+		_classZones.put(ClanHallZone.class, new ConcurrentHashMap<>());
+		_classZones.put(ConditionZone.class, new ConcurrentHashMap<>());
+		_classZones.put(DamageZone.class, new ConcurrentHashMap<>());
+		_classZones.put(DerbyTrackZone.class, new ConcurrentHashMap<>());
+		_classZones.put(EffectZone.class, new ConcurrentHashMap<>());
+		_classZones.put(FishingZone.class, new ConcurrentHashMap<>());
+		_classZones.put(FortZone.class, new ConcurrentHashMap<>());
+		_classZones.put(HqZone.class, new ConcurrentHashMap<>());
+		_classZones.put(JailZone.class, new ConcurrentHashMap<>());
+		_classZones.put(LandingZone.class, new ConcurrentHashMap<>());
+		_classZones.put(MotherTreeZone.class, new ConcurrentHashMap<>());
+		_classZones.put(NoLandingZone.class, new ConcurrentHashMap<>());
+		_classZones.put(NoRestartZone.class, new ConcurrentHashMap<>());
+		_classZones.put(NoStoreZone.class, new ConcurrentHashMap<>());
+		_classZones.put(NoSummonFriendZone.class, new ConcurrentHashMap<>());
+		_classZones.put(OlympiadStadiumZone.class, new ConcurrentHashMap<>());
+		_classZones.put(PeaceZone.class, new ConcurrentHashMap<>());
+		_classZones.put(ResidenceHallTeleportZone.class, new ConcurrentHashMap<>());
+		_classZones.put(ResidenceTeleportZone.class, new ConcurrentHashMap<>());
+		_classZones.put(ResidenceZone.class, new ConcurrentHashMap<>());
+		_classZones.put(RespawnZone.class, new ConcurrentHashMap<>());
+		_classZones.put(SayuneZone.class, new ConcurrentHashMap<>());
+		_classZones.put(ScriptZone.class, new ConcurrentHashMap<>());
+		_classZones.put(SiegableHallZone.class, new ConcurrentHashMap<>());
+		_classZones.put(SiegeZone.class, new ConcurrentHashMap<>());
+		_classZones.put(SwampZone.class, new ConcurrentHashMap<>());
+		_classZones.put(TaxZone.class, new ConcurrentHashMap<>());
+		_classZones.put(TeleportZone.class, new ConcurrentHashMap<>());
+		_classZones.put(UndyingZone.class, new ConcurrentHashMap<>());
+		_classZones.put(WaterZone.class, new ConcurrentHashMap<>());
 		_spawnTerritories.clear();
 		parseDatapackDirectory("data/zones", false);
 		parseDatapackDirectory("data/zones/spawnZones", false);
@@ -458,14 +520,10 @@ public final class ZoneManager implements IXmlReader
 		ConcurrentHashMap<Integer, T> map = (ConcurrentHashMap<Integer, T>) _classZones.get(zone.getClass());
 		if (map == null)
 		{
-			map = new ConcurrentHashMap<>();
-			map.put(id, zone);
-			_classZones.put(zone.getClass(), map);
+			_classZones.put(zone.getClass(), new ConcurrentHashMap<>());
+			map = (ConcurrentHashMap<Integer, T>) _classZones.get(zone.getClass());
 		}
-		else
-		{
-			map.put(id, zone);
-		}
+		map.put(id, zone);
 	}
 	
 	/**
