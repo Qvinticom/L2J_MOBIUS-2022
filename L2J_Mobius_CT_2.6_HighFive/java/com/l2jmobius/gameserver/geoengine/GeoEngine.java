@@ -52,15 +52,6 @@ public class GeoEngine
 	private final BlockNull _nullBlock;
 	
 	/**
-	 * Returns the instance of the {@link GeoEngine}.
-	 * @return {@link GeoEngine} : The instance.
-	 */
-	public static GeoEngine getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
-	/**
 	 * GeoEngine constructor. Loads all geodata files of chosen geodata format.
 	 */
 	public GeoEngine()
@@ -78,6 +69,7 @@ public class GeoEngine
 		
 		// load geo files according to geoengine config setup
 		int loaded = 0;
+		long _fileSize = 0;
 		for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++)
 		{
 			for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++)
@@ -89,6 +81,7 @@ public class GeoEngine
 					if (loadGeoBlocks(rx, ry))
 					{
 						loaded++;
+						_fileSize += f.length();
 					}
 				}
 				else
@@ -100,6 +93,10 @@ public class GeoEngine
 		}
 		
 		LOGGER.info("GeoEngine: Loaded " + loaded + " geodata files.");
+		if (loaded > 0)
+		{
+			LOGGER.info("GeoEngine: Total geodata file size " + (_fileSize / 1024 / 1024) + " MB.");
+		}
 		
 		// avoid wrong configs when no files are loaded
 		if (loaded == 0)
@@ -924,6 +921,15 @@ public class GeoEngine
 	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
 		return null;
+	}
+	
+	/**
+	 * Returns the instance of the {@link GeoEngine}.
+	 * @return {@link GeoEngine} : The instance.
+	 */
+	public static GeoEngine getInstance()
+	{
+		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder

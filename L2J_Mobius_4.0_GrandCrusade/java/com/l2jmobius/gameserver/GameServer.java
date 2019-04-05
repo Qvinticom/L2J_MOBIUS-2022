@@ -308,13 +308,7 @@ public class GameServer
 		ClanEntryManager.getInstance();
 		
 		printSection("Geodata");
-		long geodataMemory = getUsedMemoryMB();
 		GeoEngine.getInstance();
-		geodataMemory = getUsedMemoryMB() - geodataMemory;
-		if (geodataMemory < 0)
-		{
-			geodataMemory = 0;
-		}
 		
 		printSection("NPCs");
 		NpcData.getInstance();
@@ -452,7 +446,6 @@ public class GameServer
 		System.gc();
 		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
 		LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
-		LOGGER.info(getClass().getSimpleName() + ": Geodata use " + geodataMemory + " MB of memory.");
 		LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
 		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		
