@@ -745,8 +745,9 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>97</magicLvl>
 		<isMagic>1</isMagic>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
 		<effects>
 			<effect name="CallLearnedSkill">
 				<skillId>11565</skillId> <!-- Elemental Resistance -->
