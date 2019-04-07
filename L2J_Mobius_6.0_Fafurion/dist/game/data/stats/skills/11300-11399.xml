@@ -3023,11 +3023,11 @@
 					<value level="4">15158</value>
 					<value level="5">15159</value>
 					<value level="6">15160</value>
-					<value level="7">15161</value>
-					<value level="8">15162</value>
-					<value level="9">15163</value>
-					<value level="10">15164</value>
-					<value level="11">15165</value>
+					<value level="7">15220</value>
+					<value level="8">15221</value>
+					<value level="9">15222</value>
+					<value level="10">15223</value>
+					<value level="11">15224</value>
 				</npcId>
 				<summonPoints>2</summonPoints>
 				<lifeTime>-1</lifeTime>
@@ -3084,11 +3084,11 @@
 					<value level="4">15164</value>
 					<value level="5">15165</value>
 					<value level="6">15166</value>
-					<value level="7">15167</value>
-					<value level="8">15168</value>
-					<value level="9">15169</value>
-					<value level="10">15170</value>
-					<value level="11">15171</value>
+					<value level="7">15225</value>
+					<value level="8">15226</value>
+					<value level="9">15227</value>
+					<value level="10">15228</value>
+					<value level="11">15229</value>
 				</npcId>
 				<summonPoints>2</summonPoints>
 				<lifeTime>-1</lifeTime>
@@ -3145,11 +3145,11 @@
 					<value level="4">15170</value>
 					<value level="5">15171</value>
 					<value level="6">15172</value>
-					<value level="7">15173</value>
-					<value level="8">15174</value>
-					<value level="9">15175</value>
-					<value level="10">15176</value>
-					<value level="11">15177</value>
+					<value level="7">15230</value>
+					<value level="8">15231</value>
+					<value level="9">15232</value>
+					<value level="10">15233</value>
+					<value level="11">15234</value>
 				</npcId>
 				<summonPoints>2</summonPoints>
 				<lifeTime>-1</lifeTime>
@@ -3206,11 +3206,11 @@
 					<value level="4">15176</value>
 					<value level="5">15177</value>
 					<value level="6">15178</value>
-					<value level="7">15179</value>
-					<value level="8">15180</value>
-					<value level="9">15181</value>
-					<value level="10">15182</value>
-					<value level="11">15183</value>
+					<value level="7">15235</value>
+					<value level="8">15236</value>
+					<value level="9">15237</value>
+					<value level="10">15238</value>
+					<value level="11">15239</value>
 				</npcId>
 				<summonPoints>2</summonPoints>
 				<lifeTime>-1</lifeTime>
@@ -3267,11 +3267,11 @@
 					<value level="4">15182</value>
 					<value level="5">15183</value>
 					<value level="6">15184</value>
-					<value level="7">15185</value>
-					<value level="8">15186</value>
-					<value level="9">15187</value>
-					<value level="10">15188</value>
-					<value level="11">15189</value>
+					<value level="7">15240</value>
+					<value level="8">15241</value>
+					<value level="9">15242</value>
+					<value level="10">15243</value>
+					<value level="11">15244</value>
 				</npcId>
 				<summonPoints>2</summonPoints>
 				<lifeTime>-1</lifeTime>
@@ -3328,24 +3328,27 @@
 					<value level="4">15188</value>
 					<value level="5">15189</value>
 					<value level="6">15190</value>
-					<value level="7">15191</value>
-					<value level="8">15192</value>
-					<value level="9">15193</value>
-					<value level="10">15194</value>
-					<value level="11">15195</value>
+					<value level="7">15245</value>
+					<value level="8">15246</value>
+					<value level="9">15247</value>
+					<value level="10">15248</value>
+					<value level="11">15249</value>
 				</npcId>
 				<summonPoints>2</summonPoints>
 				<lifeTime>-1</lifeTime>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11375" toLevel="3" name="Commando Jumping Attack">
+	<skill id="11375" toLevel="6" name="Commando Jumping Attack">
 		<!-- Jumps and hulrs attack to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3359,6 +3362,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value> <!-- Guessed -->
+			<value level="5">88</value> <!-- Guessed -->
+			<value level="6">88</value> <!-- Guessed -->
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
@@ -3380,6 +3386,9 @@
 					<value level="1">18224</value>
 					<value level="2">19158</value>
 					<value level="3">20092</value>
+					<value level="4">21026</value> <!-- Guessed -->
+					<value level="5">21960</value> <!-- Guessed -->
+					<value level="6">22903</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="Speed">
@@ -3388,7 +3397,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11376" toLevel="3" name="Commando Double Smash">
+	<skill id="11376" toLevel="6" name="Commando Double Smash">
 		<!-- Inflicts damage with $s1 Power added to P. Atk. and knocks down for $s2 -->
 		<icon>icon.skill10546</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3404,6 +3413,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">88</value> <!-- Guessed -->
+			<value level="5">89</value> <!-- Guessed -->
+			<value level="6">90</value> <!-- Guessed -->
 		</mpConsume>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
@@ -3417,6 +3429,9 @@
 					<value level="1">32410</value>
 					<value level="2">34072</value>
 					<value level="3">35734</value>
+					<value level="4">37396</value> <!-- Guessed -->
+					<value level="5">39058</value> <!-- Guessed -->
+					<value level="6">40720</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="KnockBack">
@@ -3427,7 +3442,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11377" toLevel="3" name="Witch Cat Power">
+	<skill id="11377" toLevel="6" name="Witch Cat Power">
 		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
@@ -3439,6 +3454,9 @@
 			<value level="1">172</value>
 			<value level="2">173</value>
 			<value level="3">174</value>
+			<value level="4">175</value> <!-- Guessed -->
+			<value level="5">176</value> <!-- Guessed -->
+			<value level="6">177</value> <!-- Guessed -->
 		</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>2000</hitTime>
@@ -3447,6 +3465,9 @@
 			<value level="1">-3541</value>
 			<value level="2">-3561</value>
 			<value level="3">-3561</value>
+			<value level="4">-3561</value> <!-- Guessed -->
+			<value level="5">-3561</value> <!-- Guessed -->
+			<value level="6">-3561</value> <!-- Guessed -->
 		</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 		<effects>
@@ -3455,11 +3476,14 @@
 					<value level="1">31903</value>
 					<value level="2">33539</value>
 					<value level="3">35175</value>
+					<value level="4">36811</value> <!-- Guessed -->
+					<value level="5">38447</value> <!-- Guessed -->
+					<value level="6">40083</value> <!-- Guessed -->
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11378" toLevel="3" name="Elemental Slam">
+	<skill id="11378" toLevel="6" name="Elemental Slam">
 		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. and pushes them back. -->
 		<icon>icon.skill1171</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3478,6 +3502,9 @@
 			<value level="1">172</value>
 			<value level="2">173</value>
 			<value level="3">174</value>
+			<value level="4">175</value> <!-- Guessed -->
+			<value level="5">176</value> <!-- Guessed -->
+			<value level="6">177</value> <!-- Guessed -->
 		</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>2500</hitTime>
@@ -3487,6 +3514,9 @@
 			<value level="1">-3541</value>
 			<value level="2">-3561</value>
 			<value level="3">-3561</value>
+			<value level="4">-3561</value> <!-- Guessed -->
+			<value level="5">-3561</value> <!-- Guessed -->
+			<value level="6">-3561</value> <!-- Guessed -->
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -3495,6 +3525,9 @@
 					<value level="1">30623</value>
 					<value level="2">32193</value>
 					<value level="3">33763</value>
+					<value level="4">35333</value> <!-- Guessed -->
+					<value level="5">36903</value> <!-- Guessed -->
+					<value level="6">38473</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="KnockBack">
@@ -3504,13 +3537,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11379" toLevel="3" name="Lancer Rush">
+	<skill id="11379" toLevel="6" name="Lancer Rush">
 		<!-- Charges forward to inflict damage on the target with $s1 power added to P. Attack and inflicts Stun for $s2. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
+			<value level="6">3</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3529,6 +3565,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value> <!-- Guessed -->
+			<value level="5">88</value> <!-- Guessed -->
+			<value level="6">88</value> <!-- Guessed -->
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
@@ -3539,6 +3578,9 @@
 			<value level="1">-3541</value>
 			<value level="2">-3561</value>
 			<value level="3">-3561</value>
+			<value level="3">-3561</value> <!-- Guessed -->
+			<value level="3">-3561</value> <!-- Guessed -->
+			<value level="3">-3561</value> <!-- Guessed -->
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<conditions>
@@ -3552,12 +3594,15 @@
 					<value level="1">16198</value>
 					<value level="2">17028</value>
 					<value level="3">17858</value>
+					<value level="4">18688</value> <!-- Guessed -->
+					<value level="5">19518</value> <!-- Guessed -->
+					<value level="6">20348</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="11380" toLevel="3" name="Power Stump">
+	<skill id="11380" toLevel="6" name="Power Stump">
 		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. and blows them away. -->
 		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3576,6 +3621,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value> <!-- Guessed -->
+			<value level="5">88</value> <!-- Guessed -->
+			<value level="6">88</value> <!-- Guessed -->
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -3583,6 +3631,9 @@
 			<value level="1">-3541</value>
 			<value level="2">-3561</value>
 			<value level="3">-3561</value>
+			<value level="3">-3561</value> <!-- Guessed -->
+			<value level="3">-3561</value> <!-- Guessed -->
+			<value level="3">-3561</value> <!-- Guessed -->
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
 		<isDebuff>true</isDebuff>
@@ -3592,6 +3643,9 @@
 					<value level="1">22677</value>
 					<value level="2">23839</value>
 					<value level="3">25001</value>
+					<value level="4">26163</value> <!-- Guessed -->
+					<value level="5">27325</value> <!-- Guessed -->
+					<value level="6">28487</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="KnockBack">
@@ -3601,7 +3655,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11381" toLevel="3" name="Cherub Power">
+	<skill id="11381" toLevel="6" name="Cherub Power">
 		<!-- Inflicts damage to nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
@@ -3613,6 +3667,9 @@
 			<value level="1">172</value>
 			<value level="2">173</value>
 			<value level="3">174</value>
+			<value level="4">174</value> <!-- Guessed -->
+			<value level="5">175</value> <!-- Guessed -->
+			<value level="6">175</value> <!-- Guessed -->
 		</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>2000</hitTime>
@@ -3621,6 +3678,9 @@
 			<value level="1">-3541</value>
 			<value level="2">-3561</value>
 			<value level="3">-3561</value>
+			<value level="4">-3561</value> <!-- Guessed -->
+			<value level="5">-3561</value> <!-- Guessed -->
+			<value level="6">-3561</value> <!-- Guessed -->
 		</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 		<effects>
@@ -3629,17 +3689,23 @@
 					<value level="1">31903</value>
 					<value level="2">33539</value>
 					<value level="3">35175</value>
+					<value level="4">36811</value> <!-- Guessed -->
+					<value level="5">38447</value> <!-- Guessed -->
+					<value level="6">40083</value> <!-- Guessed -->
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11382" toLevel="3" name="Multiple Icicles">
+	<skill id="11382" toLevel="6" name="Multiple Icicles">
 		<!-- Inflicts damage to target and nearby enemies with $s1 Power added to P. Atk., and decreases Speed by $s3 for $s2. -->
 		<icon>icon.skill10103</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3654,6 +3720,9 @@
 			<value level="1">172</value>
 			<value level="2">173</value>
 			<value level="3">174</value>
+			<value level="4">174</value> <!-- Guessed -->
+			<value level="5">175</value> <!-- Guessed -->
+			<value level="6">175</value> <!-- Guessed -->
 		</mpConsume>
 		<castRange>400</castRange>
 		<hitTime>2500</hitTime>
@@ -3663,6 +3732,9 @@
 			<value level="1">-3541</value>
 			<value level="2">-3561</value>
 			<value level="3">-3561</value>
+			<value level="5">-3561</value> <!-- Guessed -->
+			<value level="5">-3561</value> <!-- Guessed -->
+			<value level="6">-3561</value> <!-- Guessed -->
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -3671,6 +3743,9 @@
 					<value level="1">34449</value>
 					<value level="2">36215</value>
 					<value level="3">37981</value>
+					<value level="4">39747</value> <!-- Guessed -->
+					<value level="5">41513</value> <!-- Guessed -->
+					<value level="6">43279</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="Speed">
@@ -3679,7 +3754,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11383" toLevel="3" name="Phantom Sword Attack">
+	<skill id="11383" toLevel="6" name="Phantom Sword Attack">
 		<!-- Inflicts damage with $s1 Power added to P. Atk. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
@@ -3689,6 +3764,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value>
+			<value level="5">88</value>
+			<value level="6">88</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>50</castRange>
@@ -3702,11 +3780,14 @@
 					<value level="1">40502</value>
 					<value level="2">42578</value>
 					<value level="3">44654</value>
+					<value level="4">46730</value> <!-- Guessed -->
+					<value level="5">48806</value> <!-- Guessed -->
+					<value level="6">50882</value> <!-- Guessed -->
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11384" toLevel="3" name="Phantom Blow">
+	<skill id="11384" toLevel="6" name="Phantom Blow">
 		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. -->
 		<icon>icon.skill10511</icon>
 		<operateType>A1</operateType>
@@ -3717,6 +3798,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value>
+			<value level="5">88</value>
+			<value level="6">88</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>50</castRange>
@@ -3732,6 +3816,9 @@
 					<value level="1">45696</value>
 					<value level="2">47772</value>
 					<value level="3">49848</value>
+					<value level="4">51924</value> <!-- Guessed -->
+					<value level="5">54000</value> <!-- Guessed -->
+					<value level="6">56076</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="Lethal">
@@ -3740,7 +3827,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11385" toLevel="3" name="Phantom Spike">
+	<skill id="11385" toLevel="6" name="Phantom Spike">
 		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
@@ -3751,6 +3838,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value>
+			<value level="5">88</value>
+			<value level="6">88</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>2000</hitTime>
@@ -3765,6 +3855,9 @@
 					<value level="1">51411</value>
 					<value level="2">53747</value>
 					<value level="3">56083</value>
+					<value level="4">58419</value> <!-- Guessed -->
+					<value level="5">60755</value> <!-- Guessed -->
+					<value level="6">63091</value> <!-- Guessed -->
 				</power>
 			</effect>
 			<effect name="Lethal">
@@ -3773,7 +3866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11386" toLevel="3" name="Phantom Crash">
+	<skill id="11386" toLevel="6" name="Phantom Crash">
 		<!-- Inflicts damage with $s1 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
@@ -3783,6 +3876,9 @@
 			<value level="1">86</value>
 			<value level="2">86</value>
 			<value level="3">87</value>
+			<value level="4">87</value>
+			<value level="5">88</value>
+			<value level="6">88</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>2000</hitTime>
@@ -3795,6 +3891,9 @@
 					<value level="1">45568</value>
 					<value level="2">47904</value>
 					<value level="3">50240</value>
+					<value level="4">52576</value> <!-- Guessed -->
+					<value level="5">54912</value> <!-- Guessed -->
+					<value level="6">57248</value> <!-- Guessed -->
 				</power>
 			</effect>
 		</effects>
@@ -3842,7 +3941,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11388" toLevel="1" name="Lord of Arcana">
+	<skill id="11388" toLevel="2" name="Lord of Arcana">
 		<!-- For $s1, P. Atk./ P. Def./ M. Atk./ M. Def. +$s2. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3927,7 +4026,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11390" toLevel="1" name="Lord of Elemental">
+	<skill id="11390" toLevel="2" name="Lord of Elemental">
 		<!-- For $s1, P. Atk./ P. Def./ M. Atk./ M. Def. +$s2. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
