@@ -22,28 +22,17 @@
 		<skill skillName="Create Common Item" skillId="1320" skillLvl="7" getLevel="55" autoGet="true" />
 		<skill skillName="Create Common Item" skillId="1320" skillLvl="8" getLevel="62" autoGet="true" />
 		<skill skillName="Create Common Item" skillId="1320" skillLvl="9" getLevel="70" autoGet="true" />
-
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
-			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
-			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
-		</skill>
-		<skill skillName="Divine Expansion" skillId="10956" skillLvl="1" getLevel="100" levelUpSp="88099899">
-			<item id="39738" count="8" /> <!-- Rune Stone -->
-		</skill>
 		
-		<!-- TODO Proper learning condition -->
+		<skill skillName="Aura Bird - Falcon" skillId="841" skillLvl="1" getLevel="75" />
+		<skill skillName="Aura Bird - Owl" skillId="842" skillLvl="1" getLevel="75" />
+		
+		<!-- Hair accessory hide / show -->
+		<skill skillName="Change Hair Accessory" skillId="17192" skillLvl="1" getLevel="1" autoGet="true" />
+		
+		<!-- TODO: Proper learning condition? -->
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="10000" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="370000" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="3" getLevel="95" getDualClassLevel="95" levelUpSp="1000000" />
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="4" getLevel="99" getDualClassLevel="99" levelUpSp="5000000" />
-
-		<!-- Hair accessory hide / show -->
-		<skill skillName="Change Hair Accessory" skillId="17192" skillLvl="1" getLevel="1" autoGet="true" />
 	</skillTree>
 </list>
