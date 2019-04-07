@@ -114,7 +114,13 @@ import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
 import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
+import quests.Q00562_BasicMissionAltarOfEvil.Q00562_BasicMissionAltarOfEvil;
+import quests.Q00563_BasicMissionBloodySwampland.Q00563_BasicMissionBloodySwampland;
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
+import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
+import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
+import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
+import quests.Q00584_NeverSayGoodBye.Q00584_NeverSayGoodBye;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -509,8 +515,8 @@ public class QuestMasterHandler
 		Q00553_OlympiadUndefeated.class,
 		Q00560_HowToOvercomeFear.class, // FIXME: Custom.
 		Q00561_BasicMissionHarnakUndergroundRuins.class, // TODO: Not done.
-		Q00562_BasicMissionAltarOfEvil.class, // TODO: Not done.
-		Q00563_BasicMissionBloodySwampland.class, // TODO: Not done.
+		Q00562_BasicMissionAltarOfEvil.class,
+		Q00563_BasicMissionBloodySwampland.class,
 		Q00564_BasicMissionKartiasLabyrinthSolo.class,
 		Q00565_BasicMissionFairySettlementWest.class, // TODO: Not done.
 		Q00566_BasicMissionFairySettlementEast.class, // TODO: Not done.
@@ -527,10 +533,10 @@ public class QuestMasterHandler
 		Q00578_BasicMissionCemetery.class, // TODO: Not done.
 		Q00579_BasicMissionBlazingSwamp.class, // TODO: Not done.
 		Q00580_BeyondTheMemories.class, // TODO: Not done.
-		Q00581_ThePurificationRitual.class, // TODO: Not done.
-		Q00582_WashBloodWithBlood.class, // TODO: Not done.
-		Q00583_MeaningOfSurvival.class, // TODO: Not done.
-		Q00584_NeverSayGoodBye.class, // TODO: Not done.
+		Q00581_ThePurificationRitual.class,
+		Q00582_WashBloodWithBlood.class,
+		Q00583_MeaningOfSurvival.class,
+		Q00584_NeverSayGoodBye.class,
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
 		Q00587_MoreAggressiveOperation.class, // TODO: Not done.
