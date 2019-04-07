@@ -14188,7 +14188,7 @@ public final class PlayerInstance extends Playable
 		{
 			canBeRewarded = true;
 			// Reset index if max is reached.
-			if (rewardIndex >= (AttendanceRewardData.getInstance().getRewardsCount() - 1))
+			if (rewardIndex >= AttendanceRewardData.getInstance().getRewardsCount())
 			{
 				rewardIndex = 0;
 			}
