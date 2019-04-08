@@ -54,7 +54,7 @@ public class Q00562_BasicMissionAltarOfEvil extends Quest
 	{
 		super(562);
 		addStartNpc(PENNY);
-		addTalkId(PENNY, LAPATHIA);
+		addTalkId(PENNY, LAPATHIA, ELISA, BELLA, DE_VILLAGE_TELEPORT_DEVICE);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "nolevel.html");
 	}
 	
