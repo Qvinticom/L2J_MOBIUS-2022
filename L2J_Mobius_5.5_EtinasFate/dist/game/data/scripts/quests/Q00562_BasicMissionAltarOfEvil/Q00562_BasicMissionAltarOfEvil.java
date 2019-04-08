@@ -38,7 +38,7 @@ public class Q00562_BasicMissionAltarOfEvil extends Quest
 	private static final int ELISA = 30848;
 	private static final int BELLA = 30256;
 	private static final int DE_VILLAGE_TELEPORT_DEVICE = 30134;
-	// Reward's
+	// Rewards
 	private static final long EXP = 231860550;
 	private static final int SP = 231840;
 	private static final int FP = 200; // Faction points
@@ -129,7 +129,7 @@ public class Q00562_BasicMissionAltarOfEvil extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34414-04.html": // DE_VILLAGE_TELEPORT_DEVICE
+			case "34414-04.html": // LEPATHIA
 			{
 				giveItems(player, SCROLL_OF_ESCAPE_TOWN_OF_ADEN, 1);
 				htmltext = event;

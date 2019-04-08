@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
 
 /**
- * Way Of Wandering Knight (10560)
+ * Across The DeathLine (10561)
  * @URL https://l2wiki.com/Across_the_Death_Line
  * @author NightBR
  */
@@ -38,7 +38,7 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 	private static final int HERPHAH = 34362;
 	private static final int PENNY = 34413;
 	// Reward's
-	private static final long EXP = 1409345453;
+	private static final long EXP = 4409345453L;
 	private static final int SP = 3968411;
 	private static final int SOUL_SHOT_GRADE_R = 22433;
 	private static final int BS_SHOT_GRADE_R = 22434;
@@ -72,10 +72,8 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 		{
 			case "34362-02.htm":
 			case "34362-03.htm":
-			case "34362-05.htm":
-			case "34362-06.htm":
-			case "34362-11.html":
-			case "32327-2.htm":
+			case "34362-05.html":
+			case "34362-06.html":
 			{
 				htmltext = event;
 				break;
@@ -88,7 +86,7 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34362-07.htm":
+			case "34362-07.html":
 			{
 				qs.setCond(2, true);
 				htmltext = event;
@@ -96,6 +94,7 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 			}
 			case "34362-09.html":
 			{
+				// Rewards
 				giveItems(player, SOUL_SHOT_GRADE_R, 2500);
 				giveItems(player, BS_SHOT_GRADE_R, 2500);
 				giveItems(player, PA_ART_OF_SEDUCTION, 5);
@@ -105,13 +104,13 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34413-2.htm":
+			case "34413-02.html":
 			{
 				qs.setCond(3, true);
 				htmltext = event;
 				break;
 			}
-			case "34413-4.htm":
+			case "34413-04.html":
 			{
 				qs.setCond(4, true);
 				htmltext = event;
@@ -144,17 +143,17 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 				{
 					case HERPHAH:
 					{
-						if (qs.isCond(3))
+						if (qs.isCond(1))
 						{
-							htmltext = "34362-07.htm";
+							htmltext = "34362-04.htm";
 						}
 						else if (qs.isCond(4))
 						{
 							htmltext = "34362-08.html";
 						}
-						else if (qs.isCond(5))
+						else
 						{
-							htmltext = "34362-13.html";
+							htmltext = "34362-07.html";
 						}
 						break;
 					}
@@ -162,7 +161,7 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							htmltext = "34413-1.htm";
+							htmltext = "34413-01.html";
 						}
 						else if (qs.isCond(3))
 						{
@@ -171,7 +170,7 @@ public final class Q10561_AcrossTheDeathLine extends Quest
 							// Checking if reached level 2 with Adventurer's Guild Faction
 							if (player.getFactionLevel(Faction.ADVENTURE_GUILD) >= 2)
 							{
-								htmltext = "34413-3.htm";
+								htmltext = "34413-03.html";
 							}
 							else
 							{
