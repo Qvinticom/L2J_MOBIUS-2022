@@ -120,6 +120,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	
 	// Skills
 	private static Map<Integer, SkillHolder> NPC_BUFFS = new HashMap<>();
+	static
 	{
 		NPC_BUFFS.put(NPC_KNIGHT, new SkillHolder(5970, 1));
 		NPC_BUFFS.put(NPC_RANGER, new SkillHolder(5971, 1));

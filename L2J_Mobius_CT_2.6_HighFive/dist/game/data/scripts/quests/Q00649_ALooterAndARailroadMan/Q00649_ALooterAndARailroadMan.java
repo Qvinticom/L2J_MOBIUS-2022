@@ -42,7 +42,6 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 	private static final int MIN_LVL = 30;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
-	
 	static
 	{
 		MONSTERS.put(22017, 529); // Bandit Sweeper

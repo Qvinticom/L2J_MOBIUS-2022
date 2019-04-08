@@ -40,6 +40,7 @@ public class Q357_WarehouseKeepersAmbition extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(FOREST_RUNNER, 400000);
 		CHANCES.put(FLINE_ELDER, 410000);

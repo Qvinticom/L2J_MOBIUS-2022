@@ -75,6 +75,7 @@ public class Q663_SeductiveWhispers extends Quest
 	
 	// Text of cards
 	private static final Map<Integer, String> CARDS = new HashMap<>();
+	static
 	{
 		CARDS.put(0, "No such card");
 		CARDS.put(11, "<font color=\"ff453d\"> Sun Card: 1 </font>");
@@ -91,6 +92,7 @@ public class Q663_SeductiveWhispers extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20674, 807000); // Doom Knight
 		CHANCES.put(20678, 372000); // Tortured Undead

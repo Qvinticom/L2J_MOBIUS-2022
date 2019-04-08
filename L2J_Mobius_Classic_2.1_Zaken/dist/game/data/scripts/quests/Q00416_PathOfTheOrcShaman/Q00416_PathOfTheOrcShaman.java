@@ -68,7 +68,6 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	private static final int MIN_LEVEL = 19;
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS = new HashMap<>();
-	
 	static
 	{
 		MOBS.put(20415, new ItemChanceHolder(FIRST_FIERY_EGG, 1.0, 1)); // scarlet_salamander

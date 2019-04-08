@@ -111,6 +111,7 @@ public class Q327_RecoverTheFarmland extends Quest
 	
 	// Exp
 	private static final Map<Integer, Integer> EXP_REWARD = new HashMap<>();
+	static
 	{
 		EXP_REWARD.put(ANCIENT_CLAY_URN, 2766);
 		EXP_REWARD.put(ANCIENT_BRASS_TIARA, 3227);

@@ -64,7 +64,6 @@ public final class ExBasicActionList implements IClientOutgoingPacket
 	};
 	//@formatter:on
 	public static final int[] DEFAULT_ACTION_LIST;
-	
 	static
 	{
 		final int count1 = 74; // 0 <-> (count1 - 1)

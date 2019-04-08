@@ -62,7 +62,6 @@ public final class Q00281_HeadForTheHills extends Quest
 	};
 	private static final ItemHolder SOULSHOTS_NO_GRADE_FOR_ROOKIES = new ItemHolder(5789, 6000);
 	private static final ItemHolder SPIRITSHOTS_NO_GRADE_FOR_ROOKIES = new ItemHolder(5790, 3000);
-	
 	static
 	{
 		MONSTERS.put(22234, 390); // Green Goblin

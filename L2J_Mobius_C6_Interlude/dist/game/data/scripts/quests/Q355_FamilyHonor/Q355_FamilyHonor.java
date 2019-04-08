@@ -50,6 +50,7 @@ public class Q355_FamilyHonor extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(TIMAK_ORC_TROOP_LEADER, new int[]
 		{

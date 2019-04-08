@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.attributechange.ExChangeAt
 public class ChangeAttributeCrystal implements IItemHandler
 {
 	private static final Map<Integer, ItemGrade> ITEM_GRADES = new HashMap<>();
+	static
 	{
 		ITEM_GRADES.put(33502, ItemGrade.S);
 		ITEM_GRADES.put(35749, ItemGrade.R);

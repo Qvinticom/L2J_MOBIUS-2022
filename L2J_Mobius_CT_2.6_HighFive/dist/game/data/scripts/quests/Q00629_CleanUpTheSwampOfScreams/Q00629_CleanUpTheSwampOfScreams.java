@@ -40,7 +40,6 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	private static final int MIN_LVL = 66;
 	// Mobs
 	private static final Map<Integer, Double> MOBS_DROP_CHANCES = new HashMap<>();
-	
 	static
 	{
 		MOBS_DROP_CHANCES.put(21508, 0.599); // splinter_stakato

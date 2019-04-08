@@ -40,6 +40,7 @@ public class Q627_HeartInSearchOfPower extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21520, 550000);
 		CHANCES.put(21523, 584000);
@@ -59,6 +60,7 @@ public class Q627_HeartInSearchOfPower extends Quest
 	
 	// Rewards
 	private static final Map<String, int[]> REWARDS = new HashMap<>();
+	static
 	{
 		REWARDS.put("adena", new int[]
 		{

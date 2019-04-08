@@ -42,7 +42,6 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 	private static final int REQUIRED_ITEM_COUNT = 10;
 	// Monsters
 	private static final Map<Integer, Integer> MOBS_SAC = new HashMap<>();
-	
 	static
 	{
 		MOBS_SAC.put(20007, 3); // Green Fungus

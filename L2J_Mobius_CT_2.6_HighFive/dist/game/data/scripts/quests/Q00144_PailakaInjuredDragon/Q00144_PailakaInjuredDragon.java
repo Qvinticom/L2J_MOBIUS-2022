@@ -124,6 +124,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		VARKA_SILENOS_PRIEST
 	};
 	private static final List<ItemChanceHolder> DROPLIST = new ArrayList<>();
+	static
 	{
 		DROPLIST.add(new ItemChanceHolder(HEAL_POTION, 80));
 		DROPLIST.add(new ItemChanceHolder(SHIELD_POTION, 30));
@@ -147,6 +148,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	};
 	// @formatter:off
 	private static final Map<Integer, int[]> NOEXIT_ZONES = new HashMap<>();
+	static
 	{
 		NOEXIT_ZONES.put(200001, new int[]{123167, -45743, -3023});
 		NOEXIT_ZONES.put(200002, new int[]{117783, -46398, -2560});

@@ -43,7 +43,6 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 	private static final Map<Integer, Double> MONSTER_DROP_CHANCES = new HashMap<>();
 	// Rewards
 	private static final Map<String, ItemHolder> REWARDS = new HashMap<>();
-	
 	static
 	{
 		MONSTER_DROP_CHANCES.put(22003, 0.714); // Grave Robber Scout

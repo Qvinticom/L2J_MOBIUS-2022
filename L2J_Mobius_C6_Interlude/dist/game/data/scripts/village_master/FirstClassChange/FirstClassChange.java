@@ -66,6 +66,7 @@ public class FirstClassChange extends Quest
 	
 	// Classes
 	private static final Map<String, int[]> Classes = new HashMap<>();
+	static
 	{
 		// Dark Elf
 		Classes.put("PK", new int[] {32, 31, 2, 15, 16, 17, 18, GAZE_OF_ABYSS, 33});

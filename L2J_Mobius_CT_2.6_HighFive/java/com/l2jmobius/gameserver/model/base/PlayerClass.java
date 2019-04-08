@@ -203,7 +203,6 @@ public enum PlayerClass
 	private static final Set<PlayerClass> subclasseSet5 = EnumSet.of(Sorceror, Spellsinger, Spellhowler);
 	
 	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
-	
 	static
 	{
 		final Set<PlayerClass> subclasses = getSet(null, THIRD);

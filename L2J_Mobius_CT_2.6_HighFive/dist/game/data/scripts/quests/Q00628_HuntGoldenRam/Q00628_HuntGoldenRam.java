@@ -44,7 +44,6 @@ public final class Q00628_HuntGoldenRam extends Quest
 	private static final int MIN_LVL = 66;
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
-	
 	static
 	{
 		MOBS_DROP_CHANCES.put(21508, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.500, 1)); // splinter_stakato

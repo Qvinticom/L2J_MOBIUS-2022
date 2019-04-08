@@ -81,7 +81,6 @@ public final class Q00373_SupplierOfReagents extends Quest
 	private static final HashMap<String, Integer> HTML_TO_MEMO_STATE = new HashMap<>(20);
 	private static final HashMap<Integer, ItemHolder> MEMO_STATE_TO_ITEM = new HashMap<>(20);
 	private static final HashMap<Integer, Entry> MEMO_STATE_TO_REWARD = new HashMap<>(15);
-	
 	static
 	{
 		// List of ingredients to mix

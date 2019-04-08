@@ -47,6 +47,7 @@ public final class Q00032_AnObviousLie extends Quest
 	private static final int MIN_LVL = 45;
 	// Reward
 	private static final Map<String, Integer> EARS = new HashMap<>();
+	static
 	{
 		EARS.put("cat", 6843); // Cat Ears
 		EARS.put("raccoon", 7680); // Raccoon ears

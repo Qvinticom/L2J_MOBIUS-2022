@@ -56,6 +56,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	private static final int MANAGER = 31688;
 	// Misc
 	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new HashMap<>();
+	static
 	{
 		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_SIGEL_GROUP, 917);
 		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_TIR_GROUP, 918);

@@ -51,6 +51,7 @@ public class Q325_GrimCollector extends Quest
 	private static final int SAMED = 30434;
 	
 	private static final Map<Integer, List<ItemHolder>> DROPLIST = new HashMap<>();
+	static
 	{
 		DROPLIST.put(20026, Arrays.asList(new ItemHolder(ZOMBIE_HEAD, 30), new ItemHolder(ZOMBIE_HEART, 50), new ItemHolder(ZOMBIE_LIVER, 75)));
 		DROPLIST.put(20029, Arrays.asList(new ItemHolder(ZOMBIE_HEAD, 30), new ItemHolder(ZOMBIE_HEART, 52), new ItemHolder(ZOMBIE_LIVER, 75)));

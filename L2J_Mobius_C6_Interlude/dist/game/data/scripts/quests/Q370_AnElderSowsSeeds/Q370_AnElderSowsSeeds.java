@@ -41,6 +41,7 @@ public class Q370_AnElderSowsSeeds extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20082, 86000);
 		CHANCES.put(20084, 94000);

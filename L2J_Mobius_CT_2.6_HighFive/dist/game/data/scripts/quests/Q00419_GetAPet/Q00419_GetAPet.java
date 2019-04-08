@@ -75,7 +75,6 @@ public final class Q00419_GetAPet extends Quest
 	private static final int MIN_LEVEL = 15;
 	// Links
 	private static final Map<Integer, String> LINKS = new HashMap<>();
-	
 	static
 	{
 		LINKS.put(1110001, "<a action=\"bypass -h Quest Q00419_GetAPet 30731-14.html\">Can be used for item transportation.</a><br>");

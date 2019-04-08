@@ -38,6 +38,7 @@ public class Q629_CleanUpTheSwampOfScreams extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21508, 500000);
 		CHANCES.put(21509, 431000);

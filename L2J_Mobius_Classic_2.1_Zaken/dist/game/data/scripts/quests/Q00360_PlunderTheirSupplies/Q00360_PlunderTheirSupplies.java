@@ -42,7 +42,6 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
 	// Item
 	private static final int SUPPLY_ITEMS = 5872;
-	
 	static
 	{
 		MONSTER_DROP_CHANCES.put(20666, 50); // Taik Orc Seeker

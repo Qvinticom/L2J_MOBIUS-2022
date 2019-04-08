@@ -47,6 +47,7 @@ public class Q039_RedEyedInvaders extends Quest
 	
 	// First droplist
 	private static final Map<Integer, int[]> FIRST_DP = new HashMap<>();
+	static
 	{
 		FIRST_DP.put(MAILLE_LIZARDMAN_GUARD, new int[]
 		{
@@ -67,6 +68,7 @@ public class Q039_RedEyedInvaders extends Quest
 	
 	// Second droplist
 	private static final Map<Integer, int[]> SECOND_DP = new HashMap<>();
+	static
 	{
 		SECOND_DP.put(ARANEID, new int[]
 		{

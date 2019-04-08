@@ -71,6 +71,7 @@ public class Q385_YokeOfThePast extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21208, 70000);
 		CHANCES.put(21209, 80000);

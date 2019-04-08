@@ -49,6 +49,7 @@ public class Q603_DaimonTheWhiteEyed_Part1 extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(CANYON_BANDERSNATCH_SLAVE, 500000);
 		CHANCES.put(BUFFALO_SLAVE, 519000);

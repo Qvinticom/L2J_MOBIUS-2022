@@ -42,6 +42,7 @@ public class Q300_HuntingLetoLizardman extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(LETO_LIZARDMAN, 300000);
 		CHANCES.put(LETO_LIZARDMAN_ARCHER, 320000);

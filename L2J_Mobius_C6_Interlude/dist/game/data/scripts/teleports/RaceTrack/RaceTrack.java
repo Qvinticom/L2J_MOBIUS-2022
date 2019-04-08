@@ -31,6 +31,7 @@ public class RaceTrack extends Quest
 	private static final int RACE_MANAGER = 30995;
 	
 	private static final Map<Integer, Location> RETURN_LOCATIONS = new HashMap<>();
+	static
 	{
 		RETURN_LOCATIONS.put(30320, new Location(-80826, 149775, -3043)); // RICHLIN
 		RETURN_LOCATIONS.put(30256, new Location(-12672, 122776, -3116)); // BELLA

@@ -98,6 +98,7 @@ public class Q219_TestimonyOfFate extends Quest
 	
 	// Cond 6 drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(DEAD_SEEKER, 500000);
 		CHANCES.put(TYRANT, 500000);

@@ -38,6 +38,7 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21460, 601000);
 		CHANCES.put(21461, 480000);

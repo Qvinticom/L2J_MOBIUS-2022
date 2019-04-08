@@ -34,6 +34,7 @@ public class Q341_HuntingForWildBeasts extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20021, 500000); // Red Bear
 		CHANCES.put(20203, 900000); // Dion Grizzly

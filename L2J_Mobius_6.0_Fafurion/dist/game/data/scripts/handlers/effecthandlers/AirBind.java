@@ -40,6 +40,7 @@ public final class AirBind extends AbstractEffect
 {
 	// skill data
 	private static final Map<ClassId, Integer> _chainedAirSkills = new HashMap<>(36);
+	static
 	{
 		_chainedAirSkills.put(ClassId.SIGEL_PHOENIX_KNIGHT, 10249); // Heavy Hit
 		_chainedAirSkills.put(ClassId.SIGEL_HELL_KNIGHT, 10249); // Heavy Hit

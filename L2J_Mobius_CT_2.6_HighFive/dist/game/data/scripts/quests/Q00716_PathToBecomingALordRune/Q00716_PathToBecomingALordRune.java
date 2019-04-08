@@ -43,7 +43,6 @@ public class Q00716_PathToBecomingALordRune extends Quest
 	
 	private static final int RuneCastle = 8;
 	private static List<Integer> Pagans = new ArrayList<>();
-	
 	static
 	{
 		for (int i = 22138; i <= 22176; i++)

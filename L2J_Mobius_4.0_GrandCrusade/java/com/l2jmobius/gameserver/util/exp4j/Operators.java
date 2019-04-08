@@ -27,7 +27,6 @@ public abstract class Operators
 	private static final int INDEX_UNARYPLUS = 7;
 	
 	private static final Operator[] builtinOperators = new Operator[8];
-	
 	static
 	{
 		builtinOperators[INDEX_ADDITION] = new Operator("+", 2, true, Operator.PRECEDENCE_ADDITION)

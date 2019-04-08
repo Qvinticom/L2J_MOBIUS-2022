@@ -39,7 +39,6 @@ public class Q00601_WatchingEyes extends Quest
 	private static final int PROOF_OF_AVENGER = 7188;
 	// Monsters
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
-	
 	static
 	{
 		MOBS.put(21308, 790);

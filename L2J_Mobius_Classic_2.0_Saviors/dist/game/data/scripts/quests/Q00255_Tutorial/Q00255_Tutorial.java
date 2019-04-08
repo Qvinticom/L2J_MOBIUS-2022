@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPi
 import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.QuestSoundHtmlHolder;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -56,6 +57,7 @@ public class Q00255_Tutorial extends Quest
 {
 	// NPCs
 	private static final List<Integer> NEWBIE_HELPERS = new ArrayList<>();
+	static
 	{
 		NEWBIE_HELPERS.add(30009); // human fighter
 		NEWBIE_HELPERS.add(30019); // human mystic
@@ -65,6 +67,7 @@ public class Q00255_Tutorial extends Quest
 		NEWBIE_HELPERS.add(30530); // dwarf
 	}
 	private static final List<Integer> SUPERVISORS = new ArrayList<>();
+	static
 	{
 		SUPERVISORS.add(30008); // human fighter
 		SUPERVISORS.add(30017); // human mystic
@@ -85,6 +88,7 @@ public class Q00255_Tutorial extends Quest
 	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
+	static
 	{
 		STARTING_VOICE_HTML.put(0, new QuestSoundHtmlHolder("tutorial_voice_001a", "tutorial_human_fighter001.html"));
 		STARTING_VOICE_HTML.put(10, new QuestSoundHtmlHolder("tutorial_voice_001b", "tutorial_human_mage001.html"));
@@ -97,6 +101,7 @@ public class Q00255_Tutorial extends Quest
 		STARTING_VOICE_HTML.put(53, new QuestSoundHtmlHolder("tutorial_voice_001i", "tutorial_dwarven_fighter001.html"));
 	}
 	private static final Map<Integer, Location> HELPER_LOCATION = new HashMap<>();
+	static
 	{
 		HELPER_LOCATION.put(0, new Location(-71424, 258336, -3109));
 		HELPER_LOCATION.put(10, new Location(-91036, 248044, -3568));
@@ -109,6 +114,7 @@ public class Q00255_Tutorial extends Quest
 		HELPER_LOCATION.put(53, new Location(108567, -173994, -406));
 	}
 	private static final Map<Integer, Location> COMPLETE_LOCATION = new HashMap<>();
+	static
 	{
 		COMPLETE_LOCATION.put(0, new Location(-84081, 243227, -3723));
 		COMPLETE_LOCATION.put(10, new Location(-84081, 243227, -3723));
@@ -426,27 +432,5 @@ public class Q00255_Tutorial extends Quest
 	public void playTutorialVoice(PlayerInstance player, String voice)
 	{
 		player.sendPacket(new PlaySound(2, voice, 0, 0, player.getX(), player.getY(), player.getZ()));
-	}
-	
-	private class QuestSoundHtmlHolder
-	{
-		private final String _sound;
-		private final String _html;
-		
-		QuestSoundHtmlHolder(String sound, String html)
-		{
-			_sound = sound;
-			_html = html;
-		}
-		
-		String getSound()
-		{
-			return _sound;
-		}
-		
-		String getHtml()
-		{
-			return _html;
-		}
 	}
 }

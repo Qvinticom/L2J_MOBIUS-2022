@@ -99,6 +99,7 @@ public class Q373_SupplierOfReagents extends Quest
 	 * </ul>
 	 */
 	private static final Map<Integer, int[]> DROPLIST = new HashMap<>();
+	static
 	{
 		DROPLIST.put(PLATINUM_GUARDIAN_SHAMAN, new int[]
 		{

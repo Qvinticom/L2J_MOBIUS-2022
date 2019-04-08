@@ -69,6 +69,18 @@ public final class TerritoryWarManager implements Siegable
 	private static final String DELETE = "DELETE FROM territory_registrations WHERE castleId = ? and registeredId = ?";
 	private static final String INSERT = "INSERT INTO territory_registrations (castleId, registeredId) values (?, ?)";
 	public static final Map<Integer, Integer> TERRITORY_ITEM_IDS = new HashMap<>();
+	static
+	{
+		TERRITORY_ITEM_IDS.put(81, 13757);
+		TERRITORY_ITEM_IDS.put(82, 13758);
+		TERRITORY_ITEM_IDS.put(83, 13759);
+		TERRITORY_ITEM_IDS.put(84, 13760);
+		TERRITORY_ITEM_IDS.put(85, 13761);
+		TERRITORY_ITEM_IDS.put(86, 13762);
+		TERRITORY_ITEM_IDS.put(87, 13763);
+		TERRITORY_ITEM_IDS.put(88, 13764);
+		TERRITORY_ITEM_IDS.put(89, 13765);
+	}
 	
 	public static String qn = "TerritoryWarSuperClass";
 	public static String GLOBAL_VARIABLE = "nextTWStartDate";
@@ -99,19 +111,6 @@ public final class TerritoryWarManager implements Siegable
 	protected ScheduledFuture<?> _scheduledStartTWTask = null;
 	protected ScheduledFuture<?> _scheduledEndTWTask = null;
 	protected ScheduledFuture<?> _scheduledRewardOnlineTask = null;
-	
-	static
-	{
-		TERRITORY_ITEM_IDS.put(81, 13757);
-		TERRITORY_ITEM_IDS.put(82, 13758);
-		TERRITORY_ITEM_IDS.put(83, 13759);
-		TERRITORY_ITEM_IDS.put(84, 13760);
-		TERRITORY_ITEM_IDS.put(85, 13761);
-		TERRITORY_ITEM_IDS.put(86, 13762);
-		TERRITORY_ITEM_IDS.put(87, 13763);
-		TERRITORY_ITEM_IDS.put(88, 13764);
-		TERRITORY_ITEM_IDS.put(89, 13765);
-	}
 	
 	protected TerritoryWarManager()
 	{

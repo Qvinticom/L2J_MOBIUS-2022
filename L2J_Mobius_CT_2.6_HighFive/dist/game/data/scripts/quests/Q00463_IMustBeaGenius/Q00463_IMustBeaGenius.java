@@ -67,7 +67,6 @@ public class Q00463_IMustBeaGenius extends Quest
 	
 	// Mobs
 	private static final Map<Integer, DropInfo> MOBS = new HashMap<>();
-	
 	static
 	{
 		MOBS.put(22801, new DropInfo(5, 0));

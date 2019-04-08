@@ -80,6 +80,7 @@ public class Q330_AdeptOfTaste extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20204, new int[]
 		{

@@ -46,6 +46,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20236, 380000);
 		CHANCES.put(20237, 490000);

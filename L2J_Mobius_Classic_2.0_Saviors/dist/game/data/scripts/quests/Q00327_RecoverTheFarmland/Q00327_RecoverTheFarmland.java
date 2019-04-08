@@ -78,7 +78,6 @@ public final class Q00327_RecoverTheFarmland extends Quest
 		new ItemHolder(ANCIENT_BRONZE_MIRROR, 3227),
 		new ItemHolder(ANCIENT_JADE_NECKLACE, 3919)
 	};
-	
 	static
 	{
 		FRAGMENTS_REWARD_DATA.put("30034-03.html", new ItemHolder(CLAY_URN_FRAGMENT, 307));

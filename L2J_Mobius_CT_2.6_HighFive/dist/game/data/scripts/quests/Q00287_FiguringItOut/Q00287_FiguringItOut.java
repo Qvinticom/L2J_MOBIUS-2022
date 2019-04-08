@@ -38,7 +38,6 @@ public class Q00287_FiguringItOut extends Quest
 	// NPCs
 	private static final int LAKI = 32742;
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
-	
 	static
 	{
 		MONSTERS.put(22768, 509); // Tanta Lizardman Scout

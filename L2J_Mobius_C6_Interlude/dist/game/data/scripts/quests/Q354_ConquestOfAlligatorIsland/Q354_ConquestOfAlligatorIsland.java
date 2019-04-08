@@ -35,6 +35,7 @@ public class Q354_ConquestOfAlligatorIsland extends Quest
 	private static final int PIRATE_TREASURE_MAP = 5915;
 	
 	private static final Map<Integer, int[][]> DROPLIST = new HashMap<>();
+	static
 	{
 		DROPLIST.put(20804, new int[][]
 		{

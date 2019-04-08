@@ -31,6 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExChangeAttributeInfo implements IClientOutgoingPacket
 {
 	private static final Map<AttributeType, Byte> ATTRIBUTE_MASKS = new HashMap<>();
+	static
 	{
 		ATTRIBUTE_MASKS.put(AttributeType.FIRE, (byte) 1);
 		ATTRIBUTE_MASKS.put(AttributeType.WATER, (byte) 2);

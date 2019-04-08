@@ -49,6 +49,7 @@ public class Q10790_AMercenaryHelper extends Quest
 	private static final int NEEDLE_STAKATO_SOLDIER = 21515;
 	private static final int NEEDLE_STAKATO_DRONE = 21516;
 	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
+	static
 	{
 		MOBS_REQUIRED.put(SPLINTER_STAKATO, 50);
 	}

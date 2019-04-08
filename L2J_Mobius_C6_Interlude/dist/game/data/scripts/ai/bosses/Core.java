@@ -49,6 +49,7 @@ public class Core extends Quest
 	private static final int SUSCEPTOR = 29011;
 	// Spawns
 	private static final Map<Integer, Location> MINNION_SPAWNS = new HashMap<>();
+	static
 	{
 		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17191, 109298, -6488));
 		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17564, 109548, -6488));

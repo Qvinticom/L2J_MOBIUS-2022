@@ -53,6 +53,7 @@ public class Q359_ForSleeplessDeadmen extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(DOOM_SERVANT, 320000);
 		CHANCES.put(DOOM_GUARD, 340000);

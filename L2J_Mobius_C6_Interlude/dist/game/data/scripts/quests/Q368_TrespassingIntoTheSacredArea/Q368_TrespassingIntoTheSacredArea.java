@@ -37,6 +37,7 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20794, 500000);
 		CHANCES.put(20795, 770000);

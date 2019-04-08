@@ -35,6 +35,7 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 	private static final String qn2 = "Q606_WarWithVarkaSilenos";
 	
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21350, 500000);
 		CHANCES.put(21351, 500000);
@@ -60,6 +61,7 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 	}
 	
 	private static final Map<Integer, Integer> CHANCES_MANE = new HashMap<>();
+	static
 	{
 		CHANCES_MANE.put(21350, 500000);
 		CHANCES_MANE.put(21353, 510000);

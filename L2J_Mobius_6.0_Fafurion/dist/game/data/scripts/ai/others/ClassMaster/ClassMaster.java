@@ -67,6 +67,7 @@ public final class ClassMaster extends AbstractNpcAI implements IXmlReader
 {
 	// NPCs
 	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();
+	static
 	{
 		CLASS_MASTERS.add(31756); // Mr. Cat
 		CLASS_MASTERS.add(31757); // Queen of Hearts

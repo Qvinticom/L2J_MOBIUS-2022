@@ -110,6 +110,7 @@ public final class Raina extends AbstractNpcAI
 	}
 	
 	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
+	static
 	{
 		classCloak.put(CategoryType.SIXTH_SIGEL_GROUP, 30310); // Abelius Cloak
 		classCloak.put(CategoryType.SIXTH_TIR_GROUP, 30311); // Sapyros Cloak Grade
@@ -122,6 +123,7 @@ public final class Raina extends AbstractNpcAI
 	}
 	
 	private static final List<PlayerClass> dualClassList = new ArrayList<>();
+	static
 	{
 		dualClassList.addAll(Arrays.asList(PlayerClass.sigelPhoenixKnight, PlayerClass.sigelHellKnight, PlayerClass.sigelEvasTemplar, PlayerClass.sigelShilenTemplar));
 		dualClassList.addAll(Arrays.asList(PlayerClass.tyrrDuelist, PlayerClass.tyrrDreadnought, PlayerClass.tyrrTitan, PlayerClass.tyrrGrandKhavatari, PlayerClass.tyrrDoombringer));

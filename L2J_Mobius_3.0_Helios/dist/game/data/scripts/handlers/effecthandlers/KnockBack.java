@@ -56,6 +56,7 @@ public final class KnockBack extends AbstractEffect
 	
 	// skill data
 	private static final Map<ClassId, Integer> _chainKnockSkills = new HashMap<>(36);
+	static
 	{
 		_chainKnockSkills.put(ClassId.SIGEL_PHOENIX_KNIGHT, 10250); // Heavy Hit
 		_chainKnockSkills.put(ClassId.SIGEL_HELL_KNIGHT, 10250); // Heavy Hit

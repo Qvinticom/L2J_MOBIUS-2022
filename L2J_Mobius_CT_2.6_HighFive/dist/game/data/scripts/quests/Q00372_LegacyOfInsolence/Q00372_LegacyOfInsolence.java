@@ -103,7 +103,6 @@ public final class Q00372_LegacyOfInsolence extends Quest
 	// Monsters
 	private static final int HALLATES_INSPECTOR = 20825;
 	private static final Map<Integer, QuestItemHolder> MONSTER_REWARDS = new HashMap<>();
-	
 	static
 	{
 		MONSTER_REWARDS.put(20817, new QuestItemHolder(ANCIENT_RED_PAPYRUS, 302, 1));

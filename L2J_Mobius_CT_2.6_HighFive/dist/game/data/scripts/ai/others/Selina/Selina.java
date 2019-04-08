@@ -40,7 +40,6 @@ public final class Selina extends AbstractNpcAI
 	private static final int GOLDEN_RAM_COIN = 7251;
 	// Skills
 	private static final Map<String, BuffHolder> BUFFS = new HashMap<>();
-	
 	static
 	{
 		BUFFS.put("4359", new BuffHolder(4359, 2, 2)); // Focus

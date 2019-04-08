@@ -31,6 +31,7 @@ public class Q004_LongliveThePaagrioLord extends Quest
 	private static final String qn = "Q004_LongliveThePaagrioLord";
 	
 	private static final Map<Integer, Integer> NPC_GIFTS = new HashMap<>();
+	static
 	{
 		NPC_GIFTS.put(30585, 1542);
 		NPC_GIFTS.put(30566, 1541);

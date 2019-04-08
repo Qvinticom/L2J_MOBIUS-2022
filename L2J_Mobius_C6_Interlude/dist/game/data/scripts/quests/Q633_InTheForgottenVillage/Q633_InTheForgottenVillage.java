@@ -38,6 +38,7 @@ public class Q633_InTheForgottenVillage extends Quest
 	
 	// MOBS / DROP chances
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
+	static
 	{
 		MOBS.put(21557, 328000); // Bone Snatcher
 		MOBS.put(21558, 328000); // Bone Snatcher
@@ -58,6 +59,7 @@ public class Q633_InTheForgottenVillage extends Quest
 	}
 	
 	private static final Map<Integer, Integer> UNDEADS = new HashMap<>();
+	static
 	{
 		UNDEADS.put(21553, 347000); // Trampled Man
 		UNDEADS.put(21554, 347000); // Trampled Man

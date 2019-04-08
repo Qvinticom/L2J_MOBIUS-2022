@@ -82,6 +82,7 @@ public class Quest extends ManagedScript
 	
 	// Dimensional Diamond Rewards by Class for 2nd class transfer quest (35)
 	protected static final Map<Integer, Integer> DF_REWARD_35 = new HashMap<>();
+	static
 	{
 		DF_REWARD_35.put(1, 61);
 		DF_REWARD_35.put(4, 45);
@@ -105,6 +106,7 @@ public class Quest extends ManagedScript
 	
 	// Dimensional Diamond Rewards by Race for 2nd class transfer quest (37)
 	protected static final Map<Integer, Integer> DF_REWARD_37 = new HashMap<>();
+	static
 	{
 		DF_REWARD_37.put(0, 96);
 		DF_REWARD_37.put(1, 102);
@@ -115,6 +117,7 @@ public class Quest extends ManagedScript
 	
 	// Dimensional Diamond Rewards by Class for 2nd class transfer quest (39)
 	protected static final Map<Integer, Integer> DF_REWARD_39 = new HashMap<>();
+	static
 	{
 		DF_REWARD_39.put(1, 72);
 		DF_REWARD_39.put(4, 104);

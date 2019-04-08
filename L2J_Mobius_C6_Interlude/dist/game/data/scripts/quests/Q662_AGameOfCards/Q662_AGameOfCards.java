@@ -49,6 +49,7 @@ public class Q662_AGameOfCards extends Quest
 	
 	// All cards
 	private static final Map<Integer, String> CARDS = new HashMap<>();
+	static
 	{
 		CARDS.put(0, "?");
 		CARDS.put(1, "!");
@@ -69,6 +70,7 @@ public class Q662_AGameOfCards extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(18001, 232000); // Blood Queen
 		CHANCES.put(20672, 357000); // Trives

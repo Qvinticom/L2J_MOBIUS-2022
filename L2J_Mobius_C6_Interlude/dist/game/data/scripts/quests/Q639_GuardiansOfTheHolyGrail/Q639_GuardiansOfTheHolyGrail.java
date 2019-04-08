@@ -40,6 +40,7 @@ public class Q639_GuardiansOfTheHolyGrail extends Quest
 	private static final int HOLY_WATER_BOTTLE = 8071;
 	
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(22122, 760000);
 		CHANCES.put(22123, 750000);

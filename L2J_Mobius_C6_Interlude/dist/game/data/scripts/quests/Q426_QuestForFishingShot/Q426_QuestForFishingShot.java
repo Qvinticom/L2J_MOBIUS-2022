@@ -33,6 +33,7 @@ public class Q426_QuestForFishingShot extends Quest
 	private static final int SWEET_FLUID = 7586;
 	
 	private static final Map<Integer, Integer> MOBS1 = new HashMap<>();
+	static
 	{
 		MOBS1.put(20005, 45);
 		MOBS1.put(20013, 100);
@@ -207,6 +208,7 @@ public class Q426_QuestForFishingShot extends Quest
 	}
 	
 	private static final Map<Integer, Integer> MOBS2 = new HashMap<>();
+	static
 	{
 		MOBS2.put(20579, 420);
 		MOBS2.put(20639, 280);
@@ -237,6 +239,7 @@ public class Q426_QuestForFishingShot extends Quest
 	}
 	
 	private static final Map<Integer, Integer> MOBS3 = new HashMap<>();
+	static
 	{
 		MOBS3.put(20655, 110);
 		MOBS3.put(20656, 150);
@@ -257,6 +260,7 @@ public class Q426_QuestForFishingShot extends Quest
 	}
 	
 	private static final Map<Integer, Integer> MOBS4 = new HashMap<>();
+	static
 	{
 		MOBS4.put(20815, 205);
 		MOBS4.put(20822, 100);
@@ -280,6 +284,7 @@ public class Q426_QuestForFishingShot extends Quest
 	}
 	
 	private static final Map<Integer, Integer> MOBS5 = new HashMap<>();
+	static
 	{
 		MOBS5.put(20828, 935);
 		MOBS5.put(21061, 530);
@@ -292,6 +297,7 @@ public class Q426_QuestForFishingShot extends Quest
 	}
 	
 	private static final Map<Integer, int[]> MOBSspecial = new HashMap<>();
+	static
 	{
 		MOBSspecial.put(20829, new int[]
 		{

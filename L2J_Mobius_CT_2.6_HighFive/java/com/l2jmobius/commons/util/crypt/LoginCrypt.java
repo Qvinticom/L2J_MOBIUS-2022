@@ -49,7 +49,6 @@ public class LoginCrypt implements ICrypt
 	};
 	
 	private static final BlowfishEngine STATIC_BLOWFISH_ENGINE = new BlowfishEngine();
-	
 	static
 	{
 		STATIC_BLOWFISH_ENGINE.init(STATIC_BLOWFISH_KEY);

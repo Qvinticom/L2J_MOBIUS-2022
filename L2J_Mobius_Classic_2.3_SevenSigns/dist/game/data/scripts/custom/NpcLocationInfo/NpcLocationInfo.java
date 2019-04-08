@@ -34,6 +34,7 @@ import ai.AbstractNpcAI;
 public class NpcLocationInfo extends AbstractNpcAI
 {
 	private static final List<Integer> NPC = new ArrayList<>();
+	static
 	{
 		NPC.add(30598);
 		NPC.add(30599);
@@ -42,6 +43,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 		NPC.add(30602);
 	}
 	private static final List<Integer> NPCRADAR = new ArrayList<>();
+	static
 	{
 		// Talking Island
 		NPCRADAR.add(30006); // Gatekeeper Roxxy

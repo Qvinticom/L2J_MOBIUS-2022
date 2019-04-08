@@ -45,6 +45,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	private static final ItemHolder CRUCIFIX = new ItemHolder(4273, 1);
 	// Monsters
 	private static final Map<Integer, Double> MONSTER_CHANCES = new HashMap<>();
+	static
 	{
 		MONSTER_CHANCES.put(20236, 0.58); // Cave Servant
 		MONSTER_CHANCES.put(20238, 0.75); // Cave Servant Warrior

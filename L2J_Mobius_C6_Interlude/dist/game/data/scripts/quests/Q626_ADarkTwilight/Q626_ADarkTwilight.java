@@ -37,6 +37,7 @@ public class Q626_ADarkTwilight extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21520, 533000);
 		CHANCES.put(21523, 566000);

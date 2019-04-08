@@ -47,6 +47,7 @@ public class Q162_CurseOfTheUndergroundFortress extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(SHADE_HORROR, 250000);
 		CHANCES.put(DARK_TERROR, 260000);

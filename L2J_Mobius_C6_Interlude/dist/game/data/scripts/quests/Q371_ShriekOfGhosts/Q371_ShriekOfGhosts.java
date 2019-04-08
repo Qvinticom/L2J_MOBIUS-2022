@@ -40,6 +40,7 @@ public class Q371_ShriekOfGhosts extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, int[]> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20818, new int[]
 		{

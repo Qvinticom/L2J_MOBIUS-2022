@@ -46,7 +46,6 @@ public class Q00290_ThreatRemoval extends Quest
 	private static final int MIN_LEVEL = 82;
 	
 	private static final Map<Integer, Integer> MOBS_TAG = new HashMap<>();
-	
 	static
 	{
 		MOBS_TAG.put(22775, 932); // Sel Mahum Drill Sergeant

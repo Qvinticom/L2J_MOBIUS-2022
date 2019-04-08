@@ -41,6 +41,7 @@ public class Q369_CollectorOfJewels extends Quest
 	
 	// Droplist
 	private static final Map<Integer, int[]> DROPLIST = new HashMap<>();
+	static
 	{
 		DROPLIST.put(20609, new int[]
 		{

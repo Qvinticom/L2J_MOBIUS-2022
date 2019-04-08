@@ -51,6 +51,7 @@ public class Q234_FatesWhisper extends Quest
 	
 	// Chest Spawn
 	private static final Map<Integer, Integer> CHEST_SPAWN = new HashMap<>();
+	static
 	{
 		CHEST_SPAWN.put(25035, 31027);
 		CHEST_SPAWN.put(25054, 31028);
@@ -60,6 +61,7 @@ public class Q234_FatesWhisper extends Quest
 	
 	// Weapons
 	private static final Map<Integer, String> WEAPONS = new HashMap<>();
+	static
 	{
 		WEAPONS.put(79, "Sword of Damascus");
 		WEAPONS.put(97, "Lance");

@@ -40,6 +40,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	private static final int MEDAL = 5964;
 	
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20947, 160000); // Connabi
 		CHANCES.put(20948, 180000); // Bartal

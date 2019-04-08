@@ -53,6 +53,7 @@ public class Q171_ActsOfEvil extends Quest
 	
 	// Turek Orcs drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20496, 530000);
 		CHANCES.put(20497, 550000);

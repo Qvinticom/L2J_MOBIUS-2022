@@ -34,6 +34,7 @@ public class Q324_SweetestVenom extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20034, 220000);
 		CHANCES.put(20038, 230000);

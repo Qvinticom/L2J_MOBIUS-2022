@@ -76,6 +76,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 	// Misc
 	//@formatter:off
 	private static final Map<CategoryType, Integer> R_CLASS_TALISMAN = new HashMap<>();
+	static
 	{
 		R_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 735);
 		R_CLASS_TALISMAN.put(CategoryType.SIXTH_TIR_GROUP, 736);
@@ -89,6 +90,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		R_CLASS_TALISMAN.put(CategoryType.ERTHEIA_WIZARD_GROUP, 741);
 	}
 	private static final Map<CategoryType, Integer> R90_CLASS_TALISMAN = new HashMap<>();
+	static
 	{
 		R90_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 743);
 		R90_CLASS_TALISMAN.put(CategoryType.SIXTH_TIR_GROUP, 744);
@@ -102,6 +104,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		R90_CLASS_TALISMAN.put(CategoryType.ERTHEIA_WIZARD_GROUP, 749);
 	}
 	private static final Map<CategoryType, Integer> R95_CLASS_TALISMAN = new HashMap<>();
+	static
 	{
 		R95_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 751);
 		R95_CLASS_TALISMAN.put(CategoryType.SIXTH_TIR_GROUP, 752);
@@ -115,6 +118,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 		R95_CLASS_TALISMAN.put(CategoryType.ERTHEIA_WIZARD_GROUP, 757);
 	}
 	private static final Map<CategoryType, Integer> R99_CLASS_TALISMAN = new HashMap<>();
+	static
 	{
 		R99_CLASS_TALISMAN.put(CategoryType.SIXTH_SIGEL_GROUP, 759);
 		R99_CLASS_TALISMAN.put(CategoryType.SIXTH_TIR_GROUP, 760);

@@ -42,6 +42,7 @@ public class Q165_ShilensHunt extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(ASHEN_WOLF, 1000000);
 		CHANCES.put(YOUNG_BROWN_KELTIR, 333333);

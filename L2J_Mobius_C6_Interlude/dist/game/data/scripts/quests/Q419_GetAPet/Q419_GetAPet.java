@@ -55,6 +55,7 @@ public class Q419_GetAPet extends Quest
 	
 	// Droplist
 	private static final Map<Integer, int[]> DROPLIST = new HashMap<>();
+	static
 	{
 		DROPLIST.put(20103, new int[]
 		{

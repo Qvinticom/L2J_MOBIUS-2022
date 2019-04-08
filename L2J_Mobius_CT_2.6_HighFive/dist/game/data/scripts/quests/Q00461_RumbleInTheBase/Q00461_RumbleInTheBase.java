@@ -42,7 +42,6 @@ public class Q00461_RumbleInTheBase extends Quest
 	private static final int SHOES_STRING_OF_SEL_MAHUM = 16382;
 	// Mobs
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
-	
 	static
 	{
 		MONSTERS.put(22780, 581);

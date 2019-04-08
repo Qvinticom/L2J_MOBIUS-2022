@@ -37,6 +37,7 @@ public class Q366_SilverHairedShaman extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(20986, 560000);
 		CHANCES.put(20987, 660000);

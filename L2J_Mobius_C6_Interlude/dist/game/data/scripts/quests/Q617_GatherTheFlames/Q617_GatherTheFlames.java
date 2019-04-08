@@ -41,6 +41,7 @@ public class Q617_GatherTheFlames extends Quest
 	
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+	static
 	{
 		CHANCES.put(21381, 510000);
 		CHANCES.put(21653, 510000);

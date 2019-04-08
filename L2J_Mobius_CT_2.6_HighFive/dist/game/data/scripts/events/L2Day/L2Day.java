@@ -32,6 +32,7 @@ public final class L2Day extends LongTimeEvent
 {
 	// NPCs
 	private static final Map<Integer, Integer> MANAGERS = new HashMap<>();
+	static
 	{
 		MANAGERS.put(31854, 7117); // Talking Island Village
 		MANAGERS.put(31855, 7118); // Elven Village

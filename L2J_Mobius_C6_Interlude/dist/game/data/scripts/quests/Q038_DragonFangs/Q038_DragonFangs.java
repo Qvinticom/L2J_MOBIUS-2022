@@ -65,6 +65,7 @@ public class Q038_DragonFangs extends Quest
 	
 	// Droplist
 	private static final Map<Integer, int[]> DROPLIST = new HashMap<>();
+	static
 	{
 		DROPLIST.put(21100, new int[]
 		{

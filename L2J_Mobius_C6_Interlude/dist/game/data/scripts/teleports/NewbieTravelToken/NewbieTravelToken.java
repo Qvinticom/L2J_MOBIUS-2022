@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 public class NewbieTravelToken extends Quest
 {
 	private static final Map<String, int[]> data = new HashMap<>();
+	static
 	{
 		data.put("30600", new int[]
 		{

@@ -76,6 +76,7 @@ public class Q00255_Tutorial extends Quest
 	// @formatter:on
 	// table for Question Mark Clicked (24) newbie lvl [raceId, html]
 	private static final Map<Integer, String> QMCb = new HashMap<>();
+	static
 	{
 		QMCb.put(0, "tutorial_human009.htm");
 		QMCb.put(10, "tutorial_human009.htm");
@@ -91,6 +92,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	// table for Question Mark Clicked (35) 1st class transfer [raceId, html]
 	private static final Map<Integer, String> QMCc = new HashMap<>();
+	static
 	{
 		QMCc.put(0, "tutorial_21.htm");
 		QMCc.put(10, "tutorial_21a.htm");
@@ -105,6 +107,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	// table for Tutorial Close Link (26) 2nd class transfer [raceId, html]
 	private static final Map<Integer, String> TCLa = new HashMap<>();
+	static
 	{
 		TCLa.put(1, "tutorial_22w.htm");
 		TCLa.put(4, "tutorial_22.htm");
@@ -127,6 +130,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	// table for Tutorial Close Link (23) 2nd class transfer [raceId, html]
 	private static final Map<Integer, String> TCLb = new HashMap<>();
+	static
 	{
 		TCLb.put(4, "tutorial_22aa.htm");
 		TCLb.put(7, "tutorial_22ba.htm");
@@ -142,6 +146,7 @@ public class Q00255_Tutorial extends Quest
 	}
 	// table for Tutorial Close Link (24) 2nd class transfer [raceId, html]
 	private static final Map<Integer, String> TCLc = new HashMap<>();
+	static
 	{
 		TCLc.put(4, "tutorial_22ab.htm");
 		TCLc.put(7, "tutorial_22bb.htm");

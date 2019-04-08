@@ -61,6 +61,7 @@ public class SecondClassChange extends Quest
 	
 	// @formatter:off
 	private static final Map<String, int[]> Classes = new HashMap<>();
+	static
 	{
 		// Dark Elfs
 		Classes.put("SK", new int[] {33, 32, 2, 26, 27, 28, 29, MARK_OF_DUTY, MARK_OF_FATE, MARK_OF_WITCHCRAFT, 56});

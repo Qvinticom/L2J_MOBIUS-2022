@@ -44,7 +44,6 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	private static final int RECIPE_OF_SUPPLY = 5870;
 	private static final int SUPPLY_ITEMS = 5872;
 	private static final int SUSPICIOUS_DOCUMENT_PIECE = 5871;
-	
 	static
 	{
 		MONSTER_DROP_CHANCES.put(20666, 50); // Taik Orc Seeker

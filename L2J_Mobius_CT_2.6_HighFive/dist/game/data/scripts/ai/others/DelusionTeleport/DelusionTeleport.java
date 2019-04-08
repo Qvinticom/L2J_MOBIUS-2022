@@ -54,7 +54,6 @@ public final class DelusionTeleport extends AbstractNpcAI
 	private static final String DELUSION_RETURN = "DELUSION_RETURN";
 	
 	private static final Map<Integer, Location> RETURN_LOCATIONS = new HashMap<>();
-	
 	static
 	{
 		RETURN_LOCATIONS.put(0, new Location(43835, -47749, -792)); // Undefined origin, return to Rune

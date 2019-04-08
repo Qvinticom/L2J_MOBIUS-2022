@@ -44,6 +44,7 @@ public class Q378_MagnificentFeast extends Quest
 	
 	// Rewards
 	private static final Map<String, int[]> REWARDS = new HashMap<>();
+	static
 	{
 		REWARDS.put("9", new int[]
 		{

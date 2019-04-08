@@ -54,7 +54,6 @@ public final class Q00276_TotemOfTheHestui extends Quest
 	// Misc
 	private static final List<ItemHolder> SPAWN_CHANCES = new ArrayList<>();
 	private static final int MIN_LVL = 15;
-	
 	static
 	{
 		SPAWN_CHANCES.add(new ItemHolder(79, 100));
