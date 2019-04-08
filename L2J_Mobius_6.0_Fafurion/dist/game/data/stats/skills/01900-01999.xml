@@ -75,16 +75,15 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<excludedFromCheck>true</excludedFromCheck>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>POISON,9;ROOT_MAGICALLY,9;ROOT_PHYSICALLY,9;BLEEDING,9;STUN,9</dispel>
+			<effect name="CallSkill">
+				<skillId>7002</skillId> <!-- Dispel Debuff -->
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="DefenceTrait">
-				<POISON>100</POISON>
-				<BLEED>100</BLEED>
-				<SHOCK>100</SHOCK>
-				<HOLD>100</HOLD>
-			</effect>
+			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
 	<skill id="1905" toLevel="1" name="Swiftness">
@@ -2342,6 +2341,9 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />

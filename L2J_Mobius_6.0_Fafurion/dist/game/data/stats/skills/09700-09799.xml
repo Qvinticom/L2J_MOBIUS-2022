@@ -2065,11 +2065,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>60</amount>

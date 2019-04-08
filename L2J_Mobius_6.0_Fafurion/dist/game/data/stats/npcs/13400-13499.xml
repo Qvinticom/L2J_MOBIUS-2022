@@ -1276,13 +1276,16 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
 			</speed>
 			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
@@ -1290,7 +1293,8 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="11175" level="6" /> <!-- Shadow Snare Zone -->
+			<skill id="11059" level="4" /> <!-- Shadow Snare Zone -->
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="0.001" />
@@ -1302,18 +1306,21 @@
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="7" />
-			<skill name="union_skill" id="11174" level="1" />
+			<skill name="union_skill" id="11059" level="4" />
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
 			</speed>
 			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
@@ -1321,7 +1328,8 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="11175" level="6" /> <!-- Shadow Snare Zone -->
+			<skill id="11059" level="4" /> <!-- Shadow Snare Zone -->
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="0.001" />
@@ -1333,18 +1341,21 @@
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="7" />
-			<skill name="union_skill" id="11175" level="6" />
+			<skill name="union_skill" id="11059" level="4" />
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
 			</speed>
 			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
@@ -1352,7 +1363,8 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="11175" level="6" /> <!-- Shadow Snare Zone -->
+			<skill id="11059" level="4" /> <!-- Shadow Snare Zone -->
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="0.001" />

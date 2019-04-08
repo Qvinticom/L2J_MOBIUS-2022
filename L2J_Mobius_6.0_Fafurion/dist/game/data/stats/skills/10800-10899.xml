@@ -92,7 +92,7 @@
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">100</value>
+			<value fromLevel="1" toLevel="10">70</value>
 			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>

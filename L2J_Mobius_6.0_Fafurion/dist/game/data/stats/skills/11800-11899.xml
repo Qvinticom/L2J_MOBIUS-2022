@@ -825,7 +825,7 @@
 				<dispel>IMPROVE_CRT_RATE_DMG_UP,-1;CRITICAL_PROB_UP,-1;CRITICAL_DMG_UP,-1;CHEAP_MAGIC,-1;MAGIC_CRITICAL_UP,-1</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>35</amount>

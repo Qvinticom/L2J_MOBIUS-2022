@@ -288,6 +288,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>50000</reuseDelay>
+		<reuseDelayGroup>10705</reuseDelayGroup>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">101</value>
@@ -1162,7 +1163,7 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="1" toLevel="13">30</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>

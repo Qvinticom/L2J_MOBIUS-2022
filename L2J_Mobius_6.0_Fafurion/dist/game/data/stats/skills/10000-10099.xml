@@ -756,7 +756,7 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>60</criticalChance>
 			</effect>
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>

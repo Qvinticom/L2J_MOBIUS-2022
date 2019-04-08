@@ -136,39 +136,191 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35227" toLevel="1" name="Artifact Set Effect Lv. 1">
-		<!-- Damage +$s1, Received Damage -$s2. -->
+		<!-- Damage +1%, Received Damage -5% -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLvl>100</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35228" toLevel="1" name="Artifact Set Effect Lv. 2">
-		<!-- Damage +$s1, Received Damage -$s2. -->
+		<!-- Damage +5%, Received Damage -6% -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLvl>105</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-6</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-6</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35229" toLevel="1" name="Artifact Set Effect Lv. 3">
-		<!-- Damage +$s1, Received Damage -$s2, all basic stats $s3. -->
+		<!-- Damage +6%, Received Damage -7%, all basic stats +1 -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-7</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-7</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35230" toLevel="11" name="Artifact - P. Atk.">
 		<!-- P. Atk. increased when upgraded. -->
 		<icon>icon.artifact_b_pa</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLvl>100</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">11</value>
+					<value level="11">13</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35231" toLevel="11" name="Artifact - M. Atk.">
 		<!-- M. Atk. increased when upgraded. -->
 		<icon>icon.artifact_b_ma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>80</magicLvl>
+		<magicLvl>100</magicLvl>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35232" toLevel="11" name="Artifact - Atk. Spd.">
 		<!-- Atk. Spd. increased when upgraded. -->

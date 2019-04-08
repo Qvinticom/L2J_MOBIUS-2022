@@ -92,8 +92,8 @@
 					<value level="7">13547</value>
 					<value level="8">13548</value>
 					<value level="9">13549</value>
-					<value level="10">13550</value>
-					<value level="11">13551</value>
+					<value level="10">13580</value>
+					<value level="11">13581</value>
 				</npcId>
 				<npcCount>1</npcCount>
 				<despawnDelay>15000</despawnDelay>
@@ -249,6 +249,7 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
@@ -306,11 +307,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<selfEffects>
-			<effect name="ReuseSkillById">
-				<skillId>10705</skillId> <!-- Easterly Wind Strike -->
-			</effect>
-		</selfEffects>
+		<reuseDelayGroup>10705</reuseDelayGroup>
 		<effects>
 			<effect name="CriticalDamagePosition">
 				<amount>20</amount>

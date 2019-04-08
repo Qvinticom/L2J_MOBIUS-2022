@@ -466,7 +466,21 @@
 	<skill id="11509" toLevel="13" name="Radiant Crash">
 		<!-- Attacks the target with $s1 Power added to P. Atk., P./ M. Def. -$s3 for $s2 Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11514</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -541,7 +555,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PhysicalAttackWeaponBonus">
 				<power>
 					<value level="1">14608</value>
 					<value level="2">15776</value>
@@ -578,7 +592,21 @@
 	<skill id="11510" toLevel="13" name="Resolving Bash">
 		<!-- Attacks target with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>
@@ -653,7 +681,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PhysicalAttackWeaponBonus">
 				<power>
 					<value level="1">14608</value>
 					<value level="2">15776</value>
@@ -690,10 +718,16 @@
 	<skill id="11511" toLevel="13" name="Phantom Slasher">
 		<!-- Attacks the target with $s1 Power added to P. Atk., P. Atk./ M. Atk./ P. Def./ M. Def. -$s3 for $s2 The target can remove these debuffs if it has Spectral Slash Stage 3 or higher. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11511</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="13">99</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
-		<effectRange>400</effectRange>
-		<hitTime>1410</hitTime>
+		<hitTime>5500</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -710,23 +744,23 @@
 			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">73</value>
-			<value level="2">74</value>
-			<value level="3">76</value>
-			<value level="4">79</value>
-			<value level="5">82</value>
-			<value level="6">84</value>
-			<value level="7">87</value>
-			<value level="8">90</value>
-			<value level="9">93</value>
-			<value level="10">96</value>
-			<value level="11">99</value>
-			<value level="12">104</value>
-			<value level="13">108</value>
+			<value level="1">550</value>
+			<value level="2">558</value>
+			<value level="3">612</value>
+			<value level="4">666</value>
+			<value level="5">720</value>
+			<value level="6">774</value>
+			<value level="7">828</value>
+			<value level="8">876</value>
+			<value level="9">924</value>
+			<value level="10">972</value>
+			<value level="11">1020</value>
+			<value level="12">1068</value>
+			<value level="13">1116</value>
 		</mpConsume>
-		<operateType>A1</operateType>
 		<nextAction>ATTACK</nextAction>
-		<reuseDelay>7000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
 		<effectPoint>
 			<value level="1">-692</value>
 			<value level="2">-696</value>
@@ -742,9 +776,13 @@
 			<value level="12">-712</value>
 			<value level="13">-712</value>
 		</effectPoint>
+		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -756,32 +794,63 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PhysicalAttackWeaponBonus">
 				<power>
-					<value level="1">21642</value>
-					<value level="2">22507</value>
-					<value level="3">24237</value>
-					<value level="4">25967</value>
-					<value level="5">27697</value>
-					<value level="6">29427</value>
-					<value level="7">31157</value>
-					<value level="8">32887</value>
-					<value level="9">40673</value>
-					<value level="10">42657</value>
-					<value level="11">44641</value>
-					<value level="12">46744</value>
-					<value level="13">48847</value>
+					<value level="1">24801</value>
+					<value level="2">25793</value>
+					<value level="3">27777</value>
+					<value level="4">29761</value>
+					<value level="5">31745</value>
+					<value level="6">33729</value>
+					<value level="7">35713</value>
+					<value level="8">37697</value>
+ 					<value level="9">40673</value>
+ 					<value level="10">42657</value>
+ 					<value level="11">44641</value>
+ 					<value level="12">46744</value>
+ 					<value level="13">48847</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>
-					<value fromLevel="1" toLevel="13">5</value>
-					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
-				</criticalChance>
+				<criticalChance>5</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="13">1</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
+			</effect>
+			<effect name="PAtk">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19435</skillId> <!-- Spectral Slash -->
+				<skillLevel>
+					<value level="1">1</value> <!-- Guessed -->
+					<value level="2">1</value> <!-- Guessed -->
+					<value level="3">2</value> <!-- Guessed -->
+					<value level="4">2</value> <!-- Guessed -->
+					<value level="5">3</value> <!-- Guessed -->
+					<value level="6">3</value> <!-- Guessed -->
+					<value level="7">3</value> <!-- Guessed -->
+					<value level="8">4</value> <!-- Guessed -->
+					<value level="9">4</value> <!-- Guessed -->
+					<value level="10">4</value> <!-- Guessed -->
+					<value level="11">5</value> <!-- Guessed -->
+					<value level="12">5</value> <!-- Guessed -->
+					<value level="13">5</value> <!-- Guessed -->
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1508,11 +1577,11 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
@@ -1994,6 +2063,11 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="AttackAttribute">
 				<amount>
@@ -4784,11 +4858,11 @@
 		<effectPoint>687</effectPoint>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>

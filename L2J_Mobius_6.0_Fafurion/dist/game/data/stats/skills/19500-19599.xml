@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
-		<!-- For $s1, increases selected party member's P. Atk. by $s2, M. Atk. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Atk. Spd./ Casting Spd. by $s6, and decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
+		<!-- For 30 min., increases selected party member's P. Atk. by 22%, M. Atk. by 40%, P./ M. Critical Rate by 100%, P. Critical Damage by 70%, and Atk. Spd./ Casting Spd. by 15%, and decreases Skill Cooldown by 20% and Skill MP Consumption by 15%.. -->
 		<icon>icon.skill19503</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -57,6 +57,11 @@
 			<effect name="MagicalAttackSpeed">
 				<amount>15</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
 				<amount>-20</amount>
@@ -691,6 +696,11 @@
 		<!-- Creates a cyclone to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19554</icon>
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19556" toLevel="7" name="Inhale Soul">
 		<!-- Creates a pit of darkness to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
