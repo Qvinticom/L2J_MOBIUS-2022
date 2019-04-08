@@ -1229,26 +1229,26 @@ public final class Skill implements IIdentifiable
 			{
 				if (effect.isInstant())
 				{
-					if (applyInstantEffects && effect.calcSuccess(info.getEffector(), info.getEffected(), info.getSkill()))
+					if (applyInstantEffects && effect.calcSuccess(info.getEffector(), info.getEffected(), this))
 					{
-						effect.instant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
+						effect.instant(info.getEffector(), info.getEffected(), this, info.getItem());
 					}
 				}
 				else if (addContinuousEffects)
 				{
 					if (applyInstantEffects)
 					{
-						effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
+						effect.continuousInstant(info.getEffector(), info.getEffected(), this, info.getItem());
 					}
 					
-					if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
+					if (effect.canStart(info.getEffector(), info.getEffected(), this))
 					{
 						info.addEffect(effect);
 					}
 					
 					// tempfix for hp/mp regeneration
 					// TODO: Find where regen stops and make a proper fix
-					if (info.getEffected().isPlayer() && !info.getSkill().isBad())
+					if (info.getEffected().isPlayer() && !isBad())
 					{
 						info.getEffected().getActingPlayer().getStatus().startHpMpRegeneration();
 					}
