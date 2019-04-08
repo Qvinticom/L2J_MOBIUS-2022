@@ -128,7 +128,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
-			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			damage += effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 			damage *= -((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2;
 		}
 		

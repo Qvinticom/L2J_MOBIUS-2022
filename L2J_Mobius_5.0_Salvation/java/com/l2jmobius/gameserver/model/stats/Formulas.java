@@ -179,7 +179,7 @@ public final class Formulas
 		}
 		
 		damage = damage * critMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
-		damage = attacker.getStat().getValue(Stats.MAGICAL_SKILL_POWER, damage);
+		damage += attacker.getStat().getValue(Stats.MAGICAL_SKILL_POWER, 0);
 		
 		return damage;
 	}

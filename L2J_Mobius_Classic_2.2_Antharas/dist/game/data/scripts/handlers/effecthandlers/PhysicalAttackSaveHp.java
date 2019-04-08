@@ -139,7 +139,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
-			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			damage += effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 		}
 		
 		final double minHp = (effected.getMaxHp() * _saveHp) / 100;

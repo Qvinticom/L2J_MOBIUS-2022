@@ -160,7 +160,7 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponBonus * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
-			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			damage += effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);

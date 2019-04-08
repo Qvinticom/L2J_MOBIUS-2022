@@ -149,7 +149,7 @@ public final class EnergyAttack extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * energyChargesBoost * pvpPveMod;
-			damage = attacker.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			damage += attacker.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 		}
 		
 		damage = Math.max(0, damage);
