@@ -2762,7 +2762,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			content = hc.getHtm(player, "data/scripts/" + getPath() + "/" + fileName);
 			if (content == null)
 			{
-				content = hc.getHtmForce(player, "data/scripts/quests/" + getName() + "/" + fileName);
+				content = hc.getHtm(player, "data/scripts/quests/" + getName() + "/" + fileName);
 			}
 		}
 		return content;

@@ -415,7 +415,7 @@ public final class PlayerInstance extends Playable
 	private Calendar _createDate = Calendar.getInstance();
 	
 	private String _lang = null;
-	private String _htmlPrefix = null;
+	private String _htmlPrefix = "";
 	
 	private volatile boolean _isOnline = false;
 	private long _onlineTime;
@@ -13718,7 +13718,7 @@ public final class PlayerInstance extends Playable
 	
 	public String getHtmlPrefix()
 	{
-		return Config.MULTILANG_ENABLE ? _htmlPrefix : null;
+		return Config.MULTILANG_ENABLE ? _htmlPrefix : "";
 	}
 	
 	public String getLang()
@@ -13746,7 +13746,7 @@ public final class PlayerInstance extends Playable
 		else
 		{
 			_lang = null;
-			_htmlPrefix = null;
+			_htmlPrefix = "";
 		}
 		
 		return result;

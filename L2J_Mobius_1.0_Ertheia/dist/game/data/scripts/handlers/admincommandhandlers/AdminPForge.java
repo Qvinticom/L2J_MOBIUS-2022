@@ -220,7 +220,7 @@ public final class AdminPForge implements IAdminCommandHandler
 	private void showValuesPage(PlayerInstance activeChar, String[] opCodes, String format)
 	{
 		String sendBypass = null;
-		String valuesHtml = HtmCache.getInstance().getHtmForce(activeChar, "data/html/admin/pforge/values.htm");
+		String valuesHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/pforge/values.htm");
 		if (opCodes.length == 3)
 		{
 			valuesHtml = valuesHtml.replace("%opformat%", "chd");

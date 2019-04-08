@@ -745,6 +745,7 @@ public final class Config
 	public static String CLAN_NAME_TEMPLATE;
 	public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
 	public static File DATAPACK_ROOT;
+	public static File SCRIPT_ROOT;
 	public static boolean ACCEPT_ALTERNATE_ID;
 	public static int REQUEST_ID;
 	public static boolean RESERVE_HOST_ON_LOGIN = false;
@@ -1245,6 +1246,16 @@ public final class Config
 			{
 				LOGGER.log(Level.WARNING, "Error setting datapack root!", e);
 				DATAPACK_ROOT = new File(".");
+			}
+			
+			try
+			{
+				SCRIPT_ROOT = new File(serverSettings.getString("ScriptRoot", "./data/scripts").replaceAll("\\\\", "/")).getCanonicalFile();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.WARNING, "Error setting script root!", e);
+				SCRIPT_ROOT = new File(".");
 			}
 			
 			Pattern charNamePattern;

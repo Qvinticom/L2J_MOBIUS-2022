@@ -16,36 +16,31 @@
  */
 package com.l2jmobius.gameserver.cache;
 
+import java.io.BufferedInputStream;
 import java.io.File;
-import java.nio.charset.StandardCharsets;
+import java.io.FileInputStream;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.HTMLFilter;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Layane
+ * @author Zoey76
  */
 public class HtmCache
 {
 	private static final Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
 	
 	private static final HTMLFilter HTML_FILTER = new HTMLFilter();
-	private static final Pattern EXTEND_PATTERN = Pattern.compile("<extend template=\"([a-zA-Z0-9-_./\\ ]*)\">(.*?)</extend>", Pattern.DOTALL);
-	private static final Pattern ABSTRACT_BLOCK_PATTERN = Pattern.compile("<abstract block=\"([a-zA-Z0-9-_. ]*)\" ?/>", Pattern.DOTALL);
-	private static final Pattern BLOCK_PATTERN = Pattern.compile("<block name=\"([a-zA-Z0-9-_. ]*)\">(.*?)</block>", Pattern.DOTALL);
 	
-	private static final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
+	private static final Map<String, String> HTML_CACHE = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
 	
 	private int _loadedFiles;
 	private long _bytesBuffLen;
@@ -66,14 +61,14 @@ public class HtmCache
 		{
 			LOGGER.info("Html cache start...");
 			parseDir(f);
-			LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + _loadedFiles + " files loaded");
+			LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + _loadedFiles + " files loaded.");
 		}
 		else
 		{
-			_cache.clear();
+			HTML_CACHE.clear();
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
-			LOGGER.info("Cache[HTML]: Running lazy cache");
+			LOGGER.info("Cache[HTML]: Running lazy cache.");
 		}
 	}
 	
@@ -114,86 +109,65 @@ public class HtmCache
 	
 	public String loadFile(File file)
 	{
-		if (HTML_FILTER.accept(file))
+		if (!HTML_FILTER.accept(file))
 		{
-			try
+			return null;
+		}
+		
+		String content = null;
+		try (FileInputStream fis = new FileInputStream(file);
+			BufferedInputStream bis = new BufferedInputStream(fis))
+		{
+			final int bytes = bis.available();
+			byte[] raw = new byte[bytes];
+			
+			bis.read(raw);
+			content = new String(raw, "UTF-8");
+			content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
+			
+			final String oldContent = HTML_CACHE.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);
+			if (oldContent == null)
 			{
-				String content = processHtml(Util.readAllLines(file, StandardCharsets.UTF_8, null));
-				content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
-				// content = content.replaceAll("\r", "").replaceAll("\n", ""); // Remove new lines
-				
-				final String oldContent = _cache.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);
-				if (oldContent == null)
-				{
-					_bytesBuffLen += content.length() * 2;
-					_loadedFiles++;
-				}
-				else
-				{
-					_bytesBuffLen = (_bytesBuffLen - oldContent.length()) + (content.length() * 2);
-				}
-				return content;
+				_bytesBuffLen += bytes;
+				_loadedFiles++;
 			}
-			catch (Exception e)
+			else
 			{
-				LOGGER.log(Level.WARNING, "Problem with htm file:", e);
+				_bytesBuffLen = (_bytesBuffLen - oldContent.length()) + bytes;
 			}
 		}
-		return null;
-	}
-	
-	public String getHtmForce(PlayerInstance player, String path)
-	{
-		String content = getHtm(player, path);
-		if (content == null)
+		catch (Exception e)
 		{
-			content = "<html><body>My text is missing:<br>" + path + "</body></html>";
-			LOGGER.warning("Cache[HTML]: Missing HTML page: " + path);
+			LOGGER.log(Level.WARNING, "Problem with htm file:", e);
 		}
 		return content;
 	}
 	
 	public String getHtm(PlayerInstance player, String path)
 	{
-		final String prefix = player != null ? player.getHtmlPrefix() : "en";
-		String newPath = null;
-		String content;
-		if ((prefix != null) && !prefix.isEmpty())
+		final String prefix = player != null ? player.getHtmlPrefix() : "";
+		final String newPath = prefix + path;
+		String content = HTML_CACHE.get(newPath);
+		if (Config.LAZY_CACHE && (content == null))
 		{
-			newPath = prefix + path;
-			content = getHtm(newPath);
-			if (content != null)
+			content = loadFile(new File(Config.DATAPACK_ROOT, newPath));
+			if (content == null)
 			{
-				if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
-				{
-					BuilderUtil.sendHtmlMessage(player, newPath.substring(5));
-				}
-				return content;
+				content = loadFile(new File(Config.SCRIPT_ROOT, newPath));
 			}
 		}
 		
-		content = getHtm(path);
-		if ((content != null) && (newPath != null))
+		if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
 		{
-			_cache.put(newPath, content);
+			BuilderUtil.sendHtmlMessage(player, newPath.substring(5));
 		}
 		
-		if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS)
-		{
-			BuilderUtil.sendHtmlMessage(player, path.substring(5));
-		}
 		return content;
-	}
-	
-	private String getHtm(String path)
-	{
-		// TODO: Check why some files do not get in cache on server startup.
-		return (path == null) || path.isEmpty() ? "" : _cache.get(path) == null ? loadFile(new File(Config.DATAPACK_ROOT, path)) : _cache.get(path);
 	}
 	
 	public boolean contains(String path)
 	{
-		return _cache.containsKey(path);
+		return HTML_CACHE.containsKey(path);
 	}
 	
 	/**
@@ -205,88 +179,13 @@ public class HtmCache
 		return HTML_FILTER.accept(new File(Config.DATAPACK_ROOT, path));
 	}
 	
-	private String parseTemplateName(String name)
-	{
-		if (!name.startsWith("data/"))
-		{
-			if (name.startsWith("html/"))
-			{
-				return "data/" + name;
-			}
-			else if (name.startsWith("CommunityBoard/"))
-			{
-				return "data/html/" + name;
-			}
-			else if (name.startsWith("scripts/"))
-			{
-				return "data/scripts/" + name;
-			}
-		}
-		return name;
-	}
-	
-	private String processHtml(String result)
-	{
-		final Matcher extendMatcher = EXTEND_PATTERN.matcher(result);
-		if (extendMatcher.find())
-		{
-			// If extend matcher finds something, process template
-			final String templateName = parseTemplateName(extendMatcher.group(1));
-			
-			// Generate block name -> content map
-			final Map<String, String> blockMap = generateBlockMap(result);
-			
-			// Attempt to find the template
-			String template = getHtm(templateName + "-template.htm");
-			if (template != null)
-			{
-				// Attempt to find the abstract blocks
-				final Matcher blockMatcher = ABSTRACT_BLOCK_PATTERN.matcher(template);
-				while (blockMatcher.find())
-				{
-					final String name = blockMatcher.group(1);
-					if (!blockMap.containsKey(name))
-					{
-						LOGGER.warning(getClass().getSimpleName() + ": Abstract block definition [" + name + "] is not implemented!");
-						continue;
-					}
-					
-					// Replace the matched content with the block.
-					template = template.replace(blockMatcher.group(0), blockMap.get(name));
-				}
-				
-				// Replace the entire extend block
-				result = result.replace(extendMatcher.group(0), template);
-			}
-			else
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": Missing template: " + templateName + "-template.htm !");
-			}
-		}
-		
-		return result;
-	}
-	
-	private Map<String, String> generateBlockMap(String data)
-	{
-		final Map<String, String> blockMap = new LinkedHashMap<>();
-		final Matcher blockMatcher = BLOCK_PATTERN.matcher(data);
-		while (blockMatcher.find())
-		{
-			final String name = blockMatcher.group(1);
-			final String content = blockMatcher.group(2);
-			blockMap.put(name, content);
-		}
-		return blockMap;
-	}
-	
 	public static HtmCache getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final HtmCache _instance = new HtmCache();
+		protected static final HtmCache INSTANCE = new HtmCache();
 	}
 }

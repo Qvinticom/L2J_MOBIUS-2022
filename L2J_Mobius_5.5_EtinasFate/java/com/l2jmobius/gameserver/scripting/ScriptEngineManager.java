@@ -50,7 +50,7 @@ import com.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
 public final class ScriptEngineManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
-	public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
+	public static final Path SCRIPT_FOLDER = Config.SCRIPT_ROOT.toPath();
 	public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
 	public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
 	public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "SkillConditionMasterHandler.java");

@@ -29,10 +29,10 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.HTMLFilter;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.util.BuilderUtil;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author Layane
+ * @author Zoey76
  */
 public class HtmCache
 {
@@ -40,7 +40,7 @@ public class HtmCache
 	
 	private static final HTMLFilter HTML_FILTER = new HTMLFilter();
 	
-	private static final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
+	private static final Map<String, String> HTML_CACHE = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
 	
 	private int _loadedFiles;
 	private long _bytesBuffLen;
@@ -61,14 +61,14 @@ public class HtmCache
 		{
 			LOGGER.info("Html cache start...");
 			parseDir(f);
-			LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + _loadedFiles + " files loaded");
+			LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + _loadedFiles + " files loaded.");
 		}
 		else
 		{
-			_cache.clear();
+			HTML_CACHE.clear();
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
-			LOGGER.info("Cache[HTML]: Running lazy cache");
+			LOGGER.info("Cache[HTML]: Running lazy cache.");
 		}
 	}
 	
@@ -114,19 +114,18 @@ public class HtmCache
 			return null;
 		}
 		
-		final String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
 		String content = null;
 		try (FileInputStream fis = new FileInputStream(file);
 			BufferedInputStream bis = new BufferedInputStream(fis))
 		{
 			final int bytes = bis.available();
-			final byte[] raw = new byte[bytes];
+			byte[] raw = new byte[bytes];
 			
 			bis.read(raw);
 			content = new String(raw, "UTF-8");
 			content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
 			
-			final String oldContent = _cache.put(relpath, content);
+			final String oldContent = HTML_CACHE.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);
 			if (oldContent == null)
 			{
 				_bytesBuffLen += bytes;
@@ -139,63 +138,36 @@ public class HtmCache
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Problem with htm file " + e.getMessage(), e);
-		}
-		return content;
-	}
-	
-	public String getHtmForce(PlayerInstance player, String path)
-	{
-		String content = getHtm(player, path);
-		if (content == null)
-		{
-			content = "<html><body>My text is missing:<br>" + path + "</body></html>";
-			LOGGER.warning("Cache[HTML]: Missing HTML page: " + path);
+			LOGGER.log(Level.WARNING, "Problem with htm file:", e);
 		}
 		return content;
 	}
 	
 	public String getHtm(PlayerInstance player, String path)
 	{
-		final String prefix = player != null ? player.getHtmlPrefix() : "en";
-		String newPath = null;
-		String content;
-		if ((prefix != null) && !prefix.isEmpty())
+		final String prefix = player != null ? player.getHtmlPrefix() : "";
+		final String newPath = prefix + path;
+		String content = HTML_CACHE.get(newPath);
+		if (Config.LAZY_CACHE && (content == null))
 		{
-			newPath = prefix + path;
-			content = getHtm(newPath);
-			if (content != null)
+			content = loadFile(new File(Config.DATAPACK_ROOT, newPath));
+			if (content == null)
 			{
-				if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
-				{
-					BuilderUtil.sendHtmlMessage(player, newPath.substring(5));
-				}
-				return content;
+				content = loadFile(new File(Config.SCRIPT_ROOT, newPath));
 			}
 		}
 		
-		content = getHtm(path);
-		if ((content != null) && (newPath != null))
+		if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
 		{
-			_cache.put(newPath, content);
+			BuilderUtil.sendHtmlMessage(player, newPath.substring(5));
 		}
 		
-		if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS)
-		{
-			BuilderUtil.sendHtmlMessage(player, path.substring(5));
-		}
 		return content;
-	}
-	
-	private String getHtm(String path)
-	{
-		// TODO: Check why some files do not get in cache on server startup.
-		return (path == null) || path.isEmpty() ? "" : _cache.get(path) == null ? loadFile(new File(Config.DATAPACK_ROOT, path)) : _cache.get(path);
 	}
 	
 	public boolean contains(String path)
 	{
-		return _cache.containsKey(path);
+		return HTML_CACHE.containsKey(path);
 	}
 	
 	/**
@@ -209,11 +181,11 @@ public class HtmCache
 	
 	public static HtmCache getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final HtmCache _instance = new HtmCache();
+		protected static final HtmCache INSTANCE = new HtmCache();
 	}
 }
