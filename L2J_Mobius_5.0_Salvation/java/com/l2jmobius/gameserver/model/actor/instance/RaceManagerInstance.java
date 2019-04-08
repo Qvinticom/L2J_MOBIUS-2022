@@ -355,7 +355,7 @@ public class RaceManagerInstance extends Npc
 		String filename;
 		String search;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		filename = getHtmlPath(npcId, 5);
+		filename = getHtmlPath(npcId, 5, player);
 		html.setFile(player, filename);
 		for (int i = 0; i < 8; i++)
 		{
@@ -375,7 +375,7 @@ public class RaceManagerInstance extends Npc
 		String filename;
 		String search;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		filename = getHtmlPath(npcId, 6);
+		filename = getHtmlPath(npcId, 6, player);
 		html.setFile(player, filename);
 		for (int i = 0; i < 8; i++)
 		{
@@ -402,7 +402,7 @@ public class RaceManagerInstance extends Npc
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		if (val < 10)
 		{
-			filename = getHtmlPath(npcId, 2);
+			filename = getHtmlPath(npcId, 2, player);
 			html.setFile(player, filename);
 			for (int i = 0; i < 8; i++)
 			{
@@ -427,7 +427,7 @@ public class RaceManagerInstance extends Npc
 			{
 				return;
 			}
-			filename = getHtmlPath(npcId, 3);
+			filename = getHtmlPath(npcId, 3, player);
 			html.setFile(player, filename);
 			html.replace("0place", Integer.toString(player.getRace(0)));
 			search = "Mob1";
@@ -450,7 +450,7 @@ public class RaceManagerInstance extends Npc
 			{
 				return;
 			}
-			filename = getHtmlPath(npcId, 4);
+			filename = getHtmlPath(npcId, 4, player);
 			html.setFile(player, filename);
 			html.replace("0place", Integer.toString(player.getRace(0)));
 			search = "Mob1";

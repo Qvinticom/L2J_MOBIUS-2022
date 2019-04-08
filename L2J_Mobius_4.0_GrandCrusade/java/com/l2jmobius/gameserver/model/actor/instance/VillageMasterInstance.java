@@ -74,7 +74,7 @@ public class VillageMasterInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
 		String pom = "";
 		

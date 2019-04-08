@@ -109,7 +109,7 @@ public class GuardInstance extends Attackable
 	 * @param val The number of the page to display
 	 */
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
 		String pom = "";
 		if (val == 0)

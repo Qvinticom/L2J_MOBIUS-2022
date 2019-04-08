@@ -68,7 +68,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
-						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
+						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());
 						}
@@ -95,7 +95,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 						&& !results.contains(obj.getId()))
 					{
 						final Npc npc = (Npc) obj;
-						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
+						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0, null) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());
 						}

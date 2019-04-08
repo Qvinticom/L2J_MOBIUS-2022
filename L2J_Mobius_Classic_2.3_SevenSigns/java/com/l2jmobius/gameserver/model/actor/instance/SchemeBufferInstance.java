@@ -51,7 +51,7 @@ public class SchemeBufferInstance extends Npc
 		if (currentCommand.startsWith("menu"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player, getHtmlPath(getId(), 0));
+			html.setFile(player, getHtmlPath(getId(), 0, player));
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
 		}
@@ -66,7 +66,7 @@ public class SchemeBufferInstance extends Npc
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player, getHtmlPath(getId(), 0));
+			html.setFile(player, getHtmlPath(getId(), 0, player));
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
 		}
@@ -82,7 +82,7 @@ public class SchemeBufferInstance extends Npc
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player, getHtmlPath(getId(), 0));
+			html.setFile(player, getHtmlPath(getId(), 0, player));
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
 		}
@@ -224,7 +224,7 @@ public class SchemeBufferInstance extends Npc
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
 		String filename = "";
 		if (val == 0)
@@ -266,7 +266,7 @@ public class SchemeBufferInstance extends Npc
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player, getHtmlPath(getId(), 1));
+		html.setFile(player, getHtmlPath(getId(), 1, player));
 		html.replace("%schemes%", sb.toString());
 		html.replace("%max_schemes%", Config.BUFFER_MAX_SCHEMES);
 		html.replace("%objectId%", getObjectId());
@@ -285,7 +285,7 @@ public class SchemeBufferInstance extends Npc
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
 		
-		html.setFile(player, getHtmlPath(getId(), 2));
+		html.setFile(player, getHtmlPath(getId(), 2, player));
 		html.replace("%schemename%", schemeName);
 		html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStat().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
 		html.replace("%typesframe%", getTypesFrame(groupType, schemeName));

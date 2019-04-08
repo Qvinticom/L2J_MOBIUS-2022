@@ -149,7 +149,7 @@ public class FriendlyNpcInstance extends Attackable
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
 		String pom = "";
 		if (val == 0)

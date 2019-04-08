@@ -49,7 +49,7 @@ public class MerchantInstance extends NpcInstance
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
 		String pom;
 		if (val == 0)

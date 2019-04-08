@@ -16,6 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
@@ -26,6 +29,8 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import com.l2jmobius.gameserver.model.holders.TeleporterQuestRecommendationHolder;
+import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
@@ -36,6 +41,14 @@ import com.l2jmobius.gameserver.util.Util;
 public final class TeleporterInstance extends Npc
 {
 	private static final Logger LOGGER = Logger.getLogger(TeleporterInstance.class.getName());
+	
+	private static final Map<Integer, List<TeleporterQuestRecommendationHolder>> QUEST_RECOMENDATIONS = new HashMap<>();
+	// static
+	// {
+	// QUEST_RECOMENDATIONS.put(30848, new ArrayList<>());
+	// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", -1, "30848-Q561-Q562"));
+	// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", -1, "30848-561-562"));
+	// }
 	
 	public TeleporterInstance(NpcTemplate template)
 	{
@@ -138,9 +151,33 @@ public final class TeleporterInstance extends Npc
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
-		final String pom = (val == 0) ? String.valueOf(npcId) : (npcId + "-" + val);
+		String pom;
+		if (val == 0)
+		{
+			pom = String.valueOf(npcId);
+			if ((player != null) && QUEST_RECOMENDATIONS.containsKey(npcId))
+			{
+				for (TeleporterQuestRecommendationHolder rec : QUEST_RECOMENDATIONS.get(npcId))
+				{
+					final QuestState qs = player.getQuestState(rec.getQuestName());
+					if (qs != null)
+					{
+						final int cond = rec.getCond();
+						if ((cond == -1) || qs.isCond(cond))
+						{
+							pom = rec.getHtml();
+							break;
+						}
+					}
+				}
+			}
+		}
+		else
+		{
+			pom = (npcId + "-" + val);
+		}
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 	
@@ -158,7 +195,7 @@ public final class TeleporterInstance extends Npc
 		String filename = "data/html/teleporter/castleteleporter-no.htm";
 		if ((player.getClan() != null) && (getCastle().getOwnerId() == player.getClanId())) // Clan owns castle
 		{
-			filename = getHtmlPath(getId(), 0); // Owner message window
+			filename = getHtmlPath(getId(), 0, player); // Owner message window
 		}
 		else if (getCastle().getSiege().isInProgress()) // Teleporter is busy due siege
 		{

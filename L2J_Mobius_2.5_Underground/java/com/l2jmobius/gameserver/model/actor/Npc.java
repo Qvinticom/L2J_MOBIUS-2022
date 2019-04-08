@@ -681,9 +681,10 @@ public class Npc extends Creature
 	 * </ul>
 	 * @param npcId The Identifier of the NpcInstance whose text must be display
 	 * @param val The number of the page to display
+	 * @param player The player that speaks to this NPC
 	 * @return the pathfile of the selected HTML file in function of the npcId and of the page number.
 	 */
-	public String getHtmlPath(int npcId, int val)
+	public String getHtmlPath(int npcId, int val, PlayerInstance player)
 	{
 		String pom = "";
 		
@@ -808,7 +809,7 @@ public class Npc extends Creature
 				}
 				else
 				{
-					filename = (getHtmlPath(npcId, val));
+					filename = (getHtmlPath(npcId, val, player));
 				}
 				break;
 			}
@@ -824,7 +825,7 @@ public class Npc extends Creature
 				}
 				else
 				{
-					filename = (getHtmlPath(npcId, val));
+					filename = (getHtmlPath(npcId, val, player));
 				}
 				break;
 			}
@@ -832,11 +833,11 @@ public class Npc extends Creature
 			{
 				if (player.isAcademyMember())
 				{
-					filename = (getHtmlPath(npcId, 1));
+					filename = (getHtmlPath(npcId, 1, player));
 				}
 				else
 				{
-					filename = (getHtmlPath(npcId, val));
+					filename = (getHtmlPath(npcId, val, player));
 				}
 				break;
 			}
@@ -847,7 +848,7 @@ public class Npc extends Creature
 					return;
 				}
 				// Get the text of the selected HTML file in function of the npcId and of the page number
-				filename = (getHtmlPath(npcId, val));
+				filename = (getHtmlPath(npcId, val, player));
 				break;
 			}
 		}
