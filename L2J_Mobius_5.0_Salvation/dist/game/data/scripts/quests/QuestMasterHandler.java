@@ -137,9 +137,11 @@ import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
 import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
+import quests.Q00561_BasicMissionHarnakUndergroundRuins.Q00561_BasicMissionHarnakUndergroundRuins;
 import quests.Q00562_BasicMissionAltarOfEvil.Q00562_BasicMissionAltarOfEvil;
 import quests.Q00563_BasicMissionBloodySwampland.Q00563_BasicMissionBloodySwampland;
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
+import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
 import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
@@ -582,7 +584,7 @@ public class QuestMasterHandler
 		Q00512_BladeUnderFoot.class,
 		Q00551_OlympiadStarter.class,
 		Q00553_OlympiadUndefeated.class,
-		Q00561_BasicMissionHarnakUndergroundRuins.class, // TODO: Not done.
+		Q00561_BasicMissionHarnakUndergroundRuins.class,
 		Q00562_BasicMissionAltarOfEvil.class,
 		Q00563_BasicMissionBloodySwampland.class,
 		Q00564_BasicMissionKartiasLabyrinthSolo.class,
@@ -598,7 +600,7 @@ public class QuestMasterHandler
 		Q00574_SpecialMissionNornilsGarden.class, // TODO: Not done.
 		Q00575_SpecialMissionFortuna.class, // TODO: Not done.
 		Q00576_SpecialMissionDefeatSpezion.class, // TODO: Not done.
-		Q00580_BeyondTheMemories.class, // TODO: Not done.
+		Q00580_BeyondTheMemories.class,
 		Q00581_ThePurificationRitual.class, // TODO: Not done.
 		Q00582_WashBloodWithBlood.class, // TODO: Not done.
 		Q00583_MeaningOfSurvival.class, // TODO: Not done.
