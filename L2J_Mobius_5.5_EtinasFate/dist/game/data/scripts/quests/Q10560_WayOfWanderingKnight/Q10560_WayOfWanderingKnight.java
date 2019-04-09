@@ -96,7 +96,7 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 			case "34362-02.htm":
 			case "34362-03.htm":
 			case "34362-11.html":
-			case "32327-2.htm":
+			case "32327-02.html":
 			{
 				htmltext = event;
 				break;
@@ -107,21 +107,21 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 				htmltext = event;
 				break;
 			}
-			case "34362-05.htm":
+			case "34362-05.html":
 			{
 				// Show Service/Help/Join a Clan page
 				player.sendPacket(new ExTutorialShowId(46));
 				htmltext = event;
 				break;
 			}
-			case "34362-06.htm":
+			case "34362-06.html":
 			{
 				// Show Service/Help/Creating a Clan page
 				player.sendPacket(new ExTutorialShowId(22));
 				htmltext = event;
 				break;
 			}
-			case "34362-07.htm":
+			case "34362-07.html":
 			{
 				qs.setCond(2, true);
 				htmltext = event;
@@ -156,23 +156,23 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 				}
 				else
 				{
-					htmltext = getHtm(player, "noAmity.htm").replaceAll("%name%", "Herphah");
+					htmltext = getHtm(player, "noAmity.html").replaceAll("%name%", "Herphah");
 				}
 				break;
 			}
-			case "32327-3.htm":
+			case "32327-03.html":
 			{
 				if (CategoryData.getInstance().isInCategory(CategoryType.MAGE_GROUP, classId.getId()))
 				{
-					htmltext = getHtm(player, "32327-3.htm").replaceAll("%classbuff%", "Wizard");
+					htmltext = getHtm(player, "32327-03.html").replaceAll("%classbuff%", "Wizard");
 				}
 				else if (CategoryData.getInstance().isInCategory(CategoryType.ATTACKER_GROUP, classId.getId()))
 				{
-					htmltext = getHtm(player, "32327-3.htm").replaceAll("%classbuff%", "Warrior");
+					htmltext = getHtm(player, "32327-03.html").replaceAll("%classbuff%", "Warrior");
 				}
 				else if (CategoryData.getInstance().isInCategory(CategoryType.TANKER_GROUP, classId.getId()))
 				{
-					htmltext = getHtm(player, "32327-3.htm").replaceAll("%classbuff%", "Knight");
+					htmltext = getHtm(player, "32327-03.html").replaceAll("%classbuff%", "Knight");
 				}
 				// Show Service/Help/Adventurer's Guide page
 				player.sendPacket(new ExTutorialShowId(25));
@@ -196,13 +196,13 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 				qs.setCond(3, true);
 				break;
 			}
-			case "34413-2.htm":
+			case "34413-02.html":
 			{
 				qs.setCond(6, true);
 				htmltext = event;
 				break;
 			}
-			case "34413-4.htm":
+			case "34413-04.html":
 			{
 				// TODO: we need to add reward % of amity points to factions in all faction quests
 				// check if reached level 1 with Adventurer's Guild Faction
@@ -213,7 +213,7 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 				}
 				else
 				{
-					htmltext = getHtm(player, "noAmity.htm").replaceAll("%name%", "Penny");
+					htmltext = getHtm(player, "noAmity.html").replaceAll("%name%", "Penny");
 				}
 				break;
 			}
@@ -258,11 +258,11 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 					{
 						if (qs.isCond(5))
 						{
-							htmltext = "34413-1.htm";
+							htmltext = "34413-01.html";
 						}
 						else if (qs.isCond(6))
 						{
-							htmltext = "34413-3.htm";
+							htmltext = "34413-03.html";
 						}
 						break;
 					}
@@ -270,7 +270,7 @@ public final class Q10560_WayOfWanderingKnight extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							htmltext = "32327-1.htm";
+							htmltext = "32327-1.html";
 						}
 						break;
 					}
