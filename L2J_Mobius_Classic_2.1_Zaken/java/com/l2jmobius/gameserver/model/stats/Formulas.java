@@ -200,36 +200,35 @@ public final class Formulas
 	 */
 	public static boolean calcCrit(double rate, Creature creature, Creature target, Skill skill)
 	{
-		// Skill critical rate is calculated up to the first decimal, thats why multiply by 10 and compare to 1000.
 		if (skill != null)
 		{
-			// Magic Critical Rate
+			// Magic Critical Rate.
 			if (skill.isMagic())
 			{
 				rate = creature.getStat().getValue(Stats.MAGIC_CRITICAL_RATE);
 				if ((target == null) || !skill.isBad())
 				{
-					return Math.min(rate, 320) > Rnd.get(1000);
+					return Math.min(rate, 32) > Rnd.get(100);
 				}
 				
 				double finalRate = target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
 				if ((creature.getLevel() >= 78) && (target.getLevel() >= 78))
 				{
 					finalRate += Math.sqrt(creature.getLevel()) + ((creature.getLevel() - target.getLevel()) / 25);
-					return Math.min(finalRate, 320) > Rnd.get(1000);
+					return Math.min(finalRate, 32) > Rnd.get(100);
 				}
 				
-				return Math.min(finalRate, 200) > Rnd.get(1000);
+				return Math.min(finalRate, 20) > Rnd.get(100);
 			}
 			
-			// Physical skill critical rate
+			// Physical skill critical rate.
 			final double statBonus;
 			
 			// There is a chance that activeChar has altered base stat for skill critical.
 			byte skillCritRateStat = (byte) creature.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
 			if ((skillCritRateStat >= 0) && (skillCritRateStat < BaseStats.values().length))
 			{
-				// Best tested
+				// Best tested.
 				statBonus = BaseStats.values()[skillCritRateStat].calcBonus(creature);
 			}
 			else
@@ -239,8 +238,8 @@ public final class Formulas
 			}
 			
 			final double rateBonus = creature.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
-			double finalRate = rate * statBonus * rateBonus * 10;
-			return finalRate > Rnd.get(1000);
+			double finalRate = rate * statBonus * rateBonus;
+			return Math.min(finalRate, 99) <= Rnd.get(100);
 		}
 		
 		// Autoattack critical rate.
