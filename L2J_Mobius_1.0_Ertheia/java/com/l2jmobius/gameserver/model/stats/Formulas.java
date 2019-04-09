@@ -239,7 +239,7 @@ public final class Formulas
 			
 			final double rateBonus = creature.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
 			double finalRate = rate * statBonus * rateBonus;
-			return Math.min(finalRate, 99) <= Rnd.get(100);
+			return finalRate > Rnd.get(100);
 		}
 		
 		// Autoattack critical rate.
