@@ -34,12 +34,13 @@ import ai.AbstractNpcAI;
 /**
  * Monk of Chaos AI.
  * @author Sdw
+ * @author Mobius
  */
 public final class MonkOfChaos extends AbstractNpcAI
 {
 	private static final int MONK_OF_CHAOS = 33880;
 	private static final int MIN_LEVEL = 85;
-	private static final long CANCEL_FEE = 100000000;
+	private static final int CANCEL_FEE = 100000000;
 	private static final int CHAOS_POMANDER = 37374;
 	private static final int CHAOS_POMANDER_DUALCLASS = 37375;
 	private static final String[] REVELATION_VAR_NAMES =
@@ -91,7 +92,6 @@ public final class MonkOfChaos extends AbstractNpcAI
 				if (player.isDualClassActive())
 				{
 					final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(player, SubclassType.DUALCLASS);
-					
 					if (skills.size() > 0)
 					{
 						player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION_DUALCLASS));
@@ -104,7 +104,6 @@ public final class MonkOfChaos extends AbstractNpcAI
 				else
 				{
 					final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(player, SubclassType.BASECLASS);
-					
 					if (skills.size() > 0)
 					{
 						player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION));
@@ -124,11 +123,8 @@ public final class MonkOfChaos extends AbstractNpcAI
 					break;
 				}
 				
-				int count = 0;
-				
 				final String[] varNames = player.isDualClassActive() ? DUALCLASS_REVELATION_VAR_NAMES : REVELATION_VAR_NAMES;
-				final int chaosPomander = player.isDualClassActive() ? CHAOS_POMANDER_DUALCLASS : CHAOS_POMANDER;
-				
+				int count = 0;
 				for (String varName : varNames)
 				{
 					if (player.getVariables().getInt(varName, 0) > 0)
@@ -136,7 +132,6 @@ public final class MonkOfChaos extends AbstractNpcAI
 						count++;
 					}
 				}
-				
 				if ((player.getLevel() < MIN_LEVEL) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || (count == 0))
 				{
 					htmltext = "no-cancel.html";
@@ -148,17 +143,18 @@ public final class MonkOfChaos extends AbstractNpcAI
 					htmltext = "no-adena.html";
 					break;
 				}
+				takeItems(player, 57, CANCEL_FEE);
 				
+				for (SkillLearn skill : SkillTreesData.getInstance().getAllRevelationSkills(player, player.isDualClassActive() ? SubclassType.DUALCLASS : SubclassType.BASECLASS))
+				{
+					player.removeSkill(skill.getSkillId());
+				}
 				for (String varName : varNames)
 				{
-					final int skillId = player.getVariables().getInt(varName, 0);
-					if (skillId > 0)
-					{
-						player.removeSkill(skillId);
-						player.getVariables().remove(varName);
-					}
+					player.getVariables().remove(varName);
 				}
-				giveItems(player, chaosPomander, count);
+				
+				giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUALCLASS : CHAOS_POMANDER, count);
 				htmltext = "canceled.html";
 				break;
 			}

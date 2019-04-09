@@ -878,6 +878,18 @@ public final class SkillTreesData implements IXmlReader
 	}
 	
 	/**
+	 * Gets the complete revelation skill list.
+	 * @param player the player requesting the revelation skills
+	 * @param type the player current subclass type
+	 * @return all the available revelation skills for a given {@code player}
+	 */
+	public Collection<SkillLearn> getAllRevelationSkills(PlayerInstance player, SubclassType type)
+	{
+		final Map<Long, SkillLearn> revelationSkills = _revelationSkillTree.get(type);
+		return revelationSkills == null ? Collections.emptyList() : revelationSkills.values();
+	}
+	
+	/**
 	 * Gets the available alchemy skills, restricted to Ertheia
 	 * @param player the player requesting the alchemy skills
 	 * @return all the available alchemy skills for a given {@code player}
