@@ -2269,12 +2269,16 @@
 		<!-- Additionally increases Shield Defense. Enchantment effects: Atk. Spd. +5%, P. Skill Power +2%, M. Skill Power -10%. -->
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
