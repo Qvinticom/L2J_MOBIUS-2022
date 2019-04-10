@@ -16,6 +16,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.Creature;
@@ -27,6 +28,51 @@ public class Link implements IBypassHandler
 	private static final String[] COMMANDS =
 	{
 		"Link"
+	};
+	
+	private static final String[] VALID_BYPASSES =
+	{
+		"common/attribute_info.htm",
+		"common/augmentation_01.htm",
+		"common/augmentation_02.htm",
+		"common/augmentation_exchange.htm",
+		"common/crafting_01.htm",
+		"common/crafting_02.htm",
+		"common/crafting_03.htm",
+		"common/cursed_to_unidentified.htm",
+		"common/duals_01.htm",
+		"common/duals_02.htm",
+		"common/duals_03.htm",
+		"common/g_cube_warehouse001.htm",
+		"common/skill_enchant_help.htm",
+		"common/skill_enchant_help_01.htm",
+		"common/skill_enchant_help_02.htm",
+		"common/skill_enchant_help_03.htm",
+		"common/smelting_trade001.htm",
+		"common/weapon_sa_01.htm",
+		"common/welcomeback002.htm",
+		"common/welcomeback003.htm",
+		"default/BlessingOfProtection.htm",
+		"default/SupportMagic.htm",
+		"default/SupportMagicServitor.htm",
+		"fisherman/exchange_old_items.htm",
+		"fisherman/fish_appearance_exchange.htm",
+		"fisherman/fishing_manual001.htm",
+		"fisherman/fishing_manual002.htm",
+		"fisherman/fishing_manual003.htm",
+		"fisherman/fishing_manual004.htm",
+		"fisherman/fishing_manual008.htm",
+		"fisherman/fishing_manual009.htm",
+		"fisherman/fishing_manual010.htm",
+		"fortress/foreman.htm",
+		"guard/kamaloka_help.htm",
+		"guard/kamaloka_level.htm",
+		"petmanager/evolve.htm",
+		"petmanager/exchange.htm",
+		"petmanager/instructions.htm",
+		"teleporter/separatedsoul.htm",
+		"warehouse/clanwh.htm",
+		"warehouse/privatewh.htm",
 	};
 	
 	@Override
@@ -45,9 +91,12 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		final String content = HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath);
+		final String content = CommonUtil.contains(VALID_BYPASSES, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
-		html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
+		if (content != null)
+		{
+			html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
+		}
 		player.sendPacket(html);
 		return true;
 	}

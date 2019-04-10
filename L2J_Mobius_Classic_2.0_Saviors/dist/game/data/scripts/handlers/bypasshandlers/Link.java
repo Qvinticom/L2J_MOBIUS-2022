@@ -16,6 +16,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.Creature;
@@ -27,6 +28,35 @@ public class Link implements IBypassHandler
 	private static final String[] COMMANDS =
 	{
 		"Link"
+	};
+	
+	private static final String[] VALID_BYPASSES =
+	{
+		"common/craft_01.htm",
+		"common/craft_02.htm",
+		"common/runes_01.htm",
+		"common/sealed_runes_02.htm",
+		"common/sealed_runes_03.htm",
+		"common/sealed_runes_04.htm",
+		"common/sealed_runes_05.htm",
+		"common/sealed_runes_06.htm",
+		"common/sealed_runes_07.htm",
+		"common/sealed_runes_08.htm",
+		"common/sealed_runes_09.htm",
+		"common/skill_enchant_help_01.htm",
+		"common/skill_enchant_help_02.htm",
+		"common/skill_enchant_help_03.htm",
+		"fisherman/fishing_manual001.htm",
+		"fisherman/fishing_manual002.htm",
+		"fisherman/fishing_manual003.htm",
+		"fisherman/fishing_manual004.htm",
+		"fisherman/fishing_manual005.htm",
+		"fortress/foreman.htm",
+		"petmanager/evolve.htm",
+		"petmanager/exchange.htm",
+		"petmanager/instructions.htm",
+		"warehouse/clanwh.htm",
+		"warehouse/privatewh.htm",
 	};
 	
 	@Override
@@ -45,9 +75,12 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		final String content = HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath);
+		final String content = CommonUtil.contains(VALID_BYPASSES, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
-		html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
+		if (content != null)
+		{
+			html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
+		}
 		player.sendPacket(html);
 		return true;
 	}

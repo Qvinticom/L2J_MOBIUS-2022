@@ -16,6 +16,8 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -26,6 +28,51 @@ public class Link implements IBypassHandler
 	private static final String[] COMMANDS =
 	{
 		"Link"
+	};
+	
+	private static final String[] VALID_BYPASSES =
+	{
+		"adventurer_guildsman/AboutHighLevelGuilds.htm",
+		"adventurer_guildsman/AboutNewLifeCrystals.htm",
+		"clanHallDoorman/evolve.htm",
+		"common/augmentation_01.htm",
+		"common/augmentation_02.htm",
+		"common/crafting_01.htm",
+		"common/duals_01.htm",
+		"common/duals_02.htm",
+		"common/duals_03.htm",
+		"common/g_cube_warehouse001.htm",
+		"common/skill_enchant_help.htm",
+		"common/skill_enchant_help_01.htm",
+		"common/skill_enchant_help_02.htm",
+		"common/skill_enchant_help_03.htm",
+		"common/weapon_sa_01.htm",
+		"common/welcomeback002.htm",
+		"common/welcomeback003.htm",
+		"default/BlessingOfProtection.htm",
+		"default/SupportMagic.htm",
+		"default/SupportMagicServitor.htm",
+		"fisherman/fishing_championship.htm",
+		"fortress/foreman.htm",
+		"guard/kamaloka_help.htm",
+		"guard/kamaloka_level.htm",
+		"olympiad/hero_main2.htm",
+		"petmanager/evolve.htm",
+		"petmanager/exchange.htm",
+		"petmanager/instructions.htm",
+		"seven_signs/blkmrkt_1.htm",
+		"seven_signs/blkmrkt_2.htm",
+		"seven_signs/mammblack_1a.htm",
+		"seven_signs/mammblack_1b.htm",
+		"seven_signs/mammblack_1c.htm",
+		"seven_signs/mammblack_2a.htm",
+		"seven_signs/mammblack_2b.htm",
+		"seven_signs/mammmerch_1.htm",
+		"seven_signs/mammmerch_1a.htm",
+		"seven_signs/mammmerch_1b.htm",
+		"teleporter/separatedsoul.htm",
+		"warehouse/clanwh.htm",
+		"warehouse/privatewh.htm",
 	};
 	
 	@Override
@@ -44,10 +91,12 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		final String filename = "data/html/" + htmlPath;
+		final String content = CommonUtil.contains(VALID_BYPASSES, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
-		html.setFile(player, filename);
-		html.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0));
+		if (content != null)
+		{
+			html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
+		}
 		player.sendPacket(html);
 		return true;
 	}
