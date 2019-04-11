@@ -406,6 +406,7 @@
 			<value fromLevel="3" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
+		<fanRange>0;0;600;180</fanRange>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WATER</attributeType>
@@ -424,8 +425,8 @@
 			<value level="7">107</value>
 			<value level="8">109</value>
 		</magicLvl>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">185</value>
@@ -460,6 +461,9 @@
 			<effect name="Speed">
 				<amount>-100</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
 			</effect>
 		</effects>
 	</skill>

@@ -5284,7 +5284,7 @@
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="21">70</value>
+			<value fromLevel="1" toLevel="21">50</value>
 			<value fromLevel="15" toLevel="21" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>

@@ -186,11 +186,28 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11805" toLevel="1" name="Not in Use">
-		<icon>icon.skill1460</icon>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>97</magicLvl>
+	<skill id="11805" toLevel="1" name="Summon Dominant Flag">
+		<!-- Custom Skill: Used for skill Vanguard of Baylor (19449) -->
+		<icon>icon.skill19437</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<operateType>A1</operateType>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpExistNpc">
+				<npcIds>
+					<item>15211</item>
+				</npcIds>
+				<range>600</range>
+				<isAround>false</isAround>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>15211</npcId> <!-- Dominant Flag -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11806" toLevel="4" name="Blessing of Tree">
 		<!-- Recovers HP and removes bad abnormal statuses. -->

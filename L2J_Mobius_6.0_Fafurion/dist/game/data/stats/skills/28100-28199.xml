@@ -350,7 +350,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -363,6 +363,12 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
+		<reuseDelayGroup>13973</reuseDelayGroup>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="DamageByAttack">
 				<amount>
@@ -402,7 +408,7 @@
 			<value level="4">600</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -415,6 +421,12 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
+		<reuseDelayGroup>13973</reuseDelayGroup>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
@@ -456,7 +468,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -469,6 +481,11 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
@@ -503,7 +520,7 @@
 		<!-- Recovers HP by $s1, MP by $s2, and CP by $s3. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>A1</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>3000</hitTime>
 		<coolTime>300</coolTime>
@@ -514,6 +531,11 @@
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effectPoint>10</effectPoint>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="HealPercent">
 				<power>

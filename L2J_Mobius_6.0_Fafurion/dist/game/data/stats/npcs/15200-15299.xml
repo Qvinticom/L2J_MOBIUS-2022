@@ -336,20 +336,26 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15211" level="85" type="Npc" name="Dominant Flag">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="15211" level="105" type="EffectPoint" name="Dominant Flag">
+		<parameters>
+			<param name="despawn_time" value="1800" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1277698" hpRegen="8.5" mp="40" mpRegen="0.9" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="8.47458" magical="5.78704" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="439.882533785801" magical="244.037399253603" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status targetable="false" canMove="false" undying="true" />
+		<ai clanHelpRange="1000" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
 			<height normal="88.8" />

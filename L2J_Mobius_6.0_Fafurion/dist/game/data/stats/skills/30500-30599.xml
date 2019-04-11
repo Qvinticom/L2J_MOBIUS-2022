@@ -1663,7 +1663,7 @@
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<abnormalVisualEffect>GRAVITY_SPACE_3</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="17">80</value>
+			<value fromLevel="1" toLevel="17">50</value>
 			<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>

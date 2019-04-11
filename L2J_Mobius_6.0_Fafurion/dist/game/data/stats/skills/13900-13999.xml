@@ -2487,7 +2487,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -2500,6 +2500,11 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="DamageByAttack">
 				<amount>
@@ -2534,7 +2539,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -2547,6 +2552,12 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
+		<reuseDelayGroup>13973</reuseDelayGroup>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
@@ -2588,7 +2599,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -2601,6 +2612,11 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>

@@ -2803,7 +2803,8 @@
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<clanRepConsume>100</clanRepConsume>
+		<itemConsumeCount>2000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
 		<conditions>
 			<condition name="OpCanNotUseAirship" />
 			<condition name="OpSocialClass">

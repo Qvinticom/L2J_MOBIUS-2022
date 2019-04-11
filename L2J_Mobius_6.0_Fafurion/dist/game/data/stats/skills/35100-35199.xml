@@ -1189,7 +1189,36 @@
 	<skill id="35151" toLevel="1" name="Balthus Knight Bracelet">
 		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +$s1 and allows for 5 Talismans to be equipped. -->
 		<icon>icon.octavis_bracelet_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35152" toLevel="1" name="Clan Cloak Enchant Scroll">
 		<icon>icon.star_scrl_of_ench_ag</icon>

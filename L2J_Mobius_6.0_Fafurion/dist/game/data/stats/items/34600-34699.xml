@@ -288,7 +288,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -298,6 +298,9 @@
 			<skill id="9334" level="1" /> <!-- Pipe Organ Melody - Enhanced Cocktail -->
 			<skill id="9335" level="1" /> <!-- Guitar Melody - Enhanced Cocktail -->
 			<skill id="9331" level="1" /> <!-- Horn Melody - Enhanced Cocktail -->
+			<skill id="17303" level="1" /> <!-- Prevailing Sonata - Enhanced Cocktail -->
+			<skill id="17304" level="1" /> <!-- Daring Sonata - Enhanced Cocktail -->
+			<skill id="17305" level="1" /> <!-- Refreshing Sonata - Enhanced Cocktail -->
 		</skills>
 	</item>
 	<item id="34619" name="PA Points Coupon" additionalName="PA exclusive" type="EtcItem">

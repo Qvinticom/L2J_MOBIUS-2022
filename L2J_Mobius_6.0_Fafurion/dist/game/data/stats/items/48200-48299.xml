@@ -1085,6 +1085,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>
+			<skill id="35151" level="1" /> <!-- Balthus Knight Bracelet -->
+		</skills>
 	</item>
 	<item id="48278" name="Clan Cloak - Economy Specialty" additionalName="Stage 1" type="Armor">
 		<!-- Not open -->

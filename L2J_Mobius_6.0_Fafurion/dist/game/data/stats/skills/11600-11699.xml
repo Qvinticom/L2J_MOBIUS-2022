@@ -1190,7 +1190,7 @@
 		</effects>
 	</skill>
 	<skill id="11621" toLevel="1" name="Blessing Barrier">
-		<!-- Creates a defense barrier that absorbs damage as much as $s2 of your P. Def. for $s1. -->
+		<!-- Creates a defense barrier that absorbs damage as much as 200% of your P. Def. for 10 sec.. -->
 		<icon>icon.skill11621</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1222,6 +1222,10 @@
 		<effects>
 			<effect name="AbsorbDamage">
 				<damage>20000</damage>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
