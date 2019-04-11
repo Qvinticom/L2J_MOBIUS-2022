@@ -167,11 +167,12 @@ public class Q00560_HowToOvercomeFear extends Quest
 		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
-			if (giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true))
+			final PlayerInstance player = qs.getPlayer();
+			if (giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true))
 			{
 				qs.setCond(FINISH_COND, true);
 			}
-			sendNpcLogList(killer);
+			sendNpcLogList(player);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

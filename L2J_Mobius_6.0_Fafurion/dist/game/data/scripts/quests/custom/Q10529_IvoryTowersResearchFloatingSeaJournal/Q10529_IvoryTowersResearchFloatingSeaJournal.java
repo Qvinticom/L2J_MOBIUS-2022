@@ -194,17 +194,18 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 		final QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if (qs != null)
 		{
+			final PlayerInstance player = qs.getPlayer();
 			if (qs.isCond(KILLING_COND_1) && CommonUtil.contains(MONSTERS_1, npc.getId()))
 			{
-				if (giveItemRandomly(killer, npc, MONSTER_DROP_1, 1, REQUIRED_DROP_COUNT_1, 1, true))
+				if (giveItemRandomly(player, npc, MONSTER_DROP_1, 1, REQUIRED_DROP_COUNT_1, 1, true))
 				{
 					qs.setCond(FINISH_COND_1, true);
 				}
-				sendNpcLogList(killer);
+				sendNpcLogList(player);
 			}
 			else if (qs.isCond(KILLING_COND_2) && CommonUtil.contains(MONSTERS_2, npc.getId()))
 			{
-				if (giveItemRandomly(killer, npc, MONSTER_DROP_2, 1, REQUIRED_DROP_COUNT_2, 1, true))
+				if (giveItemRandomly(player, npc, MONSTER_DROP_2, 1, REQUIRED_DROP_COUNT_2, 1, true))
 				{
 					qs.setCond(FINISH_COND_2, true);
 				}

@@ -171,21 +171,22 @@ public class Q10517_FafurionsMinions extends Quest
 		QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
-			giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
+			final PlayerInstance player = qs.getPlayer();
+			giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
 			
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
 			if (killCount < REQUIRED_KILL_COUNT)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			
-			if ((killCount >= REQUIRED_KILL_COUNT) && (getQuestItemsCount(killer, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
+			if ((killCount >= REQUIRED_KILL_COUNT) && (getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
 			{
 				qs.setCond(FINISH_COND, true);
 			}
 			
-			sendNpcLogList(killer);
+			sendNpcLogList(player);
 		}
 		
 		return super.onKill(npc, killer, isSummon);
