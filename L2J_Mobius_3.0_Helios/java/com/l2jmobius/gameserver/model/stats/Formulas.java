@@ -141,7 +141,7 @@ public final class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
 		
 		// MDAM Formula.
-		double damage = (91 * power * Math.sqrt(mAtk * shotsBonus)) / mDef;
+		double damage = ((attacker.getINT() * power * Math.sqrt(mAtk)) / mDef) * shotsBonus;
 		
 		// Failure calculation
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill))
@@ -1382,9 +1382,7 @@ public final class Formulas
 		damage *= calcAttributeBonus(attacker, target, null);
 		damage *= calculatePvpPveBonus(attacker, target, null, crit);
 		
-		damage = Math.max(0, damage);
-		
-		return damage;
+		return Math.max(0, damage);
 	}
 	
 	public static double getAbnormalResist(BasicProperty basicProperty, Creature target)

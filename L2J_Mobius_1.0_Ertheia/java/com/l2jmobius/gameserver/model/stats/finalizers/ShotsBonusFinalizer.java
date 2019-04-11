@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.OptionalDouble;
 
-import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -50,6 +49,6 @@ public class ShotsBonusFinalizer implements IStatsFunction
 				rubyBonus = player.getActiveRubyJewel().getBonus();
 			}
 		}
-		return Stats.defaultValue(creature, stat, CommonUtil.constrain(baseValue, 1.0, 1.21) + rubyBonus);
+		return Stats.defaultValue(creature, stat, baseValue + rubyBonus);
 	}
 }
