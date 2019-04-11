@@ -1,9 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2000" toLevel="1" name="Dual Certification - Death">
-		<!-- Increases P. Critical Damage and P./ M. Skill Critical Damage by $s1. -->
+		<!-- Increases P. Critical Damage and P./ M. Skill Critical Damage by 5%. -->
 		<icon>icon.skill10655</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="2001" toLevel="1" name="Red Potion">
 		<abnormalLvl>1</abnormalLvl>

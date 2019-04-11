@@ -2398,13 +2398,31 @@
 		</effects>
 	</skill>
 	<skill id="1998" toLevel="1" name="Dual Certification - Vital">
-		<!-- Increases Acquired XP/ SP in Vitality state by $s1. -->
+		<!-- Increases Acquired XP/ SP in Vitality state by 10%. -->
 		<icon>icon.skill10336</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1999" toLevel="1" name="Dual Certification - Recovery">
-		<!-- Decreases skill cooldown by $s1. -->
+		<!-- Decreases skill cooldown by 4%. -->
 		<icon>icon.skill11226</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 </list>
