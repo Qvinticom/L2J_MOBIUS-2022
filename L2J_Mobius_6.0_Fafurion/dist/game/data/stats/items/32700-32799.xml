@@ -629,100 +629,198 @@
 	<item id="32756" name="Rabbit Ears - STR Pendant" type="EtcItem">
 		<!-- Combines rabbit ears to make Rabbit Ears - STR. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9554" level="1" /> <!-- STR skill -->
+		</skills>
 	</item>
 	<item id="32757" name="Rabbit Ears - DEX Pendant" type="EtcItem">
 		<!-- Combines rabbit ears to make Rabbit Ears - DEX. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9555" level="1" /> <!-- DEX skill -->
+		</skills>
 	</item>
 	<item id="32758" name="Raccoon Ears: CON Pendant" type="EtcItem">
 		<!-- Combines raccoon ears to make Raccoon Ear - CON. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9556" level="1" /> <!-- CON skill -->
+		</skills>
 	</item>
 	<item id="32759" name="Raccoon Ears: MEN Pendant" type="EtcItem">
 		<!-- Combines raccoon ears to make Raccoon Ear - MEN. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9557" level="1" /> <!-- MEN skill -->
+		</skills>
 	</item>
 	<item id="32760" name="Cat Ears: INT Pendant" type="EtcItem">
 		<!-- Combines cat ears to make Cat Ear - INT. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9558" level="1" /> <!-- INT skill -->
+		</skills>
 	</item>
 	<item id="32761" name="Cat Ears: WIT Pendant" type="EtcItem">
 		<!-- Combines cat ears to make Cat Ear - WIT. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9559" level="1" /> <!-- WIT skill -->
+		</skills>
 	</item>
 	<item id="32762" name="Romantic Chapeau - P. Critical Rate Pendant" type="EtcItem">
 		<!-- Combines romantic chapeaus to make Romantic Chapeau - P. Critical Rate. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9560" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32763" name="Romantic Chapeau - Critical Damage Pendant" type="EtcItem">
 		<!-- Combines romantic chapeaus to make Romantic Chapeau - P. Critical Damage. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9561" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32764" name="Angel Circlet - P. Def. Pendant" type="EtcItem">
 		<!-- Combines angel circlets to make Angel Circlet - P. Def. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9562" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32765" name="Angel Circlet - M. Def. Pendant" type="EtcItem">
 		<!-- Combines angel circlets to make Angel Circlet - M. Def. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9563" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32766" name="Angel Circlet - Evasion Pendant" type="EtcItem">
 		<!-- Combines angel circlets to make Angel Circlet - Evasion. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9564" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32767" name="Demon Circlet - P. Atk. Pendant" type="EtcItem">
 		<!-- Combines demon circlets to make Demon Circlet - P. Atk. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9565" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32768" name="Demon Circlet - M. Atk. Pendant" type="EtcItem">
 		<!-- Combines demon circlets to make Demon Circlet - M. Atk. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9566" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32769" name="Demon Circlet - Accuracy Pendant" type="EtcItem">
 		<!-- Combines demon circlets to make Demon Circlet - Accuracy. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9567" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="32770" name="Beaker" type="Weapon">
 		<!-- For NPC. -->

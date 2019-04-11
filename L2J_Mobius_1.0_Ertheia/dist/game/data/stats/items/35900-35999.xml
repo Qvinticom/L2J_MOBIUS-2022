@@ -17,100 +17,198 @@
 	<item id="35901" name="STR Pendant" type="EtcItem">
 		<!-- You can bestow STR + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9554" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35902" name="DEX Pendant" type="EtcItem">
 		<!-- You can bestow DEX + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9555" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35903" name="CON Pendant" type="EtcItem">
 		<!-- You can bestow CON + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9556" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35904" name="MEN Pendant" type="EtcItem">
 		<!-- You can bestow MEN + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9557" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35905" name="INT Pendant" type="EtcItem">
 		<!-- You can bestow INT + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9558" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35906" name="WIT Pendant" type="EtcItem">
 		<!-- You can bestow WIT + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9559" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35907" name="Critical Rate Pendant" type="EtcItem">
 		<!-- You can bestow Critical Rate + 50 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9560" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35908" name="Critical Damage Pendant" type="EtcItem">
 		<!-- You can bestow Critical Damage + 90 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9561" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35909" name="P. Def. Pendant" type="EtcItem">
 		<!-- You can bestow P. Def. + 5% when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9562" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35910" name="M. Def. Pendant" type="EtcItem">
 		<!-- You can bestow M. Def. + 5% when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9563" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35911" name="Evasion Pendant" type="EtcItem">
 		<!-- You can bestow Evasion + 5 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9564" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35912" name="P. Atk. Pendant" type="EtcItem">
 		<!-- You can bestow P. Atk. + 5% when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9565" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35913" name="M. Atk. Pendant" type="EtcItem">
 		<!-- You can bestow M. Atk. + 10% when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9566" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35914" name="Accuracy Pendant" type="EtcItem">
 		<!-- You can bestow Accuracy + 5 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
-		<set name="immediate_effect" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9567" level="1" /> <!-- skill -->
+		</skills>
 	</item>
 	<item id="35915" name="Draco's Hat" additionalName="STR (Event)" type="Armor">
 		<!-- STR + 3 when equipped. -->
