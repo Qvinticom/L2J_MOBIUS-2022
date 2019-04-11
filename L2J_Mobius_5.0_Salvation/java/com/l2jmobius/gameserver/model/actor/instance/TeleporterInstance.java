@@ -54,15 +54,17 @@ public final class TeleporterInstance extends Npc
 	private static final Map<Integer, List<TeleporterQuestRecommendationHolder>> QUEST_RECOMENDATIONS = new HashMap<>();
 	static
 	{
+		// @formatter:off
 		QUEST_RECOMENDATIONS.put(30006, new ArrayList<>()); // Gatekeeper Milia
-		QUEST_RECOMENDATIONS.get(30006).add(new TeleporterQuestRecommendationHolder(30006, "Q00561_BasicMissionHarnakUndergroundRuins", -1, "30006-Q561"));
+		QUEST_RECOMENDATIONS.get(30006).add(new TeleporterQuestRecommendationHolder(30006, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{3}, "30006-Q561"));
 		QUEST_RECOMENDATIONS.put(30134, new ArrayList<>()); // Dark Elf Village Teleport Device
-		QUEST_RECOMENDATIONS.get(30134).add(new TeleporterQuestRecommendationHolder(30134, "Q00562_BasicMissionAltarOfEvil", -1, "30134-Q562"));
+		QUEST_RECOMENDATIONS.get(30134).add(new TeleporterQuestRecommendationHolder(30134, "Q00562_BasicMissionAltarOfEvil", new int[]{4}, "30134-Q562"));
 		QUEST_RECOMENDATIONS.put(30256, new ArrayList<>()); // Gatekeeper Bella
-		QUEST_RECOMENDATIONS.get(30256).add(new TeleporterQuestRecommendationHolder(30256, "Q00562_BasicMissionAltarOfEvil", -1, "30256-Q562"));
+		QUEST_RECOMENDATIONS.get(30256).add(new TeleporterQuestRecommendationHolder(30256, "Q00562_BasicMissionAltarOfEvil", new int[]{3}, "30256-Q562"));
 		QUEST_RECOMENDATIONS.put(30848, new ArrayList<>()); // Gatekeeper Elisa
-		QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", -1, "30848-Q561-Q562"));
-		QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", -1, "30848-Q561-Q562"));
+		QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{2,4}, "30848-Q561-Q562"));
+		QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", new int[]{2,4}, "30848-Q561-Q562"));
+		// @formatter:on
 	}
 	
 	public TeleporterInstance(NpcTemplate template)
@@ -184,16 +186,18 @@ public final class TeleporterInstance extends Npc
 			pom = String.valueOf(npcId);
 			if ((player != null) && QUEST_RECOMENDATIONS.containsKey(npcId))
 			{
-				for (TeleporterQuestRecommendationHolder rec : QUEST_RECOMENDATIONS.get(npcId))
+				CHECK: for (TeleporterQuestRecommendationHolder rec : QUEST_RECOMENDATIONS.get(npcId))
 				{
 					final QuestState qs = player.getQuestState(rec.getQuestName());
 					if ((qs != null) && qs.isStarted())
 					{
-						final int cond = rec.getCond();
-						if ((cond == -1) || qs.isCond(cond))
+						for (int cond : rec.getConditions())
 						{
-							pom = rec.getHtml();
-							break;
+							if ((cond == -1) || qs.isCond(cond))
+							{
+								pom = rec.getHtml();
+								break CHECK;
+							}
 						}
 					}
 				}

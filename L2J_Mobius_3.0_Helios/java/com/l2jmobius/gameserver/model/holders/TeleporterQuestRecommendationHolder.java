@@ -23,14 +23,14 @@ public class TeleporterQuestRecommendationHolder
 {
 	private final int _npcId;
 	private final String _questName;
-	private final int _cond; // -1 = all conditions
+	private final int[] _conditions; // -1 = all conditions
 	private final String _html;
 	
-	public TeleporterQuestRecommendationHolder(int npcId, String questName, int cond, String html)
+	public TeleporterQuestRecommendationHolder(int npcId, String questName, int[] conditions, String html)
 	{
 		_npcId = npcId;
 		_questName = questName;
-		_cond = cond;
+		_conditions = conditions;
 		_html = html;
 	}
 	
@@ -44,9 +44,9 @@ public class TeleporterQuestRecommendationHolder
 		return _questName;
 	}
 	
-	public int getCond()
+	public int[] getConditions()
 	{
-		return _cond;
+		return _conditions;
 	}
 	
 	public String getHtml()

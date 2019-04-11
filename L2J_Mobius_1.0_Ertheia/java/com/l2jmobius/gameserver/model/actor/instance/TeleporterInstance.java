@@ -54,8 +54,8 @@ public final class TeleporterInstance extends Npc
 	// static
 	// {
 	// QUEST_RECOMENDATIONS.put(30848, new ArrayList<>());
-	// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", -1, "30848-Q561-Q562"));
-	// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", -1, "30848-561-562"));
+	// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{-1}, "30848-Q561-Q562"));
+	// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", new int[]{-1}, "30848-561-562"));
 	// }
 	
 	public TeleporterInstance(NpcTemplate template)
@@ -177,16 +177,18 @@ public final class TeleporterInstance extends Npc
 			pom = String.valueOf(npcId);
 			if ((player != null) && QUEST_RECOMENDATIONS.containsKey(npcId))
 			{
-				for (TeleporterQuestRecommendationHolder rec : QUEST_RECOMENDATIONS.get(npcId))
+				CHECK: for (TeleporterQuestRecommendationHolder rec : QUEST_RECOMENDATIONS.get(npcId))
 				{
 					final QuestState qs = player.getQuestState(rec.getQuestName());
 					if ((qs != null) && qs.isStarted())
 					{
-						final int cond = rec.getCond();
-						if ((cond == -1) || qs.isCond(cond))
+						for (int cond : rec.getConditions())
 						{
-							pom = rec.getHtml();
-							break;
+							if ((cond == -1) || qs.isCond(cond))
+							{
+								pom = rec.getHtml();
+								break CHECK;
+							}
 						}
 					}
 				}
