@@ -61,7 +61,7 @@ public class Q00581_ThePurificationRitual extends Quest
 	private static final int XP = 231860550;
 	private static final int SP = 231840;
 	private static final int REWARD_ITEM1 = 57; // ADENA
-	private static final int REWARD_ITEM1_AMOUNT = 505080 ;
+	private static final int REWARD_ITEM1_AMOUNT = 505080;
 	
 	public Q00581_ThePurificationRitual()
 	{
@@ -144,11 +144,11 @@ public class Q00581_ThePurificationRitual extends Quest
 						// Check if Faction quest has been taken
 						final QuestState st = player.getQuestState("Q00562_BasicMissionAltarOfEvil");
 						if ((st != null) && st.isStarted())
-						{	
-							htmltext = "34414-04.html";					
+						{
+							htmltext = "34414-04.html";
 						}
 						else
-						{	
+						{
 							htmltext = "34414-06.html";
 						}
 					}
@@ -178,7 +178,8 @@ public class Q00581_ThePurificationRitual extends Quest
 		QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
-			giveItemRandomly(killer, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
+			final PlayerInstance player = qs.getPlayer();
+			giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
 			
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
 			if (killCount < REQUIRED_KILL_COUNT)
@@ -186,12 +187,12 @@ public class Q00581_ThePurificationRitual extends Quest
 				qs.set(KILL_COUNT_VAR, killCount);
 			}
 			
-			if ((killCount >= REQUIRED_KILL_COUNT) && (getQuestItemsCount(killer, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
+			if ((killCount >= REQUIRED_KILL_COUNT) && (getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT))
 			{
 				qs.setCond(FINISH_COND, true);
 			}
 			
-			sendNpcLogList(killer);
+			sendNpcLogList(player);
 		}
 		
 		return super.onKill(npc, killer, isSummon);
