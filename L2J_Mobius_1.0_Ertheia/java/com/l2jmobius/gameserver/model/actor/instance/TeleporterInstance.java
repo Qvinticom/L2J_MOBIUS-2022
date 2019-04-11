@@ -180,7 +180,7 @@ public final class TeleporterInstance extends Npc
 				for (TeleporterQuestRecommendationHolder rec : QUEST_RECOMENDATIONS.get(npcId))
 				{
 					final QuestState qs = player.getQuestState(rec.getQuestName());
-					if (qs != null)
+					if ((qs != null) && qs.isStarted())
 					{
 						final int cond = rec.getCond();
 						if ((cond == -1) || qs.isCond(cond))
