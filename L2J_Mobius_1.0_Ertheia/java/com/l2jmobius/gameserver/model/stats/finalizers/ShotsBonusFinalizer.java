@@ -35,7 +35,6 @@ public class ShotsBonusFinalizer implements IStatsFunction
 		throwIfPresent(base);
 		
 		double baseValue = 1;
-		double rubyBonus = 0;
 		final PlayerInstance player = creature.getActingPlayer();
 		if (player != null)
 		{
@@ -46,9 +45,9 @@ public class ShotsBonusFinalizer implements IStatsFunction
 			}
 			if (player.getActiveRubyJewel() != null)
 			{
-				rubyBonus = player.getActiveRubyJewel().getBonus();
+				baseValue += player.getActiveRubyJewel().getBonus();
 			}
 		}
-		return Stats.defaultValue(creature, stat, baseValue + rubyBonus);
+		return Stats.defaultValue(creature, stat, baseValue);
 	}
 }
