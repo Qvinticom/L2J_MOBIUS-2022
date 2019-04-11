@@ -306,6 +306,7 @@ import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
 import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
 import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
 import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
+import quests.Q10562_TakeUpArms.Q10562_TakeUpArms;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -804,7 +805,7 @@ public class QuestMasterHandler
 		Q10559_BeforeTheGuide.class, // TODO: Not done.
 		Q10560_WayOfWanderingKnight.class,
 		Q10561_AcrossTheDeathLine.class,
-		Q10562_TakeUpArms.class, // TODO: Not done.
+		Q10562_TakeUpArms.class,
 		Q10563_ControlOfPower.class, // TODO: Not done.
 		Q10564_ProveProgress.class, // TODO: Not done.
 		Q10565_NothingIsImpossible.class, // TODO: Not done.
