@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.TeleporterInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Link implements IBypassHandler
@@ -30,7 +31,7 @@ public class Link implements IBypassHandler
 		"Link"
 	};
 	
-	private static final String[] VALID_BYPASSES =
+	private static final String[] VALID_LINKS =
 	{
 		"common/attribute_info.htm",
 		"common/augmentation_01.htm",
@@ -91,7 +92,12 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		final String content = CommonUtil.contains(VALID_BYPASSES, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
+		String content = CommonUtil.contains(VALID_LINKS, htmlPath) ? HtmCache.getInstance().getHtm(player, "data/html/" + htmlPath) : null;
+		// Precaution.
+		if (htmlPath.startsWith("teleporter/") && !(player.getTarget() instanceof TeleporterInstance))
+		{
+			content = null;
+		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
 		if (content != null)
 		{
