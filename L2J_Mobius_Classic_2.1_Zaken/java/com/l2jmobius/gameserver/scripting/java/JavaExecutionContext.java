@@ -51,10 +51,6 @@ public final class JavaExecutionContext extends JavaScriptingEngine
 		// Set options.
 		addOptionIfNotNull(_options, getProperty("source"), "-source");
 		addOptionIfNotNull(_options, getProperty("sourcepath"), "-sourcepath");
-		if (!addOptionIfNotNull(_options, getProperty("cp"), "-cp") && !addOptionIfNotNull(_options, getProperty("classpath"), "-classpath"))
-		{
-			addOptionIfNotNull(_options, System.getProperty("java.class.path"), "-cp");
-		}
 		addOptionIfNotNull(_options, getProperty("g"), "-g:");
 		
 		// We always set the target JVM to the current running version.

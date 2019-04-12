@@ -52,15 +52,7 @@ public class JavaScriptingEngine
 		// Set properties.
 		for (Entry<Object, Object> prop : props.entrySet())
 		{
-			String key = (String) prop.getKey();
-			String value = (String) prop.getValue();
-			
-			if (value.startsWith("%") && value.endsWith("%"))
-			{
-				value = System.getProperty(value.substring(1, value.length() - 1));
-			}
-			
-			_properties.put(key, value);
+			_properties.put((String) prop.getKey(), (String) prop.getValue());
 		}
 	}
 	
