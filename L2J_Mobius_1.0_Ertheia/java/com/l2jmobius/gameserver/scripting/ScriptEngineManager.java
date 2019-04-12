@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.scripting;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
@@ -31,9 +30,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Objects;
-import java.util.Properties;
-import java.util.ServiceLoader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,34 +37,27 @@ import org.w3c.dom.Document;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.gameserver.scripting.java.JavaExecutionContext;
 import com.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
 
 /**
- * Caches script engines and provides functionality for executing and managing scripts.
- * @author KenM, HorridoJoho
+ * @author Mobius
  */
 public final class ScriptEngineManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
+	
 	public static final Path SCRIPT_FOLDER = Config.SCRIPT_ROOT.toPath();
 	public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
 	public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
 	public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "SkillConditionMasterHandler.java");
 	public static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "ConditionMasterHandler.java");
 	
-	private IExecutionContext _javaExecutionContext = null;
-	static final List<String> _exclusions = new ArrayList<>();
+	private static final JavaExecutionContext _javaExecutionContext = new JavaScriptingEngine().createExecutionContext();
+	protected static final List<String> _exclusions = new ArrayList<>();
 	
 	protected ScriptEngineManager()
 	{
-		final Properties props = loadProperties();
-		
-		// Default java engine implementation
-		registerEngine(new JavaScriptingEngine(), props);
-		
-		// Load external script engines
-		ServiceLoader.load(IScriptingEngine.class).forEach(engine -> registerEngine(engine, props));
-		
 		// Load Scripts.xml
 		load();
 	}
@@ -143,72 +132,6 @@ public final class ScriptEngineManager implements IXmlReader
 		}
 	}
 	
-	private Properties loadProperties()
-	{
-		Properties props = null;
-		try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini"))
-		{
-			props = new Properties();
-			props.load(fis);
-		}
-		catch (Exception e)
-		{
-			props = null;
-			LOGGER.warning("Couldn't load ScriptEngine.ini: " + e.getMessage());
-		}
-		return props;
-	}
-	
-	private void registerEngine(IScriptingEngine engine, Properties props)
-	{
-		maybeSetProperties("language." + engine.getLanguageName() + ".", props, engine);
-		_javaExecutionContext = engine.createExecutionContext();
-		
-		LOGGER.info("ScriptEngine: " + engine.getEngineName() + " " + engine.getEngineVersion() + " (" + engine.getLanguageName() + " " + engine.getLanguageVersion() + ")");
-	}
-	
-	private void maybeSetProperties(String propPrefix, Properties props, IScriptingEngine engine)
-	{
-		if (props == null)
-		{
-			return;
-		}
-		
-		for (Entry<Object, Object> prop : props.entrySet())
-		{
-			String key = (String) prop.getKey();
-			String value = (String) prop.getValue();
-			
-			if (key.startsWith(propPrefix))
-			{
-				key = key.substring(propPrefix.length());
-				if (value.startsWith("%") && value.endsWith("%"))
-				{
-					value = System.getProperty(value.substring(1, value.length() - 1));
-				}
-				
-				engine.setProperty(key, value);
-			}
-		}
-	}
-	
-	public void executeScriptList() throws Exception
-	{
-		if (Config.ALT_DEV_NO_QUESTS)
-		{
-			return;
-		}
-		
-		final List<Path> files = new ArrayList<>();
-		processDirectory(SCRIPT_FOLDER.toFile(), files);
-		
-		final Map<Path, Throwable> invokationErrors = _javaExecutionContext.executeScripts(files);
-		for (Entry<Path, Throwable> entry : invokationErrors.entrySet())
-		{
-			LOGGER.log(Level.WARNING, "ScriptEngine: " + entry.getKey() + " failed execution!", entry.getValue());
-		}
-	}
-	
 	private void processDirectory(File dir, List<Path> files)
 	{
 		for (File file : dir.listFiles())
@@ -230,20 +153,34 @@ public final class ScriptEngineManager implements IXmlReader
 	
 	public void executeScript(Path sourceFile) throws Exception
 	{
-		Objects.requireNonNull(sourceFile);
-		
 		if (!sourceFile.isAbsolute())
 		{
 			sourceFile = SCRIPT_FOLDER.resolve(sourceFile);
 		}
 		
 		sourceFile = sourceFile.toAbsolutePath();
-		Objects.requireNonNull(sourceFile, "ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
 		
 		final Entry<Path, Throwable> error = _javaExecutionContext.executeScript(sourceFile);
 		if (error != null)
 		{
 			throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());
+		}
+	}
+	
+	public void executeScriptList() throws Exception
+	{
+		if (Config.ALT_DEV_NO_QUESTS)
+		{
+			return;
+		}
+		
+		final List<Path> files = new ArrayList<>();
+		processDirectory(SCRIPT_FOLDER.toFile(), files);
+		
+		final Map<Path, Throwable> invokationErrors = _javaExecutionContext.executeScripts(files);
+		for (Entry<Path, Throwable> entry : invokationErrors.entrySet())
+		{
+			LOGGER.log(Level.WARNING, "ScriptEngine: " + entry.getKey() + " failed execution!", entry.getValue());
 		}
 	}
 	
@@ -254,11 +191,11 @@ public final class ScriptEngineManager implements IXmlReader
 	
 	public static ScriptEngineManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ScriptEngineManager _instance = new ScriptEngineManager();
+		protected static final ScriptEngineManager INSTANCE = new ScriptEngineManager();
 	}
 }

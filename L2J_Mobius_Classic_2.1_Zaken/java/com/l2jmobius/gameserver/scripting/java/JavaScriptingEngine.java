@@ -16,77 +16,66 @@
  */
 package com.l2jmobius.gameserver.scripting.java;
 
-import java.util.Arrays;
-
-import javax.lang.model.SourceVersion;
+import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 import org.openjavac.tools.JavaCompiler;
 import org.openjavac.tools.javac.api.JavacTool;
 
-import com.l2jmobius.gameserver.scripting.AbstractScriptingEngine;
-import com.l2jmobius.gameserver.scripting.IExecutionContext;
-
 /**
- * @author HorridoJoho, Mobius
+ * @author Mobius
  */
-public final class JavaScriptingEngine extends AbstractScriptingEngine
+public class JavaScriptingEngine
 {
-	private volatile JavaCompiler _compiler;
+	private static final Logger LOGGER = Logger.getLogger(JavaScriptingEngine.class.getName());
+	
+	private final static Map<String, String> _properties = new HashMap<>();
+	private final static JavaCompiler _compiler = JavacTool.create();
 	
 	public JavaScriptingEngine()
 	{
-		super("Java Engine", "10", "java");
-	}
-	
-	private void determineCompilerOrThrow()
-	{
-		if (_compiler == null)
+		// Load config.
+		Properties props = new Properties();
+		try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini"))
 		{
-			_compiler = JavacTool.create();
+			props.load(fis);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("Could not load ScriptEngine.ini: " + e.getMessage());
 		}
 		
-		if (_compiler == null)
+		// Set properties.
+		for (Entry<Object, Object> prop : props.entrySet())
 		{
-			throw new IllegalStateException("No JavaCompiler service installed!");
-		}
-	}
-	
-	private void ensureCompilerOrThrow()
-	{
-		if (_compiler == null)
-		{
-			synchronized (this)
+			String key = (String) prop.getKey();
+			String value = (String) prop.getValue();
+			
+			if (value.startsWith("%") && value.endsWith("%"))
 			{
-				if (_compiler == null)
-				{
-					determineCompilerOrThrow();
-				}
+				value = System.getProperty(value.substring(1, value.length() - 1));
 			}
+			
+			_properties.put(key, value);
 		}
 	}
 	
-	JavaCompiler getCompiler()
+	public JavaExecutionContext createExecutionContext()
 	{
-		return _compiler;
-	}
-	
-	@Override
-	public IExecutionContext createExecutionContext()
-	{
-		ensureCompilerOrThrow();
 		return new JavaExecutionContext(this);
 	}
 	
-	@Override
-	public String getLanguageName()
+	public final String getProperty(String key)
 	{
-		return "Java";
+		return _properties.get(key);
 	}
 	
-	@Override
-	public String getLanguageVersion()
+	public JavaCompiler getCompiler()
 	{
-		ensureCompilerOrThrow();
-		return Arrays.deepToString(_compiler.getSourceVersions().toArray(new SourceVersion[0])).replace("RELEASE_", "");
+		return _compiler;
 	}
 }

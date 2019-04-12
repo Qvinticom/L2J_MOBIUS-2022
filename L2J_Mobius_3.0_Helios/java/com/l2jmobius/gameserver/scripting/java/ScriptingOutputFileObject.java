@@ -144,5 +144,4 @@ final class ScriptingOutputFileObject implements JavaFileObject
 	{
 		return null;
 	}
-	
 }

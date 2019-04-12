@@ -22,9 +22,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -34,22 +34,20 @@ import org.openjavac.tools.Diagnostic;
 import org.openjavac.tools.DiagnosticCollector;
 import org.openjavac.tools.JavaFileObject;
 
-import com.l2jmobius.gameserver.scripting.AbstractExecutionContext;
 import com.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 /**
  * @author HorridoJoho
  */
-public final class JavaExecutionContext extends AbstractExecutionContext<JavaScriptingEngine>
+public final class JavaExecutionContext extends JavaScriptingEngine
 {
 	private static final Logger LOGGER = Logger.getLogger(JavaExecutionContext.class.getName());
 	
-	private static final List<String> _options = new LinkedList<>();
+	private static final List<String> _options = new ArrayList<>();
+	private static Path _currentExecutingScript;
 	
 	JavaExecutionContext(JavaScriptingEngine engine)
 	{
-		super(engine);
-		
 		// Set options.
 		addOptionIfNotNull(_options, getProperty("source"), "-source");
 		addOptionIfNotNull(_options, getProperty("sourcepath"), "-sourcepath");
@@ -76,7 +74,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 			}
 			else
 			{
-				throw new JavaCompilerException("Could not determine target version!");
+				throw new RuntimeException("Could not determine target version!");
 			}
 		}
 	}
@@ -133,16 +131,15 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 		}
 	}
 	
-	@Override
 	public Map<Path, Throwable> executeScripts(Iterable<Path> sourcePaths) throws Exception
 	{
 		final DiagnosticCollector<JavaFileObject> fileManagerDiagnostics = new DiagnosticCollector<>();
 		final DiagnosticCollector<JavaFileObject> compilationDiagnostics = new DiagnosticCollector<>();
 		
-		try (ScriptingFileManager fileManager = new ScriptingFileManager(getScriptingEngine().getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
+		try (ScriptingFileManager fileManager = new ScriptingFileManager(getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
 		{
 			// We really need an iterable of files or strings.
-			final List<String> sourcePathStrings = new LinkedList<>();
+			final List<String> sourcePathStrings = new ArrayList<>();
 			for (Path sourcePath : sourcePaths)
 			{
 				sourcePathStrings.add(sourcePath.toString());
@@ -150,7 +147,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 			
 			final StringWriter strOut = new StringWriter();
 			final PrintWriter out = new PrintWriter(strOut);
-			final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(out, fileManager, compilationDiagnostics, _options, null, fileManager.getJavaFileObjectsFromStrings(sourcePathStrings)).call();
+			final boolean compilationSuccess = getCompiler().getTask(out, fileManager, compilationDiagnostics, _options, null, fileManager.getJavaFileObjectsFromStrings(sourcePathStrings)).call();
 			if (!compilationSuccess)
 			{
 				out.println();
@@ -175,12 +172,12 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 					out.println("\t\tmessage: " + diagnostic.getMessage(null));
 				}
 				
-				throw new JavaCompilerException(strOut.toString());
+				throw new RuntimeException(strOut.toString());
 			}
 			
 			final ClassLoader parentClassLoader = determineScriptParentClassloader();
 			
-			final Map<Path, Throwable> executionFailures = new LinkedHashMap<>();
+			final Map<Path, Throwable> executionFailures = new HashMap<>();
 			final Iterable<ScriptingOutputFileObject> compiledClasses = fileManager.getCompiledClasses();
 			for (Path sourcePath : sourcePaths)
 			{
@@ -199,7 +196,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 						}
 						
 						found = true;
-						setCurrentExecutingScript(compiledSourcePath);
+						_currentExecutingScript = compiledSourcePath;
 						try
 						{
 							final ScriptingClassLoader loader = new ScriptingClassLoader(parentClassLoader, compiledClasses);
@@ -227,7 +224,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 						}
 						finally
 						{
-							setCurrentExecutingScript(null);
+							_currentExecutingScript = null;
 						}
 						
 						break;
@@ -244,7 +241,6 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 		}
 	}
 	
-	@Override
 	public Entry<Path, Throwable> executeScript(Path sourcePath) throws Exception
 	{
 		final Map<Path, Throwable> executionFailures = executeScripts(Arrays.asList(sourcePath));
@@ -253,5 +249,10 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 			return executionFailures.entrySet().iterator().next();
 		}
 		return null;
+	}
+	
+	public final Path getCurrentExecutingScript()
+	{
+		return _currentExecutingScript;
 	}
 }
