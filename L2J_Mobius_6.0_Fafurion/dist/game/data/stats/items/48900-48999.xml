@@ -931,6 +931,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48204" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Radiant Warrior's Circlet -->
+		</capsuled_items>
 	</item>
 	<item id="48993" name="+5 Radiant Wizard's Circlet Box" type="EtcItem">
 		<!-- Double-click to obtain a +5 Radiant Wizard's Circlet. -->
@@ -943,6 +947,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48207" min="1" max="1" minEnchant="5" maxEnchant="5"  chance="100" /> <!-- Radiant Wizard's Circlet -->
+		</capsuled_items>
 	</item>
 	<item id="48994" name="+5 Radiant Knight's Circlet Box" type="EtcItem">
 		<!-- Double-click to obtain a +5 Radiant Knight's Circlet. -->
@@ -955,6 +963,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48210" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Radiant Knight's Circlet -->
+		</capsuled_items>
 	</item>
 	<item id="48995" name="+5 Dragon Rind Leather Shirt Box" type="EtcItem">
 		<!-- Obtain a +5 Dragon Rind Leather Shirt. -->
@@ -967,6 +980,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48493" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Dragon Rind Leather Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="48996" name="Lv. 5 Legendary Dye 10-unit Box" type="EtcItem">
 		<!-- Use it to obtain one of the boxes containing 10 Lv. 5 Legendary Dyes of STR, DEX, CON, INT, WIT, or MEN. -->

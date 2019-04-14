@@ -1414,7 +1414,7 @@
 		</stats>
 	</item>
 	<item id="48292" name="Aden Hero Support Box" type="EtcItem">
-		<!-- A box containing support items for playing on the test server. Use to obtain +12 Bloody Weapon Pack, +10 Bloody Armor Pack, Dimensional Bracelet- Stage 6, Ruler's Authority, Talisman- Golden Bough, Talisman- Seven Signs, Lv. 5 Legendary Dye Pack, Super Advanced Seed Bracelet, Mysterious R-grade Soulshot/ Blessed Spiritshot Pack, 10 billion Adena, Scroll: 1,000,000,000 SP, Rare Accessory Box, and +10 Zodiac Agathion Box. -->
+		<!-- A box containing support items for playing on the test server. Use to obtain +12 Bloody Weapon Pack, +10 Bloody Armor Pack, Dimensional Bracelet- Stage 6, Ruler's Authority, Talisman- Golden Bough, Talisman- Seven Signs, Lv. 5 Legendary Dye Pack, Super Advanced Seed Bracelet, Mysterious R-grade Soulshot/ Blessed Spiritshot Pack, 10 billion Adena, Scroll: 1,000,000,000 SP, +10 Zodiac Agathion Box. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1425,6 +1425,23 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48293" min="1" max="1" chance="100" minEnchant="12" maxEnchant="12" /> <!-- +12 Bloody Weapon Pack -->
+			<item id="48504" min="1" max="1" chance="100" minEnchant="12" maxEnchant="12" /> <!-- +10 Bloody Armor Pack -->
+			<item id="39992" min="1" max="1" chance="100" /> <!-- Dimensional Bracelet- Stage 6 (Basic) -->
+			<item id="35564" min="1" max="1" chance="100" /> <!-- Ruler's Authority -->
+			<item id="37717" min="1" max="1" chance="100" /> <!-- Talisman- Seven Signs -->
+			<item id="34954" min="1" max="1" chance="100" /> <!-- Lv. 5 Legendary Dye Pack -->
+			<item id="48064" min="1" max="1" chance="100" /> <!-- Super Advanced Seed Bracelet -->
+			<item id="22890" min="1" max="1" chance="100" /> <!-- Mysterious R-grade Soulshot Pack -->
+			<item id="22892" min="1" max="1" chance="100" /> <!-- Mysterious R-grade Blessed Spiritshot Pack -->
+			<!-- <item id="57" min="10000000000" max="10000000000" chance="100" />  10 Billion Adena -->
+			<item id="37904" min="1" max="1" chance="100" /> <!-- Scroll: 1,000,000,000 SP -->
+			<item id="48832" min="1" max="1" chance="100" /> <!-- Rare Accessory Box -->
+			<item id="48298" min="1" max="1" chance="100" /> <!-- +10 Zodiac Agathion Box -->
+		</capsuled_items>
 	</item>
 	<item id="48293" name="+12 Bloody Helios Weapon Pack" type="EtcItem">
 		<!-- Test server support item. Use to obtain all Bloody Helios weapons, enchanted to +12. -->

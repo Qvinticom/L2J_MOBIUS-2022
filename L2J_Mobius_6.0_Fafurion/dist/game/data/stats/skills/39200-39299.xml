@@ -13,10 +13,22 @@
 		<!-- A Dragon Shirt Enchant Scroll. If enchantment to the Blessed Enchant Scroll fails, its enchant level will be reset. -->
 		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39204" toLevel="2" name="Mysterious Weapon Enchant Scroll">
 		<!-- A Mysterious Weapon Enchant Scroll. If enchantment fails, the weapon will be destroyed. -->
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39205" toLevel="1" name="Glowing Dragon's Attribute Potion">
 		<!-- For $s1, Attack Attribute +$s2, all Attribute Resistance +$s3, and Acquired XP/ SP +$s4. Buff effects persist even after death. -->
@@ -182,9 +194,21 @@
 	</skill>
 	<skill id="39238" toLevel="1" name="Episode Enchant Scroll">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39239" toLevel="1" name="Episode Special Enchant Scroll">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39240" toLevel="2" name="Goblin Cudgel">
 		<operateType>A1</operateType>
@@ -219,6 +243,12 @@
 	<skill id="39247" toLevel="1" name="Scroll: Enchant Angel Accessory">
 		<icon>icon.scrl_of_ench_acc</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39248" toLevel="1" name="Windstorm Box">
 		<operateType>A1</operateType>

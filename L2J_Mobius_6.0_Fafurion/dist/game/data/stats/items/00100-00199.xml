@@ -776,10 +776,24 @@
 	<item id="136" name="Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double-click to get a random Zodiac Agathion (Low-grade). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="14075" min="1" max="1" chance="100" /> <!-- Agathion - Angry Devil (Event) - 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="137" name="(Not in Use)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Shiny (30-day). -->
