@@ -75,9 +75,9 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 			}
 			case "30857-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_FIELDS_OF_MASSACRE, 1);
 					htmltext = event;
 				}
@@ -85,7 +85,7 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 			}
 			case "33867-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 807240, 193);
@@ -117,9 +117,9 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 		{
 			if (npc.getId() == ORVEN)
 			{
-				htmltext = (qs.isCond(1)) ? "30857-01.html" : "30857-04.html";
+				htmltext = (qs.isCond(2)) ? "30857-01.html" : "30857-04.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = "33867-01.html";
 			}

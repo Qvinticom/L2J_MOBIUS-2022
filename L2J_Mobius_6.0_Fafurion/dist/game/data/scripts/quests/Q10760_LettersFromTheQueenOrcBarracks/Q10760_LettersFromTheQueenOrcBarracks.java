@@ -74,9 +74,9 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 			}
 			case "30037-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_ORC_BARRACKS, 1);
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU_TO_GO_TO_ORC_BARRACKS, ExShowScreenMessage.TOP_CENTER, 5000);
 				}
@@ -84,7 +84,7 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 			}
 			case "30597-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 242760, 58);
@@ -116,9 +116,9 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 		{
 			if ((npc.getId() == LEVIAN))
 			{
-				htmltext = (qs.isCond(1)) ? "30037-01.html" : "30037-04.html";
+				htmltext = (qs.isCond(2)) ? "30037-01.html" : "30037-04.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = "30597-01.html";
 			}

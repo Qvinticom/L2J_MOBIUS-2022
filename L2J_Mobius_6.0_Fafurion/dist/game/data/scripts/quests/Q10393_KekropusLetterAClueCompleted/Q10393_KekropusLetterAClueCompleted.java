@@ -77,9 +77,9 @@ public final class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 			}
 			case "30677-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_OUTLAW_FOREST, 1);
 					htmltext = event;
 				}
@@ -87,7 +87,7 @@ public final class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 			}
 			case "33862-02.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
@@ -114,11 +114,11 @@ public final class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 		
 		if (qs.isStarted())
 		{
-			if (qs.isCond(1) && (npc.getId() == FLUTER))
+			if (qs.isCond(2) && (npc.getId() == FLUTER))
 			{
 				htmltext = "30677-01.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = npc.getId() == FLUTER ? "30677-04.html" : "33862-01.html";
 			}
@@ -134,7 +134,7 @@ public final class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			
-			if ((qs != null) && qs.isCond(2))
+			if ((qs != null) && qs.isCond(3))
 			{
 				showOnScreenMsg(player, NpcStringId.OUTLAW_FOREST_IS_A_GOOD_HUNTING_ZONE_FOR_LV_46_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}

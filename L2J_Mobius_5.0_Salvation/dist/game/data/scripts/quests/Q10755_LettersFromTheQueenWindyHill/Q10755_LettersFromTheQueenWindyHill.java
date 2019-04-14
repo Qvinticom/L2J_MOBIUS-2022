@@ -74,9 +74,9 @@ public final class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 			}
 			case "30037-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_WINDY_HILL, 1);
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU, ExShowScreenMessage.TOP_CENTER, 5000);
 				}
@@ -84,7 +84,7 @@ public final class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 			}
 			case "33963-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 120960, 29);
@@ -116,9 +116,9 @@ public final class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 		{
 			if ((npc.getId() == LEVIAN))
 			{
-				htmltext = (qs.isCond(1)) ? "30037-01.html" : "30037-04.html";
+				htmltext = (qs.isCond(2)) ? "30037-01.html" : "30037-04.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = "33963-01.html";
 			}

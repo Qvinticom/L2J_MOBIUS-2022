@@ -78,18 +78,18 @@ public class Q10415_KekropusLetterWithWisdom extends LetterQuest
 			}
 			case "31292-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
 					takeItems(player, SOE_TOWN_OF_GODDARD, -1);
 					giveItems(player, SOE_WALL_OF_ARGOS, 1);
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33851-02.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
@@ -113,11 +113,11 @@ public class Q10415_KekropusLetterWithWisdom extends LetterQuest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isStarted())
 		{
-			if ((npc.getId() == ANDREI) && qs.isCond(1))
+			if ((npc.getId() == ANDREI) && qs.isCond(2))
 			{
 				htmltext = "31292-01.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = npc.getId() == ANDREI ? "31292-04.html" : "33851-01.html";
 			}
@@ -133,7 +133,7 @@ public class Q10415_KekropusLetterWithWisdom extends LetterQuest
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			
-			if ((qs != null) && qs.isCond(2))
+			if ((qs != null) && qs.isCond(3))
 			{
 				showOnScreenMsg(player, NpcStringId.WALL_OF_ARGOS_IS_A_GOOD_HUNTING_ZONE_FOR_LV_70_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}

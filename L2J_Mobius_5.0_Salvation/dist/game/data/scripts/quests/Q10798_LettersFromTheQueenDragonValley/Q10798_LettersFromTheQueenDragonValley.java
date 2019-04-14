@@ -75,9 +75,9 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 			}
 			case "30120-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_DRAGON_VALLEY, 1);
 					htmltext = event;
 				}
@@ -85,7 +85,7 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 			}
 			case "33973-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 1277640, 306);
@@ -112,9 +112,9 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 		{
 			if (npc.getId() == MAXIMILIAN)
 			{
-				htmltext = (qs.isCond(1)) ? "30120-01.html" : "30120-04.html";
+				htmltext = (qs.isCond(2)) ? "30120-01.html" : "30120-04.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = "33973-01.html";
 			}

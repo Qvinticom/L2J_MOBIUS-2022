@@ -74,9 +74,9 @@ public final class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
 			}
 			case "30070-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_CRUMA_TOWER, 1);
 					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_SYLVAIN_GAVE_YOU_TO_GO_TO_CRUMA_TOWER_2, ExShowScreenMessage.TOP_CENTER, 8000);
 				}
@@ -84,7 +84,7 @@ public final class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
 			}
 			case "30487-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 483840, 116);
@@ -115,9 +115,9 @@ public final class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
 		{
 			if (npc.getId() == SYLVAIN)
 			{
-				htmltext = (qs.isCond(1)) ? "30070-01.html" : "30070-04.html";
+				htmltext = (qs.isCond(2)) ? "30070-01.html" : "30070-04.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = "30487-01.html";
 			}

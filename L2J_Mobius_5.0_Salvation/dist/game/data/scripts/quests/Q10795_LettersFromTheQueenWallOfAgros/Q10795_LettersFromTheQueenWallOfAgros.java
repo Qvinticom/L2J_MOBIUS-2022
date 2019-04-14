@@ -60,9 +60,9 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 			}
 			case "31279-03.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
+					qs.setCond(3, true);
 					giveItems(player, SOE_WAAL_OF_ARGOS, 1);
 					htmltext = event;
 				}
@@ -70,7 +70,7 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 			}
 			case "31616-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(3))
 				{
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 1088640, 261);
@@ -97,9 +97,9 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 		{
 			if (npc.getId() == GREGORY)
 			{
-				htmltext = (qs.isCond(1)) ? "31279-01.html" : "31279-04.html";
+				htmltext = (qs.isCond(2)) ? "31279-01.html" : "31279-04.html";
 			}
-			else if (qs.isCond(2))
+			else if (qs.isCond(3))
 			{
 				htmltext = "31616-01.html";
 			}

@@ -195,6 +195,7 @@ public abstract class LetterQuest extends Quest
 				{
 					player.teleToLocation(_startTeleport);
 					takeItems(player, _startSOE, -1);
+					qs.setCond(2, true);
 				}
 			}
 			player.sendPacket(TutorialCloseHtml.STATIC_PACKET);

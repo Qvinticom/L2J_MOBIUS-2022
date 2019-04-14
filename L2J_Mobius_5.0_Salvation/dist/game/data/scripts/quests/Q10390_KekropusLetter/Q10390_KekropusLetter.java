@@ -119,7 +119,7 @@ public final class Q10390_KekropusLetter extends Quest
 				{
 					player.sendPacket(new TutorialShowHtml(getHtm(player, event)));
 					player.sendPacket(new PlaySound(3, "Npcdialog1.kekrops_quest_1", 0, 0, 0, 0, 0));
-					qs.setCond(2);
+					qs.setCond(2, true);
 				}
 				break;
 			}
@@ -129,7 +129,7 @@ public final class Q10390_KekropusLetter extends Quest
 				{
 					takeItems(player, KEKROPUS_LETTER, -1);
 					giveItems(player, HAINE_SOE, 1);
-					qs.setCond(3);
+					qs.setCond(3, true);
 					htmltext = event;
 				}
 				break;
@@ -139,7 +139,7 @@ public final class Q10390_KekropusLetter extends Quest
 				if (qs.isCond(3))
 				{
 					giveItems(player, ALLIGATOR_ISLAND_SOE, 1);
-					qs.setCond(4);
+					qs.setCond(4, true);
 					htmltext = event;
 				}
 				break;

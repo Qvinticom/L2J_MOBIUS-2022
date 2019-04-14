@@ -297,6 +297,7 @@ import quests.Q10525_QueenNavarisLetterKetraOrcOutpost.Q10525_QueenNavarisLetter
 import quests.Q10526_TheDarkSecretOfTheKetraOrcs.Q10526_TheDarkSecretOfTheKetraOrcs;
 import quests.Q10527_TheAssassinationOfTheKetraOrcCommander.Q10527_TheAssassinationOfTheKetraOrcCommander;
 import quests.Q10528_TheAssassinationOfTheKetraOrcChief.Q10528_TheAssassinationOfTheKetraOrcChief;
+import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterTheDragonsTransition;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
@@ -796,6 +797,7 @@ public class QuestMasterHandler
 		Q10527_TheAssassinationOfTheKetraOrcCommander.class,
 		Q10528_TheAssassinationOfTheKetraOrcChief.class,
 		Q10529_IvoryTowersResearchFloatingSeaJournal.class, // FIXME: Custom.
+		Q10530_KekropusLetterTheDragonsTransition.class,
 		Q10531_OddHappeningsAtDragonValley.class, // TODO: Not done.
 		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
 		Q10533_OrfensAmbition.class, // TODO: Not done.
