@@ -16,11 +16,13 @@
  */
 package quests.Q00763_ADauntingTask;
 
+import java.util.Arrays;
+
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -34,62 +36,41 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 public final class Q00763_ADauntingTask extends Quest
 {
 	// NPCs
+	private static final int ANDREI = 31292;
 	private static final int JANITT = 33851;
-	private static final int[] MONSTERS =
+	private static final int[] MONSTERS_MALICE =
 	{
 		21294, // Canyon Antelope
-		21295, // Canyon Antelope Slave
 		21296, // Canyon Bandersnatch
-		21297, // Canyon Bandersnatch Slave
-		21299, // Valley Buffalo Slave
-		21300, // Eye of Guide
-		21301, // Gaze of Nightmares
-		21302, // Eye of Watchman
-		21303, // Homunculus
-		21304, // Valley Grendel Slave
-		21305, // Eye of Pilgrim
-		21306, // Disciple of Protection
-		21307, // Elder Homunculus
-		21308, // Disciples of Punishment
-		21310, // Disciples of Authority
-		21312, // Eye of Ruler
 		23311, // Valley Buffalo
 		23312, // Valley Grendel
-		23313, // Disciple of Protection
+	};
+	private static final int[] MONSTERS_EYE =
+	{
+		21295, // Canyon Antelope Slave
+		21297, // Canyon Bandersnatch Slave
+		21299, // Valley Buffalo Slave
+		21304, // Valley Grendel Slave
 	};
 	// Items
-	private static final int EYE = 36672; // Evil Eye of Darkness
-	private static final int MALICE = 36673; // Powerful Dark Malice
-	private static final int STEEL_DOOR_BOX = 37392; // Steel Door Guild Reward Box (Mid-grade)
+	private static final ItemHolder EYE = new ItemHolder(36672, 200);
+	private static final ItemHolder MALICE = new ItemHolder(36673, 200);
 	// Rewards
-	//@formatter:off
-	// Format: min item count, exp reward, sp reward, item count reward
-	private static final int[][] REWARD = 
-	{
-		{900, 163_296_000, 1_632_960, 10}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{800, 146_966_400, 1_469_664, 9}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{700, 130_636_800, 1_306_368, 8}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{600, 114_307_200, 1_143_072, 7}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{500, 97_977_600, 979_776, 6}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{400, 81_648_000, 816_480, 5}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{300, 65_318_400, 653_184, 4}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{200, 48_988_800, 489_888, 3}, //TODO: Custom, SP reward should be decreated since Ertheia
-		{100, 32_659_200, 7_838, 2},
-		{0, 16_329_600, 3_919, 1},
-	};
-	//@formatter:on
+	private static final long EXP = 474767890;
+	private static final int SP = 5026;
 	// Misc
 	private static final int MIN_LEVEL = 70;
+	private static final QuestType QUEST_TYPE = QuestType.REPEATABLE; // REPEATABLE, ONE_TIME, DAILY
 	
 	public Q00763_ADauntingTask()
 	{
 		super(763);
-		addStartNpc(JANITT);
-		addTalkId(JANITT);
-		addKillId(MONSTERS);
-		registerQuestItems(EYE, MALICE);
-		addCondNotRace(Race.ERTHEIA, "33851-10.html");
-		addCondMinLevel(MIN_LEVEL, "33851-11.htm");
+		addStartNpc(ANDREI);
+		addTalkId(ANDREI, JANITT);
+		addKillId(MONSTERS_EYE);
+		addKillId(MONSTERS_MALICE);
+		registerQuestItems(EYE.getId(), MALICE.getId());
+		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 	}
 	
 	@Override
@@ -104,41 +85,40 @@ public final class Q00763_ADauntingTask extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33851-02.htm":
-			case "33851-03.htm":
-			case "33851-07.html":
-			case "33851-08.html":
+			case "31292-02.htm":
+			case "31292-03.htm":
+			case "33851-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33851-04.htm":
+			case "31292-04.htm":
 			{
+				// Starts
 				qs.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "33851-03.html":
+			{
+				// Killing Cond
 				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
-			case "33851-09.html":
+			case "31292-06.html":
 			{
 				if (qs.isCond(3))
 				{
-					final long itemCount = getQuestItemsCount(player, MALICE);
-					
-					for (int[] data : REWARD)
+					// Rewards
+					if (player.getLevel() >= MIN_LEVEL)
 					{
-						if (itemCount >= data[0])
-						{
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								addExpAndSp(player, data[1], data[2]);
-							}
-							giveItems(player, STEEL_DOOR_BOX, data[3]);
-							qs.exitQuest(QuestType.DAILY, true);
-							htmltext = event;
-							break;
-						}
+						addExpAndSp(player, EXP, SP);
 					}
+					takeAllItems(player, EYE, MALICE);
+					qs.exitQuest(QUEST_TYPE, true);
+					htmltext = event;
+					break;
 				}
 				break;
 			}
@@ -156,12 +136,33 @@ public final class Q00763_ADauntingTask extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "33851-01.htm";
+				htmltext = "31292-01.htm";
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = qs.isCond(2) ? "33851-05.html" : "33851-06.html";
+				if (npc.getId() == ANDREI)
+				{
+					if (qs.isCond(3))
+					{
+						htmltext = "31292-05.html";
+					}
+					else
+					{
+						htmltext = "31292-04.html";
+					}
+				}
+				else if (npc.getId() == JANITT)
+				{
+					if (qs.isCond(1))
+					{
+						htmltext = "33851-01.html";
+					}
+					else
+					{
+						htmltext = "33851-03.html";
+					}
+				}
 				break;
 			}
 			case State.COMPLETED:
@@ -173,7 +174,7 @@ public final class Q00763_ADauntingTask extends Quest
 				else
 				{
 					qs.setState(State.CREATED);
-					htmltext = "33851-01.htm";
+					htmltext = "31292-01.htm";
 				}
 				break;
 			}
@@ -186,25 +187,32 @@ public final class Q00763_ADauntingTask extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(2) && (getRandom(100) < 25))
+		if ((qs != null) && qs.isCond(2))
 		{
-			if (getQuestItemsCount(killer, EYE) < 50)
+			if (contains(MONSTERS_EYE, npc.getId()) && (getQuestItemsCount(killer, EYE.getId()) < 200))
 			{
-				giveItems(killer, EYE, 1);
+				giveItems(killer, EYE.getId(), 1);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
-				if (getQuestItemsCount(killer, EYE) >= 50)
-				{
-					qs.setCond(3, true);
-					showOnScreenMsg(killer, NpcStringId.YOU_CAN_GATHER_MORE_POWERFUL_DARK_MALICE, ExShowScreenMessage.TOP_CENTER, 6000);
-				}
 			}
-			else
+			else if (contains(MONSTERS_MALICE, npc.getId()) && (getQuestItemsCount(killer, MALICE.getId()) < 200))
 			{
-				giveItems(killer, MALICE, 1);
+				giveItems(killer, MALICE.getId(), 1);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			
+			if ((getQuestItemsCount(killer, EYE.getId()) >= 200) && (getQuestItemsCount(killer, MALICE.getId()) >= 200))
+			{
+				// Finish
+				qs.setCond(3, true);
+				showOnScreenMsg(killer, NpcStringId.YOU_CAN_GATHER_MORE_POWERFUL_DARK_MALICE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
+		
+	}
+	
+	public static boolean contains(int[] arr, Integer item)
+	{
+		return Arrays.stream(arr).anyMatch(item::equals);
 	}
 }

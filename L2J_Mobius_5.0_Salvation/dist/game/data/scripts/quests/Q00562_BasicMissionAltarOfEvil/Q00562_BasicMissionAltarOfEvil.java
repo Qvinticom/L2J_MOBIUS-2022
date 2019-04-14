@@ -226,6 +226,10 @@ public class Q00562_BasicMissionAltarOfEvil extends Quest
 								qs.setCond(7, true);
 								htmltext = "34414-02.html";
 							}
+							else
+							{
+								htmltext = "34414-01.html";
+							}
 						}
 						break;
 					}
