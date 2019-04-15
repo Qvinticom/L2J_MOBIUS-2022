@@ -31,6 +31,13 @@ public class Penny extends AbstractNpcAI
 {
 	// NPC
 	private static final int PENNY = 34413;
+	// Misc
+	private static final String[] RANDOM_VOICE =
+	{
+		"Npcdialog1.peny_ep50_greeting_7",
+		"Npcdialog1.peny_ep50_greeting_8",
+		"Npcdialog1.peny_ep50_greeting_9"
+	};
 	
 	private Penny()
 	{
@@ -61,7 +68,7 @@ public class Penny extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		player.sendPacket(new PlaySound(3, "Npcdialog1.penny_faction_1", 0, 0, 0, 0, 0));
+		player.sendPacket(new PlaySound(3, RANDOM_VOICE[getRandom(3)], 0, 0, 0, 0, 0));
 		return "34413.html";
 	}
 	

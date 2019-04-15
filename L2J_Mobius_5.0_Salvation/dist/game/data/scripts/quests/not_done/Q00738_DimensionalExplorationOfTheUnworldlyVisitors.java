@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
  */
 public class Q00738_DimensionalExplorationOfTheUnworldlyVisitors extends Quest
 {
-	private static final int START_NPC = 34360;
+	private static final int START_NPC = 34359;
 	
 	public Q00738_DimensionalExplorationOfTheUnworldlyVisitors()
 	{

@@ -31,6 +31,13 @@ public class Herphah extends AbstractNpcAI
 {
 	// NPC
 	private static final int HERPHAH = 34362;
+	// Misc
+	private static final String[] RANDOM_VOICE =
+	{
+		"Npcdialog1.herphah_ep50_greeting_1",
+		"Npcdialog1.herphah_ep50_greeting_2",
+		"Npcdialog1.herphah_ep50_greeting_3"
+	};
 	
 	private Herphah()
 	{
@@ -67,7 +74,7 @@ public class Herphah extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		player.sendPacket(new PlaySound(3, "Npcdialog1.herphah_faction_1", 0, 0, 0, 0, 0));
+		player.sendPacket(new PlaySound(3, RANDOM_VOICE[getRandom(3)], 0, 0, 0, 0, 0));
 		return "34362.html";
 	}
 	
