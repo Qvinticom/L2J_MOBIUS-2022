@@ -27,8 +27,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10501" toLevel="10" name="Superior Dagger Mastery">
-		<!-- When equipped with a dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, and Vital Spot Attack Rate +$s5. Additionally, STR +$s6. Depending on STR, skill cooldown can be reset or skill duration can be increased by $s7 times. -->
+	<skill id="10501" toLevel="7" name="Superior Dagger Mastery">
+		<!-- When equipped with a dagger, P. Atk. +25% and +1425, Atk. Spd. +25%, P. Accuracy +8, and Vital Spot Attack Rate +5%. Additionally, STR +2. Depending on STR, skill cooldown can be reset or skill duration can be increased by 2 times. -->
 		<icon>icon.skill10501</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -39,9 +39,6 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
-			<value level="8">106</value>
-			<value level="9">108</value>
-			<value level="10">110</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -64,9 +61,6 @@
 					<value level="5">1266</value>
 					<value level="6">1343</value>
 					<value level="7">1425</value>
-					<value level="8">1512</value>
-					<value level="9">1604</value>
-					<value level="10">1702</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -100,8 +94,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10502" toLevel="10" name="Superior Dual Dagger Mastery">
-		<!-- When equipped with a dual dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, and Vital Spot Attack Rate +$s5. Additionally, STR +$s6. -->
+	<skill id="10502" toLevel="7" name="Superior Dual Dagger Mastery">
+		<!-- When equipped with a dual dagger, P. Atk. +25% and +1629, Atk. Spd. +25%, P. Accuracy +8, and Vital Spot Attack Rate +5%. Additionally, STR +2.	 -->
 		<icon>icon.skill10502</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -112,9 +106,6 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
-			<value level="8">106</value>
-			<value level="9">108</value>
-			<value level="10">110</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -134,9 +125,6 @@
 					<value level="5">1447</value>
 					<value level="6">1535</value>
 					<value level="7">1629</value>
-					<value level="8">1728</value>
-					<value level="9">1833</value>
-					<value level="10">1945</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -170,8 +158,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10503" toLevel="10" name="Superior Light Armor Mastery">
-		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, chance of receiving critical attacks -$s4 when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +$s5 and applies Assassin's Reflex which accelerates Atk. Spd. at a $s6 chance if successfully evaded. -->
+	<skill id="10503" toLevel="7" name="Superior Light Armor Mastery">
+		<!-- Max HP +4880, P. Def. +1506, P. Evasion +20, chance of receiving critical attacks -35% when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +2 and applies Assassin's Reflex which accelerates Atk. Spd. at a 10% chance if successfully evaded. -->
 		<icon>icon.skill10503</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -182,9 +170,6 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
-			<value level="8">106</value>
-			<value level="9">108</value>
-			<value level="10">110</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -204,9 +189,6 @@
 					<value level="5">2196</value>
 					<value level="6">2279</value>
 					<value level="7">2365</value>
-					<value level="8">2455</value>
-					<value level="9">2558</value>
-					<value level="10">2655</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -252,7 +234,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10504" toLevel="10" name="Superior Movement">
+	<skill id="10504" toLevel="7" name="Superior Movement">
 		<!-- Speed +$s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3. STR +$s4. -->
 		<icon>icon.skill10504</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -264,9 +246,6 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
-			<value level="8">106</value>
-			<value level="9">108</value>
-			<value level="10">110</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
@@ -279,9 +258,6 @@
 					<value level="5">22</value>
 					<value level="6">23</value>
 					<value level="7">24</value>
-					<value level="8">25</value>
-					<value level="9">26</value>
-					<value level="10">27</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -293,13 +269,13 @@
 				<amount>2</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="HpRegen">
+			<effect name="MpRegen">
 				<amount>6</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10505" toLevel="10" name="Superior Critical Mastery">
+	<skill id="10505" toLevel="7" name="Superior Critical Mastery">
 		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2, Skill Master Rate +$s3, P. Skill Power +$s4, P. Skill Critical Rate +$s5. Additionally, STR +$s4. -->
 		<icon>icon.skill10505</icon>
 		<magicLvl>
@@ -310,9 +286,6 @@
 			<value level="5">100</value>
 			<value level="6">102</value>
 			<value level="7">104</value>
-			<value level="8">106</value>
-			<value level="9">108</value>
-			<value level="10">110</value>
 		</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -326,22 +299,29 @@
 					<value level="5">970</value>
 					<value level="6">1085</value>
 					<value level="7">1200</value>
-					<value level="8">1315</value>
-					<value level="9">1430</value>
-					<value level="10">1545</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>60</amount>
+				<magicType>0</magicType>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>10</amount>
 				<stat>STR</stat>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalProbability"><!-- TODO: Add skill master rate -->
+				<amount>1000</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="SkillCriticalProbability">
-				<amount>1000</amount>
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -505,7 +485,7 @@
 					<value level="13">68930</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>30</criticalChance>
+				<criticalChance>80</criticalChance>
 				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
@@ -529,7 +509,7 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
-				<criticalChance>30</criticalChance>
+				<criticalChance>80</criticalChance>
 				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
@@ -638,7 +618,7 @@
 					<value level="13">51660</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>15</criticalChance>
+				<criticalChance>60</criticalChance>
 				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
@@ -666,7 +646,7 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
-				<criticalChance>15</criticalChance>
+				<criticalChance>60</criticalChance>
 				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>

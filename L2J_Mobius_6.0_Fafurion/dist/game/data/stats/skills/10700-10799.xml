@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="10701" toLevel="4" name="Great Luck">
-		<!-- Increases PVE Damage by $s1, Skill Critical Rate by $s2, and LUC by $s3. Decreases P./ M. Critical Rate Received by $s4. -->
+		<!-- Increases PVE Damage by 30%, Skill Critical Rate by 10%, and LUC by 3. Decreases P./ M. Critical Rate Received by 15%. -->
 		<icon>icon.skill10701</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -78,33 +78,6 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxCp">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>30</amount>
 				<mode>PER</mode>
@@ -113,8 +86,37 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>30</amount>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">20</value>
+				</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">20</value>
+				</amount>
+				<magicType>1</magicType>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -179,7 +181,7 @@
 		</effects>
 	</skill>
 	<skill id="10703" toLevel="5" name="Armor Breaker">
-		<!-- In PvP, removes the target's armor for $s1. In PvE, decreases the target's P. Def. by $s2 for $s1. Requires a dagger or dual dagger to be equipped. Consumes $s3 Soulstones. -->
+		<!-- In PvP, removes the target's armor for 3 sec.. In PvE, decreases the target's P. Def. by 50% for 3 sec.. Requires a dagger or dual dagger to be equipped. Consumes 2 Soulstones. -->
 		<icon>icon.skill10703</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -206,9 +208,25 @@
 		<reuseDelay>90000</reuseDelay>
 		<effectPoint>-655</effectPoint>
 		<isDebuff>true</isDebuff>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Disarmor" />
 		</effects>
+		<pveEffects>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</pveEffects>
 	</skill>
 	<skill id="10704" toLevel="5" name="Grim Reaper Possession">
 		<!-- Raids the target in the distance of $s1 to inflict short Stun and increase your critical damage by $s3 for $s2. Requires dagger/ dual dagger. Consumes $s4 Soulstones. -->

@@ -28,6 +28,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
 		</skills>
 		<stats>
 			<stat type="mDef">64</stat>
@@ -218,6 +219,9 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+			<skill id="8840" level="1" /> <!-- PvE Defense -->
+			<skill id="13807" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">398</stat>
@@ -236,6 +240,10 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8841" level="1" /> <!-- PvE Defense -->
+			<skill id="13808" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="pDef">248</stat>
 			<stat type="rEvas">3</stat>
@@ -252,6 +260,10 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8841" level="1" /> <!-- PvE Defense -->
+			<skill id="13809" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -267,6 +279,10 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8843" level="1" /> <!-- PvE Defense -->
+			<skill id="13810" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -282,6 +298,10 @@
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8844" level="1" /> <!-- PvE Defense -->
+			<skill id="13811" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -300,6 +320,9 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+			<skill id="8845" level="1" /> <!-- PvE Defense -->
+			<skill id="13812" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="mDef">68</stat>
@@ -319,6 +342,10 @@
 		<set name="weight" val="850" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8846" level="1" /> <!-- PvE Defense -->
+			<skill id="13813" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="mDef">45</stat>
 			<stat type="pDef">171</stat>
@@ -336,6 +363,10 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8847" level="1" /> <!-- PvE Defense -->
+			<skill id="13814" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -351,6 +382,10 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8848" level="1" /> <!-- PvE Defense -->
+			<skill id="13815" level="1" /> <!-- Additional Ability Might -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -366,6 +401,9 @@
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8805" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -384,6 +422,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="8806" level="1" /> <!-- PvP Defense -->
 		</skills>
 		<stats>
 			<stat type="pDef">498</stat>
@@ -401,6 +440,9 @@
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8807" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">311</stat>
 		</stats>
@@ -416,6 +458,9 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8808" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -431,6 +476,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8809" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -446,6 +494,9 @@
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8810" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -463,6 +514,7 @@
 		<set name="price" val="1055730000" />
 		<set name="enchant_enabled" val="1" />
 		<skills>
+			<skill id="8811" level="1" /> <!-- PvP Defense -->
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 		</skills>
 		<stats>
@@ -482,6 +534,9 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8812" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">248</stat>
 			<stat type="rEvas">3</stat>
@@ -498,6 +553,9 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8813" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -513,6 +571,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8814" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -528,6 +589,9 @@
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8815" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -545,6 +609,7 @@
 		<set name="price" val="1055730000" />
 		<set name="enchant_enabled" val="1" />
 		<skills>
+			<skill id="8816" level="1" /> <!-- PvP Defense -->
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 		</skills>
 		<stats>
@@ -565,6 +630,9 @@
 		<set name="weight" val="850" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8817" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="mDef">45</stat>
 			<stat type="pDef">171</stat>
@@ -582,6 +650,9 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8818" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -597,6 +668,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="8819" level="1" /> <!-- PvP Defense -->
+		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>

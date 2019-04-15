@@ -2217,6 +2217,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
 		</skills>
 		<stats>
 			<stat type="pDef">478</stat>
@@ -2279,6 +2280,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SHIELD" />
+		<skills>
+			<skill id="35294" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Leviathan Shield Enchantment Effect -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -2313,6 +2318,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
 		</skills>
 		<stats>
 			<stat type="pDef">382</stat>

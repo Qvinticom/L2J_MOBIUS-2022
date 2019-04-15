@@ -328,6 +328,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35233" toLevel="11" name="Artifact - Casting Spd.">
 		<!-- Casting Spd. increased when upgraded. -->
@@ -335,6 +353,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35234" toLevel="11" name="Artifact - P. Def.">
 		<!-- P. Def. increased when upgraded. -->
@@ -342,6 +378,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35235" toLevel="11" name="Artifact - M. Def.">
 		<!-- M. Def. increased when upgraded. -->
@@ -349,6 +403,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35236" toLevel="11" name="Artifact - Max HP">
 		<!-- Max HP increased when upgraded. -->
@@ -356,6 +428,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">11</value>
+					<value level="9">14</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35237" toLevel="11" name="Artifact - Max MP">
 		<!-- Max MP increased when upgraded. -->
@@ -363,6 +453,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">11</value>
+					<value level="9">14</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35238" toLevel="11" name="Artifact - XP">
 		<!-- Enchantment increases XP and SP Bonus. -->
@@ -370,6 +478,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35239" toLevel="11" name="Artifact - Vampiric Rage">
 		<!-- Vampiric Rage increased when upgraded. -->
@@ -377,6 +503,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">5</value>
+					<value level="9">6</value>
+					<value level="10">7</value>
+					<value level="11">8</value>
+				</amount>
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35240" toLevel="11" name="Artifact - Speed">
 		<!-- Speed increased when upgraded. -->
@@ -384,6 +528,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35241" toLevel="11" name="Artifact - Received Healing">
 		<!-- Received Healing increased when upgraded. -->
@@ -391,6 +553,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">11</value>
+					<value level="9">14</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35242" toLevel="11" name="Artifact - P. Atk.">
 		<!-- P. Atk. increased when upgraded. -->
@@ -398,6 +578,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35243" toLevel="11" name="Artifact - M. Atk.">
 		<!-- M. Atk. increased when upgraded. -->
@@ -405,6 +603,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35244" toLevel="11" name="Artifact - P. Accuracy">
 		<!-- P. Accuracy increased when upgraded. -->
@@ -412,6 +628,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35245" toLevel="11" name="Artifact - M. Accuracy">
 		<!-- M. Accuracy increased when upgraded. -->
@@ -419,6 +653,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MagicAccuracy">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35246" toLevel="11" name="Artifact - Normal Attack Critical Rate">
 		<!-- Enchantment increases Normal Attack Critical Rate. -->
@@ -426,6 +678,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">11</value>
+					<value level="9">14</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35247" toLevel="11" name="Artifact - P. Skill Critical Rate">
 		<!-- P. Skill Critical Rate increased when upgraded. -->
@@ -433,6 +703,25 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35248" toLevel="11" name="Artifact - M. Skill Critical Rate">
 		<!-- M. Skill Critical Rate increased when upgraded. -->
@@ -440,6 +729,25 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35249" toLevel="11" name="Artifact - Potion/ Elixir Effect Bonus">
 		<!-- Potion/ Elixir Effect Bonus increased when upgraded. -->
@@ -447,16 +755,75 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="AdditionalPotionHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+					<value level="4">200</value>
+					<value level="5">300</value>
+					<value level="6">400</value>
+					<value level="7">500</value>
+					<value level="8">600</value>
+					<value level="9">700</value>
+					<value level="10">800</value>
+					<value level="11">1000</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-
 	<skill id="35250" toLevel="11" name="Artifact - Received Damage When Immobilized">
 		<!-- Received Damage when Immobilized reduced when upgraded. -->
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-
 	<skill id="35251" toLevel="11" name="Artifact - Fixed Damage Resistance">
 		<!-- Fixed Damage Resistance increased when upgraded. -->
 		<icon>icon.artifact_a_dmg_by_atk</icon>
@@ -1148,12 +1515,44 @@
 	<skill id="35294" toLevel="1" name="Leviathan Shield Enchantment Effect">
 		<!-- Atk. Spd. +$s1, P. Skill Power +$s2, M. Skill Power -$s3. -->
 		<icon>icon.weapon_r110_shield</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>2</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>-10</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35295" toLevel="1" name="Leviathan Sigil Enchantment Effect">
 		<!-- Casting Spd. +$s1, M. Skill Power +$s2, P. Skill Power -$s3. -->
 		<icon>icon.weapon_r110_sigil</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>2</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>-10</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35296" toLevel="1" name="Special Ability Krishna Dicing Death">
 		<!-- P. Accuracy +$s1, Normal Attack Critical Rate +$s2. -->
