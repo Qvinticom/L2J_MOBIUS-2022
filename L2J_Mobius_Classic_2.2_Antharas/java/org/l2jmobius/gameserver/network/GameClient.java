@@ -605,6 +605,7 @@ public final class GameClient extends ChannelInboundHandler<GameClient>
 				{
 					return "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
+				case ENTERING:
 				case IN_GAME:
 				{
 					return "[Character: " + (_player == null ? "disconnected" : _player.getName() + "[" + _player.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";

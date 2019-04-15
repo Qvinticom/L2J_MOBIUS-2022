@@ -321,6 +321,7 @@ public final class FloodProtectorAction
 		
 		switch (client.getState())
 		{
+			case ENTERING:
 			case IN_GAME:
 			{
 				if (client.getPlayer() != null)

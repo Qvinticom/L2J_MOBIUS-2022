@@ -65,6 +65,7 @@ public class AccountingFormatter extends Formatter
 					
 					switch ((ConnectionState) client.getConnectionState())
 					{
+						case ENTERING:
 						case IN_GAME:
 						{
 							if (client.getPlayer() != null)

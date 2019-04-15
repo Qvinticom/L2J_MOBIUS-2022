@@ -630,6 +630,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>> imple
 				{
 					return "[Account: " + accountName + " - IP: " + ip + "]";
 				}
+				case ENTERING:
 				case IN_GAME:
 				{
 					return "[Character: " + (_player == null ? "disconnected" : _player.getName()) + " - Account: " + accountName + " - IP: " + ip + "]";
