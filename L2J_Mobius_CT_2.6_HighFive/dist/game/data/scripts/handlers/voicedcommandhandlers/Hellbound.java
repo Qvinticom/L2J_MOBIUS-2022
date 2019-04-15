@@ -16,8 +16,8 @@
  */
 package handlers.voicedcommandhandlers;
 
-import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.areas.Hellbound.HellboundEngine;
 

@@ -18,9 +18,9 @@ package handlers.usercommandhandlers;
 
 import java.text.SimpleDateFormat;
 
-import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.handler.IUserCommandHandler;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * Clan Penalty user command.

@@ -16,14 +16,14 @@
  */
 package quests.Q10441_ChasingMeccadan;
 
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10440_TheSealOfPunishmentTheFields.Q10440_TheSealOfPunishmentTheFields;
 

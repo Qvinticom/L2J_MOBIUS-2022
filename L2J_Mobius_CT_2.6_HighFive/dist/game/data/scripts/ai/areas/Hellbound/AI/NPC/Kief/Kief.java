@@ -16,8 +16,8 @@
  */
 package ai.areas.Hellbound.AI.NPC.Kief;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 import ai.areas.Hellbound.HellboundEngine;

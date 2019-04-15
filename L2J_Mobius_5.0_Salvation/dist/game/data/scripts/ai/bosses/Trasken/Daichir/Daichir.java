@@ -18,13 +18,13 @@ package ai.bosses.Trasken.Daichir;
 
 import java.util.List;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.Party;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
 

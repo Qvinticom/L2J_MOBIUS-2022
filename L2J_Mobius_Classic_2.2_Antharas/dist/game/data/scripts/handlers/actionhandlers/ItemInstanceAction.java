@@ -16,16 +16,16 @@
  */
 package handlers.actionhandlers;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.handler.IActionHandler;
-import com.l2jmobius.gameserver.instancemanager.CastleManager;
-import com.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.handler.IActionHandler;
+import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 
 public class ItemInstanceAction implements IActionHandler
 {

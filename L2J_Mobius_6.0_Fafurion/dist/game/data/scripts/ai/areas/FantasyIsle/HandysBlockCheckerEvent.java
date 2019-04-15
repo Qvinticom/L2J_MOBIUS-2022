@@ -18,15 +18,15 @@ package ai.areas.FantasyIsle;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangeTimeToStart;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameRequestReady;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameTeamList;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
+import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangeTimeToStart;
+import org.l2jmobius.gameserver.network.serverpackets.ExCubeGameRequestReady;
+import org.l2jmobius.gameserver.network.serverpackets.ExCubeGameTeamList;
 
 import ai.AbstractNpcAI;
 

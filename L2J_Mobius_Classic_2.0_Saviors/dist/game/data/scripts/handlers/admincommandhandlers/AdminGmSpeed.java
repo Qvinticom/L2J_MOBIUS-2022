@@ -20,15 +20,15 @@ import java.util.EnumSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.stats.Stats;
-import com.l2jmobius.gameserver.util.BuilderUtil;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.handler.AdminCommandHandler;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * A retail-like implementation of //gmspeed builder command.

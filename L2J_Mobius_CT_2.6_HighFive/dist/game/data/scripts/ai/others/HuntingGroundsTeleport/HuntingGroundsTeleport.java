@@ -16,10 +16,10 @@
  */
 package ai.others.HuntingGroundsTeleport;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.SevenSigns;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.SevenSigns;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 

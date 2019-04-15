@@ -16,23 +16,23 @@
  */
 package quests.Q00500_BrothersBoundInChains;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.events.Containers;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
-import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonAgathion;
-import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerUnsummonAgathion;
-import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.enums.QuestType;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.Containers;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonAgathion;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerUnsummonAgathion;
+import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Brothers Bound in Chains (500)

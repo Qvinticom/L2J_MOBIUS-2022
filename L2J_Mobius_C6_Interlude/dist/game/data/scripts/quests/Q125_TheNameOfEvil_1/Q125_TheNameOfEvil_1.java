@@ -16,13 +16,13 @@
  */
 package quests.Q125_TheNameOfEvil_1;
 
-import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.util.Util;
 
 import quests.Q124_MeetingTheElroki.Q124_MeetingTheElroki;
 

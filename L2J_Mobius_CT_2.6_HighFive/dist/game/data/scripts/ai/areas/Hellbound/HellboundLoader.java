@@ -18,11 +18,11 @@ package ai.areas.Hellbound;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
-import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.handler.AdminCommandHandler;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 
 import ai.areas.Hellbound.AI.Amaskari;
 import ai.areas.Hellbound.AI.Chimeras;

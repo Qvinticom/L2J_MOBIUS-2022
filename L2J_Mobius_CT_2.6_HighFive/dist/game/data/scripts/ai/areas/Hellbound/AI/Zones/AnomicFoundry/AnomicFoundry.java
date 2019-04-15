@@ -19,17 +19,17 @@ package ai.areas.Hellbound.AI.Zones.AnomicFoundry;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.Spawn;
-import com.l2jmobius.gameserver.model.actor.Attackable;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Spawn;
+import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
 import ai.areas.Hellbound.HellboundEngine;

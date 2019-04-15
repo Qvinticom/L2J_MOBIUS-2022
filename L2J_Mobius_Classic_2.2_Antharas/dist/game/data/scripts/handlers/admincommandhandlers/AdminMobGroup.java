@@ -16,19 +16,19 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.MobGroup;
-import com.l2jmobius.gameserver.model.MobGroupTable;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
-import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.model.MobGroup;
+import org.l2jmobius.gameserver.model.MobGroupTable;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
+import org.l2jmobius.gameserver.util.Broadcast;
+import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author littlecrow Admin commands handler for controllable mobs

@@ -1,10 +1,10 @@
 import sys
-from com.l2jmobius.gameserver.model.actor.instance import L2PcInstance
-from com.l2jmobius.gameserver.model.actor.instance import L2NpcInstance
+from org.l2jmobius.gameserver.model.actor.instance import L2PcInstance
+from org.l2jmobius.gameserver.model.actor.instance import L2NpcInstance
 from java.util import Iterator
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "6667_ClanManager"
 

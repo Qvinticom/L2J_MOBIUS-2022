@@ -18,14 +18,14 @@ package ai;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.holders.MinionHolder;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.MinionHolder;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * Abstract NPC AI class for datapack based AIs.

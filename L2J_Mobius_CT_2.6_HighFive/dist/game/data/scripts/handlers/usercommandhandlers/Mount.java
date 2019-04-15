@@ -16,8 +16,8 @@
  */
 package handlers.usercommandhandlers;
 
-import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.handler.IUserCommandHandler;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Mount user command.

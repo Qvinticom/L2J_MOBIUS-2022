@@ -16,7 +16,7 @@
  */
 package ai.areas.TalkingIsland.Raina;
 
-import static com.l2jmobius.gameserver.model.base.ClassLevel.THIRD;
+import static org.l2jmobius.gameserver.model.base.ClassLevel.THIRD;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,32 +27,32 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.enums.CategoryType;
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.enums.SubclassInfoType;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.base.ClassLevel;
-import com.l2jmobius.gameserver.model.base.PlayerClass;
-import com.l2jmobius.gameserver.model.base.SubClass;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.Id;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMenuSelect;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
-import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.SubclassInfoType;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.base.ClassId;
+import org.l2jmobius.gameserver.model.base.ClassLevel;
+import org.l2jmobius.gameserver.model.base.PlayerClass;
+import org.l2jmobius.gameserver.model.base.SubClass;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.Id;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
+import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import ai.AbstractNpcAI;
 import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;

@@ -20,17 +20,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import com.l2jmobius.gameserver.handler.AffectObjectHandler;
-import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.Playable;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import org.l2jmobius.gameserver.handler.AffectObjectHandler;
+import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
+import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
 /**
  * @author Nik
@@ -47,7 +47,7 @@ public class Party implements IAffectScopeHandler
 		if (target.isPlayable())
 		{
 			final PlayerInstance player = target.getActingPlayer();
-			final com.l2jmobius.gameserver.model.Party party = player.getParty();
+			final org.l2jmobius.gameserver.model.Party party = player.getParty();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
@@ -72,7 +72,7 @@ public class Party implements IAffectScopeHandler
 				
 				if (p != player)
 				{
-					final com.l2jmobius.gameserver.model.Party targetParty = p.getParty();
+					final org.l2jmobius.gameserver.model.Party targetParty = p.getParty();
 					if ((party == null) || (targetParty == null) || (party.getLeaderObjectId() != targetParty.getLeaderObjectId()))
 					{
 						return false;

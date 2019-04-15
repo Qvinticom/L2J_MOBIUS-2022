@@ -16,14 +16,14 @@
  */
 package handlers.usercommandhandlers;
 
-import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.handler.IUserCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.zone.type.RespawnZone;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.handler.IUserCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Loc user command.

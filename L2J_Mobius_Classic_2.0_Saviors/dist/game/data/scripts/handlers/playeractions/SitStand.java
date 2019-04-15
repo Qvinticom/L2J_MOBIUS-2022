@@ -16,17 +16,17 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.NextAction;
-import com.l2jmobius.gameserver.enums.MountType;
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.network.serverpackets.ChairSit;
+import org.l2jmobius.gameserver.ai.CtrlEvent;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.ai.NextAction;
+import org.l2jmobius.gameserver.enums.MountType;
+import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
+import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.effects.EffectFlag;
+import org.l2jmobius.gameserver.network.serverpackets.ChairSit;
 
 /**
  * Sit/Stand player action handler.

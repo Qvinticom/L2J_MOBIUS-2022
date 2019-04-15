@@ -16,14 +16,14 @@
  */
 package ai.areas.PlainsOfDion;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
 

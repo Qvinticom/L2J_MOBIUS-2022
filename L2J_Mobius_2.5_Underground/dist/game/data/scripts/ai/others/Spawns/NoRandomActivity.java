@@ -16,9 +16,9 @@
  */
 package ai.others.Spawns;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
-import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.spawns.SpawnGroup;
+import org.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 
 import ai.AbstractNpcAI;
 

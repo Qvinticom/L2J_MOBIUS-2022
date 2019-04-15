@@ -16,12 +16,12 @@
  */
 package ai.others;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.Attackable;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 import quests.Q00605_AllianceWithKetraOrcs.Q00605_AllianceWithKetraOrcs;

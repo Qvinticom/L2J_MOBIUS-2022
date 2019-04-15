@@ -16,11 +16,11 @@
  */
 package ai;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.holders.MinionHolder;
-import com.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.MinionHolder;
+import org.l2jmobius.gameserver.model.quest.Quest;
 
 /**
  * Abstract NPC AI class for datapack based AIs.

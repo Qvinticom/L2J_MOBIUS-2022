@@ -19,14 +19,14 @@ package vehicles;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.instancemanager.BoatManager;
-import com.l2jmobius.gameserver.model.VehiclePathPoint;
-import com.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.instancemanager.BoatManager;
+import org.l2jmobius.gameserver.model.VehiclePathPoint;
+import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 /**
  * @author DS

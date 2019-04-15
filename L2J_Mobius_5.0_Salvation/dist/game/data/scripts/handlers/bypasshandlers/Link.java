@@ -16,13 +16,13 @@
  */
 package handlers.bypasshandlers;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.actor.instance.TeleporterInstance;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.handler.IBypassHandler;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.TeleporterInstance;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class Link implements IBypassHandler
 {

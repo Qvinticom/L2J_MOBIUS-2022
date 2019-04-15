@@ -19,10 +19,10 @@ package teleports.NewbieTravelToken;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 
 public class NewbieTravelToken extends Quest
 {

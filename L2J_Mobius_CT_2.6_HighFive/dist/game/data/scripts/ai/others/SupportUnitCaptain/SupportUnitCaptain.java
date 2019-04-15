@@ -16,10 +16,10 @@
  */
 package ai.others.SupportUnitCaptain;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import com.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
+import org.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
 import ai.AbstractNpcAI;
 

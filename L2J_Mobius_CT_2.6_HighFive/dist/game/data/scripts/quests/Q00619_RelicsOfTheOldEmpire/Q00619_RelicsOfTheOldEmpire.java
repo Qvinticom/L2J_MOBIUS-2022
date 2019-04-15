@@ -19,11 +19,11 @@ package quests.Q00619_RelicsOfTheOldEmpire;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 
 /**
  * Relics of the Old Empire (619)

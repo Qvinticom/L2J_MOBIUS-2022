@@ -16,15 +16,15 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
-import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
-import com.l2jmobius.gameserver.model.events.returns.DamageReturn;
-import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.Stats;
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDamageReceived;
+import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
+import org.l2jmobius.gameserver.model.events.returns.DamageReturn;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * @author Sdw

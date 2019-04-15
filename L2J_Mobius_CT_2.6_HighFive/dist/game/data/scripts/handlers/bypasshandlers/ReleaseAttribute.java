@@ -16,10 +16,10 @@
  */
 package handlers.bypasshandlers;
 
-import com.l2jmobius.gameserver.handler.IBypassHandler;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
+import org.l2jmobius.gameserver.handler.IBypassHandler;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 
 public class ReleaseAttribute implements IBypassHandler
 {

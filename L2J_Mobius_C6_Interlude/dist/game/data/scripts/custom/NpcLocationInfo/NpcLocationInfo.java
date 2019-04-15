@@ -16,13 +16,13 @@
  */
 package custom.NpcLocationInfo;
 
-import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
-import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.spawn.Spawn;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.spawn.Spawn;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @authors L2Emu Team (python), Nyaran (java)

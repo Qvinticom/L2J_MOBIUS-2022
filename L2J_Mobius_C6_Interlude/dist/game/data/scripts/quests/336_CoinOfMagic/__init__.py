@@ -92,10 +92,10 @@ TRADE_LIST={
     }
 
 import sys
-from com.l2jmobius import Config
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius import Config
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
 
 def promote(st) :
    grade = st.getInt("grade")

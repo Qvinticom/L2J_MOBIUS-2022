@@ -19,17 +19,17 @@ package quests.Q00655_AGrandPlanForTamingWildBeasts;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.clan.Clan;
-import com.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
-import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
+import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * A Grand Plan for Taming Wild Beasts (655)

@@ -1,10 +1,10 @@
 import sys
-from com.l2jmobius.gameserver.ai import CtrlIntention
-from com.l2jmobius.gameserver.model.actor.position import Location
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.gameserver.network.serverpackets import CreatureSay
-from com.l2jmobius.commons.util import Rnd
+from org.l2jmobius.gameserver.ai import CtrlIntention
+from org.l2jmobius.gameserver.model.actor.position import Location
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.gameserver.network.serverpackets import CreatureSay
+from org.l2jmobius.commons.util import Rnd
 
 # flee onAttack (current version is rather fear than retreat)
 # ToDo: find a way to check position instead of using a timer to stop fleeing

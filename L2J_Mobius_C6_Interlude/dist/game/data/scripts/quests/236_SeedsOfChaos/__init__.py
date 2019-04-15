@@ -2,10 +2,10 @@
 # by Vashts6583
 # Please pardon the sloppiness of the code and the poor naming standards of my .htm files
 import sys
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.gameserver.model.base import Race
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.gameserver.model.base import Race
 
 qn = "236_SeedsOfChaos"
 

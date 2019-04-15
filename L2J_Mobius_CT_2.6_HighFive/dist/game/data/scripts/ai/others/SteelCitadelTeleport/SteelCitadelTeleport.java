@@ -16,15 +16,15 @@
  */
 package ai.others.SteelCitadelTeleport;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.CommandChannel;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.Party;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.zone.type.BossZone;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.model.CommandChannel;
+import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.type.BossZone;
 
 import ai.AbstractNpcAI;
 

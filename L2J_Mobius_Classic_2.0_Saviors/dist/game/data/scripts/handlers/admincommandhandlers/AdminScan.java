@@ -19,24 +19,24 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 import java.util.function.Predicate;
 
-import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
-import com.l2jmobius.gameserver.model.Spawn;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.html.PageBuilder;
-import com.l2jmobius.gameserver.model.html.PageResult;
-import com.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
-import com.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
-import com.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.util.BuilderUtil;
-import com.l2jmobius.gameserver.util.BypassBuilder;
-import com.l2jmobius.gameserver.util.BypassParser;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
+import org.l2jmobius.gameserver.model.Spawn;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.html.PageBuilder;
+import org.l2jmobius.gameserver.model.html.PageResult;
+import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
+import org.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
+import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.util.BypassBuilder;
+import org.l2jmobius.gameserver.util.BypassParser;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * @author NosBit

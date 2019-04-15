@@ -19,16 +19,16 @@ package handlers.targethandlers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.clan.ClanMember;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.TargetType;
+import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.entity.TvTEvent;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * @author UnAfraid
@@ -68,7 +68,7 @@ public class Clan implements ITargetTypeHandler
 			targetList.add(player);
 			
 			final int radius = skill.getAffectRange();
-			final com.l2jmobius.gameserver.model.clan.Clan clan = player.getClan();
+			final org.l2jmobius.gameserver.model.clan.Clan clan = player.getClan();
 			
 			if (Skill.addSummon(creature, player, radius, false))
 			{

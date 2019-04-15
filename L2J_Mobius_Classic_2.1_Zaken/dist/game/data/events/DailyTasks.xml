@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/events.xsd">
-	<event name="Daily Reset" class="com.l2jmobius.gameserver.instancemanager.DailyTaskManager">
+	<event name="Daily Reset" class="org.l2jmobius.gameserver.instancemanager.DailyTaskManager">
 		<variables>
 			<list name="reset_skills" type="SkillHolder">
 				<skill id="2510" /> <!-- Wondrous Cubic -->

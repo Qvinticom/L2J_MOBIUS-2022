@@ -19,13 +19,13 @@ package handlers.admincommandhandlers;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.util.BuilderUtil;
-import com.l2jmobius.gameserver.util.GMAudit;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.util.GMAudit;
 
 public class AdminInstanceZone implements IAdminCommandHandler
 {

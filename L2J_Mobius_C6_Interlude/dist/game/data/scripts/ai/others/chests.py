@@ -3,9 +3,9 @@
 # Written by Fulminus
 # # # # # # # # # # #
 import sys
-from com.l2jmobius.gameserver.ai import CtrlIntention
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.commons.util import Rnd
+from org.l2jmobius.gameserver.ai import CtrlIntention
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.commons.util import Rnd
 
 SKILL_DELUXE_KEY = 2229
 

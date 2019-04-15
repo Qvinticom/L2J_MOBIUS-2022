@@ -16,12 +16,12 @@
  */
 package handlers.actionhandlers;
 
-import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.handler.IActionHandler;
-import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.handler.IActionHandler;
+import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ItemInstanceAction implements IActionHandler
 {

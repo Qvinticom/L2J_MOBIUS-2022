@@ -19,22 +19,22 @@ package quests.Q00937_ToReviveTheFishingGuild;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.enums.Faction;
-import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
-import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
+import org.l2jmobius.gameserver.enums.Faction;
+import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.QuestType;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 
 /**
  * To Revive The Fishing Guild (937)

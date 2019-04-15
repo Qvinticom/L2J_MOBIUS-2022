@@ -16,11 +16,11 @@
  */
 package handlers.skillconditionhandlers;
 
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.skills.ISkillCondition;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.skills.ISkillCondition;
+import org.l2jmobius.gameserver.model.skills.Skill;
 
 public class OpCheckOnGoingEventCampaignSkillCondition implements ISkillCondition
 {

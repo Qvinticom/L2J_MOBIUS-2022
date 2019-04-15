@@ -16,14 +16,14 @@
  */
 package ai.areas.Hellbound.AI.NPC.Warpgate;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.PlayerCondOverride;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.PlayerCondOverride;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 import ai.AbstractNpcAI;
 import ai.areas.Hellbound.HellboundEngine;

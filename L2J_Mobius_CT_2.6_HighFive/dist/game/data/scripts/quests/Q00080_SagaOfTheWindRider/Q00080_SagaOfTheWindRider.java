@@ -16,7 +16,7 @@
  */
 package quests.Q00080_SagaOfTheWindRider;
 
-import com.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Location;
 
 import quests.AbstractSagaQuest;
 

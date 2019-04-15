@@ -16,10 +16,10 @@
  */
 package ai.areas.DragonValley;
 
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
 

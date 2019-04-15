@@ -16,10 +16,10 @@
  */
 package quests.Q00184_ArtOfPersuasion;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;

@@ -16,22 +16,22 @@
  */
 package custom.VarkaSilenosSupport;
 
-import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.Party;
-import com.l2jmobius.gameserver.model.PlayerInventory;
-import com.l2jmobius.gameserver.model.Skill;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Attackable;
-import com.l2jmobius.gameserver.model.actor.Playable;
-import com.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import com.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.PlayerInventory;
+import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * This script supports :

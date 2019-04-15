@@ -19,11 +19,11 @@ package ai.others;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
-import com.l2jmobius.gameserver.model.Party;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
+import org.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
+import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 
 import ai.AbstractNpcAI;
 

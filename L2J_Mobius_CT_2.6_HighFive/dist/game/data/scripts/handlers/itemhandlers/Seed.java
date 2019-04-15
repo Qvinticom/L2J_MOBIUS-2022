@@ -16,19 +16,19 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Playable;
-import com.l2jmobius.gameserver.model.actor.instance.ChestInstance;
-import com.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.handler.IItemHandler;
+import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
+import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * @author l3x
@@ -72,7 +72,7 @@ public class Seed implements IItemHandler
 			return false;
 		}
 		
-		final com.l2jmobius.gameserver.model.Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
+		final org.l2jmobius.gameserver.model.Seed seed = CastleManorManager.getInstance().getSeed(item.getId());
 		if (seed == null)
 		{
 			return false;

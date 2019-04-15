@@ -16,14 +16,14 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.entity.TvTEvent;
-import com.l2jmobius.gameserver.model.entity.TvTEventTeleporter;
-import com.l2jmobius.gameserver.model.entity.TvTManager;
-import com.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.entity.TvTEvent;
+import org.l2jmobius.gameserver.model.entity.TvTEventTeleporter;
+import org.l2jmobius.gameserver.model.entity.TvTManager;
+import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author HorridoJoho

@@ -16,7 +16,7 @@
  */
 package quests.TerritoryWarScripts;
 
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * Deny Blessings (737)

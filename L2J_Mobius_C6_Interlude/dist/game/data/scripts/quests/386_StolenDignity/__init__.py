@@ -1,10 +1,10 @@
 # Stolen Dignity version 0.1 
 # by DrLecter
 import sys
-from com.l2jmobius import Config
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius import Config
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"

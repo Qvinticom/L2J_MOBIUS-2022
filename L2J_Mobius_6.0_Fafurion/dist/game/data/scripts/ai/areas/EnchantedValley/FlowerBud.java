@@ -19,9 +19,9 @@ package ai.areas.EnchantedValley;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
 

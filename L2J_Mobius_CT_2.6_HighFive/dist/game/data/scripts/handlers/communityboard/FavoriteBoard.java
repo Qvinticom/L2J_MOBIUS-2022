@@ -21,12 +21,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.cache.HtmCache;
-import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
-import com.l2jmobius.gameserver.handler.IParseBoardHandler;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
+import org.l2jmobius.gameserver.handler.IParseBoardHandler;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.util.Util;
 
 /**
  * Favorite board.

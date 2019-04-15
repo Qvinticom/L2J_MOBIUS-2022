@@ -16,14 +16,14 @@
  */
 package handlers.punishmenthandlers;
 
-import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.handler.IPunishmentHandler;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
-import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.network.Disconnection;
-import com.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.LoginServerThread;
+import org.l2jmobius.gameserver.handler.IPunishmentHandler;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
+import org.l2jmobius.gameserver.model.punishment.PunishmentType;
+import org.l2jmobius.gameserver.network.Disconnection;
+import org.l2jmobius.gameserver.network.GameClient;
 
 /**
  * This class handles ban punishment.

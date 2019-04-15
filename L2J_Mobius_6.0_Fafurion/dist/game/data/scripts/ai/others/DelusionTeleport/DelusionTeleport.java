@@ -19,10 +19,10 @@ package ai.others.DelusionTeleport;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 import ai.AbstractNpcAI;
 

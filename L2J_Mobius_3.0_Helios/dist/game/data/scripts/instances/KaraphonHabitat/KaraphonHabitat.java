@@ -16,10 +16,10 @@
  */
 package instances.KaraphonHabitat;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import instances.AbstractInstance;
 import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;

@@ -16,14 +16,14 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jmobius.gameserver.SevenSigns;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import com.l2jmobius.gameserver.model.AutoSpawnHandler;
-import com.l2jmobius.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.SevenSigns;
+import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.model.AutoSpawnHandler;
+import org.l2jmobius.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Admin Command Handler for Mammon NPCs

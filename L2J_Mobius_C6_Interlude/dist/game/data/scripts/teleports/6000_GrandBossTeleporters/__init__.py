@@ -1,14 +1,14 @@
 #Made by Emperorc
 import sys
-from com.l2jmobius import Config
-from com.l2jmobius.gameserver.datatables.csv import DoorTable
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.gameserver.datatables.sql import SpawnTable
-from com.l2jmobius.commons.util import Rnd
-from com.l2jmobius.gameserver.instancemanager import QuestManager
-from com.l2jmobius.gameserver.instancemanager import GrandBossManager
+from org.l2jmobius import Config
+from org.l2jmobius.gameserver.datatables.csv import DoorTable
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.gameserver.datatables.sql import SpawnTable
+from org.l2jmobius.commons.util import Rnd
+from org.l2jmobius.gameserver.instancemanager import QuestManager
+from org.l2jmobius.gameserver.instancemanager import GrandBossManager
 
 qn = "6000_GrandBossTeleporters"
 

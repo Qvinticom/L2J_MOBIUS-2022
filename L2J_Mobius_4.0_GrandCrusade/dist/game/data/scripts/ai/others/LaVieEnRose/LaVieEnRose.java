@@ -16,16 +16,16 @@
  */
 package ai.others.LaVieEnRose;
 
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyList;
-import com.l2jmobius.gameserver.network.serverpackets.ExResponseResetList;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowBeautyMenu;
+import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyList;
+import org.l2jmobius.gameserver.network.serverpackets.ExResponseResetList;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowBeautyMenu;
 
 import ai.AbstractNpcAI;
 

@@ -16,11 +16,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.TransformData;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.data.xml.impl.TransformData;
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.conditions.Condition;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
  * Transformation effect implementation.

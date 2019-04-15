@@ -19,8 +19,8 @@ package handlers;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.handler.EffectHandler;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.handler.EffectHandler;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 
 import handlers.effecthandlers.*;
 

@@ -16,10 +16,10 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.ActionDataHolder;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
+import org.l2jmobius.gameserver.instancemanager.AirShipManager;
+import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
  * Airship Action player action handler.

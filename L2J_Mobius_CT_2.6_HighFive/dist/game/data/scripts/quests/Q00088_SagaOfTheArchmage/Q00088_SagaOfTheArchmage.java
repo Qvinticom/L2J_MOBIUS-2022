@@ -16,7 +16,7 @@
  */
 package quests.Q00088_SagaOfTheArchmage;
 
-import com.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.Location;
 
 import quests.AbstractSagaQuest;
 

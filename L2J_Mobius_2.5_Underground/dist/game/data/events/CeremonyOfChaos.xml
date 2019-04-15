@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/events.xsd">
-	<event name="Ceremony of Chaos" class="com.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager">
+	<event name="Ceremony of Chaos" class="org.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager">
 		<variables>
 			<variable name="max_players" value="18" />
 			<variable name="max_arenas" value="5" />

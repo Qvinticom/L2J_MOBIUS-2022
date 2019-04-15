@@ -18,8 +18,8 @@ package handlers.telnethandlers.server;
 
 import java.text.DecimalFormat;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;
 

@@ -16,7 +16,7 @@
  */
 package ai.bosses.Spezion;
 
-import com.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Npc;
 
 import ai.AbstractNpcAI;
 

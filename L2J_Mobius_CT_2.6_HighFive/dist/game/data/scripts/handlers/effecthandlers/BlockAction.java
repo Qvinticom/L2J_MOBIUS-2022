@@ -19,15 +19,15 @@ package handlers.effecthandlers;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.datatables.BotReportTable;
-import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
-import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
-import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.datatables.BotReportTable;
+import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.conditions.Condition;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
+import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
+import org.l2jmobius.gameserver.model.punishment.PunishmentType;
+import org.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
  * Block Action effect implementation.

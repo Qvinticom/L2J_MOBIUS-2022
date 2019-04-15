@@ -20,15 +20,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import com.l2jmobius.gameserver.handler.AffectObjectHandler;
-import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
-import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.WorldObject;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.targets.AffectScope;
+import org.l2jmobius.gameserver.handler.AffectObjectHandler;
+import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
+import org.l2jmobius.gameserver.handler.IAffectScopeHandler;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 
 /**
  * Static Object affect scope implementation. Used to detect hidden doors.

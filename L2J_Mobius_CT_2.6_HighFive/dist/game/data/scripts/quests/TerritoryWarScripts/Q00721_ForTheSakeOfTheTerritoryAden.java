@@ -16,7 +16,7 @@
  */
 package quests.TerritoryWarScripts;
 
-import com.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * For the Sake of the Territory - Aden (721)

@@ -16,14 +16,14 @@
  */
 package handlers.telnethandlers.player;
 
-import com.l2jmobius.gameserver.model.World;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.util.GMAudit;
-import com.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
+import org.l2jmobius.gameserver.util.GMAudit;
+import org.l2jmobius.gameserver.util.Util;
 
 import io.netty.channel.ChannelHandlerContext;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/events.xsd">
-	<event name="Clan Hall Auction" class="com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager">
+	<event name="Clan Hall Auction" class="org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager">
 		<scheduler>
 			<!-- Schedule of the event start, Wednesday at 19:00 -->
 			<schedule name="startAuction" minute="00" hour="18" dayOfMonth="*" month="*" dayOfWeek="3">

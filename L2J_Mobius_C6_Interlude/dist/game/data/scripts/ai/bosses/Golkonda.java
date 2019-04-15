@@ -16,7 +16,7 @@
  */
 package ai.bosses;
 
-import com.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.Quest;
 
 /*
  * @author m095 (L2EmuRT)

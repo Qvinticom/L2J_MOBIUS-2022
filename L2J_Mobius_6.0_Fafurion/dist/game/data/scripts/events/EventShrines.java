@@ -19,11 +19,11 @@ package events;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.instancemanager.EventShrineManager;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.model.zone.ZoneType;
-import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
+import org.l2jmobius.gameserver.instancemanager.EventShrineManager;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 /**
  * @author hlwrave, Mobius

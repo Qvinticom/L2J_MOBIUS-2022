@@ -1,14 +1,14 @@
 import sys
-from com.l2jmobius.gameserver.ai import CtrlIntention
-from com.l2jmobius.gameserver.datatables.sql import SpawnTable
-from com.l2jmobius.gameserver.model.actor.position import Location
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.gameserver.network.serverpackets import ActionFailed
-from com.l2jmobius.gameserver.network.serverpackets import PlaySound
-from com.l2jmobius.gameserver.network.serverpackets import SocialAction
-from com.l2jmobius.gameserver.network.serverpackets import SpecialCamera
+from org.l2jmobius.gameserver.ai import CtrlIntention
+from org.l2jmobius.gameserver.datatables.sql import SpawnTable
+from org.l2jmobius.gameserver.model.actor.position import Location
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.gameserver.network.serverpackets import ActionFailed
+from org.l2jmobius.gameserver.network.serverpackets import PlaySound
+from org.l2jmobius.gameserver.network.serverpackets import SocialAction
+from org.l2jmobius.gameserver.network.serverpackets import SpecialCamera
 
 Doctor_Chaos = 32033
 Strange_Machine = 32032

@@ -16,11 +16,11 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.actor.Playable;
-import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExRequestChangeNicknameColor;
+import org.l2jmobius.gameserver.handler.IItemHandler;
+import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExRequestChangeNicknameColor;
 
 public class NicknameColor implements IItemHandler
 {

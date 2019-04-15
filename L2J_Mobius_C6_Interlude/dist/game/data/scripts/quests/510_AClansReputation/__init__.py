@@ -1,9 +1,9 @@
 import sys
-from com.l2jmobius.gameserver.model.quest           import State
-from com.l2jmobius.gameserver.model.quest           import QuestState
-from com.l2jmobius.gameserver.model.quest.jython    import QuestJython as JQuest
-from com.l2jmobius.gameserver.network.serverpackets import PledgeShowInfoUpdate
-from com.l2jmobius.gameserver.network.serverpackets import SystemMessage
+from org.l2jmobius.gameserver.model.quest           import State
+from org.l2jmobius.gameserver.model.quest           import QuestState
+from org.l2jmobius.gameserver.model.quest.jython    import QuestJython as JQuest
+from org.l2jmobius.gameserver.network.serverpackets import PledgeShowInfoUpdate
+from org.l2jmobius.gameserver.network.serverpackets import SystemMessage
 
 qn="510_AClansReputation"
 

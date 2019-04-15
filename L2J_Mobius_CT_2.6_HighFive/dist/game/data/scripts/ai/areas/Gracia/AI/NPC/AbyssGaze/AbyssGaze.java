@@ -16,10 +16,10 @@
  */
 package ai.areas.Gracia.AI.NPC.AbyssGaze;
 
-import com.l2jmobius.gameserver.instancemanager.SoIManager;
-import com.l2jmobius.gameserver.model.actor.Npc;
-import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.instancemanager.SoIManager;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
 

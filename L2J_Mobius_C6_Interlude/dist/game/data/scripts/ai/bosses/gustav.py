@@ -1,13 +1,13 @@
 import sys
-from com.l2jmobius.gameserver.ai import CtrlIntention
-from com.l2jmobius.gameserver.model.entity.siege.clanhalls import DevastatedCastle
-from com.l2jmobius.gameserver.model.quest import State
-from com.l2jmobius.gameserver.model.quest import QuestState
-from com.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jmobius.gameserver.instancemanager import ClanHallManager
-from com.l2jmobius.commons.util import Rnd
-from com.l2jmobius.gameserver.model.clan import Clan
-from com.l2jmobius.gameserver.model.clan import ClanMember
+from org.l2jmobius.gameserver.ai import CtrlIntention
+from org.l2jmobius.gameserver.model.entity.siege.clanhalls import DevastatedCastle
+from org.l2jmobius.gameserver.model.quest import State
+from org.l2jmobius.gameserver.model.quest import QuestState
+from org.l2jmobius.gameserver.model.quest.jython import QuestJython as JQuest
+from org.l2jmobius.gameserver.instancemanager import ClanHallManager
+from org.l2jmobius.commons.util import Rnd
+from org.l2jmobius.gameserver.model.clan import Clan
+from org.l2jmobius.gameserver.model.clan import ClanMember
 from java.lang import System
 
 GUSTAV = 35410

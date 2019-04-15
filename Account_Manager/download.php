@@ -70,7 +70,7 @@ include 'includes/config.php';
 
 
 	<div class="footer">
-		<a href="http://l2jmobius.com"><img alt="" src="images/l2jmobius.png" title=""></a>
+		<a href="http://l2jmobius.org"><img alt="" src="images/l2jmobius.png" title=""></a>
 	</div>
 	<script>
 	               var url = 'download.php';

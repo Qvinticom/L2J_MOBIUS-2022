@@ -21,15 +21,15 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.EffectList;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.Creature;
-import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.EffectType;
-import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.model.EffectList;
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.conditions.Condition;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
  * Dispel By Slot Probability effect implementation.
