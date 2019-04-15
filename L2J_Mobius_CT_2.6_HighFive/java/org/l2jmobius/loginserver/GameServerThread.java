@@ -136,8 +136,11 @@ public class GameServerThread extends Thread
 		{
 			if (isAuthed())
 			{
-				_gsi.setDown();
-				LOGGER.info("Server [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " is now set as disconnected");
+				if (_gsi != null)
+				{
+					_gsi.setDown();
+				}
+				LOGGER.info("Server [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " is now set as disconnected.");
 			}
 			LoginServer.getInstance().getGameServerListener().removeGameServer(this);
 			LoginServer.getInstance().getGameServerListener().removeFloodProtection(_connectionIp);
