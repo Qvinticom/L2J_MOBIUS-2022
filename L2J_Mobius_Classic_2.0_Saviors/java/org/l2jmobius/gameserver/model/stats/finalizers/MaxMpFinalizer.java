@@ -35,18 +35,18 @@ public class MaxMpFinalizer implements IStatsFunction
 	{
 		throwIfPresent(base);
 		
-		double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
+		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 		if (creature.isPet())
 		{
 			final PetInstance pet = (PetInstance) creature;
-			baseValue += pet.getPetLevelData().getPetMaxMP();
+			baseValue = pet.getPetLevelData().getPetMaxMP();
 		}
 		else if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			if (player != null)
 			{
-				baseValue += player.getTemplate().getBaseMpMax(player.getLevel());
+				baseValue = player.getTemplate().getBaseMpMax(player.getLevel());
 			}
 		}
 		final double menBonus = creature.getMEN() > 0 ? BaseStats.MEN.calcBonus(creature) : 1.;

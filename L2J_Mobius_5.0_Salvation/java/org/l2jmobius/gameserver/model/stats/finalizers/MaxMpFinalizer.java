@@ -35,7 +35,7 @@ public class MaxMpFinalizer implements IStatsFunction
 	{
 		throwIfPresent(base);
 		
-		double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
+		double baseValue = creature.getTemplate().getBaseValue(stat, 0);
 		if (creature.isPet())
 		{
 			final PetInstance pet = (PetInstance) creature;
