@@ -214,9 +214,22 @@
 	<skill id="7014" toLevel="1" name="Test - Critical Damage Up">
 		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
-		<operateType>T</operateType>
+		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalLevel>5</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>100</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7015" toLevel="1" name="Test - Critical Damage Down">
 		<!-- Decreases received Critical Damage -->
