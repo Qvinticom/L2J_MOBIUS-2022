@@ -48,7 +48,7 @@ class NpcBuffersData implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("data/scripts/ai/others/NpcBuffers/NpcBuffersData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _npcBuffers.size() + " buffers data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcBuffers.size() + " buffers data.");
 	}
 	
 	@Override

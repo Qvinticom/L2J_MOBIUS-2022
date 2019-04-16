@@ -65,7 +65,7 @@ public class SpawnsData implements IXmlReader
 	public void load()
 	{
 		parseDatapackDirectory("data/spawns", true);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _spawns.stream().flatMap(c -> c.getGroups().stream()).flatMap(c -> c.getSpawns().stream()).count() + " spawns");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawns.stream().flatMap(c -> c.getGroups().stream()).flatMap(c -> c.getSpawns().stream()).count() + " spawns");
 	}
 	
 	@Override

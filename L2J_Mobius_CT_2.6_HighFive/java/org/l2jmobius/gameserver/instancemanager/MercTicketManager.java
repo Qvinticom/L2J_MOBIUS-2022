@@ -202,7 +202,7 @@ public final class MercTicketManager
 			rs.close();
 			s.close();
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + DROPPED_TICKETS.size() + " Mercenary Tickets");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + DROPPED_TICKETS.size() + " Mercenary Tickets");
 		}
 		catch (Exception e)
 		{

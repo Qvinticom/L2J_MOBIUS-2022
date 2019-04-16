@@ -310,7 +310,7 @@ public class OfflineTradersTable
 				}
 			}
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + nTraders + " offline trader(s)");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + nTraders + " offline trader(s)");
 			
 			if (!Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 			{

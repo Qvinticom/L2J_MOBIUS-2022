@@ -53,9 +53,9 @@ public class EnsoulData implements IXmlReader
 	public void load()
 	{
 		parseDatapackDirectory("data/stats/ensoul", true);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _ensoulFees.size() + " fees");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _ensoulOptions.size() + " options");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _ensoulStones.size() + " stones");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _ensoulFees.size() + " fees");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _ensoulOptions.size() + " options");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _ensoulStones.size() + " stones");
 	}
 	
 	@Override

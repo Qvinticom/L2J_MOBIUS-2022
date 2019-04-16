@@ -76,7 +76,7 @@ public final class CursedWeaponsManager implements IXmlReader
 		parseDatapackFile("data/CursedWeapons.xml");
 		restore();
 		controlPlayers();
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _cursedWeapons.size() + " cursed weapon(s).");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _cursedWeapons.size() + " cursed weapon(s).");
 	}
 	
 	@Override

@@ -103,7 +103,7 @@ public class AugmentationData
 		load();
 		
 		// Use size*4: since theres 4 blocks of stat-data with equivalent size
-		LOGGER.info("AugmentationData: Loaded: " + (_augmentationStats[0].size() * 4) + " augmentation stats.");
+		LOGGER.info("AugmentationData: Loaded " + (_augmentationStats[0].size() * 4) + " augmentation stats.");
 	}
 	
 	public static void reload()

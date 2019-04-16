@@ -106,7 +106,7 @@ public final class ClanHallAuctionManager
 			{
 				_auctions.add(new Auction(rs.getInt("id")));
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _auctions.size() + " auction(s)");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _auctions.size() + " auction(s)");
 		}
 		catch (Exception e)
 		{

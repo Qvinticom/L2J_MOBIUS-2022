@@ -169,7 +169,7 @@ public final class FortManager implements InstanceListManager
 				_forts.add(new Fort(rs.getInt("id")));
 			}
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _forts.size() + " fortress");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _forts.size() + " fortress");
 			for (Fort fort : _forts)
 			{
 				fort.getSiege().getSiegeGuardManager().loadSiegeGuard();

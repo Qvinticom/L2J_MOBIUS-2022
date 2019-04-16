@@ -104,13 +104,13 @@ public class AugmentationData
 		{
 			for (int i = 0; i < 10; i++)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _blueSkills.get(i).size() + " blue, " + _purpleSkills.get(i).size() + " purple and " + _redSkills.get(i).size() + " red skills for lifeStoneLevel " + i);
+				LOGGER.info(getClass().getSimpleName() + ": Loaded " + _blueSkills.get(i).size() + " blue, " + _purpleSkills.get(i).size() + " purple and " + _redSkills.get(i).size() + " red skills for lifeStoneLevel " + i);
 			}
 		}
 		else
 		{
-			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _augmentationChances.size() + " augmentations.");
-			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _augmentationChancesAcc.size() + " accessory augmentations.");
+			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _augmentationChances.size() + " augmentations.");
+			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _augmentationChancesAcc.size() + " accessory augmentations.");
 		}
 	}
 	

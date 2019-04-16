@@ -51,7 +51,7 @@ public final class ResidenceFunctionsData implements IXmlReader
 	{
 		_functions.clear();
 		parseDatapackFile("data/ResidenceFunctions.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _functions.size() + " functions.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _functions.size() + " functions.");
 	}
 	
 	@Override

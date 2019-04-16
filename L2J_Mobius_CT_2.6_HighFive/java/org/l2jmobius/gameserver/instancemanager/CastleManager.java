@@ -307,7 +307,7 @@ public final class CastleManager implements InstanceListManager
 			{
 				_castles.add(new Castle(rs.getInt("id")));
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _castles.size() + " castles");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _castles.size() + " castles");
 		}
 		catch (Exception e)
 		{

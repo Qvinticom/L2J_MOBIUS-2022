@@ -121,8 +121,8 @@ public final class QuestManager
 	 */
 	public void report()
 	{
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _quests.size() + " quests.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _scripts.size() + " scripts.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _quests.size() + " quests.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scripts.size() + " scripts.");
 	}
 	
 	/**

@@ -48,7 +48,7 @@ public class MonsterBookData implements IXmlReader
 	{
 		_monsterBook.clear();
 		parseDatapackFile("data/MonsterBook.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _monsterBook.size() + " monster data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _monsterBook.size() + " monster data.");
 	}
 	
 	@Override

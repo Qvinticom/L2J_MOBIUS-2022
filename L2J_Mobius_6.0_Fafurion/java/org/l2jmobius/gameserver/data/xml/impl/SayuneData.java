@@ -47,7 +47,7 @@ public class SayuneData implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("data/SayuneData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _maps.size() + " maps.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _maps.size() + " maps.");
 	}
 	
 	@Override

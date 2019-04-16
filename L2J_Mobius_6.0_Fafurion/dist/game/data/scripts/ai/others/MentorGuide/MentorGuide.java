@@ -110,7 +110,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("config/MentorCoins.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + MENTEE_COINS.size() + " mentee coins");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + MENTEE_COINS.size() + " mentee coins");
 	}
 	
 	@Override
