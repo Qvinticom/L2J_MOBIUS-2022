@@ -406,6 +406,7 @@ import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
+import quests.custom.Q00683_AdventOfKrofinSubspecies.Q00683_AdventOfKrofinSubspecies;
 import quests.custom.Q10516_UnveiledFafurionTemple.Q10516_UnveiledFafurionTemple;
 import quests.custom.Q10517_FafurionsMinions.Q10517_FafurionsMinions;
 import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
@@ -577,7 +578,7 @@ public class QuestMasterHandler
 		Q00674_ChangesInTheShadowOfTheMotherTree.class, // TODO: Not done.
 		Q00675_WhatTheThreadOfThePastShows.class, // TODO: Not done.
 		Q00682_TheStrongInTheClosedSpace.class, // TODO: Not done.
-		Q00683_AdventOfKrofinSubspecies.class, // TODO: Not done.
+		Q00683_AdventOfKrofinSubspecies.class, // FIXME: Custom.
 		Q00684_DisturbedFields.class, // TODO: Not done.
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
