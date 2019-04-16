@@ -1091,7 +1091,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 				case BOW:
 				{
-					final int reuse = Formulas.calculateReuseTime(this, weaponItem);
+					// Old method.
+					// final int reuse = Formulas.calculateReuseTime(this, weaponItem);
+					// Try to do what is expected by having more attack speed.
+					final int reuse = (int) (Formulas.calculateReuseTime(this, weaponItem) / (Math.max(1, _stat.getAttackSpeedMultiplier() - 1)));
 					
 					// Consume arrows
 					final Inventory inventory = getInventory();
