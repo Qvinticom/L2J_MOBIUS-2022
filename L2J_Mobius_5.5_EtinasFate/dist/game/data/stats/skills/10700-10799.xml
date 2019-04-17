@@ -77,33 +77,6 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxCp">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>30</amount>
 				<mode>PER</mode>
@@ -112,8 +85,37 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>30</amount>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">20</value>
+				</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">20</value>
+				</amount>
+				<magicType>1</magicType>
 				<mode>PER</mode>
 			</effect>
 		</effects>

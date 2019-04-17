@@ -45,13 +45,6 @@
 			<effect name="SkillCritical">
 				<stat>STR</stat>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>DAGGER</item>
-				</weaponType>
-			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">739</value>
@@ -109,13 +102,6 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>DUALDAGGER</item>
-				</weaponType>
-			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">844</value>
