@@ -19,8 +19,9 @@ package org.l2jmobius.commons.database;
 import java.sql.Connection;
 import java.util.logging.Logger;
 
-import org.l2jmobius.Config;
 import com.zaxxer.hikari.HikariDataSource;
+
+import org.l2jmobius.Config;
 
 /**
  * @author Mobius

@@ -22,13 +22,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.Henna;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 /**
  * This class holds the henna related information.<br>

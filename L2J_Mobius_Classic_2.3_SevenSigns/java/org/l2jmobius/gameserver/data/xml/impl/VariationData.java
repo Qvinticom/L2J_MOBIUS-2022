@@ -25,6 +25,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import org.w3c.dom.Document;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.VariationInstance;
@@ -35,7 +37,6 @@ import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.options.Variation;
 import org.l2jmobius.gameserver.model.options.VariationFee;
 import org.l2jmobius.gameserver.model.options.VariationWeaponType;
-import org.w3c.dom.Document;
 
 /**
  * @author Pere

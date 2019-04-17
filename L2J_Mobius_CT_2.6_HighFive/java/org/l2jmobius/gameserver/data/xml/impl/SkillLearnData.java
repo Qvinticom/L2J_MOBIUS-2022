@@ -22,10 +22,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.model.base.ClassId;
 
 /**
  * Holds all skill learn data for all NPCs.

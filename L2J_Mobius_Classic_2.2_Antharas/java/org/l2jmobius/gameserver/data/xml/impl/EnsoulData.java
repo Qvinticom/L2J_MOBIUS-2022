@@ -23,15 +23,16 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulFee;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulStone;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 /**
  * @author UnAfraid

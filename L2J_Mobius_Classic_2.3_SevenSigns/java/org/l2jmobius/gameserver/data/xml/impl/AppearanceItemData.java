@@ -21,6 +21,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
@@ -29,8 +32,6 @@ import org.l2jmobius.gameserver.model.holders.AppearanceHolder;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 
 /**
  * @author UnAfraid

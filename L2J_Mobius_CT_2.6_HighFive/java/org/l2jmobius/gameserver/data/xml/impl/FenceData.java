@@ -25,14 +25,15 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 
 /**
  * @author HoridoJoho / FBIagent

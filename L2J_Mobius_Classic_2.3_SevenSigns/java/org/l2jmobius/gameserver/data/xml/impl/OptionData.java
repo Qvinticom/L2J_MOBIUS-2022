@@ -22,6 +22,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import org.w3c.dom.Document;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.model.StatsSet;
@@ -29,7 +31,6 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
-import org.w3c.dom.Document;
 
 /**
  * @author UnAfraid

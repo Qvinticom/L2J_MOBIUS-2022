@@ -30,6 +30,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.IXmlReader;
@@ -44,9 +48,6 @@ import org.l2jmobius.gameserver.model.holders.DropHolder;
 import org.l2jmobius.gameserver.model.holders.MinionHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 /**
  * NPC data parser.

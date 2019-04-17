@@ -20,12 +20,13 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.StatsSet;
-import org.l2jmobius.gameserver.model.fishing.FishingRod;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.fishing.FishingRod;
 
 /**
  * This class holds the Fishing Rods information.

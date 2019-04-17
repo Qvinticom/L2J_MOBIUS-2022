@@ -23,11 +23,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.enums.CategoryType;
 
 /**
  * Loads the category data with Class or NPC IDs.

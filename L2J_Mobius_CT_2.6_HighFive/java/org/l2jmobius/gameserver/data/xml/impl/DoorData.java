@@ -25,6 +25,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -32,9 +36,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 /**
  * Loads doors.

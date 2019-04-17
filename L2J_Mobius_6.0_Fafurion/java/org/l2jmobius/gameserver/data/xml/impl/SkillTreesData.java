@@ -34,6 +34,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -52,9 +56,6 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>

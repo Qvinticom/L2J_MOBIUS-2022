@@ -26,6 +26,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
@@ -34,9 +38,6 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 /**
  * Loads buy lists for NPCs.

@@ -18,12 +18,13 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 
-import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.GameTimeController;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.GameTimeController;
+import org.l2jmobius.gameserver.model.actor.Creature;
 
 /**
  * This class load, holds and calculates the hit condition bonuses.
