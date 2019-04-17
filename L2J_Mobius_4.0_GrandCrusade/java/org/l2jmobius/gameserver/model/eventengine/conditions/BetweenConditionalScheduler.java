@@ -75,6 +75,6 @@ public class BetweenConditionalScheduler implements IConditionalEventScheduler
 			throw new NullPointerException("Main scheduler not found: " + _name);
 		}
 		mainScheduler.run();
-		LOGGER.info("Event " + _eventManager.getClass().getSimpleName() + " will resume because is within the event period");
+		LOGGER.info("Event " + _eventManager.getClass().getSimpleName() + " will resume because is within the event period.");
 	}
 }

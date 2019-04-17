@@ -147,7 +147,7 @@ public final class EventEngineData implements IXmlReader
 		// Notify the event manager that we've done initializing its stuff
 		eventManager.onInitialized();
 		
-		LOGGER.info(getClass().getSimpleName() + ": " + eventManager.getClass().getSimpleName() + ": Initialized");
+		LOGGER.info(getClass().getSimpleName() + ": " + eventManager.getClass().getSimpleName() + ": Initialized.");
 	}
 	
 	/**
