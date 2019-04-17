@@ -147,7 +147,7 @@ public final class EnergyAttack extends AbstractEffect
 			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power)) / defence;
+			final double baseMod = (77 * ((attacker.getPAtk() * attacker.getLevelMod()) + _power)) / (defence / effector.getLevelMod());
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * energyChargesBoost * pvpPveMod;
 			damage += attacker.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 		}

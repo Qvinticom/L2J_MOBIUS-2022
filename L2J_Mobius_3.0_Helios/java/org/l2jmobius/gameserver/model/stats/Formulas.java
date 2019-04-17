@@ -141,7 +141,7 @@ public final class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
 		
 		// MDAM Formula.
-		double damage = ((attacker.getINT() * power * Math.sqrt(mAtk)) / mDef) * shotsBonus;
+		double damage = ((attacker.getINT() * power * Math.sqrt(mAtk)) / (mDef / attacker.getLevelMod())) * shotsBonus;
 		
 		// Failure calculation
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill))
