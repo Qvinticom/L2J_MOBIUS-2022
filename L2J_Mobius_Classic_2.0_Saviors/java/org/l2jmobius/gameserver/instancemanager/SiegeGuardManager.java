@@ -381,11 +381,11 @@ public final class SiegeGuardManager
 	 */
 	public static SiegeGuardManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SiegeGuardManager _instance = new SiegeGuardManager();
+		protected static final SiegeGuardManager INSTANCE = new SiegeGuardManager();
 	}
 }

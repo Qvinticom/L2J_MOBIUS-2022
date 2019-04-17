@@ -836,11 +836,11 @@ public final class Formulas
 		}
 	}
 	
-	private static final Formulas _instance = new Formulas();
+	private static final Formulas INSTANCE = new Formulas();
 	
 	public static Formulas getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	private Formulas()

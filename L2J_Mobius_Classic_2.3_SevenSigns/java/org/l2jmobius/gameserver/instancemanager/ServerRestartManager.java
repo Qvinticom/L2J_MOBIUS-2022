@@ -97,11 +97,11 @@ public class ServerRestartManager
 	
 	public static ServerRestartManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ServerRestartManager _instance = new ServerRestartManager();
+		protected static final ServerRestartManager INSTANCE = new ServerRestartManager();
 	}
 }

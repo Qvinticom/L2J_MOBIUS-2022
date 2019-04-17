@@ -444,11 +444,11 @@ public final class SellBuffsManager implements IXmlReader
 	 */
 	public static SellBuffsManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SellBuffsManager _instance = new SellBuffsManager();
+		protected static final SellBuffsManager INSTANCE = new SellBuffsManager();
 	}
 }

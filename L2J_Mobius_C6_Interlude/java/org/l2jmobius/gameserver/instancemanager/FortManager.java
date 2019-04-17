@@ -190,11 +190,11 @@ public class FortManager
 	
 	public static final FortManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FortManager _instance = new FortManager();
+		protected static final FortManager INSTANCE = new FortManager();
 	}
 }

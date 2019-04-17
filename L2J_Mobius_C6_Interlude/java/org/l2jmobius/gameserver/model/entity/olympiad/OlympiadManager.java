@@ -67,7 +67,7 @@ class OlympiadManager implements Runnable
 	
 	public static OlympiadManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -427,6 +427,6 @@ class OlympiadManager implements Runnable
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final OlympiadManager _instance = new OlympiadManager();
+		protected static final OlympiadManager INSTANCE = new OlympiadManager();
 	}
 }

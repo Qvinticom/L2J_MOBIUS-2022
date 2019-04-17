@@ -59,11 +59,11 @@ public class AffectObjectHandler implements IHandler<IAffectObjectHandler, Enum<
 	
 	public static AffectObjectHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AffectObjectHandler _instance = new AffectObjectHandler();
+		protected static final AffectObjectHandler INSTANCE = new AffectObjectHandler();
 	}
 }

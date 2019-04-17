@@ -50,7 +50,7 @@ public class SiegeManager
 	
 	public static final SiegeManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private int _attackerMaxClans = 500; // Max number of clans
@@ -458,6 +458,6 @@ public class SiegeManager
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final SiegeManager _instance = new SiegeManager();
+		protected static final SiegeManager INSTANCE = new SiegeManager();
 	}
 }

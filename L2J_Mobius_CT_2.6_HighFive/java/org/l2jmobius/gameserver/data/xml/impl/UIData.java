@@ -184,11 +184,11 @@ public class UIData implements IXmlReader
 	
 	public static UIData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final UIData _instance = new UIData();
+		protected static final UIData INSTANCE = new UIData();
 	}
 }

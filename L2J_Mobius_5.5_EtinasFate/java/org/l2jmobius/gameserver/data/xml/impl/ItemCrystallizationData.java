@@ -233,11 +233,11 @@ public final class ItemCrystallizationData implements IXmlReader
 	 */
 	public static ItemCrystallizationData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemCrystallizationData _instance = new ItemCrystallizationData();
+		protected static final ItemCrystallizationData INSTANCE = new ItemCrystallizationData();
 	}
 }

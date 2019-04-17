@@ -59,11 +59,11 @@ public class TargetHandler implements IHandler<ITargetTypeHandler, Enum<TargetTy
 	
 	public static TargetHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TargetHandler _instance = new TargetHandler();
+		protected static final TargetHandler INSTANCE = new TargetHandler();
 	}
 }

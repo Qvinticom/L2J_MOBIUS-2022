@@ -113,7 +113,7 @@ public class AuctionManager
 	
 	public static final AuctionManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 		
 	}
 	
@@ -225,6 +225,6 @@ public class AuctionManager
 	
 	private static class SingletonHolder
 	{
-		protected static final AuctionManager _instance = new AuctionManager();
+		protected static final AuctionManager INSTANCE = new AuctionManager();
 	}
 }

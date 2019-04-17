@@ -273,11 +273,11 @@ public final class QuestManager
 	 */
 	public static QuestManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final QuestManager _instance = new QuestManager();
+		protected static final QuestManager INSTANCE = new QuestManager();
 	}
 }

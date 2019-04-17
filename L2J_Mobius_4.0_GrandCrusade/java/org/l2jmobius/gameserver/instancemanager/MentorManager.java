@@ -258,11 +258,11 @@ public class MentorManager
 	
 	public static MentorManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final MentorManager _instance = new MentorManager();
+		protected static final MentorManager INSTANCE = new MentorManager();
 	}
 }

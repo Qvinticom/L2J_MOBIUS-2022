@@ -132,11 +132,11 @@ public class MonsterRace
 	
 	public static MonsterRace getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final MonsterRace _instance = new MonsterRace();
+		protected static final MonsterRace INSTANCE = new MonsterRace();
 	}
 }

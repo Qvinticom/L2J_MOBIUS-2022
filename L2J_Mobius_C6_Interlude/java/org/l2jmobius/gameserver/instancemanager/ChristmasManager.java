@@ -263,7 +263,7 @@ public class ChristmasManager
 	 */
 	public static ChristmasManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	/**
@@ -759,6 +759,6 @@ public class ChristmasManager
 	
 	private static class SingletonHolder
 	{
-		protected static final ChristmasManager _instance = new ChristmasManager();
+		protected static final ChristmasManager INSTANCE = new ChristmasManager();
 	}
 }

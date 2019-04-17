@@ -391,11 +391,11 @@ public final class CursedWeaponsManager implements IXmlReader
 	
 	public static CursedWeaponsManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CursedWeaponsManager _instance = new CursedWeaponsManager();
+		protected static final CursedWeaponsManager INSTANCE = new CursedWeaponsManager();
 	}
 }

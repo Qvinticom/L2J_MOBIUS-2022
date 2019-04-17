@@ -275,11 +275,11 @@ public final class DoorData implements IXmlReader
 	
 	public static DoorData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DoorData _instance = new DoorData();
+		protected static final DoorData INSTANCE = new DoorData();
 	}
 }

@@ -30,7 +30,7 @@ public class ActionHandler implements IHandler<IActionHandler, InstanceType>
 	
 	public static ActionHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected ActionHandler()
@@ -73,6 +73,6 @@ public class ActionHandler implements IHandler<IActionHandler, InstanceType>
 	
 	private static class SingletonHolder
 	{
-		protected static final ActionHandler _instance = new ActionHandler();
+		protected static final ActionHandler INSTANCE = new ActionHandler();
 	}
 }

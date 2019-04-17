@@ -39,7 +39,7 @@ public class RegionBBSManager extends BaseBBSManager
 	
 	public static RegionBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -118,6 +118,6 @@ public class RegionBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final RegionBBSManager _instance = new RegionBBSManager();
+		protected static final RegionBBSManager INSTANCE = new RegionBBSManager();
 	}
 }

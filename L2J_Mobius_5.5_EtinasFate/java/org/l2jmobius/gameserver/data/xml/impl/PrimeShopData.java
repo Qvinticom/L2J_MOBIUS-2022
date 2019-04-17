@@ -142,11 +142,11 @@ public class PrimeShopData implements IXmlReader
 	
 	public static PrimeShopData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PrimeShopData _instance = new PrimeShopData();
+		protected static final PrimeShopData INSTANCE = new PrimeShopData();
 	}
 }

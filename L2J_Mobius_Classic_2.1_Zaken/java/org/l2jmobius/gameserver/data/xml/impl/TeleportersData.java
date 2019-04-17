@@ -132,11 +132,11 @@ public class TeleportersData implements IXmlReader
 	 */
 	public static TeleportersData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TeleportersData _instance = new TeleportersData();
+		protected static final TeleportersData INSTANCE = new TeleportersData();
 	}
 }

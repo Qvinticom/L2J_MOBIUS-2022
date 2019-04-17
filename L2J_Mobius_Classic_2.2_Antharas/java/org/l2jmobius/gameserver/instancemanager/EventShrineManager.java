@@ -35,11 +35,11 @@ public final class EventShrineManager
 	
 	public static EventShrineManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EventShrineManager _instance = new EventShrineManager();
+		protected static final EventShrineManager INSTANCE = new EventShrineManager();
 	}
 }

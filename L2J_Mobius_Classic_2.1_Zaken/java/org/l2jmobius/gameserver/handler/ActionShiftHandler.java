@@ -68,11 +68,11 @@ public class ActionShiftHandler implements IHandler<IActionShiftHandler, Instanc
 	
 	public static ActionShiftHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ActionShiftHandler _instance = new ActionShiftHandler();
+		protected static final ActionShiftHandler INSTANCE = new ActionShiftHandler();
 	}
 }

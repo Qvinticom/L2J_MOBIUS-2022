@@ -130,11 +130,11 @@ public class AlchemyData implements IXmlReader
 	 */
 	public static AlchemyData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AlchemyData _instance = new AlchemyData();
+		protected static final AlchemyData INSTANCE = new AlchemyData();
 	}
 }

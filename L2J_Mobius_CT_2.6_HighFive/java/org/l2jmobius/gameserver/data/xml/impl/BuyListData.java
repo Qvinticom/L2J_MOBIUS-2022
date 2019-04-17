@@ -192,11 +192,11 @@ public final class BuyListData implements IXmlReader
 	
 	public static BuyListData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final BuyListData _instance = new BuyListData();
+		protected static final BuyListData INSTANCE = new BuyListData();
 	}
 }

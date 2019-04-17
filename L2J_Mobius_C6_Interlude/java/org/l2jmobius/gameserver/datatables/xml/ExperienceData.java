@@ -114,12 +114,12 @@ public class ExperienceData
 	
 	public static ExperienceData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final ExperienceData _instance = new ExperienceData();
+		protected static final ExperienceData INSTANCE = new ExperienceData();
 	}
 }

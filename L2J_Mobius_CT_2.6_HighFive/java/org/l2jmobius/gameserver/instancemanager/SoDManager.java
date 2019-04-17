@@ -230,11 +230,11 @@ public final class SoDManager
 	 */
 	public static SoDManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SoDManager _instance = new SoDManager();
+		protected static final SoDManager INSTANCE = new SoDManager();
 	}
 }

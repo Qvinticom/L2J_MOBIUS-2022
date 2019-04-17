@@ -125,11 +125,11 @@ public final class PunishmentManager
 	 */
 	public static PunishmentManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PunishmentManager _instance = new PunishmentManager();
+		protected static final PunishmentManager INSTANCE = new PunishmentManager();
 	}
 }

@@ -215,11 +215,11 @@ public final class FishingData implements IXmlReader
 	 */
 	public static FishingData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FishingData _instance = new FishingData();
+		protected static final FishingData INSTANCE = new FishingData();
 	}
 }

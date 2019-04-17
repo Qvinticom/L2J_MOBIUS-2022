@@ -249,11 +249,11 @@ public class CharSummonTable
 	
 	public static CharSummonTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CharSummonTable _instance = new CharSummonTable();
+		protected static final CharSummonTable INSTANCE = new CharSummonTable();
 	}
 }

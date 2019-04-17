@@ -47,7 +47,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	
 	public static MerchantPriceConfigTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static final String MPCS_FILE = "MerchantPriceConfig.xml";
@@ -286,6 +286,6 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	
 	private static class SingletonHolder
 	{
-		protected static final MerchantPriceConfigTable _instance = new MerchantPriceConfigTable();
+		protected static final MerchantPriceConfigTable INSTANCE = new MerchantPriceConfigTable();
 	}
 }

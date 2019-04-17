@@ -56,11 +56,11 @@ public class PlayerActionHandler implements IHandler<IPlayerActionHandler, Strin
 	
 	public static PlayerActionHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PlayerActionHandler _instance = new PlayerActionHandler();
+		protected static final PlayerActionHandler INSTANCE = new PlayerActionHandler();
 	}
 }

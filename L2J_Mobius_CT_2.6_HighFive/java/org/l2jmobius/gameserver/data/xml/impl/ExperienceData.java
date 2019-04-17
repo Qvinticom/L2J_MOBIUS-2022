@@ -107,11 +107,11 @@ public final class ExperienceData implements IXmlReader
 	 */
 	public static ExperienceData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ExperienceData _instance = new ExperienceData();
+		protected static final ExperienceData INSTANCE = new ExperienceData();
 	}
 }

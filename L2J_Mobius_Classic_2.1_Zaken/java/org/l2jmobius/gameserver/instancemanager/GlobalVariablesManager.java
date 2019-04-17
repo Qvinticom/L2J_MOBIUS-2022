@@ -138,11 +138,11 @@ public final class GlobalVariablesManager extends AbstractVariables
 	 */
 	public static GlobalVariablesManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final GlobalVariablesManager _instance = new GlobalVariablesManager();
+		protected static final GlobalVariablesManager INSTANCE = new GlobalVariablesManager();
 	}
 }

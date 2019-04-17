@@ -87,11 +87,11 @@ public class ItemHandler implements IHandler<IItemHandler, EtcItem>
 	 */
 	public static ItemHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemHandler _instance = new ItemHandler();
+		protected static final ItemHandler INSTANCE = new ItemHandler();
 	}
 }

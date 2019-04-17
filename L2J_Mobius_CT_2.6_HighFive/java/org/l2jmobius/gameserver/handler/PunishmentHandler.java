@@ -59,11 +59,11 @@ public class PunishmentHandler implements IHandler<IPunishmentHandler, Punishmen
 	
 	public static PunishmentHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PunishmentHandler _instance = new PunishmentHandler();
+		protected static final PunishmentHandler INSTANCE = new PunishmentHandler();
 	}
 }

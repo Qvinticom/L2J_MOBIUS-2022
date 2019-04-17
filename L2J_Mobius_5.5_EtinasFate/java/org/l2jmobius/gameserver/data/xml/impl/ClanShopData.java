@@ -95,11 +95,11 @@ public class ClanShopData implements IXmlReader
 	
 	public static ClanShopData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanShopData _instance = new ClanShopData();
+		protected static final ClanShopData INSTANCE = new ClanShopData();
 	}
 }

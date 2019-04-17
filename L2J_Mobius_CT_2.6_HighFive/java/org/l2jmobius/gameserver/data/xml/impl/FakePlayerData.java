@@ -115,11 +115,11 @@ public class FakePlayerData implements IXmlReader
 	
 	public static FakePlayerData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FakePlayerData _instance = new FakePlayerData();
+		protected static final FakePlayerData INSTANCE = new FakePlayerData();
 	}
 }

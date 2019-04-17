@@ -44,7 +44,7 @@ public class AttackStanceTaskManager
 	
 	public static AttackStanceTaskManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public void addAttackStanceTask(Creature actor)
@@ -131,6 +131,6 @@ public class AttackStanceTaskManager
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final AttackStanceTaskManager _instance = new AttackStanceTaskManager();
+		protected static final AttackStanceTaskManager INSTANCE = new AttackStanceTaskManager();
 	}
 }

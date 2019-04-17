@@ -73,11 +73,11 @@ public class WarpedSpaceManager
 	
 	public static WarpedSpaceManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final WarpedSpaceManager _instance = new WarpedSpaceManager();
+		protected static final WarpedSpaceManager INSTANCE = new WarpedSpaceManager();
 	}
 }

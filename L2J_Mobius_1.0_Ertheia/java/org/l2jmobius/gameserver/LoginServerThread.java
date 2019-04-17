@@ -142,7 +142,7 @@ public class LoginServerThread extends Thread
 	 */
 	public static LoginServerThread getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -834,6 +834,6 @@ public class LoginServerThread extends Thread
 	
 	private static class SingletonHolder
 	{
-		protected static final LoginServerThread _instance = new LoginServerThread();
+		protected static final LoginServerThread INSTANCE = new LoginServerThread();
 	}
 }

@@ -191,11 +191,11 @@ public final class ShuttleData implements IXmlReader
 	
 	public static ShuttleData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ShuttleData _instance = new ShuttleData();
+		protected static final ShuttleData INSTANCE = new ShuttleData();
 	}
 }

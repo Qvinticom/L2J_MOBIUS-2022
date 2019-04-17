@@ -60,11 +60,11 @@ public final class ConditionHandler
 	
 	private static final class SingletonHolder
 	{
-		protected static final ConditionHandler _instance = new ConditionHandler();
+		protected static final ConditionHandler INSTANCE = new ConditionHandler();
 	}
 	
 	public static ConditionHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 }

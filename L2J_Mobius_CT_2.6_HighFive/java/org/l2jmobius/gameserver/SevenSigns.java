@@ -406,7 +406,7 @@ public class SevenSigns
 	
 	public static SevenSigns getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public static long calcContributionScore(long blueCount, long greenCount, long redCount)
@@ -1745,6 +1745,6 @@ public class SevenSigns
 	
 	private static class SingletonHolder
 	{
-		protected static final SevenSigns _instance = new SevenSigns();
+		protected static final SevenSigns INSTANCE = new SevenSigns();
 	}
 }

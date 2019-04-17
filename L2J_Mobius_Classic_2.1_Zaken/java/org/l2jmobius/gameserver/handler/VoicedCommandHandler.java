@@ -63,11 +63,11 @@ public class VoicedCommandHandler implements IHandler<IVoicedCommandHandler, Str
 	
 	public static VoicedCommandHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final VoicedCommandHandler _instance = new VoicedCommandHandler();
+		protected static final VoicedCommandHandler INSTANCE = new VoicedCommandHandler();
 	}
 }

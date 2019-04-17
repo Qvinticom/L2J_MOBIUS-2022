@@ -89,11 +89,11 @@ public class KarmaData implements IXmlReader
 	 */
 	public static KarmaData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final KarmaData _instance = new KarmaData();
+		protected static final KarmaData INSTANCE = new KarmaData();
 	}
 }

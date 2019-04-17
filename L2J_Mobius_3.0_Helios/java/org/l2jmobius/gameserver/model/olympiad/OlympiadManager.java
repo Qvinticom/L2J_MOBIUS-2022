@@ -45,7 +45,7 @@ public class OlympiadManager
 	
 	public static OlympiadManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public final Set<Integer> getRegisteredNonClassBased()
@@ -332,7 +332,7 @@ public class OlympiadManager
 	
 	private static class SingletonHolder
 	{
-		protected static final OlympiadManager _instance = new OlympiadManager();
+		protected static final OlympiadManager INSTANCE = new OlympiadManager();
 	}
 	
 	private int getClassGroup(PlayerInstance player)

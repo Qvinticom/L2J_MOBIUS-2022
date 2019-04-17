@@ -771,11 +771,11 @@ public class RecipeController
 	
 	public static RecipeController getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RecipeController _instance = new RecipeController();
+		protected static final RecipeController INSTANCE = new RecipeController();
 	}
 }

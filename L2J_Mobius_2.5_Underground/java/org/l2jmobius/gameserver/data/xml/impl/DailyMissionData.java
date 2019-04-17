@@ -137,11 +137,11 @@ public class DailyMissionData implements IXmlReader
 	 */
 	public static DailyMissionData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DailyMissionData _instance = new DailyMissionData();
+		protected static final DailyMissionData INSTANCE = new DailyMissionData();
 	}
 }

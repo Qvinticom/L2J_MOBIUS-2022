@@ -138,11 +138,11 @@ public final class CoupleManager
 	
 	public static CoupleManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CoupleManager _instance = new CoupleManager();
+		protected static final CoupleManager INSTANCE = new CoupleManager();
 	}
 }

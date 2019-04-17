@@ -208,11 +208,11 @@ public final class DuelManager
 	
 	public static DuelManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DuelManager _instance = new DuelManager();
+		protected static final DuelManager INSTANCE = new DuelManager();
 	}
 }

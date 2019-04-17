@@ -80,7 +80,7 @@ public class AutoSpawnHandler
 	
 	public static AutoSpawnHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public final int size()
@@ -719,6 +719,6 @@ public class AutoSpawnHandler
 	
 	private static class SingletonHolder
 	{
-		protected static final AutoSpawnHandler _instance = new AutoSpawnHandler();
+		protected static final AutoSpawnHandler INSTANCE = new AutoSpawnHandler();
 	}
 }

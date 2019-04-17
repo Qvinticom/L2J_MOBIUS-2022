@@ -113,11 +113,11 @@ public class PartyMatchRoomList
 	
 	public static PartyMatchRoomList getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PartyMatchRoomList _instance = new PartyMatchRoomList();
+		protected static final PartyMatchRoomList INSTANCE = new PartyMatchRoomList();
 	}
 }

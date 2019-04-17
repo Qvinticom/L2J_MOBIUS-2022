@@ -59,11 +59,11 @@ public class DailyMissionHandler
 	
 	public static DailyMissionHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DailyMissionHandler _instance = new DailyMissionHandler();
+		protected static final DailyMissionHandler INSTANCE = new DailyMissionHandler();
 	}
 }

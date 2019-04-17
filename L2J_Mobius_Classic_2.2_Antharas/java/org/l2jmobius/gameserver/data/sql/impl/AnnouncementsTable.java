@@ -162,11 +162,11 @@ public final class AnnouncementsTable
 	 */
 	public static AnnouncementsTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AnnouncementsTable _instance = new AnnouncementsTable();
+		protected static final AnnouncementsTable INSTANCE = new AnnouncementsTable();
 	}
 }

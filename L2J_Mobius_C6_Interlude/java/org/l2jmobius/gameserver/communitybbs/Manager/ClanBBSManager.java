@@ -35,7 +35,7 @@ public class ClanBBSManager extends BaseBBSManager
 	
 	public static ClanBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -354,6 +354,6 @@ public class ClanBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanBBSManager _instance = new ClanBBSManager();
+		protected static final ClanBBSManager INSTANCE = new ClanBBSManager();
 	}
 }

@@ -36,7 +36,7 @@ public class FaenorInterface implements EngineInterface
 	
 	public static FaenorInterface getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public List<?> getAllPlayers()
@@ -147,6 +147,6 @@ public class FaenorInterface implements EngineInterface
 	
 	private static class SingletonHolder
 	{
-		protected static final FaenorInterface _instance = new FaenorInterface();
+		protected static final FaenorInterface INSTANCE = new FaenorInterface();
 	}
 }

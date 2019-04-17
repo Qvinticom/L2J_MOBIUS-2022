@@ -31,11 +31,11 @@ public class ClientNetworkManager extends NetworkManager
 	
 	public static ClientNetworkManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClientNetworkManager _instance = new ClientNetworkManager();
+		protected static final ClientNetworkManager INSTANCE = new ClientNetworkManager();
 	}
 }

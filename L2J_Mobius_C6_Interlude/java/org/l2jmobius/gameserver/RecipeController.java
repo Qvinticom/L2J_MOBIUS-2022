@@ -52,12 +52,12 @@ public class RecipeController
 {
 	protected static final Logger LOGGER = Logger.getLogger(RecipeController.class.getName());
 	
-	private static RecipeController _instance;
+	private static RecipeController INSTANCE;
 	protected static final Map<PlayerInstance, RecipeItemMaker> _activeMakers = Collections.synchronizedMap(new WeakHashMap<PlayerInstance, RecipeItemMaker>());
 	
 	public static RecipeController getInstance()
 	{
-		return _instance == null ? _instance = new RecipeController() : _instance;
+		return INSTANCE == null ? INSTANCE = new RecipeController() : INSTANCE;
 	}
 	
 	public synchronized void requestBookOpen(PlayerInstance player, boolean isDwarvenCraft)

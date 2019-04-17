@@ -34,13 +34,13 @@ import org.l2jmobius.gameserver.templates.item.Henna;
 public class HennaTreeTable
 {
 	private static Logger LOGGER = Logger.getLogger(HennaTreeTable.class.getName());
-	private static final HennaTreeTable _instance = new HennaTreeTable();
+	private static final HennaTreeTable INSTANCE = new HennaTreeTable();
 	private final Map<ClassId, List<HennaInstance>> _hennaTrees;
 	private final boolean _initialized = true;
 	
 	public static HennaTreeTable getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	private HennaTreeTable()

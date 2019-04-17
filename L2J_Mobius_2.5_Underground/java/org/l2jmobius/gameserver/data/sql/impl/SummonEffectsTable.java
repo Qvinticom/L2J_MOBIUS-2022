@@ -82,11 +82,11 @@ public class SummonEffectsTable
 	
 	public static SummonEffectsTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SummonEffectsTable _instance = new SummonEffectsTable();
+		protected static final SummonEffectsTable INSTANCE = new SummonEffectsTable();
 	}
 }

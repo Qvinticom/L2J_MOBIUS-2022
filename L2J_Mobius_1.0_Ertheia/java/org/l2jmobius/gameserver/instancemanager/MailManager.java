@@ -291,11 +291,11 @@ public final class MailManager
 	 */
 	public static MailManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final MailManager _instance = new MailManager();
+		protected static final MailManager INSTANCE = new MailManager();
 	}
 }

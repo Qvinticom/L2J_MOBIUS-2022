@@ -700,7 +700,7 @@ public final class GameServerTable implements IXmlReader
 	 */
 	public static GameServerTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	/**
@@ -708,6 +708,6 @@ public final class GameServerTable implements IXmlReader
 	 */
 	private static class SingletonHolder
 	{
-		protected static final GameServerTable _instance = new GameServerTable();
+		protected static final GameServerTable INSTANCE = new GameServerTable();
 	}
 }

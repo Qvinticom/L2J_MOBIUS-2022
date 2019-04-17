@@ -90,11 +90,11 @@ public class AttendanceRewardData implements IXmlReader
 	
 	public static AttendanceRewardData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AttendanceRewardData _instance = new AttendanceRewardData();
+		protected static final AttendanceRewardData INSTANCE = new AttendanceRewardData();
 	}
 }

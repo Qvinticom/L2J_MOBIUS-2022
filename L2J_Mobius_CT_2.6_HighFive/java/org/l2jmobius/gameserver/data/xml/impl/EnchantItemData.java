@@ -155,11 +155,11 @@ public class EnchantItemData implements IXmlReader
 	 */
 	public static EnchantItemData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantItemData _instance = new EnchantItemData();
+		protected static final EnchantItemData INSTANCE = new EnchantItemData();
 	}
 }

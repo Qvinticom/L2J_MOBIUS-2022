@@ -44,7 +44,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 	
 	public static FavoriteBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -136,6 +136,6 @@ public class FavoriteBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final FavoriteBBSManager _instance = new FavoriteBBSManager();
+		protected static final FavoriteBBSManager INSTANCE = new FavoriteBBSManager();
 	}
 }

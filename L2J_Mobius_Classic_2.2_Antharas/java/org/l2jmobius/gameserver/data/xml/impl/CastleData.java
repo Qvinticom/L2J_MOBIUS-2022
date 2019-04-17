@@ -138,11 +138,11 @@ public final class CastleData implements IXmlReader
 	 */
 	public static CastleData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CastleData _instance = new CastleData();
+		protected static final CastleData INSTANCE = new CastleData();
 	}
 }

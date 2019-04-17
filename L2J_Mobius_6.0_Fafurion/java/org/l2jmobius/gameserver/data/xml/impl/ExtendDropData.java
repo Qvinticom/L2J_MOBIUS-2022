@@ -194,11 +194,11 @@ public class ExtendDropData implements IXmlReader
 	
 	public static ExtendDropData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ExtendDropData _instance = new ExtendDropData();
+		protected static final ExtendDropData INSTANCE = new ExtendDropData();
 	}
 }

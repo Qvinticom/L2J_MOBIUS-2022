@@ -181,11 +181,11 @@ public final class PlayerTemplateData implements IXmlReader
 	
 	public static PlayerTemplateData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PlayerTemplateData _instance = new PlayerTemplateData();
+		protected static final PlayerTemplateData INSTANCE = new PlayerTemplateData();
 	}
 }

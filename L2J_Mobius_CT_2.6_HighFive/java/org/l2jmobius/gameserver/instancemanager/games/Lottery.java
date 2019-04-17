@@ -70,7 +70,7 @@ public class Lottery
 	
 	public static Lottery getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public int getId()
@@ -528,6 +528,6 @@ public class Lottery
 	
 	private static class SingletonHolder
 	{
-		protected static final Lottery _instance = new Lottery();
+		protected static final Lottery INSTANCE = new Lottery();
 	}
 }

@@ -345,11 +345,11 @@ public final class FortSiegeManager
 	
 	public static FortSiegeManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FortSiegeManager _instance = new FortSiegeManager();
+		protected static final FortSiegeManager INSTANCE = new FortSiegeManager();
 	}
 }

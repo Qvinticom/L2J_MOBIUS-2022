@@ -413,11 +413,11 @@ public class ClanEntryManager
 	
 	public static ClanEntryManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanEntryManager _instance = new ClanEntryManager();
+		protected static final ClanEntryManager INSTANCE = new ClanEntryManager();
 	}
 }

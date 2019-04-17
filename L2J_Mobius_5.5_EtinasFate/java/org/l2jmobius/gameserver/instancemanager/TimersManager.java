@@ -81,11 +81,11 @@ public class TimersManager
 	
 	public static TimersManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TimersManager _instance = new TimersManager();
+		protected static final TimersManager INSTANCE = new TimersManager();
 	}
 }

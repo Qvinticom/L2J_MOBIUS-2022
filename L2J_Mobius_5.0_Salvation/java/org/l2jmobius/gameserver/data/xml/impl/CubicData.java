@@ -162,11 +162,11 @@ public class CubicData implements IXmlReader
 	 */
 	public static CubicData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CubicData _instance = new CubicData();
+		protected static final CubicData INSTANCE = new CubicData();
 	}
 }

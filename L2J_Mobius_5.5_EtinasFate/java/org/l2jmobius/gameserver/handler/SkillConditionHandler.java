@@ -60,11 +60,11 @@ public final class SkillConditionHandler
 	
 	private static final class SingletonHolder
 	{
-		protected static final SkillConditionHandler _instance = new SkillConditionHandler();
+		protected static final SkillConditionHandler INSTANCE = new SkillConditionHandler();
 	}
 	
 	public static SkillConditionHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 }

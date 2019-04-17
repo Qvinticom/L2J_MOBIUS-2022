@@ -75,7 +75,7 @@ public class ItemsOnGroundManager
 	
 	public static final ItemsOnGroundManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private void load()
@@ -293,6 +293,6 @@ public class ItemsOnGroundManager
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final ItemsOnGroundManager _instance = new ItemsOnGroundManager();
+		protected static final ItemsOnGroundManager INSTANCE = new ItemsOnGroundManager();
 	}
 }

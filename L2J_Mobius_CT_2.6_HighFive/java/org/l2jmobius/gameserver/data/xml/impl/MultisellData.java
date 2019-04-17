@@ -402,11 +402,11 @@ public final class MultisellData implements IXmlReader
 	
 	public static MultisellData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final MultisellData _instance = new MultisellData();
+		protected static final MultisellData INSTANCE = new MultisellData();
 	}
 }

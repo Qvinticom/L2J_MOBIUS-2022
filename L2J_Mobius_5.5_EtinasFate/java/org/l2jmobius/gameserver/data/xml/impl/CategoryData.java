@@ -115,11 +115,11 @@ public final class CategoryData implements IXmlReader
 	
 	public static CategoryData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CategoryData _instance = new CategoryData();
+		protected static final CategoryData INSTANCE = new CategoryData();
 	}
 }

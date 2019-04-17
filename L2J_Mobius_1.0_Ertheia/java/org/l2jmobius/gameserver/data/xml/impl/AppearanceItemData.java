@@ -153,11 +153,11 @@ public class AppearanceItemData implements IXmlReader
 	 */
 	public static AppearanceItemData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AppearanceItemData _instance = new AppearanceItemData();
+		protected static final AppearanceItemData INSTANCE = new AppearanceItemData();
 	}
 }

@@ -38,7 +38,7 @@ public class GameTimeController
 	public static final int TICKS_PER_SECOND = 10;
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
 	
-	private static GameTimeController _instance = new GameTimeController();
+	private static GameTimeController INSTANCE = new GameTimeController();
 	
 	protected static int _gameTicks;
 	protected static long _gameStartTime;
@@ -55,7 +55,7 @@ public class GameTimeController
 	 */
 	public static GameTimeController getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	private GameTimeController()

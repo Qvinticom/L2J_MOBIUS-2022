@@ -65,11 +65,11 @@ public class DocumentBaseGeneral extends DocumentBase
 	
 	public static DocumentBaseGeneral getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DocumentBaseGeneral _instance = new DocumentBaseGeneral(null);
+		protected static final DocumentBaseGeneral INSTANCE = new DocumentBaseGeneral(null);
 	}
 }

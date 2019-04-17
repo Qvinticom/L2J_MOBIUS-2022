@@ -128,11 +128,11 @@ public final class InitialEquipmentData implements IXmlReader
 	 */
 	public static InitialEquipmentData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final InitialEquipmentData _instance = new InitialEquipmentData();
+		protected static final InitialEquipmentData INSTANCE = new InitialEquipmentData();
 	}
 }

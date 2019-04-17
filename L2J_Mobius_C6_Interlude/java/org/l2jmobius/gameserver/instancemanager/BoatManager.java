@@ -38,7 +38,7 @@ public class BoatManager
 	
 	public static final BoatManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private Map<Integer, BoatInstance> _staticItems = new HashMap<>();
@@ -229,6 +229,6 @@ public class BoatManager
 	
 	private static class SingletonHolder
 	{
-		protected static final BoatManager _instance = new BoatManager();
+		protected static final BoatManager INSTANCE = new BoatManager();
 	}
 }

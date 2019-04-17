@@ -809,11 +809,11 @@ public final class ZoneManager implements IXmlReader
 	 */
 	public static ZoneManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ZoneManager _instance = new ZoneManager();
+		protected static final ZoneManager INSTANCE = new ZoneManager();
 	}
 }

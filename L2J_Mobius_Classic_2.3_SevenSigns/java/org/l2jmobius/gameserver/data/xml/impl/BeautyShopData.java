@@ -156,11 +156,11 @@ public final class BeautyShopData implements IXmlReader
 	
 	public static BeautyShopData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final BeautyShopData _instance = new BeautyShopData();
+		protected static final BeautyShopData INSTANCE = new BeautyShopData();
 	}
 }

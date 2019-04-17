@@ -70,11 +70,11 @@ public class LoginServerNetworkManager
 	
 	public static LoginServerNetworkManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final LoginServerNetworkManager _instance = new LoginServerNetworkManager();
+		protected static final LoginServerNetworkManager INSTANCE = new LoginServerNetworkManager();
 	}
 }

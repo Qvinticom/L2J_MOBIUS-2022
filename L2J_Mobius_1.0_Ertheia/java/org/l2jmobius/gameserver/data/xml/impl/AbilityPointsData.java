@@ -103,11 +103,11 @@ public final class AbilityPointsData implements IXmlReader
 	
 	public static AbilityPointsData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AbilityPointsData _instance = new AbilityPointsData();
+		protected static final AbilityPointsData INSTANCE = new AbilityPointsData();
 	}
 }

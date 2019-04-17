@@ -266,11 +266,11 @@ public final class CastleManager implements InstanceListManager
 	
 	public static CastleManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CastleManager _instance = new CastleManager();
+		protected static final CastleManager INSTANCE = new CastleManager();
 	}
 }

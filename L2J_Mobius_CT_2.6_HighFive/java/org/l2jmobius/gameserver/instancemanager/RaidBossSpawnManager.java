@@ -533,11 +533,11 @@ public class RaidBossSpawnManager
 	 */
 	public static RaidBossSpawnManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RaidBossSpawnManager _instance = new RaidBossSpawnManager();
+		protected static final RaidBossSpawnManager INSTANCE = new RaidBossSpawnManager();
 	}
 }

@@ -69,11 +69,11 @@ public class WarehouseCacheManager
 	
 	public static WarehouseCacheManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final WarehouseCacheManager _instance = new WarehouseCacheManager();
+		protected static final WarehouseCacheManager INSTANCE = new WarehouseCacheManager();
 	}
 }

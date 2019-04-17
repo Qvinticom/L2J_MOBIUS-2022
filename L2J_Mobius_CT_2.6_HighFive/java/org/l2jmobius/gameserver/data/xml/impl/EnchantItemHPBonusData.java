@@ -148,11 +148,11 @@ public class EnchantItemHPBonusData implements IXmlReader
 	 */
 	public static EnchantItemHPBonusData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantItemHPBonusData _instance = new EnchantItemHPBonusData();
+		protected static final EnchantItemHPBonusData INSTANCE = new EnchantItemHPBonusData();
 	}
 }

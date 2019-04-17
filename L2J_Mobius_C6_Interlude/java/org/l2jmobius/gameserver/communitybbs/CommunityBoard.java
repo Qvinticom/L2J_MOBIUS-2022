@@ -44,7 +44,7 @@ public class CommunityBoard
 	
 	public static CommunityBoard getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public void handleCommands(GameClient client, String command)
@@ -170,6 +170,6 @@ public class CommunityBoard
 	
 	private static class SingletonHolder
 	{
-		protected static final CommunityBoard _instance = new CommunityBoard();
+		protected static final CommunityBoard INSTANCE = new CommunityBoard();
 	}
 }

@@ -61,7 +61,7 @@ public class TvTManager
 	 */
 	public static TvTManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	/**
@@ -286,6 +286,6 @@ public class TvTManager
 	
 	private static class SingletonHolder
 	{
-		protected static final TvTManager _instance = new TvTManager();
+		protected static final TvTManager INSTANCE = new TvTManager();
 	}
 }

@@ -81,11 +81,11 @@ public final class PlayerXpPercentLostData implements IXmlReader
 	 */
 	public static PlayerXpPercentLostData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PlayerXpPercentLostData _instance = new PlayerXpPercentLostData();
+		protected static final PlayerXpPercentLostData INSTANCE = new PlayerXpPercentLostData();
 	}
 }

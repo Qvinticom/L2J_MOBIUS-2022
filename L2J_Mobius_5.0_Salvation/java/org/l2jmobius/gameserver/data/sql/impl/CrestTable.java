@@ -209,11 +209,11 @@ public final class CrestTable
 	
 	public static CrestTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CrestTable _instance = new CrestTable();
+		protected static final CrestTable INSTANCE = new CrestTable();
 	}
 }

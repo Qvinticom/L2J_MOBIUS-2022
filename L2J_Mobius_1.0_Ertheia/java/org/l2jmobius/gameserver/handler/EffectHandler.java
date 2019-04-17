@@ -60,11 +60,11 @@ public final class EffectHandler
 	
 	private static final class SingletonHolder
 	{
-		protected static final EffectHandler _instance = new EffectHandler();
+		protected static final EffectHandler INSTANCE = new EffectHandler();
 	}
 	
 	public static EffectHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 }

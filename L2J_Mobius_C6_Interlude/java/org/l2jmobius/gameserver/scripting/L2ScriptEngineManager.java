@@ -56,7 +56,7 @@ public final class L2ScriptEngineManager
 	
 	public static L2ScriptEngineManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private final Map<String, ScriptEngine> _nameEngines = new HashMap<>();
@@ -694,6 +694,6 @@ public final class L2ScriptEngineManager
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final L2ScriptEngineManager _instance = new L2ScriptEngineManager();
+		protected static final L2ScriptEngineManager INSTANCE = new L2ScriptEngineManager();
 	}
 }

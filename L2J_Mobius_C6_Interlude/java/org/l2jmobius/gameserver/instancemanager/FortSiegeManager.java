@@ -50,7 +50,7 @@ public class FortSiegeManager
 	
 	public static final FortSiegeManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public FortSiegeManager()
@@ -451,6 +451,6 @@ public class FortSiegeManager
 	
 	private static class SingletonHolder
 	{
-		protected static final FortSiegeManager _instance = new FortSiegeManager();
+		protected static final FortSiegeManager INSTANCE = new FortSiegeManager();
 	}
 }

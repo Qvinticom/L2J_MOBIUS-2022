@@ -56,12 +56,12 @@ public class PartyMatchWaitingList
 	
 	public static PartyMatchWaitingList getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final PartyMatchWaitingList _instance = new PartyMatchWaitingList();
+		protected static final PartyMatchWaitingList INSTANCE = new PartyMatchWaitingList();
 	}
 }

@@ -108,11 +108,11 @@ public class DocumentEngine
 	
 	private static class SingletonHolder
 	{
-		protected static final DocumentEngine _instance = new DocumentEngine();
+		protected static final DocumentEngine INSTANCE = new DocumentEngine();
 	}
 	
 	public static DocumentEngine getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 }

@@ -286,11 +286,11 @@ public final class AntiFeedManager
 	
 	public static AntiFeedManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AntiFeedManager _instance = new AntiFeedManager();
+		protected static final AntiFeedManager INSTANCE = new AntiFeedManager();
 	}
 }

@@ -44,7 +44,7 @@ public class ClanHallManager
 	
 	public static ClanHallManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public boolean loaded()
@@ -256,6 +256,6 @@ public class ClanHallManager
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanHallManager _instance = new ClanHallManager();
+		protected static final ClanHallManager INSTANCE = new ClanHallManager();
 	}
 }

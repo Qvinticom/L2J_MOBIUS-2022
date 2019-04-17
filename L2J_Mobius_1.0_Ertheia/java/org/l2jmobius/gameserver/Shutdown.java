@@ -595,11 +595,11 @@ public class Shutdown extends Thread
 	 */
 	public static Shutdown getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final Shutdown _instance = new Shutdown();
+		protected static final Shutdown INSTANCE = new Shutdown();
 	}
 }

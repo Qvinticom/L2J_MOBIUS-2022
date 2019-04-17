@@ -178,11 +178,11 @@ public class PostBBSManager extends BaseBBSManager
 	
 	public static PostBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PostBBSManager _instance = new PostBBSManager();
+		protected static final PostBBSManager INSTANCE = new PostBBSManager();
 	}
 }

@@ -125,11 +125,11 @@ public class NpcPersonalAIData
 	 */
 	public static NpcPersonalAIData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final NpcPersonalAIData _instance = new NpcPersonalAIData();
+		protected static final NpcPersonalAIData INSTANCE = new NpcPersonalAIData();
 	}
 }

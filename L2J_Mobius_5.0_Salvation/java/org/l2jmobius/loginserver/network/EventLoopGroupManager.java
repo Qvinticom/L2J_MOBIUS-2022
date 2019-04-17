@@ -46,11 +46,11 @@ public class EventLoopGroupManager
 	
 	public static EventLoopGroupManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EventLoopGroupManager _instance = new EventLoopGroupManager();
+		protected static final EventLoopGroupManager INSTANCE = new EventLoopGroupManager();
 	}
 }

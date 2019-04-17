@@ -59,11 +59,11 @@ public class AffectScopeHandler implements IHandler<IAffectScopeHandler, Enum<Af
 	
 	public static AffectScopeHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AffectScopeHandler _instance = new AffectScopeHandler();
+		protected static final AffectScopeHandler INSTANCE = new AffectScopeHandler();
 	}
 }

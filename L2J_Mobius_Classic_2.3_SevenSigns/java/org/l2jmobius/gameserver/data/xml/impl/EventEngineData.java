@@ -572,11 +572,11 @@ public final class EventEngineData implements IXmlReader
 	 */
 	public static EventEngineData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EventEngineData _instance = new EventEngineData();
+		protected static final EventEngineData INSTANCE = new EventEngineData();
 	}
 }

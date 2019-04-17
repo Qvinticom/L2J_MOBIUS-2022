@@ -259,11 +259,11 @@ public class SoIManager
 	 */
 	public static SoIManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SoIManager _instance = new SoIManager();
+		protected static final SoIManager INSTANCE = new SoIManager();
 	}
 }

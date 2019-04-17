@@ -43,7 +43,7 @@ public final class DayNightSpawnManager
 	
 	public static DayNightSpawnManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected DayNightSpawnManager()
@@ -259,6 +259,6 @@ public final class DayNightSpawnManager
 	
 	private static class SingletonHolder
 	{
-		protected static final DayNightSpawnManager _instance = new DayNightSpawnManager();
+		protected static final DayNightSpawnManager INSTANCE = new DayNightSpawnManager();
 	}
 }

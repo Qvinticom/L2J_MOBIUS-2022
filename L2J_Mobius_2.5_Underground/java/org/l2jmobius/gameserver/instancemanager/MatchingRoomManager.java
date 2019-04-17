@@ -149,11 +149,11 @@ public class MatchingRoomManager
 	
 	public static MatchingRoomManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final MatchingRoomManager _instance = new MatchingRoomManager();
+		protected static final MatchingRoomManager INSTANCE = new MatchingRoomManager();
 	}
 }

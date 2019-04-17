@@ -37,7 +37,7 @@ public final class ItemsAutoDestroy
 	
 	public static ItemsAutoDestroy getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public synchronized void addItem(ItemInstance item)
@@ -93,6 +93,6 @@ public final class ItemsAutoDestroy
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemsAutoDestroy _instance = new ItemsAutoDestroy();
+		protected static final ItemsAutoDestroy INSTANCE = new ItemsAutoDestroy();
 	}
 }

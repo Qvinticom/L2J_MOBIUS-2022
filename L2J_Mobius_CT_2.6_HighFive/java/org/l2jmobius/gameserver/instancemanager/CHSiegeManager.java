@@ -199,11 +199,11 @@ public final class CHSiegeManager
 	
 	public static CHSiegeManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static final class SingletonHolder
 	{
-		protected static final CHSiegeManager _instance = new CHSiegeManager();
+		protected static final CHSiegeManager INSTANCE = new CHSiegeManager();
 	}
 }

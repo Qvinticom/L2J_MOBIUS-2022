@@ -201,11 +201,11 @@ public final class ClanHallData implements IXmlReader
 	 */
 	public static ClanHallData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanHallData _instance = new ClanHallData();
+		protected static final ClanHallData INSTANCE = new ClanHallData();
 	}
 }

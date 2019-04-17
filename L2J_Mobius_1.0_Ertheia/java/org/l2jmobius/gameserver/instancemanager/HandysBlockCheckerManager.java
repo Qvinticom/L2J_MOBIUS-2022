@@ -373,11 +373,11 @@ public final class HandysBlockCheckerManager
 	 */
 	public static HandysBlockCheckerManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
+		protected static final HandysBlockCheckerManager INSTANCE = new HandysBlockCheckerManager();
 	}
 }

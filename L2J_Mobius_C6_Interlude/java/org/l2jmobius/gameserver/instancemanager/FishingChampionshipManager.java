@@ -541,11 +541,11 @@ public class FishingChampionshipManager
 	
 	public static final FishingChampionshipManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FishingChampionshipManager _instance = new FishingChampionshipManager();
+		protected static final FishingChampionshipManager INSTANCE = new FishingChampionshipManager();
 	}
 }

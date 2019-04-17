@@ -229,11 +229,11 @@ public class EnsoulData implements IXmlReader
 	 */
 	public static EnsoulData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnsoulData _instance = new EnsoulData();
+		protected static final EnsoulData INSTANCE = new EnsoulData();
 	}
 }

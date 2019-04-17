@@ -246,11 +246,11 @@ public final class EventDispatcher
 	
 	public static EventDispatcher getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EventDispatcher _instance = new EventDispatcher();
+		protected static final EventDispatcher INSTANCE = new EventDispatcher();
 	}
 }

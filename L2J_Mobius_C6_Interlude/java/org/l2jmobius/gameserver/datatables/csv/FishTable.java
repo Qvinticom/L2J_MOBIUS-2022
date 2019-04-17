@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.FishData;
 public class FishTable
 {
 	private static Logger LOGGER = Logger.getLogger(SkillTreeTable.class.getName());
-	private static final FishTable _instance = new FishTable();
+	private static final FishTable INSTANCE = new FishTable();
 	
 	private static List<FishData> _fishsNormal;
 	private static List<FishData> _fishsEasy;
@@ -46,7 +46,7 @@ public class FishTable
 	
 	public static FishTable getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	private FishTable()

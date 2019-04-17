@@ -802,7 +802,7 @@ public class SevenSignsFestival implements SpawnListener
 	
 	public static SevenSignsFestival getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	/**
@@ -2448,6 +2448,6 @@ public class SevenSignsFestival implements SpawnListener
 	
 	private static class SingletonHolder
 	{
-		protected static final SevenSignsFestival _instance = new SevenSignsFestival();
+		protected static final SevenSignsFestival INSTANCE = new SevenSignsFestival();
 	}
 }

@@ -118,11 +118,11 @@ public class ClanMasteryData implements IXmlReader
 	
 	public static ClanMasteryData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanMasteryData _instance = new ClanMasteryData();
+		protected static final ClanMasteryData INSTANCE = new ClanMasteryData();
 	}
 }

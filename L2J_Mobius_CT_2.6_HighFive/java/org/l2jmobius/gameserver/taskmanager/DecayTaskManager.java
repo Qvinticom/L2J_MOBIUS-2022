@@ -154,11 +154,11 @@ public final class DecayTaskManager
 	
 	public static DecayTaskManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DecayTaskManager _instance = new DecayTaskManager();
+		protected static final DecayTaskManager INSTANCE = new DecayTaskManager();
 	}
 }

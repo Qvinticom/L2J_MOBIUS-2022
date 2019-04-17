@@ -1040,11 +1040,11 @@ public class AugmentationData
 	
 	public static AugmentationData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AugmentationData _instance = new AugmentationData();
+		protected static final AugmentationData INSTANCE = new AugmentationData();
 	}
 }

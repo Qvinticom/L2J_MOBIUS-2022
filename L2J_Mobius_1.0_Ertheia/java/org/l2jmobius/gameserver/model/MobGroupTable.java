@@ -37,7 +37,7 @@ public class MobGroupTable
 	
 	public static MobGroupTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public void addGroup(int groupKey, MobGroup group)
@@ -80,6 +80,6 @@ public class MobGroupTable
 	
 	private static class SingletonHolder
 	{
-		protected static final MobGroupTable _instance = new MobGroupTable();
+		protected static final MobGroupTable INSTANCE = new MobGroupTable();
 	}
 }

@@ -114,12 +114,12 @@ public class SiegeScheduleData implements IXmlReader
 	
 	public static SiegeScheduleData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SiegeScheduleData _instance = new SiegeScheduleData();
+		protected static final SiegeScheduleData INSTANCE = new SiegeScheduleData();
 	}
 	
 }

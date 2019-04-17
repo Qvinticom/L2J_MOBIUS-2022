@@ -118,11 +118,11 @@ public class EventDroplist
 	
 	public static EventDroplist getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EventDroplist _instance = new EventDroplist();
+		protected static final EventDroplist INSTANCE = new EventDroplist();
 	}
 }

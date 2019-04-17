@@ -186,11 +186,11 @@ public final class FakePlayerChatManager implements IXmlReader
 	
 	public static FakePlayerChatManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FakePlayerChatManager _instance = new FakePlayerChatManager();
+		protected static final FakePlayerChatManager INSTANCE = new FakePlayerChatManager();
 	}
 }

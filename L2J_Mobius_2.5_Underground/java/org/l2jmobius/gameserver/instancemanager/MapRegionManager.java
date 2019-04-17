@@ -449,11 +449,11 @@ public final class MapRegionManager implements IXmlReader
 	 */
 	public static MapRegionManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final MapRegionManager _instance = new MapRegionManager();
+		protected static final MapRegionManager INSTANCE = new MapRegionManager();
 	}
 }

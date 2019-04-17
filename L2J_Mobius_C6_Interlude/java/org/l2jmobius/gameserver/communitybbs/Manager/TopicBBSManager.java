@@ -40,7 +40,7 @@ public class TopicBBSManager extends BaseBBSManager
 	
 	public static TopicBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected TopicBBSManager()
@@ -336,6 +336,6 @@ public class TopicBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final TopicBBSManager _instance = new TopicBBSManager();
+		protected static final TopicBBSManager INSTANCE = new TopicBBSManager();
 	}
 }

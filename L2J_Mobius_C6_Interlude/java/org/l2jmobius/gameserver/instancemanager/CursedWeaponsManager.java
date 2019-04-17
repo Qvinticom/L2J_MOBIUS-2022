@@ -61,7 +61,7 @@ public class CursedWeaponsManager
 	
 	public static final CursedWeaponsManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public CursedWeaponsManager()
@@ -453,6 +453,6 @@ public class CursedWeaponsManager
 	
 	private static class SingletonHolder
 	{
-		protected static final CursedWeaponsManager _instance = new CursedWeaponsManager();
+		protected static final CursedWeaponsManager INSTANCE = new CursedWeaponsManager();
 	}
 }

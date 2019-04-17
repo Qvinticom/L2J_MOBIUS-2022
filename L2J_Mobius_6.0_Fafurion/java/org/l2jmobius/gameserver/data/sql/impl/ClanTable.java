@@ -479,11 +479,11 @@ public class ClanTable
 	
 	public static ClanTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanTable _instance = new ClanTable();
+		protected static final ClanTable INSTANCE = new ClanTable();
 	}
 }

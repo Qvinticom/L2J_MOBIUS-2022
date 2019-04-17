@@ -342,11 +342,11 @@ public final class AdminData implements IXmlReader
 	 */
 	public static AdminData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final AdminData _instance = new AdminData();
+		protected static final AdminData INSTANCE = new AdminData();
 	}
 }

@@ -68,11 +68,11 @@ public class TelnetHandler implements IHandler<ITelnetHandler, String>
 	
 	public static TelnetHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TelnetHandler _instance = new TelnetHandler();
+		protected static final TelnetHandler INSTANCE = new TelnetHandler();
 	}
 }

@@ -324,11 +324,11 @@ public final class SpawnTable
 	
 	public static SpawnTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SpawnTable _instance = new SpawnTable();
+		protected static final SpawnTable INSTANCE = new SpawnTable();
 	}
 }

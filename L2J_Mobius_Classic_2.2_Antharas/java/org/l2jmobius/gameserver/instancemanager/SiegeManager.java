@@ -295,11 +295,11 @@ public final class SiegeManager
 	
 	public static SiegeManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SiegeManager _instance = new SiegeManager();
+		protected static final SiegeManager INSTANCE = new SiegeManager();
 	}
 }

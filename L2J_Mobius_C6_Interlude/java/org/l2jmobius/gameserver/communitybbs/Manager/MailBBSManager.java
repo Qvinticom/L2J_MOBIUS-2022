@@ -102,7 +102,7 @@ public class MailBBSManager extends BaseBBSManager
 	
 	public static MailBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected MailBBSManager()
@@ -865,6 +865,6 @@ public class MailBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final MailBBSManager _instance = new MailBBSManager();
+		protected static final MailBBSManager INSTANCE = new MailBBSManager();
 	}
 }

@@ -153,11 +153,11 @@ public final class HitConditionBonusData implements IXmlReader
 	 */
 	public static HitConditionBonusData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final HitConditionBonusData _instance = new HitConditionBonusData();
+		protected static final HitConditionBonusData INSTANCE = new HitConditionBonusData();
 	}
 }

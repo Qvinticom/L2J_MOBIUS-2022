@@ -45,7 +45,7 @@ public class FriendsBBSManager extends BaseBBSManager
 	
 	public static FriendsBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -376,6 +376,6 @@ public class FriendsBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final FriendsBBSManager _instance = new FriendsBBSManager();
+		protected static final FriendsBBSManager INSTANCE = new FriendsBBSManager();
 	}
 }

@@ -163,11 +163,11 @@ public class PetSkillData implements IXmlReader
 	
 	public static PetSkillData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PetSkillData _instance = new PetSkillData();
+		protected static final PetSkillData INSTANCE = new PetSkillData();
 	}
 }

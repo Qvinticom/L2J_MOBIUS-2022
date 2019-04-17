@@ -130,11 +130,11 @@ public class TelnetServer
 	
 	public static TelnetServer getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TelnetServer _instance = new TelnetServer();
+		protected static final TelnetServer INSTANCE = new TelnetServer();
 	}
 }

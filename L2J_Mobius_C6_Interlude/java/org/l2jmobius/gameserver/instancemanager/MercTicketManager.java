@@ -48,7 +48,7 @@ public class MercTicketManager
 	
 	public static final MercTicketManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public MercTicketManager()
@@ -951,6 +951,6 @@ public class MercTicketManager
 	
 	private static class SingletonHolder
 	{
-		protected static final MercTicketManager _instance = new MercTicketManager();
+		protected static final MercTicketManager INSTANCE = new MercTicketManager();
 	}
 }

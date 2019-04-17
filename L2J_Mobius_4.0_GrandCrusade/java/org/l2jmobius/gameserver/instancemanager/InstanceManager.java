@@ -666,11 +666,11 @@ public final class InstanceManager implements IXmlReader
 	 */
 	public static InstanceManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final InstanceManager _instance = new InstanceManager();
+		protected static final InstanceManager INSTANCE = new InstanceManager();
 	}
 }

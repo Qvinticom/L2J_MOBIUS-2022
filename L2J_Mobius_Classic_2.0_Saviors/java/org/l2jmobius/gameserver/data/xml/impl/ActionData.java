@@ -86,11 +86,11 @@ public class ActionData implements IXmlReader
 	 */
 	public static ActionData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ActionData _instance = new ActionData();
+		protected static final ActionData INSTANCE = new ActionData();
 	}
 }

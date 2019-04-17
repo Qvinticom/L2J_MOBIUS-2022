@@ -784,11 +784,11 @@ public final class World
 	 */
 	public static World getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final World _instance = new World();
+		protected static final World INSTANCE = new World();
 	}
 }

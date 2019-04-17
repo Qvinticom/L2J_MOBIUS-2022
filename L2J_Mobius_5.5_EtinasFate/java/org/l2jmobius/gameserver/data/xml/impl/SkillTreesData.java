@@ -1790,7 +1790,7 @@ public final class SkillTreesData implements IXmlReader
 	 */
 	public static SkillTreesData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	/**
@@ -1798,6 +1798,6 @@ public final class SkillTreesData implements IXmlReader
 	 */
 	private static class SingletonHolder
 	{
-		protected static final SkillTreesData _instance = new SkillTreesData();
+		protected static final SkillTreesData INSTANCE = new SkillTreesData();
 	}
 }

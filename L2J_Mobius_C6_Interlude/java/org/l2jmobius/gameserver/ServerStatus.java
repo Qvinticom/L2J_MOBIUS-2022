@@ -76,11 +76,11 @@ public class ServerStatus
 	
 	public static ServerStatus getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ServerStatus _instance = new ServerStatus();
+		protected static final ServerStatus INSTANCE = new ServerStatus();
 	}
 }

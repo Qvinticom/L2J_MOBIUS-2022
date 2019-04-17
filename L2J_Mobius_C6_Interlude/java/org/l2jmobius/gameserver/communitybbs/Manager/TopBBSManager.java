@@ -28,7 +28,7 @@ public class TopBBSManager extends BaseBBSManager
 	
 	public static TopBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	@Override
@@ -59,6 +59,6 @@ public class TopBBSManager extends BaseBBSManager
 	
 	private static class SingletonHolder
 	{
-		protected static final TopBBSManager _instance = new TopBBSManager();
+		protected static final TopBBSManager INSTANCE = new TopBBSManager();
 	}
 }

@@ -39,7 +39,7 @@ public class BoatManager
 	
 	public static BoatManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected BoatManager()
@@ -196,6 +196,6 @@ public class BoatManager
 	
 	private static class SingletonHolder
 	{
-		protected static final BoatManager _instance = new BoatManager();
+		protected static final BoatManager INSTANCE = new BoatManager();
 	}
 }

@@ -238,11 +238,11 @@ public class CharNameTable
 	
 	public static CharNameTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CharNameTable _instance = new CharNameTable();
+		protected static final CharNameTable INSTANCE = new CharNameTable();
 	}
 }

@@ -120,11 +120,11 @@ public class EnchantItemOptionsData implements IXmlReader
 	 */
 	public static EnchantItemOptionsData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantItemOptionsData _instance = new EnchantItemOptionsData();
+		protected static final EnchantItemOptionsData INSTANCE = new EnchantItemOptionsData();
 	}
 }

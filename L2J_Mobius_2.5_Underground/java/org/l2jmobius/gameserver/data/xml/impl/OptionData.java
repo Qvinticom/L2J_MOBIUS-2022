@@ -121,11 +121,11 @@ public class OptionData implements IXmlReader
 	 */
 	public static OptionData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final OptionData _instance = new OptionData();
+		protected static final OptionData INSTANCE = new OptionData();
 	}
 }

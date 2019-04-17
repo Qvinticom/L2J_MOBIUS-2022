@@ -1317,11 +1317,11 @@ public class Olympiad extends ListenersContainer
 	
 	public static Olympiad getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final Olympiad _instance = new Olympiad();
+		protected static final Olympiad INSTANCE = new Olympiad();
 	}
 }

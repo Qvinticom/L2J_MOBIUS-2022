@@ -467,11 +467,11 @@ public final class CommissionManager
 	 */
 	public static CommissionManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CommissionManager _instance = new CommissionManager();
+		protected static final CommissionManager INSTANCE = new CommissionManager();
 	}
 }

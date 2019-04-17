@@ -260,11 +260,11 @@ public class VariationData implements IXmlReader
 	
 	public static VariationData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final VariationData _instance = new VariationData();
+		protected static final VariationData INSTANCE = new VariationData();
 	}
 }

@@ -448,11 +448,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	
 	public static CeremonyOfChaosManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CeremonyOfChaosManager _instance = new CeremonyOfChaosManager();
+		protected static final CeremonyOfChaosManager INSTANCE = new CeremonyOfChaosManager();
 	}
 }

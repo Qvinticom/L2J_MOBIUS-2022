@@ -219,11 +219,11 @@ public class PremiumManager
 	
 	public static PremiumManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PremiumManager _instance = new PremiumManager();
+		protected static final PremiumManager INSTANCE = new PremiumManager();
 	}
 }

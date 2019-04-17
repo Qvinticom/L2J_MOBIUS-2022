@@ -108,11 +108,11 @@ public final class StaticObjectData implements IXmlReader
 	 */
 	public static StaticObjectData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final StaticObjectData _instance = new StaticObjectData();
+		protected static final StaticObjectData INSTANCE = new StaticObjectData();
 	}
 }

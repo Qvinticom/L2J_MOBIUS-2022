@@ -89,11 +89,11 @@ public final class PcCafePointsManager
 	 */
 	public static PcCafePointsManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PcCafePointsManager _instance = new PcCafePointsManager();
+		protected static final PcCafePointsManager INSTANCE = new PcCafePointsManager();
 	}
 }

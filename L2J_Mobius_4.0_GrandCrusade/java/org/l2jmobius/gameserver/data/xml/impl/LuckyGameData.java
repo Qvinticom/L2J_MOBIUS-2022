@@ -105,11 +105,11 @@ public class LuckyGameData implements IXmlReader
 	
 	public static LuckyGameData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final LuckyGameData _instance = new LuckyGameData();
+		protected static final LuckyGameData INSTANCE = new LuckyGameData();
 	}
 }

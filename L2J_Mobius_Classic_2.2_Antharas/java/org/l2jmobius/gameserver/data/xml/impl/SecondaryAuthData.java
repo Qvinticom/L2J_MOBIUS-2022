@@ -132,11 +132,11 @@ public class SecondaryAuthData implements IXmlReader
 	
 	public static SecondaryAuthData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SecondaryAuthData _instance = new SecondaryAuthData();
+		protected static final SecondaryAuthData INSTANCE = new SecondaryAuthData();
 	}
 }

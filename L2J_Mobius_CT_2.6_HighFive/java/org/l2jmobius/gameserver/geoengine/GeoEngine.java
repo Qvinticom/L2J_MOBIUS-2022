@@ -929,11 +929,11 @@ public class GeoEngine
 	 */
 	public static GeoEngine getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final GeoEngine _instance = Config.PATHFINDING ? new GeoEnginePathfinding() : new GeoEngine();
+		protected static final GeoEngine INSTANCE = Config.PATHFINDING ? new GeoEnginePathfinding() : new GeoEngine();
 	}
 }

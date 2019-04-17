@@ -65,7 +65,7 @@ public class OlympiadGameManager implements Runnable
 	
 	public static OlympiadGameManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected final boolean isBattleStarted()
@@ -243,7 +243,7 @@ public class OlympiadGameManager implements Runnable
 	
 	private static class SingletonHolder
 	{
-		protected static final OlympiadGameManager _instance = new OlympiadGameManager();
+		protected static final OlympiadGameManager INSTANCE = new OlympiadGameManager();
 	}
 	
 	/**

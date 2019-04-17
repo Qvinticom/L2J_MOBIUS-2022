@@ -58,7 +58,7 @@ public final class DimensionalRiftManager
 	
 	public static DimensionalRiftManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected DimensionalRiftManager()
@@ -482,6 +482,6 @@ public final class DimensionalRiftManager
 	
 	private static class SingletonHolder
 	{
-		protected static final DimensionalRiftManager _instance = new DimensionalRiftManager();
+		protected static final DimensionalRiftManager INSTANCE = new DimensionalRiftManager();
 	}
 }

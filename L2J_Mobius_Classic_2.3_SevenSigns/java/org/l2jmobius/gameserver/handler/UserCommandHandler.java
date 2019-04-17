@@ -63,11 +63,11 @@ public class UserCommandHandler implements IHandler<IUserCommandHandler, Integer
 	
 	public static UserCommandHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final UserCommandHandler _instance = new UserCommandHandler();
+		protected static final UserCommandHandler INSTANCE = new UserCommandHandler();
 	}
 }

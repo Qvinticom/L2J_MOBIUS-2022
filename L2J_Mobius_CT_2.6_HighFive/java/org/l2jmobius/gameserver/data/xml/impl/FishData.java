@@ -159,11 +159,11 @@ public final class FishData implements IXmlReader
 	 */
 	public static FishData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FishData _instance = new FishData();
+		protected static final FishData INSTANCE = new FishData();
 	}
 }

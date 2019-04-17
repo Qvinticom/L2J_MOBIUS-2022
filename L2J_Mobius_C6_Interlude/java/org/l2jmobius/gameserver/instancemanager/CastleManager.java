@@ -39,7 +39,7 @@ public class CastleManager
 	
 	public static final CastleManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private List<Castle> _castles;
@@ -361,6 +361,6 @@ public class CastleManager
 	
 	private static class SingletonHolder
 	{
-		protected static final CastleManager _instance = new CastleManager();
+		protected static final CastleManager INSTANCE = new CastleManager();
 	}
 }

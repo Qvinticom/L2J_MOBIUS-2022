@@ -112,11 +112,11 @@ public final class ClassListData implements IXmlReader
 	 */
 	public static ClassListData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClassListData _instance = new ClassListData();
+		protected static final ClassListData INSTANCE = new ClassListData();
 	}
 }

@@ -157,11 +157,11 @@ public final class EnchantItemGroupsData implements IXmlReader
 	
 	public static EnchantItemGroupsData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantItemGroupsData _instance = new EnchantItemGroupsData();
+		protected static final EnchantItemGroupsData INSTANCE = new EnchantItemGroupsData();
 	}
 }

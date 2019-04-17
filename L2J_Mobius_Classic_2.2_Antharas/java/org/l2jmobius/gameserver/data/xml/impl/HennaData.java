@@ -185,11 +185,11 @@ public final class HennaData implements IXmlReader
 	 */
 	public static HennaData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final HennaData _instance = new HennaData();
+		protected static final HennaData INSTANCE = new HennaData();
 	}
 }

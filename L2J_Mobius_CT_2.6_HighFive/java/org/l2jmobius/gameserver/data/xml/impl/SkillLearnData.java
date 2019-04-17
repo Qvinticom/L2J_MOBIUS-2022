@@ -89,11 +89,11 @@ public final class SkillLearnData implements IXmlReader
 	 */
 	public static SkillLearnData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SkillLearnData _instance = new SkillLearnData();
+		protected static final SkillLearnData INSTANCE = new SkillLearnData();
 	}
 }

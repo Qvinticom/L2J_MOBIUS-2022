@@ -49,11 +49,11 @@ public class FishingChampionshipManager
 	private static final String DELETE = "DELETE FROM fishing_championship";
 	private static final String SELECT = "SELECT `player_name`, `fish_length`, `rewarded` FROM fishing_championship";
 	
-	private static final FishingChampionshipManager _instance = new FishingChampionshipManager();
+	private static final FishingChampionshipManager INSTANCE = new FishingChampionshipManager();
 	
 	public static FishingChampionshipManager getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	protected long _enddate = 0;

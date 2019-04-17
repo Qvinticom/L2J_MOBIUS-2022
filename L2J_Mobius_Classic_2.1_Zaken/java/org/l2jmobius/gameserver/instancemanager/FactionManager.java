@@ -105,11 +105,11 @@ public class FactionManager
 	
 	public static FactionManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FactionManager _instance = new FactionManager();
+		protected static final FactionManager INSTANCE = new FactionManager();
 	}
 }

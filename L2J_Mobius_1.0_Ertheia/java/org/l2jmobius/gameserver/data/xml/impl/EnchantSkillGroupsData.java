@@ -132,11 +132,11 @@ public class EnchantSkillGroupsData implements IXmlReader
 	
 	public static EnchantSkillGroupsData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final EnchantSkillGroupsData _instance = new EnchantSkillGroupsData();
+		protected static final EnchantSkillGroupsData INSTANCE = new EnchantSkillGroupsData();
 	}
 }

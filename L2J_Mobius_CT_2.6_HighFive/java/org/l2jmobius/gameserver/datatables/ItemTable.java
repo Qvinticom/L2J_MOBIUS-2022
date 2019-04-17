@@ -108,7 +108,7 @@ public class ItemTable
 	 */
 	public static ItemTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	protected ItemTable()
@@ -443,6 +443,6 @@ public class ItemTable
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemTable _instance = new ItemTable();
+		protected static final ItemTable INSTANCE = new ItemTable();
 	}
 }

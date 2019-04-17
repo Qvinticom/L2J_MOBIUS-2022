@@ -357,11 +357,11 @@ public final class InitialShortcutData implements IXmlReader
 	 */
 	public static InitialShortcutData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final InitialShortcutData _instance = new InitialShortcutData();
+		protected static final InitialShortcutData INSTANCE = new InitialShortcutData();
 	}
 }

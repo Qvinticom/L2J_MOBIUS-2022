@@ -105,11 +105,11 @@ public class SayuneData implements IXmlReader
 	 */
 	public static SayuneData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SayuneData _instance = new SayuneData();
+		protected static final SayuneData INSTANCE = new SayuneData();
 	}
 }

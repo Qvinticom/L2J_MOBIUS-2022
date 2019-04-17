@@ -809,11 +809,11 @@ public final class CastleManorManager implements IXmlReader, IStorable
 	// -------------------------------------------------------
 	public static CastleManorManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CastleManorManager _instance = new CastleManorManager();
+		protected static final CastleManorManager INSTANCE = new CastleManorManager();
 	}
 }

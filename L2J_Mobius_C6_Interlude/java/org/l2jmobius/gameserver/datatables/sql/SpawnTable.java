@@ -39,7 +39,7 @@ public class SpawnTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	
-	private static final SpawnTable _instance = new SpawnTable();
+	private static final SpawnTable INSTANCE = new SpawnTable();
 	
 	private final Map<Integer, Spawn> spawntable = new ConcurrentHashMap<>();
 	private int npcSpawnCount;
@@ -49,7 +49,7 @@ public class SpawnTable
 	
 	public static SpawnTable getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	private SpawnTable()

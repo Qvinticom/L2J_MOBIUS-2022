@@ -234,11 +234,11 @@ public final class TransformData implements IXmlReader
 	
 	public static TransformData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TransformData _instance = new TransformData();
+		protected static final TransformData INSTANCE = new TransformData();
 	}
 }

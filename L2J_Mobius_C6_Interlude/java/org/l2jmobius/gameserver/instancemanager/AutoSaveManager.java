@@ -41,7 +41,7 @@ public class AutoSaveManager
 	
 	public static final AutoSaveManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public AutoSaveManager()
@@ -178,6 +178,6 @@ public class AutoSaveManager
 	
 	private static class SingletonHolder
 	{
-		protected static final AutoSaveManager _instance = new AutoSaveManager();
+		protected static final AutoSaveManager INSTANCE = new AutoSaveManager();
 	}
 }

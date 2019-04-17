@@ -615,11 +615,11 @@ public class DBSpawnManager
 	 */
 	public static DBSpawnManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final DBSpawnManager _instance = new DBSpawnManager();
+		protected static final DBSpawnManager INSTANCE = new DBSpawnManager();
 	}
 }

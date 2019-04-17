@@ -372,11 +372,11 @@ public final class TaskManager
 	
 	public static TaskManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final TaskManager _instance = new TaskManager();
+		protected static final TaskManager INSTANCE = new TaskManager();
 	}
 }

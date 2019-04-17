@@ -226,11 +226,11 @@ public final class PetDataTable implements IXmlReader
 	 */
 	public static PetDataTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PetDataTable _instance = new PetDataTable();
+		protected static final PetDataTable INSTANCE = new PetDataTable();
 	}
 }

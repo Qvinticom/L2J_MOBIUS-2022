@@ -267,7 +267,7 @@ public class RecipeData implements IXmlReader
 	 */
 	public static RecipeData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	/**
@@ -275,6 +275,6 @@ public class RecipeData implements IXmlReader
 	 */
 	private static class SingletonHolder
 	{
-		protected static final RecipeData _instance = new RecipeData();
+		protected static final RecipeData INSTANCE = new RecipeData();
 	}
 }

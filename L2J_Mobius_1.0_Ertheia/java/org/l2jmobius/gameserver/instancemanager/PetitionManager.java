@@ -461,11 +461,11 @@ public final class PetitionManager
 	 */
 	public static PetitionManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PetitionManager _instance = new PetitionManager();
+		protected static final PetitionManager INSTANCE = new PetitionManager();
 	}
 }

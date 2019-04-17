@@ -67,11 +67,11 @@ public class BypassHandler implements IHandler<IBypassHandler, String>
 	
 	public static BypassHandler getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final BypassHandler _instance = new BypassHandler();
+		protected static final BypassHandler INSTANCE = new BypassHandler();
 	}
 }

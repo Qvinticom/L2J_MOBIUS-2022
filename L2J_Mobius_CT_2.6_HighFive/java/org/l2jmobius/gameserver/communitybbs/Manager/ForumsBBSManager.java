@@ -158,11 +158,11 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public static ForumsBBSManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ForumsBBSManager _instance = new ForumsBBSManager();
+		protected static final ForumsBBSManager INSTANCE = new ForumsBBSManager();
 	}
 }

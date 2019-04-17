@@ -256,7 +256,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public static final FourSepulchersManager getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	public FourSepulchersManager()
@@ -1919,6 +1919,6 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	private static class SingletonHolder
 	{
-		protected static final FourSepulchersManager _instance = new FourSepulchersManager();
+		protected static final FourSepulchersManager INSTANCE = new FourSepulchersManager();
 	}
 }

@@ -96,11 +96,11 @@ public class FaenorScriptEngine extends ScriptEngine
 	
 	public static FaenorScriptEngine getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final FaenorScriptEngine _instance = new FaenorScriptEngine();
+		protected static final FaenorScriptEngine INSTANCE = new FaenorScriptEngine();
 	}
 }

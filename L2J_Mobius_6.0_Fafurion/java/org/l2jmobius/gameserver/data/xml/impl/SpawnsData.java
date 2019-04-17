@@ -355,11 +355,11 @@ public class SpawnsData implements IXmlReader
 	 */
 	public static SpawnsData getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SpawnsData _instance = new SpawnsData();
+		protected static final SpawnsData INSTANCE = new SpawnsData();
 	}
 }
