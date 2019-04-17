@@ -21,10 +21,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.options.Options;
@@ -32,6 +28,9 @@ import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
 import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Item Option data.
@@ -51,7 +50,7 @@ public class OptionData implements IXmlReader
 	{
 		_optionData.clear();
 		parseDatapackDirectory("data/stats/augmentation/options", false);
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _optionData.size() + " Options.");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _optionData.size() + " options.");
 	}
 	
 	@Override

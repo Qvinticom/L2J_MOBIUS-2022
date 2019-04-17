@@ -61,7 +61,7 @@ public class TeleportLocationTable
 				
 				_teleports.put(teleport.getTeleId(), teleport);
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _teleports.size() + " Teleport Location Templates.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _teleports.size() + " teleport location templates.");
 		}
 		catch (Exception e)
 		{
@@ -95,7 +95,7 @@ public class TeleportLocationTable
 			_cTeleCount = _teleports.size() - _cTeleCount;
 			if (_cTeleCount > 0)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Loaded " + _cTeleCount + " Custom Teleport Location Templates.");
+				LOGGER.info(getClass().getSimpleName() + ": Loaded " + _cTeleCount + " custom teleport location templates.");
 			}
 		}
 		catch (Exception e)

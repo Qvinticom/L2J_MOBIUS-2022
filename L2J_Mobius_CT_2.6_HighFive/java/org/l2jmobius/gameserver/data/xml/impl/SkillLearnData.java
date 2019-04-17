@@ -22,11 +22,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.base.ClassId;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
 /**
  * Holds all skill learn data for all NPCs.
@@ -46,7 +45,7 @@ public final class SkillLearnData implements IXmlReader
 	{
 		_skillLearn.clear();
 		parseDatapackFile("data/SkillLearn.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skillLearn.size() + " Skill Learn data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skillLearn.size() + " skill learn data.");
 	}
 	
 	@Override

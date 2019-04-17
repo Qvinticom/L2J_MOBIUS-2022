@@ -23,14 +23,13 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.SiegeScheduleDate;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.util.Util;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * @author UnAfraid
@@ -55,7 +54,7 @@ public class SiegeScheduleData implements IXmlReader
 		if (_scheduleData.isEmpty())
 		{
 			_scheduleData.add(new SiegeScheduleDate(new StatsSet()));
-			LOGGER.info(getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
+			LOGGER.info(getClass().getSimpleName() + ": Emergency loaded " + _scheduleData.size() + " default siege schedulers.");
 		}
 	}
 	

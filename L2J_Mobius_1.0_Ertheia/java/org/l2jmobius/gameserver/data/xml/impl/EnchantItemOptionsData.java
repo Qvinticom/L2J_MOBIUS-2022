@@ -21,13 +21,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.options.EnchantOptions;
 import org.l2jmobius.gameserver.util.Util;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
 /**
  * @author UnAfraid
@@ -89,7 +88,7 @@ public class EnchantItemOptionsData implements IXmlReader
 				}
 			}
 		}
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _data.size() + " Items and " + counter + " Options.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _data.size() + " items and " + counter + " options.");
 	}
 	
 	/**

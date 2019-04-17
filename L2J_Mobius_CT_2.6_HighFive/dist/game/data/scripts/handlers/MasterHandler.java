@@ -691,7 +691,7 @@ public class MasterHandler
 		
 		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
-			LOGGER.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
+			LOGGER.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " handlers.");
 		}
 		
 		LOGGER.log(Level.INFO, "Handlers Loaded...");

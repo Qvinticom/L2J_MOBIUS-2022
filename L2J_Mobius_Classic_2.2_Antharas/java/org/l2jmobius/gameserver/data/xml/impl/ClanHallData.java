@@ -26,10 +26,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.ClanHallType;
@@ -39,6 +35,9 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * @author St3eT
@@ -57,7 +56,7 @@ public final class ClanHallData implements IXmlReader
 	public void load()
 	{
 		parseDatapackDirectory("data/residences/clanHalls", true);
-		LOGGER.info(getClass().getSimpleName() + ": Succesfully loaded " + _clanHalls.size() + " Clan Halls.");
+		LOGGER.info(getClass().getSimpleName() + ": Succesfully loaded " + _clanHalls.size() + " clan halls.");
 	}
 	
 	@Override

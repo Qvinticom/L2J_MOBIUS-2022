@@ -67,7 +67,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Couldn't restore global variables");
+			LOGGER.warning(getClass().getSimpleName() + ": Couldn't restore global variables.");
 			return false;
 		}
 		finally

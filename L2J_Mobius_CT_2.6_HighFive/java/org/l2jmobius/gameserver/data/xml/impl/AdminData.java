@@ -25,10 +25,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.AdminCommandAccessRight;
@@ -37,6 +33,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Loads administrator access levels and commands.
@@ -60,9 +59,9 @@ public final class AdminData implements IXmlReader
 		_accessLevels.clear();
 		_adminCommandAccessRights.clear();
 		parseDatapackFile("config/AccessLevels.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _accessLevels.size() + " Access Levels.");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _accessLevels.size() + " access levels.");
 		parseDatapackFile("config/AdminCommands.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _adminCommandAccessRights.size() + " Access Commands.");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _adminCommandAccessRights.size() + " access commands.");
 	}
 	
 	@Override

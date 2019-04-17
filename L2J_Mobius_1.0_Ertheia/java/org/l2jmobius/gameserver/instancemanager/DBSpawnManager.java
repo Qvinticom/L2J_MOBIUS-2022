@@ -146,8 +146,8 @@ public class DBSpawnManager
 				}
 			}
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " Instances");
-			LOGGER.info(getClass().getSimpleName() + ": Scheduled " + _schedules.size() + " Instances");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " instances.");
+			LOGGER.info(getClass().getSimpleName() + ": Scheduled " + _schedules.size() + " instances.");
 		}
 		catch (SQLException e)
 		{

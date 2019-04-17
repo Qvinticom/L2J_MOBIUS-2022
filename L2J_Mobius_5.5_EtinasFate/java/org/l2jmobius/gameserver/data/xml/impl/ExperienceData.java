@@ -21,12 +21,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.IXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
-import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.IXmlReader;
 
 /**
  * This class holds the Experience points for each level for players and pets.
@@ -57,8 +56,8 @@ public final class ExperienceData implements IXmlReader
 		_traningRateTable.clear();
 		parseDatapackFile("data/stats/experience.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
-		LOGGER.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
-		LOGGER.info(getClass().getSimpleName() + ": Max Pet Level is: " + (MAX_PET_LEVEL - 1));
+		LOGGER.info(getClass().getSimpleName() + ": Max Player Level is " + (MAX_LEVEL - 1) + ".");
+		LOGGER.info(getClass().getSimpleName() + ": Max Pet Level is " + (MAX_PET_LEVEL - 1) + ".");
 	}
 	
 	@Override

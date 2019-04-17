@@ -94,7 +94,7 @@ public final class GrandBossManager implements IStorable
 					LOGGER.warning(getClass().getSimpleName() + ": Could not find GrandBoss NPC template for " + bossId);
 				}
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " Instances.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " instances.");
 		}
 		catch (SQLException e)
 		{
@@ -119,7 +119,7 @@ public final class GrandBossManager implements IStorable
 	public void setBossStatus(int bossId, int status)
 	{
 		_bossStatus.put(bossId, status);
-		LOGGER.info(getClass().getSimpleName() + ": Updated " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status);
+		LOGGER.info(getClass().getSimpleName() + ": Updated " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status + ".");
 		updateDb(bossId, true);
 	}
 	

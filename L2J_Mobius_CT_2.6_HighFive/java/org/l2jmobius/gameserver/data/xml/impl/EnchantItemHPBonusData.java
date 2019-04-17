@@ -23,9 +23,6 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.StatFunction;
@@ -34,6 +31,8 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
 /**
  * This class holds the Enchant HP Bonus Data.
@@ -119,7 +118,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 	{
 		_armorHPBonuses.clear();
 		parseDatapackFile("data/stats/enchantHPBonus.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorHPBonuses.size() + " Enchant HP Bonuses.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorHPBonuses.size() + " enchant HP bonuses.");
 	}
 	
 	/**

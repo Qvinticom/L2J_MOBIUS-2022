@@ -55,7 +55,7 @@ public final class PetitionManager
 		final int numPetitions = _pendingPetitions.size();
 		
 		_completedPetitions.clear();
-		LOGGER.info(getClass().getSimpleName() + ": Completed petition data cleared. " + numPetitions + " petition(s) removed.");
+		LOGGER.info(getClass().getSimpleName() + ": Completed petition data cleared. " + numPetitions + " petitions removed.");
 	}
 	
 	public void clearPendingPetitions()
@@ -63,7 +63,7 @@ public final class PetitionManager
 		final int numPetitions = _pendingPetitions.size();
 		
 		_pendingPetitions.clear();
-		LOGGER.info(getClass().getSimpleName() + ": Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
+		LOGGER.info(getClass().getSimpleName() + ": Pending petition queue cleared. " + numPetitions + " petitions removed.");
 	}
 	
 	public boolean acceptPetition(PlayerInstance respondingAdmin, int petitionId)

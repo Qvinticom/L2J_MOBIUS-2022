@@ -96,7 +96,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 				clan.setNewLeader(member);
 			}
 		}
-		LOGGER.info("Clan leaders has been updated");
+		LOGGER.info("Clan leaders has been updated.");
 	}
 	
 	@ScheduleTarget

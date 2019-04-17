@@ -21,15 +21,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Loads item enchant data.
@@ -56,8 +55,8 @@ public class EnchantItemData implements IXmlReader
 		_scrolls.clear();
 		_supports.clear();
 		parseDatapackFile("data/EnchantItemData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scrolls.size() + " Enchant Scrolls.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _supports.size() + " Support Items.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scrolls.size() + " enchant scrolls.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _supports.size() + " support items.");
 	}
 	
 	@Override

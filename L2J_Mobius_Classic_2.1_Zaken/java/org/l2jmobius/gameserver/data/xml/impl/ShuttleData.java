@@ -23,10 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
@@ -36,6 +32,9 @@ import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleDataHolder;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleEngine;
 import org.l2jmobius.gameserver.model.shuttle.ShuttleStop;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * @author UnAfraid
@@ -65,7 +64,7 @@ public final class ShuttleData implements IXmlReader
 		}
 		parseDatapackFile("data/ShuttleData.xml");
 		init();
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _shuttles.size() + " Shuttles.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _shuttles.size() + " shuttles.");
 	}
 	
 	@Override

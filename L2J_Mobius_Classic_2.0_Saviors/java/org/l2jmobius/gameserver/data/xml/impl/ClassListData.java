@@ -21,13 +21,12 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.base.ClassInfo;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Loads the the list of classes and it's info.
@@ -52,7 +51,7 @@ public final class ClassListData implements IXmlReader
 	{
 		_classData.clear();
 		parseDatapackFile("data/stats/chars/classList.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " Class data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " class data.");
 	}
 	
 	@Override

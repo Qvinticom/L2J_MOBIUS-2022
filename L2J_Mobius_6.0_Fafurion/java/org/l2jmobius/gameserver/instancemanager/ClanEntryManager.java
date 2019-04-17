@@ -106,7 +106,7 @@ public class ClanEntryManager
 					removeFromClanList(clanId);
 				}
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _clanList.size() + " clan entry");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _clanList.size() + " clan entries.");
 		}
 		catch (Exception e)
 		{
@@ -122,7 +122,7 @@ public class ClanEntryManager
 				_waitingList.put(rs.getInt("char_id"), new PledgeWaitingInfo(rs.getInt("char_id"), rs.getInt("level"), rs.getInt("karma"), rs.getInt("base_class"), rs.getString("char_name")));
 			}
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _waitingList.size() + " player in waiting list");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _waitingList.size() + " players in waiting list.");
 		}
 		catch (Exception e)
 		{
@@ -138,7 +138,7 @@ public class ClanEntryManager
 				_applicantList.computeIfAbsent(rs.getInt("clanId"), k -> new ConcurrentHashMap<>()).put(rs.getInt("charId"), new PledgeApplicantInfo(rs.getInt("charId"), rs.getString("char_name"), rs.getInt("level"), rs.getInt("karma"), rs.getInt("clanId"), rs.getString("message")));
 			}
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _applicantList.size() + " player application");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _applicantList.size() + " player applications.");
 		}
 		catch (Exception e)
 		{

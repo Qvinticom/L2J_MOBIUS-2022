@@ -142,10 +142,10 @@ public class ItemTable
 			}
 		}
 		buildFastLookupTable(highest);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _etcItems.size() + " Etc Items");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armors.size() + " Armor Items");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _weapons.size() + " Weapon Items");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_etcItems.size() + _armors.size() + _weapons.size()) + " Items in total.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _etcItems.size() + " etc items.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armors.size() + " armor items.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _weapons.size() + " weapon items.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_etcItems.size() + _armors.size() + _weapons.size()) + " items in total.");
 	}
 	
 	/**

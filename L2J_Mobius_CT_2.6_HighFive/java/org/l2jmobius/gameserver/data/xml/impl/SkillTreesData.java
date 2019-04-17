@@ -29,10 +29,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.Race;
@@ -51,6 +47,9 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>
@@ -1331,22 +1330,22 @@ public final class SkillTreesData implements IXmlReader
 		}
 		
 		final String className = getClass().getSimpleName();
-		LOGGER.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " Class Skill Trees.");
-		LOGGER.info(className + ": Loaded " + _subClassSkillTree.size() + " Sub-Class Skills.");
-		LOGGER.info(className + ": Loaded " + trasferSkillTreeCount + " Transfer Skills for " + _transferSkillTrees.size() + " Transfer Skill Trees.");
-		LOGGER.info(className + ": Loaded " + _fishingSkillTree.size() + " Fishing Skills, " + dwarvenOnlyFishingSkillCount + " Dwarven only Fishing Skills.");
-		LOGGER.info(className + ": Loaded " + _collectSkillTree.size() + " Collect Skills.");
-		LOGGER.info(className + ": Loaded " + _pledgeSkillTree.size() + " Clan Skills, " + (_pledgeSkillTree.size() - resSkillCount) + " for Clan and " + resSkillCount + " Residential.");
-		LOGGER.info(className + ": Loaded " + _subPledgeSkillTree.size() + " Sub-Pledge Skills.");
-		LOGGER.info(className + ": Loaded " + _transformSkillTree.size() + " Transform Skills.");
-		LOGGER.info(className + ": Loaded " + _nobleSkillTree.size() + " Noble Skills.");
-		LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " Hero Skills.");
-		LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " Game Master Skills.");
-		LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
+		LOGGER.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " class skill trees.");
+		LOGGER.info(className + ": Loaded " + _subClassSkillTree.size() + " sub-class skills.");
+		LOGGER.info(className + ": Loaded " + trasferSkillTreeCount + " transfer skills for " + _transferSkillTrees.size() + " transfer skill trees.");
+		LOGGER.info(className + ": Loaded " + _fishingSkillTree.size() + " fishing skills, " + dwarvenOnlyFishingSkillCount + " Dwarven only fishing skills.");
+		LOGGER.info(className + ": Loaded " + _collectSkillTree.size() + " collect skills.");
+		LOGGER.info(className + ": Loaded " + _pledgeSkillTree.size() + " clan skills, " + (_pledgeSkillTree.size() - resSkillCount) + " for clan and " + resSkillCount + " residential.");
+		LOGGER.info(className + ": Loaded " + _subPledgeSkillTree.size() + " sub-pledge skills.");
+		LOGGER.info(className + ": Loaded " + _transformSkillTree.size() + " transform skills.");
+		LOGGER.info(className + ": Loaded " + _nobleSkillTree.size() + " noble skills.");
+		LOGGER.info(className + ": Loaded " + _heroSkillTree.size() + " hero skills.");
+		LOGGER.info(className + ": Loaded " + _gameMasterSkillTree.size() + " game master skills.");
+		LOGGER.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " game master aura skills.");
 		final int commonSkills = _commonSkillTree.size();
 		if (commonSkills > 0)
 		{
-			LOGGER.info(className + ": Loaded " + commonSkills + " Common Skills to all classes.");
+			LOGGER.info(className + ": Loaded " + commonSkills + " common skills.");
 		}
 	}
 	

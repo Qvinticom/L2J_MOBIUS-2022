@@ -20,13 +20,12 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.fishing.FishingRod;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * This class holds the Fishing Rods information.
@@ -49,7 +48,7 @@ public final class FishingRodsData implements IXmlReader
 	{
 		_fishingRods.clear();
 		parseDatapackFile("data/stats/fishing/fishingRods.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fishingRods.size() + " Fishing Rods.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fishingRods.size() + " fishing rods.");
 	}
 	
 	@Override

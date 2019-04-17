@@ -23,10 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.MacroType;
 import org.l2jmobius.gameserver.enums.ShortcutType;
@@ -37,6 +33,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * This class holds the Initial Shortcuts information.<br>
@@ -67,9 +66,9 @@ public final class InitialShortcutData implements IXmlReader
 		
 		parseDatapackFile("data/stats/initialShortcuts.xml");
 		
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialGlobalShortcutList.size() + " Initial Global Shortcuts data.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialShortcutData.size() + " Initial Shortcuts data.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _macroPresets.size() + " Macros presets.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialGlobalShortcutList.size() + " initial global shortcuts data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _initialShortcutData.size() + " initial shortcuts data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _macroPresets.size() + " macro presets.");
 	}
 	
 	@Override

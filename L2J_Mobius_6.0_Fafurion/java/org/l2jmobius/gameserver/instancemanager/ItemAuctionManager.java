@@ -28,14 +28,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * @author Forsaiken
@@ -77,7 +76,7 @@ public final class ItemAuctionManager implements IXmlReader
 	{
 		_managerInstances.clear();
 		parseDatapackFile("data/ItemAuctions.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instance(s).");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instances.");
 	}
 	
 	@Override

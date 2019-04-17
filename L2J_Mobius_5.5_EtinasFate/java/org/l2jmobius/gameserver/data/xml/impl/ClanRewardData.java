@@ -24,15 +24,14 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.enums.ClanRewardType;
 import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * @author UnAfraid
@@ -53,7 +52,7 @@ public class ClanRewardData implements IXmlReader
 		parseDatapackFile("config/ClanReward.xml");
 		for (ClanRewardType type : ClanRewardType.values())
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type);
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_clanRewards.containsKey(type) ? _clanRewards.get(type).size() : 0) + " rewards for " + type + ".");
 		}
 	}
 	
