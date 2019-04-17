@@ -778,13 +778,25 @@
 	<item id="48250" name="Herphah's Support Box" type="EtcItem">
 		<!-- A support box received after completing Herphah's mission. Double-click to obtain various items needed for growth. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33780" min="5000" max="5000" chance="100" /> <!-- soulshots -r-grade-event -->
+			<item id="34616" min="3500" max="3500" chance="100" /> <!--blessed spiritshots r-grade-event -->
+			<item id="35675" min="5" max="5" chance="100" /> <!-- high-grade elixier of life r-grade -->
+			<item id="35676" min="5" max="5" chance="100" /> <!-- high-grade elixier of mind r-grade -->
+		</capsuled_items>
 	</item>
 	<item id="48251" name="Herphah's Completion Box" type="EtcItem">
 		<!-- A support box received after competing all of Herphah's missions. Opening this box requires Herphah's Support Box Key, which can be obtained by completing other missions from Herphah. -->
