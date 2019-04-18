@@ -337,6 +337,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48534" name="Dust of Destroyed Demon" type="EtcItem">
 		<!-- The item that Corzet asked you to gather as evidence of defeating demons in the Silent Valley. -->
@@ -348,6 +349,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48535" name="Scroll of Escape - Silent Valley" type="EtcItem">
 		<!-- Use the scroll to teleport to the Silent Valley. -->

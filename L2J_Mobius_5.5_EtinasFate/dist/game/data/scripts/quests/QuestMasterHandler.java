@@ -408,6 +408,8 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
+import quests.custom.Q00590_ToEachTheirOwn.Q00590_ToEachTheirOwn;
 import quests.not_done.*;
 
 /**
@@ -543,8 +545,8 @@ public class QuestMasterHandler
 		Q00586_MutatedCreatures.class, // TODO: Not done.
 		Q00587_MoreAggressiveOperation.class, // TODO: Not done.
 		Q00588_HeadOnCrash.class, // TODO: Not done.
-		Q00589_ASecretChange.class, // TODO: Not done.
-		Q00590_ToEachTheirOwn.class, // TODO: Not done.
+		Q00589_ASecretChange.class, // FIXME: Custom.
+		Q00590_ToEachTheirOwn.class, // FIXME: Custom.
 		Q00591_GreatAmbitions.class, // TODO: Not done.
 		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
 		Q00600_KeyToTheRefiningProcess.class, // TODO: Not done.
