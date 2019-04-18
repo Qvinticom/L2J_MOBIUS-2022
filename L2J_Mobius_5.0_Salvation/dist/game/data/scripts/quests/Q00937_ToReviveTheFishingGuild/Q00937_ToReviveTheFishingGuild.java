@@ -62,6 +62,7 @@ public class Q00937_ToReviveTheFishingGuild extends Quest
 	private static final int BATIDAE = 31989;
 	private static final int EINDARKNER = 31697;
 	private static final int GALBA = 32007;
+	private static final int SANTIAGO = 34138;
 	// Reward
 	private static final int BASIC_SUPPLY_BOX = 47571;
 	private static final int INTERMEDIATE_SUPPLY_BOX = 47572;
@@ -72,8 +73,8 @@ public class Q00937_ToReviveTheFishingGuild extends Quest
 	public Q00937_ToReviveTheFishingGuild()
 	{
 		super(937);
-		addStartNpc(OFULLE, LINNAEUS, PERELIN, BLEAKER, CYANO, PAMFUS, LANOSCO, HUFS, MONAKAN, BERIX, LITULON, WILLIE, HILGENDORF, PLATIS, KLAUS, BATIDAE, EINDARKNER, GALBA);
-		addTalkId(OFULLE, LINNAEUS, PERELIN, BLEAKER, CYANO, PAMFUS, LANOSCO, HUFS, MONAKAN, BERIX, LITULON, WILLIE, HILGENDORF, PLATIS, KLAUS, BATIDAE, EINDARKNER, GALBA);
+		addStartNpc(OFULLE, LINNAEUS, PERELIN, BLEAKER, CYANO, PAMFUS, LANOSCO, HUFS, MONAKAN, BERIX, LITULON, WILLIE, HILGENDORF, PLATIS, KLAUS, BATIDAE, EINDARKNER, GALBA, SANTIAGO);
+		addTalkId(OFULLE, LINNAEUS, PERELIN, BLEAKER, CYANO, PAMFUS, LANOSCO, HUFS, MONAKAN, BERIX, LITULON, WILLIE, HILGENDORF, PLATIS, KLAUS, BATIDAE, EINDARKNER, GALBA, SANTIAGO);
 		addCondMinLevel(MIN_LEVEL, "noLevel.htm");
 	}
 	
@@ -174,6 +175,7 @@ public class Q00937_ToReviveTheFishingGuild extends Quest
 			{
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
+			sendNpcLogList(player);
 		}
 	}
 	

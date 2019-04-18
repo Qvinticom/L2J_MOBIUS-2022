@@ -4,6 +4,9 @@
 	<xpRate min="1" max="1" /> <!-- XP modifiction rate -->
 	<spRate min="1" max="1" /> <!-- SP modifiction rate -->
 	<baits>
+		<bait itemId="46737" minPlayerLevel="95" chance="40" timeMin="105000" waitMin="15000" > <!-- Practice Bait -->
+			<catch itemId="46736" chance="70" multiplier="1" /> <!-- Practice Fish -->
+		</bait>	
 		<bait itemId="47547" minPlayerLevel="85" chance="40" timeMin="105000" waitMin="15000" > <!-- Bait -->
 			<catch itemId="47550" chance="70" multiplier="1" /> <!-- Ugly Fish -->
 			<catch itemId="47551" chance="25" multiplier="1" /> <!-- Nimble Fish -->

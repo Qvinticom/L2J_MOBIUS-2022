@@ -306,6 +306,8 @@ import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
 import quests.Q10560_WayOfWanderingKnight.Q10560_WayOfWanderingKnight;
 import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
 import quests.Q10562_TakeUpArms.Q10562_TakeUpArms;
+import quests.Q10566_BestChoice.Q10566_BestChoice;
+import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -831,14 +833,14 @@ public class QuestMasterHandler
 		Q10563_ControlOfPower.class, // TODO: Not done.
 		Q10564_ProveProgress.class, // TODO: Not done.
 		Q10565_NothingIsImpossible.class, // TODO: Not done.
-		Q10566_BestChoice.class, // TODO: Not done.
+		Q10566_BestChoice.class,
 		Q10567_SpecialMissionNornilsGarden.class, // TODO: Not done.
 		Q10568_KamaelsTechnologicalAdvancement.class, // TODO: Not done.
 		Q10569_DeclarationOfWar.class, // TODO: Not done.
 		Q10570_HurrahForKamaelsIndependence.class, // TODO: Not done.
 		Q10571_StrategicReconciliation.class, // TODO: Not done.
 		Q10572_ToExpelTheEmbryosForces.class, // TODO: Not done.
-		Q10575_LetsGoFishing.class, // TODO: Not done.
+		Q10575_LetsGoFishing.class,
 		Q10576_GlitteringWeapons.class, // TODO: Not done.
 		Q10577_TemperARustingBlade.class, // TODO: Not done.
 		Q10578_TheSoulOfASword.class, // TODO: Not done.
