@@ -410,6 +410,9 @@ import quests.custom.Q00683_AdventOfKrofinSubspecies.Q00683_AdventOfKrofinSubspe
 import quests.custom.Q00684_DisturbedFields.Q00684_DisturbedFields;
 import quests.custom.Q10516_UnveiledFafurionTemple.Q10516_UnveiledFafurionTemple;
 import quests.custom.Q10517_FafurionsMinions.Q10517_FafurionsMinions;
+import quests.custom.Q10518_SucceedingThePriestess.Q10518_SucceedingThePriestess;
+import quests.custom.Q10519_ControllingYourTemper.Q10519_ControllingYourTemper;
+import quests.custom.Q10520_TempleGuardians.Q10520_TempleGuardians;
 import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
 import quests.not_done.*;
 
@@ -787,9 +790,9 @@ public class QuestMasterHandler
 		Q10505_JewelOfValakas.class,
 		Q10516_UnveiledFafurionTemple.class, // FIXME: Custom.
 		Q10517_FafurionsMinions.class, // FIXME: Custom.
-		Q10518_SucceedingThePriestess.class, // TODO: Not done.
-		Q10519_ControllingYourTemper.class, // TODO: Not done.
-		Q10520_TempleGuardians.class, // TODO: Not done.
+		Q10518_SucceedingThePriestess.class, // FIXME: Custom.
+		Q10519_ControllingYourTemper.class, // FIXME: Custom.
+		Q10520_TempleGuardians.class, // FIXME: Custom.
 		Q10521_QueenNavarisLetterVarkaSilenosBarracks.class,
 		Q10522_TheDarkSecretOfVarkaSilenos.class,
 		Q10523_TheAssassinationOfTheVarkaSilenosCommander.class,

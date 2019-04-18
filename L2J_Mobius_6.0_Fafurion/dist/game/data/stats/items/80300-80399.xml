@@ -346,6 +346,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80326" name="Broken Contract Fragments" type="EtcItem">
 		<!-- Proof that the contract between the priestess kin and Fafurion is weakening after the death of Priestess Parme. This fragment of the contract may lead you to find clues to Fafurion. Gather them and take them to Lionel Hunter in Heine. -->
@@ -357,6 +358,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80327" name="Recipe: Krishna Dual Sword (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Krishna Dual Sword. Requires Create Item - Skill Level 15. The success rate is 60%. -->
