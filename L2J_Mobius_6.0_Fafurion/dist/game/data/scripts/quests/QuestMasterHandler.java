@@ -414,6 +414,7 @@ import quests.custom.Q10518_SucceedingThePriestess.Q10518_SucceedingThePriestess
 import quests.custom.Q10519_ControllingYourTemper.Q10519_ControllingYourTemper;
 import quests.custom.Q10520_TempleGuardians.Q10520_TempleGuardians;
 import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTowersResearchFloatingSeaJournal;
+import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
 import quests.not_done.*;
 
 /**
@@ -805,7 +806,7 @@ public class QuestMasterHandler
 		Q10530_KekropusLetterTheDragonsTransition.class,
 		Q10531_OddHappeningsAtDragonValley.class, // TODO: Not done.
 		Q10532_UncoveringTheConspiracy.class, // TODO: Not done.
-		Q10533_OrfensAmbition.class, // TODO: Not done.
+		Q10533_OrfensAmbition.class, // FIXME: Custom.
 		Q10534_HatchlingResearch.class,
 		Q10535_BlacksmithsSoul3.class, // TODO: Not done.
 		Q10537_KamaelDisarray.class, // TODO: Not done.
