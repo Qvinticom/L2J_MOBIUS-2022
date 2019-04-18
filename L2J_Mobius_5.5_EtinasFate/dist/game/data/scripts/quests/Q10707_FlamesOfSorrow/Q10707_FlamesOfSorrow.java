@@ -16,18 +16,25 @@
  */
 package quests.Q10707_FlamesOfSorrow;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
+import quests.Q10395_NotATraitor.Q10395_NotATraitor;
+
 /**
  * Flames of Sorrow (10707)
+ * @URL https://l2wiki.com/Flames_of_Sorrow
  * @author St3eT
+ * @author Night
  */
 public final class Q10707_FlamesOfSorrow extends Quest
 {
@@ -38,9 +45,13 @@ public final class Q10707_FlamesOfSorrow extends Quest
 	private static final int SPIRIT = 33959;
 	// Items
 	private static final int MARK = 39508; // Mark of Gratitude
+	// Rewards
+	private static final int XP = 14518600; // Experience points
+	private static final int SP = 756; // Skill Points
 	// Misc
 	private static final int MIN_LEVEL = 46;
 	private static final int MAX_LEVEL = 51;
+	private static final int NPCSTRING_ID = NpcStringId.LV_46_56_FLAMES_OF_SORROW_IN_PROGRESS.getId();
 	private static final NpcStringId[] RANDOM_MSGS =
 	{
 		NpcStringId.WE_WILL_NOT_TURN_BACK,
@@ -56,8 +67,7 @@ public final class Q10707_FlamesOfSorrow extends Quest
 		addKillId(VENGEFUL_SPIRIT);
 		registerQuestItems(MARK);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33863-07.htm");
-		// TODO: Pre-Quest removed with Etina's Fate.
-		// addCondCompletedQuest(Q10395_NotATraitor.class.getSimpleName(), "33863-07.htm");
+		addCondCompletedQuest(Q10395_NotATraitor.class.getSimpleName(), "33863-07.htm");
 	}
 	
 	@Override
@@ -86,27 +96,19 @@ public final class Q10707_FlamesOfSorrow extends Quest
 			}
 			case "33863-06.html":
 			{
-				if (qs.isCond(2))
-				{
-					qs.exitQuest(false, true);
-					giveStoryQuestReward(npc, player);
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						addExpAndSp(player, 6049417, 378);
-					}
-					htmltext = event;
-				}
+				qs.exitQuest(false, true);
+				giveStoryQuestReward(npc, player);
+				addExpAndSp(player, XP, SP);
+				htmltext = event;
 				break;
 			}
 			case "spawnMonster":
 			{
-				if (qs.isCond(1))
-				{
-					npc.deleteMe();
-					final Npc spirit = addSpawn(VENGEFUL_SPIRIT, player, true, 60000);
-					addAttackPlayerDesire(spirit, player);
-					spirit.broadcastSay(ChatType.NPC_GENERAL, RANDOM_MSGS[getRandom(RANDOM_MSGS.length)]);
-				}
+				npc.deleteMe();
+				final Npc spirit = addSpawn(VENGEFUL_SPIRIT, player, true, 60000);
+				addAttackPlayerDesire(spirit, player);
+				spirit.broadcastSay(ChatType.NPC_GENERAL, RANDOM_MSGS[getRandom(RANDOM_MSGS.length)]);
+				qs.setCond(2, false);
 				break;
 			}
 		}
@@ -133,14 +135,7 @@ public final class Q10707_FlamesOfSorrow extends Quest
 			{
 				if (npc.getId() == LEO)
 				{
-					if (qs.isCond(1))
-					{
-						htmltext = "33863-04.html";
-					}
-					else if (qs.isCond(2))
-					{
-						htmltext = "33863-05.html";
-					}
+					htmltext = (qs.getCond() < 4) ? "33863-04.html" : "33863-05.html";
 				}
 				break;
 			}
@@ -157,29 +152,43 @@ public final class Q10707_FlamesOfSorrow extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if ((qs != null) && qs.isStarted() && qs.isCond(1) && (getRandom(100) < 75))
+		if ((qs != null) && qs.isStarted() && (qs.getCond() < 4) && (getRandom(100) < 75))
 		{
-			giveItems(killer, MARK, 1);
-			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			final Npc spirit = addSpawn(SPIRIT, npc, false, 5000);
 			spirit.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_DELIVER_THIS_MARK_OF_GRATITUDE_TO_LEO);
+			qs.setCond(3, false);
+			giveItems(player, MARK, 1, true);
 			
-			if (getQuestItemsCount(killer, MARK) == 10)
+			if (getQuestItemsCount(player, MARK) >= 10)
 			{
-				qs.setCond(2, true);
+				qs.setCond(4, true);
 			}
+			sendNpcLogList(player);
 		}
-		return super.onKill(npc, killer, isSummon);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(3))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			holder.add(new NpcLogListHolder(NPCSTRING_ID, true, (int) getQuestItemsCount(player, MARK)));
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 	
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		return(qs != null) && qs.isCond(1) ? "19545.html" : "19545-no.html";
+		return (qs != null) && (qs.getCond() < 4) ? "19545.html" : "19545-no.html";
 	}
 }
