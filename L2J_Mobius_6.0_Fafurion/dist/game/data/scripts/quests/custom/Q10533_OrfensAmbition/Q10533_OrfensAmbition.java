@@ -48,7 +48,7 @@ public class Q10533_OrfensAmbition extends Quest
 	public Q10533_OrfensAmbition()
 	{
 		super(10533);
-		addStartNpc(START_NPC, TALK_NPC_1);
+		addStartNpc(START_NPC);
 		addTalkId(START_NPC, TALK_NPC_1);
 		addKillId(BOSS_IDS);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
