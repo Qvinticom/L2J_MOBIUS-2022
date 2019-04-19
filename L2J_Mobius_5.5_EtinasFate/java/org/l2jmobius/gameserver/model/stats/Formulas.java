@@ -92,6 +92,8 @@ public final class Formulas
 				return 1;
 			}
 		}
+		// TODO: Find proper defence formula.
+		defence = target.getLevel() > 99 ? defence / 10 : defence;
 		
 		// Critical
 		final double criticalMod = (attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1));
@@ -114,16 +116,16 @@ public final class Formulas
 		final double isPosition = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 		
 		// Mobius: Manage level difference.
-		if (attacker.getLevel() < target.getLevel())
-		{
-			power *= 1 - (Math.min(target.getLevel() - attacker.getLevel(), 9) / 10);
-		}
+		// if (attacker.getLevel() < target.getLevel())
+		// {
+		// power *= 1 - (Math.min(target.getLevel() - attacker.getLevel(), 9) / 10);
+		// }
 		
 		// ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
 		// ATTACK CALCULATION 77 * [(skillpower+patk) * 0.666 * cdbonus * cdPosBonusHalf * cdVulnHalf * ss + isBack0.2Side0.05 * (skillpower+patk*ss) * random + 6 * cd_patk] / pdef
 		// ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
-		final double baseMod = ((77 * (((power + attacker.getPAtk()) * 0.666 * ssmod * cdMult) + (isPosition * (power + (attacker.getPAtk() * ssmod)) * randomMod) + (6 * cdPatk))) / defence);
-		final double damage = baseMod * weaponTraitMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
+		final double baseMod = ((77 * (((power + attacker.getPAtk()) * 0.666) + (isPosition * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence);
+		final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
 		
 		return damage;
 	}
@@ -141,7 +143,9 @@ public final class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
 		
 		// MDAM Formula.
-		double damage = ((attacker.getINT() * power * Math.sqrt(mAtk)) / (mDef / attacker.getLevelMod())) * shotsBonus;
+		// TODO: Find proper mDefence formula.
+		mDef = target.getLevel() > 99 ? mDef / 3.33 : mDef;
+		double damage = ((attacker.getINT() * power * Math.sqrt(mAtk)) / mDef) * shotsBonus;
 		
 		// Failure calculation
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill))

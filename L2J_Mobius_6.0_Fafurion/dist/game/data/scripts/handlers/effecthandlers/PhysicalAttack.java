@@ -137,6 +137,9 @@ public final class PhysicalAttack extends AbstractEffect
 		
 		if (defence != -1)
 		{
+			// TODO: Find proper defence formula.
+			defence = effected.getLevel() > 99 ? defence / 10 : defence;
+			
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
@@ -165,7 +168,7 @@ public final class PhysicalAttack extends AbstractEffect
 			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / (defence / effector.getLevelMod());
+			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / defence;
 			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
 			damage += effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 		}
