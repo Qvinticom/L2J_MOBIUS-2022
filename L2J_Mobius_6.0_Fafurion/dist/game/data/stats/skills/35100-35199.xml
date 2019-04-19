@@ -1965,7 +1965,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>900000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2065,7 +2065,7 @@
 		</abnormalTime>
 		<coolTime>300</coolTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>900000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2102,7 +2102,7 @@
 	<skill id="35190" toLevel="18" name="Dragon Rise">
 		<!-- Removes all debuffs from you and excludes you from enemy's target for $s1 -->
 		<icon>icon.skill35190</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<abnormalLvl>85</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="12">5</value>
@@ -2118,53 +2118,56 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="CpHealPercent">
+				<power>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</power>
+			</effect>
+			<effect name="HealPercent">
+				<power>
+					<value fromLevel="1" toLevel="6">0</value>
+					<value fromLevel="7" toLevel="9">10</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">20</value>
+					<value level="13">30</value>
+					<value level="14">30</value>
+					<value level="15">30</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">50</value>
+				</power>
+			</effect>
 			<effect name="Untargetable" />
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>20</max>
-			</effect>
-			<effect name="CpHealPercent">
-				<amount>
-					<value fromLevel="7" toLevel="9">10</value>
-					<value level="10">15</value>
-					<value level="11">15</value>
-					<value level="12">20</value>
-					<value level="13">30</value>
-					<value level="14">30</value>
-					<value level="15">30</value>
-					<value level="16">35</value>
-					<value level="17">35</value>
-					<value level="18">50</value>
-				</amount>
-			</effect>
-			<effect name="ManaHealPercent">
-				<amount>
-					<value fromLevel="7" toLevel="9">10</value>
-					<value level="10">15</value>
-					<value level="11">15</value>
-					<value level="12">20</value>
-					<value level="13">30</value>
-					<value level="14">30</value>
-					<value level="15">30</value>
-					<value level="16">35</value>
-					<value level="17">35</value>
-					<value level="18">50</value>
-				</amount>
-			</effect>
-			<effect name="HealPercent">
-				<amount>
-					<value fromLevel="7" toLevel="9">10</value>
-					<value level="10">15</value>
-					<value level="11">15</value>
-					<value level="12">20</value>
-					<value level="13">30</value>
-					<value level="14">30</value>
-					<value level="15">30</value>
-					<value level="16">35</value>
-					<value level="17">35</value>
-					<value level="18">50</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>

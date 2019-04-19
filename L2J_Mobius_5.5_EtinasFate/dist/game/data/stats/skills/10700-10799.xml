@@ -1106,10 +1106,8 @@
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
-		<affectScope>SQUARE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<fanRange>0;0;1100;50</fanRange>
-		<affectLimit>5-12</affectLimit>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1120,7 +1118,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="AirBind" />
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">20814</value>

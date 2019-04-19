@@ -853,17 +853,259 @@
 	<skill id="19552" toLevel="11" name="Burning Chain Lash">
 		<!-- Wields the Burning Chain to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Also puts them into the Ignite state for $s2. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19556</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>90</activateRate>
+		<activateRate>80</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">92</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">98</value>
+			<value level="9">101</value>
+			<value level="10">103</value>
+			<value level="11">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">159</value>
+			<value level="2">162</value>
+			<value level="3">167</value>
+			<value level="4">173</value>
+			<value level="5">179</value>
+			<value level="6">184</value>
+			<value level="7">190</value>
+			<value level="8">196</value>
+			<value level="9">202</value>
+			<value level="10">206</value>
+			<value level="11">210</value>
+		</mpConsume>
+		<hitTime>2500</hitTime>
+		<coolTime>370</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>
+			<value level="1">-1378</value>
+			<value level="2">-1383</value>
+			<value level="3">-1392</value>
+			<value level="4">-1400</value>
+			<value level="5">-1407</value>
+			<value level="6">-1414</value>
+			<value level="7">-1420</value>
+			<value level="8">-1425</value>
+			<value level="9">-1430</value>
+			<value level="10">-1435</value>
+			<value level="11">-1440</value>
+		</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<affectHeight>-100;200</affectHeight>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">14300</value>
+					<value level="2">14789</value>
+					<value level="3">15769</value>
+					<value level="4">16748</value>
+					<value level="5">17727</value>
+					<value level="6">18707</value>
+					<value level="7">19686</value>
+					<value level="8">20666</value>
+					<value level="9">23468</value>
+					<value level="10">24612</value>
+					<value level="11">25756</value>
+				</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19553" toLevel="7" name="Revenging Thorn">
 		<!-- Shoots Revenging Thorns to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Recovers $s2 HP and has longer range and stronger effect if cast with Lv. 5 Grand Fortress. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19553</icon>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<activateRate>60</activateRate>
+		<affectRange>400</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>
+			<value level="1">-4312</value>
+			<value level="2">-4427</value>
+			<value level="3">-4544</value>
+			<value level="4">-4661</value>
+			<value level="5">-4778</value>
+			<value level="6">-4895</value>
+			<value level="7">-5013</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">98</value>
+			<value level="3">101</value>
+			<value level="4">103</value>
+			<value level="5">105</value>
+			<value level="6">107</value>
+			<value level="7">109</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">51</value>
+			<value level="5">53</value>
+			<value level="6">55</value>
+			<value level="7">57</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BLUNT</item>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">34353</value>
+					<value level="2">35201</value>
+					<value level="3">36897</value>
+					<value level="4">38593</value>
+					<value level="5">40289</value>
+					<value level="6">42087</value>
+					<value level="7">43885</value>
+				</power>
+				<overHit>true</overHit>
+				<chance>90</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
+		<selfEffects>
+			<effect name="HealPercent">
+				<power>5</power>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19554" toLevel="7" name="Revenging Black Thorn">
 		<!-- Shoots Revenging Thorns to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Recovers $s2 HP and has longer range and stronger effect if cast with Lv. 5 Grand Fortress. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19553</icon>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<activateRate>60</activateRate>
+		<affectRange>400</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>
+			<value level="1">-4312</value>
+			<value level="2">-4427</value>
+			<value level="3">-4544</value>
+			<value level="4">-4661</value>
+			<value level="5">-4778</value>
+			<value level="6">-4895</value>
+			<value level="7">-5013</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">98</value>
+			<value level="3">101</value>
+			<value level="4">103</value>
+			<value level="5">105</value>
+			<value level="6">107</value>
+			<value level="7">109</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">51</value>
+			<value level="5">53</value>
+			<value level="6">55</value>
+			<value level="7">57</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<hitTime>3500</hitTime>
+		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BLUNT</item>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">35222</value>
+					<value level="2">35826</value>
+					<value level="3">43471</value>
+					<value level="4">45591</value>
+					<value level="5">47711</value>
+					<value level="6">49958</value>
+					<value level="7">52205</value>
+				</power>
+				<overHit>true</overHit>
+				<chance>90</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
+		<selfEffects>
+			<effect name="HealPercent">
+				<power>50</power>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19555" toLevel="7" name="Maelstrom">
 		<!-- Creates a cyclone to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
@@ -943,42 +1185,575 @@
 	<skill id="19556" toLevel="7" name="Inhale Soul">
 		<!-- Creates a pit of darkness to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19555</icon>
-		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>400</affectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">98</value>
+			<value level="3">101</value>
+			<value level="4">103</value>
+			<value level="5">105</value>
+			<value level="6">107</value>
+			<value level="7">109</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">51</value>
+			<value level="5">53</value>
+			<value level="6">55</value>
+			<value level="7">57</value>
+		</mpConsume>
+		<hitTime>3500</hitTime>
+		<coolTime>370</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>
+			<value level="1">-1378</value>
+			<value level="2">-1383</value>
+			<value level="3">-1392</value>
+			<value level="4">-1400</value>
+			<value level="5">-1407</value>
+			<value level="6">-1414</value>
+			<value level="7">-1420</value>
+		</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<affectHeight>-100;200</affectHeight>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<abnormalTime>5</abnormalTime>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">35222</value>
+					<value level="2">38826</value>
+					<value level="3">43471</value>
+					<value level="4">45591</value>
+					<value level="5">47711</value>
+					<value level="6">49958</value>
+					<value level="7">52205</value>
+				</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19557" toLevel="5" name="Inhale Soul">
 		<!-- Creates a pit of darkness to draw nearby enemies to you. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill19555</icon>
-		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>400</affectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">98</value>
+			<value level="3">101</value>
+			<value level="4">103</value>
+			<value level="5">105</value>
+			<value level="6">107</value>
+			<value level="7">109</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">51</value>
+			<value level="5">53</value>
+			<value level="6">55</value>
+			<value level="7">57</value>
+		</mpConsume>
+		<hitTime>3500</hitTime>
+		<coolTime>370</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>
+			<value level="1">-1378</value>
+			<value level="2">-1383</value>
+			<value level="3">-1392</value>
+			<value level="4">-1400</value>
+			<value level="5">-1407</value>
+			<value level="6">-1414</value>
+			<value level="7">-1420</value>
+		</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<affectHeight>-100;200</affectHeight>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">35222</value>
+					<value level="2">38826</value>
+					<value level="3">43471</value>
+					<value level="4">45591</value>
+					<value level="5">47711</value>
+					<value level="6">49958</value>
+					<value level="7">52205</value>
+				</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19558" toLevel="7" name="Flame Feather">
 		<!-- Fires the Flame of Phoenix to attack nearby enemies with $s1 Power added to P. Atk. and provoke them into attacking you for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19552</icon>
-		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>400</affectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">95</value>
+			<value level="2">98</value>
+			<value level="3">101</value>
+			<value level="4">103</value>
+			<value level="5">105</value>
+			<value level="6">107</value>
+			<value level="7">109</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">51</value>
+			<value level="5">53</value>
+			<value level="6">55</value>
+			<value level="7">57</value>
+		</mpConsume>
+		<hitTime>3500</hitTime>
+		<coolTime>370</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>
+			<value level="1">-1378</value>
+			<value level="2">-1383</value>
+			<value level="3">-1392</value>
+			<value level="4">-1400</value>
+			<value level="5">-1407</value>
+			<value level="6">-1414</value>
+			<value level="7">-1420</value>
+		</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<affectHeight>-100;200</affectHeight>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<abnormalTime>5</abnormalTime>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">35222</value>
+					<value level="2">38826</value>
+					<value level="3">43471</value>
+					<value level="4">45591</value>
+					<value level="5">47711</value>
+					<value level="6">49958</value>
+					<value level="7">52205</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
+			<effect name="AddHate">
+				<power>500</power>
+			</effect>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
+		</effects>
 	</skill>
 	<skill id="19559" toLevel="11" name="Black Thorn Chain Strike">
 		<!-- Swings the Black Thorn Chain to attack the target and enemies on the path with $s1 Power added to P. Atk. and draw them to you. Also recovers your HP by $s2. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill19557</icon>
+		<affectLimit>5-12</affectLimit>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<activateRate>60</activateRate>
+		<nextAction>ATTACK</nextAction>
+		<affectRange>600</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>
+			<value level="1">-4312</value>
+			<value level="2">-4427</value>
+			<value level="3">-4544</value>
+			<value level="4">-4661</value>
+			<value level="5">-4778</value>
+			<value level="6">-4895</value>
+			<value level="7">-5013</value>
+			<value level="8">-5013</value>
+			<value level="9">-5013</value>
+			<value level="10">-5013</value>
+			<value level="11">-5013</value>
+		</effectPoint>
+		<effectRange>600</effectRange>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">89</value>
+			<value level="2">91</value>
+			<value level="3">93</value>
+			<value level="4">95</value>
+			<value level="5">97</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+			<value level="10">107</value>
+			<value level="11">109</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">44</value>
+			<value level="3">48</value>
+			<value level="4">51</value>
+			<value level="5">53</value>
+			<value level="6">55</value>
+			<value level="7">57</value>
+			<value level="8">57</value>
+			<value level="9">57</value>
+			<value level="10">57</value>
+			<value level="11">57</value>
+		</mpConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>45000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;600;180</fanRange>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<lvlBonusRate>1</lvlBonusRate>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BLUNT</item>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">10833</value>
+					<value level="2">11492</value>
+					<value level="3">12150</value>
+					<value level="4">12809</value>
+					<value level="5">13468</value>
+					<value level="6">14126</value>
+					<value level="7">14897</value>
+					<value level="8">15623</value>
+					<value level="9">16349</value>
+					<value level="10">17119</value>
+					<value level="11">17889</value>
+				</power>
+				<overHit>true</overHit>
+				<chance>90</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
+		<selfEffects>
+			<effect name="HealPercent">
+				<power>10</power>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19560" toLevel="9" name="Rising Tide Circle">
 		<!-- Creates a circular wave to draw enemies close and decrease Atk. Spd./ Casting Spd. by $s1 and Speed by $s2. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill19558</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">1</value>
+			<value level="3">1</value>
+			<value level="4">2</value>
+			<value level="5">2</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">4</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ALL_SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>
+			<value level="1">-523</value>
+			<value level="2">-549</value>
+			<value level="3">-566</value>
+			<value level="4">-582</value>
+			<value level="5">-597</value>
+			<value level="6">-611</value>
+			<value level="7">-624</value>
+			<value level="8">-635</value>
+			<value level="9">-646</value>
+		</effectPoint>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">58</value>
+			<value level="3">60</value>
+			<value level="4">62</value>
+			<value level="5">64</value>
+			<value level="6">66</value>
+			<value level="7">68</value>
+			<value level="8">70</value>
+			<value level="9">72</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">78</value>
+			<value level="2">84</value>
+			<value level="3">87</value>
+			<value level="4">90</value>
+			<value level="5">93</value>
+			<value level="6">96</value>
+			<value level="7">99</value>
+			<value level="8">102</value>
+			<value level="9">105</value>
+		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>15000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>BLUNT</item>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Speed">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">-72</value>
+					<value level="2">-72</value>
+					<value level="3">-74</value>
+					<value level="4">-74</value>
+					<value level="5">-76</value>
+					<value level="6">-76</value>
+					<value level="7">-78</value>
+					<value level="8">-78</value>
+					<value level="9">-80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">-72</value>
+					<value level="2">-72</value>
+					<value level="3">-74</value>
+					<value level="4">-74</value>
+					<value level="5">-76</value>
+					<value level="6">-76</value>
+					<value level="7">-78</value>
+					<value level="8">-78</value>
+					<value level="9">-80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19561" toLevel="11" name="Chained Death Scythe">
-		<!-- Summons a scythe to attack the target and nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
+		<!-- Summons a scythe to attack the target and nearby enemies with 17889 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill19559</icon>
-		<operateType>A1</operateType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<lvlBonusRate>2</lvlBonusRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
+		<magicLvl>
+			<value level="1">89</value>
+			<value level="2">91</value>
+			<value level="3">93</value>
+			<value level="4">95</value>
+			<value level="5">97</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+			<value level="10">107</value>
+			<value level="11">109</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<mpConsume>
+			<value level="1">166</value>
+			<value level="2">173</value>
+			<value level="3">179</value>
+			<value level="4">185</value>
+			<value level="5">191</value>
+			<value level="6">197</value>
+			<value level="7">199</value>
+			<value level="8">201</value>
+			<value level="9">203</value>
+			<value level="10">205</value>
+			<value level="11">207</value>
+		</mpConsume>
+		<hitTime>3500</hitTime>
+		<coolTime>370</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>
+			<value level="1">-1378</value>
+			<value level="2">-1383</value>
+			<value level="3">-1392</value>
+			<value level="4">-1400</value>
+			<value level="5">-1407</value>
+			<value level="6">-1414</value>
+			<value level="7">-1420</value>
+			<value level="8">-1425</value>
+			<value level="9">-1430</value>
+			<value level="10">-1435</value>
+			<value level="11">-1440</value>
+		</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<affectHeight>-100;200</affectHeight>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">10833</value>
+					<value level="2">11492</value>
+					<value level="3">12150</value>
+					<value level="4">12809</value>
+					<value level="5">13468</value>
+					<value level="6">14126</value>
+					<value level="7">14897</value>
+					<value level="8">15623</value>
+					<value level="9">16349</value>
+					<value level="10">17119</value>
+					<value level="11">17889</value>
+				</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19562" toLevel="7" name="Reborn from Ashes">
 		<!-- Becomes invincible for $s1 and recovers $s2 HP under the Protection of Phoenix. -->
 		<icon>icon.skill19565</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
+		<operateType>A2</operateType>
+		<magicLvl>97</magicLvl>
+		<mpConsume>73</mpConsume>
+		<hitTime>500</hitTime>
+		<coolTime>200</coolTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>300000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="HealPercent">
+				<power>
+					<value level="1">20</value>
+					<value level="2">35</value>
+					<value level="3">50</value>
+					<value level="4">65</value>
+					<value level="5">80</value>
+					<value level="6">90</value>
+					<value level="7">100</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19563" toLevel="1" name="Wave Reflection">
 		<!-- Damage Reflection Trigger -->
 		<icon>icon.skill3584</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>10</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19564" toLevel="1" name="Wave Barrier">
 		<!-- For $s1, P. Def. +$s2 and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
@@ -986,21 +1761,31 @@
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>379</effectPoint>
-		<abnormalType>DMG_SHIELD</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>60000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DMG_SHIELD</abnormalType>
 		<effects>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<chance>30</chance>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<allowWeapons>SWORD,BLUNT</allowWeapons>
+				<skillId>19563</skillId> <!-- Wave Reflection -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>50</amount>
-			</effect>
-			<effect name="DamageShield">
-				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1038,6 +1823,17 @@
 		</magicLvl>
 		<mpConsume>8</mpConsume>
 		<effects>
+		<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<chance>30</chance>
+				<targetType>SELFT</targetType>
+				<minDamage>1</minDamage>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>19572</skillId> <!-- Shillien Shadow -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -1373,21 +2169,95 @@
 		<!-- Deactivates the Raise Shield/ Focus Shield if a shield skill is cast. -->
 		<icon>icon.skill10073</icon>
 		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DisableSkill">
+				<disable>10020;10021</disable>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19571" toLevel="1" name="Lightning Strike">
 		<!-- Paralyzed by Vanishing Shock for $s1. -->
 		<icon>icon.skill0279</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="19572" toLevel="1" name="Shillien Shadow">
 		<!-- Removes debuffs and limits the maximum damage received for $s1 to 6666. -->
 		<icon>icon.skill5242</icon>
 		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<abnormalTime>6</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+			<effect name="GetDamageLimit">
+				<amount>6666</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19573" toLevel="9" name="Cubic Fire Bless">
 		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2. Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>20</abnormalTime>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
+		<magicLvl>97</magicLvl>
+		<hitTime>1000</hitTime>
+		<reuseDelay></reuseDelay>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>20</max>
+			</effect>
+			<effect name="Hp">
+				<amount>
+					<value level="1">2000</value>
+					<value level="2">2600</value>
+					<value level="3">3200</value>
+					<value level="4">3800</value>
+					<value level="5">4400</value>
+					<value level="6">5000</value>
+					<value level="7">6000</value>
+					<value level="8">7000</value>
+					<value level="9">8000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-60</amount>
+				<slot>BUFF</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-60</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>19562</skillId> <!-- Reborn from Ashes -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19574" toLevel="1" name="Shield Grab Stance">
 		<!-- If this stance is reused in the two-hand stance or if the shield is equipped or unequipped, the two-hand stance effect will disappear. It is set as unequip_skill for all shield items. -->

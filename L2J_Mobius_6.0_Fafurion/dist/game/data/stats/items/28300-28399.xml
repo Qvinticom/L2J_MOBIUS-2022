@@ -827,6 +827,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28386" min="1" max="1" chance="100" /> <!-- Race Change Ticket -->
+		</capsuled_items>
 	</item>
 	<item id="28386" name="Race Change Ticket" type="EtcItem">
 		<!-- After purchasing a Race Change ticket, you can contact support at, support.lineage2.com, with the subject title of "Character Race Change". \Only characters that have reached at least level 85 and who have completed the 4th Class transfer can request a race change. Note that the following race and class restrictions apply to the race change service. 1.) Ertheia and Kamael classes cannot change to a different race. 2.) Human/ Elf/ Dark Elf/ Orc/ Dwarf races cannot change to the Ertheia or Kamael race. 3.) Orc Overlord/ Dominator/ Iss Dominator as a Mainclass/ Dualclass/ Sublcass cannot change to a different race. 4.) Dwarven Warsmith/ Maestro/ Tyrr Maestro as a Mainclass/ Dualclass/ Sublcass cannot change to a different race. 5.) If switching from a Dwarven race to Human/ Elf/ Dark Elf/ Orc, the character will lose the Dwarven inventory/ warehouse/ private shop bonus slots. -->
@@ -943,6 +947,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28393" min="300" max="300" chance="100" /> <!-- Heine Exclusive Bait Coupons -->
+			<item id="38154" min="300" max="300" chance="100" /> <!-- Fishing Shots -->
+		</capsuled_items>
 	</item>
 	<item id="28396" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
 		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
@@ -951,6 +960,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28393" min="3000" max="3000" chance="100" /> <!-- Heine Exclusive Bait Coupons -->
+			<item id="38154" min="3000" max="3000" chance="100" /> <!-- Fishing Shots -->
+			<item id="45493" min="1" max="1" chance="100" /> <!-- Fishing Rod Pack (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28397" name="2016 World Olympiad Hero XXX's Accessory" type="Armor">
 		<!-- Special hair accessory crafted for the winner of the 2016 World Olympiad, XXX. STR/ INT/ DEX/ WIT/ CON/ MEN +5 when equipped. -->

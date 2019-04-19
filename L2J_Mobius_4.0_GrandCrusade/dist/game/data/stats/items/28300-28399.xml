@@ -940,6 +940,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28393" min="300" max="300" chance="100" /> <!-- Heine Exclusive Bait Coupons -->
+			<item id="38154" min="300" max="300" chance="100" /> <!-- Fishing Shots -->
+		</capsuled_items>
 	</item>
 	<item id="28396" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
 		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->

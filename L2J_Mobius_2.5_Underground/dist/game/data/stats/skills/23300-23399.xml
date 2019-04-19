@@ -101,6 +101,17 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23306" toLevel="1" name="Zinyanzi Agathion Cute Trick">
 		<!-- Able to see the summoned Zinyanzi perform cute tricks. -->

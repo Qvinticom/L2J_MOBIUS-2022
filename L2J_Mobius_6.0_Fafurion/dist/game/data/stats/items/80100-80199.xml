@@ -2198,7 +2198,9 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -2214,7 +2216,9 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="1055730000" />
+		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
@@ -2233,7 +2237,9 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
+		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -2248,6 +2254,7 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2262,6 +2269,8 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2279,6 +2288,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="SHIELD" />
 		<skills>
 			<skill id="35294" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Leviathan Shield Enchantment Effect -->
@@ -2300,6 +2310,8 @@
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -2316,6 +2328,8 @@
 		<set name="weight" val="4140" />
 		<set name="price" val="1055730000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="element_enabled" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -2336,6 +2350,8 @@
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
@@ -2351,6 +2367,8 @@
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2365,6 +2383,8 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
