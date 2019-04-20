@@ -54,7 +54,7 @@ public class MAttackFinalizer implements IStatsFunction
 		
 		// Calculate modifiers Magic Attack
 		baseValue *= Math.pow(BaseStats.INT.calcBonus(creature) * creature.getLevelMod(), 2.2072);
-		return Math.min(Stats.defaultValue(creature, stat, baseValue), Config.MAX_MATK);
+		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 0, Config.MAX_MATK);
 	}
 	
 	@Override
