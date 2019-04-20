@@ -51,6 +51,10 @@ public class Q10575_LetsGoFishing extends Quest
 	private static final int PRACTICE_BAIT = 46737;
 	private static final int PRACTICE_FISH = 46736;
 	private static final int PRACTICE_FISHING_ROD = 46738;
+	// Misc
+	private static final int MIN_LEVEL = 95;
+	private static final String COUNT_VAR = "FishWinCount";
+	private static final int NPCSTRING_ID = NpcStringId.CATCH_PRACTICE_FISH.getId();
 	// Rewards
 	private static final int XP = 597699960;
 	private static final int SP = 597690;
@@ -58,10 +62,6 @@ public class Q10575_LetsGoFishing extends Quest
 	private static final int FISHING_SHOT = 38154;
 	private static final int REWARD_FISHING_ROD_PACK = 46739;
 	private static final int BAIT = 48537;
-	// Misc
-	private static final int MIN_LEVEL = 95;
-	private static final String COUNT_VAR = "FishWinCount";
-	private static final int NPCSTRING_ID = NpcStringId.CATCH_PRACTICE_FISH.getId();
 	
 	public Q10575_LetsGoFishing()
 	{
@@ -115,6 +115,7 @@ public class Q10575_LetsGoFishing extends Quest
 					giveItems(player, FISHING_SHOT, 60);
 					giveItems(player, REWARD_FISHING_ROD_PACK, 1);
 					giveItems(player, BAIT, 60);
+					qs.unset(COUNT_VAR);
 					qs.exitQuest(QuestType.ONE_TIME, true);
 					htmltext = event;
 				}
@@ -134,7 +135,7 @@ public class Q10575_LetsGoFishing extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.hasPremiumStatus()) ? "34138-01.htm" : "34138-99.html";
+				htmltext = "34138-01.htm";
 				break;
 			}
 			case State.STARTED:

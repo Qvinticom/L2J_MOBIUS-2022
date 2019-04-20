@@ -308,6 +308,7 @@ import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
 import quests.Q10562_TakeUpArms.Q10562_TakeUpArms;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
+import quests.Q10579_ContainingTheAttributePower.Q10579_ContainingTheAttributePower;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -846,7 +847,7 @@ public class QuestMasterHandler
 		Q10576_GlitteringWeapons.class, // TODO: Not done.
 		Q10577_TemperARustingBlade.class, // TODO: Not done.
 		Q10578_TheSoulOfASword.class, // TODO: Not done.
-		Q10579_ContainingTheAttributePower.class, // TODO: Not done.
+		Q10579_ContainingTheAttributePower.class,
 		Q10580_SpecialMissionDefeatSpezion.class, // TODO: Not done.
 		Q10588_SpecialMissionDefeatBaylor.class, // TODO: Not done.
 		Q10594_FergasonsScheme.class, // TODO: Not done.

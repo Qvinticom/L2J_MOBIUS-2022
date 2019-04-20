@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 /**
  * Best Choice (10566)
  * @URL https://l2wiki.com/Best_Choice
- * @author Werum / Standardization by NightBR
+ * @author Werum / NightBR
  */
 public class Q10566_BestChoice extends Quest
 {
@@ -40,8 +40,9 @@ public class Q10566_BestChoice extends Quest
 	private static final int CERTIFICATE_FLUTTER = 48175;
 	private static final int CERTIFICATE_VINCENZ = 48176;
 	private static final int CERTIFICATE_FERRIS = 48177;
-	private static final int HERPHAHS_SUPPORT_BOX = 48250;
 	private static final int HERPHAHS_MISSION_LIST = 48172;
+	// Rewards
+	private static final int HERPHAHS_SUPPORT_BOX = 48250;
 	
 	public Q10566_BestChoice()
 	{
@@ -102,13 +103,16 @@ public class Q10566_BestChoice extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					boolean hasItems = hasQuestItems(player, CERTIFICATE_SANTIAGO, CERTIFICATE_RUPIO, CERTIFICATE_FLUTTER, CERTIFICATE_VINCENZ, CERTIFICATE_FERRIS);
-					// Chck if player has the necessary quest items to complete the quest
-					if (hasItems)
+					// Check if player has the necessary quest items to complete the quest
+					if (hasQuestItems(player, CERTIFICATE_SANTIAGO, CERTIFICATE_RUPIO, CERTIFICATE_FLUTTER, CERTIFICATE_VINCENZ, CERTIFICATE_FERRIS))
 					{
 						qs.setCond(2, true);
+						htmltext = "34362-06.html";
 					}
-					htmltext = (hasItems) ? "34362-06.html" : "34362-05.html";
+					else
+					{
+						htmltext = "34362-05.html";
+					}
 				}
 				break;
 			}

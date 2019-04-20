@@ -894,16 +894,20 @@
 		<!-- A crude weapon you received to practice applying attributes on a weapon. It is practically worthless in combat. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1420" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />	
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">24</stat>
 			<stat type="mAtk">17</stat>
@@ -917,6 +921,8 @@
 		<!-- Fire elemental attack attribute increases by 5 when bestowed on a weapon. Water Attribute Resistance attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of elemental defense attribute can be bestowed, and one type of elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />		
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
@@ -925,6 +931,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="2329" level="1" /> <!-- Fire Stone -->
+		</skills>		
 	</item>
 	<item id="48170" name="Enhancement Practice Long Sword" type="Weapon">
 		<!-- A training sword you received from Blacksmith Rupio to practice weapon enchanting. It is worthless as a weapon. Take it to Rupio after enchanting it to the enchantment level he asked for. -->

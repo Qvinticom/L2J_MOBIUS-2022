@@ -104,6 +104,14 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
+		// Quest Q10579_ContainingTheAttributePower check.
+		if ((item.getItem().getId() == 48168) && (stone.getItem().getId() != 48169))
+		{
+			player.removeRequest(request.getClass());
+			client.sendPacket(SystemMessageId.ATTRIBUTE_ITEM_USAGE_HAS_BEEN_CANCELLED);
+			return;
+		}
+		
 		if (!item.isElementable())
 		{
 			client.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);

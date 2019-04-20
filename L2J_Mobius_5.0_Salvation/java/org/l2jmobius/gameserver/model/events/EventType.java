@@ -120,6 +120,7 @@ import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceDestroy;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceEnter;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceLeave;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemAttributeAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
@@ -181,6 +182,7 @@ public enum EventType
 	ON_ITEM_BYPASS_EVENT(OnItemBypassEvent.class, void.class),
 	ON_ITEM_CREATE(OnItemCreate.class, void.class),
 	ON_ITEM_TALK(OnItemTalk.class, void.class),
+	ON_ITEM_ATTRIBUTE_ADD(OnItemAttributeAdd.class, void.class),
 	
 	// NPC events
 	ON_NPC_CAN_BE_SEEN(OnNpcCanBeSeen.class, void.class, TerminateReturn.class),

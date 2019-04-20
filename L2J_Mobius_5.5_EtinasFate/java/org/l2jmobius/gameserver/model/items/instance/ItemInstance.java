@@ -67,6 +67,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDrop;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPickup;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemAttributeAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -1215,6 +1216,9 @@ public final class ItemInstance extends WorldObject
 				_elementals.put(holder.getType(), holder);
 			}
 		}
+		
+		// Notify to Scripts
+		EventDispatcher.getInstance().notifyEventAsync(new OnItemAttributeAdd(getActingPlayer(), this));
 	}
 	
 	/**

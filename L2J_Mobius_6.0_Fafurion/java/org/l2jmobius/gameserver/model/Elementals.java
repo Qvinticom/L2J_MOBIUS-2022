@@ -100,6 +100,8 @@ public final class Elementals
 	
 	public enum ElementalItems
 	{
+		attributePracticeFireStone(FIRE, 48169, ElementalItemType.Stone, 0),
+		
 		fireStone(FIRE, 9546, ElementalItemType.Stone, 0),
 		waterStone(WATER, 9547, ElementalItemType.Stone, 0),
 		windStone(WIND, 9549, ElementalItemType.Stone, 0),
