@@ -243,11 +243,11 @@ public class VillageMasterInstance extends NpcInstance
 				if (clan.getNewLeaderId() == 0)
 				{
 					clan.setNewLeaderId(member.getObjectId(), true);
-					msg.setFile(player, "data/scripts/village_master/Clan/9000-07-success.htm");
+					msg.setFile(player, "data/scripts/village_master/ClanMaster/9000-07-success.htm");
 				}
 				else
 				{
-					msg.setFile(player, "data/scripts/village_master/Clan/9000-07-in-progress.htm");
+					msg.setFile(player, "data/scripts/village_master/ClanMaster/9000-07-in-progress.htm");
 				}
 				player.sendPacket(msg);
 			}
@@ -265,7 +265,7 @@ public class VillageMasterInstance extends NpcInstance
 			if (clan.getNewLeaderId() != 0)
 			{
 				clan.setNewLeaderId(0, true);
-				msg.setFile(player, "data/scripts/village_master/Clan/9000-07-canceled.htm");
+				msg.setFile(player, "data/scripts/village_master/ClanMaster/9000-07-canceled.htm");
 			}
 			else
 			{
