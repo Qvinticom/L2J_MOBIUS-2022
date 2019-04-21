@@ -20,6 +20,7 @@ import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
@@ -164,8 +165,13 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 	public void useRandomSkill(Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		final Npc target = (Npc) npc.getTarget();
-		if ((instance != null) && !npc.isCastingNow() && (target != null) && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
+		final WorldObject target = npc.getTarget();
+		if (target == null)
+		{
+			return;
+		}
+		
+		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatsSet instParams = instance.getTemplateParameters();
 			final SkillHolder skill_01 = instParams.getSkillHolder("bartonInfinity");
