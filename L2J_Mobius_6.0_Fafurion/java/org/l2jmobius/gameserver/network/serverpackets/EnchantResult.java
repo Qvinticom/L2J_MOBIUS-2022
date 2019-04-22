@@ -32,6 +32,7 @@ public class EnchantResult implements IClientOutgoingPacket
 	private final int _crystal;
 	private final int _count;
 	private final int _enchantLevel;
+	@SuppressWarnings("unused")
 	private final int[] _enchantOptions;
 	
 	public EnchantResult(int result, int crystal, int count, int enchantLevel, int[] options)
@@ -61,11 +62,21 @@ public class EnchantResult implements IClientOutgoingPacket
 		packet.writeD(_result);
 		packet.writeD(_crystal);
 		packet.writeQ(_count);
-		packet.writeD(_enchantLevel);
-		for (int option : _enchantOptions)
-		{
-			packet.writeH(option);
-		}
+		
+		// Guessing.
+		// With 166 options became 3x write integers instead of shorts and enchant level moved bellow.
+		
+		// Commenting until actually knowing.
+		// for (int option : _enchantOptions)
+		// {
+		// packet.writeD(option);
+		// }
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		
+		packet.writeD(_enchantLevel); // Confirmed.
+		
 		return true;
 	}
 }
