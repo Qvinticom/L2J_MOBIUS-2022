@@ -875,6 +875,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13818" level="2" /> <!-- Insane Kelbim's Bow -->
 			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
@@ -903,6 +904,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13819" level="2" /> <!-- Insane Kelbim Crossbow -->
 			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->

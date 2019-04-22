@@ -708,6 +708,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="reuse_delay" val="1500" />
 		<stats>
 			<stat type="pAtk">4225</stat>
 			<stat type="mAtk">935</stat>
@@ -732,6 +733,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<stats>
 			<stat type="pAtk">3804</stat>
 			<stat type="mAtk">1247</stat>
@@ -758,6 +760,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -782,6 +785,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1371</stat>
@@ -809,6 +813,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">2090</stat>
 			<stat type="mAtk">935</stat>

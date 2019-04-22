@@ -988,6 +988,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13576" level="1" /> <!-- Hero's Weapon: Bow -->
 		</skills>
@@ -1021,6 +1022,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13577" level="1" /> <!-- Hero's Weapon: Crossbow -->
 		</skills>
@@ -1054,6 +1056,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13578" level="1" /> <!-- Hero's Weapon: One-handed Magic Sword -->
 		</skills>
@@ -1086,6 +1089,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13579" level="1" /> <!-- Hero's Weapon: One-handed Magic Blunt Weapon -->
 		</skills>
@@ -1119,6 +1123,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13580" level="1" /> <!-- Hero's Weapon: Two-handed Magic Blunt Weapon -->
 		</skills>
