@@ -314,17 +314,13 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<attributeType>WIND</attributeType>
-		<attributeValue>150</attributeValue>
 		<hitTime>4000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>8000</reuseDelay>
-		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>18000</power> <!-- Guessing -->
+			<effect name="PhysicalAttack">
+				<power>10000</power> <!-- Guessing -->
 			</effect>
 		</effects>
 	</skill>
@@ -335,8 +331,6 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<attributeType>DARK</attributeType>
-		<attributeValue>150</attributeValue>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>8000</reuseDelay>
@@ -345,7 +339,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>18000</power> <!-- Guessing -->
+				<power>100</power> <!-- Guessing -->
 			</effect>
 		</effects>
 	</skill>
