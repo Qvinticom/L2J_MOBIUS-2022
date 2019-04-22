@@ -781,6 +781,7 @@
 		<!-- With the wave of the shield, attacks enemies in front with $s1 Power added to P. Atk., pushes them away a short distance, and releases the target with a certain probability. Requires a shield to be equipped. -->
 		<icon>icon.skill10012</icon>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;150;180</fanRange>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -855,9 +856,6 @@
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="10" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="4" toLevel="10" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
@@ -868,9 +866,6 @@
 				<speed>700</speed>
 				<distance>50</distance>
 				<knockDown>false</knockDown>
-			</effect>
-			<effect name="DeleteHate">
-				<chance>40</chance>
 			</effect>
 		</effects>
 	</skill>
