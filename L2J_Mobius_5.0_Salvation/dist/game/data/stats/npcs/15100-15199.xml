@@ -172,7 +172,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="656.89655172414" magical="814.46075642047" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -200,7 +200,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="682.95454545455" magical="856.21062106211" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -228,7 +228,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="710.67415730337" magical="899.98887529202" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -256,7 +256,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="738.88888888889" magical="944.99449944995" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -284,7 +284,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="768.68131868132" magical="992.63772531099" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -312,7 +312,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="933.69565217391" magical="1217.8935284833" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
@@ -340,7 +340,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="971.50537634409" magical="1279.3214805352" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -368,7 +368,7 @@
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1010.6382978723" magical="1343.65564216" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -828,7 +828,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1129.8279696327" magical="280.82224756717" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="656.89655172414" magical="814.46075642047" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -856,7 +856,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1198.6993732731" magical="299.97616921847" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="682.95454545455" magical="856.21062106211" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
@@ -884,7 +884,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1271.8534744838" magical="317.81056986594" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="710.67415730337" magical="899.98887529202" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -912,7 +912,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1349.5593443703" magical="336.89425376575" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="738.88888888889" magical="944.99449944995" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -940,7 +940,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="1431.6669246247" magical="357.88344830754" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="768.68131868132" magical="992.63772531099" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -968,7 +968,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2026.4608244432" magical="674.93973844084" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="933.69565217391" magical="1217.8935284833" />
 			<attribute>
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
@@ -996,7 +996,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2148.9434627004" magical="715.87444622067" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="971.50537634409" magical="1279.3214805352" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -1024,7 +1024,7 @@
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2279.8605744208" magical="758.971123285" critical="14" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1010.6382978723" magical="1343.65564216" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
@@ -1730,7 +1730,7 @@
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9921" hpRegen="7.5" mp="897" mpRegen="2.7" />
-			<attack physical="2822.6" magical="1164.3" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="2822.6" magical="1164.3" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1043.7" magical="729.3" />
 			<speed>
 				<walk ground="50" />
@@ -1762,7 +1762,7 @@
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10019" hpRegen="7.5" mp="911" mpRegen="2.7" />
-			<attack physical="3174.75" magical="1309.8375" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="3174.75" magical="1309.8375" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1131.655" magical="805.8765" />
 			<speed>
 				<walk ground="50" />
@@ -1794,7 +1794,7 @@
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10117" hpRegen="7.5" mp="925" mpRegen="2.7" />
-			<attack physical="3571.59375" magical="1473.5671875" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="3571.59375" magical="1473.5671875" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1227.845675" magical="890.4935325" />
 			<speed>
 				<walk ground="50" />
@@ -1826,7 +1826,7 @@
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10215" hpRegen="7.5" mp="940" mpRegen="2.7" />
-			<attack physical="4018.04296875" magical="1657.7630859375" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="4018.04296875" magical="1657.7630859375" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1332.212557375" magical="983.9953534125" />
 			<speed>
 				<walk ground="50" />
@@ -1858,7 +1858,7 @@
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10317" hpRegen="7.5" mp="954" mpRegen="2.7" />
-			<attack physical="4520.29833984375" magical="1864.983471679688" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="4520.29833984375" magical="1864.983471679688" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1445.450624751875" magical="1087.314865520813" />
 			<speed>
 				<walk ground="50" />
@@ -1890,7 +1890,7 @@
 		<equipment rhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10417" hpRegen="7.5" mp="969" mpRegen="2.7" />
-			<attack physical="5085.335632324219" magical="2098.106405639648" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="5085.335632324219" magical="2098.106405639648" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1568.313927855784" magical="1201.482926400498" />
 			<speed>
 				<walk ground="50" />
@@ -2108,7 +2108,7 @@
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9921" hpRegen="7.5" mp="897" mpRegen="2.7" />
-			<attack physical="2822.6" magical="1164.3" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="2822.6" magical="1164.3" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1043.7" magical="729.3" />
 			<speed>
 				<walk ground="50" />
@@ -2140,7 +2140,7 @@
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10019" hpRegen="7.5" mp="911" mpRegen="2.7" />
-			<attack physical="3174.75" magical="1309.8375" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="3174.75" magical="1309.8375" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1131.655" magical="805.8765" />
 			<speed>
 				<walk ground="50" />
@@ -2172,7 +2172,7 @@
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10117" hpRegen="7.5" mp="925" mpRegen="2.7" />
-			<attack physical="3571.59375" magical="1473.5671875" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="3571.59375" magical="1473.5671875" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1227.845675" magical="890.4935325" />
 			<speed>
 				<walk ground="50" />
@@ -2204,7 +2204,7 @@
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10215" hpRegen="7.5" mp="940" mpRegen="2.7" />
-			<attack physical="4018.04296875" magical="1657.7630859375" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="4018.04296875" magical="1657.7630859375" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1332.212557375" magical="983.9953534125" />
 			<speed>
 				<walk ground="50" />
@@ -2236,7 +2236,7 @@
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10317" hpRegen="7.5" mp="954" mpRegen="2.7" />
-			<attack physical="4520.29833984375" magical="1864.983471679688" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="4520.29833984375" magical="1864.983471679688" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1445.450624751875" magical="1087.314865520813" />
 			<speed>
 				<walk ground="50" />
@@ -2268,7 +2268,7 @@
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10417" hpRegen="7.5" mp="969" mpRegen="2.7" />
-			<attack physical="5085.335632324219" magical="2098.106405639648" critical="4" attackSpeed="283" range="40" distance="80" width="120" />
+			<attack physical="5085.335632324219" magical="2098.106405639648" critical="4" attackSpeed="283" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1568.313927855784" magical="1201.482926400498" />
 			<speed>
 				<walk ground="50" />
@@ -2486,7 +2486,7 @@
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9921" hpRegen="7.5" mp="897" mpRegen="2.7" />
-			<attack physical="2822.6" magical="1164.3" critical="4" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="2822.6" magical="1164.3" critical="4" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1043.7" magical="729.3" />
 			<speed>
 				<walk ground="50" />
@@ -2518,7 +2518,7 @@
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10019" hpRegen="7.5" mp="911" mpRegen="2.7" />
-			<attack physical="3174.75" magical="1309.8375" critical="4" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="3174.75" magical="1309.8375" critical="4" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1131.655" magical="805.8765" />
 			<speed>
 				<walk ground="50" />
@@ -2550,7 +2550,7 @@
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10117" hpRegen="7.5" mp="925" mpRegen="2.7" />
-			<attack physical="3571.59375" magical="1473.5671875" critical="4" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="3571.59375" magical="1473.5671875" critical="4" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1227.845675" magical="890.4935325" />
 			<speed>
 				<walk ground="50" />
@@ -2582,7 +2582,7 @@
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10215" hpRegen="7.5" mp="940" mpRegen="2.7" />
-			<attack physical="4018.04296875" magical="1657.7630859375" critical="4" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="4018.04296875" magical="1657.7630859375" critical="4" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1332.212557375" magical="983.9953534125" />
 			<speed>
 				<walk ground="50" />
@@ -2614,7 +2614,7 @@
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10317" hpRegen="7.5" mp="954" mpRegen="2.7" />
-			<attack physical="4520.29833984375" magical="1864.983471679688" critical="4" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="4520.29833984375" magical="1864.983471679688" critical="4" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1445.450624751875" magical="1087.314865520813" />
 			<speed>
 				<walk ground="50" />
@@ -2646,7 +2646,7 @@
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10417" hpRegen="7.5" mp="969" mpRegen="2.7" />
-			<attack physical="5085.335632324219" magical="2098.106405639648" critical="4" attackSpeed="343" range="40" distance="80" width="120" />
+			<attack physical="5085.335632324219" magical="2098.106405639648" critical="4" attackSpeed="343" range="900" type="BOW" distance="80" width="120" />
 			<defence physical="1568.313927855784" magical="1201.482926400498" />
 			<speed>
 				<walk ground="50" />
