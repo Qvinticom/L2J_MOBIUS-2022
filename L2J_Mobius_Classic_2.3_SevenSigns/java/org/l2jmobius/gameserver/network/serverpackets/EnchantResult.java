@@ -63,7 +63,7 @@ public class EnchantResult implements IClientOutgoingPacket
 		packet.writeD(_crystal);
 		packet.writeQ(_count);
 		
-		if (!Config.PROTOCOL_LIST.contains(166)) // 152
+		if ((Config.PROTOCOL_LIST.size() == 1) && Config.PROTOCOL_LIST.contains(152)) // 152
 		{
 			packet.writeD(_enchantLevel);
 			for (int option : _enchantOptions)
