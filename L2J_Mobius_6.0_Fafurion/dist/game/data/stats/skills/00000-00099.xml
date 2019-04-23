@@ -6763,7 +6763,7 @@
 			</effect>
 			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{subIndex * 0.4 + 0.6}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
