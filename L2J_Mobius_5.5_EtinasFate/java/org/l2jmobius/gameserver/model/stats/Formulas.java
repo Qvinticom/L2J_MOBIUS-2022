@@ -525,7 +525,7 @@ public final class Formulas
 			return 0;
 		}
 		
-		double shldRate = target.getStat().getValue(Stats.SHIELD_DEFENCE_RATE) * BaseStats.DEX.calcBonus(target);
+		double shldRate = target.getStat().getValue(Stats.SHIELD_DEFENCE_RATE) * BaseStats.CON.calcBonus(target);
 		
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
 		if (attacker.getAttackType().isRanged())
@@ -545,7 +545,7 @@ public final class Formulas
 		if (shldRate > Rnd.get(100))
 		{
 			// If shield succeed, check perfect block.
-			if (((100 - (2 * BaseStats.DEX.calcBonus(target))) < Rnd.get(100)))
+			if (((100 - (2 * BaseStats.CON.calcBonus(target))) < Rnd.get(100)))
 			{
 				shldSuccess = SHIELD_DEFENSE_PERFECT_BLOCK;
 			}
