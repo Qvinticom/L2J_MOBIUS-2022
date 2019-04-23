@@ -596,7 +596,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
@@ -641,6 +641,10 @@
 			<effect name="HpRegen">
 				<amount>20</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE</dispel>

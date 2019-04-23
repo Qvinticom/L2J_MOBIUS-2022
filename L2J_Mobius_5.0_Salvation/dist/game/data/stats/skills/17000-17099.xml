@@ -497,6 +497,10 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17083" toLevel="1" name="Mentor's Daring Sonata">
@@ -524,10 +528,6 @@
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
-			</effect>
-			<effect name="VampiricAttack">
-				<amount>5</amount>
-				<chance>30</chance>
 			</effect>
 			<effect name="PAtk">
 				<amount>5</amount>
@@ -630,6 +630,7 @@
 	<skill id="17085" toLevel="1" name="Kisung's Power Up">
 		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<itemConsumeId>37554</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
@@ -646,6 +647,7 @@
 	<skill id="17087" toLevel="1" name="Kisung's Power Up (Event)">
 		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>1</effectPoint>

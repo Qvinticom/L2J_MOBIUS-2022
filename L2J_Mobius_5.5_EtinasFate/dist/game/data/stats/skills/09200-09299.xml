@@ -25,7 +25,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
@@ -66,6 +66,10 @@
 			<effect name="HpRegen">
 				<amount>20</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE</dispel>
@@ -124,11 +128,11 @@
 				<magicType>22</magicType>
 			</effect>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -596,7 +600,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
@@ -640,7 +644,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP;VAMPIRIC_ATTACK;IMPROVE_VAMPIRIC_HASTE</dispel>
@@ -699,11 +703,11 @@
 				<magicType>22</magicType>
 			</effect>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -995,6 +999,10 @@
 				<amount>37</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="9231" toLevel="1" name="Mentor's Guitar Melody">
@@ -1017,11 +1025,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>60</amount>
@@ -2052,7 +2060,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>34</amount>
@@ -2130,11 +2138,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>60</amount>
@@ -2389,7 +2397,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
@@ -2505,11 +2513,11 @@
 				<magicType>22</magicType>
 			</effect>
 			<effect name="DispelBySlotProbability">
-				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</dispel>
+				<dispel>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC;MULTI_BUFF</slot>
 			</effect>
 		</effects>
 	</skill>

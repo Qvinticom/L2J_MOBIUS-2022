@@ -567,7 +567,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -1348,6 +1348,10 @@
 				<amount>43</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14782" toLevel="1" name="Guitar Melody - GM's Blessing">
@@ -1489,7 +1493,7 @@
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>80</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>37</amount>
@@ -1969,6 +1973,10 @@
 			<effect name="HpRegen">
 				<amount>20</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
 			</effect>
 		</effects>
 	</skill>
