@@ -49,8 +49,29 @@
 			<value level="10">110</value>
 		</magicLvl>
 		<effects>
-			<effect name="SkillCritical">
-				<stat>STR</stat>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -68,16 +89,19 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
+					<item>BLUNT</item>
 				</weaponType>
+			</effect>
+			<effect name="SkillCritical">
+				<stat>STR</stat>
+			</effect>
+			<effect name="Accuracy">
+				<amount>8</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="HateAttack">
 				<amount>60</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item> BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -108,9 +132,15 @@
 		<effects>
 			<effect name="CubicMastery">
 				<amount>3</amount>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>ABSORB</slot>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -132,18 +162,30 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>10</amount>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>8.4</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-35</amount>
 				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
 				<stat>STR</stat>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="MaxHp">
 				<amount>6883</amount>
@@ -389,13 +431,13 @@
 		<!-- For $s1, Shield Def. +$s2, cooldown of Raise Shield/ Focus Shield -$s3. -->
 		<icon>icon.skill10006</icon>
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<operateType>A2</operateType>
 		<magicLvl>
-			<value level="1">89</value>
-			<value level="2">93</value>
-			<value level="3">97</value>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
 		</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>8000</reuseDelay>
