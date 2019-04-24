@@ -8025,12 +8025,18 @@
 			<item id="80222" /> <!-- Dark Leviathan Gaiters -->
 			<item id="80223" /> <!-- Dark Leviathan Gauntlets -->
 			<item id="80224" /> <!-- Dark Leviathan Boots -->
+			<item id="80235" /> <!-- Limited Leviathan Helmet -->
+			<item id="80236" /> <!-- Limited Leviathan Breastplate -->
+			<item id="80237" /> <!-- Limited Leviathan Gaiters -->
+			<item id="80238" /> <!-- Limited Leviathan Gauntlets -->
+			<item id="80239" /> <!-- Limited Leviathan Boots -->
 		</requiredItems>
 		<skills>
 			<skill id="35291" level="1" minimumPieces="2" /> <!-- Set Effect - Leviathan Heavy Armor 2 Piece  -->
 			<skill id="35291" level="2" minimumPieces="3" /> <!-- Set Effect - Leviathan Heavy Armor 2 Piece  -->
 			<skill id="35291" level="3" minimumPieces="4" /> <!-- Set Effect - Leviathan Heavy Armor 2 Piece  -->
 			<skill id="35291" level="4" minimumPieces="5" /> <!-- Set Effect - Leviathan Heavy Armor 2 Piece  -->
+			<skill id="8785" level="1" optional="true" /> <!-- Equip Shield -->
 			<skill id="13339" level="1" minimumPieces="5" minimumEnchant="6" /> <!-- Enchant Heavy Armor Set + 6 (R-grade) -->
 			<skill id="13339" level="2" minimumPieces="5" minimumEnchant="7" /> <!-- Enchant Heavy Armor Set + 7 (R-grade) -->
 			<skill id="13339" level="3" minimumPieces="5" minimumEnchant="8" /> <!-- Enchant Heavy Armor Set + 8 (R-grade) -->
@@ -8040,21 +8046,26 @@
 	</set>
 	<set id="419" minimumPieces="2">
 		<requiredItems>
-			<item id="80195" /> <!-- Enchanted Leviathan Helmet -->
-			<item id="80196" /> <!-- Enchanted Leviathan Breastplate -->
-			<item id="80197" /> <!-- Enchanted Leviathan Gaiters -->
-			<item id="80198" /> <!-- Enchanted Leviathan Gauntlets -->
-			<item id="80199" /> <!-- Enchanted Leviathan Boots -->
-			<item id="80225" /> <!-- Dark Leviathan Helmet -->
-			<item id="80226" /> <!-- Dark Leviathan Breastplate -->
-			<item id="80227" /> <!-- Dark Leviathan Gaiters -->
-			<item id="80228" /> <!-- Dark Leviathan Gauntlets -->
-			<item id="80229" /> <!-- Dark Leviathan Boots -->
-			<item id="80210" /> <!-- Bloody Leviathan Helmet -->
-			<item id="80211" /> <!-- Bloody Leviathan Breastplate -->
-			<item id="80212" /> <!-- Bloody Leviathan Gaiters -->
-			<item id="80213" /> <!-- Bloody Leviathan Gauntlets -->
-			<item id="80214" /> <!-- Bloody Leviathan Boots -->
+			<item id="80195" /> <!-- Enchanted Leviathan Leather Helmet -->
+			<item id="80196" /> <!-- Enchanted Leviathan Leather Armor -->
+			<item id="80197" /> <!-- Enchanted Leviathan Leather Leggings -->
+			<item id="80198" /> <!-- Enchanted Leviathan Leather Gloves -->
+			<item id="80199" /> <!-- Enchanted Leviathan Leather Boots -->
+			<item id="80225" /> <!-- Dark Leviathan Leather Helmet -->
+			<item id="80226" /> <!-- Dark Leviathan Leather Armor -->
+			<item id="80227" /> <!-- Dark Leviathan Leather Leggings -->
+			<item id="80228" /> <!-- Dark Leviathan Leather Gloves -->
+			<item id="80229" /> <!-- Dark Leviathan Leather Boots -->
+			<item id="80210" /> <!-- Bloody Leviathan Leather Helmet -->
+			<item id="80211" /> <!-- Bloody Leviathan Leather Armor -->
+			<item id="80212" /> <!-- Bloody Leviathan Leather Leggings -->
+			<item id="80213" /> <!-- Bloody Leviathan Leather Gloves -->
+			<item id="80214" /> <!-- Bloody Leviathan Leather Boots -->
+			<item id="80240" /> <!-- Limited Leviathan Leather Helmet -->
+			<item id="80241" /> <!-- Limited Leviathan Leather Armor -->
+			<item id="80242" /> <!-- Limited Leviathan Leather Leggings -->
+			<item id="80243" /> <!-- Limited Leviathan Leather Gloves -->
+			<item id="80244" /> <!-- Limited Leviathan Leather Boots -->
 		</requiredItems>
 		<skills>
 			<skill id="35292" level="1" minimumPieces="2" /> <!-- Set Effect - Leviathan Light Armor 2 Piece  -->
@@ -8085,6 +8096,11 @@
 			<item id="80217" /> <!-- Bloody Leviathan Stockings -->
 			<item id="80218" /> <!-- Bloody Leviathan Gloves -->
 			<item id="80219" /> <!-- Bloody Leviathan Shoes -->
+			<item id="80245" /> <!-- Limited Leviathan Circlet -->
+			<item id="80246" /> <!-- Limited Leviathan Tunic -->
+			<item id="80247" /> <!-- Limited Leviathan Stockings -->
+			<item id="80248" /> <!-- Limited Leviathan Gloves -->
+			<item id="80249" /> <!-- Limited Leviathan Shoes -->
 		</requiredItems>
 		<skills>
 			<skill id="35293" level="1" minimumPieces="2" /> <!-- Set Effect - Eternal Robe 2 Piece (Magic Type) -->
