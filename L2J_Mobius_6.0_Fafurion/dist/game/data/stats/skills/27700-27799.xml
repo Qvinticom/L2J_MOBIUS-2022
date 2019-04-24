@@ -421,13 +421,88 @@
 		</effects>
 	</skill>
 	<skill id="27720" toLevel="1" name="Ultimate Jewelry Box">
-		<operateType>A1</operateType>
-	</skill>
+	<icon>icon.etc_bm_jewelbox_main_i00</icon>
+	<itemConsumeId>38941</itemConsumeId>
+	<itemConsumeCount>1</itemConsumeCount>
+	<isMagic>2</isMagic> <!-- Static Skill -->
+	<magicLvl>1</magicLvl>
+	<operateType>A1</operateType>
+	<magicCriticalRate>5</magicCriticalRate>
+	<hitCancelTime>0</hitCancelTime>
+	<targetType>SELF</targetType>
+	<affectScope>SINGLE</affectScope>
+	<conditions>
+	   <condition name="OpEncumbered">
+		<weightPercent>10</weightPercent>
+		<slotsPercent>10</slotsPercent>
+	   </condition>
+	</conditions>
+	<effects>
+	   <effect name="Restoration">
+		<itemId>28364</itemId>
+		<itemCount>1</itemCount>
+	   </effect>
+	   <effect name="RestorationRandom">
+		<items>
+		   <value level="1">
+			<item chance="6.90">
+			   <item id="38932" count="1" /> <!-- La Vie En Rose's Ruby Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38933" count="1" /> <!-- La Vie En Rose's Sapphire Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38934" count="1" /> <!-- La Vie En Rose's Topaz Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38935" count="1" /> <!-- La Vie En Rose's Opal Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38936" count="1" /> <!-- La Vie En Rose's Obsidian Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38937" count="1" /> <!-- La Vie En Rose's Diamond Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38938" count="1" /> <!-- La Vie En Rose's Emerald Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38939" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="38940" count="1" /> <!-- La Vie En Rose's Pearl Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="26508" count="1" /> <!-- La Vie En Rose's Amethyst Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="47701" count="1" /> <!-- La Vie En Rose's Red Cat's Eye Box -->
+			</item>
+			<item chance="6.90">
+			   <item id="47702" count="1" /> <!-- La Vie En Rose's Blue Cat's Eye Box -->
+			</item>
+			<item chance="1">
+			   <item id="26475" count="1" /> <!-- Radiant Gemstone Fragment -->
+			</item>
+			<item chance="1">
+			   <item id="28539" count="1" /> <!-- Magnificent Brooch Spirit Stone -->
+			</item>
+			<item chance="1">
+			   <item id="28540" count="1" /> <!-- Magnificent Brooch Spirit Stone Rare -->
+			</item>
+			<item chance="0.4">
+			   <item id="28489" count="1" /> <!-- La Vie En Rose's Magnificent Brooch Jewel -->
+			</item>
+		   </value>
+		</items>
+	   </effect>
+	</effects>
+   </skill>
 	<skill id="27721" toLevel="1" name="Lv.1 La Vie En Rose's Energy">
 		<!-- For 30 sec., party members' M. Atk. +400%. -->
 		<icon>icon.etc_5slot_brooch_i00</icon>
 		<operateType>A2</operateType>
-		<abnormalType>PUBLIC_SLOT</abnormalType>	<!-- Guess -->
+		<abnormalType>PUBLIC_SLOT</abnormalType> <!-- Guess -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<hitTime>500</hitTime>
@@ -1061,12 +1136,6 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
-		<reuseDelayGroup>13973</reuseDelayGroup>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="DamageByAttack">
 				<amount>
@@ -1119,12 +1188,6 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
-		<reuseDelayGroup>13973</reuseDelayGroup>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
@@ -1179,11 +1242,6 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
@@ -1229,11 +1287,6 @@
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effectPoint>10</effectPoint>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="HealPercent">
 				<power>

@@ -245,13 +245,13 @@
 			<value fromLevel="1" toLevel="5">80</value> <!-- Guessed -->
 			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<affectRange>1300</affectRange> <!-- Fafurion -->
+		<affectRange>400</affectRange> <!-- Fafurion -->
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>DERANGEMENT</trait>
 		<mpConsume>
@@ -2015,7 +2015,7 @@
 			<value level="12">-726</value>
 			<value level="13">-730</value>
 		</effectPoint>
-		<reuseDelay>15000</reuseDelay>
+		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

@@ -481,10 +481,9 @@
 			<value level="10">3</value>
 			<value level="11">3</value>
 		</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>SHIELD_ATTACK</abnormalType>
-		<affectHeight>-100;200</affectHeight>
-		<operateType>A2</operateType>
+		<operateType>DA2</operateType>
 		<mpConsume>
 			<value level="1">53</value>
 			<value level="2">54</value>
@@ -500,7 +499,7 @@
 		</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<nextAction>ATTACK</nextAction>
-		<castRange>40</castRange>
+		<castRange>300</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>570</coolTime>
 		<magicLvl>
@@ -516,12 +515,11 @@
 			<value level="10">103</value>
 			<value level="11">105</value>
 		</magicLvl>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<isDebuff>true</isDebuff>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<effectRange>400</effectRange>
-		<irreplacableBuff>true</irreplacableBuff>
+		<effectRange>300</effectRange>
 		<effectPoint>
 			<value level="1">-689</value>
 			<value level="2">-692</value>
@@ -537,8 +535,12 @@
 		</effectPoint>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipShield" />
+			<condition name="OpCheckCastRange">
+				<distance>300</distance>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
@@ -558,26 +560,11 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-2</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>-10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed">
 				<amount>
 					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="DispelCaster">
-				<dispel>SIGEL_SHIELD</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -586,7 +573,8 @@
 		<icon>icon.skill10011</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">100</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -640,6 +628,7 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
+		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -652,6 +641,18 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="13">
+				<attackerType>Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>SWORD,BLUNT</allowWeapons>
+				<skillId>19565</skillId> <!-- Shield Bash -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">16556</value>
@@ -670,15 +671,17 @@
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="Speed">
-				<amount>-70</amount>
-				<mode>DIFF</mode>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -693,7 +696,6 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
-		<nextAction>ATTACK</nextAction>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -772,16 +774,16 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>60</criticalChance>
 			</effect>
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PAtk">
+			<effect name="PhysicalAttackSpeed">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
+			<effect name="MagicalAttackSpeed">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
@@ -798,12 +800,6 @@
 		<icon>icon.skill10012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="8">90</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
-		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;150;180</fanRange>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -818,7 +814,6 @@
 			<value level="7">103</value>
 			<value level="8">105</value>
 		</magicLvl>
-		<trait>SHOCK</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -848,9 +843,11 @@
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<trait>DERANGEMENT</trait>
+		<nextAction>ATTACK</nextAction>
 		<conditions>
 			<condition name="EquipShield" />
 		</conditions>
@@ -869,14 +866,16 @@
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="KnockBack">
+				<speed>700</speed>
+				<distance>50</distance>
+				<knockDown>false</knockDown>
 			</effect>
 		</effects>
 	</skill>
@@ -981,6 +980,9 @@
 		<!-- Attacks nearby targets with $s1 Power added to P. Atk and Heal Received is reduced by $s3 for $s2. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10013</icon>
 		<affectLimit>5-12</affectLimit>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<affectRange>200</affectRange>
 		<affectHeight>-100;200</affectHeight>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1046,6 +1048,10 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="HealEffect">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">10314</value>
@@ -1076,9 +1082,10 @@
 	<skill id="10014" toLevel="11" name="Chain Galaxy">
 		<!-- Swings the chain to attack nearby enemies with $s1 Power added to P. Atk. and holds them for $s2. Requires a sword or blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10014</icon>
-		<abnormalLvl>3</abnormalLvl>
+		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>90</activateRate>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -1086,8 +1093,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<lvlBonusRate>2</lvlBonusRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PULL</trait>
+		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1115,7 +1124,7 @@
 			<value level="10">206</value>
 			<value level="11">210</value>
 		</mpConsume>
-		<hitTime>1700</hitTime>
+		<hitTime>2500</hitTime>
 		<coolTime>370</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>
@@ -1137,7 +1146,21 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">14300</value>
@@ -1154,10 +1177,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>5</criticalChance>
-			</effect>
-			<effect name="HealEffect">
-				<amount>-90</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -1528,6 +1547,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
 			<effect name="TransferDamageToPlayer">
 				<amount>90</amount>
@@ -1568,8 +1590,10 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TrackLimitedSkill" />
 		</effects>
+		<endEffects>
+			<effect name="TrackLimitedSkill" />
+		</endEffects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
 		<!-- For $s1, activates the Shield Block buff, M. Def +$s2, and chance of receiving M Critical Hit -$s3. It becomes inactive when using a shield skill. Requires a shield to be equipped. -->
@@ -2199,24 +2223,8 @@
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="Speed">
-				<amount>10</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalDamage">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>50</amount>
+				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -2226,7 +2234,6 @@
 		<icon>icon.skill10026</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
-		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
 		<activateRate>100</activateRate>
@@ -2235,28 +2242,23 @@
 		<magicLvl>85</magicLvl>
 		<hitTime>500</hitTime>
 		<reuseDelay>1000</reuseDelay>
-		<effectPoint>-2</effectPoint>
+		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
 		<staticReuse>true</staticReuse>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="PAtk">
-				<amount>-20</amount>
+			<effect name="AddHate">
+				<amount>500</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
-				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-20</amount>
+			<effect name="TargetMe" />
+			<effect name="GetAgro" />
+			<effect name="HateAttack">
+				<amount>500</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

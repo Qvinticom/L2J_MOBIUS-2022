@@ -534,10 +534,21 @@
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>INVINCIBILITY</dispel>
-				<rate>100</rate>
+				<rate>50</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>INVINCIBILITY</slot>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>ABNORMAL_INVINCIBILITY</dispel>
+				<rate>50</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>ABNORMAL_INVINCIBILITY</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>0</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>

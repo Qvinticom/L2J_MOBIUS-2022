@@ -139,10 +139,14 @@
 	</skill>
 	<skill id="30501" toLevel="27" name="Backspin Blow">
 		<icon>icon.skill30501</icon>
-		<castRange>40</castRange>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<trait>SHOCK</trait>
+		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<effectRange>400</effectRange>
+		<effectRange>600</effectRange>
 		<hitTime>1000</hitTime>
 		<magicLvl>
 			<value level="1">20</value>
@@ -253,6 +257,7 @@
 					<value fromLevel="23" toLevel="27" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="30502" toLevel="24" name="Chin Strike">
@@ -1142,6 +1147,10 @@
 			<effect name="SphericBarrier">
 				<amount>150</amount>
 			</effect>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
@@ -1630,6 +1639,11 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="30531" toLevel="1" name="Servitor's Rage">
+		<!-- Critical Damage Received increases by $s2 for $s1 due to the rage of Servitor. -->
+		<icon>icon.skill11351</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- P. Critical Rate +$s1, P. Skill Critical Rate +$s2. -->
 		<icon>icon.skill30510</icon>
@@ -1672,6 +1686,25 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="30533" toLevel="1" name="Backside Purge">
+		<icon>icon.skill30509</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30534" toLevel="1" name="Transform Puppy 1">
+		<!-- Transforms into a Test - Puppy. -->
+		<icon>icon.skilltransform1</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30535" toLevel="1" name="Transform Puppy 2">
+		<!-- Transforms into a Test - Puppy. -->
+		<icon>icon.skilltransform1</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="30536" toLevel="1" name="Transform Puppy 3">
+		<!-- Transforms into a Test - Puppy. -->
+		<icon>icon.skilltransform1</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="30540" toLevel="17" name="Eminent Fist Weapon Mastery">
 		<!-- When equipped with a fist weapon, P. Atk. +$s1 and +$s2. -->

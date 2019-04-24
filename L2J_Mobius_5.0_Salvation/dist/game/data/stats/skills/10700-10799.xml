@@ -206,9 +206,25 @@
 		<reuseDelay>90000</reuseDelay>
 		<effectPoint>-655</effectPoint>
 		<isDebuff>true</isDebuff>
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Disarmor" />
 		</effects>
+		<pveEffects>
+			<effect name="PhysicalDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</pveEffects>
 	</skill>
 	<skill id="10704" toLevel="3" name="Grim Reaper Possession">
 		<!-- Raids the target in the distance of $s1 to inflict short stun and increase your P. Critical Damage by $s3 for $s2. Requires dagger/ dual dagger. Consumes $s4 Soulstones. -->
@@ -221,16 +237,20 @@
 			<value fromLevel="1" toLevel="3">80</value> <!-- Guessed -->
 			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<affectRange>200</affectRange> <!-- Guessed -->
-		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<affectRange>400</affectRange> <!-- Fafurion -->
+		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>DERANGEMENT</trait>
-		<mpConsume>155</mpConsume>
+		<mpConsume>
+			<value level="1">145</value>
+			<value level="2">150</value>
+			<value level="3">155</value>
+		</mpConsume>
 		<castRange>1300</castRange>
 		<hitTime>1000</hitTime>
 		<reuseDelay>30000</reuseDelay>
@@ -256,6 +276,11 @@
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>7014</skillId> 
+			</effect>
+		</selfEffects>
 	</skill>
  	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 Power added to P. Atk.. Causes Bleed on the target for $s2. Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Eastery Wind Strike. Half-kill is possible. Requires dagger/ dual dagger to be equipped. -->

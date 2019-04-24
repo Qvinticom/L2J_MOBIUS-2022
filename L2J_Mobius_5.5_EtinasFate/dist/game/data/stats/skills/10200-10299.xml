@@ -192,6 +192,11 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>SWORD</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -265,6 +270,11 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+					<item>DUALBLUNT</item>
+					<item>DUAL</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -715,7 +725,6 @@
 					<value level="11">22603</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -918,14 +927,6 @@
 				<distance>250</distance>
 				<speed>600</speed>
 				<knockDown>true</knockDown>
-			</effect>
-			<effect name="DefenceTrait">
-				<AIRBIND>100</AIRBIND>
-				<KNOCKBACK>100</KNOCKBACK>
-				<SLEEP>100</SLEEP>
-				<KNOCKDOWN>100</KNOCKDOWN>
-				<SHOCK>100</SHOCK>
-				<HOLD>100</HOLD>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>

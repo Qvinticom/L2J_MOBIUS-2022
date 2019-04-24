@@ -777,10 +777,14 @@
 	<item id="28382" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry Box. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+		   <skill id="27720" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="28383" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Resistance to all Debuffs by 30%, and when receiving damage to a PC, Stun/ Silence are canceled. When used, all debuffs are canceled and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->

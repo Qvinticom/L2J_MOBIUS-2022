@@ -712,6 +712,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27440" level="6"/> <!-- Cat's Eye -->
+			<skill id="27441" level="1"/> <!-- Cat's Eye - Invincibility -->
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" type="Armor">
@@ -724,6 +725,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27442" level="6"/> <!-- Amethyst -->
+			<skill id="27443" level="1"/> <!-- Amethyst - Remove Invincibility/Immunity -->
 		</skills>
 	</item>
 	<item id="28378" name="Greater Vital Stone" type="Armor">
@@ -736,6 +738,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="18568" level="6"/> <!-- Vital Stone -->
+			<skill id="27439" level="3"/> <!-- Vital Wind -->
 		</skills>
 	</item>
 	<item id="28379" name="Greater Garnet" type="Armor">
@@ -774,10 +777,14 @@
 	<item id="28382" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry Box. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+		   <skill id="27720" level="1" /> <!-- Ultimate Jewelry Box -->
+		</skills>
 	</item>
 	<item id="28383" name="Greater Garnet" type="Armor">
 		<!-- Increases Resistance to all Debuffs by 30%, and when receiving damage to a PC, Stun/ Silence are canceled. When used, all debuffs are canceled and you become immune to debuffs for 7 seconds. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
