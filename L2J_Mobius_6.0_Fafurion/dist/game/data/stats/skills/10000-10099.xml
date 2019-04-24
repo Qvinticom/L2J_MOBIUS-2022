@@ -572,7 +572,7 @@
 			</effect>
 			<effect name="Speed">
 				<amount>
-					<value fromLevel="1" toLevel="6">120</value>
+					<value fromLevel="1" toLevel="6">-120</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
@@ -584,7 +584,8 @@
 		<icon>icon.skill10011</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="13">100</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -644,6 +645,7 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
+		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -688,9 +690,8 @@
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="Speed">
-				<amount>-70</amount>
-				<mode>DIFF</mode>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -711,7 +712,6 @@
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
-		<nextAction>ATTACK</nextAction>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -803,11 +803,11 @@
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PAtk">
+			<effect name="PhysicalAttackSpeed">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
+			<effect name="MagicalAttackSpeed">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
