@@ -173,7 +173,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUAL</item>
-					<item> DUALBLUNT</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="PAtk">
@@ -186,7 +186,7 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>DUAL</item>
-					<item> DUALBLUNT</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 		</effects>
@@ -345,15 +345,15 @@
 				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>-15</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
@@ -361,11 +361,11 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
@@ -373,16 +373,16 @@
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
-					<item> BLUNT</item>
-					<item> DUAL</item>
-					<item> DUALFIST</item>
-					<item> POLE</item>
-					<item> DUALBLUNT</item>
+					<item>BLUNT</item>
+					<item>DUAL</item>
+					<item>DUALFIST</item>
+					<item>POLE</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1047,7 +1047,7 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1429,7 +1429,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<abnormalVisualEffect>LONG_BLOW</abnormalVisualEffect>
@@ -1456,13 +1456,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -1475,7 +1475,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">60</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<abnormalVisualEffect>LONG_BLOW</abnormalVisualEffect>
@@ -1531,13 +1531,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -1550,7 +1550,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">60</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<abnormalVisualEffect>WIDE_SWORD</abnormalVisualEffect>
@@ -1579,13 +1579,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -1599,7 +1599,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">60</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalVisualEffect>BIG_FIST</abnormalVisualEffect>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -1663,7 +1663,7 @@
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
