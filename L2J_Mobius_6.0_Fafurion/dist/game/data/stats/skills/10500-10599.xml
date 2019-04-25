@@ -46,6 +46,13 @@
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
 				<amount>
 					<value level="1">739</value>
 					<value level="2">856</value>
@@ -102,6 +109,13 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="PAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">844</value>
@@ -290,7 +304,6 @@
 			</effect>
 			<effect name="CriticalRate">
 				<amount>60</amount>
-				<magicType>0</magicType>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
