@@ -138,7 +138,7 @@ public final class PhysicalAttack extends AbstractEffect
 		if (defence != -1)
 		{
 			// TODO: Find proper defence formula.
-			defence = effected.getLevel() > 99 ? defence / 10 : defence;
+			defence = effector.isPlayable() && (effected.getLevel() > 99) ? defence / 10 : defence;
 			
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
