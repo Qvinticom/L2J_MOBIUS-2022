@@ -2681,7 +2681,7 @@
 				<mode>PER</mode>
 				<armorType>
 					<item>LIGHT</item>
-					<item> MAGIC</item>
+					<item>MAGIC</item>
 				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -2700,7 +2700,7 @@
 				<mode>DIFF</mode>
 				<armorType>
 					<item>LIGHT</item>
-					<item> MAGIC</item>
+					<item>MAGIC</item>
 				</armorType>
 			</effect>
 			<effect name="HpRegen">
@@ -2717,6 +2717,10 @@
 					<value level="10">9.4</value>
 				</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+					<item>MAGIC</item>
+				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>
@@ -2732,6 +2736,10 @@
 					<value level="10">10.2</value>
 				</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+					<item>MAGIC</item>
+				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -2742,7 +2750,7 @@
 				<mode>DIFF</mode>
 				<armorType>
 					<item>LIGHT</item>
-					<item> MAGIC</item>
+					<item>MAGIC</item>
 				</armorType>
 			</effect>
 		</effects>
@@ -2936,7 +2944,7 @@
 		<effects>
 			<effect name="MpRegen">
 				<amount>20</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 				<armorType>
 					<item>SIGIL</item>
 				</armorType>
