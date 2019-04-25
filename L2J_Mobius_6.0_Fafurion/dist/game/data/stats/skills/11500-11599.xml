@@ -66,6 +66,10 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -105,6 +109,10 @@
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>20</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -196,8 +204,15 @@
 					<item>LIGHT</item>
 				</armorType>
 			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
 			<effect name="Speed">
-				<amount>4</amount>
+				<amount>10</amount>
 				<mode>DIFF</mode>
 				<armorType>
 					<item>LIGHT</item>
@@ -2134,6 +2149,10 @@
 			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
