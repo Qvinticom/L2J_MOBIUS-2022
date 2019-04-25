@@ -383,12 +383,18 @@
 				<stat>INT</stat>
 			</effect>
 			<effect name="PAtk">
-				<amount>105</amount>
+				<amount>120</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="MAtk">
 				<amount>24</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -405,7 +411,7 @@
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
-					<item>DUALBLUNT</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="MAtk">
@@ -422,17 +428,23 @@
 					<value level="10">2478</value>
 				</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="Accuracy">
 				<amount>4</amount>
 				<mode>DIFF</mode>
 				<weaponType>
-					<item>DUALBLUNT</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>23</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -440,7 +452,10 @@
 			</effect>
 			<effect name="MagicCriticalRate">
 				<amount>6</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
