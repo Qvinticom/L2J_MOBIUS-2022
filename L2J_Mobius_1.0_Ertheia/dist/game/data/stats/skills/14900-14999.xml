@@ -2554,11 +2554,10 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -2608,11 +2607,10 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -2673,11 +2671,10 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<affectRange>2000</affectRange>
-		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
