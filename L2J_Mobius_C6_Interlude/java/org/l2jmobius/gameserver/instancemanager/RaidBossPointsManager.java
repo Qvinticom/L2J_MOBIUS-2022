@@ -73,7 +73,7 @@ public class RaidBossPointsManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("RaidPointsManager: Couldnt load raid points ");
+			LOGGER.warning("RaidPointsManager: Could not load raid points.");
 		}
 		catch (Exception e)
 		{
@@ -95,7 +95,7 @@ public class RaidBossPointsManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not update char raid points: " + e);
+			LOGGER.warning("RaidPointsManager: Could not update char raid points: " + e);
 		}
 	}
 	
@@ -165,7 +165,7 @@ public class RaidBossPointsManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not clean raid points: " + e);
+			LOGGER.warning("RaidPointsManager: Could not clean raid points: " + e);
 		}
 	}
 	

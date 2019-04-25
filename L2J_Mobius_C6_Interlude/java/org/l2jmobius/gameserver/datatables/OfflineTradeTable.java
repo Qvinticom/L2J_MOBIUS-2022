@@ -290,7 +290,7 @@ public class OfflineTradeTable
 			}
 			rs.close();
 			stm.close();
-			LOGGER.info("Loaded: " + nTraders + " offline trader(s)");
+			LOGGER.info("Loaded " + nTraders + " offline traders.");
 		}
 		catch (Exception e)
 		{

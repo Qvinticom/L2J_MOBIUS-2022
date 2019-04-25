@@ -146,8 +146,8 @@ public class AccessLevels
 		{
 			LOGGER.warning("AccessLevels: Error loading from database " + e);
 		}
-		LOGGER.info("AccessLevels: Master Access Level is " + Config.MASTERACCESS_LEVEL);
-		LOGGER.info("AccessLevels: User Access Level is " + Config.USERACCESS_LEVEL);
+		LOGGER.info("AccessLevels: Master Access Level is " + Config.MASTERACCESS_LEVEL + ".");
+		LOGGER.info("AccessLevels: User Access Level is " + Config.USERACCESS_LEVEL + ".");
 	}
 	
 	/**

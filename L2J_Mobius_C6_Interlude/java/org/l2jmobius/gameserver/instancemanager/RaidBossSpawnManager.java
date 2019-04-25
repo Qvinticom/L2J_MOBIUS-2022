@@ -105,8 +105,8 @@ public class RaidBossSpawnManager
 				}
 			}
 			
-			LOGGER.info("RaidBossSpawnManager: Loaded " + _bosses.size() + " Instances");
-			LOGGER.info("RaidBossSpawnManager: Scheduled " + _schedules.size() + " Instances");
+			LOGGER.info("RaidBossSpawnManager: Loaded " + _bosses.size() + " instances.");
+			LOGGER.info("RaidBossSpawnManager: Scheduled " + _schedules.size() + " instances.");
 		}
 		catch (SQLException e)
 		{
@@ -156,7 +156,7 @@ public class RaidBossSpawnManager
 				
 				_storedInfo.put(bossId, info);
 				
-				GmListTable.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName());
+				GmListTable.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName() + ".");
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss " + raidboss.getName() + " spawned in world.");

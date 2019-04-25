@@ -481,7 +481,7 @@ public class FishingChampionshipManager
 			setEndOfChamp();
 			shutdown();
 			
-			LOGGER.info("FishingChampionshipManager : new event period start.");
+			LOGGER.info("FishingChampionshipManager: new event period start.");
 			ThreadPool.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}

@@ -402,8 +402,8 @@ public class GameServer
 		UserCommandHandler.getInstance();
 		VoicedCommandHandler.getInstance();
 		
-		LOGGER.info("AutoChatHandler : Loaded " + AutoChatHandler.getInstance().size() + " handlers in total.");
-		LOGGER.info("AutoSpawnHandler : Loaded " + AutoSpawn.getInstance().size() + " handlers in total.");
+		LOGGER.info("AutoChatHandler: Loaded " + AutoChatHandler.getInstance().size() + " handlers in total.");
+		LOGGER.info("AutoSpawnHandler: Loaded " + AutoSpawn.getInstance().size() + " handlers in total.");
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
@@ -587,7 +587,7 @@ public class GameServer
 		
 		Util.printSection("Status");
 		System.gc();
-		LOGGER.info("Server Loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds");
+		LOGGER.info("Server Loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		ServerStatus.getInstance();
 		
 		// Load telnet status

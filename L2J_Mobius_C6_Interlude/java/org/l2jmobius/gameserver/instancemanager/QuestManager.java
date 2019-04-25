@@ -44,7 +44,7 @@ public class QuestManager extends ScriptManager<Quest>
 	
 	public QuestManager()
 	{
-		LOGGER.info("Initializing QuestManager");
+		LOGGER.info("Initializing QuestManager.");
 		_questCount = 0;
 	}
 	
