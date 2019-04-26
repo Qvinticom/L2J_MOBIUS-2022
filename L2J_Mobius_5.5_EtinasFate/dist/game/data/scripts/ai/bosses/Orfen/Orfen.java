@@ -50,10 +50,10 @@ public final class Orfen extends AbstractNpcAI
 {
 	private static final Location[] POS =
 	{
-		new Location(43728, 17220, -4342),
-		new Location(55024, 17368, -5412),
-		new Location(53504, 21248, -5486),
-		new Location(53248, 24576, -5262)
+		new Location(43200, 16304, -4395),
+		new Location(43300, 16404, -4395),
+		new Location(43400, 16504, -4395),
+		new Location(43500, 16604, -4395)
 	};
 	
 	private static final NpcStringId[] TEXT =
