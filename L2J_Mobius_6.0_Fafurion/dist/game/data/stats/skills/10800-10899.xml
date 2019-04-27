@@ -93,7 +93,7 @@
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="10">70</value>
-			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -208,7 +208,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="10" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="4" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -229,7 +229,7 @@
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="6">100</value>
-			<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -267,7 +267,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -361,7 +361,7 @@
 			<value level="2">600</value>
 			<value level="3">700</value>
 			<value level="4">800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + 10 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<effectRange>
 			<value level="1">1000</value>
@@ -545,7 +545,7 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + subIndex * 90}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + (subIndex * 90)}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<effectPoint>687</effectPoint>
@@ -616,7 +616,7 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -693,7 +693,7 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + subIndex * 90}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + (subIndex * 90)}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<magicLvl>
@@ -761,7 +761,7 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

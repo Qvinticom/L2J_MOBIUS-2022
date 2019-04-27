@@ -308,7 +308,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">300</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 15)}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<operateType>A2</operateType>
@@ -382,7 +382,7 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -817,12 +817,12 @@
 					<value level="7">29911</value>
 					<value level="8">29911</value>
 					<value level="9">29911</value>
-					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
 					<value fromLevel="1" toLevel="9">15</value>
-					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="9">1</value>
@@ -927,7 +927,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">50</value>
-			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -984,7 +984,7 @@
 					<value level="7">39060</value>
 					<value level="8">39060</value>
 					<value level="9">39060</value>
-					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -994,7 +994,7 @@
 			<effect name="TargetCancel" />
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1006,7 +1006,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">300</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 15)}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<operateType>A2</operateType>
@@ -1047,7 +1047,7 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1134,7 +1134,7 @@
 				<slot>BUFF</slot>
 				<rate>
 					<value fromLevel="1" toLevel="8">70</value>
-					<value fromLevel="2" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="2" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</rate>
 				<max>2</max>
 			</effect>
@@ -1360,7 +1360,7 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<activateRate>
 			<value fromLevel="1" toLevel="9">60</value>
-			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1415,12 +1415,12 @@
 					<value level="7">36005</value>
 					<value level="8">36005</value>
 					<value level="9">36005</value>
-					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
 					<value fromLevel="1" toLevel="9">15</value>
-					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
 			</effect>
@@ -1471,13 +1471,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + (0.4 * subIndex)}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -1546,13 +1546,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + (0.4 * subIndex)}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -1594,13 +1594,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1) * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
+ 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{0.6 + (0.4 * subIndex)}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -1672,13 +1672,13 @@
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{subIndex * 0.4 + 0.6}</value>
+ 					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3020">{0.6 + (0.4 * subIndex)}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
