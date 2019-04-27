@@ -39,7 +39,6 @@ public class DatabaseFactory
 		_hds.setUsername(Config.DATABASE_LOGIN);
 		_hds.setPassword(Config.DATABASE_PASSWORD);
 		_hds.setMaximumPoolSize(Config.DATABASE_MAX_CONNECTIONS);
-		_hds.setIdleTimeout(Config.DATABASE_MAX_IDLE_TIME);
 		_hds.setConnectionTimeout(600000);
 		_hds.setIdleTimeout(1200000);
 		_hds.setMaxLifetime(1200000);

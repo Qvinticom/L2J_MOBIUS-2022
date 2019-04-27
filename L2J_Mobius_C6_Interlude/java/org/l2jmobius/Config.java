@@ -210,7 +210,6 @@ public final class Config
 	public static String DATABASE_LOGIN;
 	public static String DATABASE_PASSWORD;
 	public static int DATABASE_MAX_CONNECTIONS;
-	public static int DATABASE_MAX_IDLE_TIME;
 	public static boolean BACKUP_DATABASE;
 	public static String MYSQL_BIN_PATH;
 	public static String BACKUP_PATH;
@@ -1360,7 +1359,6 @@ public final class Config
 			DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
 			DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
 			DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
-			DATABASE_MAX_IDLE_TIME = Integer.parseInt(serverSettings.getProperty("MaximumDbIdleTime", "0"));
 			
 			BACKUP_DATABASE = Boolean.valueOf(serverSettings.getProperty("BackupDatabase", "false"));
 			MYSQL_BIN_PATH = serverSettings.getProperty("MySqlBinLocation", "C:/xampp/mysql/bin/");
@@ -3792,7 +3790,6 @@ public final class Config
 			DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
 			DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
 			DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
-			DATABASE_MAX_IDLE_TIME = Integer.parseInt(serverSettings.getProperty("MaximumDbIdleTime", "0"));
 			
 			BACKUP_DATABASE = Boolean.valueOf(serverSettings.getProperty("BackupDatabase", "false"));
 			MYSQL_BIN_PATH = serverSettings.getProperty("MySqlBinLocation", "C:/xampp/mysql/bin/");
