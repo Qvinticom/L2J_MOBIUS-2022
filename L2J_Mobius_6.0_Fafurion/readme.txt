@@ -1,7 +1,7 @@
 L2J-Mobius Fafurion
 
 Client: https://drive.google.com/uc?id=1pukdKmUvpSxdeCcBDmWKW3wXLY-fy4Y4&export=download
-Geodata: https://www.mediafire.com/file/o4eh1zzpa34971g/mobius_geodata_fafurion_l2d.zip
+Geodata: http://www.mediafire.com/file/1sp3m42qqnmrkmm/L2J_Mobius_6.0_Fafurion_Geodata.zip
 JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 
