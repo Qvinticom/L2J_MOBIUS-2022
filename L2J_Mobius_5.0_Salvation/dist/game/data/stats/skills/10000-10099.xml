@@ -100,7 +100,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HateAttack">
-				<amount>60</amount>
+				<amount>500</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
@@ -2103,6 +2103,32 @@
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 			<!-- TODO p_berserker -->
+			<effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">622500</value>
+					<value level="3">658100</value>
+					<value level="4">693700</value>
+					<value level="5">729300</value>
+					<value level="6">764900</value>
+					<value level="7">902250</value>
+					<value level="8">950650</value>
+					<value level="9">999050</value>
+				</power>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">11738</value>
+					<value level="2">12450</value>
+					<value level="3">13162</value>
+					<value level="4">13874</value>
+					<value level="5">14586</value>
+					<value level="6">15298</value>
+					<value level="7">18045</value>
+					<value level="8">19013</value>
+					<value level="9">19981</value>
+				</power>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="DispelBySlot">
@@ -2184,6 +2210,18 @@
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 			<!-- TODO p_berserker -->
+			<effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">622500</value>
+					<value level="3">658100</value>
+					<value level="4">693700</value>
+					<value level="5">729300</value>
+					<value level="6">764900</value>
+					<value level="7">902250</value>
+					<value level="8">950650</value>
+				</power>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="DispelBySlot">
@@ -2217,6 +2255,14 @@
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
 		<effects>
+			<effect name="HateAttack">
+				<amount>500</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Rage Aura -->
 				<skillId>10029</skillId> <!-- Provoke Aura -->
@@ -2251,16 +2297,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="AddHate">
-				<amount>500</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
-			<effect name="HateAttack">
-				<amount>500</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10030" toLevel="1" name="Challenge Aura">
@@ -2273,14 +2311,6 @@
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
 		<effects>
-			<effect name="HateAttack">
-				<amount>200</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
-			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Challenge Aura -->
 				<skillId>10031</skillId> <!-- Challenge Aura -->

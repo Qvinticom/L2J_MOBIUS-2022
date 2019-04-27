@@ -100,7 +100,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HateAttack">
-				<amount>60</amount>
+				<amount>500</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
@@ -462,6 +462,7 @@
 		</effects>
 	</skill>
 	<skill id="10008" toLevel="11" name="Shield Charge">
+		<!-- Uses a shield to rush target with $s1 Power added, reducing their Speed by $s3 for $s2. Can be used while a shield is equipped. -->
 		<icon>icon.skill10008</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
@@ -568,6 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="10009" toLevel="11" name="Last Judgment">
+		<!-- Attacks target with $s1 Power added to P. Atk. and Stuns for $s2. In PVP, Restrains standard attacks. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10011</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -684,6 +686,7 @@
 		</effects>
 	</skill>
 	<skill id="10010" toLevel="11" name="Justice Punishment">
+		<!-- Attacks target with $s1 Power added to P. Atk, and Attack/ Casting Spd. is reduced by $s2 for $s3. Has a chance to Silence target. If in a Two-Hand Stance, Decreases P. Def. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10010</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -793,6 +796,7 @@
 		</effects>
 	</skill>
 	<skill id="10011" toLevel="8" name="Shield Impact">
+		<!-- With the wave of the shield, attacks enemies in front with $s1 Power added to P. Atk., pushes them away a short distance, and releases the target with a certain probability. Requires a shield to be equipped. -->
 		<icon>icon.skill10012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -876,6 +880,7 @@
 		</effects>
 	</skill>
 	<skill id="10012" toLevel="10" name="Shield Wave">
+		<!-- Attacks the targets near you with $s1 power added to P. Atk. and inflicts Stun for $s2. Grants Wave Barrier effect for $s3. Requires a shield. -->
 		<icon>icon.skill3584</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -972,6 +977,7 @@
 		</effects>
 	</skill>
 	<skill id="10013" toLevel="11" name="Gust Blade">
+		<!-- Attacks nearby targets with $s1 Power added to P. Atk and Heal Received is reduced by $s3 for $s2. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10013</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalLvl>1</abnormalLvl>
@@ -1074,6 +1080,7 @@
 		</effects>
 	</skill>
 	<skill id="10014" toLevel="11" name="Chain Galaxy">
+		<!-- Swings the chain to attack nearby enemies with $s1 Power added to P. Atk. and holds them for $s2. Requires a sword or blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10014</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1180,6 +1187,7 @@
 		</effects>
 	</skill>
 	<skill id="10015" toLevel="9" name="Chain Strike">
+		<!-- Swings a chain to draw the target to you. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill10015</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1253,6 +1261,7 @@
 		</effects>
 	</skill>
 	<skill id="10016" toLevel="9" name="Chain Hydra">
+		<!-- Pulls target and nearby enemies to make them attack you.Requires a shield. -->
 		<icon>icon.skill10016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1328,6 +1337,7 @@
 		</effects>
 	</skill>
 	<skill id="10017" toLevel="7" name="Final Ultimate Defense">
+		<!-- Activates Shield Block for $s1 and reduces the maximum damage received to approximately $s2 in inverse proportion to your P. Def. Impossible to use Raise Shield/ Focus Shield. Requires a shield to be equipped. -->
 		<icon>icon.skill10097</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1443,6 +1453,7 @@
 		</effects>
 	</skill>
 	<skill id="10018" toLevel="2" name="Noble Sacrifice">
+		<!-- For $s1, receives $s2 of the damage received by the ally and activates the Last Patience effect that prevents your HP from dropping below 1. -->
 		<icon>icon.skill10020</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1495,6 +1506,7 @@
 		</effects>
 	</skill>
 	<skill id="10019" toLevel="5" name="Protection of Faith">
+		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 in inverse proportion to your P. Def and increases Speed by $s3. Makes you immune to Hold and Stun. This effect cannot be stacked with the same effect or Nigh Aegis, and a limit applies after its duration is over. Requires a shield to be equipped. -->
 		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
@@ -1584,6 +1596,7 @@
 		</endEffects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
+		<!-- For $s1, activates the Shield Block buff. Increases M. Def. by $s2 and decreases chance of receiving M. Critical Hit by $s3. Using Shield Charge, Shield Bash or Shield Boomerang cancels the skill. Requires a shield to be equipped. -->
 		<icon>icon.skill10020_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1643,6 +1656,7 @@
 		</effects>
 	</skill>
 	<skill id="10021" toLevel="7" name="Raise Shield">
+		<!-- For $s1, activates the Shield Block buff. Increases P. Def. by $s2 and decreases chance of receiving P. Critical Hit by $s3. Using Shield Charge, Shield Bash or Shield Boomerang cancels the skill. Requires a shield to be equipped. -->
 		<icon>icon.skill10021_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1716,6 +1730,7 @@
 		</effects>
 	</skill>
 	<skill id="10022" toLevel="1" name="Ignore Death">
+		<!-- For $s1, HP does not decrease below 1. -->
 		<icon>
 			<value level="1">icon.skill10020</value>
 			<value level="2">icon.skill10022</value>
@@ -1815,6 +1830,7 @@
 		</effects>
 	</skill>
 	<skill id="10023" toLevel="5" name="King of Beasts">
+		<!-- Summons the King of Beasts to attack nearby and frontal targets with $s1 Power added to P. Atk. Requires a shield. Over-hit. -->
 		<icon>icon.skill10023</icon>
 		<affectLimit>5-12</affectLimit>
 		<nextAction>ATTACK</nextAction>
@@ -1879,6 +1895,7 @@
 		</effects>
 	</skill>
 	<skill id="10024" toLevel="1" name="Nine Aegis">
+		<!-- Creates the Protection Barrier for $s1 with 9 shields, which increases P. Def/ M. Def/ Bow/ Crossbow Resistance of allies within the area of effect by $s2 and their Reflect Magic by $s3 and makes them immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. This effect cannot be stacked with the same effect or Protection of Faith, and a limit applies after its duration is over. Requires a shield to be equipped. -->
 		<icon>icon.skill10024</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -2036,6 +2053,7 @@
 		</effects>
 	</skill>
 	<skill id="10026" toLevel="9" name="Superior Aggression">
+		<!-- Throws the shield at the target to attack it with $s1 Power added to P. Atk and provoke it into attacking you for $s2. In PvP, it also decreases Speed by $s3. Requires a shield to be equipped. -->
 		<icon>icon.skill10018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2085,6 +2103,32 @@
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 			<!-- TODO p_berserker -->
+			<effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">622500</value>
+					<value level="3">658100</value>
+					<value level="4">693700</value>
+					<value level="5">729300</value>
+					<value level="6">764900</value>
+					<value level="7">902250</value>
+					<value level="8">950650</value>
+					<value level="9">999050</value>
+				</power>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">11738</value>
+					<value level="2">12450</value>
+					<value level="3">13162</value>
+					<value level="4">13874</value>
+					<value level="5">14586</value>
+					<value level="6">15298</value>
+					<value level="7">18045</value>
+					<value level="8">19013</value>
+					<value level="9">19981</value>
+				</power>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="DispelBySlot">
@@ -2109,6 +2153,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10027" toLevel="8" name="Superior Aggression Aura">
+		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2165,6 +2210,18 @@
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 			<!-- TODO p_berserker -->
+			<effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">622500</value>
+					<value level="3">658100</value>
+					<value level="4">693700</value>
+					<value level="5">729300</value>
+					<value level="6">764900</value>
+					<value level="7">902250</value>
+					<value level="8">950650</value>
+				</power>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="DispelBySlot">
@@ -2198,6 +2255,14 @@
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
 		<effects>
+			<effect name="HateAttack">
+				<amount>500</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Rage Aura -->
 				<skillId>10029</skillId> <!-- Provoke Aura -->
@@ -2232,16 +2297,8 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="AddHate">
-				<amount>500</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
-			<effect name="HateAttack">
-				<amount>500</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10030" toLevel="1" name="Challenge Aura">
@@ -2254,14 +2311,6 @@
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
 		<effects>
-			<effect name="HateAttack">
-				<amount>200</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
-			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Challenge Aura -->
 				<skillId>10031</skillId> <!-- Challenge Aura -->
@@ -3284,6 +3333,7 @@
 		</effects>
 	</skill>
 	<skill id="10051" toLevel="6" name="Lion Roar">
+		<!-- Attack the nearby enemies and block the physical skills. -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -3337,6 +3387,7 @@
 		</effects>
 	</skill>
 	<skill id="10052" toLevel="6" name="Lion Claw">
+		<!-- Flourishes claws to attack enemies at the front. -->
 		<icon>icon.skill0217</icon>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;80;150</fanRange>
@@ -3381,6 +3432,7 @@
 		</effects>
 	</skill>
 	<skill id="10053" toLevel="6" name="Lion Dash">
+		<!-- Charges toward the enemy to inflict damage and inflict Stun. -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3435,6 +3487,7 @@
 		</effects>
 	</skill>
 	<skill id="10054" toLevel="6" name="Lion Flame">
+		<!-- Spews flames at the enemy to inflict damage. -->
 		<icon>icon.skill0217</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -4926,6 +4979,7 @@
 		</effects>
 	</skill>
 	<skill id="10091" toLevel="1" name="Templar's Will">
+		<!-- Removes your debuff. -->
 		<icon>icon.skll10092</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -5102,6 +5156,7 @@
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
+		<!-- Strikes the Lightning of Darkness on the target and nearby enemies with $s1 Power added to P. Atk. and paralyzes them for $s2. Consumes $s3 Soulstones. Requires a sword or blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10094_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5235,6 +5290,7 @@
 		</effects>
 	</skill>
 	<skill id="10097" toLevel="6" name="Riot Shield">
+		<!-- Sends the Phoenix to attack the target and nearby enemies with $s1 Power added to P. Atk. and provokes them into attacking you for $s2. Decreases standard attack ranges of Bow and Crossbow by $s3. Consumes $s3 Soulstones. Requires a sword or blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10097_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5304,6 +5360,7 @@
 		</effects>
 	</skill>
 	<skill id="10098" toLevel="4" name="Paladin's Frenzy">
+		<!-- For $s1, increases Shield Def. by $s2, M. Def by $s3, Atk. Spd. by $s4, P. Critical Rate/ P. Critical Damage by $s5, and all debuff resistances by $s6. Additionally increases the duration of Last Patience by $s7. -->
 		<icon>icon.skill10098</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5429,6 +5486,7 @@
 		</effects>
 	</skill>
 	<skill id="10099" toLevel="4" name="Avenger's Frenzy">
+		<!-- For $s1, increases Shield Def. by $s2, M. Def by $s3, Atk. Spd. by $s4, Speed by $s5, P. Critical Rate/ P. Critical Damage by $s6, and Damage Reflection by $s7. -->
 		<icon>icon.skill10099</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
