@@ -178,6 +178,8 @@ public final class Config
 	public static boolean SUMMON_STORE_SKILL_COOLTIME;
 	public static long EFFECT_TICK_RATIO;
 	public static boolean ENABLE_ALTER_SKILLS;
+	public static boolean FAKE_DEATH_UNTARGET;
+	public static boolean FAKE_DEATH_DAMAGE_STAND;
 	public static boolean LIFE_CRYSTAL_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
@@ -1523,6 +1525,8 @@ public final class Config
 			SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
 			EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
 			ENABLE_ALTER_SKILLS = Character.getBoolean("EnableAlterSkills", true);
+			FAKE_DEATH_UNTARGET = Character.getBoolean("FakeDeathUntarget", true);
+			FAKE_DEATH_DAMAGE_STAND = Character.getBoolean("FakeDeathDamageStand", false);
 			LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);

@@ -1096,7 +1096,7 @@ public class CreatureAI extends AbstractAI
 		if ((target == null) || target.isAlikeDead())
 		{
 			// check if player is fakedeath
-			if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath())
+			if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 			{
 				target.stopFakeDeath(true);
 				return false;
@@ -1126,7 +1126,7 @@ public class CreatureAI extends AbstractAI
 	 */
 	protected boolean checkTargetLost(WorldObject target)
 	{
-		if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath())
+		if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 		{
 			((PlayerInstance) target).stopFakeDeath(true);
 			return false;

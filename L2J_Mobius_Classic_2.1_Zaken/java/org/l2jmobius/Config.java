@@ -177,6 +177,8 @@ public final class Config
 	public static boolean SUBCLASS_STORE_SKILL_COOLTIME;
 	public static boolean SUMMON_STORE_SKILL_COOLTIME;
 	public static long EFFECT_TICK_RATIO;
+	public static boolean FAKE_DEATH_UNTARGET;
+	public static boolean FAKE_DEATH_DAMAGE_STAND;
 	public static boolean LIFE_CRYSTAL_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;

@@ -174,6 +174,8 @@ public final class Config
 	public static boolean ALT_GAME_SHIELD_BLOCKS;
 	public static int ALT_PERFECT_SHLD_BLOCK;
 	public static long EFFECT_TICK_RATIO;
+	public static boolean FAKE_DEATH_UNTARGET;
+	public static boolean FAKE_DEATH_DAMAGE_STAND;
 	public static boolean ALLOW_CLASS_MASTERS;
 	public static ClassMasterSettings CLASS_MASTER_SETTINGS;
 	public static boolean ALLOW_ENTIRE_TREE;
@@ -1759,6 +1761,8 @@ public final class Config
 			ALT_GAME_SHIELD_BLOCKS = Character.getBoolean("AltShieldBlocks", false);
 			ALT_PERFECT_SHLD_BLOCK = Character.getInt("AltPerfectShieldBlockRate", 10);
 			EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
+			FAKE_DEATH_UNTARGET = Character.getBoolean("FakeDeathUntarget", false);
+			FAKE_DEATH_DAMAGE_STAND = Character.getBoolean("FakeDeathDamageStand", true);
 			ALLOW_CLASS_MASTERS = Character.getBoolean("AllowClassMasters", false);
 			ALLOW_ENTIRE_TREE = Character.getBoolean("AllowEntireTree", false);
 			ALTERNATE_CLASS_MASTER = Character.getBoolean("AlternateClassMaster", false);

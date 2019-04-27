@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.StatsSet;
@@ -61,7 +62,7 @@ public final class MagicalSoulAttack extends AbstractEffect
 			return;
 		}
 		
-		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
+		if (target.isPlayer() && target.getActingPlayer().isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 		{
 			target.stopFakeDeath(true);
 		}

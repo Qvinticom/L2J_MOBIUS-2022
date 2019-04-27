@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -51,7 +52,7 @@ public final class CpDamPercent extends AbstractEffect
 			return;
 		}
 		
-		if (info.getEffected().isPlayer() && info.getEffected().getActingPlayer().isFakeDeath())
+		if (info.getEffected().isPlayer() && info.getEffected().getActingPlayer().isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 		{
 			info.getEffected().stopFakeDeath(true);
 		}

@@ -31,6 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -1046,7 +1047,7 @@ public class CreatureAI extends AbstractAI
 		if ((target == null) || target.isAlikeDead())
 		{
 			// check if player is fakedeath
-			if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath())
+			if ((target != null) && target.isPlayer() && ((PlayerInstance) target).isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 			{
 				target.stopFakeDeath(true);
 				return false;
@@ -1076,11 +1077,10 @@ public class CreatureAI extends AbstractAI
 	 */
 	protected boolean checkTargetLost(WorldObject target)
 	{
-		// check if player is fakedeath
-		if ((target != null) && target.isPlayer())
+		// Check if player is fakedeath.
+		if ((target != null) && target.isPlayer() && Config.FAKE_DEATH_DAMAGE_STAND)
 		{
-			final PlayerInstance target2 = (PlayerInstance) target; // convert object to chara
-			
+			final PlayerInstance target2 = (PlayerInstance) target; // Convert object to player.
 			if (target2.isFakeDeath())
 			{
 				target2.stopFakeDeath(true);

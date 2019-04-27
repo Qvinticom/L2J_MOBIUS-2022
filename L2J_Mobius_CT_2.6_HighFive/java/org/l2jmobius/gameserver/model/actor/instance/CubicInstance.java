@@ -22,6 +22,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -537,7 +538,7 @@ public final class CubicInstance implements IIdentifiable
 			
 			if (target.isAlikeDead())
 			{
-				if (target.isPlayer())
+				if (target.isPlayer() && Config.FAKE_DEATH_DAMAGE_STAND)
 				{
 					target.stopFakeDeath(true);
 				}

@@ -3116,6 +3116,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		stopMove(null);
 		getAI().notifyEvent(CtrlEvent.EVT_FAKE_DEATH);
 		broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_START_FAKEDEATH));
+		
+		// Remove target from those that have the untargetable creature on target.
+		if (Config.FAKE_DEATH_UNTARGET)
+		{
+			World.getInstance().forEachVisibleObject(this, Creature.class, c ->
+			{
+				if (c.getTarget() == this)
+				{
+					c.setTarget(null);
+				}
+			});
+		}
 	}
 	
 	/**
