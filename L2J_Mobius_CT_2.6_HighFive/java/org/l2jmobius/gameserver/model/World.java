@@ -111,7 +111,7 @@ public final class World
 				{
 					for (int sy = ry - 1; sy <= (ry + 1); sy++)
 					{
-						if (((sx >= 0) && (sx <= REGIONS_X) && (sy >= 0) && (sy <= REGIONS_Y)))
+						if (((sx >= 0) && (sx < REGIONS_X) && (sy >= 0) && (sy < REGIONS_Y)))
 						{
 							surroundingRegions.add(_worldRegions[sx][sy]);
 						}
