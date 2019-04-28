@@ -16,6 +16,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -192,6 +193,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13929" level="2" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -366,6 +368,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13929" level="2" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -542,6 +545,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13929" level="2" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -599,6 +603,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13930" level="2" /> <!-- Paulina's Magic Enhancement Blessing -->
@@ -715,6 +720,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13929" level="2" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -896,6 +902,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13929" level="2" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1076,6 +1083,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13929" level="2" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1110,6 +1118,7 @@
 			<item id="46929" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Gaiters - Heavy Armor -->
 			<item id="46930" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Gauntlets - Heavy Armor -->
 			<item id="46931" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Boots - Heavy Armor -->
+			<item id="46920" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Shield -->
 			<item id="46942" min="1" max="1" chance="100" /> <!-- Paulina's Elven Necklace -->
 			<item id="46943" min="2" max="2" chance="100" /> <!-- Paulina's Elven Earring -->
 			<item id="46944" min="2" max="2" chance="100" /> <!-- Paulina's Elven Ring -->
@@ -1185,6 +1194,7 @@
 			<item id="46947" min="1" max="1" chance="100" /> <!-- Paulina's Chain Gaiters - Heavy Armor -->
 			<item id="46948" min="1" max="1" chance="100" /> <!-- Paulina's Chain Gloves - Heavy Armor -->
 			<item id="46949" min="1" max="1" chance="100" /> <!-- Paulina's Chain Boots - Heavy Armor -->
+			<item id="46921" min="1" max="1" chance="100" /> <!-- Paulina's Chain Shield -->
 			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Skill Cooldown -->
 			<item id="46961" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - Vampiric Rage -->
 			<item id="46962" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - MP Consumption -->
@@ -1266,6 +1276,7 @@
 			<item id="46967" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gaiters - Heavy Armor -->
 			<item id="46968" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gloves - Heavy Armor -->
 			<item id="46969" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Boots - Heavy Armor -->
+			<item id="46922" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Shield -->
 			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Skill Cooldown -->
 			<item id="46981" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - Vampiric Rage -->
 			<item id="46982" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - MP Consumption -->
@@ -1347,6 +1358,7 @@
 			<item id="46987" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gaiters - Heavy Armor -->
 			<item id="46988" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gauntlets - Heavy Armor -->
 			<item id="46989" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Boots - Heavy Armor -->
+			<item id="46923" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Shield -->
 			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Skill Cooldown -->
 			<item id="47001" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - Vampiric Rage -->
 			<item id="47002" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - MP Consumption -->
@@ -1354,7 +1366,7 @@
 			<item id="47004" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="46847" name="Paulina? Light Armor Box (S-grade)" type="EtcItem">
+	<item id="46847" name="Paulina's Light Armor Box (S-grade)" type="EtcItem">
 		<!-- Double click to obtain a S-grade light armor set, earrings, necklace, and ring -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
@@ -1673,6 +1685,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13943" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1703,6 +1716,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13943" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -2453,6 +2467,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="13943" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -2482,6 +2497,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="13943" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
