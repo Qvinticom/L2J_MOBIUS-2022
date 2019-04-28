@@ -7,7 +7,7 @@
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
@@ -67,7 +67,7 @@
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -125,7 +125,7 @@
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -325,7 +325,7 @@
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -363,7 +363,7 @@
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -404,7 +404,7 @@
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -463,7 +463,7 @@
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -525,7 +525,7 @@
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -591,7 +591,7 @@
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -650,7 +650,7 @@
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -712,7 +712,7 @@
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 30)}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -777,7 +777,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -819,7 +819,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>RHAPSODY</abnormalType>
 		<operateType>A2</operateType>
@@ -879,7 +879,7 @@
 		<icon>icon.skill11615</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
@@ -926,7 +926,7 @@
 		<icon>icon.skill11616</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
@@ -974,7 +974,7 @@
 		<icon>icon.skill11617</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
@@ -1024,7 +1024,7 @@
 		<icon>icon.skill11618</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
