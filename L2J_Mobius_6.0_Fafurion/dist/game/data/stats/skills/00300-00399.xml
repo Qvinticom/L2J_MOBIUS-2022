@@ -1738,7 +1738,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="17">80</value>
-			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
@@ -1817,7 +1817,7 @@
 					<value level="15">876</value>
 					<value level="16">876</value>
 					<value level="17">876</value>
-					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -1849,7 +1849,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="17">80</value>
-			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
@@ -1928,7 +1928,7 @@
 					<value level="15">876</value>
 					<value level="16">876</value>
 					<value level="17">876</value>
-					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -2762,7 +2762,7 @@
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="13">40</value>
-			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>

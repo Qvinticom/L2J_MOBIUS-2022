@@ -2179,12 +2179,12 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="9">30</value>
 			<value fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
-			<value fromLevel="4" toLevel="9" fromSubLevel="2011" toSubLevel="2020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="2011" toSubLevel="2020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">80</value>
-			<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>

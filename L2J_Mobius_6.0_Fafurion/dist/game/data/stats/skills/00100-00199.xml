@@ -1847,7 +1847,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="8" toLevel="10" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="8" toLevel="10" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="8" toLevel="10" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
@@ -2806,7 +2806,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="8" toLevel="10" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="8" toLevel="10" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="8" toLevel="10" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
