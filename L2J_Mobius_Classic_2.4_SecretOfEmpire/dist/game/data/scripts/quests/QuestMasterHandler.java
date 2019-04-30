@@ -181,8 +181,6 @@ import quests.Q11021_RedGemNecklace1.Q11021_RedGemNecklace1;
 import quests.Q11022_RedGemNecklace2.Q11022_RedGemNecklace2;
 import quests.Q11023_RedGemNecklace3.Q11023_RedGemNecklace3;
 import quests.not_done.Q00630_PirateTreasureHunt;
-import quests.not_done.Q00657_MonsterArenaTrialForWarriors;
-import quests.not_done.Q00658_MonsterArenaTrialForEliteWarriors;
 import quests.not_done.Q00664_QuarrelsTime;
 import quests.not_done.Q00910_RequestFromTheRedLibraGuildLv1;
 import quests.not_done.Q00911_RequestFromTheRedLibraGuildLv2;
@@ -335,8 +333,6 @@ public class QuestMasterHandler
 		Q00418_PathOfTheArtisan.class,
 		Q00500_BrothersBoundInChains.class,
 		Q00630_PirateTreasureHunt.class, // TODO: Not done.
-		Q00657_MonsterArenaTrialForWarriors.class, // TODO: Not done.
-		Q00658_MonsterArenaTrialForEliteWarriors.class, // TODO: Not done.
 		Q00662_AGameOfCards.class,
 		Q00664_QuarrelsTime.class, // TODO: Not done.
 		Q00910_RequestFromTheRedLibraGuildLv1.class, // TODO: Not done.
