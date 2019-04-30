@@ -778,6 +778,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="2151" level="1" /> <!-- Soulshot (C-grade) -->
 		</skills>
@@ -799,6 +800,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="2152" level="1" /> <!-- Soulshot (B-grade) -->
 		</skills>
@@ -820,6 +822,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
@@ -841,6 +844,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
 		</skills>
@@ -884,6 +888,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
 			<skill id="2161" level="1" /> <!-- Blessed Spiritshot (C-grade) -->
 		</skills>
@@ -905,6 +910,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
 			<skill id="2162" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
@@ -926,6 +932,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
@@ -947,6 +954,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
 			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
