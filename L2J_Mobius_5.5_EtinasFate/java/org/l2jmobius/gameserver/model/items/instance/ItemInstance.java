@@ -69,6 +69,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDr
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPickup;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemAttributeAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemSoulCrystalAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.Armor;
@@ -2207,6 +2208,9 @@ public final class ItemInstance extends WorldObject
 		{
 			updateSpecialAbilities();
 		}
+		
+		// Notify to Scripts
+		EventDispatcher.getInstance().notifyEventAsync(new OnItemSoulCrystalAdd(getActingPlayer(), this));
 	}
 	
 	public void removeSpecialAbility(int position, int type)
