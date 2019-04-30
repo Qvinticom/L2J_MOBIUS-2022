@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately decreases Atk. Spd. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -79,7 +79,7 @@
 		</effects>
 	</skill>
 	<skill id="4201" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -208,7 +208,7 @@
 		</effects>
 	</skill>
 	<skill id="4203" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -286,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="4204" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -431,7 +431,7 @@
 		</effects>
 	</skill>
 	<skill id="4206" toLevel="12" name="Aura Sink">
-		<!-- MP decreases. Effect $s1 -->
+		<!-- MP decreases. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -566,7 +566,7 @@
 		</effects>
 	</skill>
 	<skill id="4208" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -887,7 +887,7 @@
 		</effects>
 	</skill>
 	<skill id="4213" toLevel="12" name="Haste">
-		<!-- Atk. Spd. +$s1 -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -989,7 +989,7 @@
 		</effects>
 	</skill>
 	<skill id="4215" toLevel="1" name="Raid Curse">
-		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1162,7 +1162,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4225" toLevel="5" name="Stun Resistance">
-		<!-- Resistant to Stun Attacks. -->
+		<!-- Resistance to Stun. -->
 		<icon>icon.skill4225</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1524,7 +1524,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4236" toLevel="1" name="Decrease Heal">
-		<!-- Reduces the effectiveness of recovery magic. -->
+		<!-- Received Healing -50%. -->
 		<icon>icon.skill1269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1557,7 +1557,7 @@
 		</effects>
 	</skill>
 	<skill id="4237" toLevel="1" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect 3. -->
+		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1236</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1591,7 +1591,7 @@
 		</effects>
 	</skill>
 	<skill id="4238" toLevel="1" name="Increase Cooldown">
-		<!-- Skill Cooldown increases momentarily. -->
+		<!-- P./ M. Skill Cooldown increases momentarily. -->
 		<icon>icon.skill1248</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1698,7 +1698,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4243" toLevel="1" name="Venomous Poison">
-		<!-- Noxious fumes gradually decrease your HP. Effect 9. -->
+		<!-- Noxious fumes gradually decrease your HP. -->
 		<icon>icon.skill4082</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1950,7 +1950,7 @@
 		</effects>
 	</skill>
 	<skill id="4249" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -20%. -->
 		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2481,7 +2481,7 @@
 		</effects>
 	</skill>
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
-		<!-- Noxious fumes gradually decrease your HP. Effect $s1 -->
+		<!-- Noxious fumes gradually decrease your HP. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2743,7 +2743,7 @@
 		</effects>
 	</skill>
 	<skill id="4262" toLevel="2" name="Holiday Wind Walk">
-		<!-- Speed increases temporarily. Effect 2. -->
+		<!-- Temporarily Speed +33. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2767,7 +2767,7 @@
 		</effects>
 	</skill>
 	<skill id="4263" toLevel="1" name="Holiday Haste">
-		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2792,7 +2792,7 @@
 		</effects>
 	</skill>
 	<skill id="4264" toLevel="1" name="Holiday Empower">
-		<!-- M. Atk. increases temporarily. Effect 1. -->
+		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2817,7 +2817,7 @@
 		</effects>
 	</skill>
 	<skill id="4265" toLevel="3" name="Holiday Might">
-		<!-- P. Atk. increases temporarily. Effect $s1 -->
+		<!-- Temporarily P. Atk. +5%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2846,7 +2846,7 @@
 		</effects>
 	</skill>
 	<skill id="4266" toLevel="3" name="Holiday Shield">
-		<!-- P. Def. increases temporarily. Effect $s1 -->
+		<!-- Temporarily P. Def. +5%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2996,8 +2996,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4272" toLevel="1" name="Greater Bow/Crossbow Resistance">
-		<!-- Highly resistant to Bow/ Crossbows. -->
+	<skill id="4272" toLevel="1" name="Greater Bow Resistance">
+		<!-- Very resistant to bow. -->
 		<icon>icon.skill4272</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3009,8 +3009,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4273" toLevel="5" name="Dagger/Rapier Resistance">
-		<!-- Resistant to Dagger/ Rapier attacks. -->
+	<skill id="4273" toLevel="5" name="Dagger Resistance">
+		<!-- Resistance to dagger. -->
 		<icon>icon.skill4273_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3042,7 +3042,7 @@
 		</effects>
 	</skill>
 	<skill id="4274" toLevel="5" name="Blunt Weapon Vulnerability">
-		<!-- Vulnerable to Blunt Weapons. -->
+		<!-- Vulnerable to blunt weapon. -->
 		<icon>icon.skill4274_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3060,14 +3060,14 @@
 		</effects>
 	</skill>
 	<skill id="4275" toLevel="5" name="Holy Attack Vulnerability">
-		<!-- Vulnerable to Holy attacks. -->
+		<!-- Vulnerable to Holy. -->
 		<icon>icon.skill4275_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4276" toLevel="5" name="Bow / Crossbow Vulnerability">
-		<!-- Weak against Bow/ Crossbow attacks. -->
+	<skill id="4276" toLevel="5" name="Bow Vulnerability">
+		<!-- Vulnerable to bow. -->
 		<icon>icon.skill4276_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3092,7 +3092,7 @@
 		</effects>
 	</skill>
 	<skill id="4277" toLevel="5" name="Poison Resistance">
-		<!-- Resistant to poison attack. -->
+		<!-- Resistant to Poison. -->
 		<icon>icon.skill4277</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3123,28 +3123,28 @@
 		</effects>
 	</skill>
 	<skill id="4279" toLevel="5" name="Fire Vulnerability">
-		<!-- Vulnerable to Fire attacks. -->
+		<!-- Vulnerable to Fire. -->
 		<icon>icon.skill4279_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4280" toLevel="5" name="Water Vulnerability">
-		<!-- Vulnerable to Water attacks. -->
+		<!-- Vulnerable to Water. -->
 		<icon>icon.skill4280_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4281" toLevel="5" name="Wind Attack Vulnerability">
-		<!-- Vulnerable to Wind attacks. -->
+		<!-- Vulnerable to Wind. -->
 		<icon>icon.skill4281_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4282" toLevel="5" name="Earth Attack Vulnerability">
-		<!-- Vulnerable to Earth attacks. -->
+		<!-- Vulnerable to Earth. -->
 		<icon>icon.skill4282_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3164,7 +3164,7 @@
 		</effects>
 	</skill>
 	<skill id="4284" toLevel="5" name="Bleed Resistance">
-		<!-- Resistant to Bleed attack. -->
+		<!-- Resistant to Bleed. -->
 		<icon>icon.skill4284</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3182,7 +3182,7 @@
 		</effects>
 	</skill>
 	<skill id="4285" toLevel="5" name="Sleep Resistance">
-		<!-- Resistant to Sleep attacks. -->
+		<!-- Resistant to Sleep. -->
 		<icon>icon.skill4285</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

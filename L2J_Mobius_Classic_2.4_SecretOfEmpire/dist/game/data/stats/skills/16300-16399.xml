@@ -86,7 +86,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16317" toLevel="10" name="Pull Resistance">
-		<!-- Resistance to Pull. -->
+		<!-- Slightly increases Pull Resistance. -->
 		<icon>icon.skill10015</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -283,7 +283,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16345" toLevel="2" name="Fire Flare">
-		<!-- HP decreases from bleeding. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>25</mpConsume>
@@ -302,7 +302,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="16347" toLevel="3" name="Breeze Shell">
-		<!-- Momentarily decreases Atk. Spd., Casting Spd., and Speed. -->
+		<!-- Atk. Spd., Casting Spd. Speed are decreased. -->
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
 		<castRange>600</castRange>

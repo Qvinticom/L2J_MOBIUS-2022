@@ -87,7 +87,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16107" toLevel="3" name="Fatal Blow">
-		<!-- Powerful blow on a vital spot. Possible to achieve Critical. -->
+		<!-- Powerful blow on a vital spot. Critical. -->
 		<operateType>A1</operateType>
 		<mpConsume>32</mpConsume>
 		<castRange>40</castRange>
@@ -122,7 +122,7 @@
 		</isMagic>
 	</skill>
 	<skill id="16109" toLevel="1" name="Heavy Armor Rise">
-		<!-- Increases received Critical Damage -->
+		<!-- Increases P. Critical Damage. -->
 		<icon>icon.m_class_heavy</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -166,7 +166,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16113" toLevel="1" name="Tragic Bleed">
-		<!-- Bleeding. HP momentarily decreases. Power 12. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.m_mystery_blood</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -179,7 +179,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16114" toLevel="1" name="Curse of the Dead">
-		<!-- Cuts target and party members' HP by 50%. -->
+		<!-- Cuts target and party members' HP by $s1. -->
 		<operateType>A1</operateType>
 		<mpConsume>59</mpConsume>
 		<castRange>1300</castRange>
@@ -549,7 +549,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16149" toLevel="5" name="Fatal Poison">
-		<!-- HP cut due to deadly Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -567,7 +567,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16150" toLevel="5" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -585,7 +585,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16151" toLevel="7" name="Aura Spike">
-		<!-- Deals non-attribute magic damage to target. -->
+		<!-- Attacks the target with magic. -->
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">30</value>
@@ -611,7 +611,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16152" toLevel="7" name="Fire Spike">
-		<!-- Deals fire damage to target. -->
+		<!-- Powerful magical Fire attack. -->
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">30</value>
@@ -659,7 +659,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16157" toLevel="5" name="Grave Bleeding">
-		<!-- Causes target to bleed severely, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -678,7 +678,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16158" toLevel="1" name="Beleth's Volcano">
-		<!-- Deals fire damage to target. -->
+		<!-- Powerful magical Fire attack. -->
 		<operateType>A1</operateType>
 		<mpConsume>51</mpConsume>
 		<castRange>900</castRange>
@@ -711,7 +711,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16161" toLevel="1" name="Darion's Bleed">
-		<!-- HP decreases from bleeding. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>91</mpConsume>
@@ -773,7 +773,7 @@
 			<value level="3">120000</value>
 		</reuseDelay>
 	</skill>
-	<skill id="16167" toLevel="2" name="Increase Evasion 1">
+	<skill id="16167" toLevel="2" name="Increase P. Evasion 1">
 		<!-- P./ M. Evasion strengthened. -->
 		<icon>icon.skill0078</icon>
 		<operateType>P</operateType>
@@ -837,7 +837,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="16177" toLevel="5" name="Stun Resistance">
-		<!-- Resistant to Knock Down. -->
+		<!-- Resistance to Stun. -->
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16178" toLevel="1" name="Leona's Thunder Spear">
@@ -875,7 +875,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16184" toLevel="1" name="Vengeful Petrify">
-		<!-- Petrified for 5 sec. -->
+		<!-- Inflicts Petrify for 5 sec. -->
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>300</castRange>
@@ -901,7 +901,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="16187" toLevel="1" name="Head-on Crash">
-		<!-- P. Atk. On a single enemy. -->
+		<!-- Powerful attack on a single enemy. -->
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>300</castRange>
@@ -918,7 +918,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16189" toLevel="1" name="Disciple's Blow">
-		<!-- M. Atk. On a single enemy. -->
+		<!-- Powerful magic attack on a single enemy. -->
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>300</castRange>

@@ -392,7 +392,7 @@
 		</effects>
 	</skill>
 	<skill id="4320" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -743,7 +743,7 @@
 		</effects>
 	</skill>
 	<skill id="4333" toLevel="5" name="Dark Attack Resistance">
-		<!-- Resistant to Dark attacks. -->
+		<!-- Resistance to Dark. -->
 		<icon>icon.skill4333</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -790,7 +790,7 @@
 		</effects>
 	</skill>
 	<skill id="4336" toLevel="5" name="Dark Attack Vulnerability">
-		<!-- Vulnerable to Dark attacks. -->
+		<!-- Vulnerable to Dark. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -809,7 +809,7 @@
 		</effects>
 	</skill>
 	<skill id="4337" toLevel="5" name="Holy Attack Resistance">
-		<!-- Resistant to Holy attacks. -->
+		<!-- Resistance to Holy. -->
 		<icon>icon.skill4337</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -905,7 +905,7 @@
 		</effects>
 	</skill>
 	<skill id="4342" toLevel="2" name="Wind Walk">
-		<!-- Increases Speed temporarily. Effect $s1 -->
+		<!-- Temporarily Speed +20. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -938,7 +938,7 @@
 		</effects>
 	</skill>
 	<skill id="4343" toLevel="3" name="Decrease Weight">
-		<!-- Reduces current weight. Effect $s1 -->
+		<!-- Temporarily reduces current weight. -->
 		<icon>icon.skill1257</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -973,7 +973,7 @@
 		</effects>
 	</skill>
 	<skill id="4344" toLevel="3" name="Shield">
-		<!-- Increases defense power temporarily. Effect $s1 -->
+		<!-- Temporarily P. Def. +8%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1013,7 +1013,7 @@
 		</effects>
 	</skill>
 	<skill id="4345" toLevel="3" name="Might">
-		<!-- P. Atk. increases temporarily. Effect $s1 -->
+		<!-- Temporarily P. Atk. +8%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1049,7 +1049,7 @@
 		</effects>
 	</skill>
 	<skill id="4346" toLevel="4" name="Mental Shield">
-		<!-- Momentarily increases Hold/ Sleep/ Fear/ Mental Attack Resistance. Effect $s1 -->
+		<!-- Temporarily Hold/ Sleep/ Mental Resistance +$s1. -->
 		<icon>icon.skill1035</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1099,7 +1099,7 @@
 		</effects>
 	</skill>
 	<skill id="4347" toLevel="6" name="Blessed Body">
-		<!-- Momentarily increases maximum HP. Effect $s1 -->
+		<!-- Max HP +10% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1144,7 +1144,7 @@
 		</effects>
 	</skill>
 	<skill id="4348" toLevel="6" name="Blessed Soul">
-		<!-- Momentarily increases maximum MP. Effect $s1 -->
+		<!-- Max MP +10% for a certain amount of time. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1189,7 +1189,7 @@
 		</effects>
 	</skill>
 	<skill id="4349" toLevel="2" name="Magic Barrier">
-		<!-- Momentarily increases M. Def. Effect $s1 -->
+		<!-- Temporarily M. Def. +23%. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1222,7 +1222,7 @@
 		</effects>
 	</skill>
 	<skill id="4350" toLevel="4" name="Stun Resistance">
-		<!-- Momentarily provides powerful resistance against Stun Attack. Effect $s1 -->
+		<!-- Temporarily Stun Resistance +15. -->
 		<icon>icon.skill1259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1260,7 +1260,7 @@
 		</effects>
 	</skill>
 	<skill id="4351" toLevel="6" name="Concentration">
-		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect $s1 -->
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1304,8 +1304,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4352" toLevel="2" name="Berserker Spirit">
-		<!-- P. Def. decreases momentarily., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect $s1 -->
+	<skill id="4352" toLevel="2" name="Soul of Berserker">
+		<!-- Temporarily decreases P./ M. Def. and P. Evasion, and increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1387,7 +1387,7 @@
 		</effects>
 	</skill>
 	<skill id="4353" toLevel="6" name="Blessed Shield">
-		<!-- Momentarily increases the probability of shield defense. Effect $s1 -->
+		<!-- Temporarily Shield Defense Rate +30%. -->
 		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1432,7 +1432,7 @@
 		</effects>
 	</skill>
 	<skill id="4354" toLevel="4" name="Vampiric Rage">
-		<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. Effect $s1 -->
+		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1471,7 +1471,7 @@
 		</effects>
 	</skill>
 	<skill id="4355" toLevel="3" name="Acumen">
-		<!-- Increases Casting Spd. temporarily. Effect $s1 -->
+		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1507,7 +1507,7 @@
 		</effects>
 	</skill>
 	<skill id="4356" toLevel="3" name="Empower">
-		<!-- Increases M. Atk. power temporarily. Effect $s1 -->
+		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1543,7 +1543,7 @@
 		</effects>
 	</skill>
 	<skill id="4357" toLevel="2" name="Haste">
-		<!-- Atk. Spd. increases temporarily. Effect $s1 -->
+		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1576,7 +1576,7 @@
 		</effects>
 	</skill>
 	<skill id="4358" toLevel="3" name="Guidance">
-		<!-- Increases Accuracy temporarily. Effect $s1 -->
+		<!-- Temporarily P. Accuracy +2. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1612,7 +1612,7 @@
 		</effects>
 	</skill>
 	<skill id="4359" toLevel="3" name="Focus">
-		<!-- Momentarily increases critical P. Atk. rate. Effect $s1 -->
+		<!-- Increases P. Critical Rate for a certain amount of time. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1648,7 +1648,7 @@
 		</effects>
 	</skill>
 	<skill id="4360" toLevel="3" name="Death Whisper">
-		<!-- Momentarily increase the Critical P. Atk. Effect $s1 -->
+		<!-- Increases P. Critical Damage for a certain amount of time. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1684,7 +1684,7 @@
 		</effects>
 	</skill>
 	<skill id="4361" toLevel="2" name="Curse of Destruction">
-		<!-- Curse of the Preacher of Doom. Momentarily decreases Accuracy. Effect $s1 -->
+		<!-- Curse of the Preacher of Doom. Temporarily P. Accuracy -12. -->
 		<icon>icon.skill0046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1727,7 +1727,7 @@
 		</effects>
 	</skill>
 	<skill id="4362" toLevel="2" name="Curse of Destruction">
-		<!-- Curse of the Preacher of Doom. Momentarily decreases Casting Spd. Effect $s1 -->
+		<!-- Curse of the Preacher of Doom. Temporarily Casting Spd. -30%. -->
 		<icon>icon.skill0046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1770,7 +1770,7 @@
 		</effects>
 	</skill>
 	<skill id="4363" toLevel="1" name="Curse of Destruction">
-		<!-- Curse of the Preacher of Doom. Momentarily decreases Accuracy. Effect 1. -->
+		<!-- Curse of the Preacher of Doom. Temporarily P. Accuracy -12. -->
 		<icon>icon.skill0046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1795,7 +1795,7 @@
 		</effects>
 	</skill>
 	<skill id="4364" toLevel="2" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Momentarily decreases body weight and increases Poison/ Bleed Resistance. Effect $s1 -->
+		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Poison/ Bleed Resistance +25. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1839,7 +1839,7 @@
 		</effects>
 	</skill>
 	<skill id="4365" toLevel="2" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Momentarily increases your Hold/ Mental Attack Resistance and lessens the probability of magic cancellation due to damage. Effect $s1 -->
+		<!-- Blessing of the Orator of Revelations. Temporarily increases Hold/ Mental Attack Resistance and lessens the probability of magic cancellation due to damage. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1879,7 +1879,7 @@
 		</effects>
 	</skill>
 	<skill id="4366" toLevel="1" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Momentarily decreases body weight and increases Poison/ Bleed Resistance. Effect 1. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Poison/ Bleed Resistance +25. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2181,7 +2181,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4378" toLevel="12" name="Damage Shield">
+	<skill id="4378" toLevel="12" name="Personal Damage Shield">
 		<!-- Temporarily returns some of the received damage back to the enemy. -->
 		<icon>icon.action105</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -2233,7 +2233,7 @@
 		</effects>
 	</skill>
 	<skill id="4379" toLevel="5" name="Spear Resistance">
-		<!-- Spear Resistance -->
+		<!-- Resistance to spear. -->
 		<icon>icon.skill4379</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2439,7 +2439,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4388" toLevel="5" name="Paralysis Resistance">
-		<!-- Resistant to paralyzing attacks. -->
+		<!-- Resistance to Paralysis. -->
 		<icon>icon.skill4388</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2457,7 +2457,7 @@
 		</effects>
 	</skill>
 	<skill id="4389" toLevel="5" name="Mental Attack Resistance">
-		<!-- Resistant to Mental Derangement -->
+		<!-- Resistance to Mental Attack. -->
 		<icon>icon.skill4389</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2484,7 +2484,7 @@
 		</effects>
 	</skill>
 	<skill id="4391" toLevel="2" name="Wind Walk">
-		<!-- Increases Speed temporarily. Effect $s1 -->
+		<!-- Temporarily Speed +20. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2514,7 +2514,7 @@
 		</effects>
 	</skill>
 	<skill id="4392" toLevel="3" name="Shield">
-		<!-- Increases defense power temporarily. Effect $s1 -->
+		<!-- Temporarily P. Def. +8%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2546,7 +2546,7 @@
 		</effects>
 	</skill>
 	<skill id="4393" toLevel="3" name="Might">
-		<!-- P. Atk. increases temporarily. Effect $s1 -->
+		<!-- Temporarily P. Atk. +8%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2577,7 +2577,7 @@
 		</effects>
 	</skill>
 	<skill id="4394" toLevel="6" name="Blessed Body">
-		<!-- Momentarily increases maximum HP. Effect $s1 -->
+		<!-- Max HP +10% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2614,7 +2614,7 @@
 		</effects>
 	</skill>
 	<skill id="4395" toLevel="6" name="Blessed Soul">
-		<!-- Momentarily increases maximum MP. Effect $s1 -->
+		<!-- Max MP +10% for a certain amount of time. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2651,7 +2651,7 @@
 		</effects>
 	</skill>
 	<skill id="4396" toLevel="2" name="Magic Barrier">
-		<!-- Momentarily increases M. Def. Effect $s1 -->
+		<!-- Temporarily M. Def. +23%. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -2679,8 +2679,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4397" toLevel="2" name="Berserker Spirit">
-		<!-- P. Def. decreases momentarily., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect $s1 -->
+	<skill id="4397" toLevel="2" name="Soul of Berserker">
+		<!-- Temporarily decreases P./ M. Def. and P. Evasion, and increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2758,7 +2758,7 @@
 		</effects>
 	</skill>
 	<skill id="4398" toLevel="6" name="Blessed Shield">
-		<!-- Momentarily increases the probability of shield defense. Effect $s1 -->
+		<!-- Temporarily Shield Defense Rate +30%. -->
 		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2795,7 +2795,7 @@
 		</effects>
 	</skill>
 	<skill id="4399" toLevel="4" name="Vampiric Rage">
-		<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. Effect $s1 -->
+		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">2</value>

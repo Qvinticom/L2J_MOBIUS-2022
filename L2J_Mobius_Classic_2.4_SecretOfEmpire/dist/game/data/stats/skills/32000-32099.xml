@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32000" toLevel="1" name="Rice Cake of Fighting Spirit">
-		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Buff remains after death. -->
+		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Effect remains after death. -->
 		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -31,7 +31,7 @@
 		</effects>
 	</skill>
 	<skill id="32001" toLevel="1" name="Rice Cake of Fighting Spirit - Personal">
-		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Buff remains after death. -->
+		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Effect remains after death. -->
 		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -61,7 +61,7 @@
 		</effects>
 	</skill>
 	<skill id="32002" toLevel="1" name="Rice Cake of Flaming Fighting Spirit">
-		<!-- Acquired XP/ SP +30% for 20 min. Cooldown - 10 min. Buff remains after death. -->
+		<!-- Acquired XP/ SP +30% for 3 min. Cooldown - 10 min. Effect remains after death. -->
 		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -91,7 +91,6 @@
 		</effects>
 	</skill>
 	<skill id="32003" toLevel="1" name="Rich Supplies">
-		<!-- Open the chest to randomly get one of the next items: Scroll: Enchant Weapon/ Armor (D/ C-grade), Magic Haste Potion, Greater Magic Haste Potion, Haste Potion, Greater Haste Potion, Greater Scroll of Resurrection, Scroll of Escape. -->
 		<icon>icon.event_high_oriental_park_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -100,7 +99,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32005" toLevel="1" name="Fighting Spirit Support Box">
-		<!-- Double-click to obtain two Cakes of Fighting Spirit. Rich Supplies can be obtained at a certain chance. -->
 		<icon>icon.etc_marguene_collection_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -114,17 +112,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32010" toLevel="1" name="Potion Box">
-		<!-- Double-click the chest to get one of the following items: Dye Potion Pack/ Facelifting Potion Pack/ Mysterious Potion. -->
 		<icon>icon.etc_box_of_adventure_2_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32011" toLevel="1" name="Enchantment Scroll Box">
-		<!-- Double-click the chest to get one of the following items: Scroll: Empower/ Scroll: Might/ Scroll: Shield. -->
 		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32012" toLevel="1" name="High-Quality Dye Chest">
-		<!-- Double-click to get one of the following items: Greater STR Dye/ Greater CON Dye/ Greater DEX Dye/ Greater INT Dye/ Greater Dye/ Greater MEN Dye. -->
 		<icon>icon.etc_box_of_adventure_4_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -185,7 +180,6 @@
 		</effects>
 	</skill>
 	<skill id="32013" toLevel="1" name="Wind Dye Pack">
-		<!-- Double-click to get one of the following items: Dye of STR/ Dye of CON/ Dye of DEX/ Dye of INT/ Dye of MEN. -->
 		<icon>icon.etc_box_of_adventure_5_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -246,37 +240,30 @@
 		</effects>
 	</skill>
 	<skill id="32014" toLevel="1" name="Staff Chest">
-		<!-- Double-click to get one of the following items: Cursed Staff/ Crystal Staff/ Sage's Staff/ Demon's Staff. -->
 		<icon>icon.etc_treasure_box_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32015" toLevel="1" name="Fist Weapon Chest">
-		<!-- Double-click to get one of the following items: Knuckle Duster/ Needle Wolverine/ Fisted Blade/ Great Pata. -->
 		<icon>icon.etc_treasure_box_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32016" toLevel="1" name="Spear Chest">
-		<!-- Double-click to get one of the following items: Bec de Corbin/ Orcish Glaive/ Poleaxe/ Orcish Poleaxe. -->
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32017" toLevel="1" name="Blunt Weapon Chest">
-		<!-- Double-click to get one of the following items: Dwarven War Hammer/ Heavy Doom Hammer/ War Axe/ Yaksa Mace. -->
 		<icon>icon.etc_treasure_box_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32018" toLevel="1" name="Dagger Chest">
-		<!-- Double-click to get one of the following items: Stiletto/ Cursed Dagger/ Dark Screamer/ Crystal Dagger. -->
 		<icon>icon.etc_treasure_box_i06</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32019" toLevel="1" name="One-Handed Sword Chest">
-		<!-- Double-click to get one of the following items: Katana/ StormBringer/ Sword of Delusion/ Samurai Long Sword. -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32020" toLevel="1" name="Bow Chest">
-		<!-- Double-click to get one of the following items: Elemental Bow/ Crystallized Ice Bow/ Akat Longbow/ Eminence Bow. -->
 		<icon>icon.etc_treasure_box_i08</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -290,7 +277,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32023" toLevel="1" name="Ring of Macken">
-		<!-- Increases Max. HP and P./ M. Atk. -->
+		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -305,7 +292,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32026" toLevel="1" name="Ring of Macken">
-		<!-- Increases Max. HP and P./ M. Atk. -->
+		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -320,12 +307,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32029" toLevel="1" name="Venezia Rune - High-Grade">
-		<!-- XP/ SP +11% Scroll -->
+		<!-- When in inventory, Acquired XP/ SP +11%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32030" toLevel="1" name="Dandy's Home Run Ball">
-		<!-- For 1 hr., acquired XP/ SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Buff remains after death. -->
+		<!-- For 1 h., acquired XP/ SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Lineage II Uniform. Effect remains after death. -->
 		<icon>BranchIcon.icon.g_ev_homerunball</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -622,7 +609,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32049" toLevel="1" name="Storm Power">
-		<!-- Acquired XP/ SP +50% for 2 hr. Cooldown - 2 hr. Buff remains after death. -->
+		<!-- Acquired XP/ SP +50% for 2 h. Cooldown: 2 h. Effect remains after death. -->
 		<icon>icon.power_of_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -630,8 +617,8 @@
 		<icon>icon.etc_pi_gift_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32051" toLevel="1" name="Berserker Spirit">
-		<!-- For 20 min., P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+	<skill id="32051" toLevel="1" name="Soul of Berserker">
+		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>

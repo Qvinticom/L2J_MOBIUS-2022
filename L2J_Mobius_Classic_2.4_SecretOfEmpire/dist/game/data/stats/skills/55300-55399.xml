@@ -43,17 +43,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55309" toLevel="10" name="Earring of Chronicle Heir">
-		<!-- MP Recovery Bonus +1%, Max MP +1%. -->
+		<!-- MP Recovery Bonus +$s1, Max MP +$s2. -->
 		<icon>icon.event_classic_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55310" toLevel="1" name="Holiday Hat">
-		<!-- Resurrects a dead character and restores 100% XP. Consumes 1 Spirit Ore. Cooldown is 360 min. -->
+		<!-- Resurrects a dead target and restores 100% XP. Consumes 1 Spirit Ore. Cooldown: 360 min. -->
 		<icon>icon.bm_romantic_chaperon_gold</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55311" toLevel="1" name="Overwhelming Power of a Holiday Hat">
-		<!-- For 60 min., acquired XP/ SP +5%. Buff remains after death. -->
+		<!-- For 60 min., acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -64,7 +64,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55314" toLevel="1" name="Attempt to Forget">
-		<!-- Nothing serious, but strange feeling of unease in chasing you. You are trying to calm yourself down. For 1 hr., grants the following effects: Might - Lv. 3, Shield - Lv. 3, Focus - Lv. 3, Haste - Lv. 2, Acumen - Lv. 3, Empower - Lv. 3 and Wind Walk - Lv. 2. -->
+		<!-- Nothing serious, but strange feeling of unease in chasing you. You are trying to calm yourself down. For 1 h., grants the following effects: Might - Lv. 3, Shield - Lv. 3, Focus - Lv. 3, Haste - Lv. 2, Acumen - Lv. 3, Empower - Lv. 3 and Wind Walk - Lv. 2. -->
 		<icon>icon.skill0763</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -725,7 +725,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55327" toLevel="1" name="Sweet Chocolate Energy">
-		<!-- Eat some chocolate from Coco Brownie to feel life-giving energy. For 2 hr., acquired XP/ SP +5%, Atk. Spd./ Casting Spd. +10%, Speed +10. Cannot be stacked with Blessing of Light. -->
+		<!-- Eat some chocolate from Coco Brownie to feel life-giving energy. For 2 h., acquired XP/ SP +5%, Atk. Spd./ Casting Spd. +10%, Speed +10. Cannot be stacked with Blessing of Light. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A1</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -854,7 +854,7 @@
 		</effects>
 	</skill>
 	<skill id="55331" toLevel="1" name="Cherry Juice">
-		<!-- For 5 min. P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. -->
+		<!-- For 5 min., Evasion +3, Accuracy +3, Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. -->
 		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -904,127 +904,127 @@
 	<skill id="55334" toLevel="3" name="Scroll: 1000 SP">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55335" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55335" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55336" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55336" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55337" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55337" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55338" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55338" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55339" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55339" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55340" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55340" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55341" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55341" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55342" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55342" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55343" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55343" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55344" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55344" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55345" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55345" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55346" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55346" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55347" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55347" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55348" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55348" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55349" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55349" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55350" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55350" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55351" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55351" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55352" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55352" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55353" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55353" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55354" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55354" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55355" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55355" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55356" toLevel="1" name="Irene' Hourglass - 1 Hour">
+	<skill id="55356" toLevel="1" name="Irene's Hourglass - 1 Hour">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55357" toLevel="1" name="Irene' Hourglass - 2 Hours">
+	<skill id="55357" toLevel="1" name="Irene's Hourglass - 2 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55358" toLevel="1" name="Irene' Hourglass - 3 Hours">
+	<skill id="55358" toLevel="1" name="Irene's Hourglass - 3 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55359" toLevel="1" name="Irene' Hourglass - 4 Hours">
+	<skill id="55359" toLevel="1" name="Irene's Hourglass - 4 Hours">
 		<!-- Acquired XP/ SP +50% for the duration of the effect -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>

@@ -33,7 +33,7 @@
 		</conditions>
 	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
@@ -237,7 +237,7 @@
 		</effects>
 	</skill>
 	<skill id="6717" toLevel="1" name="Berserker Spirit of Elcadia">
-		<!-- For 10 min., party members' P. Def. -8%, M. Def. -16%, and evasion -4. P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8. -->
+		<!-- For 10 min., party member's P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -290,7 +290,7 @@
 		</effects>
 	</skill>
 	<skill id="6718" toLevel="1" name="Death Whisper of Elcadia">
-		<!-- Critical Attack effect +35% for 10 min. -->
+		<!-- For 10 min., P. Critical Damage +35%. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -315,7 +315,7 @@
 		</effects>
 	</skill>
 	<skill id="6719" toLevel="1" name="Guidance of Elcadia">
-		<!-- For 10 min., Accuracy +4. -->
+		<!-- For 10 min., P. Accuracy +4. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -340,7 +340,7 @@
 		</effects>
 	</skill>
 	<skill id="6720" toLevel="1" name="Focus of Elcadia">
-		<!-- Critical Attack rate +30% for 10 min. -->
+		<!-- For 10 min., P. Critical Rate +30%. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>

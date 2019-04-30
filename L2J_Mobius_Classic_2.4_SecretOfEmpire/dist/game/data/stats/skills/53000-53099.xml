@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="53001" toLevel="3" name="Critical Creation">
+		<!-- Craft critical success rate +$s1. -->
+		<icon>icon.skill10701</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="53002" toLevel="3" name="Creation Master">
+		<!-- Craft success rate +$s1. -->
+		<icon>icon.skill10312</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="53003" toLevel="3" name="Mass Chain Strike">
+		<!-- Pulls a selected target and nearby enemies to you and provokes. -->
+		<icon>icon.skill53003</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="53004" toLevel="5" name="Critical Vulnerability Decrease">
+		<!-- Success rate of attacks targeting the character's vital points -$s1, chance of receiving P. Critical Attack -$s2. -->
+		<icon>icon.skill53004</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="53005" toLevel="1" name="Detect Darkness">
+		<!-- Allows to find invisible enemies nearby character. Target can't become invisible and cancel this effect for 2 sec. Requires a bow. -->
+		<icon>icon.skill53005</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="53006" toLevel="5" name="Bind">
+		<!-- Blocks all the enemy's physical skills for $s1 -->
+		<icon>icon.skill6320</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

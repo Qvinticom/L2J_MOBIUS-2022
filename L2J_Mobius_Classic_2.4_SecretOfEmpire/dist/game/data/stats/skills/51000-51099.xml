@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51001" toLevel="1" name="Sayha's Storm">
-		<!-- For 10 min., Sayha Grace points +100%, acquired XP/ SP +100%. Reuse Time: 10 min. Buff remains after death. -->
+		<!-- Momentum consumption speed while hunting +100%, acquired XP/ SP +150% for 10 min. Buff does not disappear after death. Cooldown: 10 min. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51002" toLevel="1" name="Sayha's Storm">
-		<!-- For 10 min., Sayha Grace points +100%, acquired XP/ SP +100%. Reuse Time: 10 min. Buff remains after death. -->
+		<!-- Momentum consumption speed while hunting +100%, acquired XP/ SP +150% for 10 min. Buff does not disappear after death. Cooldown: 10 min. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -28,6 +28,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51007" toLevel="1" name="Golden Treasure Chest">
+		<!-- Acquired XP/ SP +20%, Sayha Grace Consumption -10%. -->
 		<icon>icon.bm_sayha_rune</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -49,7 +50,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51013" toLevel="1" name="Shining Scroll of Mood Melody">
-		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Buff remains after death. Cannot be used together with Scroll of Mood Melody. -->
+		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Effect remains after death. Cannot be used together with Scroll of Mood Melody. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51014" toLevel="1" name="Fire Dragon's Blessing Scroll">
@@ -58,7 +59,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51015" toLevel="1" name="Shining Scroll of Mood Melody">
-		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Buff remains after death. Cannot be used together with Scroll of Mood Melody. -->
+		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Effect remains after death. Cannot be used together with Scroll of Mood Melody. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -88,17 +89,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51021" toLevel="1" name="Clan Bonus - P. Atk. Lv. 2">
-		<!-- Clan Alliance Buff. For 4 hr., PvE Damage +10%. Requires at least 6 534 000 clan hunting points for the effect to be applied. -->
+		<!-- Clan Alliance Buff. For 4 h., PvE Damage +10%. Requires at least 6 534 000 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51022" toLevel="1" name="Clan Bonus - P. Atk. Lv. 3">
-		<!-- Clan Alliance Buff. For 4 hr., PvE Damage +15%. Requires at least 9 801 000 clan hunting points for the effect to be applied. -->
+		<!-- Clan Alliance Buff. For 4 h., PvE Damage +15%. Requires at least 9 801 000 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51023" toLevel="1" name="Clan Bonus - P. Atk. Lv. 4">
-		<!-- Clan Alliance Buff. For 4 hr., PvE Damage +15%, PvP Damage +10%. Requires at least 13 068 000 clan hunting points for the effect to be applied. -->
+		<!-- Clan Alliance Buff. For 4 h., PvE Damage +15%, PvP Damage +10%. Requires at least 13 068 000 clan hunting points for the effect to be applied. -->
 		<icon>icon.skill19011</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -168,7 +169,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51036" toLevel="1" name="Rudolph's Blessing">
-		<!-- Atk. Spd. and Casting Spd. +5%, acquired XP/ SP +10%. -->
+		<!-- Atk. Spd. and Casting Spd. +5%, Acquired XP/ SP +10%. -->
 		<icon>BranchSys2.icon.event_lbracelet_rudolph</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -420,7 +421,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51050" toLevel="1" name="Raid Lucky Charm">
-		<!-- Chance of dropping items -50%, chance of losing XP -50% when character dies. Cannot be used by chaotic characters. -->
+		<!-- Chance of dropping items and player's death XP penalty -50% when character dies. Cannot be used by chaotic characters. -->
 		<icon>icon.etc_cross_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -490,12 +491,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51069" toLevel="1" name="Hour of Penitence">
-		<!-- For 2 hr., allows you to receive Crumbs of Penitence while hunting. -->
+		<!-- For 2 h., allows you to receive Crumbs of Penitence while hunting. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51070" toLevel="3" name="Dragon's Miracle Potion">
-		<!-- Restores Sayha Grace points. For 20 min., acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Buff remains after death. -->
+		<!-- Restores Sayha Grace points. For 20 min., acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Effect remains after death. -->
 		<icon>
 			<value level="1">icon.bm_dragon_posion_brave_1</value>
 			<value level="2">icon.bm_dragon_posion_brave_2</value>
@@ -559,7 +560,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51088" toLevel="1" name="Amulet of Winds">
-		<!-- Acquired XP/ SP +20%, Acquired XP/ SP through fishing +50%, all characteristics +1. -->
+		<!-- When equipped, Acquired XP/ SP +20%, Acquired XP/ SP while fishing +50%, STR +1, CON +1, DEX +1, INT +1, WIT +1, MEN +1. -->
 		<icon>icon.bm_sayha_rune</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -604,12 +605,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51098" toLevel="1" name="Energy of Blue Dynasty">
-		<!-- Armor is transformed into the Blue Dynasty. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Buff remains even after death. -->
+		<!-- Armor is transformed into the Blue Dynasty. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
 		<icon>icon.armor_t91_u_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51099" toLevel="1" name="Kat the Cat�s Energy">
-		<!-- Transforms you into Kat the Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Buff remains even after death. -->
+		<!-- Transforms you into Kat the Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
 		<icon>icon.cat_the_cat_change_0</icon>
 		<operateType>A1</operateType>
 	</skill>

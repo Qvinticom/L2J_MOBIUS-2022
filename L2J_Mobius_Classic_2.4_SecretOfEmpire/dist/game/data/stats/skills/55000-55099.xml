@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="55000" toLevel="4" name="XP/SP Scroll - High">
-		<!-- Acquired XP/ SP +30% for 20 min. Buff remains after death. -->
+	<skill id="55000" toLevel="4" name="XP/SP Scroll">
+		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -272,17 +272,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55025" toLevel="1" name="VIP Level 2">
-		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +7%, item drop rate +7%. World chat on any level, number of usage attempts +10. -->
+		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +7%, item drop rate +7%. World chat on any level, number of usage attempts +3. -->
 		<icon>BranchIcon.Icon.g_skill_vip2</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55026" toLevel="1" name="VIP Level 3">
-		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +15%. Experience loss and chance to lose items upon death is -10%. World chat on any level, number of usage attempts +10. -->
+		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +15%. Experience loss and chance to lose items upon death is -10%. World chat on any level, number of usage attempts +3. -->
 		<icon>BranchIcon.Icon.g_skill_vip3</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55027" toLevel="1" name="VIP Level 4">
-		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +15%. Experience loss and chance to lose items upon death is -15%. World chat on any level, number of usage attempts +10. -->
+		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +15%. Experience loss and chance to lose items upon death is -15%. World chat on any level, number of usage attempts +5. -->
 		<icon>BranchIcon.Icon.g_skill_vip4</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -307,7 +307,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55032" toLevel="1" name="Life Hazard">
-		<!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 hr. -->
+		<!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -486,12 +486,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55040" toLevel="1" name="Greater Scion Ring">
-		<!-- Max HP +10%, HP Recovery Bonus +10%. Atk. Spd. and Casting Spd. are increased. P./ M. Accuracy +1, Weight Limit +5000. -->
+		<!-- Max HP +10%, HP Recovery Bonus +10%. Atk. Spd., Casting Spd., P./ M. Accuracy +1, Weight Limit +5000. -->
 		<icon>icon.event_classic_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55041" toLevel="1" name="XP/SP Scroll">
-		<!-- Acquired XP/ SP +20% for 60 min. Buff remains after death. -->
+		<!-- For 60 min., Acquired XP/ SP +20%. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1081,7 +1081,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55051" toLevel="1" name="XP/SP Scroll">
-		<!-- Acquired XP/ SP +30% for 20 min. Buff remains after death. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1111,17 +1111,17 @@
 		</effects>
 	</skill>
 	<skill id="55052" toLevel="2" name="XP/SP Scroll - Normal">
-		<!-- Acquired XP/ SP +30% for 20 min. Buff remains after death. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55053" toLevel="3" name="XP/SP Scroll - Medium">
-		<!-- Acquired XP/ SP +40% for 20 min. Buff remains after death. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55054" toLevel="4" name="XP/SP Scroll - High">
-		<!-- Acquired XP/ SP +100% for 20 min. Buff remains after death. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1276,7 +1276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55059" toLevel="1" name="Summon Agathion - Griffin">
+	<skill id="55059" toLevel="1" name="Summon Agathion Griffin">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1311,7 +1311,7 @@
 		</effects>
 	</skill>
 	<skill id="55061" toLevel="2" name="Castle XP/SP Scroll - Normal">
-		<!-- Acquired XP/ SP +35% for 20 min. Buff remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +35%. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1350,7 +1350,7 @@
 		</effects>
 	</skill>
 	<skill id="55062" toLevel="2" name="Castle XP/SP Scroll - Medium">
-		<!-- Acquired XP/ SP +45% for 20 min. Buff remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +45%. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -1423,7 +1423,7 @@
 		</effects>
 	</skill>
 	<skill id="55065" toLevel="1" name="Scroll: Castle Berserker Spirit">
-		<!-- For 20 min., P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1542,7 +1542,7 @@
 		</effects>
 	</skill>
 	<skill id="55069" toLevel="1" name="Castle Ring">
-		<!-- Increases Max. HP and P./ M. Atk. -->
+		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>P</operateType>
 		<effects>

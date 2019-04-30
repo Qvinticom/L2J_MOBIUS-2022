@@ -286,7 +286,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15316" toLevel="1" name="Delayed Healing">
-		<!-- Attacks the target's area with magic and power of healing magic is -50%. -->
+		<!-- Attacks the target's area with magic and Received Healing -50%. -->
 		<icon>icon.skill11510</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -362,7 +362,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15319" toLevel="1" name="Hell Allegiance">
-		<!-- Increases your Atk. Spd. -->
+		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill0168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -426,7 +426,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15323" toLevel="1" name="Hell Defense">
-		<!-- Stunned. -->
+		<!-- Stuns. -->
 		<icon>icon.skill11057</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -559,7 +559,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="15331" toLevel="1" name="Headquarters' Effect">
-		<!-- P. Atk./ M. Atk. +200%. Skill Cooldown -50%. -->
+		<!-- P./ M. Atk. +200%. Skill Cooldown -50%. -->
 		<icon>icon.skill11544</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -740,7 +740,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15344" toLevel="1" name="Rake Attack">
-		<!-- Rushes to the target to inflict damage. -->
+		<!-- Long-distance attack, inflicts damage. -->
 		<icon>icon.skill6041</icon>
 		<operateType>DA1</operateType>
 		<castRange>300</castRange>
@@ -1060,8 +1060,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15364" toLevel="1" name="Shock Attack">
-		<!-- Paralyzed. -->
+	<skill id="15364" toLevel="1" name="Paralysis">
+		<!-- Inflicts Paralysis. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1189,7 +1189,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15371" toLevel="1" name="Stun Rush">
-		<!-- Rushes to the target to inflict damage. -->
+		<!-- Rush toward target, inflicts damage. -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
 		<castRange>300</castRange>
@@ -1227,7 +1227,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15373" toLevel="1" name="Spell of Protection">
-		<!-- Protected from preemptive monster attacks for 2 min. The status is cancelled if you take preemptive action. -->
+		<!-- For 2 min. protects from preemptive attacks from monsters. The effect will be canceled if character launches an attack. -->
 		<icon>icon.skill11562</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>

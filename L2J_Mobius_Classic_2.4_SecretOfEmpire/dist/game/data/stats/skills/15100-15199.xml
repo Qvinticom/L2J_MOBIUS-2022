@@ -463,7 +463,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15174" toLevel="1" name="Petra Injection - Enhance HP Recovery">
+	<skill id="15174" toLevel="1" name="Petra Injection - Enhance HP Recovery Bonus">
 		<icon>icon.skill1434</icon>
 		<operateType>CA2</operateType>
 		<castRange>2500</castRange>
@@ -475,7 +475,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15175</channelingSkillId> <!-- Petra Injection - Enhance HP Recovery -->
+		<channelingSkillId>15175</channelingSkillId> <!-- Petra Injection - Enhance HP Recovery Bonus -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -483,8 +483,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15175" toLevel="1" name="Petra Injection - Enhance HP Recovery">
-		<!-- Zahak has used its Petra to increase Tauti's HP Recovery. -->
+	<skill id="15175" toLevel="1" name="Petra Injection - Enhance HP Recovery Bonus">
+		<!-- Increases Tauti's HP Recovery Bonus. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>
@@ -522,7 +522,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15177" toLevel="1" name="Petra Injection - Enhance P. Def.">
-		<!-- Zahak has used its Petra to increase Tauti's P. Def. -->
+		<!-- Increases Tauti's P. Def. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>
@@ -560,7 +560,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15179" toLevel="1" name="Petra Injection - Enhance M. Def.">
-		<!-- Zahak has used its Petra to increase Tauti's M. Def. -->
+		<!-- Increases Tauti's M. Def. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>
@@ -598,7 +598,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15181" toLevel="1" name="Petra Injection - Enhance P. Atk.">
-		<!-- Zahak has used its Petra to increase Tauti's P. Atk. -->
+		<!-- Tauti's P. Skill Power is increased. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>

@@ -121,17 +121,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55824" toLevel="10" name="Empire Legendary Cloak Augmentation">
-		<!-- P. Critical Damage Boost -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55825" toLevel="10" name="Empire Legendary Cloak Augmentation">
-		<!-- P. Skill Critical Damage Boost -->
+		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55826" toLevel="10" name="Empire Legendary Cloak Augmentation">
-		<!-- M. Critical Damage Boost -->
+		<!-- M. Critical Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -438,7 +438,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55887" toLevel="4" name="Clan Exuberance">
-		<!-- Clan members' HP/ MP/ CP Recovery Bonus +$s1, received PVE damage -$s2, EXP and SP +$s3. -->
+		<!-- Clan members' HP/ MP/ CP Recovery Bonus +$s1, received PVE damage -$s2, Acquired XP/ SP +$s3. -->
 		<icon>icon.skill19014</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -458,7 +458,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55892" toLevel="1" name="Dragon's Miracle Potion">
-		<!-- For 20 min., acquired XP/ SP +50%, P./ M. Atk. +18%, P./ M. Def. +22%, Atk. Spd./ Casting Spd. +5%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%, HP/ MP/ CP +25%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Buff remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +50%, P./ M. Atk. +18%, P./ M. Def. +22%, Atk. Spd./ Casting Spd. +5%, P./ M. Crirical Rate +30, P./ M. Critical Damage +10%, HP/ MP/ CP +25%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Effect remains after death. -->
 		<icon>icon.bm_dragon_posion_brave</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -466,17 +466,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55894" toLevel="1" name="Transformation Into Teddy Bear">
-		<!-- Transforms into teddy bear. During transformation HP/ MP +$s1, P./ M. Def. +$s2, acquired XP/ SP +$s3. Buff remains after death. -->
+		<!-- Transforms into teddy bear. During transformation HP/ MP +$s1, P./ M. Def. +$s2, acquired XP/ SP +$s3. Effect remains after death. -->
 		<icon>icon.gomdori_chest_change</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55895" toLevel="1" name="Transformation Into Panda">
-		<!-- Transforms into panda. During transformation HP/ MP +$s1, P./ M. Def. +$s2, acquired XP/ SP +$s3. Buff remains after death. -->
+		<!-- Transforms into panda. During transformation HP/ MP +$s1, P./ M. Def. +$s2, acquired XP/ SP +$s3. Effect remains after death. -->
 		<icon>icon.sayha2017_panda</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55896" toLevel="1" name="Transformation Into Cat">
-		<!-- Transforms into cat. During transformation HP/ MP +$s1, P./ M. Def. +$s2, acquired XP/ SP +$s3. Buff remains after death. -->
+		<!-- Transforms into cat. During transformation HP/ MP +$s1, P./ M. Def. +$s2, acquired XP/ SP +$s3. Effect remains after death. -->
 		<icon>icon.sayha2017_cat</icon>
 		<operateType>A1</operateType>
 	</skill>

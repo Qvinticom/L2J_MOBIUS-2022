@@ -27,7 +27,7 @@
 		</effects>
 	</skill>
 	<skill id="6301" toLevel="2" name="Cold Mana Fragment">
-		<!-- Recovers MP by $s1 per sec. -->
+		<!-- Each second MP +$s1. -->
 		<icon>icon.skill6301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -110,7 +110,7 @@
 		</effects>
 	</skill>
 	<skill id="6304" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 2 sec. -->
+		<!-- Immobilizes and stuns target for 2 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -799,7 +799,7 @@
 		</effects>
 	</skill>
 	<skill id="6332" toLevel="1" name="Campfire Full">
-		<!-- Speed and Atk. Spd. is decreased. -->
+		<!-- Speed and Atk. Spd. are decreased. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -863,7 +863,7 @@
 		</effects>
 	</skill>
 	<skill id="6334" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 4 sec. -->
+		<!-- Immobilizes and stuns target for 4 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -1014,7 +1014,7 @@
 		</effects>
 	</skill>
 	<skill id="6340" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 4 sec. -->
+		<!-- Immobilizes and stuns target for 4 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -1156,7 +1156,7 @@
 		</effects>
 	</skill>
 	<skill id="6366" toLevel="2" name="Maguen Plasma - Critical">
-		<!-- The Wild Maguen blesses you with a buff that slightly increases your Critical Rate and Critical Damage for $s1. -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your P. Critical Rate, P. Critical Damage and M. Critical Damage for $s1 -->
 		<icon>
 			<value level="1">icon.skill6366_1</value>
 			<value level="2">icon.skill6366_2</value>
@@ -1317,7 +1317,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6371" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -1334,7 +1334,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6372" toLevel="10" name="Power Up">
-		<!-- Atk. Spd. +$s1 and Physical Skill Damage +$s2. -->
+		<!-- Atk. Spd. +$s1, P. Skill Power +$s2. -->
 		<icon>icon.skill0917</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1704,7 +1704,7 @@
 		</effects>
 	</skill>
 	<skill id="6386" toLevel="1" name="Bistakon Earth Rise">
-		<!-- Momentarily Stuns and immobilizes the enemy for 3 sec. -->
+		<!-- Immobilizes and stuns target for 3 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

@@ -11,7 +11,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50002" toLevel="1" name="Curse Zaken">
-		<!-- Bleeding. HP momentarily decreases. Power 5. -->
+		<!-- Speed -30%, HP decreases temporarily. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -70,7 +70,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50014" toLevel="1" name="Christmas Blessing">
-		<!-- For 1 hr. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
+		<!-- For 1 h. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -213,17 +213,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50046" toLevel="2" name="Wind Ability - Lv. 1 Atk.">
-		<!-- P. Atk. +20%. -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50047" toLevel="2" name="Wind Ability - Lv. 1 Def.">
-		<!-- P./ M. Def. +50%. -->
+		<!-- P./ M. Def. +$s1. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50048" toLevel="2" name="Wind Ability - Lv. 1 Magic">
-		<!-- M. Atk. +20%. -->
+		<!-- M. Atk. +$s1. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -260,7 +260,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50054" toLevel="1" name="Stone Crusher">
-		<!-- Attacks nearby enemies with 30000 Power added to P. Atk. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50055" toLevel="1" name="Stone Transformation - Long Distance">
@@ -274,17 +274,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50057" toLevel="1" name="Stone Earthquake">
-		<!-- Unleashed power of King Petram attacks nearby enemies with 10000 Power and stuns them for some time. -->
+		<!-- Unleashed power of King Petram attacks nearby enemies with $s1 Power and stuns them for some time. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50058" toLevel="1" name="Stone Slide">
-		<!-- Attacks nearby enemies with 10000 Power added to P. Atk. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50059" toLevel="1" name="Earth Fury">
-		<!-- Attacks nearby enemies with 10000 Power added to P. Atk. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50060" toLevel="1" name="Stone Destruction">
@@ -294,6 +294,7 @@
 	</skill>
 	<skill id="50061" toLevel="1" name="Earth Life">
 		<!-- Resores HP for prolonged time thanks to the Earth Attribute power. -->
+		<icon>icon.skill1610</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50062" toLevel="1" name="Ignition">
@@ -318,7 +319,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50067" toLevel="1" name="Stone Earthquake">
-		<!-- Stuns with a powerful blow. -->
+		<!-- Stuns enemies with a powerful blow. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -352,17 +353,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50075" toLevel="1" name="Boiling Geyser">
-		<!-- For 5 min. due to raging energy of the Boiling Geyser P. Atk. +5%, Atk. Spd. +5%. -->
+		<!-- For 5 min. due to raging energy of the hot spring P. Atk. +5%, Atk. Spd. +5%. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50076" toLevel="1" name="Fatal Geyser">
-		<!-- For 5 min. due to raging energy of the Fatal Geyser P. Critical Rate +30, P. Accuracy +6. -->
+		<!-- For 5 min. due to raging energy of the hot spring P. Critical Rate +30, P. Accuracy +6. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50077" toLevel="1" name="Magical Geyser">
-		<!-- For 5 min. due to raging energy of the Magical Geyser P. Atk. +10%, Casting Spd. +5%. -->
+		<!-- For 5 min. due to raging energy of the hot spring M. Atk. +10%, Casting Spd. +5%. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -371,24 +372,118 @@
 		<icon>icon.skill1333</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50079" toLevel="1" name="Raid Boss (Lv. 82)">
+	<skill id="50079" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- King Ignis, the ruler of Fire Spirits invading Aden. He is waiting for a right moment to leave his secret hideout and burn the continent with the power of raging flame. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50080" toLevel="1" name="Raid Boss (Lv. 82)">
+	<skill id="50080" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- Queen Nebula, the ruler of Water Spirits invading Aden. She is waiting for a right moment to leave her secret hideout and drown the continent with the power of raging water. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50081" toLevel="1" name="Raid Boss (Lv. 82)">
+	<skill id="50081" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- King Procella, the ruler of Wind Spirits invading Aden. He is waiting for a right moment to leave his secret hideout and tear the continent down with the power of raging winds. -->
 		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50082" toLevel="1" name="Raid Boss (Lv. 82)">
+	<skill id="50082" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- King Petram, the ruler of Earth Spirits invading Aden. He is waiting for a right moment to leave his secret hideout and shake the continent with the power of raging earth. -->
 		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50083" toLevel="1" name="84 Lv. Raid Boss">
+		<!-- King Ignis, the ruler of Fire Spirits invading Aden. He is waiting for a right moment to leave his secret hideout and burn the continent with the power of raging flame. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50084" toLevel="1" name="84 Lv. Raid Boss">
+		<!-- Queen Nebula, the ruler of Water Spirits invading Aden. She is waiting for a right moment to leave her secret hideout and drown the continent with the power of raging water. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50085" toLevel="1" name="84 Lv. Raid Boss">
+		<!-- King Procella, the ruler of Wind Spirits invading Aden. He is waiting for a right moment to leave his secret hideout and tear the continent down with the power of raging winds. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50086" toLevel="1" name="84 Lv. Raid Boss">
+		<!-- King Petram, the ruler of Earth Spirits invading Aden. He is waiting for a right moment to leave his secret hideout and shake the continent with the power of raging earth. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50087" toLevel="10" name="Fire Rage">
+		<!-- Power of King Ignis. Constantly decreases HP. Debuffs add up decreasing HP even more. The debuff can be cancelled if you speak to Freya. -->
+		<icon>
+			<value level="1">icon.skill50050_1</value>
+			<value level="2">icon.skill50050_2</value>
+			<value level="3">icon.skill50050_3</value>
+			<value level="4">icon.skill50050_4</value>
+			<value level="5">icon.skill50050_5</value>
+			<value level="6">icon.skill50050_6</value>
+			<value level="7">icon.skill50050_7</value>
+			<value level="8">icon.skill50050_8</value>
+			<value level="9">icon.skill50050_9</value>
+			<value level="10">icon.skill50050_10</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50088" toLevel="2" name="Power Strike">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50089" toLevel="2" name="Hurricane Attack">
+		<!-- Attacks nearby enemies with 102 Power added to M. Atk. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50090" toLevel="2" name="Decrease Speed">
+		<!-- Immediately target's Speed -30%. -->
+		<icon>icon.skill1160</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50091" toLevel="2" name="Fire Attack">
+		<!-- Attacks enemies in front of the boss with $s1 Power added to M. Atk. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50092" toLevel="2" name="Water Attack">
+		<!-- Attacks nearby enemies with $s1 Power added to M. Atk. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50093" toLevel="2" name="Shock Attack">
+		<!-- Attacks nearby enemies with $s1 Power added to M. Atk. and inflicts Stun for 5 sec. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50094" toLevel="6" name="Shadow's Despair">
+		<!-- Nightshade's debuff magic. Nearby enemy's Sleep/ Hold/ Stun/ Mental/ Pull/ Knockdown Resistance -$s1. -->
+		<icon>icon.skill50094</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50095" toLevel="5" name="Frintezza Heal Music">
+		<!-- Music to soothe the soul. -->
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.skill0000</value>
+			<value level="3">icon.skill0000</value>
+			<value level="4">icon.skill5008_plague</value>
+			<value level="5">icon.skill5008_psycho</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50096" toLevel="4" name="Frintezza Demon Field">
+		<!-- Powerful attack on nearby enemies. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50097" toLevel="5" name="Halisha's Surveillance">
+		<!-- Halisha's Surveillance Lv. 1. Increases received damage if character stay in Demon Field (proportionately to skill level). -->
+		<icon>icon.karma</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50098" toLevel="4" name="Frintezza Demon Field">
+		<!-- Powerful attack on nearby enemies. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50099" toLevel="5" name="Halisha's Surveillance">
+		<!-- Halisha's Surveillance Lv. 1. Increases received damage if character stay in Demon Field (proportionately to skill level). -->
+		<icon>icon.karma</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

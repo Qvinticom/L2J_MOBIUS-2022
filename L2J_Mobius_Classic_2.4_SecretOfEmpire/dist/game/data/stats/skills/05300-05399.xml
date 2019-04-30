@@ -53,7 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="5301" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -114,7 +114,7 @@
 		</effects>
 	</skill>
 	<skill id="5302" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -198,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="5303" toLevel="9" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -345,7 +345,7 @@
 		</effects>
 	</skill>
 	<skill id="5305" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -481,7 +481,7 @@
 		</effects>
 	</skill>
 	<skill id="5307" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -541,7 +541,7 @@
 		</effects>
 	</skill>
 	<skill id="5308" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -624,7 +624,7 @@
 		</effects>
 	</skill>
 	<skill id="5309" toLevel="9" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1753,7 +1753,7 @@
 		</effects>
 	</skill>
 	<skill id="5333" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -2798,7 +2798,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5362" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2859,7 +2859,7 @@
 		</effects>
 	</skill>
 	<skill id="5363" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -2943,7 +2943,7 @@
 		</effects>
 	</skill>
 	<skill id="5364" toLevel="9" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -3067,7 +3067,7 @@
 		</effects>
 	</skill>
 	<skill id="5366" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3181,7 +3181,7 @@
 		</effects>
 	</skill>
 	<skill id="5368" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3214,7 +3214,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5369" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -3297,7 +3297,7 @@
 		</effects>
 	</skill>
 	<skill id="5370" toLevel="9" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -4286,7 +4286,7 @@
 		</effects>
 	</skill>
 	<skill id="5394" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>

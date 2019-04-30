@@ -5,7 +5,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39001" toLevel="1" name="Turek Orc Adena Bank">
-		<!-- Double-click to randomly obtain a battle item or anywhere between 1 - 10,000,000 Adena. Once a day. -->
+		<!-- Double-click to randomly obtain a battle item or anywhere between 1 - 1,000,000 Adena. Once a day. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39002" toLevel="1" name="Healing Potion">
@@ -55,7 +55,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39013" toLevel="1" name="Scroll: Empower">
-		<!-- Increases M. Atk. Effect 1. -->
+		<!-- M. Atk. +55%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -78,7 +78,7 @@
 		</effects>
 	</skill>
 	<skill id="39014" toLevel="1" name="Scroll: Might">
-		<!-- Increases P. Atk. Effect 1. -->
+		<!-- P. Atk. +8%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -101,7 +101,7 @@
 		</effects>
 	</skill>
 	<skill id="39015" toLevel="1" name="Scroll: Shield">
-		<!-- Increases P. Def. Effect 1. -->
+		<!-- P. Def. +8%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -383,7 +383,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39028" toLevel="1" name="Newbie Wind Walk Potion">
-		<!-- Increases Speed. Effect 1. -->
+		<!-- Speed +20. -->
 		<icon>icon.etc_potion_green_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -542,7 +542,7 @@
 		</effects>
 	</skill>
 	<skill id="39045" toLevel="1" name="Overwhelming Power of a Holiday Hat"> <!-- increases XP and SP gain by 5% for 20 minutes -->
-		<!-- For 20 min., acquired XP/ SP +5%. Buff remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.skill19226</icon>
  		<!-- increases XP and SP gain by 5% for 20 minutes -->
 		<operateType>A2</operateType>
@@ -562,12 +562,12 @@
 		</effects>
 	</skill>
 	<skill id="39046" toLevel="1" name="Letter Collector's Gift">
-		<!-- Gives Santa appearance. For 1 hr., acquired XP/ SP +10%, Max HP/ MP +10%. Speed +5. Cooldown: 30 min. Buff remains after death. -->
+		<!-- Gives Santa appearance. For 1 h., acquired XP/ SP +10%, Max HP/ MP +10%. Speed +5. Cooldown: 30 min. Effect remains after death. -->
 		<icon>icon.shield_bread_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39047" toLevel="1" name="Fish Stew - Might">
-		<!-- For 20 min. P. Atk. +8%. -->
+		<!-- For $s1 P. Atk. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -593,7 +593,7 @@
 		</effects>
 	</skill>
 	<skill id="39048" toLevel="1" name="Fish Stew - Shield">
-		<!-- For 20 min. P. Def. +8%. -->
+		<!-- For $s1 P. Def. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -619,7 +619,7 @@
 		</effects>
 	</skill>
 	<skill id="39049" toLevel="1" name="Fish Stew - Magic Barrier">
-		<!-- For 20 min. M. Def. +23%. -->
+		<!-- For $s1, M. Def. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -645,7 +645,7 @@
 		</effects>
 	</skill>
 	<skill id="39050" toLevel="1" name="Fish Stew - Vampiric Rage">
-		<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For $s1 recovers as HP $s2 of the melee damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -671,7 +671,7 @@
 		</effects>
 	</skill>
 	<skill id="39051" toLevel="1" name="Fish Stew - Empower">
-		<!-- For 20 min. M. Atk. +55%. -->
+		<!-- M. Atk. +$s2 for $s1. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -788,7 +788,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39057" toLevel="1" name="Hero Experience Rune">
+	<skill id="39057" toLevel="1" name="Hero's XP Amulet">
 		<!-- Acquired XP/ SP +20%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -992,7 +992,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39062" toLevel="1" name="Black Mask Teleport">
-		<!-- Teleports character to the nearest village. Cooldown - 2 hr. -->
+		<!-- Teleports character to the nearest village. Cooldown - 2 h. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39063" toLevel="1" name="Solid Scroll: Enchant Armor (D-grade)">
@@ -1020,7 +1020,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39069" toLevel="1" name="Major Warrior Healing Potion">
-		<!-- Greatly increases HP recovery bonus. Effect 3. -->
+		<!-- Greatly increases HP Recovery Bonus. -->
 		<icon>icon.etc_reagent_white_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1176,7 +1176,7 @@
 		</effects>
 	</skill>
 	<skill id="39074" toLevel="1" name="Angel Cat's Energy">
-		<!-- For 30 min., Max. HP/ MP +5%, and acquired XP/ SP +20%. Buff remains after death. -->
+		<!-- For 30 min., Max. HP/ MP +5%, and acquired XP/ SP +20%. Effect remains after death. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -1222,7 +1222,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39076" toLevel="1" name="Fish Stew - Guild's Gratitude">
-		<!-- For 20 min. XP/ SP +10% while hunting. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800</reuseDelay>
@@ -1292,12 +1292,12 @@
 		</effects>
 	</skill>
 	<skill id="39079" toLevel="1" name="Sheep Resurrection">
-		<!-- Ian s Blessing resurrects the dead. Besides, restores 70% of lost experience. -->
+		<!-- Resurrects the dead. Besides, restores 70% of lost experience. -->
 		<icon>icon.skill11784</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39080" toLevel="2" name="Sheep�s Benediction">
-		<!-- For 3 hr., M. and P. Atk. +7%, M. and P. Def +10%, HP/ MP/ CP +15%, HP/ MP Recovery Bonus +20%. Can be used once a day. The number of usages is set to zero at 6.30 AM. Persists through death. When the buff ends, character gets a sheep s present. Warning! The item disappears if a character dies upon obtaining the item, not having put the item into the inventory. -->
+		<!-- For 3 h., P./ M. Atk. +7%, P./ M. Def +10%, HP/ MP/ CP +15%, HP/ MP Recovery Bonus +20%. Can be used once a day. The number of usages is set to zero at 6.30 AM. Effect remains after death. When the buff ends, character gets a sheep s present. Warning! The item disappears if a character dies upon obtaining the item, not having put the item into the inventory. -->
 		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1342,12 +1342,11 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39084" toLevel="1" name="Pirate Trophy Chest">
-		<!-- Double-click to get 2 Special Pirate Fruit. With a bit of luck you may receive Pirate King's Treasure Chest. -->
 		<icon>icon.freya_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39085" toLevel="1" name="Special Pirate Fruit">
-		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. XP/ SP +5%. Cooldown is 1 min. Buff remains after death. -->
+		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Recovery Bonus +20%. With a certain chance, converts 3% of melee damage dealt into HP. Cooldown is 1 min. Effect remains after death. -->
 		<icon>icon.etc_codran_i09</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1455,7 +1454,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39095" toLevel="1" name="Blessing of Aries">
-		<!-- Resistance to mental attacks/ stun/ sleep/ paralysis +5%. -->
+		<!-- Mental/ Stun/ Sleep/ Paralysis Attack Resistance +$s1. -->
 		<icon>icon.skill6366_2</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="5201" toLevel="6" name="Pet Concentration">
-		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect $s1 -->
+		<!-- Temporarily the probability of magic being canceled due to damage taken -18. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -137,7 +137,7 @@
 		</effects>
 	</skill>
 	<skill id="5202" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -267,7 +267,7 @@
 		</effects>
 	</skill>
 	<skill id="5206" toLevel="1" name="Decrease Speed">
-		<!-- Mutant Curse: Speed decreases momentarily. Effect 1. -->
+		<!-- Mutant Curse: Speed -15%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -298,7 +298,7 @@
 		</effects>
 	</skill>
 	<skill id="5207" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- Mutant Curse: Atk. Spd. decreases momentarily. Effect 1. -->
+		<!-- Mutant Curse: Atk. Spd. -15%. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -328,7 +328,7 @@
 		</effects>
 	</skill>
 	<skill id="5208" toLevel="1" name="Wind Walk (Event)">
-		<!-- Speed increases temporarily. Effect 2. -->
+		<!-- Temporarily Speed +33. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -352,7 +352,7 @@
 		</effects>
 	</skill>
 	<skill id="5209" toLevel="1" name="Shield (Event)">
-		<!-- P. Def. increases temporarily. Effect 3. -->
+		<!-- Temporarily P. Def. +15%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -376,7 +376,7 @@
 		</effects>
 	</skill>
 	<skill id="5210" toLevel="1" name="Blessed Body (Event)">
-		<!-- Momentarily increases maximum HP. Effect 6. -->
+		<!-- Max HP +35% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -400,7 +400,7 @@
 		</effects>
 	</skill>
 	<skill id="5211" toLevel="1" name="Vampiric Rage (Event)">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
+		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -424,7 +424,7 @@
 		</effects>
 	</skill>
 	<skill id="5212" toLevel="1" name="Regeneration (Event)">
-		<!-- Increases HP recovery bonus for a fixed time. Effect 3. -->
+		<!-- HP Recovery Bonus +20% for a certain amount of time. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -448,7 +448,7 @@
 		</effects>
 	</skill>
 	<skill id="5213" toLevel="1" name="Haste (Event)">
-		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<!-- Increases Atk. Spd. for a certain amount of time. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -472,7 +472,7 @@
 		</effects>
 	</skill>
 	<skill id="5214" toLevel="1" name="Blessed Soul (Event)">
-		<!-- Momentarily increases maximum MP. Effect 6. -->
+		<!-- Increases Max MP for a certain amount of time. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -496,7 +496,7 @@
 		</effects>
 	</skill>
 	<skill id="5215" toLevel="1" name="Acumen (Event)">
-		<!-- Momentarily increases Casting Spd. Effect 3. -->
+		<!-- Temporarily Atk. Spd. +30%. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -520,7 +520,7 @@
 		</effects>
 	</skill>
 	<skill id="5216" toLevel="1" name="Concentration (Event)">
-		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect 1. -->
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -544,7 +544,7 @@
 		</effects>
 	</skill>
 	<skill id="5217" toLevel="1" name="Empower (Event)">
-		<!-- M. Atk. increases temporarily. Effect 1. -->
+		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -579,7 +579,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5219" toLevel="1" name="Giant Mutant Stun">
-		<!-- Curse of giant mutated animal: Stunned and unable to move momentarily. -->
+		<!-- Curse of giant mutated animal: Immobilizes and stuns target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -707,7 +707,7 @@
 		</effects>
 	</skill>
 	<skill id="5225" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<icon>icon.skill1427</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -755,7 +755,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5230" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -784,7 +784,7 @@
 		</effects>
 	</skill>
 	<skill id="5231" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -813,7 +813,7 @@
 		</effects>
 	</skill>
 	<skill id="5232" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -896,7 +896,7 @@
 		</effects>
 	</skill>
 	<skill id="5236" toLevel="1" name="Speed Up">
-		<!-- Increases Speed. Effect 2. -->
+		<!-- Speed +33. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -918,7 +918,7 @@
 		</effects>
 	</skill>
 	<skill id="5237" toLevel="1" name="Decrease Speed">
-		<!-- Decreases Speed. Effect 2. -->
+		<!-- Speed -20%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1002,7 +1002,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5240" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1033,7 +1033,7 @@
 		</effects>
 	</skill>
 	<skill id="5241" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1444,7 +1444,7 @@
 		</effects>
 	</skill>
 	<skill id="5250" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1473,7 +1473,7 @@
 		</effects>
 	</skill>
 	<skill id="5251" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1614,7 +1614,7 @@
 		</effects>
 	</skill>
 	<skill id="5253" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1718,7 +1718,7 @@
 		</endEffects>
 	</skill>
 	<skill id="5254" toLevel="12" name="Invasion of Spirit">
-		<!-- MP decreases. Effect $s1 -->
+		<!-- MP decreases. -->
 		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2240,7 +2240,7 @@
 		</effects>
 	</skill>
 	<skill id="5264" toLevel="12" name="Death Mark">
-		<!-- Marked with the brand of darkness. Effect $s1 -->
+		<!-- Marked with the brand of darkness. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DEATH_MARK</abnormalType>
@@ -2379,7 +2379,7 @@
 		</effects>
 	</skill>
 	<skill id="5266" toLevel="12" name="Magical Backfire">
-		<!-- Increased MP consumption. Effect $s1 -->
+		<!-- Skill MP Consumption +100%. -->
 		<icon>icon.skill1396</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2627,7 +2627,7 @@
 		</effects>
 	</skill>
 	<skill id="5269" toLevel="17" name="Slow Trap">
-		<!-- Decreases Atk. Spd. and Casting Spd. Effect $s1 -->
+		<!-- Atk. Spd. -23%, Casting Spd. -30%, Speed -30%. -->
 		<icon>icon.skill0516</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

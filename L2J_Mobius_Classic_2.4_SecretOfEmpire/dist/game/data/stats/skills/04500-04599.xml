@@ -108,7 +108,7 @@
 		<affectScope>NONE</affectScope>
 	</skill>
 	<skill id="4515" toLevel="1" name="Raid Curse">
-		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -240,7 +240,7 @@
 		</effects>
 	</skill>
 	<skill id="4522" toLevel="1" name="Eye of Assassin">
-		<!-- Greatly increases the critical success rate of dagger and rapier skills. -->
+		<!-- Greatly increases the P. Critical Rate of dagger and rapier skills. -->
 		<icon>icon.skill0016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -451,7 +451,7 @@
 		</effects>
 	</skill>
 	<skill id="4533" toLevel="1" name="Dance of Resistance">
-		<!-- Momentarily decreases Speed and Accuracy significantly. Dance of Inspiration can remove the curse. -->
+		<!-- Temporarily decreases Speed and P. Accuracy. Dance of Inspiration can remove the curse. -->
 		<icon>icon.skill0272</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -479,7 +479,7 @@
 		</effects>
 	</skill>
 	<skill id="4534" toLevel="1" name="Nihilistic Dance">
-		<!-- Atk. Spd. decreases momentarily and Evasion significantly. Dance of Fury can remove the curse. -->
+		<!-- Temporarily decreases Atk. Spd. and P. Evasion. Dance of Fury can remove the curse. -->
 		<icon>icon.skill0275</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -507,7 +507,7 @@
 		</effects>
 	</skill>
 	<skill id="4535" toLevel="1" name="Dance of Weakness">
-		<!-- P. Def. decreases momentarily and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
+		<!-- Temporarily decreases P. Def. and P. Atk. Dance of the Vampire can remove the curse. -->
 		<icon>icon.skill0310</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -535,7 +535,7 @@
 		</effects>
 	</skill>
 	<skill id="4536" toLevel="1" name="Song of Seduction">
-		<!-- Momentarily decreases Speed and Accuracy significantly. Song of Wind can remove the curse. -->
+		<!-- Temporarily decreases Speed and P. Accuracy. Song of Wind can remove the curse. -->
 		<icon>icon.skill0268</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -563,7 +563,7 @@
 		</effects>
 	</skill>
 	<skill id="4537" toLevel="1" name="Song of Sweet Whispers">
-		<!-- Atk. Spd. decreases momentarily and Evasion significantly. Song of Water can remove the curse. -->
+		<!-- Temporarily decreases Atk. Spd. and P. Evasion. Song of Water can remove the curse. -->
 		<icon>icon.skill0266</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -591,7 +591,7 @@
 		</effects>
 	</skill>
 	<skill id="4538" toLevel="1" name="Song of Temptation">
-		<!-- P. Def. decreases momentarily. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
+		<!-- Temporarily decreases P. Def. and P. Atk. Song of Vengeance can remove the curse. -->
 		<icon>icon.skill0305</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -619,7 +619,7 @@
 		</effects>
 	</skill>
 	<skill id="4539" toLevel="1" name="Vague Curse">
-		<!-- Momentarily decreases Speed and Accuracy significantly. Guidance spell can remove the curse. -->
+		<!-- Temporarily decreases Speed and P. Accuracy. Guidance skill can remove the curse. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -648,7 +648,7 @@
 		</effects>
 	</skill>
 	<skill id="4540" toLevel="1" name="Curse Weakness">
-		<!-- P. Def. decreases momentarily. and Speed significantly. Shield spell can remove the curse. -->
+		<!-- Temporarily decreases P. Def. and Speed. Shield skill can remove the curse. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -677,7 +677,7 @@
 		</effects>
 	</skill>
 	<skill id="4541" toLevel="1" name="Nihilistic Curse">
-		<!-- P. Atk. decreases momentarily., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
+		<!-- Temporarily decreases P. Atk., Atk. Spd. and M. Atk.. Might skill can remove the curse. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -859,7 +859,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4551" toLevel="10" name="Hot Springs Rheumatism">
-		<!-- Infected with Hot Springs Rheumatism. While afflicted, Critical Rate increases temporarily. Effect $s1 -->
+		<!-- Infected Hot Springs Rheumatism. While afflicted, P. Critical Rate +3. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -924,7 +924,7 @@
 		</effects>
 	</skill>
 	<skill id="4552" toLevel="10" name="Hot Springs Cholera">
-		<!-- Infected with Hot Springs Cholera. While afflicted, Accuracy increases temporarily. Effect $s1 -->
+		<!-- Infected with Hot Springs Cholera. While afflicted, P. Accuracy +3. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -989,7 +989,7 @@
 		</effects>
 	</skill>
 	<skill id="4553" toLevel="10" name="Hot Springs Flu">
-		<!-- Infected with Hot Springs Flu. While afflicted, Atk. Spd. increases temporarily. Effect $s1 -->
+		<!-- Infected with Hot Springs Flu. While afflicted, Atk. Spd. increases temporarily. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1054,7 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="4554" toLevel="10" name="Hot Spring Malaria">
-		<!-- Infected with Hot Springs Malaria. While afflicted, Casting Spd. increases temporarily. Effect $s1 -->
+		<!-- Infected with Hot Springs Malaria. While afflicted, Casting Spd. +4%. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2200,7 +2200,7 @@
 		</effects>
 	</skill>
 	<skill id="4575" toLevel="2" name="Haste">
-		<!-- Atk. Spd. +$s1. Effect $s2 -->
+		<!-- Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2242,7 +2242,7 @@
 		</effects>
 	</skill>
 	<skill id="4576" toLevel="3" name="Reflect Damage">
-		<!-- Reflects $s1 of received damage. Effect $s2 -->
+		<!-- Reflect 10% of damage. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2288,8 +2288,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4577" toLevel="12" name="Decrease Accuracy">
-		<!-- Accuracy decreases momentarily. Effect $s1 -->
+	<skill id="4577" toLevel="12" name="Decrease P. Accuracy">
+		<!-- Immediately decreases P. Accuracy. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2414,7 +2414,7 @@
 		</effects>
 	</skill>
 	<skill id="4579" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2514,7 +2514,7 @@
 		</effects>
 	</skill>
 	<skill id="4580" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2647,7 +2647,7 @@
 		</effects>
 	</skill>
 	<skill id="4582" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2730,7 +2730,7 @@
 		</effects>
 	</skill>
 	<skill id="4583" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2809,8 +2809,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4584" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- P. Def. decreases momentarily. Stunned and unable to move momentarily. Effect $s1 -->
+	<skill id="4584" toLevel="12" name="Decrease P. Def. and Stun">
+		<!-- Immediately decreases P. Def., target is immobilized because of stun. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -2906,8 +2906,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4585" toLevel="3" name="Berserker Spirit">
-		<!-- P. Def. -$s1, M. Def. -$s2, Evasion -$s3, and P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
+	<skill id="4585" toLevel="3" name="Soul of Berserker">
+		<!-- P. Def. -$s1, M. Def. -$s2, P. Evasion -$s3, P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3004,8 +3004,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4586" toLevel="12" name="Decrease Evasion">
-		<!-- Evasion decreases momentarily. Effect $s1 -->
+	<skill id="4586" toLevel="12" name="Decrease P. Evasion">
+		<!-- Immediately P. Evasion -10. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3086,7 +3086,7 @@
 		</effects>
 	</skill>
 	<skill id="4587" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3251,7 +3251,7 @@
 		</effects>
 	</skill>
 	<skill id="4589" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3336,7 +3336,7 @@
 		</effects>
 	</skill>
 	<skill id="4590" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3421,7 +3421,7 @@
 		</effects>
 	</skill>
 	<skill id="4591" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3506,7 +3506,7 @@
 		</effects>
 	</skill>
 	<skill id="4592" toLevel="12" name="Decrease P. Def.">
-		<!-- P. Def. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Def. -17%. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3589,7 +3589,7 @@
 		</effects>
 	</skill>
 	<skill id="4593" toLevel="12" name="Decrease P. Def.">
-		<!-- P. Def. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Def. -17%. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3672,7 +3672,7 @@
 		</effects>
 	</skill>
 	<skill id="4594" toLevel="12" name="Decrease P. Def.">
-		<!-- P. Def. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Def. -17%. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3808,7 +3808,7 @@
 		</effects>
 	</skill>
 	<skill id="4596" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3892,7 +3892,7 @@
 		</effects>
 	</skill>
 	<skill id="4597" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3976,7 +3976,7 @@
 		</effects>
 	</skill>
 	<skill id="4598" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4060,7 +4060,7 @@
 		</effects>
 	</skill>
 	<skill id="4599" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4600" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- P. Def. decreases momentarily. Stunned and unable to move momentarily. Effect $s1 -->
+	<skill id="4600" toLevel="12" name="Decrease P. Def. and Stun">
+		<!-- Immediately P. Def. -17%, target is immobilized because of stun. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -135,7 +135,7 @@
 		</effects>
 	</skill>
 	<skill id="4602" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -234,7 +234,7 @@
 		</effects>
 	</skill>
 	<skill id="4603" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -317,7 +317,7 @@
 		</effects>
 	</skill>
 	<skill id="4604" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -416,7 +416,7 @@
 		</effects>
 	</skill>
 	<skill id="4605" toLevel="12" name="Surrender to Fire">
-		<!-- Momentarily decreases Fire Resistance and increases Water Resistance. Effect $s1 -->
+		<!-- Fire Resistance decreases and Water Resistance increases momentarily. -->
 		<icon>icon.skill4279_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -532,7 +532,7 @@
 		</effects>
 	</skill>
 	<skill id="4606" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1029,7 +1029,7 @@
 		</effects>
 	</skill>
 	<skill id="4615" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1436,7 +1436,7 @@
 		</effects>
 	</skill>
 	<skill id="4624" toLevel="12" name="Disease">
-		<!-- HP recovery skill effect greatly decreases momentarily. -->
+		<!-- Immediately greatly decreases Received Healing. -->
 		<icon>icon.skill1269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1474,7 +1474,7 @@
 		</effects>
 	</skill>
 	<skill id="4625" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2464,7 +2464,7 @@
 		</effects>
 	</skill>
 	<skill id="4640" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2610,7 +2610,7 @@
 		</effects>
 	</skill>
 	<skill id="4643" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2863,7 +2863,7 @@
 		</effects>
 	</skill>
 	<skill id="4649" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3516,7 +3516,7 @@
 		</effects>
 	</skill>
 	<skill id="4660" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3602,7 +3602,7 @@
 		</effects>
 	</skill>
 	<skill id="4661" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3688,7 +3688,7 @@
 		</effects>
 	</skill>
 	<skill id="4662" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill4046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4240,7 +4240,7 @@
 		</effects>
 	</skill>
 	<skill id="4670" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target for a short time. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -5220,7 +5220,7 @@
 		</effects>
 	</skill>
 	<skill id="4699" toLevel="13" name="Blessing of Queen">
-		<!-- Queen's buff magic temporarily increases party members' P. Critical Rate/ Damage. Effect $s1 -->
+		<!-- For $s1, party members' P. Critical Rate +$s2, P. Critical Damage +$s3. -->
 		<icon>icon.skill1331</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

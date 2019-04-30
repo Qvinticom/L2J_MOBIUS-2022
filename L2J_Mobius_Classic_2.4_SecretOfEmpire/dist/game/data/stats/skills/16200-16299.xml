@@ -253,7 +253,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16224" toLevel="4" name="Mass Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -266,7 +266,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16225" toLevel="4" name="Mass Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -350,7 +350,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16233" toLevel="5" name="Mass Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Enemy is afflicted with Fear and moving against own will. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

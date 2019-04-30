@@ -34,7 +34,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5802" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -191,7 +191,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5810" toLevel="1" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect 3. -->
+		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -613,7 +613,7 @@
 		</effects>
 	</skill>
 	<skill id="5831" toLevel="1" name="Polearm Swing">
-		<!-- HP decreases from bleeding momentarily. Effect 9. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<affectRange>150</affectRange>
 		<effectPoint>-689</effectPoint>
@@ -665,7 +665,7 @@
 		</effects>
 	</skill>
 	<skill id="5833" toLevel="1" name="Shield">
-		<!-- Increases defense power temporarily. Effect 3. -->
+		<!-- Temporarily P. Def. +15%. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -694,7 +694,7 @@
 		</effects>
 	</skill>
 	<skill id="5834" toLevel="1" name="Magic Barrier">
-		<!-- Momentarily increases M. Def. Effect 3. -->
+		<!-- Temporarily M. Def. +33%. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -743,7 +743,7 @@
 		</effects>
 	</skill>
 	<skill id="5836" toLevel="1" name="Greater Heal">
-		<!-- Recovers party member's HP and increases HP Recovery Bonus momentarily. Power 1. Effect 5. -->
+		<!-- Recovers HP and momentarily increases HP Recovery Bonus for party members. -->
 		<icon>icon.skill1219</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1013,7 +1013,7 @@
 		</effects>
 	</skill>
 	<skill id="5846" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1101,7 +1101,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5849" toLevel="1" name="Decrease Speed">
-		<!-- Decreased Spd. -->
+		<!-- Speed decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1133,7 +1133,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5851" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1188,7 +1188,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5854" toLevel="1" name="Decrease Speed">
-		<!-- Decreased Spd. -->
+		<!-- Speed decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1207,7 +1207,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5855" toLevel="2" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1384,7 +1384,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5866" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1 -->
+		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1432,7 +1432,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5867" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1 -->
+		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1484,7 +1484,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5868" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1 -->
+		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1535,7 +1535,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5869" toLevel="10" name="Soul Worm">
-		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. Effect $s1 -->
+		<!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1584,7 +1584,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5870" toLevel="10" name="Flash Worm">
-		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1 -->
+		<!-- Physical blow is received. Max HP and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1631,7 +1631,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5871" toLevel="10" name="Flash Worm">
-		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1 -->
+		<!-- Physical blow is received. Max HP and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1681,7 +1681,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5872" toLevel="10" name="Flash Worm">
-		<!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. Effect $s1 -->
+		<!-- Physical blow is received. Max HP and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1853,7 +1853,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5878" toLevel="1" name="Cruel Puncture">
-		<!-- Life force is lost and Casting Spd. is decreased. -->
+		<!-- Inflicts damage and decreases Casting Spd. -->
 		<icon>icon.skill1386</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1884,7 +1884,7 @@
 		</effects>
 	</skill>
 	<skill id="5879" toLevel="1" name="Cruel Expunge">
-		<!-- HP decreases from bleeding momentarily. Effect 9. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1915,7 +1915,7 @@
 		</effects>
 	</skill>
 	<skill id="5880" toLevel="2" name="Vicious Mutilation">
-		<!-- Decreased Spd. -->
+		<!-- Speed decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1936,7 +1936,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5881" toLevel="2" name="Vicious Mutilation">
-		<!-- P. Def., Evasion, and Speed are decreased. -->
+		<!-- P. Def., P. Evasion, and Speed are decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1957,7 +1957,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5882" toLevel="2" name="Weakened Pommel">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1994,7 +1994,7 @@
 		</effects>
 	</skill>
 	<skill id="5883" toLevel="1" name="Meggling Injury">
-		<!-- HP decreases from bleeding momentarily. Effect 9. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2063,7 +2063,7 @@
 		</effects>
 	</skill>
 	<skill id="5885" toLevel="2" name="Weakened Sweep">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2100,7 +2100,7 @@
 		</effects>
 	</skill>
 	<skill id="5886" toLevel="1" name="Ground Shaker">
-		<!-- Evasion and Speed are decreased. -->
+		<!-- P. Evasion and Speed are decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2135,7 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="5887" toLevel="1" name="Howl from Beyond">
-		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are greatly decreased. -->
+		<!-- P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Rate and P. Critical Damage are decreased. -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2157,7 +2157,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5888" toLevel="2" name="Earthquake">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2309,7 +2309,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5894" toLevel="1" name="Mark of Despair">
-		<!-- Significantly decreases P. Def., M. Def., evasion and HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Damage and critical attack rate are increased. -->
+		<!-- Significantly decreases P./ M. Def., P. Evasion and Max HP, but P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Damage and P. Critical Rate are increased. -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2378,7 +2378,7 @@
 		</effects>
 	</skill>
 	<skill id="5895" toLevel="1" name="Mark of Cowardice">
-		<!-- Significantly decreases HP, P. Def., M. Def. and evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased. -->
+		<!-- Significantly decreases Max HP, P./ M. Def. and P. Evasion. The use of attack and skills, HP Recovery Bonus are limited, but Speed is slightly increased. -->
 		<icon>icon.skill1337</icon>
 	<!-- TODO JEY -->
 		<abnormalLvl>1</abnormalLvl>
@@ -2448,7 +2448,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5897" toLevel="1" name="Spike of Anchor">
-		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
+		<!-- P./ M. Def., P. Evasion and Speed are decreased. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2488,7 +2488,7 @@
 		</effects>
 	</skill>
 	<skill id="5898" toLevel="2" name="Blast of Anchor">
-		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
+		<!-- P./ M. Def., P. Evasion and Speed are decreased. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

@@ -164,7 +164,7 @@
 		</effects>
 	</skill>
 	<skill id="3602" toLevel="10" name="Special Ability: Guidance">
-		<!-- Increases Accuracy. Enables the character to attack multiple opponents. -->
+		<!-- Increases P. Accuracy and enables the character to attack multiple opponents. -->
 		<icon>icon.skill1240</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -526,7 +526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3605" toLevel="1" name="Set Effect - Moon Heavy Armor">
+	<skill id="3605" toLevel="1" name="Set Effect - Moon Heavy Armor, 4-piece">
 		<!-- HP Recovery Bonus +3%, Max HP +25, P. Def. +3%. -->
 		<icon>icon.armor_t1001_ul_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -547,7 +547,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3606" toLevel="1" name="Set Effect - Moon Light Armor">
+	<skill id="3606" toLevel="1" name="Set Effect - Moon Light Armor, 4-piece">
 		<!-- MP Recovery Bonus +3%, Max MP +10, P. Atk. +2%. -->
 		<icon>icon.armor_t1002_ul_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -568,7 +568,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3607" toLevel="1" name="Set Effect - Moon Robe Armor">
+	<skill id="3607" toLevel="1" name="Set Effect - Moon Robe Armor, 4-piece">
 		<!-- MP Recovery Bonus +3%, Max MP +20, M. Atk. +2%. -->
 		<icon>icon.armor_t1003_ul_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -589,8 +589,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3608" toLevel="3" name="Improved Apella Heavy Armor Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases Critical Damage success rate. -->
+	<skill id="3608" toLevel="3" name="Set Effect - Apella Heavy Armor">
+		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases P. Critical Damage success rate. -->
 		<icon>icon.armor_t1004_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -661,8 +661,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3609" toLevel="3" name="Improved Apella Light Armor Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Evasion when attacked. Decreases received Critical Damage. -->
+	<skill id="3609" toLevel="3" name="Set Effect - Apella Light Armor">
+		<!-- Increases Max CP/ CP Recovery Bonus, decreases the skill player's death XP penalty. Increases one's own P. Evasion when attacked. Decreases Received P. Critical Damage. -->
 		<icon>icon.armor_t1005_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -733,8 +733,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3610" toLevel="3" name="Improved Apella Robe Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Speed and P. Def. when attacked. -->
+	<skill id="3610" toLevel="3" name="Set Effect - Apella Robe Armor">
+		<!-- Increases Max CP/ CP Recovery Bonus, and decreases death XP penalty. Increases Speed and P. Def. when attacked. -->
 		<icon>icon.armor_t1006_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1456,7 +1456,7 @@
 		</effects>
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
-		<!-- Active: Momentarily increases Stun Resistance. -->
+		<!-- Active: Temporarily increases Stun Resistance. -->
 		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>

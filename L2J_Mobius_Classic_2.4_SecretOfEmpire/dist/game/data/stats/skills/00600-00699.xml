@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="600" toLevel="1" name="Residence Guidance">
-		<!-- Accuracy of clan members in residence +4. -->
+		<!-- P. Accuracy of clan members in residence +4. -->
 		<icon>icon.skill0380</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -14,7 +14,7 @@
 		</effects>
 	</skill>
 	<skill id="601" toLevel="1" name="Residence Agility">
-		<!-- Evasion of clan members in residence +4. -->
+		<!-- P. Evasion of clan members in residence +4. -->
 		<icon>icon.skill0381</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -214,7 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="613" toLevel="3" name="Wind Squad">
-		<!-- The corresponding troops' Accuracy +$s1. -->
+		<!-- The corresponding troops' P. Accuracy +$s1. -->
 		<icon>icon.skill1465</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -260,7 +260,7 @@
 		</effects>
 	</skill>
 	<skill id="615" toLevel="3" name="Holy Squad">
-		<!-- The corresponding troops' heal power +$s1. -->
+		<!-- The corresponding troops' Healing Power +$s1. -->
 		<icon>icon.skill1043</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -353,7 +353,7 @@
 		</effects>
 	</skill>
 	<skill id="622" toLevel="2" name="Ultimate Escape">
-		<!-- Evasion +$s2 and Speed +$s3 for $s1. -->
+		<!-- P. Evasion +$s2 and Speed +$s3 for $s1 -->
 		<icon>icon.skill0622</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -423,7 +423,7 @@
 		</effects>
 	</skill>
 	<skill id="626" toLevel="4" name="Critical Sense">
-		<!-- Critical Rate +$s1 and Critical Damage +$s2. -->
+		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2. -->
 		<icon>icon.skill0312</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -1054,7 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="640" toLevel="1" name="Master Ability: Focus">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases P. Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1114,7 +1114,7 @@
 		</effects>
 	</skill>
 	<skill id="644" toLevel="1" name="Rogue Ability: Evasion">
-		<!-- Increase Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<icon>icon.skill1087</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1173,7 +1173,7 @@
 		</effects>
 	</skill>
 	<skill id="648" toLevel="1" name="Healer Ability: Prayer">
-		<!-- The effect of receiving HP recovery magic increases. Effect 1. -->
+		<!-- Increases Received Healing. -->
 		<icon>icon.skill1307</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1247,7 +1247,7 @@
 		</effects>
 	</skill>
 	<skill id="653" toLevel="1" name="Rogue Ability: Critical Chance">
-		<!-- Has a chance to increase Critical Rate while attacking. -->
+		<!-- Has a chance to increase P. Critical Rate while attacking. -->
 		<icon>icon.skill1077</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1270,7 +1270,7 @@
 		</effects>
 	</skill>
 	<skill id="654" toLevel="1" name="Wizard Ability: Mana Steal">
-		<!-- Has a chance to recover MP while attacking. -->
+		<!-- Has a chance to recover MP when striking. -->
 		<icon>icon.skill1398</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1314,7 +1314,7 @@
 		</effects>
 	</skill>
 	<skill id="675" toLevel="1" name="Divine Warrior Cross Slash">
-		<!-- Attacks the enemy with 2904 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- Attacks the enemy with 2904 Power added to P. Atk. Critical. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -1338,7 +1338,7 @@
 		</effects>
 	</skill>
 	<skill id="676" toLevel="1" name="Divine Warrior Sonic Blaster">
-		<!-- Hurls Momentum to attack the enemy with 2323 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- A long-distance attack with 2323 Power added to P. Atk. Critical. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>-342</effectPoint>
@@ -1500,7 +1500,7 @@
 		</effects>
 	</skill>
 	<skill id="682" toLevel="1" name="Divine Knight Stun Attack">
-		<!-- Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit. Power 1162. -->
+		<!-- Damages and stuns the target simultaneously. Over-hit. Power 1162. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1567,7 +1567,7 @@
 		</effects>
 	</skill>
 	<skill id="684" toLevel="1" name="Divine Knight Ultimate Defense">
-		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
+		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1697,7 +1697,7 @@
 		</effects>
 	</skill>
 	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
-		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit. Power 1549. Effect 3. -->
+		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1762,7 +1762,7 @@
 		</effects>
 	</skill>
 	<skill id="690" toLevel="1" name="Divine Rogue Agility">
-		<!-- Temporarily Evasion +4. -->
+		<!-- Temporarily P. Evasion +4. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1788,7 +1788,7 @@
 		</effects>
 	</skill>
 	<skill id="691" toLevel="1" name="Sacrifice Rogue">
-		<!-- Increase party member's Evasion by sacrificing yourself. Available only when HP is under 30 percent. -->
+		<!-- Increase party member's P. Evasion by sacrificing yourself. Available only when HP is under 30 percent. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1826,8 +1826,8 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="692" toLevel="1" name="Divine Wizard Divine Flare">
-		<!-- Attacks a contacted target with non-attribute attack with 102 Power. -->
+	<skill id="692" toLevel="1" name="Divine Wizard Divine Prayer">
+		<!-- Deals non-attribute magic damage to target. Power 102. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1942,7 +1942,7 @@
 		</effects>
 	</skill>
 	<skill id="696" toLevel="1" name="Divine Wizard Surrender to Holy">
-		<!-- Immediately decreases Holy Attacks Resistance and increases Dark Attacks Resistance. Effect 3. -->
+		<!-- Immediately decreases Holy Attacks Resistance and increases Dark Attacks Resistance. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2015,7 +2015,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="698" toLevel="1" name="Divine Healer Major Heal">
-		<!-- Restores HP by 946 power. -->
+		<!-- Restores HP with 946 Power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>826</effectPoint>
@@ -2036,7 +2036,7 @@
 		</effects>
 	</skill>
 	<skill id="699" toLevel="1" name="Divine Healer Battle Heal">
-		<!-- Restores HP by 826 power. -->
+		<!-- Restores HP with 826 Power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>661</effectPoint>

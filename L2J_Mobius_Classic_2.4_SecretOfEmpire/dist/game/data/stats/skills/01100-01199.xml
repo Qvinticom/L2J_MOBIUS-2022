@@ -438,7 +438,7 @@
 		</effects>
 	</skill>
 	<skill id="1108" toLevel="4" name="Seal of Flame">
-		<!-- Ignites mystical flames that causes loss of $s2 HP per sec. for $s1. -->
+		<!-- Ignites nearby enemies, causing loss of $s2 HP per sec. for $s1. -->
 		<icon>icon.skill1108</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -885,7 +885,7 @@
 		</effects>
 	</skill>
 	<skill id="1127" toLevel="53" name="Servitor Heal">
-		<!-- Heals the servitor with $s1 Power. -->
+		<!-- Restores the servitor's HP by $s1 power. -->
 		<icon>icon.skill1127</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1174,7 +1174,6 @@
 	<skill id="1128" toLevel="18" name="Summon Shadow">
 		<!-- Summons Shadow. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1128</icon>
-		<!-- H5 hitTime -->
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -1441,7 +1440,7 @@
 		</effects>
 	</skill>
 	<skill id="1139" toLevel="2" name="Servitor Magic Shield">
-		<!-- Servitor's M. Def. +$s2 for $s1. -->
+		<!-- For $s1, Servitor's M. Def. +$s2. -->
 		<icon>icon.skill1139</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1486,7 +1485,7 @@
 		</effects>
 	</skill>
 	<skill id="1140" toLevel="3" name="Servitor Physical Shield">
-		<!-- Servitor's P. Def. +$s2 for $s1. -->
+		<!-- For $s1, Servitor's P. Def. +$s2. -->
 		<icon>icon.skill1140</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1537,7 +1536,7 @@
 		</effects>
 	</skill>
 	<skill id="1141" toLevel="2" name="Servitor Haste">
-		<!-- Servitor's Atk. Spd. +$s2 for $s1. -->
+		<!-- For $s1, Servitor's Atk. Spd. +$s2. -->
 		<icon>icon.skill1141</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1582,7 +1581,7 @@
 		</effects>
 	</skill>
 	<skill id="1144" toLevel="2" name="Servitor Wind Walk">
-		<!-- Servitor's Speed +$s2 for $s1. -->
+		<!-- For $s1, Servitor's Speed +$s2. -->
 		<icon>icon.skill1144</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1729,7 +1728,7 @@
 		</effects>
 	</skill>
 	<skill id="1147" toLevel="6" name="Vampiric Touch">
-		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<!-- Inflicts damage by darkness on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
 		<icon>icon.skill1147</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -2019,8 +2018,6 @@
 	<skill id="1154" toLevel="6" name="Summon Corrupted Man">
 		<!-- Summons a Sinful man. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1154</icon>
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
 		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2074,7 +2071,7 @@
 		</effects>
 	</skill>
 	<skill id="1155" toLevel="17" name="Corpse Burst">
-		<!-- Detonates a corpse to inflict dark damage on the enemies using $s1 Power added to M. Atk. -->
+		<!-- Detonates a corpse to inflict dark damage on the enemies with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1155</icon>
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>
@@ -2459,7 +2456,7 @@
 		</effects>
 	</skill>
 	<skill id="1160" toLevel="17" name="Slow">
-		<!-- Enemy's Speed -$s2 for $s1. -->
+		<!-- For $s1, enemy's Speed -$s2. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2681,7 +2678,7 @@
 		</effects>
 	</skill>
 	<skill id="1164" toLevel="21" name="Curse Weakness">
-		<!-- Eenemy's P. Atk. -$s2 for $s1. -->
+		<!-- For $s1, enemy's P. Atk. -$s2. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2843,7 +2840,7 @@
 		</effects>
 	</skill>
 	<skill id="1167" toLevel="7" name="Poisonous Cloud">
-		<!-- Creates a venomous cloud. For $s1 poisons the target and enemies around it, taking $s2 HP every sec. -->
+		<!-- Creates a venomous cloud. For $s1, poisons the target and enemies around it, taking $s2 HP every sec. -->
 		<icon>icon.skill1167</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -2927,7 +2924,7 @@
 		</effects>
 	</skill>
 	<skill id="1168" toLevel="7" name="Curse Poison">
-		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1. -->
+		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1 -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3008,7 +3005,7 @@
 		</effects>
 	</skill>
 	<skill id="1169" toLevel="16" name="Curse Fear">
-		<!-- Frightens the enemy into fleeing for $s1. -->
+		<!-- For $s1, frightens the enemy into fleeing. -->
 		<icon>icon.skill1169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -3106,7 +3103,7 @@
 		</effects>
 	</skill>
 	<skill id="1170" toLevel="15" name="Anchor">
-		<!-- Causes the enemy's body to go completely rigid for $s1 and causes paralysis for $s2. -->
+		<!-- Causes the enemy's body to go completely rigid for $s1 and causes paralysis for $s2 -->
 		<icon>icon.skill1170</icon>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>100</activateRate>
@@ -3350,7 +3347,7 @@
 		</effects>
 	</skill>
 	<skill id="1172" toLevel="8" name="Aura Burn">
-		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
+		<!-- Inflicts magic damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1172</icon>
 		<castRange>150</castRange>
 		<effectPoint>
@@ -3575,7 +3572,7 @@
 		</effects>
 	</skill>
 	<skill id="1175" toLevel="8" name="Aqua Swirl">
-		<!-- Creates a powerful vortex of water, inflicting Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Releases a water vortex to inflict Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1175</icon>
 		<castRange>750</castRange>
 		<effectPoint>

@@ -119,7 +119,7 @@
 		</effects>
 	</skill>
 	<skill id="4102" toLevel="3" name="Surrender to Fire">
-		<!-- Momentarily decreases Fire Resistance and increases Water Resistance. Effect $s1 -->
+		<!-- Fire Resistance decreases and Water Resistance increases momentarily. -->
 		<icon>icon.skill4279_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -207,7 +207,7 @@
 		</effects>
 	</skill>
 	<skill id="4104" toLevel="12" name="Chill Flame">
-		<!-- HP decreases momentarily from burning flame. Effect $s1 -->
+		<!-- HP decreases from flame momentarily. -->
 		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -349,7 +349,7 @@
 		</effects>
 	</skill>
 	<skill id="4106" toLevel="1" name="Antharas Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill4106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -379,7 +379,7 @@
 		</effects>
 	</skill>
 	<skill id="4107" toLevel="1" name="Antharas Tail Swipe">
-		<!-- Instantly stuns characters and does not let them move. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -635,7 +635,7 @@
 		</effects>
 	</skill>
 	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
-		<!-- Increases M. Def. -->
+		<!-- Resistance to magic attacks. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -796,8 +796,8 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4119" toLevel="3" name="Decrease Accuracy">
-		<!-- Accuracy decreases momentarily. Effect $s1 -->
+	<skill id="4119" toLevel="3" name="Decrease P. Accuracy">
+		<!-- Momentarily P. Accuracy -6. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -843,7 +843,7 @@
 		</effects>
 	</skill>
 	<skill id="4120" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1100,7 +1100,7 @@
 		</effects>
 	</skill>
 	<skill id="4126" toLevel="1" name="Reduce Delay">
-		<!-- Skill Cooldown decreases temporarily. -->
+		<!-- Temporarily decreases Skill Cooldown. -->
 		<icon>icon.skill0164</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1478,7 +1478,7 @@
 		</effects>
 	</skill>
 	<skill id="4140" toLevel="12" name="Contract Payment">
-		<!-- Your MP is continuously consumed as payment for summoning an unholy creature. Effect $s1 -->
+		<!-- Your MP is continuously consumed as payment for summoning an unholy creature. -->
 		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1826,7 +1826,7 @@
 		</effects>
 	</skill>
 	<skill id="4145" toLevel="3" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1858,7 +1858,7 @@
 		</effects>
 	</skill>
 	<skill id="4146" toLevel="3" name="Decrease P. Def.">
-		<!-- P. Def. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Def. -17%. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1910,7 +1910,7 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1976,7 +1976,7 @@
 		</effects>
 	</skill>
 	<skill id="4149" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2042,7 +2042,7 @@
 		</effects>
 	</skill>
 	<skill id="4150" toLevel="12" name="Flame">
-		<!-- HP decreases momentarily from burning flame. Effect $s1 -->
+		<!-- HP decreases from flame momentarily. -->
 		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2243,7 +2243,7 @@
 		</effects>
 	</skill>
 	<skill id="4153" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -20%. -->
 		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2769,7 +2769,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
-		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately Atk. Spd. -17%. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2848,8 +2848,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4164" toLevel="18" name="Paralysis">
-		<!-- Stunned and unable to move momentarily. -->
+	<skill id="4164" toLevel="18" name="Cubic Paralysis">
+		<!-- Paralyzed and unable to move temporarily. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2906,8 +2906,8 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="4165" toLevel="17" name="Icy Air">
-		<!-- Continuously damaged by icy air. Effect $s1 -->
+	<skill id="4165" toLevel="17" name="Cubic Icy Air">
+		<!-- Continuously damaged by icy air. -->
 		<icon>icon.skill1183</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2986,8 +2986,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4166" toLevel="18" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+	<skill id="4166" toLevel="18" name="Cubic Stun">
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3114,7 +3114,7 @@
 		</effects>
 	</skill>
 	<skill id="4169" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3310,7 +3310,7 @@
 		</effects>
 	</skill>
 	<skill id="4172" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3727,7 +3727,7 @@
 		</effects>
 	</skill>
 	<skill id="4180" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3866,7 +3866,7 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3947,7 +3947,7 @@
 		</effects>
 	</skill>
 	<skill id="4183" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4025,7 +4025,7 @@
 		</effects>
 	</skill>
 	<skill id="4184" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately Atk. Spd. -17%. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4103,7 +4103,7 @@
 		</effects>
 	</skill>
 	<skill id="4185" toLevel="12" name="Sleep">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4232,7 +4232,7 @@
 		</effects>
 	</skill>
 	<skill id="4187" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4310,7 +4310,7 @@
 		</effects>
 	</skill>
 	<skill id="4188" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4455,7 +4455,7 @@
 		</effects>
 	</skill>
 	<skill id="4190" toLevel="12" name="Decrease MP">
-		<!-- MP decreases. Effect $s1 -->
+		<!-- Continuously decreases MP. -->
 		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4822,7 +4822,7 @@
 		</effects>
 	</skill>
 	<skill id="4196" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -20%. -->
 		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4959,7 +4959,7 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -5040,7 +5040,7 @@
 		</effects>
 	</skill>
 	<skill id="4199" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- P. Atk. decreases momentarily. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

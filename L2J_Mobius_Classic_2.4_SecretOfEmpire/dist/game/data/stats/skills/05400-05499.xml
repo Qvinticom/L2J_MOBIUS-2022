@@ -200,14 +200,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5417" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="5418" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -227,7 +227,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5420" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -370,7 +370,7 @@
 		</effects>
 	</skill>
 	<skill id="5424" toLevel="12" name="Bleed">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -485,7 +485,7 @@
 		</effects>
 	</skill>
 	<skill id="5427" toLevel="1" name="Counter Rapid Shot">
-		<!-- Increases bow/ crossbow Atk. Spd. -->
+		<!-- Increases Atk. Spd. with bow. -->
 		<icon>icon.skill0533</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -676,7 +676,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="5436" toLevel="1" name="Increase Recovery Rate">
+	<skill id="5436" toLevel="1" name="Increase Recovery Bonus">
 		<!-- HP and MP recovery bonus are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -951,7 +951,7 @@
 		</effects>
 	</skill>
 	<skill id="5444" toLevel="2" name="Maul">
-		<!-- Attacks with fore-claws to create wound. Power $s1. Effect $s2 -->
+		<!-- Attacks with fore-claws to create wound. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1147,7 +1147,7 @@
 		</effects>
 	</skill>
 	<skill id="5449" toLevel="1" name="Weak Constitution">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1165,7 +1165,7 @@
 		</effects>
 	</skill>
 	<skill id="5450" toLevel="7" name="Thin Skin">
-		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1 -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<abnormalLvl>
 			<value level="1">4</value>
 			<value level="2">5</value>
@@ -1222,7 +1222,7 @@
 		</effects>
 	</skill>
 	<skill id="5451" toLevel="1" name="Enervation">
-		<!-- Decreases attack and Casting Spd. -->
+		<!-- Atk. Spd./ Casting Spd. are derceased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
@@ -1251,7 +1251,7 @@
 		</effects>
 	</skill>
 	<skill id="5452" toLevel="3" name="Spite">
-		<!-- Greatly increases the amount of Critical Damage received. -->
+		<!-- Greatly increases the amount of P. Critical Damage received. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_DMG_UP</abnormalType>
@@ -1600,63 +1600,63 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5470" toLevel="1" name="Raid Boss (Lv. 81)">
+	<skill id="5470" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- This cruel, soulless woman handled much of Beleth' dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5471" toLevel="1" name="Raid Boss (Lv. 82)">
+	<skill id="5471" toLevel="1" name="82 Lv. Raid Boss">
 		<!-- Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5472" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5472" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5473" toLevel="1" name="Raid Boss (Lv. 81)">
+	<skill id="5473" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5474" toLevel="1" name="Raid Boss (Lv. 81)">
+	<skill id="5474" toLevel="1" name="81 Lv. Raid Boss">
 		<!-- This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5475" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5475" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- This high-Lv. Demon general, royalty even to the infernal, was ordered by Darion to capture the Tower of Infinitum. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5476" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5476" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth' invasion of the mainland. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5477" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5477" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- Beleth' right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5478" toLevel="1" name="Raid Boss (Lv. 83)">
+	<skill id="5478" toLevel="1" name="83 Lv. Raid Boss">
 		<!-- The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -1705,7 +1705,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5484" toLevel="1" name="Endurance Defense Up">
-		<!-- Increases P. Def. Effect 1. -->
+		<!-- P. Def. +500. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -1720,7 +1720,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5485" toLevel="1" name="Endurance Defense Up">
-		<!-- Increases P. Def. Effect 1. -->
+		<!-- M. Def. +300. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -1735,7 +1735,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5486" toLevel="1" name="Endurance Defense Up">
-		<!-- Increases P. Atk. Effect 1. -->
+		<!-- P. Atk. +100. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1761,7 +1761,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5488" toLevel="1" name="Counter Critical Damage Up">
-		<!-- Increases critical P. Atk. Effect 1. -->
+		<!-- P. Critical Damage +80. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -1778,7 +1778,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5489" toLevel="1" name="Counter Critical Rate Up">
-		<!-- Increases critical attack rate. Effect 1. -->
+		<!-- P. Critical Rate +80. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -1811,8 +1811,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5491" toLevel="1" name="Decreases bow/crossbow Atk. Spd.">
-		<!-- Decreases Atk. Spd. when equipped with bow/ crossbow while transformed. -->
+	<skill id="5491" toLevel="1" name="Decrease Bow Atk. Spd.">
+		<!-- Decreases Atk. Spd. when equipped with bow while transformed. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1892,7 +1892,7 @@
 		</effects>
 	</skill>
 	<skill id="5495" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding momentarily. Effect 10. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1947,7 +1947,7 @@
 		</effects>
 	</skill>
 	<skill id="5497" toLevel="1" name="Horn of Rising Darkness">
-		<!-- Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1. -->
+		<!-- Cannot move and HP decreases temporarily due to the stun and bleeding. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>

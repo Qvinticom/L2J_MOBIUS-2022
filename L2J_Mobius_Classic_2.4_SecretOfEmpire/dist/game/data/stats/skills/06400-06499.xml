@@ -176,7 +176,7 @@
 		</effects>
 	</skill>
 	<skill id="6423" toLevel="1" name="Stun">
-		<!-- Momentarily Stuns and immobilizes the enemy for 3 sec. -->
+		<!-- Immobilizes and stuns target for 3 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -317,7 +317,7 @@
 		</effects>
 	</skill>
 	<skill id="6429" toLevel="1" name="Cozy Mucus">
-		<!-- Bow/ Crossbow P. Atk. +15% and HP recovers. -->
+		<!-- Bow P. Atk. +15% and HP recovers. -->
 		<icon>icon.skill6429</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -395,7 +395,7 @@
 		</effects>
 	</skill>
 	<skill id="6432" toLevel="1" name="Feral Focus">
-		<!-- Critical attack rate +35% for 5 min. -->
+		<!-- For 5 min., P. Critical Rate +35%. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -421,7 +421,7 @@
 		</effects>
 	</skill>
 	<skill id="6433" toLevel="1" name="Feral Guidance">
-		<!-- Accuracy +7 for 5 min. -->
+		<!-- For 5 min., P. Accuracy +7. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -473,7 +473,7 @@
 		</effects>
 	</skill>
 	<skill id="6435" toLevel="3" name="Curse of Abyss">
-		<!-- Bow/ Crossbow Critical Rate +$s1 and Critical Damage +$s2. -->
+		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2 when using a bow. -->
 		<icon>icon.skill6435</icon>
 		<abnormalLvl>
 			<value level="1">7</value>
@@ -540,7 +540,7 @@
 		</effects>
 	</skill>
 	<skill id="6436" toLevel="1" name="Curse of the Dark Abyss">
-		<!-- Max HP -5%, Bow/ Crossbow Critical Rate +90% and Critical Damage +50% per sec. -->
+		<!-- Max HP -5% per sec., P. Critical Rate +90% and P. Critical Damage +50% when using a bow. -->
 		<icon>icon.skill6435</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>

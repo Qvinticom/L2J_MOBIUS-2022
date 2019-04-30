@@ -36,7 +36,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15506" toLevel="1" name="Wondrous Herb of Power">
-		<!-- For 1 hr. 30 sec., P. Atk. +100%. -->
+		<!-- For 1 h. 30 sec., P. Atk. +100%. -->
 		<icon>icon.etc_warrior_set_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -45,7 +45,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15507" toLevel="1" name="Wondrous Herb of Magic">
-		<!-- For 1 hr. 30 sec., M. Atk. +400%. -->
+		<!-- For 1 h. 30 sec., M. Atk. +400%. -->
 		<icon>icon.etc_magic_set_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -250,7 +250,7 @@
 		<hitTime>100</hitTime>
 	</skill>
 	<skill id="15529" toLevel="1" name="Absorb Spirit">
-		<!-- Soul is drained. P. Def./ M. Def. -30%, and Atk. Spd. +10%. -->
+		<!-- Soul is drained. P./ M. Def. -30%, and Atk. Spd. +10%. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -260,7 +260,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15530" toLevel="1" name="Slumber">
-		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<!-- Immobilizes and puts a target into sleep. -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -340,7 +340,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15538" toLevel="2" name="Blood Sacrifice: Decrease Accuracy">
+	<skill id="15538" toLevel="2" name="Blood Sacrifice: Decrease P. Accuracy">
 		<!-- Restores $s1 of enemy's HP and gives an abnormal status debuff. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -374,7 +374,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15542" toLevel="1" name="Rush Raid">
-		<!-- Powerful rush attack on enemy. -->
+		<!-- Rush toward target, inflicts damage. -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -413,7 +413,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15546" toLevel="1" name="Dark Invisibility">
-		<!-- Hides for a while. -->
+		<!-- Temporarily grants invisibility. -->
 		<icon>icon.skill10784</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -440,7 +440,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15549" toLevel="1" name="Soul Break">
-		<!-- Nearby enemies' Casting Spd. -20% and Critical Damage -30%. -->
+		<!-- For 20 min., nearby enemies' Casting Spd. -20% and P. Critical Damage -30%. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -463,7 +463,7 @@
 		<effectPoint>-687</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="15551" toLevel="1" name="Weaken Attack">
+	<skill id="15551" toLevel="1" name="Heavy Attack">
 		<!-- Hits enemy's vital point, weakening P. Atk. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>

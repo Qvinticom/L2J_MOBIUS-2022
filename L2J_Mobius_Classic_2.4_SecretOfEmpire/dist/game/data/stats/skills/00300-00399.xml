@@ -300,7 +300,7 @@
 		</effects>
 	</skill>
 	<skill id="309" toLevel="1" name="Dance of Earth Guard">
-		<!-- Party members' Earth Resistance +30 for 20 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Party members' Earth Resistance +30 for 20 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. -->
 		<icon>icon.skill0309</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -402,7 +402,7 @@
 		</effects>
 	</skill>
 	<skill id="312" toLevel="20" name="Vicious Stance">
-		<!-- Critical Damage +$s1. Continuously consumes MP proportionately to your level. -->
+		<!-- P. Critical Damage +$s1. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0312</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -915,7 +915,7 @@
 		</effects>
 	</skill>
 	<skill id="319" toLevel="2" name="Agile Movement">
-		<!-- Accuracy +$s1 and Speed +$s2 when equipped with light armor. -->
+		<!-- P. Accuracy +$s1 and Speed +$s2 when equipped with light armor. -->
 		<icon>icon.skill0319</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1145,7 +1145,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="322" toLevel="6" name="Shield Fortress">
+	<skill id="322" toLevel="6" name="Ultimate Shield">
 		<!-- Shield Defense +$s1. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0322</icon>
 		<magicLvl>
@@ -1352,7 +1352,7 @@
 		</effects>
 	</skill>
 	<skill id="334" toLevel="1" name="Focus Skill Mastery">
-		<!-- Skill Mastery skill rate +1000%. Continuously consumes MP proportionately to your level. -->
+		<!-- By the effect of Skill Mastery Critical Rate +1000%. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0334</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1414,7 +1414,7 @@
 		</effects>
 	</skill>
 	<skill id="337" toLevel="1" name="Arcane Power">
-		<!-- Maximizes magic efficiency, M. Atk. +10% and MP Consumption +5%. Every sec., 30 HP is consumed. -->
+		<!-- Maximizes magic efficiency, M. Atk. +$s1 and MP Consumption +$s2. Every sec., $s3 HP is consumed. -->
 		<icon>icon.skill0337</icon>
 		<magicLvl>77</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1467,7 +1467,7 @@
 		</effects>
 	</skill>
 	<skill id="339" toLevel="1" name="Parry Stance">
-		<!-- Blocks an attack using a weapon. P. Def. +25% and M. Def. +25%. Speed -10%, Atk. Spd. -20%, and Accuracy -4. Continuously consumes MP proportionately to your level. -->
+		<!-- Blocks an attack using a weapon. P. Def. +25% and M. Def. +25%. Speed -10%, Atk. Spd. -20%, and P. Accuracy -4. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0339</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1502,7 +1502,7 @@
 		</effects>
 	</skill>
 	<skill id="340" toLevel="1" name="Riposte Stance">
-		<!-- Parries and returns an attack using a weapon. Returns 30% of received damage back to the enemy, and reflects buff/ de-buff with a 30% chance. Speed -10%, Atk. Spd. -20%, and Accuracy -4. Continuously consumes MP proportionately to your level. -->
+		<!-- Parries and returns an attack using a weapon. Returns 30% of received damage back to the enemy, and reflects buff/ de-buff with a 30% chance. Speed -10%, Atk. Spd. -20%, and P. Accuracy -4. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0340</icon>
 		<magicLvl>77</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -1630,7 +1630,7 @@
 		</effects>
 	</skill>
 	<skill id="343" toLevel="9" name="Lethal Shot">
-		<!-- Shoots an arrow at a vital spot. Attacks the enemy with $s1 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow at a vital spot. Attacks the enemy with $s1 Power added to P. Atk. Ignores $s2 enemy's defense. Requires a bow. Critical. Over-hit. -->
 		<icon>icon.skill0343</icon>
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
@@ -1693,7 +1693,7 @@
 		</effects>
 	</skill>
 	<skill id="344" toLevel="2" name="Lethal Blow">
-		<!-- Attacks the target's vital points with 7148 Power added to P. Atk. Over-hit. Requires a dagger. Critical. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Critical. Over-hit. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
@@ -1739,7 +1739,7 @@
 		</effects>
 	</skill>
 	<skill id="345" toLevel="5" name="Sonic Rage">
-		<!-- Attacks the target with a deadly energy storm with $s1 Power, lowers P. Def., and absorbs Momentum. Requires a sword, spear, blunt weapon, fist weapon, or dual sword. -->
+		<!-- Attacks the target with a deadly energy storm with $s1 Power, P. Def -30%, absorbs Momentum. Requires a sword, spear, blunt weapon, fist weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1807,7 +1807,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="346" toLevel="5" name="Raging Force">
-		<!-- Attacks the target with a devastating burst of wind with $s1 Power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, spear, fist weapon, spear or dual sword. -->
+		<!-- Attacks the target with a devastating burst of wind with $s1 Power, P. Def -30%, absorbs Momentum. Requires a sword, spear, blunt weapon, fist weapon, or dual sword. -->
 		<icon>icon.skill0346</icon>
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
@@ -1868,7 +1868,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="347" toLevel="9" name="Earthquake">
-		<!-- Attacks nearby enemies with a powerful strike with $s1 Power added to P. Atk. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target cancel is possible. -->
+		<!-- Attacks nearby enemies with a powerful strike with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a polearm. Over-hit. Critical. Target cancel is possible. -->
 		<icon>icon.skill0347</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1946,7 +1946,7 @@
 		</effects>
 	</skill>
 	<skill id="348" toLevel="8" name="Spoil Crush">
-		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Critical. Over-hit. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
 		<coolTime>100</coolTime>
@@ -1997,7 +1997,7 @@
 		</effects>
 	</skill>
 	<skill id="349" toLevel="1" name="Song of Renewal">
-		<!-- For 5 min., all party members' physical/ magic/ song/ dance skills' MP Consumption -5%, and physical/ magic skills' Cooldown -20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- For $s1, all party members' physical/ magic/ song/ dance skills' MP Consumption -$s2, and physical/ magic skills' Cooldown -$s3. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0349</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2217,7 +2217,7 @@
 		</effects>
 	</skill>
 	<skill id="354" toLevel="1" name="Hamstring Shot">
-		<!-- Shoots an arrow at the enemy with 1973 Power added to P. Atk., and enemy's Speed -30% for 1 min. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow at the enemy with 1973 Power added to P. Atk., and enemy's Speed -30% for 1 min. Requires a bow. Critical. Over-hit. -->
 		<icon>icon.skill0354</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2257,7 +2257,7 @@
 		</effects>
 	</skill>
 	<skill id="355" toLevel="1" name="Focus Death">
-		<!-- For $s1 Critical rate -$s2, frontal Critical Damage -$s3. Vital points attacks success rate +$s4, rear Critical Damage +$s5. Requires a dagger. -->
+		<!-- For $s1 P. Critical Rate -$s2, frontal P. Critical Damage -$s3. Vital points attacks success rate +$s4, rear P. Critical Damage +$s5. Requires a dagger. -->
 		<icon>icon.skill0355</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2301,7 +2301,7 @@
 		</effects>
 	</skill>
 	<skill id="356" toLevel="1" name="Focus Chance">
-		<!-- For $s1, frontal Critical Rate -$s2. Vital points attacks success rate +$s3, side Critical Rate +$s4, and rear Critical Rate +$s5. Requires a dagger. -->
+		<!-- For $s1, frontal P. Critical Rate -$s2. Vital points attacks success rate +$s3, side P. Critical Rate +$s4, and rear P. Critical Rate +$s5. Requires a dagger. -->
 		<icon>icon.skill0356</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2342,7 +2342,7 @@
 		</effects>
 	</skill>
 	<skill id="357" toLevel="1" name="Focus Power">
-		<!-- For $s1, frontal Critical Damage -$s2. Side Critical Damage +$s3 and rear Critical Damage +$s4. Requires a dagger. -->
+		<!-- For $s1, frontal P. Critical Damage -$s2. Side P. Critical Damage +$s3 and rear P. Critical Damage +$s4. Requires a dagger. -->
 		<icon>icon.skill0357</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2383,7 +2383,7 @@
 		</effects>
 	</skill>
 	<skill id="358" toLevel="1" name="Bluff">
-		<!-- Deceives the enemy into turning his back, losing his urge to attack and becoming stunned for 9 sec. Requires a dagger. Target cancel is possible. -->
+		<!-- Deceives the enemy into turning his back, losing his urge to attack and becoming stunned for $s1 Requires a dagger. Target cancel is possible. -->
 		<icon>icon.skill0358</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2475,8 +2475,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="361" toLevel="3" name="Stun Blast">
-		<!-- Creates a powerful shock wave with 2486 Power added to P. Atk., inflicting damage and stunning the target and nearby enemies for 7 sec. ?heir P. Def. -30% and M. Def. -30%. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target cancel is possible. -->
+	<skill id="361" toLevel="3" name="Stun Burst">
+		<!-- Creates a powerful shock wave with $s1 Power added to P. Atk., inflicting damage and stunning the target and nearby enemies for $s2 Their P. Def. -$s3 and M. Def. -$s4. Requires a polearm. Critical. Over-hit. Ignores Shield Defense. Target cancel is possible. -->
 		<icon>icon.skill0361</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -2550,7 +2550,7 @@
 		</effects>
 	</skill>
 	<skill id="362" toLevel="8" name="Armor Crush">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Stuns the enemy for 7 sec., and their P. Def. -30% and M. Def. -30%. Requires a sword, blunt weapon, two-handed sword or two-handed blunt weapon. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Stuns the enemy for 7 sec., and their P. Def. -30% and M. Def. -30%. Requires a sword, blunt weapon, two-handed sword or two-handed blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0362</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -2669,7 +2669,7 @@
 		</effects>
 	</skill>
 	<skill id="364" toLevel="1" name="Champion Song">
-		<!-- For 5 min., all party members' physical/ sing/ dance skill use MP Consumption -20% and physical/ sing/ dance skill Cooldown -10%. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
+		<!-- For $s1, all party members' physical/ sing/ dance skill use MP Consumption -$s2 and physical/ sing/ dance skill Cooldown -$s3. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0364</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2711,7 +2711,7 @@
 		</effects>
 	</skill>
 	<skill id="365" toLevel="1" name="Dance of Siren">
-		<!-- For 5 min., party members' M. Critical Rate +50%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- All party members' M. Critical Rate +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0365</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2744,7 +2744,7 @@
 		</effects>
 	</skill>
 	<skill id="366" toLevel="1" name="Dance of Shadows">
-		<!-- For 5 min., all party members' Speed -50% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- For $s1, all party members' Speed -$s2 prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0366</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2920,7 +2920,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="369" toLevel="1" name="Evade Shot">
-		<!-- Attacks the enemy with 2020 Power added to P. Atk. and Evasion +6 for 30 sec. Requires a bow. Over-hit. -->
+		<!-- Attacks the enemy with 2020 Power added to P. Atk. and P. Evasion +6 for 30 sec. Requires a bow. Over-hit. -->
 		<icon>icon.skill0369</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3148,7 +3148,7 @@
 		</effects>
 	</skill>
 	<skill id="380" toLevel="5" name="Clan Guidance">
-		<!-- ?lan members' Accuracy +$s1. -->
+		<!-- Clan members' P. Accuracy +$s1. -->
 		<icon>icon.skill0380</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3167,7 +3167,7 @@
 		</effects>
 	</skill>
 	<skill id="381" toLevel="5" name="Clan Agility">
-		<!-- Increases clan members' Evasion by $s1. -->
+		<!-- Clan members' P. Evasion +$s1. -->
 		<icon>icon.skill0381</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

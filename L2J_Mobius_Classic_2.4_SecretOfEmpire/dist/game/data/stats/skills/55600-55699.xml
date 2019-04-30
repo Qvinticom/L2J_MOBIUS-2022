@@ -16,7 +16,7 @@
 		<icon>[icon.etc_earthen_ore_cube_pc_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55604" toLevel="1" name="Progression Support Cube">
+	<skill id="55604" toLevel="1" name="Growth Support Cube">
 		<icon>[icon.etc_crystal_cube_event_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1387,22 +1387,22 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55682" toLevel="1" name="Special Dragons Fruit">
-		<!-- For 20 min., XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Buff remains after death. -->
+		<!-- For 20 min., XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Effect remains after death. -->
 		<icon>icon.bm_dragon_fruit</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55683" toLevel="1" name="Royal Tears">
-		<!-- The essence of Frintezza s feelings. P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Changes the appearance of your weapon. Deleted upon logout. Not deleted upon death. -->
+		<!-- The essence of Frintezza s feelings. P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Changes the appearance of your weapon. Deleted upon logout. Effect remains after death. -->
 		<icon>BranchSys2.icon.g_illumination_skyblue</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55684" toLevel="1" name="Red Candy of the Royal Family">
-		<!-- XP/ SP +25%. Can be once stacked with the Blue Candy of the Royal Family. -->
+		<!-- Acquired XP/ SP +25%. Can be once stacked with the Blue Candy of the Royal Family. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55685" toLevel="1" name="Blue Candy of the Royal Family">
-		<!-- XP/ SP +25%. Can be once stacked with the Red Candy of the Royal Family. -->
+		<!-- Acquired XP/ SP +25%. Can be once stacked with the Red Candy of the Royal Family. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1410,7 +1410,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55687" toLevel="1" name="Ultimate Confidence">
-		<!-- You feel unusually confident about yourself and you are ready to express your feelings as they are. For 2 hr., acquired XP/ SP +5%, Atk. Spd./ Casting Spd. +10%, Speed +20. Cannot be stacked with Blessing of Light. Changes the appearance of your weapon. Not deleted upon death. -->
+		<!-- You feel unusually confident about yourself and you are ready to express your feelings as they are. For 2 h., acquired XP/ SP +5%, Atk. Spd./ Casting Spd. +10%, Speed +20. Cannot be stacked with Blessing of Light. Changes the appearance of your weapon. Effect remains after death. -->
 		<icon>icon.release_thirst</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1419,32 +1419,32 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55689" toLevel="1" name="Newbie Talisman">
-		<!-- P. Def. +18, M. Def. +9, P./ M. Evasion +1, Max HP/ MP/ CP +50, Atk. Spd./ Casting Spd. +6, Speed +4. -->
+		<!-- P. Def. +18, M. Def. +9, P./ M. Skill Evasion +1, Max. HP/ MP/ CP +50, Atk. Spd./ Casting Spd. +6, Speed +4. -->
 		<icon>icon.npoint_talisman_stat</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55690" toLevel="2" name="Transformation Scroll: Pirate">
-		<!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
+		<!-- Transformation into a Pirate. Fighting characteristics are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55691" toLevel="2" name="Transformation Scroll: Dark Assassin">
-		<!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Remains even after death. -->
+		<!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55692" toLevel="2" name="Transformation Scroll: White Assassin">
-		<!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains even after death. -->
+		<!-- Transformation into a White Assassin. Fighting characteristics are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55693" toLevel="1" name="Blue Dynasty Transformation Scroll">
-		<!-- Makes you armor look like Blue Dynasty one. Fighting characteristics are improved. Remains after death. -->
+		<!-- Makes you armor look like Blue Dynasty one. Fighting characteristics are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55694" toLevel="1" name="Red Zubei Transformation Scroll">
-		<!-- Makes you armor look like Red Zubei one. Fighting characteristics are improved. Remains after death. -->
+		<!-- Makes you armor look like Red Zubei one. Fighting characteristics are improved. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1453,7 +1453,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55696" toLevel="1" name="Newbie Amulet">
-		<!-- XP/ SP +50%, while hunting. -->
+		<!-- Acquired XP/ SP +50%. -->
 		<icon>BranchSys2.lcon.br_life_rune_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1465,7 +1465,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55699" toLevel="1" name="Scroll: Hunter's Song">
-		<!-- Critical Attack Rate +100% for 10 min. -->
+		<!-- For 10 min., P. Critical Rate +100%. -->
 		<icon>icon.skill0269</icon>
 		<operateType>A1</operateType>
 	</skill>

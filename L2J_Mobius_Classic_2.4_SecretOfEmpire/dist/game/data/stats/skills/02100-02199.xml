@@ -271,7 +271,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2117" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
+	<skill id="2117" toLevel="1" name="Big Blessed Spiritshot Compressed Package (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -292,7 +292,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2118" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
+	<skill id="2118" toLevel="1" name="Big Blessed Spiritshot Compressed Package (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -313,7 +313,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2119" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
+	<skill id="2119" toLevel="1" name="Big Blessed Spiritshot Compressed Package (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -334,7 +334,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2120" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
+	<skill id="2120" toLevel="1" name="Big Blessed Spiritshot Compressed Package (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -740,6 +740,10 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="2154" toLevel="1" name="Soulshot (S-grade)">
+		<icon>icon.etc_spirit_bullet_white_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="2155" toLevel="1" name="Spiritshot (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -775,6 +779,10 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="2159" toLevel="1" name="Spiritshot (S-grade)">
+		<icon>icon.etc_spirit_bullet_white_i00</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="2160" toLevel="1" name="Blessed Spiritshot (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -812,6 +820,10 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="2164" toLevel="1" name="Blessed Spiritshot (S-grade)">
+		<icon>icon.etc_spirit_bullet_white_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="2165" toLevel="1" name="Momentum Stone">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -826,7 +838,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2166" toLevel="2" name="Greater CP Potion">
+	<skill id="2166" toLevel="2" name="CP Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -873,7 +885,7 @@
 		</effects>
 	</skill>
 	<skill id="2168" toLevel="6" name="Lucky Charm">
-		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/ Raid Monsters. Effect 1. -->
+		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/ Raid Monsters. -->
 		<icon>icon.etc_orcish_talisman_i00</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -935,7 +947,7 @@
 		</effects>
 	</skill>
 	<skill id="2169" toLevel="2" name="Magic Haste Potion">
-		<!-- Increases Casting Spd. Effect 2. -->
+		<!-- Casting Spd. +23%. -->
 		<icon>
 			<value level="1">icon.etc_potion_of_acumen2_i00</value>
 			<value level="2">icon.etc_potion_of_acumen3_i00</value>

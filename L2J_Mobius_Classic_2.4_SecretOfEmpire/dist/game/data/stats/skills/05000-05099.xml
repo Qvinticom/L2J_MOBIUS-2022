@@ -82,6 +82,11 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5004" toLevel="1" name="Dimensional Stun">
+		<!-- Immobilizes and stuns target. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza Pose">
 		<!-- Frintezza is in temporary state of paralysis. -->
 		<abnormalLvl>1</abnormalLvl>
@@ -115,7 +120,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5007" toLevel="5" name="Frintezza Rampage Music">
+	<skill id="5007" toLevel="5" name="Frintezza Heal Music">
 		<!-- Music to soothe the soul. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>
@@ -133,7 +138,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5008" toLevel="5" name="Frintezza Rampage Music">
+	<skill id="5008" toLevel="5" name="Frintezza Heal Music">
 		<!-- Music to soothe the soul. -->
 		<icon>
 			<value level="1">icon.skill0000</value>
@@ -598,7 +603,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5022" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -681,7 +686,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5024" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately Atk. Spd. -17%. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -769,14 +774,14 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5031" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5031" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5032" toLevel="1" name="Raid Boss (Lv. 80)">
+	<skill id="5032" toLevel="1" name="80 Lv. Raid Boss">
 		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -797,7 +802,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5035" toLevel="1" name="Raid Boss (Lv. 76)">
+	<skill id="5035" toLevel="1" name="76 Lv. Raid Boss">
 		<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -812,7 +817,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5037" toLevel="3" name="Decrease Casting Spd.">
-		<!-- Casting Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately Casting Spd. -17%. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2019,7 +2024,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5068" toLevel="12" name="Decrease Speed">
-		<!-- Speed decreases momentarily. Effect $s1 -->
+		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2054,7 +2059,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5069" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Atk. Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately Atk. Spd. -23%. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2089,7 +2094,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5070" toLevel="12" name="Decrease Casting Spd.">
-		<!-- Casting Spd. decreases momentarily. Effect $s1 -->
+		<!-- Immediately Casting Spd. -23%. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2124,7 +2129,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5071" toLevel="12" name="P. Atk. Decrease">
-		<!-- P. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately P. Atk. -23%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2159,7 +2164,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5072" toLevel="12" name="Decrease M. Atk.">
-		<!-- M. Atk. decreases momentarily. Effect $s1 -->
+		<!-- Immediately M. Atk. -50%. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
@@ -2263,7 +2268,7 @@
 		</effects>
 	</skill>
 	<skill id="5076" toLevel="15" name="Death Penalty">
-		<!-- Combat ability is decreased due to death. Effect $s1 -->
+		<!-- Combat ability is decreased due to death. -->
 		<icon>
 			<value level="1">icon.skill5076_a</value>
 			<value level="2">icon.skill5076_a</value>
@@ -2613,7 +2618,7 @@
 		</effects>
 	</skill>
 	<skill id="5083" toLevel="4" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill5083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

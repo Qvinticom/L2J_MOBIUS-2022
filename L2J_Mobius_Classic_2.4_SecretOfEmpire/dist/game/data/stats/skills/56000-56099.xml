@@ -10,7 +10,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56003" toLevel="1" name="XP and SP Rune - 50%">
-		<!-- When in inventory, acquired XP/ SP +50%. -->
+		<!-- Acquired XP/ SP +50%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -24,7 +24,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="56006" toLevel="1" name="Master's Fishing Potion">
-		<!-- For $s1, Acquired XP/ SP +$s2 when fishing succeeds. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Acquired XP/ SP +$s2 when fishing succeeds. Effect remains after death and cannot be forcefully deleted. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 	</skill>

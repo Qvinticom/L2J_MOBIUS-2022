@@ -1466,7 +1466,7 @@
 		</effects>
 	</skill>
 	<skill id="6621" toLevel="7" name="Maguen Plasma">
-		<!-- P. Atk. and M. Atk. are increased. -->
+		<!-- Increases P./ M. Atk. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1513,7 +1513,7 @@
 		</effects>
 	</skill>
 	<skill id="6622" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 20 sec. The chance of receiving Critical Damage +50%. -->
+		<!-- For 20 sec. immobilizes and stuns target, P. Critical Rate +50%. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1556,7 +1556,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6624" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 9 sec. The chance of receiving Critical Damage +50%. -->
+		<!-- For 9 sec. immobilizes and stuns target, P. Critical Rate +50%. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1682,7 +1682,7 @@
 		</effects>
 	</skill>
 	<skill id="6631" toLevel="1" name="Energy of Strength">
-		<!-- Increases P. Atk. temporarily. Effect 3. -->
+		<!-- Temporarily P. Atk. +15%. -->
 		<icon>icon.etc_herb_red_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1709,7 +1709,7 @@
 		</effects>
 	</skill>
 	<skill id="6632" toLevel="1" name="Energy of Magic">
-		<!-- Increases M. Atk. temporarily. Effect 3. -->
+		<!-- Temporarily M. Atk. +75%. -->
 		<icon>icon.etc_herb_blue_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1730,7 +1730,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6633" toLevel="1" name="Energy of Atk. Spd.">
-		<!-- Increases Speed. temporarily. Effect 2. -->
+		<!-- Temporarily Atk. Spd. +33%. -->
 		<icon>icon.etc_attack_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>2</abnormalLvl>
@@ -1757,7 +1757,7 @@
 		</effects>
 	</skill>
 	<skill id="6634" toLevel="1" name="Energy of Casting Spd.">
-		<!-- Increases Casting Spd. temporarily. Effect 3. -->
+		<!-- Temporarily Atk. Spd. +30%. -->
 		<icon>icon.etc_magic_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1778,7 +1778,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6635" toLevel="1" name="Energy of Crtical Attack">
-		<!-- Increases Critical attack rate temporarily. Effect 3. -->
+		<!-- Temporarily P. Critical Rate +30%. -->
 		<icon>icon.etc_critical_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1805,7 +1805,7 @@
 		</effects>
 	</skill>
 	<skill id="6636" toLevel="1" name="Energy of Speed">
-		<!-- Increases Speed. temporarily. Effect 2. -->
+		<!-- Temporarily Speed +33. -->
 		<icon>icon.etc_move_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>2</abnormalLvl>
@@ -1832,7 +1832,7 @@
 		</effects>
 	</skill>
 	<skill id="6637" toLevel="1" name="Energy of HP Drain">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
+		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill6637</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>4</abnormalLvl>
@@ -1900,7 +1900,7 @@
 		</effects>
 	</skill>
 	<skill id="6639" toLevel="1" name="Energy of Crtical Rate: Damage">
-		<!-- Increases Critical P. Atk. temporarily. Effect 3. -->
+		<!-- Increases P. Critical Damage for a certain amount of time. -->
 		<icon>icon.skill2514</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -2005,7 +2005,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6645" toLevel="1" name="Cooker Invincibility On">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -2138,28 +2138,28 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6658" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6658" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Raid Boss Darnel -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6659" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6659" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Raid Boss Kechi -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6660" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6660" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Raid Boss Tears -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6661" toLevel="1" name="Raid Boss (Lv. 85)">
+	<skill id="6661" toLevel="1" name="85 Lv. Raid Boss">
 		<!-- Ice warrior created by blowing life into Freya's crystal fragment. It has no understanding of self and only obeys the commands of its master Freya. It will even walk into death if it is her will. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -2212,14 +2212,14 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="6663" toLevel="1" name="Raid Boss (Lv. 76)">
+	<skill id="6663" toLevel="1" name="76 Lv. Raid Boss">
 		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6664" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6664" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
@@ -2290,7 +2290,7 @@
 		</effects>
 	</skill>
 	<skill id="6668" toLevel="1" name="Feral Death Whisper">
-		<!-- Critical Attack effect +35% for 5 min. -->
+		<!-- For 5 min., P. Critical Damage +35%. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -2368,7 +2368,7 @@
 		</effects>
 	</skill>
 	<skill id="6671" toLevel="1" name="Feral Berserker Spirit">
-		<!-- P. Def. momentarily -8%, M. Def. -16%, and evasion -4, and P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8 for 5 min. -->
+		<!-- For 5 min., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -2461,7 +2461,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6674" toLevel="1" name="Energy of Range Increment">
-		<!-- Bow/ Crossbow range is temporarily +50. -->
+		<!-- Temporarily attack range +50 when using a bow. -->
 		<icon>icon.etc_magic_sp_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>10</abnormalLvl>
@@ -2708,7 +2708,7 @@
 		</effects>
 	</skill>
 	<skill id="6687" toLevel="1" name="Patience">
-		<!-- Skill Power is increased. -->
+		<!-- P. Skill Power is increased. -->
 		<icon>icon.skill0983</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>

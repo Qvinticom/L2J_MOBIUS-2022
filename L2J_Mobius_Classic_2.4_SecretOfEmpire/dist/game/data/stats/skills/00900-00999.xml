@@ -245,7 +245,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="904" toLevel="6" name="Corpse Burst">
-		<!-- Causes a nearby corpse to burst open, poisoning enemies with $s1 Power. Effect $s2 -->
+		<!-- Causes a nearby corpse to burst open, poisoning enemies. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -680,7 +680,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="910" toLevel="6" name="Water Jet">
-		<!-- Strikes enemies with $s2 Power in a mighty rush of Water. Effect $s1 -->
+		<!-- Strikes enemies with a mighty rush of water, inflicts Bleed. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -822,7 +822,7 @@
 		</effects>
 	</skill>
 	<skill id="912" toLevel="1" name="Summon Imperial Phoenix">
-		<!-- Summons an Imperial Phoenix. Requires 2 A-grade Crystals. -->
+		<!-- Summons a Phoenix. Requires 2 A-grade Crystals. -->
 		<icon>icon.skill0912</icon>
 		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -847,7 +847,7 @@
 		</effects>
 	</skill>
 	<skill id="913" toLevel="1" name="Deflect Magic">
-		<!-- Magic Attack Resistance +50% for 20 min. -->
+		<!-- For 20 min., Resistance to magic attacks +50%. -->
 		<icon>icon.skill0913</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -999,7 +999,7 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
-		<!-- For 30 sec., you call upon your hidden reserves to get your skills power +10% and standard attack damage +8% during PvP. -->
+		<!-- For 30 sec., you call upon your hidden reserves to get your P. Skill Power +10% and standard attack damage +8% during PvP. -->
 		<icon>icon.skill0917</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1080,7 +1080,7 @@
 		</effects>
 	</skill>
 	<skill id="920" toLevel="37" name="Power Crush">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Critical. Over-hit. -->
 		<icon>icon.skill0920</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
@@ -1263,7 +1263,7 @@
 		</effects>
 	</skill>
 	<skill id="921" toLevel="1" name="Spike Thrust">
-		<!-- Attacks a target and inflicts damage with 3849 Power added to P. Atk. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks a target and inflicts damage with 3849 Power added to P. Atk. Ignores Shield Defense. Over-hit. Critical. -->
 		<icon>icon.skill0921</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
@@ -1393,7 +1393,7 @@
 		</effects>
 	</skill>
 	<skill id="925" toLevel="1" name="Sigil Mastery">
-		<!-- When a Sigil is equipped, M. Atk. +4% and MP Recovery Bonus +17%. -->
+		<!-- When a sigil is equipped, M. Atk. +4% and MP Recovery Bonus +17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1416,7 +1416,7 @@
 		</effects>
 	</skill>
 	<skill id="926" toLevel="1" name="Sigil Mastery">
-		<!-- When a Sigil is equipped, heal power +30 and MP Recovery Bonus +17%. -->
+		<!-- When a sigil is equipped, heal power +30 and MP Recovery Bonus +17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1439,7 +1439,7 @@
 		</effects>
 	</skill>
 	<skill id="927" toLevel="14" name="Burning Chop">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every sec. Cannot be used when a bow is equipped. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every sec. Cannot be used when a bow is equipped. Critical. Over-hit. -->
 		<icon>icon.skill0927</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2541,7 +2541,7 @@
 		</effects>
 	</skill>
 	<skill id="939" toLevel="1" name="Soul Rage">
-		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to Lv. 40. Critical hit and over-hit are possible. -->
+		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to Lv. 40. Critical. Over-hit. -->
 		<icon>icon.skill0939</icon>
 		<castRange>600</castRange>
 		<effectPoint>-340</effectPoint>
@@ -2939,7 +2939,7 @@
 		</effects>
 	</skill>
 	<skill id="954" toLevel="1" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every second. Over-hit. Critical. -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every second. Critical. Over-hit. -->
 		<icon>icon.skill00954</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2976,7 +2976,7 @@
 		</effects>
 	</skill>
 	<skill id="955" toLevel="1" name="Strider Dash">
-		<!-- Speed +66 for 15 sec. -->
+		<!-- For 15 sec., Speed +66. -->
 		<icon>icon.skill000955</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2999,7 +2999,7 @@
 		</effects>
 	</skill>
 	<skill id="956" toLevel="3" name="Boost Morale">
-		<!-- For $s1, when using a sword/ blunt weapon/ dual sword, one's own Accuracy +$s2, Critical Rate +$s3, and Critical Damage +$s4. -->
+		<!-- For $s1, P. Accuracy +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4. Requires sword, blunt weapon, or dual sword. -->
 		<icon>icon.skill956</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3061,7 +3061,7 @@
 		</effects>
 	</skill>
 	<skill id="957" toLevel="37" name="Guillotine Attack">
-		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a two-handed sword/ two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a two-handed sword or two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill957</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -3246,7 +3246,7 @@
 		</effects>
 	</skill>
 	<skill id="958" toLevel="37" name="Triple Blade Slash">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill958</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -3652,7 +3652,7 @@
 		</effects>
 	</skill>
 	<skill id="970" toLevel="1" name="Dash">
-		<!-- Speed +66 for 15 sec. -->
+		<!-- For 15 sec., Speed +66. -->
 		<icon>icon.skill0004</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3704,7 +3704,7 @@
 		</effects>
 	</skill>
 	<skill id="972" toLevel="1" name="Snipe">
-		<!-- For 2 min., Accuracy +6, P. Atk. +199, bow's range +200 and Critical Rate +20% when using a bow. The player cannot move while the effect lasts. -->
+		<!-- For 2 min., P. Accuracy +6, P. Atk. +199, bow's range +200 and P. Critical Rate +20% when using a bow. The player cannot move while the effect lasts. -->
 		<icon>icon.skill0313</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3878,7 +3878,7 @@
 		</effects>
 	</skill>
 	<skill id="975" toLevel="33" name="Aqua Swirl">
-		<!-- Creates a powerful vortex of water, inflicting Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Releases a water vortex to inflict Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1175</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -4296,7 +4296,7 @@
 		</effects>
 	</skill>
 	<skill id="981" toLevel="6" name="Sleep">
-		<!-- Causes the enemy to sleep for $s1. -->
+		<!-- For $s1, causes the enemy to sleep. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4403,7 +4403,7 @@
 		</effects>
 	</skill>
 	<skill id="983" toLevel="1" name="Patience">
-		<!-- Skill Power +20% when being attacked. -->
+		<!-- With a certain chance Skill Power +20% under normal attacks. -->
 		<icon>icon.skill0983</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>P</operateType>
@@ -4423,7 +4423,7 @@
 		</effects>
 	</skill>
 	<skill id="984" toLevel="25" name="Shield Strike">
-		<!-- Attacks the enemy using a shield with $s1 Power added to P. Atk, and provokes the enemy. Requires a shield. -->
+		<!-- Attacks the enemy using a shield with $s1 Power added to P. Atk, and provokes the enemy. Requires a shield. Over-hit. -->
 		<icon>icon.skill0984</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -4590,7 +4590,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="986" toLevel="18" name="Deadly Strike">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Over-hit. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. For $s2 decreases enemy s P. Def. by $s3. Requires dual swords. Over-hit. -->
 		<icon>icon.skill0986</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4691,7 +4691,7 @@
 		</effects>
 	</skill>
 	<skill id="987" toLevel="1" name="Multiple Shot">
-		<!-- Attack multiple enemies at the front with 11030 Power added to P. Atk. Over-hit. Critical. Requires a bow or crossbow to be equipped. -->
+		<!-- Attack multiple enemies at the front with 11030 Power added to P. Atk. Critical. Over-hit. Requires a bow to be equipped. -->
 		<icon>icon.skill0987</icon>
 		<affectLimit>8-0-1</affectLimit>
 		<affectRange>900</affectRange>
@@ -4729,7 +4729,7 @@
 		</effects>
 	</skill>
 	<skill id="988" toLevel="3" name="Battle Whisper">
-		<!-- For $s1, P. Atk. +$s2, Critical Damage +$s3, and Atk. Spd. +$s4. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
+		<!-- For $s1, P. Atk. +$s2, P. Critical Damage +$s3, and Atk. Spd. +$s4. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
 		<icon>icon.skill0988</icon>
 		<abnormalTime>120</abnormalTime>
 		<effectPoint>
@@ -4785,7 +4785,7 @@
 		</effects>
 	</skill>
 	<skill id="989" toLevel="1" name="Defense Motion">
-		<!-- For 2 min., P. Def. +25%, Evasion +3, and M. Def. +10%. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
+		<!-- For 2 min., P. Def. +25%, P. Evasion +3, and M. Def. +10%. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
 		<icon>icon.skill0989</icon>
 		<abnormalTime>120</abnormalTime>
 		<effectPoint>1</effectPoint>
@@ -4900,7 +4900,7 @@
 		</effects>
 	</skill>
 	<skill id="992" toLevel="8" name="Sonic Mastery">
-		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a critical attack. Applies when a sword, blunt weapon, or dual sword is equipped. Up to level $s3 of Momentum can be absorbed. -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a physical critical attack. Applies when a sword, blunt weapon, or dual sword is equipped. Up to level $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0992</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -4983,7 +4983,7 @@
 		</effects>
 	</skill>
 	<skill id="993" toLevel="8" name="Force Mastery">
-		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a critical attack. Applies when a fist weapon is equipped. Up to level $s3 of Momentum can be absorbed. -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a physical critical attack. Applies when a fist weapon is equipped. Up to level $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0993</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -5057,7 +5057,7 @@
 		</effects>
 	</skill>
 	<skill id="994" toLevel="1" name="Rush">
-		<!-- Charges toward the enemy. Momentum level 1. Cannot be used when a bow/ crossbow is equipped. -->
+		<!-- Charges into the enemy. Can be used if distance between the enemy and the character is more than 200. -->
 		<icon>icon.skill0484</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
@@ -5091,7 +5091,7 @@
 		</conditions>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
-		<!-- Rushes forward to attack the enemies in front with 4224 Power added to P. Atk. and inflicts Stun for 9 sec. Cannot be used when a bow/ crossbow is equipped. -->
+		<!-- Rushes forward to attack the enemies in front with 4224 Power added to P. Atk. and inflicts Stun for 9 sec. Cannot be used when a bow is equipped. -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -5309,7 +5309,7 @@
 		</effects>
 	</skill>
 	<skill id="998" toLevel="1" name="Blazing Boost">
-		<!-- Quickly approaches the enemy. Cannot be used when a bow/ crossbow is equipped. -->
+		<!-- Quickly approaches the enemy. Cannot be used when a bow is equipped. -->
 		<icon>icon.skill0998</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>

@@ -403,7 +403,7 @@
 	<skill id="55233" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55234" toLevel="2" name="XP Rune 100%">
+	<skill id="55234" toLevel="2" name="XP and SP Rune - 100%">
 		<!-- Acquired XP/ SP +100%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
@@ -519,12 +519,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55240" toLevel="1" name="Overwhelming Power of a Holiday Hat">
-		<!-- For 20 min., acquired XP/ SP +5%. Buff remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55241" toLevel="1" name="Scroll: Mana Regeneration">
-		<!-- Increases MP Regeneration. Effect 4 -->
+		<!-- Increases MP Recovery Bonus. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>70105</itemConsumeId> <!-- Scroll: Mana Regeneration lvl 1 -->
@@ -548,7 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="55242" toLevel="1" name="Scroll: Berserker Spirit">
-		<!-- For 20 min., P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -784,7 +784,7 @@
 		</effects>
 	</skill>
 	<skill id="55253" toLevel="20" name="Sigel's Protection">
-		<!-- P. Def. +$s1 -->
+		<!-- P. Def. +$s1, when equipped. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
 			<value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -837,7 +837,7 @@
 		</effects>
 	</skill>
 	<skill id="55254" toLevel="20" name="Sigel Protection">
-		<!-- Max HP +$s1 -->
+		<!-- Max HP +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
 			<value level="2">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -890,7 +890,7 @@
 		</effects>
 	</skill>
 	<skill id="55255" toLevel="20" name="Tyrr Might">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
 			<value level="2">BranchIcon.Icon.g_rune_tir_lv00</value>
@@ -1049,7 +1049,7 @@
 		</effects>
 	</skill>
 	<skill id="55258" toLevel="20" name="Othell's Critical Damage">
-		<!-- Critical Damage +$s1. -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_othel_lv01</value>
 			<value level="2">BranchIcon.Icon.g_rune_othel_lv01</value>
@@ -1675,8 +1675,8 @@
 		<icon>icon.bm_agathion_wind</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55273" toLevel="3" name="Great Energy of Development">
-		<!-- For 10 min., acquired XP +5%. -->
+	<skill id="55273" toLevel="3" name="Energy of Development">
+		<!-- For 10 min., Acquired XP/ SP +$s1. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1704,7 +1704,7 @@
 		</effects>
 	</skill>
 	<skill id="55274" toLevel="3" name="Energy of Speed">
-		<!-- Speed +2 for 10 min. -->
+		<!-- For 10 min., P. Accuracy +$s1. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1732,7 +1732,7 @@
 		</effects>
 	</skill>
 	<skill id="55275" toLevel="3" name="Energy of Accuracy">
-		<!-- P./ M. Accuracy +1 for 10 min. -->
+		<!-- For 10 min., P. Accuracy +$s1, M. Accuracy +$s2. -->
 		<icon>BranchIcon.Icon.etc_g_bonus_herb_i02</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
@@ -1788,8 +1788,8 @@
 	<skill id="55289" toLevel="1" name="Old Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55290" toLevel="1" name="Devil's Ring">
-		<!-- Increases Max. HP and P./ M. Atk. -->
+	<skill id="55290" toLevel="1" name="Devi�s Ring">
+		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -1814,12 +1814,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55291" toLevel="1" name="Devil's Ring">
-		<!-- Increases Max. HP and P./ M. Atk. -->
+	<skill id="55291" toLevel="1" name="Devi�s Ring">
+		<!-- Increases P./ M. Atk. and Max HP. -->
 		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55292" toLevel="1" name="Devil's Earring">
+	<skill id="55292" toLevel="1" name="Devi�s Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<magicLvl>55</magicLvl>
@@ -1841,12 +1841,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55293" toLevel="1" name="Devil's Earring">
+	<skill id="55293" toLevel="1" name="Devi�s Earring">
 		<!-- Increases MP recovery rate and healing power. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55294" toLevel="1" name="Devil's Necklace">
+	<skill id="55294" toLevel="1" name="Devi�s Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 	<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->
@@ -1874,7 +1874,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55295" toLevel="1" name="Devil's Necklace">
+	<skill id="55295" toLevel="1" name="Devi�s Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>

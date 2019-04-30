@@ -186,7 +186,7 @@
 		</effects>
 	</skill>
 	<skill id="6809" toLevel="1" name="Arena Guidance">
-		<!-- Accuracy +4 for 5 min. -->
+		<!-- For 5 min., P. Accuracy +4. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -211,7 +211,7 @@
 		</effects>
 	</skill>
 	<skill id="6810" toLevel="1" name="Arena Focus">
-		<!-- Critical Attack Rate +30% for 5 min. -->
+		<!-- For 5 min., P. Critical Rate +30%. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -236,7 +236,7 @@
 		</effects>
 	</skill>
 	<skill id="6811" toLevel="1" name="Arena Death Whisper">
-		<!-- Critical Attack effect +35% for 5 min. -->
+		<!-- For 5 min., P. Critical Damage +35%. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -261,7 +261,7 @@
 		</effects>
 	</skill>
 	<skill id="6812" toLevel="1" name="Arena Berserker Spirit">
-		<!-- P. Def. momentarily -8%, M. Def. -16%, and evasion -4, and P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8 for 5 min. -->
+		<!-- For 5 min., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -767,7 +767,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6830" toLevel="1" name="Bleed">
-		<!-- For 5 sec., inflicts bleed and -100 HP every sec. Effect of recovery magic -600. -->
+		<!-- For 5 sec., inflicts bleed and -100 HP every sec., Received Healing -600%. -->
 		<icon>icon.skill0096</icon>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1170,7 +1170,7 @@
 		</effects>
 	</skill>
 	<skill id="6853" toLevel="1" name="Sleep">
-		<!-- Inflicts sleep for 6 sec. -->
+		<!-- Sleep for 6 sec. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>6</abnormalTime>
@@ -1883,7 +1883,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6885" toLevel="3" name="Morale Boost">
-		<!-- The brave who fight together in Dragon Valley receive Paralysis/ Bleed/ Poison/ Stun Resistance +$s1, Critical Rate +$s2, and Critical Damage +$s3. -->
+		<!-- The brave who fight together in Dragon Valley receive Paralysis/ Bleed/ Poison/ Stun Resistance +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3. -->
 		<icon>icon.skill6885</icon>
 		<abnormalTime>60</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -2220,7 +2220,7 @@
 		</effects>
 	</skill>
 	<skill id="6897" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -2255,14 +2255,14 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6898" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6898" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. After swallowing the Ancient Drake and absorbing its power, it quickly arose as a Commander that rules over the monsters nearby. It has good hearing but its vision is very poor, so it waits in a quiet, dark place, listening to the enemy's heartbeat, before swooping in for an attack. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6899" toLevel="1" name="Raid Boss (Lv. 84)">
+	<skill id="6899" toLevel="1" name="84 Lv. Raid Boss">
 		<!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. It swallowed up its brethren and gained a greater power. Antharas, whose heart was filled with innate cruelty and madness of a Dust Rider, appointed him as the Valley's Eradicator and commanded him to build the Tower of Corpses. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>

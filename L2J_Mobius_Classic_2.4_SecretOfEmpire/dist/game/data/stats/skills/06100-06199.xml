@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6100" toLevel="3" name="Turkey's Choice - Paper">
+	<skill id="6100" toLevel="3" name="Turkey's Choice - Scissors">
 		<!-- Turkey's Choice - Scissors. -->
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
@@ -12,7 +12,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6103" toLevel="5" name="Showdown with the Turkey - 2 Consecutive Wins">
+	<skill id="6103" toLevel="5" name="Showdown with the Turkey - 1st Win">
 		<!-- $s1st win. -->
 		<icon>
 			<value level="1">icon.xmas_pcwin1_i00</value>
@@ -54,7 +54,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6105" toLevel="1" name="Turkey's Mistake">
-		<!-- The stupid turkey's mistake. For 1 hr., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, Critical Rate +5, Critical Damage +15%, and the chance of prominent damage occurring through magic damage +2. -->
+		<!-- The stupid turkey's mistake. For 1 h., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, P. Critical Rate +5, P. Critical Damage +15%, M. Critical Rate +20. -->
 		<icon>icon.turkey_buff_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -75,7 +75,7 @@
 		<affectObject>ALL</affectObject>
 	</skill>
 	<skill id="6106" toLevel="1" name="Winter Holiday Festival">
-		<!-- Holiday festival. For 1 hr., Max HP +5%, Max MP +5%, Max CP +5%, Speed +10, P. Atk. +8%, and M. Atk. +10%. -->
+		<!-- Holiday festival. For 1 h., Max HP +5%, Max MP +5%, Max CP +5%, Speed +10, P. Atk. +8%, and M. Atk. +10%. -->
 		<icon>icon.xmas_miracle_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -220,8 +220,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6114" toLevel="1" name="Winter Holiday Blessing - Rune">
-		<!-- Holiday Blessing - Registered in Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+	<skill id="6114" toLevel="1" name="Winter Holiday Blessing - Town of Rune">
+		<!-- Holiday Blessing - Registered in Town of Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
@@ -257,7 +257,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6116" toLevel="1" name="Attacks the Turkey">
-		<!-- Attacks the Turkey -->
+		<!-- Attacks the turkey. -->
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -268,7 +268,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6117" toLevel="3" name="Choice - Paper">
+	<skill id="6117" toLevel="3" name="Choice - Scissors">
 		<!-- You have selected Scissors. You cannot move for $s1. -->
 		<icon>
 			<value level="1">icon.xmas_gawi_i00</value>
@@ -297,17 +297,17 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6118" toLevel="1" name="Christmas Blessing">
-		<!-- Grants for 1 hr. the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
+		<!-- Grants for 1 h. the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="6119" toLevel="1" name="Blessing of Plenty">
-		<!-- Grants for 1 hr. the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
+		<!-- Grants for 1 h. the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.skill5662</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="6120" toLevel="1" name="Santa's Reward">
-		<!-- Santa's reward. For 1 hr., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, Critical Rate +5, Critical Damage +15%, and the chance of prominent damage occurring through magic damage +2. -->
+		<!-- For 1 h., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, P. Critical Rate +5, P. Critical Damage +15%, M. Critical Rate +2. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -441,7 +441,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6129" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -465,7 +465,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6130" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Stunned and unable to move momentarily. -->
+		<!-- Curse of giant mutated animal: Immobilizes and stuns target. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -492,7 +492,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6131" toLevel="1" name="Decrease Speed">
-		<!-- Mutant Curse: Speed decreases momentarily. Effect 1. -->
+		<!-- Mutant Curse: Speed -8%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -515,7 +515,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6132" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- Mutant Curse: Atk. Spd. decreases momentarily. Effect 1. -->
+		<!-- Mutant Curse: Atk. Spd. -8%. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -559,7 +559,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6134" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Atk. Spd. and Speed decrease momentarily. Effect 1. -->
+		<!-- Mutant Curse: Atk. Spd. and Speed -30%. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -581,7 +581,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6135" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Stunned and unable to move momentarily. -->
+		<!-- Curse of giant mutated animal: Immobilizes and stuns target. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -715,7 +715,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6142" toLevel="3" name="Tar Trap">
-		<!-- You are covered in hot and sticky tar. Your Speed -$s2 for $s1. P. Def. and Evasion -$s3. -->
+		<!-- You are covered in hot and sticky tar. Your Speed -$s2 for $s1. P. Def. and P. Evasion -$s3. -->
 		<icon>icon.skill0770</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -899,7 +899,7 @@
 		</effects>
 	</skill>
 	<skill id="6149" toLevel="1" name="Kasha's Brand">
-		<!-- Kasha's Brand. For 5 min., P. Def. -30%. -->
+		<!-- For 5 min., P. Def. -30%. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>900</abnormalTime>
@@ -1050,7 +1050,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6154" toLevel="4" name="Kasha's Despair">
-		<!-- Kasha's Despair. Critical rate increases. -->
+		<!-- Increases P. Critical Rate. -->
 		<icon>
 			<value level="1">icon.skill6154_1</value>
 			<value level="2">icon.skill6154_2</value>
@@ -1087,7 +1087,7 @@
 		</effects>
 	</skill>
 	<skill id="6155" toLevel="4" name="Kasha's Despair">
-		<!-- Kasha's Despair. Critical rate increases and P. Def. decreases. -->
+		<!-- Increases P. Critical Rate, decreases P. Def. -->
 		<icon>
 			<value level="1">icon.skill6154_1</value>
 			<value level="2">icon.skill6154_2</value>
@@ -1112,7 +1112,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6156" toLevel="1" name="Mood Melody">
-		<!-- Provides for 1 hr. the following positive effects: Might Lv. 3, Shield Lv. 3, Focus Lv. 3, Haste Lv. 2, Acumen Lv. 3, Empower Lv. 3, Wind Walk Lv. 2, Death Whisper Lv. 3, and Vampiric Rage Lv. 4. Buff is deleted after death and after moving to the Olympiad. -->
+		<!-- For 1 h., grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1194,7 +1194,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6167" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1230,7 +1230,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6168" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>

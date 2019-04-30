@@ -312,7 +312,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5912" toLevel="1" name="Pestilence Cleanse">
-		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are increased. Skill Cooldown is increased. -->
+		<!-- P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Rate and P. Critical Damage are decreased, Skill Cooldown is increased. -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -352,7 +352,7 @@
 		</effects>
 	</skill>
 	<skill id="5914" toLevel="1" name="Putrefaction Cleanse">
-		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
+		<!-- P./ M. Def., P. Evasion and Speed are decreased. -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -530,7 +530,7 @@
 		</effects>
 	</skill>
 	<skill id="5921" toLevel="1" name="Inhale">
-		<!-- P. Atk., Atk. Spd., M. Atk., Accuracy, critical attack rate and Critical Damage are decreased. -->
+		<!-- P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Rate and P. Critical Damage are decreased. -->
 		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -588,7 +588,7 @@
 		</effects>
 	</skill>
 	<skill id="5922" toLevel="1" name="Exhale">
-		<!-- Evasion, P. Def., M. Def. and speed are decreased. -->
+		<!-- P. Evasion, P./ M. Def. and Speed are decreased. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -938,7 +938,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5938" toLevel="5" name="P. Atk. Up">
+	<skill id="5938" toLevel="5" name="Enhance Attack">
 		<!-- Attack abilities are enhanced. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -954,7 +954,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5939" toLevel="5" name="Defense Ability Up">
+	<skill id="5939" toLevel="5" name="Enhance Defense">
 		<!-- Defense abilities are enhanced. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1031,7 +1031,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5942" toLevel="1" name="Energy of Pollution">
-		<!-- HP/ MP recovery magic effect decreases temporarily. -->
+		<!-- Temporarily Received Healing and MP Recovery Bonus are decreased. -->
 		<icon>icon.skill0052</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1065,7 +1065,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5944" toLevel="1" name="Energy of Oblivion">
-		<!-- Accuracy is decreased. -->
+		<!-- Decreases P. Accuracy. -->
 		<icon>icon.skill0107</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1302,7 +1302,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5961" toLevel="1" name="Barrier Thunder Storm">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1408,7 +1408,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5968" toLevel="2" name="Rapid Shot">
-		<!-- Momentarily increases your own bow Atk. Spd. Effect $s1 -->
+		<!-- With a bow Atk. Spd. +8% for a certain amount of time. -->
 		<icon>icon.skill0099</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1434,7 +1434,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5969" toLevel="2" name="Punch of Doom">
-		<!-- Throws Iron Fist which inflicts significant damage to the enemy while inflicting Stun on you momentarily. Requires a fist weapon. Ignores Shield Defense. Over-hit. $s1 power. -->
+		<!-- Inflicts great damage on the enemy with iron-fist and inflicts Stun. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
 		<icon>icon.skill005969</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1738,7 +1738,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5984" toLevel="1" name="Hand of Death">
-		<!-- P. Def., M. Def., and speed are greatly decreased. -->
+		<!-- P./ M. Def. and Speed are decreased. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1926,7 +1926,7 @@
 		</effects>
 	</skill>
 	<skill id="5989" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
+		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>

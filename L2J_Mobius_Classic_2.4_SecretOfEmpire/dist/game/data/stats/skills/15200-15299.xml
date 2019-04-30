@@ -738,7 +738,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15251" toLevel="1" name="Invincible Nurka">
-		<!-- Invincibility -->
+		<!-- Nurka won't attack. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -759,7 +759,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15253" toLevel="1" name="Earth-rumbling Nurka">
-		<!-- Damages nearby enemies and decreases their Spd. -->
+		<!-- Inflicts damage to target and nearby enemies, decreases Speed. -->
 		<icon>icon.skill11509</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -837,7 +837,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15257" toLevel="1" name="Resistance Blaze">
-		<!-- Decreased Spd. -->
+		<!-- Speed decreased. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1132,8 +1132,8 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="15288" toLevel="1" name="Increase Recovery Rate">
-		<!-- Lidia's HP Recovery Rate is greatly increased. -->
+	<skill id="15288" toLevel="1" name="Increase Recovery Bonus">
+		<!-- Greatly increases Lidia's HP Recovery Bonus. -->
 		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

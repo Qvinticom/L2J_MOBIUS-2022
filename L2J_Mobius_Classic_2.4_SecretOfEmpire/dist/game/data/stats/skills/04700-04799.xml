@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" toLevel="13" name="Gift of Queen">
-		<!-- Queen's buff magic temporarily increases party members' P. Atk. and P. Accuracy. Effect $s1 -->
+		<!-- For $s1, party members' P. Atk. +$s2, P. Accuracy +$s3. -->
 		<icon>icon.skill1331</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -129,7 +129,7 @@
 		</effects>
 	</skill>
 	<skill id="4701" toLevel="13" name="Cure of Queen">
-		<!-- Has a $s1 chance to remove curses that decrease Accuracy, P. Atk. and Atk. Spd. from all party members. -->
+		<!-- Has a $s1 chance to remove curses that decrease P. Accuracy, P./ M. Atk., Atk. Spd./ Casting Spd. and Speed from all party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -206,7 +206,7 @@
 		</effects>
 	</skill>
 	<skill id="4702" toLevel="13" name="Blessing of Seraphim">
-		<!-- Buff magic used by the Seraphim the Unicorn. Party members' MP Recovery Bonus increases temporarily. Effect $s1 -->
+		<!-- For $s1, party members' MP Recovery Bonus +$s2, M. Critical Rate +$s3. -->
 		<icon>icon.skill1332</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -316,7 +316,7 @@
 		</effects>
 	</skill>
 	<skill id="4703" toLevel="13" name="Gift of Seraphim">
-		<!-- Seraphim the Unicorn's buff magic temporarily reduces party members' M. Skill Cooldown. Effect $s1 -->
+		<!-- For $s1, party members' M. Skill Cooldown -$s2, M. Atk. +$s3. -->
 		<icon>icon.skill1332</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -427,7 +427,7 @@
 		</effects>
 	</skill>
 	<skill id="4704" toLevel="13" name="Cure of Seraphim">
-		<!-- Seraphim the Unicorn's cure magic. Has a $s1 chance to remove Sleep, Hold, Stun, Silence and Paralysis debuffs from party members. -->
+		<!-- Has a $s1 chance to remove curses that inflicts Sleep, Hold, Stun, Paralysis and Mental from all party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -885,7 +885,7 @@
 		</effects>
 	</skill>
 	<skill id="4708" toLevel="17" name="Cursed Strike">
-		<!-- Cursed Man inflicts the curse to inflict damage and stun target simultaneously. Power $s1 -->
+		<!-- Cursed Man inflicts damage and stun target simultaneously. Power $s1 -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1827,7 +1827,7 @@
 		</effects>
 	</skill>
 	<skill id="4724" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1908,7 +1908,7 @@
 		</effects>
 	</skill>
 	<skill id="4725" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1989,7 +1989,7 @@
 		</effects>
 	</skill>
 	<skill id="4726" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2070,7 +2070,7 @@
 		</effects>
 	</skill>
 	<skill id="4727" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2151,7 +2151,7 @@
 		</effects>
 	</skill>
 	<skill id="4728" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3092,7 +3092,7 @@
 		</effects>
 	</skill>
 	<skill id="4744" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3173,7 +3173,7 @@
 		</effects>
 	</skill>
 	<skill id="4745" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3254,7 +3254,7 @@
 		</effects>
 	</skill>
 	<skill id="4746" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3335,7 +3335,7 @@
 		</effects>
 	</skill>
 	<skill id="4747" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3416,7 +3416,7 @@
 		</effects>
 	</skill>
 	<skill id="4748" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4067,7 +4067,7 @@
 		</effects>
 	</skill>
 	<skill id="4759" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4147,7 +4147,7 @@
 		</effects>
 	</skill>
 	<skill id="4760" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4227,7 +4227,7 @@
 		</effects>
 	</skill>
 	<skill id="4761" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4307,7 +4307,7 @@
 		</effects>
 	</skill>
 	<skill id="4762" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4387,7 +4387,7 @@
 		</effects>
 	</skill>
 	<skill id="4763" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4747,7 +4747,7 @@
 		</effects>
 	</skill>
 	<skill id="4769" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4827,7 +4827,7 @@
 		</effects>
 	</skill>
 	<skill id="4770" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4907,7 +4907,7 @@
 		</effects>
 	</skill>
 	<skill id="4771" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4987,7 +4987,7 @@
 		</effects>
 	</skill>
 	<skill id="4772" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5067,7 +5067,7 @@
 		</effects>
 	</skill>
 	<skill id="4773" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

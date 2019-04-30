@@ -26,22 +26,22 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51105" toLevel="1" name="Improved Master Fisherman's Blessing">
-		<!-- For 2 hr. Acquired XP/ SP through fishing +200%. Buff remains even after death. -->
+		<!-- For 2 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51106" toLevel="1" name="Improved Master Fisherman's Blessing">
-		<!-- For 4 hr. Acquired XP/ SP through fishing +200%. Buff remains even after death. -->
+		<!-- For 4 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51107" toLevel="1" name="Improved Master Fisherman's Blessing">
-		<!-- For 8 hr. Acquired XP/ SP through fishing +200%. Buff remains even after death. -->
+		<!-- For 8 h. Acquired XP/ SP through fishing +200%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51108" toLevel="1" name="Dandy's Golden Ball">
-		<!-- Restores Sayha Grace. For 1 hr., Acquired XP/ SP +100%. Changes the appearance of your armor into that of a Lineage II Uniform. -->
+		<!-- Restores Sayha Grace. For 1 h., Acquired XP/ SP +100%. Changes the appearance of your armor into that of a Lineage II Uniform. -->
 		<icon>icon.ev_dinos_baseball_gold</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -49,7 +49,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51110" toLevel="1" name="Fisherman's Blessing">
-		<!-- For 24 hr., Acquired XP/ SP through fishing +50%. Buff remains after death. -->
+		<!-- For 24 h., Acquired XP/ SP through fishing +50%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket_1</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -105,7 +105,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51124" toLevel="1" name="Chronicle Token">
-		<!-- All characteristics +1, Atk. Spd./ Casting Spd. +5%. -->
+		<!-- CON +1, MEN +1, DEX +1, WIT +1, STR +1, INT +1, Atk. Spd./ Casting Spd. +5%. -->
 		<icon>icon.etc_scroll_of_memory_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -114,12 +114,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51126" toLevel="1" name="Intermediate Spirit's Blessing">
-		<!-- For 20 min. Acquired XP +30%. -->
+		<!-- For 20 min., Acquired attribute XP +30%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51127" toLevel="1" name="Advanced Spirit's Blessing">
-		<!-- For 20 min. Acquired XP +50%. -->
+		<!-- For 20 min., Acquired attribute XP +50%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -191,12 +191,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51147" toLevel="1" name="Energy of Panda">
-		<!-- Transforms you into Panda. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Buff remains even after death. -->
+		<!-- Transforms you into Panda. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
 		<icon>icon.sayha2017_panda</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51148" toLevel="1" name="Energy of Cat">
-		<!-- Transforms you into Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Buff remains even after death. -->
+		<!-- Transforms you into Cat. Max HP/ MP +20%, Acquired XP/ SP and during effect of Sayha Grace +20%. Effect remains after death. -->
 		<icon>icon.sayha2017_cat</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -212,7 +212,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51152" toLevel="2" name="Santa Girl's Gift">
-		<!-- Santa Girl's Gift. You can receive an Santa Girl's Gift Pouch when the Buff is no longer in effect. Songs/ dances skills' MP Consumption -15%. Acquired XP/ SP +20%. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory. -->
+		<!-- Santa Girl's Gift. You can receive a Santa Girl's Gift Pouch once the buff expires. Songs/ dances skills' MP Consumption -15%. Acquired XP/ SP +20%. <Warning> If your character dies at the time the item is given, you cannot receive the gift. You also cannot receive the gift if there is no empty slot in your inventory. -->
 		<icon>BranchSys.Icon.Br_santa_gift_click_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -226,7 +226,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51155" toLevel="1" name="Christmas Tree Blessing">
-		<!-- Restores $s1 MP of all party members. -->
+		<!-- Immediately restores $s1 HP and $s2 MP of party members. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51156" toLevel="1" name="Santa Girl's Gift Pouch">
@@ -234,12 +234,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51157" toLevel="1" name="Christmas Amulet">
-		<!-- Acquired XP/ SP during fishing +20%. -->
+		<!-- Acquired XP/ SP through hunting/ fishing +20%. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51158" toLevel="1" name="Lucky Herb Pouch">
-		<!-- For $s1, P./ M. Atk. +$s2, P./ M. Def. +$s3, Atk. Spd./ Casting. Spd. +$s4, HP/ MP Recovery Bonus+$s5, Speed +$s6. Disappears after restart. -->
+		<!-- For $s1, P./ M. Atk. +$s2, P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, HP/ MP Bonus Recovery +$s5, Speed +$s6. Disappears after restart. -->
 		<icon>icon.christmas_card_box2</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -249,7 +249,7 @@
 	<skill id="51160" toLevel="1" name="Radiant Dragon Varnish">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51161" toLevel="1" name="Quality Quick Healing Potion">
+	<skill id="51161" toLevel="1" name="Major Quick Healing Potion">
 		<!-- Instantly recovers 800 HP. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -353,7 +353,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51183" toLevel="1" name="Dragon Berserker">
-		<!-- Transforms into Dragon Berserker. For 15 min. Acquired XP +30%, P. Atk. +15%, M. Atk. +15%,P./ M. Critical Rate +10%. Cooldown: 2 h. Transformation effect remais after death.. <Special ability>. During transformation in case of successful attack or skill use with a certain chance P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Damage Reflection +15%. -->
+		<!-- Transforms into Dragon Berserker. For 15 min. Acquired XP +30%, P. Atk. +15%, M. Atk. +15%,P./ M. Critical Damage +10%. Cooldown: 2 h. Transformation effect remais after death.. <Special ability>. During transformation in case of successful attack or skill use with a certain chance P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%, Damage Reflection +15%. -->
 		<icon>icon.bm2018_dragon_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
