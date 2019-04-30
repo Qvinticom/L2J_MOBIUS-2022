@@ -2155,7 +2155,7 @@ public final class PlayerInstance extends Playable
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
@@ -5927,7 +5927,7 @@ public final class PlayerInstance extends Playable
 			final SystemMessage sm;
 			if (unequiped[0].getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 				sm.addInt(unequiped[0].getEnchantLevel());
 				sm.addItemName(unequiped[0]);
 			}
@@ -5967,7 +5967,7 @@ public final class PlayerInstance extends Playable
 				SystemMessage sm = null;
 				if (unequiped[0].getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 					sm.addInt(unequiped[0].getEnchantLevel());
 					sm.addItemName(unequiped[0]);
 				}
@@ -11557,7 +11557,7 @@ public final class PlayerInstance extends Playable
 				
 				if (equippedItem.getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 					sm.addInt(equippedItem.getEnchantLevel());
 					sm.addItemName(equippedItem);
 				}

@@ -301,7 +301,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 						{
 							if (item.getEnchantLevel() > 0)
 							{
-								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 								sm.addInt(item.getEnchantLevel());
 								sm.addItemName(item);
 								client.sendPacket(sm);
