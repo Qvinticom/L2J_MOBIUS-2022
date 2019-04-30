@@ -85,6 +85,7 @@ Seven Signs: https://eu.4gameforum.com/threads/658543/
 
 Secret of Empire: https://eu.4game.com/patchnotes/lineage2classic/133/
 -Parsed new skills from client
+-Parsed new items from client
 
 Customs:
 -Newbie Helper NPC location info
