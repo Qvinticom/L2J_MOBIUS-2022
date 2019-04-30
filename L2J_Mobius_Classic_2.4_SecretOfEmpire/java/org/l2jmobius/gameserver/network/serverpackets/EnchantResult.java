@@ -32,6 +32,7 @@ public class EnchantResult implements IClientOutgoingPacket
 	private final int _crystal;
 	private final int _count;
 	private final int _enchantLevel;
+	@SuppressWarnings("unused")
 	private final int[] _enchantOptions;
 	
 	public EnchantResult(int result, int crystal, int count, int enchantLevel, int[] options)
