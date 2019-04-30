@@ -69,7 +69,7 @@ public final class HennaInfo implements IClientOutgoingPacket
 		if (_player.getHenna(4) != null)
 		{
 			packet.writeD(_player.getHenna(4).getDyeId());
-			packet.writeD(0x00); // Premium Slot Dye Time Left
+			packet.writeD(_player.getHenna(4).getDuration()); // Premium Slot Dye Time Left
 			packet.writeD(_player.getHenna(4).isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
 		}
 		else
