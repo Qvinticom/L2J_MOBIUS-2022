@@ -906,7 +906,6 @@
 	<item id="91488" name="Blessed Soulshot (S-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with S-grade weapon. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_silver_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
@@ -943,7 +942,6 @@
 	<item id="91491" name="Mysterious Blessed Soulshot (S-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with S-grade weapon. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_silver_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
