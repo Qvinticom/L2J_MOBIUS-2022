@@ -454,44 +454,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 				}
 			}
 			
-			if (!Config.FORCE_INVENTORY_UPDATE)
-			{
-				if (scroll.getCount() == 0)
-				{
-					iu.addRemovedItem(scroll);
-				}
-				else
-				{
-					iu.addModifiedItem(scroll);
-				}
-				
-				if (item.getCount() == 0)
-				{
-					iu.addRemovedItem(item);
-				}
-				else
-				{
-					iu.addModifiedItem(item);
-				}
-				
-				if (support != null)
-				{
-					if (support.getCount() == 0)
-					{
-						iu.addRemovedItem(support);
-					}
-					else
-					{
-						iu.addModifiedItem(support);
-					}
-				}
-				
-				player.sendInventoryUpdate(iu);
-			}
-			else
-			{
-				player.sendItemList(true);
-			}
+			player.sendItemList(true);
 			
 			request.setProcessing(false);
 			player.broadcastUserInfo(UserInfoType.ENCHANTLEVEL);
