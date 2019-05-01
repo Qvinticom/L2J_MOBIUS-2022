@@ -123,6 +123,7 @@ import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChang
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemAttributeAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemEnchantAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemSoulCrystalAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2jmobius.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
@@ -185,6 +186,7 @@ public enum EventType
 	ON_ITEM_TALK(OnItemTalk.class, void.class),
 	ON_ITEM_ATTRIBUTE_ADD(OnItemAttributeAdd.class, void.class),
 	ON_ITEM_SOUL_CRYSTAL_ADD(OnItemSoulCrystalAdd.class, void.class),
+	ON_ITEM_ENCHANT_ADD(OnItemEnchantAdd.class, void.class),
 	
 	// NPC events
 	ON_NPC_CAN_BE_SEEN(OnNpcCanBeSeen.class, void.class, TerminateReturn.class),

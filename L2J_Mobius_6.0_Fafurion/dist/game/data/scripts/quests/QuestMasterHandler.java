@@ -308,6 +308,7 @@ import quests.Q10561_AcrossTheDeathLine.Q10561_AcrossTheDeathLine;
 import quests.Q10562_TakeUpArms.Q10562_TakeUpArms;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
+import quests.Q10576_GlitteringWeapons.Q10576_GlitteringWeapons;
 import quests.Q10577_TemperARustingBlade.Q10577_TemperARustingBlade;
 import quests.Q10578_TheSoulOfASword.Q10578_TheSoulOfASword;
 import quests.Q10579_ContainingTheAttributePower.Q10579_ContainingTheAttributePower;
@@ -846,7 +847,7 @@ public class QuestMasterHandler
 		Q10571_StrategicReconciliation.class, // TODO: Not done.
 		Q10572_ToExpelTheEmbryosForces.class, // TODO: Not done.
 		Q10575_LetsGoFishing.class,
-		Q10576_GlitteringWeapons.class, // TODO: Not done.
+		Q10576_GlitteringWeapons.class,
 		Q10577_TemperARustingBlade.class,
 		Q10578_TheSoulOfASword.class,
 		Q10579_ContainingTheAttributePower.class,

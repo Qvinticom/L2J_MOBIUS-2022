@@ -69,6 +69,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDr
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPickup;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemAttributeAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
+import org.l2jmobius.gameserver.model.events.impl.item.OnItemEnchantAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemSoulCrystalAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -943,6 +944,9 @@ public final class ItemInstance extends WorldObject
 		_enchantLevel = enchantLevel;
 		applyEnchantStats();
 		_storedInDb = false;
+		
+		// Notify to Scripts
+		EventDispatcher.getInstance().notifyEventAsync(new OnItemEnchantAdd(getActingPlayer(), this));
 	}
 	
 	/**
