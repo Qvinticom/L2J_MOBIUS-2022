@@ -66,11 +66,20 @@ public final class HennaInfo implements IClientOutgoingPacket
 			packet.writeD(henna.getDyeId());
 			packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
 		}
-		if (_player.getHenna(4) != null)
+		
+		final Henna premium = _player.getHenna(4);
+		if (premium != null)
 		{
-			packet.writeD(_player.getHenna(4).getDyeId());
-			packet.writeD(_player.getHenna(4).getDuration()); // Premium Slot Dye Time Left
-			packet.writeD(_player.getHenna(4).isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
+			int duration = premium.getDuration();
+			if (duration > 0)
+			{
+				final long currentTime = System.currentTimeMillis();
+				duration = (int) Math.max(0, _player.getVariables().getLong("HennaDuration4", currentTime) - currentTime) / 1000;
+			}
+			
+			packet.writeD(premium.getDyeId());
+			packet.writeD(duration); // Premium Slot Dye Time Left
+			packet.writeD(premium.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
 		}
 		else
 		{
