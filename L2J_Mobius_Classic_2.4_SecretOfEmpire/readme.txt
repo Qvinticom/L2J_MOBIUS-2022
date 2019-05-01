@@ -84,8 +84,10 @@ Seven Signs: https://eu.4gameforum.com/threads/658543/
 -Goddard clanhalls
 
 Secret of Empire: https://eu.4game.com/patchnotes/lineage2classic/133/
+-Parsed new system messages and npc strings from client
 -Parsed new skills from client
 -Parsed new items from client
+-Parsed new recipes from client
 
 Customs:
 -Newbie Helper NPC location info
