@@ -109,7 +109,13 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39358" toLevel="1" name="Scroll: Enchant Fallen Angel Accessory">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39359" toLevel="3" name="Infinite Bliss">
 		<operateType>A1</operateType>
