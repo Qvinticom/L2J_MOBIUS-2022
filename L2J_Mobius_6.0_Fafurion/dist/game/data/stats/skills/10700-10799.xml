@@ -249,11 +249,11 @@
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
-		<operateType>A2</operateType>
+		<operateType>DA2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<trait>DERANGEMENT</trait>
+		<trait>SHOCK</trait>
 		<mpConsume>
 			<value level="1">145</value>
 			<value level="2">150</value>
@@ -275,6 +275,7 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="AirBind" />
 			<effect name="Bluff">
 				<chance>80</chance>
 			</effect>
@@ -284,7 +285,9 @@
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
