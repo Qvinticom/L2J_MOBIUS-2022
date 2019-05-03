@@ -115,7 +115,7 @@ public final class ScriptEngineManager implements IXmlReader
 								}
 								if (excludeScript)
 								{
-									_exclusions.add(fileName);
+									_exclusions.add(file.toUri().getPath());
 									break;
 								}
 							}
@@ -138,8 +138,8 @@ public final class ScriptEngineManager implements IXmlReader
 		{
 			if (file.isFile())
 			{
-				final String fileName = file.getName();
-				if (fileName.endsWith(".java") && !_exclusions.contains(fileName))
+				final String filePath = file.toURI().getPath();
+				if (filePath.endsWith(".java") && !_exclusions.contains(filePath))
 				{
 					files.add(file.toPath().toAbsolutePath());
 				}
