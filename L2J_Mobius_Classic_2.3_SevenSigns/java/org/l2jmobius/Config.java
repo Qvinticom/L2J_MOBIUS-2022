@@ -827,6 +827,8 @@ public final class Config
 	public static int NORMAL_CONNECTION_TIME;
 	public static int FAST_CONNECTION_TIME;
 	public static int MAX_CONNECTION_PER_IP;
+	public static boolean ENABLE_CMD_LINE_LOGIN;
+	public static boolean ONLY_CMD_LINE_LOGIN;
 	
 	// GrandBoss Settings
 	
@@ -2790,6 +2792,9 @@ public final class Config
 			NORMAL_CONNECTION_TIME = ServerSettings.getInt("NormalConnectionTime", 700);
 			FAST_CONNECTION_TIME = ServerSettings.getInt("FastConnectionTime", 350);
 			MAX_CONNECTION_PER_IP = ServerSettings.getInt("MaxConnectionPerIP", 50);
+			
+			ENABLE_CMD_LINE_LOGIN = ServerSettings.getBoolean("EnableCmdLineLogin", false);
+			ONLY_CMD_LINE_LOGIN = ServerSettings.getBoolean("OnlyCmdLineLogin", false);
 		}
 		else
 		{

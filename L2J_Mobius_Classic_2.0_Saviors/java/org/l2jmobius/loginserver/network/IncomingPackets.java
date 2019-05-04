@@ -26,6 +26,7 @@ import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.network.IIncomingPackets;
 import org.l2jmobius.loginserver.network.clientpackets.AuthGameGuard;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
+import org.l2jmobius.loginserver.network.clientpackets.RequestCmdLogin;
 import org.l2jmobius.loginserver.network.clientpackets.RequestPIAgreement;
 import org.l2jmobius.loginserver.network.clientpackets.RequestPIAgreementCheck;
 import org.l2jmobius.loginserver.network.clientpackets.RequestServerList;
@@ -38,6 +39,7 @@ public enum IncomingPackets implements IIncomingPackets<LoginClient>
 {
 	AUTH_GAME_GUARD(0x07, AuthGameGuard::new, ConnectionState.CONNECTED),
 	REQUEST_AUTH_LOGIN(0x00, RequestAuthLogin::new, ConnectionState.AUTHED_GG),
+	REQUEST_LOGIN(0x0B, RequestCmdLogin::new, ConnectionState.AUTHED_GG),
 	REQUEST_SERVER_LOGIN(0x02, RequestServerLogin::new, ConnectionState.AUTHED_LOGIN),
 	REQUEST_SERVER_LIST(0x05, RequestServerList::new, ConnectionState.AUTHED_LOGIN),
 	REQUEST_PI_AGREEMENT_CHECK(0x0E, RequestPIAgreementCheck::new, ConnectionState.AUTHED_LOGIN),
