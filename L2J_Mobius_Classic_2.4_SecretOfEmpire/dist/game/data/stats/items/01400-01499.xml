@@ -871,11 +871,18 @@
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="1471" name="Silenos Blowgun" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />

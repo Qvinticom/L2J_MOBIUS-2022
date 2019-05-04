@@ -261,11 +261,18 @@
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<skills>
+			<skill id="2159" level="1" /> <!-- Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="2516" name="Saber*Saber" type="Weapon">
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->

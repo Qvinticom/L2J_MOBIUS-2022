@@ -442,11 +442,18 @@
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="350" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->

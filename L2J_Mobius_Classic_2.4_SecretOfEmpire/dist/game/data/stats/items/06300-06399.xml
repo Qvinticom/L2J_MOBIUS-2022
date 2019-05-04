@@ -965,14 +965,19 @@
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
+		<set name="change_weaponId" val="9364" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">281</stat>
 			<stat type="mAtk">132</stat>
@@ -982,11 +987,14 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6365" name="Basalt Battlehammer" type="Weapon">
+		<item id="6365" name="Basalt Battlehammer" type="Weapon">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1570" />
@@ -994,9 +1002,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-		</skills>
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<stats>
 			<stat type="pAtk">281</stat>
 			<stat type="mAtk">132</stat>
@@ -1004,6 +1010,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="6366" name="Imperial Staff" type="Weapon">
@@ -1033,11 +1040,14 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="6367" name="Angel Slayer" type="Weapon">
+		<item id="6367" name="Angel Slayer" type="Weapon">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1368" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="950" />
@@ -1045,6 +1055,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
 		<stats>
 			<stat type="pAtk">246</stat>
 			<stat type="mAtk">132</stat>
@@ -1207,14 +1219,17 @@
 			<stat type="pDef">55</stat>
 		</stats>
 	</item>
-	<item id="6377" name="Imperial Crusader Shield" type="Armor">
+		<item id="6377" name="Imperial Crusader Shield" type="Armor">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="107" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1170" />
 		<set name="price" val="3355000" />
+		<set name="commissionItemType" val="SHIELD" />
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="rEvas">-8</stat>

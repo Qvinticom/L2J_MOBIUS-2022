@@ -223,14 +223,14 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90729" name="Flower Sweets" type="EtcItem">
-		<!-- For 20 minutes Max HP/ MP +5%, Acquired XP/ SPed through hunting +20%. Cannot be dropped. <Note>When used simultaneously with Life Control Tower's Scroll of Blessing, effects do not stack. If Angel Cat's Blessing is used at the same time, only Flower Sweets will produce an effect. Will be deleted after the event is over on September 28, 2016. -->
+		<!-- For 20 minutes Max HP/ MP +5%, Acquired XP/ SP while hunting +20%. Cannot be dropped. <Note>When used simultaneously with Life Control Tower's Scroll of Blessing, effects do not stack. If Angel Cat's Blessing is used at the same time, only Flower Sweets will produce an effect. Will be deleted after the event. -->
 		<set name="icon" val="icon.flower_songpyeon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90730" name="Pumpkin Sweets" type="EtcItem">
-		<!-- For 20 minutes, P./ M. Atk. +12%, P./ M. Def. +15%, Max. HP/ CP/ MP +25%, P./ M. Crit. Rate +10, P./ M. Critical Damage +5%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. <Note>When used simultaneously with Special Pirate Fruit or Special Dragon Fruit, effects do not stack. Will be deleted after the event is over on September 28, 2016. -->
+		<!-- For 20 minutes, P./ M. Atk. +12%, P./ M. Def. +15%, Max. HP/ CP/ MP +25%, P./ M. Crit. Rate +10, P./ M. Critical Damage +5%, HP/ MP Recovery Bonus +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. <Note>When used simultaneously with Special Pirate Fruit or Special Dragon Fruit, effects do not stack. Will be deleted after the event. -->
 		<set name="icon" val="icon.pumpkin_songpyeon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -556,7 +556,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90763" name="Zaken's Earring" type="Armor">
-		<!-- MP +22, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +5%, Mental Resistance and Atk. Rate +5% Healing Effects +4%, HP Recovery Bonus +10%, skill MP consumption -2%. The effect doesn't stack if two identical earrings are worn. -->
+		<!-- MP +22, Bleed Resistance/ Atk. Rate +10%, Stun Resistance/ Atk. Rate +5%, Mental Resistance/ Atk. Rate +5%, Received Healing +4%, HP Recovery Bonus +10%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -572,8 +572,8 @@
 		</stats>
 	</item>
 	<item id="90764" name="Enhanced Zaken's Earring" type="Armor">
-		<!-- MP +28, Bleed Resistance and Bleed Atk. Rate +15%, Stun Resistance and Stun Atk. Rate +10%, Mental Resistance and Atk. Rate +10% Healing Effects 6%, HP Recovery Bonus +15%, skill MP consumption -3%. The effect doesn't stack if two identical earrings are worn. -->
-		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<!-- MP +28, Bleed Resistance/ Atk. Rate +15%, Stun Resistance/ Atk. Rate +10%, Mental Resistance/ Atk. Rate +10%, Received Healing +6%, HP Recovery Bonus +15%, Skill MP Consumption -3%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -588,8 +588,8 @@
 		</stats>
 	</item>
 	<item id="90765" name="Refined Zaken's Earring" type="Armor">
-		<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Effects +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%, skill MP consumption +4%. The effect doesn't stack if two identical earrings are worn. -->
-		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<!-- MP +34, Bleed Resistance/ Atk. Rate +20%, Stun Resistance/ Atk. Rate +15%, Mental Resistance/ Atk. Rate +15%, Received Healing +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%, Skill MP Consumption +4%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted.If you take 2 these rings to Beggins in Giran Village, you can change them for Essence of Zaken. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -615,7 +615,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90767" name="Zaken's Earring" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. MP +22, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +5%, Mental Resistance and Atk. Rate +5% Healing Effects +4%, HP Recovery Bonus +10%, skill MP consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. MP +22, Bleed Resistance/ Atk. Rate +10%, Stun/ Mental Resistance and Atk. Rate +5%, Received Healing +4%, HP Recovery Bonus +10%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -722,7 +722,7 @@
 		</stats>
 	</item>
 	<item id="90775" name="Talisman of Border - Lv. 3" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./ M. Def. +17, P./ M. Skills Evasion +1, HP/ MP/ CP +80, Speed +3, P./ M. Atk. Spd. +15, Acquired XP/ SP +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./ M. Def. +17, P./ M. Evasion +1, HP/ MP/ CP +80, Speed +3, P./ M. Atk. Spd. +15, Acquired XP/ SP +3%. Effects from two such talismans do not stack. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		</stats>
 	</item>
 	<item id="90777" name="Talisman of Border - Lv. 4" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./ M. Def. +19, P./ M. Skills Evasion +1, HP/ MP/ CP +80, Speed +3, Atk. Spd./ Casting Spd. +17, Acquired XP/ SP +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./ M. Def. +19, P./ M. Evasion +1, HP/ MP/ CP +80, Speed +3, Atk. Spd./ Casting Spd. +17, Acquired XP/ SP +3%. Effects from two such talismans do not stack. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -778,7 +778,7 @@
 		</stats>
 	</item>
 	<item id="90779" name="Talisman of Border - Lv. 5" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./ M. Def. +22, P./ M. Skills Evasion +1, HP/ MP/ CP +120, Speed +5, Atk. Spd./ Casting Spd. +10, Acquired XP/ SP +4%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./ M. Def. +22, P./ M. Evasion +1, HP/ MP/ CP +120, Speed +5, Atk. Spd./ Casting Spd. +10, Acquired XP/ SP +4%. Effects from two such talismans do not stack. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -806,7 +806,7 @@
 		</stats>
 	</item>
 	<item id="90781" name="Talisman of Border - Lv. 6" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./ M. Def. +24, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +5, P./ M. Atk. Spd. +15, Acquired XP/ SP +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
+		<!-- A 7-day item. P./ M. Def. +24, P./ M. Evasion +2, HP/ MP/ CP +160, Speed +5, P./ M. Atk. Spd. +15, Acquired XP/ SP +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -834,7 +834,7 @@
 		</stats>
 	</item>
 	<item id="90783" name="Talisman of Border - Lv. 7" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./ M. Def. +29, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +7, P./ M. Atk. Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 1 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./ M. Def. +29, P./ M. Evasion +2, HP/ MP/ CP +160, Speed +7, P./ M. Atk. Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 1 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -949,7 +949,7 @@
 		</stats>
 	</item>
 	<item id="90791" name="Talisman of Border - Lv. 8" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./ M. Def. +34, P./ M. Skills Evasion +2, HP/ MP/ CP +200, Speed +7, P./ M. Atk. Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./ M. Def. +34, P./ M. Evasion +2, HP/ MP/ CP +200, Speed +7, P./ M. Atk. Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />

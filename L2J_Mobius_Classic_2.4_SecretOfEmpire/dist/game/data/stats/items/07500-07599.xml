@@ -547,7 +547,7 @@
 	<item id="7575" name="Draconic Bow" type="Weapon">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
@@ -565,7 +565,7 @@
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="7579" name="Draconic Bow Shaft" type="EtcItem">
