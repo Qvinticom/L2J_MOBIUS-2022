@@ -37,6 +37,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -50,6 +51,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
@@ -505,8 +507,9 @@ public abstract class Inventory extends ItemContainer
 				update = true;
 			}
 			
-			// Very and apply visual set
-			if (verifyAndApply(player, item, ItemInstance::getVisualId))
+			// Verify and apply visual set
+			final int itemVisualId = item.getVisualId();
+			if ((itemVisualId > 0) && (AppearanceItemData.getInstance().getStone(itemVisualId).getType() == AppearanceType.FIXED) && verifyAndApply(player, item, ItemInstance::getVisualId))
 			{
 				update = true;
 			}

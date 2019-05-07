@@ -1529,7 +1529,9 @@ public final class ItemInstance extends WorldObject
 	 */
 	public class ItemDropTask implements Runnable
 	{
-		private int _x, _y, _z;
+		private int _x;
+		private int _y;
+		private int _z;
 		private final Creature _dropper;
 		private final ItemInstance _itеm;
 		
