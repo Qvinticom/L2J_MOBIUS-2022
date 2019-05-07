@@ -51,6 +51,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
@@ -514,9 +515,16 @@ public abstract class Inventory extends ItemContainer
 			
 			// Verify and apply visual set
 			final int itemVisualId = item.getVisualId();
-			if ((itemVisualId > 0) && (AppearanceItemData.getInstance().getStone(itemVisualId).getType() == AppearanceType.FIXED) && verifyAndApply(player, item, ItemInstance::getVisualId))
+			if (itemVisualId > 0)
 			{
-				update = true;
+				final AppearanceStone stone = AppearanceItemData.getInstance().getStone(itemVisualId);
+				if (stone != null)
+				{
+					if ((stone.getType() == AppearanceType.FIXED) && verifyAndApply(player, item, ItemInstance::getVisualId))
+					{
+						update = true;
+					}
+				}
 			}
 			
 			if (update)
