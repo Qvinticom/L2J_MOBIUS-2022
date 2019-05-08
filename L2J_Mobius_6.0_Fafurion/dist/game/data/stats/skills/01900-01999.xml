@@ -1588,6 +1588,7 @@
 		<!-- Increases Max HP/ MP/ CP by $s1. -->
 		<icon>icon.skill1501</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1871,7 +1872,7 @@
 				<magicTypes>0;1;2;3;4;22</magicTypes>
 				<skillId>1977</skillId> <!-- Dual Certification - Master's Rage -->
 				<skillLevel>1</skillLevel>
-				<chance>2</chance>
+				<chance>10</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
@@ -2016,6 +2017,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2045,6 +2047,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2077,6 +2080,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND_PC</affectObject>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2105,6 +2109,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>100</amount>
@@ -2116,6 +2121,7 @@
 		<icon>icon.skill0917</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -2407,6 +2413,7 @@
 		<!-- Increases Acquired XP/ SP in Vitality state by 10%. -->
 		<icon>icon.skill10336</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="VitalityExpRate">
 				<amount>10</amount>
@@ -2418,6 +2425,7 @@
 		<!-- Decreases skill cooldown by 4%. -->
 		<icon>icon.skill11226</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="Reuse">
 				<amount>-4</amount>

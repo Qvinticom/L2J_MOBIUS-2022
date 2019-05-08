@@ -75,16 +75,15 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<excludedFromCheck>true</excludedFromCheck>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>POISON,9;ROOT_MAGICALLY,9;ROOT_PHYSICALLY,9;BLEEDING,9;STUN,9</dispel>
+			<effect name="CallSkill">
+				<skillId>7002</skillId> <!-- Dispel Debuff -->
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="DefenceTrait">
-				<POISON>100</POISON>
-				<BLEED>100</BLEED>
-				<SHOCK>100</SHOCK>
-				<HOLD>100</HOLD>
-			</effect>
+			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
 	<skill id="1905" toLevel="1" name="Swiftness">
@@ -1589,6 +1588,7 @@
 		<!-- Max HP + 6%. -->
 		<icon>icon.skill0211</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -2017,6 +2017,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2046,6 +2047,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2078,6 +2080,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND_PC</affectObject>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2106,6 +2109,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>100</amount>
@@ -2117,6 +2121,7 @@
 		<icon>icon.skill0917</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>

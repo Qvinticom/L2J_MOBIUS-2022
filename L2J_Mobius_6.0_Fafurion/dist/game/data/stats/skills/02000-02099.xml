@@ -4,6 +4,7 @@
 		<!-- Increases P. Critical Damage and P./ M. Skill Critical Damage by 5%. -->
 		<icon>icon.skill10655</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>5</amount>
