@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.Elementals;
@@ -112,7 +111,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!item.isElementable())
+		if (!Elementals.isElementableWithStone(item, stone.getItem().getId()))
 		{
 			client.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
 			player.removeRequest(request.getClass());
@@ -308,55 +307,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			player.removeRequest(EnchantItemAttributeRequest.class);
 			return -1;
 		}
-		
-		boolean success = false;
-		switch (stone.getItem().getCrystalType())
-		{
-			case R:
-			{
-				success = Rnd.get(100) < 80;
-				break;
-			}
-			case R95:
-			case R99:
-			case R110:
-			{
-				success = true;
-				break;
-			}
-			default:
-			{
-				switch (Elementals.getItemElemental(stone.getId())._type)
-				{
-					case Stone:
-					case Roughore:
-					{
-						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_STONE;
-						break;
-					}
-					case Crystal:
-					{
-						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL;
-						break;
-					}
-					case Jewel:
-					{
-						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_JEWEL;
-						break;
-					}
-					case Energy:
-					{
-						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_ENERGY;
-						break;
-					}
-					case GoD_Event:
-					{
-						success = true;
-						break;
-					}
-				}
-			}
-		}
+		boolean success = Elementals.isSuccess(item, stone.getId());
 		
 		if (success)
 		{
