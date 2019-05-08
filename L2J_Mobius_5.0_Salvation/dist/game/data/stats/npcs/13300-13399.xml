@@ -227,7 +227,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="13307" level="85" type="Npc" name="Ant Hell">
+	<npc id="13307" level="85" type="EffectPoint" name="Ant Hell">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
@@ -249,7 +249,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -760,7 +760,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
+		<status attackable="false" hasSummoner="true" targetable="false" showName="false" canMove="false" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
