@@ -242,11 +242,11 @@
 	</skill>
 	<skill id="39247" toLevel="1" name="Scroll: Enchant Angel Accessory">
 		<icon>icon.scrl_of_ench_acc</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
-		<isMagic>2</isMagic>
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>

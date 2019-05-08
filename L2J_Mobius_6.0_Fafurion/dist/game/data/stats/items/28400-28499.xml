@@ -106,6 +106,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="22091" level="1" /> <!-- Eva's Rune -->
+		</skills>
 	</item>
 	<item id="28408" name="Eva's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
@@ -116,6 +119,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="22091" level="1" /> <!-- Eva's Rune -->
+		</skills>
 	</item>
 	<item id="28409" name="Eva's Rune Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Rune (7-day). -->

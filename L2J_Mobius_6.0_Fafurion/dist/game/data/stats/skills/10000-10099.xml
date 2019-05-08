@@ -521,7 +521,6 @@
 			<value level="12">107</value>
 			<value level="13">109</value>
 		</magicLvl>
-		<reuseDelay>10000</reuseDelay>
 		<isDebuff>true</isDebuff>
 		<basicProperty>PHYSICAL</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
@@ -590,6 +589,7 @@
 			<value fromLevel="1" toLevel="13">100</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
+		<trait>SHOCK</trait>
 		<effectRange>400</effectRange>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -645,7 +645,6 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -690,9 +689,6 @@
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
@@ -715,6 +711,7 @@
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
+		<nextAction>ATTACK</nextAction>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -806,11 +803,11 @@
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
+			<effect name="PAtk">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttackSpeed">
+			<effect name="MAtk">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
@@ -911,6 +908,9 @@
 				<speed>700</speed>
 				<distance>50</distance>
 				<knockDown>false</knockDown>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -2362,8 +2362,9 @@
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>AU</operateType>
+		<toggleGroupId>5</toggleGroupId>
+		<isMagic>3</isMagic>
 		<reuseDelay>1000</reuseDelay>
-		<toggleGroupId>4</toggleGroupId>
 		<effects>
 			<effect name="HateAttack">
 				<amount>500</amount>
@@ -2374,7 +2375,6 @@
 				</weaponType>
 			</effect>
 			<effect name="CallSkillOnActionTime">
-				<!-- Rage Aura -->
 				<skillId>10029</skillId> <!-- Provoke Aura -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
@@ -2393,7 +2393,7 @@
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
 		<activateRate>100</activateRate>
-		<operateType>A5</operateType>
+		<operateType>A6</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<hitTime>500</hitTime>
@@ -3992,17 +3992,19 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<affectRange>1000</affectRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<affectRange>1000</affectRange> <!-- TODO : check it out -->
+		<canBeDispelled>false</canBeDispelled>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<operateType>A2</operateType>
+		<operateType>A6</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<castRange>400</castRange>
@@ -4199,6 +4201,9 @@
 					<value level="4">6</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>25</amount>
 			</effect>
 		</effects>
 	</skill>

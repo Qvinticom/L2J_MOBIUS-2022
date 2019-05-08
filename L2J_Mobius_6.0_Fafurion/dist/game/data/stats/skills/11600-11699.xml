@@ -1190,17 +1190,23 @@
 	<skill id="11621" toLevel="1" name="Blessing Barrier">
 		<!-- Creates a defense barrier that absorbs damage as much as 200% of your P. Def. for 10 sec.. -->
 		<icon>icon.skill11621</icon>
-		<operateType>P</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>BARRIER</abnormalType>
+		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
+		<operateType>A2</operateType>
 		<magicLvl>99</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>30000</reuseDelay>
+		<isMagic>4</isMagic>
 		<effects>
-			<effect name="TriggerSkillByDamage">
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>80</chance> <!-- Chance appears almost 100% -->
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
-				<skillId>11622</skillId> <!-- Blessing Barrier -->
-				<skillLevel>1</skillLevel>
+			<effect name="AbsorbDamage">
+				<damage>20000</damage>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

@@ -795,7 +795,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
+		<status attackable="false" hasSummoner="true" targetable="false" showName="false" canMove="false" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->

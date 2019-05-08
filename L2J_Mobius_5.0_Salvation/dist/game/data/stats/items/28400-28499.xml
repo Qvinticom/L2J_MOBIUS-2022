@@ -106,6 +106,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="22091" level="1" /> <!-- Eva's Rune -->
+		</skills>
 	</item>
 	<item id="28408" name="Eva's Rune" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, bestows Eva's power upon your character: Max HP +10%, Skill Cooldown -20%, Reflect Damage +5%. The remaining time decreases even when not playing. -->
@@ -116,6 +119,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="22091" level="1" /> <!-- Eva's Rune -->
+		</skills>
 	</item>
 	<item id="28409" name="Eva's Rune Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Rune (7-day). -->
@@ -296,6 +302,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Shiny Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="28413" name="+10 Physical Reflect Shirt Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a +10 Physical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->

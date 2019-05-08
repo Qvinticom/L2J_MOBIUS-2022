@@ -4700,12 +4700,12 @@
 	<skill id="11059" toLevel="4" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 4 -->
 		<!-- Pulls the enemies near you to the center. -->
 		<icon>icon.skill1469</icon>
-		<abnormalTime>7</abnormalTime>
-		<abnormalLvl>5</abnormalLvl>
-		<abnormalType>STUN</abnormalType>
-		<activateRate>100</activateRate>
+		<abnormalTime>1</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>DERANGEMENT</abnormalType>
+		<activateRate>50</activateRate>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>300</affectRange>
+		<affectRange>200</affectRange>
 		<operateType>A2</operateType>
 		<trait>PULL</trait>
 		<effectPoint>
@@ -4726,9 +4726,15 @@
 		<effects>
 			<effect name="PullBack">
 				<speed>600</speed>
+				<delay>650</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			 <effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">693700</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>

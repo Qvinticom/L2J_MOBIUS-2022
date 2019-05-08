@@ -1826,26 +1826,28 @@
 	<skill id="8564" toLevel="1" name="Rush Impact">
 		<!-- Charges forward to attack the enemies in front with 4040 power added to P. Atk. and inflicts Stun for 9 sec. The power of the ring made it easier to use. -->
 		<icon>icon.skill0793</icon>
-		<operateType>DA2</operateType>
-		<mpConsume>83</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>800</hitTime>
-		<coolTime>200</coolTime>
-		<effectPoint>-679</effectPoint>
-		<abnormalType>STUN</abnormalType>
-		<basicProperty>PHYSICAL</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>800</effectRange>
-		<lvlBonusRate>1</lvlBonusRate>
-		<activateRate>60</activateRate>
-		<magicLvl>78</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
-		<trait>SHOCK</trait>
-		<affectLimit>5-12</affectLimit>
+		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<fanRange>0;0;600;60</fanRange>
+		<activateRate>60</activateRate>
+		<affectLimit>5-12-1</affectLimit>
+		<affectRange>600</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-681</effectPoint>
+		<effectRange>800</effectRange>
+		<hitTime>800</hitTime>
 		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<mpConsume>82</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>DA2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<fanRange>0;0;600;60</fanRange>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1856,7 +1858,7 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>4312</power>
+				<power>4040</power>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>

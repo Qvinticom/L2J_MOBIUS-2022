@@ -2329,7 +2329,7 @@
 			<value level="3">15</value>
 		</abnormalTime>
 		<abnormalType>WEAPON_MASTER_SPECIAL</abnormalType>
-		<isMagic>4</isMagic> <!-- Item Skill -->
+		<isMagic>2</isMagic> <!-- Item Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
@@ -2337,8 +2337,13 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<castRange>400</castRange>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>
+			<value level="1">30000</value>
+			<value level="2">10000</value>
+			<value level="3">5000</value>
+		</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2360,8 +2365,8 @@
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">30</value>
-					<value level="2">20</value>
-					<value level="3">0</value>
+					<value level="2">10</value>
+					<value level="3">5</value>
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>

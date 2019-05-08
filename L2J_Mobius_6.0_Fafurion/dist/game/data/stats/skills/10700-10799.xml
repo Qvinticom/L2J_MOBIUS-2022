@@ -325,7 +325,7 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>50000</reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<reuseDelayGroup>10705</reuseDelayGroup>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1184,7 +1184,6 @@
 		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2669,7 +2668,6 @@
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

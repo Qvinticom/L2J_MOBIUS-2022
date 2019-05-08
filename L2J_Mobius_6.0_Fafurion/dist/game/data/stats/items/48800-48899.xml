@@ -397,10 +397,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="8" />
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -672,9 +671,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<skills>
-			<skill id="35217" level="1" /> <!-- Fallen Angel's Ring -->
-		</skills>
+		<set name="enchant_enabled" val="8" />
 		<stats>
 			<stat type="mDef">101</stat>
 		</stats>

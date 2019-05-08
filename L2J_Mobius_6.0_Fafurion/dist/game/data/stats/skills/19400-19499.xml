@@ -436,8 +436,9 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="KnockBack">
+				<distance>250</distance>
 				<speed>600</speed>
-				<distance>100</distance>
+				<knockDown>false</knockDown>
 			</effect>
 		</effects>
 	</skill>
