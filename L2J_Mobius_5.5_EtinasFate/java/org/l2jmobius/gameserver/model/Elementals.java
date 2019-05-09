@@ -19,6 +19,9 @@ package org.l2jmobius.gameserver.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+
 public final class Elementals
 {
 	private static final Map<Integer, ElementalItems> TABLE = new HashMap<>();
@@ -84,11 +87,11 @@ public final class Elementals
 	public enum ElementalItemType
 	{
 		Stone(3),
-		Roughore(3),
+		StoneSuper(3),
 		Crystal(6),
+		CrystalSuper(6),
 		Jewel(9),
-		Energy(12),
-		GoD_Event(9);
+		Energy(12);
 		
 		public int _maxLevel;
 		
@@ -109,12 +112,12 @@ public final class Elementals
 		divineStone(HOLY, 9551, ElementalItemType.Stone, 0),
 		darkStone(DARK, 9550, ElementalItemType.Stone, 0),
 		
-		fireRoughtore(FIRE, 10521, ElementalItemType.Roughore, 0),
-		waterRoughtore(WATER, 10522, ElementalItemType.Roughore, 0),
-		windRoughtore(WIND, 10524, ElementalItemType.Roughore, 0),
-		earthRoughtore(EARTH, 10523, ElementalItemType.Roughore, 0),
-		divineRoughtore(HOLY, 10526, ElementalItemType.Roughore, 0),
-		darkRoughtore(DARK, 10525, ElementalItemType.Roughore, 0),
+		fireRoughtore(FIRE, 10521, ElementalItemType.Stone, 0),
+		waterRoughtore(WATER, 10522, ElementalItemType.Stone, 0),
+		windRoughtore(WIND, 10524, ElementalItemType.Stone, 0),
+		earthRoughtore(EARTH, 10523, ElementalItemType.Stone, 0),
+		divineRoughtore(HOLY, 10526, ElementalItemType.Stone, 0),
+		darkRoughtore(DARK, 10525, ElementalItemType.Stone, 0),
 		
 		fireCrystal(FIRE, 9552, ElementalItemType.Crystal, 0),
 		waterCrystal(WATER, 9553, ElementalItemType.Crystal, 0),
@@ -130,7 +133,6 @@ public final class Elementals
 		divineJewel(HOLY, 9563, ElementalItemType.Jewel, 0),
 		darkJewel(DARK, 9562, ElementalItemType.Jewel, 0),
 		
-		// not yet supported by client (Freya pts)
 		fireEnergy(FIRE, 9564, ElementalItemType.Energy, 0),
 		waterEnergy(WATER, 9565, ElementalItemType.Energy, 0),
 		windEnergy(WIND, 9567, ElementalItemType.Energy, 0),
@@ -139,121 +141,121 @@ public final class Elementals
 		darkEnergy(DARK, 9568, ElementalItemType.Energy, 0),
 		
 		// GoD+ Stones
-		GoD_22635(FIRE, 22635, ElementalItemType.GoD_Event, 0),
-		GoD_22636(WATER, 22636, ElementalItemType.GoD_Event, 0),
-		GoD_22637(EARTH, 22637, ElementalItemType.GoD_Event, 0),
-		GoD_22638(WIND, 22638, ElementalItemType.GoD_Event, 0),
-		GoD_22639(DARK, 22639, ElementalItemType.GoD_Event, 0),
-		GoD_22640(HOLY, 22640, ElementalItemType.GoD_Event, 0),
-		GoD_22919(FIRE, 22919, ElementalItemType.GoD_Event, 0),
-		GoD_22920(WATER, 22920, ElementalItemType.GoD_Event, 0),
-		GoD_22921(EARTH, 22921, ElementalItemType.GoD_Event, 0),
-		GoD_22922(WIND, 22922, ElementalItemType.GoD_Event, 0),
-		GoD_22923(DARK, 22923, ElementalItemType.GoD_Event, 0),
-		GoD_22924(HOLY, 22924, ElementalItemType.GoD_Event, 0),
-		GoD_33481(FIRE, 33481, ElementalItemType.GoD_Event, 0),
-		GoD_33482(WATER, 33482, ElementalItemType.GoD_Event, 0),
-		GoD_33483(EARTH, 33483, ElementalItemType.GoD_Event, 0),
-		GoD_33484(WIND, 33484, ElementalItemType.GoD_Event, 0),
-		GoD_33485(DARK, 33485, ElementalItemType.GoD_Event, 0),
-		GoD_33486(HOLY, 33486, ElementalItemType.GoD_Event, 0),
-		GoD_33863(FIRE, 33863, ElementalItemType.GoD_Event, 60),
-		GoD_33864(WATER, 33864, ElementalItemType.GoD_Event, 60),
-		GoD_33865(EARTH, 33865, ElementalItemType.GoD_Event, 60),
-		GoD_33866(WIND, 33866, ElementalItemType.GoD_Event, 60),
-		GoD_33867(DARK, 33867, ElementalItemType.GoD_Event, 60),
-		GoD_33868(HOLY, 33868, ElementalItemType.GoD_Event, 60),
-		GoD_33869(FIRE, 33869, ElementalItemType.GoD_Event, 150),
-		GoD_33870(WATER, 33870, ElementalItemType.GoD_Event, 150),
-		GoD_33871(EARTH, 33871, ElementalItemType.GoD_Event, 150),
-		GoD_33872(WIND, 33872, ElementalItemType.GoD_Event, 150),
-		GoD_33873(DARK, 33873, ElementalItemType.GoD_Event, 150),
-		GoD_33874(HOLY, 33874, ElementalItemType.GoD_Event, 150),
-		GoD_34661(FIRE, 34661, ElementalItemType.GoD_Event, 60),
-		GoD_34662(WATER, 34662, ElementalItemType.GoD_Event, 60),
-		GoD_34663(EARTH, 34663, ElementalItemType.GoD_Event, 60),
-		GoD_34664(WIND, 34664, ElementalItemType.GoD_Event, 60),
-		GoD_34665(DARK, 34665, ElementalItemType.GoD_Event, 60),
-		GoD_34666(HOLY, 34666, ElementalItemType.GoD_Event, 60),
-		GoD_34667(FIRE, 34667, ElementalItemType.GoD_Event, 150),
-		GoD_34668(WATER, 34668, ElementalItemType.GoD_Event, 150),
-		GoD_34669(EARTH, 34669, ElementalItemType.GoD_Event, 150),
-		GoD_34670(WIND, 34670, ElementalItemType.GoD_Event, 150),
-		GoD_34671(DARK, 34671, ElementalItemType.GoD_Event, 150),
-		GoD_34672(HOLY, 34672, ElementalItemType.GoD_Event, 150),
-		GoD_34790(FIRE, 34790, ElementalItemType.GoD_Event, 0),
-		GoD_34791(WATER, 34791, ElementalItemType.GoD_Event, 0),
-		GoD_34792(EARTH, 34792, ElementalItemType.GoD_Event, 0),
-		GoD_34793(WIND, 34793, ElementalItemType.GoD_Event, 0),
-		GoD_34794(DARK, 34794, ElementalItemType.GoD_Event, 0),
-		GoD_34795(HOLY, 34795, ElementalItemType.GoD_Event, 0),
-		GoD_35729(FIRE, 35729, ElementalItemType.GoD_Event, 60),
-		GoD_35730(WATER, 35730, ElementalItemType.GoD_Event, 60),
-		GoD_35731(EARTH, 35731, ElementalItemType.GoD_Event, 60),
-		GoD_35732(WIND, 35732, ElementalItemType.GoD_Event, 60),
-		GoD_35733(DARK, 35733, ElementalItemType.GoD_Event, 60),
-		GoD_35734(HOLY, 35734, ElementalItemType.GoD_Event, 60),
-		GoD_35735(FIRE, 35735, ElementalItemType.GoD_Event, 150),
-		GoD_35736(WATER, 35736, ElementalItemType.GoD_Event, 150),
-		GoD_35737(EARTH, 35737, ElementalItemType.GoD_Event, 150),
-		GoD_35738(WIND, 35738, ElementalItemType.GoD_Event, 150),
-		GoD_35739(DARK, 35739, ElementalItemType.GoD_Event, 150),
-		GoD_35740(HOLY, 35740, ElementalItemType.GoD_Event, 150),
-		GoD_36960(FIRE, 36960, ElementalItemType.GoD_Event, 60),
-		GoD_36961(WATER, 36961, ElementalItemType.GoD_Event, 60),
-		GoD_36962(EARTH, 36962, ElementalItemType.GoD_Event, 60),
-		GoD_36963(WIND, 36963, ElementalItemType.GoD_Event, 60),
-		GoD_36964(DARK, 36964, ElementalItemType.GoD_Event, 60),
-		GoD_36965(HOLY, 36965, ElementalItemType.GoD_Event, 60),
-		GoD_36966(FIRE, 36966, ElementalItemType.GoD_Event, 150),
-		GoD_36967(WATER, 36967, ElementalItemType.GoD_Event, 150),
-		GoD_36968(EARTH, 36968, ElementalItemType.GoD_Event, 150),
-		GoD_36969(WIND, 36969, ElementalItemType.GoD_Event, 150),
-		GoD_36970(DARK, 36970, ElementalItemType.GoD_Event, 150),
-		GoD_36971(HOLY, 36971, ElementalItemType.GoD_Event, 150),
-		GoD_37499(FIRE, 37499, ElementalItemType.GoD_Event, 0),
-		GoD_37500(WATER, 37500, ElementalItemType.GoD_Event, 0),
-		GoD_37501(EARTH, 37501, ElementalItemType.GoD_Event, 0),
-		GoD_37502(WIND, 37502, ElementalItemType.GoD_Event, 0),
-		GoD_37503(DARK, 37503, ElementalItemType.GoD_Event, 0),
-		GoD_37504(HOLY, 37504, ElementalItemType.GoD_Event, 0),
+		GoD_22635(FIRE, 22635, ElementalItemType.Stone, 0),
+		GoD_22636(WATER, 22636, ElementalItemType.Stone, 0),
+		GoD_22637(EARTH, 22637, ElementalItemType.Stone, 0),
+		GoD_22638(WIND, 22638, ElementalItemType.Stone, 0),
+		GoD_22639(DARK, 22639, ElementalItemType.Stone, 0),
+		GoD_22640(HOLY, 22640, ElementalItemType.Stone, 0),
+		GoD_22919(FIRE, 22919, ElementalItemType.Stone, 0),
+		GoD_22920(WATER, 22920, ElementalItemType.Stone, 0),
+		GoD_22921(EARTH, 22921, ElementalItemType.Stone, 0),
+		GoD_22922(WIND, 22922, ElementalItemType.Stone, 0),
+		GoD_22923(DARK, 22923, ElementalItemType.Stone, 0),
+		GoD_22924(HOLY, 22924, ElementalItemType.Stone, 0),
+		GoD_33481(FIRE, 33481, ElementalItemType.StoneSuper, 0),
+		GoD_33482(WATER, 33482, ElementalItemType.StoneSuper, 0),
+		GoD_33483(EARTH, 33483, ElementalItemType.StoneSuper, 0),
+		GoD_33484(WIND, 33484, ElementalItemType.StoneSuper, 0),
+		GoD_33485(DARK, 33485, ElementalItemType.StoneSuper, 0),
+		GoD_33486(HOLY, 33486, ElementalItemType.StoneSuper, 0),
+		GoD_33863(FIRE, 33863, ElementalItemType.StoneSuper, 60),
+		GoD_33864(WATER, 33864, ElementalItemType.StoneSuper, 60),
+		GoD_33865(EARTH, 33865, ElementalItemType.StoneSuper, 60),
+		GoD_33866(WIND, 33866, ElementalItemType.StoneSuper, 60),
+		GoD_33867(DARK, 33867, ElementalItemType.StoneSuper, 60),
+		GoD_33868(HOLY, 33868, ElementalItemType.StoneSuper, 60),
+		GoD_33869(FIRE, 33869, ElementalItemType.StoneSuper, 150),
+		GoD_33870(WATER, 33870, ElementalItemType.StoneSuper, 150),
+		GoD_33871(EARTH, 33871, ElementalItemType.StoneSuper, 150),
+		GoD_33872(WIND, 33872, ElementalItemType.StoneSuper, 150),
+		GoD_33873(DARK, 33873, ElementalItemType.StoneSuper, 150),
+		GoD_33874(HOLY, 33874, ElementalItemType.StoneSuper, 150),
+		GoD_34661(FIRE, 34661, ElementalItemType.StoneSuper, 60),
+		GoD_34662(WATER, 34662, ElementalItemType.StoneSuper, 60),
+		GoD_34663(EARTH, 34663, ElementalItemType.StoneSuper, 60),
+		GoD_34664(WIND, 34664, ElementalItemType.StoneSuper, 60),
+		GoD_34665(DARK, 34665, ElementalItemType.StoneSuper, 60),
+		GoD_34666(HOLY, 34666, ElementalItemType.StoneSuper, 60),
+		GoD_34667(FIRE, 34667, ElementalItemType.StoneSuper, 150),
+		GoD_34668(WATER, 34668, ElementalItemType.StoneSuper, 150),
+		GoD_34669(EARTH, 34669, ElementalItemType.StoneSuper, 150),
+		GoD_34670(WIND, 34670, ElementalItemType.StoneSuper, 150),
+		GoD_34671(DARK, 34671, ElementalItemType.StoneSuper, 150),
+		GoD_34672(HOLY, 34672, ElementalItemType.StoneSuper, 150),
+		GoD_34790(FIRE, 34790, ElementalItemType.Stone, 0),
+		GoD_34791(WATER, 34791, ElementalItemType.Stone, 0),
+		GoD_34792(EARTH, 34792, ElementalItemType.Stone, 0),
+		GoD_34793(WIND, 34793, ElementalItemType.Stone, 0),
+		GoD_34794(DARK, 34794, ElementalItemType.Stone, 0),
+		GoD_34795(HOLY, 34795, ElementalItemType.Stone, 0),
+		GoD_35729(FIRE, 35729, ElementalItemType.StoneSuper, 60),
+		GoD_35730(WATER, 35730, ElementalItemType.StoneSuper, 60),
+		GoD_35731(EARTH, 35731, ElementalItemType.StoneSuper, 60),
+		GoD_35732(WIND, 35732, ElementalItemType.StoneSuper, 60),
+		GoD_35733(DARK, 35733, ElementalItemType.StoneSuper, 60),
+		GoD_35734(HOLY, 35734, ElementalItemType.StoneSuper, 60),
+		GoD_35735(FIRE, 35735, ElementalItemType.StoneSuper, 150),
+		GoD_35736(WATER, 35736, ElementalItemType.StoneSuper, 150),
+		GoD_35737(EARTH, 35737, ElementalItemType.StoneSuper, 150),
+		GoD_35738(WIND, 35738, ElementalItemType.StoneSuper, 150),
+		GoD_35739(DARK, 35739, ElementalItemType.StoneSuper, 150),
+		GoD_35740(HOLY, 35740, ElementalItemType.StoneSuper, 150),
+		GoD_36960(FIRE, 36960, ElementalItemType.StoneSuper, 60),
+		GoD_36961(WATER, 36961, ElementalItemType.StoneSuper, 60),
+		GoD_36962(EARTH, 36962, ElementalItemType.StoneSuper, 60),
+		GoD_36963(WIND, 36963, ElementalItemType.StoneSuper, 60),
+		GoD_36964(DARK, 36964, ElementalItemType.StoneSuper, 60),
+		GoD_36965(HOLY, 36965, ElementalItemType.StoneSuper, 60),
+		GoD_36966(FIRE, 36966, ElementalItemType.StoneSuper, 150),
+		GoD_36967(WATER, 36967, ElementalItemType.StoneSuper, 150),
+		GoD_36968(EARTH, 36968, ElementalItemType.StoneSuper, 150),
+		GoD_36969(WIND, 36969, ElementalItemType.StoneSuper, 150),
+		GoD_36970(DARK, 36970, ElementalItemType.StoneSuper, 150),
+		GoD_36971(HOLY, 36971, ElementalItemType.StoneSuper, 150),
+		GoD_37499(FIRE, 37499, ElementalItemType.Stone, 0),
+		GoD_37500(WATER, 37500, ElementalItemType.Stone, 0),
+		GoD_37501(EARTH, 37501, ElementalItemType.Stone, 0),
+		GoD_37502(WIND, 37502, ElementalItemType.Stone, 0),
+		GoD_37503(DARK, 37503, ElementalItemType.Stone, 0),
+		GoD_37504(HOLY, 37504, ElementalItemType.Stone, 0),
 		
 		// GoD+ Crystals
-		GoD_22641(FIRE, 22641, ElementalItemType.GoD_Event, 0),
-		GoD_22642(WATER, 22642, ElementalItemType.GoD_Event, 0),
-		GoD_22643(EARTH, 22643, ElementalItemType.GoD_Event, 0),
-		GoD_22644(WIND, 22644, ElementalItemType.GoD_Event, 0),
-		GoD_22645(DARK, 22645, ElementalItemType.GoD_Event, 0),
-		GoD_22646(HOLY, 22646, ElementalItemType.GoD_Event, 0),
-		GoD_22925(FIRE, 22925, ElementalItemType.GoD_Event, 0),
-		GoD_22926(WATER, 22926, ElementalItemType.GoD_Event, 0),
-		GoD_22927(EARTH, 22927, ElementalItemType.GoD_Event, 0),
-		GoD_22928(WIND, 22928, ElementalItemType.GoD_Event, 0),
-		GoD_22929(DARK, 22929, ElementalItemType.GoD_Event, 0),
-		GoD_22930(HOLY, 22930, ElementalItemType.GoD_Event, 0),
-		GoD_33487(FIRE, 33487, ElementalItemType.GoD_Event, 0),
-		GoD_33488(WATER, 33488, ElementalItemType.GoD_Event, 0),
-		GoD_33489(EARTH, 33489, ElementalItemType.GoD_Event, 0),
-		GoD_33490(WIND, 33490, ElementalItemType.GoD_Event, 0),
-		GoD_33491(DARK, 33491, ElementalItemType.GoD_Event, 0),
-		GoD_33492(HOLY, 33492, ElementalItemType.GoD_Event, 0),
-		GoD_34796(FIRE, 34796, ElementalItemType.GoD_Event, 0),
-		GoD_34797(WATER, 34797, ElementalItemType.GoD_Event, 0),
-		GoD_34798(EARTH, 34798, ElementalItemType.GoD_Event, 0),
-		GoD_34799(WIND, 34799, ElementalItemType.GoD_Event, 0),
-		GoD_34800(DARK, 34800, ElementalItemType.GoD_Event, 0),
-		GoD_34801(HOLY, 34801, ElementalItemType.GoD_Event, 0),
-		GoD_36972(FIRE, 36972, ElementalItemType.GoD_Event, 0),
-		GoD_36973(WATER, 36973, ElementalItemType.GoD_Event, 0),
-		GoD_36974(EARTH, 36974, ElementalItemType.GoD_Event, 0),
-		GoD_36975(WIND, 36975, ElementalItemType.GoD_Event, 0),
-		GoD_36976(DARK, 36976, ElementalItemType.GoD_Event, 0),
-		GoD_36977(HOLY, 36977, ElementalItemType.GoD_Event, 0);
+		GoD_22641(FIRE, 22641, ElementalItemType.Crystal, 0),
+		GoD_22642(WATER, 22642, ElementalItemType.Crystal, 0),
+		GoD_22643(EARTH, 22643, ElementalItemType.Crystal, 0),
+		GoD_22644(WIND, 22644, ElementalItemType.Crystal, 0),
+		GoD_22645(DARK, 22645, ElementalItemType.Crystal, 0),
+		GoD_22646(HOLY, 22646, ElementalItemType.Crystal, 0),
+		GoD_22925(FIRE, 22925, ElementalItemType.Crystal, 0),
+		GoD_22926(WATER, 22926, ElementalItemType.Crystal, 0),
+		GoD_22927(EARTH, 22927, ElementalItemType.Crystal, 0),
+		GoD_22928(WIND, 22928, ElementalItemType.Crystal, 0),
+		GoD_22929(DARK, 22929, ElementalItemType.Crystal, 0),
+		GoD_22930(HOLY, 22930, ElementalItemType.Crystal, 0),
+		GoD_33487(FIRE, 33487, ElementalItemType.CrystalSuper, 0),
+		GoD_33488(WATER, 33488, ElementalItemType.CrystalSuper, 0),
+		GoD_33489(EARTH, 33489, ElementalItemType.CrystalSuper, 0),
+		GoD_33490(WIND, 33490, ElementalItemType.CrystalSuper, 0),
+		GoD_33491(DARK, 33491, ElementalItemType.CrystalSuper, 0),
+		GoD_33492(HOLY, 33492, ElementalItemType.CrystalSuper, 0),
+		GoD_34796(FIRE, 34796, ElementalItemType.Crystal, 0),
+		GoD_34797(WATER, 34797, ElementalItemType.Crystal, 0),
+		GoD_34798(EARTH, 34798, ElementalItemType.Crystal, 0),
+		GoD_34799(WIND, 34799, ElementalItemType.Crystal, 0),
+		GoD_34800(DARK, 34800, ElementalItemType.Crystal, 0),
+		GoD_34801(HOLY, 34801, ElementalItemType.Crystal, 0),
+		GoD_36972(FIRE, 36972, ElementalItemType.CrystalSuper, 0),
+		GoD_36973(WATER, 36973, ElementalItemType.CrystalSuper, 0),
+		GoD_36974(EARTH, 36974, ElementalItemType.CrystalSuper, 0),
+		GoD_36975(WIND, 36975, ElementalItemType.CrystalSuper, 0),
+		GoD_36976(DARK, 36976, ElementalItemType.CrystalSuper, 0),
+		GoD_36977(HOLY, 36977, ElementalItemType.CrystalSuper, 0);
 		
-		public byte _element;
-		public int _itemId;
-		public ElementalItemType _type;
-		public int _fixedPower;
+		public final byte _element;
+		public final int _itemId;
+		public final ElementalItemType _type;
+		public final int _fixedPower;
 		
 		ElementalItems(byte element, int itemId, ElementalItemType type, int fixedPower)
 		{
@@ -287,5 +289,130 @@ public final class Elementals
 			return item._type._maxLevel;
 		}
 		return -1;
+	}
+	
+	public static boolean isElementableWithStone(ItemInstance targetItem, int stoneId)
+	{
+		return targetItem.isElementable();
+	}
+	
+	/* @formatter:off */
+	//	+-------+----------------+----------------+----------------+----------------+
+	//	| Grade |      Stone     |     Crystal    |   Stone-Super  |  Crystal-Super |
+	//	+-------+----------------+----------------+----------------+----------------+
+	//	|       | Weapon | Armor | Weapon | Armor | Weapon | Armor | Weapon | Armor |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|   S   |   50%  |  60%  |   30%  |  50%  |  100%  |  100% |   80%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  S80  |   50%  |  80%  |   40%  |  70%  |  100%  |  100% |   90%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  S84  |   50%  |  80%  |   50%  |  80%  |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|   R   |   50%  |  100% |   60%  |  80%  |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  R95  |   50%  |  100% |   60%  |  100% |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  R99  |   50%  |  100% |   60%  |  100% |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	/* @formatter:on */
+	
+	public static boolean isSuccess(ItemInstance item, int stoneId)
+	{
+		switch (Elementals.getItemElemental(stoneId)._type)
+		{
+			case Stone:
+			{
+				if (item.isWeapon())
+				{
+					return Rnd.get(100) < 50;
+				}
+				switch (item.getItem().getCrystalType())
+				{
+					case S:
+					{
+						return Rnd.get(100) < 60;
+					}
+					case S80:
+					case S84:
+					{
+						return Rnd.get(100) < 80;
+					}
+					default:
+					{
+						return true;
+					}
+				}
+			}
+			case Crystal:
+			{
+				if (item.isWeapon())
+				{
+					switch (item.getItem().getCrystalType())
+					{
+						case S:
+						{
+							return Rnd.get(100) < 30;
+						}
+						case S80:
+						{
+							return Rnd.get(100) < 40;
+						}
+						case S84:
+						{
+							return Rnd.get(100) < 50;
+						}
+						default:
+						{
+							return Rnd.get(100) < 60;
+						}
+					}
+				}
+				switch (item.getItem().getCrystalType())
+				{
+					case S:
+					{
+						return Rnd.get(100) < 50;
+					}
+					case S80:
+					{
+						return Rnd.get(100) < 70;
+					}
+					case S84:
+					case R:
+					{
+						return Rnd.get(100) < 80;
+					}
+					default:
+					{
+						return true;
+					}
+				}
+			}
+			case CrystalSuper:
+			{
+				if (item.isWeapon())
+				{
+					switch (item.getItem().getCrystalType())
+					{
+						case S:
+						{
+							return Rnd.get(100) < 80;
+						}
+						case S80:
+						{
+							return Rnd.get(100) < 90;
+						}
+						default:
+						{
+							return true;
+						}
+					}
+				}
+				return true;
+			}
+		}
+		// Super stones have 100% so will end here.
+		// Patch notes do not have info about jewels chance so 100% for now, till l2wiki update, energy are not used.
+		return true;
 	}
 }

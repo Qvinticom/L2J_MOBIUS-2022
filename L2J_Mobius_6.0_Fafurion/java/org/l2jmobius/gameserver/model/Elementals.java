@@ -135,7 +135,6 @@ public final class Elementals
 		divineJewel(HOLY, 9563, ElementalItemType.Jewel, 0),
 		darkJewel(DARK, 9562, ElementalItemType.Jewel, 0),
 		
-		// not yet supported by client (Freya pts)
 		fireEnergy(FIRE, 9564, ElementalItemType.Energy, 0),
 		waterEnergy(WATER, 9565, ElementalItemType.Energy, 0),
 		windEnergy(WIND, 9567, ElementalItemType.Energy, 0),

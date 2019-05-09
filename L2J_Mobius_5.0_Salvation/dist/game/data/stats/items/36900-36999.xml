@@ -843,44 +843,110 @@
 	<item id="36972" name="Fire Crystal - Super" type="EtcItem">
 		<!-- Fire attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
-		<set name="weight" val="1" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="12875" level="2" /> <!-- Fire Crystal -->
+		</skills>
 	</item>
 	<item id="36973" name="Water Crystal - Super" type="EtcItem">
 		<!-- Water attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
-		<set name="weight" val="1" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="12876" level="2" /> <!-- Water Crystal -->
+		</skills>
 	</item>
 	<item id="36974" name="Earth Crystal - Super" type="EtcItem">
 		<!-- Earth attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
-		<set name="weight" val="1" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="12878" level="2" /> <!-- Earth Crystal -->
+		</skills>
 	</item>
 	<item id="36975" name="Wind Crystal - Super" type="EtcItem">
 		<!-- Wind attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
-		<set name="weight" val="1" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="12877" level="2" /> <!-- Wind Crystal -->
+		</skills>
 	</item>
 	<item id="36976" name="Dark Crystal - Super" type="EtcItem">
 		<!-- Dark attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
-		<set name="weight" val="1" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="12880" level="2" /> <!-- Dark Crystal -->
+		</skills>
 	</item>
 	<item id="36977" name="Holy Crystal - Super" type="EtcItem">
 		<!-- Holy attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
-		<set name="weight" val="1" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<skills>
+			<skill id="12879" level="2" /> <!-- Holy Crystal -->
+		</skills>
 	</item>
 	<item id="36978" name="Scroll: Enchant Hair Accessory" type="EtcItem">
 		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at +4. Can be safely enchanted to +3. -->

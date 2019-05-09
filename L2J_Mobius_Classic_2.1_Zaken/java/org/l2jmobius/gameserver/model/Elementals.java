@@ -19,6 +19,9 @@ package org.l2jmobius.gameserver.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+
 public final class Elementals
 {
 	private static final Map<Integer, ElementalItems> TABLE = new HashMap<>();
@@ -84,8 +87,9 @@ public final class Elementals
 	public enum ElementalItemType
 	{
 		Stone(3),
-		Roughore(3),
+		StoneSuper(3),
 		Crystal(6),
+		CrystalSuper(6),
 		Jewel(9),
 		Energy(12);
 		
@@ -99,51 +103,52 @@ public final class Elementals
 	
 	public enum ElementalItems
 	{
-		fireStone(FIRE, 9546, ElementalItemType.Stone),
-		waterStone(WATER, 9547, ElementalItemType.Stone),
-		windStone(WIND, 9549, ElementalItemType.Stone),
-		earthStone(EARTH, 9548, ElementalItemType.Stone),
-		divineStone(HOLY, 9551, ElementalItemType.Stone),
-		darkStone(DARK, 9550, ElementalItemType.Stone),
+		fireStone(FIRE, 9546, ElementalItemType.Stone, 0),
+		waterStone(WATER, 9547, ElementalItemType.Stone, 0),
+		windStone(WIND, 9549, ElementalItemType.Stone, 0),
+		earthStone(EARTH, 9548, ElementalItemType.Stone, 0),
+		divineStone(HOLY, 9551, ElementalItemType.Stone, 0),
+		darkStone(DARK, 9550, ElementalItemType.Stone, 0),
 		
-		fireRoughtore(FIRE, 10521, ElementalItemType.Roughore),
-		waterRoughtore(WATER, 10522, ElementalItemType.Roughore),
-		windRoughtore(WIND, 10524, ElementalItemType.Roughore),
-		earthRoughtore(EARTH, 10523, ElementalItemType.Roughore),
-		divineRoughtore(HOLY, 10526, ElementalItemType.Roughore),
-		darkRoughtore(DARK, 10525, ElementalItemType.Roughore),
+		fireRoughtore(FIRE, 10521, ElementalItemType.Stone, 0),
+		waterRoughtore(WATER, 10522, ElementalItemType.Stone, 0),
+		windRoughtore(WIND, 10524, ElementalItemType.Stone, 0),
+		earthRoughtore(EARTH, 10523, ElementalItemType.Stone, 0),
+		divineRoughtore(HOLY, 10526, ElementalItemType.Stone, 0),
+		darkRoughtore(DARK, 10525, ElementalItemType.Stone, 0),
 		
-		fireCrystal(FIRE, 9552, ElementalItemType.Crystal),
-		waterCrystal(WATER, 9553, ElementalItemType.Crystal),
-		windCrystal(WIND, 9555, ElementalItemType.Crystal),
-		earthCrystal(EARTH, 9554, ElementalItemType.Crystal),
-		divineCrystal(HOLY, 9557, ElementalItemType.Crystal),
-		darkCrystal(DARK, 9556, ElementalItemType.Crystal),
+		fireCrystal(FIRE, 9552, ElementalItemType.Crystal, 0),
+		waterCrystal(WATER, 9553, ElementalItemType.Crystal, 0),
+		windCrystal(WIND, 9555, ElementalItemType.Crystal, 0),
+		earthCrystal(EARTH, 9554, ElementalItemType.Crystal, 0),
+		divineCrystal(HOLY, 9557, ElementalItemType.Crystal, 0),
+		darkCrystal(DARK, 9556, ElementalItemType.Crystal, 0),
 		
-		fireJewel(FIRE, 9558, ElementalItemType.Jewel),
-		waterJewel(WATER, 9559, ElementalItemType.Jewel),
-		windJewel(WIND, 9561, ElementalItemType.Jewel),
-		earthJewel(EARTH, 9560, ElementalItemType.Jewel),
-		divineJewel(HOLY, 9563, ElementalItemType.Jewel),
-		darkJewel(DARK, 9562, ElementalItemType.Jewel),
+		fireJewel(FIRE, 9558, ElementalItemType.Jewel, 0),
+		waterJewel(WATER, 9559, ElementalItemType.Jewel, 0),
+		windJewel(WIND, 9561, ElementalItemType.Jewel, 0),
+		earthJewel(EARTH, 9560, ElementalItemType.Jewel, 0),
+		divineJewel(HOLY, 9563, ElementalItemType.Jewel, 0),
+		darkJewel(DARK, 9562, ElementalItemType.Jewel, 0),
 		
-		// not yet supported by client (Freya pts)
-		fireEnergy(FIRE, 9564, ElementalItemType.Energy),
-		waterEnergy(WATER, 9565, ElementalItemType.Energy),
-		windEnergy(WIND, 9567, ElementalItemType.Energy),
-		earthEnergy(EARTH, 9566, ElementalItemType.Energy),
-		divineEnergy(HOLY, 9569, ElementalItemType.Energy),
-		darkEnergy(DARK, 9568, ElementalItemType.Energy);
+		fireEnergy(FIRE, 9564, ElementalItemType.Energy, 0),
+		waterEnergy(WATER, 9565, ElementalItemType.Energy, 0),
+		windEnergy(WIND, 9567, ElementalItemType.Energy, 0),
+		earthEnergy(EARTH, 9566, ElementalItemType.Energy, 0),
+		divineEnergy(HOLY, 9569, ElementalItemType.Energy, 0),
+		darkEnergy(DARK, 9568, ElementalItemType.Energy, 0);
 		
-		public byte _element;
-		public int _itemId;
-		public ElementalItemType _type;
+		public final byte _element;
+		public final int _itemId;
+		public final ElementalItemType _type;
+		public final int _fixedPower;
 		
-		ElementalItems(byte element, int itemId, ElementalItemType type)
+		ElementalItems(byte element, int itemId, ElementalItemType type, int fixedPower)
 		{
 			_element = element;
 			_itemId = itemId;
 			_type = type;
+			_fixedPower = fixedPower;
 		}
 	}
 	
@@ -170,5 +175,130 @@ public final class Elementals
 			return item._type._maxLevel;
 		}
 		return -1;
+	}
+	
+	public static boolean isElementableWithStone(ItemInstance targetItem, int stoneId)
+	{
+		return targetItem.isElementable();
+	}
+	
+	/* @formatter:off */
+	//	+-------+----------------+----------------+----------------+----------------+
+	//	| Grade |      Stone     |     Crystal    |   Stone-Super  |  Crystal-Super |
+	//	+-------+----------------+----------------+----------------+----------------+
+	//	|       | Weapon | Armor | Weapon | Armor | Weapon | Armor | Weapon | Armor |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|   S   |   50%  |  60%  |   30%  |  50%  |  100%  |  100% |   80%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  S80  |   50%  |  80%  |   40%  |  70%  |  100%  |  100% |   90%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  S84  |   50%  |  80%  |   50%  |  80%  |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|   R   |   50%  |  100% |   60%  |  80%  |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  R95  |   50%  |  100% |   60%  |  100% |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	//	|  R99  |   50%  |  100% |   60%  |  100% |  100%  |  100% |  100%  |  100% |
+	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
+	/* @formatter:on */
+	
+	public static boolean isSuccess(ItemInstance item, int stoneId)
+	{
+		switch (Elementals.getItemElemental(stoneId)._type)
+		{
+			case Stone:
+			{
+				if (item.isWeapon())
+				{
+					return Rnd.get(100) < 50;
+				}
+				switch (item.getItem().getCrystalType())
+				{
+					case S:
+					{
+						return Rnd.get(100) < 60;
+					}
+					case S80:
+					case S84:
+					{
+						return Rnd.get(100) < 80;
+					}
+					default:
+					{
+						return true;
+					}
+				}
+			}
+			case Crystal:
+			{
+				if (item.isWeapon())
+				{
+					switch (item.getItem().getCrystalType())
+					{
+						case S:
+						{
+							return Rnd.get(100) < 30;
+						}
+						case S80:
+						{
+							return Rnd.get(100) < 40;
+						}
+						case S84:
+						{
+							return Rnd.get(100) < 50;
+						}
+						default:
+						{
+							return Rnd.get(100) < 60;
+						}
+					}
+				}
+				switch (item.getItem().getCrystalType())
+				{
+					case S:
+					{
+						return Rnd.get(100) < 50;
+					}
+					case S80:
+					{
+						return Rnd.get(100) < 70;
+					}
+					case S84:
+					case R:
+					{
+						return Rnd.get(100) < 80;
+					}
+					default:
+					{
+						return true;
+					}
+				}
+			}
+			case CrystalSuper:
+			{
+				if (item.isWeapon())
+				{
+					switch (item.getItem().getCrystalType())
+					{
+						case S:
+						{
+							return Rnd.get(100) < 80;
+						}
+						case S80:
+						{
+							return Rnd.get(100) < 90;
+						}
+						default:
+						{
+							return true;
+						}
+					}
+				}
+				return true;
+			}
+		}
+		// Super stones have 100% so will end here.
+		// Patch notes do not have info about jewels chance so 100% for now, till l2wiki update, energy are not used.
+		return true;
 	}
 }

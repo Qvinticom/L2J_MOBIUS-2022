@@ -51,7 +51,7 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 		// Register only items that can be put an attribute stone/crystal
 		for (ItemInstance item : player.getInventory().getItems())
 		{
-			if (item.isElementable())
+			if (Elementals.isElementableWithStone(item, stone.getId()))
 			{
 				_items.add(item.getObjectId());
 			}
