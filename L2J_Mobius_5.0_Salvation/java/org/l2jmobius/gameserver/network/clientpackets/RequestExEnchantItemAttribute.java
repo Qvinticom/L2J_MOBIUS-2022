@@ -111,7 +111,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!Elementals.isElementableWithStone(item, stone.getItem().getId()))
+		if (!item.isElementable())
 		{
 			client.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
 			player.removeRequest(request.getClass());

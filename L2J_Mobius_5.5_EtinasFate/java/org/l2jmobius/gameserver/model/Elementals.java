@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
@@ -83,6 +84,18 @@ public final class Elementals
 		Integer.MAX_VALUE
 		// TODO: Higher stones
 	};
+	
+	/* @formatter:off */
+	private static final int[][] CHANCE_TABLE =
+	{
+		{Config.S_WEAPON_STONE,		Config.S_ARMOR_STONE,		Config.S_WEAPON_CRYSTAL,	Config.S_ARMOR_CRYSTAL,		Config.S_WEAPON_STONE_SUPER,	Config.S_ARMOR_STONE_SUPER,		Config.S_WEAPON_JEWEL,		Config.S_ARMOR_JEWEL},
+		{Config.S80_WEAPON_STONE,	Config.S80_ARMOR_STONE,		Config.S80_WEAPON_CRYSTAL,	Config.S80_ARMOR_CRYSTAL,	Config.S80_WEAPON_STONE_SUPER,	Config.S80_ARMOR_STONE_SUPER,	Config.S80_WEAPON_JEWEL,	Config.S80_ARMOR_JEWEL},
+		{Config.S84_WEAPON_STONE,	Config.S84_ARMOR_STONE,		Config.S84_WEAPON_CRYSTAL,	Config.S84_ARMOR_CRYSTAL,	Config.S84_WEAPON_STONE_SUPER,	Config.S84_ARMOR_STONE_SUPER,	Config.S84_WEAPON_JEWEL,	Config.S84_ARMOR_JEWEL},
+		{Config.R_WEAPON_STONE,		Config.R_ARMOR_STONE,		Config.R_WEAPON_CRYSTAL,	Config.R_ARMOR_CRYSTAL,		Config.R_WEAPON_STONE_SUPER,	Config.R_ARMOR_STONE_SUPER,		Config.R_WEAPON_JEWEL,		Config.R_ARMOR_JEWEL},
+		{Config.R95_WEAPON_STONE,	Config.R95_ARMOR_STONE,		Config.R95_WEAPON_CRYSTAL,	Config.R95_ARMOR_CRYSTAL,	Config.R95_WEAPON_STONE_SUPER,	Config.R95_ARMOR_STONE_SUPER,	Config.R95_WEAPON_JEWEL,	Config.R95_ARMOR_JEWEL},
+		{Config.R99_WEAPON_STONE,	Config.R99_ARMOR_STONE,		Config.R99_WEAPON_CRYSTAL,	Config.R99_ARMOR_CRYSTAL,	Config.R99_WEAPON_STONE_SUPER,	Config.R99_ARMOR_STONE_SUPER,	Config.R99_WEAPON_JEWEL,	Config.R99_ARMOR_JEWEL},
+	};	
+	/* @formatter:on */
 	
 	public enum ElementalItemType
 	{
@@ -291,128 +304,111 @@ public final class Elementals
 		return -1;
 	}
 	
-	public static boolean isElementableWithStone(ItemInstance targetItem, int stoneId)
-	{
-		return targetItem.isElementable();
-	}
-	
-	/* @formatter:off */
-	//	+-------+----------------+----------------+----------------+----------------+
-	//	| Grade |      Stone     |     Crystal    |   Stone-Super  |  Crystal-Super |
-	//	+-------+----------------+----------------+----------------+----------------+
-	//	|       | Weapon | Armor | Weapon | Armor | Weapon | Armor | Weapon | Armor |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	//	|   S   |   50%  |  60%  |   30%  |  50%  |  100%  |  100% |   80%  |  100% |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	//	|  S80  |   50%  |  80%  |   40%  |  70%  |  100%  |  100% |   90%  |  100% |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	//	|  S84  |   50%  |  80%  |   50%  |  80%  |  100%  |  100% |  100%  |  100% |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	//	|   R   |   50%  |  100% |   60%  |  80%  |  100%  |  100% |  100%  |  100% |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	//	|  R95  |   50%  |  100% |   60%  |  100% |  100%  |  100% |  100%  |  100% |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	//	|  R99  |   50%  |  100% |   60%  |  100% |  100%  |  100% |  100%  |  100% |
-	//	+-------+--------+-------+--------+-------+--------+-------+--------+-------+
-	/* @formatter:on */
-	
 	public static boolean isSuccess(ItemInstance item, int stoneId)
 	{
-		switch (Elementals.getItemElemental(stoneId)._type)
+		int row = -1;
+		int column = -1;
+		switch (item.getItem().getCrystalType())
+		{
+			case S:
+			{
+				row = 0;
+				break;
+			}
+			case S80:
+			{
+				row = 1;
+				break;
+			}
+			case S84:
+			{
+				row = 2;
+				break;
+			}
+			case R:
+			{
+				row = 3;
+				break;
+			}
+			case R95:
+			{
+				row = 4;
+				break;
+			}
+			case R99:
+			{
+				row = 5;
+				break;
+			}
+		}
+		
+		switch (TABLE.get(stoneId)._type)
 		{
 			case Stone:
 			{
 				if (item.isWeapon())
 				{
-					return Rnd.get(100) < 50;
+					column = 0;
 				}
-				switch (item.getItem().getCrystalType())
+				else // isArmor = true
 				{
-					case S:
-					{
-						return Rnd.get(100) < 60;
-					}
-					case S80:
-					case S84:
-					{
-						return Rnd.get(100) < 80;
-					}
-					default:
-					{
-						return true;
-					}
+					column = 1;
 				}
+				break;
 			}
 			case Crystal:
 			{
 				if (item.isWeapon())
 				{
-					switch (item.getItem().getCrystalType())
-					{
-						case S:
-						{
-							return Rnd.get(100) < 30;
-						}
-						case S80:
-						{
-							return Rnd.get(100) < 40;
-						}
-						case S84:
-						{
-							return Rnd.get(100) < 50;
-						}
-						default:
-						{
-							return Rnd.get(100) < 60;
-						}
-					}
+					column = 2;
 				}
-				switch (item.getItem().getCrystalType())
+				else // isArmor = true
 				{
-					case S:
-					{
-						return Rnd.get(100) < 50;
-					}
-					case S80:
-					{
-						return Rnd.get(100) < 70;
-					}
-					case S84:
-					case R:
-					{
-						return Rnd.get(100) < 80;
-					}
-					default:
-					{
-						return true;
-					}
+					column = 3;
 				}
+				break;
+			}
+			case StoneSuper:
+			{
+				if (item.isWeapon())
+				{
+					column = 4;
+				}
+				else // isArmor = true
+				{
+					column = 5;
+				}
+				break;
 			}
 			case CrystalSuper:
 			{
 				if (item.isWeapon())
 				{
-					switch (item.getItem().getCrystalType())
-					{
-						case S:
-						{
-							return Rnd.get(100) < 80;
-						}
-						case S80:
-						{
-							return Rnd.get(100) < 90;
-						}
-						default:
-						{
-							return true;
-						}
-					}
+					column = 6;
 				}
-				return true;
+				else // isArmor = true
+				{
+					column = 7;
+				}
+				break;
+			}
+			case Jewel:
+			{
+				if (item.isWeapon())
+				{
+					column = 8;
+				}
+				else // isArmor = true
+				{
+					column = 9;
+				}
+				break;
 			}
 		}
-		// Super stones have 100% so will end here.
-		// Patch notes do not have info about jewels chance so 100% for now, till l2wiki update, energy are not used.
+		if ((row != -1) && (column != -1))
+		{
+			return Rnd.get(100) < CHANCE_TABLE[row][column];
+		}
 		return true;
 	}
 }

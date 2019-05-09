@@ -804,10 +804,6 @@ public final class Config
 	public static IdFactoryType IDFACTORY_TYPE;
 	public static boolean BAD_ID_CHECKING;
 	
-	public static double ENCHANT_CHANCE_ELEMENT_STONE;
-	public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
-	public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
-	public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
 	public static int[] ENCHANT_BLACKLIST;
 	public static boolean DISABLE_OVER_ENCHANTING;
 	public static int[] AUGMENTATION_BLACKLIST;
@@ -938,6 +934,77 @@ public final class Config
 	public static int HEURISTIC_WEIGHT;
 	public static int OBSTACLE_MULTIPLIER;
 	public static int MAX_ITERATIONS;
+	
+	/** Attribute System */
+	public static int S_WEAPON_STONE;
+	public static int S80_WEAPON_STONE;
+	public static int S84_WEAPON_STONE;
+	public static int R_WEAPON_STONE;
+	public static int R95_WEAPON_STONE;
+	public static int R99_WEAPON_STONE;
+	
+	public static int S_ARMOR_STONE;
+	public static int S80_ARMOR_STONE;
+	public static int S84_ARMOR_STONE;
+	public static int R_ARMOR_STONE;
+	public static int R95_ARMOR_STONE;
+	public static int R99_ARMOR_STONE;
+	
+	public static int S_WEAPON_CRYSTAL;
+	public static int S80_WEAPON_CRYSTAL;
+	public static int S84_WEAPON_CRYSTAL;
+	public static int R_WEAPON_CRYSTAL;
+	public static int R95_WEAPON_CRYSTAL;
+	public static int R99_WEAPON_CRYSTAL;
+	
+	public static int S_ARMOR_CRYSTAL;
+	public static int S80_ARMOR_CRYSTAL;
+	public static int S84_ARMOR_CRYSTAL;
+	public static int R_ARMOR_CRYSTAL;
+	public static int R95_ARMOR_CRYSTAL;
+	public static int R99_ARMOR_CRYSTAL;
+	
+	public static int S_WEAPON_STONE_SUPER;
+	public static int S80_WEAPON_STONE_SUPER;
+	public static int S84_WEAPON_STONE_SUPER;
+	public static int R_WEAPON_STONE_SUPER;
+	public static int R95_WEAPON_STONE_SUPER;
+	public static int R99_WEAPON_STONE_SUPER;
+	
+	public static int S_ARMOR_STONE_SUPER;
+	public static int S80_ARMOR_STONE_SUPER;
+	public static int S84_ARMOR_STONE_SUPER;
+	public static int R_ARMOR_STONE_SUPER;
+	public static int R95_ARMOR_STONE_SUPER;
+	public static int R99_ARMOR_STONE_SUPER;
+	
+	public static int S_WEAPON_CRYSTAL_SUPER;
+	public static int S80_WEAPON_CRYSTAL_SUPER;
+	public static int S84_WEAPON_CRYSTAL_SUPER;
+	public static int R_WEAPON_CRYSTAL_SUPER;
+	public static int R95_WEAPON_CRYSTAL_SUPER;
+	public static int R99_WEAPON_CRYSTAL_SUPER;
+	
+	public static int S_ARMOR_CRYSTAL_SUPER;
+	public static int S80_ARMOR_CRYSTAL_SUPER;
+	public static int S84_ARMOR_CRYSTAL_SUPER;
+	public static int R_ARMOR_CRYSTAL_SUPER;
+	public static int R95_ARMOR_CRYSTAL_SUPER;
+	public static int R99_ARMOR_CRYSTAL_SUPER;
+	
+	public static int S_WEAPON_JEWEL;
+	public static int S80_WEAPON_JEWEL;
+	public static int S84_WEAPON_JEWEL;
+	public static int R_WEAPON_JEWEL;
+	public static int R95_WEAPON_JEWEL;
+	public static int R99_WEAPON_JEWEL;
+	
+	public static int S_ARMOR_JEWEL;
+	public static int S80_ARMOR_JEWEL;
+	public static int S84_ARMOR_JEWEL;
+	public static int R_ARMOR_JEWEL;
+	public static int R95_ARMOR_JEWEL;
+	public static int R99_ARMOR_JEWEL;
 	
 	// --------------------------------------------------
 	// Custom Settings
@@ -1422,8 +1489,9 @@ public final class Config
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
 			ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
 			
-			// Load Attandance config file (if exists)
+			// Load Attendance config file (if exists)
 			final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
+			
 			ENABLE_ATTENDANCE_REWARDS = Attandance.getBoolean("EnableAttendanceRewards", false);
 			PREMIUM_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("PremiumOnlyAttendanceRewards", false);
 			ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
@@ -1597,10 +1665,6 @@ public final class Config
 			ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
 			MENTOR_PENALTY_FOR_MENTEE_COMPLETE = Character.getInt("MentorPenaltyForMenteeComplete", 1) * 24 * 60 * 60 * 1000;
 			MENTOR_PENALTY_FOR_MENTEE_COMPLETE = Character.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
-			ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
-			ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
-			ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);
-			ENCHANT_CHANCE_ELEMENT_ENERGY = Character.getDouble("EnchantChanceElementEnergy", 10);
 			final String[] notenchantable = Character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
 			ENCHANT_BLACKLIST = new int[notenchantable.length];
 			for (int i = 0; i < notenchantable.length; i++)
