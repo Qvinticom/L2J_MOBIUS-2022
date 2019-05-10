@@ -444,10 +444,21 @@
 	<skill id="15430" toLevel="1" name="Lindvior's Jump">
 		<!-- Ranged attack. -->
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<affectRange>600</affectRange>
 		<hitTime>5000</hitTime>
 		<coolTime>5000</coolTime>
 		<effectPoint>-574</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15431" toLevel="1" name="Supersonic Blaster">
 		<operateType>A1</operateType>

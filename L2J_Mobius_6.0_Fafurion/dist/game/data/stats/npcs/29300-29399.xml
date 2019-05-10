@@ -5,8 +5,8 @@
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="231808530" hpRegen="7.5" mp="47100" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="24330.717385" magical="11870.210597" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="350" />
 				<attack type="DARK" value="430" />
@@ -161,17 +161,17 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="29303" level="105" type="Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29303" level="105" type="GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="34907.01512" magical="17038.26718" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -182,16 +182,19 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16609" level="1" /> <!-- Helios' Plasma -->
+			<skill id="16610" level="1" /> <!-- Helios' Grand Plasma -->
 		</skillList>
 		<collision>
 			<radius normal="105" />
 			<height normal="124" />
 		</collision>
 	</npc>
-	<npc id="29304" level="105" type="Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29304" level="105" type="GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
@@ -201,14 +204,19 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="34907.01512" magical="17038.26718" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16746" level="2" /> <!-- Helios -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16614" level="1" /> <!-- Helios Plasma Pressure -->
+			<skill id="16615" level="1" /> <!-- Helios Plasma Wall -->
+			<skill id="16616" level="1" /> <!-- Helios' Overawing Gaze -->
+			<skill id="16727" level="1" /> <!-- Helios Storm Fist -->
 		</skillList>
 		<collision>
 			<radius normal="105" />
@@ -225,12 +233,13 @@
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
+			<abnormalResist physical="230" magical="230" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="34907.01512" magical="17038.26718" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
@@ -238,6 +247,13 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16746" level="2" /> <!-- Helios -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16610" level="1" /> <!-- Helios' Grand Plasma -->
+			<skill id="16611" level="1" /> <!-- Helios' Throne of Agony -->
+			<skill id="16612" level="1" /> <!-- Emperor Helios' Authority -->
+			<skill id="16614" level="1" /> <!-- Helios Plasma Pressure -->
+			<skill id="16622" level="1" /> <!-- Helios' Bionic Bomb -->
+			<skill id="16623" level="1" /> <!-- Helios' Lightning of Anger -->
 		</skillList>
 		<collision>
 			<radius normal="105" />
@@ -666,6 +682,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 	</npc>
 	<npc id="29319" level="109" type="RaidBoss" name="Etis van Etina" title="Overlord">
@@ -680,6 +697,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="DARK" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -690,6 +711,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -786,6 +808,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="DARK" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -796,6 +822,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1035,6 +1062,10 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="32487" level="1" /> <!-- Orfen Fatal Slasher -->
+			<skill id="32492" level="1" /> <!-- Orfen Fatal Stamp -->
+			<skill id="32493" level="1" /> <!-- Orfen Raise Spore -->
 		</skillList>
 		<corpseTime>300</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1362,6 +1393,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="DARK" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 			<hitTime>500</hitTime>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -1376,6 +1411,9 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16102" level="1" /> <!-- Dark Storm -->
+			<skill id="15662" level="1" /> <!-- Decrease M. Def. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -1474,12 +1512,16 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="18886789.420995" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
-			<attack physical="7674.3256799509" magical="2507.70032725781" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<attack physical="69212" magical="60406" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" evasion="-18" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="150" dark="300" />
+			</attribute>
 			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1504,12 +1546,16 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="18886789.420995" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
-			<attack physical="7674.3256799509" magical="2507.70032725781" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<attack physical="69212" magical="60406" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" evasion="-18" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="150" dark="300" />
+			</attribute>
 			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1531,16 +1577,27 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<attack physical="7674.3256799509" magical="2507.70032725781" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<vitals hp="18886789.420995" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" evasion="-18" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="150" dark="300" />
+			</attribute>
 			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
 		<collision>
@@ -2008,6 +2065,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="HOLY" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
 			<hitTime>560</hitTime>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -2025,6 +2086,7 @@
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -2123,12 +2185,16 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="18886789.420995" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
-			<attack physical="7674.3256799509" magical="2507.70032725781" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<attack physical="69212" magical="60406" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" evasion="-18" />
 			<speed>
 				<walk ground="49" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="HOLY" value="300" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="150" />
+			</attribute>
 			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2153,12 +2219,16 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="18886789.420995" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
-			<attack physical="7674.3256799509" magical="2507.70032725781" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<attack physical="69212" magical="60406" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" evasion="-18" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="HOLY" value="300" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="150" />
+			</attribute>
 			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2180,16 +2250,27 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<attack physical="7674.3256799509" magical="2507.70032725781" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.60512" magical="493.3" evasion="-18" />
+			<vitals hp="18886789.420995" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" evasion="-18" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="HOLY" value="300" />
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="150" />
+			</attribute>
 			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
 		<collision>
@@ -3237,13 +3318,18 @@
 		<sex>MALE</sex>
 		<acquire exp="108452897573760" sp="97607602024" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="260487323.99993" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
+			<vitals hp="520974648.63077" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
 			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44109.29354" magical="21529.93964" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 			<speed>
 				<walk ground="45" />
 				<run ground="270" />
 			</speed>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3257,9 +3343,16 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="32726" level="1" /> <!-- Fafurion -->
 			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 3 -->
+			<skill id="32705" level="1" /> <!-- Fafurion Normal Attack -->
+			<skill id="32713" level="1" /> <!-- Fafurion Tail Strike -->
+			<skill id="32716" level="1" /> <!-- Fafurion Breath -->
+			<skill id="32717" level="1" /> <!-- Fafurion Fear -->
 		</skillList>
 		<dropLists>
 			<drop>
+				<item id="80335" min="1" max="2" chance="100" /> <!-- Dragon Ring -->
+				<item id="80334" min="1" max="1" chance="34.23" /> <!-- Dragon Earring -->
+				<item id="80333" min="1" max="1" chance="31.93" /> <!-- Dragon Necklace -->
 				<item id="80113" min="1" max="2" chance="20.59" /> <!-- Leviathan Leather Gloves - Light Armor -->
 				<item id="80110" min="1" max="2" chance="20.49" /> <!-- Leviathan Leather Helmet - Light Armor -->
 				<item id="80111" min="1" max="2" chance="19.88" /> <!-- Leviathan Leather Armor - Light Armor -->
@@ -3471,6 +3564,11 @@
 				<walk ground="65" />
 				<run ground="270" />
 			</speed>
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" />
+			</attribute>
+			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" />
 		<collision>

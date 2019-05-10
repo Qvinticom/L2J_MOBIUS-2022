@@ -847,7 +847,7 @@ public class Trasken extends AbstractNpcAI
 			{
 				tie_trasken = addSpawn(TAIL_TRASKEN, CENTER_LOCATION, false, 0, true);
 				hp_tail = tie_trasken.getCurrentHp();
-				startQuestTimer("spawn_rnd", 30000, tie_trasken, null);
+				startQuestTimer("spawn_rnd", 3000000, tie_trasken, null);
 				break;
 			}
 			case 3:
@@ -858,7 +858,7 @@ public class Trasken extends AbstractNpcAI
 				trasken.doCast(SKILL_TRASKEN_UP.getSkill());
 				hp_trasken = trasken.getCurrentHp();
 				
-				startQuestTimer("spawn_rnd", 70000, trasken, null);
+				startQuestTimer("spawn_rnd", 9000000, trasken, null);
 				for (Location loc : Spawn_Larva_1)
 				{
 					addSpawn(LAVRA_1, loc, false, 0, true);

@@ -206,25 +206,19 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
-		<activateRate>150</activateRate>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<mpConsume>10</mpConsume>
 		<castRange>2500</castRange>
 		<effectRange>2500</effectRange>
-		<affectRange>200</affectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<effectPoint>-52</effectPoint>
-		<hitCancelTime>0</hitCancelTime>
+		<effectPoint>-100</effectPoint>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+				<power>157</power>		<!-- TODO -->
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
@@ -237,20 +231,17 @@
 		<operateType>A1</operateType>
 		<staticReuse>true</staticReuse>
 		<affectLimit>40-80</affectLimit>
-		<castRange>2500</castRange>
-		<affectRange>900</affectRange>
-		<mpConsume>10</mpConsume>
+		<affectRange>600</affectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-52</effectPoint>
-		<effectRange>2500</effectRange>
+		<effectPoint>-100</effectPoint>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+			<effect name="PhysicalAttack">
+				<power>34255</power>		<!-- TODO -->
 			</effect>
 		</effects>
 	</skill>
@@ -259,21 +250,14 @@
 		<icon>icon.skill1275</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
-		<abnormalTime>2</abnormalTime>
-		<activateRate>200</activateRate>
-		<staticReuse>true</staticReuse>
-		<castRange>-1</castRange>
+		<abnormalTime>5</abnormalTime>
 		<affectLimit>40-80</affectLimit>
-		<affectRange>900</affectRange>
-		<reuseDelay>20000</reuseDelay>
+		<affectRange>600</affectRange>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<hitCancelTime>0</hitCancelTime>
-		<mpConsume>10</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-52</effectPoint>
-		<effectRange>2500</effectRange>
+		<effectPoint>-100</effectPoint>
 		<trait>KNOCKDOWN</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -281,7 +265,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+				<power>157</power>		<!-- TODO -->
 			</effect>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -297,18 +281,11 @@
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
-		<activateRate>200</activateRate>
-		<staticReuse>true</staticReuse>
-		<castRange>-1</castRange>
 		<affectLimit>40-80</affectLimit>
-		<affectRange>900</affectRange>
-		<reuseDelay>20000</reuseDelay>
-		<hitCancelTime>0</hitCancelTime>
-		<mpConsume>10</mpConsume>
+		<affectRange>600</affectRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-52</effectPoint>
-		<effectRange>2500</effectRange>
+		<effectPoint>-100</effectPoint>
 		<trait>GIANT_WEAKNESS</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -316,7 +293,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+				<power>157</power>		<!-- TODO -->
 			</effect>
 			<effect name="PAtk">
 				<amount>30</amount>
@@ -368,22 +345,16 @@
 		<!-- Deals physical damage to, and paralyzes the target and nearby enemies. -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
-		<castRange>1200</castRange>
+		<castRange>2500</castRange>
 		<hitTime>2000</hitTime>
-		<effectPoint>-52</effectPoint>
-		<isMagic>1</isMagic>
-		<mpConsume>10</mpConsume>
+		<effectPoint>-100</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>		<!-- TODO -->
 		<affectLimit>40-80</affectLimit>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>150</activateRate>
-		<affectRange>900</affectRange>
-		<effectRange>1200</effectRange>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<hitCancelTime>0</hitCancelTime>
+		<affectRange>300</affectRange>
+		<effectRange>2500</effectRange>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -391,7 +362,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">		<!-- TODO -->
-				<power>100000</power>
+				<power>34255</power>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
@@ -402,23 +373,20 @@
 	<skill id="16615" toLevel="1" name="Helios Plasma Wall">
 		<!-- A rectangular barrier or electricity is formed around a range target, dealing powerful magic damage and 25% Mana Burn. -->
 		<operateType>A1</operateType>
-		<staticReuse>true</staticReuse>
 		<affectLimit>45-45</affectLimit>
-		<activateRate>200</activateRate>
-		<castRange>1200</castRange>
-		<affectRange>400</affectRange>
-		<mpConsume>10</mpConsume>
+		<castRange>2500</castRange>
+		<affectRange>300</affectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-1349</effectPoint>
-		<effectRange>1200</effectRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2500</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+				<power>157</power>		<!-- TODO -->
 			</effect>
 			<effect name="MagicalAttackMp">
 				<power>250</power>
@@ -431,26 +399,21 @@
 		<!-- Helios' overawing gaze has petrified you and made you unable to move. Additional damage is received at regular intervals. -->
 		<icon>icon.skill16614</icon>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<castRange>1200</castRange>
+		<castRange>2500</castRange>
 		<hitTime>3000</hitTime>
-		<effectPoint>-52</effectPoint>
-		<isMagic>1</isMagic>
-		<mpConsume>10</mpConsume>
-		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2500</effectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
-		<activateRate>150</activateRate>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DamOverTime">
-				<power>200</power>		<!-- TODO -->
+				<power>512</power>		<!-- TODO -->
 				<ticks>1</ticks>
 			</effect>
 			<effect name="BlockActions">
@@ -587,19 +550,20 @@
 		<operateType>A1</operateType>
 		<castRange>2500</castRange>
 		<hitTime>5000</hitTime>
-		<effectPoint>-696</effectPoint>
-		<isMagic>1</isMagic>
-		<reuseDelay>10000</reuseDelay>
-		<affectRange>200</affectRange>
-		<mpConsume>12</mpConsume>
+		<effectPoint>-100</effectPoint>
+		<affectRange>300</affectRange>
 		<effectRange>2500</effectRange>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+				<power>157</power>		<!-- TODO -->
+			</effect>
+			<effect name="DamOverTime">
+				<power>512</power>
+				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -607,23 +571,17 @@
 		<!-- Lightning strikes the target and nearby enemies, dealing magic damage and paralyzing them. Also decreases P. Def. and Magic Resistance. -->
 		<icon>icon.skll10094</icon>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
 		<castRange>2500</castRange>
 		<effectRange>2500</effectRange>
-		<affectRange>900</affectRange>
+		<affectRange>300</affectRange>
 		<hitTime>2500</hitTime>
 		<affectLimit>40-80</affectLimit>
-		<effectPoint>-438</effectPoint>
-		<isMagic>1</isMagic>
-		<mpConsume>10</mpConsume>
-		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
-		<activateRate>150</activateRate>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -634,7 +592,7 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
 			</effect>
 			<effect name="MagicalAttack">
-				<power>1500</power>		<!-- TODO -->
+				<power>157</power>		<!-- TODO -->
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-50</amount>

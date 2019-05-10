@@ -879,21 +879,53 @@
 	<skill id="15590" toLevel="1" name="Fear of Lindvior">
 		<!-- Afflicted with Fear and moving against own will. -->
 		<icon>icon.skill4108</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<affectRange>600</affectRange>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-867</effectPoint>
 		<isDebuff>true</isDebuff>
+		<trait>DERANGEMENT</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+		</effects>
 	</skill>
 	<skill id="15591" toLevel="1" name="Wind Pull">
 		<!-- Pulls target using the wind. -->
 		<icon>icon.skill0006</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<affectRange>600</affectRange>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>3000</coolTime>
 		<effectPoint>-867</effectPoint>
 		<isDebuff>true</isDebuff>
+		<trait>PULL</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15592" toLevel="1" name="Dark Wind Armor">
 		<!-- Reflects a part of received damage. -->

@@ -42,8 +42,8 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="84439.5246547926" magical="8214.70531877018" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3607.74748074426" magical="2081.35112045963" />
+			<attack physical="214683.835640155" magical="34104.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="17685" magical="10155" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -151,8 +151,8 @@
 				<walk ground="70" />
 				<run ground="140" />
 			</speed>
-			<attack physical="128810.835640155" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3537" magical="2031" />
+			<attack physical="214683.835640155" magical="34104.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="17685" magical="10155" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -937,8 +937,8 @@
 		<acquire exp="5380749000" sp="8609198" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="14525732.7012" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
-			<attack physical="47220.20588" magical="8304.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4866.717385" magical="2374.210597" />
+			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="24330.717385" magical="11870.210597" />
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -1056,15 +1056,16 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1188371250" sp="1901394" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
+			<vitals hp="13227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="218535.28907848" magical="11614.245235341" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3893.6170212766" magical="2351.3720322231" />
+			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="24330.717385" magical="11870.210597" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<attack type="FIRE" value="370" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
@@ -1147,15 +1148,16 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1188371250" sp="1901394" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
+			<vitals hp="13227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="218535.28907848" magical="11614.245235341" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3893.6170212766" magical="2351.3720322231" />
+			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="24330.717385" magical="11870.210597" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<attack type="FIRE" value="370" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
@@ -1238,15 +1240,16 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1188371250" sp="1901394" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
+			<vitals hp="13227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="218535.28907848" magical="11614.245235341" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3893.6170212766" magical="2351.3720322231" />
+			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="24330.717385" magical="11870.210597" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<attack type="FIRE" value="370" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
@@ -1328,15 +1331,16 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1188371250" sp="1901394" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
-			<attack physical="47220.20588" magical="8304.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4866.717385" magical="2374.210597" />
+			<vitals hp="13227939.688945" hpRegen="395.225454" mp="77237.207" mpRegen="3" />
+			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="24330.717385" magical="11870.210597" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+				<attack type="FIRE" value="370" />
 			</attribute>
 		</stats>
 		<status attackable="true" />
@@ -1421,8 +1425,8 @@
 		<acquire exp="3394764000" sp="814743" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="26016136.491975" hpRegen="319.2293199" mp="61717.911" mpRegen="3" />
-			<attack physical="8378.426681" magical="2640.22553" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3669.642906" magical="1790.222112" />
+			<attack physical="104725.426681" magical="13200.22553" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="18345.642906" magical="8950.222112" />
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
@@ -1521,8 +1525,8 @@
 		<acquire exp="3969891000" sp="952773" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30914054.558145" hpRegen="348.6550231" mp="69936.585" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
@@ -1692,8 +1696,8 @@
 		<acquire exp="4142475000" sp="994194" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34225422.6612" hpRegen="363.8542499" mp="72343.633" mpRegen="3" />
-			<attack physical="39019.97122" magical="6908.12227" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4480.419431" magical="2185.756528" />
+			<attack physical="195095.97122" magical="34540.12227" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="22400.419431" magical="10925.756528" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1921,8 +1925,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="35763681.128385" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -2047,8 +2051,8 @@
 		<acquire exp="7998784284" sp="1919708" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27481044.150345" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -2168,8 +2172,8 @@
 		<acquire exp="6810821128" sp="1634597" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="24098460.88575" hpRegen="319.2293199" mp="96049.974" mpRegen="3" />
-			<attack physical="21748.05311" magical="3775.915859" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3842.828167" magical="1874.70992" />
+			<attack physical="108740.05311" magical="18875.915859" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="19210.828167" magical="9370.70992" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -2297,8 +2301,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="35763681.128385" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="41" />
 				<run ground="300" />
@@ -2406,8 +2410,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="180" />
 				<run ground="300" />
@@ -2515,8 +2519,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -2624,8 +2628,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="57" />
 				<run ground="300" />
@@ -2733,8 +2737,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -2842,8 +2846,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -3096,8 +3100,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="35763681.128385" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -3205,8 +3209,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="40" />
 				<run ground="300" />
@@ -3314,8 +3318,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -3423,8 +3427,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="40" />
 				<run ground="300" />
@@ -3532,8 +3536,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -3641,8 +3645,8 @@
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="30399128.86449" hpRegen="387.2610592" mp="114006.325" mpRegen="3" />
-			<attack physical="45027.40865" magical="7933.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4768.645618" magical="2326.366638" />
+			<attack physical="225135.40865" magical="39665.390785" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23840.645618" magical="11630.366638" />
 			<speed>
 				<walk ground="40" />
 				<run ground="300" />
@@ -3894,8 +3898,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="32851590.10674" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -4006,8 +4010,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -4118,8 +4122,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
@@ -4230,8 +4234,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -4342,8 +4346,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
@@ -4455,8 +4459,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -4715,8 +4719,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="32851590.10674" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -4827,8 +4831,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -4939,8 +4943,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -5051,8 +5055,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -5163,8 +5167,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -5275,8 +5279,8 @@
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4671.572037" magical="2279.00964" />
+			<attack physical="214680.94521" magical="37890.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="23355.572037" magical="11395.00964" />
 			<speed>
 				<walk ground="63" />
 				<run ground="300" />
@@ -5531,8 +5535,8 @@
 		<acquire exp="7998784284" sp="1919708" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27481044.150345" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
@@ -5638,8 +5642,8 @@
 		<acquire exp="7998784284" sp="1919708" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19236730.84215" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
@@ -5740,8 +5744,8 @@
 		<acquire exp="7998784284" sp="1919708" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19236730.84215" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
@@ -5847,8 +5851,8 @@
 		<equipment rhand="10278" lhand="10278" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19236730.84215" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="29" />
 				<run ground="300" />
@@ -5953,8 +5957,8 @@
 		<acquire exp="7998784284" sp="1919708" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19236730.84215" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
@@ -6059,8 +6063,8 @@
 		<acquire exp="7998784284" sp="1919708" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19236730.84215" hpRegen="348.6550231" mp="104905.283" mpRegen="3" />
-			<attack physical="35459.98742" magical="6296.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4293.25957" magical="2094.451262" />
+			<attack physical="177295.98742" magical="31480.763836" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="21465.25957" magical="10470.451262" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />

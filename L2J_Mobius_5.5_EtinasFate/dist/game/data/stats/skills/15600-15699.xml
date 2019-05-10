@@ -4,11 +4,22 @@
 		<!-- Powerful P. Atk. on enemy. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
+		<affectRange>300</affectRange>
 		<castRange>300</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
-		<effectPoint>-867</effectPoint>
-		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<effectRange>300</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15601" toLevel="1" name="Lindvior's Attack">
 		<!-- Powerful P. Atk. on enemy. -->
@@ -90,13 +101,11 @@
 		<!-- Powerful P. Atk. on enemy. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
-		<castRange>40</castRange>
+		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>600</effectRange>
 		<coolTime>500</coolTime>
-		<nextAction>ATTACK</nextAction>
-		<reuseDelay>6000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -108,7 +117,7 @@
 					<value level="4">1000</value>
 					<value level="5">2000</value>
 					<value level="6">4000</value>
-					<value level="7">6000</value>
+					<value level="7">50000</value>
 				</power>
 			</effect>
 		</effects>
@@ -130,8 +139,7 @@
 		<hitTime>6000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
-		<affectRange>300</affectRange>
-		<reuseDelay>30000</reuseDelay>
+		<affectRange>600</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -144,7 +152,7 @@
 					<value level="4">12000</value>
 					<value level="5">14000</value>
 					<value level="6">16000</value>
-					<value level="7">18000</value>
+					<value level="7">50000</value>
 				</power>
 			</effect>
 		</effects>
@@ -156,8 +164,7 @@
 		<hitTime>6000</hitTime>
 		<effectPoint>-100</effectPoint>
 		<coolTime>500</coolTime>
-		<affectRange>800</affectRange>
-		<reuseDelay>30000</reuseDelay>
+		<affectRange>600</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -170,7 +177,7 @@
 					<value level="4">16000</value>
 					<value level="5">18000</value>
 					<value level="6">20000</value>
-					<value level="7">22000</value>
+					<value level="7">50000</value>
 				</power>
 			</effect>
 		</effects>
@@ -394,6 +401,10 @@
 		<!-- Very strong against Wind, and vulnerable to Earth. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
 	<skill id="15639" toLevel="1" name="Mysterious Fear">
 		<!-- In Fear. -->
@@ -1215,11 +1226,25 @@
 		<!-- M. Def. -20%. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
-		<hitTime>2000</hitTime>
+		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
-		<isMagic>1</isMagic>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<castRange>300</castRange>
+		<affectRange>300</affectRange>
+		<effectRange>300</effectRange>
+		<affectLimit>40-80</affectLimit>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15663" toLevel="1" name="Increase P. Atk.">
 		<!-- P. Atk. and M. Atk. +10%. -->

@@ -389,15 +389,15 @@
 	</skill>
 	<skill id="16727" toLevel="1" name="Helios Storm Fist">
 		<operateType>A1</operateType>
-		<castRange>-1</castRange>
+		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
-		<isMagic>1</isMagic> <!-- Static Skill -->
 		<effectPoint>-100</effectPoint>
+		<effectRange>600</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>100000</power>
+				<power>34255</power>
 			</effect>
 		</effects>
 	</skill>

@@ -28,11 +28,22 @@
 		<!-- Powerful magical attack on target and nearby enemies. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
-		<hitTime>2000</hitTime>
+		<abnormalLvl>1</abnormalLvl>
+		<castRange>300</castRange>
+		<affectLimit>40-80</affectLimit>
+		<affectRange>300</affectRange>
+		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-264</effectPoint>
-		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<effectRange>300</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>157</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16103" toLevel="6" name="Death Lift">
 		<!-- Deals damage and cancels target. -->

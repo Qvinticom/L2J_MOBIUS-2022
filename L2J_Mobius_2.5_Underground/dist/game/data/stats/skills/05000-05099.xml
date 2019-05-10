@@ -3003,25 +3003,21 @@
 		</effects>
 	</skill>
 	<skill id="5093" toLevel="1" name="Antharas Meteor">
-		<affectRange>150</affectRange>
-		<castRange>600</castRange>
-		<effectPoint>-1</effectPoint>
-		<effectRange>1100</effectRange>
+		<castRange>2500</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>2500</effectRange>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>180</attributeValue>
+		<attributeValue>450</attributeValue>
 		<hitTime>8000</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>99</magicLvl>
-		<operateType>A1</operateType>
-		<reuseDelay>6000</reuseDelay>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<affectRange>300</affectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>1084</power>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
 			</effect>
 		</effects>
 	</skill>

@@ -27,7 +27,24 @@
 	</skill>
 	<skill id="32705" toLevel="1" name="Fafurion Normal Attack">
 		<!-- Fafurion Basic Attack -->
+		<affectRange>300</affectRange>
+		<castRange>300</castRange>
+		<coolTime>1500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>300</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>450</attributeValue>
+		<hitTime>1000</hitTime>
+		<magicLvl>110</magicLvl>
 		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32706" toLevel="1" name="Fafurion Bite">
 		<!-- Bleeding after receiving physical damage from Fafurion's bite. -->
@@ -68,12 +85,54 @@
 	<skill id="32713" toLevel="1" name="Fafurion Tail Strike">
 		<!-- Suffering physical damage from Fafurion's smashing tail and being blown away. -->
 		<icon>icon.skill32713</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<attributeType>WATER</attributeType>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32714" toLevel="1" name="Fafurion Tail Strike">
 		<!-- Suffering physical damage from Fafurion's smashing tail and being blown away. -->
 		<icon>icon.skill32713</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<attributeType>WATER</attributeType>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32715" toLevel="1" name="Fafurion Water Wave">
 		<!-- Knocked back after receiving magic damage from the wave caused by the sheer force of Fafurion. -->
@@ -83,12 +142,64 @@
 	<skill id="32716" toLevel="3" name="Fafurion Breath">
 		<!-- Fafurion inflicts physical damage to enemies in front of it. -->
 		<icon>icon.skill32716</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitTime>2500</hitTime>
+		<coolTime>3000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<attributeType>WATER</attributeType>
+		<attributeValue>450</attributeValue>
+		<magicLvl>110</magicLvl>
+		<isDebuff>true</isDebuff>
+		<fanRange>0;0;2500;900</fanRange>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>512</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32717" toLevel="2" name="Fafurion Fear">
 		<!-- Suffering physical damage caused by Fafurion's Energy of Fear. Targets flee with P./ M. Def. decreased. -->
 		<icon>icon.skill32717</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<affectRange>600</affectRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<trait>DERANGEMENT</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamOverTime">
+				<power>512</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32718" toLevel="1" name="Fafurion Power Stamp">
 		<!-- Stunned after receiving physical damage from the shock that Fafurion dealt by striking nearby enemies with its wing-like fins. -->
@@ -131,7 +242,11 @@
 	<skill id="32726" toLevel="1" name="Fafurion">
 		<!-- A water dragon, birthed by Shilen. It was long dormant, deep in the sea off the coast of Innadril. As one of the most rational dragons, it appointed one of the elves as a priestess, tasked with comforting its mind and controlling its anger. Fafurion was awakened when the Seven Seals were broken, and now uses its rage to build strength and find a way to revive Shilen in Aden. -->
 		<icon>icon.skillboss</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
 	<skill id="32727" toLevel="3" name="Fafurion's Arrogance - Stage 1">
 		<!-- Fafurion's arrogance grows as its challengers fail. -->

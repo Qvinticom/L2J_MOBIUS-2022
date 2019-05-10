@@ -785,37 +785,68 @@
 	<skill id="23682" toLevel="1" name="Fatal Strike">
 		<!-- Inflicts a powerful blow on a single target. -->
 		<operateType>A1</operateType>
-		<mpConsume>1</mpConsume>
-		<castRange>600</castRange>
+		<castRange>100</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>800</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>-700</effectPoint>
-		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23683" toLevel="1" name="Dark Cloud">
 		<!-- Inflicts great magic damage to enemies within range. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectLimit>40-80</affectLimit>
+		<affectRange>600</affectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>157</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>512</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23684" toLevel="1" name="Dancing Blade">
 		<!-- Inflicts great damage to enemies within range and makes them bleed for 10 sec. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectLimit>40-80</affectLimit>
+		<affectRange>600</affectRange>
 		<hitTime>6000</hitTime>
 		<coolTime>800</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>1</isMagic>
-		<effectPoint>-700</effectPoint>
+		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>512</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23685" toLevel="1" name="Exploration Fear">
 		<!-- Inflicts Fear to enemies within range for 10 sec. -->

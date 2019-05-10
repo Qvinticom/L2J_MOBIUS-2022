@@ -4688,87 +4688,69 @@
 	<skill id="4679" toLevel="1" name="Valakas">
 		<!-- Vulnerable to water, impervious to fire. -->
 		<icon>icon.skillboss</icon>
-		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
 		<effects>
-			<effect name="DefenceTrait">
-				<VALAKAS>-8</VALAKAS>
-			</effect>
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
 	<skill id="4680" toLevel="1" name="Valakas Lava Skin">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<hitTime>3300</hitTime>
-		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
+		<magicLvl>110</magicLvl>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>900</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>900</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4681" toLevel="1" name="Valakas Trample">
-		<affectRange>250</affectRange>
-		<castRange>50</castRange>
+		<affectRange>300</affectRange>
+		<castRange>300</castRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<effectRange>400</effectRange>
+		<effectRange>300</effectRange>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;15;250;160</fanRange>
+		<attributeValue>450</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>99</magicLvl>
+		<magicLvl>110</magicLvl>
 		<operateType>A1</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>VALAKAS</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SQUARE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>30416</power>
-				<criticalChance>10</criticalChance>
+				<power>34255</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4682" toLevel="1" name="Valakas Trample">
-		<affectRange>250</affectRange>
-		<castRange>50</castRange>
+		<affectRange>300</affectRange>
+		<castRange>300</castRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<effectRange>400</effectRange>
+		<effectRange>300</effectRange>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;-15;250;160</fanRange>
+		<attributeValue>450</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>99</magicLvl>
+		<magicLvl>110</magicLvl>
 		<operateType>A1</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>VALAKAS</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SQUARE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>30416</power>
-				<criticalChance>10</criticalChance>
+				<power>34255</power>
 			</effect>
 		</effects>
 	</skill>
@@ -4776,36 +4758,27 @@
 		<!-- HP decreases rapidly from flame momentarily. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>DRAGON_BREATH</abnormalType>
-		<activateRate>80</activateRate>
-		<affectRange>1200</affectRange>
-		<basicProperty>MAGIC</basicProperty>
-		<castRange>600</castRange>
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
-		<effectRange>1100</effectRange>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;0;1200;35</fanRange>
+		<attributeValue>450</attributeValue>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<affectHeight>-100;100</affectHeight>
-		<targetType>ENEMY</targetType>
-		<affectScope>FAN</affectScope>
+		<fanRange>0;0;2500;900</fanRange>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>648</power>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
 			</effect>
 			<effect name="DamOverTime">
-				<power>216</power>
-				<ticks>3</ticks>
+				<power>512</power>
+				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -4813,122 +4786,124 @@
 		<!-- HP decreases rapidly from flame momentarily. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>DRAGON_BREATH</abnormalType>
-		<activateRate>80</activateRate>
-		<affectRange>1700</affectRange>
-		<basicProperty>MAGIC</basicProperty>
-		<castRange>900</castRange>
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
-		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;0;1700;160</fanRange>
+		<attributeValue>450</attributeValue>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<affectHeight>100;300</affectHeight>
-		<targetType>ENEMY</targetType>
+		<fanRange>0;0;2500;900</fanRange>
+		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>648</power>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
 			</effect>
 			<effect name="DamOverTime">
-				<power>216</power>
-				<ticks>3</ticks>
+				<power>512</power>
+				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4685" toLevel="1" name="Valakas Tail Stamp">
-		<affectRange>1000</affectRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;180;1000;120</fanRange>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<magicLvl>99</magicLvl>
-		<operateType>A1</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
-		<affectScope>SQUARE_PB</affectScope>
+		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>48391</power>
-				<criticalChance>10</criticalChance>
+				<power>34255</power>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="4686" toLevel="1" name="Valakas Tail Stamp">
-		<affectRange>500</affectRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;180;500;120</fanRange>
-		<magicLvl>99</magicLvl>
-		<operateType>A1</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
+		<hitTime>3000</hitTime>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
-		<affectScope>SQUARE_PB</affectScope>
+		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>157</power>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="4687" toLevel="1" name="Valakas Tail Stamp">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<magicLvl>99</magicLvl>
-		<operateType>A1</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="4688" toLevel="1" name="Valakas Tail Rash">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4688</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<activateRate>80</activateRate>
-		<affectRange>250</affectRange>
-		<basicProperty>PHYSICAL</basicProperty>
-		<coolTime>3000</coolTime>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;180;250;500</fanRange>
+		<attributeValue>450</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
-		<affectScope>SQUARE_PB</affectScope>
+		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>27849</power>
-				<criticalChance>10</criticalChance>
-			</effect>
-			<effect name="FlyAway">
-				<radius>600</radius>
+				<power>34255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -4940,36 +4915,13 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
-		<activateRate>
-			<value level="1">80</value>
-			<value level="2">-1</value>
-		</activateRate>
-		<affectRange>1000</affectRange>
-		<basicProperty>
-			<value level="1">MAGIC</value>
-			<value level="2">NONE</value>
-		</basicProperty>
-		<coolTime>
-			<value level="1">2000</value>
-			<value level="2">0</value>
-		</coolTime>
+		<affectRange>600</affectRange>
+		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
-		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<hitTime>
-			<value level="1">3000</value>
-			<value level="2">0</value>
-		</hitTime>
+		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>
-			<value level="1">1</value>
-			<value level="2">0</value>
-		</lvlBonusRate>
-		<magicLvl>99</magicLvl>
+		<magicLvl>110</magicLvl>
 		<operateType>A2</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<affectHeight>-100;300</affectHeight>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4980,22 +4932,20 @@
 		</effects>
 	</skill>
 	<skill id="4690" toLevel="1" name="Valakas Meteor Storm">
-		<affectRange>300</affectRange>
+		<affectRange>600</affectRange>
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
+		<attributeValue>450</attributeValue>
 		<hitTime>8000</hitTime>
-		<magicLvl>99</magicLvl>
-		<operateType>A1</operateType>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
-		<affectScope>BALAKAS_SCOPE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>1084</power>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
 			</effect>
 		</effects>
 	</skill>

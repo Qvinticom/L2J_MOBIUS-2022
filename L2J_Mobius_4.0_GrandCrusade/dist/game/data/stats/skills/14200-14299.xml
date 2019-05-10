@@ -1232,29 +1232,20 @@
 	<skill id="14247" toLevel="1" name="Black Vortex">
 		<icon>icon.skill0054</icon>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
-		<castRange>1000</castRange>
+		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
-		<isMagic>1</isMagic>
-		<effectPoint>-1</effectPoint>
+		<effectPoint>-100</effectPoint>
 		<abnormalType>FLY_AWAY</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<effectRange>1400</effectRange>
-		<lvlBonusRate>1</lvlBonusRate>
-		<activateRate>99</activateRate>
+		<effectRange>600</effectRange>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<affectRange>200</affectRange>
+		<abnormalTime>3</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>2000</power>
+				<power>157</power>
 			</effect>
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
 				<radius>200</radius>

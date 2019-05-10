@@ -418,6 +418,19 @@
 	<skill id="32487" toLevel="1" name="Orfen Fatal Slasher">
 		<!-- Orfen's Powerful Physical Range Attack -->
 		<operateType>A1</operateType>
+		<affectLimit>40-80</affectLimit>
+		<affectRange>600</affectRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>3500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32488" toLevel="1" name="Orfen Energy Scatter">
 		<!-- Orfen's Normal Magic Range Attack -->
@@ -440,12 +453,63 @@
 	<skill id="32492" toLevel="1" name="Orfen Fatal Stamp">
 		<!-- Movement is restricted by Orfen. -->
 		<icon>icon.skill10266</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<affectLimit>40-80</affectLimit>
+		<affectRange>600</affectRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>5500</hitTime>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<trait>HOLD</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
+			</effect>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="32493" toLevel="1" name="Orfen Raise Spore">
 		<!-- Attacking abilities have been crippled by spores stirred up by Orfen. Decreases Atk. Spd./ Casting Spd. by $s1. -->
 		<icon>icon.skill1072</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>POISON</abnormalVisualEffect>
+		<affectLimit>40-80</affectLimit>
+		<affectRange>600</affectRange>
+		<coolTime>2000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>5500</hitTime>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<trait>POISON</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>157</power>
+			</effect>
+			<effect name="DamOverTime">
+				<power>512</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32494" toLevel="1" name="Hallucinating Dust">
 		<!-- Attacking abilities have been crippled by spores stirred up by Orfen. Decreases Atk. Spd./ Casting Spd. by $s1, Speed by $s2. -->
