@@ -5408,6 +5408,55 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		<!-- Super Advanced Spirit Stones -->
+		<variation mineralId="80130">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
+					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="31210" to="31268" chance="1.666" /> <!-- P. Critical Rate + 3.3% -> Passive: M. Skill Critical Damage + 8%. -->
+					<option id="31269" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 15%. -->
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="31270" to="31279" chance="10.0" /> <!-- Passive: Attack Attribute + 10. -> Passive: Attack Attribute + 70. -->
+				</optionCategory>
+				<optionCategory chance="7.0">
+					<optionRange from="31280" to="31377" chance="1.0101" /> <!-- Stun Attack Success Rate + 3% -> Passive: Petrification Attack Success Rate + 15%. -->
+					<option id="31378" chance="1.0102"/> <!-- Passive: Petrification Attack Success Rate + 30%. -->
+				</optionCategory>
+				<optionCategory chance="3.0">
+					<optionRange from="32684" to="32837" chance="0.645" /> <!-- Passive: Max HP + 8%. -> Active: Not targeted by enemies for 5 seconds. -->
+					<option id="32838" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
+					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="31210" to="31268" chance="1.666" /> <!-- P. Critical Rate + 3.3% -> Passive: M. Skill Critical Damage + 8%. -->
+					<option id="31269" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 15%. -->
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="31270" to="31279" chance="10.0" /> <!-- Passive: Attack Attribute + 10. -> Passive: Attack Attribute + 70. -->
+				</optionCategory>
+				<optionCategory chance="7.0">
+					<optionRange from="31280" to="31377" chance="1.0101" /> <!-- Stun Attack Success Rate + 3% -> Passive: Petrification Attack Success Rate + 15%. -->
+					<option id="31378" chance="1.0102"/> <!-- Passive: Petrification Attack Success Rate + 30%. -->
+				</optionCategory>
+				<optionCategory chance="3.0">
+					<optionRange from="32684" to="32837" chance="0.645" /> <!-- Passive: Max HP + 8%. -> Active: Not targeted by enemies for 5 seconds. -->
+					<option id="32838" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
 		<!-- Spirit Stone: Accessory -->
 		<variation mineralId="45933">
 			<optionGroup weaponType="warrior" order="0">
@@ -17301,6 +17350,10 @@
 		<!-- [q10462_practice_life_stone] -->
 		<fee itemGroup="75" itemId="36719" itemCount="20" cancelFee="1"> <!-- Augmentation Practice Gemstone (D-grade) -->
 			<mineral id="36718" /> <!-- Augmentation Practice Spirit Stone (46) -->
+		</fee>
+		<!-- [r110_new] -->
+		<fee itemGroup="76" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="80130" /> <!-- Super Advanced Spirit Stone -->
 		</fee>
 	</fees>
 </list>

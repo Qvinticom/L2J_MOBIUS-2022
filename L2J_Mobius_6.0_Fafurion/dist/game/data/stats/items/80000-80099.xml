@@ -1717,10 +1717,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
-			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shaper -->
 		</skills>
 		<stats>
 			<stat type="pAtk">708</stat>
@@ -1745,12 +1747,14 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="crystal_count" val="34485" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
-			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dicing Death -->
 		</skills>
 		<stats>
 			<stat type="pAtk">809</stat>
@@ -1775,11 +1779,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="crystal_count" val="34485" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
-			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Slasher -->
 		</skills>
 		<stats>
 			<stat type="pAtk">984</stat>
@@ -1804,11 +1810,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Avenger -->
 		</skills>
 		<stats>
 			<stat type="pAtk">809</stat>
@@ -1833,11 +1841,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="crystal_count" val="34485" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
-			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Fighter -->
 		</skills>
 		<stats>
 			<stat type="pAtk">984</stat>
@@ -1864,11 +1874,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
+			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Stormer -->
 		</skills>
 		<stats>
 			<stat type="pAtk">809</stat>
@@ -1896,10 +1908,12 @@
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="commissionItemType" val="BOW" />
 		<skills>
-			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Thrower -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1593</stat>
@@ -1928,9 +1942,11 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="1616590000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<skills>
-			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shooter -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1434</stat>
@@ -1958,11 +1974,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
-			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Buster -->
 		</skills>
 		<stats>
 			<stat type="pAtk">647</stat>
@@ -1988,11 +2006,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
-			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Caster -->
 		</skills>
 		<stats>
 			<stat type="pAtk">647</stat>

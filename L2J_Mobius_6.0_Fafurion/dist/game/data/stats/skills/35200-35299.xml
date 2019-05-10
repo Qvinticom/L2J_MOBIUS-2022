@@ -1522,72 +1522,302 @@
 	<skill id="35277" toLevel="1" name="Krishna Shaper Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35278" toLevel="1" name="Krishna Dicing Death Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, P. Def. +$s2. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35279" toLevel="1" name="Krishna Slasher Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, P. Atk. +$s2. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35280" toLevel="1" name="Krishna Avenger Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35281" toLevel="1" name="Krishna Fighter Enchantment Effect">
 		<!-- Normal Attack Critical Damage +$s1 and additional damage +$s2. -->
 		<icon>icon.weapon_r110_fist_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35282" toLevel="1" name="Krishna Stormer Enchantment Effect">
 		<!-- Increases Normal Attack Critical Damage by $s1 and has a chance to stun enemies near the target for $s2 on a standard attack. -->
 		<icon>icon.weapon_r110_spear_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35283" toLevel="1" name="Krishna Thrower Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, Normal Critical Damage +$s2. -->
 		<icon>icon.weapon_r110_bow_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35284" toLevel="1" name="Krishna Shooter Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_crossbow_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35285" toLevel="1" name="Krishna Buster Enchantment Effect">
 		<!-- M. Skill Critical Damage +$s1, P. Def. +$s2. -->
 		<icon>icon.weapon_r110_onehand_magic_sword_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35286" toLevel="1" name="Krishna Caster Enchantment Effect">
 		<!-- M. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_onehand_magic_blunt_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35287" toLevel="1" name="Krishna Retributer Enchantment Effect">
 		<!-- Normal Attack/ P. Skill/ M. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_twohand_magic_blunt_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35288" toLevel="1" name="Krishna Dual Sword Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_dual_sword_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35289" toLevel="1" name="Krishna Dual Dagger Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, Normal Attack Critical Damage +$s2. -->
 		<icon>icon.weapon_r110_dual_dagger_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35290" toLevel="1" name="Krishna Dual Blunt Enchantment Effect">
 		<!-- P. Skill Critical Damage +$s1, Skill Cooldown -$s2. -->
 		<icon>icon.weapon_r110_dual_blunt_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35291" toLevel="4" name="Set Effect - Leviathan Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
@@ -1952,14 +2182,12 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalDamage">
+			<effect name="PhysicalSkillPower">
 				<amount>2</amount>
-				<magicType>0</magicType>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalDamage">
+			<effect name="MagicalSkillPower">
 				<amount>-10</amount>
-				<magicType>1</magicType>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1973,14 +2201,12 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalDamage">
+			<effect name="MagicalSkillPower">
 				<amount>2</amount>
-				<magicType>1</magicType>
 				<mode>PER</mode>
 			</effect>
-			<effect name="SkillCriticalDamage">
+			<effect name="PhysicalSkillPower">
 				<amount>-10</amount>
-				<magicType>0</magicType>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1988,21 +2214,69 @@
 	<skill id="35296" toLevel="1" name="Special Ability Krishna Dicing Death">
 		<!-- P. Accuracy +$s1, Normal Attack Critical Rate +$s2. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35297" toLevel="1" name="Special Ability Krishna Slasher">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35298" toLevel="1" name="Special Ability Krishna Avenger">
 		<!-- P. Accuracy +$s1, P./ M. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35299" toLevel="1" name="Special Ability Krishna Shaper">
 		<!-- P. Accuracy +$s1, P. Skill Critical Damage +$s2. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>110</magicLvl>
+		<effects>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

@@ -86,6 +86,18 @@
 	        <item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
 		</crystallizable_template>
+		<crystallizable_template crystalType="R110" crystallizationType="WEAPON">
+	        <item id="17526" count="1" chance="0.0292974954184484" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+	        <item id="19447" count="1" chance="0.0009375600000000" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+	        <item id="36386" count="1" chance="0.0078140770252324" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+	    	</crystallizable_template>
+		<crystallizable_template crystalType="R110" crystallizationType="ARMOR">
+	        <item id="17527" count="1" chance="0.3750240000000000" /> <!-- Scroll: Enchant Armor (R-grade) -->
+	        <item id="19448" count="1" chance="0.0078243243243243" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+	        <item id="36389" count="1" chance="0.0651451721809588" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+	        <item id="36514" count="1" chance="0.0093758300132802" /> <!-- Elcyum Crystal -->
+		</crystallizable_template>
 	</templates>
 	<items>
 		<crystallizable_item id="23989"> <!-- Agathion - Virgo - Stage 1 -->

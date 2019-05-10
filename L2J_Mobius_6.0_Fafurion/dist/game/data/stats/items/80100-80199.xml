@@ -15,11 +15,13 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
-			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Retributer -->
 		</skills>
 		<stats>
 			<stat type="pAtk">788</stat>
@@ -46,10 +48,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
-			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Sword -->
 		</skills>
 		<stats>
 			<stat type="pAtk">984</stat>
@@ -72,11 +76,15 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<skills>
-			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Dagger -->
 		</skills>
 		<stats>
 			<stat type="pAtk">809</stat>
@@ -100,11 +108,15 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
-			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Blunt -->
 		</skills>
 		<stats>
 			<stat type="pAtk">984</stat>
@@ -123,10 +135,12 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="6714" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="316718000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -139,10 +153,17 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="17905" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="844584000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">469</stat>
 		</stats>
@@ -155,10 +176,13 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="11191" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="527866000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
@@ -170,10 +194,13 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -185,10 +212,13 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -200,10 +230,16 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="lhand" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="8785" level="1" /> <!-- Equip Shield -->
+		</skills>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -217,10 +253,12 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="6714" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="316718000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -233,10 +271,17 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="17905" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="844584000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">375</stat>
 			<stat type="rEvas">5</stat>
@@ -250,10 +295,13 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="11191" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="527866000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">234</stat>
 			<stat type="rEvas">3</stat>
@@ -266,10 +314,13 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -281,10 +332,13 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -296,10 +350,12 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="6714" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="316718000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -312,10 +368,17 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="17905" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="844584000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">63</stat>
 			<stat type="pDef">257</stat>
@@ -330,10 +393,13 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="11191" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="527866000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="mDef">42</stat>
 			<stat type="pDef">161</stat>
@@ -347,10 +413,13 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -362,10 +431,13 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -378,10 +450,13 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="4476" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<set name="price" val="211146000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">58</stat>
 			<stat type="pAtkRange">40</stat>
@@ -523,8 +598,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
 		<skills>
-			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shaper -->
+			<skill id="35277" level="1" /> <!-- Krishna Shaper Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">729</stat>
@@ -541,7 +620,7 @@
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="blessed" val="true" />
 		<set name="crystal_count" val="17243" />
@@ -553,9 +632,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="ANCIENT_SWORD" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
-			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dicing Death -->
+			<skill id="35278" level="1" /> <!-- Krishna Dicing Death Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
@@ -582,9 +664,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
-			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Slasher -->
+			<skill id="35279" level="1" /> <!-- Krishna Slasher Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
@@ -612,10 +697,12 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
+			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Avenger -->
+			<skill id="35280" level="1" /> <!-- Krishna Avenger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
@@ -641,11 +728,14 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
-			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Fighter -->
+			<skill id="35281" level="1" /> <!-- Krishna Fighter Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
@@ -672,12 +762,15 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
+			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Stormer -->
+			<skill id="35282" level="1" /> <!-- Krishna Stormer Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
@@ -704,12 +797,15 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="reuse_delay" val="1500" />
 		<set name="commissionItemType" val="BOW" />
 		<skills>
-			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Thrower -->
+			<skill id="35283" level="1" /> <!-- Krishna Thrower Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1641</stat>
@@ -733,13 +829,18 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="reuse_delay" val="1350" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<skills>
-			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shooter -->
+			<skill id="35284" level="1" /> <!-- Krishna Shooter Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1477</stat>
@@ -766,12 +867,15 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
-			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Buster -->
+			<skill id="35285" level="1" /> <!-- Krishna Buster Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">666</stat>
@@ -796,12 +900,15 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
-			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Caster -->
+			<skill id="35286" level="1" /> <!-- Krishna Caster Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">666</stat>
@@ -828,12 +935,15 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
-			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Retributer -->
+			<skill id="35287" level="1" /> <!-- Krishna Retributer Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">811</stat>
@@ -860,11 +970,14 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
-			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Sword -->
+			<skill id="35288" level="1" /> <!-- Krishna Dual Sword Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
@@ -887,12 +1000,17 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<skills>
-			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Dagger -->
+			<skill id="35289" level="1" /> <!-- Krishna Dual Dagger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
@@ -916,12 +1034,17 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
-			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Blunt -->
+			<skill id="35290" level="1" /> <!-- Krishna Dual Blunt Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
@@ -948,6 +1071,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
@@ -955,7 +1080,8 @@
 		<skills>
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13787" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shaper -->
+			<skill id="35277" level="1" /> <!-- Krishna Shaper Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">773</stat>
@@ -982,13 +1108,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13788" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dicing Death -->
+			<skill id="35278" level="1" /> <!-- Krishna Dicing Death Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1014,13 +1143,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13789" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Slasher -->
+			<skill id="35279" level="1" /> <!-- Krishna Slasher Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1046,14 +1178,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13790" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
+			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Avenger -->
+			<skill id="35280" level="1" /> <!-- Krishna Avenger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1079,13 +1213,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13791" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Fighter -->
+			<skill id="35281" level="1" /> <!-- Krishna Fighter Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1112,6 +1249,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -1119,7 +1258,8 @@
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13792" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
+			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Stormer -->
+			<skill id="35282" level="1" /> <!-- Krishna Stormer Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1146,6 +1286,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="reuse_delay" val="1500" />
@@ -1153,7 +1295,8 @@
 		<skills>
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13793" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Thrower -->
+			<skill id="35283" level="1" /> <!-- Krishna Thrower Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1741</stat>
@@ -1177,7 +1320,11 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="reuse_delay" val="1350" />
@@ -1185,7 +1332,8 @@
 		<skills>
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13794" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shooter -->
+			<skill id="35284" level="1" /> <!-- Krishna Shooter Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1567</stat>
@@ -1212,6 +1360,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
@@ -1219,7 +1369,8 @@
 		<skills>
 			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13795" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Buster -->
+			<skill id="35285" level="1" /> <!-- Krishna Buster Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">707</stat>
@@ -1244,6 +1395,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
@@ -1251,7 +1404,8 @@
 		<skills>
 			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13796" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Caster -->
+			<skill id="35286" level="1" /> <!-- Krishna Caster Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">707</stat>
@@ -1278,6 +1432,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
@@ -1285,7 +1441,8 @@
 		<skills>
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13797" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Retributer -->
+			<skill id="35287" level="1" /> <!-- Krishna Retributer Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">861</stat>
@@ -1312,13 +1469,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13798" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Sword -->
+			<skill id="35288" level="1" /> <!-- Krishna Dual Sword Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1341,14 +1501,19 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13799" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Dagger -->
+			<skill id="35289" level="1" /> <!-- Krishna Dual Dagger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1372,14 +1537,19 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13800" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Blunt -->
+			<skill id="35290" level="1" /> <!-- Krishna Dual Blunt Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1406,6 +1576,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
@@ -1413,7 +1585,8 @@
 		<skills>
 			<skill id="8820" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13773" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shaper -->
+			<skill id="35277" level="1" /> <!-- Krishna Shaper Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">773</stat>
@@ -1440,13 +1613,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
 			<skill id="8821" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13774" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dicing Death -->
+			<skill id="35278" level="1" /> <!-- Krishna Dicing Death Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1472,13 +1648,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
 			<skill id="8822" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13775" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Slasher -->
+			<skill id="35279" level="1" /> <!-- Krishna Slasher Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1504,14 +1683,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8823" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13776" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
+			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Avenger -->
+			<skill id="35280" level="1" /> <!-- Krishna Avenger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1537,13 +1718,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="8824" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13777" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Fighter -->
+			<skill id="35281" level="1" /> <!-- Krishna Fighter Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1570,6 +1754,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -1577,7 +1763,8 @@
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8825" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13778" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
+			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Stormer -->
+			<skill id="35282" level="1" /> <!-- Krishna Stormer Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1604,6 +1791,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="reuse_delay" val="1500" />
@@ -1611,7 +1800,8 @@
 		<skills>
 			<skill id="8826" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13779" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Thrower -->
+			<skill id="35283" level="1" /> <!-- Krishna Thrower Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1741</stat>
@@ -1635,7 +1825,11 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="reuse_delay" val="1350" />
@@ -1643,7 +1837,8 @@
 		<skills>
 			<skill id="8827" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13780" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shooter -->
+			<skill id="35284" level="1" /> <!-- Krishna Shooter Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1567</stat>
@@ -1670,6 +1865,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
@@ -1677,7 +1874,8 @@
 		<skills>
 			<skill id="8828" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13781" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Buster -->
+			<skill id="35285" level="1" /> <!-- Krishna Buster Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">707</stat>
@@ -1702,6 +1900,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
@@ -1709,7 +1909,8 @@
 		<skills>
 			<skill id="8829" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13782" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Caster -->
+			<skill id="35286" level="1" /> <!-- Krishna Caster Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">707</stat>
@@ -1736,6 +1937,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_magic_weapon" val="true" />
@@ -1743,7 +1946,8 @@
 		<skills>
 			<skill id="8830" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13783" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Retributer -->
+			<skill id="35287" level="1" /> <!-- Krishna Retributer Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">861</stat>
@@ -1770,13 +1974,16 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="8831" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13784" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Sword -->
+			<skill id="35288" level="1" /> <!-- Krishna Dual Sword Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1799,14 +2006,19 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<skills>
 			<skill id="8832" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13785" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Dagger -->
+			<skill id="35289" level="1" /> <!-- Krishna Dual Dagger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">884</stat>
@@ -1830,14 +2042,19 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="8833" level="1" /> <!-- PvP Damage Increase -->
 			<skill id="13786" level="1" /> <!-- Additional Ability Health -->
-			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Blunt -->
+			<skill id="35290" level="1" /> <!-- Krishna Dual Blunt Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1076</stat>
@@ -1858,11 +2075,24 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
+		<skills>
+			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8820" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13787" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shaper -->
+			<skill id="35277" level="1" /> <!-- Krishna Shaper Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">845</stat>
 			<stat type="mAtk">421</stat>
@@ -1877,16 +2107,29 @@
 		<!-- PvP/ PvE enchant type item, When equipped, Damage to NPC and PC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and Normal Attack Critical Rate +30. Enchantment effects: P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="ANCIENT_SWORD" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<skills>
+			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8821" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13788" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dicing Death -->
+			<skill id="35278" level="1" /> <!-- Krishna Dicing Death Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">966</stat>
 			<stat type="mAtk">421</stat>
@@ -1906,11 +2149,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<skills>
+			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8822" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13789" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Slasher -->
+			<skill id="35279" level="1" /> <!-- Krishna Slasher Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -1929,13 +2184,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8823" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13790" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Avenger -->
+			<skill id="35280" level="1" /> <!-- Krishna Avenger Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="pAtk">966</stat>
@@ -1956,11 +2221,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<skills>
+			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8824" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13791" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Fighter -->
+			<skill id="35281" level="1" /> <!-- Krishna Fighter Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -1981,11 +2258,24 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;60;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8825" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13792" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Stormer -->
+			<skill id="35282" level="1" /> <!-- Krishna Stormer Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">966</stat>
 			<stat type="mAtk">421</stat>
@@ -2006,13 +2296,24 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
+		<set name="crystal_count" val="43108" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="commissionItemType" val="BOW" />
+		<skills>
+			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8826" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13793" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Thrower -->
+			<skill id="35283" level="1" /> <!-- Krishna Thrower Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1902</stat>
 			<stat type="mAtk">421</stat>
@@ -2033,11 +2334,24 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
+		<set name="crystal_count" val="43108" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="1350" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="commissionItemType" val="CROSSBOW" />
+		<skills>
+			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8827" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13794" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Shooter -->
+			<skill id="35284" level="1" /> <!-- Krishna Shooter Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1713</stat>
 			<stat type="mAtk">421</stat>
@@ -2057,11 +2371,24 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<skills>
+			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8828" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13795" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Buster -->
+			<skill id="35285" level="1" /> <!-- Krishna Buster Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">773</stat>
 			<stat type="mAtk">561</stat>
@@ -2079,11 +2406,24 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8829" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13796" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Caster -->
+			<skill id="35286" level="1" /> <!-- Krishna Caster Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">773</stat>
 			<stat type="mAtk">561</stat>
@@ -2104,11 +2444,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<skills>
+			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8830" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13797" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35309" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Retributer -->
+			<skill id="35287" level="1" /> <!-- Krishna Retributer Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">941</stat>
 			<stat type="mAtk">617</stat>
@@ -2129,11 +2481,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<skills>
+			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8831" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13798" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35302" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Sword -->
+			<skill id="35288" level="1" /> <!-- Krishna Dual Sword Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -2153,9 +2517,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<skills>
+			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8832" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13799" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35304" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Dagger -->
+			<skill id="35289" level="1" /> <!-- Krishna Dual Dagger Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">966</stat>
 			<stat type="mAtk">421</stat>
@@ -2176,9 +2554,23 @@
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="crystal_count" val="43108" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
 		<set name="price" val="2020737500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<skills>
+			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="8833" level="1" /> <!-- PvP Damage Increase -->
+			<skill id="13800" level="1" /> <!-- Additional Ability Health -->
+			<skill id="35303" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability Krishna Dual Blunt -->
+			<skill id="35290" level="1" /> <!-- Krishna Dual Blunt Enchantment Effect -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -2195,10 +2587,10 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="8393" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
-		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
 		<stats>
@@ -2213,12 +2605,13 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="22381" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="1055730000" />
-		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
@@ -2234,12 +2627,13 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="13988" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
-		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -2250,11 +2644,13 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="5595" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2265,6 +2661,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="5595" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
@@ -2282,17 +2679,18 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="5595" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="SHIELD" />
 		<skills>
-			<skill id="35294" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Leviathan Shield Enchantment Effect -->
-			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+			<skill id="8785" level="1" /> <!-- Equip Shield -->
+			<skill id="35294" level="1" /> <!-- Leviathan Shield Enchantment Effect -->
 		</skills>
 		<stats>
 			<stat type="rEvas">-8</stat>
@@ -2306,11 +2704,11 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="8393" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
 		<set name="element_enabled" val="true" />
 		<stats>
 			<stat type="pDef">179</stat>
@@ -2324,12 +2722,13 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="22381" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="1055730000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -2346,12 +2745,13 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="13988" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
@@ -2363,12 +2763,13 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="5595" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -2379,12 +2780,13 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="5595" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
 		<set name="enchant_enabled" val="1" />
-		<set name="isAppearanceable" val="true" />
 		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
