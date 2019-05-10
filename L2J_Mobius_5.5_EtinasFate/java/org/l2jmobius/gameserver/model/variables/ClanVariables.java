@@ -41,6 +41,7 @@ public class ClanVariables extends AbstractVariables
 	// Public variables.
 	public static final String CLAN_DEVELOPMENT_POINTS = "CLAN_DEVELOPMENT_POINTS";
 	public static final String CLAN_MASTERY = "CLAN_MASTERY_";
+	public static final String CLAN_MASTERY_SKILL_TIME = "CLAN_MASTERY_SKILL_TIME_";
 	
 	private final int _objectId;
 	

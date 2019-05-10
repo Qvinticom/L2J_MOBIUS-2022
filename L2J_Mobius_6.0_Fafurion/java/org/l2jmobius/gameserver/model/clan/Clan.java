@@ -27,6 +27,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -154,6 +156,8 @@ public class Clan implements IIdentifiable, INamable
 	private ClanRewardBonus _lastMembersOnlineBonus = null;
 	private ClanRewardBonus _lastHuntingBonus = null;
 	
+	private final List<ScheduledFuture<?>> masterySkillTasks = new CopyOnWriteArrayList<>();
+	
 	private volatile ClanVariables _vars;
 	
 	/**
@@ -177,6 +181,52 @@ public class Clan implements IIdentifiable, INamable
 		if ((_lastHuntingBonus == null) && (availableHuntingBonus != null))
 		{
 			_lastHuntingBonus = availableHuntingBonus;
+		}
+		
+		final int masteryTime19538 = getMasterySkillRemainingTime(19538);
+		if (masteryTime19538 > 0)
+		{
+			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
+			{
+				removeMasterySkill(19538);
+			}, masteryTime19538);
+			masterySkillTasks.add(task);
+		}
+		final int masteryTime19539 = getMasterySkillRemainingTime(19539);
+		if (masteryTime19539 > 0)
+		{
+			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
+			{
+				removeMasterySkill(19539);
+			}, masteryTime19539);
+			masterySkillTasks.add(task);
+		}
+		final int masteryTime19540 = getMasterySkillRemainingTime(19540);
+		if (masteryTime19540 > 0)
+		{
+			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
+			{
+				removeMasterySkill(19540);
+			}, masteryTime19540);
+			masterySkillTasks.add(task);
+		}
+		final int masteryTime19541 = getMasterySkillRemainingTime(19541);
+		if (masteryTime19541 > 0)
+		{
+			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
+			{
+				removeMasterySkill(19541);
+			}, masteryTime19541);
+			masterySkillTasks.add(task);
+		}
+		final int masteryTime19542 = getMasterySkillRemainingTime(19542);
+		if (masteryTime19542 > 0)
+		{
+			final ScheduledFuture<?> task = ThreadPool.schedule(() ->
+			{
+				removeMasterySkill(19542);
+			}, masteryTime19542);
+			masterySkillTasks.add(task);
 		}
 	}
 	
@@ -2803,6 +2853,46 @@ public class Clan implements IIdentifiable, INamable
 				removeSkill(skill);
 			}
 		}
+		for (ScheduledFuture<?> task : masterySkillTasks)
+		{
+			if ((task != null) && !task.isDone())
+			{
+				task.cancel(true);
+			}
+		}
+		masterySkillTasks.clear();
+		removeMasterySkill(19538);
+		removeMasterySkill(19539);
+		removeMasterySkill(19540);
+		removeMasterySkill(19541);
+		removeMasterySkill(19542);
+	}
+	
+	public void addMasterySkill(int id)
+	{
+		getVariables().set(ClanVariables.CLAN_MASTERY_SKILL_TIME + id, System.currentTimeMillis() + 1296000000);
+		final ScheduledFuture<?> task = ThreadPool.schedule(() ->
+		{
+			removeMasterySkill(id);
+		}, 1296000000); // 1296000000 = 15 days
+		masterySkillTasks.add(task);
+		addNewSkill(SkillData.getInstance().getSkill(id, 1));
+	}
+	
+	public void removeMasterySkill(int id)
+	{
+		getVariables().remove(ClanVariables.CLAN_MASTERY_SKILL_TIME + id);
+		removeSkill(SkillData.getInstance().getSkill(id, 1));
+	}
+	
+	public int getMasterySkillRemainingTime(int id)
+	{
+		final long endTime = getVariables().getLong(ClanVariables.CLAN_MASTERY_SKILL_TIME + id, 0);
+		if (endTime == 0)
+		{
+			return -1;
+		}
+		return (int) (endTime - System.currentTimeMillis());
 	}
 	
 	public void setDevelopmentPoints(int count)

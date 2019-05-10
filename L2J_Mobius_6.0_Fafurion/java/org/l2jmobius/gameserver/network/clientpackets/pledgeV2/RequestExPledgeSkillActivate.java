@@ -26,16 +26,14 @@ import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeSkillInfo
 /**
  * @author Mobius
  */
-public class RequestExPledgeSkillInfo implements IClientIncomingPacket
+public class RequestExPledgeSkillActivate implements IClientIncomingPacket
 {
 	private int _skillId;
-	private int _skillLevel;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLevel = packet.readD();
 		return true;
 	}
 	
@@ -52,48 +50,69 @@ public class RequestExPledgeSkillInfo implements IClientIncomingPacket
 		{
 			return;
 		}
+		if (player.getObjectId() != clan.getLeaderId())
+		{
+			player.sendMessage("You do not have enough privileges to take this action.");
+			return;
+		}
 		
+		// Check if already enabled.
+		if (clan.getMasterySkillRemainingTime(_skillId) > 0)
+		{
+			clan.removeMasterySkill(_skillId);
+			return;
+		}
+		
+		// Check if it can be learned.
 		int previous = 0;
+		int cost = 0;
 		switch (_skillId)
 		{
 			case 19538:
 			{
 				previous = 4;
+				cost = 40000;
 				break;
 			}
 			case 19539:
 			{
 				previous = 9;
+				cost = 30000;
 				break;
 			}
 			case 19540:
 			{
 				previous = 11;
+				cost = 50000;
 				break;
 			}
 			case 19541:
 			{
 				previous = 14;
+				cost = 30000;
 				break;
 			}
 			case 19542:
 			{
 				previous = 16;
+				cost = 50000;
 				break;
 			}
 		}
-		int time = -1;
-		int available = 0;
-		final int remainingTime = clan.getMasterySkillRemainingTime(_skillId);
-		if (remainingTime > 0)
+		if (clan.getReputationScore() < cost)
 		{
-			time = remainingTime / 1000;
-			available = 2;
+			player.sendMessage("Your clan reputation is lower than the requirement.");
+			return;
 		}
-		else if (clan.hasMastery(previous))
+		if (!clan.hasMastery(previous))
 		{
-			available = 1;
+			player.sendMessage("You need to learn the previous mastery.");
+			return;
 		}
-		client.sendPacket(new ExPledgeSkillInfo(_skillId, _skillLevel, time, available));
+		
+		// Learn.
+		clan.takeReputationScore(cost, true);
+		clan.addMasterySkill(_skillId);
+		player.sendPacket(new ExPledgeSkillInfo(_skillId, 1, 1296000, 2));
 	}
 }
