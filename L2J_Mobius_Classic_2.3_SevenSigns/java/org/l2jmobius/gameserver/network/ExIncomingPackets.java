@@ -60,6 +60,7 @@ import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrys
 import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import org.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
+import org.l2jmobius.gameserver.network.clientpackets.elementalspirits.ExElementalSpiritInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
@@ -421,7 +422,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_CREATE_PLEDGE(0x14D, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_BUY(0x14F, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_INFO(0x150, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_INFO(0x150, ExElementalSpiritInfo::new, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, null, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, null, ConnectionState.IN_GAME),
 	EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, null, ConnectionState.IN_GAME),
