@@ -55,7 +55,7 @@ public class RequestExPledgeMasterySet implements IClientIncomingPacket
 		}
 		if (player.getObjectId() != clan.getLeaderId())
 		{
-			player.sendMessage("You do not have enough privilages to take this action.");
+			player.sendMessage("You do not have enough privileges to take this action.");
 			return;
 		}
 		
@@ -67,7 +67,7 @@ public class RequestExPledgeMasterySet implements IClientIncomingPacket
 		}
 		
 		// Check if it can be learned.
-		if (clan.getTotalDevelopmentPoints() < (clan.getUsedDevelopmentPoints() + 1))
+		if (clan.getTotalDevelopmentPoints() <= clan.getUsedDevelopmentPoints())
 		{
 			player.sendMessage("Your clan develpment points are not sufficient.");
 			return;

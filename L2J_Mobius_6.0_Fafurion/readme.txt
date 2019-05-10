@@ -86,6 +86,7 @@ Grand Crusade:
 
 Salvation:
 -New Agathion item support
+-New clan system support
 
 Etina's Fate:
 -Parsed new items from client

@@ -87,6 +87,7 @@ Grand Crusade:
 Salvation:
 -Parsed new items from client
 -New Agathion item support
+-New clan system support
 
 Events:
 -Birth of Draco

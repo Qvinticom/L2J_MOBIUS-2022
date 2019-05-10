@@ -63,19 +63,18 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 				{
 					available = false;
 				}
-				if (clan.getReputationScore() < mastery.getClanReputation())
+				else
 				{
-					available = false;
-				}
-				final int previous = mastery.getPreviousMastery();
-				final int previousAlt = mastery.getPreviousMasteryAlt();
-				if (previousAlt > 0)
-				{
-					available = clan.hasMastery(previous) || clan.hasMastery(previousAlt);
-				}
-				else if (previous > 0)
-				{
-					available = clan.hasMastery(previous);
+					final int previous = mastery.getPreviousMastery();
+					final int previousAlt = mastery.getPreviousMasteryAlt();
+					if (previousAlt > 0)
+					{
+						available = clan.hasMastery(previous) || clan.hasMastery(previousAlt);
+					}
+					else if (previous > 0)
+					{
+						available = clan.hasMastery(previous);
+					}
 				}
 				
 				packet.writeC(clan.hasMastery(id) ? 0x02 : available ? 0x01 : 0x00); // Availability.

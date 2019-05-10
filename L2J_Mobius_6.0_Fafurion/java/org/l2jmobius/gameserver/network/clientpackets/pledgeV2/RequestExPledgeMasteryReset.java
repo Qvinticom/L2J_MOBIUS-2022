@@ -51,7 +51,7 @@ public class RequestExPledgeMasteryReset implements IClientIncomingPacket
 		}
 		if (player.getObjectId() != clan.getLeaderId())
 		{
-			player.sendMessage("You do not have enough privilages to take this action.");
+			player.sendMessage("You do not have enough privileges to take this action.");
 			return;
 		}
 		
