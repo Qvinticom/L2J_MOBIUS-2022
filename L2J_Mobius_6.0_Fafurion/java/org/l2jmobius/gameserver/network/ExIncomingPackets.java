@@ -87,6 +87,7 @@ import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeIt
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeLevelUp;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryInfo;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryReset;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasterySet;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeSkillInfo;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import org.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
@@ -428,7 +429,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PLEDGE_MISSION_INFO(0x142, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_MISSION_REWARD(0x143, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_MASTERY_INFO(0x144, RequestExPledgeMasteryInfo::new, ConnectionState.IN_GAME),
-	EX_PLEDGE_MASTERY_SET(0x145, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MASTERY_SET(0x145, RequestExPledgeMasterySet::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MASTERY_RESET(0x146, RequestExPledgeMasteryReset::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_SKILL_INFO(0x147, RequestExPledgeSkillInfo::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_SKILL_ACTIVATE(0x148, null, ConnectionState.IN_GAME),

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.ClanMasteryData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClanMasteryHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
@@ -38,24 +39,46 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		if (_player.getClan() == null)
+		final Clan clan = _player.getClan();
+		if (clan == null)
 		{
 			return false;
 		}
 		
 		OutgoingPackets.EX_PLEDGE_MASTERY_INFO.writeId(packet);
 		
-		packet.writeD(0); // Consumed development points
-		packet.writeD(Math.max(0, _player.getClan().getLevel() - 4)); // Total development points
-		
-		packet.writeD(16); // Masteries count
+		packet.writeD(clan.getUsedDevelopmentPoints()); // Consumed development points
+		packet.writeD(clan.getTotalDevelopmentPoints()); // Total development points
+		packet.writeD(16); // Mastery count
 		for (ClanMasteryHolder mastery : ClanMasteryData.getInstance().getMasteries())
 		{
 			if (mastery.getId() < 17)
 			{
-				packet.writeD(mastery.getId()); // Mastery
-				packet.writeD(0); // Purchased?
-				packet.writeC(/* _player.getClan().getLevel() >= mastery.getClanLevel() ? 1 : */ 0); // Availability - TODO: Previous level requirement.
+				final int id = mastery.getId();
+				packet.writeD(id); // Mastery
+				packet.writeD(0x00); // ?
+				
+				boolean available = true;
+				if (clan.getLevel() < mastery.getClanLevel())
+				{
+					available = false;
+				}
+				if (clan.getReputationScore() < mastery.getClanReputation())
+				{
+					available = false;
+				}
+				final int previous = mastery.getPreviousMastery();
+				final int previousAlt = mastery.getPreviousMasteryAlt();
+				if (previousAlt > 0)
+				{
+					available = clan.hasMastery(previous) || clan.hasMastery(previousAlt);
+				}
+				else if (previous > 0)
+				{
+					available = clan.hasMastery(previous);
+				}
+				
+				packet.writeC(clan.hasMastery(id) ? 0x02 : available ? 0x01 : 0x00); // Availability.
 			}
 		}
 		

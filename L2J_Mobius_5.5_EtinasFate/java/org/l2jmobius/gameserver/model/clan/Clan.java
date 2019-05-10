@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import org.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
+import org.l2jmobius.gameserver.data.xml.impl.ClanMasteryData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.enums.ClanRewardType;
@@ -57,6 +58,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanJo
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLeaderChange;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLeft;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanLvlUp;
+import org.l2jmobius.gameserver.model.holders.ClanMasteryHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
@@ -1471,6 +1473,33 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
+	public void removeSkill(Skill skill)
+	{
+		_skills.remove(skill.getId());
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM clan_skills WHERE clan_id=? AND skill_id=? AND skill_level=?"))
+		{
+			ps.setInt(1, _clanId);
+			ps.setInt(2, skill.getId());
+			ps.setInt(3, skill.getLevel());
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Error removing clan masteries: " + e.getMessage(), e);
+		}
+		
+		for (ClanMember member : _members.values())
+		{
+			if ((member != null) && (member.getPlayerInstance() != null) && member.isOnline())
+			{
+				member.getPlayerInstance().removeSkill(skill, false);
+				member.getPlayerInstance().sendSkillList();
+			}
+		}
+	}
+	
 	public void broadcastToOnlineAllyMembers(IClientOutgoingPacket packet)
 	{
 		for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId()))
@@ -2752,6 +2781,44 @@ public class Clan implements IIdentifiable, INamable
 		
 		// Send Packet
 		broadcastToOnlineMembers(ExPledgeBonusMarkReset.STATIC_PACKET);
+	}
+	
+	public void addMastery(int id)
+	{
+		getVariables().set(ClanVariables.CLAN_MASTERY + id, true);
+	}
+	
+	public boolean hasMastery(int id)
+	{
+		return getVariables().getBoolean(ClanVariables.CLAN_MASTERY + id, false);
+	}
+	
+	public void removeAllMasteries()
+	{
+		for (ClanMasteryHolder mastery : ClanMasteryData.getInstance().getMasteries())
+		{
+			getVariables().remove(ClanVariables.CLAN_MASTERY + mastery.getId());
+			for (Skill skill : mastery.getSkills())
+			{
+				removeSkill(skill);
+			}
+		}
+	}
+	
+	public void setDevelopmentPoints(int count)
+	{
+		getVariables().set(ClanVariables.CLAN_DEVELOPMENT_POINTS, count);
+		getVariables().storeMe();
+	}
+	
+	public int getUsedDevelopmentPoints()
+	{
+		return getVariables().getInt(ClanVariables.CLAN_DEVELOPMENT_POINTS, 0);
+	}
+	
+	public int getTotalDevelopmentPoints()
+	{
+		return Math.max(0, _level - 4);
 	}
 	
 	public ClanVariables getVariables()

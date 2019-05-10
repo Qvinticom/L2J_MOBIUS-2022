@@ -17,8 +17,9 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -35,7 +36,7 @@ public class ClanMasteryData implements IXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(ClanMasteryData.class.getName());
 	
-	private final List<ClanMasteryHolder> _clanMasteryData = new ArrayList<>();
+	private final Map<Integer, ClanMasteryHolder> _clanMasteryData = new HashMap<>();
 	
 	protected ClanMasteryData()
 	{
@@ -107,13 +108,18 @@ public class ClanMasteryData implements IXmlReader
 			final int previousMastery = set.getInt("previousMastery", 0);
 			final int previousMasteryAlt = set.getInt("previousMasteryAlt", 0);
 			
-			_clanMasteryData.add(new ClanMasteryHolder(id, skill1, skill2, skill3, skill4, clanLevel, clanReputation, previousMastery, previousMasteryAlt));
+			_clanMasteryData.put(id, new ClanMasteryHolder(id, skill1, skill2, skill3, skill4, clanLevel, clanReputation, previousMastery, previousMasteryAlt));
 		}));
 	}
 	
-	public List<ClanMasteryHolder> getMasteries()
+	public Collection<ClanMasteryHolder> getMasteries()
 	{
-		return _clanMasteryData;
+		return _clanMasteryData.values();
+	}
+	
+	public ClanMasteryHolder getClanMastery(int id)
+	{
+		return _clanMasteryData.get(id);
 	}
 	
 	public static ClanMasteryData getInstance()

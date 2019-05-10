@@ -38,6 +38,10 @@ public class ClanVariables extends AbstractVariables
 	private static final String DELETE_QUERY = "DELETE FROM clan_variables WHERE clanId = ?";
 	private static final String INSERT_QUERY = "INSERT INTO clan_variables (clanId, var, val) VALUES (?, ?, ?)";
 	
+	// Public variables.
+	public static final String CLAN_DEVELOPMENT_POINTS = "CLAN_DEVELOPMENT_POINTS";
+	public static final String CLAN_MASTERY = "CLAN_MASTERY_";
+	
 	private final int _objectId;
 	
 	public ClanVariables(int objectId)
