@@ -409,16 +409,49 @@
 		</effects>
 	</skill>
 	<skill id="19536" toLevel="1" name="Clan Battlefield">
-		<!-- For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, and Speed +$s5. Consumes $s6 Spirit Ore. Only available in the battlefield. -->
+		<!-- For 5min, Max HP/ MP/ CP +5, P. Atk. +5%, M. Atk. +10%, and Speed +7. Consumes 5 Spirit Ore. Only available in the battlefield. -->
 		<icon>icon.skill19536</icon>
-		<itemConsumeId>3031</itemConsumeId>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>100</effectPoint>
+		<staticReuse>true</staticReuse>
+		<abnormalTime>300</abnormalTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<conditions>
+			<condition name="CanUseInBattlefield" />
+		</conditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19537" toLevel="2" name="Clan Iron">
 		<!-- Clan members' PvP Damage Received -$s1. -->

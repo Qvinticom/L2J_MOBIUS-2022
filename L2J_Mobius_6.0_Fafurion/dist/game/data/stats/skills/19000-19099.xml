@@ -185,6 +185,7 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<famePointConsume>900</famePointConsume>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -206,19 +207,25 @@
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
-		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
+		<abnormalTime>1</abnormalTime>
+		<isMagic>1</isMagic>
+		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effectPoint>100</effectPoint>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<clanRepConsume>1000</clanRepConsume>
-		<itemConsumeCount>100</itemConsumeCount>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="CanUseInBattlefield" />
+			<condition name="OpSocialClass">
+				<socialClass>8</socialClass>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="HealPercent">
@@ -287,6 +294,7 @@
 		<magicLvl>74</magicLvl>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<famePointConsume>1500</famePointConsume>
@@ -339,8 +347,11 @@
 		<affectLimit>50-50</affectLimit>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<removedOnDamage>true</removedOnDamage>
 		<isMagic>2</isMagic>
 		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -352,6 +363,9 @@
 			<effect name="Speed">
 				<amount>0.5</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="SilentMove">
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -369,6 +383,7 @@
 		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -436,6 +451,7 @@
 		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>

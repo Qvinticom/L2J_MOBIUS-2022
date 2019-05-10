@@ -185,6 +185,7 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<famePointConsume>900</famePointConsume>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -197,40 +198,46 @@
 				<includeMe>false</includeMe>
 			</condition>
 		</conditions>
-        <effects>
+		<effects>
 			<effect name="CallPc" />
-        </effects>
+		</effects>
 	</skill>
 	<skill id="19008" toLevel="1" name="Clan Guardian">
 		<!-- Uses the clan guardian's power to restore nearby clan members' HP/ MP/ CP. Consumes 1000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
-		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
+		<abnormalTime>1</abnormalTime>
+		<isMagic>1</isMagic>
+		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effectPoint>100</effectPoint>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<clanRepConsume>1000</clanRepConsume>
-		<itemConsumeCount>100</itemConsumeCount>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
-			<condition name="CanUseInBattlefield" />
+			<condition name="OpSocialClass">
+				<socialClass>8</socialClass>
+			</condition>
 		</conditions>
-        <effects>
-            <effect name="HealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="CpHealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="ManaHealPercent">
-                <power>100</power>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19009" toLevel="1" name="Clan Advent">
 		<!-- Increases clan members' P. Atk. by $s1, M. Atk. by $s2, P. Def/ M. Def by $s3, and HP/ MP Recovery Bonus by $s4. This effect is activated only when the clan leader and/ or an elite clan member is online. -->
@@ -287,6 +294,7 @@
 		<magicLvl>74</magicLvl>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<famePointConsume>1500</famePointConsume>
@@ -339,21 +347,27 @@
 		<affectLimit>50-50</affectLimit>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<removedOnDamage>true</removedOnDamage>
 		<isMagic>2</isMagic>
 		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>150</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
-        <effects>
-            <effect name="Hide" />
-            <effect name="Speed">
-                <amount>0.5</amount>
-                <mode>PER</mode>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="Hide" />
+			<effect name="Speed">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SilentMove">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19013" toLevel="1" name="Clan Un-debuff">
 		<!-- Removes all debuffs from nearby clan members. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. -->
@@ -369,6 +383,7 @@
 		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -405,19 +420,19 @@
 		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-        <effects>
-            <effect name="DamageBlock">
-                <type>BLOCK_HP</type>
-            </effect>
-            <effect name="DamageBlock">
-                <type>BLOCK_MP</type>
-            </effect>
-            <effect name="DebuffBlock" />
-            <effect name="ResistDispelByCategory">
-                <amount>-100</amount>
-                <slot>ALL</slot>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19015" toLevel="1" name="Clan Friendly">
 		<!-- Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 50 Spirit Ore. Consumes 3500 Individual Fame. Applies after the marquis stage. -->
@@ -436,6 +451,7 @@
 		<affectLimit>50-50</affectLimit>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -478,13 +494,13 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="PAtk">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PhysicalDefence">
-                <amount>3</amount>
-                <mode>PER</mode>
-            </effect>
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19017" toLevel="1" name="Clan Prison">
@@ -537,17 +553,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND</affectObject>
-        <effects>
-            <effect name="HealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="CpHealPercent">
-                <power>100</power>
-            </effect>
-            <effect name="ManaHealPercent">
-                <power>100</power>
-            </effect>
-        </effects>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19019" toLevel="1" name="Revolution Blade">
 		<!-- Inflicts physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed. -->
