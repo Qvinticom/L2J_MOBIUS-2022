@@ -56,13 +56,6 @@ public class RequestExPledgeSkillActivate implements IClientIncomingPacket
 			return;
 		}
 		
-		// Check if already enabled.
-		if (clan.getMasterySkillRemainingTime(_skillId) > 0)
-		{
-			clan.removeMasterySkill(_skillId);
-			return;
-		}
-		
 		// Check if it can be learned.
 		int previous = 0;
 		int cost = 0;
@@ -107,6 +100,13 @@ public class RequestExPledgeSkillActivate implements IClientIncomingPacket
 		if (!clan.hasMastery(previous))
 		{
 			player.sendMessage("You need to learn the previous mastery.");
+			return;
+		}
+		
+		// Check if already enabled.
+		if (clan.getMasterySkillRemainingTime(_skillId) > 0)
+		{
+			clan.removeMasterySkill(_skillId);
 			return;
 		}
 		
