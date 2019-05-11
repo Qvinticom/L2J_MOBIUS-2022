@@ -80,22 +80,21 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 	// Skills
 	private static final SkillHolder[] MENTEE_BUFFS_WITHOUT_MENTOR_ONLINE =
 	{
-		new SkillHolder(9227, 1), // Mentor's Poem of Horn
-		new SkillHolder(9228, 1), // Mentor's Poem of Drum
-		new SkillHolder(9230, 1), // Mentor's Poem of Organ
-		new SkillHolder(9231, 1), // Mentor's Poem of Guitar
+		new SkillHolder(9227, 1), // Horn Melody - Mentor
+		new SkillHolder(9228, 1), // Drum Melody - Mentor
+		new SkillHolder(9230, 1), // Pipe Organ Melody - Mentor
+		new SkillHolder(9231, 1), // Guitar Melody - Mentor
 		new SkillHolder(17082, 1), // Mentor's Prevailing Sonata
-		new SkillHolder(17083, 1), // Mentor's Daring Sonata
-		new SkillHolder(17084, 1), // Mentor's Refreshing Sonata
+		new SkillHolder(17083, 1), // Daring Sonata - Mentor
+		new SkillHolder(17084, 1), // Refreshing Sonata - Mentor
+		new SkillHolder(18593, 1), // Mentor's Harmony
 	};
 	protected static final SkillHolder[] MENTOR_BUFFS =
 	{
 		new SkillHolder(9256, 1), // Mentee's Appreciation;
 	};
 	private static final SkillHolder MENTEE_MENTOR_SUMMON = new SkillHolder(9379, 1); // Mentee's Mentor Summon
-	private static final SkillHolder MENTOR_KNIGHTS_HARMONY = new SkillHolder(9376, 1); // Mentor's Knight's Harmony
-	private static final SkillHolder MENTOR_WIZARDS_HARMONY = new SkillHolder(9377, 1); // Mentor's Wizard's Harmony
-	private static final SkillHolder MENTOR_WARRIORS_HARMONY = new SkillHolder(9378, 1); // Mentor's Warrior's Harmony
+	private static final SkillHolder MENTOR_ART_OF_SEDUCTION = new SkillHolder(18594, 1); // Mentor's Art of Seduction
 	// Misc
 	private static final int MAX_LEVEL = 85;
 	private static final String LEVEL_UP_TITLE = "Mentee coin from Mentee leveling";
@@ -413,9 +412,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 		// If player does not have any mentees anymore remove mentor skills.
 		if ((mentor != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()) == null))
 		{
-			mentor.removeSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), true);
-			mentor.removeSkill(MENTOR_WIZARDS_HARMONY.getSkill(), true);
-			mentor.removeSkill(MENTOR_WARRIORS_HARMONY.getSkill(), true);
+			mentor.removeSkill(MENTOR_ART_OF_SEDUCTION.getSkill(), true);
 			
 			// Clear the mentee
 			mentor.sendPacket(new ExMentorList(mentor));
@@ -445,9 +442,7 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 		// If player does not have any mentees anymore remove mentor skills.
 		if (MentorManager.getInstance().getMentees(mentor.getObjectId()) == null)
 		{
-			mentor.removeSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), true);
-			mentor.removeSkill(MENTOR_WIZARDS_HARMONY.getSkill(), true);
-			mentor.removeSkill(MENTOR_WARRIORS_HARMONY.getSkill(), true);
+			mentor.removeSkill(MENTOR_ART_OF_SEDUCTION.getSkill(), true);
 		}
 		
 		// Remove mentee from the list
@@ -467,12 +462,10 @@ public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 	private void handleMentorSkills(PlayerInstance player)
 	{
 		// Give mentor's buffs only if he didn't had them.
-		if (player.getKnownSkill(MENTOR_KNIGHTS_HARMONY.getSkillId()) == null)
+		if (player.getKnownSkill(MENTOR_ART_OF_SEDUCTION.getSkillId()) == null)
 		{
 			// Add the mentor skills
-			player.addSkill(MENTOR_KNIGHTS_HARMONY.getSkill(), false);
-			player.addSkill(MENTOR_WIZARDS_HARMONY.getSkill(), false);
-			player.addSkill(MENTOR_WARRIORS_HARMONY.getSkill(), false);
+			player.addSkill(MENTOR_ART_OF_SEDUCTION.getSkill(), false);
 		}
 	}
 	

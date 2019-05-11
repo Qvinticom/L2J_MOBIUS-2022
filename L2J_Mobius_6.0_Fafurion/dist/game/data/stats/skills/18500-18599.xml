@@ -989,11 +989,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
-				<amount>35</amount>
+				<amount>22</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>40</amount>
+				<amount>45</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
@@ -1009,16 +1009,12 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>8</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>8</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>8</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-15</amount>
