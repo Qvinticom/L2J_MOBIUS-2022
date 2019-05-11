@@ -882,6 +882,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="18098" level="1" /> <!-- Scroll: 1,000 SP -->
+		</skills>
 	</item>
 	<item id="40050" name="Scroll: 10,000 SP" type="EtcItem">
 		<!-- Restores 10,000 SP. -->
@@ -890,6 +897,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="18099" level="1" /> <!-- Scroll: 10,000 SP -->
+		</skills>
 	</item>
 	<item id="40051" name="Scroll: 100,000 SP" type="EtcItem">
 		<!-- Restores 100,000 SP. -->
@@ -898,7 +912,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="18100" level="1" /> <!-- Scroll: 100,000 SP -->
+		</skills>
 	</item>
 	<item id="40052" name="Scroll: 1,000,000 SP" type="EtcItem">
 		<!-- Restores 1,000,000 SP. -->
@@ -907,6 +927,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="18101" level="1" /> <!-- Scroll: 1,000,000 SP -->
+		</skills>
 	</item>
 	<item id="40053" name="Scroll: 10,000,000 SP" type="EtcItem">
 		<!-- Restores 10,000,000 SP. -->
@@ -915,7 +942,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="18102" level="1" /> <!-- Scroll: 10,000,000 SP -->
+		</skills>
 	</item>
 	<item id="40054" name="Rune of Bountiful Growth Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Rune of Bountiful Growth (30-day). -->
@@ -956,8 +989,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="500" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17898" level="1" /> <!-- Mysterious Wind Scroll -->
+		</skills>
 	</item>
 	<item id="40057" name="Magic Broom" type="Weapon">
 		<!-- A basic for appearance modification. -->
