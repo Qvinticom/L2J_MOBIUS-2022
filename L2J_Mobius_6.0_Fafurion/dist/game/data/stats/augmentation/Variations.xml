@@ -5412,13 +5412,14 @@
 		<variation mineralId="80130">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33748" to="33884" chance="100" /> <!-- P. Ak. + 1% -> Damage Received -15% -->
+					<optionRange from="33748" to="33883" chance="1.063" /> <!-- P. Ak. + 1% -> Damage Increase +15% -->
+					<option id="33884" chance="1.141"/> <!-- Damage Received -15% -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33748" to="33884" chance="100" /> <!-- P. Ak. + 1% -> Damage Received -15% -->
-				</optionCategory>
+					<optionRange from="33748" to="33883" chance="1.063" /> <!-- P. Ak. + 1% -> Damage Increase +15% -->
+					<option id="33884" chance="1.141"/> <!-- Damage Received -15% -->				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Spirit Stone: Accessory -->
