@@ -77,6 +77,15 @@ public final class MultisellData implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
+		final EnchantItemGroup magicWeaponGroup = EnchantItemGroupsData.getInstance().getItemGroup("MAGE_WEAPON_GROUP");
+		final int magicWeaponGroupMax = magicWeaponGroup != null ? magicWeaponGroup.getMaximumEnchant() : 0;
+		final EnchantItemGroup weapongroup = EnchantItemGroupsData.getInstance().getItemGroup("FIGHTER_WEAPON_GROUP");
+		final int weaponGroupMax = weapongroup != null ? weapongroup.getMaximumEnchant() : 0;
+		final EnchantItemGroup fullArmorGroup = EnchantItemGroupsData.getInstance().getItemGroup("FULL_ARMOR_GROUP");
+		final int fullArmorGroupMax = fullArmorGroup != null ? fullArmorGroup.getMaximumEnchant() : 0;
+		final EnchantItemGroup armorGroup = EnchantItemGroupsData.getInstance().getItemGroup("ARMOR_GROUP");
+		final int armorGroupMax = armorGroup != null ? armorGroup.getMaximumEnchant() : 0;
+		
 		try
 		{
 			forEach(doc, "list", listNode ->
@@ -119,7 +128,6 @@ public final class MultisellData implements IXmlReader
 								final long count = parseLong(d.getAttributes(), "count");
 								final double chance = parseDouble(d.getAttributes(), "chance", Double.NaN);
 								byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
-								
 								if (enchantmentLevel > 0)
 								{
 									final Item item = ItemTable.getInstance().getTemplate(id);
@@ -127,47 +135,16 @@ public final class MultisellData implements IXmlReader
 									{
 										if (item.isWeapon())
 										{
-											if (item.isMagicWeapon())
-											{
-												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("MAGE_WEAPON_GROUP");
-												if (group != null)
-												{
-													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
-												}
-											}
-											else
-											{
-												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("FIGHTER_WEAPON_GROUP");
-												if (group != null)
-												{
-													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
-												}
-											}
+											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.isMagicWeapon() ? magicWeaponGroupMax : weaponGroupMax);
 										}
 										else if (item.isArmor())
 										{
-											if (item.getBodyPart() == Item.SLOT_FULL_ARMOR)
-											{
-												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("FULL_ARMOR_GROUP");
-												if (group != null)
-												{
-													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
-												}
-											}
-											else
-											{
-												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("ARMOR_GROUP");
-												if (group != null)
-												{
-													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
-												}
-											}
+											enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == Item.SLOT_FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
 										}
 									}
 								}
 								
 								final ItemChanceHolder product = new ItemChanceHolder(id, chance, count, enchantmentLevel);
-								
 								if (itemExists(product))
 								{
 									// Check chance only of items that have set chance. Items without chance (NaN) are used for displaying purposes.
