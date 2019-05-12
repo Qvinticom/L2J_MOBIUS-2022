@@ -5412,14 +5412,42 @@
 		<variation mineralId="80130">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33748" to="33883" chance="1.063" /> <!-- P. Ak. + 1% -> Damage Increase +15% -->
-					<option id="33884" chance="1.141"/> <!-- Damage Received -15% -->
+					<optionRange from="33748" to="33799" chance="100" /> <!-- P. Ak. + 1% -> CHA + 1 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="33800" to="33824" chance="100" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="33835" to="33873" chance="100" />
+				</optionCategory>
+				<optionCategory chance="7.0">
+					<optionRange from="33825" to="33834" chance="50" />
+					<optionRange from="33874" to="33879" chance="50" />
+				</optionCategory>
+				<optionCategory chance="3.0">
+					<optionRange from="33880" to="33884" chance="100" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33748" to="33883" chance="1.063" /> <!-- P. Ak. + 1% -> Damage Increase +15% -->
-					<option id="33884" chance="1.141"/> <!-- Damage Received -15% -->
+					<optionRange from="33748" to="33799" chance="100" /> <!-- P. Ak. + 1% -> CHA + 1 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="33800" to="33824" chance="100" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="33835" to="33873" chance="100" />
+				</optionCategory>
+				<optionCategory chance="7.0">
+					<optionRange from="33825" to="33834" chance="50" />
+					<optionRange from="33874" to="33879" chance="50" />
+				</optionCategory>
+				<optionCategory chance="3.0">
+					<optionRange from="33880" to="33884" chance="100" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
