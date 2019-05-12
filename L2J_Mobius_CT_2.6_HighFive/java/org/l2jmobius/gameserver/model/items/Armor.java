@@ -112,6 +112,15 @@ public final class Armor extends Item
 	}
 	
 	/**
+	 * @return {@code true} if the item is an etc item, {@code false} otherwise.
+	 */
+	@Override
+	public boolean isArmor()
+	{
+		return true;
+	}
+	
+	/**
 	 * @return skill that player get when has equipped armor +4 or more
 	 */
 	@Override

@@ -239,8 +239,35 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	public abstract ItemType getItemType();
 	
 	/**
+	 * Verifies if the item is an etc item.
+	 * @return {@code true} if the item is an etc item, {@code false} otherwise.
+	 */
+	public boolean isEtcItem()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verifies if the item is an armor.
+	 * @return {@code true} if the item is an armor, {@code false} otherwise.
+	 */
+	public boolean isArmor()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verifies if the item is a weapon.
+	 * @return {@code true} if the item is a weapon, {@code false} otherwise.
+	 */
+	public boolean isWeapon()
+	{
+		return false;
+	}
+	
+	/**
 	 * Verifies if the item is a magic weapon.
-	 * @return {@code true} if the weapon is magic, {@code false} otherwise
+	 * @return {@code true} if the weapon is magic, {@code false} otherwise.
 	 */
 	public boolean isMagicWeapon()
 	{

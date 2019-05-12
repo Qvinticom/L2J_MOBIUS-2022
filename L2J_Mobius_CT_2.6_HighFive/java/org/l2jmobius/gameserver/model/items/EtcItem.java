@@ -141,6 +141,15 @@ public final class EtcItem extends Item
 	}
 	
 	/**
+	 * @return {@code true} if the item is an etc item, {@code false} otherwise.
+	 */
+	@Override
+	public boolean isEtcItem()
+	{
+		return true;
+	}
+	
+	/**
 	 * @return the handler name, null if no handler for item.
 	 */
 	public String getHandlerName()

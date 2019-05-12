@@ -75,4 +75,13 @@ public final class Armor extends Item
 	{
 		return _type.mask();
 	}
+	
+	/**
+	 * @return {@code true} if the item is an armor, {@code false} otherwise
+	 */
+	@Override
+	public boolean isArmor()
+	{
+		return true;
+	}
 }

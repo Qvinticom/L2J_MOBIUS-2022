@@ -212,6 +212,15 @@ public final class Weapon extends Item
 	}
 	
 	/**
+	 * @return {@code true} if the item is a weapon, {@code false} otherwise.
+	 */
+	@Override
+	public boolean isWeapon()
+	{
+		return true;
+	}
+	
+	/**
 	 * @return {@code true} if the weapon is magic, {@code false} otherwise.
 	 */
 	@Override
