@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.VillageMasterInstance;
 import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -179,57 +178,6 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				if (checkPlayerSkill(player, trainer, s))
 				{
 					giveSkill(player, trainer, skill);
-				}
-				break;
-			}
-			case PLEDGE:
-			{
-				if (!player.isClanLeader())
-				{
-					return;
-				}
-				
-				final Clan clan = player.getClan();
-				final int repCost = (int) s.getLevelUpSp(); // Hopefully not greater that max int.
-				if (clan.getReputationScore() >= repCost)
-				{
-					if (Config.LIFE_CRYSTAL_NEEDED)
-					{
-						for (ItemHolder item : s.getRequiredItems())
-						{
-							if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false))
-							{
-								// Doesn't have required item.
-								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
-								VillageMasterInstance.showPledgeSkillList(player);
-								return;
-							}
-							
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-							sm.addItemName(item.getId());
-							sm.addLong(item.getCount());
-							player.sendPacket(sm);
-						}
-					}
-					
-					clan.takeReputationScore(repCost, true);
-					
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-					cr.addInt(repCost);
-					player.sendPacket(cr);
-					
-					clan.addNewSkill(skill);
-					
-					clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-					
-					player.sendPacket(new AcquireSkillDone());
-					
-					VillageMasterInstance.showPledgeSkillList(player);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
-					VillageMasterInstance.showPledgeSkillList(player);
 				}
 				break;
 			}

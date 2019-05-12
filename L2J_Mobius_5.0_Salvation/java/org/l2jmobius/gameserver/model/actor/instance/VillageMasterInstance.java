@@ -16,31 +16,25 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.List;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -238,10 +232,6 @@ public class VillageMasterInstance extends NpcInstance
 				player.broadcastPacket(new MagicSkillLaunched(player, 5103, 1));
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("learn_clan_skills"))
-		{
-			showPledgeSkillList(player);
-		}
 		else
 		{
 			super.onBypassFeedback(player, command);
@@ -320,52 +310,6 @@ public class VillageMasterInstance extends NpcInstance
 		final Clan clan = player.getClan();
 		clan.setDissolvingExpiryTime(0);
 		clan.updateClanInDB();
-	}
-	
-	/**
-	 * this displays PledgeSkillList to the player.
-	 * @param player
-	 */
-	public static void showPledgeSkillList(PlayerInstance player)
-	{
-		if (!player.isClanLeader())
-		{
-			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(player, "data/html/villagemaster/NotClanLeader.htm");
-			player.sendPacket(html);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		final List<SkillLearn> skills = SkillTreesData.getInstance().getAvailablePledgeSkills(player.getClan());
-		
-		if (skills.isEmpty())
-		{
-			if (player.getClan().getLevel() < 8)
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
-				if (player.getClan().getLevel() < 5)
-				{
-					sm.addInt(5);
-				}
-				else
-				{
-					sm.addInt(player.getClan().getLevel() + 1);
-				}
-				player.sendPacket(sm);
-			}
-			else
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage();
-				html.setFile(player, "data/html/villagemaster/NoMoreSkills.htm");
-				player.sendPacket(html);
-			}
-		}
-		else
-		{
-			player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.PLEDGE));
-		}
-		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	private static boolean isValidName(String name)
