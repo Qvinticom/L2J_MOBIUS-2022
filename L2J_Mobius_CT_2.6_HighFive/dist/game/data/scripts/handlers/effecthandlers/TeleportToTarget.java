@@ -48,6 +48,12 @@ public final class TeleportToTarget extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffected() != null) && GeoEngine.getInstance().canSeeTarget(info.getEffected(), info.getEffector());
+	}
+	
+	@Override
 	public boolean isInstant()
 	{
 		return true;
