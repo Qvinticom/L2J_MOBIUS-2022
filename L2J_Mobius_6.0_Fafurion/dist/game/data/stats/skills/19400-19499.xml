@@ -1805,6 +1805,32 @@
 		<!-- Instantly recovers your MP and nearby allies' MP up to $s1 according to their levels and decreases remaining cooldown of Alluring Conduct by $s2. Can be cast in the Triad state. -->
 		<icon>icon.skill11761</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0</hitCancelTime>
+		<coolTime>200</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<!-- TODO: Find proper way for Triad State -->
+		<effects>
+			<effect name="ManaHealByLevel">
+				<power>
+					<value level="1">700</value>
+					<value level="2">715</value>
+					<value level="3">725</value>
+					<value level="4">740</value>
+					<value level="5">755</value>
+					<value level="6">768</value>
+					<value level="7">786</value>
+					<value level="8">806</value>
+					<value level="9">826</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
 		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->

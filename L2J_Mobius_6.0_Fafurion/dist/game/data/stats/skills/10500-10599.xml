@@ -1429,7 +1429,6 @@
 		</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1972,7 +1971,7 @@
 		<magicLvl>93</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<mpInitialConsume>1</mpInitialConsume>
+		<mpInitialConsume>100</mpInitialConsume>
 		<hitTime>800</hitTime>
 		<targetType>NONE</targetType>
 		<effects>
@@ -2018,7 +2017,6 @@
 		<basicProperty>NONE</basicProperty>
 		<effectRange>1100</effectRange>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<canBeDispelled>true</canBeDispelled>
@@ -2207,7 +2205,6 @@
 		</effectPoint>
 		<reuseDelay>180000</reuseDelay>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2254,7 +2251,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
@@ -2483,7 +2479,6 @@
 			<value level="13">-709</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

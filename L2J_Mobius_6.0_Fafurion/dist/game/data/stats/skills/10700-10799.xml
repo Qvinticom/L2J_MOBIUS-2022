@@ -2335,7 +2335,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2565,7 +2564,6 @@
 		<reuseDelay>30000</reuseDelay>
 		<magicLvl>93</magicLvl>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>GROUND</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2616,7 +2614,6 @@
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2723,7 +2720,6 @@
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
-		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>93</magicLvl>
 		<mpConsume>9</mpConsume>
@@ -2731,7 +2727,6 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2947,7 +2942,6 @@
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2976,7 +2970,6 @@
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3011,7 +3004,6 @@
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3053,7 +3045,6 @@
 		<coolTime>200</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
