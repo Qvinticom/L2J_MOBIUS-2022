@@ -31,6 +31,7 @@ public final class EnchantItemGroup
 	private static final Logger LOGGER = Logger.getLogger(EnchantItemGroup.class.getName());
 	private final List<RangeChanceHolder> _chances = new ArrayList<>();
 	private final String _name;
+	private int _maximumEnchant = -1;
 	
 	public EnchantItemGroup(String name)
 	{
@@ -73,5 +74,24 @@ public final class EnchantItemGroup
 		}
 		LOGGER.warning(getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
 		return -1;
+	}
+	
+	/**
+	 * @return the maximum enchant level for current enchant item group.
+	 */
+	public int getMaximumEnchant()
+	{
+		if (_maximumEnchant == -1)
+		{
+			for (RangeChanceHolder holder : _chances)
+			{
+				if ((holder.getChance() > 0) && (holder.getMax() > _maximumEnchant))
+				{
+					_maximumEnchant = holder.getMax();
+				}
+			}
+			_maximumEnchant++;
+		}
+		return _maximumEnchant;
 	}
 }

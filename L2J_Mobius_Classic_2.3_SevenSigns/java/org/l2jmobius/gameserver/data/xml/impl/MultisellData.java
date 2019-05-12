@@ -44,6 +44,7 @@ import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
 public final class MultisellData implements IXmlReader
@@ -117,7 +118,54 @@ public final class MultisellData implements IXmlReader
 								final int id = parseInteger(d.getAttributes(), "id");
 								final long count = parseLong(d.getAttributes(), "count");
 								final double chance = parseDouble(d.getAttributes(), "chance", Double.NaN);
-								final byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
+								byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
+								
+								if (enchantmentLevel > 0)
+								{
+									final Item item = ItemTable.getInstance().getTemplate(id);
+									if (item != null)
+									{
+										if (item.isWeapon())
+										{
+											if (item.isMagicWeapon())
+											{
+												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("MAGE_WEAPON_GROUP");
+												if (group != null)
+												{
+													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
+												}
+											}
+											else
+											{
+												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("FIGHTER_WEAPON_GROUP");
+												if (group != null)
+												{
+													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
+												}
+											}
+										}
+										else if (item.isArmor())
+										{
+											if (item.getBodyPart() == Item.SLOT_FULL_ARMOR)
+											{
+												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("FULL_ARMOR_GROUP");
+												if (group != null)
+												{
+													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
+												}
+											}
+											else
+											{
+												final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup("ARMOR_GROUP");
+												if (group != null)
+												{
+													enchantmentLevel = (byte) Math.min(enchantmentLevel, group.getMaximumEnchant());
+												}
+											}
+										}
+									}
+								}
+								
 								final ItemChanceHolder product = new ItemChanceHolder(id, chance, count, enchantmentLevel);
 								
 								if (itemExists(product))
