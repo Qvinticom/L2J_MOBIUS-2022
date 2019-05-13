@@ -89,13 +89,13 @@ public final class Elementals
 	/* @formatter:off */
 	private static final int[][] CHANCE_TABLE =
 	{
-		{Config.S_WEAPON_STONE,		Config.S_ARMOR_STONE,		Config.S_WEAPON_CRYSTAL,	Config.S_ARMOR_CRYSTAL,		Config.S_WEAPON_STONE_SUPER,	Config.S_ARMOR_STONE_SUPER,		Config.S_WEAPON_JEWEL,		Config.S_ARMOR_JEWEL},
-		{Config.S80_WEAPON_STONE,	Config.S80_ARMOR_STONE,		Config.S80_WEAPON_CRYSTAL,	Config.S80_ARMOR_CRYSTAL,	Config.S80_WEAPON_STONE_SUPER,	Config.S80_ARMOR_STONE_SUPER,	Config.S80_WEAPON_JEWEL,	Config.S80_ARMOR_JEWEL},
-		{Config.S84_WEAPON_STONE,	Config.S84_ARMOR_STONE,		Config.S84_WEAPON_CRYSTAL,	Config.S84_ARMOR_CRYSTAL,	Config.S84_WEAPON_STONE_SUPER,	Config.S84_ARMOR_STONE_SUPER,	Config.S84_WEAPON_JEWEL,	Config.S84_ARMOR_JEWEL},
-		{Config.R_WEAPON_STONE,		Config.R_ARMOR_STONE,		Config.R_WEAPON_CRYSTAL,	Config.R_ARMOR_CRYSTAL,		Config.R_WEAPON_STONE_SUPER,	Config.R_ARMOR_STONE_SUPER,		Config.R_WEAPON_JEWEL,		Config.R_ARMOR_JEWEL},
-		{Config.R95_WEAPON_STONE,	Config.R95_ARMOR_STONE,		Config.R95_WEAPON_CRYSTAL,	Config.R95_ARMOR_CRYSTAL,	Config.R95_WEAPON_STONE_SUPER,	Config.R95_ARMOR_STONE_SUPER,	Config.R95_WEAPON_JEWEL,	Config.R95_ARMOR_JEWEL},
-		{Config.R99_WEAPON_STONE,	Config.R99_ARMOR_STONE,		Config.R99_WEAPON_CRYSTAL,	Config.R99_ARMOR_CRYSTAL,	Config.R99_WEAPON_STONE_SUPER,	Config.R99_ARMOR_STONE_SUPER,	Config.R99_WEAPON_JEWEL,	Config.R99_ARMOR_JEWEL},
-		{Config.R110_WEAPON_STONE,	Config.R110_ARMOR_STONE,	Config.R110_WEAPON_CRYSTAL,	Config.R110_ARMOR_CRYSTAL,	Config.R110_WEAPON_STONE_SUPER,	Config.R110_ARMOR_STONE_SUPER,	Config.R110_WEAPON_JEWEL,	Config.R110_ARMOR_JEWEL},
+		{Config.S_WEAPON_STONE,		Config.S_ARMOR_STONE,		Config.S_WEAPON_CRYSTAL,	Config.S_ARMOR_CRYSTAL,		Config.S_WEAPON_STONE_SUPER,	Config.S_ARMOR_STONE_SUPER,		Config.S_WEAPON_CRYSTAL_SUPER,		Config.S_ARMOR_CRYSTAL_SUPER,		Config.S_WEAPON_JEWEL,		Config.S_ARMOR_JEWEL},
+		{Config.S80_WEAPON_STONE,	Config.S80_ARMOR_STONE,		Config.S80_WEAPON_CRYSTAL,	Config.S80_ARMOR_CRYSTAL,	Config.S80_WEAPON_STONE_SUPER,	Config.S80_ARMOR_STONE_SUPER,	Config.S80_WEAPON_CRYSTAL_SUPER,	Config.S80_ARMOR_CRYSTAL_SUPER,		Config.S80_WEAPON_JEWEL,	Config.S80_ARMOR_JEWEL},
+		{Config.S84_WEAPON_STONE,	Config.S84_ARMOR_STONE,		Config.S84_WEAPON_CRYSTAL,	Config.S84_ARMOR_CRYSTAL,	Config.S84_WEAPON_STONE_SUPER,	Config.S84_ARMOR_STONE_SUPER,	Config.S84_WEAPON_CRYSTAL_SUPER,	Config.S84_ARMOR_CRYSTAL_SUPER,		Config.S84_WEAPON_JEWEL,	Config.S84_ARMOR_JEWEL},
+		{Config.R_WEAPON_STONE,		Config.R_ARMOR_STONE,		Config.R_WEAPON_CRYSTAL,	Config.R_ARMOR_CRYSTAL,		Config.R_WEAPON_STONE_SUPER,	Config.R_ARMOR_STONE_SUPER,		Config.R_WEAPON_CRYSTAL_SUPER,		Config.R_ARMOR_CRYSTAL_SUPER,		Config.R_WEAPON_JEWEL,		Config.R_ARMOR_JEWEL},
+		{Config.R95_WEAPON_STONE,	Config.R95_ARMOR_STONE,		Config.R95_WEAPON_CRYSTAL,	Config.R95_ARMOR_CRYSTAL,	Config.R95_WEAPON_STONE_SUPER,	Config.R95_ARMOR_STONE_SUPER,	Config.R95_WEAPON_CRYSTAL_SUPER,	Config.R95_ARMOR_CRYSTAL_SUPER,		Config.R95_WEAPON_JEWEL,	Config.R95_ARMOR_JEWEL},
+		{Config.R99_WEAPON_STONE,	Config.R99_ARMOR_STONE,		Config.R99_WEAPON_CRYSTAL,	Config.R99_ARMOR_CRYSTAL,	Config.R99_WEAPON_STONE_SUPER,	Config.R99_ARMOR_STONE_SUPER,	Config.R99_WEAPON_CRYSTAL_SUPER,	Config.R99_ARMOR_CRYSTAL_SUPER,		Config.R99_WEAPON_JEWEL,	Config.R99_ARMOR_JEWEL},
+		{Config.R110_WEAPON_STONE,	Config.R110_ARMOR_STONE,	Config.R110_WEAPON_CRYSTAL,	Config.R110_ARMOR_CRYSTAL,	Config.R110_WEAPON_STONE_SUPER,	Config.R110_ARMOR_STONE_SUPER,	Config.R110_WEAPON_CRYSTAL_SUPER,	Config.R110_ARMOR_CRYSTAL_SUPER,	Config.R110_WEAPON_JEWEL,	Config.R110_ARMOR_JEWEL},
 	};	
 	/* @formatter:on */
 	
@@ -372,62 +372,27 @@ public final class Elementals
 		{
 			case Stone:
 			{
-				if (item.isWeapon())
-				{
-					column = 0;
-				}
-				else // isArmor = true
-				{
-					column = 1;
-				}
+				column = item.isWeapon() ? 0 : 1;
 				break;
 			}
 			case Crystal:
 			{
-				if (item.isWeapon())
-				{
-					column = 2;
-				}
-				else // isArmor = true
-				{
-					column = 3;
-				}
+				column = item.isWeapon() ? 2 : 3;
 				break;
 			}
 			case StoneSuper:
 			{
-				if (item.isWeapon())
-				{
-					column = 4;
-				}
-				else // isArmor = true
-				{
-					column = 5;
-				}
+				column = item.isWeapon() ? 4 : 5;
 				break;
 			}
 			case CrystalSuper:
 			{
-				if (item.isWeapon())
-				{
-					column = 6;
-				}
-				else // isArmor = true
-				{
-					column = 7;
-				}
+				column = item.isWeapon() ? 6 : 7;
 				break;
 			}
 			case Jewel:
 			{
-				if (item.isWeapon())
-				{
-					column = 8;
-				}
-				else // isArmor = true
-				{
-					column = 9;
-				}
+				column = item.isWeapon() ? 8 : 9;
 				break;
 			}
 		}
