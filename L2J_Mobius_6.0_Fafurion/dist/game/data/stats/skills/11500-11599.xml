@@ -603,6 +603,13 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="11510" toLevel="13" name="Resolving Bash">
 		<!-- Attacks target with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
@@ -729,6 +736,13 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="11511" toLevel="13" name="Phantom Slasher">
 		<!-- Attacks the target with $s1 Power added to P. Atk., P. Atk./ M. Atk./ P. Def./ M. Def. -$s3 for $s2 The target can remove these debuffs if it has Spectral Slash Stage 3 or higher. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
@@ -979,6 +993,13 @@
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="11514" toLevel="11" name="Resolving Bash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
@@ -1086,6 +1107,13 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19442</skillId> <!-- Single Note - Triad -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="11515" toLevel="5" name="Confusion Bomber">
 		<!-- Curses target with darkness. For $s1, decreases Speed and Atk. Spd. by $s2. After $s3, detonates target to inflict damage nearby. Requires a sword, dual sword or dual blunt to be equipped. -->
