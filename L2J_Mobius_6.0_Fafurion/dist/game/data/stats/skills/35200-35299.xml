@@ -1454,6 +1454,8 @@
 	<skill id="35271" toLevel="1" name="Fafurion's Breath">
 		<!-- Petrifies nearby enemies for 5 sec and then paralyzes them for 10 sec when fully petrified. Ignores debuff resistance. Consumes 1 Dragon Blood. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
 		<icon>icon.fafurion_breath_i00</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>36415</itemConsumeId> <!-- Dragon Blood -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1462,12 +1464,13 @@
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<effects>
 			<effect name="BlockActions" />
 		</effects>
