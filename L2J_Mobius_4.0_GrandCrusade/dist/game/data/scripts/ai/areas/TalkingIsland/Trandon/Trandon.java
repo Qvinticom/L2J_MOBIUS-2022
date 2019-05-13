@@ -49,7 +49,7 @@ public final class Trandon extends AbstractNpcAI
 	private static final int DUAL_CERTIFICATE = 36078;
 	// Misc @formatter:off
 	private static final int[] SUB_SKILL_LEVELS = {65, 70, 75, 80};
-	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99};
+	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99, 101, 103, 105};
 	// @formatter:on
 	
 	private Trandon()
@@ -234,7 +234,7 @@ public final class Trandon extends AbstractNpcAI
 				}
 				
 				final int index = Integer.parseInt(substrings[1]);
-				if ((index < 0) || (index > 3))
+				if ((index < 0) || (index > (DUAL_SKILL_LEVELS.length - 1)))
 				{
 					return null;
 				}
