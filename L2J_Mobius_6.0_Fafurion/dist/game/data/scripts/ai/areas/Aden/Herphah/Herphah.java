@@ -18,7 +18,6 @@ package ai.areas.Aden.Herphah;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
 
@@ -32,6 +31,7 @@ public class Herphah extends AbstractNpcAI
 	// NPC
 	private static final int HERPHAH = 34362;
 	// Misc
+	@SuppressWarnings("unused")
 	private static final String[] RANDOM_VOICE =
 	{
 		"Npcdialog1.herphah_ep50_greeting_1",
@@ -74,7 +74,8 @@ public class Herphah extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		player.sendPacket(new PlaySound(3, RANDOM_VOICE[getRandom(3)], 0, 0, 0, 0, 0));
+		// Chance to broadcast at nearby players?
+		// player.sendPacket(new PlaySound(RANDOM_VOICE[getRandom(3)]));
 		return "34362.html";
 	}
 	
