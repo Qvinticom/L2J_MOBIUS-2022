@@ -835,14 +835,17 @@
 		</optionalItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="5" /> <!-- Equip Set Items -->
-			<skill id="3553" level="1" minimumPieces="5" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="1" minimumPieces="2" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="2" minimumPieces="3" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="3" minimumPieces="4" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3553" level="4" minimumPieces="5" /> <!-- Imperial Crusader Heavy Armor Set -->
 			<skill id="3554" level="1" optional="true" /> <!-- Equip Shield -->
-			<skill id="3623" level="1" minimumEnchant="6" /> <!-- Enchant Heavy Armor (S-grade) -->
+			<skill id="13339" level="1" minimumEnchant="6" minimumPieces="5" /> <!-- Heavy Armor Set +6 -->
+			<skill id="13339" level="2" minimumEnchant="7" minimumPieces="5" /> <!-- Heavy Armor Set +7 -->
+			<skill id="13339" level="3" minimumEnchant="8" minimumPieces="5" /> <!-- Heavy Armor Set +8 -->
+			<skill id="13339" level="4" minimumEnchant="9" minimumPieces="5" /> <!-- Heavy Armor Set +9 -->
+			<skill id="13339" level="5" minimumEnchant="10" minimumPieces="5" /> <!-- Heavy Armor Set +10 -->
 		</skills>
-		<stats>
-			<stat type="STR" val="4" />
-			<stat type="DEX" val="-1" />
-		</stats>
 	</set>
 	<set id="43" minimumPieces="4">
 		<requiredItems>
@@ -853,14 +856,15 @@
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
-			<skill id="3555" level="1" minimumPieces="4" /> <!-- Draconic Leather Armor Set -->
-			<skill id="3624" level="1" minimumEnchant="6" /> <!-- Enchant Light Armor (S-grade) -->
+			<skill id="3555" level="1" minimumPieces="2" /> <!-- Draconic Leather Armor Set -->
+			<skill id="3555" level="2" minimumPieces="3" /> <!-- Draconic Leather Armor Set -->
+			<skill id="3555" level="3" minimumPieces="4" /> <!-- Draconic Leather Armor Set -->
+			<skill id="13340" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Light Armor Set +6 -->
+			<skill id="13340" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Light Armor Set +7 -->
+			<skill id="13340" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Light Armor Set +8 -->
+			<skill id="13340" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Light Armor Set +9 -->
+			<skill id="13340" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Light Armor Set +10 -->
 		</skills>
-		<stats>
-			<stat type="STR" val="2" />
-			<stat type="DEX" val="2" />
-			<stat type="CON" val="-1" />
-		</stats>
 	</set>
 	<set id="44" minimumPieces="4">
 		<requiredItems>
@@ -871,14 +875,15 @@
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
-			<skill id="3556" level="1" minimumPieces="4" /> <!-- Major Arcana Robe Set -->
-			<skill id="3625" level="1" minimumEnchant="6" /> <!-- Enchant Robe (S-grade) -->
+			<skill id="3556" level="1" minimumPieces="2" /> <!-- Major Arcana Robe Set -->
+			<skill id="3556" level="2" minimumPieces="3" /> <!-- Major Arcana Robe Set -->
+			<skill id="3556" level="3" minimumPieces="4" /> <!-- Major Arcana Robe Set -->
+			<skill id="13341" level="1" minimumEnchant="6" minimumPieces="4" /> <!-- Robe Armor Set +6 -->
+			<skill id="13341" level="2" minimumEnchant="7" minimumPieces="4" /> <!-- Robe Armor Set +7 -->
+			<skill id="13341" level="3" minimumEnchant="8" minimumPieces="4" /> <!-- Robe Armor Set +8 -->
+			<skill id="13341" level="4" minimumEnchant="9" minimumPieces="4" /> <!-- Robe Armor Set +9 -->
+			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
 		</skills>
-		<stats>
-			<stat type="INT" val="2" />
-			<stat type="WIT" val="2" />
-			<stat type="MEN" val="-1" />
-		</stats>
 	</set>
 	<set id="45" minimumPieces="4">
 		<requiredItems>

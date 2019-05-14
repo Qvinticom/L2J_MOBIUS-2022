@@ -1220,22 +1220,34 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3553" toLevel="1" name="Set Effect - Imperial Crusader Armor, 2-piece">
+	<skill id="3553" toLevel="4" name="Set Effect - Imperial Crusader Armor, 2-piece">
 		<!-- HP Recovery Bonus +6%. -->
 		<icon>icon.armor_t88_u_i00</icon>
-		<magicLvl>75</magicLvl>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SLEEP>70</SLEEP>
-				<HOLD>70</HOLD>
+			<effect name="HpRegen" fromLevel="1" toLevel="4">
+				<amount>6</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="4">
 				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxHp">
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
+			</effect>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="MaxHp" fromLevel="4" toLevel="4">
 				<amount>445</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1248,60 +1260,80 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<POISON>80</POISON>
-				<BLEED>80</BLEED>
+			<effect name="ShieldDefenceRate">
+				<amount>24</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3555" toLevel="1" name="Set Effect - Draconic Leather Armor, 2-piece">
+	<skill id="3555" toLevel="3" name="Set Effect - Draconic Leather Armor, 2-piece">
 		<!-- Weight limit +5759, Max MP +289. -->
 		<icon>icon.armor_t89_ul_i00</icon>
-		<magicLvl>75</magicLvl>
+				<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PAtk">
-				<amount>4</amount>
-				<mode>PER</mode>
+			<effect name="WeightPenalty" fromLevel="1" toLevel="3">
+				<amount>5759</amount>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
+			<effect name="MaxMp" fromLevel="1" toLevel="3">
 				<amount>289</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5759</amount>
+			<effect name="PAtk" fromLevel="2" toLevel="3">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed" fromLevel="2" toLevel="3">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-1</amount>
+				<stat>CON</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3556" toLevel="1" name="Set Effect - Arcana Robe Armor, 2-piece">
+	<skill id="3556" toLevel="3" name="Set Effect - Arcana Robe Armor, 2-piece">
 		<!-- Weight limit +5759, Speed +7. -->
 		<icon>icon.armor_t90_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SHOCK>50</SHOCK>
+			<effect name="WeightPenalty" fromLevel="1" toLevel="3">
+				<amount>5759</amount>
 			</effect>
-			<effect name="MAtk">
-				<amount>17</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
+			<effect name="Speed" fromLevel="1" toLevel="3">
 				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5759</amount>
+			<effect name="MAtk" fromLevel="2" toLevel="3">
+				<amount>17</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-50</amount>
-				<mode>DIFF</mode>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
+				<SHOCK>50</SHOCK>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-1</amount>
+				<stat>MEN</stat>
 			</effect>
 		</effects>
 	</skill>
