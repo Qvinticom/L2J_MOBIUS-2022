@@ -47,24 +47,29 @@ public class Pledge implements IAffectScopeHandler
 		{
 			final Playable playable = (Playable) target;
 			final PlayerInstance player = playable.getActingPlayer();
+			final int clanId = player.getClanId();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<Playable> filter = plbl ->
+			final Predicate<Playable> filter = c ->
 			{
 				if ((affectLimit > 0) && (affected.get() >= affectLimit))
 				{
 					return false;
 				}
 				
-				final PlayerInstance p = plbl.getActingPlayer();
+				final PlayerInstance p = c.getActingPlayer();
 				if ((p == null) || p.isDead())
 				{
 					return false;
 				}
-				if ((p != player) && ((p.getClanId() == 0) || (p.getClanId() != player.getClanId())))
+				if (p != player)
 				{
-					return false;
+					final int pClanId = p.getClanId();
+					if ((pClanId == 0) || (pClanId != clanId))
+					{
+						return false;
+					}
 				}
 				if ((affectObject != null) && !affectObject.checkAffectedObject(creature, p))
 				{

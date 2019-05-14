@@ -50,17 +50,18 @@ public class PartyPledge implements IAffectScopeHandler
 			final Playable playable = (Playable) target;
 			final PlayerInstance player = playable.getActingPlayer();
 			final Party party = player.getParty();
+			final int clanId = player.getClanId();
 			
 			// Create the target filter.
 			final AtomicInteger affected = new AtomicInteger(0);
-			final Predicate<Playable> filter = plbl ->
+			final Predicate<Playable> filter = c ->
 			{
 				if ((affectLimit > 0) && (affected.get() >= affectLimit))
 				{
 					return false;
 				}
 				
-				final PlayerInstance p = plbl.getActingPlayer();
+				final PlayerInstance p = c.getActingPlayer();
 				if ((p == null) || p.isDead())
 				{
 					return false;
@@ -68,7 +69,9 @@ public class PartyPledge implements IAffectScopeHandler
 				
 				if (p != player)
 				{
-					if (((p.getClanId() == 0) && (p.getParty() == null)) || ((p.getClanId() != player.getClanId()) && (party != player.getParty())))
+					final Party pParty = p.getParty();
+					final int pClanId = p.getClanId();
+					if (((pClanId == 0) && (pParty == null)) || ((clanId != pClanId) && (party != pParty)))
 					{
 						return false;
 					}
