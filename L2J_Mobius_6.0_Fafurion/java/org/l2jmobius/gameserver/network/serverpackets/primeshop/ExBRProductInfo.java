@@ -31,12 +31,14 @@ public class ExBRProductInfo implements IClientOutgoingPacket
 	private final PrimeShopGroup _item;
 	private final int _charPoints;
 	private final long _charAdena;
+	private final long _charCoins;
 	
 	public ExBRProductInfo(PrimeShopGroup item, PlayerInstance player)
 	{
 		_item = item;
 		_charPoints = player.getPrimePoints();
 		_charAdena = player.getAdena();
+		_charCoins = player.getInventory().getInventoryItemCount(23805, -1);
 	}
 	
 	@Override
@@ -56,7 +58,7 @@ public class ExBRProductInfo implements IClientOutgoingPacket
 		}
 		packet.writeQ(_charAdena);
 		packet.writeQ(_charPoints);
-		packet.writeQ(0x00); // Hero coins
+		packet.writeQ(_charCoins); // Hero coins
 		return true;
 	}
 }
