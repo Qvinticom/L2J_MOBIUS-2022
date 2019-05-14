@@ -822,6 +822,64 @@
 			<skill id="13341" level="5" minimumEnchant="10" minimumPieces="4" /> <!-- Robe Armor Set +10 -->
 		</skills>
 	</set>
+	<set id="42" minimumPieces="5">
+		<requiredItems>
+			<item id="6373" /> <!-- Imperial Crusader Breastplate -->
+			<item id="6374" /> <!-- Imperial Crusader Gaiters -->
+			<item id="6378" /> <!-- Imperial Crusader Helmet -->
+			<item id="6375" /> <!-- Imperial Crusader Gauntlets -->
+			<item id="6376" /> <!-- Imperial Crusader Boots -->
+		</requiredItems>
+		<optionalItems>
+			<item id="6377" /> <!-- Imperial Crusader Shield -->
+		</optionalItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="5" /> <!-- Equip Set Items -->
+			<skill id="3553" level="1" minimumPieces="5" /> <!-- Imperial Crusader Heavy Armor Set -->
+			<skill id="3554" level="1" optional="true" /> <!-- Equip Shield -->
+			<skill id="3623" level="1" minimumEnchant="6" /> <!-- Enchant Heavy Armor (S-grade) -->
+		</skills>
+		<stats>
+			<stat type="STR" val="4" />
+			<stat type="DEX" val="-1" />
+		</stats>
+	</set>
+	<set id="43" minimumPieces="4">
+		<requiredItems>
+			<item id="6379" /> <!-- Draconic Leather Armor -->
+			<item id="6382" /> <!-- Draconic Leather Helmet -->
+			<item id="6380" /> <!-- Draconic Leather Gloves -->
+			<item id="6381" /> <!-- Draconic Leather Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3555" level="1" minimumPieces="4" /> <!-- Draconic Leather Armor Set -->
+			<skill id="3624" level="1" minimumEnchant="6" /> <!-- Enchant Light Armor (S-grade) -->
+		</skills>
+		<stats>
+			<stat type="STR" val="2" />
+			<stat type="DEX" val="2" />
+			<stat type="CON" val="-1" />
+		</stats>
+	</set>
+	<set id="44" minimumPieces="4">
+		<requiredItems>
+			<item id="6383" /> <!-- Major Arcana Robe -->
+			<item id="6386" /> <!-- Major Arcana Circlet -->
+			<item id="6384" /> <!-- Major Arcana Gloves -->
+			<item id="6385" /> <!-- Major Arcana Boots -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="4" /> <!-- Equip Set Items -->
+			<skill id="3556" level="1" minimumPieces="4" /> <!-- Major Arcana Robe Set -->
+			<skill id="3625" level="1" minimumEnchant="6" /> <!-- Enchant Robe (S-grade) -->
+		</skills>
+		<stats>
+			<stat type="INT" val="2" />
+			<stat type="WIT" val="2" />
+			<stat type="MEN" val="-1" />
+		</stats>
+	</set>
 	<set id="45" minimumPieces="4">
 		<requiredItems>
 			<item id="7851" /> <!-- Moon Armor -->
