@@ -45,7 +45,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.entity.Fort;
 import org.l2jmobius.gameserver.model.entity.FortSiege;
@@ -69,7 +68,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
-import org.l2jmobius.gameserver.network.serverpackets.ExCastleState;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
@@ -346,12 +344,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send blank skill list
 		player.sendPacket(new SkillList());
-		
-		// Send castle state.
-		for (Castle castle : CastleManager.getInstance().getCastles())
-		{
-			player.sendPacket(new ExCastleState(castle));
-		}
 		
 		// Send GG check
 		// player.queryGameGuard();
