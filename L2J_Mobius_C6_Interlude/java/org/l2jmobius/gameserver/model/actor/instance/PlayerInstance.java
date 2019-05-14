@@ -304,7 +304,6 @@ public final class PlayerInstance extends Playable
 	private int pcBangPoint = 0;
 	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
 	private PlayerAppearance _appearance;
-	private int _charId = 0x00030b7a;
 	private long _expBeforeDeath;
 	private int _karma;
 	private int _pvpKills;
@@ -3834,26 +3833,6 @@ public final class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Identifier of the PlayerInstance.<BR>
-	 * <BR>
-	 * @return the char id
-	 */
-	public int getCharId()
-	{
-		return _charId;
-	}
-	
-	/**
-	 * Set the Identifier of the PlayerInstance.<BR>
-	 * <BR>
-	 * @param charId the new char id
-	 */
-	public void setCharId(int charId)
-	{
-		_charId = charId;
-	}
-	
-	/**
 	 * Return the Adena amount of the PlayerInstance.<BR>
 	 * <BR>
 	 * @return the adena
@@ -4206,7 +4185,7 @@ public final class PlayerInstance extends Playable
 			{
 				if (!isCastingNow() && !isCastingPotionNow())
 				{
-					ItemInstance herb = new ItemInstance(_charId, itemId);
+					ItemInstance herb = new ItemInstance(getObjectId(), itemId);
 					IItemHandler handler = ItemHandler.getInstance().getItemHandler(herb.getItemId());
 					
 					if (handler == null)

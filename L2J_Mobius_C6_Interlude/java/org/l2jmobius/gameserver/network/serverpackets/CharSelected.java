@@ -43,7 +43,7 @@ public class CharSelected extends GameServerPacket
 		writeC(0x15);
 		
 		writeS(_player.getName());
-		writeD(_player.getCharId()); // ??
+		writeD(_player.getObjectId()); // ??
 		writeS(_player.getTitle());
 		writeD(_sessionId);
 		writeD(_player.getClanId());

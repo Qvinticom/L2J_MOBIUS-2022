@@ -96,9 +96,9 @@ public class AdminPForge implements IAdminCommandHandler
 							val = String.valueOf(activeChar.getBoat().getObjectId());
 						}
 					}
-					else if (val.toLowerCase().equals("$clanid"))
+					else if (val.toLowerCase().equals("$clarid"))
 					{
-						val = String.valueOf(activeChar.getCharId());
+						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getObjectId());
 					}
 					else if (val.toLowerCase().equals("$allyid"))
 					{
@@ -106,7 +106,7 @@ public class AdminPForge implements IAdminCommandHandler
 					}
 					else if (val.toLowerCase().equals("$tclanid"))
 					{
-						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getCharId());
+						val = String.valueOf(((PlayerInstance) activeChar.getTarget()).getClanId());
 					}
 					else if (val.toLowerCase().equals("$tallyid"))
 					{
