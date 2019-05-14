@@ -188,9 +188,7 @@ public class ServitorInstance extends Summon implements Runnable
 			_summonLifeTask.cancel(false);
 		}
 		
-		CharSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
 		return true;
-		
 	}
 	
 	/**
@@ -258,14 +256,21 @@ public class ServitorInstance extends Summon implements Runnable
 	@Override
 	public void storeMe()
 	{
-		if ((_referenceSkill == 0) || isDead())
+		if (_referenceSkill == 0)
 		{
 			return;
 		}
 		
 		if (Config.RESTORE_SERVITOR_ON_RECONNECT)
 		{
-			CharSummonTable.getInstance().saveSummon(this);
+			if (isDead())
+			{
+				CharSummonTable.getInstance().removeServitor(getOwner(), getObjectId());
+			}
+			else
+			{
+				CharSummonTable.getInstance().saveSummon(this);
+			}
 		}
 	}
 	

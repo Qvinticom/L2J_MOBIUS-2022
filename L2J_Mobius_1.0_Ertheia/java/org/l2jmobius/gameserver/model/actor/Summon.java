@@ -22,6 +22,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.SummonAI;
+import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.InstanceType;
@@ -404,6 +405,8 @@ public abstract class Summon extends Playable
 			getInventory().destroyAllItems("pet deleted", _owner, this);
 		}
 		decayMe();
+		
+		CharSummonTable.getInstance().removeServitor(_owner, getObjectId());
 	}
 	
 	public void unSummon(PlayerInstance owner)
