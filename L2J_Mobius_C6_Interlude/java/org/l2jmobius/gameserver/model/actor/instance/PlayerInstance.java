@@ -302,7 +302,7 @@ public final class PlayerInstance extends Playable
 	protected int _classIndex = 0;
 	private boolean _first_log;
 	private int pcBangPoint = 0;
-	private Map<Integer, SubClass> _subClasses;
+	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
 	private PlayerAppearance _appearance;
 	private int _charId = 0x00030b7a;
 	private long _expBeforeDeath;
@@ -13611,11 +13611,6 @@ public final class PlayerInstance extends Playable
 	 */
 	public Map<Integer, SubClass> getSubClasses()
 	{
-		if (_subClasses == null)
-		{
-			_subClasses = new HashMap<>();
-		}
-		
 		return _subClasses;
 	}
 	

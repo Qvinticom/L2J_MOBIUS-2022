@@ -441,7 +441,7 @@ public final class PlayerInstance extends Playable
 	private boolean _petItems = false;
 	
 	/** The list of sub-classes this character has. */
-	private volatile Map<Integer, SubClass> _subClasses;
+	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
 	
 	private static final String ORIGINAL_CLASS_VAR = "OriginalClass";
 	
@@ -9781,7 +9781,20 @@ public final class PlayerInstance extends Playable
 	
 	public boolean isDualClassActive()
 	{
-		return isSubClassActive() && getSubClasses().get(_classIndex).isDualClass();
+		if (!isSubClassActive())
+		{
+			return false;
+		}
+		if (_subClasses.isEmpty())
+		{
+			return false;
+		}
+		final SubClass subClass = _subClasses.get(_classIndex);
+		if (subClass == null)
+		{
+			return false;
+		}
+		return subClass.isDualClass();
 	}
 	
 	public boolean hasDualClass()
@@ -9796,17 +9809,6 @@ public final class PlayerInstance extends Playable
 	
 	public Map<Integer, SubClass> getSubClasses()
 	{
-		if (_subClasses == null)
-		{
-			synchronized (this)
-			{
-				if (_subClasses == null)
-				{
-					_subClasses = new ConcurrentHashMap<>();
-				}
-			}
-		}
-		
 		return _subClasses;
 	}
 	
