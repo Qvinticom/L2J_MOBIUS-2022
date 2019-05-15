@@ -395,7 +395,7 @@ public abstract class Inventory extends ItemContainer
 				});
 			}
 			// Must check for toggle skill item conditions.
-			for (Skill skill : player.getSkills().values())
+			for (Skill skill : player.getAllSkills())
 			{
 				if (skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player))
 				{
