@@ -47,6 +47,7 @@ public class Link implements IBypassHandler
 		"common/skill_enchant_help_01.htm",
 		"common/skill_enchant_help_02.htm",
 		"common/skill_enchant_help_03.htm",
+		"default/BlessingOfProtection.htm",
 		"fisherman/fishing_manual001.htm",
 		"fisherman/fishing_manual002.htm",
 		"fisherman/fishing_manual003.htm",
