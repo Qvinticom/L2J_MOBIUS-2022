@@ -2265,9 +2265,12 @@
 														</xs:element>
 														<xs:element minOccurs="0" name="minLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
+														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="affectType" type="xs:string" />
 														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
-														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
 														<xs:element minOccurs="0" name="weaponType">
 															<xs:complexType>
 																<xs:sequence>

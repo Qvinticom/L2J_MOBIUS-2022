@@ -1045,6 +1045,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="9945" level="1" /> <!-- Scroll: Enchant Hair Accessory -->
+		</skills>
 	</item>
 	<item id="48583" name="Special Scroll: Enchant Savior's Mask" type="EtcItem">
 		<!-- Enchant Scroll exclusively for Savior's Mask. Enchantment increases P. Def. and Debuff Resistance. Enchantment to +7 or higher increases P. Atk., M. Atk., P. Def., and M. Def., depending on the type of the equipped circlet. The scroll can enchant the mask safely to +3 and enchant up to +10. If successfully enchanted, the mask will enhance randomly between +1 to +3. Cannot be used on the items enchanted to +7 or higher. -->
@@ -1057,6 +1064,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="9945" level="1" /> <!-- Scroll: Enchant Hair Accessory -->
+		</skills>
 	</item>
 	<item id="48584" name="Savior's Mask" type="Armor">
 		<!-- A mask granted only to those credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina at the Savior's Path - Fall of Etina.. When equipped, increases M. Def. by 5%. -->
@@ -1070,6 +1084,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35205" level="1" /> <!-- Savior's Mask Basic Effect -->
+			<skill id="35207" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35207" level="2" type="ON_ENCHANT" type_value="8" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35207" level="3" type="ON_ENCHANT" type_value="9" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35207" level="4" type="ON_ENCHANT" type_value="10" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35208" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35208" level="2" type="ON_ENCHANT" type_value="8" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35208" level="3" type="ON_ENCHANT" type_value="9" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35208" level="4" type="ON_ENCHANT" type_value="10" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35209" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35209" level="2" type="ON_ENCHANT" type_value="8" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35209" level="3" type="ON_ENCHANT" type_value="9" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35209" level="4" type="ON_ENCHANT" type_value="10" /> <!-- Knight's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48585" name="Savior's Wish" type="EtcItem">
 		<!-- Embodiment of the wish of the saviors who saved Aden from Etis van Etina. It can be obtained from the Blackbird Clan that led the Savior's Path. Those who are credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina at the Savior's Path - Fall of Etina can purchase Savior's Wish at a set price or receive it as a reward for helping the Blackbird Clan's mission. You can use it through Elikia at the Blackbird Campsite. -->

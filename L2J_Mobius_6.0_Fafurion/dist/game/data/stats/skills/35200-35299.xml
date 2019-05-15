@@ -28,27 +28,123 @@
 	<skill id="35205" toLevel="1" name="Savior's Mask Basic Effect">
 		<!-- Increases M. Def. by $s1. -->
 		<icon>icon.episode_mask_01</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35206" toLevel="11" name="Savior's Mask Enchant Effects">
 		<!-- Enchanting a hair accessory increases its Debuff Resistance and an adds extra option depending on the equipped Knight's/ Warrior's/ Wizard's Circlet. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+					<value level="7">6</value>
+					<value level="8">7</value>
+					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">10</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35207" toLevel="4" name="Strength of Savior's Warrior">
 		<!-- Increases P. Atk. by $s1. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpSkillAcquire">
+				<skillId>35104</skillId> <!-- Warrior's Circlet -->
+				<hasLearned>true</hasLearned>
+			</condition>
+			<condition name="OpEquipItem">
+				<itemId>48584</itemId> <!-- Savior's Mask -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35208" toLevel="4" name="Power of Savior's Wizard">
 		<!-- Increases M. Atk. by $s1. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpSkillAcquire">
+				<skillId>35108</skillId> <!-- Wizard's Circlet -->
+				<hasLearned>true</hasLearned>
+			</condition>
+			<condition name="OpEquipItem">
+				<itemId>48584</itemId> <!-- Savior's Mask -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35209" toLevel="4" name="Defense of Savior's Knight">
 		<!-- Increases P./ M. Def. by $s1. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpSkillAcquire">
+				<skillId>35112</skillId> <!-- Knight's Circlet -->
+				<hasLearned>true</hasLearned>
+			</condition>
+			<condition name="OpEquipItem">
+				<itemId>48584</itemId> <!-- Savior's Mask -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35210" toLevel="1" name="Warrior's Ring">
 		<!-- Increases Max CP by $s1, P. Critical Damage and P./ M. Skill Critical Damage by $s2, Atk./ Casting Spd. by $s3, Stun/ Paralysis/ Knock Back/ Knock Down Attack and Defense Success by $s4. -->

@@ -463,6 +463,12 @@
 	<skill id="9945" toLevel="1" name="Scroll: Enchant Hair Accessory">
 		<!-- Enchants Hair Accessory. -->
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9946" toLevel="1" name="9th Anniversary Cube (30-day) (Event)">
 		<!-- 9th Anniversary Cube. 30-day. -->
