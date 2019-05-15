@@ -58,6 +58,7 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.SkillConditionScope;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 
@@ -378,6 +379,34 @@ public abstract class Inventory extends ItemContainer
 				}
 			}
 			
+			// Must check all equipped items for enchant conditions.
+			for (ItemInstance equipped : inventory.getPaperdollItems())
+			{
+				equipped.getItem().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
+				{
+					// Add skills bestowed from +4 armor
+					if (equipped.getEnchantLevel() >= holder.getValue())
+					{
+						final Skill skill = holder.getSkill();
+						// Check passive skill conditions.
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						{
+							player.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+							update.compareAndSet(false, true);
+						}
+					}
+				});
+			}
+			// Must check for toggle skill item conditions.
+			for (Skill skill : player.getSkills().values())
+			{
+				if (skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player))
+				{
+					player.stopSkillEffects(true, skill.getId());
+					update.compareAndSet(false, true);
+				}
+			}
+			
 			// Apply skill, if weapon have "skills on unequip"
 			it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(player, player));
 			
@@ -429,7 +458,13 @@ public abstract class Inventory extends ItemContainer
 				// Add skills bestowed from +4 armor
 				if (item.getEnchantLevel() >= holder.getValue())
 				{
-					player.addSkill(holder.getSkill(), false);
+					final Skill skill = holder.getSkill();
+					// Check passive skill conditions.
+					if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+					{
+						return;
+					}
+					player.addSkill(skill, false);
 					update.compareAndSet(false, true);
 				}
 			});
@@ -467,6 +502,26 @@ public abstract class Inventory extends ItemContainer
 					LOGGER.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + holder);
 				}
 			});
+			
+			// Must check all equipped items for enchant conditions.
+			for (ItemInstance equipped : inventory.getPaperdollItems())
+			{
+				equipped.getItem().forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
+				{
+					// Add skills bestowed from +4 armor
+					if (equipped.getEnchantLevel() >= holder.getValue())
+					{
+						final Skill skill = holder.getSkill();
+						// Check passive skill conditions.
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						{
+							return;
+						}
+						player.addSkill(skill, false);
+						update.compareAndSet(false, true);
+					}
+				});
+			}
 			
 			// Apply skill, if weapon have "skills on equip"
 			item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
