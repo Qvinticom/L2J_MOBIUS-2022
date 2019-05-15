@@ -67,6 +67,15 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 		if (_type == 1)
 		{
 			option = item.getSpecialAbility(_position);
+			// If position is invalid, check the other one.
+			if ((option == null) && (_position == 0))
+			{
+				option = item.getSpecialAbility(1);
+				if (option != null)
+				{
+					_position = 1;
+				}
+			}
 		}
 		if (_type == 2)
 		{
