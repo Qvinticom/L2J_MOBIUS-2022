@@ -61,6 +61,7 @@ public final class AddHate extends AbstractEffect
 		if (val > 0)
 		{
 			((Attackable) effected).addDamageHate(effector, 0, (int) val);
+			effected.setRunning();
 		}
 		else if (val < 0)
 		{
