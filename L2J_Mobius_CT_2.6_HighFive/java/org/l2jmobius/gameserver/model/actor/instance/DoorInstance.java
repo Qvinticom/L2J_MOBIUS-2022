@@ -345,7 +345,7 @@ public class DoorInstance extends Creature
 		
 		final PlayerInstance actingPlayer = attacker.getActingPlayer();
 		
-		if (_clanHall != null)
+		if ((_clanHall != null) && _clanHall.isSiegableHall())
 		{
 			final SiegableHall hall = (SiegableHall) _clanHall;
 			if (!hall.isSiegableHall())
