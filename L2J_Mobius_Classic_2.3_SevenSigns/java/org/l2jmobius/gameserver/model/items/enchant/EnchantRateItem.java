@@ -25,7 +25,7 @@ public final class EnchantRateItem
 {
 	private final String _name;
 	private int _itemId;
-	private int _slot;
+	private long _slot;
 	private Boolean _isMagicWeapon = null;
 	
 	public EnchantRateItem(String name)
