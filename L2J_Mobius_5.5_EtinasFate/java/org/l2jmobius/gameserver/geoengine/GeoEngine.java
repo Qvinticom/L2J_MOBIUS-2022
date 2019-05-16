@@ -274,7 +274,7 @@ public class GeoEngine
 		final int y = geoY / GeoStructure.BLOCK_CELLS_Y;
 		
 		// if x or y is out of array return null
-		if ((x < GeoStructure.GEO_BLOCKS_X) && (y < GeoStructure.GEO_BLOCKS_Y))
+		if ((x > -1) && (y > -1) && (x < GeoStructure.GEO_BLOCKS_X) && (y < GeoStructure.GEO_BLOCKS_Y))
 		{
 			return _blocks[x][y];
 		}
