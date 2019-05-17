@@ -206,15 +206,15 @@ public class EnterWorld implements IClientIncomingPacket
 					player.setDietMode(true);
 					player.refreshOverloaded();
 				}
-				
-				if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
-				{
-					AdminData.getInstance().addGm(player, false);
-				}
-				else
-				{
-					AdminData.getInstance().addGm(player, true);
-				}
+			}
+			
+			if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", player.getAccessLevel()))
+			{
+				AdminData.getInstance().addGm(player, false);
+			}
+			else
+			{
+				AdminData.getInstance().addGm(player, true);
 			}
 			
 			if (Config.GM_GIVE_SPECIAL_SKILLS)
