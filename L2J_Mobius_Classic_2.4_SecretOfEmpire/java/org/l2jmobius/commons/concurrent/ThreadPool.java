@@ -62,6 +62,7 @@ public final class ThreadPool
 		for (ScheduledThreadPoolExecutor threadPool : SCHEDULED_POOLS)
 		{
 			threadPool.setRejectedExecutionHandler(new RejectedExecutionHandlerImpl());
+			threadPool.setRemoveOnCancelPolicy(true);
 			threadPool.prestartAllCoreThreads();
 		}
 		for (ThreadPoolExecutor threadPool : INSTANT_POOLS)
