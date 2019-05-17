@@ -357,8 +357,8 @@ public final class ClanHall extends AbstractResidence
 				{
 					if (getCostFailDay() > 8)
 					{
-						setOwner(null);
 						_owner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
+						setOwner(null);
 					}
 					else
 					{
