@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -62,7 +63,7 @@ public class DoorAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onIntentionMoveTo(Location destination)
+	protected void onIntentionMoveTo(ILocational destination)
 	{
 	}
 	

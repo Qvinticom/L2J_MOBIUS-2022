@@ -347,7 +347,7 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionMoveTo(Location loc)
+	protected void onIntentionMoveTo(ILocational loc)
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{

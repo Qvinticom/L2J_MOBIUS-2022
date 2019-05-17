@@ -24,12 +24,12 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_MOVE_TO;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.entity.Duel;
+import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -182,7 +182,7 @@ public class PlayerAI extends PlayableAI
 	 * </ul>
 	 */
 	@Override
-	protected void onIntentionMoveTo(Location loc)
+	protected void onIntentionMoveTo(ILocational loc)
 	{
 		if (getIntention() == AI_INTENTION_REST)
 		{
