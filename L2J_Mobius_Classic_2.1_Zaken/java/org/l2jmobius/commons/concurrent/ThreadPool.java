@@ -95,34 +95,6 @@ public final class ThreadPool
 	}
 	
 	/**
-	 * Finds the least used ScheduledThreadPoolExecutor from SCHEDULED_POOLS.
-	 * @return the least used ScheduledThreadPoolExecutor.
-	 */
-	private static ScheduledThreadPoolExecutor getLeastUsedScheduledThreadPool()
-	{
-		int lastQueueSize = Integer.MAX_VALUE;
-		ScheduledThreadPoolExecutor leastUsed = null;
-		for (ScheduledThreadPoolExecutor threadPool : SCHEDULED_POOLS)
-		{
-			final int queueSize = threadPool.getQueue().size();
-			if (lastQueueSize > queueSize)
-			{
-				lastQueueSize = queueSize;
-				leastUsed = threadPool;
-			}
-		}
-		
-		// Not likely to happen.
-		if (leastUsed == null)
-		{
-			LOGGER.warning("ThreadPool: All threadpool queues reached 2147483647 size! Consider restarting the server!");
-			leastUsed = SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT];
-		}
-		
-		return leastUsed;
-	}
-	
-	/**
 	 * Creates and executes a one-shot action that becomes enabled after the given delay.
 	 * @param runnable : the task to execute.
 	 * @param delay : the time from now to delay execution.
@@ -132,7 +104,7 @@ public final class ThreadPool
 	{
 		try
 		{
-			return getLeastUsedScheduledThreadPool().schedule(new RunnableWrapper(runnable), delay, TimeUnit.MILLISECONDS);
+			return SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT].schedule(new RunnableWrapper(runnable), delay, TimeUnit.MILLISECONDS);
 		}
 		catch (Exception e)
 		{
@@ -151,7 +123,7 @@ public final class ThreadPool
 	{
 		try
 		{
-			return getLeastUsedScheduledThreadPool().scheduleAtFixedRate(new RunnableWrapper(runnable), initialDelay, period, TimeUnit.MILLISECONDS);
+			return SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT].scheduleAtFixedRate(new RunnableWrapper(runnable), initialDelay, period, TimeUnit.MILLISECONDS);
 		}
 		catch (Exception e)
 		{
