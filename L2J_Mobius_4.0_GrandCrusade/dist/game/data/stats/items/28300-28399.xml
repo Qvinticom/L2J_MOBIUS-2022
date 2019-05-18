@@ -18,6 +18,8 @@
 		<set name="crystal_count" val="9008" />
 		<set name="blessed" val="true" />
 		<skills>
+			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27698" level="6" /> <!-- Inherent Abilities - Attack -->
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
 		</skills>
@@ -44,6 +46,10 @@
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="5630" />
 		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27699" level="6" /> <!-- Inherent Abilities - Attack -->
+		</skills>
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">171</stat>
@@ -66,6 +72,10 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="2252" />
 		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27700" level="6" /> <!-- Inherent Abilities - Attack -->
+		</skills>
 		<stats>
 			<stat type="pDef">125</stat>
 		</stats>
@@ -86,6 +96,10 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="2252" />
 		<set name="blessed" val="true" />
+		<skills>
+			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
+			<skill id="27701" level="6" /> <!-- Inherent Abilities - Attack -->
+		</skills>
 		<stats>
 			<stat type="pDef">125</stat>
 		</stats>
