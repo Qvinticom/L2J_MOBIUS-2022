@@ -71,9 +71,10 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 		for (DailyMissionDataHolder reward : _rewards)
 		{
 			packet.writeH(reward.getId());
-			packet.writeC(reward.getStatus(_player));
+			int status = reward.getStatus(_player);
+			packet.writeC(status);
 			packet.writeC(reward.getRequiredCompletions() > 1 ? 0x01 : 0x00);
-			packet.writeD(Math.min(reward.getProgress(_player), _player.getLevel()));
+			packet.writeD(reward.getParams().getInt("level", -1) == -1 ? (status == 1 ? 0 : reward.getProgress(_player)) : _player.getLevel());
 			packet.writeD(reward.getRequiredCompletions());
 		}
 		return true;

@@ -1655,14 +1655,12 @@
 			<item id="29648" count="1" />
 		</items>
 	</reward>
-	<!--
 	<reward id="232" reward_id="612" name="Have you joined a clan?" isMainClassOnly="false" requiredCompletion="1" isOneTime="true">
 		<handler name="siege" />
 		<items>
 			<item id="29654" count="1" />
 		</items>
 	</reward>
-	-->
 	<reward id="233" reward_id="613" name="Olympiad Warrior" isMainClassOnly="false" requiredCompletion="1" isOneTime="false">
 		<handler name="olympiad" />
 		<items>
@@ -1679,6 +1677,267 @@
 		<handler name="olympiad" />
 		<items>
 			<item id="70280" count="1" />
+		</items>
+	</reward>
+	<reward id="245" reward_id="615" name="Win 15 Olympiad Matches!" isMainClassOnly="false" requiredCompletion="15" isOneTime="false">
+		<handler name="olympiad" />
+		<items>
+			<item id="70024" count="15" />
+		</items>
+	</reward>
+	<reward id="250" reward_id="301" name="Explore the Devil's Isle!" requiredCompletion="100">
+		<handler name="monster">
+			<param name="ids">24025,24026,24027,24028,24029,24030,24031,24032,24033,24035,24039,24040</param>
+		</handler>
+		<items>
+			<item id="29010" count="1" />
+		</items>
+	</reward>
+	<reward id="251" reward_id="302" name="Defeat Zaken!">
+		<handler name="monster">
+			<param name="ids">29022</param>
+		</handler>
+		<items>
+			<item id="90767" count="1" />
+		</items>
+	</reward>
+	<reward id="252" reward_id="101" name="Participate in the Siege!" isOneTime="false">
+		<handler name="siege" />
+		<items>
+			<item id="29009" count="1" />
+		</items>
+	</reward>
+	<!-- 
+	<reward id="253" reward_id="102" name="Enchant Item!">
+	</reward>
+	-->
+	<reward id="254" reward_id="7" name="Daily Hunting (Lv. 20 or lower)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<reward id="255" reward_id="8" name="Daily Hunting (Lv. 21-40)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<reward id="256" reward_id="9" name="Daily Hunting (Lv. 41-50)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<reward id="257" reward_id="10" name="Daily Hunting (Lv. 51-60)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<reward id="258" reward_id="11" name="Daily Hunting (Lv. 61-70)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<reward id="259" reward_id="12" name="Daily Hunting (Lv. 71-75)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<reward id="260" reward_id="13" name="Daily Hunting (Lv. 76 or higher)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">76</param>
+		</handler>
+		<items>
+			<item id="70767" count="1" />
+		</items>
+	</reward>
+	<!--
+	<reward id="261" reward_id="103" name="Weekly Hunting (Lv. 20 or lower)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">1</param>
+			<param name="maxLevel">20</param>
+		</handler>
+	</reward>
+	<reward id="262" reward_id="104" name="Weekly Hunting (Lv. 21-40)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">21</param>
+			<param name="maxLevel">40</param>
+		</handler>
+	</reward>
+	<reward id="263" reward_id="105" name="Weekly Hunting (Lv. 41-50)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">41</param>
+			<param name="maxLevel">50</param>
+		</handler>
+	</reward>
+	<reward id="264" reward_id="106" name="Weekly Hunting (Lv. 51-60)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">51</param>
+			<param name="maxLevel">60</param>
+		</handler>
+	</reward>
+	<reward id="265" reward_id="107" name="Weekly Hunting (Lv. 61-70)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">61</param>
+			<param name="maxLevel">70</param>
+		</handler>
+	</reward>
+	<reward id="266" reward_id="108" name="Weekly Hunting (Lv. 71-75)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">71</param>
+			<param name="maxLevel">75</param>
+		</handler>
+	</reward>
+	<reward id="267" reward_id="109" name="Weekly Hunting (Lv. 76 or higher)" isOneTime="false">
+		<handler name="monster">
+			<param name="minLevel">76</param>
+		</handler>
+	</reward>
+	<reward id="1095" reward_id="110" name="Clan Raid Attack">
+	</reward>
+	<reward id="1096" reward_id="303" name="Clan Raid Suppression">
+	</reward>
+	-->
+	<reward id="1097" reward_id="304" name="Expedition on the Forgotten Island" requiredCompletion="300">
+		<handler name="monster">
+			<param name="ids">21733,21734,21735,21736,21742,21743,21744,21745</param>
+		</handler>
+		<items>
+			<item id="29010" count="1" />
+		</items>
+	</reward>
+	<!--
+	<reward id="1102" reward_id="806" name="Special Daily Hunting (Lv. 35-50)" isOneTime="false">
+	</reward>
+	<reward id="1103" reward_id="807" name="Special Daily Hunting (Lv. 45-60)" isOneTime="false">
+	</reward>
+	<reward id="1104" reward_id="808" name="Special Daily Hunting (Lv. 55-70)" isOneTime="false">
+	</reward>
+	<reward id="1105" reward_id="809" name="Special Daily Hunting (Lv. 65-75)" isOneTime="false">
+	</reward>
+	<reward id="1106" reward_id="810" name="Special Daily Hunting (Lv. 76+)" isOneTime="false">
+	</reward>
+	<reward id="1107" reward_id="502" name="Attribute control" isOneTime="false">
+	</reward>
+	<reward id="1108" reward_id="504" name="Wind Hunting Guide" isOneTime="false">
+	</reward>
+	<reward id="1109" reward_id="505" name="Earth Hunting Guide" isOneTime="false">
+	</reward>
+	<reward id="1110" reward_id="506" name="Water Hunting Guide" isOneTime="false">
+	</reward>
+	<reward id="1111" reward_id="507" name="Fire Hunting Guide" isOneTime="false">
+	</reward>
+	<reward id="1112" reward_id="508" name="Flame Spirit Lv. 3" isOneTime="false">
+	</reward>
+	<reward id="1113" reward_id="509" name="Water Spirit Lv. 3" isOneTime="false">
+	</reward>
+	<reward id="1114" reward_id="510" name="Wind Spirit Lv. 3" isOneTime="false">
+	</reward>
+	<reward id="1115" reward_id="511" name="Earth Spirit Lv. 3" isOneTime="false">
+	</reward>
+	<reward id="1116" reward_id="118" name="Attribute monsters hunting" isOneTime="false">
+	</reward>
+	-->
+	<reward id="1117" reward_id="811" name="Exploration of Giant's Cave" requiredCompletion="200" isOneTime="false">
+		<handler name="monster">
+			<param name="ids">20651,20652,20654,20656,20657,20658,24015,24016,24021,24022,20655,20771</param>
+		</handler>
+		<items>
+			<item id="90917" count="3" />
+			<item id="91030" count="2" />
+		</items>
+	</reward>
+	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200" isOneTime="false">
+		<handler name="monster">
+			<param name="ids">21737,21738,21739,21740,21741,21746,21747,21748,21749,21750,21752,21753</param>
+		</handler>
+		<items>
+			<item id="90917" count="3" />
+			<item id="91030" count="2" />
+		</items>
+	</reward>
+	<reward id="1119" reward_id="813" name="Exploration of Varka Silenos Barracks" requiredCompletion="300" isOneTime="false">
+		<handler name="monster">
+			<param name="ids">21869,21870,21871,21876,21877,21878,21879,21888</param>
+		</handler>
+		<items>
+			<item id="90917" count="3" />
+			<item id="91030" count="2" />
+		</items>
+	</reward>
+	<reward id="1120" reward_id="814" name="Exploration of Ketra Orc Outpost" requiredCompletion="300" isOneTime="false">
+		<handler name="monster">
+			<param name="ids">21854,21855,81856,21857,21866,21867</param>
+		</handler>
+		<items>
+			<item id="90917" count="3" />
+			<item id="91030" count="2" />
+		</items>
+	</reward>
+	<reward id="1121" reward_id="815" name="Killing of Spirit King Ignis" requiredCompletion="10">
+		<handler name="monster">
+			<param name="ids">29105</param>
+		</handler>
+		<items>
+			<item id="91125" count="1" />
+		</items>
+	</reward>
+	<reward id="1122" reward_id="816" name="Killing of Spirit Queen Nebula" requiredCompletion="10">
+		<handler name="monster">
+			<param name="ids">29106</param>
+		</handler>
+		<items>
+			<item id="91126" count="1" />
+		</items>
+	</reward>
+	<reward id="1123" reward_id="817" name="Killing of Spirit King Procella" requiredCompletion="10">
+		<handler name="monster">
+			<param name="ids">29107</param>
+		</handler>
+		<items>
+			<item id="91127" count="1" />
+		</items>
+	</reward>
+	<reward id="1124" reward_id="818" name="Killing of Spirit King Petram" requiredCompletion="10">
+		<handler name="monster">
+			<param name="ids">29108</param>
+		</handler>
+		<items>
+			<item id="91128" count="1" />
+		</items>
+	</reward>
+	<reward id="1125" reward_id="1103" name="Reach Level (Lv. 85)" requiredCompletion="85">
+		<handler name="level">
+			<param name="level">85</param>
+		</handler>
+		<items>
+			<item id="49592" count="1" />
+			<item id="90950" count="1" />
+			<item id="90820" count="1" />
+			<item id="49533" count="30" />
+			<item id="90415" count="30" />
 		</items>
 	</reward>
 </list>

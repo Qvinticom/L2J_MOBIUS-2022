@@ -26,6 +26,7 @@ import handlers.dailymissionhandlers.FishingDailyMissionHandler;
 import handlers.dailymissionhandlers.LevelDailyMissionHandler;
 import handlers.dailymissionhandlers.LoginMonthDailyMissionHandler;
 import handlers.dailymissionhandlers.LoginWeekendDailyMissionHandler;
+import handlers.dailymissionhandlers.MonsterDailyMissionHandler;
 import handlers.dailymissionhandlers.OlympiadDailyMissionHandler;
 import handlers.dailymissionhandlers.QuestDailyMissionHandler;
 import handlers.dailymissionhandlers.SiegeDailyMissionHandler;
@@ -47,6 +48,7 @@ public class DailyMissionMasterHandler
 		DailyMissionHandler.getInstance().registerHandler("siege", SiegeDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("ceremonyofchaos", CeremonyOfChaosDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("boss", BossDailyMissionHandler::new);
+		DailyMissionHandler.getInstance().registerHandler("monster", MonsterDailyMissionHandler::new);
 		DailyMissionHandler.getInstance().registerHandler("fishing", FishingDailyMissionHandler::new);
 		LOGGER.info(DailyMissionMasterHandler.class.getSimpleName() + ":  Loaded " + DailyMissionHandler.getInstance().size() + " handlers.");
 	}
