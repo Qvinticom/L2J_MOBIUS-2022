@@ -14215,14 +14215,23 @@ public final class PlayerInstance extends Playable
 	
 	public void setAttendanceInfo(int rewardIndex)
 	{
+		// At 6:30 next day, another reward may be taken.
+		final Calendar nextReward = Calendar.getInstance();
+		nextReward.set(Calendar.MINUTE, 30);
+		if (nextReward.get(Calendar.HOUR_OF_DAY) >= 6)
+		{
+			nextReward.add(Calendar.DATE, 1);
+		}
+		nextReward.set(Calendar.HOUR_OF_DAY, 6);
+		
 		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
 		{
-			getAccountVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis() + 86400000); // Now + 24 hours.
+			getAccountVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
 			getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
 		else
 		{
-			getVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis() + 86400000); // Now + 24 hours.
+			getVariables().set(ATTENDANCE_DATE_VAR, nextReward.getTimeInMillis());
 			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
 		}
 	}
