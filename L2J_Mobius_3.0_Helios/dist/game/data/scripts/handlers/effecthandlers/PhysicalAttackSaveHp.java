@@ -111,9 +111,6 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 		
 		if (defence != -1)
 		{
-			// TODO: Find proper defence formula.
-			defence = effector.isPlayable() && (effected.getLevel() > 99) ? defence / 10 : defence;
-			
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
@@ -141,9 +138,8 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + _power + rangedBonus)) / defence;
+			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + (_power * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1)) + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0) + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
-			damage += effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 0);
 		}
 		
 		final double minHp = (effected.getMaxHp() * _saveHp) / 100;

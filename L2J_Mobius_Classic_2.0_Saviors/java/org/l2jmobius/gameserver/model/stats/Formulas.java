@@ -92,8 +92,6 @@ public final class Formulas
 				return 1;
 			}
 		}
-		// TODO: Find proper defence formula.
-		defence = target.getLevel() > 99 ? defence / 10 : defence;
 		
 		// Critical
 		final double criticalMod = (attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1));
@@ -143,9 +141,7 @@ public final class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
 		
 		// MDAM Formula.
-		// TODO: Find proper mDefence formula.
-		mDef = target.getLevel() > 99 ? mDef / 3.33 : mDef;
-		double damage = ((attacker.getINT() * power * Math.sqrt(mAtk)) / mDef) * shotsBonus;
+		double damage = ((attacker.getINT() * ((power * attacker.getStat().getValue(Stats.MAGICAL_SKILL_POWER, 1)) + attacker.getStat().getValue(Stats.SKILL_POWER_ADD, 0)) * Math.sqrt(mAtk)) / mDef) * shotsBonus;
 		
 		// Failure calculation
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(attacker, target, skill))
@@ -183,7 +179,6 @@ public final class Formulas
 		}
 		
 		damage = damage * critMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
-		damage += attacker.getStat().getValue(Stats.MAGICAL_SKILL_POWER, 0);
 		
 		return damage;
 	}
