@@ -90,11 +90,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>100</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>100</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -403,7 +401,6 @@
 					<value level="2">50</value>
 					<value level="3">100</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
@@ -411,8 +408,7 @@
 					<value level="2">50</value>
 					<value level="3">100</value>
 				</amount>
-				<mode>PER</mode>
-				</effect>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="27440" toLevel="5" name="Cat's Eye">

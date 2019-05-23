@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class VitalityPointsRate extends AbstractStatEffect
+public class VitalityPointsRate extends AbstractStatPercentEffect
 {
 	public VitalityPointsRate(StatsSet params)
 	{

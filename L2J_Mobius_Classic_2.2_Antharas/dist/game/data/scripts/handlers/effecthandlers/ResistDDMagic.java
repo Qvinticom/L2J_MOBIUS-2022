@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class ResistDDMagic extends AbstractStatEffect
+public class ResistDDMagic extends AbstractStatPercentEffect
 {
 	public ResistDDMagic(StatsSet params)
 	{

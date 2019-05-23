@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Mobius
  */
-public class BonusSpoilRate extends AbstractStatEffect
+public class BonusSpoilRate extends AbstractStatPercentEffect
 {
 	public BonusSpoilRate(StatsSet params)
 	{

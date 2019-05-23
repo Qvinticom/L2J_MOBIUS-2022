@@ -388,7 +388,6 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>5</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>30</amount>
@@ -488,7 +487,6 @@
 			</effect>
 			<effect name="AreaDamage">
 				<amount>-20</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait">
 				<KNOCKDOWN>20</KNOCKDOWN>
@@ -636,7 +634,6 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>3</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1007,38 +1004,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DamageShield">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-				</amount>
-				<stat>CHA</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-				</amount>
-				<stat>LUC</stat>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="13340" toLevel="3" name="Enchant Light Armor Set + 6 (R-grade)">
@@ -1341,7 +1306,6 @@
 		<effects>
 			<effect name="DamageShieldResist">
 				<amount>10</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

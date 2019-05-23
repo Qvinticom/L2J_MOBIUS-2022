@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class PvpPhysicalSkillDefenceBonus extends AbstractStatEffect
+public class PvpPhysicalSkillDefenceBonus extends AbstractStatPercentEffect
 {
 	public PvpPhysicalSkillDefenceBonus(StatsSet params)
 	{

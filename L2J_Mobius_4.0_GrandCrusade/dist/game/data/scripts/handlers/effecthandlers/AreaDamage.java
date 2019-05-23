@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class AreaDamage extends AbstractStatEffect
+public class AreaDamage extends AbstractStatAddEffect
 {
 	public AreaDamage(StatsSet params)
 	{

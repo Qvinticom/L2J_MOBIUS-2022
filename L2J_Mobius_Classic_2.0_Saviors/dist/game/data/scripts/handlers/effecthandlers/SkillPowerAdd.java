@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Mobius
  */
-public class SkillPowerAdd extends AbstractStatEffect
+public class SkillPowerAdd extends AbstractStatAddEffect
 {
 	public SkillPowerAdd(StatsSet params)
 	{

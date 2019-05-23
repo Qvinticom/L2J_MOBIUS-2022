@@ -886,7 +886,6 @@
 			</effect>
 			<effect name="DamageShield" fromLevel="2" toLevel="3">
 				<amount>5</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
 				<amount>2</amount>
@@ -1328,7 +1327,6 @@
 			</effect>
 			<effect name="DamageShield">
 				<amount>5</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>15</amount>
@@ -1915,7 +1913,6 @@
 		<effects>
 			<effect name="DamageShield">
 				<amount>8</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>8</amount>
@@ -1981,7 +1978,6 @@
 		<effects>
 			<effect name="DamageShield">
 				<amount>10</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>10</amount>

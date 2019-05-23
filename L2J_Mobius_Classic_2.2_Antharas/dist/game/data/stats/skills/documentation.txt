@@ -4,6 +4,7 @@ AbsorbDamage: Absorbs given amount of damage. Immune message is displayed when d
 AbstractConditionalHpEffect: Abstract class for managing conditional HP stats. Skills like Frenzy, Final Fortress, etc.
 AbstractStatAddEffect: Abstract class for managing stat adding.
 AbstractStatEffect: Abstract class for managing stats.
+AbstractStatPercentEffect: Abstract class for managing stat percentages. (l2jmobius)
 Accuracy: P. Accuracy stat.
 AddHate: Instant effect that increases target's hate towards you.
 AdditionalPotionCp: Increases the amount of CP heal gained from potions or elixirs. (l2jmobius)

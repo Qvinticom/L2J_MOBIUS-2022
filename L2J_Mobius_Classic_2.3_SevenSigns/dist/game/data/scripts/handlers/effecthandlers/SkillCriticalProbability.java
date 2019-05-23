@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class SkillCriticalProbability extends AbstractStatEffect
+public class SkillCriticalProbability extends AbstractStatPercentEffect
 {
 	public SkillCriticalProbability(StatsSet params)
 	{

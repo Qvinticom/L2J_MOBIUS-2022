@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class HateAttack extends AbstractStatEffect
+public class HateAttack extends AbstractStatPercentEffect
 {
 	public HateAttack(StatsSet params)
 	{

@@ -1135,11 +1135,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>50</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>50</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1290,14 +1288,12 @@
 					<value level="1">100</value>
 					<value level="2">200</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
 					<value level="1">100</value>
 					<value level="2">200</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1671,11 +1667,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>5</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>5</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

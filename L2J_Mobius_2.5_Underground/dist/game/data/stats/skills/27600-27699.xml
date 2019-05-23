@@ -347,16 +347,12 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>200</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>200</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
 				<amount>200</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -1905,7 +1901,6 @@
 					<value level="5">-38</value>
 					<value level="6">-40</value>
 				</amount>
-					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2576,7 +2571,6 @@
 					<value level="5">-38</value>
 					<value level="6">-40</value>
 				</amount>
-					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3022,7 +3016,6 @@
 					<value level="5">39</value>
 					<value level="6">45</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAbnormalResist">
 				<amount>
@@ -3173,7 +3166,6 @@
 					<value level="5">-18</value>
 					<value level="6">-20</value>
 				</amount>
-					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3625,7 +3617,6 @@
 					<value level="5">39</value>
 					<value level="6">45</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAbnormalResist">
 				<amount>
@@ -3787,7 +3778,6 @@
 					<value level="5">-18</value>
 					<value level="6">-20</value>
 				</amount>
-					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

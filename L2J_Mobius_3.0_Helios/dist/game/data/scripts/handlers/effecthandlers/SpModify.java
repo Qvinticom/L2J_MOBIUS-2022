@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Sdw
  */
-public class SpModify extends AbstractStatEffect
+public class SpModify extends AbstractStatAddEffect
 {
 	public SpModify(StatsSet params)
 	{

@@ -743,16 +743,12 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>8</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>8</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
 				<amount>3</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -769,11 +765,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>16</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>16</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>2</amount>
@@ -807,11 +801,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>24</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>24</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>5</amount>
@@ -845,11 +837,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>35</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>35</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>8</amount>

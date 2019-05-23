@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.StatModifierType;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -34,6 +35,10 @@ public class AbstractStatAddEffect extends AbstractEffect
 	{
 		_stat = stat;
 		_amount = params.getDouble("amount", 0);
+		if (params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF) != StatModifierType.DIFF)
+		{
+			LOGGER.warning(getClass().getSimpleName() + " can only use DIFF mode.");
+		}
 	}
 	
 	@Override

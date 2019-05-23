@@ -684,7 +684,6 @@
 					<value level="5">0</value>
 					<value level="6">10</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -705,11 +704,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>3</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>3</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -720,11 +717,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>7</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>7</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -735,11 +730,9 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>3</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>3</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk">
 				<amount>3</amount>
@@ -769,7 +762,6 @@
 			</effect>
 			<effect name="VitalityPointsRate">
 				<amount>-1</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

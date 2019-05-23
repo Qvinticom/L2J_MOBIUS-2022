@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author Mobius
  */
-public class RearDamage extends AbstractStatEffect
+public class RearDamage extends AbstractStatPercentEffect
 {
 	public RearDamage(StatsSet params)
 	{
