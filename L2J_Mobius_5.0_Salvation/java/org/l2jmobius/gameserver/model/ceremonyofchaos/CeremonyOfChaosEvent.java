@@ -282,7 +282,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		
 		final List<CeremonyOfChaosMember> winners = getWinners();
 		final List<CeremonyOfChaosMember> members = new ArrayList<>(getMembers().size());
-		final SystemMessage msg;
+		SystemMessage msg = null;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
 			msg = SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
@@ -290,92 +290,95 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		else
 		{
 			final PlayerInstance winner = winners.get(0).getPlayer();
-			msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
-			msg.addString(winner.getName());
-			
-			// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
-			final int marksRewarded = Rnd.get(2, 4);
-			winner.addItem("CoC-Winner", 34900, marksRewarded, winner, true); // Mysterious Marks
-			
-			// Possible additional rewards
-			
-			// Improved Life Stone
-			if (Rnd.get(10) < 3) // Chance to get reward (30%)
+			if (winner != null)
 			{
-				switch (Rnd.get(4))
+				msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				msg.addString(winner.getName());
+				
+				// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
+				final int marksRewarded = Rnd.get(2, 4);
+				winner.addItem("CoC-Winner", 34900, marksRewarded, winner, true); // Mysterious Marks
+				
+				// Possible additional rewards
+				
+				// Improved Life Stone
+				if (Rnd.get(10) < 3) // Chance to get reward (30%)
 				{
-					case 0:
+					switch (Rnd.get(4))
 					{
-						winner.addItem("CoC-Winner", 18570, 1, winner, true); // Improved Life Stone (R95-grade)
-						break;
-					}
-					case 1:
-					{
-						winner.addItem("CoC-Winner", 18571, 1, winner, true); // Improved Life Stone (R95-grade)
-						break;
-					}
-					case 2:
-					{
-						winner.addItem("CoC-Winner", 18575, 1, winner, true); // Improved Life Stone (R99-grade)
-						break;
-					}
-					case 3:
-					{
-						winner.addItem("CoC-Winner", 18576, 1, winner, true); // Improved Life Stone (R99-grade)
-						break;
+						case 0:
+						{
+							winner.addItem("CoC-Winner", 18570, 1, winner, true); // Improved Life Stone (R95-grade)
+							break;
+						}
+						case 1:
+						{
+							winner.addItem("CoC-Winner", 18571, 1, winner, true); // Improved Life Stone (R95-grade)
+							break;
+						}
+						case 2:
+						{
+							winner.addItem("CoC-Winner", 18575, 1, winner, true); // Improved Life Stone (R99-grade)
+							break;
+						}
+						case 3:
+						{
+							winner.addItem("CoC-Winner", 18576, 1, winner, true); // Improved Life Stone (R99-grade)
+							break;
+						}
 					}
 				}
-			}
-			// Soul Crystal Fragment
-			else if (Rnd.get(10) < 3) // Chance to get reward (30%)
-			{
-				switch (Rnd.get(6))
+				// Soul Crystal Fragment
+				else if (Rnd.get(10) < 3) // Chance to get reward (30%)
 				{
-					case 0:
+					switch (Rnd.get(6))
 					{
-						winner.addItem("CoC-Winner", 19467, 1, winner, true); // Yellow Soul Crystal Fragment (R99-Grade)
-						break;
-					}
-					case 1:
-					{
-						winner.addItem("CoC-Winner", 19468, 1, winner, true); // Teal Soul Crystal Fragment (R99-Grade)
-						break;
-					}
-					case 2:
-					{
-						winner.addItem("CoC-Winner", 19469, 1, winner, true); // Purple Soul Crystal Fragment (R99-Grade)
-						break;
-					}
-					case 3:
-					{
-						winner.addItem("CoC-Winner", 19511, 1, winner, true); // Yellow Soul Crystal Fragment (R95-Grade)
-						break;
-					}
-					case 4:
-					{
-						winner.addItem("CoC-Winner", 19512, 1, winner, true); // Teal Soul Crystal Fragment (R95-Grade)
-						break;
-					}
-					case 5:
-					{
-						winner.addItem("CoC-Winner", 19513, 1, winner, true); // Purple Soul Crystal Fragment (R95-Grade)
-						break;
+						case 0:
+						{
+							winner.addItem("CoC-Winner", 19467, 1, winner, true); // Yellow Soul Crystal Fragment (R99-Grade)
+							break;
+						}
+						case 1:
+						{
+							winner.addItem("CoC-Winner", 19468, 1, winner, true); // Teal Soul Crystal Fragment (R99-Grade)
+							break;
+						}
+						case 2:
+						{
+							winner.addItem("CoC-Winner", 19469, 1, winner, true); // Purple Soul Crystal Fragment (R99-Grade)
+							break;
+						}
+						case 3:
+						{
+							winner.addItem("CoC-Winner", 19511, 1, winner, true); // Yellow Soul Crystal Fragment (R95-Grade)
+							break;
+						}
+						case 4:
+						{
+							winner.addItem("CoC-Winner", 19512, 1, winner, true); // Teal Soul Crystal Fragment (R95-Grade)
+							break;
+						}
+						case 5:
+						{
+							winner.addItem("CoC-Winner", 19513, 1, winner, true); // Purple Soul Crystal Fragment (R95-Grade)
+							break;
+						}
 					}
 				}
-			}
-			// Mysterious Belt
-			else if (Rnd.get(10) < 1) // Chance to get reward (10%)
-			{
-				winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
-			}
-			
-			// Save monthly progress.
-			final int totalMarks = winner.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, 0) + marksRewarded;
-			winner.getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, totalMarks);
-			if (totalMarks > GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MARKS, 0))
-			{
-				GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, totalMarks);
-				GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, winner.getObjectId());
+				// Mysterious Belt
+				else if (Rnd.get(10) < 1) // Chance to get reward (10%)
+				{
+					winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
+				}
+				
+				// Save monthly progress.
+				final int totalMarks = winner.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, 0) + marksRewarded;
+				winner.getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, totalMarks);
+				if (totalMarks > GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MARKS, 0))
+				{
+					GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, totalMarks);
+					GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, winner.getObjectId());
+				}
 			}
 		}
 		
@@ -385,7 +388,10 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			if (player != null)
 			{
 				// Send winner message
-				player.sendPacket(msg);
+				if (msg != null)
+				{
+					player.sendPacket(msg);
+				}
 				
 				// Send result
 				player.sendPacket(new ExCuriousHouseResult(member.getResultType(), this));
