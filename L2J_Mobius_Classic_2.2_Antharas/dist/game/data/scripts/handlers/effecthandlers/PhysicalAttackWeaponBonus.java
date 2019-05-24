@@ -139,9 +139,10 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 			final double randomMod = effector.getRandomDamageMultiplier();
 			
 			// Skill specific mods.
-			final double wpnMod = effector.getAttackType().isRanged() ? 70 : 77;
+			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
 			final double weaponBonus = _weaponBonus.getOrDefault(effector.getAttackType(), 1.0);
-			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
+			final double power = (_power * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1)) + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0);
+			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
@@ -159,7 +160,7 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + (_power * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1)) + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0) + rangedBonus)) / defence;
+			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponBonus * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
 		}
 		
