@@ -107,7 +107,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			
 			// Skill specific mods.
 			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
-			final double power = (_power * effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1)) + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0);
+			final double power = _power + effector.getStat().getValue(Stats.SKILL_POWER_ADD, 0);
 			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
@@ -128,6 +128,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
+			damage *= effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1);
 			damage *= -((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2;
 		}
 		
