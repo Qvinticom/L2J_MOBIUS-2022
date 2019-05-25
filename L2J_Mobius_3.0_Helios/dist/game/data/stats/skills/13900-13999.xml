@@ -12,12 +12,10 @@
 			<effect name="DamageByAttack">
 				<amount>-5</amount>
 				<type>PK</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>-5</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -201,12 +199,10 @@
 			<effect name="DamageByAttack">
 				<amount>-10</amount>
 				<type>PK</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>-10</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1406,12 +1402,10 @@
 			<effect name="DamageByAttack">
 				<amount>-2</amount>
 				<type>PK</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>-2</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="WeightLimit">
 				<amount>12800</amount>

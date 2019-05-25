@@ -682,12 +682,10 @@
 			<effect name="DamageByAttack">
 				<amount>-5</amount>
 				<type>PK</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>-5</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="EnlargeSlot">
 				<amount>18</amount>
@@ -1090,7 +1088,6 @@
 					<value level="4">-10</value>
 				</amount>
 				<type>PK</type>
-				<mode>PER</mode>
 			</effect>
 			<effect name="DamageByAttack">
 				<amount>
@@ -1100,7 +1097,6 @@
 					<value level="4">-10</value>
 				</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

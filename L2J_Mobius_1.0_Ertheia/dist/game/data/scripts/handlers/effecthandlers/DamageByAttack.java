@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.DamageByAttackType;
+import org.l2jmobius.gameserver.enums.StatModifierType;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -41,6 +42,10 @@ public class DamageByAttack extends AbstractEffect
 	{
 		_value = params.getDouble("amount");
 		_type = params.getEnum("type", DamageByAttackType.class, DamageByAttackType.NONE);
+		if (params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF) != StatModifierType.DIFF)
+		{
+			LOGGER.warning(getClass().getSimpleName() + " can only use DIFF mode.");
+		}
 	}
 	
 	@Override

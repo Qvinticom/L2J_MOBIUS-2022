@@ -667,7 +667,6 @@
 			<effect name="DamageByAttack">
 				<amount>-5</amount>
 				<type>PK</type>
-				<mode>PER</mode>
 			</effect>
 			<!-- Pve FIXME -->
 			<effect name="PveMagicalSkillDamageBonus">
@@ -685,7 +684,6 @@
 			<effect name="DamageByAttack">
 				<amount>-5</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
