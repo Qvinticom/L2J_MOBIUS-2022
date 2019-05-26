@@ -1300,11 +1300,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>

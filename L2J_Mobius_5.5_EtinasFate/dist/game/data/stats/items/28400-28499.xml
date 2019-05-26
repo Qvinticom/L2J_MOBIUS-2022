@@ -113,12 +113,16 @@
 	<item id="28408" name="Eva's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
