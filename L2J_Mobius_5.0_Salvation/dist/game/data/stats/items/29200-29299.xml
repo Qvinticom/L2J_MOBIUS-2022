@@ -167,7 +167,6 @@
 	<item id="29215" name="Starter Kit" additionalName="Lv. 85" type="EtcItem">
 		<!-- Double-click to obtain 3 XP Rune IV (Lv. 1-99) 100% Packs (1-hr), 3 Mysterious Wind Scrolls, 3 Dandy's Scrolls: Challenge, 5 Dragon Vitality Replenishing Potions, Entrance Pass: Kartia's Labyrinth Lv. 85/ 90 Party, Adventurer's Circlet, Shirt Box, 3 Scrolls: Enchant Elemental Shirt, Blessed Scroll: Enchant Elemental Shirt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -175,11 +174,28 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item chance="100.0" id="26407" max="3" min="3" /> <!-- XP Rune IV (Lv. 1-99) 100% Pack (1-hr) -->
+			<item chance="100.0" id="40056" max="3" min="3" /> <!-- Mysterious Wind Scroll -->
+			<item chance="100.0" id="37731" max="3" min="3" /> <!-- Dandy's Scroll: Challenge -->
+			<item chance="100.0" id="35932" max="5" min="5" /> <!-- Dragon Vitality Replenishing Potion -->
+			<item chance="100.0" id="23609" max="1" min="1" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 85 Party -->
+			<item chance="100.0" id="23610" max="1" min="1" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 90 Party -->
+			<item chance="100.0" id="27520" max="1" min="1" /> <!-- Adventurer's Circlet -->
+			<item chance="100.0" id="29214" max="1" min="1" /> <!-- Shirt Box -->
+			<item chance="100.0" id="34627" max="3" min="3" /> <!-- Scroll: Enchant Elemental Shirt -->
+			<item chance="100.0" id="23241" max="1" min="1" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="29216" name="Starter Kit" additionalName="Lv. 95" type="EtcItem">
 		<!-- Double-click to obtain 5 XP Rune IV (Lv. 1-99) 100% Packs (1-hr), 5 Mysterious Wind Scrolls, 5 Dandy's Scrolls: Challenge, 10 Dragon Vitality Replenishing Potions, Entrance Pass: Istina/ Octavis (Normal), Adventurer's Bracelet, Venir's Talisman Stage 5, Sayha's Talisman Stage 1, Seed Bracelet, Radiant Zodiac Agathion Box (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -187,11 +203,29 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item chance="100.0" id="26407" max="5" min="5" /> <!-- XP Rune IV (Lv. 1-99) 100% Pack -->
+			<item chance="100.0" id="40056" max="5" min="5" /> <!-- Mysterious Wind Scroll -->
+			<item chance="100.0" id="37731" max="5" min="5" /> <!-- Dandy's Scroll: Challenge -->
+			<item chance="100.0" id="35932" max="10" min="10" /> <!-- Dragon Vitality Replenishing Potion -->
+			<item chance="100.0" id="36275" max="1" min="1" /> <!-- Entrance Pass: Istina -->
+			<item chance="100.0" id="36276" max="1" min="1" /> <!-- Entrance Pass: Octavis -->
+			<item chance="100.0" id="27521" max="1" min="1" /> <!-- Adventurer's Bracelet -->
+			<item chance="100.0" id="39638" max="1" min="1" /> <!-- Venir's Talisman Stage 5 -->
+			<item chance="100.0" id="28437" max="1" min="1" /> <!-- Sayha's Talisman Stage 1 -->
+			<item chance="100.0" id="28760" max="1" min="1" /> <!-- Seed Bracelet -->
+			<item chance="100.0" id="45573" max="1" min="1" /> <!-- Zodiac Agathion Box (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29217" name="Starter Kit" additionalName="Lv. 99" type="EtcItem">
 		<!-- Double-click to obtain 5 Prestige Rune 100% Packs (1-hr), 10 Mysterious Wind Scrolls, 10 Dandy's Scrolls: Challenge, 3 XP Buffs 50% (1-hr), Entrance Pass: Nightmare Kamaloka, 5 Feathers of Blessing, 10 Top-grade Love Potions - Party, 5 Tarot Card Coupons, La Vie En Rose's Brilliant Brooch, Ruby Lv. 1, Sapphire Lv. 1, Emerald Lv. 1, Vital Stone Lv. 1, Talisman - Abundance Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -199,6 +233,26 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item chance="100.0" id="28405" max="5" min="5" /> <!-- High-grade Maphr's Rune 100% Pack (1-hr) -->
+			<item chance="100.0" id="40056" max="10" min="10" /> <!-- Mysterious Wind Scroll -->
+			<item chance="100.0" id="37731" max="10" min="10" /> <!-- Dandy's Scroll: Challenge -->
+			<item chance="100.0" id="23332" max="3" min="3" /> <!-- XP Buff 50% (1-hr) -->
+			<item chance="100.0" id="45463" max="1" min="1" /> <!-- Entrance Pass: Nightmare Kamaloka -->
+			<item chance="100.0" id="10649" max="5" min="5" /> <!-- Feather of Blessing -->
+			<item chance="100.0" id="46530" max="10" min="10" /> <!-- Top-grade Love Potion - Party -->
+			<item chance="100.0" id="23848" max="5" min="5" /> <!-- Tarot Card Coupon -->
+			<item chance="100.0" id="38768" max="1" min="1" /> <!-- La Vie En Rose's Brilliant Brooch -->
+			<item chance="100.0" id="38855" max="1" min="1" /> <!-- Ruby Lv. 1 -->
+			<item chance="100.0" id="38927" max="1" min="1" /> <!-- Sapphire Lv. 1 -->
+			<item chance="100.0" id="26476" max="1" min="1" /> <!-- Vital Stone Lv. 1 -->
+			<item chance="100.0" id="27524" max="1" min="1" /> <!-- Talisman - Abundance Pack -->
+		</capsuled_items>
 	</item>
 	<item id="29218" name="Accessory of the Gods Upgrade Set Box" additionalName="Necklace" type="EtcItem">
 		<!-- Double-click to obtain materials to upgrade Accessory of the Gods (Necklace). -->
