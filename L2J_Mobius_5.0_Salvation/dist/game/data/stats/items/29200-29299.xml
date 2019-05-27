@@ -156,13 +156,19 @@
 	<item id="29214" name="Shirt Box" type="EtcItem">
 		<!-- Double-click to obtain 1 Pa'agrio, Sayha, Eva, or Maphr's shirt. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28202" level="1" /> <!-- T-shirt Box -->
+		</skills>
 	</item>
 	<item id="29215" name="Starter Kit" additionalName="Lv. 85" type="EtcItem">
 		<!-- Double-click to obtain 3 XP Rune IV (Lv. 1-99) 100% Packs (1-hr), 3 Mysterious Wind Scrolls, 3 Dandy's Scrolls: Challenge, 5 Dragon Vitality Replenishing Potions, Entrance Pass: Kartia's Labyrinth Lv. 85/ 90 Party, Adventurer's Circlet, Shirt Box, 3 Scrolls: Enchant Elemental Shirt, Blessed Scroll: Enchant Elemental Shirt. -->

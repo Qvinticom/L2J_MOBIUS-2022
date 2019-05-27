@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="28200" toLevel="1" name="Adventurer's Circlet">
+		<!-- Increases P. Atk. by $s1, M. Atk. by $s2 -->
+		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28201" toLevel="1" name="Adventurer's Bracelet">
+		<!-- Increases STR/ DEX/ CON/ INT/ WIT/ MEN by +$s1 when equipped. Activates 3 Talisman slots. -->
+		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28202" toLevel="1" name="T-shirt Box">
+		<itemConsumeId>29214</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="23301" count="1" /> <!-- Sayha's Shirt -->
+					</item>
+					<item chance="25">
+						<item id="23240" count="1" /> <!-- Pa'agrio's Shirt -->
+					</item>
+					<item chance="25">
+						<item id="23304" count="1" /> <!-- Eva's Shirt -->
+					</item>
+					<item chance="25">
+						<item id="23307" count="1" /> <!-- Maphr's Shirt -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28204" toLevel="1" name="Box Containing War God's Soul">
+		<icon>icon.bm_strongbox</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="28205" toLevel="1" name="14th Anniversary Rune 100%">
+		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_5</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>
