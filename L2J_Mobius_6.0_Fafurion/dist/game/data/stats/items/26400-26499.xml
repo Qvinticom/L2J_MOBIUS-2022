@@ -63,6 +63,12 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item chance="100.0" id="26408" max="1" min="1" /> <!-- XP Rune IV (Lv. 1-99) 100% (1-hr) -->
+		</capsuled_items>
 	</item>
 	<item id="26408" name="XP Rune IV (Lv. 1-99) 100%" additionalName="1-hr" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 1-h. -->
