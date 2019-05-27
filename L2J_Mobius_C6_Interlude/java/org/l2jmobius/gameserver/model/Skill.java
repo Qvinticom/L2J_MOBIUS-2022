@@ -429,7 +429,6 @@ public abstract class Skill
 	private final int _coolTime;
 	private final int _reuseDelay;
 	private final int _buffDuration;
-	private final int _reuseHashCode;
 	
 	/** Target type of the skill : SELF, PARTY, CLAN, PET... */
 	private final SkillTargetType _targetType;
@@ -669,8 +668,6 @@ public abstract class Skill
 		_singleEffect = set.getBool("singleEffect", false);
 		
 		_isDebuff = set.getBool("isDebuff", false);
-		
-		_reuseHashCode = SkillTable.getSkillHashCode(_id, _level);
 	}
 	
 	public abstract void useSkill(Creature caster, WorldObject[] targets);
@@ -3212,14 +3209,6 @@ public abstract class Skill
 	public int get_advancedMultiplier()
 	{
 		return _advancedMultiplier;
-	}
-	
-	/**
-	 * @return the _reuseHashCode
-	 */
-	public int getReuseHashCode()
-	{
-		return _reuseHashCode;
 	}
 	
 	/**

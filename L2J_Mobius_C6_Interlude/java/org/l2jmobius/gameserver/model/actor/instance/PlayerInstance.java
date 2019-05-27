@@ -151,6 +151,7 @@ import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.extender.BaseExtender.EventType;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
+import org.l2jmobius.gameserver.model.holders.TimestampHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -535,7 +536,7 @@ public final class PlayerInstance extends Playable
 	private final List<Integer> _selectedBlocksList = new ArrayList<>(); // Related to CB.
 	private int _mailPosition;
 	private FishData _fish;
-	private final Map<Integer, TimeStamp> ReuseTimeStamps = new ConcurrentHashMap<>();
+	private final Map<Integer, TimestampHolder> _reuseTimestamps = new ConcurrentHashMap<>();
 	boolean _gmStatus = true; // true by default since this is used by GMS
 	public WorldObject _saymode = null;
 	String Dropzor = "Coin of Luck";
@@ -9925,9 +9926,9 @@ public final class PlayerInstance extends Playable
 					statement.setInt(3, effect.getSkill().getLevel());
 					statement.setInt(4, effect.getCount());
 					statement.setInt(5, effect.getTime());
-					if (ReuseTimeStamps.containsKey(effect.getSkill().getReuseHashCode()))
+					if (_reuseTimestamps.containsKey(effect.getSkill().getId()))
 					{
-						final TimeStamp t = ReuseTimeStamps.get(effect.getSkill().getReuseHashCode());
+						final TimestampHolder t = _reuseTimestamps.get(effect.getSkill().getId());
 						statement.setLong(6, t.hasNotPassed() ? t.getReuse() : 0);
 						statement.setLong(7, t.hasNotPassed() ? t.getStamp() : 0);
 					}
@@ -9943,12 +9944,12 @@ public final class PlayerInstance extends Playable
 				}
 			}
 			// Store the reuse delays of remaining skills which lost effect but still under reuse delay. 'restore_type' 1.
-			for (TimeStamp t : ReuseTimeStamps.values())
+			for (TimestampHolder t : _reuseTimestamps.values())
 			{
 				if (t.hasNotPassed())
 				{
-					final int skillId = t.getSkill().getId();
-					final int skillLvl = t.getSkill().getLevel();
+					final int skillId = t.getSkillId();
+					final int skillLvl = t.getSkillLevel();
 					if (storedSkills.contains(skillId))
 					{
 						continue;
@@ -10399,7 +10400,7 @@ public final class PlayerInstance extends Playable
 					}
 					
 					disableSkill(skill, remainingTime);
-					addTimeStamp(new TimeStamp(skill, reuseDelay, systime));
+					addTimestamp(new TimestampHolder(skill, reuseDelay, systime));
 				}
 			}
 			rset.close();
@@ -10429,7 +10430,7 @@ public final class PlayerInstance extends Playable
 					}
 					
 					disableSkill(skill, remainingTime);
-					addTimeStamp(new TimeStamp(skill, reuseDelay, systime));
+					addTimestamp(new TimestampHolder(skill, reuseDelay, systime));
 				}
 			}
 			rset.close();
@@ -16461,100 +16462,49 @@ public final class PlayerInstance extends Playable
 		sendPacket(new EtcStatusUpdate(this));
 	}
 	
-	public static class TimeStamp
-	{
-		
-		public long getStamp()
-		{
-			return stamp;
-		}
-		
-		public Skill getSkill()
-		{
-			return skill;
-		}
-		
-		public long getReuse()
-		{
-			return reuse;
-		}
-		
-		public long getRemaining()
-		{
-			return Math.max(stamp - System.currentTimeMillis(), 0);
-		}
-		
-		protected boolean hasNotPassed()
-		{
-			return System.currentTimeMillis() < stamp;
-		}
-		
-		private final Skill skill;
-		private final long reuse;
-		private final long stamp;
-		
-		protected TimeStamp(Skill _skill, long _reuse)
-		{
-			skill = _skill;
-			reuse = _reuse;
-			stamp = System.currentTimeMillis() + reuse;
-		}
-		
-		protected TimeStamp(Skill _skill, long _reuse, long _systime)
-		{
-			skill = _skill;
-			reuse = _reuse;
-			stamp = _systime;
-		}
-	}
-	
 	/**
 	 * Index according to skill id the current timestamp of use.
 	 * @param s the s
 	 * @param r the r
 	 */
-	@Override
-	public void addTimeStamp(Skill s, int r)
+	public void addTimestamp(Skill s, int r)
 	{
-		ReuseTimeStamps.put(s.getReuseHashCode(), new TimeStamp(s, r));
+		_reuseTimestamps.put(s.getId(), new TimestampHolder(s, r));
 	}
 	
 	/**
 	 * Index according to skill this TimeStamp instance for restoration purposes only.
-	 * @param T the t
+	 * @param t the t
 	 */
-	private void addTimeStamp(TimeStamp T)
+	private void addTimestamp(TimestampHolder t)
 	{
-		ReuseTimeStamps.put(T.getSkill().getReuseHashCode(), T);
+		_reuseTimestamps.put(t.getSkillId(), t);
 	}
 	
 	/**
 	 * Index according to skill id the current timestamp of use.
-	 * @param s the s
+	 * @param skill the skill
 	 */
-	@Override
-	public void removeTimeStamp(Skill s)
+	public void removeTimestamp(Skill skill)
 	{
-		ReuseTimeStamps.remove(s.getReuseHashCode());
+		_reuseTimestamps.remove(skill.getId());
 	}
 	
-	public Collection<TimeStamp> getReuseTimeStamps()
+	public Collection<TimestampHolder> getReuseTimeStamps()
 	{
-		return ReuseTimeStamps.values();
+		return _reuseTimestamps.values();
 	}
 	
-	public void resetSkillTime(boolean ssl)
+	public void resetSkillTime(boolean sendSkillList)
 	{
-		final Skill arr$[] = getAllSkills();
-		for (Skill skill : arr$)
+		for (Skill skill : getAllSkills())
 		{
 			if ((skill != null) && skill.isActive() && (skill.getId() != 1324))
 			{
 				enableSkill(skill);
 			}
 		}
-		
-		if (ssl)
+		if (sendSkillList)
 		{
 			sendSkillList();
 		}

@@ -196,7 +196,7 @@ public final class Augmentation
 			if (_skill.isActive() && (Config.ACTIVE_AUGMENTS_START_REUSE_TIME > 0))
 			{
 				player.disableSkill(_skill, Config.ACTIVE_AUGMENTS_START_REUSE_TIME);
-				player.addTimeStamp(_skill, Config.ACTIVE_AUGMENTS_START_REUSE_TIME);
+				player.addTimestamp(_skill, Config.ACTIVE_AUGMENTS_START_REUSE_TIME);
 			}
 			
 			player.sendSkillList();

@@ -17,21 +17,19 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
-import java.util.Iterator;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.TimestampHolder;
 
 public class SkillCoolTime extends GameServerPacket
 {
-	@SuppressWarnings("rawtypes")
-	public Collection _reuseTimeStamps;
+	public Collection<TimestampHolder> _reuseTimestamps;
 	
 	public SkillCoolTime(PlayerInstance player)
 	{
-		_reuseTimeStamps = player.getReuseTimeStamps();
+		_reuseTimestamps = player.getReuseTimeStamps();
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Override
 	protected final void writeImpl()
 	{
@@ -40,15 +38,14 @@ public class SkillCoolTime extends GameServerPacket
 		{
 			return;
 		}
-		writeC(193);
-		writeD(_reuseTimeStamps.size());
-		PlayerInstance.TimeStamp ts;
-		for (Iterator i$ = _reuseTimeStamps.iterator(); i$.hasNext(); writeD((int) ts.getRemaining() / 1000))
+		writeC(0xc1);
+		writeD(_reuseTimestamps.size());
+		for (TimestampHolder reuseTimestamp : _reuseTimestamps)
 		{
-			ts = (PlayerInstance.TimeStamp) i$.next();
-			writeD(ts.getSkill().getId());
-			writeD(0);
-			writeD((int) ts.getReuse() / 1000);
+			writeD(reuseTimestamp.getSkillId());
+			writeD(reuseTimestamp.getSkillLevel());
+			writeD((int) reuseTimestamp.getReuse() / 1000);
+			writeD((int) reuseTimestamp.getRemaining() / 1000);
 		}
 	}
 }

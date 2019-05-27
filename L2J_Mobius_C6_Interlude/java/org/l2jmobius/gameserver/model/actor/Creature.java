@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.model.actor;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
@@ -1868,9 +1868,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Skill reuse check
-		if (reuseDelay > 30000)
+		if ((reuseDelay > 30000) && isPlayer())
 		{
-			addTimeStamp(skill, reuseDelay);
+			getActingPlayer().addTimestamp(skill, reuseDelay);
 		}
 		
 		// Check if this skill consume mp on start casting
@@ -1964,23 +1964,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			target,
 			targets
 		});
-	}
-	
-	/**
-	 * Index according to skill id the current timestamp of use.<br>
-	 * @param skill the s
-	 * @param r the r
-	 */
-	public void addTimeStamp(Skill skill, int r)
-	{
-	}
-	
-	/**
-	 * Index according to skill id the current timestamp of use.<br>
-	 * @param _skill the s
-	 */
-	public void removeTimeStamp(Skill _skill)
-	{
 	}
 	
 	/**
@@ -3037,15 +3020,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	class EnableSkill implements Runnable
 	{
-		Skill _skillId;
+		Creature _creature;
+		Skill _skill;
 		
 		/**
 		 * Instantiates a new enable skill.
+		 * @param creature
 		 * @param skill the skill
 		 */
-		public EnableSkill(Skill skill)
+		public EnableSkill(Creature creature, Skill skill)
 		{
-			_skillId = skill;
+			_creature = creature;
+			_skill = skill;
 		}
 		
 		@Override
@@ -3053,7 +3039,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			try
 			{
-				enableSkill(_skillId);
+				if (_creature != null)
+				{
+					_creature.enableSkill(_skill);
+				}
 			}
 			catch (Throwable e)
 			{
@@ -4745,7 +4734,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		public int geoPathGty;
 	}
 	
-	protected List<Integer> _disabledSkills;
+	protected List<Skill> _disabledSkills = new CopyOnWriteArrayList<>();
 	private boolean _allSkillsDisabled;
 	protected MoveData _move;
 	private boolean _cursorKeyMovement = false;
@@ -8262,40 +8251,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <BR>
 	 * All skills disabled are identified by their skillId in <B>_disabledSkills</B> of the Creature <BR>
 	 * <BR>
-	 * @param _skill
+	 * @param skill
 	 */
-	public void enableSkill(Skill _skill)
+	public void enableSkill(Skill skill)
 	{
-		if (_disabledSkills == null)
+		_disabledSkills.remove(skill);
+		if (isPlayer())
 		{
-			return;
+			getActingPlayer().removeTimestamp(skill);
 		}
-		
-		_disabledSkills.remove(_skill.getReuseHashCode());
-		
-		if (this instanceof PlayerInstance)
-		{
-			removeTimeStamp(_skill);
-		}
-	}
-	
-	/**
-	 * Disable a skill (add it to _disabledSkills of the Creature).<BR>
-	 * <BR>
-	 * <B><U> Concept</U> :</B><BR>
-	 * <BR>
-	 * All skills disabled are identified by their skillId in <B>_disabledSkills</B> of the Creature <BR>
-	 * <BR>
-	 * @param skill The identifier of the Skill to disable
-	 */
-	public void disableSkill(Skill skill)
-	{
-		if (_disabledSkills == null)
-		{
-			_disabledSkills = Collections.synchronizedList(new ArrayList<Integer>());
-		}
-		
-		_disabledSkills.add(skill.getReuseHashCode());
 	}
 	
 	/**
@@ -8310,11 +8274,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		disableSkill(skill);
+		if (!_disabledSkills.contains(skill))
+		{
+			_disabledSkills.add(skill);
+		}
 		
 		if (delay > 10)
 		{
-			ThreadPool.schedule(new EnableSkill(skill), delay);
+			ThreadPool.schedule(new EnableSkill(this, skill), delay);
 		}
 	}
 	
@@ -8325,21 +8292,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <BR>
 	 * All skills disabled are identified by their skillId in <B>_disabledSkills</B> of the Creature <BR>
 	 * <BR>
-	 * @param _skill the skill to know if its disabled
+	 * @param skill the skill to know if its disabled
 	 * @return true, if is skill disabled
 	 */
-	public boolean isSkillDisabled(Skill _skill)
+	public boolean isSkillDisabled(Skill skill)
 	{
-		final Skill skill = _skill;
-		
 		if (isAllSkillsDisabled() && !skill.isPotion())
 		{
 			return true;
 		}
 		
-		if (this instanceof PlayerInstance)
+		if (isPlayer())
 		{
-			final PlayerInstance activeChar = (PlayerInstance) this;
+			final PlayerInstance activeChar = getActingPlayer();
 			
 			if (((skill.getSkillType() == SkillType.FISHING) || (skill.getSkillType() == SkillType.REELING) || (skill.getSkillType() == SkillType.PUMPING)) && !activeChar.isFishing() && ((activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getItemType() != WeaponType.ROD)))
 			{
@@ -8392,19 +8357,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return true;
 			}
 			
-			if (activeChar.isHero() && HeroSkillTable.isHeroSkill(_skill.getId()) && activeChar.isInOlympiadMode() && activeChar.isOlympiadStart())
+			if (activeChar.isHero() && HeroSkillTable.isHeroSkill(skill.getId()) && activeChar.isInOlympiadMode() && activeChar.isOlympiadStart())
 			{
 				activeChar.sendMessage("You can't use Hero skills during Olympiad match.");
 				return true;
 			}
 		}
 		
-		if (_disabledSkills == null)
-		{
-			return false;
-		}
-		
-		return _disabledSkills.contains(_skill.getReuseHashCode());
+		return _disabledSkills.contains(skill);
 	}
 	
 	/**
