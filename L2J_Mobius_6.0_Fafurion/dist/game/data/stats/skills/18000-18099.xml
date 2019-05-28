@@ -164,9 +164,41 @@
 	</skill>
 	<skill id="18009" toLevel="1" name="Tempest Stone">
 		<!-- Double-click for a chance to obtain either a Low/ Mid/ High-grade Dye Pack, or Talisman - Wind Pack. -->
+		<itemConsumeId>39592</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="31.66">
+							<item id="39562" count="1" /> <!-- High-grade Wind Dye Pack -->
+						</item>
+						<item chance="31.67">
+							<item id="39561" count="1" /> <!-- Mid-grade Wind Dye Pack -->
+						</item>
+						<item chance="31.67">
+							<item id="39560" count="1" /> <!-- Low-grade Wind Dye Pack -->
+						</item>
+						<item chance="5">
+							<item id="48422" count="1" /> <!-- Talisman - Wind Box -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18010" toLevel="1" name="Love Potion: Atk. Spd.">
 		<!-- Feel the power of love! For 30 sec., Attribute Resistance +30, and Atk. Spd. +1500. -->

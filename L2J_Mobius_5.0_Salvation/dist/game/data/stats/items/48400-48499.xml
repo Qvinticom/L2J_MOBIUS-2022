@@ -237,41 +237,75 @@
 	<item id="48422" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Double-click to obtain a box containing a Talisman- Wind (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="time" val="43200" />
+		<capsuled_items>
+			<item id="48423" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - P. Skill Critical Damage -->
+			<item id="48424" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - M. Skill Critical Damage -->
+			<item id="48425" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Defense -->
+			<item id="48426" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Debuff Defense -->
+		</capsuled_items>
 	</item>
 	<item id="48423" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: P. Skill Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48427" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
+		</capsuled_items>
 	</item>
 	<item id="48424" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: M. Skill Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48428" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
+		</capsuled_items>
 	</item>
 	<item id="48425" name="Talisman - Wind Pack" additionalName="Defense" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: Defense (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48429" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
+		</capsuled_items>
 	</item>
 	<item id="48426" name="Talisman - Wind Pack" additionalName="Debuff Defense" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48430" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
+		</capsuled_items>
 	</item>
 	<item id="48427" name="Talisman - Wind: P. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, P. Skill Critical Damage +10%. -->
@@ -286,6 +320,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17973" level="1" /> <!-- Talisman - Wind: P. Critical Damage -->
+		</skills>
 	</item>
 	<item id="48428" name="Talisman - Wind: M. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage +10%. -->
@@ -300,6 +337,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17974" level="1" /> <!-- Talisman - Wind: M. Critical Damage -->
+		</skills>
 	</item>
 	<item id="48429" name="Talisman - Wind: Defense" additionalName="30-day" type="Armor">
 		<!-- When used, P./ M. Def. are maximized for 15 sec. Cooldown of 20 min. -->
@@ -314,6 +354,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17975" level="1" /> <!-- Talisman - Wind: Defense -->
+		</skills>
 	</item>
 	<item id="48430" name="Talisman - Wind: Debuff Resistance" additionalName="30-day" type="Armor">
 		<!-- When used, debuff resistance increases for 15 sec. Cooldown of 20 min. -->
@@ -328,6 +371,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17976" level="1" /> <!-- Talisman - Wind: Debuff Resistance -->
+		</skills>
 	</item>
 	<item id="48431" name="PA Talisman - STR" additionalName="2-hour" type="Armor">
 		<!-- When equipped, STR +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
@@ -1088,33 +1134,6 @@
 		<cond>
 			<player level="85" />
 		</cond>
-		<skills>
-			<skill id="35182" level="1" /> <!-- Dragon Shirt -->
-			<skill id="35185" level="1" /> <!-- Dragon Skin Shirt Enchantment Effect Lv1 -->
-			<skill id="35185" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Skin Shirt Enchantment Effect Lv2 -->
-			<skill id="35185" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Skin Shirt Enchantment Effect Lv3 -->
-			<skill id="35185" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Skin Shirt Enchantment Effect Lv4 -->
-			<skill id="35185" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Skin Shirt Enchantment Effect Lv5 -->
-			<skill id="35185" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Skin Shirt Enchantment Effect Lv6 -->
-			<skill id="35188" level="1" /> <!-- Dragon Rage Lv1 -->
-			<skill id="35188" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rage Lv2 -->
-			<skill id="35188" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rage Lv3 -->
-			<skill id="35188" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rage Lv4 -->
-			<skill id="35188" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rage Lv5 -->
-			<skill id="35188" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rage Lv6 -->
-			<skill id="35189" level="1" /> <!-- Dragon Scale Lv1 -->
-			<skill id="35189" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Scale Lv2 -->
-			<skill id="35189" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Scale Lv3 -->
-			<skill id="35189" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Scale Lv4 -->
-			<skill id="35189" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Scale Lv5 -->
-			<skill id="35189" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Scale Lv6 -->
-			<skill id="35190" level="1" /> <!-- Dragon Rise Lv1 -->
-			<skill id="35190" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rise Lv2 -->
-			<skill id="35190" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rise Lv3 -->
-			<skill id="35190" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rise Lv4 -->
-			<skill id="35190" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rise Lv5 -->
-			<skill id="35190" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rise Lv6 -->
-		</skills>
 		<stats>
 			<stat type="mDef">23</stat>
 			<stat type="pDef">46</stat>
@@ -1136,33 +1155,6 @@
 		<cond>
 			<player level="99" />
 		</cond>
-		<skills>
-			<skill id="35183" level="1" /> <!-- Dragon Leather Shirt -->
-			<skill id="35186" level="1" /> <!-- Dragon Skin Shirt Enchantment Effect Lv1 -->
-			<skill id="35186" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Skin Shirt Enchantment Effect Lv2 -->
-			<skill id="35186" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Skin Shirt Enchantment Effect Lv3 -->
-			<skill id="35186" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Skin Shirt Enchantment Effect Lv4 -->
-			<skill id="35186" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Skin Shirt Enchantment Effect Lv5 -->
-			<skill id="35186" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Skin Shirt Enchantment Effect Lv6 -->
-			<skill id="35188" level="7" /> <!-- Dragon Rage Lv7 -->
-			<skill id="35188" level="8" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rage Lv8 -->
-			<skill id="35188" level="9" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rage Lv9 -->
-			<skill id="35188" level="10" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rage Lv10 -->
-			<skill id="35188" level="11" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rage Lv11 -->
-			<skill id="35188" level="12" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rage Lv12 -->
-			<skill id="35189" level="7" /> <!-- Dragon Scale Lv7 -->
-			<skill id="35189" level="8" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Scale Lv8 -->
-			<skill id="35189" level="9" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Scale Lv9 -->
-			<skill id="35189" level="10" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Scale Lv10 -->
-			<skill id="35189" level="11" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Scale Lv11 -->
-			<skill id="35189" level="12" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Scale Lv12 -->
-			<skill id="35190" level="7" /> <!-- Dragon Rise Lv7 -->
-			<skill id="35190" level="8" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rise Lv8 -->
-			<skill id="35190" level="9" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rise Lv9 -->
-			<skill id="35190" level="10" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rise Lv10 -->
-			<skill id="35190" level="11" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rise Lv11 -->
-			<skill id="35190" level="12" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rise Lv12 -->
-		</skills>
 		<stats>
 			<stat type="mDef">27</stat>
 			<stat type="pDef">54</stat>
@@ -1181,33 +1173,6 @@
 		<cond>
 			<player level="105" />
 		</cond>
-		<skills>
-			<skill id="35184" level="1" /> <!-- Dragon Rind Leather Shirt -->
-			<skill id="35187" level="1" /> <!-- Dragon Rind Skin Leather Shirt Enchantment Effect Lv1 -->
-			<skill id="35187" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rind Skin Leather Shirt Enchantment Effect Lv2 -->
-			<skill id="35187" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rind Skin Leather Shirt Enchantment Effect Lv3 -->
-			<skill id="35187" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rind Skin Leather Shirt Enchantment Effect Lv4 -->
-			<skill id="35187" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rind Skin Leather Shirt Enchantment Effect Lv5 -->
-			<skill id="35187" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rind Skin Leather Shirt Enchantment Effect Lv6 -->
-			<skill id="35188" level="13" /> <!-- Dragon Rage Lv13 -->
-			<skill id="35188" level="14" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rage Lv14 -->
-			<skill id="35188" level="15" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rage Lv15 -->
-			<skill id="35188" level="16" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rage Lv16 -->
-			<skill id="35188" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rage Lv17 -->
-			<skill id="35188" level="18" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rage Lv18 -->
-			<skill id="35189" level="13" /> <!-- Dragon Scale Lv13 -->
-			<skill id="35189" level="14" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Scale Lv14 -->
-			<skill id="35189" level="15" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Scale Lv15 -->
-			<skill id="35189" level="16" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Scale Lv16 -->
-			<skill id="35189" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Scale Lv17 -->
-			<skill id="35189" level="18" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Scale Lv18 -->
-			<skill id="35190" level="13" /> <!-- Dragon Rise Lv13 -->
-			<skill id="35190" level="14" type="ON_ENCHANT" type_value="1" /> <!-- Dragon Rise Lv14 -->
-			<skill id="35190" level="15" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Rise Lv15 -->
-			<skill id="35190" level="16" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Rise Lv16 -->
-			<skill id="35190" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Rise Lv17 -->
-			<skill id="35190" level="18" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Rise Lv18 -->
-		</skills>
 		<stats>
 			<stat type="mDef">31</stat>
 			<stat type="pDef">62</stat>

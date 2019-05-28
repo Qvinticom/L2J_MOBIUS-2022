@@ -237,41 +237,75 @@
 	<item id="48422" name="Talisman - Wind Box" type="EtcItem">
 		<!-- Double-click to obtain a box containing a Talisman - Wind (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="time" val="43200" />
+		<capsuled_items>
+			<item id="48423" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - P. Skill Critical Damage -->
+			<item id="48424" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - M. Skill Critical Damage -->
+			<item id="48425" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Defense -->
+			<item id="48426" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Debuff Defense -->
+		</capsuled_items>
 	</item>
 	<item id="48423" name="Talisman - Wind Box" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Wind: P. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48427" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
+		</capsuled_items>
 	</item>
 	<item id="48424" name="Talisman - Wind Box" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: M. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48428" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
+		</capsuled_items>
 	</item>
 	<item id="48425" name="Talisman - Wind Box" additionalName="Defense" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Wind: Defense (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48429" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
+		</capsuled_items>
 	</item>
 	<item id="48426" name="Talisman - Wind Box" additionalName="Debuff Defense" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Wind: Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48430" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
+		</capsuled_items>
 	</item>
 	<item id="48427" name="Talisman - Wind: P. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, P. Skill Critical Damage +10%. -->
@@ -286,6 +320,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17973" level="1" /> <!-- Talisman - Wind: P. Critical Damage -->
+		</skills>
 	</item>
 	<item id="48428" name="Talisman- Wind: M. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage +10%. -->
@@ -300,6 +337,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17974" level="1" /> <!-- Talisman - Wind: M. Critical Damage -->
+		</skills>
 	</item>
 	<item id="48429" name="Talisman - Wind: Defense" additionalName="30-day" type="Armor">
 		<!-- When used, Physical and Magic Def. are maximized for 15 sec. Cooldown of 20 min. -->
@@ -314,6 +354,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17975" level="1" /> <!-- Talisman - Wind: Defense -->
+		</skills>
 	</item>
 	<item id="48430" name="Talisman - Wind: Debuff Resistance" additionalName="30-day" type="Armor">
 		<!-- When used, debuff resistance increases for 15 sec. Cooldown of 20 min. -->
@@ -328,6 +371,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17976" level="1" /> <!-- Talisman - Wind: Debuff Resistance -->
+		</skills>
 	</item>
 	<item id="48431" name="PA Talisman- STR" additionalName="2-hour" type="Armor">
 		<!-- When equipped, STR +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
