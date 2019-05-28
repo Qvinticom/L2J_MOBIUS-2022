@@ -103,7 +103,7 @@ public class TimerHolder<T> implements Runnable
 	}
 	
 	/**
-	 * @return {@code true} if timer for the given event, npc, player were stopped, {@code false} otheriwse
+	 * @return {@code true} if timer for the given event, npc, player were stopped, {@code false} otherwise
 	 */
 	public boolean cancelTimer()
 	{
@@ -117,7 +117,7 @@ public class TimerHolder<T> implements Runnable
 			TimersManager.getInstance().unregisterTimer(_player.getObjectId(), this);
 		}
 		
-		if (_task.isCancelled() || _task.isDone())
+		if ((_task == null) || _task.isCancelled() || _task.isDone())
 		{
 			return false;
 		}
@@ -132,12 +132,7 @@ public class TimerHolder<T> implements Runnable
 	 */
 	public long getRemainingTime()
 	{
-		if (_task == null)
-		{
-			return -1;
-		}
-		
-		if (_task.isCancelled() || _task.isDone())
+		if ((_task == null) || _task.isCancelled() || _task.isDone())
 		{
 			return -1;
 		}
