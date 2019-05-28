@@ -309,7 +309,11 @@ public final class BuffInfo
 			final EffectTaskInfo task = getEffectTask(effect);
 			if (task != null)
 			{
-				task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
+				final ScheduledFuture<?> schedule = task.getScheduledFuture();
+				if ((schedule != null) && !schedule.isCancelled() && !schedule.isDone())
+				{
+					schedule.cancel(true); // Don't allow to finish current run.
+				}
 				_effected.getEffectList().stopSkillEffects(true, _skill); // Remove the buff from the effect list.
 			}
 		}
@@ -320,7 +324,11 @@ public final class BuffInfo
 		// Cancels the ticking task.
 		for (EffectTaskInfo effectTask : _tasks.values())
 		{
-			effectTask.getScheduledFuture().cancel(true); // Don't allow to finish current run.
+			final ScheduledFuture<?> schedule = effectTask.getScheduledFuture();
+			if ((schedule != null) && !schedule.isCancelled() && !schedule.isDone())
+			{
+				schedule.cancel(true); // Don't allow to finish current run.
+			}
 		}
 		// Remove stats
 		removeStats();
