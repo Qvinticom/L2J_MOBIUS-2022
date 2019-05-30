@@ -2923,6 +2923,9 @@
 		<abnormalTime>5</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotInPeacezone"/>
+		</conditions>
 		<effects>
 			<effect name="DeleteHate" />
 			<effect name="Speed">

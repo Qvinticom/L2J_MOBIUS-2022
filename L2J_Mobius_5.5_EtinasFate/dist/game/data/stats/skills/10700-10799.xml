@@ -918,6 +918,7 @@
 		<effectPoint>687</effectPoint>
 		<toggleGroupId>2</toggleGroupId>
 		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -2549,7 +2550,6 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2945,6 +2945,9 @@
 		<abnormalTime>5</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotInPeacezone"/>
+		</conditions>
 		<effects>
 			<effect name="DeleteHate" />
 			<effect name="Speed">
