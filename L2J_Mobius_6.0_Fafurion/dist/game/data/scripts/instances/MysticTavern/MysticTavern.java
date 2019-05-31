@@ -84,10 +84,6 @@ public class MysticTavern extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final List<Integer> availableInstances = new ArrayList<>();
-		availableInstances.add(INSTANCE_FREYA);
-		// availableInstances.add(INSTANCE_TAUTI);
-		// availableInstances.add(INSTANCE_KELBIM);
 		switch (event)
 		{
 			case "tellStory":
@@ -107,6 +103,10 @@ public class MysticTavern extends AbstractNpcAI
 					{
 						return "34200-not-enough-members.html";
 					}
+					final List<Integer> availableInstances = new ArrayList<>();
+					availableInstances.add(INSTANCE_FREYA);
+					// availableInstances.add(INSTANCE_TAUTI);
+					// availableInstances.add(INSTANCE_KELBIM);
 					for (PlayerInstance member : party.getMembers())
 					{
 						if ((member == null) || !member.isSitting() || (member.calculateDistance3D(player) > 500))
@@ -124,21 +124,40 @@ public class MysticTavern extends AbstractNpcAI
 						}
 						if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_FREYA) > 0)
 						{
-							availableInstances.remove(INSTANCE_FREYA);
+							for (int i = 0; i < availableInstances.size(); i++)
+							{
+								if (availableInstances.get(i) == INSTANCE_FREYA)
+								{
+									availableInstances.remove(i);
+								}
+							}
 						}
 						// if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_TAUTI) > 0)
 						// {
-						// availableInstances.remove(INSTANCE_TAUTI);
+						// for (int i = 0; i < availableInstances.size(); i++)
+						// {
+						// if (availableInstances.get(i) == INSTANCE_TAUTI)
+						// {
+						// availableInstances.remove(i);
+						// }
+						// }
 						// }
 						// if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_KELBIM) > 0)
 						// {
-						// availableInstances.remove(INSTANCE_KELBIM);
+						// for (int i = 0; i < availableInstances.size(); i++)
+						// {
+						// if (availableInstances.get(i) == INSTANCE_KELBIM)
+						// {
+						// availableInstances.remove(i);
+						// }
+						// }
 						// }
 					}
 					if (availableInstances.isEmpty())
 					{
 						return "34200-not-available.html";
 					}
+					npc.setScriptValue(getRandom(availableInstances.size()));
 					startQuestTimer("npcRoute", 3000, npc, player);
 				}
 				startQuestTimer("npcRoute", 3000, npc, player); // TODO only for test
@@ -307,8 +326,7 @@ public class MysticTavern extends AbstractNpcAI
 			}
 			case "enter_instance":
 			{
-				// enter randomly
-				switch (availableInstances.get(getRandom(availableInstances.size())))
+				switch (npc.getScriptValue())
 				{
 					case INSTANCE_FREYA:
 					{
@@ -326,6 +344,7 @@ public class MysticTavern extends AbstractNpcAI
 					// break;
 					// }
 				}
+				npc.setScriptValue(0);
 				break;
 			}
 		}
