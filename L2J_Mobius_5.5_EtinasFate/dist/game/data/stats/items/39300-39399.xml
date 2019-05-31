@@ -281,6 +281,33 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="38023" min="1" max="1" chance="4.7619" /> <!-- Seraph Helmet Crafting Pack (Heavy Armor) -->
+			<item id="38024" min="1" max="1" chance="4.7619" /> <!-- Seraph Breastplate Crafting Pack (Heavy Armor) -->
+			<item id="38025" min="1" max="1" chance="4.7619" /> <!-- Seraph Gaiters Crafting Pack (Heavy Armor) -->
+			<item id="38026" min="1" max="1" chance="4.7619" /> <!-- Seraph Gauntlets Crafting Pack (Heavy Armor) -->
+			<item id="38027" min="1" max="1" chance="4.7619" /> <!-- Seraph Boots Crafting Pack (Heavy Armor) -->
+			<item id="38028" min="1" max="1" chance="4.7619" /> <!-- Seraph Shield Crafting Pack (Heavy Armor) -->
+			<item id="38029" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Helmet Crafting Pack (Light Armor) -->
+			<item id="38030" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Armor Crafting Pack (Light Armor) -->
+			<item id="38031" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Leggings Crafting Pack (Light Armor) -->
+			<item id="38032" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Gloves Crafting Pack (Light Armor) -->
+			<item id="38033" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Boots Crafting Pack (Light Armor) -->
+			<item id="38034" min="1" max="1" chance="4.7619" /> <!-- Seraph Circlet Crafting Pack (Robe) -->
+			<item id="38035" min="1" max="1" chance="4.7619" /> <!-- Seraph Tunic Crafting Pack (Robe) -->
+			<item id="38036" min="1" max="1" chance="4.7619" /> <!-- Seraph Stockings Crafting Pack (Robe) -->
+			<item id="38037" min="1" max="1" chance="4.7619" /> <!-- Seraph Gloves Crafting Pack (Robe) -->
+			<item id="38038" min="1" max="1" chance="4.7619" /> <!-- Seraph Shoes Crafting Pack (Robe) -->
+			<item id="38039" min="1" max="1" chance="4.7619" /> <!-- Seraph Sigil Crafting Pack (Robe) -->
+			<item id="38040" min="1" max="1" chance="4.7619" /> <!-- Seraph Necklace Crafting Pack -->
+			<item id="38041" min="1" max="1" chance="4.7619" /> <!-- Seraph Earring Crafting Pack -->
+			<item id="38042" min="1" max="1" chance="4.7619" /> <!-- Seraph Ring Crafting Pack -->
+		</capsuled_items>
 	</item>
 	<item id="39331" name="Seraph Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Seraph armor piece. -->
