@@ -50,7 +50,7 @@ public final class RequestShortCutReg implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		if ((client.getPlayer() == null) || (_page > 10) || (_page < 0))
+		if ((client.getPlayer() == null) || (_page > 19) || (_page < 0))
 		{
 			return;
 		}
