@@ -102,13 +102,16 @@ public final class ThreadPool
 	 */
 	public static ScheduledFuture<?> schedule(Runnable runnable, long delay)
 	{
-		try
+		synchronized (SCHEDULED_POOLS)
 		{
-			return SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT].schedule(new RunnableWrapper(runnable), delay, TimeUnit.MILLISECONDS);
-		}
-		catch (Exception e)
-		{
-			return null;
+			try
+			{
+				return SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT].schedule(new RunnableWrapper(runnable), delay, TimeUnit.MILLISECONDS);
+			}
+			catch (Exception e)
+			{
+				return null;
+			}
 		}
 	}
 	
@@ -121,13 +124,16 @@ public final class ThreadPool
 	 */
 	public static ScheduledFuture<?> scheduleAtFixedRate(Runnable runnable, long initialDelay, long period)
 	{
-		try
+		synchronized (SCHEDULED_POOLS)
 		{
-			return SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT].scheduleAtFixedRate(new RunnableWrapper(runnable), initialDelay, period, TimeUnit.MILLISECONDS);
-		}
-		catch (Exception e)
-		{
-			return null;
+			try
+			{
+				return SCHEDULED_POOLS[SCHEDULED_THREAD_RANDOMIZER++ % Config.SCHEDULED_THREAD_POOL_COUNT].scheduleAtFixedRate(new RunnableWrapper(runnable), initialDelay, period, TimeUnit.MILLISECONDS);
+			}
+			catch (Exception e)
+			{
+				return null;
+			}
 		}
 	}
 	
@@ -137,12 +143,15 @@ public final class ThreadPool
 	 */
 	public static void execute(Runnable runnable)
 	{
-		try
+		synchronized (INSTANT_POOLS)
 		{
-			INSTANT_POOLS[INSTANT_THREAD_RANDOMIZER++ % Config.INSTANT_THREAD_POOL_COUNT].execute(new RunnableWrapper(runnable));
-		}
-		catch (Exception e)
-		{
+			try
+			{
+				INSTANT_POOLS[INSTANT_THREAD_RANDOMIZER++ % Config.INSTANT_THREAD_POOL_COUNT].execute(new RunnableWrapper(runnable));
+			}
+			catch (Exception e)
+			{
+			}
 		}
 	}
 	
