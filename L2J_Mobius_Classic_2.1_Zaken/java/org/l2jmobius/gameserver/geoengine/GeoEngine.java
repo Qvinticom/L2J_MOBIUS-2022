@@ -886,8 +886,8 @@ public class GeoEngine
 					return new GeoLocation(gtx, gty, gtz);
 				}
 				
-				// path found, Z coordinates are not okay, return origin point
-				return new GeoLocation(gox, goy, goz);
+				// path found, Z coordinates are not okay, return last good point
+				return new GeoLocation(gpx, gpy, gpz);
 			}
 		}
 		
