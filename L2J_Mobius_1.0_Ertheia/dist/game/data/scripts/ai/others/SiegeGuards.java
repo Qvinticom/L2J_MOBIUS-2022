@@ -16,6 +16,9 @@
  */
 package ai.others;
 
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
@@ -84,6 +87,7 @@ public class SiegeGuards extends AbstractNpcAI
 		35134, 35135, 35136, 35176, 35177, 35178, 35218, 35219, 35220, 35261, 35262, 35263, 35264, 35265, 35308, 35309, 35310, 35352, 35353, 35354, 35497, 35498, 35499, 35500, 35501, 35544, 35545, 35546
 	};
 	//@formatter:on
+	private static final List<Npc> SPAWNED_GUARDS = new CopyOnWriteArrayList<>();
 	
 	public SiegeGuards()
 	{
@@ -95,34 +99,49 @@ public class SiegeGuards extends AbstractNpcAI
 		addSpawnId(FORT_GUARDS);
 		addSpawnId(MERCENARIES);
 		addSpawnId(STATIONARY_MERCENARIES);
+		addKillId(CASTLE_GUARDS);
+		addKillId(FORT_GUARDS);
+		addKillId(MERCENARIES);
+		addKillId(STATIONARY_MERCENARIES);
+		
+		startQuestTimer("AGGRO_CHECK", 3000, null, null, true);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if ((npc != null) && !npc.isDead())
+		for (Npc guard : SPAWNED_GUARDS)
 		{
-			final WorldObject target = npc.getTarget();
-			if (!npc.isInCombat() || (target == null) || (npc.calculateDistance2D(target) > npc.getAggroRange()) || target.isInvul())
+			if (guard != null)
 			{
-				for (Creature nearby : World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange()))
+				if (guard.isDead())
 				{
-					if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
+					SPAWNED_GUARDS.remove(guard);
+				}
+				else
+				{
+					final WorldObject target = guard.getTarget();
+					if (!guard.isInCombat() || (target == null) || (guard.calculateDistance2D(target) > guard.getAggroRange()) || target.isInvul())
 					{
-						final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
-						final PlayerInstance pl = summon == null ? (PlayerInstance) nearby : summon.getOwner();
-						if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(npc.getScriptValue())) && ((pl.getSiegeState() != 0) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
+						for (Creature nearby : World.getInstance().getVisibleObjectsInRange(guard, Creature.class, guard.getAggroRange()))
 						{
-							if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
+							if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
 							{
-								addAttackPlayerDesire(npc, pl);
-								break; // no need to search more
+								final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
+								final PlayerInstance pl = summon == null ? (PlayerInstance) nearby : summon.getOwner();
+								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
+								{
+									if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
+									{
+										addAttackPlayerDesire(guard, pl);
+										break; // no need to search more
+									}
+								}
 							}
 						}
 					}
 				}
 			}
-			startQuestTimer("AGGRO_CHECK" + npc.getObjectId(), 3000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -139,6 +158,13 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	{
+		SPAWNED_GUARDS.remove(npc);
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
 	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
@@ -149,7 +175,7 @@ public class SiegeGuards extends AbstractNpcAI
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();
 		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-		startQuestTimer("AGGRO_CHECK" + npc.getObjectId(), getRandom(1000, 10000), npc, null);
+		SPAWNED_GUARDS.add(npc);
 		return super.onSpawn(npc);
 	}
 	
