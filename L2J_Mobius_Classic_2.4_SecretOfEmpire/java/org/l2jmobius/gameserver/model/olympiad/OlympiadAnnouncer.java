@@ -52,32 +52,14 @@ public final class OlympiadAnnouncer implements Runnable
 			task = OlympiadGameManager.getInstance().getOlympiadTask(_currentStadium);
 			if ((task != null) && (task.getGame() != null) && task.needAnnounce())
 			{
-				NpcStringId npcString;
 				final String arenaId = String.valueOf(task.getGame().getStadiumId() + 1);
-				switch (task.getGame().getType())
-				{
-					case NON_CLASSED:
-					{
-						npcString = NpcStringId.OLYMPIAD_CLASS_FREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
-						break;
-					}
-					case CLASSED:
-					{
-						npcString = NpcStringId.OLYMPIAD_CLASS_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
-						break;
-					}
-					default:
-					{
-						continue;
-					}
-				}
 				
 				for (Spawn spawn : _managers)
 				{
 					final Npc manager = spawn.getLastSpawn();
 					if (manager != null)
 					{
-						manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);
+						manager.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.OLYMPIAD_CLASS_FREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT, arenaId);
 					}
 				}
 				break;

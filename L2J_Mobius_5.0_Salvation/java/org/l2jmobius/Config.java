@@ -507,9 +507,8 @@ public final class Config
 	public static int ALT_OLY_CLASSED;
 	public static int ALT_OLY_NONCLASSED;
 	public static int ALT_OLY_REG_DISPLAY;
-	public static List<ItemHolder> ALT_OLY_CLASSED_REWARD;
-	public static List<ItemHolder> ALT_OLY_NONCLASSED_REWARD;
-	public static List<ItemHolder> ALT_OLY_TEAM_REWARD;
+	public static List<ItemHolder> ALT_OLY_WINNER_REWARD;
+	public static List<ItemHolder> ALT_OLY_LOSER_REWARD;
 	public static int ALT_OLY_COMP_RITEM;
 	public static int ALT_OLY_MIN_MATCHES;
 	public static int ALT_OLY_MARK_PER_POINT;
@@ -520,12 +519,8 @@ public final class Config
 	public static int ALT_OLY_RANK4_POINTS;
 	public static int ALT_OLY_RANK5_POINTS;
 	public static int ALT_OLY_MAX_POINTS;
-	public static int ALT_OLY_DIVIDER_CLASSED;
-	public static int ALT_OLY_DIVIDER_NON_CLASSED;
+	public static int ALT_OLY_DIVIDER;
 	public static int ALT_OLY_MAX_WEEKLY_MATCHES;
-	public static int ALT_OLY_MAX_WEEKLY_MATCHES_NON_CLASSED;
-	public static int ALT_OLY_MAX_WEEKLY_MATCHES_CLASSED;
-	public static int ALT_OLY_MAX_WEEKLY_MATCHES_TEAM;
 	public static boolean ALT_OLY_LOG_FIGHTS;
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
@@ -2310,20 +2305,19 @@ public final class Config
 			// Load Olympiad config file (if exists)
 			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
 			
-			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
+			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 20);
 			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
-			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 21600000);
-			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
+			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 14400000);
+			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 360000);
 			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
 			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
 			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
 			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
-			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 11);
-			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 11);
+			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 10);
+			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
 			ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
-			ALT_OLY_CLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyClassedReward", "13722,50"));
-			ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
-			ALT_OLY_TEAM_REWARD = parseItemsList(Olympiad.getString("AltOlyTeamReward", "13722,85"));
+			ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", "45584,12"));
+			ALT_OLY_LOSER_REWARD = parseItemsList(Olympiad.getString("AltOlyLoserReward", "45584,7"));
 			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 45584);
 			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
 			ALT_OLY_MARK_PER_POINT = Olympiad.getInt("AltOlyMarkPerPoint", 20);
@@ -2334,12 +2328,8 @@ public final class Config
 			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 40);
 			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 30);
 			ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-			ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
-			ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 70);
-			ALT_OLY_MAX_WEEKLY_MATCHES_NON_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesNonClassed", 60);
-			ALT_OLY_MAX_WEEKLY_MATCHES_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesClassed", 30);
-			ALT_OLY_MAX_WEEKLY_MATCHES_TEAM = Olympiad.getInt("AltOlyMaxWeeklyMatchesTeam", 10);
+			ALT_OLY_DIVIDER = Olympiad.getInt("AltOlyDivider", 5);
+			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 30);
 			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
 			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
 			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
@@ -2350,12 +2340,12 @@ public final class Config
 				LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
 			}
 			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
-			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
+			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 120);
 			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Olympiad.getBoolean("AltOlyUseCustomPeriodSettings", false);
 			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
 			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
 			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
-			for (String s : Olympiad.getString("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(","))
+			for (String s : Olympiad.getString("AltOlyCompetitionDays", "6,7").split(","))
 			{
 				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
 			}

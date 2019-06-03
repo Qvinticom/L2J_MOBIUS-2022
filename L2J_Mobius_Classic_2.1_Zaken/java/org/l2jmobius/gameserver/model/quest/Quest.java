@@ -67,7 +67,6 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import org.l2jmobius.gameserver.model.olympiad.Participant;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -924,13 +923,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param winner
 	 * @param looser
-	 * @param type
 	 */
-	public final void notifyOlympiadMatch(Participant winner, Participant looser, CompetitionType type)
+	public final void notifyOlympiadMatch(Participant winner, Participant looser)
 	{
 		try
 		{
-			onOlympiadMatchFinish(winner, looser, type);
+			onOlympiadMatchFinish(winner, looser);
 		}
 		catch (Exception e)
 		{
@@ -1360,18 +1358,16 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * This function is called whenever a player wins an Olympiad Game.
 	 * @param winner in this match.
 	 * @param looser in this match.
-	 * @param type the competition type.
 	 */
-	public void onOlympiadMatchFinish(Participant winner, Participant looser, CompetitionType type)
+	public void onOlympiadMatchFinish(Participant winner, Participant looser)
 	{
 	}
 	
 	/**
 	 * This function is called whenever a player looses an Olympiad Game.
 	 * @param loser this parameter contains a reference to the exact instance of the player who lose the competition.
-	 * @param type this parameter contains a reference to the competition type.
 	 */
-	public void onOlympiadLose(PlayerInstance loser, CompetitionType type)
+	public void onOlympiadLose(PlayerInstance loser)
 	{
 	}
 	
@@ -2281,7 +2277,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	public void addOlympiadMatchFinishId()
 	{
-		setOlympiadMatchResult(event -> notifyOlympiadMatch(event.getWinner(), event.getLoser(), event.getCompetitionType()));
+		setOlympiadMatchResult(event -> notifyOlympiadMatch(event.getWinner(), event.getLoser()));
 	}
 	
 	/**

@@ -251,9 +251,6 @@ public class AdminOlympiad implements IAdminCommandHandler
 			statDat.set(Olympiad.COMP_LOST, 0);
 			statDat.set(Olympiad.COMP_DRAWN, 0);
 			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_NON_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_TEAM, 0);
 			statDat.set("to_save", true);
 			Olympiad.addNobleStats(player.getObjectId(), statDat);
 		}

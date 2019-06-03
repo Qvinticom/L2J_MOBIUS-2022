@@ -181,7 +181,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		if (Olympiad.getInstance().getMillisToCompEnd() < 600000)
+		if (Olympiad.getInstance().getMillisToCompEnd() < 1200000)
 		{
 			player.sendPacket(SystemMessageId.PARTICIPATION_REQUESTS_ARE_NO_LONGER_BEING_ACCEPTED);
 			return false;
@@ -204,18 +204,14 @@ public class OlympiadManager
 					return false;
 				}
 				
+				// TODO Class fights are only 1st week
+				
 				if ((Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
 				{
 					final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
 					message.setFile(player, "data/html/mods/OlympiadIPRestriction.htm");
 					message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
 					player.sendPacket(message);
-					return false;
-				}
-				
-				if (Olympiad.getInstance().getRemainingWeeklyMatchesClassed(charId) < 1)
-				{
-					player.sendPacket(SystemMessageId.YOU_MAY_PARTICIPATE_IN_UP_TO_30_MATCHES_PER_WEEK);
 					return false;
 				}
 				
@@ -237,12 +233,6 @@ public class OlympiadManager
 					message.setFile(player, "data/html/mods/OlympiadIPRestriction.htm");
 					message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
 					player.sendPacket(message);
-					return false;
-				}
-				
-				if (Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(charId) < 1)
-				{
-					player.sendPacket(SystemMessageId.YOU_MAY_PARTICIPATE_IN_UP_TO_30_MATCHES_PER_WEEK);
 					return false;
 				}
 				

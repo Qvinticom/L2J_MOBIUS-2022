@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
@@ -124,7 +123,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				else
 				{
-					OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
+					OlympiadManager.getInstance().registerNoble(player);
 				}
 				break;
 			}

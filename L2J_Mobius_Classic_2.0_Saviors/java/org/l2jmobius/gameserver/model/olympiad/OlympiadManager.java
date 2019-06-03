@@ -16,10 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.olympiad;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -36,8 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class OlympiadManager
 {
-	private final Set<Integer> _nonClassBasedRegisters = ConcurrentHashMap.newKeySet();
-	private final Map<Integer, Set<Integer>> _classBasedRegisters = new ConcurrentHashMap<>();
+	private final Set<Integer> _playerRegistered = ConcurrentHashMap.newKeySet();
 	
 	protected OlympiadManager()
 	{
@@ -48,43 +43,19 @@ public class OlympiadManager
 		return SingletonHolder.INSTANCE;
 	}
 	
-	public final Set<Integer> getRegisteredNonClassBased()
+	public final Set<Integer> getPlayerRegistered()
 	{
-		return _nonClassBasedRegisters;
-	}
-	
-	public final Map<Integer, Set<Integer>> getRegisteredClassBased()
-	{
-		return _classBasedRegisters;
-	}
-	
-	protected final List<Set<Integer>> hasEnoughRegisteredClassed()
-	{
-		List<Set<Integer>> result = null;
-		for (Map.Entry<Integer, Set<Integer>> classList : _classBasedRegisters.entrySet())
-		{
-			if ((classList.getValue() != null) && (classList.getValue().size() >= Config.ALT_OLY_CLASSED))
-			{
-				if (result == null)
-				{
-					result = new ArrayList<>();
-				}
-				
-				result.add(classList.getValue());
-			}
-		}
-		return result;
+		return _playerRegistered;
 	}
 	
 	protected final boolean hasEnoughRegisteredNonClassed()
 	{
-		return _nonClassBasedRegisters.size() >= Config.ALT_OLY_NONCLASSED;
+		return _playerRegistered.size() >= Config.ALT_OLY_NONCLASSED;
 	}
 	
 	protected final void clearRegistered()
 	{
-		_nonClassBasedRegisters.clear();
-		_classBasedRegisters.clear();
+		_playerRegistered.clear();
 		AntiFeedManager.getInstance().clear(AntiFeedManager.OLYMPIAD_ID);
 	}
 	
@@ -96,7 +67,7 @@ public class OlympiadManager
 	private boolean isRegistered(PlayerInstance noble, PlayerInstance player, boolean showMessage)
 	{
 		final Integer objId = Integer.valueOf(noble.getObjectId());
-		if (_nonClassBasedRegisters.contains(objId))
+		if (_playerRegistered.contains(objId))
 		{
 			if (showMessage)
 			{
@@ -106,19 +77,6 @@ public class OlympiadManager
 			}
 			return true;
 		}
-		
-		final Set<Integer> classed = _classBasedRegisters.get(getClassGroup(noble));
-		if ((classed != null) && classed.contains(objId))
-		{
-			if (showMessage)
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_CLASS_MATCH_WAITING_LIST);
-				sm.addPcName(noble);
-				player.sendPacket(sm);
-			}
-			return true;
-		}
-		
 		return false;
 	}
 	
@@ -134,7 +92,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		AbstractOlympiadGame game;
+		OlympiadGameNormal game;
 		for (int i = OlympiadGameManager.getInstance().getNumberOfStadiums(); --i >= 0;)
 		{
 			game = OlympiadGameManager.getInstance().getOlympiadTask(i).getGame();
@@ -150,30 +108,17 @@ public class OlympiadManager
 					return true;
 				}
 				
-				switch (game.getType())
-				{
-					case CLASSED:
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_CLASS_MATCH_WAITING_LIST);
-						sm.addPcName(noble);
-						player.sendPacket(sm);
-						break;
-					}
-					case NON_CLASSED:
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_ALL_CLASS_BATTLE);
-						sm.addPcName(noble);
-						player.sendPacket(sm);
-						break;
-					}
-				}
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_ALL_CLASS_BATTLE);
+				sm.addPcName(noble);
+				player.sendPacket(sm);
+				
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	public final boolean registerNoble(PlayerInstance player, CompetitionType type)
+	public final boolean registerNoble(PlayerInstance player)
 	{
 		if (!Olympiad._inCompPeriod)
 		{
@@ -181,7 +126,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		if (Olympiad.getInstance().getMillisToCompEnd() < 600000)
+		if (Olympiad.getInstance().getMillisToCompEnd() < 1200000)
 		{
 			player.sendPacket(SystemMessageId.PARTICIPATION_REQUESTS_ARE_NO_LONGER_BEING_ACCEPTED);
 			return false;
@@ -194,63 +139,24 @@ public class OlympiadManager
 			return false;
 		}
 		
-		switch (type)
+		if (player.isOnEvent())
 		{
-			case CLASSED:
-			{
-				if (player.isOnEvent())
-				{
-					player.sendMessage("You can't join olympiad while participating on an Event.");
-					return false;
-				}
-				
-				if ((Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
-				{
-					final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
-					message.setFile(player, "data/html/mods/OlympiadIPRestriction.htm");
-					message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
-					player.sendPacket(message);
-					return false;
-				}
-				
-				if (Olympiad.getInstance().getRemainingWeeklyMatchesClassed(charId) < 1)
-				{
-					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_30_FREE_FOR_ALL_BATTLES_AND_30_CLASS_SPECIFIC_BATTLES_PER_WEEK);
-					return false;
-				}
-				
-				_classBasedRegisters.computeIfAbsent(getClassGroup(player), k -> ConcurrentHashMap.newKeySet()).add(charId);
-				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_BATTLE);
-				break;
-			}
-			case NON_CLASSED:
-			{
-				if (player.isOnEvent())
-				{
-					player.sendMessage("You can't join olympiad while participating on TvT Event.");
-					return false;
-				}
-				
-				if ((Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
-				{
-					final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
-					message.setFile(player, "data/html/mods/OlympiadIPRestriction.htm");
-					message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
-					player.sendPacket(message);
-					return false;
-				}
-				
-				if (Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(charId) < 1)
-				{
-					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_30_FREE_FOR_ALL_BATTLES_AND_30_CLASS_SPECIFIC_BATTLES_PER_WEEK);
-					return false;
-				}
-				
-				_nonClassBasedRegisters.add(charId);
-				player.sendPacket(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
-				break;
-			}
+			player.sendMessage("You can't join olympiad while participating on TvT Event.");
+			return false;
 		}
+		
+		if ((Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
+		{
+			final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());
+			message.setFile(player, "data/html/mods/OlympiadIPRestriction.htm");
+			message.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP)));
+			player.sendPacket(message);
+			return false;
+		}
+		
+		_playerRegistered.add(charId);
+		player.sendPacket(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
+		
 		return true;
 	}
 	
@@ -282,19 +188,7 @@ public class OlympiadManager
 		}
 		
 		final Integer objId = Integer.valueOf(noble.getObjectId());
-		if (_nonClassBasedRegisters.remove(objId))
-		{
-			if (Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
-			{
-				AntiFeedManager.getInstance().removePlayer(AntiFeedManager.OLYMPIAD_ID, noble);
-			}
-			
-			noble.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST);
-			return true;
-		}
-		
-		final Set<Integer> classed = _classBasedRegisters.get(getClassGroup(noble));
-		if ((classed != null) && classed.remove(objId))
+		if (_playerRegistered.remove(objId))
 		{
 			if (Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
 			{
@@ -315,67 +209,16 @@ public class OlympiadManager
 		{
 			task.getGame().handleDisconnect(player);
 		}
-		
-		final Integer objId = Integer.valueOf(player.getObjectId());
-		if (_nonClassBasedRegisters.remove(objId))
-		{
-			return;
-		}
-		
-		_classBasedRegisters.getOrDefault(getClassGroup(player), Collections.emptySet()).remove(objId);
+		_playerRegistered.remove(player.getObjectId());
 	}
 	
 	public int getCountOpponents()
 	{
-		return _nonClassBasedRegisters.size() + _classBasedRegisters.size();
+		return _playerRegistered.size();
 	}
 	
 	private static class SingletonHolder
 	{
 		protected static final OlympiadManager INSTANCE = new OlympiadManager();
-	}
-	
-	private int getClassGroup(PlayerInstance player)
-	{
-		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
-		{
-			return 1001;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_SIGEL_GROUP))
-		{
-			return 1002;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
-		{
-			return 1003;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP))
-		{
-			return 1004;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP))
-		{
-			return 1005;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
-		{
-			return 1006;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
-		{
-			return 1007;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP))
-		{
-			return 1008;
-		}
-		else if (player.isInCategory(CategoryType.ERTHEIA_FOURTH_CLASS_GROUP))
-		{
-			return 1009;
-		}
-		else
-		{
-			return player.getBaseClass();
-		}
 	}
 }

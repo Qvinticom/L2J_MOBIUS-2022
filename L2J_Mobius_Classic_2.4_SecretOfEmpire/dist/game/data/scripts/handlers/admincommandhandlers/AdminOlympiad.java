@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameNonClassed;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadGameNormal;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.olympiad.Participant;
@@ -91,7 +91,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 								final Participant[] players = new Participant[2];
 								players[0] = new Participant(activeChar, 1);
 								players[1] = new Participant(player, 2);
-								task.attachGame(new OlympiadGameNonClassed(i, players));
+								task.attachGame(new OlympiadGameNormal(i, players));
 								return true;
 							}
 						}
@@ -251,9 +251,6 @@ public class AdminOlympiad implements IAdminCommandHandler
 			statDat.set(Olympiad.COMP_LOST, 0);
 			statDat.set(Olympiad.COMP_DRAWN, 0);
 			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_NON_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_TEAM, 0);
 			statDat.set("to_save", true);
 			Olympiad.addNobleStats(player.getObjectId(), statDat);
 		}
