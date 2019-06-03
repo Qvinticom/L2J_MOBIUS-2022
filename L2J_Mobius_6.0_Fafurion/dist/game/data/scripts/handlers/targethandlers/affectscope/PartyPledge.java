@@ -71,7 +71,7 @@ public class PartyPledge implements IAffectScopeHandler
 				{
 					final Party pParty = p.getParty();
 					final int pClanId = p.getClanId();
-					if (((pClanId == 0) && (pParty == null)) || ((clanId != pClanId) && (party != pParty)))
+					if ((pParty == null) || ((clanId != pClanId) && (party != pParty)))
 					{
 						return false;
 					}
