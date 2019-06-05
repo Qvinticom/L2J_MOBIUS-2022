@@ -7816,6 +7816,17 @@ public final class PlayerInstance extends Playable
 			_henna[i - 1] = null;
 		}
 		
+		// Cancel and remove existing running tasks.
+		for (Entry<Integer, ScheduledFuture<?>> entry : _hennaRemoveSchedules.entrySet())
+		{
+			final ScheduledFuture<?> task = entry.getValue();
+			if ((task != null) && !task.isCancelled() && !task.isDone())
+			{
+				task.cancel(true);
+			}
+			_hennaRemoveSchedules.remove(entry.getKey());
+		}
+		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_HENNAS))
 		{
@@ -7851,6 +7862,8 @@ public final class PlayerInstance extends Playable
 							removeHenna(slot);
 							continue;
 						}
+						
+						// Add the new task.
 						_hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
 					}
 					
