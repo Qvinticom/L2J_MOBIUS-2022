@@ -4252,11 +4252,7 @@ public final class PlayerInstance extends Playable
 	
 	public int getAllyCrestId()
 	{
-		if (_clanId == 0)
-		{
-			return 0;
-		}
-		if (_clan.getAllyId() == 0)
+		if ((_clanId == 0) || (_clan == null) || (_clan.getAllyId() == 0))
 		{
 			return 0;
 		}
