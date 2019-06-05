@@ -671,8 +671,11 @@
 	<skill id="1896" toLevel="4" name="Full Knockdown">
 		<!-- Inflicts a powerful strike on target with $s1 Power added to P. Atk., knocking down for $s2 Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill1896</icon>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -719,6 +722,9 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2190</hitTime>
+		<isDebuff>true</isDebuff>
+		<hitCancelTime>0.2</hitCancelTime>
+		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">81</value>
 			<value level="2">82</value>
@@ -731,11 +737,13 @@
 			<value level="3">109</value>
 			<value level="4">110</value>
 		</mpConsume>
+		<staticReuse>true</staticReuse>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
+		<trait>KNOCKDOWN</trait>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -761,13 +769,13 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="KnockBack">
-				<distance>200</distance>
+				<distance>50</distance>
 				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1897" toLevel="5" name="Shilen's Cursed Field">
+	<skill id="1897" toLevel="11" name="Shilen's Cursed Field">
 		<!-- For $s1, Melee Weapon Resistance of the target and nearby enemies -$s2. -->
 		<icon>icon.skill1897</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -776,13 +784,31 @@
 		<abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>600</castRange>
+		<castRange>
+			<value level="1">600</value>
+			<value level="2">700</value>
+			<value level="3">800</value>
+			<value level="4">900</value>
+			<value level="5">900</value>
+			<value level="6">900</value>
+			<value level="7">900</value>
+			<value level="8">900</value>
+			<value level="9">900</value>
+			<value level="10">900</value>
+			<value level="11">900</value>
+		</castRange>
 		<effectPoint>
-			<value level="1">-190</value>
-			<value level="2">-204</value>
-			<value level="3">-219</value>
-			<value level="4">-234</value>
-			<value level="5">-248</value>
+			<value level="1">-379</value>
+			<value level="2">-495</value>
+			<value level="3">-582</value>
+			<value level="4">-635</value>
+			<value level="5">-639</value>
+			<value level="6">-643</value>
+			<value level="7">-646</value>
+			<value level="8">-649</value>
+			<value level="9">-652</value>
+			<value level="10">-654</value>
+			<value level="11">-656</value>
 		</effectPoint>
 		<effectRange>
 			<value level="1">1100</value>
@@ -790,6 +816,12 @@
 			<value level="3">1300</value>
 			<value level="4">1400</value>
 			<value level="5">1500</value>
+			<value level="6">1500</value>
+			<value level="7">1500</value>
+			<value level="8">1500</value>
+			<value level="9">1500</value>
+			<value level="10">1500</value>
+			<value level="11">1500</value>
 		</effectRange>
 		<hitTime>1200</hitTime>
 		<isDebuff>true</isDebuff>
@@ -800,6 +832,12 @@
 			<value level="3">62</value>
 			<value level="4">70</value>
 			<value level="5">78</value>
+			<value level="6">79</value>
+			<value level="7">80</value>
+			<value level="8">81</value>
+			<value level="9">82</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">54</value>
@@ -807,6 +845,12 @@
 			<value level="3">87</value>
 			<value level="4">99</value>
 			<value level="5">126</value>
+			<value level="6">129</value>
+			<value level="7">132</value>
+			<value level="8">135</value>
+			<value level="9">138</value>
+			<value level="10">141</value>
+			<value level="11">144</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -822,6 +866,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</SWORD>
 				<BLUNT>
 					<value level="1">-16</value>
@@ -829,6 +879,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</BLUNT>
 				<POLE>
 					<value level="1">-16</value>
@@ -836,6 +892,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</POLE>
 				<DUAL>
 					<value level="1">-16</value>
@@ -843,6 +905,12 @@
 					<value level="3">-32</value>
 					<value level="4">-40</value>
 					<value level="5">-48</value>
+					<value level="6">-49</value>
+					<value level="7">-50</value>
+					<value level="8">-51</value>
+					<value level="9">-52</value>
+					<value level="10">-53</value>
+					<value level="11">-54</value>
 				</DUAL>
 			</effect>
 		</effects>
@@ -858,19 +926,20 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
-			<value level="1">-377</value>
-			<value level="2">-392</value>
-			<value level="3">-407</value>
-			<value level="4">-437</value>
-			<value level="5">-453</value>
-			<value level="6">-469</value>
-			<value level="7">-501</value>
-			<value level="8">-518</value>
-			<value level="9">-535</value>
+			<value level="1">-2130</value>
+			<value level="2">-2190</value>
+			<value level="3">-2250</value>
+			<value level="4">-2310</value>
+			<value level="5">-2370</value>
+			<value level="6">-2420</value>
+			<value level="7">-2480</value>
+			<value level="8">-2540</value>
+			<value level="9">-2600</value>
 		</effectPoint>
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
-		<hitTime>1000</hitTime>
+		<hitTime>800</hitTime>
+		<coolTime>200</coolTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -905,9 +974,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipShield" />
-			<condition name="OpCheckCastRange">
-				<distance>200</distance>
-			</condition>
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
