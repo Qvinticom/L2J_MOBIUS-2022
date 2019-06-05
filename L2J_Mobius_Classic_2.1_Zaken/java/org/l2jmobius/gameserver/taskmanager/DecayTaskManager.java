@@ -18,11 +18,7 @@ package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -31,17 +27,31 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
- * @author NosBit
+ * @author Mobius
  */
 public final class DecayTaskManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
+	private static final Map<Creature, Long> DECAY_SCHEDULES = new ConcurrentHashMap<>();
 	
-	protected final Map<Creature, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
+	public DecayTaskManager()
+	{
+		ThreadPool.scheduleAtFixedRate(() ->
+		{
+			final long time = System.currentTimeMillis();
+			for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
+			{
+				if (time > entry.getValue())
+				{
+					final Creature creature = entry.getKey();
+					DECAY_SCHEDULES.remove(creature);
+					creature.onDecay();
+				}
+			}
+		}, 0, 1000);
+	}
 	
 	/**
 	 * Adds a decay task for the specified character.<br>
-	 * <br>
 	 * If the decay task already exists it cancels it and re-adds it.
 	 * @param creature the creature
 	 */
@@ -67,17 +77,8 @@ public final class DecayTaskManager
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
 		
-		// Remove entries that became null.
-		_decayTasks.entrySet().removeIf(Objects::isNull);
-		
-		try
-		{
-			_decayTasks.putIfAbsent(creature, ThreadPool.schedule(new DecayTask(creature), delay * 1000));
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("DecayTaskManager add " + creature + " caused [" + e.getMessage() + "] exception.");
-		}
+		// Add to decay schedules.
+		DECAY_SCHEDULES.put(creature, System.currentTimeMillis() + (delay * 1000));
 	}
 	
 	/**
@@ -86,11 +87,7 @@ public final class DecayTaskManager
 	 */
 	public void cancel(Creature creature)
 	{
-		final ScheduledFuture<?> decayTask = _decayTasks.remove(creature);
-		if (decayTask != null)
-		{
-			decayTask.cancel(false);
-		}
+		DECAY_SCHEDULES.remove(creature);
 	}
 	
 	/**
@@ -100,30 +97,8 @@ public final class DecayTaskManager
 	 */
 	public long getRemainingTime(Creature creature)
 	{
-		final ScheduledFuture<?> decayTask = _decayTasks.get(creature);
-		if (decayTask != null)
-		{
-			return decayTask.getDelay(TimeUnit.MILLISECONDS);
-		}
-		
-		return Long.MAX_VALUE;
-	}
-	
-	private class DecayTask implements Runnable
-	{
-		private final Creature _creature;
-		
-		protected DecayTask(Creature creature)
-		{
-			_creature = creature;
-		}
-		
-		@Override
-		public void run()
-		{
-			_decayTasks.remove(_creature);
-			_creature.onDecay();
-		}
+		final Long time = DECAY_SCHEDULES.get(creature);
+		return time != null ? time - System.currentTimeMillis() : Long.MAX_VALUE;
 	}
 	
 	@Override
@@ -133,19 +108,20 @@ public final class DecayTaskManager
 		ret.append("============= DecayTask Manager Report ============");
 		ret.append(Config.EOL);
 		ret.append("Tasks count: ");
-		ret.append(_decayTasks.size());
+		ret.append(DECAY_SCHEDULES.size());
 		ret.append(Config.EOL);
 		ret.append("Tasks dump:");
 		ret.append(Config.EOL);
 		
-		for (Entry<Creature, ScheduledFuture<?>> entry : _decayTasks.entrySet())
+		final long time = System.currentTimeMillis();
+		for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
 		{
 			ret.append("Class/Name: ");
 			ret.append(entry.getKey().getClass().getSimpleName());
 			ret.append('/');
 			ret.append(entry.getKey().getName());
 			ret.append(" decay timer: ");
-			ret.append(entry.getValue().getDelay(TimeUnit.MILLISECONDS));
+			ret.append(entry.getValue() - time);
 			ret.append(Config.EOL);
 		}
 		
