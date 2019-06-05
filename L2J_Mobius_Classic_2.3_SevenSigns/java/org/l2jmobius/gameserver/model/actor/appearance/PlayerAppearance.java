@@ -240,7 +240,7 @@ public class PlayerAppearance
 	
 	public int getVisibleAllyCrestId()
 	{
-		return _visibleAllyCrestId != -1 ? _visibleAllyCrestId : _owner.isCursedWeaponEquipped() ? 0 : _owner.getAllyCrestId();
+		return _visibleAllyCrestId != -1 ? _visibleAllyCrestId : (_owner == null) || _owner.isCursedWeaponEquipped() ? 0 : _owner.getAllyCrestId();
 	}
 	
 	public void setVisibleClanData(int clanId, int clanCrestId, int clanLargeCrestId, int allyId, int allyCrestId)
