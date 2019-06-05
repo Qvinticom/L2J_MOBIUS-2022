@@ -55,8 +55,6 @@ public final class BuffInfo
 	// Tasks
 	/** Effect tasks for ticks. */
 	private volatile Map<AbstractEffect, EffectTaskInfo> _tasks;
-	/** Scheduled future. */
-	private ScheduledFuture<?> _scheduledFutureTimeTask;
 	// Time and ticks
 	/** Abnormal time. */
 	private int _abnormalTime;
@@ -296,11 +294,8 @@ public final class BuffInfo
 	public void stopAllEffects(boolean removed)
 	{
 		setRemoved(removed);
-		// Cancels the task that will end this buff info
-		if ((_scheduledFutureTimeTask != null) && !_scheduledFutureTimeTask.isCancelled())
-		{
-			_scheduledFutureTimeTask.cancel(true);
-		}
+		// Remove this buff info from BuffFinishTask.
+		_effected.removeBuffInfoTime(this);
 		finishEffects();
 	}
 	
@@ -322,7 +317,7 @@ public final class BuffInfo
 		// Creates a task that will stop all the effects.
 		if (_abnormalTime > 0)
 		{
-			_scheduledFutureTimeTask = ThreadPool.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000);
+			_effected.addBuffInfoTime(this);
 		}
 		
 		for (AbstractEffect effect : _effects)
@@ -453,11 +448,8 @@ public final class BuffInfo
 		{
 			_periodStartTicks = GameTimeController.getInstance().getGameTicks();
 			_abnormalTime = abnormalTime;
-			if ((_scheduledFutureTimeTask != null) && !_scheduledFutureTimeTask.isCancelled())
-			{
-				_scheduledFutureTimeTask.cancel(true);
-			}
-			_scheduledFutureTimeTask = ThreadPool.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000);
+			_effected.removeBuffInfoTime(this);
+			_effected.addBuffInfoTime(this);
 		}
 	}
 	

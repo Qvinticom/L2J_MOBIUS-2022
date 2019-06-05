@@ -120,6 +120,7 @@ import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.BuffFinishTask;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
@@ -242,6 +243,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private SkillChannelizer _channelizer = null;
 	
 	private SkillChannelized _channelized = null;
+	
+	private BuffFinishTask _buffFinishTask = null;
 	
 	private Optional<Transform> _transform = Optional.empty();
 	
@@ -1693,6 +1696,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Cancel all timers related to this Creature
 		TimersManager.getInstance().cancelTimers(getObjectId());
+		
+		// Cancel the BuffFinishTask related to this creature.
+		cancelBuffFinishTask();
 		
 		// Set world region to null.
 		setWorldRegion(null);
@@ -5410,5 +5416,35 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public List<ItemInstance> getFakePlayerDrops()
 	{
 		return _fakePlayerDrops;
+	}
+	
+	public void addBuffInfoTime(BuffInfo info)
+	{
+		if (_buffFinishTask == null)
+		{
+			_buffFinishTask = new BuffFinishTask();
+		}
+		_buffFinishTask.addBuffInfo(info);
+	}
+	
+	public void removeBuffInfoTime(BuffInfo info)
+	{
+		if (_buffFinishTask != null)
+		{
+			_buffFinishTask.removeBuffInfo(info);
+		}
+	}
+	
+	public void cancelBuffFinishTask()
+	{
+		if (_buffFinishTask != null)
+		{
+			final ScheduledFuture<?> task = _buffFinishTask.getTask();
+			if ((task != null) && !task.isCancelled() && !task.isDone())
+			{
+				task.cancel(true);
+			}
+			_buffFinishTask = null;
+		}
 	}
 }

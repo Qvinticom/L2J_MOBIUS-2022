@@ -52,8 +52,6 @@ public final class BuffInfo
 	// Tasks
 	/** Effect tasks for ticks. */
 	private volatile Map<AbstractEffect, EffectTaskInfo> _tasks = new ConcurrentHashMap<>();
-	/** Scheduled future. */
-	private ScheduledFuture<?> _scheduledFutureTimeTask;
 	// Time and ticks
 	/** Abnormal time. */
 	private int _abnormalTime;
@@ -227,11 +225,8 @@ public final class BuffInfo
 	public void stopAllEffects(boolean removed)
 	{
 		setRemoved(removed);
-		// Cancels the task that will end this buff info
-		if ((_scheduledFutureTimeTask != null) && !_scheduledFutureTimeTask.isCancelled())
-		{
-			_scheduledFutureTimeTask.cancel(true);
-		}
+		// Remove this buff info from BuffFinishTask.
+		_effected.removeBuffInfoTime(this);
 		finishEffects();
 	}
 	
@@ -253,7 +248,7 @@ public final class BuffInfo
 		// Creates a task that will stop all the effects.
 		if (_abnormalTime > 0)
 		{
-			_scheduledFutureTimeTask = ThreadPool.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000);
+			_effected.addBuffInfoTime(this);
 		}
 		
 		boolean update = false;
@@ -463,6 +458,6 @@ public final class BuffInfo
 	@Override
 	public String toString()
 	{
-		return "BuffInfo [effector=" + _effector + ", effected=" + _effected + ", skill=" + _skill + ", effects=" + _effects + ", tasks=" + _tasks + ", scheduledFutureTimeTask=" + _scheduledFutureTimeTask + ", abnormalTime=" + _abnormalTime + ", periodStartTicks=" + _periodStartTicks + ", isRemoved=" + _isRemoved + ", isInUse=" + _isInUse + "]";
+		return "BuffInfo [effector=" + _effector + ", effected=" + _effected + ", skill=" + _skill + ", effects=" + _effects + ", tasks=" + _tasks + ", abnormalTime=" + _abnormalTime + ", periodStartTicks=" + _periodStartTicks + ", isRemoved=" + _isRemoved + ", isInUse=" + _isInUse + "]";
 	}
 }

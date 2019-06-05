@@ -29,6 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.StampedLock;
 import java.util.logging.Level;
@@ -114,6 +115,7 @@ import org.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import org.l2jmobius.gameserver.model.options.OptionsSkillType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.model.skills.BuffFinishTask;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.EffectScope;
@@ -242,6 +244,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private SkillChannelizer _channelizer = null;
 	
 	private SkillChannelized _channelized = null;
+	
+	private BuffFinishTask _buffFinishTask = null;
 	
 	/** Map 32 bits, containing all abnormal visual effects in progress. */
 	private int _abnormalVisualEffects;
@@ -2438,6 +2442,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			getAI().stopAITask();
 		}
+		
+		// Cancel the BuffFinishTask related to this creature.
+		cancelBuffFinishTask();
 		
 		// Set world region to null.
 		setWorldRegion(null);
@@ -6740,5 +6747,35 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public List<ItemInstance> getFakePlayerDrops()
 	{
 		return _fakePlayerDrops;
+	}
+	
+	public void addBuffInfoTime(BuffInfo info)
+	{
+		if (_buffFinishTask == null)
+		{
+			_buffFinishTask = new BuffFinishTask();
+		}
+		_buffFinishTask.addBuffInfo(info);
+	}
+	
+	public void removeBuffInfoTime(BuffInfo info)
+	{
+		if (_buffFinishTask != null)
+		{
+			_buffFinishTask.removeBuffInfo(info);
+		}
+	}
+	
+	public void cancelBuffFinishTask()
+	{
+		if (_buffFinishTask != null)
+		{
+			final ScheduledFuture<?> task = _buffFinishTask.getTask();
+			if ((task != null) && !task.isCancelled() && !task.isDone())
+			{
+				task.cancel(true);
+			}
+			_buffFinishTask = null;
+		}
 	}
 }
