@@ -56,11 +56,12 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio03_mb1821_02" minZ="-2799" maxZ="-2299">
-				<node x="-44640" y="122634" />
-				<node x="-44136" y="122634" />
-				<node x="-44144" y="123145" />
-				<node x="-44647" y="123138" />
+			<territory name="gludio03_mb1821_02" minZ="-3880" maxZ="-3280">
+				<node x="-45896" y="110708" />
+				<node x="-44836" y="110992" />
+				<node x="-45296" y="111588" />
+				<node x="-46060" y="111556" />
+				<node x="-46476" y="111088" />
 			</territory>
 		</territories>
 		<npc id="25369" dbSave="true" dbName="soul_scavenger" respawnTime="24hour" respawnRandom="12hour" /> <!-- Soul Scavenger -->
@@ -149,14 +150,14 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio02_mb1922_02" minZ="-3749" maxZ="-3249">
-				<node x="-30506" y="131738" />
-				<node x="-29294" y="131735" />
-				<node x="-29284" y="133353" />
-				<node x="-30495" y="133356" />
+			<territory name="gludio02_mb1922_02" minZ="-3136" maxZ="-2636">
+				<node x="-22036" y="152044" />
+				<node x="-21642" y="151796" />
+				<node x="-21536" y="152076" />
+				<node x="-21896" y="152344" />
 			</territory>
 		</territories>
-		<npc id="25166" x="-29797" y="132470" z="-3664" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ikuntai -->
+		<npc id="25166" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ikuntai -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -893,17 +894,39 @@
 		</territories>
 		<npc id="25463" dbSave="true" dbName="harit_tutelar_garangky" respawnTime="24hour" respawnRandom="12hour" /> <!-- Harit Guardian Garangky -->
 	</spawn>
-	<!-- Greyclaw Kutus -->
 	<spawn>
-		<npc id="25001" x="-53289" y="147314" z="-2776" heading="0" dbSave="true" dbName="Greyclaw Kutus" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="gludio09_mb1822_01" minZ="-3000" maxZ="-2400">
+				<node x="-54440" y="145764" />
+				<node x="-53532" y="146480" />
+				<node x="-54220" y="147364" />
+				<node x="-54988" y="147000" />
+				<node x="-55140" y="146252" />
+			</territory>
+		</territories>
+		<npc id="25001" dbSave="true" dbName="greyclaw_kutus" respawnTime="24hour" respawnRandom="12hour" /> <!-- Greyclaw Kutus -->
 	</spawn>
-	<!-- Evil Spirit Bifrons -->
 	<spawn>
-		<npc id="25146" x="-13056" y="215680" z="-3760" heading="0" dbSave="true" dbName="Evil Spirit Bifrons" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="gludio01_mb1924_01" minZ="-3800" maxZ="-3300">
+				<node x="-14144" y="213916" />
+				<node x="-13904" y="214320" />
+				<node x="-13280" y="213720" />
+				<node x="-13464" y="213228" />
+			</territory>
+		</territories>
+		<npc id="25146" dbSave="true" dbName="serpent_demon_bifrons" respawnTime="24hour" respawnRandom="12hour" /> <!-- Evil Spirit Bifrons -->
 	</spawn>
-	<!-- Zombie Lord Crowl -->
 	<spawn>
-		<npc id="25149" x="-12624" y="138112" z="-3552" heading="0" dbSave="true" dbName="Zombie Lord Crowl" respawnTime="24hour" respawnRandom="12hour" />
+		<territories>
+			<territory name="gludio02_mb1922_01" minZ="-3720" maxZ="-3120">
+				<node x="-13166" y="138211" />
+				<node x="-12594" y="137645" />
+				<node x="-12128" y="138291" />
+				<node x="-12722" y="138652" />
+			</territory>
+		</territories>
+		<npc id="25149" dbSave="true" dbName="zombie_lord_crowl" respawnTime="24hour" respawnRandom="12hour" /> <!-- Zombie Lord Crowl -->
 	</spawn>
 	<!-- Skyla -->
 	<spawn>
