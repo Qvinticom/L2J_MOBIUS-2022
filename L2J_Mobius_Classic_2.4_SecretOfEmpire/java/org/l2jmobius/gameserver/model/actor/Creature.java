@@ -1678,6 +1678,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	@Override
+	public boolean decayMe()
+	{
+		if (hasAI())
+		{
+			getAI().stopAITask();
+		}
+		return super.decayMe();
+	}
+	
+	@Override
 	public boolean deleteMe()
 	{
 		if (hasAI())
