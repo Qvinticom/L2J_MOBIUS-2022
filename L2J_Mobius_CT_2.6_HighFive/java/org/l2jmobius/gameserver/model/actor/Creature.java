@@ -2401,7 +2401,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Stop HP/MP/CP Regeneration task
 		_status.stopHpMpRegeneration();
 		
-		stopAllEffectsExceptThoseThatLastThroughDeath();
+		if (isMonster())
+		{
+			_effectList.stopAllEffectsWithoutExclusions(true, true);
+		}
+		else
+		{
+			stopAllEffectsExceptThoseThatLastThroughDeath();
+		}
 		
 		calculateRewards(killer);
 		
@@ -2442,6 +2449,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			getAI().stopAITask();
 		}
+		
+		// Remove all effects, do not broadcast changes.
+		_effectList.stopAllEffectsWithoutExclusions(false, false);
 		
 		// Cancel the BuffFinishTask related to this creature.
 		cancelBuffFinishTask();

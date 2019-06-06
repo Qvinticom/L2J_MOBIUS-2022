@@ -1650,7 +1650,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (isMonster())
 		{
-			stopAllEffects();
+			_effectList.stopAllEffectsWithoutExclusions(true, true);
 		}
 		else
 		{
@@ -1691,8 +1691,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			_summoner.removeSummonedNpc(getObjectId());
 		}
 		
-		// Remove all effects, do not broadcast changes.
-		_effectList.stopAllEffects(false);
+		// Remove all active, passive and option effects, do not broadcast changes.
+		_effectList.stopAllEffectsWithoutExclusions(false, false);
 		
 		// Cancel all timers related to this Creature
 		TimersManager.getInstance().cancelTimers(getObjectId());
