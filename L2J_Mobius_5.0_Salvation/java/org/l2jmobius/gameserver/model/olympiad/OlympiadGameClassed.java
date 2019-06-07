@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.olympiad;
 import java.util.List;
 import java.util.Set;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 
 /**
@@ -35,6 +36,12 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 	public final CompetitionType getType()
 	{
 		return CompetitionType.CLASSED;
+	}
+	
+	@Override
+	protected int getDivider()
+	{
+		return Config.ALT_OLY_DIVIDER_CLASSED;
 	}
 	
 	protected static OlympiadGameClassed createGame(int id, List<Set<Integer>> classList)

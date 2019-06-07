@@ -60,6 +60,7 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -512,9 +513,10 @@ public final class Config
 	public static long ALT_OLY_VPERIOD;
 	public static int ALT_OLY_START_POINTS;
 	public static int ALT_OLY_WEEKLY_POINTS;
-	public static int ALT_OLY_PARTICIPANTS;
+	public static int ALT_OLY_CLASSED;
 	public static int ALT_OLY_NONCLASSED;
-	public static int ALT_OLY_REG_DISPLAY;
+	public static List<ItemHolder> ALT_OLY_WINNER_REWARD;
+	public static List<ItemHolder> ALT_OLY_LOSER_REWARD;
 	public static int ALT_OLY_COMP_RITEM;
 	public static int ALT_OLY_MIN_MATCHES;
 	public static int ALT_OLY_MARK_PER_POINT;
@@ -525,7 +527,8 @@ public final class Config
 	public static int ALT_OLY_RANK4_POINTS;
 	public static int ALT_OLY_RANK5_POINTS;
 	public static int ALT_OLY_MAX_POINTS;
-	public static int ALT_OLY_DIVIDER;
+	public static int ALT_OLY_DIVIDER_CLASSED;
+	public static int ALT_OLY_DIVIDER_NON_CLASSED;
 	public static int ALT_OLY_MAX_WEEKLY_MATCHES;
 	public static boolean ALT_OLY_LOG_FIGHTS;
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
@@ -533,7 +536,6 @@ public final class Config
 	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS;
 	public static int ALT_OLY_ENCHANT_LIMIT;
 	public static int ALT_OLY_WAIT_TIME;
-	public static boolean ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS;
 	public static String ALT_OLY_PERIOD;
 	public static int ALT_OLY_PERIOD_MULTIPLIER;
 	public static List<Integer> ALT_OLY_COMPETITION_DAYS;
@@ -2147,13 +2149,15 @@ public final class Config
 			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 20);
 			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
 			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 14400000);
-			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 360000);
+			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
 			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
 			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
 			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
 			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
-			ALT_OLY_PARTICIPANTS = Olympiad.getInt("AltOlyParticipants", 20);
-			ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
+			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 20);
+			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 20);
+			ALT_OLY_WINNER_REWARD = parseItemsList(Olympiad.getString("AltOlyWinReward", "none"));
+			ALT_OLY_LOSER_REWARD = parseItemsList(Olympiad.getString("AltOlyLoserReward", "none"));
 			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 45584);
 			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
 			ALT_OLY_MARK_PER_POINT = Olympiad.getInt("AltOlyMarkPerPoint", 20);
@@ -2164,8 +2168,9 @@ public final class Config
 			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 30);
 			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 15);
 			ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-			ALT_OLY_DIVIDER = Olympiad.getInt("AltOlyDivider", 5);
-			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 70);
+			ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
+			ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
+			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 30);
 			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
 			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
 			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
@@ -2177,11 +2182,10 @@ public final class Config
 			}
 			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
 			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
-			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Olympiad.getBoolean("AltOlyUseCustomPeriodSettings", false);
 			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
 			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
 			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
-			for (String s : Olympiad.getString("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(","))
+			for (String s : Olympiad.getString("AltOlyCompetitionDays", "6,7").split(","))
 			{
 				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
 			}
@@ -3001,6 +3005,60 @@ public final class Config
 			ret.put(i++, Float.parseFloat(value));
 		}
 		return ret;
+	}
+	
+	/**
+	 * Parse a config value from its string representation to a two-dimensional int array.<br>
+	 * The format of the value to be parsed should be as follows: "item1Id,item1Amount;item2Id,item2Amount;...itemNId,itemNAmount".
+	 * @param line the value of the parameter to parse
+	 * @return the parsed list or {@code null} if nothing was parsed
+	 */
+	private static List<ItemHolder> parseItemsList(String line)
+	{
+		final String[] propertySplit = line.split(";");
+		if (line.equalsIgnoreCase("none") || (propertySplit.length == 0))
+		{
+			// nothing to do here
+			return null;
+		}
+		
+		String[] valueSplit;
+		final List<ItemHolder> result = new ArrayList<>(propertySplit.length);
+		for (String value : propertySplit)
+		{
+			valueSplit = value.split(",");
+			if (valueSplit.length != 2)
+			{
+				LOGGER.warning("parseItemsList[Config.load()]: invalid entry -> " + valueSplit[0] + ", should be itemId,itemNumber. Skipping to the next entry in the list.");
+				continue;
+			}
+			
+			int itemId = -1;
+			try
+			{
+				itemId = Integer.parseInt(valueSplit[0]);
+			}
+			catch (NumberFormatException e)
+			{
+				LOGGER.warning("parseItemsList[Config.load()]: invalid itemId -> " + valueSplit[0] + ", value must be an integer. Skipping to the next entry in the list.");
+				continue;
+			}
+			int count = -1;
+			try
+			{
+				count = Integer.parseInt(valueSplit[1]);
+			}
+			catch (NumberFormatException e)
+			{
+				LOGGER.warning("parseItemsList[Config.load()]: invalid item number -> " + valueSplit[1] + ", value must be an integer. Skipping to the next entry in the list.");
+				continue;
+			}
+			if ((itemId > 0) && (count > 0))
+			{
+				result.add(new ItemHolder(itemId, count));
+			}
+		}
+		return result;
 	}
 	
 	private static class IPConfigData implements IXmlReader

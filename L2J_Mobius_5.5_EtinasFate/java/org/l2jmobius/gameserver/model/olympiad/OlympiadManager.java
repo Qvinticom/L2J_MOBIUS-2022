@@ -204,8 +204,6 @@ public class OlympiadManager
 					return false;
 				}
 				
-				// TODO Class fights are only 1st week
-				
 				if ((Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.OLYMPIAD_ID, player, Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP))
 				{
 					final NpcHtmlMessage message = new NpcHtmlMessage(player.getLastHtmlActionOriginId());

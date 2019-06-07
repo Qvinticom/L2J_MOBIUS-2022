@@ -93,7 +93,7 @@ public final class OlympiadGameTask implements Runnable
 	};
 	
 	private final OlympiadStadium _stadium;
-	private OlympiadGameNormal _game;
+	private AbstractOlympiadGame _game;
 	private GameState _state = GameState.IDLE;
 	private boolean _needAnnounce = false;
 	private int _countDown = 0;
@@ -154,12 +154,12 @@ public final class OlympiadGameTask implements Runnable
 		return _stadium;
 	}
 	
-	public final OlympiadGameNormal getGame()
+	public final AbstractOlympiadGame getGame()
 	{
 		return _game;
 	}
 	
-	public final void attachGame(OlympiadGameNormal game)
+	public final void attachGame(AbstractOlympiadGame game)
 	{
 		if ((game != null) && (_state != GameState.IDLE))
 		{

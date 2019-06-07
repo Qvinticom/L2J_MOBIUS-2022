@@ -392,21 +392,6 @@ public class Olympiad extends ListenersContainer
 			return;
 		}
 		
-		prepareCompStart();
-		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
-		
-		if (_scheduledOlympiadEnd != null)
-		{
-			_scheduledOlympiadEnd.cancel(true);
-		}
-		
-		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
-		
-		updateCompStatus();
-	}
-	
-	private void prepareCompStart()
-	{
 		_compStart = Calendar.getInstance();
 		final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
 		boolean dayFound = false;
@@ -437,6 +422,16 @@ public class Olympiad extends ListenersContainer
 		}
 		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
 		_compStart.set(Calendar.MINUTE, COMP_MIN);
+		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
+		
+		if (_scheduledOlympiadEnd != null)
+		{
+			_scheduledOlympiadEnd.cancel(true);
+		}
+		
+		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
+		
+		updateCompStatus();
 	}
 	
 	protected class OlympiadEndTask implements Runnable
@@ -619,77 +614,60 @@ public class Olympiad extends ListenersContainer
 		sm.addInt(_currentCycle);
 		Broadcast.toAllOnlinePlayers(sm);
 		
-		if (!Config.ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS)
+		Calendar currentTime = Calendar.getInstance();
+		currentTime.set(Calendar.AM_PM, Calendar.AM);
+		currentTime.set(Calendar.HOUR, 12);
+		currentTime.set(Calendar.MINUTE, 0);
+		currentTime.set(Calendar.SECOND, 0);
+		
+		Calendar nextChange = Calendar.getInstance();
+		
+		switch (Config.ALT_OLY_PERIOD)
 		{
-			final Calendar currentTime = Calendar.getInstance();
-			currentTime.add(Calendar.MONTH, 1);
-			currentTime.set(Calendar.DAY_OF_MONTH, 1);
-			currentTime.set(Calendar.AM_PM, Calendar.AM);
-			currentTime.set(Calendar.HOUR, 12);
-			currentTime.set(Calendar.MINUTE, 0);
-			currentTime.set(Calendar.SECOND, 0);
-			_olympiadEnd = currentTime.getTimeInMillis();
-			
-			final Calendar nextChange = Calendar.getInstance();
-			_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
-		}
-		else
-		{
-			Calendar currentTime = Calendar.getInstance();
-			currentTime.set(Calendar.AM_PM, Calendar.AM);
-			currentTime.set(Calendar.HOUR, 12);
-			currentTime.set(Calendar.MINUTE, 0);
-			currentTime.set(Calendar.SECOND, 0);
-			
-			Calendar nextChange = Calendar.getInstance();
-			
-			switch (Config.ALT_OLY_PERIOD)
+			case "DAY":
 			{
-				case "DAY":
+				currentTime.add(Calendar.DAY_OF_MONTH, Config.ALT_OLY_PERIOD_MULTIPLIER);
+				currentTime.add(Calendar.DAY_OF_MONTH, -1); // last day is for validation
+				
+				if (Config.ALT_OLY_PERIOD_MULTIPLIER >= 14)
 				{
-					currentTime.add(Calendar.DAY_OF_MONTH, Config.ALT_OLY_PERIOD_MULTIPLIER);
-					currentTime.add(Calendar.DAY_OF_MONTH, -1); // last day is for validation
-					
-					if (Config.ALT_OLY_PERIOD_MULTIPLIER >= 14)
-					{
-						_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
-					}
-					else if (Config.ALT_OLY_PERIOD_MULTIPLIER >= 7)
-					{
-						_nextWeeklyChange = nextChange.getTimeInMillis() + (WEEKLY_PERIOD / 2);
-					}
-					else
-					{
-						LOGGER.warning("Invalid config value for Config.ALT_OLY_PERIOD_MULTIPLIER, must be >= 7");
-					}
-					break;
-				}
-				case "WEEK":
-				{
-					currentTime.add(Calendar.WEEK_OF_MONTH, Config.ALT_OLY_PERIOD_MULTIPLIER);
-					currentTime.add(Calendar.DAY_OF_MONTH, -1); // last day is for validation
-					
-					if (Config.ALT_OLY_PERIOD_MULTIPLIER > 1)
-					{
-						_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
-					}
-					else
-					{
-						_nextWeeklyChange = nextChange.getTimeInMillis() + (WEEKLY_PERIOD / 2);
-					}
-					break;
-				}
-				case "MONTH":
-				{
-					currentTime.add(Calendar.MONTH, Config.ALT_OLY_PERIOD_MULTIPLIER);
-					currentTime.add(Calendar.DAY_OF_MONTH, -1); // last day is for validation
-					
 					_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
-					break;
 				}
+				else if (Config.ALT_OLY_PERIOD_MULTIPLIER >= 7)
+				{
+					_nextWeeklyChange = nextChange.getTimeInMillis() + (WEEKLY_PERIOD / 2);
+				}
+				else
+				{
+					LOGGER.warning("Invalid config value for Config.ALT_OLY_PERIOD_MULTIPLIER, must be >= 7");
+				}
+				break;
 			}
-			_olympiadEnd = currentTime.getTimeInMillis();
+			case "WEEK":
+			{
+				currentTime.add(Calendar.WEEK_OF_MONTH, Config.ALT_OLY_PERIOD_MULTIPLIER);
+				currentTime.add(Calendar.DAY_OF_MONTH, -1); // last day is for validation
+				
+				if (Config.ALT_OLY_PERIOD_MULTIPLIER > 1)
+				{
+					_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
+				}
+				else
+				{
+					_nextWeeklyChange = nextChange.getTimeInMillis() + (WEEKLY_PERIOD / 2);
+				}
+				break;
+			}
+			case "MONTH":
+			{
+				currentTime.add(Calendar.MONTH, Config.ALT_OLY_PERIOD_MULTIPLIER);
+				currentTime.add(Calendar.DAY_OF_MONTH, -1); // last day is for validation
+				
+				_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
+				break;
+			}
 		}
+		_olympiadEnd = currentTime.getTimeInMillis();
 		
 		scheduleWeeklyChange();
 	}
@@ -716,7 +694,36 @@ public class Olympiad extends ListenersContainer
 	
 	private long setNewCompBegin()
 	{
-		prepareCompStart();
+		_compStart = Calendar.getInstance();
+		final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
+		boolean dayFound = false;
+		int dayCounter = 0;
+		for (int i = currentDay; i < 8; i++)
+		{
+			if (Config.ALT_OLY_COMPETITION_DAYS.contains(i))
+			{
+				dayFound = true;
+				break;
+			}
+			dayCounter++;
+		}
+		if (!dayFound)
+		{
+			for (int i = 1; i < 8; i++)
+			{
+				if (Config.ALT_OLY_COMPETITION_DAYS.contains(i))
+				{
+					break;
+				}
+				dayCounter++;
+			}
+		}
+		if (dayCounter > 0)
+		{
+			_compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
+		}
+		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
+		_compStart.set(Calendar.MINUTE, COMP_MIN);
 		_compStart.add(Calendar.HOUR_OF_DAY, 24);
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
 		
@@ -1063,7 +1070,7 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		// Win/no win matches point bonus
-		points += getCompetitionWon(objectId) > 0 ? 10 : 5;
+		points += getCompetitionWon(objectId) > 0 ? 10 : 0;
 		
 		// This is a one time calculation.
 		noble.set(POINTS, 0);

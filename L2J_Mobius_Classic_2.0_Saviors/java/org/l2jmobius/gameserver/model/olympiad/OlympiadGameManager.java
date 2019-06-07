@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.olympiad;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -87,11 +88,12 @@ public class OlympiadGameManager implements Runnable
 		
 		if (Olympiad.getInstance().inCompPeriod())
 		{
-			OlympiadGameNormal newGame;
+			AbstractOlympiadGame newGame;
 			
+			List<Set<Integer>> readyClassed = OlympiadManager.getInstance().hasEnoughRegisteredClassed();
 			boolean readyNonClassed = OlympiadManager.getInstance().hasEnoughRegisteredNonClassed();
 			
-			if (readyNonClassed)
+			if ((readyClassed != null) || readyNonClassed)
 			{
 				// reset delay broadcast
 				_delay = 0;
@@ -104,11 +106,23 @@ public class OlympiadGameManager implements Runnable
 					{
 						if (!task.isRunning())
 						{
+							// Fair arena distribution
+							// 0,2,4,6,8.. arenas checked for classed or teams first
+							if (readyClassed != null)
+							{
+								newGame = OlympiadGameClassed.createGame(i, readyClassed);
+								if (newGame != null)
+								{
+									task.attachGame(newGame);
+									continue;
+								}
+								readyClassed = null;
+							}
 							// 1,3,5,7,9.. arenas used for non-classed
 							// also other arenas will be used for non-classed if no classed or teams available
 							if (readyNonClassed)
 							{
-								newGame = OlympiadGameNormal.createGame(i, OlympiadManager.getInstance().getPlayerRegistered());
+								newGame = OlympiadGameNonClassed.createGame(i, OlympiadManager.getInstance().getRegisteredNonClassBased());
 								if (newGame != null)
 								{
 									task.attachGame(newGame);
@@ -120,7 +134,7 @@ public class OlympiadGameManager implements Runnable
 					}
 					
 					// stop generating games if no more participants
-					if (!readyNonClassed)
+					if ((readyClassed == null) && !readyNonClassed)
 					{
 						break;
 					}
@@ -132,7 +146,7 @@ public class OlympiadGameManager implements Runnable
 				_delay++;
 				if (_delay >= 10) // 5min
 				{
-					for (Integer id : OlympiadManager.getInstance().getPlayerRegistered())
+					for (Integer id : OlympiadManager.getInstance().getRegisteredNonClassBased())
 					{
 						if (id == null)
 						{
@@ -145,6 +159,24 @@ public class OlympiadGameManager implements Runnable
 							noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
 						}
 					}
+					
+					for (Set<Integer> list : OlympiadManager.getInstance().getRegisteredClassBased().values())
+					{
+						for (Integer id : list)
+						{
+							if (id == null)
+							{
+								continue;
+							}
+							
+							final PlayerInstance noble = World.getInstance().getPlayer(id);
+							if (noble != null)
+							{
+								noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAMES_MAY_BE_DELAYED_DUE_TO_AN_INSUFFICIENT_NUMBER_OF_PLAYERS_WAITING));
+							}
+						}
+					}
+					
 					_delay = 0;
 				}
 			}
@@ -202,7 +234,7 @@ public class OlympiadGameManager implements Runnable
 			return;
 		}
 		
-		final OlympiadGameNormal game = _tasks.get(id).getTask().getGame();
+		final AbstractOlympiadGame game = _tasks.get(id).getTask().getGame();
 		if (game != null)
 		{
 			game.addDamage(attacker, damage);

@@ -214,12 +214,12 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected final void cleanEffects()
 	{
-		if (checkOnline(_playerTwo) && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId))
+		if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId))
 		{
 			cleanEffects(_playerOne.getPlayer());
 		}
 		
-		if (checkOnline(_playerTwo) && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId))
+		if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId))
 		{
 			cleanEffects(_playerTwo.getPlayer());
 		}
@@ -228,11 +228,11 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected final void portPlayersBack()
 	{
-		if (checkOnline(_playerTwo))
+		if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected())
 		{
 			portPlayerBack(_playerOne.getPlayer());
 		}
-		if (checkOnline(_playerTwo))
+		if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected())
 		{
 			portPlayerBack(_playerTwo.getPlayer());
 		}
@@ -241,20 +241,15 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	@Override
 	protected final void playersStatusBack()
 	{
-		if (checkOnline(_playerTwo) && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId))
+		if ((_playerOne.getPlayer() != null) && !_playerOne.isDefaulted() && !_playerOne.isDisconnected() && (_playerOne.getPlayer().getOlympiadGameId() == _stadiumId))
 		{
 			playerStatusBack(_playerOne.getPlayer());
 		}
 		
-		if (checkOnline(_playerTwo) && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId))
+		if ((_playerTwo.getPlayer() != null) && !_playerTwo.isDefaulted() && !_playerTwo.isDisconnected() && (_playerTwo.getPlayer().getOlympiadGameId() == _stadiumId))
 		{
 			playerStatusBack(_playerTwo.getPlayer());
 		}
-	}
-	
-	private boolean checkOnline(Participant player)
-	{
-		return (player.getPlayer() != null) && !player.isDefaulted() && !player.isDisconnected();
 	}
 	
 	@Override
@@ -358,7 +353,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		
 		final int playerOnePoints = _playerOne.getStats().getInt(POINTS);
 		final int playerTwoPoints = _playerTwo.getStats().getInt(POINTS);
-		int pointDiff = Math.min(playerOnePoints, playerTwoPoints) / Config.ALT_OLY_DIVIDER;
+		int pointDiff = Math.min(playerOnePoints, playerTwoPoints) / getDivider();
 		if (pointDiff <= 0)
 		{
 			pointDiff = 1;
@@ -372,7 +367,6 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		SystemMessage sm;
 		
 		// Check for if a player defaulted before battle started
-		// TODO Is this really official?
 		if (_playerOne.isDefaulted() || _playerTwo.isDefaulted())
 		{
 			try
@@ -463,7 +457,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					winside = 1;
 					
-					rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD);
+					rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
@@ -489,7 +483,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					winside = 2;
 					
-					rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD);
+					rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
@@ -603,11 +597,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 1, _startTime, _fightTime, getType());
-				rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD);
-				if ((_playerTwo.getPlayer() != null) && _playerTwo.getPlayer().isOnline())
-				{
-					rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_LOSER_REWARD);
-				}
+				
+				rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
+				rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerOne, _playerTwo, getType()), Olympiad.getInstance());
@@ -632,11 +624,9 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				
 				// Save Fight Result
 				saveResults(_playerOne, _playerTwo, 2, _startTime, _fightTime, getType());
-				rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD);
-				if ((_playerOne.getPlayer() != null) && _playerOne.getPlayer().isOnline())
-				{
-					rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_LOSER_REWARD);
-				}
+				
+				rewardParticipant(_playerTwo.getPlayer(), Config.ALT_OLY_WINNER_REWARD); // Winner
+				rewardParticipant(_playerOne.getPlayer(), Config.ALT_OLY_LOSER_REWARD); // Loser
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
@@ -649,12 +639,12 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
 				stadium.broadcastPacket(sm);
 				
-				int value = Math.min(playerOnePoints / Config.ALT_OLY_DIVIDER, Config.ALT_OLY_MAX_POINTS);
+				int value = Math.min(playerOnePoints / getDivider(), Config.ALT_OLY_MAX_POINTS);
 				
 				removePointsFromParticipant(_playerOne, value);
 				list1.add(new OlympiadInfo(_playerOne.getName(), _playerOne.getClanName(), _playerOne.getClanId(), _playerOne.getBaseClass(), _damageP1, playerOnePoints - value, -value));
 				
-				value = Math.min(playerTwoPoints / Config.ALT_OLY_DIVIDER, Config.ALT_OLY_MAX_POINTS);
+				value = Math.min(playerTwoPoints / getDivider(), Config.ALT_OLY_MAX_POINTS);
 				removePointsFromParticipant(_playerTwo, value);
 				list2.add(new OlympiadInfo(_playerTwo.getName(), _playerTwo.getClanName(), _playerTwo.getClanId(), _playerTwo.getBaseClass(), _damageP2, playerTwoPoints - value, -value));
 				

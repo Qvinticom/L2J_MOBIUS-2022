@@ -116,16 +116,14 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					switch (LocalDate.now().get(WeekFields.of(DayOfWeek.MONDAY, 7).weekOfMonth()))
 					{
-						case 1:
-						case 2:
-						case 3: // First 3 weeks of month is 1v1 + 1v1 class matches
-						{
-							htmltext = getHtm(player, "OlyManager-joinMatch.html");
-							break;
-						}
-						default:// Rest is only 1v1 class matches
+						case 1: // First week is class and non-class battles
 						{
 							htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
+							break;
+						}
+						default:// Rest is only 1v1 non-class matches
+						{
+							htmltext = getHtm(player, "OlyManager-joinMatch.html");
 							break;
 						}
 					}
@@ -159,10 +157,11 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
 				}
-				else
+				else if (LocalDate.now().get(WeekFields.of(DayOfWeek.MONDAY, 7).weekOfMonth()) == 1) // Only first week is class match possible
 				{
 					OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
 				}
+				
 				break;
 			}
 			case "unregister":

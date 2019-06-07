@@ -19,7 +19,6 @@ package ai.others.OlyBuffer;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 
 import ai.AbstractNpcAI;
@@ -68,41 +67,37 @@ public final class OlyBuffer extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = null;
-		
 		switch (event)
 		{
 			case "guardian":
 			{
-				htmltext = applyBuffs(npc, player, KNIGHT.getSkill());
+				applyBuffs(npc, player, KNIGHT);
 				break;
 			}
 			case "berserker":
 			{
-				htmltext = applyBuffs(npc, player, WARRIOR.getSkill());
+				applyBuffs(npc, player, WARRIOR);
 				break;
 			}
 			case "magician":
 			{
-				htmltext = applyBuffs(npc, player, WIZARD.getSkill());
+				applyBuffs(npc, player, WIZARD);
 				break;
 			}
 		}
 		npc.setScriptValue(1);
-		htmltext = "olympiad_master003.htm";
 		getTimers().addTimer("DELETE_ME", 5000, evnt -> npc.deleteMe());
 		
-		return htmltext;
+		return "olympiad_master003.htm";
 	}
 	
-	private String applyBuffs(Npc npc, PlayerInstance player, Skill skill)
+	private void applyBuffs(Npc npc, PlayerInstance player, SkillHolder skill)
 	{
 		for (SkillHolder holder : BUFFS)
 		{
 			SkillCaster.triggerCast(npc, player, holder.getSkill());
 		}
-		SkillCaster.triggerCast(npc, player, skill);
-		return null;
+		SkillCaster.triggerCast(npc, player, skill.getSkill());
 	}
 	
 	public static void main(String[] args)
