@@ -20,12 +20,12 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.stats.Stats;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class HealEffect extends AbstractStatEffect
 {
 	public HealEffect(StatsSet params)
 	{
-		super(params, Stats.HEAL_EFFECT);
+		super(params, Stats.HEAL_EFFECT, Stats.HEAL_EFFECT_ADD);
 	}
 }
