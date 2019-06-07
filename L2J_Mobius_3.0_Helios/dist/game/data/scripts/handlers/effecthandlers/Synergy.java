@@ -97,7 +97,7 @@ public final class Synergy extends AbstractEffect
 		
 		if (abnormalCount >= _minSlot)
 		{
-			final SkillHolder partyBuff = new SkillHolder(_partyBuffSkillId, Math.max(abnormalCount - 1, _skillLevelScaleTo));
+			final SkillHolder partyBuff = new SkillHolder(_partyBuffSkillId, Math.min(abnormalCount - 1, _skillLevelScaleTo));
 			final Skill partyBuffSkill = partyBuff.getSkill();
 			
 			if (partyBuffSkill != null)

@@ -691,16 +691,7 @@
 				<!-- Sigel Force -->
 				<skillId>1928</skillId> <!-- Sigel Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
-			</effect>
-			<effect name="Synergy">
-				<!-- Party Solidarity -->
-				<optionalSlots>SYNERGY_FEOH;SYNERGY_LENKER;SYNERGY_OTHEL;SYNERGY_SEER;SYNERGY_TIR;SYNERGY_WYNN;SYNERGY_YR</optionalSlots>
-				<requiredSlots>SYNERGY_SIGEL;SYNERGY_EOLH</requiredSlots>
-				<partyBuffSkillId>1955</partyBuffSkillId>
-				<minSlot>2</minSlot>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-				<ticks>15</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -708,18 +699,17 @@
 		<!-- P. Atk. +1%. -->
 		<icon>icon.icon_sigel_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_SIGEL</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -728,6 +718,15 @@
 			<effect name="PAtk">
 				<amount>1</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="Synergy">
+				<!-- Party Solidarity -->
+				<optionalSlots>SYNERGY_FEOH;SYNERGY_LENKER;SYNERGY_OTHEL;SYNERGY_SEER;SYNERGY_TIR;SYNERGY_WYNN;SYNERGY_YR</optionalSlots>
+				<requiredSlots>SYNERGY_SIGEL;SYNERGY_EOLH</requiredSlots>
+				<partyBuffSkillId>1955</partyBuffSkillId>
+				<minSlot>2</minSlot>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -745,7 +744,7 @@
 				<!-- Tyrr Force -->
 				<skillId>1930</skillId> <!-- Tyrr Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -753,18 +752,17 @@
 		<!-- P. Critical Rate +1%. -->
 		<icon>icon.icon_tir_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_TIR</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -790,7 +788,7 @@
 				<!-- Othell Force -->
 				<skillId>1932</skillId> <!-- Othell Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -798,18 +796,17 @@
 		<!-- Atk. Spd. +1%. -->
 		<icon>icon.icon_othel_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_OTHEL</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -835,7 +832,7 @@
 				<!-- Yul Force -->
 				<skillId>1934</skillId> <!-- Yul Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -843,18 +840,17 @@
 		<!-- MP Recovery Bonus +50%. -->
 		<icon>icon.icon_yr_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_YR</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -880,7 +876,7 @@
 				<!-- Feoh Force -->
 				<skillId>1936</skillId> <!-- Feoh Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -888,18 +884,17 @@
 		<!-- Casting Spd. +1%. -->
 		<icon>icon.icon_feoh_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_FEOH</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -925,7 +920,7 @@
 				<!-- Wynn Force -->
 				<skillId>1938</skillId> <!-- Wynn Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -933,18 +928,17 @@
 		<!-- P./ M. Skill MP Consumption -3%. -->
 		<icon>icon.icon_wynn_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_WYNN</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -976,7 +970,7 @@
 				<!-- Aeore Force -->
 				<skillId>1940</skillId> <!-- Aeore Force -->
 				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -984,18 +978,17 @@
 		<!-- M. Atk. +1%. -->
 		<icon>icon.icon_eolh_01</icon>
 		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_EOLH</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>1</abnormalLvl>
 		<isMagic>3</isMagic>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1247,8 +1240,7 @@
 	<skill id="1955" toLevel="3" name="Party Solidarity">
 		<!-- Increases party members' P. Atk. by $s1, M. Atk. by $s2, P. Critical Rate by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. Decreases physical and magic skill Cooldown by $s6. Always includes Sigel and Aeore Force. When $s7 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
 		<icon>icon.skill1955</icon>
-		<abnormallVL>1</abnormallVL>
-		<abnormalTime>11</abnormalTime>
+		<abnormalTime>6</abnormalTime>
 		<abnormalType>SYNERGY_PARTY_BUF</abnormalType>
 		<affectRange>200</affectRange>
 		<magicLvl>
@@ -1259,7 +1251,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A5</operateType>
 		<!-- Target ONE on retail, will be PARTY here. -->
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>

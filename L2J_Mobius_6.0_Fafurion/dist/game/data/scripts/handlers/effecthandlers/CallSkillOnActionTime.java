@@ -44,14 +44,20 @@ public final class CallSkillOnActionTime extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		effected.getEffectList().stopEffects(Collections.singleton(_skill.getSkill().getAbnormalType()));
-		effected.getEffectList().addBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
+		if (!_skill.getSkill().isSynergySkill())
+		{
+			effected.getEffectList().stopEffects(Collections.singleton(_skill.getSkill().getAbnormalType()));
+			effected.getEffectList().addBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
+		}
 	}
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		effected.getEffectList().removeBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
+		if (!_skill.getSkill().isSynergySkill())
+		{
+			effected.getEffectList().removeBlockedAbnormalTypes(Collections.singleton(_skill.getSkill().getAbnormalType()));
+		}
 	}
 	
 	@Override
