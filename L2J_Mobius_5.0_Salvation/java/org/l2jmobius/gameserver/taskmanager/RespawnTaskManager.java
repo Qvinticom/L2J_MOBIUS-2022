@@ -40,18 +40,19 @@ public class RespawnTaskManager
 			for (Entry<Spawn, List<Long>> entry : PENDING_RESPAWNS.entrySet())
 			{
 				final Spawn spawn = entry.getKey();
-				for (Long respawnTime : entry.getValue())
+				final List<Long> schedules = entry.getValue();
+				for (Long respawnTime : schedules)
 				{
 					if (time > respawnTime)
 					{
-						entry.getValue().remove(respawnTime);
+						schedules.remove(respawnTime);
+						if (schedules.isEmpty())
+						{
+							PENDING_RESPAWNS.remove(spawn);
+						}
 						spawn.doSpawn();
 						spawn._scheduledCount--;
 					}
-				}
-				if (entry.getValue().isEmpty())
-				{
-					PENDING_RESPAWNS.remove(spawn);
 				}
 			}
 		}, 0, 1000);
