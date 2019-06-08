@@ -21,13 +21,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.TerritoryTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.templates.creatures.NpcTemplate;
 
 /**
@@ -47,7 +47,7 @@ public class Spawn
 	private int _location;
 	private int _maximumCount;
 	private int _currentCount;
-	protected int _scheduledCount;
+	public int _scheduledCount;
 	private int _locX;
 	private int _locY;
 	private int _locZ;
@@ -61,36 +61,13 @@ public class Spawn
 	private NpcInstance _lastSpawn;
 	private static List<SpawnListener> _spawnListeners = new ArrayList<>();
 	
-	/** The task launching the function doSpawn() */
-	class SpawnTask implements Runnable
-	{
-		public SpawnTask()
-		{
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				doSpawn();
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning(e.getMessage());
-			}
-			
-			_scheduledCount--;
-		}
-	}
-	
 	/**
 	 * Constructor of Spawn.<BR>
 	 * <BR>
 	 * <B><U> Concept</U> :</B><BR>
 	 * <BR>
-	 * Each Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...). All of those properties are stored in a different NpcTemplate for each type of Spawn. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Spawn is
-	 * created, server just create a link between the instance and the template. This link is stored in <B>_template</B><BR>
+	 * Each Spawn owns generic and static properties (ex : RewardExp, RewardSP, AggroRange...). All of those properties are stored in a different NpcTemplate for each type of Spawn. Each template is loaded once in the server cache memory (reduce memory use). When a new instance of Spawn is created,
+	 * server just create a link between the instance and the template. This link is stored in <B>_template</B><BR>
 	 * <BR>
 	 * Each NpcInstance is linked to a Spawn that manages its spawn and respawn (delay, location...). This link is stored in <B>_spawn</B> of the NpcInstance<BR>
 	 * <BR>
@@ -369,10 +346,8 @@ public class Spawn
 	 * <li>Create a new SpawnTask to launch after the respawn Delay</li><BR>
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</B></FONT><BR>
-	 * <BR>
-	 * @param oldNpc
 	 */
-	public void decreaseCount(/* int npcId */final NpcInstance oldNpc)
+	public void decreaseCount()
 	{
 		// Decrease the current number of NpcInstance of this Spawn
 		_currentCount--;
@@ -383,8 +358,8 @@ public class Spawn
 			// Update the current number of SpawnTask in progress or stand by of this Spawn
 			_scheduledCount++;
 			
-			// Create a new SpawnTask to launch after the respawn Delay
-			ThreadPool.schedule(new SpawnTask(), _respawnDelay);
+			// Schedule the next respawn.
+			RespawnTaskManager.getInstance().add(this, System.currentTimeMillis() + _respawnDelay);
 		}
 	}
 	

@@ -25,7 +25,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.datatables.NpcPersonalAIData;
@@ -38,6 +37,7 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
+import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 
 /**
  * This class manages the spawn and respawn of a group of NpcInstance that are in the same are and have the same type.<br>
@@ -59,7 +59,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	/** The current number of NpcInstance managed by this Spawn */
 	private int _currentCount;
 	/** The current number of SpawnTask in progress or stand by of this Spawn */
-	protected int _scheduledCount;
+	public int _scheduledCount;
 	/** The identifier of the location area where NpcInstance can be spawned */
 	private int _locationId;
 	/** Link to NPC spawn territory */
@@ -76,29 +76,6 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	private final Deque<Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private boolean _randomWalk = false; // Is random walk
 	private int _spawnTemplateId = 0;
-	
-	/** The task launching the function doSpawn() */
-	class SpawnTask implements Runnable
-	{
-		public SpawnTask()
-		{
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				doSpawn();
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.WARNING, "", e);
-			}
-			
-			_scheduledCount--;
-		}
-	}
 	
 	/**
 	 * Constructor of Spawn.<br>
@@ -271,8 +248,8 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			// Update the current number of SpawnTask in progress or stand by of this Spawn
 			_scheduledCount++;
 			
-			// Create a new SpawnTask to launch after the respawn Delay
-			ThreadPool.schedule(new SpawnTask(), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
+			// Schedule the next respawn.
+			RespawnTaskManager.getInstance().add(this, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
 		}
 	}
 	

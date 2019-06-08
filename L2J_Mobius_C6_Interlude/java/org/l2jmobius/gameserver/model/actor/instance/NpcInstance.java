@@ -3185,7 +3185,7 @@ public class NpcInstance extends Creature
 		// Decrease its spawn counter
 		if (_spawn != null)
 		{
-			_spawn.decreaseCount(this);
+			_spawn.decreaseCount();
 		}
 	}
 	
