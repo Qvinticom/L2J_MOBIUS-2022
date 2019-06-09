@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 /**
  * @author Mobius
  */
-public class RandomAnimationManager
+public class RandomAnimationTaskManager
 {
 	private static final Map<Npc, Long> PENDING_ANIMATIONS = new ConcurrentHashMap<>();
 	
-	public RandomAnimationManager()
+	public RandomAnimationTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
@@ -78,13 +78,13 @@ public class RandomAnimationManager
 		PENDING_ANIMATIONS.remove(npc);
 	}
 	
-	public static RandomAnimationManager getInstance()
+	public static RandomAnimationTaskManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final RandomAnimationManager INSTANCE = new RandomAnimationManager();
+		protected static final RandomAnimationTaskManager INSTANCE = new RandomAnimationTaskManager();
 	}
 }

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.ZoneManager;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
-import org.l2jmobius.gameserver.taskmanager.RandomAnimationManager;
+import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 
 public final class WorldRegion
 {
@@ -224,11 +224,11 @@ public final class WorldRegion
 						}
 					}
 					
-					RandomAnimationManager.getInstance().remove(mob);
+					RandomAnimationTaskManager.getInstance().remove(mob);
 				}
 				else if (o instanceof NpcInstance)
 				{
-					RandomAnimationManager.getInstance().remove((NpcInstance) o);
+					RandomAnimationTaskManager.getInstance().remove((NpcInstance) o);
 				}
 			}
 		}
@@ -240,11 +240,11 @@ public final class WorldRegion
 				{
 					// Start HP/MP/CP Regeneration task
 					((Attackable) o).getStatus().startHpMpRegeneration();
-					RandomAnimationManager.getInstance().add((NpcInstance) o);
+					RandomAnimationTaskManager.getInstance().add((NpcInstance) o);
 				}
 				else if (o instanceof NpcInstance)
 				{
-					RandomAnimationManager.getInstance().add((NpcInstance) o);
+					RandomAnimationTaskManager.getInstance().add((NpcInstance) o);
 				}
 			}
 		}

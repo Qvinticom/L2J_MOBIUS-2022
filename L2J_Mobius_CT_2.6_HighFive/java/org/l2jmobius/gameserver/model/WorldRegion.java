@@ -25,7 +25,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.taskmanager.RandomAnimationManager;
+import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 
 public final class WorldRegion
 {
@@ -105,11 +105,11 @@ public final class WorldRegion
 						mob.getAI().stopAITask();
 					}
 					
-					RandomAnimationManager.getInstance().remove(mob);
+					RandomAnimationTaskManager.getInstance().remove(mob);
 				}
 				else if (o instanceof Npc)
 				{
-					RandomAnimationManager.getInstance().remove((Npc) o);
+					RandomAnimationTaskManager.getInstance().remove((Npc) o);
 				}
 			}
 		}
@@ -121,11 +121,11 @@ public final class WorldRegion
 				{
 					// Start HP/MP/CP regeneration task.
 					((Attackable) o).getStatus().startHpMpRegeneration();
-					RandomAnimationManager.getInstance().add((Npc) o);
+					RandomAnimationTaskManager.getInstance().add((Npc) o);
 				}
 				else if (o instanceof Npc)
 				{
-					RandomAnimationManager.getInstance().add((Npc) o);
+					RandomAnimationTaskManager.getInstance().add((Npc) o);
 				}
 			}
 		}
