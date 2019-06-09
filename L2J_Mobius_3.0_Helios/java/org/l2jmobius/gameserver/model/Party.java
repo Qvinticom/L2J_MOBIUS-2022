@@ -35,6 +35,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
+import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -62,6 +63,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAdd;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDelete;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
+import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -356,6 +358,11 @@ public class Party extends AbstractPlayerGroup
 			_partyLvl = player.getLevel();
 		}
 		
+		// status update for hp bar display
+		final StatusUpdate su = new StatusUpdate(player);
+		su.addUpdate(StatusUpdateType.MAX_HP, player.getMaxHp());
+		su.addUpdate(StatusUpdateType.CUR_HP, (int) player.getCurrentHp());
+		
 		// update partySpelled
 		Summon summon;
 		for (PlayerInstance member : _members)
@@ -370,6 +377,9 @@ public class Party extends AbstractPlayerGroup
 					summon.updateEffectIcons();
 				}
 				member.getServitors().values().forEach(Summon::updateEffectIcons);
+				
+				// send hp status update
+				member.sendPacket(su);
 			}
 		}
 		
