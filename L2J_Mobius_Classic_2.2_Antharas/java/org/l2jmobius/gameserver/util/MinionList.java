@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.util;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -36,6 +37,7 @@ public class MinionList
 {
 	protected final MonsterInstance _master;
 	private final List<MonsterInstance> _spawnedMinions = new CopyOnWriteArrayList<>();
+	private final List<ScheduledFuture<?>> _respawnTasks = new CopyOnWriteArrayList<>();
 	
 	public MinionList(MonsterInstance pMaster)
 	{
@@ -117,8 +119,20 @@ public class MinionList
 						minion.deleteMe();
 					}
 				}
-				_spawnedMinions.clear();
 			}
+			_spawnedMinions.clear();
+			
+			if (!_respawnTasks.isEmpty())
+			{
+				for (ScheduledFuture<?> task : _respawnTasks)
+				{
+					if ((task != null) && !task.isCancelled() && !task.isDone())
+					{
+						task.cancel(true);
+					}
+				}
+			}
+			_respawnTasks.clear();
 		}
 	}
 	
@@ -135,7 +149,7 @@ public class MinionList
 		final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
 		if ((time > 0) && !_master.isAlikeDead())
 		{
-			ThreadPool.schedule(new MinionRespawnTask(minion), time);
+			_respawnTasks.add(ThreadPool.schedule(new MinionRespawnTask(minion), time));
 		}
 	}
 	
