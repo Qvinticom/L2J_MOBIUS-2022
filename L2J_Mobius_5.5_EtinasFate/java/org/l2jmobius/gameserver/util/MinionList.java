@@ -119,8 +119,8 @@ public class MinionList
 						minion.deleteMe();
 					}
 				}
+				_spawnedMinions.clear();
 			}
-			_spawnedMinions.clear();
 			
 			if (!_respawnTasks.isEmpty())
 			{
@@ -131,8 +131,8 @@ public class MinionList
 						task.cancel(true);
 					}
 				}
+				_respawnTasks.clear();
 			}
-			_respawnTasks.clear();
 		}
 	}
 	
