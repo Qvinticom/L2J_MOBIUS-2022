@@ -1468,7 +1468,7 @@ public class Npc extends Creature
 	 */
 	public boolean isInMySpawnGroup(Npc npc)
 	{
-		return ((getSpawn() != null) && (npc.getSpawn() != null) && (getSpawn().getName() != null) && (getSpawn().getName().equals(npc.getSpawn().getName())));
+		return getSpawn().getNpcSpawnTemplate().getSpawnTemplate().getName().equals(npc.getSpawn().getNpcSpawnTemplate().getSpawnTemplate().getName());
 	}
 	
 	/**
