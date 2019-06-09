@@ -23,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 
 /**
@@ -30,16 +31,16 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
  */
 public class RespawnTaskManager
 {
-	private static final Map<Spawn, List<Long>> PENDING_RESPAWNS = new ConcurrentHashMap<>();
+	private static final Map<NpcInstance, List<Long>> PENDING_RESPAWNS = new ConcurrentHashMap<>();
 	
 	public RespawnTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
 			final long time = System.currentTimeMillis();
-			for (Entry<Spawn, List<Long>> entry : PENDING_RESPAWNS.entrySet())
+			for (Entry<NpcInstance, List<Long>> entry : PENDING_RESPAWNS.entrySet())
 			{
-				final Spawn spawn = entry.getKey();
+				final NpcInstance npc = entry.getKey();
 				final List<Long> schedules = entry.getValue();
 				for (Long respawnTime : schedules)
 				{
@@ -48,23 +49,27 @@ public class RespawnTaskManager
 						schedules.remove(respawnTime);
 						if (schedules.isEmpty())
 						{
-							PENDING_RESPAWNS.remove(spawn);
+							PENDING_RESPAWNS.remove(npc);
 						}
-						spawn.doSpawn();
-						spawn._scheduledCount--;
+						final Spawn spawn = npc.getSpawn();
+						if (spawn != null)
+						{
+							spawn.respawnNpc(npc);
+							spawn._scheduledCount--;
+						}
 					}
 				}
 			}
 		}, 0, 1000);
 	}
 	
-	public void add(Spawn spawn, Long time)
+	public void add(NpcInstance npc, Long time)
 	{
-		if (!PENDING_RESPAWNS.containsKey(spawn))
+		if (!PENDING_RESPAWNS.containsKey(npc))
 		{
-			PENDING_RESPAWNS.put(spawn, new CopyOnWriteArrayList<>());
+			PENDING_RESPAWNS.put(npc, new CopyOnWriteArrayList<>());
 		}
-		PENDING_RESPAWNS.get(spawn).add(time);
+		PENDING_RESPAWNS.get(npc).add(time);
 	}
 	
 	public static RespawnTaskManager getInstance()

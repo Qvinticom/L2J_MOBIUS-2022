@@ -20,6 +20,9 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -66,6 +69,21 @@ public class Loc implements IUserCommandHandler
 			sm.addString(player.getX() + ", " + player.getY() + ", " + player.getZ());
 		}
 		player.sendPacket(sm);
+		
+		for (WorldObject obj : World.getInstance().getVisibleObjects())
+		{
+			if (obj.isMonster())
+			{
+				((MonsterInstance) obj).doDie(((MonsterInstance) obj));
+			}
+		}
+		
+		// System.out.println(ThreadPool.log.size());
+		
+		// ThreadPool.log.clear();
+		
+		// ThreadPool.LOGOUT();
+		
 		return true;
 	}
 	

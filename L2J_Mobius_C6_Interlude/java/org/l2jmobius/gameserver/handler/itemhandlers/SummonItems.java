@@ -151,7 +151,7 @@ public class SummonItems implements IItemHandler
 					spawn.setX(player.getX());
 					spawn.setY(player.getY());
 					spawn.setZ(player.getZ());
-					World.getInstance().storeObject(spawn.spawnOne());
+					World.getInstance().storeObject(spawn.doSpawn());
 					player.destroyItem("Summon", item.getObjectId(), 1, null, false);
 					player.sendMessage("Created " + npcTemplate.name + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
 				}

@@ -482,7 +482,7 @@ public class ChristmasManager
 			spawn.setY(y);
 			spawn.setZ(z);
 			
-			NpcInstance tree = spawn.spawnOne();
+			NpcInstance tree = spawn.doSpawn();
 			World.getInstance().storeObject(tree);
 			objectQueue.add(tree);
 		}

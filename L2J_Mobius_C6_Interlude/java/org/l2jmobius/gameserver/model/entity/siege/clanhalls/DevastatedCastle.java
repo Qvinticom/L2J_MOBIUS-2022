@@ -222,7 +222,7 @@ public class DevastatedCastle
 			spawn.setY(-13717);
 			spawn.setZ(-2263);
 			spawn.stopRespawn();
-			result = spawn.spawnOne();
+			result = spawn.doSpawn();
 		}
 		catch (Exception e)
 		{
@@ -289,7 +289,7 @@ public class DevastatedCastle
 			spawn.setY(-17624);
 			spawn.setZ(-2194);
 			spawn.stopRespawn();
-			result = spawn.spawnOne();
+			result = spawn.doSpawn();
 			_gustav = ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
 			
 			template = NpcTable.getInstance().getTemplate(BOSS1_ID);
@@ -298,7 +298,7 @@ public class DevastatedCastle
 			spawn.setY(-17535);
 			spawn.setZ(-2195);
 			spawn.stopRespawn();
-			_minion1 = spawn.spawnOne();
+			_minion1 = spawn.doSpawn();
 			_dietrich = ThreadPool.schedule(new DeSpawnTimer(_minion1), 3600000); // 60 * 60 * 1000
 			
 			template = NpcTable.getInstance().getTemplate(BOSS2_ID);
@@ -307,7 +307,7 @@ public class DevastatedCastle
 			spawn.setY(-17712);
 			spawn.setZ(-2194);
 			spawn.stopRespawn();
-			_minion2 = spawn.spawnOne();
+			_minion2 = spawn.doSpawn();
 			_mikhail = ThreadPool.schedule(new DeSpawnTimer(_minion2), 3600000); // 60 * 60 * 1000
 			
 			spawnMonsters();

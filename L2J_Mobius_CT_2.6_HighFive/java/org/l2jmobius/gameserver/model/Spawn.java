@@ -249,7 +249,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			_scheduledCount++;
 			
 			// Schedule the next respawn.
-			RespawnTaskManager.getInstance().add(this, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
+			RespawnTaskManager.getInstance().add(oldNpc, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
 		}
 	}
 	
@@ -549,6 +549,15 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	public final Deque<Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
+	}
+	
+	public void respawnNpc(Npc oldNpc)
+	{
+		if (_doRespawn)
+		{
+			oldNpc.refreshID();
+			initializeNpcInstance(oldNpc);
+		}
 	}
 	
 	public NpcTemplate getTemplate()

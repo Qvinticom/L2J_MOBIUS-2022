@@ -208,7 +208,7 @@ public class FortressOfResistance
 			spawn.setY(111275);
 			spawn.setZ(-1970);
 			spawn.stopRespawn();
-			result = spawn.spawnOne();
+			result = spawn.doSpawn();
 		}
 		catch (Exception e)
 		{
@@ -246,7 +246,7 @@ public class FortressOfResistance
 			spawn.setY(108867);
 			spawn.setZ(-2020);
 			spawn.stopRespawn();
-			result = spawn.spawnOne();
+			result = spawn.doSpawn();
 		}
 		catch (Exception e)
 		{

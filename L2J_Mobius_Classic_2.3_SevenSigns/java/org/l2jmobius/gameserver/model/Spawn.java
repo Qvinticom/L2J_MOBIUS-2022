@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
@@ -254,7 +255,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			_scheduledCount++;
 			
 			// Schedule the next respawn.
-			RespawnTaskManager.getInstance().add(this, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
+			RespawnTaskManager.getInstance().add(oldNpc, System.currentTimeMillis() + (hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay));
 		}
 	}
 	
@@ -468,7 +469,6 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			_respawnMinDelay = Math.max(10, minDelay) * 1000;
 			_respawnMaxDelay = Math.max(10, maxDelay) * 1000;
 		}
-		
 		else
 		{
 			_respawnMinDelay = 0;
@@ -509,6 +509,22 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	public final Deque<Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
+	}
+	
+	public void respawnNpc(Npc oldNpc)
+	{
+		if (_doRespawn)
+		{
+			oldNpc.refreshID();
+			initializeNpcInstance(oldNpc);
+			
+			// Register NPC back to instance world.
+			final Instance instance = oldNpc.getInstanceWorld();
+			if (instance != null)
+			{
+				instance.addNpc(oldNpc);
+			}
+		}
 	}
 	
 	public NpcTemplate getTemplate()

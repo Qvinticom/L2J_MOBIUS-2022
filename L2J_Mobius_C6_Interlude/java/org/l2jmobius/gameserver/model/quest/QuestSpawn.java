@@ -132,7 +132,7 @@ public final class QuestSpawn
 				spawn.setY(y);
 				spawn.setZ(z + 20);
 				spawn.stopRespawn();
-				result = spawn.spawnOne();
+				result = spawn.doSpawn();
 				
 				if (despawnDelay > 0)
 				{

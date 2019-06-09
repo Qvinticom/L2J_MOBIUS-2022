@@ -346,8 +346,9 @@ public class Spawn
 	 * <li>Create a new SpawnTask to launch after the respawn Delay</li><BR>
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : A respawn is possible ONLY if _doRespawn=True and _scheduledCount + _currentCount < _maximumCount</B></FONT><BR>
+	 * @param oldNpc
 	 */
-	public void decreaseCount()
+	public void decreaseCount(NpcInstance oldNpc)
 	{
 		// Decrease the current number of NpcInstance of this Spawn
 		_currentCount--;
@@ -359,7 +360,7 @@ public class Spawn
 			_scheduledCount++;
 			
 			// Schedule the next respawn.
-			RespawnTaskManager.getInstance().add(this, System.currentTimeMillis() + _respawnDelay);
+			RespawnTaskManager.getInstance().add(oldNpc, System.currentTimeMillis() + _respawnDelay);
 		}
 	}
 	
@@ -377,15 +378,6 @@ public class Spawn
 		_doRespawn = true;
 		
 		return _currentCount;
-	}
-	
-	/**
-	 * Create a NpcInstance in this Spawn.
-	 * @return
-	 */
-	public NpcInstance spawnOne()
-	{
-		return doSpawn();
 	}
 	
 	/**
@@ -429,7 +421,7 @@ public class Spawn
 	 */
 	public NpcInstance doSpawn()
 	{
-		NpcInstance mob = null;
+		NpcInstance npc = null;
 		try
 		{
 			// Check if the Spawn is not a Net or Minion spawn
@@ -437,7 +429,7 @@ public class Spawn
 			{
 				_currentCount++;
 				
-				return mob;
+				return npc;
 			}
 			
 			// Get NpcInstance Init parameters and its generate an Identifier
@@ -457,25 +449,25 @@ public class Spawn
 			// Check if the Instance is a NpcInstance
 			if (!(tmp instanceof NpcInstance))
 			{
-				return mob;
+				return npc;
 			}
 			
-			mob = (NpcInstance) tmp;
+			npc = (NpcInstance) tmp;
 			
-			return initializeNpcInstance(mob);
+			return initializeNpcInstance(npc);
 		}
 		catch (Exception e)
 		{
 			LOGGER.warning("NPC " + _template.npcId + " class not found " + e);
 		}
-		return mob;
+		return npc;
 	}
 	
 	/**
-	 * @param mob
+	 * @param npc
 	 * @return
 	 */
-	private NpcInstance initializeNpcInstance(NpcInstance mob)
+	private NpcInstance initializeNpcInstance(NpcInstance npc)
 	{
 		int newlocx;
 		int newlocy;
@@ -486,7 +478,7 @@ public class Spawn
 		{
 			if (_location == 0)
 			{
-				return mob;
+				return npc;
 			}
 			
 			// Calculate the random position in the location area
@@ -505,45 +497,45 @@ public class Spawn
 			newlocz = _locZ;
 		}
 		
-		if (mob != null)
+		if (npc != null)
 		{
-			mob.stopAllEffects();
+			npc.stopAllEffects();
 			
 			// Set the HP and MP of the NpcInstance to the max
-			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
+			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			
 			// Set the heading of the NpcInstance (random heading if not defined)
 			if (_heading == -1)
 			{
-				mob.setHeading(Rnd.get(61794));
+				npc.setHeading(Rnd.get(61794));
 			}
 			else
 			{
-				mob.setHeading(_heading);
+				npc.setHeading(_heading);
 			}
 			
 			// Reset decay info
-			mob.setDecayed(false);
+			npc.setDecayed(false);
 			
 			// Link the NpcInstance to this Spawn
-			mob.setSpawn(this);
+			npc.setSpawn(this);
 			
 			// Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world as a visible object
-			mob.spawnMe(newlocx, newlocy, newlocz);
+			npc.spawnMe(newlocx, newlocy, newlocz);
 			
-			notifyNpcSpawned(mob);
+			notifyNpcSpawned(npc);
 			
-			_lastSpawn = mob;
+			_lastSpawn = npc;
 			
-			for (Quest quest : mob.getTemplate().getEventQuests(Quest.QuestEventType.ON_SPAWN))
+			for (Quest quest : npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_SPAWN))
 			{
-				quest.notifySpawn(mob);
+				quest.notifySpawn(npc);
 			}
 			
 			// Increase the current number of NpcInstance managed by this Spawn
 			_currentCount++;
 		}
-		return mob;
+		return npc;
 	}
 	
 	public static void addSpawnListener(SpawnListener listener)
@@ -594,6 +586,15 @@ public class Spawn
 	public NpcInstance getLastSpawn()
 	{
 		return _lastSpawn;
+	}
+	
+	public void respawnNpc(NpcInstance oldNpc)
+	{
+		if (_doRespawn)
+		{
+			oldNpc.refreshID();
+			initializeNpcInstance(oldNpc);
+		}
 	}
 	
 	public NpcTemplate getTemplate()

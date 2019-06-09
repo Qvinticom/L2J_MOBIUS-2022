@@ -79,7 +79,7 @@ public class ChristmasTree implements IItemHandler
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());
-			final NpcInstance result = spawn.spawnOne();
+			final NpcInstance result = spawn.doSpawn();
 			
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			

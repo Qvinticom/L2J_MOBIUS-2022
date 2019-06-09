@@ -72,7 +72,7 @@ public class JackpotSeed implements IItemHandler
 			spawn.setX(player.getX());
 			spawn.setY(player.getY());
 			spawn.setZ(player.getZ());
-			_gourd = (GourdInstance) spawn.spawnOne();
+			_gourd = (GourdInstance) spawn.doSpawn();
 			World.getInstance().storeObject(_gourd);
 			_gourd.setOwner(player.getName());
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
