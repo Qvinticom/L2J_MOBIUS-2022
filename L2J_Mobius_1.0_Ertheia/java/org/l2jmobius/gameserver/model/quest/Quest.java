@@ -292,8 +292,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void startQuestTimer(String name, long time, Npc npc, PlayerInstance player, boolean repeating)
 	{
 		final List<QuestTimer> timers = getQuestTimers().computeIfAbsent(name, k -> new ArrayList<>(1));
-		// if there exists a timer with this name, allow the timer only if the [npc, player] set is unique
-		// nulls act as wildcards
+		// If there exists a timer with this name, allow the timer only if the [npc, player] set is unique nulls act as wildcards.
 		if (getQuestTimer(name, npc, player) == null)
 		{
 			_writeLock.lock();

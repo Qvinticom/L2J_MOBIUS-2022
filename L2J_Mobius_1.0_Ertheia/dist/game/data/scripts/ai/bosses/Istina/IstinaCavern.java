@@ -588,6 +588,7 @@ public final class IstinaCavern extends AbstractInstance
 				npc.setUndying(true);
 				npc.setIsInvul(true);
 				npc.setTargetable(false);
+				getTimers().cancelTimer("BALLISTA_START_TIMER", npc, null);
 				getTimers().addTimer("BALLISTA_START_TIMER", 10000, npc, null);
 			}
 		}

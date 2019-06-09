@@ -61,6 +61,7 @@ public final class Handermonkey extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		npc.setRunning();
+		cancelQuestTimer("NPC_MOVE", npc, null);
 		startQuestTimer("NPC_MOVE", 5000, npc, null, true);
 		return super.onSpawn(npc);
 	}

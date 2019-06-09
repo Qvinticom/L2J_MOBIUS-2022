@@ -98,12 +98,16 @@ public final class AreaSkillNpc extends AbstractNpcAI
 			final int castTime = npc.getTemplate().getParameters().getInt("i_use_term_time", 5000);
 			final int despawnTime = npc.getTemplate().getParameters().getInt("i_despawn_time", 30000);
 			onTimerEvent("SKILL_CAST_BASIC", null, npc, null); // Trigger cast instantly
+			getTimers().cancelTimer("SKILL_CAST_TIMED", npc, null);
+			getTimers().cancelTimer("DELETE_ME", npc, null);
 			getTimers().addTimer("SKILL_CAST_TIMED", castTime, npc, null);
 			getTimers().addTimer("DELETE_ME", despawnTime, npc, null);
 		}
 		else
 		{
 			final int despawnTime = npc.getTemplate().getParameters().getInt("despawn_time", 7);
+			getTimers().cancelTimer("SKILL_CAST_TIMED", npc, null);
+			getTimers().cancelTimer("DELETE_ME", npc, null);
 			getTimers().addTimer("SKILL_CAST_TIMED", 100, npc, null);
 			getTimers().addTimer("DELETE_ME", (despawnTime * 1000), npc, null);
 		}

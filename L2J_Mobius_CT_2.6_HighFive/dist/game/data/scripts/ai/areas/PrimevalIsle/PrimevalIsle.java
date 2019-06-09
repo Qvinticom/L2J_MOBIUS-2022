@@ -486,6 +486,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 	{
 		if (CommonUtil.contains(SPRIGNANT, npc.getId()))
 		{
+			cancelQuestTimer("USE_SKILL", npc, null);
 			startQuestTimer("USE_SKILL", 15000, npc, null);
 		}
 		else if (CommonUtil.contains(TREX, npc.getId()))
@@ -495,6 +496,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 			
 			if (collectGhost == 1)
 			{
+				cancelQuestTimer("GHOST_DESPAWN", npc, null);
 				startQuestTimer("GHOST_DESPAWN", collectDespawn * 60000, npc, null);
 			}
 		}

@@ -282,6 +282,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 	{
 		npc.setIsInvul(true);
 		npc.disableCoreAI(true);
+		cancelQuestTimer("TRAINING", npc, null);
 		startQuestTimer("TRAINING", 30000, npc, null, true);
 		return super.onSpawn(npc);
 	}

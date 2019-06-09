@@ -85,6 +85,11 @@ public final class Wastelands extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		if ((npc == null) || !npc.isSpawned())
+		{
+			return null;
+		}
+		
 		switch (event)
 		{
 			case "SOCIAL_SHOW":

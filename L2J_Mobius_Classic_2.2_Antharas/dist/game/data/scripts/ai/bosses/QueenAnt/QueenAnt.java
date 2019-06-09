@@ -18,10 +18,8 @@ package ai.bosses.QueenAnt;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -84,7 +82,6 @@ public final class QueenAnt extends AbstractNpcAI
 	MonsterInstance _queen = null;
 	private MonsterInstance _larva = null;
 	private final Set<MonsterInstance> _nurses = ConcurrentHashMap.newKeySet();
-	ScheduledFuture<?> _task = null;
 	
 	private QueenAnt()
 	{
@@ -160,68 +157,87 @@ public final class QueenAnt extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equalsIgnoreCase("heal"))
+		switch (event)
 		{
-			boolean notCasting;
-			final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
-			final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
-			for (MonsterInstance nurse : _nurses)
+			case "heal":
 			{
-				if ((nurse == null) || nurse.isDead() || nurse.isCastingNow(SkillCaster::isAnyNormalType))
+				boolean notCasting;
+				final boolean larvaNeedHeal = (_larva != null) && (_larva.getCurrentHp() < _larva.getMaxHp());
+				final boolean queenNeedHeal = (_queen != null) && (_queen.getCurrentHp() < _queen.getMaxHp());
+				for (MonsterInstance nurse : _nurses)
 				{
-					continue;
-				}
-				
-				notCasting = nurse.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST;
-				if (larvaNeedHeal)
-				{
-					if ((nurse.getTarget() != _larva) || notCasting)
-					{
-						nurse.setTarget(_larva);
-						nurse.useMagic(getRandomBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
-					}
-					continue;
-				}
-				if (queenNeedHeal)
-				{
-					if (nurse.getLeader() == _larva)
+					if ((nurse == null) || nurse.isDead() || nurse.isCastingNow(SkillCaster::isAnyNormalType))
 					{
 						continue;
 					}
 					
-					if ((nurse.getTarget() != _queen) || notCasting)
+					notCasting = nurse.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST;
+					if (larvaNeedHeal)
 					{
-						nurse.setTarget(_queen);
-						nurse.useMagic(HEAL1.getSkill());
+						if ((nurse.getTarget() != _larva) || notCasting)
+						{
+							nurse.setTarget(_larva);
+							nurse.useMagic(getRandomBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
+						}
+						continue;
 					}
-					continue;
+					if (queenNeedHeal)
+					{
+						if (nurse.getLeader() == _larva)
+						{
+							continue;
+						}
+						
+						if ((nurse.getTarget() != _queen) || notCasting)
+						{
+							nurse.setTarget(_queen);
+							nurse.useMagic(HEAL1.getSkill());
+						}
+						continue;
+					}
+					// if nurse not casting - remove target
+					if (notCasting && (nurse.getTarget() != null))
+					{
+						nurse.setTarget(null);
+					}
 				}
-				// if nurse not casting - remove target
-				if (notCasting && (nurse.getTarget() != null))
-				{
-					nurse.setTarget(null);
-				}
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("action") && (npc != null))
-		{
-			if (getRandom(3) == 0)
+			case "action":
 			{
-				if (getRandom(2) == 0)
+				if ((npc != null) && (getRandom(3) == 0))
 				{
-					npc.broadcastSocialAction(3);
+					if (getRandom(2) == 0)
+					{
+						npc.broadcastSocialAction(3);
+					}
+					else
+					{
+						npc.broadcastSocialAction(4);
+					}
 				}
-				else
-				{
-					npc.broadcastSocialAction(4);
-				}
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("queen_unlock"))
-		{
-			final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
-			GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
-			spawnBoss(queen);
+			case "queen_unlock":
+			{
+				final GrandBossInstance queen = (GrandBossInstance) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+				GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
+				spawnBoss(queen);
+				break;
+			}
+			case "ANT_QUEEN_TASK":
+			{
+				if ((_queen == null) || _queen.isDead())
+				{
+					cancelQuestTimers("ANT_QUEEN_TASK");
+				}
+				else if (_queen.calculateDistance2D(QUEEN_X, QUEEN_Y, QUEEN_Z) > 2000)
+				{
+					_queen.clearAggroList();
+					_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
+				}
+				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -258,7 +274,8 @@ public final class QueenAnt extends AbstractNpcAI
 				{
 					((MonsterInstance) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
 				}
-				_task = ThreadPool.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				cancelQuestTimer("ANT_QUEEN_TASK", npc, null);
+				startQuestTimer("ANT_QUEEN_TASK", 5000, npc, null, true);
 				break;
 			}
 		}
@@ -360,11 +377,7 @@ public final class QueenAnt extends AbstractNpcAI
 			_larva.deleteMe();
 			_larva = null;
 			_queen = null;
-			if (_task != null)
-			{
-				_task.cancel(false);
-				_task = null;
-			}
+			cancelQuestTimers("ANT_QUEEN_TASK");
 		}
 		else if ((_queen != null) && !_queen.isAlikeDead())
 		{
@@ -387,29 +400,6 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	private class QueenAntTask implements Runnable
-	{
-		public QueenAntTask()
-		{
-			// Constructor stub
-		}
-		
-		@Override
-		public void run()
-		{
-			if ((_queen == null) || _queen.isDead())
-			{
-				_task.cancel(false);
-				_task = null;
-			}
-			else if (_queen.calculateDistance2D(QUEEN_X, QUEEN_Y, QUEEN_Z) > 2000.)
-			{
-				_queen.clearAggroList();
-				_queen.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(QUEEN_X, QUEEN_Y, QUEEN_Z, 0));
-			}
-		}
 	}
 	
 	public static void main(String[] args)

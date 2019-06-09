@@ -263,6 +263,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 	{
 		if (CommonUtil.contains(MAHUM_CHIEFS, npc.getId()))
 		{
+			cancelQuestTimer("do_social_action", npc, null);
 			startQuestTimer("do_social_action", 15000, npc, null);
 		}
 		

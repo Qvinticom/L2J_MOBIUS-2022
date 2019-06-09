@@ -54,8 +54,7 @@ public final class ZealotOfShilen extends AbstractNpcAI
 			return null;
 		}
 		
-		startQuestTimer("WATCHING", 10000, npc, null, true);
-		if (event.equalsIgnoreCase("WATCHING") && !npc.isAttackingNow())
+		if (event.equals("WATCHING") && !npc.isAttackingNow() && !npc.isAlikeDead())
 		{
 			World.getInstance().forEachVisibleObject(npc, MonsterInstance.class, character ->
 			{
@@ -66,6 +65,7 @@ public final class ZealotOfShilen extends AbstractNpcAI
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
 				}
 			});
+			startQuestTimer("WATCHING", 10000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -81,13 +81,14 @@ public final class ZealotOfShilen extends AbstractNpcAI
 	{
 		if (npc.getId() == ZEALOT)
 		{
-			npc.setRandomWalking(true);
+			npc.setRandomWalking(false);
 		}
 		else
 		{
 			npc.setIsInvul(true);
 			((Attackable) npc).setCanReturnToSpawnPoint(false);
-			startQuestTimer("WATCHING", 10000, npc, null, true);
+			cancelQuestTimer("WATCHING", npc, null);
+			startQuestTimer("WATCHING", 10000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}

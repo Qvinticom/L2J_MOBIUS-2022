@@ -128,6 +128,8 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
+		cancelQuestTimer("SPAWN", npc, null);
+		cancelQuestTimer("DESPAWN", npc, null);
 		startQuestTimer("SPAWN", 2000, npc, null);
 		return super.onSpawn(npc);
 	}

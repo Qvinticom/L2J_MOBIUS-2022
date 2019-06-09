@@ -345,6 +345,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 		}
 		else if (npc.getId() == FIRE)
 		{
+			cancelQuestTimer("fire", npc, null);
 			startQuestTimer("fire", 1000, npc, null);
 		}
 		else if (CommonUtil.contains(SQUAD_LEADERS, npc.getId()))

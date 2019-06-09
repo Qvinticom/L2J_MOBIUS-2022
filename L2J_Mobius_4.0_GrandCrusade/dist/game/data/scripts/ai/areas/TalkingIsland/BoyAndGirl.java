@@ -72,7 +72,9 @@ public final class BoyAndGirl extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
+		cancelQuestTimer("NPC_CHANGEWEAP", npc, null);
 		startQuestTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
+		cancelQuestTimer("NPC_SHOUT", npc, null);
 		startQuestTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
 		npc.setRunning();
 		final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600);

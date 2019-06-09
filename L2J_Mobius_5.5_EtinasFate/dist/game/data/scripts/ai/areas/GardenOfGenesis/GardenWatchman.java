@@ -84,6 +84,7 @@ public class GardenWatchman extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
+		cancelQuestTimer("SPAWN_TRAP", npc, null);
 		startQuestTimer("SPAWN_TRAP", 50000, npc, null);
 		return super.onSpawn(npc);
 	}

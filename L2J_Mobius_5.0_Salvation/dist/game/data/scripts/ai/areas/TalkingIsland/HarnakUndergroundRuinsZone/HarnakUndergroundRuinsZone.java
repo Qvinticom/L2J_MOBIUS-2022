@@ -123,11 +123,11 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 	
 	private static final class changeZoneStage implements Runnable
 	{
-		private final ZoneType zone;
+		private final ZoneType _zone;
 		
-		public changeZoneStage(ZoneType a)
+		public changeZoneStage(ZoneType zone)
 		{
-			zone = a;
+			_zone = zone;
 		}
 		
 		@Override
@@ -135,50 +135,50 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		{
 			try
 			{
-				zoneInfo currentInfo = _roomInfo.get(zone);
+				zoneInfo currentInfo = _roomInfo.get(_zone);
 				switch (currentInfo.getZoneStage())
 				{
 					case 0:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MONITOR_THE_DAMAGE_FOR_30_SEC, ExShowScreenMessage.TOP_CENTER, 3000));
+						_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MONITOR_THE_DAMAGE_FOR_30_SEC, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 1:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TWENTY_FIVE_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
+						_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TWENTY_FIVE_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 2:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TWENTY_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
+						_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TWENTY_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 3:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIFTEEN_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
+						_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIFTEEN_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 4:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TEN_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
+						_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TEN_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 5:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIVE_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
+						_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIVE_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 6:
 					{
 						if (currentInfo.getCurrentMonitorizedDamage() >= 10)
 						{
-							zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.DEMONIC_SYSTEM_WILL_ACTIVATE, ExShowScreenMessage.TOP_CENTER, 3000));
-							String zoneName = zone.getName().toLowerCase().replace(" ", "_");
+							_zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.DEMONIC_SYSTEM_WILL_ACTIVATE, ExShowScreenMessage.TOP_CENTER, 3000));
+							String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
 							_templates.stream().forEach(t -> t.despawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName)));
 							_templates.stream().forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName + "_demonic"), null));
-							zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 600, 0, NpcStringId.DEMONIC_SYSTEM_ACTIVATED)));
+							_zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 600, 0, NpcStringId.DEMONIC_SYSTEM_ACTIVATED)));
 							currentInfo.setZoneStage(7);
-							ThreadPool.schedule(new changeZoneStage(zone), 600000); // 10min
+							ThreadPool.schedule(new changeZoneStage(_zone), 600000); // 10min
 						}
 						else
 						{
@@ -190,14 +190,14 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 					case 7:
 					{
 						currentInfo.reset();
-						for (PlayerInstance player : zone.getPlayersInside())
+						for (PlayerInstance player : _zone.getPlayersInside())
 						{
 							if (player != null)
 							{
 								player.sendPacket(new ExSendUIEvent(player));
 							}
 						}
-						String zoneName = zone.getName().toLowerCase().replace(" ", "_");
+						String zoneName = _zone.getName().toLowerCase().replace(" ", "_");
 						_templates.stream().forEach(t -> t.despawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName + "_demonic")));
 						_templates.stream().forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName), null));
 						return;
@@ -206,7 +206,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 				if (currentInfo.getZoneStage() < 6)
 				{
 					currentInfo.setZoneStage(currentInfo.getZoneStage() + 1);
-					ThreadPool.schedule(new changeZoneStage(zone), 5000);
+					ThreadPool.schedule(new changeZoneStage(_zone), 5000);
 				}
 			}
 			catch (Exception e)
@@ -223,7 +223,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		{
 			if (currentZone.getKey().isInsideZone(npc))
 			{
-				zoneInfo currentInfo = currentZone.getValue();
+				final zoneInfo currentInfo = currentZone.getValue();
 				int currentPoints = currentInfo.getCurrentPoints();
 				if (currentPoints == 300)
 				{

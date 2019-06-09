@@ -215,6 +215,12 @@ public final class DarkWaterDragon extends AbstractNpcAI
 				addSpawn(DETRACTOR1, x + 100, y - 100, npc.getZ(), 0, false, 40000);
 				addSpawn(DETRACTOR2, x - 100, y + 100, npc.getZ(), 0, false, 40000);
 				addSpawn(DETRACTOR1, x - 100, y - 100, npc.getZ(), 0, false, 40000);
+				cancelQuestTimer("first_spawn", npc, null);
+				cancelQuestTimer("second_spawn", npc, null);
+				cancelQuestTimer("third_spawn", npc, null);
+				cancelQuestTimer("fourth_spawn", npc, null);
+				cancelQuestTimer("fafurion_poison", npc, null);
+				cancelQuestTimer("fafurion_despawn", npc, null);
 				startQuestTimer("first_spawn", 2000, npc, null); // timer to delay timer "1"
 				startQuestTimer("second_spawn", 4000, npc, null); // timer to delay timer "2"
 				startQuestTimer("third_spawn", 8000, npc, null); // timer to delay timer "3"

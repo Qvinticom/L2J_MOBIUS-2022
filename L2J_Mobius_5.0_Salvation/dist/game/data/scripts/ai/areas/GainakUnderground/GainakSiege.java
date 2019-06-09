@@ -69,7 +69,6 @@ public final class GainakSiege extends AbstractNpcAI
 	{
 		addEnterZoneId(GAINAK_SIEGE_ZONE.getId(), GAINAK_TOWN_ZONE.getId());
 		addKillId(ASSASSIN_IDS);
-		addSpawnId(ASSASSIN_IDS);
 		startQuestTimer("GAINAK_WAR", getTimeBetweenSieges() * 60000, null, null);
 	}
 	

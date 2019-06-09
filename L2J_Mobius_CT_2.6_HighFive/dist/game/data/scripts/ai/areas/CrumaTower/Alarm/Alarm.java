@@ -223,6 +223,7 @@ public final class Alarm extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
+		cancelQuestTimer("SELF_DESTRUCT_IN_60", npc, null);
 		startQuestTimer("SELF_DESTRUCT_IN_60", 60000, npc, null);
 		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.INTRUDER_ALERT_THE_ALARM_WILL_SELF_DESTRUCT_IN_2_MINUTES);
 		final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);

@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.type.EffectZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 import ai.AbstractNpcAI;
 
@@ -35,6 +36,7 @@ import ai.AbstractNpcAI;
  * Dummy AI for spawns/respawns only for testing.
  * @author Gnacik
  */
+@Disabled // Mobius: this needs to be rewritten.
 public final class DenOfEvil extends AbstractNpcAI
 {
 	// private static final int _buffer_id = 32656;

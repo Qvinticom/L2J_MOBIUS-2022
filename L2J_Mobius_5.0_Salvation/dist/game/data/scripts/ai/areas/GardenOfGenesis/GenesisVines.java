@@ -66,6 +66,8 @@ public final class GenesisVines extends AbstractNpcAI
 	{
 		npc.disableCoreAI(true);
 		npc.setScriptValue(1);
+		cancelQuestTimer("CAST_SKILL", npc, null);
+		cancelQuestTimer("DELETE", npc, null);
 		startQuestTimer("CAST_SKILL", 3000, npc, null);
 		startQuestTimer("DELETE", 150000, npc, null);
 		return super.onSpawn(npc);

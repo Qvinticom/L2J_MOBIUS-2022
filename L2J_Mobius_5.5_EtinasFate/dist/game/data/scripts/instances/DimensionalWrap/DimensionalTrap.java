@@ -55,49 +55,51 @@ public class DimensionalTrap extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (npc != null)
+		if ((npc == null) || npc.isAlikeDead())
 		{
-			switch (event)
+			return null;
+		}
+		
+		switch (event)
+		{
+			case "debuff_player":
 			{
-				case "debuff_player":
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
+					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
-						if ((p != null) && p.isPlayer() && !p.isDead())
-						{
-							npc.setTarget(p);
-							npc.doCast((getRandom(10) < 5) ? TRAP_HOLD.getSkill() : TRAP_ARIALL_YOKE.getSkill());
-						}
-					});
-					startQuestTimer("debuff_player", 10000, npc, null);
-					break;
-				}
-				case "demage_player":
+						npc.setTarget(p);
+						npc.doCast((getRandom(10) < 5) ? TRAP_HOLD.getSkill() : TRAP_ARIALL_YOKE.getSkill());
+					}
+				});
+				startQuestTimer("debuff_player", 10000, npc, null);
+				break;
+			}
+			case "damage_player":
+			{
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
+					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
-						if ((p != null) && p.isPlayer() && !p.isDead())
-						{
-							npc.setTarget(p);
-							npc.doCast((getRandom(10) < 5) ? TRAP_STUN.getSkill() : TRAP_POYSON.getSkill());
-						}
-					});
-					startQuestTimer("demage_player", 10000, npc, null);
-					break;
-				}
-				case "heal_player":
+						npc.setTarget(p);
+						npc.doCast((getRandom(10) < 5) ? TRAP_STUN.getSkill() : TRAP_POYSON.getSkill());
+					}
+				});
+				startQuestTimer("damage_player", 10000, npc, null);
+				break;
+			}
+			case "heal_player":
+			{
+				World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, _type, p ->
+					if ((p != null) && p.isPlayer() && !p.isDead())
 					{
-						if ((p != null) && p.isPlayer() && !p.isDead())
-						{
-							npc.setTarget(p);
-							npc.doCast(PEACE_ZONE_CURE.getSkill());
-						}
-					});
-					startQuestTimer("heal_player", 10000, npc, null);
-					break;
-				}
+						npc.setTarget(p);
+						npc.doCast(PEACE_ZONE_CURE.getSkill());
+					}
+				});
+				startQuestTimer("heal_player", 10000, npc, null);
+				break;
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -133,21 +135,21 @@ public class DimensionalTrap extends AbstractNpcAI
 			case DIMENSIONAL_DEMAGE_TRAP_1:
 			{
 				npc.setDisplayEffect(4);
-				startQuestTimer("demage_player", 3000, npc, null);
+				startQuestTimer("damage_player", 3000, npc, null);
 				_type = 50;
 				break;
 			}
 			case DIMENSIONAL_DEMAGE_TRAP_2:
 			{
 				npc.setDisplayEffect(5);
-				startQuestTimer("demage_player", 3000, npc, null);
+				startQuestTimer("damage_player", 3000, npc, null);
 				_type = 100;
 				break;
 			}
 			case DIMENSIONAL_DEMAGE_TRAP_3:
 			{
 				npc.setDisplayEffect(6);
-				startQuestTimer("demage_player", 3000, npc, null);
+				startQuestTimer("damage_player", 3000, npc, null);
 				_type = 150;
 				break;
 			}

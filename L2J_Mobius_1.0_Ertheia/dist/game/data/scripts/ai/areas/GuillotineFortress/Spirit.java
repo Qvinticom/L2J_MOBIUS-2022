@@ -112,16 +112,19 @@ public final class Spirit extends AbstractNpcAI
 		{
 			case EXECUTED_MAIDEN_VENGEFUL_SPIRIT:
 			{
+				cancelQuestTimer("SPAM_TEXT1", npc, null);
 				startQuestTimer("SPAM_TEXT1", 50000, npc, null, true);
 				break;
 			}
 			case SPIRIT_OF_THE_TORTURED_DWARF:
 			{
+				cancelQuestTimer("SPAM_TEXT2", npc, null);
 				startQuestTimer("SPAM_TEXT2", 50000, npc, null, true);
 				break;
 			}
 			case SPIRIT_OF_ONE_BURNED_ALIVE:
 			{
+				cancelQuestTimer("SPAM_TEXT3", npc, null);
 				startQuestTimer("SPAM_TEXT3", 50000, npc, null, true);
 				break;
 			}

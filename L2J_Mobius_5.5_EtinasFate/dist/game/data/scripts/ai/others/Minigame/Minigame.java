@@ -253,6 +253,7 @@ public final class Minigame extends AbstractNpcAI
 			case TREASURE_BOX:
 			{
 				npc.disableCoreAI(true);
+				cancelQuestTimer("afterthat", npc, null);
 				startQuestTimer("afterthat", 180000, npc, null);
 				break;
 			}

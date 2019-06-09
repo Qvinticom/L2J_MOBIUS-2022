@@ -73,7 +73,7 @@ public final class HillsOfGold extends AbstractNpcAI
 					return;
 				}
 			});
-			startQuestTimer("SPICULA_AGGRO" + npc.getObjectId(), 10000, npc, null);
+			startQuestTimer("SPICULA_AGGRO", 10000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -98,7 +98,7 @@ public final class HillsOfGold extends AbstractNpcAI
 	{
 		if ((npc.getId() == SPICULA_1) || (npc.getId() == SPICULA_2))
 		{
-			startQuestTimer("SPICULA_AGGRO" + npc.getObjectId(), 5000, npc, null);
+			startQuestTimer("SPICULA_AGGRO", 5000, npc, null);
 		}
 		else
 		{

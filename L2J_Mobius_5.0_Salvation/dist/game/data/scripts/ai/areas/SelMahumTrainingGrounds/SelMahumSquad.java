@@ -68,7 +68,6 @@ public final class SelMahumSquad extends AbstractNpcAI
 	
 	private SelMahumSquad()
 	{
-		
 		addAttackId(CHEF);
 		addAttackId(SQUAD_LEADERS);
 		addEventReceivedId(CHEF, FIRE, STOVE);
@@ -320,7 +319,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 	@Override
 	public void onMoveFinished(Npc npc)
 	{
-		// Npc moves to fire
+		// NPC moves to fire.
 		if (!npc.isRandomWalkingEnabled() && (npc.getX() == npc.getVariables().getInt("DESTINATION_X")) && (npc.getY() == npc.getVariables().getInt("DESTINATION_Y")))
 		{
 			npc.setRHandId(OHS_Weapon);
@@ -354,6 +353,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 		}
 		else if (npc.getId() == FIRE)
 		{
+			cancelQuestTimer("fire", npc, null);
 			startQuestTimer("fire", 1000, npc, null);
 		}
 		else if (CommonUtil.contains(SQUAD_LEADERS, npc.getId()))
