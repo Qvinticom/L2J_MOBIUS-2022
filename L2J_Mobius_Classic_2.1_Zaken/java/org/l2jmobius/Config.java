@@ -434,9 +434,7 @@ public final class Config
 	public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
 	public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
 	public static int SCHEDULED_THREAD_POOL_COUNT;
-	public static int THREADS_PER_SCHEDULED_THREAD_POOL;
 	public static int INSTANT_THREAD_POOL_COUNT;
-	public static int THREADS_PER_INSTANT_THREAD_POOL;
 	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static boolean THREADS_FOR_LOADING;
 	public static boolean DEADLOCK_DETECTOR;
@@ -1297,19 +1295,9 @@ public final class Config
 			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
 			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 			
-			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
-			if (SCHEDULED_THREAD_POOL_COUNT == -1)
-			{
-				SCHEDULED_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
-			}
-			THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
-			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
-			if (INSTANT_THREAD_POOL_COUNT == -1)
-			{
-				INSTANT_THREAD_POOL_COUNT = Runtime.getRuntime().availableProcessors();
-			}
-			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
-			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
+			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", 40);
+			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", 20);
+			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 20);
 			THREADS_FOR_LOADING = serverSettings.getBoolean("ThreadsForLoading", false);
 			
 			DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
