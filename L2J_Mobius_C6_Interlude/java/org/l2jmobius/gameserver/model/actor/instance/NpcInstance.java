@@ -16,14 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -131,115 +128,11 @@ public class NpcInstance extends Creature
 	private int _isSpoiledBy = 0;
 	private long _lastSocialBroadcast = 0;
 	private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
-	protected RandomAnimationTask _rAniTask;
 	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentCollisionHeight; // used for npc grow effect skills
 	private int _currentCollisionRadius; // used for npc grow effect skills
 	private int _scriptValue = 0;
-	
-	public class RandomAnimationTask implements Runnable
-	{
-		private final NpcInstance _npc;
-		private boolean _stopTask;
-		
-		public RandomAnimationTask(NpcInstance npc)
-		{
-			_npc = npc;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (_stopTask)
-			{
-				return;
-			}
-			
-			try
-			{
-				if (!_npc.isInActiveRegion())
-				{
-					return;
-				}
-				
-				// Cancel further animation timers until intention is changed to ACTIVE again.
-				if (_npc.isAttackable() && (_npc.getAI().getIntention() != AI_INTENTION_ACTIVE))
-				{
-					return;
-				}
-				
-				if (!(_npc.isDead() || _npc.isStunned() || _npc.isSleeping() || _npc.isParalyzed()))
-				{
-					_npc.onRandomAnimation(Rnd.get(2, 3));
-				}
-				
-				startRandomAnimationTimer();
-			}
-			catch (Exception e)
-			{
-			}
-		}
-		
-		/**
-		 * Create a RandomAnimation Task that will be launched after the calculated delay.
-		 */
-		public void startRandomAnimationTimer()
-		{
-			if (!_npc.hasRandomAnimation() || _stopTask)
-			{
-				return;
-			}
-			
-			final int minWait = _npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION;
-			final int maxWait = _npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION;
-			
-			// Calculate the delay before the next animation
-			final int interval = Rnd.get(minWait, maxWait) * 1000;
-			
-			// Create a RandomAnimation Task that will be launched after the calculated delay
-			ThreadPool.schedule(this, interval);
-		}
-		
-		/**
-		 * Stops the task from continuing and blocks it from continuing ever again. You need to create new task if you want to start it again.
-		 */
-		public void stopRandomAnimationTimer()
-		{
-			_stopTask = true;
-		}
-	}
-	
-	public void startRandomAnimationTask()
-	{
-		if (!hasRandomAnimation())
-		{
-			return;
-		}
-		
-		if (_rAniTask == null)
-		{
-			synchronized (this)
-			{
-				if (_rAniTask == null)
-				{
-					_rAniTask = new RandomAnimationTask(this);
-				}
-			}
-		}
-		
-		_rAniTask.startRandomAnimationTimer();
-	}
-	
-	public void stopRandomAnimationTask()
-	{
-		final RandomAnimationTask rAniTask = _rAniTask;
-		if (rAniTask != null)
-		{
-			rAniTask.stopRandomAnimationTimer();
-			_rAniTask = null;
-		}
-	}
 	
 	/**
 	 * Send a packet SocialAction to all PlayerInstance in the _KnownPlayers of the NpcInstance and create a new RandomAnimation Task.

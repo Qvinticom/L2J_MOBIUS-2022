@@ -1876,10 +1876,10 @@ public final class Config
 			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = General.getBoolean("LazyCache", true);
 			CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
-			MIN_NPC_ANIMATION = General.getInt("MinNPCAnimation", 10);
-			MAX_NPC_ANIMATION = General.getInt("MaxNPCAnimation", 20);
+			MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
+			MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
 			MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
-			MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 20);
+			MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
 			GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
 			GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
 			GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);

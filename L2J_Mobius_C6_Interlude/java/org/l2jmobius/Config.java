@@ -1287,10 +1287,10 @@ public final class Config
 			
 			MAX_DRIFT_RANGE = Integer.parseInt(optionsSettings.getProperty("MaxDriftRange", "300"));
 			
-			MIN_NPC_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MinNPCAnimation", "10"));
-			MAX_NPC_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MaxNPCAnimation", "20"));
+			MIN_NPC_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MinNpcAnimation", "5"));
+			MAX_NPC_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MaxNpcAnimation", "60"));
 			MIN_MONSTER_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MinMonsterAnimation", "5"));
-			MAX_MONSTER_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MaxMonsterAnimation", "20"));
+			MAX_MONSTER_ANIMATION = Integer.parseInt(optionsSettings.getProperty("MaxMonsterAnimation", "60"));
 			
 			SHOW_NPC_LVL = Boolean.valueOf(optionsSettings.getProperty("ShowNpcLevel", "false"));
 			

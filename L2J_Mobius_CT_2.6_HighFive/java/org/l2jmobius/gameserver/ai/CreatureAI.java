@@ -203,13 +203,6 @@ public class CreatureAI extends AbstractAI
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		clientStopAutoAttack();
 		
-		// Also enable random animations for this Creature if allowed
-		// This is only for mobs - town npcs are handled in their constructor
-		if (_actor.isAttackable())
-		{
-			((Npc) _actor).startRandomAnimationTask();
-		}
-		
 		// Launch the Think Event
 		onEvtThink();
 	}

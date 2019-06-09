@@ -30,14 +30,12 @@ import org.l2jmobius.gameserver.ai.PlayerAI.IntentionCommand;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance.ItemLocation;
-import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.position.Location;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -146,13 +144,6 @@ public class CreatureAI extends AbstractAI
 			
 			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 			clientStopAutoAttack();
-			
-			// Also enable random animations for this Creature if allowed
-			// This is only for mobs - town npcs are handled in their constructor
-			if (_actor instanceof Attackable)
-			{
-				((NpcInstance) _actor).startRandomAnimationTask();
-			}
 			
 			// Launch the Think Event
 			onEvtThink();
@@ -1214,13 +1205,6 @@ public class CreatureAI extends AbstractAI
 			
 			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 			clientStopAutoAttack();
-			
-			// Also enable random animations for this Creature if allowed
-			// This is only for mobs - town npcs are handled in their constructor
-			if (_actor instanceof Attackable)
-			{
-				((NpcInstance) _actor).startRandomAnimationTask();
-			}
 			
 			// Launch the Think Event
 			onEvtThink();

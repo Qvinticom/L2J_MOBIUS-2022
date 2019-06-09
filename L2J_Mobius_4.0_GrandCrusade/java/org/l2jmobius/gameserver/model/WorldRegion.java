@@ -20,18 +20,15 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Vehicle;
+import org.l2jmobius.gameserver.taskmanager.RandomAnimationManager;
 
 public final class WorldRegion
 {
-	private static final Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
-	
 	/** Map containing visible objects in this world region. */
 	private volatile Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
 	/** Map containing nearby regions forming this world region's effective area. */
@@ -81,14 +78,12 @@ public final class WorldRegion
 			return;
 		}
 		
-		int c = 0;
 		if (!isOn)
 		{
 			for (WorldObject o : _visibleObjects.values())
 			{
 				if (o.isAttackable())
 				{
-					c++;
 					final Attackable mob = (Attackable) o;
 					
 					// Set target to null and cancel attack or cast.
@@ -109,13 +104,14 @@ public final class WorldRegion
 						mob.getAI().setIntention(org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE);
 						mob.getAI().stopAITask();
 					}
+					
+					RandomAnimationManager.getInstance().remove(mob);
 				}
-				else if (o instanceof Vehicle)
+				else if (o instanceof Npc)
 				{
-					c++;
+					RandomAnimationManager.getInstance().remove((Npc) o);
 				}
 			}
-			LOGGER.finer(c + " mobs were turned off");
 		}
 		else
 		{
@@ -123,16 +119,15 @@ public final class WorldRegion
 			{
 				if (o.isAttackable())
 				{
-					c++;
 					// Start HP/MP/CP regeneration task.
 					((Attackable) o).getStatus().startHpMpRegeneration();
+					RandomAnimationManager.getInstance().add((Npc) o);
 				}
 				else if (o instanceof Npc)
 				{
-					((Npc) o).startRandomAnimationTask();
+					RandomAnimationManager.getInstance().add((Npc) o);
 				}
 			}
-			LOGGER.finer(c + " mobs were turned on");
 		}
 	}
 	
@@ -161,8 +156,6 @@ public final class WorldRegion
 		
 		// Turn the AI on or off to match the region's activation.
 		switchAI(value);
-		
-		LOGGER.finer((value ? "Starting" : "Stopping") + " Grid " + this);
 	}
 	
 	/**

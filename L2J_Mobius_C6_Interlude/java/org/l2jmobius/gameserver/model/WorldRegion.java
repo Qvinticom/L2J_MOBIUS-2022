@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.ZoneManager;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.PeaceZone;
+import org.l2jmobius.gameserver.taskmanager.RandomAnimationManager;
 
 public final class WorldRegion
 {
@@ -222,6 +223,12 @@ public final class WorldRegion
 							((SiegeGuardAI) mob.getAI()).stopAITask();
 						}
 					}
+					
+					RandomAnimationManager.getInstance().remove(mob);
+				}
+				else if (o instanceof NpcInstance)
+				{
+					RandomAnimationManager.getInstance().remove((NpcInstance) o);
 				}
 			}
 		}
@@ -233,12 +240,11 @@ public final class WorldRegion
 				{
 					// Start HP/MP/CP Regeneration task
 					((Attackable) o).getStatus().startHpMpRegeneration();
+					RandomAnimationManager.getInstance().add((NpcInstance) o);
 				}
 				else if (o instanceof NpcInstance)
 				{
-					// Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it
-					// Monsterinstance/Attackable socials are handled by AI (TODO: check the instances)
-					((NpcInstance) o).startRandomAnimationTask();
+					RandomAnimationManager.getInstance().add((NpcInstance) o);
 				}
 			}
 		}

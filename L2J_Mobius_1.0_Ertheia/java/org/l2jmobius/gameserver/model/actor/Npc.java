@@ -59,7 +59,6 @@ import org.l2jmobius.gameserver.model.actor.instance.TeleporterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.WarehouseInstance;
 import org.l2jmobius.gameserver.model.actor.stat.NpcStat;
 import org.l2jmobius.gameserver.model.actor.status.NpcStatus;
-import org.l2jmobius.gameserver.model.actor.tasks.npc.RandomAnimationTask;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
@@ -132,7 +131,6 @@ public class Npc extends Creature
 	private final boolean _isQuestMonster = getTemplate().isQuestMonster();
 	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
 	
-	protected RandomAnimationTask _rAniTask;
 	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
@@ -187,37 +185,6 @@ public class Npc extends Creature
 		
 		setIsFlying(template.isFlying());
 		initStatusUpdateCache();
-	}
-	
-	public void startRandomAnimationTask()
-	{
-		if (!hasRandomAnimation())
-		{
-			return;
-		}
-		
-		if (_rAniTask == null)
-		{
-			synchronized (this)
-			{
-				if (_rAniTask == null)
-				{
-					_rAniTask = new RandomAnimationTask(this);
-				}
-			}
-		}
-		
-		_rAniTask.startRandomAnimationTimer();
-	}
-	
-	public void stopRandomAnimationTask()
-	{
-		final RandomAnimationTask rAniTask = _rAniTask;
-		if (rAniTask != null)
-		{
-			rAniTask.stopRandomAnimationTimer();
-			_rAniTask = null;
-		}
 	}
 	
 	/**
