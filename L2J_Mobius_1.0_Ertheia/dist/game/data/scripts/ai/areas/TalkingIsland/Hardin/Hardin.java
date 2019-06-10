@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -160,7 +161,11 @@ public final class Hardin extends AbstractNpcAI
 			{
 				for (int skillId : removedSkillIds)
 				{
-					player.removeSkill(skillId);
+					final Skill skill = player.getKnownSkill(skillId);
+					if (skill != null)
+					{
+						player.removeSkill(skill);
+					}
 				}
 			}
 			player.store(false);

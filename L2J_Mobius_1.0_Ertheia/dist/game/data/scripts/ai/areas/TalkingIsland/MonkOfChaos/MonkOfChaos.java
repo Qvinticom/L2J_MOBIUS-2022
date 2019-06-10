@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.AcquireSkillType;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
@@ -145,9 +146,13 @@ public final class MonkOfChaos extends AbstractNpcAI
 				}
 				takeItems(player, 57, CANCEL_FEE);
 				
-				for (SkillLearn skill : SkillTreesData.getInstance().getAllRevelationSkills(player, player.isDualClassActive() ? SubclassType.DUALCLASS : SubclassType.BASECLASS))
+				for (SkillLearn skillLearn : SkillTreesData.getInstance().getAllRevelationSkills(player, player.isDualClassActive() ? SubclassType.DUALCLASS : SubclassType.BASECLASS))
 				{
-					player.removeSkill(skill.getSkillId());
+					final Skill skill = player.getKnownSkill(skillLearn.getSkillId());
+					if (skill != null)
+					{
+						player.removeSkill(skill);
+					}
 				}
 				for (String varName : varNames)
 				{
