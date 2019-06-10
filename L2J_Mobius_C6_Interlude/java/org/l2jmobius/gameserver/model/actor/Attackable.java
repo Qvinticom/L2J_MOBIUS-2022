@@ -569,12 +569,11 @@ public class Attackable extends NpcInstance
 		setChampion(false);
 		if (Config.L2JMOD_CHAMPION_ENABLE)
 		{
-			// Set champion on next spawn
+			// Set champion on next spawn.
 			if (!(this instanceof GrandBossInstance) && !(this instanceof RaidBossInstance) && (this instanceof MonsterInstance)
 			/* && !getTemplate().isQuestMonster */ && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL))
 			{
-				final int random = Rnd.get(100);
-				if (random < Config.L2JMOD_CHAMPION_FREQUENCY)
+				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
 				{
 					setChampion(true);
 				}

@@ -1344,6 +1344,15 @@ public class Npc extends Creature
 		return true;
 	}
 	
+	public void setTeam(Team team, boolean broadcast)
+	{
+		super.setTeam(team);
+		if (broadcast)
+		{
+			broadcastInfo();
+		}
+	}
+	
 	@Override
 	public void setTeam(Team team)
 	{

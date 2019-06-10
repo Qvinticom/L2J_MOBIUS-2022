@@ -1019,38 +1019,6 @@ public class Attackable extends Npc
 				}
 			}
 		}
-		
-		// Apply Special Item drop with random(rnd) quantity(qty) for champions.
-		if (!Config.CHAMPION_ENABLE || !_champion || ((Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE <= 0) && (Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE <= 0)))
-		{
-			return;
-		}
-		
-		int champqty = Rnd.get(Config.CHAMPION_REWARD_QTY);
-		final ItemHolder item = new ItemHolder(Config.CHAMPION_REWARD_ID, ++champqty);
-		
-		if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
-		{
-			if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || Config.AUTO_LOOT || isFlying())
-			{
-				player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the PlayerInstance that has killed the Attackable
-			}
-			else
-			{
-				dropItem(player, item);
-			}
-		}
-		else if ((player.getLevel() > getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
-		{
-			if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || Config.AUTO_LOOT || isFlying())
-			{
-				player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the PlayerInstance that has killed the Attackable
-			}
-			else
-			{
-				dropItem(player, item);
-			}
-		}
 	}
 	
 	/**
@@ -1747,9 +1715,9 @@ public class Attackable extends Npc
 	public void setChampion(boolean champ)
 	{
 		_champion = champ;
-		if (champ && Config.SHOW_CHAMPION_AURA)
+		if (Config.SHOW_CHAMPION_AURA)
 		{
-			setTeam(Team.RED);
+			setTeam(champ ? Team.RED : Team.NONE);
 		}
 	}
 	
