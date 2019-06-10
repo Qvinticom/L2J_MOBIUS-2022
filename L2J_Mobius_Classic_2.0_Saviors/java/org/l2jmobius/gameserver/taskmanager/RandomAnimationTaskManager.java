@@ -23,7 +23,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.Npc;
 
 /**
@@ -43,22 +42,10 @@ public class RandomAnimationTaskManager
 				if (time > entry.getValue())
 				{
 					final Npc npc = entry.getKey();
-					if (!npc.isInActiveRegion())
-					{
-						continue;
-					}
-					
-					// Cancel further animation schedules until intention is changed to ACTIVE again.
-					if (npc.isAttackable() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ACTIVE))
-					{
-						continue;
-					}
-					
-					if (!npc.isDead() && !npc.hasBlockActions())
+					if (npc.isInActiveRegion() && !npc.isDead() && !npc.isInCombat() && !npc.isMoving() && !npc.hasBlockActions())
 					{
 						npc.onRandomAnimation(Rnd.get(2, 3));
 					}
-					
 					PENDING_ANIMATIONS.put(npc, time + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
 				}
 			}
