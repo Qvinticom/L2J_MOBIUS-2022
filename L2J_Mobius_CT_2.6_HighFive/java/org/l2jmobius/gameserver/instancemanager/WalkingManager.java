@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -64,6 +66,9 @@ public final class WalkingManager implements IXmlReader
 	private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
 	private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
 	private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
+	private final Map<Npc, ScheduledFuture<?>> _startMoveTasks = new ConcurrentHashMap<>();
+	private final Map<Npc, ScheduledFuture<?>> _repeatMoveTasks = new ConcurrentHashMap<>();
+	private final Map<Npc, ScheduledFuture<?>> _arriveTasks = new ConcurrentHashMap<>();
 	
 	protected WalkingManager()
 	{
@@ -269,43 +274,56 @@ public final class WalkingManager implements IXmlReader
 						npc.setWalking();
 					}
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-					walk.setWalkCheckTask(ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
+					
+					final ScheduledFuture<?> task = _repeatMoveTasks.get(npc);
+					if ((task == null) || task.isCancelled() || task.isDone())
+					{
+						final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000);
+						_repeatMoveTasks.put(npc, newTask);
+						walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
+					}
 					
 					_activeRoutes.put(npc.getObjectId(), walk); // register route
 				}
 				else
 				{
-					ThreadPool.schedule(new StartMovingTask(npc, routeName), 60000);
+					final ScheduledFuture<?> task = _startMoveTasks.get(npc);
+					if ((task == null) || task.isCancelled() || task.isDone())
+					{
+						_startMoveTasks.put(npc, ThreadPool.schedule(new StartMovingTask(npc, routeName), 60000));
+					}
 				}
 			}
-			// walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
-			else if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
+			else // walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
 			{
-				final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-				if (walk == null)
+				if (_activeRoutes.containsKey(npc.getObjectId()) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
 				{
-					return;
+					final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
+					if (walk == null)
+					{
+						return;
+					}
+					
+					// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
+					if (walk.isBlocked() || walk.isSuspended())
+					{
+						return;
+					}
+					
+					walk.setBlocked(true);
+					final NpcWalkerNode node = walk.getCurrentNode();
+					if (node.runToLocation())
+					{
+						npc.setRunning();
+					}
+					else
+					{
+						npc.setWalking();
+					}
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
+					walk.setBlocked(false);
+					walk.setStoppedByAttack(false);
 				}
-				
-				// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
-				if (walk.isBlocked() || walk.isSuspended())
-				{
-					return;
-				}
-				
-				walk.setBlocked(true);
-				final NpcWalkerNode node = walk.getCurrentNode();
-				if (node.runToLocation())
-				{
-					npc.setRunning();
-				}
-				else
-				{
-					npc.setWalking();
-				}
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-				walk.setBlocked(false);
-				walk.setStoppedByAttack(false);
 			}
 		}
 	}
@@ -317,11 +335,10 @@ public final class WalkingManager implements IXmlReader
 	public synchronized void cancelMoving(Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.remove(npc.getObjectId());
-		if (walk == null)
+		if (walk != null)
 		{
-			return;
+			walk.getWalkCheckTask().cancel(true);
 		}
-		walk.getWalkCheckTask().cancel(true);
 	}
 	
 	/**
@@ -331,13 +348,12 @@ public final class WalkingManager implements IXmlReader
 	public void resumeMoving(Npc npc)
 	{
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-		if (walk == null)
+		if (walk != null)
 		{
-			return;
+			walk.setSuspended(false);
+			walk.setStoppedByAttack(false);
+			startMoving(npc, walk.getRoute().getName());
 		}
-		walk.setSuspended(false);
-		walk.setStoppedByAttack(false);
-		startMoving(npc, walk.getRoute().getName());
 	}
 	
 	/**
@@ -411,7 +427,11 @@ public final class WalkingManager implements IXmlReader
 			npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
 		}
 		
-		ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000));
+		final ScheduledFuture<?> task = _arriveTasks.get(npc);
+		if ((task == null) || task.isCancelled() || task.isDone())
+		{
+			_arriveTasks.put(npc, ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000)));
+		}
 	}
 	
 	/**
