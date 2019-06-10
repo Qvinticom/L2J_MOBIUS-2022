@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
 
 /**
  * Zealot of Shilen AI.
- * @author nonom
+ * @author nonom, Mobius
  */
 public final class ZealotOfShilen extends AbstractNpcAI
 {
@@ -56,17 +56,26 @@ public final class ZealotOfShilen extends AbstractNpcAI
 		
 		if (event.equals("WATCHING") && !npc.isAttackingNow() && !npc.isAlikeDead())
 		{
-			World.getInstance().forEachVisibleObject(npc, MonsterInstance.class, character ->
+			Npc nearby = null;
+			double maxDistance = Double.MAX_VALUE;
+			for (MonsterInstance obj : World.getInstance().getVisibleObjects(npc, MonsterInstance.class))
 			{
-				if (!character.isDead() && !character.isDecayed())
+				final double distance = npc.calculateDistance2D(obj);
+				if ((distance < maxDistance) && !obj.isDead() && !obj.isDecayed())
 				{
-					npc.setRunning();
-					((Attackable) npc).addDamageHate(character, 0, 999);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
+					maxDistance = distance;
+					nearby = obj;
 				}
-			});
+			}
+			if (nearby != null)
+			{
+				npc.setRunning();
+				((Attackable) npc).addDamageHate(nearby, 0, 999);
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, nearby, null);
+			}
 			startQuestTimer("WATCHING", 10000, npc, null);
 		}
+		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
