@@ -201,7 +201,7 @@ public final class NpcTemplate extends CharTemplate implements IIdentifiable
 		
 		_extendDrop = set.getList("extendDrop", Integer.class);
 		
-		if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
+		if (Config.ENABLE_NPC_STAT_MULTIPLIERS) // Custom NPC Stat Multipliers
 		{
 			switch (_type)
 			{

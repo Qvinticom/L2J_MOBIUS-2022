@@ -121,7 +121,7 @@ public final class Config
 	private static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
 	private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
 	private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
-	private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
+	private static final String CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
 	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
 	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
@@ -1042,7 +1042,7 @@ public final class Config
 	public static boolean BANKING_SYSTEM_ENABLED;
 	public static int BANKING_SYSTEM_GOLDBARS;
 	public static int BANKING_SYSTEM_ADENA;
-	public static boolean ENABLE_NPC_STAT_MULTIPIERS;
+	public static boolean ENABLE_NPC_STAT_MULTIPLIERS;
 	public static double MONSTER_HP_MULTIPLIER;
 	public static double MONSTER_MP_MULTIPLIER;
 	public static double MONSTER_PATK_MULTIPLIER;
@@ -2472,9 +2472,9 @@ public final class Config
 			BANKING_SYSTEM_ADENA = Banking.getInt("BankingAdenaCount", 500000000);
 			
 			// Load BoostNpcStats config file (if exists)
-			final PropertiesParser BoostNpcStats = new PropertiesParser(CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE);
+			final PropertiesParser BoostNpcStats = new PropertiesParser(CUSTOM_NPC_STAT_MULTIPLIERS_CONFIG_FILE);
 			
-			ENABLE_NPC_STAT_MULTIPIERS = BoostNpcStats.getBoolean("EnableNpcStatMultipliers", false);
+			ENABLE_NPC_STAT_MULTIPLIERS = BoostNpcStats.getBoolean("EnableNpcStatMultipliers", false);
 			MONSTER_HP_MULTIPLIER = BoostNpcStats.getDouble("MonsterHP", 1.0);
 			MONSTER_MP_MULTIPLIER = BoostNpcStats.getDouble("MonsterMP", 1.0);
 			MONSTER_PATK_MULTIPLIER = BoostNpcStats.getDouble("MonsterPAtk", 1.0);
@@ -2542,11 +2542,11 @@ public final class Config
 			// Load ClassBalance config file (if exists)
 			final PropertiesParser ClassBalance = new PropertiesParser(CUSTOM_CLASS_BALANCE_CONFIG_FILE);
 			
-			final String[] pveMagicalSkillDamageMultipiers = ClassBalance.getString("PveMagicalSkillDamageMultipiers", "").trim().split(";");
+			final String[] pveMagicalSkillDamageMultipliers = ClassBalance.getString("PveMagicalSkillDamageMultipliers", "").trim().split(";");
 			PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.clear();
-			if (pveMagicalSkillDamageMultipiers.length > 0)
+			if (pveMagicalSkillDamageMultipliers.length > 0)
 			{
-				for (String info : pveMagicalSkillDamageMultipiers)
+				for (String info : pveMagicalSkillDamageMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2555,11 +2555,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvpMagicalSkillDamageMultipiers = ClassBalance.getString("PvpMagicalSkillDamageMultipiers", "").trim().split(";");
+			final String[] pvpMagicalSkillDamageMultipliers = ClassBalance.getString("PvpMagicalSkillDamageMultipliers", "").trim().split(";");
 			PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.clear();
-			if (pvpMagicalSkillDamageMultipiers.length > 0)
+			if (pvpMagicalSkillDamageMultipliers.length > 0)
 			{
-				for (String info : pvpMagicalSkillDamageMultipiers)
+				for (String info : pvpMagicalSkillDamageMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2568,11 +2568,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pveMagicalSkillDefenceMultipiers = ClassBalance.getString("PveMagicalSkillDefenceMultipiers", "").trim().split(";");
+			final String[] pveMagicalSkillDefenceMultipliers = ClassBalance.getString("PveMagicalSkillDefenceMultipliers", "").trim().split(";");
 			PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.clear();
-			if (pveMagicalSkillDefenceMultipiers.length > 0)
+			if (pveMagicalSkillDefenceMultipliers.length > 0)
 			{
-				for (String info : pveMagicalSkillDefenceMultipiers)
+				for (String info : pveMagicalSkillDefenceMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2581,11 +2581,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvpMagicalSkillDefenceMultipiers = ClassBalance.getString("PvpMagicalSkillDefenceMultipiers", "").trim().split(";");
+			final String[] pvpMagicalSkillDefenceMultipliers = ClassBalance.getString("PvpMagicalSkillDefenceMultipliers", "").trim().split(";");
 			PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.clear();
-			if (pvpMagicalSkillDefenceMultipiers.length > 0)
+			if (pvpMagicalSkillDefenceMultipliers.length > 0)
 			{
-				for (String info : pvpMagicalSkillDefenceMultipiers)
+				for (String info : pvpMagicalSkillDefenceMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2594,11 +2594,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvePhysicalSkillDamageMultipiers = ClassBalance.getString("PvePhysicalSkillDamageMultipiers", "").trim().split(";");
+			final String[] pvePhysicalSkillDamageMultipliers = ClassBalance.getString("PvePhysicalSkillDamageMultipliers", "").trim().split(";");
 			PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.clear();
-			if (pvePhysicalSkillDamageMultipiers.length > 0)
+			if (pvePhysicalSkillDamageMultipliers.length > 0)
 			{
-				for (String info : pvePhysicalSkillDamageMultipiers)
+				for (String info : pvePhysicalSkillDamageMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2607,11 +2607,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvpPhysicalSkillDamageMultipiers = ClassBalance.getString("PvpPhysicalSkillDamageMultipiers", "").trim().split(";");
+			final String[] pvpPhysicalSkillDamageMultipliers = ClassBalance.getString("PvpPhysicalSkillDamageMultipliers", "").trim().split(";");
 			PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.clear();
-			if (pvpPhysicalSkillDamageMultipiers.length > 0)
+			if (pvpPhysicalSkillDamageMultipliers.length > 0)
 			{
-				for (String info : pvpPhysicalSkillDamageMultipiers)
+				for (String info : pvpPhysicalSkillDamageMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2620,11 +2620,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvePhysicalSkillDefenceMultipiers = ClassBalance.getString("PvePhysicalSkillDefenceMultipiers", "").trim().split(";");
+			final String[] pvePhysicalSkillDefenceMultipliers = ClassBalance.getString("PvePhysicalSkillDefenceMultipliers", "").trim().split(";");
 			PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.clear();
-			if (pvePhysicalSkillDefenceMultipiers.length > 0)
+			if (pvePhysicalSkillDefenceMultipliers.length > 0)
 			{
-				for (String info : pvePhysicalSkillDefenceMultipiers)
+				for (String info : pvePhysicalSkillDefenceMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2633,11 +2633,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvpPhysicalSkillDefenceMultipiers = ClassBalance.getString("PvpPhysicalSkillDefenceMultipiers", "").trim().split(";");
+			final String[] pvpPhysicalSkillDefenceMultipliers = ClassBalance.getString("PvpPhysicalSkillDefenceMultipliers", "").trim().split(";");
 			PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.clear();
-			if (pvpPhysicalSkillDefenceMultipiers.length > 0)
+			if (pvpPhysicalSkillDefenceMultipliers.length > 0)
 			{
-				for (String info : pvpPhysicalSkillDefenceMultipiers)
+				for (String info : pvpPhysicalSkillDefenceMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2646,11 +2646,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvePhysicalAttackDamageMultipiers = ClassBalance.getString("PvePhysicalAttackDamageMultipiers", "").trim().split(";");
+			final String[] pvePhysicalAttackDamageMultipliers = ClassBalance.getString("PvePhysicalAttackDamageMultipliers", "").trim().split(";");
 			PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.clear();
-			if (pvePhysicalAttackDamageMultipiers.length > 0)
+			if (pvePhysicalAttackDamageMultipliers.length > 0)
 			{
-				for (String info : pvePhysicalAttackDamageMultipiers)
+				for (String info : pvePhysicalAttackDamageMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2659,11 +2659,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvpPhysicalAttackDamageMultipiers = ClassBalance.getString("PvpPhysicalAttackDamageMultipiers", "").trim().split(";");
+			final String[] pvpPhysicalAttackDamageMultipliers = ClassBalance.getString("PvpPhysicalAttackDamageMultipliers", "").trim().split(";");
 			PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.clear();
-			if (pvpPhysicalAttackDamageMultipiers.length > 0)
+			if (pvpPhysicalAttackDamageMultipliers.length > 0)
 			{
-				for (String info : pvpPhysicalAttackDamageMultipiers)
+				for (String info : pvpPhysicalAttackDamageMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2672,11 +2672,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvePhysicalAttackDefenceMultipiers = ClassBalance.getString("PvePhysicalAttackDefenceMultipiers", "").trim().split(";");
+			final String[] pvePhysicalAttackDefenceMultipliers = ClassBalance.getString("PvePhysicalAttackDefenceMultipliers", "").trim().split(";");
 			PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.clear();
-			if (pvePhysicalAttackDefenceMultipiers.length > 0)
+			if (pvePhysicalAttackDefenceMultipliers.length > 0)
 			{
-				for (String info : pvePhysicalAttackDefenceMultipiers)
+				for (String info : pvePhysicalAttackDefenceMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
@@ -2685,11 +2685,11 @@ public final class Config
 					}
 				}
 			}
-			final String[] pvpPhysicalAttackDefenceMultipiers = ClassBalance.getString("PvpPhysicalAttackDefenceMultipiers", "").trim().split(";");
+			final String[] pvpPhysicalAttackDefenceMultipliers = ClassBalance.getString("PvpPhysicalAttackDefenceMultipliers", "").trim().split(";");
 			PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.clear();
-			if (pvpPhysicalAttackDefenceMultipiers.length > 0)
+			if (pvpPhysicalAttackDefenceMultipliers.length > 0)
 			{
-				for (String info : pvpPhysicalAttackDefenceMultipiers)
+				for (String info : pvpPhysicalAttackDefenceMultipliers)
 				{
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
