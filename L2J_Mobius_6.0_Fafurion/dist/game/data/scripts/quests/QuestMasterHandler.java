@@ -410,6 +410,7 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -964,7 +965,7 @@ public class QuestMasterHandler
 		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
 		Q10849_TrialsForAdaptation.class, // TODO: Not done.
-		Q10851_ElvenBotany.class, // TODO: Not done.
+		Q10851_ElvenBotany.class,
 		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.

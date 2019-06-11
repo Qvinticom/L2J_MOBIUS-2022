@@ -458,6 +458,7 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00744_TheAlligatorHunterReturns;
@@ -520,7 +521,6 @@ import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
 import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
 import quests.not_done.Q10849_TrialsForAdaptation;
-import quests.not_done.Q10851_ElvenBotany;
 import quests.not_done.Q10852_TheMotherTreeRevivalProject;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
@@ -1039,7 +1039,7 @@ public class QuestMasterHandler
 		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
 		Q10849_TrialsForAdaptation.class, // TODO: Not done.
-		Q10851_ElvenBotany.class, // TODO: Not done.
+		Q10851_ElvenBotany.class,
 		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
