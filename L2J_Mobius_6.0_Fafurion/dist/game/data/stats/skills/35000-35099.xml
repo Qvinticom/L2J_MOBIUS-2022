@@ -143,7 +143,21 @@
 	<skill id="35029" toLevel="1" name="Freya's Dark Rune">
 		<!-- PvP Damage +$s1. -->
 		<icon>icon.bm_freya_dark_rune</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35030" toLevel="1" name="Freya's CHA Potion">
 		<!-- Changes the appearance to that of Teddy Bear and increases CHA +$s2 for $s1. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown of 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
@@ -344,17 +358,42 @@
 			<value level="1">icon.agathion_base</value>
 			<value level="2">icon.lbracelet_agathion_charm</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35070" toLevel="4" name="Expand Secondary Agathion Slot">
 		<!-- Unlocks $s1 secondary Agathion slots. -->
 		<icon>icon.agathion_base</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35071" toLevel="4" name="Expand Primary and Secondary Agathion Slots">
 		<!-- Unlocks the primary Agathion slot and expands secondary Agathion slots to $s1. -->
 		<icon>icon.agathion_base</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35072" toLevel="1" name="Zodiac Agathion Book of Growth">
 		<icon>icon.star_scrl_of_ench_ag</icon>
@@ -384,47 +423,345 @@
 	<skill id="35078" toLevel="1" name="Elementary Seed Bracelet">
 		<!-- Activates the primary Agathion slot. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35079" toLevel="1" name="Intermediate Seed Bracelet">
 		<!-- Activates the primary Agathion slot and increases STR/ DEX/ CON/ INT/ WIT/ MEN +$s1. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35080" toLevel="1" name="Advanced Seed Bracelet">
 		<!-- Activates the primary Agathion slot and STR/ DEX/ CON/ INT/ WIT/ MEN +$s1 and all Attribute Resistance +$s2. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35081" toLevel="1" name="Top-grade Seed Bracelet">
 		<!-- Activates the primary Agathion slot, STR/ DEX/ CON/ INT/ WIT/ MEN +$s1, Attack Attribute +$s2, and all Attribute Resistance +$s3. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35082" toLevel="4" name="Super Advanced Seed Bracelet - Stage 1">
 		<!-- Activates the primary Agathion slot and adds $s1 secondary slots. Also increases Vitality bonus +$s2, all basic stats +$s3, Attack Attribute +$s4, and all Attribute Resistance +$s5. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
 		<operateType>A1</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</amount>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35083" toLevel="1" name="Seed Teleport: Town of Aden">
 		<!-- Teleports you to the Town of Aden. -->
 		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>147450</x>
+				<y>27064</y>
+				<z>-2208</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35084" toLevel="1" name="Seed Teleport: Town of Rune">
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>44070</x>
+				<y>-50243</y>
+				<z>-791</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35085" toLevel="1" name="Seed Teleport: Town of Giran">
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82698</x>
+				<y>148638</y>
+				<z>-3468</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35086" toLevel="1" name="Seed Teleport: Heine">
 		<!-- Teleports you to Heine. -->
 		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1800000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>111115</x>
+				<y>219017</y>
+				<z>-3542</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35087" toLevel="1" name="Agathion's Trick">
 		<!-- Watch the Agathion's trick. -->

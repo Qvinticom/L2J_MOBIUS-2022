@@ -622,30 +622,58 @@
 	<item id="24337" name="Starlight Jar Pouch" type="EtcItem">
 		<!-- Double-click to acquire a Starlight Jar. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24139" min="1" max="1" chance="100" /> <!-- Starlight Jar -->
+		</capsuled_items>
 	</item>
 	<item id="24338" name="Starlight Jar Pack" type="EtcItem">
 		<!-- Double-click to acquire 10 Starlight Jar Pouches. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24337" min="10" max="10" chance="100" /> <!-- Starlight Jar -->
+		</capsuled_items>
 	</item>
 	<item id="24339" name="Starlight Jar Pouch" type="EtcItem">
 		<!-- Double-click to acquire a Starlight Jar. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24139" min="1" max="1" chance="100" /> <!-- Starlight Jar -->
+		</capsuled_items>
 	</item>
 	<item id="24340" name="Starlight Jar Pack" type="EtcItem">
 		<!-- Double-click to acquire 10 Starlight Jar Pouches. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="24337" min="10" max="10" chance="100" /> <!-- Starlight Jar -->
+		</capsuled_items>
 	</item>
 	<item id="24341" name="Blessed Giant's Lucky Enchant Stone: Weapon Pack (R-grade)" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Giant's Lucky Enchant Stone: Weapon (R-grade). -->

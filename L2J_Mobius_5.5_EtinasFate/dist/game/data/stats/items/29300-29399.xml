@@ -1608,28 +1608,4 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29397" name="Ancient Relic" type="EtcItem">
-		<!-- Double-click to obtain an Ancient Relic Box or Shining Ancient Relic Box at a certain rate. Additionally, there is a chance to obtain Artifact Fragment. -->
-		<set name="icon" val="icon.bm_dragon_present_poket" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="29398" name="Ancient Relic Box" type="EtcItem">
-		<!-- Double-click to obtain one of the following items at a certain rate: Sayha's Talisman Stage 7/ Stage 8 Pack, Noble Knight's/ Wizard's/ Warrior's Circlet, Kaliel's Energy Longing, Ultimate Lv. 3/ Lv. 4 Jewelry Box, Noble Circlet Upgrade Stone, Dimensional Bracelet Stage 6 Pack CHA +5/ Basic, Freya's Bloody/ Dark Rune (30-day) Pack, Starlight Jar, Low-grade Zodiac Agathion Pack, Dark/ Bloody Eternal Enhancement Stone, Lv. 5 Legendary CHA Dye Pack, Lv. 5 Legendary Dye Pack Event, Top-grade Spirit Stone, Giant's Scroll: Enchant Weapon (R-grade), Dimensional Bracelet Enhancement Stone Pack, Superior Giant's Codex - Chapter 1, Pa'agrio's Blessing EXP/ Might, Freya's Art of Seduction EXP/ Barrier, Energy of Destruction 20-unit Pack, Giant's Energy 3-unit Pack, Giant's Scroll: Enchant Armor (R-grade), Freya's CHA Potion, Scroll: Enchant Armor x2/ Weapon x1 Pack (R-grade), Blessed Lucky Enchant Stone: Armor x2/ Weapon x1 Pack (R-grade), Bottle Fragment of Antharas' x4/ Valakas' Soul x5, Gemstone (R-grade) x10. -->
-		<set name="icon" val="icon.bm_dragon_present_3" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="29399" name="Shining Ancient Relic Box" type="EtcItem">
-		<!-- Double-click to obtain one of the following items at a certain rate: Ultimate Lv. 4/ Lv. 5 Jewelry Box, Lindvior's Earring, Blessed Valakas' Necklace, Blessed Antharas' Earring, Mystic Soul Crystal, Sealed Talisman - Insanity/ Longing, Red Starlight Jar, Ancient Zodiac Agathion Charm Book of Growth, Mystic Soul Crystal Fragment, Life Stone Instilled with Giants' Power, Royal White Save Card (R99-grade), Lesser Giant's Lucky Enchant Stone: Weapon/ Armor Pack (R-grade), Scroll of Blessing: (R99-grade), Freya's Rune (30-day) Box, Apparition Stone (All-purpose), Life Stone Instilled with Giants' Power, Giant's Energy 100-unit Pack, Superior Giant's Codex - Mastery x2/ Mastery Chapter 1, Source of the Emperor, Eva's Rune (3-day) Pack (Event), Pa'agrio's Blessing Might x5, Freya's Art of Seduction Barrier x5. -->
-		<set name="icon" val="icon.bm_dragon_present_4" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
 </list>

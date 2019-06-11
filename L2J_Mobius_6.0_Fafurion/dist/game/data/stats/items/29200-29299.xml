@@ -354,7 +354,7 @@
 		<!-- A charm that can summon Babayaga Agathion. -->
 		<set name="icon" val="BranchIcon.icon.br_babayaga_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -367,7 +367,7 @@
 		<!-- A charm that can summon Minion Eye Agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -380,7 +380,7 @@
 		<!-- A charm that can summon Minion Eye Agathion. Minion Eye's Encouragement effect (CON +3, MEN +3, increases weight gauge by 10000, maximum HP/ MP/ CP by 300, and decreases cooldown delay by 3%, Skill MP Consumption by 3%.). Skill used: Minion Eye Blessed Resurrection -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -394,7 +394,7 @@
 		<!-- A charm that can summon Minion Eye Agathion. Minion Eye's Encouragement effect (CON +3, MEN +3, increases weight gauge by 10000, maximum HP/ MP/ CP by 300, and decreases cooldown delay by 3%, Skill MP Consumption by 3%.). Skill used: Minion Eye Blessed Resurrection -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -408,7 +408,7 @@
 		<!-- A charm that can summon Matryoshka Agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -421,7 +421,7 @@
 		<!-- A charm that can summon Matryoshka Agathion. Skill used: Talking Island Village, Aden Castle Town, Ancient City Arcan, Xerces Alliance Base Teleport. Matryoshka's Gift - You can receive a special gift from Matryoshka every 12 hours,. Matryoshka's Blessing - Increases Acquired XP/ SP by 30% for 60 min. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -435,7 +435,7 @@
 		<!-- A charm that can summon Matryoshka Agathion. Skill used: Talking Island Village, Aden Castle Town, Ancient City Arcan, Xerces Alliance Base Teleport. Matryoshka's Gift - You can receive a special gift from Matryoshka every 12 hours,. Matryoshka's Blessing - Increases Acquired XP/ SP by 30% for 60 min. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -853,7 +853,7 @@
 		<!-- A charm that activates the power of the Meliodas Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Meliodas Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -866,7 +866,7 @@
 		<!-- A charm that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Elizabeth Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -879,7 +879,7 @@
 		<!-- A charm that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Hawk Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -892,7 +892,7 @@
 		<!-- A charm that activates the power of the Ban Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Ban Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -905,7 +905,7 @@
 		<!-- A charm that activates the power of the Diane Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Diane Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -918,7 +918,7 @@
 		<!-- A charm that activates the power of the King Agathion.. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. King Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -931,7 +931,7 @@
 		<!-- A charm that activates the power of the Merlin Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Merlin Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -944,7 +944,7 @@
 		<!-- A charm that activates the power of the Gowther Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Gowther Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -957,7 +957,7 @@
 		<!-- A charm that activates the power of the Escanor Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Escanor Agathion +7 to upgrade to Stage 2. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -970,7 +970,7 @@
 		<!-- A charm that activates the power of the Meliodas Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Meliodas Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -983,7 +983,7 @@
 		<!-- A charm that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Elizabeth Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -996,7 +996,7 @@
 		<!-- A charm that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Hawk Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1009,7 +1009,7 @@
 		<!-- A charm that activates the power of the Ban Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Ban Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1022,7 +1022,7 @@
 		<!-- A charm that activates the power of the Diane Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. DianeAgathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1035,7 +1035,7 @@
 		<!-- A charm that activates the power of the King Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. King Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1048,7 +1048,7 @@
 		<!-- A charm that activates the power of the Merlin Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Merlin Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1061,7 +1061,7 @@
 		<!-- A charm that activates the power of the Gowther Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Gowther Agathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1074,7 +1074,7 @@
 		<!-- A charm that activates the power of the Escanor Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. EscanorAgathion +7 to upgrade to Stage 3. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1087,7 +1087,7 @@
 		<!-- A charm that activates the power of the Meliodas Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1097,7 +1097,7 @@
 		<!-- A charm that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1107,7 +1107,7 @@
 		<!-- A charm that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1117,7 +1117,7 @@
 		<!-- A charm that activates the power of the Ban Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1127,7 +1127,7 @@
 		<!-- A charm that activates the power of the Diane Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1137,7 +1137,7 @@
 		<!-- A charm that activates the power of the King Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />

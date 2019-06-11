@@ -34,26 +34,76 @@
 		<!-- Summons the Virgo Agathion- Virg. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13410</npcId> <!-- Virgo -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28107" toLevel="1" name="Summon Capricorn Agathion">
 		<!-- Summons the Capricorn Agathion- Capri. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13412</npcId> <!-- Capricorn -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28108" toLevel="1" name="Summon Libra Agathion">
 		<!-- Summons the Libra Agathion- Libb. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13415</npcId> <!-- Libra -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28109" toLevel="1" name="Summon Aries Agathion">
 		<!-- Summons the Aries Agathion- Arie. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13411</npcId> <!-- Aries -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28110" toLevel="1" name="Summon Taurus Agathion">
 		<!-- Summons the Taurus Agathion- Tau. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13418</npcId> <!-- Taurus -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28111" toLevel="1" name="Summon Leo Agathion">
 		<!-- Summons the Leo Agathion- Leo. -->
@@ -94,26 +144,76 @@
 		<!-- Summons the Virgo Agathion- Virg. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13410</npcId> <!-- Virgo -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28119" toLevel="1" name="Summon Capricorn Agathion">
 		<!-- Summons the Capricorn Agathion- Capri. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13412</npcId> <!-- Capricorn -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28120" toLevel="1" name="Summon Libra Agathion">
 		<!-- Summons the Libra Agathion- Libb. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13415</npcId> <!-- Libra -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28121" toLevel="1" name="Summon Aries Agathion">
 		<!-- Summons the Aries Agathion- Arie. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13411</npcId> <!-- Aries -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28122" toLevel="1" name="Summon Taurus Agathion">
 		<!-- Summons the Taurus Agathion- Tau. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13418</npcId> <!-- Taurus -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28123" toLevel="1" name="Summon Leo Agathion">
 		<!-- Summons the Leo Agathion- Leo. -->
@@ -154,26 +254,76 @@
 		<!-- Summons the Virgo Agathion- Virg. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13410</npcId> <!-- Virgo -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28131" toLevel="1" name="Summon Capricorn Agathion">
 		<!-- Summons the Capricorn Agathion- Capri. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13412</npcId> <!-- Capricorn -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28132" toLevel="1" name="Summon Libra Agathion">
 		<!-- Summons the Libra Agathion- Libb. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13415</npcId> <!-- Libra -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28133" toLevel="1" name="Summon Aries Agathion">
 		<!-- Summons the Aries Agathion- Arie. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13411</npcId> <!-- Aries -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28134" toLevel="1" name="Summon Taurus Agathion">
 		<!-- Summons the Taurus Agathion- Tau. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13418</npcId> <!-- Taurus -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28135" toLevel="1" name="Summon Leo Agathion">
 		<!-- Summons the Leo Agathion- Leo. -->

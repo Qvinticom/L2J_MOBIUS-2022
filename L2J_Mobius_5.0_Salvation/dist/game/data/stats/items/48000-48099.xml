@@ -67,7 +67,7 @@
 		<!-- A Bracelet of Challenger. When equipped, it increases basic stats by 1 and activates 5 talisman slots. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -324,16 +324,20 @@
 	<item id="48032" name="Sayha Talisman Stage 8 Treasure Chest" type="EtcItem">
 		<!-- Use to obtain a Sayha Talisman Stage 8. The Sayha Talisman Stage 6 obtained can only be shared within the account through a Dimensional Merchant, and cannot be exchanged. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28444" min="1" max="1" chance="100" /> <!-- Sayha Talisman Stage 8 -->
+		</capsuled_items>
 	</item>
 	<item id="48033" name="Test - Agathion Items" type="Armor">
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -342,7 +346,7 @@
 	<item id="48034" name="Test - Bracelet Main 1 Slot" type="Armor">
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -351,7 +355,7 @@
 	<item id="48035" name="Test - Bracelet Main 1 Slot, Subclass 1 Slot" type="Armor">
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -360,7 +364,7 @@
 	<item id="48036" name="Test - Bracelet Main 1 Slot, Subclass 2 Slot" type="Armor">
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -369,7 +373,7 @@
 	<item id="48037" name="Test - Bracelet Main 1 Slot, Subclass 3 Slot" type="Armor">
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -378,7 +382,7 @@
 	<item id="48038" name="Test - Bracelet Main 1 Slot, Subclass 4 Slot" type="Armor">
 		<set name="icon" val="BranchIcon.accessary_lbracelet_sign_agathion_sep_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -451,7 +455,7 @@
 		<!-- A charm that activates the power of the Virgo Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -461,7 +465,7 @@
 		<!-- A charm that activates the power of the Capricorn Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -471,7 +475,7 @@
 		<!-- A charm that activates the power of the Libra Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -481,7 +485,7 @@
 		<!-- A charm that activates the power of the Aries Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -491,7 +495,7 @@
 		<!-- A charm that activates the power of the Taurus Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -501,7 +505,7 @@
 		<!-- A charm that activates the power of the Leo Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -511,7 +515,7 @@
 		<!-- A charm that activates the power of the Gemini Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -521,7 +525,7 @@
 		<!-- A charm that activates the power of the Scorpio Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -531,7 +535,7 @@
 		<!-- A charm that activates the power of the Aquarius Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -541,7 +545,7 @@
 		<!-- A charm that activates the power of the Pisces Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -551,7 +555,7 @@
 		<!-- A charm that activates the power of the Sagittarius Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -561,7 +565,7 @@
 		<!-- A charm that activates the power of the Cancer Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Equipping in the side slot only activates the Unique Ability. Agathion charms can be exchanged for Books of Growth through the Fishing Guild Member. -->
 		<set name="icon" val="icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -571,51 +575,90 @@
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min) -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48061" name="Intermediate Seed Bracelet" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48062" name="High-grade Seed Bracelet" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute defenses +30. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48063" name="Top-grade Seed Bracelet" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack and defenses +30. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35069" level="1" /> <!-- Expand Primary Agathion Slot -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48064" name="Super Advanced Seed Bracelet" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack +50 and resistances +30. 3. XP gained when Vitality is active +5%. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35071" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48065" name="Zodiac Cube Fragment" type="EtcItem">
 		<!-- Mysterious fragment filled with the power of stars, obtainable from some Fishing Treasure Chests or by hunting. Can be exchanged for Zodiac Agathion Cubes through the Fishing Guild Member in every town. -->
@@ -637,12 +680,16 @@
 	<item id="48067" name="Elementary Seed Bracelet Treasure Chest" type="EtcItem">
 		<!-- Open to obtain an Elementary Seed Bracelet. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48060" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="48068" name="Intermediate Seed Bracelet Treasure Chest" type="EtcItem">
 		<!-- Open to obtain an Intermediate Seed Bracelet. -->
@@ -653,6 +700,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48061" min="1" max="1" chance="100" /> <!-- Intermediate Seed Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="48069" name="High-grade Seed Bracelet Treasure Chest" type="EtcItem">
 		<!-- Open to obtain a High-grade Seed Bracelet. -->
@@ -663,6 +714,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48062" min="1" max="1" chance="100" /> <!-- High-grade Seed Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="48070" name="Top-grade Seed Bracelet Treasure Chest" type="EtcItem">
 		<!-- Open to obtain a Top-grade Seed Bracelet. -->
@@ -673,6 +728,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48063" min="1" max="1" chance="100" /> <!-- Top-grade Seed Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="48071" name="Super Advanced Seed Bracelet Treasure Chest" type="EtcItem">
 		<!-- Open to obtain a Super Advanced Seed Bracelet. -->
@@ -683,12 +742,16 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48064" min="1" max="1" chance="100" /> <!-- Super Advanced Seed Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="48072" name="Elementary Seed Bracelet" additionalName="15-day" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min) -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -697,12 +760,19 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="35078" level="1" /> <!-- Elementary Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48073" name="Intermediate Seed Bracelet" additionalName="15-day" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -711,12 +781,19 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="35079" level="1" /> <!-- Intermediate Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48074" name="High-grade Seed Bracelet" additionalName="30-day" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute defenses +30. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -725,12 +802,19 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="35080" level="1" /> <!-- Advanced Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48075" name="Top-grade Seed Bracelet" additionalName="30-day" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack and defenses +30. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -739,12 +823,19 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="35081" level="1" /> <!-- Top-grade Seed Bracelet -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48076" name="Super Advanced Seed Bracelet" additionalName="30-day" type="Armor">
 		<!-- Activates one main Agathion slot when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack +50 and resistances +30. 3. XP gained when Vitality is active +5%. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -753,50 +844,69 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="35082" level="1" /> <!-- Super Advanced Seed Bracelet - Stage 1 -->
+			<skill id="35083" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="35086" level="1" /> <!-- Agathion Teleport: Heine -->
+		</skills>
 	</item>
 	<item id="48077" name="Elementary Seed Bracelet Treasure Chest" additionalName="15-day" type="EtcItem">
 		<!-- Use to obtain an Elementary Seed Bracelet (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48072" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet (15-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48078" name="Intermediate Seed Bracelet Treasure Chest" additionalName="15-day" type="EtcItem">
 		<!-- Use to obtain an Intermediate Seed Bracelet (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="21600" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48073" min="1" max="1" chance="100" /> <!-- Intermediate Seed Bracelet (15-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48079" name="High-grade Seed Bracelet Treasure Chest" additionalName="30-day" type="EtcItem">
 		<!-- Use to obtain a High-grade Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48074" min="1" max="1" chance="100" /> <!-- High-grade Seed Bracelet (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48080" name="Top-grade Seed Bracelet Treasure Chest" additionalName="30-day" type="EtcItem">
 		<!-- Use to obtain a Top-grade Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48075" min="1" max="1" chance="100" /> <!-- Top-grade Seed Bracelet (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48081" name="Super Advanced Seed Bracelet Treasure Chest" additionalName="30-day" type="EtcItem">
 		<!-- Use to obtain a Super Advanced Seed Bracelet (30-day). -->
@@ -807,13 +917,16 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48076" min="1" max="1" chance="100" /> <!-- Super Advanced Seed Bracelet (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="48082" name="Agathion Charm - Rainbow Clan Hall" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Rainbow Clan Hall. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -822,12 +935,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player clanHall="62" />
+		</cond>
 	</item>
 	<item id="48083" name="Agathion Charm - Wild Beast Reserve" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Wild Beast Reserve. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -836,12 +952,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player clanHall="63" />
+		</cond>
 	</item>
 	<item id="48084" name="Agathion Charm - Gludio" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Gludio Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -850,12 +969,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{1}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="1" />
+			</and>
+		</cond>
 	</item>
 	<item id="48085" name="Agathion Charm - Dion" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Dion Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -864,12 +989,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{2}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="2" />
+			</and>
+		</cond>
 	</item>
 	<item id="48086" name="Agathion Charm - Giran" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Giran Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -878,12 +1009,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{3}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="3" />
+			</and>
+		</cond>
 	</item>
 	<item id="48087" name="Agathion Charm - Oren" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Oren Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -892,12 +1029,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{4}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="4" />
+			</and>
+		</cond>
 	</item>
 	<item id="48088" name="Agathion Charm - Aden" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Aden Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -906,12 +1049,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{5}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="5" />
+			</and>
+		</cond>
 	</item>
 	<item id="48089" name="Agathion Charm - Innadril" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Innadril Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -920,12 +1069,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{6}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="6" />
+			</and>
+		</cond>
 	</item>
 	<item id="48090" name="Agathion Charm - Goddard" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Innadril Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -934,12 +1089,18 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{7}}}" />
+		<cond msgId="1518">
+			<and>
+				<player castle="7" />
+			</and>
+		</cond>
 	</item>
 	<item id="48091" name="Agathion Charm - Rune" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Rune Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -948,12 +1109,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{8}}}" />
+		<cond msgId="1518">
+			<player castle="8" />
+		</cond>
 	</item>
 	<item id="48092" name="Agathion Charm - Schuttgart" type="Armor">
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns the Schuttgart Castle. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -962,12 +1127,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{9}}}" />
+		<cond msgId="1518">
+			<player castle="9" />
+		</cond>
 	</item>
 	<item id="48093" name="Agathion Charm" type="Armor">
 		<!-- Charm that summons a cute Fortress Agathion. It is a Shadow Item that lasts for 700 min. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -980,7 +1149,7 @@
 		<!-- Charm that can summon an Agathion. Wearable only by members of a clan that owns a fortress. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -988,12 +1157,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_condition" val="{{ec_fortress;1}}" />
+		<cond msgId="1518">
+			<player fort="-1" />
+		</cond>
 	</item>
 	<item id="48095" name="Agathion Charm" type="Armor">
 		<!-- Charm that summons a cute Rainbow Agathion. It is a Shadow Item that lasts for 700 min. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1006,7 +1179,7 @@
 		<!-- Charm that summons a cute Little Angel Agathion. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1019,7 +1192,7 @@
 		<!-- Charm that summons a cute Little Angel Agathion. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1032,7 +1205,7 @@
 		<!-- Charm that summons a cute Little Angel Agathion. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1045,7 +1218,7 @@
 		<!-- Charm that summons a cute Little Angel Agathion. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
