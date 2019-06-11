@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.stats;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author UnAfraid, NosBit
  */
@@ -88,6 +91,33 @@ public enum TraitType
 	SPIRIT_WEAKNESS(2);
 	
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
+	private final static List<TraitType> _weaknesses = new ArrayList<>();
+	static
+	{
+		_weaknesses.add(BUG_WEAKNESS);
+		_weaknesses.add(ANIMAL_WEAKNESS);
+		_weaknesses.add(PLANT_WEAKNESS);
+		_weaknesses.add(BEAST_WEAKNESS);
+		_weaknesses.add(DRAGON_WEAKNESS);
+		_weaknesses.add(GIANT_WEAKNESS);
+		_weaknesses.add(CONSTRUCT_WEAKNESS);
+		_weaknesses.add(VALAKAS);
+		_weaknesses.add(ANESTHESIA);
+		_weaknesses.add(DEMONIC_WEAKNESS);
+		_weaknesses.add(DIVINE_WEAKNESS);
+		_weaknesses.add(ELEMENTAL_WEAKNESS);
+		_weaknesses.add(FAIRY_WEAKNESS);
+		_weaknesses.add(HUMAN_WEAKNESS);
+		_weaknesses.add(HUMANOID_WEAKNESS);
+		_weaknesses.add(UNDEAD_WEAKNESS);
+		_weaknesses.add(EMBRYO_WEAKNESS);
+		_weaknesses.add(SPIRIT_WEAKNESS);
+	}
+	
+	public static List<TraitType> getAllWeakness()
+	{
+		return _weaknesses;
+	}
 	
 	TraitType(int type)
 	{

@@ -141,6 +141,7 @@ public final class PhysicalAttack extends AbstractEffect
 			// Trait, elements
 			final double weaponTraitMod = Formulas.calcWeaponTraitBonus(effector, effected);
 			final double generalTraitMod = Formulas.calcGeneralTraitBonus(effector, effected, skill.getTraitType(), true);
+			final double weaknessMod = Formulas.calcWeaknessBonus(effector, effected, skill.getTraitType());
 			final double attributeMod = Formulas.calcAttributeBonus(effector, effected, skill);
 			final double pvpPveMod = Formulas.calculatePvpPveBonus(effector, effected, skill, true);
 			final double randomMod = effector.getRandomDamageMultiplier();
@@ -168,7 +169,7 @@ public final class PhysicalAttack extends AbstractEffect
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef
 			// ```````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^``````````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 			final double baseMod = (weaponMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
-			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
+			damage = baseMod * abnormalMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * pvpPveMod * randomMod;
 			damage *= effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, 1);
 		}
 		

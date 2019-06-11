@@ -94,14 +94,15 @@ public final class Formulas
 		}
 		
 		// Critical
-		final double criticalMod = (attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1));
+		final double criticalMod = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1);
 		final double criticalPositionMod = attacker.getStat().getPositionTypeValue(Stats.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
-		final double criticalVulnMod = (target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE, 1));
-		final double criticalAddMod = (attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_ADD, 0));
+		final double criticalVulnMod = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE, 1);
+		final double criticalAddMod = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_ADD, 0);
 		final double criticalAddVuln = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
 		// Trait, elements
 		final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
 		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
+		final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTraitType());
 		final double attributeMod = calcAttributeBonus(attacker, target, skill);
 		final double randomMod = attacker.getRandomDamageMultiplier();
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
@@ -122,8 +123,8 @@ public final class Formulas
 		// ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
 		// ATTACK CALCULATION 77 * [(skillpower+patk) * 0.666 * cdbonus * cdPosBonusHalf * cdVulnHalf * ss + isBack0.2Side0.05 * (skillpower+patk*ss) * random + 6 * cd_patk] / pdef
 		// ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
-		final double baseMod = ((77 * (((power + attacker.getPAtk()) * 0.666) + (isPosition * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence);
-		final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
+		final double baseMod = (77 * (((power + attacker.getPAtk()) * 0.666) + (isPosition * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence;
+		final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
 		
 		return damage;
 	}
@@ -136,6 +137,7 @@ public final class Formulas
 		
 		// Trait, elements
 		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
+		final double weaknessMod = calcWeaknessBonus(attacker, target, skill.getTraitType());
 		final double attributeMod = calcAttributeBonus(attacker, target, skill);
 		final double randomMod = attacker.getRandomDamageMultiplier();
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
@@ -178,7 +180,7 @@ public final class Formulas
 			}
 		}
 		
-		damage = damage * critMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
+		damage = damage * critMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
 		damage *= attacker.getStat().getValue(Stats.MAGICAL_SKILL_POWER, 1);
 		
 		return damage;
@@ -1270,8 +1272,20 @@ public final class Formulas
 			}
 		}
 		
-		final double result = (attacker.getStat().getAttackTrait(traitType) - target.getStat().getDefenceTrait(traitType)) + 1.0;
-		return CommonUtil.constrain(result, 0.05, 2.0);
+		return Math.max(attacker.getStat().getAttackTrait(traitType) - target.getStat().getDefenceTrait(traitType), 0.05);
+	}
+	
+	public static double calcWeaknessBonus(Creature attacker, Creature target, TraitType traitType)
+	{
+		double result = 1;
+		for (TraitType trait : TraitType.getAllWeakness())
+		{
+			if ((traitType != trait) && target.getStat().hasDefenceTrait(trait) && attacker.getStat().hasAttackTrait(trait) && !target.getStat().isInvulnerableTrait(traitType))
+			{
+				result *= Math.max(attacker.getStat().getAttackTrait(trait) - target.getStat().getDefenceTrait(trait), 0.05);
+			}
+		}
+		return result;
 	}
 	
 	public static double calcWeaponTraitBonus(Creature attacker, Creature target)
@@ -1300,7 +1314,7 @@ public final class Formulas
 			}
 		}
 		
-		return CommonUtil.constrain((weaponTraitBonus * weaknessBonus), 0.05, 2.0);
+		return Math.max(weaponTraitBonus * weaknessBonus, 0.05);
 	}
 	
 	public static double getBasicPropertyResistBonus(BasicProperty basicProperty, Creature target)

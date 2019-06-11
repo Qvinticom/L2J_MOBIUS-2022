@@ -87,6 +87,11 @@ public class CreatureStat
 	public CreatureStat(Creature creature)
 	{
 		_creature = creature;
+		for (int i = 0; i < TraitType.values().length; i++)
+		{
+			_attackTraitValues[i] = 1;
+			_defenceTraitValues[i] = 1;
+		}
 	}
 	
 	/**
@@ -573,8 +578,33 @@ public class CreatureStat
 	
 	public void mergeAttackTrait(TraitType traitType, float value)
 	{
-		_attackTraitValues[traitType.ordinal()] *= value;
-		_attackTraits.add(traitType);
+		_lock.readLock().lock();
+		try
+		{
+			_attackTraitValues[traitType.ordinal()] *= value;
+			_attackTraits.add(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
+	}
+	
+	public void removeAttackTrait(TraitType traitType, float value)
+	{
+		_lock.readLock().lock();
+		try
+		{
+			_attackTraitValues[traitType.ordinal()] /= value;
+			if (_attackTraitValues[traitType.ordinal()] == 1)
+			{
+				_attackTraits.remove(traitType);
+			}
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
 	public float getAttackTrait(TraitType traitType)
@@ -605,8 +635,33 @@ public class CreatureStat
 	
 	public void mergeDefenceTrait(TraitType traitType, float value)
 	{
-		_defenceTraitValues[traitType.ordinal()] *= value;
-		_defenceTraits.add(traitType);
+		_lock.readLock().lock();
+		try
+		{
+			_defenceTraitValues[traitType.ordinal()] *= value;
+			_defenceTraits.add(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
+	}
+	
+	public void removeDefenceTrait(TraitType traitType, float value)
+	{
+		_lock.readLock().lock();
+		try
+		{
+			_defenceTraitValues[traitType.ordinal()] /= value;
+			if (_defenceTraitValues[traitType.ordinal()] == 1)
+			{
+				_defenceTraits.remove(traitType);
+			}
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
 	public float getDefenceTrait(TraitType traitType)
@@ -637,7 +692,28 @@ public class CreatureStat
 	
 	public void mergeInvulnerableTrait(TraitType traitType)
 	{
-		_invulnerableTraits.add(traitType);
+		_lock.readLock().lock();
+		try
+		{
+			_invulnerableTraits.add(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
+	}
+	
+	public void removeInvulnerableTrait(TraitType traitType)
+	{
+		_lock.readLock().lock();
+		try
+		{
+			_invulnerableTraits.remove(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
 	public boolean isInvulnerableTrait(TraitType traitType)

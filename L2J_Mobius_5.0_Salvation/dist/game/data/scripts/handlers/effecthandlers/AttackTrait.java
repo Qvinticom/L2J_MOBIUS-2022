@@ -23,6 +23,7 @@ import java.util.Map.Entry;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.TraitType;
 
@@ -49,11 +50,20 @@ public final class AttackTrait extends AbstractEffect
 	}
 	
 	@Override
-	public void pump(Creature effected, Skill skill)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
 		{
 			effected.getStat().mergeAttackTrait(trait.getKey(), trait.getValue());
+		}
+	}
+	
+	@Override
+	public void onExit(Creature effector, Creature effected, Skill skill)
+	{
+		for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
+		{
+			effected.getStat().removeAttackTrait(trait.getKey(), trait.getValue());
 		}
 	}
 }
