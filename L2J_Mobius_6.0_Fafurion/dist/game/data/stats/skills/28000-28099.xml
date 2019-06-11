@@ -331,15 +331,33 @@
 	</skill>
 	<skill id="28065" toLevel="1" name="Zodiac Agathion Charm Book of Growth">
 		<icon>icon.star_scrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="28066" toLevel="1" name="Ancient Zodiac Agathion Charm Book of Growth">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="28067" toLevel="1" name="Zodiac Agathion Cube">
 		<icon>icon.star_agathion_cube</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="28068" toLevel="1" name="Scroll: Enchant Cloak - Legendary">
 		<operateType>A1</operateType>
