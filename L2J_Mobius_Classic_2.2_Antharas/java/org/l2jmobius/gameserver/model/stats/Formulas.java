@@ -1241,7 +1241,7 @@ public final class Formulas
 			return 1.0;
 		}
 		
-		if (target.getStat().isTraitInvul(traitType))
+		if (target.getStat().isInvulnerableTrait(traitType))
 		{
 			return 0;
 		}

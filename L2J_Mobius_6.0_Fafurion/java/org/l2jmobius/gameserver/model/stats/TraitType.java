@@ -63,6 +63,14 @@ public enum TraitType
 	PHYSICAL_WEAKNESS(3),
 	MAGICAL_WEAKNESS(3),
 	DUALDAGGER(1),
+	DEMONIC_WEAKNESS(2), // CT26_P4
+	DIVINE_WEAKNESS(2),
+	ELEMENTAL_WEAKNESS(2),
+	FAIRY_WEAKNESS(2),
+	HUMAN_WEAKNESS(2),
+	HUMANOID_WEAKNESS(2),
+	UNDEAD_WEAKNESS(2),
+	// The values from below are custom.
 	DUALBLUNT(1),
 	KNOCKBACK(3),
 	KNOCKDOWN(3),
@@ -75,7 +83,9 @@ public enum TraitType
 	CHANGEBODY(3),
 	TWOHANDCROSSBOW(1),
 	ZONE(3),
-	PSYCHIC(3);
+	PSYCHIC(3),
+	EMBRYO_WEAKNESS(2),
+	SPIRIT_WEAKNESS(2);
 	
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 	

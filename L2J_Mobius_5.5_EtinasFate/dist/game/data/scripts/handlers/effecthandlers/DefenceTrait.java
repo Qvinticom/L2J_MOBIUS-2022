@@ -22,9 +22,7 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.TraitType;
 
@@ -46,75 +44,22 @@ public final class DefenceTrait extends AbstractEffect
 		
 		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
-			try
-			{
-				final TraitType traitType = TraitType.valueOf(param.getKey());
-				final float value = Float.parseFloat((String) param.getValue());
-				if (value == 0)
-				{
-					continue;
-				}
-				_defenceTraits.put(traitType, (value + 100) / 100);
-			}
-			catch (NumberFormatException e)
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " must be float value " + param.getValue() + " found.");
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": value of TraitType enum required but found: " + param.getKey());
-			}
+			_defenceTraits.put(TraitType.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue()) + 100) / 100);
 		}
 	}
 	
 	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
-		final CreatureStat charStat = effected.getStat();
-		synchronized (charStat.getDefenceTraits())
+		for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
 		{
-			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
+			if (trait.getValue() < 2.0f)
 			{
-				if (trait.getValue() < 2.0f)
-				{
-					if (charStat.getDefenceTraitsCount()[trait.getKey().ordinal()] == 0)
-					{
-						continue;
-					}
-					
-					charStat.getDefenceTraits()[trait.getKey().ordinal()] /= trait.getValue();
-					charStat.getDefenceTraitsCount()[trait.getKey().ordinal()]--;
-				}
-				else
-				{
-					if (charStat.getTraitsInvul()[trait.getKey().ordinal()] == 0)
-					{
-						continue;
-					}
-					
-					charStat.getTraitsInvul()[trait.getKey().ordinal()]--;
-				}
+				effected.getStat().mergeDefenceTrait(trait.getKey(), trait.getValue());
 			}
-		}
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
-	{
-		final CreatureStat charStat = effected.getStat();
-		synchronized (charStat.getDefenceTraits())
-		{
-			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
+			else
 			{
-				if (trait.getValue() < 2.0f)
-				{
-					charStat.getDefenceTraits()[trait.getKey().ordinal()] *= trait.getValue();
-					charStat.getDefenceTraitsCount()[trait.getKey().ordinal()]++;
-				}
-				else
-				{
-					charStat.getTraitsInvul()[trait.getKey().ordinal()]++;
-				}
+				effected.getStat().mergeInvulnerableTrait(trait.getKey());
 			}
 		}
 	}

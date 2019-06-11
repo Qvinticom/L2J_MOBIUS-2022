@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.EnumMap;
+import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -72,11 +72,11 @@ public class CreatureStat
 	private final Deque<StatsHolder> _additionalMul = new ConcurrentLinkedDeque<>();
 	private final Map<Stats, Double> _fixedValue = new ConcurrentHashMap<>();
 	
-	private final float[] _attackTraits = new float[TraitType.values().length];
-	private final float[] _defenceTraits = new float[TraitType.values().length];
-	private final int[] _attackTraitsCount = new int[TraitType.values().length];
-	private final int[] _defenceTraitsCount = new int[TraitType.values().length];
-	private final int[] _traitsInvul = new int[TraitType.values().length];
+	private final float[] _attackTraitValues = new float[TraitType.values().length];
+	private final float[] _defenceTraitValues = new float[TraitType.values().length];
+	private final Set<TraitType> _attackTraits = EnumSet.noneOf(TraitType.class);
+	private final Set<TraitType> _defenceTraits = EnumSet.noneOf(TraitType.class);
+	private final Set<TraitType> _invulnerableTraits = EnumSet.noneOf(TraitType.class);
 	
 	/** Values to be recalculated after every stat update */
 	private double _attackSpeedMultiplier = 1;
@@ -87,8 +87,6 @@ public class CreatureStat
 	public CreatureStat(Creature creature)
 	{
 		_creature = creature;
-		Arrays.fill(_attackTraits, 1.0f);
-		Arrays.fill(_defenceTraits, 1.0f);
 	}
 	
 	/**
@@ -573,54 +571,86 @@ public class CreatureStat
 		}
 	}
 	
-	public float getAttackTrait(TraitType traitType)
+	public void mergeAttackTrait(TraitType traitType, float value)
 	{
-		return _attackTraits[traitType.ordinal()];
+		_attackTraitValues[traitType.ordinal()] *= value;
+		_attackTraits.add(traitType);
 	}
 	
-	public float[] getAttackTraits()
+	public float getAttackTrait(TraitType traitType)
 	{
-		return _attackTraits;
+		_lock.readLock().lock();
+		try
+		{
+			return _attackTraitValues[traitType.ordinal()];
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
 	public boolean hasAttackTrait(TraitType traitType)
 	{
-		return _attackTraitsCount[traitType.ordinal()] > 0;
+		_lock.readLock().lock();
+		try
+		{
+			return _attackTraits.contains(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
-	public int[] getAttackTraitsCount()
+	public void mergeDefenceTrait(TraitType traitType, float value)
 	{
-		return _attackTraitsCount;
+		_defenceTraitValues[traitType.ordinal()] *= value;
+		_defenceTraits.add(traitType);
 	}
 	
 	public float getDefenceTrait(TraitType traitType)
 	{
-		return _defenceTraits[traitType.ordinal()];
-	}
-	
-	public float[] getDefenceTraits()
-	{
-		return _defenceTraits;
+		_lock.readLock().lock();
+		try
+		{
+			return _defenceTraitValues[traitType.ordinal()];
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
 	public boolean hasDefenceTrait(TraitType traitType)
 	{
-		return _defenceTraitsCount[traitType.ordinal()] > 0;
+		_lock.readLock().lock();
+		try
+		{
+			return _defenceTraits.contains(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
-	public int[] getDefenceTraitsCount()
+	public void mergeInvulnerableTrait(TraitType traitType)
 	{
-		return _defenceTraitsCount;
+		_invulnerableTraits.add(traitType);
 	}
 	
-	public boolean isTraitInvul(TraitType traitType)
+	public boolean isInvulnerableTrait(TraitType traitType)
 	{
-		return _traitsInvul[traitType.ordinal()] > 0;
-	}
-	
-	public int[] getTraitsInvul()
-	{
-		return _traitsInvul;
+		_lock.readLock().lock();
+		try
+		{
+			return _invulnerableTraits.contains(traitType);
+		}
+		finally
+		{
+			_lock.readLock().unlock();
+		}
 	}
 	
 	/**

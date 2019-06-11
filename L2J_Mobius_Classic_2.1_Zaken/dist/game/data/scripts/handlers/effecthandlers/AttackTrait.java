@@ -22,9 +22,7 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.TraitType;
 
@@ -51,35 +49,11 @@ public final class AttackTrait extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
+	public void pump(Creature effected, Skill skill)
 	{
-		final CreatureStat charStat = effected.getStat();
-		synchronized (charStat.getAttackTraits())
+		for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
 		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
-			{
-				if (charStat.getAttackTraitsCount()[trait.getKey().ordinal()] == 0)
-				{
-					continue;
-				}
-				
-				charStat.getAttackTraits()[trait.getKey().ordinal()] /= trait.getValue();
-				charStat.getAttackTraitsCount()[trait.getKey().ordinal()]--;
-			}
-		}
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
-	{
-		final CreatureStat charStat = effected.getStat();
-		synchronized (charStat.getAttackTraits())
-		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
-			{
-				charStat.getAttackTraits()[trait.getKey().ordinal()] *= trait.getValue();
-				charStat.getAttackTraitsCount()[trait.getKey().ordinal()]++;
-			}
+			effected.getStat().mergeAttackTrait(trait.getKey(), trait.getValue());
 		}
 	}
 }
