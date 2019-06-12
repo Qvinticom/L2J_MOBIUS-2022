@@ -190,7 +190,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
 		
-		if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
+		if (Config.ENABLE_NPC_STAT_MULTIPLIERS) // Custom NPC Stat Multipliers
 		{
 			switch (_type)
 			{
