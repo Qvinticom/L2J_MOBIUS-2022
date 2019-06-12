@@ -61,6 +61,7 @@ import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
@@ -1054,18 +1055,18 @@ public final class Config
 	public static String TITLE_FOR_PVP_AMOUNT4;
 	public static String TITLE_FOR_PVP_AMOUNT5;
 	public static boolean CHAT_ADMIN;
-	public static Map<Integer, Float> PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
-	public static Map<Integer, Float> PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static boolean MULTILANG_ENABLE;
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
 	public static String MULTILANG_DEFAULT;
@@ -2405,7 +2406,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2418,7 +2420,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2431,7 +2434,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2444,7 +2448,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2457,7 +2462,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2470,7 +2476,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2483,7 +2490,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2496,7 +2504,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2509,7 +2518,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2522,7 +2532,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2535,7 +2546,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
@@ -2548,7 +2560,8 @@ public final class Config
 					final String[] classInfo = info.trim().split(",");
 					if (classInfo.length == 2)
 					{
-						PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.put(Integer.parseInt(classInfo[0].trim()), Float.parseFloat(classInfo[1].trim()));
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
