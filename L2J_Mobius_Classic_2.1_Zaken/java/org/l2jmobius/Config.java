@@ -2408,7 +2408,7 @@ public final class Config
 			{
 				for (String info : pveMagicalSkillDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2422,7 +2422,7 @@ public final class Config
 			{
 				for (String info : pvpMagicalSkillDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2436,7 +2436,7 @@ public final class Config
 			{
 				for (String info : pveMagicalSkillDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2450,7 +2450,7 @@ public final class Config
 			{
 				for (String info : pvpMagicalSkillDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2464,7 +2464,7 @@ public final class Config
 			{
 				for (String info : pvePhysicalSkillDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2478,7 +2478,7 @@ public final class Config
 			{
 				for (String info : pvpPhysicalSkillDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2492,7 +2492,7 @@ public final class Config
 			{
 				for (String info : pvePhysicalSkillDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2506,7 +2506,7 @@ public final class Config
 			{
 				for (String info : pvpPhysicalSkillDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2520,7 +2520,7 @@ public final class Config
 			{
 				for (String info : pvePhysicalAttackDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2534,7 +2534,7 @@ public final class Config
 			{
 				for (String info : pvpPhysicalAttackDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2548,7 +2548,7 @@ public final class Config
 			{
 				for (String info : pvePhysicalAttackDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2562,7 +2562,7 @@ public final class Config
 			{
 				for (String info : pvpPhysicalAttackDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2576,7 +2576,7 @@ public final class Config
 			{
 				for (String info : pveBlowSkillDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2590,7 +2590,7 @@ public final class Config
 			{
 				for (String info : pvpBlowSkillDamageMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2604,7 +2604,7 @@ public final class Config
 			{
 				for (String info : pveBlowSkillDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2618,7 +2618,7 @@ public final class Config
 			{
 				for (String info : pvpBlowSkillDefenceMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
@@ -2632,7 +2632,7 @@ public final class Config
 			{
 				for (String info : playerHealingSkillMultipliers)
 				{
-					final String[] classInfo = info.trim().split("*");
+					final String[] classInfo = info.trim().split("[*]");
 					if (classInfo.length == 2)
 					{
 						final String id = classInfo[0].trim();
