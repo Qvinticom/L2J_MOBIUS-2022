@@ -1126,6 +1126,11 @@ public final class Config
 	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_BLOW_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PLAYER_HEALING_SKILL_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static boolean MULTILANG_ENABLE;
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
 	public static String MULTILANG_DEFAULT;
@@ -2693,6 +2698,76 @@ public final class Config
 					{
 						final String id = classInfo[0].trim();
 						PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pveBlowSkillDamageMultipliers = ClassBalance.getString("PveBlowSkillDamageMultipliers", "").trim().split(";");
+			PVE_BLOW_SKILL_DAMAGE_MULTIPLIERS.clear();
+			if (pveBlowSkillDamageMultipliers.length > 0)
+			{
+				for (String info : pveBlowSkillDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split(",");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_BLOW_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpBlowSkillDamageMultipliers = ClassBalance.getString("PvpBlowSkillDamageMultipliers", "").trim().split(";");
+			PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS.clear();
+			if (pvpBlowSkillDamageMultipliers.length > 0)
+			{
+				for (String info : pvpBlowSkillDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split(",");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pveBlowSkillDefenceMultipliers = ClassBalance.getString("PveBlowSkillDefenceMultipliers", "").trim().split(";");
+			PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS.clear();
+			if (pveBlowSkillDefenceMultipliers.length > 0)
+			{
+				for (String info : pveBlowSkillDefenceMultipliers)
+				{
+					final String[] classInfo = info.trim().split(",");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpBlowSkillDefenceMultipliers = ClassBalance.getString("PvpBlowSkillDefenceMultipliers", "").trim().split(";");
+			PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS.clear();
+			if (pvpBlowSkillDefenceMultipliers.length > 0)
+			{
+				for (String info : pvpBlowSkillDefenceMultipliers)
+				{
+					final String[] classInfo = info.trim().split(",");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] playerHealingSkillMultipliers = ClassBalance.getString("PlayerHealingSkillMultipliers", "").trim().split(";");
+			PLAYER_HEALING_SKILL_MULTIPLIERS.clear();
+			if (playerHealingSkillMultipliers.length > 0)
+			{
+				for (String info : playerHealingSkillMultipliers)
+				{
+					final String[] classInfo = info.trim().split(",");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PLAYER_HEALING_SKILL_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}

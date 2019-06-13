@@ -120,11 +120,21 @@ public final class Formulas
 		// power *= 1 - (Math.min(target.getLevel() - attacker.getLevel(), 9) / 10);
 		// }
 		
+		double balanceMod = 1;
+		if (attacker.isPlayable())
+		{
+			balanceMod = target.isPlayable() ? Config.PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_BLOW_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
+		}
+		if (target.isPlayable())
+		{
+			defence *= attacker.isPlayable() ? Config.PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(target.getActingPlayer().getClassId(), 1f) : Config.PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(target.getActingPlayer().getClassId(), 1f);
+		}
+		
 		// ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
 		// ATTACK CALCULATION 77 * [(skillpower+patk) * 0.666 * cdbonus * cdPosBonusHalf * cdVulnHalf * ss + isBack0.2Side0.05 * (skillpower+patk*ss) * random + 6 * cd_patk] / pdef
 		// ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
 		final double baseMod = (77 * (((power + attacker.getPAtk()) * 0.666) + (isPosition * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence;
-		final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod;
+		final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod * balanceMod;
 		
 		return damage;
 	}
