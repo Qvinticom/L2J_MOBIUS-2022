@@ -64,6 +64,7 @@ import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
+import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.TeleportWhereType;
 import org.l2jmobius.gameserver.model.TimeStamp;
 import org.l2jmobius.gameserver.model.World;
@@ -2403,7 +2404,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (isMonster())
 		{
-			_effectList.stopAllEffectsWithoutExclusions(true, true);
+			final Spawn spawn = ((Npc) this).getSpawn();
+			if ((spawn != null) && spawn.isRespawnEnabled())
+			{
+				stopAllEffects();
+			}
+			else
+			{
+				_effectList.stopAllEffectsWithoutExclusions(true, true);
+			}
 		}
 		else
 		{
