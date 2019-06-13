@@ -45,7 +45,7 @@ public final class DefenceTrait extends AbstractEffect
 		
 		for (Entry<String, Object> param : params.getSet().entrySet())
 		{
-			_defenceTraits.put(TraitType.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue()) + 100) / 100);
+			_defenceTraits.put(TraitType.valueOf(param.getKey()), Float.parseFloat((String) param.getValue()) / 100);
 		}
 	}
 	
@@ -54,7 +54,7 @@ public final class DefenceTrait extends AbstractEffect
 	{
 		for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
 		{
-			if (trait.getValue() < 2.0f)
+			if (trait.getValue() < 1.0f)
 			{
 				effected.getStat().mergeDefenceTrait(trait.getKey(), trait.getValue());
 			}
@@ -70,7 +70,7 @@ public final class DefenceTrait extends AbstractEffect
 	{
 		for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
 		{
-			if (trait.getValue() < 2.0f)
+			if (trait.getValue() < 1.0f)
 			{
 				effected.getStat().removeDefenceTrait(trait.getKey(), trait.getValue());
 			}

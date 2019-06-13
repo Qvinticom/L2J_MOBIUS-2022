@@ -591,7 +591,7 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			_attackTraitValues[traitType.ordinal()] *= value;
+			_attackTraitValues[traitType.ordinal()] += value;
 			_attackTraits.add(traitType);
 		}
 		finally
@@ -605,7 +605,7 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			_attackTraitValues[traitType.ordinal()] /= value;
+			_attackTraitValues[traitType.ordinal()] -= value;
 			if (_attackTraitValues[traitType.ordinal()] == 1)
 			{
 				_attackTraits.remove(traitType);
@@ -648,7 +648,7 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			_defenceTraitValues[traitType.ordinal()] *= value;
+			_defenceTraitValues[traitType.ordinal()] += value;
 			_defenceTraits.add(traitType);
 		}
 		finally
@@ -662,7 +662,7 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			_defenceTraitValues[traitType.ordinal()] /= value;
+			_defenceTraitValues[traitType.ordinal()] -= value;
 			if (_defenceTraitValues[traitType.ordinal()] == 1)
 			{
 				_defenceTraits.remove(traitType);
