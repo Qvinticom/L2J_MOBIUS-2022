@@ -129,12 +129,17 @@
 	<item id="48014" name="Freya's Dark Rune (2-hr.) Box" type="EtcItem">
 		<!-- Double-click to obtain Freya's Dark Rune (2-hr.). Freya's Dark Rune effects do not apply in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="48015" min="1" max="1" chance="100" /> <!-- Freya's Dark Rune 2-hour -->
+		</capsuled_items>
 	</item>
 	<item id="48015" name="Freya's Dark Rune" additionalName="2-hr." type="EtcItem">
 		<!-- When stored in the inventory, PvP Damage +15%. The remaining time decreases even when not playing. Cannot be used in the Olympiad. -->
@@ -144,6 +149,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35029" level="1" /> <!-- Freya's Dark Rune -->
+		</skills>
 	</item>
 	<item id="48016" name="White Knight Suit" type="Armor">
 		<set name="icon" val="icon.white_knight_suit" />

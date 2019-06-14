@@ -1270,12 +1270,15 @@
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-15</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18650" toLevel="1" name="Mysterious Talisman - Attribute Defense">
 		<!-- Attribute Defense is boosted by 50 when the When worn, is worn. Only the effect of one Talisman applies even when two of the same Talisman are equipped, or a PC Cafe Talisman/Mysterious Talisman with the same effect is equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="18651" toLevel="10" name="Kelbim Weapon Pack">
 		<!-- Double click to obtain one of the following +8 enchanted items: Shiny Elemental/Melee Reflect/Magical Reflect T-Shirt. -->

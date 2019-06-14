@@ -1270,6 +1270,9 @@
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-15</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18650" toLevel="1" name="Mysterious Talisman - Attribute Defense">
@@ -1278,7 +1281,7 @@
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
 			<value level="2">icon.npoint_talisman_stat</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="18651" toLevel="10" name="+7 T-shirt Box (Shining/Attack/Magic)">
 		<!-- Double-click to obtain one of Shiny Elemental enchanted by +7/ Reflect Attack/ Reflect Magic Shirt. -->
@@ -1486,7 +1489,7 @@
 		<!-- Chef Monkey's Treasure Chest, caught using the Banana Bait. Use to obtain various items.To be deleted at the time of the scheduled server check on Wednesday, February 17, 2016. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18691" toLevel="2" name="Angler??s Shining Treasure Chest">
+	<skill id="18691" toLevel="2" name="Angler's Shining Treasure Chest">
 		<!-- A treasure box by Chef Monkey caught with a banana bait. Use this to obtain various kinds of items. Scheduled for batch deletion during regular maintenance on February 17, 2016 (Wed.) -->
 		<operateType>A1</operateType>
 	</skill>

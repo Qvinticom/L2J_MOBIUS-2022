@@ -764,6 +764,11 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="47680" min="1" max="1" chance="100" /> <!-- Freya's Dark Rune 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="48675" name="Freya's Bloody Rune (30-day) Pack" type="EtcItem">
 		<!-- Double-click to obtain Freya's Bloody Rune (30-day). -->
@@ -774,6 +779,11 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="48681" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="48676" name="Freya's Vital Rune (30-day) Pack" type="EtcItem">
 		<!-- Double-click to obtain Freya's Vital Rune (30-day). -->
@@ -784,6 +794,11 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="48682" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune 30-day -->
+		</capsuled_items>
 	</item>
 	<item id="48677" name="Advanced Mammon's Talisman Box - Skill Power" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain the Advanced Mammon's Talisman - Skill Power (30-day). -->
@@ -827,6 +842,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35029" level="1" /> <!-- Freya's Dark Rune -->
+		</skills>
 	</item>
 	<item id="48681" name="Freya's Bloody Rune" additionalName="30-day" type="EtcItem">
 		<!-- When stored in the inventory, PvE Damage +15%. -->
@@ -837,6 +860,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="for_npc" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18647" level="1" /> <!-- Freya's Bloody Rune -->
+		</skills>
 	</item>
 	<item id="48682" name="Freya's Vital Rune" additionalName="30-day" type="EtcItem">
 		<!-- If stored in the inventory, increases Bonus XP gain in Vitality state by 50% (excludes boss monsters) and decreases Vitality Consumption Spd. by 15%. -->
@@ -847,6 +877,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="for_npc" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
+		</skills>
 	</item>
 	<item id="48683" name="Advanced Mammon's Talisman (30-day)" additionalName="Skill Power" type="Armor">
 		<!-- When equipped, increases Skill Power by 5% and Skill Critical Damage by 10%. -->
