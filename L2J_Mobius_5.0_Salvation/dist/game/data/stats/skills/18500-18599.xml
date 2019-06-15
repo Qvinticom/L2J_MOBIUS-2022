@@ -605,7 +605,10 @@
 			<value level="2">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
 		</icon>
 		<operateType>A2</operateType>
-		<abnormalType>SKILL_IGNORE</abnormalType>
+		<abnormalType>
+			<value level="1">SKILL_IGNORE</value>
+			<value level="2">ABNORMAL_INVINCIBILITY</value>
+		</abnormalType>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -623,8 +626,8 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">SKILL_IGNORE,1</value>
-					<value level="2">SKILL_IGNORE,1</value>
+					<value level="1">SKILL_IGNORE,9</value>
+					<value level="2">ABNORMAL_INVINCIBILITY,9</value>
 				</dispel>
 			</effect>
 			<effect name="DispelByCategory" fromLevel="1" toLevel="2">
@@ -632,13 +635,7 @@
 				<rate>100</rate>
 				<max>10</max>
 			</effect>
-			<effect name="TriggerSkillBySkill" fromLevel="2" toLevel="2">
-				<castSkillId>18567</castSkillId>
-				<skillId>18722</skillId> <!-- Greater Garnet - Cancel Debuffs -->
-				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
-			</effect>
+			<effect name="DebuffBlock" fromLevel="2" toLevel="2"/>
 		</effects>
 	</skill>
 	<skill id="18568" toLevel="6" name="Vital Stone">

@@ -49,7 +49,8 @@
 		<!-- Cancels all debuffs on you and makes you immune to debuffs for $s1. -->
 		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
 		<operateType>A2</operateType>
-		<abnormalTime>1</abnormalTime>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<abnormalTime>7</abnormalTime>
 		<chance>100</chance>
 		<reuseDelay>15000</reuseDelay>
 		<staticReuse>true</staticReuse>
