@@ -1605,7 +1605,9 @@
 				<angle>180</angle>
 				<range>600</range>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>100</chance>
 			</effect>
@@ -1827,9 +1829,7 @@
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
@@ -1876,9 +1876,7 @@
 				<SHOCK>100</SHOCK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="9461" toLevel="1" name="Scroll of Escape: Guillotine Fortress">

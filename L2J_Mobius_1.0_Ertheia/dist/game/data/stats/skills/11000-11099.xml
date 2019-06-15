@@ -3999,9 +3999,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 				<CHANGEBODY>100</CHANGEBODY>
@@ -4082,9 +4080,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 				<CHANGEBODY>100</CHANGEBODY>
@@ -4162,9 +4158,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -4287,9 +4281,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -4634,7 +4626,9 @@
 					<value fromLevel="5" toLevel="9" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel" />
 		</effects>
 		<selfEffects>
@@ -5708,7 +5702,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11092" toLevel="3" name="Damaged Area">
@@ -5894,7 +5890,9 @@
 					<value fromLevel="5" toLevel="9" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel" />
 		</effects>
 		<selfEffects>

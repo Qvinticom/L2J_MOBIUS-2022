@@ -1047,7 +1047,9 @@
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6749" toLevel="1" name="Devil Strike">
@@ -1520,7 +1522,9 @@
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6769" toLevel="1" name="Petrify">
@@ -1685,7 +1689,9 @@
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6775" toLevel="1" name="Soul Breath">
@@ -1790,7 +1796,9 @@
 				<power>200</power>
 				<ticks>1</ticks>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="Speed">
 				<amount>-20</amount>
 				<mode>PER</mode>
@@ -1837,7 +1845,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6780" toLevel="1" name="Presentation - Portal Ray Combined Light Maintenance">

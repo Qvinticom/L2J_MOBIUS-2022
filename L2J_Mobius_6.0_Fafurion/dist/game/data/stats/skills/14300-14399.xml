@@ -906,9 +906,7 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14334" toLevel="1" name="Poison Puddle">
@@ -1109,9 +1107,7 @@
 			<effect name="TargetCancel">
 				<chance>40</chance>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14345" toLevel="1" name="Larva Sting">
@@ -1300,9 +1296,7 @@
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14353" toLevel="1" name="Lazaros' Poison">
@@ -1361,9 +1355,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14355" toLevel="1" name="Theofanis' Fear">
@@ -1449,9 +1441,7 @@
 			<effect name="PhysicalAttack">
 				<power>144191</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -1934,9 +1924,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="HpRegen">
 				<amount>-100</amount>
 				<mode>PER</mode>
@@ -2015,9 +2003,7 @@
 				<HOLD>100</HOLD>
 				<SHOCK>100</SHOCK>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14378" toLevel="1" name="Antharas' Grinding">
@@ -2104,9 +2090,7 @@
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
 				<radius>600</radius>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14381" toLevel="1" name="Curse of Antharas">
@@ -2197,9 +2181,7 @@
 			<effect name="PhysicalAttack">
 				<power>50000</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
 				<radius>600</radius>
 			</effect>
@@ -2258,9 +2240,7 @@
 			<effect name="PhysicalAttack">
 				<power>10</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
 			</effect>
@@ -2455,9 +2435,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="PhysicalAttack">
 				<power>122203</power>
 			</effect>
@@ -2594,9 +2572,7 @@
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
 				<radius>600</radius>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14399" toLevel="1" name="Valakas Meteor Storm">

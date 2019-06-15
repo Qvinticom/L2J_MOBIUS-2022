@@ -86,9 +86,7 @@
 				<speed>5000</speed>
 				<delay>5000</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14507" toLevel="1" name="Leap Attack">
@@ -123,9 +121,7 @@
 				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<SLEEP>100</SLEEP>
@@ -160,9 +156,7 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14509" toLevel="1" name="HP Drain">
@@ -235,9 +229,7 @@
 				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<SLEEP>100</SLEEP>
@@ -541,9 +533,7 @@
 				<distance>200</distance>
 				<speed>400</speed>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14521" toLevel="1" name="Judgment of Corruption">
@@ -1125,9 +1115,7 @@
 			<effect name="PhysicalAttack">
 				<power>143711</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="TriggerSkillByDamage">
 				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
@@ -1405,9 +1393,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -1465,9 +1451,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -1578,9 +1562,7 @@
 			<effect name="PhysicalAttack">
 				<power>63230</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
 				<radius>600</radius>
 			</effect>
@@ -1742,9 +1724,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14561" toLevel="1" name="Teredor Poison Area">
@@ -1965,9 +1945,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -2002,9 +1980,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<SLEEP>100</SLEEP>
@@ -2444,9 +2420,7 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DispelBySlot">
 				<dispel>NPC_ATTACK2,-1</dispel>
 			</effect>
@@ -2605,9 +2579,7 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DispelBySlot">
 				<dispel>NPC_ATTACK2,-1</dispel>
 			</effect>
@@ -2638,9 +2610,7 @@
 			<effect name="PhysicalAttack">
 				<power>8102</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DispelBySlot">
 				<dispel>NPC_ATTACK3,-1</dispel>
 			</effect>
@@ -3014,9 +2984,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DispelBySlot">
 				<dispel>NPC_ATTACK3,-1</dispel>
 			</effect>

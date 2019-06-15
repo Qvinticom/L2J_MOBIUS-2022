@@ -1926,7 +1926,9 @@
 		<isDebuff>true</isDebuff>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11134" toLevel="1" name="Meteor">
@@ -2604,9 +2606,7 @@
 			<effect name="PullBack">
 				<speed>600</speed>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="11175" toLevel="6" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 6 -->
@@ -2641,9 +2641,7 @@
 			<effect name="PullBack">
 				<speed>600</speed>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="11176" toLevel="4" name="Superior Wizardry">
@@ -2759,9 +2757,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -2803,9 +2799,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -2847,9 +2841,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -2891,9 +2883,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>

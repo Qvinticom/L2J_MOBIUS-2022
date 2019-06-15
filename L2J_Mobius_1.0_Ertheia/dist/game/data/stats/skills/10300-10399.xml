@@ -559,7 +559,9 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10314" toLevel="4" name="Disarmament">
@@ -939,7 +941,9 @@
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
@@ -1632,7 +1636,9 @@
 		<isDebuff>true</isDebuff>
 		<trait>SHOCK</trait>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10340" toLevel="3" name="Blade Slasher">

@@ -491,9 +491,7 @@
 					<value fromLevel="21" toLevel="25" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="MagicalDefence" fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
 					<value fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
@@ -1175,9 +1173,7 @@
 				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="30013" toLevel="1" name="Switch Places">

@@ -375,7 +375,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19413" toLevel="9" name="Elemental Burst: Water">
@@ -403,7 +405,9 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19414" toLevel="9" name="Elemental Burst: Wind">
@@ -501,7 +505,9 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19417" toLevel="9" name="Elemental Burst: Water">
@@ -532,7 +538,9 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19418" toLevel="9" name="Elemental Burst: Wind">
@@ -560,7 +568,9 @@
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>100</chance>
 			</effect>

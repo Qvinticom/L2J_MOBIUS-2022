@@ -930,9 +930,7 @@
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
 					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
@@ -1148,7 +1146,9 @@
 			<effect name="TargetCancel">
 				<chance>60</chance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
 					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
@@ -1248,9 +1248,7 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>

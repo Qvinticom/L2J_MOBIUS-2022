@@ -428,9 +428,7 @@
 				<distance>100</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="16551" toLevel="1" name="Ice Attack">
@@ -477,9 +475,7 @@
 			<effect name="PhysicalAttack">
 				<power>9000</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="16553" toLevel="1" name="Ice Breath">
@@ -504,9 +500,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<fanRange>0;0;200;180</fanRange>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamOverTime">
 				<power>115</power>
 				<ticks>5</ticks>
@@ -1110,9 +1104,7 @@
 			<effect name="PhysicalAttack"> <!-- TODO -->
 				<power>100000</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="16599" toLevel="1" name="Piercing Bolt">

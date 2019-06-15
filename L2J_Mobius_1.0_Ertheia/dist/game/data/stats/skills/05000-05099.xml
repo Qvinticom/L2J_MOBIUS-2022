@@ -325,9 +325,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="BlockActions" fromLevel="5" toLevel="5">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" fromLevel="5" toLevel="5" />
 		</effects>
 	</skill>
 	<skill id="5009" toLevel="1" name="Frintezza Ghost Fighter">
@@ -2808,7 +2806,9 @@
 					<value level="4">8602</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>10</chance>
 			</effect>

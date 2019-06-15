@@ -1152,9 +1152,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="10516" toLevel="9" name="Shadow Chase">
@@ -2761,9 +2759,7 @@
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="10547" toLevel="1" name="Shadow Attack">
@@ -2800,9 +2796,7 @@
 		<effects>
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="FatalBlow">
 				<power>8875</power>
 				<chanceBoost>300</chanceBoost>
@@ -2924,9 +2918,7 @@
 				<SHOCK>100</SHOCK>
 				<KNOCKBACK>100</KNOCKBACK>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="10550" toLevel="7" name="Illusion Strike">

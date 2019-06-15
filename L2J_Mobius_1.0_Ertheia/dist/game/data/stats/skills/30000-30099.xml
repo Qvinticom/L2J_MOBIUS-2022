@@ -409,9 +409,7 @@
 					<value level="25">604</value>
 				</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="30005" fromLevel="4" toLevel="4" name="Storm Sign">
@@ -947,9 +945,7 @@
 				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="30013" toLevel="1" name="Switch Places">

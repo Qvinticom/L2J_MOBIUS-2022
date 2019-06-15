@@ -24,9 +24,7 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="BlockControl" />
 			<effect name="DefenceTrait">
 				<AIRBIND>100</AIRBIND>
@@ -867,7 +865,9 @@
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11325" toLevel="8" name="Feline Bite">
@@ -1236,7 +1236,9 @@
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11334" toLevel="8" name="Unicorn's Bite">
@@ -1605,7 +1607,9 @@
 		<effectPoint>-687</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11343" toLevel="8" name="Phantom Bite">
@@ -3498,7 +3502,9 @@
 					<value level="3">17858</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11380" toLevel="3" name="Power Stump">

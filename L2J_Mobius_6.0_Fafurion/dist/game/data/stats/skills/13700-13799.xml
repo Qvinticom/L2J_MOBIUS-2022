@@ -591,9 +591,7 @@
 		<affectLimit>5-12</affectLimit>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<DERANGEMENT>100</DERANGEMENT>
@@ -822,9 +820,7 @@
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="13712" toLevel="12" name="Item Skill: Paralyze">
@@ -891,9 +887,7 @@
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<PARALYZE>100</PARALYZE>
 			</effect>
@@ -1271,9 +1265,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 				<CHANGEBODY>100</CHANGEBODY>
@@ -1755,9 +1747,7 @@
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="13726" toLevel="12" name="Item Skill: Paralyze">

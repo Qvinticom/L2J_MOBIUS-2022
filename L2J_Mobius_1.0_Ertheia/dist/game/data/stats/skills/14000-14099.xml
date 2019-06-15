@@ -629,9 +629,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="KnockBack">
 				<distance>200</distance>
 				<speed>400</speed>
@@ -817,9 +815,7 @@
 			<effect name="PhysicalAttack">
 				<power>23700</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
 				<radius>200</radius>
 			</effect>
@@ -855,9 +851,7 @@
 			<effect name="PhysicalAttack">
 				<power>47400</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;300} -->
 				<radius>300</radius>
 			</effect>
@@ -934,9 +928,7 @@
 			<effect name="PhysicalAttack">
 				<power>242052</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;450} -->
 				<radius>450</radius>
 			</effect>
@@ -1061,9 +1053,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="KnockBack">
 				<distance>0</distance>
 				<speed>0</speed>
@@ -1240,9 +1230,7 @@
 			<effect name="PhysicalAttack">
 				<power>30000</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14040" toLevel="6" name="Power Strike">
@@ -2104,9 +2092,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -2501,9 +2487,7 @@
 				<speed>900</speed>
 				<delay>900</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14072" toLevel="6" name="Gardener Blow">
@@ -2625,9 +2609,7 @@
 				<speed>900</speed>
 				<delay>900</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14075" toLevel="1" name="Harmful Trap">
@@ -2946,9 +2928,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
 			</effect>
@@ -3245,9 +3225,7 @@
 					<value level="6">7772</value>
 				</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14091" toLevel="6" name="Rose Poison">

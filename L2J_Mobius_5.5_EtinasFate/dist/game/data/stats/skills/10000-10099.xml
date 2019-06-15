@@ -1155,9 +1155,7 @@
 			<effect name="PullBack">
 				<speed>600</speed>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">14300</value>
@@ -1251,9 +1249,7 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
@@ -1327,9 +1323,7 @@
 				<speed>600</speed>
 				<delay>650</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
@@ -4996,7 +4990,9 @@
 					<value level="7">11409</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10089" toLevel="4" name="Strong Cubic Mind">

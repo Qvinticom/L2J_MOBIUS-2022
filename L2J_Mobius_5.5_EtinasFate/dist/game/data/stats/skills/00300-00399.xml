@@ -2144,7 +2144,9 @@
 			<effect name="TargetCancel">
 				<chance>80</chance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="353" toLevel="1" name="Shield Slam">
@@ -2391,7 +2393,9 @@
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="359" toLevel="1" name="Eye of Hunter">
@@ -2487,7 +2491,9 @@
 				<power>2486</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="MagicalDefence">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -2539,7 +2545,9 @@
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="MagicalDefence">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -2792,9 +2800,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
 			</effect>

@@ -108,9 +108,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamOverTime">
 				<power>167</power>
 				<ticks>1</ticks>
@@ -855,9 +853,7 @@
 				<SLEEP>100</SLEEP>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14634" toLevel="1" name="Stigma's Despair">
@@ -936,9 +932,7 @@
 				<power>500</power>
 				<ticks>5</ticks>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14637" toLevel="1" name="Driving Fog">
@@ -1106,9 +1100,7 @@
 				<SLEEP>100</SLEEP>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14643" toLevel="1" name="Summon">
@@ -1311,9 +1303,7 @@
 			<effect name="FlyAway"> <!-- TODO FIX ME i_fly_away;curve;push;600 -->
 				<radius>600</radius>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14650" toLevel="1" name="Corpse' Blow">
@@ -1847,9 +1837,7 @@
 			<effect name="FlyAway"> <!-- TODO FIX ME i_fly_away;curve;push;600 -->
 				<radius>600</radius>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14673" toLevel="1" name="Cry of Destiny - Shield Charge">
@@ -1918,9 +1906,7 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14675" toLevel="1" name="Cry of Destiny - Last Judgment">
@@ -2026,9 +2012,7 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14678" toLevel="1" name="Cry of Destiny - Power Bomber">
@@ -2056,9 +2040,7 @@
 			<effect name="PhysicalAttack">
 				<power>2000</power>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14679" toLevel="1" name="Cry of Destiny - Heart Breaker">
@@ -2334,9 +2316,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14688" toLevel="2" name="Cry of Destiny - Mark of Weakness">
@@ -2434,9 +2414,7 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamOverTime">
 				<power>167</power>
 				<ticks>1</ticks>
@@ -2649,9 +2627,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="14698" toLevel="1" name="Current Shock">
