@@ -1567,7 +1567,7 @@ public final class Formulas
 				pvpDefense = target.getStat().getValue(Stats.PVP_PHYSICAL_ATTACK_DEFENCE, 1) * Config.PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f);
 			}
 			
-			return 1 + (pvpAttack - pvpDefense);
+			return Math.max(0.05, 1 + (pvpAttack - pvpDefense)); // Bonus should not be negative.
 		}
 		
 		// PvE Bonus
@@ -1616,7 +1616,7 @@ public final class Formulas
 				pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stats.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
 			}
 			
-			return (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty;
+			return Math.max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty); // Bonus should not be negative.
 		}
 		
 		return 1;
