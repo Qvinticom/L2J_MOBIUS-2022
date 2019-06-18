@@ -20,8 +20,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
@@ -44,7 +44,7 @@ public class PremiumManager
 {
 	// SQL Statement
 	private static final String LOAD_SQL = "SELECT account_name,enddate FROM account_premium WHERE account_name = ?";
-	private static final String UPDATE_SQL = "REPLACE INTO account_premium (enddate,account_name) VALUE (?,?)";
+	private static final String UPDATE_SQL = "REPLACE INTO account_premium (account_name,enddate) VALUE (?,?)";
 	private static final String DELETE_SQL = "DELETE FROM account_premium WHERE account_name = ?";
 	
 	class PremiumExpireTask implements Runnable
@@ -64,10 +64,10 @@ public class PremiumManager
 	}
 	
 	// Data Cache
-	private final Map<String, Long> premiumData = new HashMap<>();
+	private final Map<String, Long> premiumData = new ConcurrentHashMap<>();
 	
 	// expireTasks
-	private final Map<String, ScheduledFuture<?>> expiretasks = new HashMap<>();
+	private final Map<String, ScheduledFuture<?>> expiretasks = new ConcurrentHashMap<>();
 	
 	// Listeners
 	private final ListenersContainer listenerContainer = Containers.Players();
@@ -163,8 +163,8 @@ public class PremiumManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(UPDATE_SQL))
 		{
-			stmt.setLong(1, newPremiumExpiration);
-			stmt.setString(2, accountName);
+			stmt.setString(1, accountName);
+			stmt.setLong(2, newPremiumExpiration);
 			stmt.execute();
 		}
 		catch (SQLException e)
