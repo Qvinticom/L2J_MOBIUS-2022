@@ -3174,14 +3174,18 @@
 	</npc>
 	<npc id="29365" level="118" type="Monster" name="Fafurion" title="Wrathful Water Dragon">
 		<race>DRAGON</race>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="694632864.84102" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="270" />
 			</speed>
-			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4370.37037037037" magical="2537.63440860215" />
+			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44109.29354" magical="21529.93964" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -3192,115 +3196,26 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="32726" level="1" /> <!-- Fafurion -->
 			<skill id="32728" level="1" /> <!-- Fafurion's Anger - Stage 1 -->
+			<skill id="32705" level="1" /> <!-- Fafurion Normal Attack -->
+			<skill id="32713" level="1" /> <!-- Fafurion Tail Strike -->
+			<skill id="32716" level="1" /> <!-- Fafurion Breath -->
+			<skill id="32717" level="1" /> <!-- Fafurion Fear -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="80335" min="1" max="2" chance="100" /> <!-- Dragon Ring -->
-				<item id="80334" min="1" max="1" chance="34.23" /> <!-- Dragon Earring -->
-				<item id="80333" min="1" max="1" chance="31.93" /> <!-- Dragon Necklace -->
-				<item id="80113" min="1" max="3" chance="20.29" /> <!-- Leviathan Leather Gloves - Light Armor -->
-				<item id="80112" min="1" max="3" chance="19.73" /> <!-- Leviathan Leather Leggings - Light Armor -->
-				<item id="80110" min="1" max="3" chance="19.67" /> <!-- Leviathan Leather Helmet - Light Armor -->
-				<item id="80111" min="1" max="3" chance="19.56" /> <!-- Leviathan Leather Armor - Light Armor -->
-				<item id="80114" min="1" max="3" chance="19.12" /> <!-- Leviathan Leather Boots - Light Armor -->
-				<item id="80119" min="1" max="3" chance="17.45" /> <!-- Leviathan Shoes - Robe -->
-				<item id="80106" min="1" max="3" chance="17.45" /> <!-- Leviathan Gaiters - Heavy Armor -->
-				<item id="80120" min="1" max="3" chance="16.925" /> <!-- Leviathan Sigil - Robe -->
-				<item id="80117" min="1" max="3" chance="16.66" /> <!-- Leviathan Stockings - Robe -->
-				<item id="80115" min="1" max="3" chance="16.48" /> <!-- Leviathan's Circlet - Robe -->
-				<item id="80105" min="1" max="3" chance="16.41" /> <!-- Leviathan Breastplate - Heavy Armor -->
-				<item id="80116" min="1" max="3" chance="16.33" /> <!-- Leviathan Tunic - Robe -->
-				<item id="80107" min="1" max="3" chance="16.33" /> <!-- Leviathan Gauntlets - Heavy Armor -->
-				<item id="80108" min="1" max="3" chance="16.24" /> <!-- Leviathan Boots - Heavy Armor -->
-				<item id="80118" min="1" max="3" chance="16.23" /> <!-- Leviathan Gloves - Robe -->
-				<item id="80104" min="1" max="3" chance="16.13" /> <!-- Leviathan Helmet - Heavy Armor -->
-				<item id="80109" min="1" max="3" chance="16.035" /> <!-- Leviathan Shield - Heavy Armor -->
-				<item id="80099" min="1" max="3" chance="9.151" /> <!-- Krishna Caster -->
-				<item id="80098" min="1" max="3" chance="9.143" /> <!-- Krishna Buster -->
-				<item id="80100" min="1" max="3" chance="9.126" /> <!-- Krishna Retributer -->
-				<item id="80094" min="1" max="3" chance="9.11" /> <!-- Krishna Fighter -->
-				<item id="80095" min="1" max="3" chance="9.093" /> <!-- Krishna Stormer -->
-				<item id="80091" min="1" max="3" chance="9.09" /> <!-- Krishna Cutter -->
-				<item id="80096" min="1" max="3" chance="9.084" /> <!-- Krishna Thrower -->
-				<item id="80092" min="1" max="3" chance="9.072" /> <!-- Krishna Slasher -->
-				<item id="80090" min="1" max="3" chance="9.065" /> <!-- Krishna Shaper -->
-				<item id="80093" min="1" max="3" chance="9.049" /> <!-- Krishna Avenger -->
-				<item id="80097" min="1" max="3" chance="9.035" /> <!-- Krishna Shooter -->
-				<item id="80070" min="1" max="1" chance="0.075" /> <!-- Fafurion Dual Blunt - Fragment -->
-				<item id="80069" min="1" max="1" chance="0.075" /> <!-- Fafurion Retributer - Fragment -->
-				<item id="80071" min="1" max="1" chance="0.075" /> <!-- Fafurion Dual Sword - Fragment -->
-				<item id="80315" min="1" max="1" chance="0.075" /> <!-- Fafurion Dual Dagger - Fragment -->
-				<item id="80068" min="1" max="1" chance="0.075" /> <!-- Fafurion Stormer - Fragment -->
-				<item id="80067" min="1" max="1" chance="0.075" /> <!-- Fafurion Fighter - Fragment -->
-				<item id="80066" min="1" max="1" chance="0.075" /> <!-- Fafurion Avenger - Fragment -->
-				<item id="36414" min="2" max="2" chance="100" /> <!-- Dragon Claw -->
-				<item id="37772" min="1" max="1" chance="51.1" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
-				<item id="35568" min="1" max="1" chance="50.68" /> <!-- Bloody Weapon Enhancement Stone -->
-				<item id="37781" min="1" max="1" chance="49.8" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-				<item id="36389" min="10" max="10" chance="29.01" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="19448" min="10" max="10" chance="28.82" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="46507" min="1" max="2" chance="23.98" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46477" min="1" max="2" chance="23.96" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46508" min="1" max="1" chance="23.94" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="23.4" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46493" min="1" max="1" chance="23.11" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46492" min="1" max="2" chance="22.9" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="36162" min="1" max="1" chance="20.36" /> <!-- Scroll of Blessing: (R99-grade) -->
-				<item id="19447" min="10" max="10" chance="19.72" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="46509" min="1" max="1" chance="19.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="36386" min="10" max="10" chance="19.37" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="46494" min="1" max="1" chance="19.11" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46479" min="1" max="1" chance="18.58" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="39484" min="1" max="1" chance="17.26" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="17702" min="1" max="1" chance="17.25" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
-				<item id="17711" min="1" max="1" chance="17.17" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
-				<item id="17699" min="1" max="1" chance="17.09" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
-				<item id="17704" min="1" max="1" chance="17.02" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
-				<item id="17698" min="1" max="1" chance="16.94" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
-				<item id="17703" min="1" max="1" chance="16.86" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
-				<item id="39485" min="1" max="1" chance="16.8" /> <!-- Alchemic Tome: Dye -->
-				<item id="17710" min="1" max="1" chance="16.72" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
-				<item id="39483" min="1" max="1" chance="16.67" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="17701" min="1" max="1" chance="16.55" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
-				<item id="17708" min="1" max="1" chance="16.49" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
-				<item id="17713" min="1" max="1" chance="16.42" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
-				<item id="17706" min="1" max="1" chance="16.4" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
-				<item id="46448" min="1" max="1" chance="16.23" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46463" min="1" max="1" chance="16.23" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="17712" min="1" max="1" chance="16.16" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
-				<item id="17697" min="1" max="1" chance="16.15" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
-				<item id="17714" min="1" max="1" chance="16.14" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
-				<item id="17709" min="1" max="1" chance="16.12" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
-				<item id="17705" min="1" max="1" chance="16.02" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
-				<item id="17707" min="1" max="1" chance="15.96" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
-				<item id="17700" min="1" max="1" chance="15.84" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
-				<item id="46447" min="1" max="2" chance="15.65" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46462" min="1" max="2" chance="14.89" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46464" min="1" max="1" chance="13.18" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="13.17" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46480" min="1" max="1" chance="11.69" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46510" min="1" max="1" chance="11.62" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46495" min="1" max="1" chance="11.19" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46465" min="1" max="1" chance="7.724" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="7.717" /> <!-- Kain's Soul Crystal - Stage 7 -->
-				<item id="46511" min="1" max="1" chance="7.674" /> <!-- Lionel's Soul Crystal - Stage 8 -->
-				<item id="46481" min="1" max="1" chance="7.614" /> <!-- Leona's Soul Crystal - Stage 8 -->
-				<item id="46496" min="1" max="1" chance="7.608" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
-				<item id="46451" min="1" max="1" chance="5.204" /> <!-- Kain's Soul Crystal - Stage 8 -->
-				<item id="46466" min="1" max="1" chance="5.164" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="29366" level="118" type="Monster" name="Fafurion" title="Wrathful Water Dragon">
 		<race>DRAGON</race>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="781461972.63069" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="270" />
 			</speed>
-			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4370.37037037037" magical="2537.63440860215" />
+			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44109.29354" magical="21529.93964" />
+			<attribute>
+				<attack type="WATER" value="450" />
+				<defence fire="450" water="450" wind="450" earth="450" holy="450" dark="450" default="300" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -3311,6 +3226,10 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="32726" level="1" /> <!-- Fafurion -->
 			<skill id="32728" level="2" /> <!-- Fafurion's Anger - Stage 2 -->
+			<skill id="32705" level="1" /> <!-- Fafurion Normal Attack -->
+			<skill id="32713" level="1" /> <!-- Fafurion Tail Strike -->
+			<skill id="32716" level="1" /> <!-- Fafurion Breath -->
+			<skill id="32717" level="1" /> <!-- Fafurion Fear -->
 		</skillList>
 	</npc>
 	<npc id="29367" level="118" type="RaidBoss" name="Fafurion" title="Wrathful Water Dragon">
