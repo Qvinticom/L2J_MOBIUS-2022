@@ -205,32 +205,32 @@ public class Fafurion extends AbstractNpcAI
 		{
 			case FAFURION_FORM_1:
 			{
-				final Map<Creature, AggroInfo> aggroList = ((MonsterInstance) bossInstance).getAggroList();
 				for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
 				{
 					plr.sendPacket(new ExShowScreenMessage(NpcStringId.AREN_T_YOU_AFRAID_OF_FAFURION, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
-				npc.deleteMe();
-				bossInstance = addSpawn(FAFURION_FORM_2, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+				final Map<Creature, AggroInfo> aggroList = ((MonsterInstance) bossInstance).getAggroList();
+				bossInstance = addSpawn(FAFURION_FORM_2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false);
 				for (Entry<Creature, AggroInfo> entry : aggroList.entrySet())
 				{
 					((MonsterInstance) bossInstance).getAggroList().put(entry.getKey(), entry.getValue());
 				}
+				npc.deleteMe();
 				break;
 			}
 			case FAFURION_FORM_2:
 			{
-				final Map<Creature, AggroInfo> aggroList = ((MonsterInstance) bossInstance).getAggroList();
 				for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
 				{
 					plr.sendPacket(new ExShowScreenMessage(NpcStringId.GLORY_TO_FAFURION_DEATH_TO_S1, ExShowScreenMessage.TOP_CENTER, 10000, true, killer.getName()));
 				}
-				npc.deleteMe();
-				bossInstance = addSpawn(FAFURION_FINAL_FORM, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+				final Map<Creature, AggroInfo> aggroList = ((MonsterInstance) bossInstance).getAggroList();
+				bossInstance = addSpawn(FAFURION_FINAL_FORM, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false);
 				for (Entry<Creature, AggroInfo> entry : aggroList.entrySet())
 				{
 					((MonsterInstance) bossInstance).getAggroList().put(entry.getKey(), entry.getValue());
 				}
+				npc.deleteMe();
 				break;
 			}
 			case FAFURION_FINAL_FORM:
