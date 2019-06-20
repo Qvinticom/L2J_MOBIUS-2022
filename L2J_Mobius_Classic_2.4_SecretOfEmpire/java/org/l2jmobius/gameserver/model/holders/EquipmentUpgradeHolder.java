@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * @author Mobius
  */
-public class UpgradeEquipmentHolder
+public class EquipmentUpgradeHolder
 {
 	private final int _id;
 	private final int _requiredItemId;
@@ -31,7 +31,7 @@ public class UpgradeEquipmentHolder
 	private final int _resultItemId;
 	private final int _resultItemEnchant;
 	
-	public UpgradeEquipmentHolder(int id, int requiredItemId, int requiredItemEnchant, List<ItemHolder> materials, long adena, int resultItemId, int resultItemEnchant)
+	public EquipmentUpgradeHolder(int id, int requiredItemId, int requiredItemEnchant, List<ItemHolder> materials, long adena, int resultItemId, int resultItemEnchant)
 	{
 		_id = id;
 		_requiredItemId = requiredItemId;

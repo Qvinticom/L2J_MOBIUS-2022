@@ -28,18 +28,18 @@ import org.w3c.dom.Document;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.UpgradeEquipmentHolder;
 
 /**
  * @author Mobius
  */
-public class UpgradeEquipmentData implements IXmlReader
+public class EquipmentUpgradeData implements IXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(UpgradeEquipmentData.class.getName());
-	private static final Map<Integer, UpgradeEquipmentHolder> _upgrades = new HashMap<>();
+	private static Logger LOGGER = Logger.getLogger(EquipmentUpgradeData.class.getName());
+	private static final Map<Integer, EquipmentUpgradeHolder> _upgrades = new HashMap<>();
 	
-	protected UpgradeEquipmentData()
+	protected EquipmentUpgradeData()
 	{
 		load();
 	}
@@ -48,7 +48,7 @@ public class UpgradeEquipmentData implements IXmlReader
 	public void load()
 	{
 		_upgrades.clear();
-		parseDatapackFile("data/UpgradeEquipmentData.xml");
+		parseDatapackFile("data/EquipmentUpgradeData.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _upgrades.size() + " upgrade equipment data.");
 	}
 	
@@ -90,23 +90,23 @@ public class UpgradeEquipmentData implements IXmlReader
 			}
 			else
 			{
-				_upgrades.put(id, new UpgradeEquipmentHolder(id, requiredItemId, requiredItemEnchant, materialList, adena, resultItemId, resultItemEnchant));
+				_upgrades.put(id, new EquipmentUpgradeHolder(id, requiredItemId, requiredItemEnchant, materialList, adena, resultItemId, resultItemEnchant));
 			}
 		}));
 	}
 	
-	public UpgradeEquipmentHolder getUpgrade(int id)
+	public EquipmentUpgradeHolder getUpgrade(int id)
 	{
 		return _upgrades.get(id);
 	}
 	
-	public static UpgradeEquipmentData getInstance()
+	public static EquipmentUpgradeData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final UpgradeEquipmentData INSTANCE = new UpgradeEquipmentData();
+		protected static final EquipmentUpgradeData INSTANCE = new EquipmentUpgradeData();
 	}
 }

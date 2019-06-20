@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.UpgradeEquipmentData;
+import org.l2jmobius.gameserver.data.xml.impl.EquipmentUpgradeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.UpgradeEquipmentHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -58,7 +58,7 @@ public class RequestUpgradeSystemResult implements IClientIncomingPacket
 			return;
 		}
 		
-		final UpgradeEquipmentHolder upgradeHolder = UpgradeEquipmentData.getInstance().getUpgrade(_upgradeId);
+		final EquipmentUpgradeHolder upgradeHolder = EquipmentUpgradeData.getInstance().getUpgrade(_upgradeId);
 		if (upgradeHolder == null)
 		{
 			player.sendPacket(new ExUpgradeSystemResult(0, 0));
