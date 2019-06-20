@@ -94,6 +94,7 @@ import org.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import org.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
 import org.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import org.l2jmobius.gameserver.data.xml.impl.TransformData;
+import org.l2jmobius.gameserver.data.xml.impl.UpgradeEquipmentData;
 import org.l2jmobius.gameserver.data.xml.impl.VariationData;
 import org.l2jmobius.gameserver.datatables.BotReportTable;
 import org.l2jmobius.gameserver.datatables.EventDroplist;
@@ -257,6 +258,7 @@ public class GameServer
 		EnchantItemHPBonusData.getInstance();
 		BuyListData.getInstance();
 		MultisellData.getInstance();
+		UpgradeEquipmentData.getInstance();
 		RecipeData.getInstance();
 		ArmorSetsData.getInstance();
 		FishingData.getInstance();

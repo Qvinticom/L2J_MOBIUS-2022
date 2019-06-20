@@ -69,6 +69,7 @@ import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrys
 import org.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
+import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
 import org.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
@@ -415,7 +416,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EXREQUEST_MATCH_GROUP_WITHDRAW(0x133, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP_OUST(0x134, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP_CHANGE_MASTER(0x135, null, ConnectionState.IN_GAME),
-	REQUEST_UPGRADE_SYSTEM_RESULT(0x136, null, ConnectionState.IN_GAME),
+	REQUEST_UPGRADE_SYSTEM_RESULT(0x136, RequestUpgradeSystemResult::new, ConnectionState.IN_GAME),
 	EX_CARD_UPDOWN_PICK_NUMB(0x137, null, ConnectionState.IN_GAME),
 	EX_CARD_UPDOWN_GAME_REWARD_REQUEST(0x138, null, ConnectionState.IN_GAME),
 	EX_CARD_UPDOWN_GAME_RETRY(0x139, null, ConnectionState.IN_GAME),

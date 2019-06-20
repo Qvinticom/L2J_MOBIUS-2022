@@ -159,6 +159,7 @@ import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.TerritoryStatus;
 import handlers.bypasshandlers.TutorialClose;
+import handlers.bypasshandlers.UpgradeEquipment;
 import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAlliance;
@@ -498,6 +499,7 @@ public class MasterHandler
 			SkillList.class,
 			TerritoryStatus.class,
 			TutorialClose.class,
+			UpgradeEquipment.class,
 			VoiceCommand.class,
 			Wear.class,
 		},
