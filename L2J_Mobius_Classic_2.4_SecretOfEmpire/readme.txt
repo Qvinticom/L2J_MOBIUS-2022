@@ -88,6 +88,9 @@ Secret of Empire: https://eu.4game.com/patchnotes/lineage2classic/133/
 -Parsed new skills from client
 -Parsed new items from client
 -Parsed new recipes from client
+-Imperial tomb area spawns
+-Retail gatekeeper teleports
+-Equipment upgrade system
 
 Customs:
 -Newbie Helper NPC location info

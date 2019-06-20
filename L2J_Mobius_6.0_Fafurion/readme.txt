@@ -95,6 +95,8 @@ Etina's Fate:
 Fafurion:
 -Support for R110 items
 -Spawned new areas
+-Retail gatekeeper teleports
+-Equipment upgrade system
 
 Events:
 -Birth of Draco
