@@ -179,7 +179,6 @@ import org.l2jmobius.gameserver.util.Util;
 public abstract class Creature extends WorldObject implements ISkillsHolder, IDeletable
 {
 	public static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
-	
 	private volatile Set<WeakReference<Creature>> _attackByList;
 	
 	private boolean _isDead = false;
@@ -4428,33 +4427,40 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			
 			// Absorb HP from the damage inflicted
-			if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
+			final boolean isPvP = isPlayable() && target.isPlayable();
+			if (!isPvP || Config.VAMPIRIC_ATTACK_AFFECTS_PVP)
 			{
-				double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-				if ((absorbPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
+				if (skill == null) // Classic: Skills counted with the Vampiric Rage effect was introduced on GoD chronicles.
 				{
-					int absorbDamage = (int) Math.min(absorbPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
-					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-					if (absorbDamage > 0)
+					final double absorbHpPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
+					if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
 					{
-						setCurrentHp(_status.getCurrentHp() + absorbDamage);
+						int absorbDamage = (int) Math.min(absorbHpPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
+						absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+						if (absorbDamage > 0)
+						{
+							setCurrentHp(_status.getCurrentHp() + absorbDamage);
+						}
 					}
 				}
 			}
 			
 			// Absorb MP from the damage inflicted.
-			if (skill != null) // Classic: Used to reduce skill MP consumption. See Orfen's Earring.
+			if (!isPvP || Config.MP_VAMPIRIC_ATTACK_AFFECTS_PVP)
 			{
-				if (Rnd.get(10) < 3) // Classic: Static 30% change.
+				if (skill != null) // Classic: Used to reduce skill MP consumption. See Orfen's Earring.
 				{
-					double absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
-					if (absorbPercent > 0)
+					if (Rnd.get(10) < 3) // Classic: Static 30% change.
 					{
-						int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
-						absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-						if (absorbDamage > 0)
+						final double absorbMpPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+						if (absorbMpPercent > 0)
 						{
-							setCurrentMp(_status.getCurrentMp() + absorbDamage);
+							int absorbDamage = (int) Math.min((absorbMpPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
+							absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+							if (absorbDamage > 0)
+							{
+								setCurrentMp(_status.getCurrentMp() + absorbDamage);
+							}
 						}
 					}
 				}

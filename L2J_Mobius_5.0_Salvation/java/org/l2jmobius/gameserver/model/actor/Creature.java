@@ -4438,26 +4438,33 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			
 			// Absorb HP from the damage inflicted
-			double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-			if ((absorbPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
+			final boolean isPvP = isPlayable() && target.isPlayable();
+			if (!isPvP || Config.VAMPIRIC_ATTACK_AFFECTS_PVP)
 			{
-				int absorbDamage = (int) Math.min(absorbPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
-				absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-				if (absorbDamage > 0)
+				final double absorbHpPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
+				if ((absorbHpPercent > 0) && (Rnd.nextDouble() < _stat.getValue(Stats.ABSORB_DAMAGE_CHANCE)))
 				{
-					setCurrentHp(_status.getCurrentHp() + absorbDamage);
+					int absorbDamage = (int) Math.min(absorbHpPercent * damage, _stat.getMaxRecoverableHp() - _status.getCurrentHp());
+					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+					if (absorbDamage > 0)
+					{
+						setCurrentHp(_status.getCurrentHp() + absorbDamage);
+					}
 				}
 			}
 			
 			// Absorb MP from the damage inflicted.
-			absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
-			if (absorbPercent > 0)
+			if (!isPvP || Config.MP_VAMPIRIC_ATTACK_AFFECTS_PVP)
 			{
-				int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
-				absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-				if (absorbDamage > 0)
+				final double absorbMpPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+				if (absorbMpPercent > 0)
 				{
-					setCurrentMp(_status.getCurrentMp() + absorbDamage);
+					int absorbDamage = (int) Math.min((absorbMpPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
+					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+					if (absorbDamage > 0)
+					{
+						setCurrentMp(_status.getCurrentMp() + absorbDamage);
+					}
 				}
 			}
 			

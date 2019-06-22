@@ -651,6 +651,8 @@ public final class Config
 	public static boolean ANTIFEED_DUALBOX;
 	public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
 	public static int ANTIFEED_INTERVAL;
+	public static boolean VAMPIRIC_ATTACK_AFFECTS_PVP;
+	public static boolean MP_VAMPIRIC_ATTACK_AFFECTS_PVP;
 	public static boolean ANNOUNCE_GAINAK_SIEGE;
 	
 	// --------------------------------------------------
@@ -2152,6 +2154,9 @@ public final class Config
 			ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
 			ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
 			ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
+			
+			VAMPIRIC_ATTACK_AFFECTS_PVP = PVPSettings.getBoolean("VampiricAttackAffectsPvP", false);
+			MP_VAMPIRIC_ATTACK_AFFECTS_PVP = PVPSettings.getBoolean("MpVampiricAttackAffectsPvP", false);
 			
 			// sorting so binarySearch can be used later
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
