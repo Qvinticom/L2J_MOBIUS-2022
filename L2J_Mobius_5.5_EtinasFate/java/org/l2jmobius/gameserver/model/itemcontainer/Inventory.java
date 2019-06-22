@@ -508,6 +508,11 @@ public abstract class Inventory extends ItemContainer
 				final Skill skill = holder.getSkill();
 				if (skill != null)
 				{
+					if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+					{
+						return;
+					}
+					
 					player.addSkill(skill, false);
 					
 					if (skill.isActive())
@@ -632,6 +637,11 @@ public abstract class Inventory extends ItemContainer
 						if (itemSkill == null)
 						{
 							LOGGER.warning("Inventory.ArmorSetListener.addSkills: Incorrect skill: " + holder);
+							continue;
+						}
+						
+						if (itemSkill.isPassive() && !itemSkill.checkConditions(SkillConditionScope.PASSIVE, player, player))
+						{
 							continue;
 						}
 						
