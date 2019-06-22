@@ -1126,14 +1126,26 @@ public final class Config
 	public static Map<ClassId, Float> PVP_MAGICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_MAGICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_BLOW_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
@@ -2689,6 +2701,62 @@ public final class Config
 					}
 				}
 			}
+			final String[] pveMagicalSkillCriticalChanceMultipliers = ClassBalance.getString("PveMagicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.clear();
+			if (pveMagicalSkillCriticalChanceMultipliers.length > 0)
+			{
+				for (String info : pveMagicalSkillCriticalChanceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpMagicalSkillCriticalChanceMultipliers = ClassBalance.getString("PvpMagicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.clear();
+			if (pvpMagicalSkillCriticalChanceMultipliers.length > 0)
+			{
+				for (String info : pvpMagicalSkillCriticalChanceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pveMagicalSkillCriticalDamageMultipliers = ClassBalance.getString("PveMagicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			PVE_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.clear();
+			if (pveMagicalSkillCriticalDamageMultipliers.length > 0)
+			{
+				for (String info : pveMagicalSkillCriticalDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpMagicalSkillCriticalDamageMultipliers = ClassBalance.getString("PvpMagicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			PVP_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.clear();
+			if (pvpMagicalSkillCriticalDamageMultipliers.length > 0)
+			{
+				for (String info : pvpMagicalSkillCriticalDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
 			final String[] pvePhysicalSkillDamageMultipliers = ClassBalance.getString("PvePhysicalSkillDamageMultipliers", "").trim().split(";");
 			PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.clear();
 			if (pvePhysicalSkillDamageMultipliers.length > 0)
@@ -2745,6 +2813,62 @@ public final class Config
 					}
 				}
 			}
+			final String[] pvePhysicalSkillCriticalChanceMultipliers = ClassBalance.getString("PvePhysicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			PVE_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.clear();
+			if (pvePhysicalSkillCriticalChanceMultipliers.length > 0)
+			{
+				for (String info : pvePhysicalSkillCriticalChanceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpPhysicalSkillCriticalChanceMultipliers = ClassBalance.getString("PvpPhysicalSkillCriticalChanceMultipliers", "").trim().split(";");
+			PVP_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.clear();
+			if (pvpPhysicalSkillCriticalChanceMultipliers.length > 0)
+			{
+				for (String info : pvpPhysicalSkillCriticalChanceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvePhysicalSkillCriticalDamageMultipliers = ClassBalance.getString("PvePhysicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.clear();
+			if (pvePhysicalSkillCriticalDamageMultipliers.length > 0)
+			{
+				for (String info : pvePhysicalSkillCriticalDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpPhysicalSkillCriticalDamageMultipliers = ClassBalance.getString("PvpPhysicalSkillCriticalDamageMultipliers", "").trim().split(";");
+			PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.clear();
+			if (pvpPhysicalSkillCriticalDamageMultipliers.length > 0)
+			{
+				for (String info : pvpPhysicalSkillCriticalDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
 			final String[] pvePhysicalAttackDamageMultipliers = ClassBalance.getString("PvePhysicalAttackDamageMultipliers", "").trim().split(";");
 			PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.clear();
 			if (pvePhysicalAttackDamageMultipliers.length > 0)
@@ -2798,6 +2922,62 @@ public final class Config
 					{
 						final String id = classInfo[0].trim();
 						PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvePhysicalAttackCriticalChanceMultipliers = ClassBalance.getString("PvePhysicalAttackCriticalChanceMultipliers", "").trim().split(";");
+			PVE_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS.clear();
+			if (pvePhysicalAttackCriticalChanceMultipliers.length > 0)
+			{
+				for (String info : pvePhysicalAttackCriticalChanceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpPhysicalAttackCriticalChanceMultipliers = ClassBalance.getString("PvpPhysicalAttackCriticalChanceMultipliers", "").trim().split(";");
+			PVP_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS.clear();
+			if (pvpPhysicalAttackCriticalChanceMultipliers.length > 0)
+			{
+				for (String info : pvpPhysicalAttackCriticalChanceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvePhysicalAttackCriticalDamageMultipliers = ClassBalance.getString("PvePhysicalAttackCriticalDamageMultipliers", "").trim().split(";");
+			PVE_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.clear();
+			if (pvePhysicalAttackCriticalDamageMultipliers.length > 0)
+			{
+				for (String info : pvePhysicalAttackCriticalDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpPhysicalAttackCriticalDamageMultipliers = ClassBalance.getString("PvpPhysicalAttackCriticalDamageMultipliers", "").trim().split(";");
+			PVP_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.clear();
+			if (pvpPhysicalAttackCriticalDamageMultipliers.length > 0)
+			{
+				for (String info : pvpPhysicalAttackCriticalDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}

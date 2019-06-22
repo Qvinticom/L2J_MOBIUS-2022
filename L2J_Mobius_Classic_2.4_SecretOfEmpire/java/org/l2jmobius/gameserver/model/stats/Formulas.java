@@ -230,7 +230,13 @@ public final class Formulas
 					return Math.min(finalRate, 32) > Rnd.get(100);
 				}
 				
-				return Math.min(finalRate, 20) > Rnd.get(100);
+				double balanceMod = 1;
+				if (creature.isPlayable())
+				{
+					balanceMod = target.isPlayable() ? Config.PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.getOrDefault(creature.getActingPlayer().getClassId(), 1f) : Config.PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.getOrDefault(creature.getActingPlayer().getClassId(), 1f);
+				}
+				
+				return (Math.min(finalRate, 20) * balanceMod) > Rnd.get(100);
 			}
 			
 			// Physical skill critical rate.
@@ -250,8 +256,14 @@ public final class Formulas
 			}
 			
 			final double rateBonus = creature.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
-			double finalRate = rate * statBonus * rateBonus;
-			return finalRate > Rnd.get(100);
+			
+			double balanceMod = 1;
+			if (creature.isPlayable())
+			{
+				balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.getOrDefault(creature.getActingPlayer().getClassId(), 1f) : Config.PVE_PHYSICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS.getOrDefault(creature.getActingPlayer().getClassId(), 1f);
+			}
+			
+			return (rate * statBonus * rateBonus * balanceMod) > Rnd.get(100);
 		}
 		
 		// Autoattack critical rate.
@@ -271,7 +283,13 @@ public final class Formulas
 		// Autoattack critical rate is limited between 3%-97%.
 		rate = CommonUtil.constrain(rate, 3, 97);
 		
-		return rate > Rnd.get(100);
+		double balanceMod = 1;
+		if (creature.isPlayable())
+		{
+			balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS.getOrDefault(creature.getActingPlayer().getClassId(), 1f) : Config.PVE_PHYSICAL_ATTACK_CRITICAL_CHANCE_MULTIPLIERS.getOrDefault(creature.getActingPlayer().getClassId(), 1f);
+		}
+		
+		return (rate * balanceMod) > Rnd.get(100);
 	}
 	
 	/**
@@ -315,6 +333,7 @@ public final class Formulas
 	{
 		final double criticalDamage;
 		final double defenceCriticalDamage;
+		double balanceMod = 1;
 		
 		if (skill != null)
 		{
@@ -323,11 +342,19 @@ public final class Formulas
 				// Magic critical damage.
 				criticalDamage = attacker.getStat().getValue(Stats.MAGIC_CRITICAL_DAMAGE, 1);
 				defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_MAGIC_CRITICAL_DAMAGE, 1);
+				if (attacker.isPlayable())
+				{
+					balanceMod = target.isPlayable() ? Config.PVP_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_MAGICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
+				}
 			}
 			else
 			{
 				criticalDamage = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE_SKILL, 1);
 				defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_SKILL, 1);
+				if (attacker.isPlayable())
+				{
+					balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_PHYSICAL_SKILL_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
+				}
 			}
 		}
 		else
@@ -335,9 +362,13 @@ public final class Formulas
 			// Autoattack critical damage.
 			criticalDamage = attacker.getStat().getValue(Stats.CRITICAL_DAMAGE, 1) * attacker.getStat().getPositionTypeValue(Stats.CRITICAL_DAMAGE, Position.getPosition(attacker, target));
 			defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE, 1);
+			if (attacker.isPlayable())
+			{
+				balanceMod = target.isPlayable() ? Config.PVP_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_PHYSICAL_ATTACK_CRITICAL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
+			}
 		}
 		
-		return 2 * criticalDamage * defenceCriticalDamage;
+		return 2 * criticalDamage * defenceCriticalDamage * balanceMod;
 	}
 	
 	/**
