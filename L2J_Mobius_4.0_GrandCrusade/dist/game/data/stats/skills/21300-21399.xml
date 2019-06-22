@@ -1845,13 +1845,13 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<conditions>
+		<passiveConditions>
 			<condition name="RemainHpPer">
 				<amount>90</amount>
 				<percentType>MORE</percentType>
 				<affectType>CASTER</affectType>
 			</condition>
-		</conditions>
+		</passiveConditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>20</amount>

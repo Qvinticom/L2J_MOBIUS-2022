@@ -529,7 +529,7 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="classId" type="xs:string" />
-														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
@@ -658,8 +658,8 @@
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="effects">
-									<xs:complexType mixed="true">
-										<xs:sequence minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
 											<xs:element minOccurs="0" name="dispel">
 												<xs:complexType>
 													<xs:sequence>
@@ -1122,7 +1122,6 @@
 																			</xs:complexType>
 																		</xs:element>
 																	</xs:sequence>
-																	<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="accuracyAmount" type="xs:unsignedByte" />
@@ -1289,8 +1288,8 @@
 																						<xs:complexType>
 																							<xs:attribute name="id" type="xs:unsignedShort" use="required" />
 																							<xs:attribute name="count" type="xs:unsignedInt" use="required" />
-																							<xs:attribute name="minEnchant" type="xs:unsignedInt" />
-																							<xs:attribute name="maxEnchant" type="xs:unsignedInt" />
+																							<xs:attribute name="minEnchant" type="xs:unsignedByte" use="optional" />
+																							<xs:attribute name="maxEnchant" type="xs:unsignedByte" use="optional" />
 																						</xs:complexType>
 																					</xs:element>
 																				</xs:sequence>
@@ -2241,13 +2240,14 @@
 											<xs:element maxOccurs="unbounded" name="condition">
 												<xs:complexType>
 													<xs:sequence minOccurs="0">
-														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="percentType" type="xs:string" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
 														<xs:element minOccurs="0" name="level" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasAbnormal" type="xs:boolean" />
 														<xs:element minOccurs="0" name="L2Object" type="xs:string" />
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
+														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="percentType" type="xs:string" />
+														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>

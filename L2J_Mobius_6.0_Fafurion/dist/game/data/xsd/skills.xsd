@@ -318,9 +318,7 @@
 												<xs:complexType>
 													<xs:simpleContent>
 														<xs:extension base="xs:string">
-															<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
-															<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
-															<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
+															<xs:attribute name="level" type="xs:unsignedByte" use="required" />
 														</xs:extension>
 													</xs:simpleContent>
 												</xs:complexType>
@@ -529,7 +527,7 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="classId" type="xs:string" />
-														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
@@ -2242,13 +2240,16 @@
 											<xs:element maxOccurs="unbounded" name="condition">
 												<xs:complexType>
 													<xs:sequence minOccurs="0">
-														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="percentType" type="xs:string" />
+														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
 														<xs:element minOccurs="0" name="level" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasAbnormal" type="xs:boolean" />
 														<xs:element minOccurs="0" name="L2Object" type="xs:string" />
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
+														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="percentType" type="xs:string" />
+														<xs:element minOccurs="0" maxOccurs="unbounded" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>
@@ -2265,12 +2266,9 @@
 														</xs:element>
 														<xs:element minOccurs="0" name="minLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
-														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
-														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
-														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="affectType" type="xs:string" />
 														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
+														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
 														<xs:element minOccurs="0" name="weaponType">
 															<xs:complexType>
 																<xs:sequence>
@@ -2507,7 +2505,7 @@
 										<xs:sequence>
 											<xs:element maxOccurs="unbounded" name="effect">
 												<xs:complexType>
-													<xs:sequence>
+													<xs:sequence minOccurs="0">
 														<xs:element minOccurs="0" name="power">
 															<xs:complexType>
 																<xs:sequence>
@@ -2856,13 +2854,13 @@
 								<xs:element name="abnormalResists" type="xs:string" />
 								<xs:element name="isTriggeredSkill" type="xs:boolean" />
 								<xs:element name="deleteAbnormalOnLeave" type="xs:boolean" />
+								<xs:element name="abnormalLevel" type="xs:unsignedByte" />
 								<xs:element name="reuseDelayType" type="xs:string" />
 								<xs:element name="withoutAction" type="xs:boolean" />
 								<xs:element name="isMentoring" type="xs:boolean" />
 								<xs:element name="handler" type="xs:string" />
 								<xs:element name="blockActionUseSkill" type="xs:boolean" />
 								<xs:element name="is_destroyable" type="xs:boolean" />
-								<xs:element name="abnormalLevel" type="xs:unsignedByte" />
 								<xs:element name="magicLevel">
 									<xs:complexType mixed="true">
 										<xs:sequence minOccurs="0">
@@ -2920,10 +2918,10 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="clanRepConsume" type="xs:unsignedShort" />
 								<xs:element name="targetScope" type="xs:string" />
 								<xs:element name="chance" type="xs:unsignedByte" />
 								<xs:element name="famePointConsume" type="xs:unsignedShort" />
+								<xs:element name="clanRepConsume" type="xs:unsignedShort" />
 								<xs:element name="resetQuest" type="xs:string" />
 								<xs:element name="despawnDelay" type="xs:unsignedInt" />
 							</xs:choice>

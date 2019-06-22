@@ -848,14 +848,14 @@
 		<!-- Damage to Immobilized Targets +$s1. -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
-		<conditions>
+		<passiveConditions>
 			<condition name="OpCheckAbnormal">
 				<type>STUN</type>
 				<level>1</level>
 				<hasAbnormal>true</hasAbnormal>
 				<affectType>TARGET</affectType>
 			</condition>
-		</conditions>
+		</passiveConditions>
 		<effects>
 			<effect name="MAtk">
 				<amount>5</amount>

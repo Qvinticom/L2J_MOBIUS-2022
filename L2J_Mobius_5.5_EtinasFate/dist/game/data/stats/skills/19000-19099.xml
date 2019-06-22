@@ -310,14 +310,14 @@
 		<!-- Increases P. Atk. and P. Def. when HP is below 30%. Applies after the lord stage. -->
 		<icon>icon.skill19011</icon>
 		<operateType>P</operateType>
-		<conditions>
+		<passiveConditions>
 			<condition name="CanUseInBattlefield" />
 			<condition name="RemainHpPer">
 				<amount>30</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>
-		</conditions>
+		</passiveConditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>30</amount>

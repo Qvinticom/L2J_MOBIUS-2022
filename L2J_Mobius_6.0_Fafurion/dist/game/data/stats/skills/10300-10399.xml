@@ -1075,7 +1075,7 @@
 		<!-- Power of skills that consume Momentum +$s1. -->
 		<icon>icon.skill10324</icon>
 		<operateType>P</operateType>
-		<conditions>
+		<passiveConditions>
 			<condition name="OpCheckSkill">
 				<skillId>261</skillId> <!-- Triple Sonic Slash -->
 				<skillId>10258</skillId> <!-- Armor Destruction -->
@@ -1086,7 +1086,7 @@
 				<skillId>10318</skillId> <!-- Sonic Flash -->
 				<affectType>CASTER</affectType>
 			</condition>
-		</conditions>
+		</passiveConditions>
 		<effects>
 			<effect name="PhysicalSkillPower">
 				<amount>
