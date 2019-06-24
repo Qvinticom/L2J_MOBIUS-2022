@@ -967,19 +967,380 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17850" toLevel="1" name="Twilight Crafting Pack">
+		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>39336</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="37996" count="1" /> <!-- Twilight Boots Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37993" count="1" /> <!-- Twilight Breastplate Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38003" count="1" /> <!-- Twilight Circlet Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37994" count="1" /> <!-- Twilight Gaiters Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37995" count="1" /> <!-- Twilight Gauntlets Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38006" count="1" /> <!-- Twilight Gloves Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37992" count="1" /> <!-- Twilight Helmet Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37999" count="1" /> <!-- Twilight Leather Armor Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38002" count="1" /> <!-- Twilight Leather Boots Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38001" count="1" /> <!-- Twilight Leather Gloves Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37998" count="1" /> <!-- Twilight Leather Helmet Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38000" count="1" /> <!-- Twilight Leather Leggings Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="37997" count="1" /> <!-- Twilight Shield Crafting Box -->
+						</item>
+						<item chance="5.88235">
+							<item id="38007" count="1" /> <!-- Twilight Shoes Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38008" count="1" /> <!-- Twilight Sigil Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38005" count="1" /> <!-- Twilight Stockings Crafting Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38004" count="1" /> <!-- Twilight Tunic Crafting Pack -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17851" toLevel="1" name="Twilight Completion Pack">
+		<icon>icon.etc_box_of_adventure_3_i00</icon>
+		<itemConsumeId>39337</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="17342" count="1" /> <!-- Twilight Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="17339" count="1" /> <!-- Twilight Breastplate -->
+						</item>
+						<item chance="5.88235">
+							<item id="17349" count="1" /> <!-- Twilight Circlet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17340" count="1" /> <!-- Twilight Gaiters -->
+						</item>
+						<item chance="5.88235">
+							<item id="17341" count="1" /> <!-- Twilight Gauntlets -->
+						</item>
+						<item chance="5.88235">
+							<item id="17352" count="1" /> <!-- Twilight Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="17338" count="1" /> <!-- Twilight Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17345" count="1" /> <!-- Twilight Leather Armor -->
+						</item>
+						<item chance="5.88235">
+							<item id="17348" count="1" /> <!-- Twilight Leather Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="17347" count="1" /> <!-- Twilight Leather Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="17344" count="1" /> <!-- Twilight Leather Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17346" count="1" /> <!-- Twilight Leather Leggings -->
+						</item>
+						<item chance="5.88235">
+							<item id="17343" count="1" /> <!-- Twilight Shield -->
+						</item>
+						<item chance="5.88235">
+							<item id="17353" count="1" /> <!-- Twilight Shoes -->
+						</item>
+						<item chance="5.88235">
+							<item id="17354" count="1" /> <!-- Twilight Sigil -->
+						</item>
+						<item chance="5.88235">
+							<item id="17351" count="1" /> <!-- Twilight Stockings -->
+						</item>
+						<item chance="5.88235">
+							<item id="17350" count="1" /> <!-- Twilight Tunic -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17852" toLevel="1" name="+5 Twilight Pack">
+		<itemConsumeId>39338</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17342" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17339" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17349" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17340" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17341" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17352" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17338" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17345" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17348" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17347" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17344" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17346" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17343" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17353" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17354" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Sigil -->
+					</item>
+					<item chance="5.88235">
+						<item id="17351" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17350" count="1" minEnchant="5" maxEnchant="5" /> <!-- Twilight Tunic -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17853" toLevel="1" name="+6 Twilight Pack">
+		<itemConsumeId>39339</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17342" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17339" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17349" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17340" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17341" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17352" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17338" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17345" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17348" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17347" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17344" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17346" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17343" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17353" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17354" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Sigil -->
+					</item>
+					<item chance="5.88235">
+						<item id="17351" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17350" count="1" minEnchant="6" maxEnchant="6" /> <!-- Twilight Tunic -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17854" toLevel="1" name="+8 Twilight Pack">
+		<itemConsumeId>39340</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17342" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17339" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17349" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17340" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17341" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17352" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17338" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17345" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17348" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17347" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17344" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17346" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17343" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17353" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17354" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Sigil -->
+					</item>
+					<item chance="5.88235">
+						<item id="17351" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17350" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Tunic -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17855" toLevel="1" name="Vesper Pack">
 		<operateType>A1</operateType>
