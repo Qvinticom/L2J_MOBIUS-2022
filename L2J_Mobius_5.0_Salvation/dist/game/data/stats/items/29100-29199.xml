@@ -773,6 +773,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="22091" level="1" /> <!-- Eva's Rune -->
+		</skills>
 	</item>
 	<item id="29181" name="Mermaid Agathion Charm" type="Armor">
 		<!-- Can summon a Mermaid Agathion when equipped. -->

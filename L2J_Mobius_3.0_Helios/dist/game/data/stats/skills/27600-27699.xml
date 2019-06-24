@@ -12,6 +12,9 @@
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="TalismanSlot">
+				<slots>3</slots>
+			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>
 				<stat>MEN</stat>

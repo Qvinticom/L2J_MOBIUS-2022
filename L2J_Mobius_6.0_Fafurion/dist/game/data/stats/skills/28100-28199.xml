@@ -714,7 +714,69 @@
 	</skill>
 	<skill id="28154" toLevel="1" name="Talisman - Abundance Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
+		<itemConsumeId>29077</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="7.45">
+						<item id="26418" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 1 (High-grade) -->
+					</item>
+					<item chance="5.25">
+						<item id="26419" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 2 (High-grade) -->
+					</item>
+					<item chance="4.25">
+						<item id="26420" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 3 (High-grade) -->
+					</item>
+					<item chance="3.25">
+						<item id="26421" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 4 (High-grade) -->
+					</item>
+					<item chance="7.45">
+						<item id="23833" count="1" /> <!-- Talisman - Abundance -->
+					</item>
+					<item chance="7.45">
+						<item id="23835" count="1" /> <!-- Talisman - Abundance -->
+					</item>
+					<item chance="7.45">
+						<item id="23834" count="1" /> <!-- Talisman - Abundance -->
+					</item>
+					<item chance="7.45">
+						<item id="23836" count="1" /> <!-- Talisman - Abundance -->
+					</item>
+					<item chance="7.45">
+						<item id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
+					</item>
+					<item chance="5.25">
+						<item id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
+					</item>
+					<item chance="4.25">
+						<item id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
+					</item>
+					<item chance="3.25">
+						<item id="26341" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
+					</item>
+					<item chance="7.45">
+						<item id="23839" count="1" /> <!-- Talisman - Conquerer -->
+					</item>
+					<item chance="7.45">
+						<item id="23837" count="1" /> <!-- Talisman - Hunter -->
+					</item>
+					<item chance="7.45">
+						<item id="23840" count="1" /> <!-- Talisman - Outlaw -->
+					</item>
+					<item chance="7.45">
+						<item id="23838" count="1" /> <!-- Talisman - Slaughterer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28155" toLevel="1" name="Wondrous Jewelry Box">
 		<operateType>A1</operateType>

@@ -121,26 +121,25 @@
 		<!-- A luxurious golden hair accessory for adventurers. Requires 2 hair accessory slots. Increases P. Atk. by 3% and M. Atk. by 5%. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="MAGIC" />
-		<set name="bodypart" val="onepiece" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="2450" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="enchant_enabled" val="7" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="weight" val="10" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="maxMp">665</stat>
-		</stats>
+		<set name="is_commissionable" val="false" />		
+		<skills>			
+			<skill id="27588" level="1" /> <!-- Adventurer's Shirt Effect -->		
+		</skills>
 	</item>
 	<item id="29213" name="Adventurer's Bracelet" type="Armor">
 		<!-- Bracelet for adventurers. Increases STR/ DEX/ CON/ INT/ WIT/ MEN by 1 and activates 3 talisman slots. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="MAGIC" />
-		<set name="bodypart" val="onepiece" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
@@ -149,9 +148,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="maxMp">718</stat>
-		</stats>
+		<set name="commissionItemType" val="BRACELET" />
+		<skills>	
+			<skill id="27602" level="1" /> <!-- Paulina Twilight Bracelet -->	
+		</skills>
 	</item>
 	<item id="29214" name="Shirt Box" type="EtcItem">
 		<!-- Double-click to obtain 1 Pa'agrio, Sayha, Eva, or Maphr's shirt. -->

@@ -837,10 +837,18 @@
 	<item id="29077" name="Talisman - Abundance Pack" type="EtcItem">
 		<!-- Double-click to get a Talisman - Abundance (War, Tactics, Morale, or Physique.) -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28154" level="1" /> <!-- Talisman - Abundance Pack -->
+		</skills>
 	</item>
 	<item id="29078" name="Greater Vital Stone" additionalName="30-day" type="Armor">
 		<!-- Vitality Bonus +30% and Vitality Consumption -15%. Acquired XP/ SP +10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
