@@ -78,10 +78,23 @@
 	<item id="29207" name="Teddy Bear Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance into that of a Teddy Bear. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Teddy Bear. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<skills>
+			<skill id="28197" level="1" /> <!-- Teddy Bear Appearance Stone -->
+		</skills>
 	</item>
 	<item id="29208" name="Cat Plushie Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance into that of a Cat Plushie. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Cat Plushie. Appearance is restored through the use of a Restoration Stone. -->

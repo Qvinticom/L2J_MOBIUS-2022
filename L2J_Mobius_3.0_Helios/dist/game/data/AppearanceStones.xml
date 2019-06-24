@@ -1,5 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/AppearanceStones.xsd">
+	<!-- Weapon Appearance Scrolls -->
+	<!-- Normal -->
+	<appearance_stone id="36574" targetType="WEAPON" type="NORMAL"> <!-- Scroll: Modify Weapon (R-grade) -->
+		<grade>R</grade>                   
+		<grade>R95</grade>             
+		<grade>R99</grade>             
+	</appearance_stone>                
+	<appearance_stone id="36575" targetType="WEAPON" type="NORMAL"> <!-- Scroll: Modify Weapon (S-grade) -->
+		<grade>S</grade>               
+		<grade>S80</grade>             
+	</appearance_stone>                
+	<appearance_stone id="36576" targetType="WEAPON" type="NORMAL" grade="A" /> <!-- Scroll: Modify Weapon (A-grade) -->
+	<appearance_stone id="36577" targetType="WEAPON" type="NORMAL" grade="B" /> <!-- Scroll: Modify Weapon (B-grade) -->
+	<appearance_stone id="36578" targetType="WEAPON" type="NORMAL" grade="C" /> <!-- Scroll: Modify Weapon (C-grade) -->
+	<appearance_stone id="36579" targetType="WEAPON" type="NORMAL" grade="D" /> <!-- Scroll: Modify Weapon (D-grade) -->
+	<!-- 15-day -->                      
+	<appearance_stone id="36606" targetType="WEAPON" type="NORMAL" lifeTime="15days"> <!-- Scroll: Modify Weapon (R-grade) - 15-day -->
+		<grade>R</grade>                   
+		<grade>R95</grade>             
+		<grade>R99</grade>             
+	</appearance_stone>
+	<appearance_stone id="36607" targetType="WEAPON" type="NORMAL" lifeTime="15days"> <!-- Scroll: Modify Weapon (S-grade) - 15-day -->
+		<grade>S</grade>               
+		<grade>S80</grade>             
+	</appearance_stone>
+	<appearance_stone id="36608" targetType="WEAPON" type="NORMAL" grade="A" lifeTime="15days" /> <!-- Scroll: Modify Weapon (A-grade) - 15-day -->
+	<appearance_stone id="36609" targetType="WEAPON" type="NORMAL" grade="B" lifeTime="15days" /> <!-- Scroll: Modify Weapon (B-grade) - 15-day -->
+	<appearance_stone id="36610" targetType="WEAPON" type="NORMAL" grade="C" lifeTime="15days" /> <!-- Scroll: Modify Weapon (C-grade) - 15-day -->
+	<appearance_stone id="36611" targetType="WEAPON" type="NORMAL" grade="D" lifeTime="15days" /> <!-- Scroll: Modify Weapon (D-grade) - 15-day -->
+	<!-- Blessed -->                     
+	<appearance_stone id="36580" targetType="WEAPON" type="BLESSED"> <!-- Blessed Scroll: Modify Weapon (R-grade) -->
+		<grade>R</grade>                   
+		<grade>R95</grade>             
+		<grade>R99</grade>             
+	</appearance_stone>
+	<appearance_stone id="36581" targetType="WEAPON" type="BLESSED"> <!-- Blessed Scroll: Modify Weapon (S-grade) -->
+		<grade>S</grade>               
+		<grade>S80</grade>             
+	</appearance_stone>
+	<appearance_stone id="36582" targetType="WEAPON" type="BLESSED" grade="A" /> <!-- Blessed Scroll: Modify Weapon (A-grade) -->
+	<appearance_stone id="36583" targetType="WEAPON" type="BLESSED" grade="B" /> <!-- Blessed Scroll: Modify Weapon (B-grade) -->
+	<appearance_stone id="36584" targetType="WEAPON" type="BLESSED" grade="C" /> <!-- Blessed Scroll: Modify Weapon (C-grade) -->
+	<appearance_stone id="36585" targetType="WEAPON" type="BLESSED" grade="D" /> <!-- Blessed Scroll: Modify Weapon (D-grade) -->
+	<!-- 7-day -->                       
+	<appearance_stone id="36612" targetType="WEAPON" type="BLESSED" lifeTime="7days"> <!-- Blessed Scroll: Modify Weapon (R-grade) - 7-day -->
+		<grade>R</grade>                   
+		<grade>R95</grade>             
+		<grade>R99</grade>             
+	</appearance_stone>
+	<appearance_stone id="36613" targetType="WEAPON" type="BLESSED" lifeTime="7days"> <!-- Blessed Scroll: Modify Weapon (S-grade) - 7-day -->
+		<grade>S</grade>               
+		<grade>S80</grade>             
+	</appearance_stone>
+	<appearance_stone id="36614" targetType="WEAPON" type="BLESSED" grade="A" lifeTime="7days" /> <!-- Blessed Scroll: Modify Weapon (A-grade) - 7-day -->
+	<appearance_stone id="36615" targetType="WEAPON" type="BLESSED" grade="B" lifeTime="7days" /> <!-- Blessed Scroll: Modify Weapon (B-grade) - 7-day -->
+	<appearance_stone id="36616" targetType="WEAPON" type="BLESSED" grade="C" lifeTime="7days" /> <!-- Blessed Scroll: Modify Weapon (C-grade) - 7-day -->
+	<appearance_stone id="36617" targetType="WEAPON" type="BLESSED" grade="D" lifeTime="7days" /> <!-- Blessed Scroll: Modify Weapon (D-grade) - 7-day -->
+	<!-- 30-day -->                      
+	<appearance_stone id="37379" targetType="WEAPON" type="BLESSED" lifeTime="30days"> <!-- Blessed Scroll: Modify Weapon (R-grade) - 30-day -->
+		<grade>R</grade>                   
+		<grade>R95</grade>             
+		<grade>R99</grade>             
+	</appearance_stone>
+	<appearance_stone id="37380" targetType="WEAPON" type="BLESSED" lifeTime="30days"> <!-- Blessed Scroll: Modify Weapon (S-grade) - 30-day -->
+		<grade>S</grade>               
+		<grade>S80</grade>             
+	</appearance_stone>
+	<appearance_stone id="37381" targetType="WEAPON" type="BLESSED" grade="A" lifeTime="30days" /> <!-- Blessed Scroll: Modify Weapon (A-grade) - 30-day -->
+	<appearance_stone id="37382" targetType="WEAPON" type="BLESSED" grade="B" lifeTime="30days" /> <!-- Blessed Scroll: Modify Weapon (B-grade) - 30-day -->
+	<appearance_stone id="37383" targetType="WEAPON" type="BLESSED" grade="C" lifeTime="30days" /> <!-- Blessed Scroll: Modify Weapon (C-grade) - 30-day -->
+	<appearance_stone id="37384" targetType="WEAPON" type="BLESSED" grade="D" lifeTime="30days" /> <!-- Blessed Scroll: Modify Weapon (D-grade) - 30-day -->
+	
+	<!-- Armor Appearance Scrolls -->
+	<!-- Normal -->
+	<appearance_stone id="36586" targetType="ARMOR" type="NORMAL" cost="125000"> <!-- Scroll: Modify Armor (R-grade) -->
+		<grade>R</grade>
+		<grade>R95</grade>
+		<grade>R99</grade>
+	</appearance_stone>
+	<appearance_stone id="36587" targetType="ARMOR" type="NORMAL" cost="125000"> <!-- Scroll: Modify Armor (S-grade) -->
+		<grade>S</grade>
+		<grade>S80</grade>
+	</appearance_stone>
+	<appearance_stone id="36588" targetType="ARMOR" type="NORMAL" grade="A" cost="125000" /> <!-- Scroll: Modify Armor (A-grade) -->
+	<appearance_stone id="36589" targetType="ARMOR" type="NORMAL" grade="B" cost="125000" /> <!-- Scroll: Modify Armor (B-grade) -->
+	<appearance_stone id="36590" targetType="ARMOR" type="NORMAL" grade="C" cost="125000" /> <!-- Scroll: Modify Armor (C-grade) -->
+	<appearance_stone id="36591" targetType="ARMOR" type="NORMAL" grade="D" cost="125000" /> <!-- Scroll: Modify Armor (D-grade) -->
+	<!-- 15-day -->                      
+	<appearance_stone id="36618" targetType="ARMOR" type="NORMAL" cost="125000" lifeTime="15days"> <!-- Scroll: Modify Armor (R-grade) -->
+		<grade>R</grade>
+		<grade>R95</grade>
+		<grade>R99</grade>
+	</appearance_stone>
+	<appearance_stone id="36619" targetType="ARMOR" type="NORMAL" cost="125000" lifeTime="15days"> <!-- Scroll: Modify Armor (S-grade) -->
+		<grade>S</grade>
+		<grade>S80</grade>
+	</appearance_stone>
+	<appearance_stone id="36620" targetType="ARMOR" type="NORMAL" grade="A" cost="125000" lifeTime="15days" /> <!-- Scroll: Modify Armor (A-grade) -->
+	<appearance_stone id="36621" targetType="ARMOR" type="NORMAL" grade="B" cost="125000" lifeTime="15days" /> <!-- Scroll: Modify Armor (B-grade) -->
+	<appearance_stone id="36622" targetType="ARMOR" type="NORMAL" grade="C" cost="125000" lifeTime="15days" /> <!-- Scroll: Modify Armor (C-grade) -->
+	<appearance_stone id="36623" targetType="ARMOR" type="NORMAL" grade="D" cost="125000" lifeTime="15days" /> <!-- Scroll: Modify Armor (D-grade) -->
+	<!-- Blessed -->                     
+	<appearance_stone id="36592" targetType="ARMOR" type="BLESSED"> <!-- Blessed Scroll: Modify Armor (R-grade) -->
+		<grade>R</grade>
+		<grade>R95</grade>
+		<grade>R99</grade>
+	</appearance_stone>
+	<appearance_stone id="36593" targetType="ARMOR" type="BLESSED"> <!-- Blessed Scroll: Modify Armor (S-grade) -->
+		<grade>S</grade>
+		<grade>S80</grade>
+	</appearance_stone>	
+	<appearance_stone id="36594" targetType="ARMOR" type="BLESSED" grade="A" /> <!-- Blessed Scroll: Modify Armor (A-grade) -->
+	<appearance_stone id="36595" targetType="ARMOR" type="BLESSED" grade="B" /> <!-- Blessed Scroll: Modify Armor (B-grade) -->
+	<appearance_stone id="36596" targetType="ARMOR" type="BLESSED" grade="C" /> <!-- Blessed Scroll: Modify Armor (C-grade) -->
+	<appearance_stone id="36597" targetType="ARMOR" type="BLESSED" grade="D" /> <!-- Blessed Scroll: Modify Armor (D-grade) -->
+	<!-- 7-day -->                       
+	<appearance_stone id="36624" targetType="ARMOR" type="BLESSED" lifeTime="7days"> <!-- Blessed Scroll: Modify Armor (R-grade) - 7-day -->
+		<grade>R</grade>                                                     
+		<grade>R95</grade>                                                   
+		<grade>R99</grade>                                                   
+	</appearance_stone>                                                      
+	<appearance_stone id="36625" targetType="ARMOR" type="BLESSED" lifeTime="7days"> <!-- Blessed Scroll: Modify Armor (S-grade) - 7-day -->
+		<grade>S</grade>                                                     
+		<grade>S80</grade>                                                                                                     
+	</appearance_stone>                                                      
+	<appearance_stone id="36626" targetType="ARMOR" type="BLESSED" grade="A" lifeTime="7days" /> <!-- Blessed Scroll: Modify Armor (A-grade) - 7-day -->
+	<appearance_stone id="36627" targetType="ARMOR" type="BLESSED" grade="B" lifeTime="7days" /> <!-- Blessed Scroll: Modify Armor (B-grade) - 7-day -->
+	<appearance_stone id="36628" targetType="ARMOR" type="BLESSED" grade="C" lifeTime="7days" /> <!-- Blessed Scroll: Modify Armor (C-grade) - 7-day -->
+	<appearance_stone id="36629" targetType="ARMOR" type="BLESSED" grade="D" lifeTime="7days" /> <!-- Blessed Scroll: Modify Armor (D-grade) - 7-day -->
+	<!-- 30-day -->                      
+	<appearance_stone id="37385" targetType="ARMOR" type="BLESSED" lifeTime="30days"> <!-- Blessed Scroll: Modify Armor (R-grade) - 30-day -->
+		<grade>R</grade>                                                     
+		<grade>R95</grade>                                                   
+		<grade>R99</grade>                                                   
+	</appearance_stone>
+	<appearance_stone id="37386" targetType="ARMOR" type="BLESSED" lifeTime="30days"> <!-- Blessed Scroll: Modify Armor (S-grade) - 30-day -->
+		<grade>S</grade>                                                     
+		<grade>S80</grade>                                                                                                      
+	</appearance_stone>
+	<appearance_stone id="37387" targetType="ARMOR" type="BLESSED" grade="A" lifeTime="30days" /> <!-- Blessed Scroll: Modify Armor (A-grade) - 30-day -->
+	<appearance_stone id="37388" targetType="ARMOR" type="BLESSED" grade="B" lifeTime="30days" /> <!-- Blessed Scroll: Modify Armor (B-grade) - 30-day -->
+	<appearance_stone id="37389" targetType="ARMOR" type="BLESSED" grade="C" lifeTime="30days" /> <!-- Blessed Scroll: Modify Armor (C-grade) - 30-day -->
+	<appearance_stone id="37390" targetType="ARMOR" type="BLESSED" grade="D" lifeTime="30days" /> <!-- Blessed Scroll: Modify Armor (D-grade) - 30-day -->
+	
 	<!-- Normal -->
 	<appearance_stone id="22402" targetType="WEAPON" type="NORMAL" cost="800000"><!-- Weapon Appearance Stone (R-grade) -->
 		<grade>R</grade>
@@ -154,7 +298,7 @@
 	<appearance_stone id="38207" targetType="WEAPON" type="FIXED" visualId="38218" weaponType="CROSSBOW" /> <!-- Crayfish Appearance Stone: Crossbow -->
 
 	<appearance_stone id="22673" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt Weapon -->
-	<appearance_stone id="37408" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt Weapon ( 15 days )-->
+	<appearance_stone id="37408" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt Weapon ( 15 days ) -->
 	<appearance_stone id="36655" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" lifeTime="7days" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt Weapon ( 7 days ) -->
 	<appearance_stone id="22734" targetType="WEAPON" type="FIXED" visualId="22718" weaponType="BLUNT" /> <!-- Japanese Blunt Appearance Stone -->
 	<appearance_stone id="37835" targetType="WEAPON" type="FIXED" visualId="37691" weaponType="BLUNT" lifeTime="15days" /> <!-- Valentine Appearance Stone: One-handed Blunt Weapon ( 15 days ) -->
@@ -217,7 +361,7 @@
 		<grade>R95</grade>
 		<grade>R99</grade>
 	</appearance_stone>
-	<appearance_stone id="22689" targetType="ARMOR" type="BLESSED"> <!--Blessed Armor Appearance Stone (S-grade) -->
+	<appearance_stone id="22689" targetType="ARMOR" type="BLESSED"> <!-- Blessed Armor Appearance Stone (S-grade) -->
 		<grade>S</grade>
 		<grade>S80</grade>
 	</appearance_stone>
@@ -226,6 +370,37 @@
 	<appearance_stone id="22692" targetType="ARMOR" type="BLESSED" grade="C" /> <!-- Blessed Armor Appearance Stone (C-grade) -->
 	<appearance_stone id="22693" targetType="ARMOR" type="BLESSED" grade="D" /> <!-- Blessed Armor Appearance Stone (D-grade) -->
 
+	<!-- Restore Appearance Scrolls -->
+	<appearance_stone id="36598" type="RESTORE"> <!-- Scroll: Restore Equipment (R-grade) -->
+		<grade>R</grade>
+		<grade>R95</grade>
+		<grade>R99</grade>
+		<targetType>WEAPON</targetType>
+		<targetType>ARMOR</targetType>
+	</appearance_stone>
+	<appearance_stone id="36599" type="RESTORE"> <!-- Scroll: Restore Equipment (S-grade) -->
+		<grade>S</grade>
+		<grade>S80</grade>
+		<targetType>WEAPON</targetType>
+		<targetType>ARMOR</targetType>
+	</appearance_stone>
+	<appearance_stone id="36600" type="RESTORE" grade="A"> <!-- Scroll: Restore Equipment (A-grade) -->
+		<targetType>WEAPON</targetType>
+		<targetType>ARMOR</targetType>
+	</appearance_stone>
+	<appearance_stone id="36601" type="RESTORE" grade="B"> <!-- Scroll: Restore Equipment (B-grade) -->
+		<targetType>WEAPON</targetType>
+		<targetType>ARMOR</targetType>
+	</appearance_stone>
+	<appearance_stone id="36602" type="RESTORE" grade="C"> <!-- Scroll: Restore Equipment (C-grade) -->
+		<targetType>WEAPON</targetType>
+		<targetType>ARMOR</targetType>
+	</appearance_stone>
+	<appearance_stone id="36603" type="RESTORE" grade="D"> <!-- Scroll: Restore Equipment (D-grade) -->
+		<targetType>WEAPON</targetType>
+		<targetType>ARMOR</targetType>
+	</appearance_stone>
+	
 	<!-- Restore -->
 	<appearance_stone id="22694" targetType="ARMOR" type="RESTORE"> <!-- Armor Restoration Stone (R-grade) -->
 		<grade>R</grade>
@@ -300,9 +475,9 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23504" targetType="ARMOR" type="FIXED" visualId="23454" bodyPart="legs"/> <!-- Military Pants Appearance Stone -->
-	<appearance_stone id="23505" targetType="ARMOR" type="FIXED" visualId="23455" bodyPart="gloves"/> <!-- Military Gloves Appearance Stone -->
-	<appearance_stone id="23506" targetType="ARMOR" type="FIXED" visualId="23456" bodyPart="feet"/> <!-- Military Shoes Appearance Stone -->
+	<appearance_stone id="23504" targetType="ARMOR" type="FIXED" visualId="23454" bodyPart="legs" /> <!-- Military Pants Appearance Stone -->
+	<appearance_stone id="23505" targetType="ARMOR" type="FIXED" visualId="23455" bodyPart="gloves" /> <!-- Military Gloves Appearance Stone -->
+	<appearance_stone id="23506" targetType="ARMOR" type="FIXED" visualId="23456" bodyPart="feet" /> <!-- Military Shoes Appearance Stone -->
 	<appearance_stone id="23507" targetType="ACCESSORY" type="FIXED" visualId="23457"> <!-- Military Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -314,18 +489,18 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23721" targetType="ARMOR" type="FIXED" visualId="23717" bodyPart="legs"/> <!-- Military Pants Appearance Stone -->
-	<appearance_stone id="23722" targetType="ARMOR" type="FIXED" visualId="23718" bodyPart="gloves"/> <!-- Military Gloves Appearance Stone -->
-	<appearance_stone id="23723" targetType="ARMOR" type="FIXED" visualId="23719" bodyPart="feet"/> <!-- Military Shoes Appearance Stone -->
+	<appearance_stone id="23721" targetType="ARMOR" type="FIXED" visualId="23717" bodyPart="legs" /> <!-- Military Pants Appearance Stone -->
+	<appearance_stone id="23722" targetType="ARMOR" type="FIXED" visualId="23718" bodyPart="gloves" /> <!-- Military Gloves Appearance Stone -->
+	<appearance_stone id="23723" targetType="ARMOR" type="FIXED" visualId="23719" bodyPart="feet" /> <!-- Military Shoes Appearance Stone -->
 
 	<!-- Ninja Suit -->
 	<appearance_stone id="23189" targetType="ARMOR" type="FIXED" visualId="23554"> <!-- Ninja Top Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23190" targetType="ARMOR" type="FIXED" visualId="23555" bodyPart="legs"/> <!-- Ninja Pants Appearance Stone -->
-	<appearance_stone id="23191" targetType="ARMOR" type="FIXED" visualId="23556" bodyPart="gloves"/> <!-- Ninja Gloves Appearance Stone -->
-	<appearance_stone id="23192" targetType="ARMOR" type="FIXED" visualId="23557" bodyPart="feet"/> <!-- Ninja Shoes Appearance Stone -->
+	<appearance_stone id="23190" targetType="ARMOR" type="FIXED" visualId="23555" bodyPart="legs" /> <!-- Ninja Pants Appearance Stone -->
+	<appearance_stone id="23191" targetType="ARMOR" type="FIXED" visualId="23556" bodyPart="gloves" /> <!-- Ninja Gloves Appearance Stone -->
+	<appearance_stone id="23192" targetType="ARMOR" type="FIXED" visualId="23557" bodyPart="feet" /> <!-- Ninja Shoes Appearance Stone -->
 	<appearance_stone id="23193" targetType="ACCESSORY" type="FIXED" visualId="23558"> <!-- Ninja Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -337,18 +512,18 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23565" targetType="ARMOR" type="FIXED" visualId="23555" bodyPart="legs"/> <!-- Ninja Pants Appearance Stone -->
-	<appearance_stone id="23566" targetType="ARMOR" type="FIXED" visualId="23556" bodyPart="gloves"/> <!-- Ninja Gloves Appearance Stone -->
-	<appearance_stone id="23567" targetType="ARMOR" type="FIXED" visualId="23557" bodyPart="feet"/> <!-- Ninja Shoes Appearance Stone -->
+	<appearance_stone id="23565" targetType="ARMOR" type="FIXED" visualId="23555" bodyPart="legs" /> <!-- Ninja Pants Appearance Stone -->
+	<appearance_stone id="23566" targetType="ARMOR" type="FIXED" visualId="23556" bodyPart="gloves" /> <!-- Ninja Gloves Appearance Stone -->
+	<appearance_stone id="23567" targetType="ARMOR" type="FIXED" visualId="23557" bodyPart="feet" /> <!-- Ninja Shoes Appearance Stone -->
 
 	<!-- Traditional Taiwanese Suit -->
 	<appearance_stone id="23194" targetType="ARMOR" type="FIXED" visualId="23184"> <!-- Traditional Taiwanese Top Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23195" targetType="ARMOR" type="FIXED" visualId="23185" bodyPart="legs"/> <!-- Traditional Taiwanese Pants Appearance Stone -->
-	<appearance_stone id="23196" targetType="ARMOR" type="FIXED" visualId="23186" bodyPart="gloves"/> <!-- Traditional Taiwanese Gloves Appearance Stone -->
-	<appearance_stone id="23197" targetType="ARMOR" type="FIXED" visualId="23187" bodyPart="feet"/> <!-- Traditional Taiwanese Shoes Appearance Stone -->
+	<appearance_stone id="23195" targetType="ARMOR" type="FIXED" visualId="23185" bodyPart="legs" /> <!-- Traditional Taiwanese Pants Appearance Stone -->
+	<appearance_stone id="23196" targetType="ARMOR" type="FIXED" visualId="23186" bodyPart="gloves" /> <!-- Traditional Taiwanese Gloves Appearance Stone -->
+	<appearance_stone id="23197" targetType="ARMOR" type="FIXED" visualId="23187" bodyPart="feet" /> <!-- Traditional Taiwanese Shoes Appearance Stone -->
 	<appearance_stone id="23198" targetType="ACCESSORY" type="FIXED" visualId="23188" > <!-- Traditional Taiwanese Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -432,9 +607,9 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23889" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs"/> <!-- Vampire Pants Appearance Stone -->
-	<appearance_stone id="23890" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves"/> <!-- Vampire Gloves Appearance Stone -->
-	<appearance_stone id="23891" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet"/> <!-- Vampire Shoes Appearance Stone -->
+	<appearance_stone id="23889" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs" /> <!-- Vampire Pants Appearance Stone -->
+	<appearance_stone id="23890" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves" /> <!-- Vampire Gloves Appearance Stone -->
+	<appearance_stone id="23891" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet" /> <!-- Vampire Shoes Appearance Stone -->
 	<appearance_stone id="23892" targetType="ACCESSORY" type="FIXED" visualId="23887"> <!-- Vampire Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -3485,11 +3660,11 @@
 	<appearance_stone id="37073" targetType="WEAPON" type="FIXED" visualId="37053" weaponType="BLUNT" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
 	<appearance_stone id="37074" targetType="WEAPON" type="FIXED" visualId="37054" weaponType="DUALBLUNT" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
 	<appearance_stone id="37075" targetType="WEAPON" type="FIXED" visualId="37055" weaponType="DAGGER" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
-	<appearance_stone id="37076" targetType="WEAPON" type="FIXED" visualId="37056" weaponType="DUALDAGGER"/> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+	<appearance_stone id="37076" targetType="WEAPON" type="FIXED" visualId="37056" weaponType="DUALDAGGER" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
 	<appearance_stone id="37077" targetType="WEAPON" type="FIXED" visualId="37057" weaponType="SWORD"  bodyPart="lrhand" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
 	<appearance_stone id="37078" targetType="WEAPON" type="FIXED" visualId="37058" weaponType="POLE" bodyPart="lrhand" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
 	<appearance_stone id="37079" targetType="WEAPON" type="FIXED" visualId="37059" weaponType="BLUNT" magicType="MAGICAL" bodyPart="lrhand" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
-	<appearance_stone id="37080" targetType="WEAPON" type="FIXED" visualId="37060" weaponType="BLUNT" magicType="MAGICAL" bodyPart="lrhand"/> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+	<appearance_stone id="37080" targetType="WEAPON" type="FIXED" visualId="37060" weaponType="BLUNT" magicType="MAGICAL" bodyPart="lrhand" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
 	<appearance_stone id="37081" targetType="WEAPON" type="FIXED" visualId="37061" weaponType="DUALFIST" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
 	<appearance_stone id="37082" targetType="WEAPON" type="FIXED" visualId="37062" weaponType="BOW" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
 	<appearance_stone id="37083" targetType="WEAPON" type="FIXED" visualId="37063" weaponType="BOW" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
@@ -3505,9 +3680,9 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="46574" targetType="ARMOR" type="FIXED" visualId="46539" bodyPart="legs"/> <!-- Tauti's Gaiters Appearance Stone -->
-	<appearance_stone id="46575" targetType="ARMOR" type="FIXED" visualId="46540" bodyPart="gloves"/> <!-- Tauti's Gauntlets Appearance Stone -->
-	<appearance_stone id="46576" targetType="ARMOR" type="FIXED" visualId="46541" bodyPart="feet"/> <!-- Tauti's Boots Appearance Stone -->
+	<appearance_stone id="46574" targetType="ARMOR" type="FIXED" visualId="46539" bodyPart="legs" /> <!-- Tauti's Gaiters Appearance Stone -->
+	<appearance_stone id="46575" targetType="ARMOR" type="FIXED" visualId="46540" bodyPart="gloves" /> <!-- Tauti's Gauntlets Appearance Stone -->
+	<appearance_stone id="46576" targetType="ARMOR" type="FIXED" visualId="46541" bodyPart="feet" /> <!-- Tauti's Boots Appearance Stone -->
 
 	<appearance_stone id="46578" targetType="ARMOR" type="FIXED" visualId="46543"> <!-- Kelbim's Leather Armor Appearance Stone -->
 		<bodyPart>chest</bodyPart>
@@ -3854,8 +4029,7 @@
 	<appearance_stone id="46116" targetType="WEAPON" type="FIXED" visualId="22807" weaponType="DUALFIST" /> <!-- Spezion's Claw Appearance Stone -->
 	<appearance_stone id="46117" targetType="WEAPON" type="FIXED" visualId="22814" weaponType="POLE" /> <!-- Maliss Stormer Appearance Stone -->
 	<appearance_stone id="46118" targetType="WEAPON" type="FIXED" visualId="22821" weaponType="DAGGER" /> <!-- Steregos' Dagger Appearance Stone -->
-	<appearance_stone id="46119" targetType="WEAPON" type="FIXED" visualId="22828" weaponType="DUALBLUNT" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
-	
+	<appearance_stone id="46119" targetType="WEAPON" type="FIXED" visualId="22828" weaponType="DUALBLUNT" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->	
 	<appearance_stone id="46120" targetType="ACCESSORY" type="FIXED" visualId="22169" lifeTime="30days"> <!-- Little Girls' Hat Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -3949,22 +4123,23 @@
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
 	<appearance_stone id="47591" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="39717" weaponType="DUALFIST" /> <!-- Cat Fighter Appearance Stone - Ertheia Only -->
-	<appearance_stone id="40219" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="39717" weaponType="DUALFIST" lifeTime="90days"/> <!-- Cat Fighter Appearance Stone - Ertheia Only 90days -->
-	<appearance_stone id="40220" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="40058" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" lifeTime="90days"/> <!-- Cat Staff Appearance Stone - Ertheia Only 90days -->
+	<appearance_stone id="40219" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="39717" weaponType="DUALFIST" lifeTime="90days" /> <!-- Cat Fighter Appearance Stone - Ertheia Only 90days -->
+	<appearance_stone id="40220" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="40058" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" lifeTime="90days" /> <!-- Cat Staff Appearance Stone - Ertheia Only 90days -->
 	<appearance_stone id="47593" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="39718" weaponType="DUALFIST" /> <!-- Boxing Glove Appearance Stone -->
 	<appearance_stone id="47592" targetType="WEAPON" type="FIXED" visualId="47600" weaponType="DUALFIST" /> <!-- Warm Bear Paws Appearance Stone -->
 	<appearance_stone id="47594" targetType="WEAPON" type="FIXED" visualId="47597" weaponType="BOW" /> <!-- Cupid's Arrow Appearance Stone -->
 	<appearance_stone id="47595" targetType="WEAPON" type="FIXED" visualId="47598" weaponType="BLUNT" handType="ONE_HANDED" /> <!-- Wedding Bouquet Appearance Stone -->
 	<appearance_stone id="47596" targetType="WEAPON" type="FIXED" visualId="47599" weaponType="DAGGER" /> <!-- Pig Lollipop Appearance Stone -->
 
+
 	<!-- Vampire Suit -->
 	<appearance_stone id="23979" targetType="ARMOR" type="FIXED" visualId="23883"> <!-- Vampire Top Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23980" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs"/> <!-- Vampire Pants Appearance Stone -->
-	<appearance_stone id="23981" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves"/> <!-- Vampire Gloves Appearance Stone -->
-	<appearance_stone id="23982" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet"/> <!-- Vampire Shoes Appearance Stone -->
+	<appearance_stone id="23980" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs" /> <!-- Vampire Pants Appearance Stone -->
+	<appearance_stone id="23981" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves" /> <!-- Vampire Gloves Appearance Stone -->
+	<appearance_stone id="23982" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet" /> <!-- Vampire Shoes Appearance Stone -->
 	<appearance_stone id="23983" targetType="ACCESSORY" type="FIXED" visualId="23887"> <!-- Vampire Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -3976,9 +4151,9 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="26384" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs" lifeTime="30days"/> <!-- Vampire Pants Appearance Stone -->
-	<appearance_stone id="26385" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves" lifeTime="30days"/> <!-- Vampire Gloves Appearance Stone -->
-	<appearance_stone id="26386" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet" lifeTime="30days"/> <!-- Vampire Shoes Appearance Stone -->
+	<appearance_stone id="26384" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs" lifeTime="30days" /> <!-- Vampire Pants Appearance Stone -->
+	<appearance_stone id="26385" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves" lifeTime="30days" /> <!-- Vampire Gloves Appearance Stone -->
+	<appearance_stone id="26386" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet" lifeTime="30days" /> <!-- Vampire Shoes Appearance Stone -->
 	<appearance_stone id="26387" targetType="ACCESSORY" type="FIXED" visualId="23887" lifeTime="30days"> <!-- Vampire Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
@@ -3995,9 +4170,9 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="26363" targetType="ARMOR" type="FIXED" visualId="23449" bodyPart="legs" lifeTime="30days"/> <!-- Metal Pants Appearance Stone -->
-	<appearance_stone id="26364" targetType="ARMOR" type="FIXED" visualId="23450" bodyPart="gloves" lifeTime="30days"/> <!-- Metal Gloves Appearance Stone -->
-	<appearance_stone id="26365" targetType="ARMOR" type="FIXED" visualId="23451" bodyPart="feet" lifeTime="30days"/> <!-- Metal Shoes Appearance Stone -->
+	<appearance_stone id="26363" targetType="ARMOR" type="FIXED" visualId="23449" bodyPart="legs" lifeTime="30days" /> <!-- Metal Pants Appearance Stone -->
+	<appearance_stone id="26364" targetType="ARMOR" type="FIXED" visualId="23450" bodyPart="gloves" lifeTime="30days" /> <!-- Metal Gloves Appearance Stone -->
+	<appearance_stone id="26365" targetType="ARMOR" type="FIXED" visualId="23451" bodyPart="feet" lifeTime="30days" /> <!-- Metal Shoes Appearance Stone -->
 	<appearance_stone id="26361" targetType="ACCESSORY" type="FIXED" visualId="23452" lifeTime="30days"> <!-- Metal Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>

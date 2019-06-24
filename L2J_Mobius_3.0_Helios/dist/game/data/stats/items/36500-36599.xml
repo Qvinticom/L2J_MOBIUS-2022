@@ -975,6 +975,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22419" level="1" /> <!-- Weapon Appearance Stone (R-grade) -->
+		</skills>
 	</item>
 	<item id="36575" name="Scroll: Modify Weapon (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -982,6 +989,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22420" level="1" /> <!-- Weapon Appearance Stone (S-grade) -->
+		</skills>
 	</item>
 	<item id="36576" name="Scroll: Modify Weapon (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -989,6 +1004,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22421" level="1" /> <!-- Weapon Appearance Stone (A-grade) -->
+		</skills>
 	</item>
 	<item id="36577" name="Scroll: Modify Weapon (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -996,6 +1019,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22422" level="1" /> <!-- Weapon Appearance Stone (B-grade) -->
+		</skills>
 	</item>
 	<item id="36578" name="Scroll: Modify Weapon (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. -->
@@ -1004,6 +1035,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22423" level="1" /> <!-- Weapon Appearance Stone (C-grade) -->
+		</skills>
 	</item>
 	<item id="36579" name="Scroll: Modify Weapon (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. -->
@@ -1012,6 +1050,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22424" level="1" /> <!-- Weapon Appearance Stone (D-grade) -->
+		</skills>
 	</item>
 	<item id="36580" name="Blessed Scroll: Modify Weapon (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1024,8 +1069,15 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22425" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
+		</skills>
 	</item>
 	<item id="36581" name="Blessed Scroll: Modify Weapon (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1040,6 +1092,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22426" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
+		</skills>
 	</item>
 	<item id="36582" name="Blessed Scroll: Modify Weapon (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1054,6 +1113,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22427" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
+		</skills>
 	</item>
 	<item id="36583" name="Blessed Scroll: Modify Weapon (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1068,6 +1134,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22428" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
+		</skills>
 	</item>
 	<item id="36584" name="Blessed Scroll: Modify Weapon (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1082,6 +1155,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22429" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
+		</skills>
 	</item>
 	<item id="36585" name="Blessed Scroll: Modify Weapon (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1096,14 +1176,29 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22430" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
+		</skills>
 	</item>
 	<item id="36586" name="Scroll: Modify Armor (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena. -->
 		<set name="icon" val="icon.armor_change_i06" />
-		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22538" level="1" /> <!-- Armor Appearance Stone (R-grade) -->
+		</skills>
 	</item>
 	<item id="36587" name="Scroll: Modify Armor (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 50,000 adena. -->
@@ -1111,6 +1206,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22539" level="1" /> <!-- Armor Appearance Stone (S-grade) -->
+		</skills>
 	</item>
 	<item id="36588" name="Scroll: Modify Armor (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 24000 adena. -->
@@ -1119,6 +1222,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22540" level="1" /> <!-- Armor Appearance Stone (A-grade) -->
+		</skills>
 	</item>
 	<item id="36589" name="Scroll: Modify Armor (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 8000 adena. -->
@@ -1127,6 +1238,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22541" level="1" /> <!-- Armor Appearance Stone (B-grade) -->
+		</skills>
 	</item>
 	<item id="36590" name="Scroll: Modify Armor (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 1500 adena. -->
@@ -1134,6 +1253,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22542" level="1" /> <!-- Armor Appearance Stone (C-grade) -->
+		</skills>
 	</item>
 	<item id="36591" name="Scroll: Modify Armor (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 600 adena. -->
@@ -1141,6 +1268,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22543" level="1" /> <!-- Armor Appearance Stone (D-grade) -->
+		</skills>
 	</item>
 	<item id="36592" name="Blessed Scroll: Modify Armor (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1155,6 +1290,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22544" level="1" /> <!-- Blessed Armor Appearance Stone (R-grade) -->
+		</skills>
 	</item>
 	<item id="36593" name="Blessed Scroll: Modify Armor (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1169,6 +1311,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22545" level="1" /> <!-- Blessed Armor Appearance Stone (S-grade) -->
+		</skills>
 	</item>
 	<item id="36594" name="Blessed Scroll: Modify Armor (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1183,6 +1332,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22546" level="1" /> <!-- Blessed Armor Appearance Stone (A-grade) -->
+		</skills>
 	</item>
 	<item id="36595" name="Blessed Scroll: Modify Armor (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1197,6 +1353,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22547" level="1" /> <!-- Blessed Armor Appearance Stone (B-grade) -->
+		</skills>
 	</item>
 	<item id="36596" name="Blessed Scroll: Modify Armor (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1211,6 +1374,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22548" level="1" /> <!-- Blessed Armor Appearance Stone (C-grade) -->
+		</skills>
 	</item>
 	<item id="36597" name="Blessed Scroll: Modify Armor (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1225,6 +1395,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22549" level="1" /> <!-- Blessed Armor Appearance Stone (D-grade) -->
+		</skills>
 	</item>
 	<item id="36598" name="Scroll: Restore Equipment (R-grade)" type="EtcItem">
 		<!-- Restores the original appearance of R-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
