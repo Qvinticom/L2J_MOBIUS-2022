@@ -11,7 +11,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2179535" sp="65386" raidPoints="300" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="687245.8498023715" hpRegen="208" mp="300" mpRegen="2.1" />
+			<vitals hp="214133.04684" hpRegen="85.09694484" mp="509.76" mpRegen="1.8" />
 			<attack physical="105" magical="8" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1252" magical="229" />
 			<speed>
@@ -331,7 +331,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2041407" sp="61242" raidPoints="300" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="930422.1343873518" hpRegen="441.65" mp="1708" mpRegen="20.0" />
+			<vitals hp="289902.43642" hpRegen="145.2219912" mp="2901.03" mpRegen="2.1" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1602" magical="293" />
 			<speed>
@@ -921,7 +921,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8872500" sp="266175" raidPoints="300" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="930422.1343873518" hpRegen="441.65" mp="36939" mpRegen="20.0" />
+			<vitals hp="289902.43642" hpRegen="145.2219912" mp="2901.03" mpRegen="2.1" />
 			<attack physical="722.31" magical="1398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1602" magical="293" />
 			<speed>
@@ -2024,14 +2024,13 @@
 		</dropLists>
 	</npc>
 	<npc id="29068" level="84" type="GrandBoss" name="Antharas" title="Land Dragon">
-		<!-- Todo: CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2147483647" sp="9759416" raidPoints="1000" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<acquire exp="40664236032" sp="9759416" raidPoints="1000" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="197047999.75369" hpRegen="319.2293199" mp="3440344.575" mpRegen="3" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3974.13793" magical="496.01325" />

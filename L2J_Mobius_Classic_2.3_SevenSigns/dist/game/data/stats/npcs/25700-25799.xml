@@ -65,28 +65,28 @@
 		</collision>
 	</npc>
 	<npc id="25738" level="75" type="RaidBoss" name="Queen Ant Drone Priest" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>BUG</race>
+		<sex>MALE</sex>
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="1321552.16662" hpRegen="310.756323" mp="5120.61" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="35" />
+			<height normal="77.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7122" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="12" /> <!-- Bug -->
 		</skillList>
-		<collision>
-			<radius normal="35" />
-			<height normal="77.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6324" min="1" max="1" chance="32.67" /> <!-- Sealed Phoenix Earring -->
@@ -126,29 +126,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25739" level="75" type="RaidBoss" name="Angel Priest of Baium" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DIVINE</race>
-		<equipment rhand="98" />
+		<sex>MALE</sex>
+		<equipment rhand="98" /> 
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="1321552.16662" hpRegen="310.756323" mp="5120.61" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22" />
+			<height normal="120" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7123" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skillList>
-		<collision>
-			<radius normal="22" />
-			<height normal="120" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="32.24" /> <!-- Sealed Phoenix Ring -->
@@ -228,29 +228,28 @@
 		</collision>
 	</npc>
 	<npc id="25742" level="75" type="RaidBoss" name="Priest of Core Decar" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
+		<sex>MALE</sex>
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
-		<equipment rhand="15302" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="1321552.16662" hpRegen="310.756323" mp="5120.61" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="30" />
 				<run ground="140" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="90" />
+			<height normal="81.6" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7124" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
-		<collision>
-			<radius normal="90" />
-			<height normal="81.6" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="32.82" /> <!-- Sealed Phoenix Ring -->
@@ -290,28 +289,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25743" level="75" type="RaidBoss" name="Priest Orfen Lord Ipos" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="174960000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="1321552.16662" hpRegen="310.756323" mp="5120.61" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="90" />
 				<run ground="140" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="56" />
+			<height normal="76.1" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7125" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="56" />
-			<height normal="76.1" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="32.76" /> <!-- Sealed Phoenix Ring -->
@@ -351,28 +350,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25744" level="55" type="RaidBoss" name="Zombie Lord Dorkhon" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<acquire exp="52925400" sp="1587762" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="420467.42646" hpRegen="178.4276342" mp="515402.76" mpRegen="2.4" />
+			<attack physical="896.8607767" magical="141.6415533" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1495.843372" magical="729.7418166" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="2619" magical="1320.285714285714" critical="4" attackSpeed="253" range="40" />
-			<defence physical="679" magical="337.7142857142857" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="26.1" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="1" /> <!-- Raid Boss (Lv. 55) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
-		<collision>
-			<radius normal="36" />
-			<height normal="26.1" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="131" min="1" max="1" chance="5.89" /> <!-- Spirit Sword -->
@@ -394,29 +393,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25745" level="55" type="RaidBoss" name="Orc Timak Darphen" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6719" /> 
 		<acquire exp="52925400" sp="1587762" raidPoints="5" />
-		<equipment rhand="6719" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="420467.42646" hpRegen="178.4276342" mp="515402.76" mpRegen="2.4" />
+			<attack physical="896.8607767" magical="141.6415533" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1495.843372" magical="729.7418166" />
 			<speed>
 				<walk ground="24" />
 				<run ground="160" />
 			</speed>
-			<attack physical="2619" magical="1320.285714285714" critical="4" attackSpeed="253" range="40" />
-			<defence physical="679" magical="337.7142857142857" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="17" />
+			<height normal="46.2" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="2" /> <!-- Raid Boss (Lv. 55) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="17" />
-			<height normal="46.2" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="73" min="1" max="1" chance="5.894" /> <!-- Shamshir -->
@@ -438,28 +437,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25746" level="60" type="RaidBoss" name="Evil Magikus" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>BEAST</race>
+		<sex>MALE</sex>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
+			<attack physical="1468.525226" magical="462.9002732" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1781.574132" magical="869.1345416" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="55.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="3" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
-		<collision>
-			<radius normal="36" />
-			<height normal="55.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="855" min="1" max="1" chance="10.82" /> <!-- Nassen's Earring -->
@@ -502,28 +501,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25747" level="60" type="RaidBoss" name="Rael Mahum Radium" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
+			<attack physical="1468.525226" magical="462.9002732" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1781.574132" magical="869.1345416" />
 			<speed>
 				<walk ground="40" />
 				<run ground="175" />
 			</speed>
-			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="72.75" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="4" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="72.75" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="917" min="1" max="1" chance="11.01" /> <!-- Necklace of Mermaid -->
@@ -566,28 +565,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25748" level="60" type="RaidBoss" name="Rael Mahum Supercium" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
+			<attack physical="1468.525226" magical="462.9002732" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1781.574132" magical="869.1345416" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="50.25" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="5" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="50.25" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="857" min="1" max="1" chance="10.91" /> <!-- Holy Earring -->
@@ -630,28 +629,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25749" level="60" type="RaidBoss" name="Tayga Feron King" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
+			<attack physical="1468.525226" magical="462.9002732" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1781.574132" magical="869.1345416" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="18" />
+			<height normal="55.8" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="6" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="18" />
-			<height normal="55.8" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="888" min="1" max="1" chance="10.77" /> <!-- Blessed Ring -->
@@ -694,29 +693,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25750" level="60" type="RaidBoss" name="Tayga Marga Shaman" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="38564" lhand="38432" />
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
+			<attack physical="1468.525226" magical="462.9002732" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1781.574132" magical="869.1345416" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="55.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="7" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="55.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="857" min="1" max="1" chance="10.68" /> <!-- Holy Earring -->
@@ -759,29 +758,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25751" level="60" type="RaidBoss" name="Tayga Septon Champion" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="38429" lhand="38435" />
 		<acquire exp="83980800" sp="2519424" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
+			<attack physical="1468.525226" magical="462.9002732" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1781.574132" magical="869.1345416" />
 			<speed>
 				<walk ground="40" />
 				<run ground="175" />
 			</speed>
-			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="54" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="8" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="54" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="857" min="1" max="1" chance="10.81" /> <!-- Holy Earring -->
@@ -864,28 +863,28 @@
 		</collision>
 	</npc>
 	<npc id="25754" level="65" type="RaidBoss" name="Flamestone Giant" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
-		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<race>ETC</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="13" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="38" />
+			<height normal="45" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="9" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
-		<collision>
-			<radius normal="38" />
-			<height normal="45" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="33.22" /> <!-- Adamantite Necklace -->
@@ -907,29 +906,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25755" level="65" type="RaidBoss" name="Gross Salamander" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<equipment rhand="15302" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="39" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="10" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="39" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="32.74" /> <!-- Adamantite Earring -->
@@ -951,28 +949,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25756" level="65" type="RaidBoss" name="Gross Dre Vanul" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="26" />
+			<height normal="43.15" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="11" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
-		<collision>
-			<radius normal="26" />
-			<height normal="43.15" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="3" chance="32.61" /> <!-- Adamantite Ring -->
@@ -994,28 +992,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25757" level="65" type="RaidBoss" name="Gross Ifrit" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="39" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="33.6" />
+			<height normal="58.8" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="12" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="33.6" />
-			<height normal="58.8" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="3" chance="32.71" /> <!-- Adamantite Ring -->
@@ -1037,28 +1035,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25758" level="65" type="RaidBoss" name="Fiend Goblier" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="31.5" />
+			<height normal="61.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="13" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
-		<collision>
-			<radius normal="31.5" />
-			<height normal="61.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="3" chance="32.35" /> <!-- Adamantite Ring -->
@@ -1080,28 +1078,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25759" level="65" type="RaidBoss" name="Fiend Cherkia" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="25.2" />
+			<height normal="52.8" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="14" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
-		<collision>
-			<radius normal="25.2" />
-			<height normal="52.8" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="32.18" /> <!-- Adamantite Necklace -->
@@ -1123,28 +1121,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25760" level="65" type="RaidBoss" name="Fiend Harthemon" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="54" />
+			<height normal="59.1" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="15" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
-		<collision>
-			<radius normal="54" />
-			<height normal="59.1" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="33.01" /> <!-- Adamantite Earring -->
@@ -1166,28 +1164,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25761" level="65" type="RaidBoss" name="Fiend Sarboth" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="25" />
+			<height normal="68" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="16" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
-		<collision>
-			<radius normal="25" />
-			<height normal="68" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="32.04" /> <!-- Adamantite Necklace -->
@@ -1209,29 +1207,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25762" level="65" type="RaidBoss" name="Demon Bedukel" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<equipment rhand="8203" lhand="8203" />
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="79" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="56" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="17" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="56" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="3" chance="33.13" /> <!-- Adamantite Ring -->
@@ -1253,28 +1251,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25763" level="65" type="RaidBoss" name="Bloody Witch Rumilla" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<acquire exp="98560800" sp="2956824" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
+			<attack physical="1724.618609" magical="543.624591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2092.259531" magical="1020.701298" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="24" />
+			<height normal="80" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="18" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
-		<collision>
-			<radius normal="24" />
-			<height normal="80" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="31.51" /> <!-- Adamantite Earring -->
@@ -1335,29 +1333,29 @@
 		</collision>
 	</npc>
 	<npc id="25766" level="70" type="RaidBoss" name="Monster Minotaur" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
-		<equipment rhand="38448" />
+		<sex>MALE</sex>
+		<equipment rhand="38448" /> 
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="60" />
+			<height normal="75.75" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="19" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="60" />
-			<height normal="75.75" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="31.41" /> <!-- Adamantite Ring -->
@@ -1411,28 +1409,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25767" level="70" type="RaidBoss" name="Monster Bulleroth" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="52" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="48" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="20" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="48" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="31.48" /> <!-- Adamantite Earring -->
@@ -1486,28 +1484,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25768" level="70" type="RaidBoss" name="Dorcaus" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="38" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="60.75" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="21" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="60.75" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="30.3" /> <!-- Adamantite Ring -->
@@ -1561,28 +1559,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25769" level="70" type="RaidBoss" name="Kerfaus" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="40" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="18" />
+			<height normal="57" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="22" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="18" />
-			<height normal="57" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="31.47" /> <!-- Adamantite Ring -->
@@ -1636,29 +1634,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25770" level="70" type="RaidBoss" name="Milinaus" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
-		<equipment rhand="38427" />
+		<sex>MALE</sex>
+		<equipment rhand="38427" /> 
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="30" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="46.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="23" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="46.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="29.84" /> <!-- Adamantite Ring -->
@@ -1732,28 +1730,28 @@
 		</collision>
 	</npc>
 	<npc id="25772" level="70" type="RaidBoss" name="Evil Orc Zetahl" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="40.8" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="24" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="40.8" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="31.42" /> <!-- Adamantite Necklace -->
@@ -1807,28 +1805,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25773" level="70" type="RaidBoss" name="Evil Orc Tabris" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="28" />
+			<height normal="54.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="25" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="28" />
-			<height normal="54.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="31.4" /> <!-- Adamantite Necklace -->
@@ -1882,28 +1880,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25774" level="70" type="RaidBoss" name="Evil Orc Ravolas" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="26" />
+			<height normal="50" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="26" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="26" />
-			<height normal="50" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="30.76" /> <!-- Adamantite Necklace -->
@@ -1957,28 +1955,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25775" level="70" type="RaidBoss" name="Evil Orc Dephracor" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="47.4" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="27" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="47.4" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="31.48" /> <!-- Adamantite Ring -->
@@ -2032,28 +2030,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25776" level="70" type="RaidBoss" name="Amden Orc Turahot" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="42" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="56.25" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="28" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="56.25" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="30.89" /> <!-- Adamantite Ring -->
@@ -2107,29 +2105,29 @@
 		</dropLists>
 	</npc>
 	<npc id="25777" level="70" type="RaidBoss" name="Amden Orc Turation" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
-		<equipment rhand="38425" />
+		<sex>MALE</sex>
+		<equipment rhand="38425" /> 
 		<acquire exp="114307200" sp="3429216" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="741394.82417" hpRegen="294.2109061" mp="757324.59" mpRegen="2.7" />
+			<attack physical="2150.478201" magical="713.6992296" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427.899572" magical="1184.442087" />
 			<speed>
 				<walk ground="48" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="51" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="29" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="51" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="29.94" /> <!-- Adamantite Ring -->
@@ -2203,28 +2201,28 @@
 		</collision>
 	</npc>
 	<npc id="25779" level="75" type="RaidBoss" name="Gariott" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
-		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<race>ETC</race>
+		<sex>MALE</sex>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="928205.44164" hpRegen="310.756323" mp="948149.175" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="63" />
+			<height normal="69" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="30" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
-		<collision>
-			<radius normal="63" />
-			<height normal="69" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="30.23" /> <!-- Sealed Phoenix Ring -->
@@ -2263,29 +2261,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25780" level="75" type="RaidBoss" name="Varbasion" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
-		<equipment rhand="5800" lhand="5799" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="928205.44164" hpRegen="310.756323" mp="948149.175" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="45" />
+			<height normal="68.25" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="31" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="45" />
-			<height normal="68.25" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="29.97" /> <!-- Sealed Phoenix Ring -->
@@ -2324,28 +2321,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25781" level="75" type="RaidBoss" name="Varmoni" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="928205.44164" hpRegen="310.756323" mp="948149.175" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="50" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="60" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="32" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="60" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="30.92" /> <!-- Sealed Phoenix Ring -->
@@ -2384,28 +2381,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25782" level="75" type="RaidBoss" name="Overlord Muscel" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
+		<sex>MALE</sex>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="928205.44164" hpRegen="310.756323" mp="948149.175" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="55" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="48" />
+			<height normal="77.25" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="33" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
-		<collision>
-			<radius normal="48" />
-			<height normal="77.25" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="30.66" /> <!-- Sealed Phoenix Ring -->
@@ -2444,28 +2441,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25783" level="75" type="RaidBoss" name="Bathus Elbogen" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
+		<sex>MALE</sex>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="928205.44164" hpRegen="310.756323" mp="948149.175" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="55" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="70.5" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="34" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
-		<collision>
-			<radius normal="36" />
-			<height normal="70.5" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="30.94" /> <!-- Sealed Phoenix Ring -->
@@ -2504,28 +2501,28 @@
 		</dropLists>
 	</npc>
 	<npc id="25784" level="75" type="RaidBoss" name="Daumen Kshana" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
+		<sex>MALE</sex>
 		<acquire exp="131220000" sp="3936600" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="928205.44164" hpRegen="310.756323" mp="948149.175" mpRegen="3" />
+			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2788.494256" magical="1360.356908" />
 			<speed>
 				<walk ground="55" />
 				<run ground="175" />
 			</speed>
-			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
-			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="36" />
+			<height normal="72.75" />
+		</collision>
 		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="35" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
-		<collision>
-			<radius normal="36" />
-			<height normal="72.75" />
-		</collision>
 		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="31.39" /> <!-- Sealed Phoenix Ring -->

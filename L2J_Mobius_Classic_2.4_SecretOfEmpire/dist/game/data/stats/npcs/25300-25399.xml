@@ -1704,7 +1704,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="25339" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25339" level="85" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25340" count="1" respawnTime="360" weightPoint="1" />
@@ -1716,9 +1716,9 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6720" /> <!-- Monster Only (Halisha's Shadow) -->
-		<acquire exp="2643172" sp="634" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="5000000.0" hpRegen="73.0538466979355" mp="1708.8" mpRegen="3.03" />
+		<acquire exp="115600000" sp="3468000" raidPoints="0" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2770987.5" hpRegen="319.2293199" mp="2901.03" mpRegen="3" />
 			<attack physical="866.449808979738" magical="251.110457495066" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="1047.2021481" magical="510.858" evasion="-17" />
 			<speed>
@@ -1752,6 +1752,11 @@
 			<radius normal="23" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="7256" min="1" max="1" chance="100" /> <!-- Goblet of Alectia -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25340" level="80" type="Monster" name="Knight of Shadow">
 		<parameters>
@@ -4300,9 +4305,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="15746400" sp="472392" raidPoints="5" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="533467" hpRegen="108.35639820142" mp="266734" mpRegen="2.1" />
+		<acquire exp="7873200" sp="236196" raidPoints="5" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="295646.13931" hpRegen="108.3563982" mp="452998.755" mpRegen="2.1" />
 			<attack physical="667.348949019213" magical="142.928040387499" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<speed>
@@ -4336,16 +4341,19 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="190" min="1" max="1" chance="2.775" /> <!-- Atuba Mace -->
-				<item id="225" min="1" max="1" chance="2.7735" /> <!-- Mithril Dagger -->
-				<item id="189" min="1" max="1" chance="2.773" /> <!-- Staff of Life -->
-				<item id="322" min="1" max="1" chance="2.7735" /> <!-- Vajra Wand -->
-				<item id="188" min="1" max="1" chance="2.765" /> <!-- Ghost Staff -->
-				<item id="321" min="1" max="1" chance="2.7555" /> <!-- Demon's Fangs -->
-				<item id="320" min="1" max="1" chance="2.738" /> <!-- Blue Crystal Skull -->
+				<item id="321" min="1" max="1" chance="5.049" /> <!-- Demon's Fangs -->
+				<item id="320" min="1" max="1" chance="5.038" /> <!-- Blue Crystal Skull -->
+				<item id="322" min="1" max="1" chance="5.033" /> <!-- Vajra Wand -->
+				<item id="190" min="1" max="1" chance="5.011" /> <!-- Atuba Mace -->
+				<item id="188" min="1" max="1" chance="5.005" /> <!-- Ghost Staff -->
+				<item id="225" min="1" max="1" chance="4.994" /> <!-- Mithril Dagger -->
+				<item id="189" min="1" max="1" chance="4.985" /> <!-- Staff of Life -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91526" min="1" max="1" chance="10.024" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="9.941" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="9.938" /> <!-- Armor Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
