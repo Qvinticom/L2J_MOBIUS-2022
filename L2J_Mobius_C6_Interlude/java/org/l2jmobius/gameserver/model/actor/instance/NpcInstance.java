@@ -77,6 +77,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -1666,18 +1667,17 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
-		final int player_level = player.getLevel();
-		// Select the player
-		setTarget(player);
+		final int playerLevel = player.getLevel();
 		// If the player is too high level, display a message and return
-		if ((player_level > 39) || (player.getClassId().level() >= 2))
+		if ((playerLevel > 39) || (player.getClassId().level() >= 2))
 		{
 			String content = "<html><body>Newbie Guide:<br>I'm sorry, but you are not eligible to receive the protection blessing.<br1>It can only be bestowed on <font color=\"LEVEL\">characters below level 39 who have not made a seccond transfer.</font></body></html>";
 			insertObjectIdAndShowChatWindow(player, content);
 			return;
 		}
 		Skill skill = SkillTable.getInstance().getInfo(5182, 1);
-		doCast(skill);
+		broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
+		skill.getEffects(this, player);
 	}
 	
 	/**
@@ -2282,8 +2282,8 @@ public class NpcInstance extends Creature
 		final Skill skill = SkillTable.getInstance().getInfo(4380, 1);
 		if (skill != null)
 		{
-			setTarget(player);
-			doCast(skill);
+			broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
+			skill.getEffects(this, player);
 		}
 		
 		player.setCurrentCp(player.getMaxCp());
@@ -2319,12 +2319,9 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
-		final int player_level = player.getLevel();
+		final int playerLevel = player.getLevel();
 		int lowestLevel = 0;
 		int higestLevel = 0;
-		
-		// Select the player
-		setTarget(player);
 		
 		// Calculate the min and max level between wich the player must be to obtain buff
 		if (player.isMageClass())
@@ -2339,7 +2336,7 @@ public class NpcInstance extends Creature
 		}
 		
 		// If the player is too high level, display a message and return
-		if ((player_level > higestLevel) || !player.isNewbie())
+		if ((playerLevel > higestLevel) || !player.isNewbie())
 		{
 			final String content = "<html><body>Newbie Guide:<br>Only a <font color=\"LEVEL\">novice character of level " + higestLevel + " or less</font> can receive my support magic.<br>Your novice character is the first one that you created and raised in this world.</body></html>";
 			insertObjectIdAndShowChatWindow(player, content);
@@ -2347,7 +2344,7 @@ public class NpcInstance extends Creature
 		}
 		
 		// If the player is too low level, display a message and return
-		if (player_level < lowestLevel)
+		if (playerLevel < lowestLevel)
 		{
 			final String content = "<html><body>Come back here when you have reached level " + lowestLevel + ". I will give you support magic then.</body></html>";
 			insertObjectIdAndShowChatWindow(player, content);
@@ -2360,7 +2357,7 @@ public class NpcInstance extends Creature
 		{
 			if (helperBuffItem.isMagicClassBuff() == player.isMageClass())
 			{
-				if ((player_level >= helperBuffItem.getLowerLevel()) && (player_level <= helperBuffItem.getUpperLevel()))
+				if ((playerLevel >= helperBuffItem.getLowerLevel()) && (playerLevel <= helperBuffItem.getUpperLevel()))
 				{
 					skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
 					
@@ -2370,7 +2367,8 @@ public class NpcInstance extends Creature
 					}
 					else
 					{
-						doCast(skill);
+						broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
+						skill.getEffects(this, player);
 					}
 				}
 			}
