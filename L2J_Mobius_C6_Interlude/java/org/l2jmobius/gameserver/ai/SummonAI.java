@@ -97,7 +97,6 @@ public class SummonAI extends CreatureAI
 		if (checkTargetLost(target))
 		{
 			setCastTarget(null);
-			return;
 		}
 		
 		final Skill skill = get_skill();
