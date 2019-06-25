@@ -46,11 +46,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="847" min="4" max="8" chance="17.91" /> <!-- Red Crescent -->
-				<item id="910" min="2" max="4" chance="17.745" /> <!-- Necklace of Devotion -->
-				<item id="890" min="4" max="8" chance="17.73" /> <!-- Ring of Devotion -->
+				<item id="847" min="4" max="8" chance="31.75" /> <!-- Red Crescent -->
+				<item id="890" min="4" max="8" chance="30.76" /> <!-- Ring of Devotion -->
+				<item id="910" min="2" max="4" chance="30.17" /> <!-- Necklace of Devotion -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="6" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="91533" min="1" max="1" chance="5.012" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91526" min="1" max="1" chance="4.97" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.951" /> <!-- Accessory Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -877,14 +880,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="101" min="1" max="1" chance="7.538" /> <!-- Scroll of Wisdom -->
-				<item id="166" min="1" max="1" chance="7.5225" /> <!-- Heavy Mace -->
-				<item id="156" min="1" max="1" chance="7.515" /> <!-- Hand Axe -->
-				<item id="221" min="1" max="1" chance="7.511" /> <!-- Assassin Knife -->
-				<item id="312" min="1" max="1" chance="7.48" /> <!-- Branch of Life -->
-				<item id="167" min="1" max="1" chance="7.474" /> <!-- Scalpel -->
+				<item id="166" min="1" max="1" chance="7.5205" /> <!-- Heavy Mace -->
+				<item id="101" min="1" max="1" chance="7.514" /> <!-- Scroll of Wisdom -->
+				<item id="156" min="1" max="1" chance="7.493" /> <!-- Hand Axe -->
+				<item id="167" min="1" max="1" chance="7.481" /> <!-- Scalpel -->
+				<item id="312" min="1" max="1" chance="7.474" /> <!-- Branch of Life -->
+				<item id="221" min="1" max="1" chance="7.452" /> <!-- Assassin Knife -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="955" min="1" max="1" chance="50.31" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="955" min="1" max="1" chance="50.01" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.011" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="5.006" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.985" /> <!-- Armor Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1782,12 +1788,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="910" min="2" max="4" chance="17.41" /> <!-- Necklace of Devotion -->
-				<item id="847" min="2" max="10" chance="17.275" /> <!-- Red Crescent -->
-				<item id="890" min="2" max="10" chance="17.12" /> <!-- Ring of Devotion -->
+				<item id="847" min="2" max="10" chance="32.15" /> <!-- Red Crescent -->
+				<item id="890" min="2" max="10" chance="31.75" /> <!-- Ring of Devotion -->
+				<item id="910" min="2" max="4" chance="31.52" /> <!-- Necklace of Devotion -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91526" min="1" max="1" chance="5.026" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.98" /> <!-- Accessory Varnish (D-grade) -->
+				<item id="91533" min="1" max="1" chance="4.958" /> <!-- Armor Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3714,16 +3723,19 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="258" min="1" max="1" chance="3.1485" /> <!-- Bagh-Nakh -->
-				<item id="274" min="1" max="1" chance="3.1385" /> <!-- Reinforced Bow -->
-				<item id="313" min="1" max="1" chance="3.1325" /> <!-- Temptation of Abyss -->
-				<item id="178" min="1" max="1" chance="3.1315" /> <!-- Bone Staff -->
-				<item id="220" min="1" max="1" chance="3.13" /> <!-- Crafted Dagger -->
-				<item id="314" min="1" max="1" chance="3.1135" /> <!-- Proof of Revenge -->
-				<item id="123" min="1" max="1" chance="3.1115" /> <!-- Saber -->
-				<item id="291" min="1" max="1" chance="3.107" /> <!-- Trident -->
-				<item id="168" min="1" max="1" chance="3.098" /> <!-- Work Hammer -->
+				<item id="168" min="1" max="1" chance="5.729" /> <!-- Work Hammer -->
+				<item id="220" min="1" max="1" chance="5.7255" /> <!-- Crafted Dagger -->
+				<item id="291" min="1" max="1" chance="5.718" /> <!-- Trident -->
+				<item id="274" min="1" max="1" chance="5.693" /> <!-- Reinforced Bow -->
+				<item id="178" min="1" max="1" chance="5.666" /> <!-- Bone Staff -->
+				<item id="258" min="1" max="1" chance="5.629" /> <!-- Bagh-Nakh -->
+				<item id="123" min="1" max="1" chance="5.627" /> <!-- Saber -->
+				<item id="313" min="1" max="1" chance="5.623" /> <!-- Temptation of Abyss -->
+				<item id="314" min="1" max="1" chance="5.605" /> <!-- Proof of Revenge -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91533" min="1" max="1" chance="5.033" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.012" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.935" /> <!-- Accessory Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4681,14 +4693,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="156" min="1" max="1" chance="4.6965" /> <!-- Hand Axe -->
-				<item id="312" min="1" max="1" chance="4.684" /> <!-- Branch of Life -->
-				<item id="167" min="1" max="1" chance="4.6675" /> <!-- Scalpel -->
-				<item id="166" min="1" max="1" chance="4.6625" /> <!-- Heavy Mace -->
-				<item id="221" min="1" max="1" chance="4.644" /> <!-- Assassin Knife -->
-				<item id="101" min="1" max="1" chance="4.643" /> <!-- Scroll of Wisdom -->
+				<item id="221" min="1" max="1" chance="8.49" /> <!-- Assassin Knife -->
+				<item id="312" min="1" max="1" chance="8.489" /> <!-- Branch of Life -->
+				<item id="166" min="1" max="1" chance="8.49" /> <!-- Heavy Mace -->
+				<item id="156" min="1" max="1" chance="8.475" /> <!-- Hand Axe -->
+				<item id="101" min="1" max="1" chance="8.446" /> <!-- Scroll of Wisdom -->
+				<item id="167" min="1" max="1" chance="8.445" /> <!-- Scalpel -->
 				<item id="955" min="2" max="10" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="91533" min="1" max="1" chance="5.059" /> <!-- Armor Varnish (D-grade) -->
+				<item id="91526" min="1" max="1" chance="5.009" /> <!-- Weapon Varnish (D-grade) -->
+				<item id="91540" min="1" max="1" chance="4.953" /> <!-- Accessory Varnish (D-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
