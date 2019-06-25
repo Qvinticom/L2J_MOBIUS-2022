@@ -1082,7 +1082,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Verify if soulshots are charged.
 		boolean wasSSCharged;
-		
 		if ((this instanceof Summon) && !(this instanceof PetInstance))
 		{
 			wasSSCharged = ((Summon) this).getChargedSoulShot() != ItemInstance.CHARGED_NONE;
@@ -1101,7 +1100,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		_attackEndTime -= 1;
 		
 		int ssGrade = 0;
-		
 		if (weaponItem != null)
 		{
 			ssGrade = weaponItem.getCrystalType();
@@ -1649,6 +1647,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			else if (this instanceof Summon)
 			{
 				((Summon) creature).getOwner().rechargeAutoSoulShot(true, false, true);
+			}
+		}
+		if (skill.useSpiritShot())
+		{
+			if (creature instanceof PlayerInstance)
+			{
+				((PlayerInstance) creature).rechargeAutoSoulShot(false, true, false);
+			}
+			else if (this instanceof Summon)
+			{
+				((Summon) creature).getOwner().rechargeAutoSoulShot(false, true, true);
 			}
 		}
 		
@@ -10082,9 +10091,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public boolean checkBss()
 	{
 		boolean bss = false;
-		
 		final ItemInstance weaponInst = getActiveWeaponInstance();
-		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
@@ -10102,7 +10109,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				bss = true;
 			}
 		}
-		
 		return bss;
 	}
 	
@@ -10112,7 +10118,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public synchronized void removeBss()
 	{
 		final ItemInstance weaponInst = getActiveWeaponInstance();
-		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
@@ -10124,13 +10129,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			
 			if (activeSummon.getChargedSpiritShot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
 			{
 				activeSummon.setChargedSpiritShot(ItemInstance.CHARGED_NONE);
 			}
 		}
-		
 		reloadShots(true);
 	}
 	
@@ -10141,9 +10144,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public boolean checkSps()
 	{
 		boolean ss = false;
-		
 		final ItemInstance weaponInst = getActiveWeaponInstance();
-		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_SPIRITSHOT)
@@ -10161,7 +10162,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				ss = true;
 			}
 		}
-		
 		return ss;
 	}
 	
@@ -10171,7 +10171,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public synchronized void removeSps()
 	{
 		final ItemInstance weaponInst = getActiveWeaponInstance();
-		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_SPIRITSHOT)
@@ -10183,13 +10182,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		else if (this instanceof Summon)
 		{
 			final Summon activeSummon = (Summon) this;
-			
 			if (activeSummon.getChargedSpiritShot() == ItemInstance.CHARGED_SPIRITSHOT)
 			{
 				activeSummon.setChargedSpiritShot(ItemInstance.CHARGED_NONE);
 			}
 		}
-		
 		reloadShots(true);
 	}
 	
@@ -10200,9 +10197,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public boolean checkSs()
 	{
 		boolean ss = false;
-		
 		final ItemInstance weaponInst = getActiveWeaponInstance();
-		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT)
@@ -10220,7 +10215,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				ss = true;
 			}
 		}
-		
 		return ss;
 	}
 	
@@ -10230,7 +10224,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public void removeSs()
 	{
 		final ItemInstance weaponInst = getActiveWeaponInstance();
-		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT)

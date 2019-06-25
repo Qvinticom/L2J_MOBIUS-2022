@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -47,6 +49,31 @@ public final class UseItem extends GameClientPacket
 {
 	private int _objectId;
 	
+	private static final List<Integer> SHOT_IDS = new ArrayList<>();
+	static
+	{
+		SHOT_IDS.add(5789);
+		SHOT_IDS.add(1835);
+		SHOT_IDS.add(1463);
+		SHOT_IDS.add(1464);
+		SHOT_IDS.add(1465);
+		SHOT_IDS.add(1466);
+		SHOT_IDS.add(1467);
+		SHOT_IDS.add(5790);
+		SHOT_IDS.add(2509);
+		SHOT_IDS.add(2510);
+		SHOT_IDS.add(2511);
+		SHOT_IDS.add(2512);
+		SHOT_IDS.add(2513);
+		SHOT_IDS.add(2514);
+		SHOT_IDS.add(3947);
+		SHOT_IDS.add(3948);
+		SHOT_IDS.add(3949);
+		SHOT_IDS.add(3950);
+		SHOT_IDS.add(3951);
+		SHOT_IDS.add(3952);
+	}
+	
 	@Override
 	protected void readImpl()
 	{
@@ -68,31 +95,8 @@ public final class UseItem extends GameClientPacket
 			return;
 		}
 		
-		// Like L2OFF you can't use soulshots while sitting
-		final int[] shots_ids =
-		{
-			5789,
-			1835,
-			1463,
-			1464,
-			1465,
-			1466,
-			1467,
-			5790,
-			2509,
-			2510,
-			2511,
-			2512,
-			2513,
-			2514,
-			3947,
-			3948,
-			3949,
-			3950,
-			3951,
-			3952
-		};
-		if (player.isSitting() && Arrays.toString(shots_ids).contains(String.valueOf(item.getItemId())))
+		// Like L2OFF you can't use soulshots while sitting.
+		if (player.isSitting() && SHOT_IDS.contains(item.getItemId()))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_AUTO_USE_LACK_OF_S1);
 			sm.addItemName(item.getItemId());
@@ -114,7 +118,7 @@ public final class UseItem extends GameClientPacket
 		}
 		if (player.isStunned() || player.isConfused() || player.isAway() || player.isParalyzed() || player.isSleeping())
 		{
-			player.sendMessage("You Cannot Use Items Right Now.");
+			player.sendMessage("You cannot use items right now.");
 			return;
 		}
 		
@@ -425,8 +429,8 @@ public final class UseItem extends GameClientPacket
 			SystemMessage sm = null;
 			
 			if (item.getItem().getType2() == Item.TYPE2_WEAPON)
-			{ // if used item is a weapon
-				
+			{
+				// if used item is a weapon
 				ItemInstance wep = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
 				if (wep == null)
 				{

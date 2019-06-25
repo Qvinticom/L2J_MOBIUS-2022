@@ -2940,12 +2940,10 @@ public final class PlayerInstance extends Playable
 		{
 			for (ItemInstance ss : getInventory().getItems())
 			{
-				final int _itemId = ss.getItemId();
-				
-				if ((((_itemId >= 2509) && (_itemId <= 2514)) || ((_itemId >= 3947) && (_itemId <= 3952)) || ((_itemId <= 1804) && (_itemId >= 1808)) || (_itemId == 5789) || (_itemId == 5790) || (_itemId == 1835)) && (ss.getItem().getCrystalType() == unequipped.getItem().getCrystalType()))
+				final int itemId = ss.getItemId();
+				if ((((itemId >= 2509) && (itemId <= 2514)) || ((itemId >= 3947) && (itemId <= 3952)) || ((itemId <= 1804) && (itemId >= 1808)) || (itemId == 5789) || (itemId == 5790) || (itemId == 1835)) && (ss.getItem().getCrystalType() == unequipped.getItem().getCrystalType()))
 				{
-					sendPacket(new ExAutoSoulShot(_itemId, 0));
-					
+					sendPacket(new ExAutoSoulShot(itemId, 0));
 					final SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
 					sm.addString(ss.getItemName());
 					sendPacket(sm);
@@ -12129,7 +12127,6 @@ public final class PlayerInstance extends Playable
 		for (int itemId : _activeSoulShots.values())
 		{
 			item = getInventory().getItemByItemId(itemId);
-			
 			if (item != null)
 			{
 				if (magic)
@@ -12139,7 +12136,6 @@ public final class PlayerInstance extends Playable
 						if ((itemId == 2509) || (itemId == 2510) || (itemId == 2511) || (itemId == 2512) || (itemId == 2513) || (itemId == 2514) || (itemId == 3947) || (itemId == 3948) || (itemId == 3949) || (itemId == 3950) || (itemId == 3951) || (itemId == 3952) || (itemId == 5790))
 						{
 							handler = ItemHandler.getInstance().getItemHandler(itemId);
-							
 							if (handler != null)
 							{
 								handler.useItem(this, item);
@@ -12149,7 +12145,6 @@ public final class PlayerInstance extends Playable
 					else if ((itemId == 6646) || (itemId == 6647))
 					{
 						handler = ItemHandler.getInstance().getItemHandler(itemId);
-						
 						if (handler != null)
 						{
 							handler.useItem(this, item);
@@ -12164,7 +12159,6 @@ public final class PlayerInstance extends Playable
 						if ((itemId == 1463) || (itemId == 1464) || (itemId == 1465) || (itemId == 1466) || (itemId == 1467) || (itemId == 1835) || (itemId == 5789))
 						{
 							handler = ItemHandler.getInstance().getItemHandler(itemId);
-							
 							if (handler != null)
 							{
 								handler.useItem(this, item);
@@ -12174,7 +12168,6 @@ public final class PlayerInstance extends Playable
 					else if (itemId == 6645)
 					{
 						handler = ItemHandler.getInstance().getItemHandler(itemId);
-						
 						if (handler != null)
 						{
 							handler.useItem(this, item);
