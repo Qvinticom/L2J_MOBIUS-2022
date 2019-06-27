@@ -272,5 +272,11 @@
 		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Infinity Strike" skillId="10275" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Giant Punch" skillId="10266" skillLvl="8" getLevel="99" levelUpSp="5000000" />
+
+		<!-- Dual Maximum HP -->
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" levelUpSp="10000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="2" getLevel="90" getDualClassLevel="90" levelUpSp="370000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="3" getLevel="95" getDualClassLevel="95" levelUpSp="1000000" />
+		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="4" getLevel="99" getDualClassLevel="99" levelUpSp="5000000" />
 	</skillTree>
 </list>
