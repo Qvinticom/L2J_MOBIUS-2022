@@ -2373,14 +2373,13 @@
 	<skill id="19573" toLevel="9" name="Cubic Fire Bless">
 		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2. Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
 		<icon>icon.skill19565</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<abnormalTime>20</abnormalTime>
 		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<magicLvl>97</magicLvl>
-		<hitTime>1000</hitTime>
-		<reuseDelay></reuseDelay>
+		<reuseDelay>5000</reuseDelay>
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>

@@ -2734,7 +2734,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10042" toLevel="3" name="Summon Cubic of Life">
+	<skill id="10042" toLevel="7" name="Summon Cubic of Life">
 		<!-- Summons the Phoenix Cubic, which recovers your HP by $s2 every $s1, releases debuffs, and increase debuff resistance by $s3. It also prevents death in critical condition once for $s4. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A1</operateType>
@@ -2747,7 +2747,20 @@
 			<value level="1">91</value>
 			<value level="2">94</value>
 			<value level="3">96</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
 		</magicLvl>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">35</value>
+			<value level="3">40</value>
+			<value level="4">44</value>
+			<value level="5">48</value>
+			<value level="6">51</value>
+			<value level="7">53</value>
+		</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2756,11 +2769,15 @@
 		</conditions>
 		<effects>
 			<effect name="SummonCubic">
-				<cubicId>16</cubicId>
+				<cubicId>24</cubicId>
 				<cubicLvl>
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
 				</cubicLvl>
 			</effect>
 		</effects>
