@@ -99,18 +99,44 @@
 	<item id="29208" name="Cat Plushy Appearance Stone" type="EtcItem">
 		<!-- Appearance Stone which changes your appearance to a cat plushy. Can be used on top or one-piece dress. Changes appearance of all armor to cat plushy. Armors can be changed back to its original form using a Scroll: Restore Equipment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<skills>
+			<skill id="28198" level="1" /> <!-- Cat Plushy Appearance Stone -->
+		</skills>
 	</item>
 	<item id="29209" name="Panda Plushy Appearance Stone" type="EtcItem">
 		<!-- Appearance Stone which changes your appearance to a panda plushy. Can be used on top or one-piece dress. Changes appearance of all armor to panda plushy. Armors can be changed back to its original form using a Scroll: Restore Equipment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<skills>
+			<skill id="28199" level="1" /> <!-- Panda Plushy Appearance Stone -->
+		</skills>
 	</item>
 	<item id="29210" name="Dark Eternal Ingredient Set" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Dark Eternal armor. -->
