@@ -647,16 +647,23 @@
 	</skill>
 	<skill id="22849" toLevel="1" name="Dragon Vitality Replenishing Potion">
 		<icon>icon.etc_potion_of_energy_i01</icon>
-		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23620</itemConsumeId> <!-- Dragon Vitality Replenishing Potion -->
+		<magicLvl>1</magicLvl>
+ 		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>60000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>17500</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22850" toLevel="1" name="Vitality Suspending Potion">
 		<!-- Suspends Vitality, stopping inflow of Vitality Bonus. -->
