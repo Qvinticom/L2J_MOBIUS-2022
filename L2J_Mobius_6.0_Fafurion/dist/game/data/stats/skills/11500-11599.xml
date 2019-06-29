@@ -883,15 +883,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11513" toLevel="11" name="Radiant Crash">
+	<skill id="11513" toLevel="13" name="Radiant Crash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. for $s2, target's P./ M. Def. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11514</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">99</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="13">99</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -910,6 +910,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">130</value>
@@ -923,6 +925,8 @@
 			<value level="9">164</value>
 			<value level="10">168</value>
 			<value level="11">172</value>
+			<value level="12">176</value>
+			<value level="13">180</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -939,6 +943,8 @@
 			<value level="9">-712</value>
 			<value level="10">-712</value>
 			<value level="11">-712</value>
+			<value level="12">-712</value>
+			<value level="13">-712</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -971,13 +977,15 @@
 					<value level="9">19113</value>
 					<value level="10">20045</value>
 					<value level="11">20977</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+					<value level="12">21964</value>
+					<value level="13">22952</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">1</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 			<effect name="MagicalDefence">
@@ -1001,15 +1009,15 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="11514" toLevel="11" name="Resolving Bash">
+	<skill id="11514" toLevel="13" name="Resolving Bash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. For $s2, P./ M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">99</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="13">99</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1028,6 +1036,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">146</value>
@@ -1041,6 +1051,8 @@
 			<value level="9">188</value>
 			<value level="10">194</value>
 			<value level="11">200</value>
+			<value level="12">204</value>
+			<value level="13">208</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1057,6 +1069,8 @@
 			<value level="9">-712</value>
 			<value level="10">-712</value>
 			<value level="11">-712</value>
+			<value level="12">-712</value>
+			<value level="13">-712</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1089,13 +1103,15 @@
 					<value level="9">21340</value>
 					<value level="10">22380</value>
 					<value level="11">23420</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+					<value level="12">24522</value>
+					<value level="13">25624</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">1</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 			<effect name="PAtk">

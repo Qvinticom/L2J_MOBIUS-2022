@@ -2068,6 +2068,8 @@
 															</xs:element>
 															<xs:element name="existingSkillId" type="xs:unsignedShort" />
 															<xs:element name="existingSkillLevel" type="xs:unsignedByte" />
+															<xs:element name="replacementSkillId" type="xs:unsignedShort" />
+															<xs:element name="replacementSkillLevel" type="xs:unsignedByte" />
 															<xs:element name="addedSkillId" type="xs:unsignedShort" />
 															<xs:element name="addedSkillLevel" type="xs:unsignedByte" />
 															<xs:element name="skills" type="xs:string" />

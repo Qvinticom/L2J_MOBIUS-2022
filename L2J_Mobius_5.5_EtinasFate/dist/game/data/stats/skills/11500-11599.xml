@@ -389,15 +389,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11508" toLevel="9" name="Assault Rush">
+	<skill id="11508" toLevel="11" name="Assault Rush">
 		<icon>icon.skill11513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">150</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">150</value>
+			<value fromLevel="5" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<nextAction>ATTACK</nextAction>
@@ -413,10 +413,12 @@
 			<value level="7">49</value>
 			<value level="8">51</value>
 			<value level="9">53</value>
+			<value level="10">55</value>
+			<value level="11">57</value>
 		</mpConsume>
 		<castRange>
-			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">600</value>
+			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
@@ -432,6 +434,8 @@
 			<value level="7">-712</value>
 			<value level="8">-712</value>
 			<value level="9">-712</value>
+			<value level="10">-712</value>
+			<value level="11">-712</value>
 		</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>800</effectRange>
@@ -445,6 +449,8 @@
 			<value level="7">101</value>
 			<value level="8">102</value>
 			<value level="9">105</value>
+			<value level="10">107</value>
+			<value level="11">109</value>
 		</magicLvl>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -460,8 +466,8 @@
 			</condition>
 			<condition name="OpCheckCastRange">
 				<distance>
-					<value fromLevel="1" toLevel="9">200</value>
-					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base - (3 * subIndex)}</value>
+					<value fromLevel="1" toLevel="11">200</value>
+					<value fromLevel="5" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base - (3 * subIndex)}</value>
 				</distance>
 			</condition>
 		</conditions>
